@@ -1,7 +1,7 @@
 # SpanishLanguagePack-JetBrains
 Spanish Language Pack for JetBrains IDE's
 
-<p align="center"><img src="https://github.com/macastro/SpanishLanguagePack-JetBrains/trunk/es.201.16/META-INF/pluginIcon.svg"></p>
+<p align="center"><img src="https://github.com/macastro/SpanishLanguagePack-JetBrains/blob/master/es.201.16/META-INF/pluginIcon.svg"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
