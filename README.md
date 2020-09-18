@@ -33,3 +33,7 @@ Cualquier ayuda es bienvenida a:
 ## Licencia
 
 Este paquete es un software de código abierto licenciado bajo la [licencia MIT](http://opensource.org/licenses/MIT).
+
+## Capturas
+
+<p align="center"><img src="https://github.com/macastro/SpanishLanguagePack-JetBrains/blob/master/Capturas%20de%20Pantalla/PHPStorm.png"></p>
