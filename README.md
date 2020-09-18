@@ -12,7 +12,7 @@ Spanish Language Pack for JetBrains IDE's
 
 Este complemento es una versión PAA(Programa de acceso anticipado) y estamos trabajando para mejorarlo todos los días. Actualmente, está disponible una versión parcialmente localizada.
 
-## Patrocinadores Laravel
+## Patrocinadores de Spanish Language Pack for JetBrains IDE's
 
 Nos gustaría extender nuestro agradecimiento a los siguientes patrocinadores por ayudar a en el desarrollo de este paquete:
 
