@@ -28,7 +28,7 @@ Arrastre el archivo es.201.16.jar al IDE y proceda a reiniciar.
 
 ## Contribuyendo
 
-Gracias por considerar contribuir a este paquete de idiomas.
+Gracias por considerar contribuir a este paquete de lenguajes.
 
 Cualquier ayuda es bienvenida a:
 
