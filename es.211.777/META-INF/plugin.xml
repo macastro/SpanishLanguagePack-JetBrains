@@ -1,0 +1,14 @@
+<idea-plugin>
+ <id>com.intellij.ko</id>
+ <version>211.279</version>
+ <idea-version since-build="211" until-build="211.*"/>
+ <name>Korean Language Pack / 한국어 언어 팩</name>
+ <vendor>JetBrains</vendor>
+ <description><![CDATA[Adds Korean as the IDE interface language.<br>It’s an EAP version, we’re making it better everyday. At the moment partial localization is available.<br>Your feedback is very much appreciated. You can submit it directly from the <a target="_blank" href="https://www.jetbrains.com/help/idea/getting-started.html#report-bug">IDE</a> or via <a target="_blank" href="https://youtrack.jetbrains.com/newIssue?project=IDEA&summary=Issue%20name%20(English%20or%20Korean)&description=Describe%20your%20problem&c=Subsystem%20Localization.%20Korean">YouTrack</a> either in English or Korean.<br><br>이 플러그인은 EAP(얼리 액세스 프로그램) 버전으로, 매일 개선 작업을 하고 있습니다. 현재는 부분적으로 현지화된 버전을 사용하실 수 있습니다.<br>사용해보시고 여러분의 의견을 저희에게 알려주세요. 의견은 <a target="_blank" href="https://www.jetbrains.com/help/idea/getting-started.html#report-bug">IDE</a> 에서 바로 제출하시거나 <a target="_blank" href="https://youtrack.jetbrains.com/newIssue?project=IDEA&summary=Issue%20name%20(English%20or%20Korean)&description=Describe%20your%20problem&c=Subsystem%20Localization.%20Korean">YouTrack</a> 에서 영어 또는 한국어로 제출하실 수 있습니다. 감사합니다!]]></description>
+ <change-notes><![CDATA[<b>October 30, 2020</b><br>Updated IntelliJ IDEA Localization Plugins Are Waiting for Your Feedback<br><a target="_blank" href="https://blog.jetbrains.com/ko/idea/2020/10/korean-lang-pack-eap-updated-ko/">업데이트된 IntelliJ IDEA 현지화 플러그인에 피드백을 보내주세요</a><br><b>May 11, 2020</b><br>Introducing the IntelliJ IDEA Localization EAP for Chinese, Japanese, and Korean.<br><a target="_blank" href="https://blog.jetbrains.com/kr/2020/05/intellij-localization-eap/">한국어, 중국어, 일본어용 IntelliJ IDEA 현지화 얼리 액세스 프로그램(EAP)을 소개합니다!</a>]]></change-notes>
+ <depends>com.intellij.modules.platform</depends>
+ <locale>ko</locale>
+ <extensions defaultExtensionNs="com.intellij">
+   <languageBundle locale="ko"/>
+ </extensions>
+</idea-plugin>
