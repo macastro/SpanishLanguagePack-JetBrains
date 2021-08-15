@@ -1,0 +1,24 @@
+<html>
+<body>
+<code>new Thread().stop();</code>과 같이 지원이 중단된 API의 사용 사례(클래스, 필드 및 메서드)를 보고합니다.
+<p>디폴트로 검사는 이를 회피하기 어렵거나 회피가 불가능한 경우 경고를 생성하지 않습니다.  예를 들어, 다음 코드는 보고되지 않습니다:</p>
+<pre><code>
+  abstract class A { //라이브러리 코드
+     @Deprecated
+     abstract void m();
+  }
+  class B extends A { //프로젝트 코드
+     @Override
+     void m() {
+        //작업 코드;
+     }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<p>
+  지원이 중단된 멤버, 더 이상 사용하지 않는 추상 메서드 재정의, static이 아닌 import 문, 지원이 중단된 클래스의 메서드 또는 동일한 최상위 클래스에서 검사를 비활성화하려면 검사 옵션을 사용하세요.
+</p>
+
+</body>
+</html>

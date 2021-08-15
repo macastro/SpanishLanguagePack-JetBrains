@@ -1,0 +1,62 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">PHP 클래스 getter 메서드에 대한 기본 제공 템플릿. 예를 들어, "getter 및 setter 추가" 빠른 수정이 실행될 때 사용됩니다.</font><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+      사전 정의된 변수는 다음의 값을 사용합니다:</font></td>
+  </tr>
+    <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${STATIC}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">프로퍼티가 정적이면, 'static' 값을 사용하고, 그렇지 않으면 빈 문자열을 사용합니다.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${GET_OR_IS}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">
+      접두사 'get/is'. 프로퍼티가 부울 타입이면 (타입 힌트) 'is'로 평가됩니다. 그렇지 않으면 'get' 문자열로 평가됩니다.
+    </font></td>
+  </tr>
+    <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">
+      첫 번째 문자를 대문자로 하며 "get" 접두사없이 카멜 표기로 표기된 메서드 이름. 예를 들어, 프로퍼티 이름 '_my_property'는 'MyProperty'로 변환됩니다.
+    </font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CLASS_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">포함하는 클래스 이름.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">언어 수준이 PHP 7.0 이상일 때 반환 타입 힌트를 포함합니다</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${FIELD_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">기존 프로퍼티 이름</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${TYPE_HINT}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">프로퍼티에 대한 타입 힌트 또는 지정되지 않은 경우 빈 문자열을 사용합니다.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">달러 표시, '$' 기호로 표시됩니다.</font></td>
+  </tr>
+</table>
+</body>
+</html>

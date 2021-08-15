@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>어노테이션의 생성자에 있는 <code>@JvmOverloads</code>는 의미가 없으므로 이를 보고합니다.</p>
+<p>
+    생성된 바이트코드 및 Kotlin 메타데이터에 <code>@JvmOverloads</code> 발자국이 없으므로
+    <code>@JvmOverloads</code>가 생성된 바이트코드 및 코드 동작에 영향을 주지 않습니다.
+</p>
+<p>어노테이션 클래스의 생성자에 있는 <code>@JvmOverloads</code>는 Kotlin 1.4 버전부터 컴파일 오류를 일으킵니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  annotation class A <b>@JvmOverloads</b> constructor(val x: Int = 1)
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  annotation class A constructor(val x: Int = 1)
+</code></pre>
+</body>
+</html>

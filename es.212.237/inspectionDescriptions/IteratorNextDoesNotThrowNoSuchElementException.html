@@ -1,0 +1,24 @@
+<html>
+<body>
+<code>java.util.NoSuchElementException</code>를 던지지 않는 <code>Iterator.next()</code>의 구현을 보고합니다.
+<p>
+  그러한 구현은 <code>java.util.Iterator</code>의 컨트랙트를 위반하며 반복자가 표준이 아닌 방식으로 사용되는 경우 미묘한 버그를 초래할 수 있습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Numbers implements Iterator&lt;Integer&gt; {
+    @Override
+    public Integer next() { // 경고
+        if (hasNext()) {
+            return generateNext();
+        } else {
+            return null; // 대신 NoSuchElementException을 던져야 함
+        }
+    }
+
+   ...
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

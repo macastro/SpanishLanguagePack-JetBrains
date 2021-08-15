@@ -1,0 +1,35 @@
+<html>
+<body>
+<p><code>record</code> 클래스에 정의된 <code>writeObject()</code>, <code>readObject()</code>, <code>readObjectNoData()</code>, <code>writeExternal()</code>, <code>readExternal()</code> 메서드 또는 <code>serialPersistentFields</code> 필드를 보고합니다.
+  이러한 메서드는 레코드의 직렬화 또는 비직렬화에 사용되지 않습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  record R1() implements Serializable {
+    // 필드가 레코드 직렬화 도중 무시됨
+    @Serial
+    private static final ObjectStreamField[] serialPersistentFields = new ObjectStreamField[0];
+
+    // 메서드가 레코드 직렬화 도중 무시됨
+    @Serial
+    private void writeObject(ObjectOutputStream out) throws IOException {
+    }
+  }
+</code></pre>
+<pre><code>
+  record R2() implements Externalizable {
+    // 메서드가 레코드 직렬화 도중 무시됨
+    @Override
+    public void writeExternal(ObjectOutput out) throws IOException {
+    }
+
+    // 메서드가 레코드 직렬화 도중 무시됨
+    @Override
+    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 언어 수준 14 이상에 적용됩니다.</p>
+<p><small>2020.3의 새로운 기능</small></p>
+</body>
+</html>

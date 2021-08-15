@@ -1,0 +1,16 @@
+<html>
+<body>
+인수 타입이 일치하지 않는 <code>Arrays.fill()</code>와 같은 제네릭이 아닌 배열 조작 메서드를 호출하는 경우를 보고합니다.
+<p>
+  그러한 호출은 유용하지 않으며 실수일 가능성이 있습니다.
+</p>
+<p><b>예:</b></p>
+<pre>
+  int foo(String[] strings) {
+    return Arrays.binarySearch(strings, 1);
+  }
+</pre>
+<!-- tooltip end -->
+<p><small>2017.2의 새로운 기능</small></p>
+</body>
+</html>

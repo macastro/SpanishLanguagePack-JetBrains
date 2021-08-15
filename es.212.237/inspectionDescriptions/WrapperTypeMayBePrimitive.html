@@ -1,0 +1,38 @@
+<html>
+<body>
+대부분 기본 타입으로 사용되는 래퍼 타입의 지역 변수를 보고합니다.
+<p>일부 사례에서, 특히 루프에서 박싱은 중대한 성능 패널티의 원인일 수 있습니다.</p>
+<p>박싱 연산의 개수를 평가하는 데 휴리스틱이 적용됩니다. 예를 들어, 루프 내부의 변환은 훨씬 더 많은 것으로 간주됩니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>  public void example() {
+    Integer value = 12;
+    needBox(value);
+    for (int i = 0; i &lt; 10; i++) {
+      // Loop usages considered as happening more often
+      needPrimitive(value);
+    }
+  }
+
+  void needPrimitive(int value) {}
+  void needBox(Integer value) {}
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>  public void example() {
+    int value = 12;
+    needBox(value);
+    for (int i = 0; i &lt; 10; i++) {
+      // 루프 사용은 더 자주 발생하는 것으로 간주됩니다
+      needPrimitive(value);
+    }
+  }
+
+  void needPrimitive(int value) {}
+  void needBox(Integer value) {}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  <small>2018.2의 새로운 기능</small>
+</p>
+</body>
+</html>

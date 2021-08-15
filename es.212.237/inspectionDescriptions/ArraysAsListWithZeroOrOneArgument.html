@@ -1,0 +1,23 @@
+<html>
+<body>
+최대 1개의 인수가 있는 <code>Arrays.asList()</code>에 대한 호출을 보고합니다.
+<p>
+  JDK 9 이상 버전에서 해당 호출을 <code>Collections.singletonList()</code>, <code>Collections.emptyList()</code>,
+  또는 <code>List.of()</code>로 대체하여 메모리를 아낄 수 있습니다.</p>
+<p>특히 인수가 없는 <code>Collections.emptyList()</code> 및 <code>List.of()</code>는 항상 공유 인스턴스를 반환합니다. 반면 인수가 없는 <code>Arrays.asList()</code>가 호출되면 항상 새 객체를 생성합니다.</p>
+<p>참고: <code>Collections.singletonList()</code> 및 <code>List.of()</code>를 통해 반환된 목록은 불변이지만 <code>Arrays.asList()</code>가 반환된 목록은 <code>set()</code> 메서드 호출을 허용합니다.
+드물게 코드 손상이 발생할 수 있습니다.</p>
+<p><b>예:</b></p>
+<pre>
+  List&lt;String&gt; empty = Arrays.asList();
+  List&lt;String&gt; one = Arrays.asList("one");
+</pre>
+<p>빠른 수정 적용 후:</p>
+<pre>
+  List&lt;String&gt; empty = Collections.emptyList();
+  List&lt;String&gt; one = Collections.singletonList("one");
+</pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

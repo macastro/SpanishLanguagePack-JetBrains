@@ -1,0 +1,33 @@
+<html>
+<body>
+호출이 선언하는 클래스 자신이 아니라 하위 클래스에 의해 정규화된 정적 필드로의 액세스를 보고합니다.
+<p>
+  Java는 그러한 정규화를 허용하지만 그러한 액세스는 상속과 재정의에 대한 미묘한 혼동을 나타낼 수 있습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Parent {
+    static int foo = 0;
+  }
+
+  class Child extends Parent { }
+
+  void bar() {
+    System.out.println(Child.foo);
+  }
+</code></pre>
+<p>빠른 수정이 적용된 후 결과는 다음과 같습니다:</p>
+<pre><code>
+  class Parent {
+    static int foo = 0;
+  }
+
+  class Child extends Parent { }
+
+  void bar() {
+    System.out.println(Parent.foo);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

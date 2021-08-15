@@ -1,0 +1,23 @@
+<html>
+<body>
+매우 상세하거나 덜 효율적인 구문 대신 static <code>Integer.compare()</code> 메서드 또는 유사한 메서드가 사용될 수 있는 경우를 보고합니다.
+<p><code>x</code> 및 <code>y</code>가 이미 정수로 박싱된 경우 <code>x.compareTo(y)</code>가 제안됩니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  public int compare(int x, int y) {
+    return x > y ? 1 : x &lt; y ? -1 : 0;
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  public int compare(int x, int y) {
+    return Integer.compare(x, y);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  <code>Double.compare()</code> 및 <code>Float.compare()</code> 메서드는 Java 1.4에서 도입되었습니다. 다른 기본 타입의 메서드는 Java 1.7부터 지원됩니다.
+</p>
+<p><small>2017.2의 새로운 기능</small></p>
+</body>
+</html>

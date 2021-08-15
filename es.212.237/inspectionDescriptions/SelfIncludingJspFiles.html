@@ -1,0 +1,17 @@
+<html>
+<body>
+포함하는 JSP 파일을 참조하는 JSP 파일 내 include 문을 보고합니다.<br/>
+
+<p><b>이름이 main.jsp인 JSP 파일 예:</b></p>
+<pre><code>
+  &lt;jsp:include page="./main.jsp" /&gt; // 오류: 자신을 포함하는 파일을 포함하려는 시도
+ ...
+</code></pre><br/>
+
+<!-- tooltip end -->
+<p>
+  <b>참고:</b> 그러한 자기 포함은 무한한 재귀로 이어지므로 JSP 파일이 컴파일되지 않습니다.
+</p>
+</body>
+</html>
+

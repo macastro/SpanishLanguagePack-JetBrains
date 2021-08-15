@@ -1,0 +1,42 @@
+<html>
+<body>
+포함하는 클래스에 동일한 시그니처를 가진 메서드가 있는 경우, 내부 클래스 또는 익명 클래스에서 모든 상위 메서드로의 호출을 보고합니다.
+<p>
+  이 경우 super 메서드가 누락되기 쉬우므로 호출이 포함하는 클래스의 메서드를 참조하도록 제안합니다.
+  인텐트를 명확히 하려면 명시적 <code>super</code> 한정자를 메서드 호출에 추가하는 것이 좋습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Parent {
+    void ambiguous(){}
+  }
+
+  class Example {
+    void ambiguous(){}
+
+    class Inner extends Parent {
+      void example(){
+        ambiguous(); //warning
+      }
+    }
+  }
+  </code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Parent {
+    void ambiguous(){}
+  }
+
+  class Example {
+    void ambiguous(){}
+
+    class Inner extends Parent {
+      void example(){
+        super.ambiguous();
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

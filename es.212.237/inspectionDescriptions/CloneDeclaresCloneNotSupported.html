@@ -1,0 +1,24 @@
+<html>
+<body>
+<code>CloneNotSupportedException</code>을 선언하지 않는 <code>clone()</code> 메서드를 보고합니다.
+<p><code>CloneNotSupportedException</code>이 선언되지 않은 경우, 메서드의 하위 클래스는 표준적인 방법으로 복제를 금지할 수 없습니다. 이 검사는 <code>final</code>을 선언한 <code>clone()</code> 메서드 및 <code>final</code> 클래스에 사용된 <code>clone()</code> 메서드는 보고하지 않습니다.</p>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<p>이 검사가 <code>public clone()</code> 메서드에 대해서도 경고를 생성해야함을 나타내려면 <b>'protected' 복제 메서드에 대해서만 경고</b> 옵션을 사용하세요.
+<i>이펙티브 자바</i> 책 (2판 및 3판) 에서는 <code>public</code> 메서드에서 <code>CloneNotSupportedException</code>을 생략할 것을 권장합니다. 이는 확인된 예외를 던지지 않는 메서드를 사용하는 것이 더 쉽기 때문입니다.
+<p>예:</p>
+<pre><code>
+  <b>public class</b> Example <b>implements</b> Cloneable {
+    // 메서드가 'throws CloneNotSupportedException'을 선언하지 않음
+    <b>protected</b> Object clone() {
+        <b>try</b> {
+            <b>return</b><b>super</b>.clone();
+        } <b>catch</b> (CloneNotSupportedException e) {
+            <b>return</b> null;
+        }
+    }
+  }
+</code></pre>
+
+</body>
+</html>

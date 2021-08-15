@@ -1,0 +1,32 @@
+<html>
+<body>
+<i>스트림 API</i> 또는 <code>String#join</code>으로 대체 가능한 반복 패턴이 포함된 표현식을 보고합니다.
+<p>예:</p>
+<pre>
+  boolean allStartWith(String a, String b, String c, String d, String prefix) {
+    return a.startsWith(prefix) && b.startsWith(prefix) && c.startsWith(prefix) && d.startsWith(prefix);
+  }
+</pre>
+<p>빠른 수정 적용 후:</p>
+<pre>
+  boolean foo(String a, String b, String c, String d, String prefix) {
+    return Stream.of(a, b, c, d).allMatch(s -> s.startsWith(prefix));
+  }
+</pre>
+<p>예:</p>
+<pre>
+  String joinAll(String a, String b, String c, String d) {
+    return a + "," + b + "," + c + "," + d;
+  }
+</pre>
+<p>빠른 수정 적용 후:</p>
+<pre>
+  String joinAll(String a, String b, String c, String d) {
+    return String.join(",", a, b, c, d);
+  }
+</pre>
+<!-- tooltip end -->
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 8 이상인 경우에만 보고합니다.</p>
+<p><small>2018.2의 새로운 기능</small></p>
+</body>
+</html>

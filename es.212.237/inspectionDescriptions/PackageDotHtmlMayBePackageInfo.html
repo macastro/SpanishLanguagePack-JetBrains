@@ -1,0 +1,21 @@
+<html>
+<body>
+패키지를 문서화하기 위해 사용하는 <code>package.html</code> 파일을 보고합니다.
+JDK 1.5 버전 이후에는 <code>package-info.java</code> 파일을 사용하는 것이 좋습니다. 파일은 패키지 어노테이션을 포함할 수도 있습니다. 이와 같이 package-info.java 는 패키지 수준 어노테이션과 문서화를 위한 유일한 저장소가 됩니다.
+<p>예: <code>package.html</code></p>
+<pre>
+&lt;html&gt;
+  &lt;body&gt;
+    Documentation example.
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>빠른 수정이 적용된 후 결과는 다음과 같습니다. <code>package-info.java</code></p>
+<pre>
+/**
+ * 문서화 예.
+ */
+package com.sample;
+</pre>
+</body>
+</html>

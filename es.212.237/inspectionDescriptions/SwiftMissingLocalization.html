@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>
+  문자열 파일에 추가되지 않은 지역화된 문자열의 사용 위치를 보고합니다.
+</p>
+<p>
+  기본적으로, 로컬라이제이션 키가 사용 가능한 문자열 파일에 정의되어 있지 않으면 검사가 트리거됩니다. 아래 체크박스를 사용하면 일부 언어에서 정의되지 않은 키에 대해서만 경고를 받을 수 있습니다.
+</p>
+<p>
+  문자열 파일에 누락된 키-값 쌍을 추가하는 것이 좋습니다.
+</p>
+<!-- tooltip end -->
+<p>
+  <b>예:</b>
+</p>
+<pre><code>
+  let presentation = "Do It"
+</code></pre>
+<p>
+  빠른 수정 적용 후:
+</p>
+<pre><code>
+  let presentation = NSLocalizedString("Do It", comment: ""))
+</code></pre>
+</body>
+</html>

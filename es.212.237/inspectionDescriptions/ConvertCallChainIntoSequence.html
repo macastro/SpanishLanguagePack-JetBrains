@@ -1,0 +1,33 @@
+<html>
+<body>
+<b>Sequence</b>로 변환해야 하는 <code>Collection</code>에서의 호출 체인을 보고합니다.
+<p>함수(<code>map()</code> 또는 <code>filter()</code> 같은)를 변환시키는 각 <code>Collection</code>은 내부에서 새
+    <code>Collection</code>(보통 <code>List</code> 또는 <code>Set</code>)을 생성합니다.
+    여러 연속 호출의 경우 <code>Collection</code>에 대량의 항목이 있으면 메모리 읽기/쓰기 양이 크게 증가할 수 있습니다.
+    그럴 경우 <code>Sequence</code>를 사용하는 것이 좋습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Entity(val key: String, val value: String)
+
+  fun getValues(lines: List&lt;String&gt;) = lines
+      .filter { it.isNotEmpty() }
+      .map { it.split(',', limit = 2) }
+      .filter { it.size == 2 }
+      .map { Entity(it[0], it[1]) }
+</code></pre>
+<p>빠른 수정을 위해 호출 체인을 <code>asSequence()</code> 및 <code>toList()</code>로 래핑하도록 제안합니다.</p>
+<pre><code>
+  class Entity(val key: String, val value: String)
+
+  fun getValues(lines: List&lt;String&gt;) = lines
+      .asSequence()
+      .filter { it.isNotEmpty() }
+      .map { it.split(',', limit = 2) }
+      .filter { it.size == 2 }
+      .map { Entity(it[0], it[1]) }
+      .toList()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

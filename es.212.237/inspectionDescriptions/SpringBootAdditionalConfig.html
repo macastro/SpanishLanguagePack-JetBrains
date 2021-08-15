@@ -1,0 +1,37 @@
+<html>
+<body>
+<p>
+  <code>additional-spring-configuration-metadata.json</code> 구성 파일의 누락되거나 지원이 중단된 프로퍼티, 확인되지 않은 참조, 잘못된 값을 보고합니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  {
+    "properties": [
+      {
+        "name": "old.key",
+        "type": "com.Unknown", // Reports 'Cannot resolve class 'Unknown''
+        "description": "Description for old.key", // Reports 'Text should end with '.''
+        "deprecation": {
+          "replacement": "new.key", // Reports 'Cannot resolve configuration key reference 'new.key''
+          "reason": "Reason", // Reports 'Text should end with '.''
+          "level": "warning"
+         }
+      },
+      {
+        "name": "duplicate", // Reports 'Duplicate entry for 'duplicate''
+        "type": "java.lang.String"
+      },
+      {
+        "name": "duplicate", // Reports 'Duplicate entry for 'duplicate''
+        "type": "java.lang.String"
+      },
+      {
+        // Reports 'Missing required 'name''
+        "type": "java.lang.String"
+      }
+    ]
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

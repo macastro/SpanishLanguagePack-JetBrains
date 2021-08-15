@@ -1,0 +1,24 @@
+<html>
+<body>
+   <code>@java.lang.Override</code> 어노테이션이 없는 슈퍼클래스 메서드를 재정의하는 메서드를 보고합니다.
+<p>
+  메서드에 주석을 작성하면 기능의 목적을 안내하여 코드를 이해하기 쉽습니다. 또한 컴파일러는 재정의 메서드의 시그니처가
+슈퍼클래스 메서드와 일치하지 않는 경우 오류가 표시됩니다.
+</p>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<ul>
+  <li>
+    <b>Ignore 'equals()', 'hashCode()' and 'toString()'</b> 옵션을 사용하여 <code>java.lang.Object</code> メソッド、<code>equals()</code>、<code>hashCode()</code>、<code>toString()</code> 을 무시합니다.  <code>@Override</code> 어노테이션에 따라
+이 메서드가 사라지고 코드가 더 이상 컴파일되지 않는
+위험은 비교적 적습니다.
+  </li>
+  <li>
+    <b>Ignore methods in anonymous classes</b> 옵션을 사용하여 익명의 클래스에서
+메서드를 무시합니다.
+  </li>
+</ul>
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 5 이상인 경우에만 적용 가능합니다.</p>
+
+</body>
+</html>

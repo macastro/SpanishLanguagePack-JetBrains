@@ -1,0 +1,26 @@
+<html>
+<body>
+<code>to()</code> infix 함수 호출로 바꿀 수 있는 <code>Pair</code> 생성자 호출을 보고합니다.
+<p>
+    명시적 생성자 호출이 상세함을 더합니다. 이는 특히 생성자 호출이 여러 번 사용되었을 때 더욱 그렇습니다.
+    생성자 호출을 <code>to()</code>로 바꾸면 코드를 더 이해하거나 유지하기 쉽습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  val countries = mapOf(
+      Pair("France", "Paris"),
+      Pair("Spain", "Madrid"),
+      Pair("Germany", "Berlin")
+  )
+</code></pre>
+<p>수정 적용 후:</p>
+<pre><code>
+  val countries = mapOf(
+      "France" to "Paris",
+      "Spain" to "Madrid",
+      "Germany" to "Berlin"
+  )
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

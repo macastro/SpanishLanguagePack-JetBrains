@@ -1,0 +1,12 @@
+<html>
+<body>
+<a href="https://kotlinlang.org/docs/coding-conventions.html#modifiers-order">스타일 가이드</a>에서 추천하는 순서를 따르지 않는 제어자를 보고합니다.
+<p><b>제어자 정렬</b> 빠른 수정을 사용해 코드를 자동으로 수정할 수 있습니다.</p>
+<p>예:</p>
+<pre><code>
+  private inline fun correctOrder(f: () -> Unit) {} // &lt;== 괜찮음
+
+  infix private fun Int.wrongOrder(expr: Int) {} // &lt;== 순서가 잘못됨, 빠른 수정이 제어자를 "private infix"로 수정
+</code></pre>
+</body>
+</html>

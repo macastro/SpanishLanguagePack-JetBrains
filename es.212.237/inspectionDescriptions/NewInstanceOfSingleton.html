@@ -1,0 +1,22 @@
+<html>
+<body>
+<b>@groovy.lang.Singleton</b>를 사용해 어노테이션된 클래스의 새 인스턴스 생성을 보고합니다.
+그러한 구문은 런타임에서 싱글턴을 초기화할 수 없음 예외를 발생시킬 수 있습니다".
+<p><b>예:</b></p>
+<pre><code>
+  @Singleton
+  class Foo{
+  }
+  
+  Foo foo = <b>new Foo()</b>
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  @Singleton
+  class Foo{
+  }
+  
+  Foo foo = <b>Foo.instance</b>
+</code></pre>
+</body>
+</html>

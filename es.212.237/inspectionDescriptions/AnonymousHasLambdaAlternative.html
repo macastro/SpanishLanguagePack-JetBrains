@@ -1,0 +1,27 @@
+<html>
+<body>
+생성자 또는 람다 식 인수를 사용하는 factory 메서드 호출로 변환 가능한 익명 클래스를 보고합니다
+<p>이 검사를 통해 다음 클래스가 보고됩니다.
+<ul>
+  <li><code>initialValue()</code> 메서드가 포함된 <code>ThreadLocal</code>을 확장하는 익명 클래스(<code>ThreadLocal.withInitial</code>로 대체 가능)</li>
+  <li><code>run()</code> 메서드가 포함된 <code>Thread</code>를 확장하는 익명 클래스(<code>new Thread(Runnable)</code>로 대체 가능)</li>
+</ul>
+<p>예:</p>
+<pre><code>
+  <b>new</b> Thread() {
+    @Override
+    <b>public void</b> run() {
+      System.out.println("Hello from thread!");
+    }
+  }.start();
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  <b>new</b> Thread(() -> {
+    System.out.println("Hello from thread!");
+  }).start();
+</code></pre>
+<!-- tooltip end -->
+<p><small>2016.3의 새로운 기능</small></p>
+</body>
+</html>

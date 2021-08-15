@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>Spring Expression Language(SpEL) 코드에서 구문 오류를 보고합니다(예: 확인되지 않은 참조 및 잘못된 위치).</p>
+
+<p><b>예:</b></p>
+<pre><code>
+@Controller
+public class MyController {
+    @Value("#{T(java.lang.Math).<strong>unknown</strong>()}") // Cannot resolve property or method 'unknown'
+    public void setValue(String s) {}
+}
+</code></pre>
+</body>
+</html>

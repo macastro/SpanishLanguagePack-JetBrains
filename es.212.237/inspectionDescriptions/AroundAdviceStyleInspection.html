@@ -1,0 +1,14 @@
+<html>
+<body>
+<p><code>@Around</code> 어드바이스 사용 시 두 가지를 기억하세요:
+<ul>
+  <li><code>org.aspectj.lang.ProceedingJoinPoint#proceed</code>를 호출해야 합니다. 그렇지 않으면 호출이 대상에 도달하지 못합니다.</li>
+  <li>해당 호출의 결과 값(<code>java.lang.Object</code> 타입)을 반환해야 합니다. 그렇지 않으면 변환 값이 원래 호출자에 도달하지 못합니다.</li>
+</ul>
+<p>하지만 다음 두 조건은 거의 항상 코딩 오류를 나타냅니다:<p>
+<ul>
+  <li><code>@Around</code> 메서드의 시그니처는 첫 번째 인수로<code>ProceedingJoinPoint</code>를 포함하지 않습니다: 이 경우 호출이 대상이 도달할 수 없습니다.</li>
+  <li><code>@Around</code> 메서드의 시그니처는 반환 타입으로 <code>Object</code>를 포함하지 않습니다: 이 경우 대상 메서드의 반환 값이 항상 손실됩니다.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>XML 애플리케이션 컨텍스트에 정의된 잘못된 <a href="https://www.springframework.org/schema/util">schema bean</a>을 보고합니다.</p>
+
+<pre><code>
+  &lt;beans... xmlns:util="https://www.springframework.org/schema/util"&gt;
+    &lt;bean class="MyBean" id="myBean"/&gt;
+    &lt;bean class="ErrTypeBean" id="errTypeBean"/&gt;
+    &lt;util:list list-class="java.lang.String"/&gt; // reports "Class must be inheritor of 'java.util.List'"
+    &lt;util:set value-type="MyBean"&gt;
+      &lt;ref bean="fooBean"/&gt;
+      &lt;ref bean="errTypeBean"/&gt; // reports "Cannot be added in collection of 'MyBean' type"
+    &lt;/util:set&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

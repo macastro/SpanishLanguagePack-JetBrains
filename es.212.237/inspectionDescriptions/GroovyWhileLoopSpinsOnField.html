@@ -1,0 +1,36 @@
+<html>
+<body>
+<code>volatile</code>이 아니며 다른 스레드에 의해 변경되기를
+ 기다리는 필드의 값에서 스핀하는 <code>while</code> 루프를 보고합니다.
+<p>
+그러한 루프는 루프 내에서 조금만 작업해도 CPU 사용량이 엄청나게 늘어나는 것 외에도
+의도하지 않게 의미가 다를 가능성이 높습니다. Java 메모리 모델에서는 다른 스레드가 필드 값을 변경하는 경우에도
+해당 루프가 완료되지 않습니다.
+</p>
+<p><b>예</b>:</p>
+<pre><code>
+  class SpinsOnField {
+      boolean ready = false;
+
+      void run() {
+          // 다른 스레드에서 markAsReady를 호출한 다음에도
+          // 루프가 완성되지 않을 수 있음
+          while (!ready) {
+          }
+          // 작업 필요
+      }
+
+      void markAsReady() {
+          ready = true;
+      }
+  }
+</code></pre>
+<p>
+또한 Java 9 이후에서 일부 하드웨어의 성능을 상당히 향상시킬 수 있도록 <code>volatile</code> 필드의 스핀 루프 내에서 <code>Thread.onSpinWait()</code>을 호출할 것을 권장합니다.
+</p>
+<!-- tooltip end -->
+<p>
+이 검사 보고서가 빈 <code>while</code> 루프만을 가지도록 하려면 아래 체크박스를 사용하세요.
+<p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+한 번도 수정되지 않은 <code>var</code> 키워드로 선언한 지역 변수를 보고합니다.
+<p>Kotlin에서는 <code>val</code> 키워드로 실질적인 불변 변수를 선언하여 그 값이 절대로 변하지 않도록 보장하기를 권장합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  fun example() {
+      var primeNumbers = listOf(1, 2, 3, 5, 7, 11, 13)
+      var fibonacciNumbers = listOf(1, 1, 2, 3, 5, 8, 13)
+      print("Same numbers: " + primeNumbers.intersect(fibonacciNumbers))
+  }
+</code></pre>
+<p>빠른 수정을 위해 <code>var</code> 키워드를 <code>val</code>로 대체하도록 제안합니다.</p>
+<pre><code>
+  fun example() {
+      val primeNumbers = listOf(1, 2, 3, 5, 7, 11, 13)
+      val fibonacciNumbers = listOf(1, 1, 2, 3, 5, 8, 13)
+      print("Same numbers: " + primeNumbers.intersect(fibonacciNumbers))
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

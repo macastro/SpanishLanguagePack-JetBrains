@@ -1,0 +1,28 @@
+<html>
+<body>
+<code>return</code> 문과 같은 코드 블록 내 다른 위치에서 값이 계산되는 지역 변수를 반환하는 <code>return</code> 문을 보고합니다.
+<p>빠른 수정은 반환 구문을 변수 값이 계산되는 지점으로 옮겨서 반환된 변수를 인라인화합니다.
+  반환된 <code>return</code> 값이 <0>return</0> 구문으로 인라인화될 수 없는 경우 빠른 수정은 반환 구문을 반환 값이 계산되는 위치에 되도록 가까운 위치로 옮깁니다.</p>
+<p>예:</p>
+<pre><code>
+  int n = -1;
+  for (int i = 0; i &lt; a.length; i++) {
+    if (a[i] == b) {
+      n = i;
+      break;
+    }
+  }
+  return n;
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  int n = -1;
+  for (int i = 0; i &lt; a.length; i++) {
+    if (a[i] == b) {
+      return i;
+    }
+  }
+  return n;
+</code></pre>
+</body>
+</html>

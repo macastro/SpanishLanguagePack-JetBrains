@@ -1,0 +1,441 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="저작권" path="ActionManager" hit="저작권" />
+    <option name="공지를" path="ActionManager" hit="저작권 공지를 생성/업데이트합니다." />
+    <option name="생성" path="ActionManager" hit="저작권 공지를 생성/업데이트합니다." />
+    <option name="업데이트합니다" path="ActionManager" hit="저작권 공지를 생성/업데이트합니다." />
+    <option name="저작권" path="ActionManager" hit="저작권 공지를 생성/업데이트합니다." />
+    <option name="업데이트" path="ActionManager" hit="저작권 업데이트…" />
+    <option name="저작권" path="ActionManager" hit="저작권 업데이트…" />
+  </configurable>
+  <configurable id="copyright" configurable_name="저작권">
+    <option name="p" hit="디폴트 프로젝트 저작권 P  " />
+    <option name="디폴트" hit="디폴트 프로젝트 저작권 P  " />
+    <option name="저작권" hit="디폴트 프로젝트 저작권 P  " />
+    <option name="프로젝트" hit="디폴트 프로젝트 저작권 P  " />
+    <option name="저작권" hit="저작권" />
+    <option name="없음" hit="저작권 없음" />
+    <option name="저작권" hit="저작권 없음" />
+  </configurable>
+  <configurable id="copyright.profiles" configurable_name="저작권 프로파일">
+    <option name="" hit="  세부 정보를 보거나 편집할 프로파일 선택  " />
+    <option name="보거나" hit="  세부 정보를 보거나 편집할 프로파일 선택  " />
+    <option name="선택" hit="  세부 정보를 보거나 편집할 프로파일 선택  " />
+    <option name="세부" hit="  세부 정보를 보거나 편집할 프로파일 선택  " />
+    <option name="정보를" hit="  세부 정보를 보거나 편집할 프로파일 선택  " />
+    <option name="편집할" hit="  세부 정보를 보거나 편집할 프로파일 선택  " />
+    <option name="프로파일" hit="  세부 정보를 보거나 편집할 프로파일 선택  " />
+    <option name="저작권" hit="저작권 프로파일" />
+    <option name="프로파일" hit="저작권 프로파일" />
+  </configurable>
+  <configurable id="template.copyright.formatting" configurable_name="서식 지정">
+    <option name="각" hit="각 줄에 접두사 사용" />
+    <option name="사용" hit="각 줄에 접두사 사용" />
+    <option name="접두사" hit="각 줄에 접두사 사용" />
+    <option name="줄에" hit="각 줄에 접두사 사용" />
+    <option name="구분" hit="구분 기호 " />
+    <option name="기호" hit="구분 기호 " />
+    <option name="길이" hit="길이 " />
+    <option name="r" hit="다른 주석 뒤 R " />
+    <option name="다른" hit="다른 주석 뒤 R " />
+    <option name="뒤" hit="다른 주석 뒤 R " />
+    <option name="주석" hit="다른 주석 뒤 R " />
+    <option name="o" hit="다른 주석 앞 O " />
+    <option name="다른" hit="다른 주석 앞 O " />
+    <option name="앞" hit="다른 주석 앞 O " />
+    <option name="주석" hit="다른 주석 앞 O " />
+    <option name="구분" hit="뒤에 구분 기호" />
+    <option name="기호" hit="뒤에 구분 기호" />
+    <option name="뒤에" hit="뒤에 구분 기호" />
+    <option name="d" hit="뒤에 빈 줄 추가 D " />
+    <option name="뒤에" hit="뒤에 빈 줄 추가 D " />
+    <option name="빈" hit="뒤에 빈 줄 추가 D " />
+    <option name="줄" hit="뒤에 빈 줄 추가 D " />
+    <option name="추가" hit="뒤에 빈 줄 추가 D " />
+    <option name="디폴트" hit="디폴트 설정 사용" />
+    <option name="사용" hit="디폴트 설정 사용" />
+    <option name="설정" hit="디폴트 설정 사용" />
+    <option name="블록" hit="블록 주석 사용" />
+    <option name="사용" hit="블록 주석 사용" />
+    <option name="주석" hit="블록 주석 사용" />
+    <option name="사용" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="사용자" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="서식" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="옵션" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="지정" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="상대" hit="상대 위치" />
+    <option name="위치" hit="상대 위치" />
+    <option name="상자" hit="상자" />
+    <option name="서식" hit="서식 지정" />
+    <option name="지정" hit="서식 지정" />
+    <option name="구분" hit="앞에 구분 기호" />
+    <option name="기호" hit="앞에 구분 기호" />
+    <option name="앞에" hit="앞에 구분 기호" />
+    <option name="b" hit="앞에 빈 줄 추가 B " />
+    <option name="빈" hit="앞에 빈 줄 추가 B " />
+    <option name="앞에" hit="앞에 빈 줄 추가 B " />
+    <option name="줄" hit="앞에 빈 줄 추가 B " />
+    <option name="추가" hit="앞에 빈 줄 추가 B " />
+    <option name="없음" hit="저작권 없음" />
+    <option name="저작권" hit="저작권 없음" />
+    <option name="주석" hit="주석 타입" />
+    <option name="타입" hit="주석 타입" />
+    <option name="사용" hit="줄 주석 사용" />
+    <option name="주석" hit="줄 주석 사용" />
+    <option name="줄" hit="줄 주석 사용" />
+    <option name="테두리" hit="테두리" />
+  </configurable>
+  <configurable id="copyright.filetypes.DTD" configurable_name="DTD">
+    <option name="dtd" hit="DTD" />
+    <option name="각" hit="각 줄에 접두사 사용" />
+    <option name="사용" hit="각 줄에 접두사 사용" />
+    <option name="접두사" hit="각 줄에 접두사 사용" />
+    <option name="줄에" hit="각 줄에 접두사 사용" />
+    <option name="구분" hit="구분 기호 " />
+    <option name="기호" hit="구분 기호 " />
+    <option name="길이" hit="길이 " />
+    <option name="r" hit="다른 주석 뒤 R " />
+    <option name="다른" hit="다른 주석 뒤 R " />
+    <option name="뒤" hit="다른 주석 뒤 R " />
+    <option name="주석" hit="다른 주석 뒤 R " />
+    <option name="o" hit="다른 주석 앞 O " />
+    <option name="다른" hit="다른 주석 앞 O " />
+    <option name="앞" hit="다른 주석 앞 O " />
+    <option name="주석" hit="다른 주석 앞 O " />
+    <option name="구분" hit="뒤에 구분 기호" />
+    <option name="기호" hit="뒤에 구분 기호" />
+    <option name="뒤에" hit="뒤에 구분 기호" />
+    <option name="d" hit="뒤에 빈 줄 추가 D " />
+    <option name="뒤에" hit="뒤에 빈 줄 추가 D " />
+    <option name="빈" hit="뒤에 빈 줄 추가 D " />
+    <option name="줄" hit="뒤에 빈 줄 추가 D " />
+    <option name="추가" hit="뒤에 빈 줄 추가 D " />
+    <option name="디폴트" hit="디폴트 설정 사용" />
+    <option name="사용" hit="디폴트 설정 사용" />
+    <option name="설정" hit="디폴트 설정 사용" />
+    <option name="블록" hit="블록 주석 사용" />
+    <option name="사용" hit="블록 주석 사용" />
+    <option name="주석" hit="블록 주석 사용" />
+    <option name="사용" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="사용자" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="서식" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="옵션" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="지정" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="상대" hit="상대 위치" />
+    <option name="위치" hit="상대 위치" />
+    <option name="상자" hit="상자" />
+    <option name="구분" hit="앞에 구분 기호" />
+    <option name="기호" hit="앞에 구분 기호" />
+    <option name="앞에" hit="앞에 구분 기호" />
+    <option name="b" hit="앞에 빈 줄 추가 B " />
+    <option name="빈" hit="앞에 빈 줄 추가 B " />
+    <option name="앞에" hit="앞에 빈 줄 추가 B " />
+    <option name="줄" hit="앞에 빈 줄 추가 B " />
+    <option name="추가" hit="앞에 빈 줄 추가 B " />
+    <option name="없음" hit="저작권 없음" />
+    <option name="저작권" hit="저작권 없음" />
+    <option name="주석" hit="주석 타입" />
+    <option name="타입" hit="주석 타입" />
+    <option name="사용" hit="줄 주석 사용" />
+    <option name="주석" hit="줄 주석 사용" />
+    <option name="줄" hit="줄 주석 사용" />
+    <option name="테두리" hit="테두리" />
+  </configurable>
+  <configurable id="copyright.filetypes.HTML" configurable_name="HTML">
+    <option name="html" hit="HTML" />
+    <option name="doctype" hit="doctype 앞" />
+    <option name="앞" hit="doctype 앞" />
+    <option name="각" hit="각 줄에 접두사 사용" />
+    <option name="사용" hit="각 줄에 접두사 사용" />
+    <option name="접두사" hit="각 줄에 접두사 사용" />
+    <option name="줄에" hit="각 줄에 접두사 사용" />
+    <option name="구분" hit="구분 기호 " />
+    <option name="기호" hit="구분 기호 " />
+    <option name="길이" hit="길이 " />
+    <option name="r" hit="다른 주석 뒤 R " />
+    <option name="다른" hit="다른 주석 뒤 R " />
+    <option name="뒤" hit="다른 주석 뒤 R " />
+    <option name="주석" hit="다른 주석 뒤 R " />
+    <option name="o" hit="다른 주석 앞 O " />
+    <option name="다른" hit="다른 주석 앞 O " />
+    <option name="앞" hit="다른 주석 앞 O " />
+    <option name="주석" hit="다른 주석 앞 O " />
+    <option name="구분" hit="뒤에 구분 기호" />
+    <option name="기호" hit="뒤에 구분 기호" />
+    <option name="뒤에" hit="뒤에 구분 기호" />
+    <option name="d" hit="뒤에 빈 줄 추가 D " />
+    <option name="뒤에" hit="뒤에 빈 줄 추가 D " />
+    <option name="빈" hit="뒤에 빈 줄 추가 D " />
+    <option name="줄" hit="뒤에 빈 줄 추가 D " />
+    <option name="추가" hit="뒤에 빈 줄 추가 D " />
+    <option name="디폴트" hit="디폴트 설정 사용" />
+    <option name="사용" hit="디폴트 설정 사용" />
+    <option name="설정" hit="디폴트 설정 사용" />
+    <option name="루트" hit="루트 태그 앞" />
+    <option name="앞" hit="루트 태그 앞" />
+    <option name="태그" hit="루트 태그 앞" />
+    <option name="블록" hit="블록 주석 사용" />
+    <option name="사용" hit="블록 주석 사용" />
+    <option name="주석" hit="블록 주석 사용" />
+    <option name="사용" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="사용자" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="서식" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="옵션" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="지정" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="상대" hit="상대 위치" />
+    <option name="위치" hit="상대 위치" />
+    <option name="상자" hit="상자" />
+    <option name="구분" hit="앞에 구분 기호" />
+    <option name="기호" hit="앞에 구분 기호" />
+    <option name="앞에" hit="앞에 구분 기호" />
+    <option name="b" hit="앞에 빈 줄 추가 B " />
+    <option name="빈" hit="앞에 빈 줄 추가 B " />
+    <option name="앞에" hit="앞에 빈 줄 추가 B " />
+    <option name="줄" hit="앞에 빈 줄 추가 B " />
+    <option name="추가" hit="앞에 빈 줄 추가 B " />
+    <option name="없음" hit="저작권 없음" />
+    <option name="저작권" hit="저작권 없음" />
+    <option name="주석" hit="주석 타입" />
+    <option name="타입" hit="주석 타입" />
+    <option name="사용" hit="줄 주석 사용" />
+    <option name="주석" hit="줄 주석 사용" />
+    <option name="줄" hit="줄 주석 사용" />
+    <option name="테두리" hit="테두리" />
+    <option name="내" hit="파일 내 위치" />
+    <option name="위치" hit="파일 내 위치" />
+    <option name="파일" hit="파일 내 위치" />
+  </configurable>
+  <configurable id="copyright.filetypes.Properties" configurable_name="Properties">
+    <option name="properties" hit="Properties" />
+    <option name="각" hit="각 줄에 접두사 사용" />
+    <option name="사용" hit="각 줄에 접두사 사용" />
+    <option name="접두사" hit="각 줄에 접두사 사용" />
+    <option name="줄에" hit="각 줄에 접두사 사용" />
+    <option name="구분" hit="구분 기호 " />
+    <option name="기호" hit="구분 기호 " />
+    <option name="길이" hit="길이 " />
+    <option name="r" hit="다른 주석 뒤 R " />
+    <option name="다른" hit="다른 주석 뒤 R " />
+    <option name="뒤" hit="다른 주석 뒤 R " />
+    <option name="주석" hit="다른 주석 뒤 R " />
+    <option name="o" hit="다른 주석 앞 O " />
+    <option name="다른" hit="다른 주석 앞 O " />
+    <option name="앞" hit="다른 주석 앞 O " />
+    <option name="주석" hit="다른 주석 앞 O " />
+    <option name="구분" hit="뒤에 구분 기호" />
+    <option name="기호" hit="뒤에 구분 기호" />
+    <option name="뒤에" hit="뒤에 구분 기호" />
+    <option name="d" hit="뒤에 빈 줄 추가 D " />
+    <option name="뒤에" hit="뒤에 빈 줄 추가 D " />
+    <option name="빈" hit="뒤에 빈 줄 추가 D " />
+    <option name="줄" hit="뒤에 빈 줄 추가 D " />
+    <option name="추가" hit="뒤에 빈 줄 추가 D " />
+    <option name="디폴트" hit="디폴트 설정 사용" />
+    <option name="사용" hit="디폴트 설정 사용" />
+    <option name="설정" hit="디폴트 설정 사용" />
+    <option name="블록" hit="블록 주석 사용" />
+    <option name="사용" hit="블록 주석 사용" />
+    <option name="주석" hit="블록 주석 사용" />
+    <option name="사용" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="사용자" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="서식" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="옵션" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="지정" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="상대" hit="상대 위치" />
+    <option name="위치" hit="상대 위치" />
+    <option name="상자" hit="상자" />
+    <option name="구분" hit="앞에 구분 기호" />
+    <option name="기호" hit="앞에 구분 기호" />
+    <option name="앞에" hit="앞에 구분 기호" />
+    <option name="b" hit="앞에 빈 줄 추가 B " />
+    <option name="빈" hit="앞에 빈 줄 추가 B " />
+    <option name="앞에" hit="앞에 빈 줄 추가 B " />
+    <option name="줄" hit="앞에 빈 줄 추가 B " />
+    <option name="추가" hit="앞에 빈 줄 추가 B " />
+    <option name="없음" hit="저작권 없음" />
+    <option name="저작권" hit="저작권 없음" />
+    <option name="주석" hit="주석 타입" />
+    <option name="타입" hit="주석 타입" />
+    <option name="사용" hit="줄 주석 사용" />
+    <option name="주석" hit="줄 주석 사용" />
+    <option name="줄" hit="줄 주석 사용" />
+    <option name="테두리" hit="테두리" />
+  </configurable>
+  <configurable id="copyright.filetypes.Vue.js" configurable_name="Vue 템플릿">
+    <option name="vue" hit="Vue 템플릿" />
+    <option name="템플릿" hit="Vue 템플릿" />
+    <option name="각" hit="각 줄에 접두사 사용" />
+    <option name="사용" hit="각 줄에 접두사 사용" />
+    <option name="접두사" hit="각 줄에 접두사 사용" />
+    <option name="줄에" hit="각 줄에 접두사 사용" />
+    <option name="구분" hit="구분 기호 " />
+    <option name="기호" hit="구분 기호 " />
+    <option name="길이" hit="길이 " />
+    <option name="r" hit="다른 주석 뒤 R " />
+    <option name="다른" hit="다른 주석 뒤 R " />
+    <option name="뒤" hit="다른 주석 뒤 R " />
+    <option name="주석" hit="다른 주석 뒤 R " />
+    <option name="o" hit="다른 주석 앞 O " />
+    <option name="다른" hit="다른 주석 앞 O " />
+    <option name="앞" hit="다른 주석 앞 O " />
+    <option name="주석" hit="다른 주석 앞 O " />
+    <option name="구분" hit="뒤에 구분 기호" />
+    <option name="기호" hit="뒤에 구분 기호" />
+    <option name="뒤에" hit="뒤에 구분 기호" />
+    <option name="d" hit="뒤에 빈 줄 추가 D " />
+    <option name="뒤에" hit="뒤에 빈 줄 추가 D " />
+    <option name="빈" hit="뒤에 빈 줄 추가 D " />
+    <option name="줄" hit="뒤에 빈 줄 추가 D " />
+    <option name="추가" hit="뒤에 빈 줄 추가 D " />
+    <option name="디폴트" hit="디폴트 설정 사용" />
+    <option name="사용" hit="디폴트 설정 사용" />
+    <option name="설정" hit="디폴트 설정 사용" />
+    <option name="블록" hit="블록 주석 사용" />
+    <option name="사용" hit="블록 주석 사용" />
+    <option name="주석" hit="블록 주석 사용" />
+    <option name="사용" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="사용자" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="서식" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="옵션" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="지정" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="상대" hit="상대 위치" />
+    <option name="위치" hit="상대 위치" />
+    <option name="상자" hit="상자" />
+    <option name="구분" hit="앞에 구분 기호" />
+    <option name="기호" hit="앞에 구분 기호" />
+    <option name="앞에" hit="앞에 구분 기호" />
+    <option name="b" hit="앞에 빈 줄 추가 B " />
+    <option name="빈" hit="앞에 빈 줄 추가 B " />
+    <option name="앞에" hit="앞에 빈 줄 추가 B " />
+    <option name="줄" hit="앞에 빈 줄 추가 B " />
+    <option name="추가" hit="앞에 빈 줄 추가 B " />
+    <option name="없음" hit="저작권 없음" />
+    <option name="저작권" hit="저작권 없음" />
+    <option name="주석" hit="주석 타입" />
+    <option name="타입" hit="주석 타입" />
+    <option name="사용" hit="줄 주석 사용" />
+    <option name="주석" hit="줄 주석 사용" />
+    <option name="줄" hit="줄 주석 사용" />
+    <option name="테두리" hit="테두리" />
+  </configurable>
+  <configurable id="copyright.filetypes.XHTML" configurable_name="XHTML">
+    <option name="xhtml" hit="XHTML" />
+    <option name="각" hit="각 줄에 접두사 사용" />
+    <option name="사용" hit="각 줄에 접두사 사용" />
+    <option name="접두사" hit="각 줄에 접두사 사용" />
+    <option name="줄에" hit="각 줄에 접두사 사용" />
+    <option name="구분" hit="구분 기호 " />
+    <option name="기호" hit="구분 기호 " />
+    <option name="길이" hit="길이 " />
+    <option name="r" hit="다른 주석 뒤 R " />
+    <option name="다른" hit="다른 주석 뒤 R " />
+    <option name="뒤" hit="다른 주석 뒤 R " />
+    <option name="주석" hit="다른 주석 뒤 R " />
+    <option name="o" hit="다른 주석 앞 O " />
+    <option name="다른" hit="다른 주석 앞 O " />
+    <option name="앞" hit="다른 주석 앞 O " />
+    <option name="주석" hit="다른 주석 앞 O " />
+    <option name="구분" hit="뒤에 구분 기호" />
+    <option name="기호" hit="뒤에 구분 기호" />
+    <option name="뒤에" hit="뒤에 구분 기호" />
+    <option name="d" hit="뒤에 빈 줄 추가 D " />
+    <option name="뒤에" hit="뒤에 빈 줄 추가 D " />
+    <option name="빈" hit="뒤에 빈 줄 추가 D " />
+    <option name="줄" hit="뒤에 빈 줄 추가 D " />
+    <option name="추가" hit="뒤에 빈 줄 추가 D " />
+    <option name="디폴트" hit="디폴트 설정 사용" />
+    <option name="사용" hit="디폴트 설정 사용" />
+    <option name="설정" hit="디폴트 설정 사용" />
+    <option name="블록" hit="블록 주석 사용" />
+    <option name="사용" hit="블록 주석 사용" />
+    <option name="주석" hit="블록 주석 사용" />
+    <option name="사용" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="사용자" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="서식" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="옵션" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="지정" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="상대" hit="상대 위치" />
+    <option name="위치" hit="상대 위치" />
+    <option name="상자" hit="상자" />
+    <option name="구분" hit="앞에 구분 기호" />
+    <option name="기호" hit="앞에 구분 기호" />
+    <option name="앞에" hit="앞에 구분 기호" />
+    <option name="b" hit="앞에 빈 줄 추가 B " />
+    <option name="빈" hit="앞에 빈 줄 추가 B " />
+    <option name="앞에" hit="앞에 빈 줄 추가 B " />
+    <option name="줄" hit="앞에 빈 줄 추가 B " />
+    <option name="추가" hit="앞에 빈 줄 추가 B " />
+    <option name="없음" hit="저작권 없음" />
+    <option name="저작권" hit="저작권 없음" />
+    <option name="주석" hit="주석 타입" />
+    <option name="타입" hit="주석 타입" />
+    <option name="사용" hit="줄 주석 사용" />
+    <option name="주석" hit="줄 주석 사용" />
+    <option name="줄" hit="줄 주석 사용" />
+    <option name="테두리" hit="테두리" />
+  </configurable>
+  <configurable id="copyright.filetypes.XML" configurable_name="XML">
+    <option name="xml" hit="XML" />
+    <option name="doctype" hit="doctype 앞" />
+    <option name="앞" hit="doctype 앞" />
+    <option name="각" hit="각 줄에 접두사 사용" />
+    <option name="사용" hit="각 줄에 접두사 사용" />
+    <option name="접두사" hit="각 줄에 접두사 사용" />
+    <option name="줄에" hit="각 줄에 접두사 사용" />
+    <option name="구분" hit="구분 기호 " />
+    <option name="기호" hit="구분 기호 " />
+    <option name="길이" hit="길이 " />
+    <option name="r" hit="다른 주석 뒤 R " />
+    <option name="다른" hit="다른 주석 뒤 R " />
+    <option name="뒤" hit="다른 주석 뒤 R " />
+    <option name="주석" hit="다른 주석 뒤 R " />
+    <option name="o" hit="다른 주석 앞 O " />
+    <option name="다른" hit="다른 주석 앞 O " />
+    <option name="앞" hit="다른 주석 앞 O " />
+    <option name="주석" hit="다른 주석 앞 O " />
+    <option name="구분" hit="뒤에 구분 기호" />
+    <option name="기호" hit="뒤에 구분 기호" />
+    <option name="뒤에" hit="뒤에 구분 기호" />
+    <option name="d" hit="뒤에 빈 줄 추가 D " />
+    <option name="뒤에" hit="뒤에 빈 줄 추가 D " />
+    <option name="빈" hit="뒤에 빈 줄 추가 D " />
+    <option name="줄" hit="뒤에 빈 줄 추가 D " />
+    <option name="추가" hit="뒤에 빈 줄 추가 D " />
+    <option name="디폴트" hit="디폴트 설정 사용" />
+    <option name="사용" hit="디폴트 설정 사용" />
+    <option name="설정" hit="디폴트 설정 사용" />
+    <option name="루트" hit="루트 태그 앞" />
+    <option name="앞" hit="루트 태그 앞" />
+    <option name="태그" hit="루트 태그 앞" />
+    <option name="블록" hit="블록 주석 사용" />
+    <option name="사용" hit="블록 주석 사용" />
+    <option name="주석" hit="블록 주석 사용" />
+    <option name="사용" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="사용자" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="서식" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="옵션" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="지정" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="상대" hit="상대 위치" />
+    <option name="위치" hit="상대 위치" />
+    <option name="상자" hit="상자" />
+    <option name="구분" hit="앞에 구분 기호" />
+    <option name="기호" hit="앞에 구분 기호" />
+    <option name="앞에" hit="앞에 구분 기호" />
+    <option name="b" hit="앞에 빈 줄 추가 B " />
+    <option name="빈" hit="앞에 빈 줄 추가 B " />
+    <option name="앞에" hit="앞에 빈 줄 추가 B " />
+    <option name="줄" hit="앞에 빈 줄 추가 B " />
+    <option name="추가" hit="앞에 빈 줄 추가 B " />
+    <option name="없음" hit="저작권 없음" />
+    <option name="저작권" hit="저작권 없음" />
+    <option name="주석" hit="주석 타입" />
+    <option name="타입" hit="주석 타입" />
+    <option name="사용" hit="줄 주석 사용" />
+    <option name="주석" hit="줄 주석 사용" />
+    <option name="줄" hit="줄 주석 사용" />
+    <option name="테두리" hit="테두리" />
+    <option name="내" hit="파일 내 위치" />
+    <option name="위치" hit="파일 내 위치" />
+    <option name="파일" hit="파일 내 위치" />
+  </configurable>
+</options>

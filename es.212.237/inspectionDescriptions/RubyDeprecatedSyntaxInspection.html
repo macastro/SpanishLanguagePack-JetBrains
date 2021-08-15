@@ -1,0 +1,16 @@
+<html>
+<body>
+Ruby 1.9에서 사용이 중단된 구문 사용을 보고합니다. 예를 들어, 한 줄 <code>if</code>, <code>when</code>, <code>unless</code>의 경우, <code>then</code> 대신 <code>:</code>를 사용합니다.
+<p>예:</p>
+<pre>
+<code>condition = true
+if condition: 1 else 0 # -> if condition then 1 else 0
+unless condition: 0 else 1 # -> unless condition then 0 else 1
+
+value = 1
+case value
+when 1: true # -> when 1 then true
+end</code>
+</pre>
+</body>
+</html>

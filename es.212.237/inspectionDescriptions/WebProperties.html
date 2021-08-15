@@ -1,0 +1,27 @@
+<html>
+<body>
+웹 모듈을 서버에 배포하는 데 사용되는 설명자 내 다음과 같은 문제를 보고합니다:
+<ul>
+  <li>인스턴스화할 수 없는 클래스 참조</li>
+  <li>필수 클래스를 확장하지 않는 클래스 참조</li>
+  <li>부적절한 스코프를 가진 클래스 참조</li>
+  <li>빈 태그 및 속성 값</li>
+  <li>요구되는 패턴(예: Java 식별자)과 일치하지 않는 태그 및 속성 값</li>
+  <li>필요한 하위 태그 또는 속성을 포함하지 않는 태그</li>
+  <li>이름이 중복된 객체를 정의하는 태그</li>
+</ul>
+
+<p><b>예:</b></p><br/>
+<pre><code>
+&lt;web-app&gt;
+  &lt;filter-mapping&gt;
+    &lt;filter-name&gt;CustomFilter&lt;/filter-name&gt; // 오류: servlet-name 또는 url-pattern 하위 태그가 정의되어야 함
+  &lt;/filter-mapping&gt;
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;CustomServletName&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/ baseUrl&lt;/url-pattern&gt; // 오류: URI-pattern은 공백을 포함할 수 없음
+  &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
+</code></pre>
+</body>
+</html>

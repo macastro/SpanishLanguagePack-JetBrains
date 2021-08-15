@@ -1,0 +1,17 @@
+<html>
+<body>
+<code>java.net.URL</code> 객체가 포함된 <code>java.util.Set</code> 및 <code>java.util.Map</code> 인스턴스화를 보고합니다.
+<p>
+  <code>URL</code>의 <code>equals()</code> 및 <code>hashCode()</code> 메서드 호출로 인해 해당 컬렉션에 <code>URL</code> 개체를 추가하면 성능 문제를 일으킬 수 있습니다.
+</p>
+<p>
+  <code>URL</code>의 <code>equals()</code> 및
+  <code>hashCode()</code> 메서드는 DNS 조회를 사용합니다. 이는 네트워크의 가용성과 DNS 서버의 속도에 따라 상당한 지연을 일으킬 수 있습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  Set&lt;URL&gt; set = new HashSet&lt;URL&gt;();
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

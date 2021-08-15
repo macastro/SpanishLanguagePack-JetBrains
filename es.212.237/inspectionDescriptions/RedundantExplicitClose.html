@@ -1,0 +1,20 @@
+<html>
+<body>
+try-with-resources 블록 끝 부분의 불필요한 <code>close()</code> 호출을 보고하고 이를 제거할 것을 권장합니다.
+<p><b>예</b>:</p>
+<pre><code>
+  try(MyAutoCloseable ac = new MyAutoCloseable()) {
+    foo();
+    ac.close();
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  try(MyAutoCloseable ac = new MyAutoCloseable()) {
+    foo();
+  }
+</code></pre>
+<!-- tooltip end -->
+<small>2018.1의 새로운 기능</small>
+</body>
+</html>

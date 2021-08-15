@@ -1,0 +1,974 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="" path="ActionManager" hit=".qrc 파일 컴파일" />
+    <option name="qrc" path="ActionManager" hit=".qrc 파일 컴파일" />
+    <option name="컴파일" path="ActionManager" hit=".qrc 파일 컴파일" />
+    <option name="파일" path="ActionManager" hit=".qrc 파일 컴파일" />
+    <option name="python" path="ActionManager" hit="Python 또는 디버그 콘솔" />
+    <option name="디버그" path="ActionManager" hit="Python 또는 디버그 콘솔" />
+    <option name="또는" path="ActionManager" hit="Python 또는 디버그 콘솔" />
+    <option name="콘솔" path="ActionManager" hit="Python 또는 디버그 콘솔" />
+    <option name="python" path="ActionManager" hit="Python 모듈로 변환" />
+    <option name="모듈로" path="ActionManager" hit="Python 모듈로 변환" />
+    <option name="변환" path="ActionManager" hit="Python 모듈로 변환" />
+    <option name="python" path="ActionManager" hit="Python 요구 사항 동기화…" />
+    <option name="동기화" path="ActionManager" hit="Python 요구 사항 동기화…" />
+    <option name="사항" path="ActionManager" hit="Python 요구 사항 동기화…" />
+    <option name="요구" path="ActionManager" hit="Python 요구 사항 동기화…" />
+    <option name="python" path="ActionManager" hit="Python 컴파일된 파일 정리" />
+    <option name="정리" path="ActionManager" hit="Python 컴파일된 파일 정리" />
+    <option name="컴파일된" path="ActionManager" hit="Python 컴파일된 파일 정리" />
+    <option name="파일" path="ActionManager" hit="Python 컴파일된 파일 정리" />
+    <option name="python" path="ActionManager" hit="Python 콘솔" />
+    <option name="콘솔" path="ActionManager" hit="Python 콘솔" />
+    <option name="python" path="ActionManager" hit="Python 콘솔에서 선택 실행" />
+    <option name="선택" path="ActionManager" hit="Python 콘솔에서 선택 실행" />
+    <option name="실행" path="ActionManager" hit="Python 콘솔에서 선택 실행" />
+    <option name="콘솔에서" path="ActionManager" hit="Python 콘솔에서 선택 실행" />
+    <option name="python" path="ActionManager" hit="Python 콘솔에서 파일 실행" />
+    <option name="실행" path="ActionManager" hit="Python 콘솔에서 파일 실행" />
+    <option name="콘솔에서" path="ActionManager" hit="Python 콘솔에서 파일 실행" />
+    <option name="파일" path="ActionManager" hit="Python 콘솔에서 파일 실행" />
+    <option name="python" path="ActionManager" hit="Python 콘솔에서 현재 파일 실행" />
+    <option name="실행" path="ActionManager" hit="Python 콘솔에서 현재 파일 실행" />
+    <option name="콘솔에서" path="ActionManager" hit="Python 콘솔에서 현재 파일 실행" />
+    <option name="파일" path="ActionManager" hit="Python 콘솔에서 현재 파일 실행" />
+    <option name="현재" path="ActionManager" hit="Python 콘솔에서 현재 파일 실행" />
+    <option name="python" path="ActionManager" hit="Python 파일" />
+    <option name="파일" path="ActionManager" hit="Python 파일" />
+    <option name="python" path="ActionManager" hit="Python 패키지" />
+    <option name="패키지" path="ActionManager" hit="Python 패키지" />
+    <option name="python" path="ActionManager" hit="Python 패키지로 변환" />
+    <option name="변환" path="ActionManager" hit="Python 패키지로 변환" />
+    <option name="패키지로" path="ActionManager" hit="Python 패키지로 변환" />
+    <option name="django" path="ActionManager" hit="Python/Django 콘솔에서 선택한 코드 조각 실행" />
+    <option name="python" path="ActionManager" hit="Python/Django 콘솔에서 선택한 코드 조각 실행" />
+    <option name="선택한" path="ActionManager" hit="Python/Django 콘솔에서 선택한 코드 조각 실행" />
+    <option name="실행" path="ActionManager" hit="Python/Django 콘솔에서 선택한 코드 조각 실행" />
+    <option name="조각" path="ActionManager" hit="Python/Django 콘솔에서 선택한 코드 조각 실행" />
+    <option name="코드" path="ActionManager" hit="Python/Django 콘솔에서 선택한 코드 조각 실행" />
+    <option name="콘솔에서" path="ActionManager" hit="Python/Django 콘솔에서 선택한 코드 조각 실행" />
+    <option name="py" path="ActionManager" hit="setup.py 생성" />
+    <option name="setup" path="ActionManager" hit="setup.py 생성" />
+    <option name="생성" path="ActionManager" hit="setup.py 생성" />
+    <option name="py" path="ActionManager" hit="setup.py 작업 실행…" />
+    <option name="setup" path="ActionManager" hit="setup.py 작업 실행…" />
+    <option name="실행" path="ActionManager" hit="setup.py 작업 실행…" />
+    <option name="작업" path="ActionManager" hit="setup.py 작업 실행…" />
+    <option name="내" path="ActionManager" hit="내 코드로 스텝인투" />
+    <option name="스텝인투" path="ActionManager" hit="내 코드로 스텝인투" />
+    <option name="코드로" path="ActionManager" hit="내 코드로 스텝인투" />
+    <option name="네임스페이스" path="ActionManager" hit="네임스페이스 패키지" />
+    <option name="패키지" path="ActionManager" hit="네임스페이스 패키지" />
+    <option name="다음으로" path="ActionManager" hit="다음으로 표시" />
+    <option name="표시" path="ActionManager" hit="다음으로 표시" />
+    <option name="init" path="ActionManager" hit="동일한 이름으로 모듈 생성 및 해당 모듈로 __init__.py 콘텐츠 이동" />
+    <option name="py" path="ActionManager" hit="동일한 이름으로 모듈 생성 및 해당 모듈로 __init__.py 콘텐츠 이동" />
+    <option name="동일한" path="ActionManager" hit="동일한 이름으로 모듈 생성 및 해당 모듈로 __init__.py 콘텐츠 이동" />
+    <option name="모듈" path="ActionManager" hit="동일한 이름으로 모듈 생성 및 해당 모듈로 __init__.py 콘텐츠 이동" />
+    <option name="모듈로" path="ActionManager" hit="동일한 이름으로 모듈 생성 및 해당 모듈로 __init__.py 콘텐츠 이동" />
+    <option name="및" path="ActionManager" hit="동일한 이름으로 모듈 생성 및 해당 모듈로 __init__.py 콘텐츠 이동" />
+    <option name="생성" path="ActionManager" hit="동일한 이름으로 모듈 생성 및 해당 모듈로 __init__.py 콘텐츠 이동" />
+    <option name="이동" path="ActionManager" hit="동일한 이름으로 모듈 생성 및 해당 모듈로 __init__.py 콘텐츠 이동" />
+    <option name="이름으로" path="ActionManager" hit="동일한 이름으로 모듈 생성 및 해당 모듈로 __init__.py 콘텐츠 이동" />
+    <option name="콘텐츠" path="ActionManager" hit="동일한 이름으로 모듈 생성 및 해당 모듈로 __init__.py 콘텐츠 이동" />
+    <option name="해당" path="ActionManager" hit="동일한 이름으로 모듈 생성 및 해당 모듈로 __init__.py 콘텐츠 이동" />
+    <option name="init" path="ActionManager" hit="동일한 이름으로 패키지 생성 및 __init__.py로 모듈 콘텐츠 이동" />
+    <option name="py로" path="ActionManager" hit="동일한 이름으로 패키지 생성 및 __init__.py로 모듈 콘텐츠 이동" />
+    <option name="동일한" path="ActionManager" hit="동일한 이름으로 패키지 생성 및 __init__.py로 모듈 콘텐츠 이동" />
+    <option name="모듈" path="ActionManager" hit="동일한 이름으로 패키지 생성 및 __init__.py로 모듈 콘텐츠 이동" />
+    <option name="및" path="ActionManager" hit="동일한 이름으로 패키지 생성 및 __init__.py로 모듈 콘텐츠 이동" />
+    <option name="생성" path="ActionManager" hit="동일한 이름으로 패키지 생성 및 __init__.py로 모듈 콘텐츠 이동" />
+    <option name="이동" path="ActionManager" hit="동일한 이름으로 패키지 생성 및 __init__.py로 모듈 콘텐츠 이동" />
+    <option name="이름으로" path="ActionManager" hit="동일한 이름으로 패키지 생성 및 __init__.py로 모듈 콘텐츠 이동" />
+    <option name="콘텐츠" path="ActionManager" hit="동일한 이름으로 패키지 생성 및 __init__.py로 모듈 콘텐츠 이동" />
+    <option name="패키지" path="ActionManager" hit="동일한 이름으로 패키지 생성 및 __init__.py로 모듈 콘텐츠 이동" />
+    <option name="python" path="ActionManager" hit="디버그 세션이 실행 중인 경우 Python 콘솔 또는 디버그 콘솔 빠른 실행 허용" />
+    <option name="경우" path="ActionManager" hit="디버그 세션이 실행 중인 경우 Python 콘솔 또는 디버그 콘솔 빠른 실행 허용" />
+    <option name="디버그" path="ActionManager" hit="디버그 세션이 실행 중인 경우 Python 콘솔 또는 디버그 콘솔 빠른 실행 허용" />
+    <option name="또는" path="ActionManager" hit="디버그 세션이 실행 중인 경우 Python 콘솔 또는 디버그 콘솔 빠른 실행 허용" />
+    <option name="빠른" path="ActionManager" hit="디버그 세션이 실행 중인 경우 Python 콘솔 또는 디버그 콘솔 빠른 실행 허용" />
+    <option name="세션이" path="ActionManager" hit="디버그 세션이 실행 중인 경우 Python 콘솔 또는 디버그 콘솔 빠른 실행 허용" />
+    <option name="실행" path="ActionManager" hit="디버그 세션이 실행 중인 경우 Python 콘솔 또는 디버그 콘솔 빠른 실행 허용" />
+    <option name="중인" path="ActionManager" hit="디버그 세션이 실행 중인 경우 Python 콘솔 또는 디버그 콘솔 빠른 실행 허용" />
+    <option name="콘솔" path="ActionManager" hit="디버그 세션이 실행 중인 경우 Python 콘솔 또는 디버그 콘솔 빠른 실행 허용" />
+    <option name="허용" path="ActionManager" hit="디버그 세션이 실행 중인 경우 Python 콘솔 또는 디버그 콘솔 빠른 실행 허용" />
+    <option name="단계별" path="ActionManager" hit="라이브러리, 생성자 등의 단계별 실행 필터를 무시하고 스텝인투합니다." />
+    <option name="등의" path="ActionManager" hit="라이브러리, 생성자 등의 단계별 실행 필터를 무시하고 스텝인투합니다." />
+    <option name="라이브러리" path="ActionManager" hit="라이브러리, 생성자 등의 단계별 실행 필터를 무시하고 스텝인투합니다." />
+    <option name="무시하고" path="ActionManager" hit="라이브러리, 생성자 등의 단계별 실행 필터를 무시하고 스텝인투합니다." />
+    <option name="생성자" path="ActionManager" hit="라이브러리, 생성자 등의 단계별 실행 필터를 무시하고 스텝인투합니다." />
+    <option name="스텝인투합니다" path="ActionManager" hit="라이브러리, 생성자 등의 단계별 실행 필터를 무시하고 스텝인투합니다." />
+    <option name="실행" path="ActionManager" hit="라이브러리, 생성자 등의 단계별 실행 필터를 무시하고 스텝인투합니다." />
+    <option name="필터를" path="ActionManager" hit="라이브러리, 생성자 등의 단계별 실행 필터를 무시하고 스텝인투합니다." />
+    <option name="다음" path="ActionManager" hit="라이브러리를 무시하고 실행된 다음 줄로 이동" />
+    <option name="라이브러리를" path="ActionManager" hit="라이브러리를 무시하고 실행된 다음 줄로 이동" />
+    <option name="무시하고" path="ActionManager" hit="라이브러리를 무시하고 실행된 다음 줄로 이동" />
+    <option name="실행된" path="ActionManager" hit="라이브러리를 무시하고 실행된 다음 줄로 이동" />
+    <option name="이동" path="ActionManager" hit="라이브러리를 무시하고 실행된 다음 줄로 이동" />
+    <option name="줄로" path="ActionManager" hit="라이브러리를 무시하고 실행된 다음 줄로 이동" />
+    <option name="배열로" path="ActionManager" hit="배열로 보기" />
+    <option name="보기" path="ActionManager" hit="배열로 보기" />
+    <option name="init" path="ActionManager" hit="새 디렉터리 및 내부에 __init__.py 생성" />
+    <option name="py" path="ActionManager" hit="새 디렉터리 및 내부에 __init__.py 생성" />
+    <option name="내부에" path="ActionManager" hit="새 디렉터리 및 내부에 __init__.py 생성" />
+    <option name="디렉터리" path="ActionManager" hit="새 디렉터리 및 내부에 __init__.py 생성" />
+    <option name="및" path="ActionManager" hit="새 디렉터리 및 내부에 __init__.py 생성" />
+    <option name="새" path="ActionManager" hit="새 디렉터리 및 내부에 __init__.py 생성" />
+    <option name="생성" path="ActionManager" hit="새 디렉터리 및 내부에 __init__.py 생성" />
+    <option name="디렉터리" path="ActionManager" hit="선택한 디렉터리 및 하위 디렉터리의 컴파일된 바이트코드 파일 삭제" />
+    <option name="디렉터리의" path="ActionManager" hit="선택한 디렉터리 및 하위 디렉터리의 컴파일된 바이트코드 파일 삭제" />
+    <option name="및" path="ActionManager" hit="선택한 디렉터리 및 하위 디렉터리의 컴파일된 바이트코드 파일 삭제" />
+    <option name="바이트코드" path="ActionManager" hit="선택한 디렉터리 및 하위 디렉터리의 컴파일된 바이트코드 파일 삭제" />
+    <option name="삭제" path="ActionManager" hit="선택한 디렉터리 및 하위 디렉터리의 컴파일된 바이트코드 파일 삭제" />
+    <option name="선택한" path="ActionManager" hit="선택한 디렉터리 및 하위 디렉터리의 컴파일된 바이트코드 파일 삭제" />
+    <option name="컴파일된" path="ActionManager" hit="선택한 디렉터리 및 하위 디렉터리의 컴파일된 바이트코드 파일 삭제" />
+    <option name="파일" path="ActionManager" hit="선택한 디렉터리 및 하위 디렉터리의 컴파일된 바이트코드 파일 삭제" />
+    <option name="하위" path="ActionManager" hit="선택한 디렉터리 및 하위 디렉터리의 컴파일된 바이트코드 파일 삭제" />
+    <option name="강제" path="ActionManager" hit="스텝인투 강제 실행" />
+    <option name="스텝인투" path="ActionManager" hit="스텝인투 강제 실행" />
+    <option name="실행" path="ActionManager" hit="스텝인투 강제 실행" />
+    <option name="python" path="ActionManager" hit="지정된 템플릿에서 Python 파일 생성" />
+    <option name="생성" path="ActionManager" hit="지정된 템플릿에서 Python 파일 생성" />
+    <option name="지정된" path="ActionManager" hit="지정된 템플릿에서 Python 파일 생성" />
+    <option name="템플릿에서" path="ActionManager" hit="지정된 템플릿에서 Python 파일 생성" />
+    <option name="파일" path="ActionManager" hit="지정된 템플릿에서 Python 파일 생성" />
+    <option name="이동" path="ActionManager" hit="캐럿이 있는 줄로 이동" />
+    <option name="있는" path="ActionManager" hit="캐럿이 있는 줄로 이동" />
+    <option name="줄로" path="ActionManager" hit="캐럿이 있는 줄로 이동" />
+    <option name="캐럿이" path="ActionManager" hit="캐럿이 있는 줄로 이동" />
+    <option name="이동" path="ActionManager" hit="커서로 이동" />
+    <option name="커서로" path="ActionManager" hit="커서로 이동" />
+    <option name="변경" path="ActionManager" hit="콘솔 이름 변경" />
+    <option name="이름" path="ActionManager" hit="콘솔 이름 변경" />
+    <option name="콘솔" path="ActionManager" hit="콘솔 이름 변경" />
+    <option name="패키징" path="ActionManager" hit="패키징" />
+    <option name="그룹" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴 실행 그룹" />
+    <option name="메뉴" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴 실행 그룹" />
+    <option name="뷰" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴 실행 그룹" />
+    <option name="실행" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴 실행 그룹" />
+    <option name="팝업" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴 실행 그룹" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴 실행 그룹" />
+    <option name="python" path="ActionManager" hit="프로젝트에 사용되는 패키지와 Python 요구 사항 파일 동기화" />
+    <option name="동기화" path="ActionManager" hit="프로젝트에 사용되는 패키지와 Python 요구 사항 파일 동기화" />
+    <option name="사용되는" path="ActionManager" hit="프로젝트에 사용되는 패키지와 Python 요구 사항 파일 동기화" />
+    <option name="사항" path="ActionManager" hit="프로젝트에 사용되는 패키지와 Python 요구 사항 파일 동기화" />
+    <option name="요구" path="ActionManager" hit="프로젝트에 사용되는 패키지와 Python 요구 사항 파일 동기화" />
+    <option name="파일" path="ActionManager" hit="프로젝트에 사용되는 패키지와 Python 요구 사항 파일 동기화" />
+    <option name="패키지와" path="ActionManager" hit="프로젝트에 사용되는 패키지와 Python 요구 사항 파일 동기화" />
+    <option name="프로젝트에" path="ActionManager" hit="프로젝트에 사용되는 패키지와 Python 요구 사항 파일 동기화" />
+  </configurable>
+  <configurable id="editor.breadcrumbs" configurable_name="이동 경로">
+    <option name="python" hit="Python" />
+  </configurable>
+  <configurable id="editor.preferences.pyOptions" configurable_name="Python">
+    <option name="python" hit="Python" />
+    <option name="enter" hit="구문 내에서 Enter 누를 시 백슬래시 삽입" />
+    <option name="구문" hit="구문 내에서 Enter 누를 시 백슬래시 삽입" />
+    <option name="내에서" hit="구문 내에서 Enter 누를 시 백슬래시 삽입" />
+    <option name="누를" hit="구문 내에서 Enter 누를 시 백슬래시 삽입" />
+    <option name="백슬래시" hit="구문 내에서 Enter 누를 시 백슬래시 삽입" />
+    <option name="삽입" hit="구문 내에서 Enter 누를 시 백슬래시 삽입" />
+    <option name="시" hit="구문 내에서 Enter 누를 시 백슬래시 삽입" />
+    <option name="self" hit="메서드 정의 시  self  삽입" />
+    <option name="메서드" hit="메서드 정의 시  self  삽입" />
+    <option name="삽입" hit="메서드 정의 시  self  삽입" />
+    <option name="시" hit="메서드 정의 시  self  삽입" />
+    <option name="정의" hit="메서드 정의 시  self  삽입" />
+    <option name="문서" hit="문서 주석 스텁에 타입 자리표시자 삽입" />
+    <option name="삽입" hit="문서 주석 스텁에 타입 자리표시자 삽입" />
+    <option name="스텁에" hit="문서 주석 스텁에 타입 자리표시자 삽입" />
+    <option name="자리표시자" hit="문서 주석 스텁에 타입 자리표시자 삽입" />
+    <option name="주석" hit="문서 주석 스텁에 타입 자리표시자 삽입" />
+    <option name="타입" hit="문서 주석 스텁에 타입 자리표시자 삽입" />
+    <option name="들여쓰기로" hit="스마트 들여쓰기로 줄 붙여넣기" />
+    <option name="붙여넣기" hit="스마트 들여쓰기로 줄 붙여넣기" />
+    <option name="스마트" hit="스마트 들여쓰기로 줄 붙여넣기" />
+    <option name="줄" hit="스마트 들여쓰기로 줄 붙여넣기" />
+  </configurable>
+  <configurable id="editor.preferences.folding" configurable_name="코드 접기">
+    <option name="python" hit="Python" />
+    <option name="긴" hit="긴 문자열 리터럴" />
+    <option name="리터럴" hit="긴 문자열 리터럴" />
+    <option name="문자열" hit="긴 문자열 리터럴" />
+    <option name="긴" hit="긴 컬렉션 리터럴" />
+    <option name="리터럴" hit="긴 컬렉션 리터럴" />
+    <option name="컬렉션" hit="긴 컬렉션 리터럴" />
+    <option name="연속" hit="연속 주석" />
+    <option name="주석" hit="연속 주석" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.Python" configurable_name="Python">
+    <option name="python" hit="Python" />
+    <option name="docstring" hit="Docstring//태그" />
+    <option name="태그" hit="Docstring//태그" />
+    <option name="docstring" hit="Docstring//텍스트" />
+    <option name="텍스트" hit="Docstring//텍스트" />
+    <option name="괄호" hit="괄호 및 연산자//대괄호" />
+    <option name="대괄호" hit="괄호 및 연산자//대괄호" />
+    <option name="및" hit="괄호 및 연산자//대괄호" />
+    <option name="연산자" hit="괄호 및 연산자//대괄호" />
+    <option name="괄호" hit="괄호 및 연산자//마침표" />
+    <option name="마침표" hit="괄호 및 연산자//마침표" />
+    <option name="및" hit="괄호 및 연산자//마침표" />
+    <option name="연산자" hit="괄호 및 연산자//마침표" />
+    <option name="괄호" hit="괄호 및 연산자//소괄호" />
+    <option name="및" hit="괄호 및 연산자//소괄호" />
+    <option name="소괄호" hit="괄호 및 연산자//소괄호" />
+    <option name="연산자" hit="괄호 및 연산자//소괄호" />
+    <option name="괄호" hit="괄호 및 연산자//쉼표" />
+    <option name="및" hit="괄호 및 연산자//쉼표" />
+    <option name="쉼표" hit="괄호 및 연산자//쉼표" />
+    <option name="연산자" hit="괄호 및 연산자//쉼표" />
+    <option name="괄호" hit="괄호 및 연산자//연산자 기호" />
+    <option name="기호" hit="괄호 및 연산자//연산자 기호" />
+    <option name="및" hit="괄호 및 연산자//연산자 기호" />
+    <option name="연산자" hit="괄호 및 연산자//연산자 기호" />
+    <option name="괄호" hit="괄호 및 연산자//중괄호" />
+    <option name="및" hit="괄호 및 연산자//중괄호" />
+    <option name="연산자" hit="괄호 및 연산자//중괄호" />
+    <option name="중괄호" hit="괄호 및 연산자//중괄호" />
+    <option name="강조" hit="구문 강조 표시" />
+    <option name="구문" hit="구문 강조 표시" />
+    <option name="표시" hit="구문 강조 표시" />
+    <option name="기본" hit="기본 제공 이름" />
+    <option name="이름" hit="기본 제공 이름" />
+    <option name="제공" hit="기본 제공 이름" />
+    <option name="데코레이터" hit="데코레이터" />
+    <option name="self" hit="매개변수//'self' 매개변수" />
+    <option name="매개변수" hit="매개변수//'self' 매개변수" />
+    <option name="매개변수" hit="매개변수//매개변수" />
+    <option name="f" hit="문자열//f-string//타입 변환" />
+    <option name="string" hit="문자열//f-string//타입 변환" />
+    <option name="문자열" hit="문자열//f-string//타입 변환" />
+    <option name="변환" hit="문자열//f-string//타입 변환" />
+    <option name="타입" hit="문자열//f-string//타입 변환" />
+    <option name="f" hit="문자열//f-string//형식 지정자 시작" />
+    <option name="string" hit="문자열//f-string//형식 지정자 시작" />
+    <option name="문자열" hit="문자열//f-string//형식 지정자 시작" />
+    <option name="시작" hit="문자열//f-string//형식 지정자 시작" />
+    <option name="지정자" hit="문자열//f-string//형식 지정자 시작" />
+    <option name="형식" hit="문자열//f-string//형식 지정자 시작" />
+    <option name="f" hit="문자열//f-문자열//표현식 중괄호" />
+    <option name="문자열" hit="문자열//f-문자열//표현식 중괄호" />
+    <option name="중괄호" hit="문자열//f-문자열//표현식 중괄호" />
+    <option name="표현식" hit="문자열//f-문자열//표현식 중괄호" />
+    <option name="문자열" hit="문자열//바이너리(바이트)" />
+    <option name="바이너리" hit="문자열//바이너리(바이트)" />
+    <option name="바이트" hit="문자열//바이너리(바이트)" />
+    <option name="문자열" hit="문자열//이스케이프 시퀀스//유효하지 않음" />
+    <option name="시퀀스" hit="문자열//이스케이프 시퀀스//유효하지 않음" />
+    <option name="않음" hit="문자열//이스케이프 시퀀스//유효하지 않음" />
+    <option name="유효하지" hit="문자열//이스케이프 시퀀스//유효하지 않음" />
+    <option name="이스케이프" hit="문자열//이스케이프 시퀀스//유효하지 않음" />
+    <option name="문자열" hit="문자열//이스케이프 시퀀스//유효함" />
+    <option name="시퀀스" hit="문자열//이스케이프 시퀀스//유효함" />
+    <option name="유효함" hit="문자열//이스케이프 시퀀스//유효함" />
+    <option name="이스케이프" hit="문자열//이스케이프 시퀀스//유효함" />
+    <option name="문자열" hit="문자열//텍스트(유니코드)" />
+    <option name="유니코드" hit="문자열//텍스트(유니코드)" />
+    <option name="텍스트" hit="문자열//텍스트(유니코드)" />
+    <option name="숫자" hit="숫자" />
+    <option name="주석" hit="줄 주석" />
+    <option name="줄" hit="줄 주석" />
+    <option name="정의" hit="클래스 정의" />
+    <option name="클래스" hit="클래스 정의" />
+    <option name="키워드" hit="키워드" />
+    <option name="인수" hit="키워드 인수" />
+    <option name="키워드" hit="키워드 인수" />
+    <option name="어노테이션" hit="타입 어노테이션" />
+    <option name="타입" hit="타입 어노테이션" />
+    <option name="사용" hit="특수 이름//사용 위치" />
+    <option name="위치" hit="특수 이름//사용 위치" />
+    <option name="이름" hit="특수 이름//사용 위치" />
+    <option name="특수" hit="특수 이름//사용 위치" />
+    <option name="이름" hit="특수 이름//정의" />
+    <option name="정의" hit="특수 이름//정의" />
+    <option name="특수" hit="특수 이름//정의" />
+    <option name="메서드" hit="함수//메서드 호출" />
+    <option name="함수" hit="함수//메서드 호출" />
+    <option name="호출" hit="함수//메서드 호출" />
+    <option name="정의" hit="함수//중첩된 함수 정의" />
+    <option name="중첩된" hit="함수//중첩된 함수 정의" />
+    <option name="함수" hit="함수//중첩된 함수 정의" />
+    <option name="정의" hit="함수//함수 정의" />
+    <option name="함수" hit="함수//함수 정의" />
+    <option name="함수" hit="함수//함수 호출" />
+    <option name="호출" hit="함수//함수 호출" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.빌드아웃 구성" configurable_name="빌드아웃 구성">
+    <option name="구성" hit="빌드아웃 구성" />
+    <option name="빌드아웃" hit="빌드아웃 구성" />
+    <option name="값" hit="값" />
+    <option name="섹션" hit="섹션 이름" />
+    <option name="이름" hit="섹션 이름" />
+    <option name="식별자" hit="식별자" />
+    <option name="주석" hit="주석" />
+    <option name="값" hit="키/값 구분 기호" />
+    <option name="구분" hit="키/값 구분 기호" />
+    <option name="기호" hit="키/값 구분 기호" />
+    <option name="키" hit="키/값 구분 기호" />
+  </configurable>
+  <configurable id="debugger.stepping" configurable_name="단계별 실행">
+    <option name="python" hit="Python" />
+    <option name="라이브러리" hit="라이브러리 스크립트로 스텝인투 안 함" />
+    <option name="스크립트로" hit="라이브러리 스크립트로 스텝인투 안 함" />
+    <option name="스텝인투" hit="라이브러리 스크립트로 스텝인투 안 함" />
+    <option name="안" hit="라이브러리 스크립트로 스텝인투 안 함" />
+    <option name="함" hit="라이브러리 스크립트로 스텝인투 안 함" />
+    <option name="스크립트로" hit="스크립트로 스텝인투 안 함 " />
+    <option name="스텝인투" hit="스크립트로 스텝인투 안 함 " />
+    <option name="안" hit="스크립트로 스텝인투 안 함 " />
+    <option name="함" hit="스크립트로 스텝인투 안 함 " />
+    <option name="스마트" hit="항상 스마트 스텝인투" />
+    <option name="스텝인투" hit="항상 스마트 스텝인투" />
+    <option name="항상" hit="항상 스마트 스텝인투" />
+  </configurable>
+  <configurable id="com.jetbrains.python.documentation.PythonDocumentationConfigurable" configurable_name="Python 외부 문서">
+    <option name="python" hit="Python 외부 문서" />
+    <option name="문서" hit="Python 외부 문서" />
+    <option name="외부" hit="Python 외부 문서" />
+  </configurable>
+  <configurable id="preferences.sourceCode.Python" configurable_name="Python">
+    <option name="" path="Import" hit=" from  import의 가져온 이름 정렬" />
+    <option name="from" path="Import" hit=" from  import의 가져온 이름 정렬" />
+    <option name="import의" path="Import" hit=" from  import의 가져온 이름 정렬" />
+    <option name="가져온" path="Import" hit=" from  import의 가져온 이름 정렬" />
+    <option name="이름" path="Import" hit=" from  import의 가져온 이름 정렬" />
+    <option name="정렬" path="Import" hit=" from  import의 가져온 이름 정렬" />
+    <option name="" path="Import" hit=" from  import의 구조" />
+    <option name="from" path="Import" hit=" from  import의 구조" />
+    <option name="import의" path="Import" hit=" from  import의 구조" />
+    <option name="구조" path="Import" hit=" from  import의 구조" />
+    <option name="import" path="Import" hit="Import" />
+    <option name="python" hit="Python" />
+    <option name="import" path="Import" hit="import 문 정렬" />
+    <option name="문" path="Import" hit="import 문 정렬" />
+    <option name="정렬" path="Import" hit="import 문 정렬" />
+    <option name="import" path="Import" hit="import 문 최적화" />
+    <option name="문" path="Import" hit="import 문 최적화" />
+    <option name="최적화" path="Import" hit="import 문 최적화" />
+    <option name="값에" path="기타" hit="값에 정렬" />
+    <option name="정렬" path="기타" hit="값에 정렬" />
+    <option name="공백" path="공백" hit="공백" />
+    <option name="구성표" hit="구성표 " />
+    <option name="그대로" path="Import" hit="그대로 유지" />
+    <option name="유지" path="Import" hit="그대로 유지" />
+    <option name="from" path="Import" hit="그룹 내에서 일반 및  from  import를 별도로 정렬" />
+    <option name="import를" path="Import" hit="그룹 내에서 일반 및  from  import를 별도로 정렬" />
+    <option name="그룹" path="Import" hit="그룹 내에서 일반 및  from  import를 별도로 정렬" />
+    <option name="내에서" path="Import" hit="그룹 내에서 일반 및  from  import를 별도로 정렬" />
+    <option name="및" path="Import" hit="그룹 내에서 일반 및  from  import를 별도로 정렬" />
+    <option name="별도로" path="Import" hit="그룹 내에서 일반 및  from  import를 별도로 정렬" />
+    <option name="일반" path="Import" hit="그룹 내에서 일반 및  from  import를 별도로 정렬" />
+    <option name="정렬" path="Import" hit="그룹 내에서 일반 및  from  import를 별도로 정렬" />
+    <option name="기타" path="기타" hit="기타" />
+    <option name="다음에" path="기타" hit="다음에 연속 들여쓰기 사용" />
+    <option name="들여쓰기" path="기타" hit="다음에 연속 들여쓰기 사용" />
+    <option name="사용" path="기타" hit="다음에 연속 들여쓰기 사용" />
+    <option name="연속" path="기타" hit="다음에 연속 들여쓰기 사용" />
+    <option name="다음에서" hit="다음에서 설정   " />
+    <option name="설정" hit="다음에서 설정   " />
+    <option name="구분" path="Import" hit="대 소문자 구분 없이 정렬" />
+    <option name="대" path="Import" hit="대 소문자 구분 없이 정렬" />
+    <option name="소문자" path="Import" hit="대 소문자 구분 없이 정렬" />
+    <option name="없이" path="Import" hit="대 소문자 구분 없이 정렬" />
+    <option name="정렬" path="Import" hit="대 소문자 구분 없이 정렬" />
+    <option name="가져오기" path="Import" hit="동일한 소스로 가져오기 병합" />
+    <option name="동일한" path="Import" hit="동일한 소스로 가져오기 병합" />
+    <option name="병합" path="Import" hit="동일한 소스로 가져오기 병합" />
+    <option name="소스로" path="Import" hit="동일한 소스로 가져오기 병합" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="들여쓰기 " />
+    <option name="딕셔너리" path="기타" hit="딕셔너리 정렬 " />
+    <option name="정렬" path="기타" hit="딕셔너리 정렬 " />
+    <option name="로드" hit="로드 중   " />
+    <option name="중" hit="로드 중   " />
+    <option name="가져오기" path="빈 줄" hit="로컬 가져오기 후 " />
+    <option name="로컬" path="빈 줄" hit="로컬 가져오기 후 " />
+    <option name="후" path="빈 줄" hit="로컬 가져오기 후 " />
+    <option name="매개변수" path="기타" hit="메서드 선언 매개변수" />
+    <option name="메서드" path="기타" hit="메서드 선언 매개변수" />
+    <option name="선언" path="기타" hit="메서드 선언 매개변수" />
+    <option name="메서드" path="빈 줄" hit="메서드 주위 " />
+    <option name="주위" path="빈 줄" hit="메서드 주위 " />
+    <option name="메서드" path="기타" hit="메서드 호출 인수" />
+    <option name="인수" path="기타" hit="메서드 호출 인수" />
+    <option name="호출" path="기타" hit="메서드 호출 인수" />
+    <option name="비활성화" hit="비활성화" />
+    <option name="빈" path="빈 줄" hit="빈 줄" />
+    <option name="줄" path="빈 줄" hit="빈 줄" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="빈" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="유지" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="줄에" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="내" path="빈 줄" hit="선언 내 " />
+    <option name="선언" path="빈 줄" hit="선언 내 " />
+    <option name="스마트" path="탭 및 들여쓰기" hit="스마트 탭" />
+    <option name="탭" path="탭 및 들여쓰기" hit="스마트 탭" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="연속 들여쓰기 " />
+    <option name="연속" path="탭 및 들여쓰기" hit="연속 들여쓰기 " />
+    <option name="안" path="기타" hit="정렬 안 함" />
+    <option name="정렬" path="기타" hit="정렬 안 함" />
+    <option name="함" path="기타" hit="정렬 안 함" />
+    <option name="괄호" path="줄 바꿈 및 괄호" hit="줄 바꿈 및 괄호" />
+    <option name="및" path="줄 바꿈 및 괄호" hit="줄 바꿈 및 괄호" />
+    <option name="바꿈" path="줄 바꿈 및 괄호" hit="줄 바꿈 및 괄호" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="줄 바꿈 및 괄호" />
+    <option name="메서드" path="빈 줄" hit="첫 번째 메서드 이전 " />
+    <option name="번째" path="빈 줄" hit="첫 번째 메서드 이전 " />
+    <option name="이전" path="빈 줄" hit="첫 번째 메서드 이전 " />
+    <option name="첫" path="빈 줄" hit="첫 번째 메서드 이전 " />
+    <option name="빈" path="빈 줄" hit="최대 빈 줄 유지" />
+    <option name="유지" path="빈 줄" hit="최대 빈 줄 유지" />
+    <option name="줄" path="빈 줄" hit="최대 빈 줄 유지" />
+    <option name="최대" path="빈 줄" hit="최대 빈 줄 유지" />
+    <option name="import" path="빈 줄" hit="최상위 import 뒤 " />
+    <option name="뒤" path="빈 줄" hit="최상위 import 뒤 " />
+    <option name="최상위" path="빈 줄" hit="최상위 import 뒤 " />
+    <option name="및" path="빈 줄" hit="최상위 클래스 및 함수 주변 " />
+    <option name="주변" path="빈 줄" hit="최상위 클래스 및 함수 주변 " />
+    <option name="최상위" path="빈 줄" hit="최상위 클래스 및 함수 주변 " />
+    <option name="클래스" path="빈 줄" hit="최상위 클래스 및 함수 주변 " />
+    <option name="함수" path="빈 줄" hit="최상위 클래스 및 함수 주변 " />
+    <option name="빈" path="빈 줄" hit="최소 빈 줄" />
+    <option name="줄" path="빈 줄" hit="최소 빈 줄" />
+    <option name="최소" path="빈 줄" hit="최소 빈 줄" />
+    <option name="내포" path="기타" hit="컬렉션 및 내포" />
+    <option name="및" path="기타" hit="컬렉션 및 내포" />
+    <option name="컬렉션" path="기타" hit="컬렉션 및 내포" />
+    <option name="내" path="빈 줄" hit="코드 내 " />
+    <option name="코드" path="빈 줄" hit="코드 내 " />
+    <option name="정렬" path="기타" hit="콜론에 정렬" />
+    <option name="콜론에" path="기타" hit="콜론에 정렬" />
+    <option name="주위" path="빈 줄" hit="클래스 주위 " />
+    <option name="클래스" path="빈 줄" hit="클래스 주위 " />
+    <option name="문자" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="사용" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="및" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="크기" path="탭 및 들여쓰기" hit="탭 크기 " />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 크기 " />
+    <option name="끝에" path="기타" hit="파일 끝에 줄 피드 추가" />
+    <option name="줄" path="기타" hit="파일 끝에 줄 피드 추가" />
+    <option name="추가" path="기타" hit="파일 끝에 줄 피드 추가" />
+    <option name="파일" path="기타" hit="파일 끝에 줄 피드 추가" />
+    <option name="피드" path="기타" hit="파일 끝에 줄 피드 추가" />
+    <option name="가져오기" path="Import" hit="항상 가져오기 분할" />
+    <option name="분할" path="Import" hit="항상 가져오기 분할" />
+    <option name="항상" path="Import" hit="항상 가져오기 분할" />
+    <option name="" path="줄 바꿈 및 괄호" hit="&quot;From&quot; Import 문" />
+    <option name="from" path="줄 바꿈 및 괄호" hit="&quot;From&quot; Import 문" />
+    <option name="import" path="줄 바꿈 및 괄호" hit="&quot;From&quot; Import 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="&quot;From&quot; Import 문" />
+    <option name="" path="공백" hit="'#' 뒤" />
+    <option name="뒤" path="공백" hit="'#' 뒤" />
+    <option name="" path="공백" hit="'#' 앞" />
+    <option name="앞" path="공백" hit="'#' 앞" />
+    <option name="" path="공백" hit="'' 앞" />
+    <option name="앞" path="공백" hit="'' 앞" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
+    <option name="뒤에" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
+    <option name="" path="공백" hit="':' 앞" />
+    <option name="앞" path="공백" hit="':' 앞" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'case' 브랜치 들여쓰기" />
+    <option name="case" path="줄 바꿈 및 괄호" hit="'case' 브랜치 들여쓰기" />
+    <option name="들여쓰기" path="줄 바꿈 및 괄호" hit="'case' 브랜치 들여쓰기" />
+    <option name="브랜치" path="줄 바꿈 및 괄호" hit="'case' 브랜치 들여쓰기" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'case'의 'break' 들여쓰기" />
+    <option name="break" path="줄 바꿈 및 괄호" hit="'case'의 'break' 들여쓰기" />
+    <option name="case" path="줄 바꿈 및 괄호" hit="'case'의 'break' 들여쓰기" />
+    <option name="들여쓰기" path="줄 바꿈 및 괄호" hit="'case'의 'break' 들여쓰기" />
+    <option name="의" path="줄 바꿈 및 괄호" hit="'case'의 'break' 들여쓰기" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'do... while()' 문" />
+    <option name="do" path="줄 바꿈 및 괄호" hit="'do... while()' 문" />
+    <option name="while" path="줄 바꿈 및 괄호" hit="'do... while()' 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="'do... while()' 문" />
+    <option name="" path="공백" hit="'for' 세미콜론 앞에" />
+    <option name="for" path="공백" hit="'for' 세미콜론 앞에" />
+    <option name="세미콜론" path="공백" hit="'for' 세미콜론 앞에" />
+    <option name="앞에" path="공백" hit="'for' 세미콜론 앞에" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'for()' 문" />
+    <option name="for" path="줄 바꿈 및 괄호" hit="'for()' 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="'for()' 문" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'if()' 문" />
+    <option name="if" path="줄 바꿈 및 괄호" hit="'if()' 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="'if()' 문" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'switch' 문" />
+    <option name="switch" path="줄 바꿈 및 괄호" hit="'switch' 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="'switch' 문" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'try' 문" />
+    <option name="try" path="줄 바꿈 및 괄호" hit="'try' 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="'try' 문" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'try-with-resources'" />
+    <option name="resources" path="줄 바꿈 및 괄호" hit="'try-with-resources'" />
+    <option name="try" path="줄 바꿈 및 괄호" hit="'try-with-resources'" />
+    <option name="with" path="줄 바꿈 및 괄호" hit="'try-with-resources'" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'while()' 문" />
+    <option name="while" path="줄 바꿈 및 괄호" hit="'while()' 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="'while()' 문" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'{' 뒤에 새 줄" />
+    <option name="뒤에" path="줄 바꿈 및 괄호" hit="'{' 뒤에 새 줄" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="'{' 뒤에 새 줄" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="'{' 뒤에 새 줄" />
+    <option name="power" path="공백" hit="Power 연산자(**)" />
+    <option name="연산자" path="공백" hit="Power 연산자(**)" />
+    <option name="assert" path="줄 바꿈 및 괄호" hit="assert 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="assert 문" />
+    <option name="곱셈" path="공백" hit="곱셈 연산자(*, @, /, %)" />
+    <option name="연산자" path="공백" hit="곱셈 연산자(*, @, /, %)" />
+    <option name="관계형" path="공백" hit="관계형 연산자 (&lt;, &gt;, &lt;=, &gt;=)" />
+    <option name="연산자" path="공백" hit="관계형 연산자 (&lt;, &gt;, &lt;=, &gt;=)" />
+    <option name="그룹" path="줄 바꿈 및 괄호" hit="그룹 선언" />
+    <option name="선언" path="줄 바꿈 및 괄호" hit="그룹 선언" />
+    <option name="기타" path="줄 바꿈 및 괄호" hit="기타" />
+    <option name="기호" path="줄 바꿈 및 괄호" hit="다음 줄의 ':' 기호" />
+    <option name="다음" path="줄 바꿈 및 괄호" hit="다음 줄의 ':' 기호" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="다음 줄의 ':' 기호" />
+    <option name="기호" path="줄 바꿈 및 괄호" hit="다음 줄의 '?' 및 ':' 기호" />
+    <option name="다음" path="줄 바꿈 및 괄호" hit="다음 줄의 '?' 및 ':' 기호" />
+    <option name="및" path="줄 바꿈 및 괄호" hit="다음 줄의 '?' 및 ':' 기호" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="다음 줄의 '?' 및 ':' 기호" />
+    <option name="기호" path="줄 바꿈 및 괄호" hit="다음 줄의 작업 기호" />
+    <option name="다음" path="줄 바꿈 및 괄호" hit="다음 줄의 작업 기호" />
+    <option name="작업" path="줄 바꿈 및 괄호" hit="다음 줄의 작업 기호" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="다음 줄의 작업 기호" />
+    <option name="기호" path="줄 바꿈 및 괄호" hit="다음 줄의 할당 기호" />
+    <option name="다음" path="줄 바꿈 및 괄호" hit="다음 줄의 할당 기호" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="다음 줄의 할당 기호" />
+    <option name="할당" path="줄 바꿈 및 괄호" hit="다음 줄의 할당 기호" />
+    <option name="다음에서" path="줄 바꿈 및 괄호" hit="다음에서 하드 랩:" />
+    <option name="랩" path="줄 바꿈 및 괄호" hit="다음에서 하드 랩:" />
+    <option name="하드" path="줄 바꿈 및 괄호" hit="다음에서 하드 랩:" />
+    <option name="다중" path="줄 바꿈 및 괄호" hit="다중 절 명령문" />
+    <option name="명령문" path="줄 바꿈 및 괄호" hit="다중 절 명령문" />
+    <option name="절" path="줄 바꿈 및 괄호" hit="다중 절 명령문" />
+    <option name="단일" path="줄 바꿈 및 괄호" hit="단일 절 명령문" />
+    <option name="명령문" path="줄 바꿈 및 괄호" hit="단일 절 명령문" />
+    <option name="절" path="줄 바꿈 및 괄호" hit="단일 절 명령문" />
+    <option name="닫는" path="줄 바꿈 및 괄호" hit="닫는 대괄호 들여쓰기" />
+    <option name="대괄호" path="줄 바꿈 및 괄호" hit="닫는 대괄호 들여쓰기" />
+    <option name="들여쓰기" path="줄 바꿈 및 괄호" hit="닫는 대괄호 들여쓰기" />
+    <option name="대괄호" path="공백" hit="대괄호" />
+    <option name="구문" path="줄 바꿈 및 괄호" hit="대입 구문" />
+    <option name="대입" path="줄 바꿈 및 괄호" hit="대입 구문" />
+    <option name="던지기" path="줄 바꿈 및 괄호" hit="던지기 목록" />
+    <option name="목록" path="줄 바꿈 및 괄호" hit="던지기 목록" />
+    <option name="던지기" path="줄 바꿈 및 괄호" hit="던지기 키워드" />
+    <option name="키워드" path="줄 바꿈 및 괄호" hit="던지기 키워드" />
+    <option name="덧셈" path="공백" hit="덧셈 연산자(+, -)" />
+    <option name="연산자" path="공백" hit="덧셈 연산자(+, -)" />
+    <option name="람다" path="줄 바꿈 및 괄호" hit="람다 선언에서" />
+    <option name="선언에서" path="줄 바꿈 및 괄호" hit="람다 선언에서" />
+    <option name="매개변수" path="줄 바꿈 및 괄호" hit="매개변수 어노테이션" />
+    <option name="어노테이션" path="줄 바꿈 및 괄호" hit="매개변수 어노테이션" />
+    <option name="매개변수" path="줄 바꿈 및 괄호" hit="메서드 선언 매개변수" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="메서드 선언 매개변수" />
+    <option name="선언" path="줄 바꿈 및 괄호" hit="메서드 선언 매개변수" />
+    <option name="메서드" path="공백" hit="메서드 선언 소괄호" />
+    <option name="선언" path="공백" hit="메서드 선언 소괄호" />
+    <option name="소괄호" path="공백" hit="메서드 선언 소괄호" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="메서드 선언에서" />
+    <option name="선언에서" path="줄 바꿈 및 괄호" hit="메서드 선언에서" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="메서드 소괄호" />
+    <option name="소괄호" path="줄 바꿈 및 괄호" hit="메서드 소괄호" />
+    <option name="throws" path="줄 바꿈 및 괄호" hit="메서드 시작에 'throws' 정렬" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="메서드 시작에 'throws' 정렬" />
+    <option name="시작에" path="줄 바꿈 및 괄호" hit="메서드 시작에 'throws' 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="메서드 시작에 'throws' 정렬" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="메서드 어노테이션" />
+    <option name="어노테이션" path="줄 바꿈 및 괄호" hit="메서드 어노테이션" />
+    <option name="메서드" path="공백" hit="메서드 호출 소괄호" />
+    <option name="소괄호" path="공백" hit="메서드 호출 소괄호" />
+    <option name="호출" path="공백" hit="메서드 호출 소괄호" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="메서드 호출 인수" />
+    <option name="인수" path="줄 바꿈 및 괄호" hit="메서드 호출 인수" />
+    <option name="호출" path="줄 바꿈 및 괄호" hit="메서드 호출 인수" />
+    <option name="배열" path="줄 바꿈 및 괄호" hit="배열 이니셜라이저" />
+    <option name="이니셜라이저" path="줄 바꿈 및 괄호" hit="배열 이니셜라이저" />
+    <option name="범위" path="공백" hit="범위" />
+    <option name="case" path="줄 바꿈 및 괄호" hit="별도의 줄에 'case' 각각" />
+    <option name="각각" path="줄 바꿈 및 괄호" hit="별도의 줄에 'case' 각각" />
+    <option name="별도의" path="줄 바꿈 및 괄호" hit="별도의 줄에 'case' 각각" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="별도의 줄에 'case' 각각" />
+    <option name="비트" path="공백" hit="비트 연산자(&amp;, |, ^)" />
+    <option name="연산자" path="공백" hit="비트 연산자(&amp;, |, ^)" />
+    <option name="메서드" path="공백" hit="빈 메서드 선언 소괄호" />
+    <option name="빈" path="공백" hit="빈 메서드 선언 소괄호" />
+    <option name="선언" path="공백" hit="빈 메서드 선언 소괄호" />
+    <option name="소괄호" path="공백" hit="빈 메서드 선언 소괄호" />
+    <option name="메서드" path="공백" hit="빈 메서드 호출 소괄호" />
+    <option name="빈" path="공백" hit="빈 메서드 호출 소괄호" />
+    <option name="소괄호" path="공백" hit="빈 메서드 호출 소괄호" />
+    <option name="호출" path="공백" hit="빈 메서드 호출 소괄호" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="빌더 메서드" />
+    <option name="빌더" path="줄 바꿈 및 괄호" hit="빌더 메서드" />
+    <option name="들여쓰기" path="줄 바꿈 및 괄호" hit="빌더 메서드 들여쓰기 유지" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="빌더 메서드 들여쓰기 유지" />
+    <option name="빌더" path="줄 바꿈 및 괄호" hit="빌더 메서드 들여쓰기 유지" />
+    <option name="유지" path="줄 바꿈 및 괄호" hit="빌더 메서드 들여쓰기 유지" />
+    <option name="리터럴" path="줄 바꿈 및 괄호" hit="사전 리터럴" />
+    <option name="사전" path="줄 바꿈 및 괄호" hit="사전 리터럴" />
+    <option name="삼항" path="줄 바꿈 및 괄호" hit="삼항 연산" />
+    <option name="연산" path="줄 바꿈 및 괄호" hit="삼항 연산" />
+    <option name="상등" path="공백" hit="상등 연산자(==, !=)" />
+    <option name="연산자" path="공백" hit="상등 연산자(==, !=)" />
+    <option name="배치" path="줄 바꿈 및 괄호" hit="새 줄에 ')' 배치" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="새 줄에 ')' 배치" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="새 줄에 ')' 배치" />
+    <option name="catch" path="줄 바꿈 및 괄호" hit="새 줄에 'catch'" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="새 줄에 'catch'" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="새 줄에 'catch'" />
+    <option name="else" path="줄 바꿈 및 괄호" hit="새 줄에 'else'" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="새 줄에 'else'" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="새 줄에 'else'" />
+    <option name="finally" path="줄 바꿈 및 괄호" hit="새 줄에 'finally" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="새 줄에 'finally" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="새 줄에 'finally" />
+    <option name="while" path="줄 바꿈 및 괄호" hit="새 줄에 'while'" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="새 줄에 'while'" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="새 줄에 'while'" />
+    <option name="배치" path="줄 바꿈 및 괄호" hit="새 줄에 '}' 배치" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="새 줄에 '}' 배치" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="새 줄에 '}' 배치" />
+    <option name="다시" path="줄 바꿈 및 괄호" hit="서식 다시 지정 시 유지" />
+    <option name="서식" path="줄 바꿈 및 괄호" hit="서식 다시 지정 시 유지" />
+    <option name="시" path="줄 바꿈 및 괄호" hit="서식 다시 지정 시 유지" />
+    <option name="유지" path="줄 바꿈 및 괄호" hit="서식 다시 지정 시 유지" />
+    <option name="지정" path="줄 바꿈 및 괄호" hit="서식 다시 지정 시 유지" />
+    <option name="소괄호" path="공백" hit="소괄호 앞" />
+    <option name="앞" path="공백" hit="소괄호 앞" />
+    <option name="뒤에" path="공백" hit="쉼표 뒤에" />
+    <option name="쉼표" path="공백" hit="쉼표 뒤에" />
+    <option name="쉼표" path="공백" hit="쉼표 앞" />
+    <option name="앞" path="공백" hit="쉼표 앞" />
+    <option name="가이드" path="줄 바꿈 및 괄호" hit="시각적 가이드" />
+    <option name="시각적" path="줄 바꿈 및 괄호" hit="시각적 가이드" />
+    <option name="시프트" path="공백" hit="시프트 연산자(&lt;&lt;, &gt;&gt;, &gt;&gt;&gt;)" />
+    <option name="연산자" path="공백" hit="시프트 연산자(&lt;&lt;, &gt;&gt;, &gt;&gt;&gt;)" />
+    <option name="강제" path="줄 바꿈 및 괄호" hit="여러 줄인 경우 강제 소괄호 넣기" />
+    <option name="경우" path="줄 바꿈 및 괄호" hit="여러 줄인 경우 강제 소괄호 넣기" />
+    <option name="넣기" path="줄 바꿈 및 괄호" hit="여러 줄인 경우 강제 소괄호 넣기" />
+    <option name="소괄호" path="줄 바꿈 및 괄호" hit="여러 줄인 경우 강제 소괄호 넣기" />
+    <option name="여러" path="줄 바꿈 및 괄호" hit="여러 줄인 경우 강제 소괄호 넣기" />
+    <option name="줄인" path="줄 바꿈 및 괄호" hit="여러 줄인 경우 강제 소괄호 넣기" />
+    <option name="강제" path="줄 바꿈 및 괄호" hit="여러 줄인 경우 강제 후행 쉼표 넣기" />
+    <option name="경우" path="줄 바꿈 및 괄호" hit="여러 줄인 경우 강제 후행 쉼표 넣기" />
+    <option name="넣기" path="줄 바꿈 및 괄호" hit="여러 줄인 경우 강제 후행 쉼표 넣기" />
+    <option name="쉼표" path="줄 바꿈 및 괄호" hit="여러 줄인 경우 강제 후행 쉼표 넣기" />
+    <option name="여러" path="줄 바꿈 및 괄호" hit="여러 줄인 경우 강제 후행 쉼표 넣기" />
+    <option name="줄인" path="줄 바꿈 및 괄호" hit="여러 줄인 경우 강제 후행 쉼표 넣기" />
+    <option name="후행" path="줄 바꿈 및 괄호" hit="여러 줄인 경우 강제 후행 쉼표 넣기" />
+    <option name="경우" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 소괄호로 정렬" />
+    <option name="소괄호로" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 소괄호로 정렬" />
+    <option name="여러" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 소괄호로 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 소괄호로 정렬" />
+    <option name="줄일" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 소괄호로 정렬" />
+    <option name="경우" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 정렬" />
+    <option name="여러" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 정렬" />
+    <option name="줄일" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 정렬" />
+    <option name="연산자" path="공백" hit="연산자 주변" />
+    <option name="주변" path="공백" hit="연산자 주변" />
+    <option name="상수" path="줄 바꿈 및 괄호" hit="열거형 상수" />
+    <option name="열거형" path="줄 바꿈 및 괄호" hit="열거형 상수" />
+    <option name="단순" path="줄 바꿈 및 괄호" hit="열에 단순 메서드 정렬" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="열에 단순 메서드 정렬" />
+    <option name="열에" path="줄 바꿈 및 괄호" hit="열에 단순 메서드 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="열에 단순 메서드 정렬" />
+    <option name="대입" path="줄 바꿈 및 괄호" hit="열에 대입 정렬" />
+    <option name="열에" path="줄 바꿈 및 괄호" hit="열에 대입 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="열에 대입 정렬" />
+    <option name="변수" path="줄 바꿈 및 괄호" hit="열에 변수 정렬" />
+    <option name="열에" path="줄 바꿈 및 괄호" hit="열에 변수 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="열에 변수 정렬" />
+    <option name="열에" path="줄 바꿈 및 괄호" hit="열에 필드 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="열에 필드 정렬" />
+    <option name="필드" path="줄 바꿈 및 괄호" hit="열에 필드 정렬" />
+    <option name="바꿈" path="줄 바꿈 및 괄호" hit="오른쪽 여백에서 줄 바꿈" />
+    <option name="여백에서" path="줄 바꿈 및 괄호" hit="오른쪽 여백에서 줄 바꿈" />
+    <option name="오른쪽" path="줄 바꿈 및 괄호" hit="오른쪽 여백에서 줄 바꿈" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="오른쪽 여백에서 줄 바꿈" />
+    <option name="않는지" path="줄 바꿈 및 괄호" hit="오른쪽 여백을 초과하지 않는지 확인" />
+    <option name="여백을" path="줄 바꿈 및 괄호" hit="오른쪽 여백을 초과하지 않는지 확인" />
+    <option name="오른쪽" path="줄 바꿈 및 괄호" hit="오른쪽 여백을 초과하지 않는지 확인" />
+    <option name="초과하지" path="줄 바꿈 및 괄호" hit="오른쪽 여백을 초과하지 않는지 확인" />
+    <option name="확인" path="줄 바꿈 및 괄호" hit="오른쪽 여백을 초과하지 않는지 확인" />
+    <option name="대괄호" path="공백" hit="왼쪽 대괄호" />
+    <option name="왼쪽" path="공백" hit="왼쪽 대괄호" />
+    <option name="매개변수의" path="공백" hit="이름이 지정된 매개변수의 = 주위  " />
+    <option name="이름이" path="공백" hit="이름이 지정된 매개변수의 = 주위  " />
+    <option name="주위" path="공백" hit="이름이 지정된 매개변수의 = 주위  " />
+    <option name="지정된" path="공백" hit="이름이 지정된 매개변수의 = 주위  " />
+    <option name="이진" path="줄 바꿈 및 괄호" hit="이진 표현식" />
+    <option name="표현식" path="줄 바꿈 및 괄호" hit="이진 표현식" />
+    <option name="이후" path="공백" hit="이후 ':'" />
+    <option name="바꿈" path="줄 바꿈 및 괄호" hit="입력 시 줄 바꿈" />
+    <option name="시" path="줄 바꿈 및 괄호" hit="입력 시 줄 바꿈" />
+    <option name="입력" path="줄 바꿈 및 괄호" hit="입력 시 줄 바꿈" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="입력 시 줄 바꿈" />
+    <option name="유지" path="줄 바꿈 및 괄호" hit="제어문을 한 줄로 유지" />
+    <option name="제어문을" path="줄 바꿈 및 괄호" hit="제어문을 한 줄로 유지" />
+    <option name="줄로" path="줄 바꿈 및 괄호" hit="제어문을 한 줄로 유지" />
+    <option name="한" path="줄 바꿈 및 괄호" hit="제어문을 한 줄로 유지" />
+    <option name="목록" path="줄 바꿈 및 괄호" hit="제어자 목록" />
+    <option name="제어자" path="줄 바꿈 및 괄호" hit="제어자 목록" />
+    <option name="뒤에" path="줄 바꿈 및 괄호" hit="제어자 목록 뒤에 줄 바꿈" />
+    <option name="목록" path="줄 바꿈 및 괄호" hit="제어자 목록 뒤에 줄 바꿈" />
+    <option name="바꿈" path="줄 바꿈 및 괄호" hit="제어자 목록 뒤에 줄 바꿈" />
+    <option name="제어자" path="줄 바꿈 및 괄호" hit="제어자 목록 뒤에 줄 바꿈" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="제어자 목록 뒤에 줄 바꿈" />
+    <option name="주석" path="줄 바꿈 및 괄호" hit="주석" />
+    <option name="바꿈" path="줄 바꿈 및 괄호" hit="줄 바꿈" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="줄 바꿈" />
+    <option name="중괄호" path="공백" hit="중괄호" />
+    <option name="강제" path="줄 바꿈 및 괄호" hit="중괄호 강제 적용" />
+    <option name="적용" path="줄 바꿈 및 괄호" hit="중괄호 강제 적용" />
+    <option name="중괄호" path="줄 바꿈 및 괄호" hit="중괄호 강제 적용" />
+    <option name="배치" path="줄 바꿈 및 괄호" hit="중괄호 배치" />
+    <option name="중괄호" path="줄 바꿈 및 괄호" hit="중괄호 배치" />
+    <option name="변수" path="줄 바꿈 및 괄호" hit="지역 변수 어노테이션" />
+    <option name="어노테이션" path="줄 바꿈 및 괄호" hit="지역 변수 어노테이션" />
+    <option name="지역" path="줄 바꿈 및 괄호" hit="지역 변수 어노테이션" />
+    <option name="번째" path="줄 바꿈 및 괄호" hit="첫 번째 열의 주석" />
+    <option name="열의" path="줄 바꿈 및 괄호" hit="첫 번째 열의 주석" />
+    <option name="주석" path="줄 바꿈 및 괄호" hit="첫 번째 열의 주석" />
+    <option name="첫" path="줄 바꿈 및 괄호" hit="첫 번째 열의 주석" />
+    <option name="바꿈" path="줄 바꿈 및 괄호" hit="첫 번째 호출 줄 바꿈" />
+    <option name="번째" path="줄 바꿈 및 괄호" hit="첫 번째 호출 줄 바꿈" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="첫 번째 호출 줄 바꿈" />
+    <option name="첫" path="줄 바꿈 및 괄호" hit="첫 번째 호출 줄 바꿈" />
+    <option name="호출" path="줄 바꿈 및 괄호" hit="첫 번째 호출 줄 바꿈" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="체인 메서드 호출" />
+    <option name="체인" path="줄 바꿈 및 괄호" hit="체인 메서드 호출" />
+    <option name="호출" path="줄 바꿈 및 괄호" hit="체인 메서드 호출" />
+    <option name="내포" path="줄 바꿈 및 괄호" hit="컬렉션 및 내포" />
+    <option name="및" path="줄 바꿈 및 괄호" hit="컬렉션 및 내포" />
+    <option name="컬렉션" path="줄 바꿈 및 괄호" hit="컬렉션 및 내포" />
+    <option name="강제" path="줄 바꿈 및 괄호" hit="콜론 후 강제 새 줄 넣기" />
+    <option name="넣기" path="줄 바꿈 및 괄호" hit="콜론 후 강제 새 줄 넣기" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="콜론 후 강제 새 줄 넣기" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="콜론 후 강제 새 줄 넣기" />
+    <option name="콜론" path="줄 바꿈 및 괄호" hit="콜론 후 강제 새 줄 넣기" />
+    <option name="후" path="줄 바꿈 및 괄호" hit="콜론 후 강제 새 줄 넣기" />
+    <option name="선언에서" path="줄 바꿈 및 괄호" hit="클래스 선언에서" />
+    <option name="클래스" path="줄 바꿈 및 괄호" hit="클래스 선언에서" />
+    <option name="어노테이션" path="줄 바꿈 및 괄호" hit="클래스 어노테이션" />
+    <option name="클래스" path="줄 바꿈 및 괄호" hit="클래스 어노테이션" />
+    <option name="인수의" path="공백" hit="키워드 인수의 = 주위" />
+    <option name="주위" path="공백" hit="키워드 인수의 = 주위" />
+    <option name="키워드" path="공백" hit="키워드 인수의 = 주위" />
+    <option name="else" path="줄 바꿈 및 괄호" hit="특별 'else if' 처리" />
+    <option name="if" path="줄 바꿈 및 괄호" hit="특별 'else if' 처리" />
+    <option name="처리" path="줄 바꿈 및 괄호" hit="특별 'else if' 처리" />
+    <option name="특별" path="줄 바꿈 및 괄호" hit="특별 'else if' 처리" />
+    <option name="어노테이션" path="줄 바꿈 및 괄호" hit="필드 어노테이션" />
+    <option name="필드" path="줄 바꿈 및 괄호" hit="필드 어노테이션" />
+    <option name="간단한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 람다" />
+    <option name="람다" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 람다" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 람다" />
+    <option name="한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 람다" />
+    <option name="간단한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 메서드" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 메서드" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 메서드" />
+    <option name="한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 메서드" />
+    <option name="간단한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 블록" />
+    <option name="블록" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 블록" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 블록" />
+    <option name="한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 블록" />
+    <option name="간단한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 클래스" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 클래스" />
+    <option name="클래스" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 클래스" />
+    <option name="한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 클래스" />
+    <option name="여러" path="줄 바꿈 및 괄호" hit="한 줄의 여러 표현식" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="한 줄의 여러 표현식" />
+    <option name="표현식" path="줄 바꿈 및 괄호" hit="한 줄의 여러 표현식" />
+    <option name="한" path="줄 바꿈 및 괄호" hit="한 줄의 여러 표현식" />
+    <option name="연산자" path="공백" hit="할당 연산자 (=, +=,...)" />
+    <option name="할당" path="공백" hit="할당 연산자 (=, +=,...)" />
+    <option name="고려" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
+    <option name="바꿈보다" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
+    <option name="우선" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
+    <option name="체인" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
+    <option name="호출" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
+    <option name="구현" path="줄 바꿈 및 괄호" hit="확장/구현 목록" />
+    <option name="목록" path="줄 바꿈 및 괄호" hit="확장/구현 목록" />
+    <option name="확장" path="줄 바꿈 및 괄호" hit="확장/구현 목록" />
+    <option name="구현" path="줄 바꿈 및 괄호" hit="확장/구현 키워드" />
+    <option name="키워드" path="줄 바꿈 및 괄호" hit="확장/구현 키워드" />
+    <option name="확장" path="줄 바꿈 및 괄호" hit="확장/구현 키워드" />
+  </configurable>
+  <configurable id="editor.preferences.import" configurable_name="자동 가져오기">
+    <option name="python" hit="Python" />
+    <option name="from" hit="from   import  " />
+    <option name="import" hit="from   import  " />
+    <option name="import" hit="import    " />
+    <option name="가져오기" hit="선호 가져오기 스타일 " />
+    <option name="선호" hit="선호 가져오기 스타일 " />
+    <option name="스타일" hit="선호 가져오기 스타일 " />
+    <option name="가져오기" hit="자동 가져오기 툴팁 표시" />
+    <option name="자동" hit="자동 가져오기 툴팁 표시" />
+    <option name="툴팁" hit="자동 가져오기 툴팁 표시" />
+    <option name="표시" hit="자동 가져오기 툴팁 표시" />
+  </configurable>
+  <configurable id="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" configurable_name="Python 통합 도구">
+    <option name="" hit="  txt 파일을 reStructuredText로 취급 " />
+    <option name="restructuredtext로" hit="  txt 파일을 reStructuredText로 취급 " />
+    <option name="txt" hit="  txt 파일을 reStructuredText로 취급 " />
+    <option name="취급" hit="  txt 파일을 reStructuredText로 취급 " />
+    <option name="파일을" hit="  txt 파일을 reStructuredText로 취급 " />
+    <option name="docstring" hit="Docstring" />
+    <option name="docstring" hit="Docstring 형식 " />
+    <option name="형식" hit="Docstring 형식 " />
+    <option name="epytext" hit="Epytext" />
+    <option name="google" hit="Google" />
+    <option name="nosetest" hit="Nosetest" />
+    <option name="numpy" hit="NumPy" />
+    <option name="pipenv" hit="Pipenv" />
+    <option name="pipenv" hit="Pipenv 실행 파일 경로 " />
+    <option name="경로" hit="Pipenv 실행 파일 경로 " />
+    <option name="실행" hit="Pipenv 실행 파일 경로 " />
+    <option name="파일" hit="Pipenv 실행 파일 경로 " />
+    <option name="plain" hit="Plain" />
+    <option name="python" hit="Python 통합 도구" />
+    <option name="도구" hit="Python 통합 도구" />
+    <option name="통합" hit="Python 통합 도구" />
+    <option name="sphinx" hit="Sphinx 작업 디렉터리 " />
+    <option name="디렉터리" hit="Sphinx 작업 디렉터리 " />
+    <option name="작업" hit="Sphinx 작업 디렉터리 " />
+    <option name="trial" hit="Twisted Trial" />
+    <option name="twisted" hit="Twisted Trial" />
+    <option name="unittest" hit="Unittest" />
+    <option name="docstring" hit="docstring 내 Python 코드 분석" />
+    <option name="python" hit="docstring 내 Python 코드 분석" />
+    <option name="내" hit="docstring 내 Python 코드 분석" />
+    <option name="분석" hit="docstring 내 Python 코드 분석" />
+    <option name="코드" hit="docstring 내 Python 코드 분석" />
+    <option name="pytest" hit="pytest" />
+    <option name="restructuredtext" hit="reStructuredText" />
+    <option name="stdlib에" hit="stdlib에 대한 외부 문서 렌더링" />
+    <option name="대한" hit="stdlib에 대한 외부 문서 렌더링" />
+    <option name="렌더링" hit="stdlib에 대한 외부 문서 렌더링" />
+    <option name="문서" hit="stdlib에 대한 외부 문서 렌더링" />
+    <option name="외부" hit="stdlib에 대한 외부 문서 렌더링" />
+    <option name="디폴트" hit="디폴트 테스트 러너 " />
+    <option name="러너" hit="디폴트 테스트 러너 " />
+    <option name="테스트" hit="디폴트 테스트 러너 " />
+    <option name="f" hit="수정 F " />
+    <option name="수정" hit="수정 F " />
+    <option name="자동" hit="자동 탐지" />
+    <option name="탐지" hit="자동 탐지" />
+    <option name="테스트" hit="테스트" />
+    <option name="requirements" hit="패키지 requirements 파일 " />
+    <option name="파일" hit="패키지 requirements 파일 " />
+    <option name="패키지" hit="패키지 requirements 파일 " />
+    <option name="패키징" hit="패키징" />
+  </configurable>
+  <configurable id="pyconsole" configurable_name="콘솔">
+    <option name="" hit=" Python 콘솔로 실행  시 기존 콘솔을 사용" />
+    <option name="python" hit=" Python 콘솔로 실행  시 기존 콘솔을 사용" />
+    <option name="기존" hit=" Python 콘솔로 실행  시 기존 콘솔을 사용" />
+    <option name="사용" hit=" Python 콘솔로 실행  시 기존 콘솔을 사용" />
+    <option name="시" hit=" Python 콘솔로 실행  시 기존 콘솔을 사용" />
+    <option name="실행" hit=" Python 콘솔로 실행  시 기존 콘솔을 사용" />
+    <option name="콘솔로" hit=" Python 콘솔로 실행  시 기존 콘솔을 사용" />
+    <option name="콘솔을" hit=" Python 콘솔로 실행  시 기존 콘솔을 사용" />
+    <option name="디폴트로" hit="디폴트로 콘솔 변수 표시" />
+    <option name="변수" hit="디폴트로 콘솔 변수 표시" />
+    <option name="콘솔" hit="디폴트로 콘솔 변수 표시" />
+    <option name="표시" hit="디폴트로 콘솔 변수 표시" />
+    <option name="ipython" hit="사용 가능한 경우 IPython 사용" />
+    <option name="가능한" hit="사용 가능한 경우 IPython 사용" />
+    <option name="경우" hit="사용 가능한 경우 IPython 사용" />
+    <option name="사용" hit="사용 가능한 경우 IPython 사용" />
+    <option name="설정" hit="일반 설정" />
+    <option name="일반" hit="일반 설정" />
+    <option name="콘솔" hit="콘솔" />
+    <option name="디버그" hit="항상 디버그 콘솔 표시" />
+    <option name="콘솔" hit="항상 디버그 콘솔 표시" />
+    <option name="표시" hit="항상 디버그 콘솔 표시" />
+    <option name="항상" hit="항상 디버그 콘솔 표시" />
+  </configurable>
+  <configurable id="PyConsoleConfigurable.Python 콘솔" configurable_name="Python 콘솔">
+    <option name="pythonpath에" hit="PYTHONPATH에 소스 루트 추가" />
+    <option name="루트" hit="PYTHONPATH에 소스 루트 추가" />
+    <option name="소스" hit="PYTHONPATH에 소스 루트 추가" />
+    <option name="추가" hit="PYTHONPATH에 소스 루트 추가" />
+    <option name="pythonpath에" hit="PYTHONPATH에 콘텐츠 루트 추가" />
+    <option name="루트" hit="PYTHONPATH에 콘텐츠 루트 추가" />
+    <option name="추가" hit="PYTHONPATH에 콘텐츠 루트 추가" />
+    <option name="콘텐츠" hit="PYTHONPATH에 콘텐츠 루트 추가" />
+    <option name="p" hit="Python 인터프리터 P  " />
+    <option name="python" hit="Python 인터프리터 P  " />
+    <option name="인터프리터" hit="Python 인터프리터 P  " />
+    <option name="python" hit="Python 콘솔" />
+    <option name="콘솔" hit="Python 콘솔" />
+    <option name="경로" hit="경로 매핑 " />
+    <option name="매핑" hit="경로 매핑 " />
+    <option name="sdk" hit="모듈 SDK 사용 " />
+    <option name="모듈" hit="모듈 SDK 사용 " />
+    <option name="사용" hit="모듈 SDK 사용 " />
+    <option name="스크립트" hit="스크립트 시작" />
+    <option name="시작" hit="스크립트 시작" />
+    <option name="o" hit="인터프리터 옵션 O  " />
+    <option name="옵션" hit="인터프리터 옵션 O  " />
+    <option name="인터프리터" hit="인터프리터 옵션 O  " />
+    <option name="w" hit="작업 디렉터리 W  " />
+    <option name="디렉터리" hit="작업 디렉터리 W  " />
+    <option name="작업" hit="작업 디렉터리 W  " />
+    <option name="u" hit="지정된 인터프리터 사용 U  " />
+    <option name="사용" hit="지정된 인터프리터 사용 U  " />
+    <option name="인터프리터" hit="지정된 인터프리터 사용 U  " />
+    <option name="지정된" hit="지정된 인터프리터 사용 U  " />
+    <option name="환경" hit="환경" />
+    <option name="e" hit="환경 변수 E  " />
+    <option name="변수" hit="환경 변수 E  " />
+    <option name="환경" hit="환경 변수 E  " />
+  </configurable>
+  <configurable id="reference.idesettings.debugger.python" configurable_name="Python 디버거">
+    <option name="" hit="  프로세스에 연결 하기 위해 다음을 포함하는 이름의 프로세스 표시  " />
+    <option name="다음을" hit="  프로세스에 연결 하기 위해 다음을 포함하는 이름의 프로세스 표시  " />
+    <option name="연결" hit="  프로세스에 연결 하기 위해 다음을 포함하는 이름의 프로세스 표시  " />
+    <option name="위해" hit="  프로세스에 연결 하기 위해 다음을 포함하는 이름의 프로세스 표시  " />
+    <option name="이름의" hit="  프로세스에 연결 하기 위해 다음을 포함하는 이름의 프로세스 표시  " />
+    <option name="포함하는" hit="  프로세스에 연결 하기 위해 다음을 포함하는 이름의 프로세스 표시  " />
+    <option name="표시" hit="  프로세스에 연결 하기 위해 다음을 포함하는 이름의 프로세스 표시  " />
+    <option name="프로세스" hit="  프로세스에 연결 하기 위해 다음을 포함하는 이름의 프로세스 표시  " />
+    <option name="프로세스에" hit="  프로세스에 연결 하기 위해 다음을 포함하는 이름의 프로세스 표시  " />
+    <option name="하기" hit="  프로세스에 연결 하기 위해 다음을 포함하는 이름의 프로세스 표시  " />
+    <option name="gevent" hit="Gevent 호환" />
+    <option name="호환" hit="Gevent 호환" />
+    <option name="pyqt" hit="PyQt " />
+    <option name="pyqt" hit="PyQt 호환" />
+    <option name="호환" hit="PyQt 호환" />
+    <option name="pyside" hit="PySide" />
+    <option name="pyside" hit="PySide " />
+    <option name="python" hit="Python 디버거" />
+    <option name="디버거" hit="Python 디버거" />
+    <option name="디버그" hit="디버그 중 자동으로 하위 프로세스에 첨부" />
+    <option name="자동으로" hit="디버그 중 자동으로 하위 프로세스에 첨부" />
+    <option name="중" hit="디버그 중 자동으로 하위 프로세스에 첨부" />
+    <option name="첨부" hit="디버그 중 자동으로 하위 프로세스에 첨부" />
+    <option name="프로세스에" hit="디버그 중 자동으로 하위 프로세스에 첨부" />
+    <option name="하위" hit="디버그 중 자동으로 하위 프로세스에 첨부" />
+    <option name="드롭" hit="실패한 테스트에 디버거를 드롭" />
+    <option name="디버거를" hit="실패한 테스트에 디버거를 드롭" />
+    <option name="실패한" hit="실패한 테스트에 디버거를 드롭" />
+    <option name="테스트에" hit="실패한 테스트에 디버거를 드롭" />
+    <option name="자동" hit="자동" />
+    <option name="지우기" hit="캐시 지우기" />
+    <option name="캐시" hit="캐시 지우기" />
+    <option name="기능을" hit="코드 분석 기능을 위한 런타임 타입 정보 수집" />
+    <option name="런타임" hit="코드 분석 기능을 위한 런타임 타입 정보 수집" />
+    <option name="분석" hit="코드 분석 기능을 위한 런타임 타입 정보 수집" />
+    <option name="수집" hit="코드 분석 기능을 위한 런타임 타입 정보 수집" />
+    <option name="위한" hit="코드 분석 기능을 위한 런타임 타입 정보 수집" />
+    <option name="정보" hit="코드 분석 기능을 위한 런타임 타입 정보 수집" />
+    <option name="코드" hit="코드 분석 기능을 위한 런타임 타입 정보 수집" />
+    <option name="타입" hit="코드 분석 기능을 위한 런타임 타입 정보 수집" />
+  </configurable>
+</options>

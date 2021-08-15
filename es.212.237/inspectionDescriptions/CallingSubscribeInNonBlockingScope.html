@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>"reactive" 메서드의 <code>subscribe()</code> 호출을 보고합니다.</p>
+<p><code>Publisher</code> 타입을 반환하는 메서드(<code>Flux</code> 및 <code>Mono</code> 포함)의 경우 <code>subscribe()</code> 메서드를 직접 호출해서는 안 됩니다. 해당 메서드가 Reactive 호출 체인을 중지할 수 있기 때문입니다.</p>
+<p><code>subscribe()</code> 대신 <code>flatMap()</code>,
+  <code>zip()</code>, <code>then()</code> 등의 합성 연산자의 사용을 고려하십시오.</p>
+<p><b>예:</b></p>
+<pre><code>
+  Flux&lt;String&gt; stringFlux(){
+    Flux&lt;String&gt; flux = Flux.just("abc");
+    flux.subscribe(); // &lt;- inappropriate `subscribe` call
+    return flux;
+  }
+</code></pre>
+</body>
+</html>

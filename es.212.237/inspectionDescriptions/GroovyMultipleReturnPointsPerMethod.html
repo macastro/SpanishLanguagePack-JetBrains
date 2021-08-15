@@ -1,0 +1,23 @@
+<html>
+<body>
+반환 지점이 너무 많은 메서드를 보고합니다. 반환 지점이 너무 많은 메서드는
+혼란스러우며 리팩터링하기 어려울 수 있습니다.
+<p><b>예:</b></p>
+<pre>
+<code>
+  int foo(int a) {
+    if (a > 0) {
+      return a
+    }
+    if (a &lt; 0) return -a
+    return 0
+  }
+</code>
+</pre>
+<!-- tooltip end -->
+<p>
+  메서드에서 허용되는 최대 반환 지점 갯수를 지정하려면 아래 제공한
+  필드를 사용하세요.
+</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+<code>java.net.URL</code> 객체에서 호출되는 <code>hashCode()</code> 및 <code>equals()</code>를 보고합니다.
+<p>
+  <code>java.net.URL</code> 클래스는 <code>java.net.URLStreamHandler</code>의 인스턴스를 내부적으로 사용하여
+  <code>hashCode()</code> 및 <code>equals()</code>를 실행합니다.
+  <code>java.net.URLStreamHandler</code>가 DNS 조회를 수행하기 때문에 성능 문제가 발생할 수 있습니다.
+  네트워크의 가용성과 DNS 서버의 속도에 따라 상당한 지연이 발생할 수 있습니다.
+</p>
+<p>이 문제는 대신 <code>java.net.URI</code>를 사용하여 대부분 해결할 수 있습니다.</p>
+<p><b>예:</b></p>
+<pre>
+  <code>
+    int f(URL url1, URL url2) {
+      if (url1.equals(url2)) return url1.hashCode();
+      else return url2.hashCode();
+    }
+  </code>
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+세 개 이상의 부정 연산(<code>!</code> 또는 <code>!=</code>)을 포함하는 메서드를 보고합니다.
+<p>그러한 메서드는 혼란을 일으킬 수 있습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  void doSmth(int a, int b, boolean flag1, boolean flag2) {
+    if (!flag && !flag2) {
+      if (a != b) {
+        doOther();
+      }
+    }
+  }
+</code></pre>
+<p>부정이 없는 경우 메서드는 더 쉽게 이해할 수 있습니다.</p>
+<pre><code>
+  void doSmth(int a, int b, boolean flag1, boolean flag2) {
+    if (flag1 || flag2 || a == b) return;
+    doOther();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<ul>
+  <li><b>'equals()' 메서드의 부정 무시</b> 옵션을 사용하여 <code>equals()</code> 메서드 내의 검사를 비활성화합니다.</li>
+  <li><b>'assert' 구문의 부정 무시</b> 옵션을 사용하여 <code>assert</code> 구문 내의 검사를 비활성화합니다.</li>
+</ul>
+</body>
+</html>

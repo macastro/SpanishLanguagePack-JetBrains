@@ -1,0 +1,44 @@
+<html>
+<body>
+<code>compareTo()</code> 메서드 및 <code>java.util.Comparator.compare()</code>를 구현하는 메서드 내 뺄셈을 보고합니다.
+<p>
+  정수 뺄셈의 결과를 <code>compareTo()</code> 메서드의 결과로 사용하는 것은 일반적인 이디엄이지만 이 구문은 정수 오버플로가 발생할 경우 미묘하고 까다로운 버그를 일으킬 수 있습니다.
+  정수 값을 직접 비교하여 <code>-1</code>, <code>0</code>, 또는 <code>1</code>를 반환하는 것이 대부분의 경우에 더 좋은 사례입니다.
+</p>
+<p>
+  정수 타입으로 즉시 변환되는 부동소수점 값에 대한 뺄셈 또한 보고됩니다. 반올림에 의해 정확도가 떨어질 수 있기 때문입니다.
+</p>
+<p>
+  이 검사는 값의 범위가 제한되어 있어 오버플로가 발생하지 않는다고 정적으로 판단되는 경우에는 보고하지 않습니다.
+  또한 <code>0</code>보다 같거나 큰 <code>int</code> 수에 대한 뺄셈은 오버플로를 일으키지 않습니다.
+  그러므로 이 검사는 그러한 경우에 경고하지 않습니다.
+</p>
+<p>
+  항상 0 이상의 값을 반환하는 메서드는 <code>javax.annotation.Nonnegative</code> 어노테이션 함께 표시하거나 이 검사의 옵션에서 지정할 수 있습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  class DoubleHolder implements Comparable&lt;DoubleHolder&gt; {
+    double d;
+    public int compareTo(DoubleHolder that) {
+        return (int)(this.d - that.d);
+    }
+ }
+</code></pre>
+<p>다음 예에서 <code>String.length()</code>는 음수가 아니기 때문에 경고가 발생하지 않습니다:</p>
+<pre><code>
+  class A implements Comparable&lt;A&gt; {
+    final String s = "";
+    public int compareTo(A a) {
+        return s.length() - a.s.length();
+    }
+ }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  뺄셈 내부에 사용하기에 안전한 메서드를 나열하려면 옵션을 사용하세요.
+  메서드가 항상 <code>0</code>보다 같거나 큰 <code>int</code> 값을 반환하는 경우 안전합니다.
+</p>
+
+</body>
+</html>

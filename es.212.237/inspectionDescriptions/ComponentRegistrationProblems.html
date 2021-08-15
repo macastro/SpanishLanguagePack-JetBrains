@@ -1,0 +1,29 @@
+<html>
+<body>
+코드와 <code>plugin.xml</code> 설명자에 모두 포함된
+플러그인 구성 요소(구성 요소 및 액션)의 부정확한 등록을 보고합니다.
+<p>
+  다음과 같은 문제가 보고됩니다.
+</p>
+<ul>
+  <li>해결되지 않은 구성 요소/액션 구현 클래스(<code>plugin.xml</code>)</li>
+  <li>해결되지 않은 구성 요소 인터페이스 클래스(<code>plugin.xml</code>)</li>
+  <li>구성 요소 구현 클래스를 해당 인터페이스 클래스(<code>plugin.xml</code>)에 할당할 수 없습니다</li>
+  <li>부정확한 구성 요소 등록(예: <code>ProjectComponent</code>)이 애플리케이션 구성 요소로 등록되었거나
+    클래스가 어떠한 구성 요소 인터페이스도 구현하지 않습니다(<code>plugin.xml</code> 및 Java 코드)
+  </li>
+  <li>부정확한 클래스 제어자: 액션 클래스는 <code>public</code>이어야 하며 인수가 없는
+    공개 생성자를 가지고 있어야 합니다. 또한 액션 및 구성 요소 구현 클래스는
+    추상 클래스일 수 없습니다(<code>plugin.xml</code> 및 Java 코드)
+  </li>
+  <li>중복 인터페이스 클래스: 클래스는 인터페이스 클래스로 한 번만 사용될 수 있습니다(<code>plugin.xml</code>)</li>
+</ul>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<ul>
+  <li><code>plugin.xml</code> 설명자에서 검사 기능을 비활성화하려면 <b>플러그인 설명자 검사(plugin.xml)</b> 옵션을 사용하세요.</li>
+  <li>액션 코드에서 검사 기능을 비활성화하려면  <b>Java 액션 검사</b> 옵션을 사용하세요.</li>
+  <li>코드에서 모든 검사 기능을 비활성화하려면 <b>Java 코드 검사</b> 옵션을 사용하세요.</li>
+</ul>
+</body>
+</html>

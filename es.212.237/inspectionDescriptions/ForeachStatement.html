@@ -1,0 +1,22 @@
+<html>
+<body>
+향상된 <code>for</code> 구문을 보고합니다.
+이러한 <code>for</code> 구문은 Java 1.4 이하에서 지원되지 않습니다.
+<p>예:</p>
+<pre>
+  for (int x: Arrays.asList(1, 2, 3)) {
+    System.out.println(x);
+  }
+</pre>
+<p>빠른 수정이 적용된 후 결과는 다음과 같습니다: </p>
+<pre>
+  for (Iterator&lt;Integer&gt; iterator = Arrays.asList(1, 2, 3).iterator(); iterator.hasNext(); ) {
+    final int x = iterator.next();
+    System.out.println(x);
+  }
+</pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

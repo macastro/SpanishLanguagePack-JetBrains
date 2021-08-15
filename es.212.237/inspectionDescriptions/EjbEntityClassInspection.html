@@ -1,0 +1,20 @@
+<html>
+<body>
+다음과 같은 오류 수준 EJB 사양 위반 사례를 탐지합니다:
+<ul>
+  <li>Finder 및 선택자 메서드가 올바르게 정의되어 있지 않은 경우</li>
+  <li>CMP 및 CMR 필드 접근자가 올바르게 정의되어 있지 않은 경우</li>
+</ul>
+</body>
+
+<p><b>예:</b></p>
+<pre><code>
+public class SessionEJB implements javax.ejb.SessionBean {
+  // 오류: 'ejbCreateXXX' 메서드는 public이어야 함
+  protected void ejbCreateExample() {... }
+
+  // 오류: 'ejbCreateAnotherExample' 메서드는 'void'를 반환해야 함
+  public int ejbCreateAnotherExample() {... }
+}
+</code></pre>
+</html>

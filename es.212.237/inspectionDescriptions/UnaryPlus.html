@@ -1,0 +1,29 @@
+<html>
+<body>
+<code>+</code> 단항 연산자 사용을 보고합니다. 단항 플러스는 일반적으로 무효 연산이며, 존재하는 경우 코드 오류를 나타냅니다. 예를 들면 증가 연산자(<code>+++</code> 등) 또는 등호 연산자(<code>=+</code> 등)의 조합이 있습니다.
+<p><b>예:</b></p>
+<pre>
+  <code>void unaryPlus(int i) {
+    int x = + +i;
+  }</code>
+</pre>
+<p>다음과 같은 빠른 수정을 권장합니다.</p>
+<ul>
+  <li><p><code>i</code> 변수 앞의 <code>+</code> 연산자를 제거합니다.</p>
+    <pre><code>void unaryPlus(int i) {
+    int x = i;
+  }</code></pre>
+  </li>
+  <li><p><code>+</code> 연산자를 접두사 증가 연산자와 치환합니다.</p>
+    <pre><code>void unaryPlus(int i) {
+    int x = ++i;
+  }</code></pre>
+  </li>
+</ul>
+<!-- tooltip end -->
+<p>
+아래의 체크박스를 사용하여 이항 또는 다른 단항 표현식과 함께 사용하는 단항 플러스를 보고합니다.
+이 검사는 단항 플러스 표현식을 배열 이니셜라이저 표현식 또는 메서드 인자로 사용하는 경우를 보고하지 않는 것을 의미합니다.
+</p>
+</body>
+</html>

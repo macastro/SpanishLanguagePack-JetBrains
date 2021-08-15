@@ -1,0 +1,32 @@
+<html>
+<body>
+어설션을 포함하지 않는 테스트 메서드를 보고합니다. 이 메서드는 불완전 또는 취약한 테스트 케이스를 나타낼 수 있습니다.
+<p><b>예:</b></p>
+<pre><code>
+  <b>public class</b> ExtensiveTest {
+
+    @Test
+    <b>public void</b> testAlive() {
+      System.out.println("nothing");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  검사 구성:
+</p>
+<ul>
+  <li>
+      테이블을 사용하여 어설션으로 한정하는 완전한 한정 클래스명과 메서드명 정규 표현식의 조합을 명시합니다. 클래스명도 하위 클래스와 일치합니다.
+  </li>
+  <li>
+      <b>'assert' 키워드를 어설션으로 간주</b> 옵션을 사용하여 <code>assert</code> 키워드를 사용하는 Java <code>assert</code> 구문을 어설션으로 간주해야 하는지 구체적으로 지정합니다.
+  </li>
+  <li>
+      <b>예외를 선언하는 테스트 메서드 무시</b> 옵션을 사용하여 예외를 선언하는 테스트 메서드를 무시합니다.
+      실패 시 예외가 발생하여 어설션이 필요하지 않은 테스트가 있는 경우에 유용할 수 있습니다.
+  </li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+의심스러운 <code>Collection.toArray()</code> 호출을 보고합니다.
+<p>다음 유형의 호출은 의심스러운 것으로 간주됩니다:</p>
+<ul>
+  <li>
+    배열 인수의 타입이 결과가 변환될 배열 타입과 같지 않은 경우
+  </li>
+  <li>
+    배열 인수의 타입이 컬렉션 선언 내 타입 매개변수와 일치하지 않는 경우
+  </li>
+</ul>
+<p><b>예:</b></p>
+<pre>
+void m1(List list) {
+  Number[] ns = (Number[]) list.toArray(new String[0]);
+}
+
+void m2(List&lt;Number&gt; list) {
+  Number[] ns = list.toArray(new String[0]);
+}
+</pre>
+
+
+</body>
+</html>

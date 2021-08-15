@@ -1,0 +1,29 @@
+<html>
+<body>
+삼항 조건 연산자가 사용된 위치를 보고하고, 이를 <code>if</code>/<code>else</code>구문으로 변환할 것을 제안합니다.
+<p>일부 코드 표준은 조건 연산자의 사용을 금지합니다.</p>
+<p>예:</p>
+<pre><code>
+  Object result = (condition) ? foo() : bar();
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  Object result;
+  if (condition) {
+    comp = foo();
+  }
+  else {
+    comp = bar();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<p>단순한 대입 및 반환을 무시하고 다음 구문을 허용하려면 <b>단순한 대입 및 반환 무시 </b> 옵션을 사용하세요.</p>
+<pre>
+  String s = (foo == null) ? "" : foo.toString();
+</pre>
+<p>
+  if 구문으로 자동 바꿈이 불가능한 경우 (예를 들어, 조건식이 <code>super()</code> 생성자 호출의 인수로 사용된 경우) 컨텍스트에서 조건식을 무시하려면 <b>if 문이 불가능한 위치 무시 </b> 옵션을 사용하세요.
+</p>
+</body>
+</html>

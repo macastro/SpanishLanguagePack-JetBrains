@@ -1,0 +1,10 @@
+<html>
+<body>
+<p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/annotation/Async.html">@Async</a> 메서드의 잘못된 반환 타입을 보고합니다.</p>
+
+<p>대상 메서드 시그니처의 경우 모든 매개변수 타입이 허용됩니다.
+  그러나 반환 타입은 <code>void</code> 또는 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html">Future</a>여야 합니다.
+  또한 보다 구체적인 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/util/concurrent/ListenableFuture.html">ListenableFuture</a> 또는 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html">CompletableFuture</a> 타입을 반환할 수 있으므로 비동기 작업과의 풍부한 상호작용이 가능하며 추가 처리 단계를 통한 즉각적 구성이 가능합니다.</p>
+
+</body>
+</html>

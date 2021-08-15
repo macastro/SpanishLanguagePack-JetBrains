@@ -1,0 +1,32 @@
+<html>
+<body>
+다음과 같은 JPA 사양 위반 사례를 보고합니다:
+<ul>
+  <li>메서드 또는 필드에 여러 속성이 구성되어 있음</li>
+  <li>Embeddable 객체에 잘못된 속성이 사용됨(JPA 1.0)</li>
+  <li>지속성 속성 메타데이터가 필드 또는 프로퍼티 getter에 지정되어 있지 않음</li>
+  <li>프로퍼티 기반 액세스가 가능한 setter 또는 getter가 없음</li>
+</ul>
+
+<p><b>예:</b></p>
+<pre><code>
+  @Entity
+  @Table(name = "TABLE")
+  public class JavaEntity {
+
+    private Integer id; // 오류: getter 및 setter가 모두 있어야 함
+
+    public Integer getId() {... }
+
+
+
+    private String data;
+
+    public String getData() {... }
+
+    @Basic // 오류: 지속성 어노테이션은 필드 또는 getter 메서드에 위치해야 함
+    public void setData(String data) {... }
+  }
+</code></pre><br/>
+</body>
+</html>

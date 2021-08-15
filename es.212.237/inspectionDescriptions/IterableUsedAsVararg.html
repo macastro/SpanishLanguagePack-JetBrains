@@ -1,0 +1,14 @@
+<html>
+<body>
+vararg 메서드 호출에서 <code>Collection</code> 또는 <code>Iterable</code>이 의심스럽게 사용된 위치를 보고합니다.
+<p>예를 들어, 다음 메서드의 경우:</p>
+  <pre>&lt;T&gt; boolean contains(T needle, T... haystack) {...}</pre> 
+<p>다음과 같은 호출은</p>
+  <pre>if(contains("item", listOfStrings)) {...}</pre> 
+<p>목록이 단일 요소 배열로 래핑되므로 의심스럽게 보입니다.
+  이 코드의 컴파일이 완료되어 예외 없이 실행될 수 있지만
+  실수로 사용되었을 가능성이 있습니다.</p>
+<!-- tooltip end -->
+<p><small>2019.2의 새로운 기능</small></p>
+</body>
+</html>

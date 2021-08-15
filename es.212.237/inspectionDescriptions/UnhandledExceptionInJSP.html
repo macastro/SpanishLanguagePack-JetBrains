@@ -1,0 +1,30 @@
+<html>
+<body>
+최상위 JSP 스크립트릿에서 던져진 예외를 보고합니다.<br/>
+
+<p><b>예:</b></p>
+<pre><code>
+  &lt;%!
+  String getFormattedDate() {
+   ...
+    throw new IllegalArgumentException(...); // 오류
+  }
+  %&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+    &lt;title&gt;Hello, JSP!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;i&gt;Today is &lt;%= getFormattedDate() %&gt;&lt;/i&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</code></pre><br/>
+
+<!-- tooltip end -->
+<p>
+  <b>참고:</b> 서블릿 컨테이너가 모든 JSP 코드를 <b>try {} catch() {}</b> 블록으로 래핑하기 때문에 그러한 JSP 페이지는 컴파일되지만
+서버에 배포 시 런타임 예외가 발생합니다.
+</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+<code>String</code> 연결에 사용되거나 <code>System.out.println()</code>와 같은 <code>java.io.PrintStream</code> 메서드에 매개변수로 전달된 배열을 보고합니다.
+<p>
+  보통 배열 객체 자신이 아닌 배열의 내용이 사용되어야 합니다.
+</p>
+<p><b>예:</b></p>
+<pre>
+  void print(Object[] objects) {
+    System.out.println(objects);
+  }
+</pre>
+<p>빠른 수정 적용 후:</p>
+<pre>
+  void print(Object[] objects) {
+    System.out.println(Arrays.toString(objects));
+  }
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

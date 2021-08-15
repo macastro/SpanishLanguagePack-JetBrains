@@ -1,0 +1,252 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="docker" path="ActionManager" hit="Docker" />
+    <option name="docker" path="ActionManager" hit="Docker 연결" />
+    <option name="연결" path="ActionManager" hit="Docker 연결" />
+    <option name="exec" path="ActionManager" hit="Exec" />
+    <option name="scale" path="ActionManager" hit="Scale" />
+    <option name="검사" path="ActionManager" hit="검사" />
+    <option name="고립" path="ActionManager" hit="고립 항목 제거" />
+    <option name="제거" path="ActionManager" hit="고립 항목 제거" />
+    <option name="항목" path="ActionManager" hit="고립 항목 제거" />
+    <option name="관련" path="ActionManager" hit="관련 네트워크, 볼륨 및 이미지와 함께 컨테이너 중지 및 제거" />
+    <option name="네트워크" path="ActionManager" hit="관련 네트워크, 볼륨 및 이미지와 함께 컨테이너 중지 및 제거" />
+    <option name="및" path="ActionManager" hit="관련 네트워크, 볼륨 및 이미지와 함께 컨테이너 중지 및 제거" />
+    <option name="볼륨" path="ActionManager" hit="관련 네트워크, 볼륨 및 이미지와 함께 컨테이너 중지 및 제거" />
+    <option name="이미지와" path="ActionManager" hit="관련 네트워크, 볼륨 및 이미지와 함께 컨테이너 중지 및 제거" />
+    <option name="제거" path="ActionManager" hit="관련 네트워크, 볼륨 및 이미지와 함께 컨테이너 중지 및 제거" />
+    <option name="중지" path="ActionManager" hit="관련 네트워크, 볼륨 및 이미지와 함께 컨테이너 중지 및 제거" />
+    <option name="컨테이너" path="ActionManager" hit="관련 네트워크, 볼륨 및 이미지와 함께 컨테이너 중지 및 제거" />
+    <option name="함께" path="ActionManager" hit="관련 네트워크, 볼륨 및 이미지와 함께 컨테이너 중지 및 제거" />
+    <option name="네트워크" path="ActionManager" hit="네트워크 삭제" />
+    <option name="삭제" path="ActionManager" hit="네트워크 삭제" />
+    <option name="다시" path="ActionManager" hit="다시 시작" />
+    <option name="시작" path="ActionManager" hit="다시 시작" />
+    <option name="도커" path="ActionManager" hit="도커 연결 추가" />
+    <option name="연결" path="ActionManager" hit="도커 연결 추가" />
+    <option name="추가" path="ActionManager" hit="도커 연결 추가" />
+    <option name="로그" path="ActionManager" hit="로그 표시" />
+    <option name="표시" path="ActionManager" hit="로그 표시" />
+    <option name="모두" path="ActionManager" hit="모두 시작" />
+    <option name="시작" path="ActionManager" hit="모두 시작" />
+    <option name="compose" path="ActionManager" hit="모든 Compose 서비스 시작" />
+    <option name="모든" path="ActionManager" hit="모든 Compose 서비스 시작" />
+    <option name="서비스" path="ActionManager" hit="모든 Compose 서비스 시작" />
+    <option name="시작" path="ActionManager" hit="모든 Compose 서비스 시작" />
+    <option name="모든" path="ActionManager" hit="모든 서비스 중지" />
+    <option name="서비스" path="ActionManager" hit="모든 서비스 중지" />
+    <option name="중지" path="ActionManager" hit="모든 서비스 중지" />
+    <option name="배포" path="ActionManager" hit="배포 중지" />
+    <option name="중지" path="ActionManager" hit="배포 중지" />
+    <option name="볼륨" path="ActionManager" hit="볼륨 삭제" />
+    <option name="삭제" path="ActionManager" hit="볼륨 삭제" />
+    <option name="삭제" path="ActionManager" hit="삭제" />
+    <option name="도구" path="ActionManager" hit="서비스 도구 창에 선택한 컨테이너 이미지 표시" />
+    <option name="서비스" path="ActionManager" hit="서비스 도구 창에 선택한 컨테이너 이미지 표시" />
+    <option name="선택한" path="ActionManager" hit="서비스 도구 창에 선택한 컨테이너 이미지 표시" />
+    <option name="이미지" path="ActionManager" hit="서비스 도구 창에 선택한 컨테이너 이미지 표시" />
+    <option name="창에" path="ActionManager" hit="서비스 도구 창에 선택한 컨테이너 이미지 표시" />
+    <option name="컨테이너" path="ActionManager" hit="서비스 도구 창에 선택한 컨테이너 이미지 표시" />
+    <option name="표시" path="ActionManager" hit="서비스 도구 창에 선택한 컨테이너 이미지 표시" />
+    <option name="삭제" path="ActionManager" hit="서비스 삭제" />
+    <option name="서비스" path="ActionManager" hit="서비스 삭제" />
+    <option name="서비스" path="ActionManager" hit="서비스 시작" />
+    <option name="시작" path="ActionManager" hit="서비스 시작" />
+    <option name="서비스" path="ActionManager" hit="서비스 중지" />
+    <option name="중지" path="ActionManager" hit="서비스 중지" />
+    <option name="서비스" path="ActionManager" hit="서비스 확장" />
+    <option name="확장" path="ActionManager" hit="서비스 확장" />
+    <option name="네트워크" path="ActionManager" hit="선택한 네트워크 삭제" />
+    <option name="삭제" path="ActionManager" hit="선택한 네트워크 삭제" />
+    <option name="선택한" path="ActionManager" hit="선택한 네트워크 삭제" />
+    <option name="배포" path="ActionManager" hit="선택한 배포 중지" />
+    <option name="선택한" path="ActionManager" hit="선택한 배포 중지" />
+    <option name="중지" path="ActionManager" hit="선택한 배포 중지" />
+    <option name="볼륨" path="ActionManager" hit="선택한 볼륨 삭제" />
+    <option name="삭제" path="ActionManager" hit="선택한 볼륨 삭제" />
+    <option name="선택한" path="ActionManager" hit="선택한 볼륨 삭제" />
+    <option name="id를" path="ActionManager" hit="선택한 이미의 ID를 클립보드에 복사" />
+    <option name="복사" path="ActionManager" hit="선택한 이미의 ID를 클립보드에 복사" />
+    <option name="선택한" path="ActionManager" hit="선택한 이미의 ID를 클립보드에 복사" />
+    <option name="이미의" path="ActionManager" hit="선택한 이미의 ID를 클립보드에 복사" />
+    <option name="클립보드에" path="ActionManager" hit="선택한 이미의 ID를 클립보드에 복사" />
+    <option name="삭제" path="ActionManager" hit="선택한 이미지 삭제" />
+    <option name="선택한" path="ActionManager" hit="선택한 이미지 삭제" />
+    <option name="이미지" path="ActionManager" hit="선택한 이미지 삭제" />
+    <option name="선택한" path="ActionManager" hit="선택한 이미지를 저장소에 푸시" />
+    <option name="이미지를" path="ActionManager" hit="선택한 이미지를 저장소에 푸시" />
+    <option name="저장소에" path="ActionManager" hit="선택한 이미지를 저장소에 푸시" />
+    <option name="푸시" path="ActionManager" hit="선택한 이미지를 저장소에 푸시" />
+    <option name="및" path="ActionManager" hit="선택한 이미지의 컨테이너 생성 및 실행" />
+    <option name="생성" path="ActionManager" hit="선택한 이미지의 컨테이너 생성 및 실행" />
+    <option name="선택한" path="ActionManager" hit="선택한 이미지의 컨테이너 생성 및 실행" />
+    <option name="실행" path="ActionManager" hit="선택한 이미지의 컨테이너 생성 및 실행" />
+    <option name="이미지의" path="ActionManager" hit="선택한 이미지의 컨테이너 생성 및 실행" />
+    <option name="컨테이너" path="ActionManager" hit="선택한 이미지의 컨테이너 생성 및 실행" />
+    <option name="내" path="ActionManager" hit="선택한 컨테이너 내 모든 프로세스 중지 해제" />
+    <option name="모든" path="ActionManager" hit="선택한 컨테이너 내 모든 프로세스 중지 해제" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이너 내 모든 프로세스 중지 해제" />
+    <option name="중지" path="ActionManager" hit="선택한 컨테이너 내 모든 프로세스 중지 해제" />
+    <option name="컨테이너" path="ActionManager" hit="선택한 컨테이너 내 모든 프로세스 중지 해제" />
+    <option name="프로세스" path="ActionManager" hit="선택한 컨테이너 내 모든 프로세스 중지 해제" />
+    <option name="해제" path="ActionManager" hit="선택한 컨테이너 내 모든 프로세스 중지 해제" />
+    <option name="다시" path="ActionManager" hit="선택한 컨테이너 다시 시작" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이너 다시 시작" />
+    <option name="시작" path="ActionManager" hit="선택한 컨테이너 다시 시작" />
+    <option name="컨테이너" path="ActionManager" hit="선택한 컨테이너 다시 시작" />
+    <option name="삭제" path="ActionManager" hit="선택한 컨테이너 삭제" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이너 삭제" />
+    <option name="컨테이너" path="ActionManager" hit="선택한 컨테이너 삭제" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이너 시작" />
+    <option name="시작" path="ActionManager" hit="선택한 컨테이너 시작" />
+    <option name="컨테이너" path="ActionManager" hit="선택한 컨테이너 시작" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이너 중지" />
+    <option name="중지" path="ActionManager" hit="선택한 컨테이너 중지" />
+    <option name="컨테이너" path="ActionManager" hit="선택한 컨테이너 중지" />
+    <option name="다시" path="ActionManager" hit="선택한 컨테이너를 다시 생성 및 실행합니다" />
+    <option name="및" path="ActionManager" hit="선택한 컨테이너를 다시 생성 및 실행합니다" />
+    <option name="생성" path="ActionManager" hit="선택한 컨테이너를 다시 생성 및 실행합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이너를 다시 생성 및 실행합니다" />
+    <option name="실행합니다" path="ActionManager" hit="선택한 컨테이너를 다시 생성 및 실행합니다" />
+    <option name="컨테이너를" path="ActionManager" hit="선택한 컨테이너를 다시 생성 및 실행합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이너에 첨부" />
+    <option name="첨부" path="ActionManager" hit="선택한 컨테이너에 첨부" />
+    <option name="컨테이너에" path="ActionManager" hit="선택한 컨테이너에 첨부" />
+    <option name="명령어" path="ActionManager" hit="선택한 컨테이너에서 명령어 실행" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이너에서 명령어 실행" />
+    <option name="실행" path="ActionManager" hit="선택한 컨테이너에서 명령어 실행" />
+    <option name="컨테이너에서" path="ActionManager" hit="선택한 컨테이너에서 명령어 실행" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이너에서 셸 시작 중" />
+    <option name="셸" path="ActionManager" hit="선택한 컨테이너에서 셸 시작 중" />
+    <option name="시작" path="ActionManager" hit="선택한 컨테이너에서 셸 시작 중" />
+    <option name="중" path="ActionManager" hit="선택한 컨테이너에서 셸 시작 중" />
+    <option name="컨테이너에서" path="ActionManager" hit="선택한 컨테이너에서 셸 시작 중" />
+    <option name="id를" path="ActionManager" hit="선택한 컨테이너의 ID를 클립보드에 복사" />
+    <option name="복사" path="ActionManager" hit="선택한 컨테이너의 ID를 클립보드에 복사" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이너의 ID를 클립보드에 복사" />
+    <option name="컨테이너의" path="ActionManager" hit="선택한 컨테이너의 ID를 클립보드에 복사" />
+    <option name="클립보드에" path="ActionManager" hit="선택한 컨테이너의 ID를 클립보드에 복사" />
+    <option name="로그" path="ActionManager" hit="선택한 컨테이너의 로그 표시" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이너의 로그 표시" />
+    <option name="컨테이너의" path="ActionManager" hit="선택한 컨테이너의 로그 표시" />
+    <option name="표시" path="ActionManager" hit="선택한 컨테이너의 로그 표시" />
+    <option name="id" path="ActionManager" hit="선택한 컨테이너의 이미지 ID 또는 태그를 클립보드에 복사" />
+    <option name="또는" path="ActionManager" hit="선택한 컨테이너의 이미지 ID 또는 태그를 클립보드에 복사" />
+    <option name="복사" path="ActionManager" hit="선택한 컨테이너의 이미지 ID 또는 태그를 클립보드에 복사" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이너의 이미지 ID 또는 태그를 클립보드에 복사" />
+    <option name="이미지" path="ActionManager" hit="선택한 컨테이너의 이미지 ID 또는 태그를 클립보드에 복사" />
+    <option name="컨테이너의" path="ActionManager" hit="선택한 컨테이너의 이미지 ID 또는 태그를 클립보드에 복사" />
+    <option name="클립보드에" path="ActionManager" hit="선택한 컨테이너의 이미지 ID 또는 태그를 클립보드에 복사" />
+    <option name="태그를" path="ActionManager" hit="선택한 컨테이너의 이미지 ID 또는 태그를 클립보드에 복사" />
+    <option name="목록" path="ActionManager" hit="선택한 컨테이너의 프로세스 목록 표시" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이너의 프로세스 목록 표시" />
+    <option name="컨테이너의" path="ActionManager" hit="선택한 컨테이너의 프로세스 목록 표시" />
+    <option name="표시" path="ActionManager" hit="선택한 컨테이너의 프로세스 목록 표시" />
+    <option name="프로세스" path="ActionManager" hit="선택한 컨테이너의 프로세스 목록 표시" />
+    <option name="내" path="ActionManager" hit="선택한 컨테이터 내 모든 프로세스 중지" />
+    <option name="모든" path="ActionManager" hit="선택한 컨테이터 내 모든 프로세스 중지" />
+    <option name="선택한" path="ActionManager" hit="선택한 컨테이터 내 모든 프로세스 중지" />
+    <option name="중지" path="ActionManager" hit="선택한 컨테이터 내 모든 프로세스 중지" />
+    <option name="컨테이터" path="ActionManager" hit="선택한 컨테이터 내 모든 프로세스 중지" />
+    <option name="프로세스" path="ActionManager" hit="선택한 컨테이터 내 모든 프로세스 중지" />
+    <option name="시작" path="ActionManager" hit="시작" />
+    <option name="compose" path="ActionManager" hit="실행 중인 모든 Compose 서비스 다시 시작" />
+    <option name="다시" path="ActionManager" hit="실행 중인 모든 Compose 서비스 다시 시작" />
+    <option name="모든" path="ActionManager" hit="실행 중인 모든 Compose 서비스 다시 시작" />
+    <option name="서비스" path="ActionManager" hit="실행 중인 모든 Compose 서비스 다시 시작" />
+    <option name="시작" path="ActionManager" hit="실행 중인 모든 Compose 서비스 다시 시작" />
+    <option name="실행" path="ActionManager" hit="실행 중인 모든 Compose 서비스 다시 시작" />
+    <option name="중인" path="ActionManager" hit="실행 중인 모든 Compose 서비스 다시 시작" />
+    <option name="아래로" path="ActionManager" hit="아래로" />
+    <option name="연결" path="ActionManager" hit="연결" />
+    <option name="삭제" path="ActionManager" hit="연결 삭제" />
+    <option name="연결" path="ActionManager" hit="연결 삭제" />
+    <option name="id" path="ActionManager" hit="이미지 ID 복사" />
+    <option name="복사" path="ActionManager" hit="이미지 ID 복사" />
+    <option name="이미지" path="ActionManager" hit="이미지 ID 복사" />
+    <option name="끌어오기" path="ActionManager" hit="이미지 끌어오기..." />
+    <option name="이미지" path="ActionManager" hit="이미지 끌어오기..." />
+    <option name="밀어넣기" path="ActionManager" hit="이미지 밀어넣기..." />
+    <option name="이미지" path="ActionManager" hit="이미지 밀어넣기..." />
+    <option name="삭제" path="ActionManager" hit="이미지 삭제" />
+    <option name="이미지" path="ActionManager" hit="이미지 삭제" />
+    <option name="이미지" path="ActionManager" hit="이미지 표시" />
+    <option name="표시" path="ActionManager" hit="이미지 표시" />
+    <option name="이미지" path="ActionManager" hit="저장소에서 이미지 풀" />
+    <option name="저장소에서" path="ActionManager" hit="저장소에서 이미지 풀" />
+    <option name="풀" path="ActionManager" hit="저장소에서 이미지 풀" />
+    <option name="중지" path="ActionManager" hit="중지" />
+    <option name="중지된" path="ActionManager" hit="중지된 컨테이너" />
+    <option name="컨테이너" path="ActionManager" hit="중지된 컨테이너" />
+    <option name="id" path="ActionManager" hit="컨테이너 ID 복사" />
+    <option name="복사" path="ActionManager" hit="컨테이너 ID 복사" />
+    <option name="컨테이너" path="ActionManager" hit="컨테이너 ID 복사" />
+    <option name="다시" path="ActionManager" hit="컨테이너 다시 생성" />
+    <option name="생성" path="ActionManager" hit="컨테이너 다시 생성" />
+    <option name="컨테이너" path="ActionManager" hit="컨테이너 다시 생성" />
+    <option name="다시" path="ActionManager" hit="컨테이너 다시 시작" />
+    <option name="시작" path="ActionManager" hit="컨테이너 다시 시작" />
+    <option name="컨테이너" path="ActionManager" hit="컨테이너 다시 시작" />
+    <option name="삭제" path="ActionManager" hit="컨테이너 삭제" />
+    <option name="컨테이너" path="ActionManager" hit="컨테이너 삭제" />
+    <option name="생성" path="ActionManager" hit="컨테이너 생성" />
+    <option name="컨테이너" path="ActionManager" hit="컨테이너 생성" />
+    <option name="시작" path="ActionManager" hit="컨테이너 시작" />
+    <option name="컨테이너" path="ActionManager" hit="컨테이너 시작" />
+    <option name="중지" path="ActionManager" hit="컨테이너 중지" />
+    <option name="컨테이너" path="ActionManager" hit="컨테이너 중지" />
+    <option name="중지" path="ActionManager" hit="컨테이너 중지 해제" />
+    <option name="컨테이너" path="ActionManager" hit="컨테이너 중지 해제" />
+    <option name="해제" path="ActionManager" hit="컨테이너 중지 해제" />
+    <option name="않은" path="ActionManager" hit="태그가 지정되지 않은 이미지" />
+    <option name="이미지" path="ActionManager" hit="태그가 지정되지 않은 이미지" />
+    <option name="지정되지" path="ActionManager" hit="태그가 지정되지 않은 이미지" />
+    <option name="태그가" path="ActionManager" hit="태그가 지정되지 않은 이미지" />
+    <option name="생성" path="ActionManager" hit="터미널 생성" />
+    <option name="터미널" path="ActionManager" hit="터미널 생성" />
+    <option name="표시" path="ActionManager" hit="프로세스 표시" />
+    <option name="프로세스" path="ActionManager" hit="프로세스 표시" />
+  </configurable>
+  <configurable id="Docker" configurable_name="Docker">
+    <option name="" hit="  Docker와의 통합을 구성하려면    를 클릭하세요   " />
+    <option name="docker와의" hit="  Docker와의 통합을 구성하려면    를 클릭하세요   " />
+    <option name="구성하려면" hit="  Docker와의 통합을 구성하려면    를 클릭하세요   " />
+    <option name="를" hit="  Docker와의 통합을 구성하려면    를 클릭하세요   " />
+    <option name="클릭하세요" hit="  Docker와의 통합을 구성하려면    를 클릭하세요   " />
+    <option name="통합을" hit="  Docker와의 통합을 구성하려면    를 클릭하세요   " />
+    <option name="docker" hit="Docker" />
+  </configurable>
+  <configurable id="DockerRegistry" configurable_name="Docker 레지스트리">
+    <option name="" hit="  Docker 레지스트리를 구성하려면    를 클릭하세요  " />
+    <option name="docker" hit="  Docker 레지스트리를 구성하려면    를 클릭하세요  " />
+    <option name="구성하려면" hit="  Docker 레지스트리를 구성하려면    를 클릭하세요  " />
+    <option name="레지스트리를" hit="  Docker 레지스트리를 구성하려면    를 클릭하세요  " />
+    <option name="를" hit="  Docker 레지스트리를 구성하려면    를 클릭하세요  " />
+    <option name="클릭하세요" hit="  Docker 레지스트리를 구성하려면    를 클릭하세요  " />
+    <option name="docker" hit="Docker 레지스트리" />
+    <option name="레지스트리" hit="Docker 레지스트리" />
+  </configurable>
+  <configurable id="reference.settingsDialog.application.dockerMachine" configurable_name="도구">
+    <option name="compose" hit="Docker Compose 실행 파일 " />
+    <option name="docker" hit="Docker Compose 실행 파일 " />
+    <option name="실행" hit="Docker Compose 실행 파일 " />
+    <option name="파일" hit="Docker Compose 실행 파일 " />
+    <option name="docker" hit="Docker Machine 실행 파일 " />
+    <option name="machine" hit="Docker Machine 실행 파일 " />
+    <option name="실행" hit="Docker Machine 실행 파일 " />
+    <option name="파일" hit="Docker Machine 실행 파일 " />
+    <option name="docker" hit="Docker 실행 파일 " />
+    <option name="실행" hit="Docker 실행 파일 " />
+    <option name="파일" hit="Docker 실행 파일 " />
+    <option name="도구" hit="도구" />
+  </configurable>
+  <configurable id="reference.settingsDialog.application.dockerConsole" configurable_name="콘솔">
+    <option name="로그" hit="로그 콘솔에서 이전 세션 접기" />
+    <option name="세션" hit="로그 콘솔에서 이전 세션 접기" />
+    <option name="이전" hit="로그 콘솔에서 이전 세션 접기" />
+    <option name="접기" hit="로그 콘솔에서 이전 세션 접기" />
+    <option name="콘솔에서" hit="로그 콘솔에서 이전 세션 접기" />
+    <option name="콘솔" hit="콘솔" />
+  </configurable>
+</options>

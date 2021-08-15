@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>Bean 클래스 내 모호한 종속성을 지니는 삽입점을 보고합니다.</p>
+<!-- tooltip end -->
+<p><b>예:</b></p>
+<pre><code>
+  interface Engine {}
+
+  @Singleton
+  class GasEngine implements Engine {}
+
+  @Singleton
+  class ElectricEngine implements Engine {}
+
+  @Singleton
+  class Car {
+    @Inject Engine <b>engine</b>; // 모호한 종속성: 삽입점과 일치하는 Bean이 여러 개가 있음
+  }
+</code></pre>
+</body>
+</html>

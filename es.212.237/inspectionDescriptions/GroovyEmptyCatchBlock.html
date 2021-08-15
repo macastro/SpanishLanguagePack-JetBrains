@@ -1,0 +1,26 @@
+<html>
+<body>
+빈 <code>catch</code> 블록을 보고합니다. 의도된 경우도 종종 있지만
+빈 <code>catch</code> 블록은 디버깅 작업을 매우 어렵게 만들 수 있습니다.
+<p><b>예:</b></p>
+<pre>
+<code>
+try {
+  throw new Exception()
+}
+catch (Exception e) {
+}
+</code>
+</pre>
+<p>빠른 수정이 적용된 후 결과는 다음과 같습니다:</p>
+<pre>
+<code>
+try {
+  throw new Exception()
+}
+catch (Exception ignored) {
+}
+</code>
+</pre>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+계산을 수동으로 수행하는 대신 <code>Math.max()</code> 또는 <code>Math.min()</code>을 사용하여 최소 또는 최대 두 개의 숫자를 계산할 수 있는 경우를 보고합니다.
+<p>예:</p>
+<pre>
+  public int min(int a, int b) {
+    return b &lt; a ? b : a;
+  }
+</pre>
+<p>빠른 수정 적용 후:</p>
+<pre>
+  public int min(int a, int b) {
+    return Math.min(a, b);
+  }
+</pre>
+<!-- tooltip end -->
+<p>
+  <b>float 및 double 비활성화</b> 옵션을 사용하여 <code>double</code> 및 <code>float</code>에 대한 검사를 비활성화합니다.
+  이 옵션은 <code>NaN</code>을 처리할 경우 빠른 수정이 <code>float</code>/
+  <code>double</code>의 의미를 약간 변경할 수 있으므로 유용합니다. 그럼에도 이 옵션은 대부분의 경우 사용자가 <code>NaN</code>을 신경 쓰지 않는다면 사소한 버그를 수정합니다.
+</p>
+<p><small>2019.2의 새로운 기능</small></p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<body>
+<code>readObject()</code>
+또는 <code>writeObject()</code> 메서드를 정의하는 <code>Externalizable</code> 클래스를 보고합니다. 이러한 메서드는 <code>Externalizable</code> 객체의 직렬화하기 위해 호출되지 않습니다.
+<p><b>예:</b></p>
+<pre><code>
+  abstract class Crucial implements Externalizable {
+    int value;
+    private void readObject(ObjectInputStream in) {
+      value = in.readInt();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+<code>this</code> 또는 <code>class</code> 표현식의 동기화를 보고합니다.
+보고된 구문에는 <code>synchronized</code> 블록 및 <code>wait()</code>, <code>notify()</code> 또는 <code>notifyAll()</code> 호출이 포함됩니다.
+<p><code>this</code> 또는 <code>class</code> 표현식의 동기화가 부적절한 몇 가지 사유가 있습니다.</p>
+<ol>
+  <li>
+    동기화가 클래스의 외부 인터페이스의 일부가 되므로 향후 다른 잠금 메커니즘을 변경하기 어렵습니다
+  </li>
+  <li>
+    주어진 객체를 잠그는 대상을 추적하기 어렵습니다
+  </li>
+  <li>
+    서비스 거부 공격(DoS)이 의도적으로 발생하거나 하위 클래스화 시 실수로 발생할 수 있습니다
+  </li>
+</ol>
+<p>그 대신 액세스를 완전히 제어할 수 있는 <code>private final</code> lock 객체에서 동기화를 고려할 수 있습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  public void print() {
+    synchronized(this) { // 경고: 'this' 클래스의 잠금 연산은 예기치 않은 부수 효과를 발생시킬 수 있습니다
+      System.out.println("synchronized");
+    }
+  }
+  </code></pre>
+<!-- tooltip end -->
+</body>
+</html>

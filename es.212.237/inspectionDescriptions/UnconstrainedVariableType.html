@@ -1,0 +1,18 @@
+<html>
+<body>
+컨셉에 의해 제한된 표현식이 <code>auto</code>로 선언된 변수에 대입하는 경우 이를 보고하며 유형 제한을 추가하기를 제안합니다.
+<p><b>예:</b></p>
+<pre><code>
+  template<class T>
+  concept Foo = true;
+
+  Foo auto func() { return true; }
+
+  void bar() {
+      auto f = func(); // 'Foo' 제약을 초가하기 위해 여기서 경고
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2020.2의 새로운 기능</small></p>
+</body>
+</html>

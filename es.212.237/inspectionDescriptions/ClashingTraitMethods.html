@@ -1,0 +1,31 @@
+<html>
+<body>
+시그니처가 같은 메서드를 포함하는 두 개 이상의 특성을 구현하는 클래스를 보고합니다.
+<p>그러한 메서드를 호출하면 예상하지 못한 결과가 나올 수 있습니다.</p>
+<p>빠른 수정이 명시적인 재정의 메서드를 추가합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  trait T1 {
+      def foo() {}
+  }
+
+  trait T2 {
+      def foo() {}
+  }
+
+  class X implements T1, T2 {}
+
+  // T2.foo()가 호출됨
+  new X().foo()
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class X implements T1, T2 {
+      @Override
+      Object foo() {
+          return T2.super.foo()
+      }
+  }
+</code></pre>
+</body>
+</html>

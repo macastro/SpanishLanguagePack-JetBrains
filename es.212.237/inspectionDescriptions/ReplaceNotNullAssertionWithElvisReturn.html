@@ -1,0 +1,20 @@
+<html>
+<body>
+elvis 연산자로 바꿀 수 있고 (<code>?: return</code>)을 반환하는 비 null 어설션(<code>!!</code>) 호출을 보고합니다.
+<p>비 null 어설션은 예상하지 못한 NPE(NullPointerException)로 이어질 수 있습니다. <code>!!</code>을 사용하지 않는 것은 좋은 관행입니다.</p>
+<p>빠른 수정이 비 null 어설션을 <code>return</code> 또는 <code>return null</code>으로 바꿉니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  fun test(number: Int?) {
+      val x = number!!
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  fun test(number: Int?) {
+      val x = number ?: return
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

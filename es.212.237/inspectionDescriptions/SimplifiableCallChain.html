@@ -1,0 +1,20 @@
+<html>
+<body>
+하나의 호출로 바꿀 수 있는 두 개의 호출 체인을 보고합니다.
+<p>이는 불필요한 코드가 실행되지 않도록 도울 수 있습니다.</p>
+<p>빠른 수정이 호출 체인을 하나의 호출로 바꿉니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  fun main() {
+      listOf(1, 2, 3).filter { it &gt; 1 }.count()
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  fun main() {
+      listOf(1, 2, 3).count { it &gt; 1 }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

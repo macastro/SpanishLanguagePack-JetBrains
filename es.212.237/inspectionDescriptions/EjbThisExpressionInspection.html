@@ -1,0 +1,18 @@
+<html>
+<body>
+<code>this</code>를 반환하거나 매개변수로 받는 메서드를 포함하는 EJB 클래스를 보고합니다.
+
+<p><b>예:</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+  private AnotherBean anotherBean;
+
+  public ExampleBean setAnotherBean(AnotherBean anotherBean) {
+    this.anotherBean = anotherBean;
+    return this; // 오류: 여기서 `this`를 반환해야 함
+  }
+}
+</code></pre>
+</body>
+</html>

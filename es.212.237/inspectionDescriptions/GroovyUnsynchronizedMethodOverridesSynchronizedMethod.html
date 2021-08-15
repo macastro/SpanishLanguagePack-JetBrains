@@ -1,0 +1,21 @@
+<html>
+<body>
+<b>synchronized</b> 메서드를 재정의하는 비 <b>synchronized</b> 메서드를 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  abstract class Base {
+      <b>synchronized</b> void foo() {
+          //...
+      }
+  }
+  class Derived extends Base {
+      @Override
+      <b>void foo()</b> {
+          super.foo()
+            //...
+        }
+    }
+</code></pre>
+<p>여기서 <code>Bar</code> 클래스 내에서 동기화되지 않은 <code>foo()</code> 메서드는 동기화된 메서드를 재정의합니다.
+</body>
+</html>

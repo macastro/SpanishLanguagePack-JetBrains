@@ -1,0 +1,16 @@
+<html>
+<body>
+동일한 방식으로 작동하지만 람다 대식 구체적인 값을 허용하는 대체 메서드가 있는 경우 자명한 람다 식이 사용되었는지 보고합니다.
+<p>이 검사는 코드를 간소화하는 데 도움이 됩니다.</p>
+<p>예:</p>
+<pre>
+  Optional.orElseGet(() -> null)
+</pre>
+<p>빠른 수정 적용 후:</p>
+<pre>
+  Optional.orElse(null)
+</pre>
+<!-- tooltip end -->
+<small>2017.1의 새로운 기능</small>
+</body>
+</html>

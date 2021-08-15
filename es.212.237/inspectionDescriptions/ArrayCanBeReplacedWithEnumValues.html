@@ -1,0 +1,19 @@
+<html>
+<body>
+<code>EnumType.values()</code>로 바꿀 수 있는 열거형 상수 배열을 보고합니다.
+<p>일반적으로 이러한 열거형을 업데이트할 때 배열도 업데이트해야 합니다. 그러나 <code>EnumType.values()</code>을 사용하면 수정이 필요하지 않습니다.</p>
+<p>예:</p>
+<pre><code>
+  enum States {
+     NOT_RUN, IN_PROGRESS, FINISHED;
+  }
+  
+  handleStates(new States[] {NOT_RUN, IN_PROGRESS, FINISHED});
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  handleStates(States.values());
+</code></pre>
+<p><small>2019.1의 새로운 기능</small></p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+<code>java.util.concurrent.locks.Condition.await()</code>가 루프 내부에서 호출되지 않는 경우를 보고합니다.
+<p>
+  <code>await()</code> 및 관련 메서드는 보통 어떤 조건이 true가 될 때까지 스레드를 중지하기 위해 사용됩니다.
+  스레드가 다른 이유로 깨어났을 수 있으므로 <code>await()</code> 호출이 반환된 후 조건을 검사해야 합니다.
+  루프는 이를 위한 간단한 방법입니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  void acquire(Condition released) throws InterruptedException {
+    released.await();
+  }
+</code></pre>
+<p>좋은 코드는 다음과 같아야 합니다:</p>
+<pre><code>
+  void acquire(Condition released) throws InterruptedException {
+    while (acquired) {
+      released.await();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

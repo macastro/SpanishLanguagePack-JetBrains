@@ -1,0 +1,35 @@
+<html>
+<head>
+  <style type="text/css">
+    body, table {
+      font-family: Verdana, sans-serif;
+      font-size: 100%;
+      padding-left: 2mm;
+    }
+
+    #footer {
+      font-size: 95%;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+<p>
+  XPath 표현식에서 사용되지만 관련 XML 파일에 누락되었거나 참조된 스키마에 정의되지 않은 요소 및 속성의 이름을 보고합니다. 이는 스크립트를 실행할 때 발생하고 즉시 발견되지 않을 수도 있는, XPath 표현식의 오타로 인한 문제를 방지할 수 있습니다.
+</p>
+
+<p>예:</p>
+
+<p>
+  <code>&lt;xsl:template match="<b>h:txtarea</b>" /></code>
+</p>
+
+<p>
+  만약 <code>h</code>가 XHTML 네임스페이스에 바운드될 때, 검사는 <code>match</code> 표현식의 이 일부를 알 수 없는 요소 이름으로 보고합니다. 이는 이 요소의 올바른 이름은 “ textarea” 이기 때문입니다.
+</p>
+
+
+<p id="footer">XPathView + XSLT-Support에 의해 지원됩니다.</p>
+</body>
+</html>

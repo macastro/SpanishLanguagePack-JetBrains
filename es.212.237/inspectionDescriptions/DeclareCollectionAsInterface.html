@@ -1,0 +1,22 @@
+<html>
+<body>
+컬렉션 클래스를 적절한 인터페이스가 아닌 타입으로 사용하여 만든 <code>Collection</code> 변수의 선언을 보고합니다. 변수 타입 약화로 컴파일 오류가 발생하면 경고가 표시되지 않습니다.
+<p>예:</p>
+<pre><code>
+  // 경고: 구체 컬렉션 클래스 ArrayList가 사용됨.
+  int getTotalLength(ArrayList&lt;String&gt; list) {
+    return list.stream().mapToInt(String::length).sum();
+  }
+
+  // 경고 없음. trimToSize() 메서드
+  // List 인터페이스에서 이용 불가
+  void addData(ArrayList&lt;String&gt; data) {
+    data.add("Hello");
+    data.add("World");
+    data.trimToSize();
+  }
+</code></pre>
+빠른 수정은 적절한 컬렉션 인터페이스를 사용하도록 제안합니다(예: <code>Collection</code>, <code>Set</code> 또는 <code>List</code>).
+<!-- tooltip end -->
+</body>
+</html>

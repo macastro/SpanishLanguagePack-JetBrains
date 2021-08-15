@@ -1,0 +1,14 @@
+<html>
+<body>
+중괄호를 괄호로 변경하지 않고 람다를 호출 가능한 참조로 교체하는 것은 일반적인 오류이므로 호출 가능한 참조 하나로 람다 표현식을 보고합니다.
+<br /><br />
+예:
+<pre><code>
+  listOf(1,2,3).map { it::toString }
+</code></pre>
+다음으로 바뀌어야 합니다.
+<pre><code>
+  listOf(1,2,3).map(Int::toString)
+</code></pre>
+</body>
+</html>

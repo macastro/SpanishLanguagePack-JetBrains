@@ -1,0 +1,24 @@
+<html>
+<body>
+값 범위를 검사하여 조건 체인을 1회 검사로 간소화할 수 있는 조건 체인을 보고합니다.
+<p>빠른 수정은 조건 체인을 간소화된 표현식으로 대체합니다.</p>
+<p>예:</p>
+<pre>
+  x > 2 && x &lt; 4
+</pre>
+<p>빠른 수정 적용 후:</p>
+<pre>
+  x == 3
+</pre>
+<p>예:</p>
+<pre>
+  arr.length == 0 || arr.length > 1
+</pre>
+<p>빠른 수정 적용 후:</p>
+<pre>
+  arr.length != 1
+</pre>
+<!-- tooltip end -->
+<p><small>2019.1의 새로운 기능</small></p>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<body>
+<code>when</code> 표현식으로 바꿀 수 있는 세 개 이상의 브랜치를 포함하는 <code>if</code> 구문을 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  fun checkIdentifier(id: String) {
+      fun Char.isIdentifierStart() = this in 'A'..'z'
+      fun Char.isIdentifierPart() = isIdentifierStart() || this in '0'..'9'
+
+      if (id.isEmpty()) {
+          print("Identifier is empty")
+      } else if (!id.first().isIdentifierStart()) {
+          print("Identifier should start with a letter")
+      } else if (!id.subSequence(1, id.length).all(Char::isIdentifierPart)) {
+          print("Identifier should contain only letters and numbers")
+      }
+  }
+</code></pre>
+<p>빠른 수정을 위해 <code>if</code> 표현식을 <code>when</code> 표현식으로 변환하도록 제안합니다.</p>
+<pre><code>
+  fun checkIdentifier(id: String) {
+      fun Char.isIdentifierStart() = this in 'A'..'z'
+      fun Char.isIdentifierPart() = isIdentifierStart() || this in '0'..'9'
+
+      when {
+          id.isEmpty() -> {
+              print("Identifier is empty")
+          }
+          !id.first().isIdentifierStart() -> {
+              print("Identifier should start with a letter")
+          }
+          !id.subSequence(1, id.length).all(Char::isIdentifierPart) -> {
+              print("Identifier should contain only letters and numbers")
+          }
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

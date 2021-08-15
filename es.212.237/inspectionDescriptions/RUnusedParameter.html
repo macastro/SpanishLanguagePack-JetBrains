@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>함수 본문에서 사용되지 않는 함수 매개변수를 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+my_fahrenheit_to_celsius  &lt;- function(f_temp) {
+  return((temp - 32) * 5 / 9)
+}
+</code></pre>
+<p>강조 표시된 코드 조각을 수정하여 매개변수가 사용되는지 확인하거나 제거합니다.</p>
+<p><b>가능한 솔루션:</b></p>
+<pre><code>
+my_fahrenheit_to_celsius  &lt;- function(f_temp) {
+  return((f_temp - 32) * 5 / 9)
+}
+</code></pre>
+</body>
+</html>

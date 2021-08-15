@@ -1,0 +1,23 @@
+<html>
+<body>
+<p><code>ADD</code> 및 <code>COPY</code> 명령어 내 유효하지 않은 대상 디렉터리를 보고합니다.</p>
+<p>
+  <a href="https://docs.docker.com/engine/reference/builder/#add">Dockerfile 사양</a>에 따르면 여러 개의 소스가 지정된 경우 대상은 디렉터리여야 하며 슬래시 '/'로 끝나야 합니다.
+  그렇지 않으면 Docker 빌드는 실패합니다.
+</p>
+<!-- tooltip end -->
+<p><b>예:</b></p>
+<pre><code>
+  # 아래 명령어 모두 실패함
+  ADD textA.txt textB.txt relativeDir
+  ADD ["binaryA.jar", "binary2.jar", "destination"]
+  COPY text3.txt text4.txt /absolute/path
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  ADD textA.txt textB.txt relativeDir/
+  ADD ["binaryA.jar", "binary2.jar", "destination/"]
+  COPY text3.txt text4.txt /absolute/path/
+</code></pre>
+</body>
+</html>

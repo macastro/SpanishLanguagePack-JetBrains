@@ -1,0 +1,41 @@
+<html>
+<body>
+<p>Spring Websocket XML 기반의 애플리케이션 컨텍스트와 관련된 이슈를 보고합니다.</p>
+
+<ul>
+  <li>확인되지 않은 bean 참조</li>
+  <li>필요한 태그 및 속성 누락</li>
+  <li>잘못된 프로퍼티 타입</li>
+  <li>일관성 없는 <code>enum</code> 프로퍼티</li>
+  <li>참조된 bean의 잘못된 타입</li>
+</ul>
+
+<p><b>예:</b></p>
+<pre><code>
+  &lt;beans... &gt;
+  
+    &lt;bean id="dummyBean" class="java.lang.String"/&gt;
+  
+    &lt;<strong>websocket:message-broker </strong>application-destination-prefix="/app"&gt; &lt;!-- Exactly one of &lt;simple-broker&gt; or &lt;stomp-broker-relay&gt; is required --&gt;
+        &lt;websocket:stomp-endpoint path="/hello" &gt;
+            &lt;websocket:sockjs&gt;
+                &lt;websocket:transport-handlers&gt;
+                    &lt;ref bean="<strong>dummyBean</strong>"/&gt; &lt;!-- Bean must be of 'org.springframework.web.socket.sockjs.transport.TransportHandler' type --&gt;
+                    &lt;bean class=<strong>"java.lang.String"</strong>/&gt; &lt;!-- java.lang.String' is not assignable to 'org.springframework.web.socket.sockjs.transport.TransportHandler --&gt;
+                &lt;/websocket:transport-handlers&gt;
+            &lt;/websocket:sockjs&gt;
+        &lt;/websocket:stomp-endpoint&gt;
+        &lt;websocket:stomp-broker-relay/&gt;
+        &lt;websocket:simple-broker prefix="/topic"/&gt;
+        &lt;websocket:broker-channel&gt;
+            &lt;websocket:executor keep-alive-seconds="10"/&gt;
+            &lt;websocket:interceptors&gt;
+              &lt;ref bean="<strong>dummyBean</strong>"/&gt;  &lt;!-- Bean must be of 'org.springframework.messaging.support.ChannelInterceptor' type --&gt;
+              &lt;bean class="<strong>java.lang.String</strong>"/&gt; &lt;!-- java.lang.String' is not assignable to 'org.springframework.messaging.support.ChannelInterceptor' --&gt;
+            &lt;/websocket:interceptors&gt;
+        &lt;/websocket:broker-channel&gt;
+  &lt;/websocket:message-broker&gt;
+&lt;/beans&gt;
+</code></pre>
+</body>
+</html>

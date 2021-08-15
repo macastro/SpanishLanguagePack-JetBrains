@@ -1,0 +1,23 @@
+<html>
+<body>
+작성된 <code>Throwable</code> 이 실제로 발생하지 않는 경우 생성한 <code>Throwable</code> 또는 그
+하위 클래스의 인스턴스화를 보고합니다.
+<p>보고된 코드는 테스트에서 잡아내기 어려운 실수를 나타냅니다.</p>
+<p>
+    또한 이 검사는 <code>Throwable</code> 인스턴스가 발생하지 않는 경우 <code>Throwable</code> 또는 그 하위 클래스의
+    인스턴스를 반환하는 메서드 호출을 보고합니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  fun check(condition: Boolean) {
+      if (!condition) /* throw is missing here */ IllegalArgumentException("condition is not met");
+  }
+
+  fun createError() = RuntimeException()
+
+  fun foo() {
+      /* 여기서 던지기가 누락됨 */ createError()
+  }
+</code></pre>
+</body>
+</html>

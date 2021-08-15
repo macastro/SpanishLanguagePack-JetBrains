@@ -1,0 +1,35 @@
+<html>
+<body>
+불필요한 <code>Unit</code> 표현식을 보고합니다.
+<p>
+    Kotlin의 <code>Unit</code>은 유의미한 것을 반환하지 않는 함수의 반환 유형으로 사용할 수 있습니다.
+    <code>Unit</code> 유형에서 가능한 값은 <code>Unit</code> 객체 하나뿐입니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  fun redundantA(): Unit {
+      return Unit // 중복, 기본적으로 'Unit'이 반환되며 예상되는 반환 유형과 일치
+  }
+
+  fun requiredA(condition: Boolean): Any {
+      if (condition) return "hello"
+      return Unit // 예상되는 유형이 'Any'이므로 명시적 'Unit'이 필요함
+  }
+
+  fun redundantB(condition: Boolean): Any = if (condition) {
+      fun ancillary(): Int = 1
+      println("${ancillary()}")
+      Unit // 마지막 표현식의 유형이 이미 'Unit'이므로 중복
+  } else {
+      println("else")
+  }
+
+  fun requiredB(condition: Boolean): Any = if (condition) {
+      1024
+      Unit // 필요함, 그렇지 않으면 '1024'(Int)가 반환 값이 됨
+  } else {
+      println("else")
+  }
+</code></pre>
+</body>
+</html>

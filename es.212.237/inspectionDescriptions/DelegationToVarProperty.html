@@ -1,0 +1,21 @@
+<html>
+<body>
+<code>var</code> 프로퍼티에 대한 인터페이스 위임을 보고합니다.
+<p>위임은 프로퍼티의 초기 값만 사용하며 이후의 대입은 위임에 영향을 주지 않습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Example(var text: CharSequence): CharSequence by text
+</code></pre>
+<p>빠른 수정을 위해 프로퍼티를 불변 프로퍼티로 전환하도록 제안합니다.</p>
+<pre><code>
+  class Example(val text: CharSequence): CharSequence by text
+</code></pre>
+<p>또는 무슨 이유로든 가변성에 의지해야 한다면:</p>
+<pre><code>
+  class Example(text: CharSequence): CharSequence by text {
+      var text = text
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

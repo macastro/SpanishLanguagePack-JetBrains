@@ -1,0 +1,12 @@
+<html>
+<body>
+정수 상수를 사용하여 반올림 모드를 지정하는 <code>BigDecimal.divide()</code> 또는 <code>BigDecimal.setScale()</code> 호출을 보고합니다.
+JDK 1.5 이후부터 대신 <code>RoundingMode</code> enum 매개변수를 취하는 메서드를 사용해 보세요.  
+<p><b>예:</b></p>
+<pre><code>new BigDecimal("42").setScale(2, BigDecimal.ROUND_FLOOR);</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>new BigDecimal("42").setScale(2, RoundingMode.FLOOR);</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+EntityGraph 관련 어노테이션 내부의 다음과 같은 해결되지 않은 속성을 보고합니다:<br/>
+<ul>
+  <li><code>@NamedAttributeNode</code> 내 value</li>
+  <li><code>@NamedAttributeNode</code> 내 명명된 하위 그래프</li>
+  <li><code>@NamedEntityGraph</code> 내 name</li>
+</ul><br/>
+
+<p><b>예:</b></p><br/>
+<pre><code>
+  @Entity
+  @NamedEntityGraph(name = "entity-graph",...)
+  public class JavaEntity {
+    public void foo() {
+      Persistence.createEntityManagerFactory("")
+        .createEntityManager()
+        .getEntityGraph("unknown-entity-graph"); // 해결되지 않은 참조
+    }
+  }
+</code></pre>
+</body>
+</html>

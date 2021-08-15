@@ -1,0 +1,35 @@
+<html>
+<body>
+인터페이스에 노출되지 않는 클래스 내 <code>public</code> 메서드를 보고합니다.
+<p>인터페이스를 통해 모든 <code>public</code> 메서드를 노출하는 것은 느슨한 결합을 유지하는 데 중요하며 특정 구성 요소 기반 프로그래밍 스타일을 위해 필수적일 수 있습니다.</p>
+<p>예:</p>
+<pre><code>
+interface Person {
+  String getName();
+}
+
+class PersonImpl implements Person {
+  private String name;
+
+  // ok: 메서드가 인터페이스에 노출됨
+  @Override
+  public String getName() {
+    return name;
+  }
+
+  // 경고: 메서드가 public이지만
+  // 인터페이스에 노출되지 않음
+  public void setName() {
+    this.name = name;
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  <b>다음 어노테이션이 추가된 경우 무시</b> 목록을 사용해 특수 어노테이션을 지정하세요. 이 어노테이션 중 하나가 추가된 인터페이스는 검사에서 무시됩니다.
+<p>
+  프로젝트의 인터페이스를 구현하지 않는 클래스의 메서드를 무시하려면 <b>포함하는 클래스가 비 라이브러리 인터페이스를 구현하지 않는 경우 무시</b> 옵션을 사용하세요.
+<p>
+
+</body>
+</html>

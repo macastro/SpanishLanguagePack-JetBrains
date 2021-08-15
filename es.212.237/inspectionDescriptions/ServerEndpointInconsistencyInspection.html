@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>WebSocket 엔드포인트 선언 오류를 보고합니다.</p>
+<p>
+  JSR 356 사양에 따르면, WebSocket 엔드포인트는 각 메시지 타입(텍스트, 메시지, pong)에 대한 정확히 하나의 <code>@OnMessage</code> 메서드를 포함해야 합니다.
+</p>
+<p>
+  <code>javax.websocket.server.ServerEndpoint</code> 어노테이션이 추가된 엔드포인트 클래스는 각 생명 주기 어노테이션이 추가된 정확히 하나의 메서드를 포함할 수 있습니다.
+</p>
+<ul>
+  <li><code>@OnOpen</code></li>
+  <li><code>@OnClose</code></li>
+  <li><code>@OnError</code></li>
+</ul>
+<p>
+  <code>javax.websocket.Endpoint</code> 어노테이션이 추가된 엔드포인트 클래스는 어노테이션을 사용하는 대신 해당하는 생명 주기 메서드를 구현해야 합니다.
+</p>
+</body>
+</html>

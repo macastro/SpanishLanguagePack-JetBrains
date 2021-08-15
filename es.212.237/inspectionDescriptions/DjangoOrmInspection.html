@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>일부 ORM 이유로 인해 호출되지 않을 수 있는 몇몇 메서드를 보고합니다.</p>
+<p><b>예:</b></p>
+<pre style="font-family: monospace">
+class Choice:
+    question = ForeignKey(Question, null=False)
+
+
+choice_set = Question.objects.get(id=1).choice_set.remove()
+</pre>
+<p>외래 키가 <code>null=False</code>를 포함하는 경우 <code>remove</code> 함수를 호출할 수 없습니다.</p>
+</body>
+</html>

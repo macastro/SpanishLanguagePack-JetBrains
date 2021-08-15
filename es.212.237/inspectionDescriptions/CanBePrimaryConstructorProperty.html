@@ -1,0 +1,18 @@
+<html>
+<body>
+기본 생성자 매개변수에 명시적으로 대입되는 프로퍼티를 보고합니다.
+<p>기본 생성자에서 직접 프로퍼티를 선언하면 코드의 양을 줄이고 코드 가독성을 높여줍니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  class User(name: String) {
+      val name = name
+  }
+</code></pre>
+<p>빠른 수정을 위해 매개변수와 프로퍼티 선언을 기본 생성자 매개변수로 결합하도록 제안합니다.</p>
+<pre><code>
+  class User(val name: String) {
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

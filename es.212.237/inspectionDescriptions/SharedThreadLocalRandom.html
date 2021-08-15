@@ -1,0 +1,33 @@
+<html>
+<body>
+스레드 간에 공유될 수 있는<code>java.util.concurrent.ThreadLocalRandom</code> 인스턴스를 보고합니다.
+<p>
+  <code>ThreadLocalRandom</code>은 스레드 안전 클래스가 아니기 때문에 스레드 간에 공유될 수 없습니다.
+  이 검사는 메서드 인수로 사용된 필드에 대입되거나 지역 변수에 대입되어 익명 클래스 또는 중첩된 클래스에서 사용되는 인스턴스를 보고합니다. 이러한 인스턴스는 스레드 간에 공유될 수 있습니다.
+</p>
+<p>
+  <code>ThreadLocalRandom</code>은 보통 <code>ThreadLocalRandom.current().nextInt(...)</code>
+  (또는 <code>nextDouble(...)</code> etc.)와 같이 사용됩니다.
+  모두 이러한 형식으로 사용될 경우, <code>ThreadLocalRandom</code> 인스턴스는 우발적으로 여러 스레드에서 사용될 수 없습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+    class Main {
+      void printRandomNumbersAsync() {
+        ThreadLocalRandom random = ThreadLocalRandom.current();
+        CompletableFuture.supplyAsync(() -&gt; generateNumbers(random))
+          .thenAccept(numbers -&gt; System.out.println(Arrays.toString(numbers)));
+      }
+
+      private int[] generateNumbers(Random random) {
+        return random.ints(1000, 0, 100).toArray();
+      }
+    }
+  </code></pre>
+<!-- tooltip end -->
+<p>
+  <code>ThreadLocalRandom</code> 인스턴스를 인수로 전달하기에 안전한 메서드를 나열하려면 옵션을 사용하세요.
+  메서드 이름으로 정규 표현식을 사용할 수 있습니다.
+</p>
+</body>
+</html>

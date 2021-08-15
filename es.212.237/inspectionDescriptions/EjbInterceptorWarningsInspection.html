@@ -1,0 +1,33 @@
+<html>
+<body>
+<p>다음과 같은 EJB 사양 위반 사례를 보고합니다:</p>
+<ul>
+  <li>일부 EJB 관련 인터페이스를 구현하는 클래스 이름이 'ejb'로 시작하는 경우</li>
+  <li>인터셉터 클래스가 인터셉터 메서드를 정의하지 않는 경우</li>
+</ul>
+
+<p><b>예:</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+
+  @Interceptors(GoodInterceptor.class)
+  public void getSomeData() {... }
+
+  @Interceptors(EmptyInterceptor.class)
+  public void getSomeData() {... }
+}
+
+class GoodInterceptor {
+
+  @AroundInvoke
+  public Object logAll(InvocationContext context) throws Exception {... }
+
+  @PostConstruct
+  public Object logCreate(InvocationContext context) throws Exception {... }
+}
+
+class EmptyInterceptor {} // 오류: 특정 메서드를 포함하지 않는 인터셉터 클래스
+</code></pre>
+</body>
+</html>

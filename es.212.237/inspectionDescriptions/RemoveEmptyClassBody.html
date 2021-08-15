@@ -1,0 +1,30 @@
+<html>
+<body>
+본문이 빈 클래스 및 객체의 선언을 보고합니다.
+<p>코드를 정리하려면 '불필요한 빈 클래스 본문 제거' 빠른 수정을 사용하세요.</p>
+<p><b>예:</b></p>
+<pre><code>
+  class EmptyA() {} // &lt;== 빈 본문
+
+  class EmptyB {
+      companion object {} // &lt;== 빈 본문
+  }
+
+  fun emptyC() {
+     object {} // &lt;== 익명 객체, 괜찮음(보고되지 않음)
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class EmptyA()
+
+  class EmptyB {
+      companion object
+  }
+
+  fun emptyC() {
+     object {}
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<body>
+포함하는 클래스의 표시된 필드와 이름이 동일한 지역 변수를 보고합니다.
+이와 같이 이름이 지정될 경우 동일한 이름의 필드가 의도된 변수를 실수로 사용할 수 있습니다.
+<p>빠른 수정은 변수 이름을 변경하도록 제안합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  public class Foo {
+    public Object foo;
+
+    void bar() {
+      Object o = new Object() {
+        void baz() {
+          Object foo; // 지역 변수 'foo'는 클래스의 필드 'Foo'를 숨깁니다
+        }
+      };
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  이 검사에서 다음 옵션을 구성할 수 있습니다.
+</p>
+<ol>
+  <li><strong>액세스할 수 없는 필드 무시</strong> - 표시되지 않는 상위 클래스 필드(예: private 필드)와 이름이 동일한 지역 변수를 무시합니다</li>
+  <li><strong>비 static 필드를 숨기는 static 컨텍스트의 지역 변수 무시</strong> - 
+예: 지역 변수가 static 메서드 내부에 있거나 static 내부 클래스의 메서드 내부에 있을 경우
+  </li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+SQL 집계 함수의 유효하지 않은 사용 위치를 보고합니다.
+<p>다음 상황이 포함됩니다:</p>
+<ul>
+  <li><p>HAVING 및 ORDER BY 절에서 사용되었으나 GROUP BY에서 누락된 열.</p>
+    <pre><code>CREATE TABLE foo(id INT PRIMARY KEY, a INT, b INT);
+SELECT a, MAX(b) FROM foo GROUP BY a HAVING b > 0;
+SELECT * FROM foo GROUP BY a ORDER BY b;</code></pre>
+    <p>그룹화가 기본 키를 기준으로 이루어진 경우에는 이 규칙이 적용되지 않습니다.</p>
+    <pre><code>SELECT * FROM foo GROUP BY id ORDER BY b;</code></pre>
+  </li>
+  <li><p>잘못된 컨텍스트에 사용된 집계 함수. 일반적으로 다음 컨텍스트에서 집계 함수를 사용할 수 있습니다: SELECT, HAVING 및 ORDER BY 섹션, 다른 파생 언어 전용 케이스 내 표현식 목록. 다음 쿼리를 실행하면 오류가 표시됩니다.</p>
+    <pre><code>SELECT a FROM foo WHERE MAX(b) > 0;
+SELECT a FROM foo GROUP BY MAX(a);</code></pre>
+  </li>
+  <li><p>중첩된 집계 함수 호출.</p>
+    <pre><code>SELECT MAX(SUM(a)) FROM foo GROUP BY a;</code></pre>
+    <p>이 규칙은 분석 함수에 적용되지 않습니다. 다음 쿼리는 유효하며 올바릅니다.</p>
+    <pre><code>SELECT MAX(SUM(a) OVER ()) FROM foo;</code></pre>
+  </li>
+  <li><p>집계 함수가 없이 HAVING을 사용한 경우입니다. 이 경우, WHERE 섹션을 사용해 코드를 다시 작성해 보세요.</p>
+    <pre><code>SELECT a, MAX(b) FROM foo GROUP BY a HAVING a > 0;</code></pre>
+  </li>
+</ul>
+</body>
+</html>

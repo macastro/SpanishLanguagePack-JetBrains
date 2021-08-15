@@ -1,0 +1,18 @@
+<html>
+<body>
+메서드 <code>@Contract</code> 어노테이션의 이슈를 보고합니다. 보고할 수 있는 이슈 유형은 다음과 같습니다.
+<ul>
+<li>컨트랙트 구문 오류</li>
+<li>메서드 시그니처를 준수하지 않는 컨트랙트(잘못된 매개변수 개수)</li>
+<li>컨트랙트와 모순되는 메서드 구현(예: 컨트랙트에 <code>false</code>로 표시되었으나 <code>true</code>를 반환하는 경우)</li>
+</ul>
+<p>예:</p>
+<pre><code>
+  // method has no parameters, but contract expects 1
+  @Contract("_ -> fail")
+  <b>void</b> x() {
+    <b>throw</b> new AssertionError();
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+래핑된 기본 값의 명시적 언래핑인 언박싱을 보고합니다.
+<p>Java 5 이상 버전에서 언박싱은 불필요하며 안전하게 제거될 수 있습니다.</p>
+<p><b>예:</b></p>
+<ul>
+  <li><code>Integer i = Integer.valueOf(42).intValue();</code> &rarr; <code>Integer i = Integer.valueOf(42);</code></li>
+  <li><code>int k = Integer.valueOf(42).intValue();</code> &rarr; <code>int k = Integer.valueOf(42);</code>
+    <p>(<b>진정으로 불필요한 언박싱된 표현식만 보고</b> 옵션이 검사되지 않은 경우에만 보고합니다)</p></li>
+</ul>
+<!-- tooltip end -->
+<p>
+  <b>진정으로 불필요한 언박싱된 표현식만 보고</b> 옵션을 사용하여 언박싱된 값이 즉시 묵시적 또는 명시적으로 박싱되는 진정으로 불필요한 언박싱만을 보고합니다.
+  이 경우 언박싱-박싱 단계 전체를 제거할 수 있습니다. 이 검사는 간단한 명시적 언박싱을 보고하지 않습니다.</p>
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 5 이상인 경우에만 보고합니다.</p>
+</body>
+</html>

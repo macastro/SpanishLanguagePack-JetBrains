@@ -1,0 +1,14 @@
+<html>
+<body>
+런타임 시 일부 프레임워크(예: Spring 또는 Hibernate)에 의해 클래스가 하위 클래스로 지정되는 것을 방지하는 코드를 보고합니다.
+<!-- tooltip end -->
+<p>필수적이나 불가능한 하위 클래스 지정의 대표적 예시:</p>
+<ul>
+  <li>프레임워크 전용 어노테이션이 표시된 <code>final</code> 클래스(예: Spring <code>@Configuration</code>)</li>
+  <li>프레임워크 전용 어노테이션이 표시된 <code>final</code>, <code>static</code> 또는 <code>private</code>(예: Spring <code>@Transactional</code>)</li>
+  <li><code>final</code> 클래스 내부에서 프레임워크 전용 어노테이션이 표시된 메서드</li>
+</ul>
+
+<p>보고된 사례의 목록은 사용된 프레임워크에 따라 다릅니다.</p>
+</body>
+</html>

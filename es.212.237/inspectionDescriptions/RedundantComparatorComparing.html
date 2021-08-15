@@ -1,0 +1,23 @@
+<html>
+<body>
+간소화될 수 있는 불필요한 <code>Comparator</code> 결합자 구문을 보고합니다.
+<p>예:</p>
+<pre><code>
+  c.thenComparing(Comparator.comparing(function));
+
+  Comparator.comparing(Map.Entry::getKey);
+
+  Collections.max(list, Comparator.reverseOrder());
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre>
+  c.thenComparing(function)
+
+  Map.Entry.comparingByKey()
+
+  Collections.min(list, Comparator.naturalOrder());
+</pre>
+<!-- tooltip end -->
+<p><small>2018.1의 새로운 기능</small></p>
+</body>
+</html>

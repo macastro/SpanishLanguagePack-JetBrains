@@ -1,0 +1,32 @@
+<html>
+<head>
+  <style type="text/css">
+    body, table {
+      font-family: Verdana, sans-serif;
+      font-size: 100%;
+      padding-left: 2mm;
+    }
+
+    #footer {
+      font-size: 95%;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+<p>
+  색인을 위한 대괄호 또는 <code>position()</code> 함수 비교에 잘못 사용된 0을 보고합니다. XPath에서 색인은 항상 0이 <em>아닌</em> 1부터 시작하기 때문에 이러한 사용은 거의 언제나 버그입니다.
+</p>
+
+<p>
+  예:
+</p>
+
+<p>
+  <code>//someelement[<b>position() = 0</b>]</code> 또는 <code>//something[<b>0</b>]</code>
+</p>
+
+<p id="footer">XPathView + XSLT-Support에 의해 지원됩니다.</p>
+</body>
+</html>

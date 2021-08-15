@@ -1,0 +1,16 @@
+<html>
+<body>
+<code>assert</code> 문을 보고하고 이를 <code>java.lang.AssertionError</code>를 던지는 <code>if</code> 문으로 바꿀 것을 제안합니다.
+<p>예:</p>
+<pre>
+  assert param != null;
+</pre>
+<p>빠른 수정 적용 후:</p>
+<pre>
+  if (param == null) throw new AssertionError();
+</pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

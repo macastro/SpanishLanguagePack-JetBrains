@@ -1,0 +1,19 @@
+<html>
+<body>
+전환 구문의 <i>fallthrough</i>를 보고합니다.  fallthrough가 유용한 경우도 종종 있지만 의도하지 않은 경우가 많으며 예상하지 못한 버그를 발생시킬 수 있습니다.
+<p><b>예:</b></p>
+<pre>
+<code>
+switch(n) {
+  case 1:
+    print 1
+  case 2: // "case 2"에 대한 "case 1" fallthrough입니다. "case 2"의 구문은 "case 1" 후에 바로 실행됩니다.
+    print 2
+    break
+  default:
+    print "Default"
+}
+</code>
+</pre>
+</body>
+</html>

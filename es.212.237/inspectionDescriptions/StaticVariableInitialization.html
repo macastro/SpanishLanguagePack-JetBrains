@@ -1,0 +1,17 @@
+<html>
+<body>
+클래스 초기화 시 초기화할 수 없는 <code>static</code> 변수를 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  class Foo {
+    public static int bar;
+
+    static { }
+  }
+</code></pre>
+<p>이 검사는 매우 보수적인 데이터플로 알고리즘을 사용하며 초기화되지 않은 <code>static</code> 변수를 부정확하게 보고할 수 있습니다. 초기화된
+  것으로 보고된 변수는 항상 초기화됩니다.</p>
+<!-- tooltip end -->
+<p><b>기본 필드 무시</b> 옵션을 사용하여, 초기화되지 않은 기본 필드를 무시합니다.</p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+대응하는 <code>Condition.wait()</code> 호출을 찾을 수 없는 경우 <code>Condition.signal()</code> 또는 <code>Condition.signalAll()</code>을 호출을 보고합니다.
+<p>현재 클래스의 필드를 대상으로 하는 호출만 이 검사에서 보고됩니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Queue {
+    private final Condition isEmpty =...;
+
+    void add(Object elem) {
+      //...
+      isEmpty.signal(); // 경고: 대응하는 'await()'가 없는 'signal()' 호출
+      //...
+    }
+
+    void remove(Object elem) throws InterruptedException {
+      //...
+      //      isEmpty.await();
+      //...
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

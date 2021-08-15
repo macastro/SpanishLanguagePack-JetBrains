@@ -1,0 +1,61 @@
+<html>
+<body>
+<p>
+  Spring Boot 애플리케이션 <code>.properties</code> 구성 파일에서 확인되지 않거나 지원이 중단된 구성 키 및 잘못된 값을 보고합니다. 이로 인해 런타임 오류가 발생할 수 있습니다.
+</p>
+
+<p><b>예:</b></p>
+<pre><code>
+server.port=invalid # Reports 'Cannot convert 'invalid' to java.lang.Integer'
+</code></pre>
+
+<p>지원이 중단된 구성 키에 대체 키가 있는 경우 'Use replacement key(대체 키 사용)' 빠른 수정을 적용할 수 있습니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+logging.path=${path} # Reports 'Deprecated configuration property 'logging.path''
+</code></pre>
+
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+logging.file.path=${path}
+</code></pre>
+
+<p>
+  구성 키가  <code>spring-configuration-metadata.json</code>에서 정의되지 않은 경우 'Define configuration key(구성 키 정의)' 빠른 수정을 적용하여 <code>META-INF/spring-additional-configuration-metadata.json</code> 파일을 생성하고 필요한 키를 정의할 수 있습니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+new.key=value #Reports 'Cannot resolve configuration property 'new.key''
+</code></pre>
+
+<p>빠른 수정 적용 후 <code>META-INF/spring-additional-configuration-metadata.json</code>에 다음 코드가 추가됩니다.</p>
+<pre><code>
+{
+  "properties": [
+    {
+      "name": "new.key",
+      "type": "java.lang.String",
+      "description": "Description for new.key."
+  }
+] }
+</code></pre>
+
+<p>또한 이 검사는 목록 및 맵 구성 키의 색인 표기 오류를 강조 표시합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+spring.datasource.schema[]=${schema} #Reports 'Missing index value'
+</code></pre>
+<!-- tooltip end -->
+
+<p>
+  <b>Replacement tokens(대체 토큰)</b> 옵션을 사용하여 구성 파일의 값 플레이스홀더에 사용된 토큰을 정의합니다.
+  해당 토큰은 <code>beginToken*endToken</code> 형식으로 지정됩니다.
+  <code>*</code>이 없을 경우 시작 및 종료 토큰이 동일한 것으로 가정됩니다.
+</p>
+<p>
+  예를 들어, 시작 및 종료 토큰 모두에 대한 기본값은 <code>@</code>이며, 이를 통해 <code>some.property=@another.property@</code>와 같은 플레이스홀더를 정의할 수 있습니다.
+</p>
+<p>대체 토큰(<code>@property.key@</code>) 내부의 값은 강조 표시되지 않습니다.</p>
+</body>
+</html>

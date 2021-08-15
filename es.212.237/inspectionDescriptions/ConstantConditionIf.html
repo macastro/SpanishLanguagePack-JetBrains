@@ -1,0 +1,21 @@
+<html>
+<body>
+조건이 일정하여 표현식을 단순화할 수 있는 <code>if</code> 표현식을 보고합니다.
+<p>의도적일 때가 가끔 있지만 이러한 구조는 혼란을 초래할 수 있으며 종종 오타가 난 결과입니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  fun example() {
+      if (true) {
+          throw IllegalStateException("Unexpected state")
+      }
+  }
+</code></pre>
+<p>빠른 수정을 위해 <code>if</code> 조건을 제거하도록 제안합니다.</p>
+<pre><code>
+  fun example() {
+      throw IllegalStateException("Unexpected state")
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

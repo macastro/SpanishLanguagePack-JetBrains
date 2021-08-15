@@ -1,0 +1,19 @@
+<html>
+<body>
+이름이 의문사로 시작하지 않는 bool 메서드를 보고합니다.
+<p>라이브러리 메서드를 재정의하는 bool 메서드는 이 검사에서 무시됩니다.</p>
+<p><b>예:</b></p>
+<pre><code>boolean empty(List&lt;String&gt; list) {
+  return list.isEmpty();
+}</code></pre>
+<p>그러한 메서드의 이름을 변경하는 빠른 수정은 에디터에서만 사용할 수 있습니다.</p>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<ul>
+  <li>bool 메서드 이름을 시작하도록 허용 가능한 의문사를 지정하려면 <b>부울 메서드 이름 접두사</b> 목록을 사용하세요.</li>
+  <li>반환 타입이 <code>java.lang.Boolean</code>인 메서드를 무시하려면 <b>반환 타입이 'java.lang.Boolean'인 메서드 무시</b> 옵션을 사용하세요. </li>
+  <li>어노테이션 타입(<code>@interface</code>)의 부울 메서드를 무시하려면 <b>@interface의 bool 메서드 무시</b> 옵션을 사용하세요.</li>
+  <li>상위 메서드가 있는 메서드를 무시하려면 <b>상위 메서드를 재정의/구현하는 메서드 무시</b> 옵션을 사용하세요.</li>
+</ul>
+</body>
+</html>

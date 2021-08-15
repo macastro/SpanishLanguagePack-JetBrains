@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>Spring Expression Language(SpEL)를 static 필드에 삽입하려는 시도 보고('null' 값이 삽입된 경우).</p>
+
+<p><b>예:</b></p>
+<pre><code>
+@Controller
+public class MyController {
+    <strong>@Value</strong>("#{systemProperties['some.key']}")  //  Injection to static fields is not allowed
+    static String spelWithDefaultValue;
+}
+</code></pre>
+</body>
+</html>

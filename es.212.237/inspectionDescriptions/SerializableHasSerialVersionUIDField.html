@@ -1,0 +1,34 @@
+<html>
+<body>
+<code>Serializable</code>을 구현하고 <code>serialVersionUID</code> 필드를 선언하지 않는 클래스를 보고합니다.
+<p>
+  <code>serialVersionUID</code> 필드가 없으면 클래스에 변경 적용 시 이전에 시리얼화된 버전을 읽을 수 없게 됩니다.
+</p>
+<p><b>예:</b></p>
+<pre>
+  <code>
+    class Main implements Serializable {
+    }
+  </code>
+</pre>
+<p>빠른 수정 적용 후:</p>
+<pre>
+  <code>
+    class Main implements Serializable {
+      private static final long serialVersionUID = -1446398935944895849L;
+    }
+  </code>
+</pre>
+<!-- tooltip end -->
+<p>다음 옵션을 사용해 검사를 구성하세요:</p>
+<ul>
+  <li>
+    상속자가 이 검사에서 보고되어서는 안 되는 클래스를 나열합니다.
+    상위 클래스에서 <code>Serializable</code>를 상속받지만 직렬화를 의도하지 않은 클래스를 말합니다.
+  </li>
+  <li>
+    <code>Serializable</code> 익명 클래스를 무시할지 여부를 설정합니다.
+  </li>
+</ul>
+</body>
+</html>

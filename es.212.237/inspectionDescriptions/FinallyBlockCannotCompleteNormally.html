@@ -1,0 +1,19 @@
+<html>
+<body>
+<code>finally</code> 블록 내에서 사용되는 <code>return</code>, <code>throw</code>, <code>break</code>, <code>continue</code> 및 <code>yield</code> 구문을 보고합니다. 이로 인해 <code>finally</code> 블록이 정상적으로 완료되지 않고 갑자기 완료됩니다.
+동일한 <code>try</code>-<code>catch</code> 구문의 <code>try</code> 및 <code>catch</code> 블록에서 던져진 모든 예외는 억제됩니다.
+<p><b>예:</b></p>
+<pre><code>
+  void x() {
+    <b>try</b> {
+      throw new RuntimeException();
+    } <b>finally</b> {
+      // bar()가 true를 반환하는 경우 RuntimeException이 억제됩니다
+      <b>if</b> (bar()) <b>return</b>;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

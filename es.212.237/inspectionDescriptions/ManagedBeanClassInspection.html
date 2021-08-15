@@ -1,0 +1,18 @@
+<html>
+<body>
+다음 경우에 잘못 정의된 Managed Bean 클래스를 보고합니다:
+<ul>
+  <li>클래스가 final가 아닌 경우</li>
+  <li>Blass가 abstract인 경우</li>
+  <li>Bean이 static이 아닌 내부 클래스인 경우</li>
+</ul>
+
+<p><b>예:</b></p><br/>
+<pre><code>
+  @ManagedBean
+  public final class JavaManagedBean { // 오류: managed bean은 final일 수 없음
+   ...
+  }
+</code></pre>
+</body>
+</html>
