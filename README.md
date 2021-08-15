@@ -21,8 +21,14 @@ Nos gustaría extender nuestro agradecimiento a los siguientes patrocinadores po
 ## Instrucciones
 
 201.16	Para versiones:	2020.1.1 — 2020.1.4	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.201.16.jar)**
-202.409	Para versiones:	2020.2 — 2020.2.5	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.202.409.jar)**
-203.604	Para versiones:	2020.3 — 2020.3.2	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.203.604.jar)**
+
+202.415	Para versiones:	2020.2 — 2020.2.5	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.202.415.jar)**
+
+203.709	Para versiones:	2020.3 — 2020.3.2	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.203.709.jar)**
+
+211.777	Para versiones:	2021.1 — 2020.1.3	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.211.777.jar)**
+
+212.237	Para versiones:	2021.2 — 2021.2.1	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.212.237.jar)**
 
 Arrastre el archivo es.201.16.jar al IDE y proceda a reiniciar.
 
