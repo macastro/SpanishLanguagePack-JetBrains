@@ -18,27 +18,27 @@
           <li>부분 메시지를 수신하는 <code>String</code> 및 bool 쌍</li>
           <li>블로킹 스트림으로 전체 메시지를 수신하는 Reader</li>
           <li>텍스트 디코더(<code>Decoder.Text</code> 또는 <code>Decoder.TextStream</code>)가 있는 엔드포인트를 위한 모든 객체 매개변수
-          </li>
-        </ul>
-      </li>
+         </li>
+       </ul>
+     </li>
       <li>
         메서드가 바이너리 메시지를 취급하는 경우:
         <ul>
           <li>전체 메시지를 수신하는 <code>byte[]</code> 또는 <code>ByteBuffer</code></li>
           <li>부분 메시지를 수신하는 <code>byte[]</code> 및 bool 쌍, 또는 <code>ByteBuffer</code> 및 bool 쌍</li>
           <li>블로킹 스트림으로 전체 메시지를 수신하는 <code>InputStream</code></li>
-          <li>바이너리 디코더(<code>Decoder.Binary</code> 또는 <code>Decoder. BinaryStream </code>)가 있는 엔드포인트를 위한 모든 객체 매개변수
-          </li>
-        </ul>
-      </li>
+          <li>바이너리 디코더(<code>Decoder.Binary</code> 또는 <code>Decoder. BinaryStream</code>)가 있는 엔드포인트를 위한 모든 객체 매개변수
+         </li>
+       </ul>
+     </li>
       <li>
         메서드가 pong 메시지를 취급하는 경우:
         <ul>
           <li>pong 메시지를 취급하기 위한 <code>PongMessage</code></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+       </ul>
+     </li>
+   </ul>
+ </li>
   <li>서버 엔드포인트를 위한 <code>@PathParam</code> 어노테이션이 추가된 모든 개수의 <code>String</code> 또는 Java 원시 매개변수</li>
   <li>선택적 <code>Session</code> 매개변수</li>
 </ul>

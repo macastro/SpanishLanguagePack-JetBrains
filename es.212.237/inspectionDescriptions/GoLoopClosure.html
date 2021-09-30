@@ -4,7 +4,7 @@
   이러한 변수는 <code>func</code> 리터럴로 복사되지 않기 때문에 예기치 못한 값을 가질 수 있습니다. 또한 <code>defer</code> 및 <code>go</code> 구문의 <code>func</code> 리터럴은 즉시 실행되지 않습니다.
 
 <p>클로저 및 고루틴에 대한 더 자세한 내용은 <a href="https://golang.org/doc/go_faq.html#closures_and_goroutines">golang.org의 What happens
-  with closures running as goroutines?</a>(을)를 참고하세요.  </p>
+  with closures running as goroutines?</a>(을)를 참고하세요. </p>
 <p>예:</p>
 <pre><code>for _, v := range []string{"a", "b", "c"} {
   go func() {

@@ -9,7 +9,7 @@ $$ LANGUAGE sql;
 SELECT * FROM produce_a_table() AS s (c1 INT);
 SELECT * FROM produce_a_table() AS s (c1);
 SELECT * FROM DBLINK('dbname=mydb', 'SELECT proname, prosrc FROM pg_proc') AS t1;</code></pre>
-<p><code>AS s (c1 INT) </code>에는 타입 별칭이 있지만 <code>AS s (c1)</code> 및 <code>AS t1</code>에는 타입 별칭이 없습니다.
+<p><code>AS s (c1 INT)</code>에는 타입 별칭이 있지만 <code>AS s (c1)</code> 및 <code>AS t1</code>에는 타입 별칭이 없습니다.
   이 경우, 두 번째 <code>produce_a_table()</code> 호출 및 <code>DBLINK()</code>가 강조 표시됩니다.
 </p>
 </body>

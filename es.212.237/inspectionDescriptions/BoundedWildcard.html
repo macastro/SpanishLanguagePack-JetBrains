@@ -42,31 +42,31 @@
       무공변성 클래스. 예를 들어, 무공변성 클래스는 <code>java.util.List&lt;T&gt;</code>입니다. 이 클래스는
       값을 허용(<code>List.add(T)</code> 메서드를 통해)할 뿐만 아니라
       값을 생성(<code>T List.get()</code> 메서드를 통해)하기 때문입니다.
-    </p>
+   </p>
     <p>
       한편,
       <code>contravariant</code> 클래스는 값을 받기만 합니다. 예를 들어, 유일한 메서드 <code>accept(T)</code>가 포함된
       <code>java.util.function.Consumer&lt;T&gt;</code>가 있습니다. 유사하게, <code>covariant</code> 클래스는
       값을 생성하기만 합니다. 예를 들어, 유일한 메서드<code>T get()</code>이 포함된
       <code>java.util.function.Supplier&lt;T&gt;</code>가 있습니다.
-    </p>
+   </p>
     <p>
       사용자들은 공변성/반공변성 클래스에서 바운드된 와일드카드를 종종 사용하지만
       무공변성 클래스에서는 와일드카드를 피합니다. 예: <code>void process(List&lt;? extends T&gt; l)</code>.
       이러한 무공변성 클래스를 무시하고 <code>void
       process(List&lt;T&gt; l)</code> 같은 엄격한 타입을 유지하려면 이 옵션을 비활성화합니다.
-    </p>
-  </li>
+   </p>
+ </li>
   <li>
     <p>
       <code>private</code> 메서드. 이 메서드는 public API의 일부가 아닌 것으로 간주될 수 있습니다.
-    </p>
-  </li>
+   </p>
+ </li>
   <li>
     <p>
       인스턴스 메서드
-    </p>
-  </li>
+   </p>
+ </li>
 </ul>
 </body>
 </html>

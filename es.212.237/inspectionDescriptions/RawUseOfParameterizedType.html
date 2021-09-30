@@ -7,12 +7,12 @@
     <pre><code>
       List list = new ArrayList&lt;String&gt;(); // 경고: 매개변수화된 클래스 'List'의 원천 타입 사용
       list.add(1);                         // 문자열 목록이 생성되지만 Integer 또한 허용되어 런타임 예외를 초래함
-    </code></pre>
-  </li>
+   </code></pre>
+ </li>
   <li>
     <pre><code>
       IntFunction&lt;List&lt;?&gt;[]> fun = List[]::new; // 배열 생성 도중 타입 인수를 제공할 수 없으므로 경고 없음</code></pre>
-  </li>
+ </li>
 </ul>
 <!-- tooltip end -->
 <p>검사 구성:</p>

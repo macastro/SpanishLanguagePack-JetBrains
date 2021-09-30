@@ -12,13 +12,13 @@
     private static final AtomicIntegerFieldUpdater updater =
     AtomicIntegerFieldUpdater.newUpdater((A.class), "value"); // 경고: 필드 'value'에 'static' 제어자가 있습니다
   }
-  </pre></li>
+ </pre></li>
   <li><pre>
   class B {
     private static final AtomicIntegerFieldUpdater updater =
       AtomicIntegerFieldUpdater.newUpdater(B.class, "value"); // 경고: 클래스 'B'에 'value'라는 필드가 없습니다
   }
-  </pre></li>
+ </pre></li>
 </ul>
 <!-- tooltip end -->
 <p>

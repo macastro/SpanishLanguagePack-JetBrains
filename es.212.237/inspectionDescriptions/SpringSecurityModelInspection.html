@@ -17,41 +17,41 @@
     <ul>
       <li>'/**' 패턴이 있는 &lt;http&gt;는 마지막이어야 합니다</li>
       <li>'pattern'이 없는 다중 &lt;http&gt; 요소는 허용되지 않습니다</li>
-    </ul>
-  </li>
+   </ul>
+ </li>
   <li>&lt;http&gt; 구성 오류
     <ul>
       <li><code>security='none'</code>일 경우 빈 태그</li>
-    </ul>
-  </li>
+   </ul>
+ </li>
   <li>&lt;user-service&gt;
     <ul>
       <li>속성 'properties' 또는 &lt;user&gt; 요소 목록을 포함해야 합니다</li>
-    </ul>
-  </li>
+   </ul>
+ </li>
   <li>&lt;ldap-server&gt;
     <ul>
       <li>'manager-dn' 사용 시 'manager-password'가 필요합니다</li>
       <li>'user-context-mapper-ref' 또는 'user-details-class'를 포함해야 합니다</li>
-    </ul>
-  </li>
+   </ul>
+ </li>
   <li> &lt;authentication-provider&gt;
     <ul>
       <li>사용자 서비스의 한 종류만 허용됩니다</li>
-    </ul>
-  </li>
+   </ul>
+ </li>
   <li>&lt;global-method-security&gt;
     <ul>
       <li>'pre-post-annotations'은 &lt;pre-post-annotation-handling&gt; 사용을 위해 값을 'enabled'해야 합니다</li>
       <li>&lt;protect-pointcut&gt; 및 &lt;intercept-url&gt;에 대한 값이 'aspectj'인 'mode'를 사용할 수 없습니다</li>
       <li>'requires-channel' 속성은 상위 &lt;http&gt;에만 허용됩니다</li>
-    </ul>
-  </li>
+   </ul>
+ </li>
   <li>&lt;protect&gt;
     <ul>
       <li>&lt;protect&gt;와 &lt;global-method-security&gt;의 혼합은 권장되지 않습니다</li>
-    </ul>
-  </li>
+   </ul>
+ </li>
 </ul>
 </body>
 </html>

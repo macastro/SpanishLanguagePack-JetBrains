@@ -19,13 +19,13 @@
   void f(boolean foo, boolean bar) {
     boolean b = (foo && bar) || !foo;
   }
-  </code></pre>
+ </code></pre>
 <p>빠른 수정 적용 후:</p>
 <pre><code>
   void f(boolean foo, boolean bar) {
     boolean b = !foo || bar;
   }
-  </code></pre>
+ </code></pre>
 
 <!-- tooltip end -->
 </body>

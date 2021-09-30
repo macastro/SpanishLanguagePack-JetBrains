@@ -16,7 +16,7 @@
   
     &lt;bean id="dummyBean" class="java.lang.String"/&gt;
   
-    &lt;<strong>websocket:message-broker </strong>application-destination-prefix="/app"&gt; &lt;!-- Exactly one of &lt;simple-broker&gt; or &lt;stomp-broker-relay&gt; is required --&gt;
+    &lt;<strong>websocket:message-broker</strong>application-destination-prefix="/app"&gt; &lt;!-- Exactly one of &lt;simple-broker&gt; or &lt;stomp-broker-relay&gt; is required --&gt;
         &lt;websocket:stomp-endpoint path="/hello" &gt;
             &lt;websocket:sockjs&gt;
                 &lt;websocket:transport-handlers&gt;

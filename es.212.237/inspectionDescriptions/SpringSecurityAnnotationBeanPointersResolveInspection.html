@@ -7,14 +7,14 @@
   <li>
     <pre><code>@WithUserDetails(value = "admin", userDetailsServiceBeanName = "unknownUserDetailsService")
       // "Cannot resolve 'unknownUserDetailsService' bean" will be reported if 'unknownUserDetailsService' is not defined in the Spring model
-    </code></pre>
-  </li>
+   </code></pre>
+ </li>
   <li>
     <pre><code>@WithUserDetails(value = "admin", userDetailsServiceBeanName = "jpaUserDetailsService")
       //"Bean must be of 'org.springframework.security.core.userdetails.UserDetailsService' type"
       // will be reported if "jpaUserDetailsService"  bean is not of 'UserDetailsService' type
-    </code></pre>
-  </li>
+   </code></pre>
+ </li>
 </ul>
 </body>
 </html>
