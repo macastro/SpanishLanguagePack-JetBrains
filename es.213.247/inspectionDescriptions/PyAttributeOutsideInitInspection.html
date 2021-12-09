@@ -1,0 +1,26 @@
+<html>
+<body>
+인스턴스 속성 정의가 <code>__init__</code> 메서드 외부에 있는 경우 문제를 보고합니다.
+<p><b>예:</b></p>
+<pre style="font-family: monospace">
+    class Book:
+    def __init__(self):
+        self.author = 'Mark Twain'
+
+    def release(self):
+        self.year = '1889'
+</pre>
+<p>
+  빠른 수정이 적용되면 코드 샘플은 다음과 같이 변경됩니다:
+</p>
+<pre style="font-family: monospace">
+    class Book:
+    def __init__(self):
+        self.year = '1889'
+        self.author = 'Mark Twain'
+
+    def release(self):
+        pass
+</pre>
+</body>
+</html>

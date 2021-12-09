@@ -1,0 +1,26 @@
+<html>
+<body>
+항상 true, false, null 또는 0으로 정적으로 알려진, 자명하지 않은 조건 및 값을 보고합니다.
+의도한 경우도 있지만, 이는 종종 프로그램에 논리적 오류가 있다는 것을 나타냅니다. 또한, <code>when</code> 브랜치에 연결할 수 없으며 항상 실패하는 것으로 정적으로 알려진 일부 표현식을 보고합니다.
+<p>예:</p>
+<pre><code>
+fun process(x: Int?) {
+  val isNull = x == null
+  if (!isNull) {
+    if (<span style="background: yellow">x != null</span>) {} // 조건은 항상 참입니다.
+    require(<span style="background: yellow">x!! &lt; 0 && x &gt; 10</span>) // 조건은 항상 거짓입니다.
+  } else {
+    println(x<span style="background: yellow">!!</span>) // !! operator will always fail
+  }
+}
+fun process(v: Any) {
+  when(v) {
+    is CharSequence -&gt; println(v <span style="background: yellow">as</span> Int) // 형 변환은 항상 실패합니다.
+    <span style="background: yellow">is String</span> -&gt; println(v) // 브랜치에 연결할 수 없습니다.
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2021.3의 새로운 기능</small></p>
+</body>
+</html>

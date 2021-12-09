@@ -1,0 +1,16 @@
+<html>
+<body>
+<code>add</code>/<code>put</code> 호출의 시퀀스 내 <code>Map</code> 키, <code>Set</code> 요소, 배열 요소를 덮어쓰는 코드, 또는 <code>Set.of</code>(런타임 오류를 발생시킴)와 같은 Java 9 factory 메서드를 사용하는 코드를 보고합니다.
+<p>이는 보통 복사-붙여넣기 오류로 발생합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  map.put("A", 1);
+  map.put("B", 2);
+  map.put("C", 3);
+  map.put("D", 4);
+  map.put("A", 5); // 키 "A" 중복, 이전에 쓰인 항목을 덮어씀
+</code></pre>
+<!-- tooltip end -->
+<p><small>2017.3의 새로운 기능</small></p>
+</body>
+</html>

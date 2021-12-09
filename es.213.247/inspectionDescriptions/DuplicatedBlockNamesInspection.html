@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>Django 템플릿 내 중복된 블록 이름을 보고합니다.</p>
+<p><b>예:</b></p>
+<pre style="font-family: monospace">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;title>{% block title %}My amazing site{% endblock %}&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id="sidebar"&gt;
+        {% block title %}
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="/"&gt;홈&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/blog/"&gt;블로그&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        {% endblock %}
+    &lt;/div&gt;
+
+    &lt;div id="content"&gt;
+        {% block content %}{% endblock %}
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</body>
+</html>

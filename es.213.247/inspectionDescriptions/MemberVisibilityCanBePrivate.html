@@ -1,0 +1,17 @@
+<html>
+<body>
+캡슐화 원칙을 따르기 위해 <code>private</code>으로 만들 수 있는 선언을 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+class Service(val url: String) {
+    fun connect(): URLConnection = URL(url).openConnection()
+}
+</code></pre>
+<p>빠른 수정 적용 후(<code>Service</code> 클래스 외부에서 <code>url</code>이 사용되지 않는다고 가정):</p>
+<pre><code>
+class Service(private val url: String) {
+    fun connect(): URLConnection = URL(url).openConnection()
+}
+</code></pre>
+</body>
+</html>

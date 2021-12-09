@@ -1,0 +1,17 @@
+<html>
+<body>
+값이 자동으로 증가하는 두 열을 포함하는 테이블을 보고합니다. MySQL, Microsoft SQL Server 및 Db2 파생 언어에서 테이블은 값 자동 증가 옵션이 추가된 필드를 하나만 가질 수 있으며 이 필드는 키여야 합니다.
+<p>예(MySQL):</p>
+<pre><code>CREATE TABLE my_table
+(
+    id INT AUTO_INCREMENT,
+    c2 INT AUTO_INCREMENT,
+);</code></pre>
+<p><code>c1</code>에 이 제약이 이미 추가되어 있으므로 <code>c2</code>에 대한 AUTO_INCREMENT 제약이 강조 표시됩니다. 이 경고를 해결하려면 <code>id</code>를 기본 키로 설정하고 <code>c2</code>에 대한 AUTO_INCREMENT를 삭제하세요.</p>
+<pre><code>CREATE TABLE my_table
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    c2 INT,
+);</code></pre>
+</body>
+</html>

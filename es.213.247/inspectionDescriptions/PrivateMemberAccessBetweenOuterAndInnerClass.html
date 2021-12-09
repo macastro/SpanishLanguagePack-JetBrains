@@ -1,0 +1,41 @@
+<html>
+<body>
+중첩 클래스에서 외부 클래스의 비상수 <code>private</code> 구성원으로의 참조를 보고합니다.
+이러한 참조의 경우, javac은 package-private 합성 접근자 메서드를 생성하며, 이때 private으로 보이는 멤버가 실제로는 전체 패키지에서 액세스할 수 있기 때문에 보안이 손상될 수 있습니다.
+<p>
+  중첩 클래스와 외부 클래스는 별도의 클래스 파일로 컴파일됩니다. Java 가상머신은 일반적으로 한 클래스로부터 다른 클래스의 private 필드 및 메서드로의 액세스를 금지합니다. 중첩 클래스로부터 외부 클래스 private 멤버로의 액세스를 활성화하기 위해 javac은 package-private 합성 접근자 메서드를 생성합니다.
+</p>
+<p>
+  대신에 <code>private</code> 멤버를 package-private으로 만들어 실제 접근성을 명확하게 합니다.
+  이렇게 하면 약간의 메모리를 보존하여 리소스가 제한된 환경의 성능도 향상할 수 있습니다.
+</p>
+<p>
+  언어 수준이 Java 11 이상인 경우, 중첩 기반의 액세스 제어 기능(JEP 181) 덕분에 접근자 메서드가 더 이상 생성되지 않으므로 이 검사에서 보고되지 않습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Outer {
+    private void x() {}
+
+    class Inner {
+      void y() {
+        x();
+      }
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Outer {
+    void x() {}
+
+    class Inner {
+      void y() {
+        x();
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,9 @@
+<html>
+<body>
+ORDER BY 절에서 ASC 및 DESC 등의 정렬 순서 지시가 불필요한 경우를 보고합니다.
+<p>예(MySQL):</p>
+<pre><code>CREATE TABLE foo(a INT, b INT, c INT);
+SELECT * FROM foo ORDER BY a ASC, b DESC, c ASC;</code></pre>
+<p>ORDER BY 키워드는 디폴트로 레코드를 오름차순으로 나열합니다. 그러므로 <code>a</code> 및 <code>c</code> 열의 <code>ASC</code> 키워드는 불필요합니다.</p>
+</body>
+</html>

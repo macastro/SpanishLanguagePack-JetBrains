@@ -1,0 +1,45 @@
+<html>
+<body>
+<code>@RunWith(Parameterized.class)</code> 으로 어노테이션이 추가되고 <code>@Parameterized.Parameters</code> 어노테이션이 추가된 데이터 제공자 메서드를 포함하지 않거나, 이 메서드에 정확한 시그니처가 없는 JUnit 4 <a href="https://github.com/junit-team/junit4/wiki/parameterized-tests">매개변수화 테스트</a>클래스를 보고합니다. 이러한 테스트 클래스는 실행할 수 없습니다.
+데이터 제공자 메서드는 <code>public</code> 및 <code>static</code>이고, 반환 타입 <code>Iterable</code> 또는 <code>Object[]</code>를 가져야 합니다.
+<p>빈 매개변수 제공자 메서드를 작성하거나 잘못된 데이터 공급자 메서드의 시그니처를 변경할 것을 권장합니다.</p>
+
+<p><b>예:</b><p>
+<pre><code>
+  @RunWith(Parameterized.class)
+  <b>public class</b> ImportantTest {
+    <b>private int</b> input;
+    <b>private int</b> expected;
+
+    ImportantTest(<b>int</b> input, <b>int</b> expected) {
+      <b>this</b>.input = input;
+      <b>this</b>.expected = expected;
+    }
+
+    // ... 테스트 케이스
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  @RunWith(Parameterized.class)
+  <b>public class</b> ImportantTest {
+    <b>private int</b> input;
+    <b>private int</b> expected;
+
+    ImportantTest(<b>int</b> input, <b>int</b> expected) {
+      <b>this</b>.input = input;
+      <b>this</b>.expected = expected;
+    }
+
+    @Parameters
+    <b>public static</b> Iterable&lt;Object[]> parameters() {
+      <b>return null</b>;
+    }
+
+    // ... 테스트 케이스
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

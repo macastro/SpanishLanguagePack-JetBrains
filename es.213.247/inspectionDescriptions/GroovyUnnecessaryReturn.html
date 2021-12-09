@@ -1,0 +1,20 @@
+<html>
+<body>
+<p><code>void</code>를 반환하는 생성자 및 메서드 끝에 있는 <code>return</code> 문을 보고합니다. 이는 불필요하며 안전하게 제거할 수 있습니다.</p>
+<p><b>예:</b>
+<pre><code>
+  <b>void</b> foo (String s){
+      print(s)
+      <b>return</b>
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  <b>void</b> foo (String s){
+      print(s)
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>자세한 내용은 Java의 동일한 검사를 참조하세요.</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>패턴 매칭 익명 함수로 변환할 수 있는 match 문을 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  iterable.map(value => value match {
+      case Some(value) => whenValue(value)
+      case None => whenNothing()
+  })
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  iterable.map {
+      case Some(value) => whenValue(value)
+      case None => whenNothing()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

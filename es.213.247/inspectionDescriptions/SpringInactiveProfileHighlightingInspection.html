@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Spring XML 애플리케이션 컨텍스트의 비활성 프로파일을 보고합니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  &lt;!-- 활성화된 프로필 <strong>'DEV'</strong>는 이 애플리케이션 컨텍스트용으로 선택되었습니다 --&gt;
+  &lt;beans profile="<strong>DEV</strong>"&gt;
+    &lt;bean class="MyFactory" factory-method="createBean"/&gt;
+  &lt;/beans&gt;
+  &lt;!--  이 태그의 내용은 'unused'로 강조 표시됩니다 --&gt;
+  <em>&lt;beans profile="<strong>TESTS</strong>"&gt;
+    &lt;bean class="MyTestFactory" factory-method="createBean"/&gt;
+  &lt;/beans&gt;</em>
+  &lt;!--  'unused' 섹션의 끝 --&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

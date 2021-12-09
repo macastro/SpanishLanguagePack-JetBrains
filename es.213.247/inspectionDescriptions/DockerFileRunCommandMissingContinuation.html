@@ -1,0 +1,21 @@
+<html>
+<body>
+<p><code>RUN</code> 명령어 내 누락된 연속 문자를 보고합니다.</p>
+<p>
+  <i>셸</i> 형식의<code>RUN</code>명령어 사용 시 하나의 <code>RUN</code> 지시를 다음 줄에 계속하려면  '\'(백슬래시)를 사용해야 합니다.
+  그렇지 않으면 Docker 빌드는 실패합니다.
+</p>
+<!-- tooltip end -->
+<p><b>예:</b></p>
+<pre><code>
+  # the command below will fail
+  RUN /bin/bash -c 'source $HOME/.bashrc;
+      echo $HOME'
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  RUN /bin/bash -c 'source $HOME/.bashrc; \
+      echo $HOME'
+</code></pre>
+</body>
+</html>

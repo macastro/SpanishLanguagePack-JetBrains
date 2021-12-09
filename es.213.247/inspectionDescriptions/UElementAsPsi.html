@@ -1,0 +1,16 @@
+<html>
+<body>
+UAST <code>UElement</code>를 <code>PsiElement</code>로 사용하는 위치를 보고합니다.
+<p>
+  이런 방식으로 얻은 <code>PsiElement</code>는 모호합니다.
+</p>
+<p>
+  "물리적인" <code>PsiElement</code>를 얻으려면 <code>UElementKt.getSourcePsiElement()</code>를 사용하고
+  Java 요소(<code>PsiClass</code>, <code>PsiMethod</code> 등)의 동작을 "흉내내는" <code>PsiElement</code>는
+  <code>UElementKt.getAsJavaPsiElement()</code>를 사용하세요.
+</p>
+<p>
+  SDK Docs에서 <a href="https://plugins.jetbrains.com/docs/intellij/uast.html">UAST - 통합 추상 구문 트리</a>를 참조하세요.
+</p>
+</body>
+</html>

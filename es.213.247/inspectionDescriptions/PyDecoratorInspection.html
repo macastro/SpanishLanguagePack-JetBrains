@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>클래스 외부의 메서드 내 <code>@classmethod</code> 또는 <code>@staticmethod</code> 데코레이터의 사용 사례를 보고합니다.</p>
+<p><b>예:</b></p>
+<pre style="font-family: monospace">
+class State(object):
+
+    @classmethod
+    def my_state(cls, name):
+        cls.name = name
+
+
+@classmethod
+def change_state(self):
+    pass
+</pre>
+<p><code>change_state</code> 메서드는 <code>@classmethod</code> 데코레이터를 사용하지 않거나 <code>State</code> 클래스 선언으로 이동해야 합니다. </p>
+<p><code>데코레이터 제거</code> 액션을 적용하면 코드는 다음과 같이 변경됩니다:</p>
+<pre style="font-family: monospace">
+class State(object):
+
+    @classmethod
+    def my_state(cls, name):
+        cls.name = name
+
+
+def change_state(self):
+    pass
+</pre>
+</body>
+</html>

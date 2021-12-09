@@ -1,0 +1,29 @@
+<html>
+<body>
+<a href="https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html">이중 검사된 잠금</a>을 보고합니다.
+<p>
+  이중 검사된 잠금은 동기화 비용을 줄이는 한편 스레드 안전한 방식으로 요청 기반의 초기화를 시도합니다.
+  안타깝지만 이 방식이 <code>volatile</code>로 선언되지 않은 필드에서 사용될 경우 스레드 안전하지 않습니다.
+  Java 1.4 또는 이전 버전을 사용할 경우 이중 검사된 잠금은 <code>volatile</code> 필드에서도 작동하지 않습니다.
+  해당 문제와 관련한 자세한 설명은 위에 링크된 글을 참조하세요.
+</p>
+<p>
+  부적절한 이중 검사된 잠금의 예시:
+</p>
+<pre><code>
+  class Foo {
+    private Helper helper = null;
+    public Helper getHelper() {
+      if (helper == null)
+        synchronized(this) {
+          if (helper == null) helper = new Helper();
+        }
+        return helper;
+      }
+    }
+    // 다른 함수 및 멤버...
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>중첩 데코레이터 문제를 보고합니다. 이 검사는 <code>classmethod</code> 또는 <code>staticmethod</code>이 다른 데코레이터 전에 적용된 경우를 강조 표시합니다.</p>
+<p><b>예:</b></p>
+<pre style="font-family: monospace">
+def innocent(f):
+    return f
+
+
+class A:
+    @innocent  # 데코레이터는 기대하는 호출 가능한 객체를 받지 않음
+    @classmethod
+    def f2(cls):
+        pass
+
+    @innocent  # 데코레이터는 기대하는 호출 가능한 객체를 받지 않음
+    @staticmethod
+    def f1():
+        pass
+</pre>
+<p>수정 방안으로 IDE는 데코레이터를 제거할 것을 제의합니다.</p>
+</body>
+</html>

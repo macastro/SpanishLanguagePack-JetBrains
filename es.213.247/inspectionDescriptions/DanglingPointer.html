@@ -1,0 +1,15 @@
+<html>
+<body>
+<code>delete</code> 연산자 또는 <code>free(void* ptr)</code> 함수에 의해 이미 삭제된 메모리를 참조하는 포인터의 사용 위치를 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  void process() {
+    for(node *pt = head; pt != nullptr; pt = pt->next) {
+        delete pt;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2020.2의 새로운 기능</small></p>
+</body>
+</html>

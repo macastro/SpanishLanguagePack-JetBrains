@@ -1,0 +1,34 @@
+<html>
+<body>
+Reports unassigned properties of <code>Entity</code> in creating in <code>ChangeScope</code> with <code>new</code> or <code>getOrCreate</code> function.
+<p>
+  You have to assign all non-nullable properties of <code>Entity</code>, or mark it with <code>@Many</code> annotation.
+  Otherwise, it's cause runtime exception.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  interface A: Entity {
+    var x: Int
+    var y: Int?
+    @Many var z: Int
+    var p: Int
+  }
+
+  fun ChangeScope.foo() {
+    new(A::class) {
+      this.p = 0
+    }
+  }
+</code></pre>
+<p>A quick-fix generates assignment for missing required properties</p>
+<pre><code>
+  fun ChangeScope.foo() {
+    new(A::class) {
+      this.x = x
+      this.p = 0
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

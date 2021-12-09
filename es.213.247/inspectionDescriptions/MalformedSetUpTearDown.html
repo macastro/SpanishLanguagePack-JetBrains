@@ -1,0 +1,19 @@
+<html>
+<body>
+<code>public</code>으로 선언되어 있거나 <code>void</code>를 반환하거나 인수를 취하는 JUnit 3 <code>setUp()</code> 또는 <code>tearDown()</code> 메서드를 보고합니다.
+그러한 <code>setUp()</code> 또는 <code>tearDown()</code> 메서드는 의도치 않게 생성된 것일 가능성이 높으며 JUnit 테스트 러너에 의해 실행되지 않습니다.
+<p>예:</p>
+<pre><code>
+  <b>public class</b> WeightyTest <b>extends</b> TestCase {
+    <b>private</b> File file;
+    <b>private int</b> setUp(String prefix) <b>throws</b> IOException {
+      file = File.createTempFile(prefix, ".tmp");
+      <b>return</b> 0;
+    }
+
+    // ... 테스트가 여기에 도달합니다
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

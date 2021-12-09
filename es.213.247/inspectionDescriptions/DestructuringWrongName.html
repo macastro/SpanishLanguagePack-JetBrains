@@ -1,0 +1,21 @@
+<html>
+<body>
+구조 분해된 데이터 클래스의 다른 프로퍼티 이름과 일치하는 구조 분해 선언의 항목을 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  data class Foo(val a: String, val b: Int, val c: String)
+
+  fun bar(f: Foo) {
+      val (a, c) = f
+  }
+</code></pre>
+<p>빠른 수정에서는 변수 이름이 해당 클래스 필드의 이름과 일치하도록 변경합니다.</p>
+<pre><code>
+  data class Foo(val a: String, val b: Int, val c: String)
+
+  fun bar(f: Foo) {
+      val (a, b) = f
+  }
+</code></pre>
+</body>
+</html>

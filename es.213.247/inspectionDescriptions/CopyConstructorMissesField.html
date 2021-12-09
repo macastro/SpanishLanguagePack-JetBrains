@@ -1,0 +1,27 @@
+<html>
+<body>
+클래스의 모든 필드를 복사하지 않는 복사 생성자를 보고합니다.
+<p>
+  이니셜라이저가 있는 <code>final</code> 필드 및 <code>transient</code> 필드는 복사할 필요가 없는 것으로 간주됩니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Point {
+
+    private int x;
+    private int y;
+
+    Point(int x, int y) {
+      this.x = x;
+      this.y = y;
+    }
+
+    Point(Point other) {
+      // 필드 x 및 y가 초기화되지 않음
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2018.1의 새로운 기능</small>
+</body>
+</html>

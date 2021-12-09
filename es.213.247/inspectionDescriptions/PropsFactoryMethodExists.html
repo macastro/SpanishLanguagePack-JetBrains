@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>동적 생성자 호출을 안전하게 factory 메서드 호출로 교체할 수 있는 사례를 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  import akka.actor._
+  
+  class Foo extends AbstractActor
+  
+  object Foo {
+    def props(): Props = Props(new Foo())
+  }
+  
+  Props(classOf[Foo])
+</code></pre>
+<p>빠른 수정 적용 후:</p>    
+<pre><code>
+  import akka.actor._
+  
+  class Foo extends AbstractActor
+  
+  object Foo {
+    def props(): Props = Props(new Foo())
+  }
+  
+  Foo.props()
+</code></pre>  
+<!-- tooltip end -->
+</body>
+</html>

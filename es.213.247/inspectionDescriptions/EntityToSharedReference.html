@@ -1,0 +1,27 @@
+<html>
+<body>
+Reports invalid reference from <code>Entity</code> to <code>SharedEntity</code>.
+<p>
+  You cannot refer <code>Entity</code> from <code>SharedEntity</code>.
+  You can refer <code>SharedEntity</code> from <code>Entity</code> only
+  if property is nullable or has <code>@CascadeDeleteBy</code> annotation.
+  Otherwise, it's cause runtime exception.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  interface A: Entity {
+    var x: SharedEntity
+    var y: SharedEntity
+  }
+</code></pre>
+<p>A quick-fix generates annotation or make your type nullable</p>
+<pre><code>
+  interface A: Entity {
+    var x: SharedEntity?
+    @CascadeDeleteBy
+    var y: SharedEntity
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

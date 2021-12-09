@@ -1,0 +1,39 @@
+<html>
+<body>
+<code>compareTo()</code> 구현 내 <code>final</code>이 아닌 필드로의 액세스를 보고합니다.
+<p>
+  그러한 액세스를 사용하면 <code>compareTo()</code>가 객체 수명 주기의 각기 다른 시점에 다른 결과를 반환할 수 있어 <code>java.util.TreeSet</code>과 같은 표준 컬렉션 클래스 사용 시 문제가 발생할 수 있습니다.
+</p>
+<p>
+  필드에 대한 쓰기 권한이 없는 경우에만 필드를 <code>final</code>로 만드는 빠른 수정을 사용할 수 있습니다. 그렇지 않으면 수정이 제안되지 않습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Foo implements Comparable&lt;Foo&gt;{
+    private int index;
+    Foo(int idx) {
+      index = idx;
+    }
+    @Override
+    public int compareTo(Foo foo) {
+     return Integer.compare(this.index, foo.index);
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Foo implements Comparable&lt;Foo&gt;{
+    private final int index;
+    Foo(int idx) {
+      index = idx;
+    }
+    @Override
+    public int compareTo(Foo foo) {
+      return Integer.compare(this.index, foo.index);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

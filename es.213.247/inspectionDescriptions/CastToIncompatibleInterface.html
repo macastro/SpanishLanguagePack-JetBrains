@@ -1,0 +1,22 @@
+<html>
+<body>
+변환 타입이 인터페이스이며 변환 표현식이 변환 인터페이스를 구현하지 않고 변환 인터페이스를 구현하는 볼 수 있는 하위 클래스가 없는 클래스 타입을 포함하는 경우 타입 변환 표현식을 보고합니다.
+<p>
+  의도된 경우도 있으나 그러한 구문은 오류일 가능성이 높으며 런타임 시 <code>java.lang.ClassCastException</code>를 발생시킵니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  interface A {}
+  interface Z {}
+  static class C {}
+
+  void x(C c) {
+    if (c instanceof Z) {
+      A a = ((A)c); // 호환되지 않는 인터페이스 'A'로 형 변환
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

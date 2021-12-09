@@ -1,0 +1,19 @@
+<html>
+<body>
+<code>instanceof</code> 식이 <code>catch</code> 블록의 매개변수 타입을 테스트하기 위해 사용되는 경우를 보고합니다.
+<p><code>catch</code> 매개변수 타입 테스트는 <code>instanceof</code>를 사용하는 대신에 별도의 <code>catch</code> 블록을 사용하여 수행하는 것이 보통 더 좋습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  void foo(Runnable runnable) {
+    try {
+        runnable.run();
+    } catch (Throwable throwable) {
+        if (throwable instanceof NoClassDefFoundError) { // 경고: 'catch' 매개변수 'throwable'의 'instanceof'
+            System.out.println("Class not found!");
+        }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+외부 컨텍스트의 프로퍼티 참조를 위해 사용된 클로저 내 <code>this</code>를 보고합니다. <p>예:</p>
+<pre><code>
+function Outer() {
+  this.outerProp = 1;
+  function inner() {
+    // Outer의 'outerProp' 때문에 좋지 않음
+    // 여기서 업데이트 안 함
+    // 'new Outer()'를 호출할 수 있음
+    this.outerProp = 2;
+  }
+  inner();
+}
+</code></pre>
+</body>
+</html>

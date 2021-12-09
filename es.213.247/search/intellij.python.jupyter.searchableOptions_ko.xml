@@ -1,0 +1,322 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="jupyter" path="ActionManager" hit="Jupyter" />
+    <option name="js" path="ActionManager" hit="Jupyter JS 콘솔 열기" />
+    <option name="jupyter" path="ActionManager" hit="Jupyter JS 콘솔 열기" />
+    <option name="열기" path="ActionManager" hit="Jupyter JS 콘솔 열기" />
+    <option name="콘솔" path="ActionManager" hit="Jupyter JS 콘솔 열기" />
+    <option name="jupyter" path="ActionManager" hit="Jupyter Notebook" />
+    <option name="notebook" path="ActionManager" hit="Jupyter Notebook" />
+    <option name="jupyter" path="ActionManager" hit="Jupyter 변경 셀 타입" />
+    <option name="변경" path="ActionManager" hit="Jupyter 변경 셀 타입" />
+    <option name="셀" path="ActionManager" hit="Jupyter 변경 셀 타입" />
+    <option name="타입" path="ActionManager" hit="Jupyter 변경 셀 타입" />
+    <option name="jupyter" path="ActionManager" hit="Jupyter 서버 시작" />
+    <option name="서버" path="ActionManager" hit="Jupyter 서버 시작" />
+    <option name="시작" path="ActionManager" hit="Jupyter 서버 시작" />
+    <option name="jupyter" path="ActionManager" hit="Jupyter 서버 중지" />
+    <option name="서버" path="ActionManager" hit="Jupyter 서버 중지" />
+    <option name="중지" path="ActionManager" hit="Jupyter 서버 중지" />
+    <option name="jupyter" path="ActionManager" hit="Jupyter 셀 삽입" />
+    <option name="삽입" path="ActionManager" hit="Jupyter 셀 삽입" />
+    <option name="셀" path="ActionManager" hit="Jupyter 셀 삽입" />
+    <option name="markdown" path="ActionManager" hit="Markdown 셀 삽입" />
+    <option name="삽입" path="ActionManager" hit="Markdown 셀 삽입" />
+    <option name="셀" path="ActionManager" hit="Markdown 셀 삽입" />
+    <option name="markdown" path="ActionManager" hit="Notebook 끝에 Markdown 셀 추가" />
+    <option name="notebook" path="ActionManager" hit="Notebook 끝에 Markdown 셀 추가" />
+    <option name="끝에" path="ActionManager" hit="Notebook 끝에 Markdown 셀 추가" />
+    <option name="셀" path="ActionManager" hit="Notebook 끝에 Markdown 셀 추가" />
+    <option name="추가" path="ActionManager" hit="Notebook 끝에 Markdown 셀 추가" />
+    <option name="nbconvert" path="ActionManager" hit="Notebook 끝에 NBConvert 셀 추가" />
+    <option name="notebook" path="ActionManager" hit="Notebook 끝에 NBConvert 셀 추가" />
+    <option name="끝에" path="ActionManager" hit="Notebook 끝에 NBConvert 셀 추가" />
+    <option name="셀" path="ActionManager" hit="Notebook 끝에 NBConvert 셀 추가" />
+    <option name="추가" path="ActionManager" hit="Notebook 끝에 NBConvert 셀 추가" />
+    <option name="notebook" path="ActionManager" hit="Notebook 끝에 코드 셀 추가" />
+    <option name="끝에" path="ActionManager" hit="Notebook 끝에 코드 셀 추가" />
+    <option name="셀" path="ActionManager" hit="Notebook 끝에 코드 셀 추가" />
+    <option name="추가" path="ActionManager" hit="Notebook 끝에 코드 셀 추가" />
+    <option name="코드" path="ActionManager" hit="Notebook 끝에 코드 셀 추가" />
+    <option name="notebook에서" path="ActionManager" hit="Notebook에서 모든 셀 실행" />
+    <option name="모든" path="ActionManager" hit="Notebook에서 모든 셀 실행" />
+    <option name="셀" path="ActionManager" hit="Notebook에서 모든 셀 실행" />
+    <option name="실행" path="ActionManager" hit="Notebook에서 모든 셀 실행" />
+    <option name="다른" path="ActionManager" hit="다른 이름으로 저장…" />
+    <option name="이름으로" path="ActionManager" hit="다른 이름으로 저장…" />
+    <option name="저장" path="ActionManager" hit="다른 이름으로 저장…" />
+    <option name="구성" path="ActionManager" hit="단축키 구성" />
+    <option name="단축키" path="ActionManager" hit="단축키 구성" />
+    <option name="구성" path="ActionManager" hit="단축키 구성…" />
+    <option name="단축키" path="ActionManager" hit="단축키 구성…" />
+    <option name="명령" path="ActionManager" hit="명령 모드 켜기" />
+    <option name="모드" path="ActionManager" hit="명령 모드 켜기" />
+    <option name="켜기" path="ActionManager" hit="명령 모드 켜기" />
+    <option name="모두" path="ActionManager" hit="모두 실행" />
+    <option name="실행" path="ActionManager" hit="모두 실행" />
+    <option name="notebook" path="ActionManager" hit="브라우저에서 Notebook 열기" />
+    <option name="브라우저에서" path="ActionManager" hit="브라우저에서 Notebook 열기" />
+    <option name="열기" path="ActionManager" hit="브라우저에서 Notebook 열기" />
+    <option name="붙여넣기" path="ActionManager" hit="상단 셀 붙여넣기" />
+    <option name="상단" path="ActionManager" hit="상단 셀 붙여넣기" />
+    <option name="셀" path="ActionManager" hit="상단 셀 붙여넣기" />
+    <option name="상단" path="ActionManager" hit="상단 셀로 이동" />
+    <option name="셀로" path="ActionManager" hit="상단 셀로 이동" />
+    <option name="이동" path="ActionManager" hit="상단 셀로 이동" />
+    <option name="markdown" path="ActionManager" hit="상단에 Markdown 셀 삽입" />
+    <option name="삽입" path="ActionManager" hit="상단에 Markdown 셀 삽입" />
+    <option name="상단에" path="ActionManager" hit="상단에 Markdown 셀 삽입" />
+    <option name="셀" path="ActionManager" hit="상단에 Markdown 셀 삽입" />
+    <option name="markdown" path="ActionManager" hit="상단에 Markdown 셀 추가" />
+    <option name="상단에" path="ActionManager" hit="상단에 Markdown 셀 추가" />
+    <option name="셀" path="ActionManager" hit="상단에 Markdown 셀 추가" />
+    <option name="추가" path="ActionManager" hit="상단에 Markdown 셀 추가" />
+    <option name="삽입" path="ActionManager" hit="상단에 코드 셀 삽입" />
+    <option name="상단에" path="ActionManager" hit="상단에 코드 셀 삽입" />
+    <option name="셀" path="ActionManager" hit="상단에 코드 셀 삽입" />
+    <option name="코드" path="ActionManager" hit="상단에 코드 셀 삽입" />
+    <option name="상단에" path="ActionManager" hit="상단에 코드 셀 추가" />
+    <option name="셀" path="ActionManager" hit="상단에 코드 셀 추가" />
+    <option name="추가" path="ActionManager" hit="상단에 코드 셀 추가" />
+    <option name="코드" path="ActionManager" hit="상단에 코드 셀 추가" />
+    <option name="모든" path="ActionManager" hit="선택한 모든 셀을 하나로 병합" />
+    <option name="병합" path="ActionManager" hit="선택한 모든 셀을 하나로 병합" />
+    <option name="선택한" path="ActionManager" hit="선택한 모든 셀을 하나로 병합" />
+    <option name="셀을" path="ActionManager" hit="선택한 모든 셀을 하나로 병합" />
+    <option name="하나로" path="ActionManager" hit="선택한 모든 셀을 하나로 병합" />
+    <option name="모든" path="ActionManager" hit="선택한 셀 및 해당 셀 하단의 모든 셀 실행" />
+    <option name="및" path="ActionManager" hit="선택한 셀 및 해당 셀 하단의 모든 셀 실행" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀 및 해당 셀 하단의 모든 셀 실행" />
+    <option name="셀" path="ActionManager" hit="선택한 셀 및 해당 셀 하단의 모든 셀 실행" />
+    <option name="실행" path="ActionManager" hit="선택한 셀 및 해당 셀 하단의 모든 셀 실행" />
+    <option name="하단의" path="ActionManager" hit="선택한 셀 및 해당 셀 하단의 모든 셀 실행" />
+    <option name="해당" path="ActionManager" hit="선택한 셀 및 해당 셀 하단의 모든 셀 실행" />
+    <option name="병합" path="ActionManager" hit="선택한 셀 병합" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀 병합" />
+    <option name="셀" path="ActionManager" hit="선택한 셀 병합" />
+    <option name="복사" path="ActionManager" hit="선택한 셀 복사" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀 복사" />
+    <option name="셀" path="ActionManager" hit="선택한 셀 복사" />
+    <option name="분할" path="ActionManager" hit="선택한 셀 분할" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀 분할" />
+    <option name="셀" path="ActionManager" hit="선택한 셀 분할" />
+    <option name="붙여넣기" path="ActionManager" hit="선택한 셀 상단에 셀 붙여넣기" />
+    <option name="상단에" path="ActionManager" hit="선택한 셀 상단에 셀 붙여넣기" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀 상단에 셀 붙여넣기" />
+    <option name="셀" path="ActionManager" hit="선택한 셀 상단에 셀 붙여넣기" />
+    <option name="모든" path="ActionManager" hit="선택한 셀 상단의 모든 셀 실행" />
+    <option name="상단의" path="ActionManager" hit="선택한 셀 상단의 모든 셀 실행" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀 상단의 모든 셀 실행" />
+    <option name="셀" path="ActionManager" hit="선택한 셀 상단의 모든 셀 실행" />
+    <option name="실행" path="ActionManager" hit="선택한 셀 상단의 모든 셀 실행" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀 실행" />
+    <option name="셀" path="ActionManager" hit="선택한 셀 실행" />
+    <option name="실행" path="ActionManager" hit="선택한 셀 실행" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀 자르기" />
+    <option name="셀" path="ActionManager" hit="선택한 셀 자르기" />
+    <option name="자르기" path="ActionManager" hit="선택한 셀 자르기" />
+    <option name="붙여넣기" path="ActionManager" hit="선택한 셀 하단에 셀 붙여넣기" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀 하단에 셀 붙여넣기" />
+    <option name="셀" path="ActionManager" hit="선택한 셀 하단에 셀 붙여넣기" />
+    <option name="하단에" path="ActionManager" hit="선택한 셀 하단에 셀 붙여넣기" />
+    <option name="병합" path="ActionManager" hit="선택한 셀과 상단 셀을 병합" />
+    <option name="상단" path="ActionManager" hit="선택한 셀과 상단 셀을 병합" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀과 상단 셀을 병합" />
+    <option name="셀과" path="ActionManager" hit="선택한 셀과 상단 셀을 병합" />
+    <option name="셀을" path="ActionManager" hit="선택한 셀과 상단 셀을 병합" />
+    <option name="병합" path="ActionManager" hit="선택한 셀과 하단 셀을 병합" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀과 하단 셀을 병합" />
+    <option name="셀과" path="ActionManager" hit="선택한 셀과 하단 셀을 병합" />
+    <option name="셀을" path="ActionManager" hit="선택한 셀과 하단 셀을 병합" />
+    <option name="하단" path="ActionManager" hit="선택한 셀과 하단 셀을 병합" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀을 실행하고 하단 셀로 이동" />
+    <option name="셀로" path="ActionManager" hit="선택한 셀을 실행하고 하단 셀로 이동" />
+    <option name="셀을" path="ActionManager" hit="선택한 셀을 실행하고 하단 셀로 이동" />
+    <option name="실행하고" path="ActionManager" hit="선택한 셀을 실행하고 하단 셀로 이동" />
+    <option name="이동" path="ActionManager" hit="선택한 셀을 실행하고 하단 셀로 이동" />
+    <option name="하단" path="ActionManager" hit="선택한 셀을 실행하고 하단 셀로 이동" />
+    <option name="삽입" path="ActionManager" hit="선택한 셀을 실행하고 해당 셀 하단에 셀 삽입" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀을 실행하고 해당 셀 하단에 셀 삽입" />
+    <option name="셀" path="ActionManager" hit="선택한 셀을 실행하고 해당 셀 하단에 셀 삽입" />
+    <option name="셀을" path="ActionManager" hit="선택한 셀을 실행하고 해당 셀 하단에 셀 삽입" />
+    <option name="실행하고" path="ActionManager" hit="선택한 셀을 실행하고 해당 셀 하단에 셀 삽입" />
+    <option name="하단에" path="ActionManager" hit="선택한 셀을 실행하고 해당 셀 하단에 셀 삽입" />
+    <option name="해당" path="ActionManager" hit="선택한 셀을 실행하고 해당 셀 하단에 셀 삽입" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀을 아래로 이동" />
+    <option name="셀을" path="ActionManager" hit="선택한 셀을 아래로 이동" />
+    <option name="아래로" path="ActionManager" hit="선택한 셀을 아래로 이동" />
+    <option name="이동" path="ActionManager" hit="선택한 셀을 아래로 이동" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀을 위로 이동" />
+    <option name="셀을" path="ActionManager" hit="선택한 셀을 위로 이동" />
+    <option name="위로" path="ActionManager" hit="선택한 셀을 위로 이동" />
+    <option name="이동" path="ActionManager" hit="선택한 셀을 위로 이동" />
+    <option name="디버그" path="ActionManager" hit="셀 디버그" />
+    <option name="셀" path="ActionManager" hit="셀 디버그" />
+    <option name="복사" path="ActionManager" hit="셀 복사" />
+    <option name="셀" path="ActionManager" hit="셀 복사" />
+    <option name="분할" path="ActionManager" hit="셀 분할" />
+    <option name="셀" path="ActionManager" hit="셀 분할" />
+    <option name="셀" path="ActionManager" hit="셀 실행" />
+    <option name="실행" path="ActionManager" hit="셀 실행" />
+    <option name="및" path="ActionManager" hit="셀 실행 및 아래 삽입" />
+    <option name="삽입" path="ActionManager" hit="셀 실행 및 아래 삽입" />
+    <option name="셀" path="ActionManager" hit="셀 실행 및 아래 삽입" />
+    <option name="실행" path="ActionManager" hit="셀 실행 및 아래 삽입" />
+    <option name="아래" path="ActionManager" hit="셀 실행 및 아래 삽입" />
+    <option name="및" path="ActionManager" hit="셀 실행 및 아래 선택" />
+    <option name="선택" path="ActionManager" hit="셀 실행 및 아래 선택" />
+    <option name="셀" path="ActionManager" hit="셀 실행 및 아래 선택" />
+    <option name="실행" path="ActionManager" hit="셀 실행 및 아래 선택" />
+    <option name="아래" path="ActionManager" hit="셀 실행 및 아래 선택" />
+    <option name="셀" path="ActionManager" hit="셀 자르기" />
+    <option name="자르기" path="ActionManager" hit="셀 자르기" />
+    <option name="셀" path="ActionManager" hit="셀 출력 제거" />
+    <option name="제거" path="ActionManager" hit="셀 출력 제거" />
+    <option name="출력" path="ActionManager" hit="셀 출력 제거" />
+    <option name="셀" path="ActionManager" hit="셀 출력 지우기" />
+    <option name="지우기" path="ActionManager" hit="셀 출력 지우기" />
+    <option name="출력" path="ActionManager" hit="셀 출력 지우기" />
+    <option name="변경" path="ActionManager" hit="셀 타입 변경" />
+    <option name="셀" path="ActionManager" hit="셀 타입 변경" />
+    <option name="타입" path="ActionManager" hit="셀 타입 변경" />
+    <option name="markdown" path="ActionManager" hit="셀을 Markdown 셀로 변환" />
+    <option name="변환" path="ActionManager" hit="셀을 Markdown 셀로 변환" />
+    <option name="셀로" path="ActionManager" hit="셀을 Markdown 셀로 변환" />
+    <option name="셀을" path="ActionManager" hit="셀을 Markdown 셀로 변환" />
+    <option name="markdown으로" path="ActionManager" hit="셀을 Markdown으로 변환" />
+    <option name="변환" path="ActionManager" hit="셀을 Markdown으로 변환" />
+    <option name="셀을" path="ActionManager" hit="셀을 Markdown으로 변환" />
+    <option name="nbconvert" path="ActionManager" hit="셀을 Raw NBConvert 셀로 변환" />
+    <option name="raw" path="ActionManager" hit="셀을 Raw NBConvert 셀로 변환" />
+    <option name="변환" path="ActionManager" hit="셀을 Raw NBConvert 셀로 변환" />
+    <option name="셀로" path="ActionManager" hit="셀을 Raw NBConvert 셀로 변환" />
+    <option name="셀을" path="ActionManager" hit="셀을 Raw NBConvert 셀로 변환" />
+    <option name="nbconvert로" path="ActionManager" hit="셀을 Raw NBConvert로 변환" />
+    <option name="raw" path="ActionManager" hit="셀을 Raw NBConvert로 변환" />
+    <option name="변환" path="ActionManager" hit="셀을 Raw NBConvert로 변환" />
+    <option name="셀을" path="ActionManager" hit="셀을 Raw NBConvert로 변환" />
+    <option name="셀을" path="ActionManager" hit="셀을 아래로 이동" />
+    <option name="아래로" path="ActionManager" hit="셀을 아래로 이동" />
+    <option name="이동" path="ActionManager" hit="셀을 아래로 이동" />
+    <option name="셀을" path="ActionManager" hit="셀을 위로 이동" />
+    <option name="위로" path="ActionManager" hit="셀을 위로 이동" />
+    <option name="이동" path="ActionManager" hit="셀을 위로 이동" />
+    <option name="변환" path="ActionManager" hit="셀을 코드 셀로 변환" />
+    <option name="셀로" path="ActionManager" hit="셀을 코드 셀로 변환" />
+    <option name="셀을" path="ActionManager" hit="셀을 코드 셀로 변환" />
+    <option name="코드" path="ActionManager" hit="셀을 코드 셀로 변환" />
+    <option name="변환" path="ActionManager" hit="셀을 코드로 변환" />
+    <option name="셀을" path="ActionManager" hit="셀을 코드로 변환" />
+    <option name="코드로" path="ActionManager" hit="셀을 코드로 변환" />
+    <option name="선택" path="ActionManager" hit="소스 선택" />
+    <option name="소스" path="ActionManager" hit="소스 선택" />
+    <option name="모두" path="ActionManager" hit="아래를 모두 실행" />
+    <option name="실행" path="ActionManager" hit="아래를 모두 실행" />
+    <option name="아래를" path="ActionManager" hit="아래를 모두 실행" />
+    <option name="선택" path="ActionManager" hit="아래의 셀 선택" />
+    <option name="셀" path="ActionManager" hit="아래의 셀 선택" />
+    <option name="아래의" path="ActionManager" hit="아래의 셀 선택" />
+    <option name="병합" path="ActionManager" hit="아래의 셀과 병합" />
+    <option name="셀과" path="ActionManager" hit="아래의 셀과 병합" />
+    <option name="아래의" path="ActionManager" hit="아래의 셀과 병합" />
+    <option name="nbconvert" path="ActionManager" hit="원시 NBConvert 셀 삽입" />
+    <option name="삽입" path="ActionManager" hit="원시 NBConvert 셀 삽입" />
+    <option name="셀" path="ActionManager" hit="원시 NBConvert 셀 삽입" />
+    <option name="원시" path="ActionManager" hit="원시 NBConvert 셀 삽입" />
+    <option name="모두" path="ActionManager" hit="위를 모두 실행" />
+    <option name="실행" path="ActionManager" hit="위를 모두 실행" />
+    <option name="위를" path="ActionManager" hit="위를 모두 실행" />
+    <option name="선택" path="ActionManager" hit="위의 셀 선택" />
+    <option name="셀" path="ActionManager" hit="위의 셀 선택" />
+    <option name="위의" path="ActionManager" hit="위의 셀 선택" />
+    <option name="병합" path="ActionManager" hit="위의 셀과 병합" />
+    <option name="셀과" path="ActionManager" hit="위의 셀과 병합" />
+    <option name="위의" path="ActionManager" hit="위의 셀과 병합" />
+    <option name="액션" path="ActionManager" hit="주석 액션" />
+    <option name="주석" path="ActionManager" hit="주석 액션" />
+    <option name="주석" path="ActionManager" hit="줄 주석으로 주석 추가" />
+    <option name="주석으로" path="ActionManager" hit="줄 주석으로 주석 추가" />
+    <option name="줄" path="ActionManager" hit="줄 주석으로 주석 추가" />
+    <option name="추가" path="ActionManager" hit="줄 주석으로 주석 추가" />
+    <option name="jupyter" path="ActionManager" hit="지정된 템플릿에서 Jupyter Notebook 파일 생성" />
+    <option name="notebook" path="ActionManager" hit="지정된 템플릿에서 Jupyter Notebook 파일 생성" />
+    <option name="생성" path="ActionManager" hit="지정된 템플릿에서 Jupyter Notebook 파일 생성" />
+    <option name="지정된" path="ActionManager" hit="지정된 템플릿에서 Jupyter Notebook 파일 생성" />
+    <option name="템플릿에서" path="ActionManager" hit="지정된 템플릿에서 Jupyter Notebook 파일 생성" />
+    <option name="파일" path="ActionManager" hit="지정된 템플릿에서 Jupyter Notebook 파일 생성" />
+    <option name="지우기" path="ActionManager" hit="출력 지우기" />
+    <option name="출력" path="ActionManager" hit="출력 지우기" />
+    <option name="다시" path="ActionManager" hit="커널 다시 시작" />
+    <option name="시작" path="ActionManager" hit="커널 다시 시작" />
+    <option name="커널" path="ActionManager" hit="커널 다시 시작" />
+    <option name="재시작" path="ActionManager" hit="커널 재시작" />
+    <option name="커널" path="ActionManager" hit="커널 재시작" />
+    <option name="notebook" path="ActionManager" hit="커널 재시작 및 Notebook 출력 삭제" />
+    <option name="및" path="ActionManager" hit="커널 재시작 및 Notebook 출력 삭제" />
+    <option name="삭제" path="ActionManager" hit="커널 재시작 및 Notebook 출력 삭제" />
+    <option name="재시작" path="ActionManager" hit="커널 재시작 및 Notebook 출력 삭제" />
+    <option name="출력" path="ActionManager" hit="커널 재시작 및 Notebook 출력 삭제" />
+    <option name="커널" path="ActionManager" hit="커널 재시작 및 Notebook 출력 삭제" />
+    <option name="모두" path="ActionManager" hit="커널 재시작 및 모두 실행" />
+    <option name="및" path="ActionManager" hit="커널 재시작 및 모두 실행" />
+    <option name="실행" path="ActionManager" hit="커널 재시작 및 모두 실행" />
+    <option name="재시작" path="ActionManager" hit="커널 재시작 및 모두 실행" />
+    <option name="커널" path="ActionManager" hit="커널 재시작 및 모두 실행" />
+    <option name="모든" path="ActionManager" hit="커널 재시작 및 모든 셀 실행" />
+    <option name="및" path="ActionManager" hit="커널 재시작 및 모든 셀 실행" />
+    <option name="셀" path="ActionManager" hit="커널 재시작 및 모든 셀 실행" />
+    <option name="실행" path="ActionManager" hit="커널 재시작 및 모든 셀 실행" />
+    <option name="재시작" path="ActionManager" hit="커널 재시작 및 모든 셀 실행" />
+    <option name="커널" path="ActionManager" hit="커널 재시작 및 모든 셀 실행" />
+    <option name="및" path="ActionManager" hit="커널 재시작 및 출력 삭제" />
+    <option name="삭제" path="ActionManager" hit="커널 재시작 및 출력 삭제" />
+    <option name="재시작" path="ActionManager" hit="커널 재시작 및 출력 삭제" />
+    <option name="출력" path="ActionManager" hit="커널 재시작 및 출력 삭제" />
+    <option name="커널" path="ActionManager" hit="커널 재시작 및 출력 삭제" />
+    <option name="종료" path="ActionManager" hit="커널 종료" />
+    <option name="커널" path="ActionManager" hit="커널 종료" />
+    <option name="중단" path="ActionManager" hit="커널 중단" />
+    <option name="커널" path="ActionManager" hit="커널 중단" />
+    <option name="삽입" path="ActionManager" hit="코드 셀 삽입" />
+    <option name="셀" path="ActionManager" hit="코드 셀 삽입" />
+    <option name="코드" path="ActionManager" hit="코드 셀 삽입" />
+    <option name="모드" path="ActionManager" hit="편집 모드 켜기" />
+    <option name="켜기" path="ActionManager" hit="편집 모드 켜기" />
+    <option name="편집" path="ActionManager" hit="편집 모드 켜기" />
+    <option name="붙여넣기" path="ActionManager" hit="하단 셀 붙여넣기" />
+    <option name="셀" path="ActionManager" hit="하단 셀 붙여넣기" />
+    <option name="하단" path="ActionManager" hit="하단 셀 붙여넣기" />
+    <option name="셀로" path="ActionManager" hit="하단 셀로 이동" />
+    <option name="이동" path="ActionManager" hit="하단 셀로 이동" />
+    <option name="하단" path="ActionManager" hit="하단 셀로 이동" />
+    <option name="markdown" path="ActionManager" hit="하단에 Markdown 셀 삽입" />
+    <option name="삽입" path="ActionManager" hit="하단에 Markdown 셀 삽입" />
+    <option name="셀" path="ActionManager" hit="하단에 Markdown 셀 삽입" />
+    <option name="하단에" path="ActionManager" hit="하단에 Markdown 셀 삽입" />
+    <option name="markdown" path="ActionManager" hit="하단에 Markdown 셀 추가" />
+    <option name="셀" path="ActionManager" hit="하단에 Markdown 셀 추가" />
+    <option name="추가" path="ActionManager" hit="하단에 Markdown 셀 추가" />
+    <option name="하단에" path="ActionManager" hit="하단에 Markdown 셀 추가" />
+    <option name="삽입" path="ActionManager" hit="하단에 코드 셀 삽입" />
+    <option name="셀" path="ActionManager" hit="하단에 코드 셀 삽입" />
+    <option name="코드" path="ActionManager" hit="하단에 코드 셀 삽입" />
+    <option name="하단에" path="ActionManager" hit="하단에 코드 셀 삽입" />
+    <option name="셀" path="ActionManager" hit="하단에 코드 셀 추가" />
+    <option name="추가" path="ActionManager" hit="하단에 코드 셀 추가" />
+    <option name="코드" path="ActionManager" hit="하단에 코드 셀 추가" />
+    <option name="하단에" path="ActionManager" hit="하단에 코드 셀 추가" />
+    <option name="또는" path="ActionManager" hit="현재 줄 또는 선택한 블록에 주석을 추가하거나 해제합니다" />
+    <option name="블록에" path="ActionManager" hit="현재 줄 또는 선택한 블록에 주석을 추가하거나 해제합니다" />
+    <option name="선택한" path="ActionManager" hit="현재 줄 또는 선택한 블록에 주석을 추가하거나 해제합니다" />
+    <option name="주석을" path="ActionManager" hit="현재 줄 또는 선택한 블록에 주석을 추가하거나 해제합니다" />
+    <option name="줄" path="ActionManager" hit="현재 줄 또는 선택한 블록에 주석을 추가하거나 해제합니다" />
+    <option name="추가하거나" path="ActionManager" hit="현재 줄 또는 선택한 블록에 주석을 추가하거나 해제합니다" />
+    <option name="해제합니다" path="ActionManager" hit="현재 줄 또는 선택한 블록에 주석을 추가하거나 해제합니다" />
+    <option name="현재" path="ActionManager" hit="현재 줄 또는 선택한 블록에 주석을 추가하거나 해제합니다" />
+    <option name="밖" path="ActionManager" hit="화면 밖 이미지 표시" />
+    <option name="이미지" path="ActionManager" hit="화면 밖 이미지 표시" />
+    <option name="표시" path="ActionManager" hit="화면 밖 이미지 표시" />
+    <option name="화면" path="ActionManager" hit="화면 밖 이미지 표시" />
+  </configurable>
+</options>

@@ -1,0 +1,157 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="" path="ActionManager" hit=".hgignore에 선택한 파일 추가" />
+    <option name="hgignore에" path="ActionManager" hit=".hgignore에 선택한 파일 추가" />
+    <option name="선택한" path="ActionManager" hit=".hgignore에 선택한 파일 추가" />
+    <option name="추가" path="ActionManager" hit=".hgignore에 선택한 파일 추가" />
+    <option name="파일" path="ActionManager" hit=".hgignore에 선택한 파일 추가" />
+    <option name="" path="ActionManager" hit=".hgignore에 추가" />
+    <option name="hgignore에" path="ActionManager" hit=".hgignore에 추가" />
+    <option name="추가" path="ActionManager" hit=".hgignore에 추가" />
+    <option name="mq가" path="ActionManager" hit="MQ가 적용되지 않은 패치 모두 표시…" />
+    <option name="모두" path="ActionManager" hit="MQ가 적용되지 않은 패치 모두 표시…" />
+    <option name="않은" path="ActionManager" hit="MQ가 적용되지 않은 패치 모두 표시…" />
+    <option name="적용되지" path="ActionManager" hit="MQ가 적용되지 않은 패치 모두 표시…" />
+    <option name="패치" path="ActionManager" hit="MQ가 적용되지 않은 패치 모두 표시…" />
+    <option name="표시" path="ActionManager" hit="MQ가 적용되지 않은 패치 모두 표시…" />
+    <option name="mercurial" path="ActionManager" hit="Mercurial" />
+    <option name="mercurial" path="ActionManager" hit="Mercurial 저장소 생성" />
+    <option name="생성" path="ActionManager" hit="Mercurial 저장소 생성" />
+    <option name="저장소" path="ActionManager" hit="Mercurial 저장소 생성" />
+    <option name="mq" path="ActionManager" hit="mq 패치 시리즈 파일에서 패치 정보 다시 로드" />
+    <option name="다시" path="ActionManager" hit="mq 패치 시리즈 파일에서 패치 정보 다시 로드" />
+    <option name="로드" path="ActionManager" hit="mq 패치 시리즈 파일에서 패치 정보 다시 로드" />
+    <option name="시리즈" path="ActionManager" hit="mq 패치 시리즈 파일에서 패치 정보 다시 로드" />
+    <option name="정보" path="ActionManager" hit="mq 패치 시리즈 파일에서 패치 정보 다시 로드" />
+    <option name="파일에서" path="ActionManager" hit="mq 패치 시리즈 파일에서 패치 정보 다시 로드" />
+    <option name="패치" path="ActionManager" hit="mq 패치 시리즈 파일에서 패치 정보 다시 로드" />
+    <option name="mq" path="ActionManager" hit="mq 패치 이름 변경" />
+    <option name="변경" path="ActionManager" hit="mq 패치 이름 변경" />
+    <option name="이름" path="ActionManager" hit="mq 패치 이름 변경" />
+    <option name="패치" path="ActionManager" hit="mq 패치 이름 변경" />
+    <option name="가져오기" path="ActionManager" hit="가져오기" />
+    <option name="계속" path="ActionManager" hit="계속 리베이스" />
+    <option name="리베이스" path="ActionManager" hit="계속 리베이스" />
+    <option name="계속" path="ActionManager" hit="계속 이식" />
+    <option name="이식" path="ActionManager" hit="계속 이식" />
+    <option name="기존" path="ActionManager" hit="기존 충돌 해결" />
+    <option name="충돌" path="ActionManager" hit="기존 충돌 해결" />
+    <option name="해결" path="ActionManager" hit="기존 충돌 해결" />
+    <option name="기존" path="ActionManager" hit="기존 파일 병합" />
+    <option name="병합" path="ActionManager" hit="기존 파일 병합" />
+    <option name="파일" path="ActionManager" hit="기존 파일 병합" />
+    <option name="다음과" path="ActionManager" hit="다음과 병합" />
+    <option name="병합" path="ActionManager" hit="다음과 병합" />
+    <option name="다음으로" path="ActionManager" hit="다음으로 업데이트…" />
+    <option name="업데이트" path="ActionManager" hit="다음으로 업데이트…" />
+    <option name="리베이스" path="ActionManager" hit="리베이스 중단" />
+    <option name="중단" path="ActionManager" hit="리베이스 중단" />
+    <option name="리비전으로" path="ActionManager" hit="리비전으로 업데이트" />
+    <option name="업데이트" path="ActionManager" hit="리비전으로 업데이트" />
+    <option name="병합" path="ActionManager" hit="병합..." />
+    <option name="북마크와" path="ActionManager" hit="브랜치/북마크와 비교…" />
+    <option name="브랜치" path="ActionManager" hit="브랜치/북마크와 비교…" />
+    <option name="비교" path="ActionManager" hit="브랜치/북마크와 비교…" />
+    <option name="브랜치" path="ActionManager" hit="브랜치…" />
+    <option name="삭제" path="ActionManager" hit="삭제" />
+    <option name="브랜치" path="ActionManager" hit="새 브랜치…" />
+    <option name="새" path="ActionManager" hit="새 브랜치…" />
+    <option name="새" path="ActionManager" hit="새 태그…" />
+    <option name="태그" path="ActionManager" hit="새 태그…" />
+    <option name="리비전과" path="ActionManager" hit="선택한 리비전과 병합" />
+    <option name="병합" path="ActionManager" hit="선택한 리비전과 병합" />
+    <option name="선택한" path="ActionManager" hit="선택한 리비전과 병합" />
+    <option name="가져오기" path="ActionManager" hit="선택한 커밋에서 시작하는 모든 리비전 가져오기" />
+    <option name="리비전" path="ActionManager" hit="선택한 커밋에서 시작하는 모든 리비전 가져오기" />
+    <option name="모든" path="ActionManager" hit="선택한 커밋에서 시작하는 모든 리비전 가져오기" />
+    <option name="선택한" path="ActionManager" hit="선택한 커밋에서 시작하는 모든 리비전 가져오기" />
+    <option name="시작하는" path="ActionManager" hit="선택한 커밋에서 시작하는 모든 리비전 가져오기" />
+    <option name="커밋에서" path="ActionManager" hit="선택한 커밋에서 시작하는 모든 리비전 가져오기" />
+    <option name="리비전" path="ActionManager" hit="선택한 커밋에서 시작하는 모든 리비전 팝" />
+    <option name="모든" path="ActionManager" hit="선택한 커밋에서 시작하는 모든 리비전 팝" />
+    <option name="선택한" path="ActionManager" hit="선택한 커밋에서 시작하는 모든 리비전 팝" />
+    <option name="시작하는" path="ActionManager" hit="선택한 커밋에서 시작하는 모든 리비전 팝" />
+    <option name="커밋에서" path="ActionManager" hit="선택한 커밋에서 시작하는 모든 리비전 팝" />
+    <option name="팝" path="ActionManager" hit="선택한 커밋에서 시작하는 모든 리비전 팝" />
+    <option name="브랜치를" path="ActionManager" hit="선택한 커밋에서 시작하는 새 브랜치를 생성합니다" />
+    <option name="새" path="ActionManager" hit="선택한 커밋에서 시작하는 새 브랜치를 생성합니다" />
+    <option name="생성합니다" path="ActionManager" hit="선택한 커밋에서 시작하는 새 브랜치를 생성합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 커밋에서 시작하는 새 브랜치를 생성합니다" />
+    <option name="시작하는" path="ActionManager" hit="선택한 커밋에서 시작하는 새 브랜치를 생성합니다" />
+    <option name="커밋에서" path="ActionManager" hit="선택한 커밋에서 시작하는 새 브랜치를 생성합니다" />
+    <option name="맨" path="ActionManager" hit="선택한 패치 맨 위로 접기" />
+    <option name="선택한" path="ActionManager" hit="선택한 패치 맨 위로 접기" />
+    <option name="위로" path="ActionManager" hit="선택한 패치 맨 위로 접기" />
+    <option name="접기" path="ActionManager" hit="선택한 패치 맨 위로 접기" />
+    <option name="패치" path="ActionManager" hit="선택한 패치 맨 위로 접기" />
+    <option name="삭제" path="ActionManager" hit="선택한 패치 삭제" />
+    <option name="선택한" path="ActionManager" hit="선택한 패치 삭제" />
+    <option name="패치" path="ActionManager" hit="선택한 패치 삭제" />
+    <option name="모든" path="ActionManager" hit="선택한 패치 위의 모든 패치 밀어넣기" />
+    <option name="밀어넣기" path="ActionManager" hit="선택한 패치 위의 모든 패치 밀어넣기" />
+    <option name="선택한" path="ActionManager" hit="선택한 패치 위의 모든 패치 밀어넣기" />
+    <option name="위의" path="ActionManager" hit="선택한 패치 위의 모든 패치 밀어넣기" />
+    <option name="패치" path="ActionManager" hit="선택한 패치 위의 모든 패치 밀어넣기" />
+    <option name="선택한" path="ActionManager" hit="선택한 패치만 적용" />
+    <option name="적용" path="ActionManager" hit="선택한 패치만 적용" />
+    <option name="패치만" path="ActionManager" hit="선택한 패치만 적용" />
+    <option name="가리키는" path="ActionManager" hit="이 커밋을 가리키는 새 태그 생성" />
+    <option name="새" path="ActionManager" hit="이 커밋을 가리키는 새 태그 생성" />
+    <option name="생성" path="ActionManager" hit="이 커밋을 가리키는 새 태그 생성" />
+    <option name="이" path="ActionManager" hit="이 커밋을 가리키는 새 태그 생성" />
+    <option name="커밋을" path="ActionManager" hit="이 커밋을 가리키는 새 태그 생성" />
+    <option name="태그" path="ActionManager" hit="이 커밋을 가리키는 새 태그 생성" />
+    <option name="이동" path="ActionManager" hit="이동" />
+    <option name="밀어넣기" path="ActionManager" hit="이동 및 밀어넣기" />
+    <option name="및" path="ActionManager" hit="이동 및 밀어넣기" />
+    <option name="이동" path="ActionManager" hit="이동 및 밀어넣기" />
+    <option name="mq" path="ActionManager" hit="저장소 기록에 mq 패치 적용" />
+    <option name="기록에" path="ActionManager" hit="저장소 기록에 mq 패치 적용" />
+    <option name="저장소" path="ActionManager" hit="저장소 기록에 mq 패치 적용" />
+    <option name="적용" path="ActionManager" hit="저장소 기록에 mq 패치 적용" />
+    <option name="패치" path="ActionManager" hit="저장소 기록에 mq 패치 적용" />
+    <option name="디렉터리를" path="ActionManager" hit="저장소 작업 디렉터리를 지정된 변경 집합으로 업데이트" />
+    <option name="변경" path="ActionManager" hit="저장소 작업 디렉터리를 지정된 변경 집합으로 업데이트" />
+    <option name="업데이트" path="ActionManager" hit="저장소 작업 디렉터리를 지정된 변경 집합으로 업데이트" />
+    <option name="작업" path="ActionManager" hit="저장소 작업 디렉터리를 지정된 변경 집합으로 업데이트" />
+    <option name="저장소" path="ActionManager" hit="저장소 작업 디렉터리를 지정된 변경 집합으로 업데이트" />
+    <option name="지정된" path="ActionManager" hit="저장소 작업 디렉터리를 지정된 변경 집합으로 업데이트" />
+    <option name="집합으로" path="ActionManager" hit="저장소 작업 디렉터리를 지정된 변경 집합으로 업데이트" />
+    <option name="접기" path="ActionManager" hit="접기" />
+    <option name="실행" path="ActionManager" hit="충돌 해결자 실행" />
+    <option name="충돌" path="ActionManager" hit="충돌 해결자 실행" />
+    <option name="해결자" path="ActionManager" hit="충돌 해결자 실행" />
+    <option name="및" path="ActionManager" hit="커밋 및 푸시…" />
+    <option name="커밋" path="ActionManager" hit="커밋 및 푸시…" />
+    <option name="푸시" path="ActionManager" hit="커밋 및 푸시…" />
+    <option name="저장소" path="ActionManager" hit="태그 저장소…" />
+    <option name="태그" path="ActionManager" hit="태그 저장소…" />
+    <option name="다시" path="ActionManager" hit="파일에서 다시 로드" />
+    <option name="로드" path="ActionManager" hit="파일에서 다시 로드" />
+    <option name="파일에서" path="ActionManager" hit="파일에서 다시 로드" />
+    <option name="완료" path="ActionManager" hit="패치 완료" />
+    <option name="패치" path="ActionManager" hit="패치 완료" />
+    <option name="변경" path="ActionManager" hit="패치 이름 변경" />
+    <option name="이름" path="ActionManager" hit="패치 이름 변경" />
+    <option name="패치" path="ActionManager" hit="패치 이름 변경" />
+    <option name="이동" path="ActionManager" hit="패치로 이동" />
+    <option name="패치로" path="ActionManager" hit="패치로 이동" />
+    <option name="풀" path="ActionManager" hit="풀…" />
+    <option name="표시" path="ActionManager" hit="해결됨으로 표시" />
+    <option name="해결됨으로" path="ActionManager" hit="해결됨으로 표시" />
+    <option name="마커" path="ActionManager" hit="해결됨으로 표시하고 충돌 마커 제거" />
+    <option name="제거" path="ActionManager" hit="해결됨으로 표시하고 충돌 마커 제거" />
+    <option name="충돌" path="ActionManager" hit="해결됨으로 표시하고 충돌 마커 제거" />
+    <option name="표시하고" path="ActionManager" hit="해결됨으로 표시하고 충돌 마커 제거" />
+    <option name="해결됨으로" path="ActionManager" hit="해결됨으로 표시하고 충돌 마커 제거" />
+    <option name="대한" path="ActionManager" hit="현재 리비전에 대한 태그 생성" />
+    <option name="리비전에" path="ActionManager" hit="현재 리비전에 대한 태그 생성" />
+    <option name="생성" path="ActionManager" hit="현재 리비전에 대한 태그 생성" />
+    <option name="태그" path="ActionManager" hit="현재 리비전에 대한 태그 생성" />
+    <option name="현재" path="ActionManager" hit="현재 리비전에 대한 태그 생성" />
+    <option name="커밋" path="ActionManager" hit="후속 커밋 풀" />
+    <option name="풀" path="ActionManager" hit="후속 커밋 풀" />
+    <option name="후속" path="ActionManager" hit="후속 커밋 풀" />
+  </configurable>
+</options>

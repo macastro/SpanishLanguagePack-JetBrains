@@ -1,0 +1,22 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="cte로" path="ActionManager" hit="CTE로 하위 쿼리" />
+    <option name="쿼리" path="ActionManager" hit="CTE로 하위 쿼리" />
+    <option name="하위" path="ActionManager" hit="CTE로 하위 쿼리" />
+    <option name="sql" path="ActionManager" hit="SQL 파생 언어 변경" />
+    <option name="변경" path="ActionManager" hit="SQL 파생 언어 변경" />
+    <option name="언어" path="ActionManager" hit="SQL 파생 언어 변경" />
+    <option name="파생" path="ActionManager" hit="SQL 파생 언어 변경" />
+    <option name="루틴" path="ActionManager" hit="루틴 추출..." />
+    <option name="추출" path="ActionManager" hit="루틴 추출..." />
+    <option name="별칭" path="ActionManager" hit="테이블 별칭..." />
+    <option name="테이블" path="ActionManager" hit="테이블 별칭..." />
+    <option name="구문" path="ActionManager" hit="현재 구문 선택 " />
+    <option name="선택" path="ActionManager" hit="현재 구문 선택 " />
+    <option name="현재" path="ActionManager" hit="현재 구문 선택 " />
+  </configurable>
+  <configurable id="editor.breadcrumbs" configurable_name="이동 경로">
+    <option name="sql" hit="SQL" />
+  </configurable>
+</options>

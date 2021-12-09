@@ -1,0 +1,33 @@
+<html>
+<body>
+매개변수가 항상 동일한 상수로 표시되는 메서드를 보고합니다.
+
+<p>예:</p>
+<pre><code>
+  static void printPoint(int x, int y) { // x는 항상 0입니다
+    System.out.println(x + ", " + y);
+  }
+
+  public static void main(String[] args) {
+    printPoint(0, 1);
+    printPoint(0, 2);
+  }
+</code></pre>
+<p>빠른 수정은 상수 값을 인라인화합니다. 이를 통해 메서드 구현을 간소화할 수 있습니다.</p>
+<!-- tooltip end -->
+<p>
+  다음과 같은 경우에 검사를 억제하려면 <b>Ignore when inline parameter initializer would not succeed(인라인 매개변수 이니셜라이저가 성공하지 않을 경우 무시)</b> 옵션을 사용하세요.
+</p>
+<ul>
+  <li>매개변수가 메서드 안에서 수정된 경우</li>
+  <li>전달되는 매개변수 값이 접근할 수 없는 필드에 대한 참조인 경우(Java에서만)</li>
+  <li>매개변수가 vararg인 경우(Java에서만)</li>
+</ul>
+<p>
+  <b>보고된 메서드의 최대 가시성</b> 옵션을 사용하여 보고된 메서드의 최대 가시성을 제어합니다.
+</p>
+<p>
+  <b>보고된 메서드의 최소 사용 횟수</b> 필드를 사용하여 매개변수 값이 같은 메서드의 최소 사용 횟수를 지정하세요.
+</p>
+</body>
+</html>

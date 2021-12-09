@@ -1,0 +1,577 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="git" path="ActionManager" hit="Git" />
+    <option name="vcs" path="ActionManager" hit="VCS 그룹" />
+    <option name="그룹" path="ActionManager" hit="VCS 그룹" />
+    <option name="vcs" path="ActionManager" hit="VCS 라벨" />
+    <option name="라벨" path="ActionManager" hit="VCS 라벨" />
+    <option name="vcs" path="ActionManager" hit="VCS 변경 내용을 새로 고칩니다" />
+    <option name="고칩니다" path="ActionManager" hit="VCS 변경 내용을 새로 고칩니다" />
+    <option name="내용을" path="ActionManager" hit="VCS 변경 내용을 새로 고칩니다" />
+    <option name="변경" path="ActionManager" hit="VCS 변경 내용을 새로 고칩니다" />
+    <option name="새로" path="ActionManager" hit="VCS 변경 내용을 새로 고칩니다" />
+    <option name="vcs" path="ActionManager" hit="VCS 액션" />
+    <option name="액션" path="ActionManager" hit="VCS 액션" />
+    <option name="vcs" path="ActionManager" hit="VCS 작업" />
+    <option name="작업" path="ActionManager" hit="VCS 작업" />
+    <option name="vcs에" path="ActionManager" hit="VCS에 추가" />
+    <option name="추가" path="ActionManager" hit="VCS에 추가" />
+    <option name="vcs에서" path="ActionManager" hit="VCS에서 제거" />
+    <option name="제거" path="ActionManager" hit="VCS에서 제거" />
+    <option name="가져오기" path="ActionManager" hit="가져오기" />
+    <option name="blame" path="ActionManager" hit="각 줄의 마지막 수정 날짜 및 작성자를 표시합니다(&quot;Blame&quot;이라고도 함)." />
+    <option name="각" path="ActionManager" hit="각 줄의 마지막 수정 날짜 및 작성자를 표시합니다(&quot;Blame&quot;이라고도 함)." />
+    <option name="날짜" path="ActionManager" hit="각 줄의 마지막 수정 날짜 및 작성자를 표시합니다(&quot;Blame&quot;이라고도 함)." />
+    <option name="마지막" path="ActionManager" hit="각 줄의 마지막 수정 날짜 및 작성자를 표시합니다(&quot;Blame&quot;이라고도 함)." />
+    <option name="및" path="ActionManager" hit="각 줄의 마지막 수정 날짜 및 작성자를 표시합니다(&quot;Blame&quot;이라고도 함)." />
+    <option name="수정" path="ActionManager" hit="각 줄의 마지막 수정 날짜 및 작성자를 표시합니다(&quot;Blame&quot;이라고도 함)." />
+    <option name="이라고도" path="ActionManager" hit="각 줄의 마지막 수정 날짜 및 작성자를 표시합니다(&quot;Blame&quot;이라고도 함)." />
+    <option name="작성자를" path="ActionManager" hit="각 줄의 마지막 수정 날짜 및 작성자를 표시합니다(&quot;Blame&quot;이라고도 함)." />
+    <option name="줄의" path="ActionManager" hit="각 줄의 마지막 수정 날짜 및 작성자를 표시합니다(&quot;Blame&quot;이라고도 함)." />
+    <option name="표시합니다" path="ActionManager" hit="각 줄의 마지막 수정 날짜 및 작성자를 표시합니다(&quot;Blame&quot;이라고도 함)." />
+    <option name="함" path="ActionManager" hit="각 줄의 마지막 수정 날짜 및 작성자를 표시합니다(&quot;Blame&quot;이라고도 함)." />
+    <option name="그룹화" path="ActionManager" hit="그룹화 기준" />
+    <option name="기준" path="ActionManager" hit="그룹화 기준" />
+    <option name="기록" path="ActionManager" hit="기록 표시" />
+    <option name="표시" path="ActionManager" hit="기록 표시" />
+    <option name="다른" path="ActionManager" hit="다른 변경 목록으로 이동…" />
+    <option name="목록으로" path="ActionManager" hit="다른 변경 목록으로 이동…" />
+    <option name="변경" path="ActionManager" hit="다른 변경 목록으로 이동…" />
+    <option name="이동" path="ActionManager" hit="다른 변경 목록으로 이동…" />
+    <option name="다른" path="ActionManager" hit="다른 변경 목록으로 줄을 이동…" />
+    <option name="목록으로" path="ActionManager" hit="다른 변경 목록으로 줄을 이동…" />
+    <option name="변경" path="ActionManager" hit="다른 변경 목록으로 줄을 이동…" />
+    <option name="이동" path="ActionManager" hit="다른 변경 목록으로 줄을 이동…" />
+    <option name="줄을" path="ActionManager" hit="다른 변경 목록으로 줄을 이동…" />
+    <option name="다음" path="ActionManager" hit="다음 변경" />
+    <option name="변경" path="ActionManager" hit="다음 변경" />
+    <option name="다음" path="ActionManager" hit="다음 변경으로 이동합니다" />
+    <option name="변경으로" path="ActionManager" hit="다음 변경으로 이동합니다" />
+    <option name="이동합니다" path="ActionManager" hit="다음 변경으로 이동합니다" />
+    <option name="동일한" path="ActionManager" hit="동일한 저장소 버전과 비교" />
+    <option name="버전과" path="ActionManager" hit="동일한 저장소 버전과 비교" />
+    <option name="비교" path="ActionManager" hit="동일한 저장소 버전과 비교" />
+    <option name="저장소" path="ActionManager" hit="동일한 저장소 버전과 비교" />
+    <option name="diff" path="ActionManager" hit="두 번 클릭 시 Diff 표시" />
+    <option name="두" path="ActionManager" hit="두 번 클릭 시 Diff 표시" />
+    <option name="번" path="ActionManager" hit="두 번 클릭 시 Diff 표시" />
+    <option name="시" path="ActionManager" hit="두 번 클릭 시 Diff 표시" />
+    <option name="클릭" path="ActionManager" hit="두 번 클릭 시 Diff 표시" />
+    <option name="표시" path="ActionManager" hit="두 번 클릭 시 Diff 표시" />
+    <option name="두" path="ActionManager" hit="두 번 클릭 시 소스 표시" />
+    <option name="번" path="ActionManager" hit="두 번 클릭 시 소스 표시" />
+    <option name="소스" path="ActionManager" hit="두 번 클릭 시 소스 표시" />
+    <option name="시" path="ActionManager" hit="두 번 클릭 시 소스 표시" />
+    <option name="클릭" path="ActionManager" hit="두 번 클릭 시 소스 표시" />
+    <option name="표시" path="ActionManager" hit="두 번 클릭 시 소스 표시" />
+    <option name="두" path="ActionManager" hit="두 번 클릭 시 표시" />
+    <option name="번" path="ActionManager" hit="두 번 클릭 시 표시" />
+    <option name="시" path="ActionManager" hit="두 번 클릭 시 표시" />
+    <option name="클릭" path="ActionManager" hit="두 번 클릭 시 표시" />
+    <option name="표시" path="ActionManager" hit="두 번 클릭 시 표시" />
+    <option name="디렉터리" path="ActionManager" hit="디렉터리" />
+    <option name="내용을" path="ActionManager" hit="디폴트로 새 변경 내용을 배치할 변경 목록을 설정합니다" />
+    <option name="디폴트로" path="ActionManager" hit="디폴트로 새 변경 내용을 배치할 변경 목록을 설정합니다" />
+    <option name="목록을" path="ActionManager" hit="디폴트로 새 변경 내용을 배치할 변경 목록을 설정합니다" />
+    <option name="배치할" path="ActionManager" hit="디폴트로 새 변경 내용을 배치할 변경 목록을 설정합니다" />
+    <option name="변경" path="ActionManager" hit="디폴트로 새 변경 내용을 배치할 변경 목록을 설정합니다" />
+    <option name="새" path="ActionManager" hit="디폴트로 새 변경 내용을 배치할 변경 목록을 설정합니다" />
+    <option name="설정합니다" path="ActionManager" hit="디폴트로 새 변경 내용을 배치할 변경 목록을 설정합니다" />
+    <option name="로그" path="ActionManager" hit="로그" />
+    <option name="내용" path="ActionManager" hit="로컬 변경 내용 표시" />
+    <option name="로컬" path="ActionManager" hit="로컬 변경 내용 표시" />
+    <option name="변경" path="ActionManager" hit="로컬 변경 내용 표시" />
+    <option name="표시" path="ActionManager" hit="로컬 변경 내용 표시" />
+    <option name="내용에서" path="ActionManager" hit="로컬 변경 내용에서 패치 생성…" />
+    <option name="로컬" path="ActionManager" hit="로컬 변경 내용에서 패치 생성…" />
+    <option name="변경" path="ActionManager" hit="로컬 변경 내용에서 패치 생성…" />
+    <option name="생성" path="ActionManager" hit="로컬 변경 내용에서 패치 생성…" />
+    <option name="패치" path="ActionManager" hit="로컬 변경 내용에서 패치 생성…" />
+    <option name="로컬과" path="ActionManager" hit="로컬과 비교" />
+    <option name="비교" path="ActionManager" hit="로컬과 비교" />
+    <option name="로컬과" path="ActionManager" hit="로컬과 이전 버전 비교" />
+    <option name="버전" path="ActionManager" hit="로컬과 이전 버전 비교" />
+    <option name="비교" path="ActionManager" hit="로컬과 이전 버전 비교" />
+    <option name="이전" path="ActionManager" hit="로컬과 이전 버전 비교" />
+    <option name="롤백" path="ActionManager" hit="롤백…" />
+    <option name="리비전" path="ActionManager" hit="리비전 번호 복사" />
+    <option name="번호" path="ActionManager" hit="리비전 번호 복사" />
+    <option name="복사" path="ActionManager" hit="리비전 번호 복사" />
+    <option name="리비전과" path="ActionManager" hit="리비전과 비교…" />
+    <option name="비교" path="ActionManager" hit="리비전과 비교…" />
+    <option name="모듈" path="ActionManager" hit="모듈" />
+    <option name="관리" path="ActionManager" hit="버전 관리" />
+    <option name="버전" path="ActionManager" hit="버전 관리" />
+    <option name="관리" path="ActionManager" hit="버전 관리 그룹" />
+    <option name="그룹" path="ActionManager" hit="버전 관리 그룹" />
+    <option name="버전" path="ActionManager" hit="버전 관리 그룹" />
+    <option name="관리" path="ActionManager" hit="버전 관리 시스템" />
+    <option name="버전" path="ActionManager" hit="버전 관리 시스템" />
+    <option name="시스템" path="ActionManager" hit="버전 관리 시스템" />
+    <option name="관리" path="ActionManager" hit="버전 관리 통합 활성화…" />
+    <option name="버전" path="ActionManager" hit="버전 관리 통합 활성화…" />
+    <option name="통합" path="ActionManager" hit="버전 관리 통합 활성화…" />
+    <option name="활성화" path="ActionManager" hit="버전 관리 통합 활성화…" />
+    <option name="관리에" path="ActionManager" hit="버전 관리에 있는 프로젝트…" />
+    <option name="버전" path="ActionManager" hit="버전 관리에 있는 프로젝트…" />
+    <option name="있는" path="ActionManager" hit="버전 관리에 있는 프로젝트…" />
+    <option name="프로젝트" path="ActionManager" hit="버전 관리에 있는 프로젝트…" />
+    <option name="가져오기" path="ActionManager" hit="버전 관리에서 가져오기…" />
+    <option name="관리에서" path="ActionManager" hit="버전 관리에서 가져오기…" />
+    <option name="버전" path="ActionManager" hit="버전 관리에서 가져오기…" />
+    <option name="내용" path="ActionManager" hit="변경 내용 되돌리기" />
+    <option name="되돌리기" path="ActionManager" hit="변경 내용 되돌리기" />
+    <option name="변경" path="ActionManager" hit="변경 내용 되돌리기" />
+    <option name="내용" path="ActionManager" hit="변경 내용 보류…" />
+    <option name="변경" path="ActionManager" hit="변경 내용 보류…" />
+    <option name="보류" path="ActionManager" hit="변경 내용 보류…" />
+    <option name="내용" path="ActionManager" hit="변경 내용 찾아보기…" />
+    <option name="변경" path="ActionManager" hit="변경 내용 찾아보기…" />
+    <option name="찾아보기" path="ActionManager" hit="변경 내용 찾아보기…" />
+    <option name="내용" path="ActionManager" hit="변경 내용 탐색 액션" />
+    <option name="변경" path="ActionManager" hit="변경 내용 탐색 액션" />
+    <option name="액션" path="ActionManager" hit="변경 내용 탐색 액션" />
+    <option name="탐색" path="ActionManager" hit="변경 내용 탐색 액션" />
+    <option name="내용에서" path="ActionManager" hit="변경 내용에서 패치를 생성하고 클립보드에 복사합니다" />
+    <option name="변경" path="ActionManager" hit="변경 내용에서 패치를 생성하고 클립보드에 복사합니다" />
+    <option name="복사합니다" path="ActionManager" hit="변경 내용에서 패치를 생성하고 클립보드에 복사합니다" />
+    <option name="생성하고" path="ActionManager" hit="변경 내용에서 패치를 생성하고 클립보드에 복사합니다" />
+    <option name="클립보드에" path="ActionManager" hit="변경 내용에서 패치를 생성하고 클립보드에 복사합니다" />
+    <option name="패치를" path="ActionManager" hit="변경 내용에서 패치를 생성하고 클립보드에 복사합니다" />
+    <option name="내용을" path="ActionManager" hit="변경 내용을 보류된 적절한 변경 목록으로 보류합니다" />
+    <option name="목록으로" path="ActionManager" hit="변경 내용을 보류된 적절한 변경 목록으로 보류합니다" />
+    <option name="변경" path="ActionManager" hit="변경 내용을 보류된 적절한 변경 목록으로 보류합니다" />
+    <option name="보류된" path="ActionManager" hit="변경 내용을 보류된 적절한 변경 목록으로 보류합니다" />
+    <option name="보류합니다" path="ActionManager" hit="변경 내용을 보류된 적절한 변경 목록으로 보류합니다" />
+    <option name="적절한" path="ActionManager" hit="변경 내용을 보류된 적절한 변경 목록으로 보류합니다" />
+    <option name="내용을" path="ActionManager" hit="변경 내용을 외부 패치 파일에 저장하고 코드에서 제거합니다" />
+    <option name="변경" path="ActionManager" hit="변경 내용을 외부 패치 파일에 저장하고 코드에서 제거합니다" />
+    <option name="외부" path="ActionManager" hit="변경 내용을 외부 패치 파일에 저장하고 코드에서 제거합니다" />
+    <option name="저장하고" path="ActionManager" hit="변경 내용을 외부 패치 파일에 저장하고 코드에서 제거합니다" />
+    <option name="제거합니다" path="ActionManager" hit="변경 내용을 외부 패치 파일에 저장하고 코드에서 제거합니다" />
+    <option name="코드에서" path="ActionManager" hit="변경 내용을 외부 패치 파일에 저장하고 코드에서 제거합니다" />
+    <option name="파일에" path="ActionManager" hit="변경 내용을 외부 패치 파일에 저장하고 코드에서 제거합니다" />
+    <option name="패치" path="ActionManager" hit="변경 내용을 외부 패치 파일에 저장하고 코드에서 제거합니다" />
+    <option name="내용을" path="ActionManager" hit="변경 내용을 적절한 변경 목록으로 보류 해제합니다" />
+    <option name="목록으로" path="ActionManager" hit="변경 내용을 적절한 변경 목록으로 보류 해제합니다" />
+    <option name="변경" path="ActionManager" hit="변경 내용을 적절한 변경 목록으로 보류 해제합니다" />
+    <option name="보류" path="ActionManager" hit="변경 내용을 적절한 변경 목록으로 보류 해제합니다" />
+    <option name="적절한" path="ActionManager" hit="변경 내용을 적절한 변경 목록으로 보류 해제합니다" />
+    <option name="해제합니다" path="ActionManager" hit="변경 내용을 적절한 변경 목록으로 보류 해제합니다" />
+    <option name="목록" path="ActionManager" hit="변경 목록" />
+    <option name="변경" path="ActionManager" hit="변경 목록" />
+    <option name="목록" path="ActionManager" hit="변경 목록 삭제" />
+    <option name="변경" path="ActionManager" hit="변경 목록 삭제" />
+    <option name="삭제" path="ActionManager" hit="변경 목록 삭제" />
+    <option name="목록" path="ActionManager" hit="변경 목록 편집…" />
+    <option name="변경" path="ActionManager" hit="변경 목록 편집…" />
+    <option name="편집" path="ActionManager" hit="변경 목록 편집…" />
+    <option name="목록" path="ActionManager" hit="변경 목록 활성화" />
+    <option name="변경" path="ActionManager" hit="변경 목록 활성화" />
+    <option name="활성화" path="ActionManager" hit="변경 목록 활성화" />
+    <option name="내용으로" path="ActionManager" hit="변경 목록을 제거하고 모든 변경 내용을 다른 변경 내용으로 이동합니다" />
+    <option name="내용을" path="ActionManager" hit="변경 목록을 제거하고 모든 변경 내용을 다른 변경 내용으로 이동합니다" />
+    <option name="다른" path="ActionManager" hit="변경 목록을 제거하고 모든 변경 내용을 다른 변경 내용으로 이동합니다" />
+    <option name="모든" path="ActionManager" hit="변경 목록을 제거하고 모든 변경 내용을 다른 변경 내용으로 이동합니다" />
+    <option name="목록을" path="ActionManager" hit="변경 목록을 제거하고 모든 변경 내용을 다른 변경 내용으로 이동합니다" />
+    <option name="변경" path="ActionManager" hit="변경 목록을 제거하고 모든 변경 내용을 다른 변경 내용으로 이동합니다" />
+    <option name="이동합니다" path="ActionManager" hit="변경 목록을 제거하고 모든 변경 내용을 다른 변경 내용으로 이동합니다" />
+    <option name="제거하고" path="ActionManager" hit="변경 목록을 제거하고 모든 변경 내용을 다른 변경 내용으로 이동합니다" />
+    <option name="diff" path="ActionManager" hit="별도 창에 Diff 표시" />
+    <option name="별도" path="ActionManager" hit="별도 창에 Diff 표시" />
+    <option name="창에" path="ActionManager" hit="별도 창에 Diff 표시" />
+    <option name="표시" path="ActionManager" hit="별도 창에 Diff 표시" />
+    <option name="보류" path="ActionManager" hit="보류 항목" />
+    <option name="항목" path="ActionManager" hit="보류 항목" />
+    <option name="보류" path="ActionManager" hit="보류 항목 표시" />
+    <option name="표시" path="ActionManager" hit="보류 항목 표시" />
+    <option name="항목" path="ActionManager" hit="보류 항목 표시" />
+    <option name="보류" path="ActionManager" hit="보류 항목에 저장" />
+    <option name="저장" path="ActionManager" hit="보류 항목에 저장" />
+    <option name="항목에" path="ActionManager" hit="보류 항목에 저장" />
+    <option name="보류" path="ActionManager" hit="보류 해제…" />
+    <option name="해제" path="ActionManager" hit="보류 해제…" />
+    <option name="목록을" path="ActionManager" hit="보류 해제된 변경 목록을 삭제합니다" />
+    <option name="변경" path="ActionManager" hit="보류 해제된 변경 목록을 삭제합니다" />
+    <option name="보류" path="ActionManager" hit="보류 해제된 변경 목록을 삭제합니다" />
+    <option name="삭제합니다" path="ActionManager" hit="보류 해제된 변경 목록을 삭제합니다" />
+    <option name="해제된" path="ActionManager" hit="보류 해제된 변경 목록을 삭제합니다" />
+    <option name="목록의" path="ActionManager" hit="보류된 변경 목록의 이름을 변경합니다" />
+    <option name="변경" path="ActionManager" hit="보류된 변경 목록의 이름을 변경합니다" />
+    <option name="변경합니다" path="ActionManager" hit="보류된 변경 목록의 이름을 변경합니다" />
+    <option name="보류된" path="ActionManager" hit="보류된 변경 목록의 이름을 변경합니다" />
+    <option name="이름을" path="ActionManager" hit="보류된 변경 목록의 이름을 변경합니다" />
+    <option name="복원" path="ActionManager" hit="복원" />
+    <option name="삭제" path="ActionManager" hit="삭제" />
+    <option name="상태" path="ActionManager" hit="상태 확인" />
+    <option name="확인" path="ActionManager" hit="상태 확인" />
+    <option name="목록" path="ActionManager" hit="새 변경 목록…" />
+    <option name="변경" path="ActionManager" hit="새 변경 목록…" />
+    <option name="새" path="ActionManager" hit="새 변경 목록…" />
+    <option name="목록을" path="ActionManager" hit="새 변경 목록을 생성합니다" />
+    <option name="변경" path="ActionManager" hit="새 변경 목록을 생성합니다" />
+    <option name="새" path="ActionManager" hit="새 변경 목록을 생성합니다" />
+    <option name="생성합니다" path="ActionManager" hit="새 변경 목록을 생성합니다" />
+    <option name="새로고침" path="ActionManager" hit="새로고침" />
+    <option name="선택" path="ActionManager" hit="선택 파일을 편집하기 위해 체크아웃합니다" />
+    <option name="위해" path="ActionManager" hit="선택 파일을 편집하기 위해 체크아웃합니다" />
+    <option name="체크아웃합니다" path="ActionManager" hit="선택 파일을 편집하기 위해 체크아웃합니다" />
+    <option name="파일을" path="ActionManager" hit="선택 파일을 편집하기 위해 체크아웃합니다" />
+    <option name="편집하기" path="ActionManager" hit="선택 파일을 편집하기 위해 체크아웃합니다" />
+    <option name="기록" path="ActionManager" hit="선택 항목의 기록 표시" />
+    <option name="선택" path="ActionManager" hit="선택 항목의 기록 표시" />
+    <option name="표시" path="ActionManager" hit="선택 항목의 기록 표시" />
+    <option name="항목의" path="ActionManager" hit="선택 항목의 기록 표시" />
+    <option name="리비전과" path="ActionManager" hit="선택한 리비전과 현재 버전을 비교합니다" />
+    <option name="버전을" path="ActionManager" hit="선택한 리비전과 현재 버전을 비교합니다" />
+    <option name="비교합니다" path="ActionManager" hit="선택한 리비전과 현재 버전을 비교합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 리비전과 현재 버전을 비교합니다" />
+    <option name="현재" path="ActionManager" hit="선택한 리비전과 현재 버전을 비교합니다" />
+    <option name="기록을" path="ActionManager" hit="선택한 리비전까지의 파일 기록을 표시합니다" />
+    <option name="리비전까지의" path="ActionManager" hit="선택한 리비전까지의 파일 기록을 표시합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 리비전까지의 파일 기록을 표시합니다" />
+    <option name="파일" path="ActionManager" hit="선택한 리비전까지의 파일 기록을 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="선택한 리비전까지의 파일 기록을 표시합니다" />
+    <option name="리비전의" path="ActionManager" hit="선택한 리비전의 이전 버전과 현재 버전을 비교합니다" />
+    <option name="버전과" path="ActionManager" hit="선택한 리비전의 이전 버전과 현재 버전을 비교합니다" />
+    <option name="버전을" path="ActionManager" hit="선택한 리비전의 이전 버전과 현재 버전을 비교합니다" />
+    <option name="비교합니다" path="ActionManager" hit="선택한 리비전의 이전 버전과 현재 버전을 비교합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 리비전의 이전 버전과 현재 버전을 비교합니다" />
+    <option name="이전" path="ActionManager" hit="선택한 리비전의 이전 버전과 현재 버전을 비교합니다" />
+    <option name="현재" path="ActionManager" hit="선택한 리비전의 이전 버전과 현재 버전을 비교합니다" />
+    <option name="diff를" path="ActionManager" hit="선택한 모든 변경 내용에 대한 Diff를 한 곳에 표시" />
+    <option name="곳에" path="ActionManager" hit="선택한 모든 변경 내용에 대한 Diff를 한 곳에 표시" />
+    <option name="내용에" path="ActionManager" hit="선택한 모든 변경 내용에 대한 Diff를 한 곳에 표시" />
+    <option name="대한" path="ActionManager" hit="선택한 모든 변경 내용에 대한 Diff를 한 곳에 표시" />
+    <option name="모든" path="ActionManager" hit="선택한 모든 변경 내용에 대한 Diff를 한 곳에 표시" />
+    <option name="변경" path="ActionManager" hit="선택한 모든 변경 내용에 대한 Diff를 한 곳에 표시" />
+    <option name="선택한" path="ActionManager" hit="선택한 모든 변경 내용에 대한 Diff를 한 곳에 표시" />
+    <option name="표시" path="ActionManager" hit="선택한 모든 변경 내용에 대한 Diff를 한 곳에 표시" />
+    <option name="한" path="ActionManager" hit="선택한 모든 변경 내용에 대한 Diff를 한 곳에 표시" />
+    <option name="내용" path="ActionManager" hit="선택한 변경 내용 되돌리기" />
+    <option name="되돌리기" path="ActionManager" hit="선택한 변경 내용 되돌리기" />
+    <option name="변경" path="ActionManager" hit="선택한 변경 내용 되돌리기" />
+    <option name="선택한" path="ActionManager" hit="선택한 변경 내용 되돌리기" />
+    <option name="내용" path="ActionManager" hit="선택한 변경 내용 체리픽" />
+    <option name="변경" path="ActionManager" hit="선택한 변경 내용 체리픽" />
+    <option name="선택한" path="ActionManager" hit="선택한 변경 내용 체리픽" />
+    <option name="체리픽" path="ActionManager" hit="선택한 변경 내용 체리픽" />
+    <option name="내용에서" path="ActionManager" hit="선택한 변경 내용에서 패치를 생성합니다" />
+    <option name="변경" path="ActionManager" hit="선택한 변경 내용에서 패치를 생성합니다" />
+    <option name="생성합니다" path="ActionManager" hit="선택한 변경 내용에서 패치를 생성합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 변경 내용에서 패치를 생성합니다" />
+    <option name="패치를" path="ActionManager" hit="선택한 변경 내용에서 패치를 생성합니다" />
+    <option name="내용을" path="ActionManager" hit="선택한 변경 내용을 다른 변경 목록으로 이동합니다" />
+    <option name="다른" path="ActionManager" hit="선택한 변경 내용을 다른 변경 목록으로 이동합니다" />
+    <option name="목록으로" path="ActionManager" hit="선택한 변경 내용을 다른 변경 목록으로 이동합니다" />
+    <option name="변경" path="ActionManager" hit="선택한 변경 내용을 다른 변경 목록으로 이동합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 변경 내용을 다른 변경 목록으로 이동합니다" />
+    <option name="이동합니다" path="ActionManager" hit="선택한 변경 내용을 다른 변경 목록으로 이동합니다" />
+    <option name="내용을" path="ActionManager" hit="선택한 변경 내용을 되돌려 작업 복사본에 적용합니다" />
+    <option name="되돌려" path="ActionManager" hit="선택한 변경 내용을 되돌려 작업 복사본에 적용합니다" />
+    <option name="변경" path="ActionManager" hit="선택한 변경 내용을 되돌려 작업 복사본에 적용합니다" />
+    <option name="복사본에" path="ActionManager" hit="선택한 변경 내용을 되돌려 작업 복사본에 적용합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 변경 내용을 되돌려 작업 복사본에 적용합니다" />
+    <option name="작업" path="ActionManager" hit="선택한 변경 내용을 되돌려 작업 복사본에 적용합니다" />
+    <option name="적용합니다" path="ActionManager" hit="선택한 변경 내용을 되돌려 작업 복사본에 적용합니다" />
+    <option name="내용을" path="ActionManager" hit="선택한 변경 내용을 보류한 변경 목록으로 복사" />
+    <option name="목록으로" path="ActionManager" hit="선택한 변경 내용을 보류한 변경 목록으로 복사" />
+    <option name="변경" path="ActionManager" hit="선택한 변경 내용을 보류한 변경 목록으로 복사" />
+    <option name="보류한" path="ActionManager" hit="선택한 변경 내용을 보류한 변경 목록으로 복사" />
+    <option name="복사" path="ActionManager" hit="선택한 변경 내용을 보류한 변경 목록으로 복사" />
+    <option name="선택한" path="ActionManager" hit="선택한 변경 내용을 보류한 변경 목록으로 복사" />
+    <option name="목록의" path="ActionManager" hit="선택한 변경 목록의 이름 및 설명을 편집합니다" />
+    <option name="및" path="ActionManager" hit="선택한 변경 목록의 이름 및 설명을 편집합니다" />
+    <option name="변경" path="ActionManager" hit="선택한 변경 목록의 이름 및 설명을 편집합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 변경 목록의 이름 및 설명을 편집합니다" />
+    <option name="설명을" path="ActionManager" hit="선택한 변경 목록의 이름 및 설명을 편집합니다" />
+    <option name="이름" path="ActionManager" hit="선택한 변경 목록의 이름 및 설명을 편집합니다" />
+    <option name="편집합니다" path="ActionManager" hit="선택한 변경 목록의 이름 및 설명을 편집합니다" />
+    <option name="목록의" path="ActionManager" hit="선택한 변경 목록의 전체 정보를 표시합니다" />
+    <option name="변경" path="ActionManager" hit="선택한 변경 목록의 전체 정보를 표시합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 변경 목록의 전체 정보를 표시합니다" />
+    <option name="전체" path="ActionManager" hit="선택한 변경 목록의 전체 정보를 표시합니다" />
+    <option name="정보를" path="ActionManager" hit="선택한 변경 목록의 전체 정보를 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="선택한 변경 목록의 전체 정보를 표시합니다" />
+    <option name="내용을" path="ActionManager" hit="선택한 줄의 변경 내용을 다른 변경 목록으로 이동합니다" />
+    <option name="다른" path="ActionManager" hit="선택한 줄의 변경 내용을 다른 변경 목록으로 이동합니다" />
+    <option name="목록으로" path="ActionManager" hit="선택한 줄의 변경 내용을 다른 변경 목록으로 이동합니다" />
+    <option name="변경" path="ActionManager" hit="선택한 줄의 변경 내용을 다른 변경 목록으로 이동합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 줄의 변경 내용을 다른 변경 목록으로 이동합니다" />
+    <option name="이동합니다" path="ActionManager" hit="선택한 줄의 변경 내용을 다른 변경 목록으로 이동합니다" />
+    <option name="줄의" path="ActionManager" hit="선택한 줄의 변경 내용을 다른 변경 목록으로 이동합니다" />
+    <option name="내용을" path="ActionManager" hit="선택한 줄의 변경 내용을 롤백합니다" />
+    <option name="롤백합니다" path="ActionManager" hit="선택한 줄의 변경 내용을 롤백합니다" />
+    <option name="변경" path="ActionManager" hit="선택한 줄의 변경 내용을 롤백합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 줄의 변경 내용을 롤백합니다" />
+    <option name="줄의" path="ActionManager" hit="선택한 줄의 변경 내용을 롤백합니다" />
+    <option name="리비전" path="ActionManager" hit="선택한 커밋의 리비전 번호를 클립보드에 복사합니다" />
+    <option name="번호를" path="ActionManager" hit="선택한 커밋의 리비전 번호를 클립보드에 복사합니다" />
+    <option name="복사합니다" path="ActionManager" hit="선택한 커밋의 리비전 번호를 클립보드에 복사합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 커밋의 리비전 번호를 클립보드에 복사합니다" />
+    <option name="커밋의" path="ActionManager" hit="선택한 커밋의 리비전 번호를 클립보드에 복사합니다" />
+    <option name="클립보드에" path="ActionManager" hit="선택한 커밋의 리비전 번호를 클립보드에 복사합니다" />
+    <option name="디렉터리를" path="ActionManager" hit="선택한 파일 또는 디렉터리를 커밋합니다" />
+    <option name="또는" path="ActionManager" hit="선택한 파일 또는 디렉터리를 커밋합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 파일 또는 디렉터리를 커밋합니다" />
+    <option name="커밋합니다" path="ActionManager" hit="선택한 파일 또는 디렉터리를 커밋합니다" />
+    <option name="파일" path="ActionManager" hit="선택한 파일 또는 디렉터리를 커밋합니다" />
+    <option name="디렉터리를" path="ActionManager" hit="선택한 파일 또는 디렉터리를 통합합니다" />
+    <option name="또는" path="ActionManager" hit="선택한 파일 또는 디렉터리를 통합합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 파일 또는 디렉터리를 통합합니다" />
+    <option name="통합합니다" path="ActionManager" hit="선택한 파일 또는 디렉터리를 통합합니다" />
+    <option name="파일" path="ActionManager" hit="선택한 파일 또는 디렉터리를 통합합니다" />
+    <option name="vcs에" path="ActionManager" hit="선택한 파일을 VCS에 추가하도록 예약합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 파일을 VCS에 추가하도록 예약합니다" />
+    <option name="예약합니다" path="ActionManager" hit="선택한 파일을 VCS에 추가하도록 예약합니다" />
+    <option name="추가하도록" path="ActionManager" hit="선택한 파일을 VCS에 추가하도록 예약합니다" />
+    <option name="파일을" path="ActionManager" hit="선택한 파일을 VCS에 추가하도록 예약합니다" />
+    <option name="vcs에서" path="ActionManager" hit="선택한 파일을 VCS에서 삭제하도록 예약합니다" />
+    <option name="삭제하도록" path="ActionManager" hit="선택한 파일을 VCS에서 삭제하도록 예약합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 파일을 VCS에서 삭제하도록 예약합니다" />
+    <option name="예약합니다" path="ActionManager" hit="선택한 파일을 VCS에서 삭제하도록 예약합니다" />
+    <option name="파일을" path="ActionManager" hit="선택한 파일을 VCS에서 삭제하도록 예약합니다" />
+    <option name="리비전을" path="ActionManager" hit="선택한 파일의 리비전을 에디터로 엽니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 파일의 리비전을 에디터로 엽니다" />
+    <option name="에디터로" path="ActionManager" hit="선택한 파일의 리비전을 에디터로 엽니다" />
+    <option name="엽니다" path="ActionManager" hit="선택한 파일의 리비전을 에디터로 엽니다" />
+    <option name="파일의" path="ActionManager" hit="선택한 파일의 리비전을 에디터로 엽니다" />
+    <option name="설정" path="ActionManager" hit="설정" />
+    <option name="세부" path="ActionManager" hit="세부 정보 표시" />
+    <option name="정보" path="ActionManager" hit="세부 정보 표시" />
+    <option name="표시" path="ActionManager" hit="세부 정보 표시" />
+    <option name="소스" path="ActionManager" hit="소스 편집" />
+    <option name="편집" path="ActionManager" hit="소스 편집" />
+    <option name="닫습니다" path="ActionManager" hit="수정되지 않은 모든 에디터를 닫습니다" />
+    <option name="모든" path="ActionManager" hit="수정되지 않은 모든 에디터를 닫습니다" />
+    <option name="수정되지" path="ActionManager" hit="수정되지 않은 모든 에디터를 닫습니다" />
+    <option name="않은" path="ActionManager" hit="수정되지 않은 모든 에디터를 닫습니다" />
+    <option name="에디터를" path="ActionManager" hit="수정되지 않은 모든 에디터를 닫습니다" />
+    <option name="닫기" path="ActionManager" hit="수정되지 않은 탭 닫기" />
+    <option name="수정되지" path="ActionManager" hit="수정되지 않은 탭 닫기" />
+    <option name="않은" path="ActionManager" hit="수정되지 않은 탭 닫기" />
+    <option name="탭" path="ActionManager" hit="수정되지 않은 탭 닫기" />
+    <option name="어노테이션" path="ActionManager" hit="어노테이션 추가" />
+    <option name="추가" path="ActionManager" hit="어노테이션 추가" />
+    <option name="어노테이션" path="ActionManager" hit="어노테이션 추가된 줄 작업" />
+    <option name="작업" path="ActionManager" hit="어노테이션 추가된 줄 작업" />
+    <option name="줄" path="ActionManager" hit="어노테이션 추가된 줄 작업" />
+    <option name="추가된" path="ActionManager" hit="어노테이션 추가된 줄 작업" />
+    <option name="어노테이션이" path="ActionManager" hit="어노테이션이 추가된 줄" />
+    <option name="줄" path="ActionManager" hit="어노테이션이 추가된 줄" />
+    <option name="추가된" path="ActionManager" hit="어노테이션이 추가된 줄" />
+    <option name="업데이트" path="ActionManager" hit="업데이트" />
+    <option name="기록" path="ActionManager" hit="에디터 선택 항목의 기록 표시" />
+    <option name="선택" path="ActionManager" hit="에디터 선택 항목의 기록 표시" />
+    <option name="에디터" path="ActionManager" hit="에디터 선택 항목의 기록 표시" />
+    <option name="표시" path="ActionManager" hit="에디터 선택 항목의 기록 표시" />
+    <option name="항목의" path="ActionManager" hit="에디터 선택 항목의 기록 표시" />
+    <option name="diff" path="ActionManager" hit="에디터 탭에 Diff 표시" />
+    <option name="에디터" path="ActionManager" hit="에디터 탭에 Diff 표시" />
+    <option name="탭에" path="ActionManager" hit="에디터 탭에 Diff 표시" />
+    <option name="표시" path="ActionManager" hit="에디터 탭에 Diff 표시" />
+    <option name="기록" path="ActionManager" hit="여기까지의 기록" />
+    <option name="여기까지의" path="ActionManager" hit="여기까지의 기록" />
+    <option name="액션" path="ActionManager" hit="옵션 액션" />
+    <option name="옵션" path="ActionManager" hit="옵션 액션" />
+    <option name="변경" path="ActionManager" hit="이름 변경…" />
+    <option name="이름" path="ActionManager" hit="이름 변경…" />
+    <option name="보류" path="ActionManager" hit="이미 보류 해제된 항목 삭제…" />
+    <option name="삭제" path="ActionManager" hit="이미 보류 해제된 항목 삭제…" />
+    <option name="이미" path="ActionManager" hit="이미 보류 해제된 항목 삭제…" />
+    <option name="항목" path="ActionManager" hit="이미 보류 해제된 항목 삭제…" />
+    <option name="해제된" path="ActionManager" hit="이미 보류 해제된 항목 삭제…" />
+    <option name="보류" path="ActionManager" hit="이미 보류 해제된 항목을 표시하거나 숨깁니다" />
+    <option name="숨깁니다" path="ActionManager" hit="이미 보류 해제된 항목을 표시하거나 숨깁니다" />
+    <option name="이미" path="ActionManager" hit="이미 보류 해제된 항목을 표시하거나 숨깁니다" />
+    <option name="표시하거나" path="ActionManager" hit="이미 보류 해제된 항목을 표시하거나 숨깁니다" />
+    <option name="항목을" path="ActionManager" hit="이미 보류 해제된 항목을 표시하거나 숨깁니다" />
+    <option name="해제된" path="ActionManager" hit="이미 보류 해제된 항목을 표시하거나 숨깁니다" />
+    <option name="변경" path="ActionManager" hit="이전 변경" />
+    <option name="이전" path="ActionManager" hit="이전 변경" />
+    <option name="변경으로" path="ActionManager" hit="이전 변경으로 이동합니다" />
+    <option name="이동합니다" path="ActionManager" hit="이전 변경으로 이동합니다" />
+    <option name="이전" path="ActionManager" hit="이전 변경으로 이동합니다" />
+    <option name="vcs" path="ActionManager" hit="일반적으로 사용되는 VCS 액션 목록이 있는 컨텍스트 인식 팝업입니다" />
+    <option name="목록이" path="ActionManager" hit="일반적으로 사용되는 VCS 액션 목록이 있는 컨텍스트 인식 팝업입니다" />
+    <option name="사용되는" path="ActionManager" hit="일반적으로 사용되는 VCS 액션 목록이 있는 컨텍스트 인식 팝업입니다" />
+    <option name="액션" path="ActionManager" hit="일반적으로 사용되는 VCS 액션 목록이 있는 컨텍스트 인식 팝업입니다" />
+    <option name="인식" path="ActionManager" hit="일반적으로 사용되는 VCS 액션 목록이 있는 컨텍스트 인식 팝업입니다" />
+    <option name="일반적으로" path="ActionManager" hit="일반적으로 사용되는 VCS 액션 목록이 있는 컨텍스트 인식 팝업입니다" />
+    <option name="있는" path="ActionManager" hit="일반적으로 사용되는 VCS 액션 목록이 있는 컨텍스트 인식 팝업입니다" />
+    <option name="컨텍스트" path="ActionManager" hit="일반적으로 사용되는 VCS 액션 목록이 있는 컨텍스트 인식 팝업입니다" />
+    <option name="팝업입니다" path="ActionManager" hit="일반적으로 사용되는 VCS 액션 목록이 있는 컨텍스트 인식 팝업입니다" />
+    <option name="버전" path="ActionManager" hit="저장소 버전 열기" />
+    <option name="열기" path="ActionManager" hit="저장소 버전 열기" />
+    <option name="저장소" path="ActionManager" hit="저장소 버전 열기" />
+    <option name="받기" path="ActionManager" hit="저장소에서 버전 받기" />
+    <option name="버전" path="ActionManager" hit="저장소에서 버전 받기" />
+    <option name="저장소에서" path="ActionManager" hit="저장소에서 버전 받기" />
+    <option name="내용" path="ActionManager" hit="적용 중인 보류된 변경 내용 표시/숨기기" />
+    <option name="변경" path="ActionManager" hit="적용 중인 보류된 변경 내용 표시/숨기기" />
+    <option name="보류된" path="ActionManager" hit="적용 중인 보류된 변경 내용 표시/숨기기" />
+    <option name="숨기기" path="ActionManager" hit="적용 중인 보류된 변경 내용 표시/숨기기" />
+    <option name="적용" path="ActionManager" hit="적용 중인 보류된 변경 내용 표시/숨기기" />
+    <option name="중인" path="ActionManager" hit="적용 중인 보류된 변경 내용 표시/숨기기" />
+    <option name="표시" path="ActionManager" hit="적용 중인 보류된 변경 내용 표시/숨기기" />
+    <option name="롤백" path="ActionManager" hit="줄 롤백" />
+    <option name="줄" path="ActionManager" hit="줄 롤백" />
+    <option name="리비전과" path="ActionManager" hit="지정된 리비전과 비교…" />
+    <option name="비교" path="ActionManager" hit="지정된 리비전과 비교…" />
+    <option name="지정된" path="ActionManager" hit="지정된 리비전과 비교…" />
+    <option name="체크아웃" path="ActionManager" hit="체크아웃" />
+    <option name="보류" path="ActionManager" hit="최근에 삭제된 보류 항목을 표시합니다" />
+    <option name="삭제된" path="ActionManager" hit="최근에 삭제된 보류 항목을 표시합니다" />
+    <option name="최근에" path="ActionManager" hit="최근에 삭제된 보류 항목을 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="최근에 삭제된 보류 항목을 표시합니다" />
+    <option name="항목을" path="ActionManager" hit="최근에 삭제된 보류 항목을 표시합니다" />
+    <option name="삭제된" path="ActionManager" hit="최근에 삭제된 항목 표시" />
+    <option name="최근에" path="ActionManager" hit="최근에 삭제된 항목 표시" />
+    <option name="표시" path="ActionManager" hit="최근에 삭제된 항목 표시" />
+    <option name="항목" path="ActionManager" hit="최근에 삭제된 항목 표시" />
+    <option name="버전과" path="ActionManager" hit="최신 저장소 버전과 비교" />
+    <option name="비교" path="ActionManager" hit="최신 저장소 버전과 비교" />
+    <option name="저장소" path="ActionManager" hit="최신 저장소 버전과 비교" />
+    <option name="최신" path="ActionManager" hit="최신 저장소 버전과 비교" />
+    <option name="추가" path="ActionManager" hit="추가" />
+    <option name="변경" path="ActionManager" hit="캐럿 위치 변경" />
+    <option name="위치" path="ActionManager" hit="캐럿 위치 변경" />
+    <option name="캐럿" path="ActionManager" hit="캐럿 위치 변경" />
+    <option name="리비전을" path="ActionManager" hit="캐시된 리비전을 삭제합니다" />
+    <option name="삭제합니다" path="ActionManager" hit="캐시된 리비전을 삭제합니다" />
+    <option name="캐시된" path="ActionManager" hit="캐시된 리비전을 삭제합니다" />
+    <option name="검사" path="ActionManager" hit="커밋 검사 실행" />
+    <option name="실행" path="ActionManager" hit="커밋 검사 실행" />
+    <option name="커밋" path="ActionManager" hit="커밋 검사 실행" />
+    <option name="대화상자로" path="ActionManager" hit="커밋 대화상자로 전환" />
+    <option name="전환" path="ActionManager" hit="커밋 대화상자로 전환" />
+    <option name="커밋" path="ActionManager" hit="커밋 대화상자로 전환" />
+    <option name="기록" path="ActionManager" hit="커밋 메시지 기록" />
+    <option name="메시지" path="ActionManager" hit="커밋 메시지 기록" />
+    <option name="커밋" path="ActionManager" hit="커밋 메시지 기록" />
+    <option name="기록" path="ActionManager" hit="커밋 메시지 기록 표시" />
+    <option name="메시지" path="ActionManager" hit="커밋 메시지 기록 표시" />
+    <option name="커밋" path="ActionManager" hit="커밋 메시지 기록 표시" />
+    <option name="표시" path="ActionManager" hit="커밋 메시지 기록 표시" />
+    <option name="다시" path="ActionManager" hit="커밋 메시지 서식 다시 지정" />
+    <option name="메시지" path="ActionManager" hit="커밋 메시지 서식 다시 지정" />
+    <option name="서식" path="ActionManager" hit="커밋 메시지 서식 다시 지정" />
+    <option name="지정" path="ActionManager" hit="커밋 메시지 서식 다시 지정" />
+    <option name="커밋" path="ActionManager" hit="커밋 메시지 서식 다시 지정" />
+    <option name="수정" path="ActionManager" hit="커밋 수정" />
+    <option name="커밋" path="ActionManager" hit="커밋 수정" />
+    <option name="옵션" path="ActionManager" hit="커밋 옵션 표시" />
+    <option name="커밋" path="ActionManager" hit="커밋 옵션 표시" />
+    <option name="표시" path="ActionManager" hit="커밋 옵션 표시" />
+    <option name="commit" path="ActionManager" hit="커밋(commit)" />
+    <option name="커밋" path="ActionManager" hit="커밋(commit)" />
+    <option name="커밋" path="ActionManager" hit="커밋…" />
+    <option name="내용" path="ActionManager" hit="커밋되지 않은 변경 내용" />
+    <option name="변경" path="ActionManager" hit="커밋되지 않은 변경 내용" />
+    <option name="않은" path="ActionManager" hit="커밋되지 않은 변경 내용" />
+    <option name="커밋되지" path="ActionManager" hit="커밋되지 않은 변경 내용" />
+    <option name="기록을" path="ActionManager" hit="커밋된 변경 내용의 기록을 표시합니다" />
+    <option name="내용의" path="ActionManager" hit="커밋된 변경 내용의 기록을 표시합니다" />
+    <option name="변경" path="ActionManager" hit="커밋된 변경 내용의 기록을 표시합니다" />
+    <option name="커밋된" path="ActionManager" hit="커밋된 변경 내용의 기록을 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="커밋된 변경 내용의 기록을 표시합니다" />
+    <option name="고칩니다" path="ActionManager" hit="커밋된 변경 내용의 목록을 새로 고칩니다" />
+    <option name="내용의" path="ActionManager" hit="커밋된 변경 내용의 목록을 새로 고칩니다" />
+    <option name="목록을" path="ActionManager" hit="커밋된 변경 내용의 목록을 새로 고칩니다" />
+    <option name="변경" path="ActionManager" hit="커밋된 변경 내용의 목록을 새로 고칩니다" />
+    <option name="새로" path="ActionManager" hit="커밋된 변경 내용의 목록을 새로 고칩니다" />
+    <option name="커밋된" path="ActionManager" hit="커밋된 변경 내용의 목록을 새로 고칩니다" />
+    <option name="복사" path="ActionManager" hit="클립보드에 패치로 복사" />
+    <option name="클립보드에" path="ActionManager" hit="클립보드에 패치로 복사" />
+    <option name="패치로" path="ActionManager" hit="클립보드에 패치로 복사" />
+    <option name="적용" path="ActionManager" hit="클립보드에서 패치 적용 …" />
+    <option name="클립보드에서" path="ActionManager" hit="클립보드에서 패치 적용 …" />
+    <option name="패치" path="ActionManager" hit="클립보드에서 패치 적용 …" />
+    <option name="통합" path="ActionManager" hit="통합" />
+    <option name="diff" path="ActionManager" hit="통합 Diff 표시" />
+    <option name="통합" path="ActionManager" hit="통합 Diff 표시" />
+    <option name="표시" path="ActionManager" hit="통합 Diff 표시" />
+    <option name="기록" path="ActionManager" hit="파일 기록" />
+    <option name="파일" path="ActionManager" hit="파일 기록" />
+    <option name="기록" path="ActionManager" hit="파일 기록 새로고침" />
+    <option name="새로고침" path="ActionManager" hit="파일 기록 새로고침" />
+    <option name="파일" path="ActionManager" hit="파일 기록 새로고침" />
+    <option name="기록" path="ActionManager" hit="파일 기록 표시" />
+    <option name="파일" path="ActionManager" hit="파일 기록 표시" />
+    <option name="표시" path="ActionManager" hit="파일 기록 표시" />
+    <option name="롤백" path="ActionManager" hit="파일 롤백…" />
+    <option name="파일" path="ActionManager" hit="파일 롤백…" />
+    <option name="수정" path="ActionManager" hit="파일 수정 정보 표시" />
+    <option name="정보" path="ActionManager" hit="파일 수정 정보 표시" />
+    <option name="파일" path="ActionManager" hit="파일 수정 정보 표시" />
+    <option name="표시" path="ActionManager" hit="파일 수정 정보 표시" />
+    <option name="커밋" path="ActionManager" hit="파일 커밋" />
+    <option name="파일" path="ActionManager" hit="파일 커밋" />
+    <option name="어노테이션" path="ActionManager" hit="파일에 어노테이션 추가" />
+    <option name="추가" path="ActionManager" hit="파일에 어노테이션 추가" />
+    <option name="파일에" path="ActionManager" hit="파일에 어노테이션 추가" />
+    <option name="패치" path="ActionManager" hit="패치" />
+    <option name="가져오기" path="ActionManager" hit="패치 가져오기…" />
+    <option name="패치" path="ActionManager" hit="패치 가져오기…" />
+    <option name="생성" path="ActionManager" hit="패치 생성…" />
+    <option name="패치" path="ActionManager" hit="패치 생성…" />
+    <option name="적용" path="ActionManager" hit="패치 적용…" />
+    <option name="패치" path="ActionManager" hit="패치 적용…" />
+    <option name="보류" path="ActionManager" hit="패치 파일을 보류 항목에 복사합니다." />
+    <option name="복사합니다" path="ActionManager" hit="패치 파일을 보류 항목에 복사합니다." />
+    <option name="파일을" path="ActionManager" hit="패치 파일을 보류 항목에 복사합니다." />
+    <option name="패치" path="ActionManager" hit="패치 파일을 보류 항목에 복사합니다." />
+    <option name="항목에" path="ActionManager" hit="패치 파일을 보류 항목에 복사합니다." />
+    <option name="경로를" path="ActionManager" hit="패치를 적용하고 보류 해제할 경로를 수정합니다" />
+    <option name="보류" path="ActionManager" hit="패치를 적용하고 보류 해제할 경로를 수정합니다" />
+    <option name="수정합니다" path="ActionManager" hit="패치를 적용하고 보류 해제할 경로를 수정합니다" />
+    <option name="적용하고" path="ActionManager" hit="패치를 적용하고 보류 해제할 경로를 수정합니다" />
+    <option name="패치를" path="ActionManager" hit="패치를 적용하고 보류 해제할 경로를 수정합니다" />
+    <option name="해제할" path="ActionManager" hit="패치를 적용하고 보류 해제할 경로를 수정합니다" />
+    <option name="소스에" path="ActionManager" hit="프로젝트 소스에 패치를 적용합니다" />
+    <option name="적용합니다" path="ActionManager" hit="프로젝트 소스에 패치를 적용합니다" />
+    <option name="패치를" path="ActionManager" hit="프로젝트 소스에 패치를 적용합니다" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 소스에 패치를 적용합니다" />
+    <option name="업데이트" path="ActionManager" hit="프로젝트 업데이트" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 업데이트" />
+    <option name="통합" path="ActionManager" hit="프로젝트 통합" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 통합" />
+    <option name="통합합니다" path="ActionManager" hit="프로젝트를 통합합니다" />
+    <option name="프로젝트를" path="ActionManager" hit="프로젝트를 통합합니다" />
+    <option name="필터" path="ActionManager" hit="필터" />
+    <option name="기준" path="ActionManager" hit="필터링 기준" />
+    <option name="필터링" path="ActionManager" hit="필터링 기준" />
+    <option name="기준을" path="ActionManager" hit="필터링 기준을 변경합니다" />
+    <option name="변경합니다" path="ActionManager" hit="필터링 기준을 변경합니다" />
+    <option name="필터링" path="ActionManager" hit="필터링 기준을 변경합니다" />
+    <option name="리비전" path="ActionManager" hit="현재 리비전 표시" />
+    <option name="표시" path="ActionManager" hit="현재 리비전 표시" />
+    <option name="현재" path="ActionManager" hit="현재 리비전 표시" />
+    <option name="브랜치의" path="ActionManager" hit="현재 브랜치의 최신 커밋을 수정합니다" />
+    <option name="수정합니다" path="ActionManager" hit="현재 브랜치의 최신 커밋을 수정합니다" />
+    <option name="최신" path="ActionManager" hit="현재 브랜치의 최신 커밋을 수정합니다" />
+    <option name="커밋을" path="ActionManager" hit="현재 브랜치의 최신 커밋을 수정합니다" />
+    <option name="현재" path="ActionManager" hit="현재 브랜치의 최신 커밋을 수정합니다" />
+    <option name="내용에" path="ActionManager" hit="현재 선택한 변경 내용에 대한 팝업을 표시합니다" />
+    <option name="대한" path="ActionManager" hit="현재 선택한 변경 내용에 대한 팝업을 표시합니다" />
+    <option name="변경" path="ActionManager" hit="현재 선택한 변경 내용에 대한 팝업을 표시합니다" />
+    <option name="선택한" path="ActionManager" hit="현재 선택한 변경 내용에 대한 팝업을 표시합니다" />
+    <option name="팝업을" path="ActionManager" hit="현재 선택한 변경 내용에 대한 팝업을 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="현재 선택한 변경 내용에 대한 팝업을 표시합니다" />
+    <option name="현재" path="ActionManager" hit="현재 선택한 변경 내용에 대한 팝업을 표시합니다" />
+    <option name="보류" path="ActionManager" hit="확인 없이 보류" />
+    <option name="없이" path="ActionManager" hit="확인 없이 보류" />
+    <option name="확인" path="ActionManager" hit="확인 없이 보류" />
+    <option name="보류" path="ActionManager" hit="확인 없이 보류 해제" />
+    <option name="없이" path="ActionManager" hit="확인 없이 보류 해제" />
+    <option name="해제" path="ActionManager" hit="확인 없이 보류 해제" />
+    <option name="확인" path="ActionManager" hit="확인 없이 보류 해제" />
+    <option name="고칩니다" path="ActionManager" hit="후속 변경 내용 목록을 새로 고칩니다" />
+    <option name="내용" path="ActionManager" hit="후속 변경 내용 목록을 새로 고칩니다" />
+    <option name="목록을" path="ActionManager" hit="후속 변경 내용 목록을 새로 고칩니다" />
+    <option name="변경" path="ActionManager" hit="후속 변경 내용 목록을 새로 고칩니다" />
+    <option name="새로" path="ActionManager" hit="후속 변경 내용 목록을 새로 고칩니다" />
+    <option name="후속" path="ActionManager" hit="후속 변경 내용 목록을 새로 고칩니다" />
+  </configurable>
+</options>

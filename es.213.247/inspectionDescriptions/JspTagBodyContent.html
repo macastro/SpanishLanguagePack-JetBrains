@@ -1,0 +1,18 @@
+<html>
+<body>
+TLD body-content 사양을 준수하지 않는 JSP 태그 본문 내용을 보고합니다.
+<p>빈 본문 내용이 지정된 경우 태그의 본문을 비어 있어야 합니다.</p>
+<p>본문 콘텐츠가 스크립트리스로 지정되어 있는 경우 태그 본문은 JSP 스크립트릿을 포함할 수 없습니다.</p>
+<p>빠른 수정에서는 빈 콘텐츠 타입이 지정된 태그의 본문을 제거하며, 스크립트리스 콘텐츠 타입이 지정된 경우 스크립트릿을 제거합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+&lt;s:empty&gt;본문이 허용되지 않음&lt;/s:empty&gt;
+&lt;s:scriptless&gt;say: &lt;% System.out.println(&quot;hey&quot;); %&gt;&lt;/s:scriptless&gt;
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+&lt;s:empty/&gt;
+&lt;s:scriptless&gt;say: &lt;/s:scriptless&gt;
+</code></pre>
+</body>
+</html>

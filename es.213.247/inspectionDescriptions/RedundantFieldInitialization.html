@@ -1,0 +1,29 @@
+<html>
+<body>
+명시적으로 디폴트 값으로 초기화되어 있는 필드를 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  class Foo {
+    int foo = 0;
+    List bar = null;
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Foo {
+    int foo;
+    List bar;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  검사 설정을 사용하여 명시적인 <code>null</code> 초기화만 보고합니다. 예시는 다음과 같습니다.
+</p>
+<pre><code>
+  class Foo {
+    int foo = 0;     // 경고 없음
+    List bar = null; // 중복 필드 초기화 경고
+  }
+</code></pre>
+</body>
+</html>

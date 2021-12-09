@@ -1,0 +1,18 @@
+<html>
+<body>
+<p><code>array.size</code> 및 <code>string.size</code> 호출을 보고합니다.</p>
+<p>그러한 호출은 정당하지만 <code>SeqLike</code>로의 묵시적 변환을 추가적으로 요구합니다.
+    배열 및 문자열에서 <code>length</code>를 호출하면 많은 이점이 생길 수 있습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  Array(1, 2, 3, 4).size
+  "this is a string".size
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  Array(1, 2, 3, 4).length
+  "this is a string".length
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

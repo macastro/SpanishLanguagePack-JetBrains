@@ -1,0 +1,23 @@
+<html>
+<body>
+의심스러운 <code>System.arraycopy()</code> 호출을 보고합니다.
+<p>그러한 호출은 다음 경우에 의심스럽습니다:</p>
+<ul>
+<li>소스 또는 대상이 배열 타입이 아닌 경우
+<li>소스 및 대상의 타입이 다른 경우
+<li>복사된 청크 길이가 <code>src.length - srcPos</code>보다 큰 경우
+<li>복사된 청크 길이가 <code>dest.length - destPos</code>보다 큰 경우
+<li>소스와 대상이 같은 배열일 때 범위가 항상 교차하는 경우
+</ul>
+<p><b>예:</b></p>
+<pre><code>
+  void foo() {
+    int[] src = new int[] { 1, 2, 3, 4 };
+    System.arraycopy(src, 0, src, 1, 2); // 경고: 범위가 교차하는 같은 배열로 복사
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

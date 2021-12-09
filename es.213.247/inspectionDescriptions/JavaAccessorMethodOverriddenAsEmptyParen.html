@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>Java 접근자 메서드를 재정의하는 빈 매개변수 절을 가진 메서드를 보고합니다.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/JavaBean">JavaBean</a>의 접근자 명명 컨트랙트를 따르는 메서드에는 <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">부수 효과</a>가 없어야 합니다.
+    매개변수가 없으며 메서드에 부수 효과가 없는 경우에는 매개변수가 없는 메서드를 사용하는 규칙이 권장됩니다.
+    이 규칙은 속성을 필드나 메서드로 구현하려는 결정이 클라이언트 코드에 영향을 주어서는 안 된다는 <a href="https://en.wikipedia.org/wiki/Uniform_access_principle">단일 접근 원칙</a>을 권장합니다.</p>
+
+<p>문제는 Java가 단일 접근 원칙을 구현하지 않으며 매개변수 절이 없는 메서드를 허용하지 않는 것입니다.
+    그 간극을 메우기 위해 Scala에서는 매개변수 절이 없는 메서드로 매개변수 절이 비어 있는 메서드를 재정의할 수 있습니다.</p>
+
+<p>빠른 수정에서는 빈 매개변수 절을 제거합니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  class TestException extends Exception {
+    override def getMessage(): String = ???
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class TestException extends Exception {
+    override def getMessage: String = ???
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

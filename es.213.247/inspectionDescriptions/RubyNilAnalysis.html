@@ -1,0 +1,14 @@
+<html>
+<body>
+가능한 <code>nil</code> 역참조를 보고합니다. <code>nil</code> 역참조는 <code>NoMethodError</code>를 일으킬 수 있습니다.
+<p>예:</p>
+<pre>
+<code>def foo
+  rand(2) == 1 ? nil : 1
+end
+
+a = foo
+a.nomethod # 메서드 호출 시 NoMethodError가 발생할 수 있음</code>
+</pre>
+</body>
+</html>

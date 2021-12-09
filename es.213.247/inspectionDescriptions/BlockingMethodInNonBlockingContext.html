@@ -1,0 +1,36 @@
+<html>
+<body>
+스레드가 차단되어서는 안되는 코드 조각에서 스레드를 차단하는 메서드 호출을 보고합니다.
+
+<p><b>예(프로젝트 Reactor):</b></p>
+<pre><code>
+Flux.just("1").flatMap(f -&gt; {
+    Flux&lt;String&gt; just = loadUsersFromDatabase();
+    just.toIterable(); // 오류: 비 블로킹 범위에서의 블로킹 연산자 호출
+    return just;
+  }
+);
+</code></pre>
+
+<p><code>Schedulers.boundedElastic()</code>과 같은 <a href="https://projectreactor.io/docs/core/release/reference/#faq.wrap-blocking">적절한 스케줄러</a>로 블로킹 코드를 실행하거나 다른 비 블로킹 API를 찾아보세요.</p>
+
+<br/>
+
+<p><b>예(Kotlin 코루틴):</b></p>
+<pre><code>
+suspend fun exampleFun() {
+    Thread.sleep(100); // 오류: suspend 함수 내 블로킹 메서드 호출
+}
+</code></pre>
+
+<p><code>Dispatchers.IO</code>과 같은 <a href="https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html">특별한 디스패처</a>로 블로킹 코드를 실행하거나 다른 비 블로킹 API를 찾아보세요.</p>
+
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<ul>
+  <li><b>차단 어노테이션</b> 목록에서 스레드를 차단하는 메서드를 표시하는 어노테이션을 지정하세요.</li>
+  <li><b>비 차단 어노테이션</b> 목록에서 비 차단 메서드를 표시하는 어노테이션을 지정하세요.</li>
+</ul>
+<p>지정한 어노테이션은 <a href="https://www.jetbrains.com/help/idea/external-annotations.html">외부 어노테이션</a>으로 사용할 수 있습니다</p>
+</body>
+</html>

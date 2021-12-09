@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>매개변수 절이 없는 결과 타입이 <code>Unit</code>인 메서드를 보고합니다.</p>
+<p>결과 타입이 <code>Unit</code>인 메서드는 <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">부수 효과</a>에 대해서만 실행되며 규칙에 따라 부수 효과가 있는 메서드는 최소 하나의 (빈) 매개변수 절을 가져야 합니다.
+    </p>
+<p>빠른 수정에서는 빈 매개변수 절을 추가합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  def test: Unit = ()
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  def test(): Unit = ()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

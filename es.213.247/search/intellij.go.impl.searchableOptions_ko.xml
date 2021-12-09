@@ -1,0 +1,197 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="getter" path="ActionManager" hit="Getter" />
+    <option name="getter" path="ActionManager" hit="Getter 및 Setter" />
+    <option name="setter" path="ActionManager" hit="Getter 및 Setter" />
+    <option name="및" path="ActionManager" hit="Getter 및 Setter" />
+    <option name="fmt" path="ActionManager" hit="Go Fmt 파일" />
+    <option name="go" path="ActionManager" hit="Go Fmt 파일" />
+    <option name="파일" path="ActionManager" hit="Go Fmt 파일" />
+    <option name="fmt" path="ActionManager" hit="Go Fmt 프로젝트" />
+    <option name="go" path="ActionManager" hit="Go Fmt 프로젝트" />
+    <option name="프로젝트" path="ActionManager" hit="Go Fmt 프로젝트" />
+    <option name="generate" path="ActionManager" hit="Go Generate 파일" />
+    <option name="go" path="ActionManager" hit="Go Generate 파일" />
+    <option name="파일" path="ActionManager" hit="Go Generate 파일" />
+    <option name="go" path="ActionManager" hit="Go Mod Tidy" />
+    <option name="mod" path="ActionManager" hit="Go Mod Tidy" />
+    <option name="tidy" path="ActionManager" hit="Go Mod Tidy" />
+    <option name="go" path="ActionManager" hit="Go Mod Vendor" />
+    <option name="mod" path="ActionManager" hit="Go Mod Vendor" />
+    <option name="vendor" path="ActionManager" hit="Go Mod Vendor" />
+    <option name="go" path="ActionManager" hit="Go Playground에서 현재 파일을 공유합니다" />
+    <option name="playground에서" path="ActionManager" hit="Go Playground에서 현재 파일을 공유합니다" />
+    <option name="공유합니다" path="ActionManager" hit="Go Playground에서 현재 파일을 공유합니다" />
+    <option name="파일을" path="ActionManager" hit="Go Playground에서 현재 파일을 공유합니다" />
+    <option name="현재" path="ActionManager" hit="Go Playground에서 현재 파일을 공유합니다" />
+    <option name="go" path="ActionManager" hit="Go Vet 파일" />
+    <option name="vet" path="ActionManager" hit="Go Vet 파일" />
+    <option name="파일" path="ActionManager" hit="Go Vet 파일" />
+    <option name="go" path="ActionManager" hit="Go 도구" />
+    <option name="도구" path="ActionManager" hit="Go 도구" />
+    <option name="go" path="ActionManager" hit="Go 모듈 동기화" />
+    <option name="동기화" path="ActionManager" hit="Go 모듈 동기화" />
+    <option name="모듈" path="ActionManager" hit="Go 모듈 동기화" />
+    <option name="go" path="ActionManager" hit="Go 모듈 파일" />
+    <option name="모듈" path="ActionManager" hit="Go 모듈 파일" />
+    <option name="파일" path="ActionManager" hit="Go 모듈 파일" />
+    <option name="go" path="ActionManager" hit="Go 모듈 파일 생성" />
+    <option name="모듈" path="ActionManager" hit="Go 모듈 파일 생성" />
+    <option name="생성" path="ActionManager" hit="Go 모듈 파일 생성" />
+    <option name="파일" path="ActionManager" hit="Go 모듈 파일 생성" />
+    <option name="go" path="ActionManager" hit="Go 외부 도구" />
+    <option name="도구" path="ActionManager" hit="Go 외부 도구" />
+    <option name="외부" path="ActionManager" hit="Go 외부 도구" />
+    <option name="go" path="ActionManager" hit="Go 파일" />
+    <option name="파일" path="ActionManager" hit="Go 파일" />
+    <option name="goimports" path="ActionManager" hit="Goimports 파일" />
+    <option name="파일" path="ActionManager" hit="Goimports 파일" />
+    <option name="json에서" path="ActionManager" hit="JSON에서 구조체 필드" />
+    <option name="구조체" path="ActionManager" hit="JSON에서 구조체 필드" />
+    <option name="필드" path="ActionManager" hit="JSON에서 구조체 필드" />
+    <option name="json에서" path="ActionManager" hit="JSON에서 구조체 필드 생성" />
+    <option name="구조체" path="ActionManager" hit="JSON에서 구조체 필드 생성" />
+    <option name="생성" path="ActionManager" hit="JSON에서 구조체 필드 생성" />
+    <option name="필드" path="ActionManager" hit="JSON에서 구조체 필드 생성" />
+    <option name="json에서" path="ActionManager" hit="JSON에서 타입 생성" />
+    <option name="생성" path="ActionManager" hit="JSON에서 타입 생성" />
+    <option name="타입" path="ActionManager" hit="JSON에서 타입 생성" />
+    <option name="json의" path="ActionManager" hit="JSON의 타입" />
+    <option name="타입" path="ActionManager" hit="JSON의 타입" />
+    <option name="playground에서" path="ActionManager" hit="Playground에서 공유" />
+    <option name="공유" path="ActionManager" hit="Playground에서 공유" />
+    <option name="setter" path="ActionManager" hit="Setter" />
+    <option name="go" path="ActionManager" hit="go 모듈 동기화" />
+    <option name="동기화" path="ActionManager" hit="go 모듈 동기화" />
+    <option name="모듈" path="ActionManager" hit="go 모듈 동기화" />
+    <option name="고루틴" path="ActionManager" hit="고루틴 덤프" />
+    <option name="덤프" path="ActionManager" hit="고루틴 덤프" />
+    <option name="구조체에" path="ActionManager" hit="구조체에 대한 생성자 함수 생성" />
+    <option name="대한" path="ActionManager" hit="구조체에 대한 생성자 함수 생성" />
+    <option name="생성" path="ActionManager" hit="구조체에 대한 생성자 함수 생성" />
+    <option name="생성자" path="ActionManager" hit="구조체에 대한 생성자 함수 생성" />
+    <option name="함수" path="ActionManager" hit="구조체에 대한 생성자 함수 생성" />
+    <option name="다음으로" path="ActionManager" hit="다음으로 표시" />
+    <option name="표시" path="ActionManager" hit="다음으로 표시" />
+    <option name="되돌리기" path="ActionManager" hit="되돌리기" />
+    <option name="디렉터리" path="ActionManager" hit="디렉터리 연결 해제…" />
+    <option name="연결" path="ActionManager" hit="디렉터리 연결 해제…" />
+    <option name="해제" path="ActionManager" hit="디렉터리 연결 해제…" />
+    <option name="디렉터리를" path="ActionManager" hit="디렉터리를 프로젝트로 열기" />
+    <option name="열기" path="ActionManager" hit="디렉터리를 프로젝트로 열기" />
+    <option name="프로젝트로" path="ActionManager" hit="디렉터리를 프로젝트로 열기" />
+    <option name="디렉터리를" path="ActionManager" hit="디렉터리를 현재 프로젝트에 추가" />
+    <option name="추가" path="ActionManager" hit="디렉터리를 현재 프로젝트에 추가" />
+    <option name="프로젝트에" path="ActionManager" hit="디렉터리를 현재 프로젝트에 추가" />
+    <option name="현재" path="ActionManager" hit="디렉터리를 현재 프로젝트에 추가" />
+    <option name="go" path="ActionManager" hit="모듈에서 'go mod tidy' 실행" />
+    <option name="mod" path="ActionManager" hit="모듈에서 'go mod tidy' 실행" />
+    <option name="tidy" path="ActionManager" hit="모듈에서 'go mod tidy' 실행" />
+    <option name="모듈에서" path="ActionManager" hit="모듈에서 'go mod tidy' 실행" />
+    <option name="실행" path="ActionManager" hit="모듈에서 'go mod tidy' 실행" />
+    <option name="go" path="ActionManager" hit="모듈에서 'go mod vendor' 실행" />
+    <option name="mod" path="ActionManager" hit="모듈에서 'go mod vendor' 실행" />
+    <option name="vendor" path="ActionManager" hit="모듈에서 'go mod vendor' 실행" />
+    <option name="모듈에서" path="ActionManager" hit="모듈에서 'go mod vendor' 실행" />
+    <option name="실행" path="ActionManager" hit="모듈에서 'go mod vendor' 실행" />
+    <option name="생성자" path="ActionManager" hit="생성자" />
+    <option name="디렉터리를" path="ActionManager" hit="선택한 디렉터리를 프로젝트로 열기" />
+    <option name="선택한" path="ActionManager" hit="선택한 디렉터리를 프로젝트로 열기" />
+    <option name="열기" path="ActionManager" hit="선택한 디렉터리를 프로젝트로 열기" />
+    <option name="프로젝트로" path="ActionManager" hit="선택한 디렉터리를 프로젝트로 열기" />
+    <option name="디렉터리를" path="ActionManager" hit="선택한 디렉터리를 현재 프로젝트에 추가" />
+    <option name="선택한" path="ActionManager" hit="선택한 디렉터리를 현재 프로젝트에 추가" />
+    <option name="추가" path="ActionManager" hit="선택한 디렉터리를 현재 프로젝트에 추가" />
+    <option name="프로젝트에" path="ActionManager" hit="선택한 디렉터리를 현재 프로젝트에 추가" />
+    <option name="현재" path="ActionManager" hit="선택한 디렉터리를 현재 프로젝트에 추가" />
+    <option name="루트를" path="ActionManager" hit="선택한 콘텐츠 루트를 현재 프로젝트에서 제거" />
+    <option name="선택한" path="ActionManager" hit="선택한 콘텐츠 루트를 현재 프로젝트에서 제거" />
+    <option name="제거" path="ActionManager" hit="선택한 콘텐츠 루트를 현재 프로젝트에서 제거" />
+    <option name="콘텐츠" path="ActionManager" hit="선택한 콘텐츠 루트를 현재 프로젝트에서 제거" />
+    <option name="프로젝트에서" path="ActionManager" hit="선택한 콘텐츠 루트를 현재 프로젝트에서 제거" />
+    <option name="현재" path="ActionManager" hit="선택한 콘텐츠 루트를 현재 프로젝트에서 제거" />
+    <option name="go" path="ActionManager" hit="선택한 파일 또는 디렉터리를 go vet 도구로 린트" />
+    <option name="vet" path="ActionManager" hit="선택한 파일 또는 디렉터리를 go vet 도구로 린트" />
+    <option name="도구로" path="ActionManager" hit="선택한 파일 또는 디렉터리를 go vet 도구로 린트" />
+    <option name="디렉터리를" path="ActionManager" hit="선택한 파일 또는 디렉터리를 go vet 도구로 린트" />
+    <option name="또는" path="ActionManager" hit="선택한 파일 또는 디렉터리를 go vet 도구로 린트" />
+    <option name="린트" path="ActionManager" hit="선택한 파일 또는 디렉터리를 go vet 도구로 린트" />
+    <option name="선택한" path="ActionManager" hit="선택한 파일 또는 디렉터리를 go vet 도구로 린트" />
+    <option name="파일" path="ActionManager" hit="선택한 파일 또는 디렉터리를 go vet 도구로 린트" />
+    <option name="generate" path="ActionManager" hit="선택한 파일에서 go generate 실행" />
+    <option name="go" path="ActionManager" hit="선택한 파일에서 go generate 실행" />
+    <option name="선택한" path="ActionManager" hit="선택한 파일에서 go generate 실행" />
+    <option name="실행" path="ActionManager" hit="선택한 파일에서 go generate 실행" />
+    <option name="파일에서" path="ActionManager" hit="선택한 파일에서 go generate 실행" />
+    <option name="fmt" path="ActionManager" hit="선택한 파일을 go fmt 도구로 서식 지정" />
+    <option name="go" path="ActionManager" hit="선택한 파일을 go fmt 도구로 서식 지정" />
+    <option name="도구로" path="ActionManager" hit="선택한 파일을 go fmt 도구로 서식 지정" />
+    <option name="서식" path="ActionManager" hit="선택한 파일을 go fmt 도구로 서식 지정" />
+    <option name="선택한" path="ActionManager" hit="선택한 파일을 go fmt 도구로 서식 지정" />
+    <option name="지정" path="ActionManager" hit="선택한 파일을 go fmt 도구로 서식 지정" />
+    <option name="파일을" path="ActionManager" hit="선택한 파일을 go fmt 도구로 서식 지정" />
+    <option name="goimports" path="ActionManager" hit="선택한 파일의 import 문을 goimports 도구로 최적화" />
+    <option name="import" path="ActionManager" hit="선택한 파일의 import 문을 goimports 도구로 최적화" />
+    <option name="도구로" path="ActionManager" hit="선택한 파일의 import 문을 goimports 도구로 최적화" />
+    <option name="문을" path="ActionManager" hit="선택한 파일의 import 문을 goimports 도구로 최적화" />
+    <option name="선택한" path="ActionManager" hit="선택한 파일의 import 문을 goimports 도구로 최적화" />
+    <option name="최적화" path="ActionManager" hit="선택한 파일의 import 문을 goimports 도구로 최적화" />
+    <option name="파일의" path="ActionManager" hit="선택한 파일의 import 문을 goimports 도구로 최적화" />
+    <option name="고루틴" path="ActionManager" hit="숨겨진 고루틴 재설정" />
+    <option name="숨겨진" path="ActionManager" hit="숨겨진 고루틴 재설정" />
+    <option name="재설정" path="ActionManager" hit="숨겨진 고루틴 재설정" />
+    <option name="스레드" path="ActionManager" hit="스레드 표시" />
+    <option name="표시" path="ActionManager" hit="스레드 표시" />
+    <option name="기반" path="ActionManager" hit="이 선언에 기반" />
+    <option name="선언에" path="ActionManager" hit="이 선언에 기반" />
+    <option name="이" path="ActionManager" hit="이 선언에 기반" />
+    <option name="뒤로" path="ActionManager" hit="이전 중단점까지 프로그램을 뒤로 실행" />
+    <option name="실행" path="ActionManager" hit="이전 중단점까지 프로그램을 뒤로 실행" />
+    <option name="이전" path="ActionManager" hit="이전 중단점까지 프로그램을 뒤로 실행" />
+    <option name="중단점까지" path="ActionManager" hit="이전 중단점까지 프로그램을 뒤로 실행" />
+    <option name="프로그램을" path="ActionManager" hit="이전 중단점까지 프로그램을 뒤로 실행" />
+    <option name="디버그" path="ActionManager" hit="저장된 추적 디버그…" />
+    <option name="저장된" path="ActionManager" hit="저장된 추적 디버그…" />
+    <option name="추적" path="ActionManager" hit="저장된 추적 디버그…" />
+    <option name="문자열을" path="ActionManager" hit="지정된 문자열을 포함하는 스택만 표시" />
+    <option name="스택만" path="ActionManager" hit="지정된 문자열을 포함하는 스택만 표시" />
+    <option name="지정된" path="ActionManager" hit="지정된 문자열을 포함하는 스택만 표시" />
+    <option name="포함하는" path="ActionManager" hit="지정된 문자열을 포함하는 스택만 표시" />
+    <option name="표시" path="ActionManager" hit="지정된 문자열을 포함하는 스택만 표시" />
+    <option name="덤프" path="ActionManager" hit="코어 덤프 열기…" />
+    <option name="열기" path="ActionManager" hit="코어 덤프 열기…" />
+    <option name="코어" path="ActionManager" hit="코어 덤프 열기…" />
+    <option name="삽입" path="ActionManager" hit="타입 삽입…" />
+    <option name="타입" path="ActionManager" hit="타입 삽입…" />
+    <option name="타입" path="ActionManager" hit="타입 표시" />
+    <option name="표시" path="ActionManager" hit="타입 표시" />
+    <option name="주소" path="ActionManager" hit="포인터 주소 표시" />
+    <option name="포인터" path="ActionManager" hit="포인터 주소 표시" />
+    <option name="표시" path="ActionManager" hit="포인터 주소 표시" />
+    <option name="fmt" path="ActionManager" hit="프로젝트를 go fmt 도구로 서식 지정" />
+    <option name="go" path="ActionManager" hit="프로젝트를 go fmt 도구로 서식 지정" />
+    <option name="도구로" path="ActionManager" hit="프로젝트를 go fmt 도구로 서식 지정" />
+    <option name="서식" path="ActionManager" hit="프로젝트를 go fmt 도구로 서식 지정" />
+    <option name="지정" path="ActionManager" hit="프로젝트를 go fmt 도구로 서식 지정" />
+    <option name="프로젝트를" path="ActionManager" hit="프로젝트를 go fmt 도구로 서식 지정" />
+    <option name="getter" path="ActionManager" hit="필드의 getter 메서드 생성" />
+    <option name="메서드" path="ActionManager" hit="필드의 getter 메서드 생성" />
+    <option name="생성" path="ActionManager" hit="필드의 getter 메서드 생성" />
+    <option name="필드의" path="ActionManager" hit="필드의 getter 메서드 생성" />
+    <option name="getter" path="ActionManager" hit="필드의 getter 및 setter 메서드 생성" />
+    <option name="setter" path="ActionManager" hit="필드의 getter 및 setter 메서드 생성" />
+    <option name="메서드" path="ActionManager" hit="필드의 getter 및 setter 메서드 생성" />
+    <option name="및" path="ActionManager" hit="필드의 getter 및 setter 메서드 생성" />
+    <option name="생성" path="ActionManager" hit="필드의 getter 및 setter 메서드 생성" />
+    <option name="필드의" path="ActionManager" hit="필드의 getter 및 setter 메서드 생성" />
+    <option name="setter" path="ActionManager" hit="필드의 setter 메서드 생성" />
+    <option name="메서드" path="ActionManager" hit="필드의 setter 메서드 생성" />
+    <option name="생성" path="ActionManager" hit="필드의 setter 메서드 생성" />
+    <option name="필드의" path="ActionManager" hit="필드의 setter 메서드 생성" />
+    <option name="필터" path="ActionManager" hit="필터" />
+  </configurable>
+  <configurable id="editor.breadcrumbs" configurable_name="이동 경로">
+    <option name="go" hit="Go" />
+  </configurable>
+</options>

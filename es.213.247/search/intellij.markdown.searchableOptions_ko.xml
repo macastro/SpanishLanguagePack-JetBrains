@@ -1,0 +1,152 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="docs에서" path="ActionManager" hit="Google Docs에서 가져오기…" />
+    <option name="google" path="ActionManager" hit="Google Docs에서 가져오기…" />
+    <option name="가져오기" path="ActionManager" hit="Google Docs에서 가져오기…" />
+    <option name="markdown" path="ActionManager" hit="Markdown 변환기" />
+    <option name="변환기" path="ActionManager" hit="Markdown 변환기" />
+    <option name="markdown" path="ActionManager" hit="Markdown 에디터 레이아웃 작업" />
+    <option name="레이아웃" path="ActionManager" hit="Markdown 에디터 레이아웃 작업" />
+    <option name="에디터" path="ActionManager" hit="Markdown 에디터 레이아웃 작업" />
+    <option name="작업" path="ActionManager" hit="Markdown 에디터 레이아웃 작업" />
+    <option name="markdown" path="ActionManager" hit="Markdown 에디터 작업" />
+    <option name="에디터" path="ActionManager" hit="Markdown 에디터 작업" />
+    <option name="작업" path="ActionManager" hit="Markdown 에디터 작업" />
+    <option name="pandoc" path="ActionManager" hit="Pandoc 구성…" />
+    <option name="구성" path="ActionManager" hit="Pandoc 구성…" />
+    <option name="word" path="ActionManager" hit="Word 문서 가져오기…" />
+    <option name="가져오기" path="ActionManager" hit="Word 문서 가져오기…" />
+    <option name="문서" path="ActionManager" hit="Word 문서 가져오기…" />
+    <option name="가운데" path="ActionManager" hit="가운데 정렬" />
+    <option name="정렬" path="ActionManager" hit="가운데 정렬" />
+    <option name="굵게" path="ActionManager" hit="굵게" />
+    <option name="기울임꼴" path="ActionManager" hit="기울임꼴" />
+    <option name="markdown" path="ActionManager" hit="다음으로 Markdown 파일 내보내기…" />
+    <option name="내보내기" path="ActionManager" hit="다음으로 Markdown 파일 내보내기…" />
+    <option name="다음으로" path="ActionManager" hit="다음으로 Markdown 파일 내보내기…" />
+    <option name="파일" path="ActionManager" hit="다음으로 Markdown 파일 내보내기…" />
+    <option name="링크" path="ActionManager" hit="링크 생성" />
+    <option name="생성" path="ActionManager" hit="링크 생성" />
+    <option name="동기화합니다" path="ActionManager" hit="미리보기 패널 스크롤을 에디터와 동기화합니다" />
+    <option name="미리보기" path="ActionManager" hit="미리보기 패널 스크롤을 에디터와 동기화합니다" />
+    <option name="스크롤을" path="ActionManager" hit="미리보기 패널 스크롤을 에디터와 동기화합니다" />
+    <option name="에디터와" path="ActionManager" hit="미리보기 패널 스크롤을 에디터와 동기화합니다" />
+    <option name="패널" path="ActionManager" hit="미리보기 패널 스크롤을 에디터와 동기화합니다" />
+    <option name="삽입" path="ActionManager" hit="삽입…" />
+    <option name="서식" path="ActionManager" hit="서식 지정" />
+    <option name="지정" path="ActionManager" hit="서식 지정" />
+    <option name="래핑합니다" path="ActionManager" hit="선택한 텍스트를 링크로 래핑합니다" />
+    <option name="링크로" path="ActionManager" hit="선택한 텍스트를 링크로 래핑합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 텍스트를 링크로 래핑합니다" />
+    <option name="텍스트를" path="ActionManager" hit="선택한 텍스트를 링크로 래핑합니다" />
+    <option name="동기화" path="ActionManager" hit="스크롤 동기화" />
+    <option name="스크롤" path="ActionManager" hit="스크롤 동기화" />
+    <option name="삽입" path="ActionManager" hit="아래에 행 삽입" />
+    <option name="아래에" path="ActionManager" hit="아래에 행 삽입" />
+    <option name="행" path="ActionManager" hit="아래에 행 삽입" />
+    <option name="설정" path="ActionManager" hit="열 정렬 설정" />
+    <option name="열" path="ActionManager" hit="열 정렬 설정" />
+    <option name="정렬" path="ActionManager" hit="열 정렬 설정" />
+    <option name="열" path="ActionManager" hit="열 제거" />
+    <option name="제거" path="ActionManager" hit="열 제거" />
+    <option name="열을" path="ActionManager" hit="열을 오른쪽으로 이동" />
+    <option name="오른쪽으로" path="ActionManager" hit="열을 오른쪽으로 이동" />
+    <option name="이동" path="ActionManager" hit="열을 오른쪽으로 이동" />
+    <option name="열을" path="ActionManager" hit="열을 왼쪽으로 이동" />
+    <option name="왼쪽으로" path="ActionManager" hit="열을 왼쪽으로 이동" />
+    <option name="이동" path="ActionManager" hit="열을 왼쪽으로 이동" />
+    <option name="선택" path="ActionManager" hit="열의 셀 선택" />
+    <option name="셀" path="ActionManager" hit="열의 셀 선택" />
+    <option name="열의" path="ActionManager" hit="열의 셀 선택" />
+    <option name="오른쪽" path="ActionManager" hit="오른쪽 정렬" />
+    <option name="정렬" path="ActionManager" hit="오른쪽 정렬" />
+    <option name="삽입" path="ActionManager" hit="오른쪽에 열 삽입" />
+    <option name="열" path="ActionManager" hit="오른쪽에 열 삽입" />
+    <option name="오른쪽에" path="ActionManager" hit="오른쪽에 열 삽입" />
+    <option name="왼쪽" path="ActionManager" hit="왼쪽 정렬" />
+    <option name="정렬" path="ActionManager" hit="왼쪽 정렬" />
+    <option name="삽입" path="ActionManager" hit="왼쪽에 열 삽입" />
+    <option name="열" path="ActionManager" hit="왼쪽에 열 삽입" />
+    <option name="왼쪽에" path="ActionManager" hit="왼쪽에 열 삽입" />
+    <option name="삽입" path="ActionManager" hit="위에 행 삽입" />
+    <option name="위에" path="ActionManager" hit="위에 행 삽입" />
+    <option name="행" path="ActionManager" hit="위에 행 삽입" />
+    <option name="삽입" path="ActionManager" hit="이미지 삽입" />
+    <option name="이미지" path="ActionManager" hit="이미지 삽입" />
+    <option name="링크로" path="ActionManager" hit="인라인 링크를 참조 스타일 링크로 변환합니다" />
+    <option name="링크를" path="ActionManager" hit="인라인 링크를 참조 스타일 링크로 변환합니다" />
+    <option name="변환합니다" path="ActionManager" hit="인라인 링크를 참조 스타일 링크로 변환합니다" />
+    <option name="스타일" path="ActionManager" hit="인라인 링크를 참조 스타일 링크로 변환합니다" />
+    <option name="인라인" path="ActionManager" hit="인라인 링크를 참조 스타일 링크로 변환합니다" />
+    <option name="참조" path="ActionManager" hit="인라인 링크를 참조 스타일 링크로 변환합니다" />
+    <option name="변환" path="ActionManager" hit="참조로 변환" />
+    <option name="참조로" path="ActionManager" hit="참조로 변환" />
+    <option name="취소선" path="ActionManager" hit="취소선" />
+    <option name="삽입합니다" path="ActionManager" hit="캐럿 위치에 이미지를 삽입합니다" />
+    <option name="위치에" path="ActionManager" hit="캐럿 위치에 이미지를 삽입합니다" />
+    <option name="이미지를" path="ActionManager" hit="캐럿 위치에 이미지를 삽입합니다" />
+    <option name="캐럿" path="ActionManager" hit="캐럿 위치에 이미지를 삽입합니다" />
+    <option name="낮춥니다" path="ActionManager" hit="캐럿으로 헤더 수준을 낮춥니다" />
+    <option name="수준을" path="ActionManager" hit="캐럿으로 헤더 수준을 낮춥니다" />
+    <option name="캐럿으로" path="ActionManager" hit="캐럿으로 헤더 수준을 낮춥니다" />
+    <option name="헤더" path="ActionManager" hit="캐럿으로 헤더 수준을 낮춥니다" />
+    <option name="높입니다" path="ActionManager" hit="캐럿으로 헤더 수준을 높입니다" />
+    <option name="수준을" path="ActionManager" hit="캐럿으로 헤더 수준을 높입니다" />
+    <option name="캐럿으로" path="ActionManager" hit="캐럿으로 헤더 수준을 높입니다" />
+    <option name="헤더" path="ActionManager" hit="캐럿으로 헤더 수준을 높입니다" />
+    <option name="코드" path="ActionManager" hit="코드" />
+    <option name="삽입" path="ActionManager" hit="테이블 삽입" />
+    <option name="테이블" path="ActionManager" hit="테이블 삽입" />
+    <option name="강조" path="ActionManager" hit="텍스트를 굵은 글꼴(강한 강조)로 서식 지정합니다" />
+    <option name="강한" path="ActionManager" hit="텍스트를 굵은 글꼴(강한 강조)로 서식 지정합니다" />
+    <option name="굵은" path="ActionManager" hit="텍스트를 굵은 글꼴(강한 강조)로 서식 지정합니다" />
+    <option name="글꼴" path="ActionManager" hit="텍스트를 굵은 글꼴(강한 강조)로 서식 지정합니다" />
+    <option name="로" path="ActionManager" hit="텍스트를 굵은 글꼴(강한 강조)로 서식 지정합니다" />
+    <option name="서식" path="ActionManager" hit="텍스트를 굵은 글꼴(강한 강조)로 서식 지정합니다" />
+    <option name="지정합니다" path="ActionManager" hit="텍스트를 굵은 글꼴(강한 강조)로 서식 지정합니다" />
+    <option name="텍스트를" path="ActionManager" hit="텍스트를 굵은 글꼴(강한 강조)로 서식 지정합니다" />
+    <option name="강조" path="ActionManager" hit="텍스트를 기울림꼴(강조)로 서식 지정합니다" />
+    <option name="기울림꼴" path="ActionManager" hit="텍스트를 기울림꼴(강조)로 서식 지정합니다" />
+    <option name="로" path="ActionManager" hit="텍스트를 기울림꼴(강조)로 서식 지정합니다" />
+    <option name="서식" path="ActionManager" hit="텍스트를 기울림꼴(강조)로 서식 지정합니다" />
+    <option name="지정합니다" path="ActionManager" hit="텍스트를 기울림꼴(강조)로 서식 지정합니다" />
+    <option name="텍스트를" path="ActionManager" hit="텍스트를 기울림꼴(강조)로 서식 지정합니다" />
+    <option name="서식" path="ActionManager" hit="텍스트를 인라인 코드 스팬으로 서식 지정합니다" />
+    <option name="스팬으로" path="ActionManager" hit="텍스트를 인라인 코드 스팬으로 서식 지정합니다" />
+    <option name="인라인" path="ActionManager" hit="텍스트를 인라인 코드 스팬으로 서식 지정합니다" />
+    <option name="지정합니다" path="ActionManager" hit="텍스트를 인라인 코드 스팬으로 서식 지정합니다" />
+    <option name="코드" path="ActionManager" hit="텍스트를 인라인 코드 스팬으로 서식 지정합니다" />
+    <option name="텍스트를" path="ActionManager" hit="텍스트를 인라인 코드 스팬으로 서식 지정합니다" />
+    <option name="서식" path="ActionManager" hit="텍스트를 취소선으로 서식 지정합니다" />
+    <option name="지정합니다" path="ActionManager" hit="텍스트를 취소선으로 서식 지정합니다" />
+    <option name="취소선으로" path="ActionManager" hit="텍스트를 취소선으로 서식 지정합니다" />
+    <option name="텍스트를" path="ActionManager" hit="텍스트를 취소선으로 서식 지정합니다" />
+    <option name="선택" path="ActionManager" hit="행 선택" />
+    <option name="행" path="ActionManager" hit="행 선택" />
+    <option name="제거" path="ActionManager" hit="행 제거" />
+    <option name="행" path="ActionManager" hit="행 제거" />
+    <option name="아래로" path="ActionManager" hit="행을 아래로 이동" />
+    <option name="이동" path="ActionManager" hit="행을 아래로 이동" />
+    <option name="행을" path="ActionManager" hit="행을 아래로 이동" />
+    <option name="위로" path="ActionManager" hit="행을 위로 이동" />
+    <option name="이동" path="ActionManager" hit="행을 위로 이동" />
+    <option name="행을" path="ActionManager" hit="행을 위로 이동" />
+    <option name="낮추기" path="ActionManager" hit="헤더 레벨 낮추기" />
+    <option name="레벨" path="ActionManager" hit="헤더 레벨 낮추기" />
+    <option name="헤더" path="ActionManager" hit="헤더 레벨 낮추기" />
+    <option name="높이기" path="ActionManager" hit="헤더 레벨 높이기" />
+    <option name="레벨" path="ActionManager" hit="헤더 레벨 높이기" />
+    <option name="헤더" path="ActionManager" hit="헤더 레벨 높이기" />
+    <option name="devtools" path="ActionManager" hit="현재 Markdown 미리보기에 대해 Devtools 창 열기" />
+    <option name="markdown" path="ActionManager" hit="현재 Markdown 미리보기에 대해 Devtools 창 열기" />
+    <option name="대해" path="ActionManager" hit="현재 Markdown 미리보기에 대해 Devtools 창 열기" />
+    <option name="미리보기에" path="ActionManager" hit="현재 Markdown 미리보기에 대해 Devtools 창 열기" />
+    <option name="열기" path="ActionManager" hit="현재 Markdown 미리보기에 대해 Devtools 창 열기" />
+    <option name="창" path="ActionManager" hit="현재 Markdown 미리보기에 대해 Devtools 창 열기" />
+    <option name="현재" path="ActionManager" hit="현재 Markdown 미리보기에 대해 Devtools 창 열기" />
+  </configurable>
+  <configurable id="editor.breadcrumbs" configurable_name="이동 경로">
+    <option name="markdown" hit="Markdown" />
+  </configurable>
+</options>

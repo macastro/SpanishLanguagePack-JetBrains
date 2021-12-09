@@ -1,0 +1,230 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="@Builder" />
+    <option name="builder" path="ActionManager" hit="@Builder" />
+    <option name="" path="ActionManager" hit="@Constructors" />
+    <option name="constructors" path="ActionManager" hit="@Constructors" />
+    <option name="" path="ActionManager" hit="@Data" />
+    <option name="data" path="ActionManager" hit="@Data" />
+    <option name="" path="ActionManager" hit="@Delegate" />
+    <option name="delegate" path="ActionManager" hit="@Delegate" />
+    <option name="" path="ActionManager" hit="@EqualsAndHashCode" />
+    <option name="equalsandhashcode" path="ActionManager" hit="@EqualsAndHashCode" />
+    <option name="" path="ActionManager" hit="@FieldNameConstants" />
+    <option name="fieldnameconstants" path="ActionManager" hit="@FieldNameConstants" />
+    <option name="" path="ActionManager" hit="@Getter" />
+    <option name="getter" path="ActionManager" hit="@Getter" />
+    <option name="" path="ActionManager" hit="@Log (및 친구들)" />
+    <option name="log" path="ActionManager" hit="@Log (및 친구들)" />
+    <option name="및" path="ActionManager" hit="@Log (및 친구들)" />
+    <option name="친구들" path="ActionManager" hit="@Log (및 친구들)" />
+    <option name="" path="ActionManager" hit="@Log (및 친구들)&#10;" />
+    <option name="log" path="ActionManager" hit="@Log (및 친구들)&#10;" />
+    <option name="및" path="ActionManager" hit="@Log (및 친구들)&#10;" />
+    <option name="친구들" path="ActionManager" hit="@Log (및 친구들)&#10;" />
+    <option name="" path="ActionManager" hit="@Setter" />
+    <option name="setter" path="ActionManager" hit="@Setter" />
+    <option name="" path="ActionManager" hit="@SuperBuilder" />
+    <option name="superbuilder" path="ActionManager" hit="@SuperBuilder" />
+    <option name="" path="ActionManager" hit="@ToString" />
+    <option name="tostring" path="ActionManager" hit="@ToString" />
+    <option name="" path="ActionManager" hit="@UtilityClass" />
+    <option name="utilityclass" path="ActionManager" hit="@UtilityClass" />
+    <option name="" path="ActionManager" hit="@Value" />
+    <option name="value" path="ActionManager" hit="@Value" />
+    <option name="" path="ActionManager" hit="@Wither" />
+    <option name="wither" path="ActionManager" hit="@Wither" />
+    <option name="delombok" path="ActionManager" hit="Delombok" />
+    <option name="lombok" path="ActionManager" hit="Lombok" />
+    <option name="builder" path="ActionManager" hit="Lombok @Builder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="java" path="ActionManager" hit="Lombok @Builder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @Builder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @Builder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="메서드로" path="ActionManager" hit="Lombok @Builder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @Builder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @Builder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @Builder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="data" path="ActionManager" hit="Lombok @Data 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="java" path="ActionManager" hit="Lombok @Data 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @Data 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @Data 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="메서드로" path="ActionManager" hit="Lombok @Data 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @Data 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @Data 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @Data 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="delegate" path="ActionManager" hit="Lombok @Delegate 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="java" path="ActionManager" hit="Lombok @Delegate 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @Delegate 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @Delegate 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="메서드로" path="ActionManager" hit="Lombok @Delegate 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @Delegate 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @Delegate 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @Delegate 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="equalsandhashcode" path="ActionManager" hit="Lombok @EqualsAndHashCode 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="java" path="ActionManager" hit="Lombok @EqualsAndHashCode 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @EqualsAndHashCode 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @EqualsAndHashCode 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="메서드로" path="ActionManager" hit="Lombok @EqualsAndHashCode 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @EqualsAndHashCode 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @EqualsAndHashCode 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @EqualsAndHashCode 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="fieldnameconstants" path="ActionManager" hit="Lombok @FieldNameConstants 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="java" path="ActionManager" hit="Lombok @FieldNameConstants 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @FieldNameConstants 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @FieldNameConstants 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @FieldNameConstants 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @FieldNameConstants 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @FieldNameConstants 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="필드로" path="ActionManager" hit="Lombok @FieldNameConstants 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="getter" path="ActionManager" hit="Lombok @Getter 어노테이션을 Vanila getter 메서드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @Getter 어노테이션을 Vanila getter 메서드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @Getter 어노테이션을 Vanila getter 메서드로 바꾸는 액션" />
+    <option name="메서드로" path="ActionManager" hit="Lombok @Getter 어노테이션을 Vanila getter 메서드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @Getter 어노테이션을 Vanila getter 메서드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @Getter 어노테이션을 Vanila getter 메서드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @Getter 어노테이션을 Vanila getter 메서드로 바꾸는 액션" />
+    <option name="log" path="ActionManager" hit="Lombok @Log (및 기타) 어노테이션을 Vanila 로그 필드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @Log (및 기타) 어노테이션을 Vanila 로그 필드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @Log (및 기타) 어노테이션을 Vanila 로그 필드로 바꾸는 액션" />
+    <option name="기타" path="ActionManager" hit="Lombok @Log (및 기타) 어노테이션을 Vanila 로그 필드로 바꾸는 액션" />
+    <option name="로그" path="ActionManager" hit="Lombok @Log (및 기타) 어노테이션을 Vanila 로그 필드로 바꾸는 액션" />
+    <option name="및" path="ActionManager" hit="Lombok @Log (및 기타) 어노테이션을 Vanila 로그 필드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @Log (및 기타) 어노테이션을 Vanila 로그 필드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @Log (및 기타) 어노테이션을 Vanila 로그 필드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @Log (및 기타) 어노테이션을 Vanila 로그 필드로 바꾸는 액션" />
+    <option name="필드로" path="ActionManager" hit="Lombok @Log (및 기타) 어노테이션을 Vanila 로그 필드로 바꾸는 액션" />
+    <option name="allargsconstructor" path="ActionManager" hit="Lombok @NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="java" path="ActionManager" hit="Lombok @NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="noargsconstructor" path="ActionManager" hit="Lombok @NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="requiredargsconstructor" path="ActionManager" hit="Lombok @NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="메서드로" path="ActionManager" hit="Lombok @NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @Setter 어노테이션을 Vanila setter 메서드로 바꾸는 액션" />
+    <option name="setter" path="ActionManager" hit="Lombok @Setter 어노테이션을 Vanila setter 메서드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @Setter 어노테이션을 Vanila setter 메서드로 바꾸는 액션" />
+    <option name="메서드로" path="ActionManager" hit="Lombok @Setter 어노테이션을 Vanila setter 메서드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @Setter 어노테이션을 Vanila setter 메서드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @Setter 어노테이션을 Vanila setter 메서드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @Setter 어노테이션을 Vanila setter 메서드로 바꾸는 액션" />
+    <option name="java" path="ActionManager" hit="Lombok @SuperBuilder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @SuperBuilder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="superbuilder" path="ActionManager" hit="Lombok @SuperBuilder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @SuperBuilder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="메서드로" path="ActionManager" hit="Lombok @SuperBuilder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @SuperBuilder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @SuperBuilder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @SuperBuilder 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="java" path="ActionManager" hit="Lombok @ToString 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @ToString 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="tostring" path="ActionManager" hit="Lombok @ToString 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @ToString 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="메서드로" path="ActionManager" hit="Lombok @ToString 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @ToString 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @ToString 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @ToString 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="java" path="ActionManager" hit="Lombok @UtilityClass 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @UtilityClass 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="utilityclass" path="ActionManager" hit="Lombok @UtilityClass 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @UtilityClass 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @UtilityClass 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @UtilityClass 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @UtilityClass 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="필드로" path="ActionManager" hit="Lombok @UtilityClass 어노테이션을 Vanila Java 필드로 바꾸는 액션" />
+    <option name="java" path="ActionManager" hit="Lombok @Value 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @Value 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="value" path="ActionManager" hit="Lombok @Value 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @Value 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="메서드로" path="ActionManager" hit="Lombok @Value 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @Value 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @Value 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @Value 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="java" path="ActionManager" hit="Lombok @Wither 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok @Wither 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="Lombok @Wither 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="wither" path="ActionManager" hit="Lombok @Wither 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="메서드로" path="ActionManager" hit="Lombok @Wither 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="Lombok @Wither 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="Lombok @Wither 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok @Wither 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="Lombok 어노테이션으로 코드 리팩터링" />
+    <option name="리팩터링" path="ActionManager" hit="Lombok 어노테이션으로 코드 리팩터링" />
+    <option name="어노테이션으로" path="ActionManager" hit="Lombok 어노테이션으로 코드 리팩터링" />
+    <option name="코드" path="ActionManager" hit="Lombok 어노테이션으로 코드 리팩터링" />
+    <option name="lombok" path="ActionManager" hit="Lombok 어노테이션을 제거하여 코드 리팩터링" />
+    <option name="리팩터링" path="ActionManager" hit="Lombok 어노테이션을 제거하여 코드 리팩터링" />
+    <option name="어노테이션을" path="ActionManager" hit="Lombok 어노테이션을 제거하여 코드 리팩터링" />
+    <option name="제거하여" path="ActionManager" hit="Lombok 어노테이션을 제거하여 코드 리팩터링" />
+    <option name="코드" path="ActionManager" hit="Lombok 어노테이션을 제거하여 코드 리팩터링" />
+    <option name="equals" path="ActionManager" hit="equals/hashcode 메서드를 Lombok @EqualsAndHashcode 어노테이션으로 바꾸는 액션" />
+    <option name="equalsandhashcode" path="ActionManager" hit="equals/hashcode 메서드를 Lombok @EqualsAndHashcode 어노테이션으로 바꾸는 액션" />
+    <option name="hashcode" path="ActionManager" hit="equals/hashcode 메서드를 Lombok @EqualsAndHashcode 어노테이션으로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="equals/hashcode 메서드를 Lombok @EqualsAndHashcode 어노테이션으로 바꾸는 액션" />
+    <option name="메서드를" path="ActionManager" hit="equals/hashcode 메서드를 Lombok @EqualsAndHashcode 어노테이션으로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="equals/hashcode 메서드를 Lombok @EqualsAndHashcode 어노테이션으로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="equals/hashcode 메서드를 Lombok @EqualsAndHashcode 어노테이션으로 바꾸는 액션" />
+    <option name="어노테이션으로" path="ActionManager" hit="equals/hashcode 메서드를 Lombok @EqualsAndHashcode 어노테이션으로 바꾸는 액션" />
+    <option name="data" path="ActionManager" hit="getter/setter/equals/hashcode/toString 메서드를 Lombok @Data 어노테이션으로 바꾸는 액션" />
+    <option name="equals" path="ActionManager" hit="getter/setter/equals/hashcode/toString 메서드를 Lombok @Data 어노테이션으로 바꾸는 액션" />
+    <option name="getter" path="ActionManager" hit="getter/setter/equals/hashcode/toString 메서드를 Lombok @Data 어노테이션으로 바꾸는 액션" />
+    <option name="hashcode" path="ActionManager" hit="getter/setter/equals/hashcode/toString 메서드를 Lombok @Data 어노테이션으로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="getter/setter/equals/hashcode/toString 메서드를 Lombok @Data 어노테이션으로 바꾸는 액션" />
+    <option name="setter" path="ActionManager" hit="getter/setter/equals/hashcode/toString 메서드를 Lombok @Data 어노테이션으로 바꾸는 액션" />
+    <option name="tostring" path="ActionManager" hit="getter/setter/equals/hashcode/toString 메서드를 Lombok @Data 어노테이션으로 바꾸는 액션" />
+    <option name="메서드를" path="ActionManager" hit="getter/setter/equals/hashcode/toString 메서드를 Lombok @Data 어노테이션으로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="getter/setter/equals/hashcode/toString 메서드를 Lombok @Data 어노테이션으로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="getter/setter/equals/hashcode/toString 메서드를 Lombok @Data 어노테이션으로 바꾸는 액션" />
+    <option name="어노테이션으로" path="ActionManager" hit="getter/setter/equals/hashcode/toString 메서드를 Lombok @Data 어노테이션으로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="toString 메서드를 Lombok @ToString 어노테이션으로 바꾸는 액션" />
+    <option name="tostring" path="ActionManager" hit="toString 메서드를 Lombok @ToString 어노테이션으로 바꾸는 액션" />
+    <option name="메서드를" path="ActionManager" hit="toString 메서드를 Lombok @ToString 어노테이션으로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="toString 메서드를 Lombok @ToString 어노테이션으로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="toString 메서드를 Lombok @ToString 어노테이션으로 바꾸는 액션" />
+    <option name="어노테이션으로" path="ActionManager" hit="toString 메서드를 Lombok @ToString 어노테이션으로 바꾸는 액션" />
+    <option name="data" path="ActionManager" hit="디폴트 @Data" />
+    <option name="디폴트" path="ActionManager" hit="디폴트 @Data" />
+    <option name="equalsandhashcode" path="ActionManager" hit="디폴트 @EqualsAndHashCode" />
+    <option name="디폴트" path="ActionManager" hit="디폴트 @EqualsAndHashCode" />
+    <option name="getter" path="ActionManager" hit="디폴트 @Getter" />
+    <option name="디폴트" path="ActionManager" hit="디폴트 @Getter" />
+    <option name="setter" path="ActionManager" hit="디폴트 @Setter" />
+    <option name="디폴트" path="ActionManager" hit="디폴트 @Setter" />
+    <option name="tostring" path="ActionManager" hit="디폴트 @ToString" />
+    <option name="디폴트" path="ActionManager" hit="디폴트 @ToString" />
+    <option name="lombok" path="ActionManager" hit="모든 Lombok 어노테이션" />
+    <option name="모든" path="ActionManager" hit="모든 Lombok 어노테이션" />
+    <option name="어노테이션" path="ActionManager" hit="모든 Lombok 어노테이션" />
+    <option name="java" path="ActionManager" hit="모든 Lombok 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="모든 Lombok 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="vanila" path="ActionManager" hit="모든 Lombok 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="메서드로" path="ActionManager" hit="모든 Lombok 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="모든" path="ActionManager" hit="모든 Lombok 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="모든 Lombok 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="모든 Lombok 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="어노테이션을" path="ActionManager" hit="모든 Lombok 어노테이션을 Vanila Java 메서드로 바꾸는 액션" />
+    <option name="getter" path="ActionManager" hit="모든 getter 메서드를 Lombok @Getter 어노테이션으로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="모든 getter 메서드를 Lombok @Getter 어노테이션으로 바꾸는 액션" />
+    <option name="메서드를" path="ActionManager" hit="모든 getter 메서드를 Lombok @Getter 어노테이션으로 바꾸는 액션" />
+    <option name="모든" path="ActionManager" hit="모든 getter 메서드를 Lombok @Getter 어노테이션으로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="모든 getter 메서드를 Lombok @Getter 어노테이션으로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="모든 getter 메서드를 Lombok @Getter 어노테이션으로 바꾸는 액션" />
+    <option name="어노테이션으로" path="ActionManager" hit="모든 getter 메서드를 Lombok @Getter 어노테이션으로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="모든 setter 메서드를 Lombok @Setter 어노테이션으로 바꾸는 액션" />
+    <option name="setter" path="ActionManager" hit="모든 setter 메서드를 Lombok @Setter 어노테이션으로 바꾸는 액션" />
+    <option name="메서드를" path="ActionManager" hit="모든 setter 메서드를 Lombok @Setter 어노테이션으로 바꾸는 액션" />
+    <option name="모든" path="ActionManager" hit="모든 setter 메서드를 Lombok @Setter 어노테이션으로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="모든 setter 메서드를 Lombok @Setter 어노테이션으로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="모든 setter 메서드를 Lombok @Setter 어노테이션으로 바꾸는 액션" />
+    <option name="어노테이션으로" path="ActionManager" hit="모든 setter 메서드를 Lombok @Setter 어노테이션으로 바꾸는 액션" />
+    <option name="log" path="ActionManager" hit="모든 로거를 Lombok @Log 어노테이션으로 바꾸는 액션" />
+    <option name="lombok" path="ActionManager" hit="모든 로거를 Lombok @Log 어노테이션으로 바꾸는 액션" />
+    <option name="로거를" path="ActionManager" hit="모든 로거를 Lombok @Log 어노테이션으로 바꾸는 액션" />
+    <option name="모든" path="ActionManager" hit="모든 로거를 Lombok @Log 어노테이션으로 바꾸는 액션" />
+    <option name="바꾸는" path="ActionManager" hit="모든 로거를 Lombok @Log 어노테이션으로 바꾸는 액션" />
+    <option name="액션" path="ActionManager" hit="모든 로거를 Lombok @Log 어노테이션으로 바꾸는 액션" />
+    <option name="어노테이션으로" path="ActionManager" hit="모든 로거를 Lombok @Log 어노테이션으로 바꾸는 액션" />
+  </configurable>
+</options>

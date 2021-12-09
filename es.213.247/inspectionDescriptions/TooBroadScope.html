@@ -1,0 +1,48 @@
+<html>
+<body>
+더 작은 범위로 이동할 수 있는 모든 변수 선언을 보고합니다.
+<p>이 검사는 주로 메서드 시작 부분의 <i>Pascal 형식</i> 선언에 유용합니다. 또한 너무 광범위한 범위를 가진 변수도 리팩터링 후에 남는 경우가 많습니다.</p>
+<p><code>sb</code> 이동의 예시:</p>
+<pre><code>
+  StringBuilder sb = new StringBuilder();
+  System.out.println();
+  sb.append(1);
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  System.out.println();
+  StringBuilder sb = new StringBuilder();
+  sb.append(1);
+</code></pre>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<ul>
+  <li><b>내부 블록으로 이동할 수 있는 변수만 보고</b> 옵션을 사용하여 더 깊은 코드 블록을 이동할 수 있는 변수만을 보고합니다.
+    예를 들어, 옵션이 활성화되면 <code>sb</code> 변수에는 이동이 제안되지만 다음의 코드에는 제안되지 않습니다.
+<pre><code>
+  StringBuilder sb = new StringBuilder(a);
+  if (flag) {
+    sb.append(1);
+  }
+</code></pre></li>
+  <li><b>new 식을 이니설라이저로 가진 변수 보고(잠재적으로 안전하지 않음)</b> 옵션을 사용하여 new 식으로 초기화되는 변수를 보고합니다. 생성자에 비 로컬 부수 효과가 있는 경우 검사가 잠재적으로 안전하지 않게 됩니다. 예를 들어, 옵션이 활성화되면 <code>foo</code> 변수에 대한 이동이 제안됩니다.
+  <pre><code>
+  class Foo {
+    static List&lt;Foo&gt; fooList = new ArrayList&lt;&gt;();
+    String bar;
+
+    Foo(String bar) {
+        this.bar = bar;
+        fooList.add(this);
+    }
+
+    public static void main(String[] args) {
+      Foo foo = new Foo("bar"); // 안전하지 않은 경우에도 이동 가능
+      System.out.println(fooList.size());
+      System.out.println(foo.bar);
+    }
+  }
+</code></pre></li>
+</ul>
+</body>
+</html>

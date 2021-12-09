@@ -1,0 +1,26 @@
+<html>
+<body>
+<code>double</code> 값을 허용하는 <code>BigDecimal</code> 생성자 호출을 보고합니다.
+이러한 생성자는 제공된 <code>double</code> 값과 정확히 동일한 <code>BigDecimal</code>을 생산합니다.
+하지만 double은 IEEE 754 64비트 배정밀도 2진 부동 소수점 포맷으로 인코딩되기 때문에 정확한 값은 기대할 수 없습니다.
+<p>예를 들어, <code>new BigDecimal(0.1)</code>은 <code>BigDecimal</code> 객체를 산출합니다. 이 값은 double로 나타낼 수 있는 0.1에 가장 가까운 수인 <small><code>0.1000000000000000055511151231257827021181583404541015625</code></small>입니다.
+  소스 코드에 쓰인 값과 같은 값을 저장하는 <code>BigDecimal</code>을 얻으려면 <code>new BigDecimal("0.1")</code> 또는 <code>BigDecimal.valueOf(0.1)</code>를 사용하세요.</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Constructor {
+    void foo() {
+      new BigDecimal(0.1);
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Constructor {
+    void foo() {
+      new BigDecimal("0.1");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

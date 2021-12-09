@@ -1,0 +1,19 @@
+<html>
+<body>
+JSP 파일 내 절대 경로를 보고합니다.
+<p>절대 경로는 애플리케이션 컨텍스트가 비어 있지 않은 경우 해결되지 않으므로 JSP에서 금지됩니다.</p>
+<p>빠른 수정에서는 경로에 동적 접두사를 추가합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  &lt;%@page contentType=&quot;text/html; ISO-8859-1&quot; %&gt;
+
+  &lt;a href=&quot;/hey.jsp&quot;&gt;hey&lt;/a&gt;
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  &lt;%@page contentType=&quot;text/html; ISO-8859-1&quot; %&gt;
+
+  &lt;a href=&quot;${pageContext.request.contextPath}/hey.jsp&quot;&gt;hey&lt;/a&gt;
+</code></pre>
+</body>
+</html>

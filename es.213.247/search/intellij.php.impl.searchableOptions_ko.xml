@@ -1,0 +1,348 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="composer" path="ActionManager" hit="Composer" />
+    <option name="composer" path="ActionManager" hit="Composer 초기화…" />
+    <option name="초기화" path="ActionManager" hit="Composer 초기화…" />
+    <option name="composer를" path="ActionManager" hit="Composer를 초기화합니다" />
+    <option name="초기화합니다" path="ActionManager" hit="Composer를 초기화합니다" />
+    <option name="dbgp" path="ActionManager" hit="DBGp 프록시" />
+    <option name="프록시" path="ActionManager" hit="DBGp 프록시" />
+    <option name="ide" path="ActionManager" hit="IDE 등록" />
+    <option name="등록" path="ActionManager" hit="IDE 등록" />
+    <option name="ide" path="ActionManager" hit="IDE 등록 취소" />
+    <option name="등록" path="ActionManager" hit="IDE 등록 취소" />
+    <option name="취소" path="ActionManager" hit="IDE 등록 취소" />
+    <option name="cs" path="ActionManager" hit="PHP CS Fixer 무시 목록에 추가합니다." />
+    <option name="fixer" path="ActionManager" hit="PHP CS Fixer 무시 목록에 추가합니다." />
+    <option name="php" path="ActionManager" hit="PHP CS Fixer 무시 목록에 추가합니다." />
+    <option name="목록에" path="ActionManager" hit="PHP CS Fixer 무시 목록에 추가합니다." />
+    <option name="무시" path="ActionManager" hit="PHP CS Fixer 무시 목록에 추가합니다." />
+    <option name="추가합니다" path="ActionManager" hit="PHP CS Fixer 무시 목록에 추가합니다." />
+    <option name="cs" path="ActionManager" hit="PHP CS 픽서 무시 목록에 추가" />
+    <option name="php" path="ActionManager" hit="PHP CS 픽서 무시 목록에 추가" />
+    <option name="목록에" path="ActionManager" hit="PHP CS 픽서 무시 목록에 추가" />
+    <option name="무시" path="ActionManager" hit="PHP CS 픽서 무시 목록에 추가" />
+    <option name="추가" path="ActionManager" hit="PHP CS 픽서 무시 목록에 추가" />
+    <option name="픽서" path="ActionManager" hit="PHP CS 픽서 무시 목록에 추가" />
+    <option name="fqn" path="ActionManager" hit="PHP FQN 표시" />
+    <option name="php" path="ActionManager" hit="PHP FQN 표시" />
+    <option name="표시" path="ActionManager" hit="PHP FQN 표시" />
+    <option name="detector" path="ActionManager" hit="PHP Mess Detector 무시 목록에 추가합니다." />
+    <option name="mess" path="ActionManager" hit="PHP Mess Detector 무시 목록에 추가합니다." />
+    <option name="php" path="ActionManager" hit="PHP Mess Detector 무시 목록에 추가합니다." />
+    <option name="목록에" path="ActionManager" hit="PHP Mess Detector 무시 목록에 추가합니다." />
+    <option name="무시" path="ActionManager" hit="PHP Mess Detector 무시 목록에 추가합니다." />
+    <option name="추가합니다" path="ActionManager" hit="PHP Mess Detector 무시 목록에 추가합니다." />
+    <option name="php" path="ActionManager" hit="PHP 스크립트 첫 번째 줄에서 중단" />
+    <option name="번째" path="ActionManager" hit="PHP 스크립트 첫 번째 줄에서 중단" />
+    <option name="스크립트" path="ActionManager" hit="PHP 스크립트 첫 번째 줄에서 중단" />
+    <option name="줄에서" path="ActionManager" hit="PHP 스크립트 첫 번째 줄에서 중단" />
+    <option name="중단" path="ActionManager" hit="PHP 스크립트 첫 번째 줄에서 중단" />
+    <option name="첫" path="ActionManager" hit="PHP 스크립트 첫 번째 줄에서 중단" />
+    <option name="php" path="ActionManager" hit="PHP 인터프리터 변경" />
+    <option name="변경" path="ActionManager" hit="PHP 인터프리터 변경" />
+    <option name="인터프리터" path="ActionManager" hit="PHP 인터프리터 변경" />
+    <option name="php" path="ActionManager" hit="PHP 클래스" />
+    <option name="클래스" path="ActionManager" hit="PHP 클래스" />
+    <option name="php" path="ActionManager" hit="PHP 테스트" />
+    <option name="테스트" path="ActionManager" hit="PHP 테스트" />
+    <option name="php" path="ActionManager" hit="PHP 파일" />
+    <option name="파일" path="ActionManager" hit="PHP 파일" />
+    <option name="phpcs" path="ActionManager" hit="PHPCS 무시 목록에 추가" />
+    <option name="목록에" path="ActionManager" hit="PHPCS 무시 목록에 추가" />
+    <option name="무시" path="ActionManager" hit="PHPCS 무시 목록에 추가" />
+    <option name="추가" path="ActionManager" hit="PHPCS 무시 목록에 추가" />
+    <option name="phpdoc" path="ActionManager" hit="PHPDoc 블록…" />
+    <option name="블록" path="ActionManager" hit="PHPDoc 블록…" />
+    <option name="phpmd" path="ActionManager" hit="PHPMD 무시 목록에 추가" />
+    <option name="목록에" path="ActionManager" hit="PHPMD 무시 목록에 추가" />
+    <option name="무시" path="ActionManager" hit="PHPMD 무시 목록에 추가" />
+    <option name="추가" path="ActionManager" hit="PHPMD 무시 목록에 추가" />
+    <option name="phpunit" path="ActionManager" hit="PHPUnit setUp 메서드 생성" />
+    <option name="setup" path="ActionManager" hit="PHPUnit setUp 메서드 생성" />
+    <option name="메서드" path="ActionManager" hit="PHPUnit setUp 메서드 생성" />
+    <option name="생성" path="ActionManager" hit="PHPUnit setUp 메서드 생성" />
+    <option name="phpunit" path="ActionManager" hit="PHPUnit tearDown 메서드 생성" />
+    <option name="teardown" path="ActionManager" hit="PHPUnit tearDown 메서드 생성" />
+    <option name="메서드" path="ActionManager" hit="PHPUnit tearDown 메서드 생성" />
+    <option name="생성" path="ActionManager" hit="PHPUnit tearDown 메서드 생성" />
+    <option name="phpunit" path="ActionManager" hit="PHPUnit 테스트" />
+    <option name="테스트" path="ActionManager" hit="PHPUnit 테스트" />
+    <option name="phpunit" path="ActionManager" hit="PHPUnit 테스트 메서드 생성" />
+    <option name="메서드" path="ActionManager" hit="PHPUnit 테스트 메서드 생성" />
+    <option name="생성" path="ActionManager" hit="PHPUnit 테스트 메서드 생성" />
+    <option name="테스트" path="ActionManager" hit="PHPUnit 테스트 메서드 생성" />
+    <option name="codesniffer" path="ActionManager" hit="PHP_CodeSniffer 무시 목록에 추가" />
+    <option name="php" path="ActionManager" hit="PHP_CodeSniffer 무시 목록에 추가" />
+    <option name="목록에" path="ActionManager" hit="PHP_CodeSniffer 무시 목록에 추가" />
+    <option name="무시" path="ActionManager" hit="PHP_CodeSniffer 무시 목록에 추가" />
+    <option name="추가" path="ActionManager" hit="PHP_CodeSniffer 무시 목록에 추가" />
+    <option name="psr" path="ActionManager" hit="PSR-0 네임스페이스 루트 탐지" />
+    <option name="네임스페이스" path="ActionManager" hit="PSR-0 네임스페이스 루트 탐지" />
+    <option name="루트" path="ActionManager" hit="PSR-0 네임스페이스 루트 탐지" />
+    <option name="탐지" path="ActionManager" hit="PSR-0 네임스페이스 루트 탐지" />
+    <option name="setup" path="ActionManager" hit="SetUp 메서드" />
+    <option name="메서드" path="ActionManager" hit="SetUp 메서드" />
+    <option name="teardown" path="ActionManager" hit="TearDown 메서드" />
+    <option name="메서드" path="ActionManager" hit="TearDown 메서드" />
+    <option name="xdebug" path="ActionManager" hit="Xdebug 프로파일러 스냅샷 분석…" />
+    <option name="분석" path="ActionManager" hit="Xdebug 프로파일러 스냅샷 분석…" />
+    <option name="스냅샷" path="ActionManager" hit="Xdebug 프로파일러 스냅샷 분석…" />
+    <option name="프로파일러" path="ActionManager" hit="Xdebug 프로파일러 스냅샷 분석…" />
+    <option name="composer" path="ActionManager" hit="composer.json 파일" />
+    <option name="json" path="ActionManager" hit="composer.json 파일" />
+    <option name="파일" path="ActionManager" hit="composer.json 파일" />
+    <option name="composer" path="ActionManager" hit="composer.json 파일 생성" />
+    <option name="json" path="ActionManager" hit="composer.json 파일 생성" />
+    <option name="생성" path="ActionManager" hit="composer.json 파일 생성" />
+    <option name="파일" path="ActionManager" hit="composer.json 파일 생성" />
+    <option name="composer" path="ActionManager" hit="composer.json에서 composer.lock을 고려하여 패키지 설치" />
+    <option name="json에서" path="ActionManager" hit="composer.json에서 composer.lock을 고려하여 패키지 설치" />
+    <option name="lock을" path="ActionManager" hit="composer.json에서 composer.lock을 고려하여 패키지 설치" />
+    <option name="고려하여" path="ActionManager" hit="composer.json에서 composer.lock을 고려하여 패키지 설치" />
+    <option name="설치" path="ActionManager" hit="composer.json에서 composer.lock을 고려하여 패키지 설치" />
+    <option name="패키지" path="ActionManager" hit="composer.json에서 composer.lock을 고려하여 패키지 설치" />
+    <option name="composer" path="ActionManager" hit="composer.json에서 최신 적절한 버전의 패키지 설치" />
+    <option name="json에서" path="ActionManager" hit="composer.json에서 최신 적절한 버전의 패키지 설치" />
+    <option name="버전의" path="ActionManager" hit="composer.json에서 최신 적절한 버전의 패키지 설치" />
+    <option name="설치" path="ActionManager" hit="composer.json에서 최신 적절한 버전의 패키지 설치" />
+    <option name="적절한" path="ActionManager" hit="composer.json에서 최신 적절한 버전의 패키지 설치" />
+    <option name="최신" path="ActionManager" hit="composer.json에서 최신 적절한 버전의 패키지 설치" />
+    <option name="패키지" path="ActionManager" hit="composer.json에서 최신 적절한 버전의 패키지 설치" />
+    <option name="composer" path="ActionManager" hit="composer.json이 유효한지 확인" />
+    <option name="json이" path="ActionManager" hit="composer.json이 유효한지 확인" />
+    <option name="유효한지" path="ActionManager" hit="composer.json이 유효한지 확인" />
+    <option name="확인" path="ActionManager" hit="composer.json이 유효한지 확인" />
+    <option name="getter" path="ActionManager" hit="getter 및 setter…" />
+    <option name="setter" path="ActionManager" hit="getter 및 setter…" />
+    <option name="및" path="ActionManager" hit="getter 및 setter…" />
+    <option name="getter" path="ActionManager" hit="getter…" />
+    <option name="getter" path="ActionManager" hit="private 클래스 필드에 대한 getter 및 setter 생성" />
+    <option name="private" path="ActionManager" hit="private 클래스 필드에 대한 getter 및 setter 생성" />
+    <option name="setter" path="ActionManager" hit="private 클래스 필드에 대한 getter 및 setter 생성" />
+    <option name="대한" path="ActionManager" hit="private 클래스 필드에 대한 getter 및 setter 생성" />
+    <option name="및" path="ActionManager" hit="private 클래스 필드에 대한 getter 및 setter 생성" />
+    <option name="생성" path="ActionManager" hit="private 클래스 필드에 대한 getter 및 setter 생성" />
+    <option name="클래스" path="ActionManager" hit="private 클래스 필드에 대한 getter 및 setter 생성" />
+    <option name="필드에" path="ActionManager" hit="private 클래스 필드에 대한 getter 및 setter 생성" />
+    <option name="private" path="ActionManager" hit="private 클래스 필드에 대한 setter 생성." />
+    <option name="setter" path="ActionManager" hit="private 클래스 필드에 대한 setter 생성." />
+    <option name="대한" path="ActionManager" hit="private 클래스 필드에 대한 setter 생성." />
+    <option name="생성" path="ActionManager" hit="private 클래스 필드에 대한 setter 생성." />
+    <option name="클래스" path="ActionManager" hit="private 클래스 필드에 대한 setter 생성." />
+    <option name="필드에" path="ActionManager" hit="private 클래스 필드에 대한 setter 생성." />
+    <option name="setter" path="ActionManager" hit="setter…" />
+    <option name="getter" path="ActionManager" hit="개인 클래스 필드에 대한 getter 생성" />
+    <option name="개인" path="ActionManager" hit="개인 클래스 필드에 대한 getter 생성" />
+    <option name="대한" path="ActionManager" hit="개인 클래스 필드에 대한 getter 생성" />
+    <option name="생성" path="ActionManager" hit="개인 클래스 필드에 대한 getter 생성" />
+    <option name="클래스" path="ActionManager" hit="개인 클래스 필드에 대한 getter 생성" />
+    <option name="필드에" path="ActionManager" hit="개인 클래스 필드에 대한 getter 생성" />
+    <option name="경로" path="ActionManager" hit="경로 복사" />
+    <option name="복사" path="ActionManager" hit="경로 복사" />
+    <option name="구성" path="ActionManager" hit="구성…" />
+    <option name="값" path="ActionManager" hit="다음으로 값 복사…" />
+    <option name="다음으로" path="ActionManager" hit="다음으로 값 복사…" />
+    <option name="복사" path="ActionManager" hit="다음으로 값 복사…" />
+    <option name="디버그" path="ActionManager" hit="디버그 연결 리스닝" />
+    <option name="리스닝" path="ActionManager" hit="디버그 연결 리스닝" />
+    <option name="연결" path="ActionManager" hit="디버그 연결 리스닝" />
+    <option name="듣습니다" path="ActionManager" hit="디버그 연결을 듣습니다" />
+    <option name="디버그" path="ActionManager" hit="디버그 연결을 듣습니다" />
+    <option name="연결을" path="ActionManager" hit="디버그 연결을 듣습니다" />
+    <option name="나열" path="ActionManager" hit="라이센스 나열" />
+    <option name="라이센스" path="ActionManager" hit="라이센스 나열" />
+    <option name="로그" path="ActionManager" hit="로그 표시" />
+    <option name="표시" path="ActionManager" hit="로그 표시" />
+    <option name="건너뛰는" path="ActionManager" hit="목록을 건너뛰는 메서드 추가" />
+    <option name="메서드" path="ActionManager" hit="목록을 건너뛰는 메서드 추가" />
+    <option name="목록을" path="ActionManager" hit="목록을 건너뛰는 메서드 추가" />
+    <option name="추가" path="ActionManager" hit="목록을 건너뛰는 메서드 추가" />
+    <option name="목록에" path="ActionManager" hit="무시 목록에 추가…" />
+    <option name="무시" path="ActionManager" hit="무시 목록에 추가…" />
+    <option name="추가" path="ActionManager" hit="무시 목록에 추가…" />
+    <option name="변수" path="ActionManager" hit="비어 있는 상위 전역 변수 표시" />
+    <option name="비어" path="ActionManager" hit="비어 있는 상위 전역 변수 표시" />
+    <option name="상위" path="ActionManager" hit="비어 있는 상위 전역 변수 표시" />
+    <option name="있는" path="ActionManager" hit="비어 있는 상위 전역 변수 표시" />
+    <option name="전역" path="ActionManager" hit="비어 있는 상위 전역 변수 표시" />
+    <option name="표시" path="ActionManager" hit="비어 있는 상위 전역 변수 표시" />
+    <option name="디버거" path="ActionManager" hit="비활성화하면 사용자 정의 상수 정보를 받는 작업이 중단되어 디버거 성능이 향상됩니다. " />
+    <option name="받는" path="ActionManager" hit="비활성화하면 사용자 정의 상수 정보를 받는 작업이 중단되어 디버거 성능이 향상됩니다. " />
+    <option name="비활성화하면" path="ActionManager" hit="비활성화하면 사용자 정의 상수 정보를 받는 작업이 중단되어 디버거 성능이 향상됩니다. " />
+    <option name="사용자" path="ActionManager" hit="비활성화하면 사용자 정의 상수 정보를 받는 작업이 중단되어 디버거 성능이 향상됩니다. " />
+    <option name="상수" path="ActionManager" hit="비활성화하면 사용자 정의 상수 정보를 받는 작업이 중단되어 디버거 성능이 향상됩니다. " />
+    <option name="성능이" path="ActionManager" hit="비활성화하면 사용자 정의 상수 정보를 받는 작업이 중단되어 디버거 성능이 향상됩니다. " />
+    <option name="작업이" path="ActionManager" hit="비활성화하면 사용자 정의 상수 정보를 받는 작업이 중단되어 디버거 성능이 향상됩니다. " />
+    <option name="정보를" path="ActionManager" hit="비활성화하면 사용자 정의 상수 정보를 받는 작업이 중단되어 디버거 성능이 향상됩니다. " />
+    <option name="정의" path="ActionManager" hit="비활성화하면 사용자 정의 상수 정보를 받는 작업이 중단되어 디버거 성능이 향상됩니다. " />
+    <option name="중단되어" path="ActionManager" hit="비활성화하면 사용자 정의 상수 정보를 받는 작업이 중단되어 디버거 성능이 향상됩니다. " />
+    <option name="향상됩니다" path="ActionManager" hit="비활성화하면 사용자 정의 상수 정보를 받는 작업이 중단되어 디버거 성능이 향상됩니다. " />
+    <option name="사용자" path="ActionManager" hit="사용자 정의 상수 표시" />
+    <option name="상수" path="ActionManager" hit="사용자 정의 상수 표시" />
+    <option name="정의" path="ActionManager" hit="사용자 정의 상수 표시" />
+    <option name="표시" path="ActionManager" hit="사용자 정의 상수 표시" />
+    <option name="php" path="ActionManager" hit="새 PHP 클래스 생성" />
+    <option name="새" path="ActionManager" hit="새 PHP 클래스 생성" />
+    <option name="생성" path="ActionManager" hit="새 PHP 클래스 생성" />
+    <option name="클래스" path="ActionManager" hit="새 PHP 클래스 생성" />
+    <option name="php" path="ActionManager" hit="새 PHP 테스트" />
+    <option name="새" path="ActionManager" hit="새 PHP 테스트" />
+    <option name="테스트" path="ActionManager" hit="새 PHP 테스트" />
+    <option name="php" path="ActionManager" hit="새 PHP 테스트 생성" />
+    <option name="새" path="ActionManager" hit="새 PHP 테스트 생성" />
+    <option name="생성" path="ActionManager" hit="새 PHP 테스트 생성" />
+    <option name="테스트" path="ActionManager" hit="새 PHP 테스트 생성" />
+    <option name="php" path="ActionManager" hit="새 PHP 파일 생성" />
+    <option name="새" path="ActionManager" hit="새 PHP 파일 생성" />
+    <option name="생성" path="ActionManager" hit="새 PHP 파일 생성" />
+    <option name="파일" path="ActionManager" hit="새 PHP 파일 생성" />
+    <option name="phpunit" path="ActionManager" hit="새 PHPUnit 테스트 생성" />
+    <option name="새" path="ActionManager" hit="새 PHPUnit 테스트 생성" />
+    <option name="생성" path="ActionManager" hit="새 PHPUnit 테스트 생성" />
+    <option name="테스트" path="ActionManager" hit="새 PHPUnit 테스트 생성" />
+    <option name="생성자" path="ActionManager" hit="생성자…" />
+    <option name="생성자를" path="ActionManager" hit="생성자를 생성합니다." />
+    <option name="생성합니다" path="ActionManager" hit="생성자를 생성합니다." />
+    <option name="phpstorm" path="ActionManager" hit="선택된 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성" />
+    <option name="wi" path="ActionManager" hit="선택된 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성" />
+    <option name="youtrack" path="ActionManager" hit="선택된 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성" />
+    <option name="생성" path="ActionManager" hit="선택된 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성" />
+    <option name="선택된" path="ActionManager" hit="선택된 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성" />
+    <option name="이슈" path="ActionManager" hit="선택된 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성" />
+    <option name="컨텐츠로부터" path="ActionManager" hit="선택된 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성" />
+    <option name="프로젝트내에" path="ActionManager" hit="선택된 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성" />
+    <option name="설치" path="ActionManager" hit="설치" />
+    <option name="나열" path="ActionManager" hit="설치된 모든 패키지의 이름, 버전 및 라이센스 나열" />
+    <option name="라이센스" path="ActionManager" hit="설치된 모든 패키지의 이름, 버전 및 라이센스 나열" />
+    <option name="모든" path="ActionManager" hit="설치된 모든 패키지의 이름, 버전 및 라이센스 나열" />
+    <option name="및" path="ActionManager" hit="설치된 모든 패키지의 이름, 버전 및 라이센스 나열" />
+    <option name="버전" path="ActionManager" hit="설치된 모든 패키지의 이름, 버전 및 라이센스 나열" />
+    <option name="설치된" path="ActionManager" hit="설치된 모든 패키지의 이름, 버전 및 라이센스 나열" />
+    <option name="이름" path="ActionManager" hit="설치된 모든 패키지의 이름, 버전 및 라이센스 나열" />
+    <option name="패키지의" path="ActionManager" hit="설치된 모든 패키지의 이름, 버전 및 라이센스 나열" />
+    <option name="네임스페이스" path="ActionManager" hit="소스 네임스페이스 루트를 탐지합니다" />
+    <option name="루트를" path="ActionManager" hit="소스 네임스페이스 루트를 탐지합니다" />
+    <option name="소스" path="ActionManager" hit="소스 네임스페이스 루트를 탐지합니다" />
+    <option name="탐지합니다" path="ActionManager" hit="소스 네임스페이스 루트를 탐지합니다" />
+    <option name="소스로" path="ActionManager" hit="소스로 이동" />
+    <option name="이동" path="ActionManager" hit="소스로 이동" />
+    <option name="업데이트" path="ActionManager" hit="업데이트" />
+    <option name="시뮬레이션" path="ActionManager" hit="업데이트 시뮬레이션" />
+    <option name="업데이트" path="ActionManager" hit="업데이트 시뮬레이션" />
+    <option name="수행하지" path="ActionManager" hit="업데이트를 실제로 수행하지 않고 시뮬레이션" />
+    <option name="시뮬레이션" path="ActionManager" hit="업데이트를 실제로 수행하지 않고 시뮬레이션" />
+    <option name="실제로" path="ActionManager" hit="업데이트를 실제로 수행하지 않고 시뮬레이션" />
+    <option name="않고" path="ActionManager" hit="업데이트를 실제로 수행하지 않고 시뮬레이션" />
+    <option name="업데이트를" path="ActionManager" hit="업데이트를 실제로 수행하지 않고 시뮬레이션" />
+    <option name="덤프" path="ActionManager" hit="오토로더 덤프…" />
+    <option name="오토로더" path="ActionManager" hit="오토로더 덤프…" />
+    <option name="개별" path="ActionManager" hit="요소를 개별 클래스로 추출합니다." />
+    <option name="요소를" path="ActionManager" hit="요소를 개별 클래스로 추출합니다." />
+    <option name="추출합니다" path="ActionManager" hit="요소를 개별 클래스로 추출합니다." />
+    <option name="클래스로" path="ActionManager" hit="요소를 개별 클래스로 추출합니다." />
+    <option name="검사" path="ActionManager" hit="웹 서버 디버그 유효성 검사" />
+    <option name="디버그" path="ActionManager" hit="웹 서버 디버그 유효성 검사" />
+    <option name="서버" path="ActionManager" hit="웹 서버 디버그 유효성 검사" />
+    <option name="웹" path="ActionManager" hit="웹 서버 디버그 유효성 검사" />
+    <option name="유효성" path="ActionManager" hit="웹 서버 디버그 유효성 검사" />
+    <option name="검사" path="ActionManager" hit="유효성 검사…" />
+    <option name="유효성" path="ActionManager" hit="유효성 검사…" />
+    <option name="composer" path="ActionManager" hit="이 composer.json으로 컴포저 액션 로그 표시" />
+    <option name="json으로" path="ActionManager" hit="이 composer.json으로 컴포저 액션 로그 표시" />
+    <option name="로그" path="ActionManager" hit="이 composer.json으로 컴포저 액션 로그 표시" />
+    <option name="액션" path="ActionManager" hit="이 composer.json으로 컴포저 액션 로그 표시" />
+    <option name="이" path="ActionManager" hit="이 composer.json으로 컴포저 액션 로그 표시" />
+    <option name="컴포저" path="ActionManager" hit="이 composer.json으로 컴포저 액션 로그 표시" />
+    <option name="표시" path="ActionManager" hit="이 composer.json으로 컴포저 액션 로그 표시" />
+    <option name="문제" path="ActionManager" hit="일반 컴포저 문제 확인" />
+    <option name="일반" path="ActionManager" hit="일반 컴포저 문제 확인" />
+    <option name="컴포저" path="ActionManager" hit="일반 컴포저 문제 확인" />
+    <option name="확인" path="ActionManager" hit="일반 컴포저 문제 확인" />
+    <option name="다시" path="ActionManager" hit="자동 로드된 클래스 목록 다시 생성" />
+    <option name="로드된" path="ActionManager" hit="자동 로드된 클래스 목록 다시 생성" />
+    <option name="목록" path="ActionManager" hit="자동 로드된 클래스 목록 다시 생성" />
+    <option name="생성" path="ActionManager" hit="자동 로드된 클래스 목록 다시 생성" />
+    <option name="자동" path="ActionManager" hit="자동 로드된 클래스 목록 다시 생성" />
+    <option name="클래스" path="ActionManager" hit="자동 로드된 클래스 목록 다시 생성" />
+    <option name="업데이트" path="ActionManager" hit="자체 업데이트" />
+    <option name="자체" path="ActionManager" hit="자체 업데이트" />
+    <option name="만들기" path="ActionManager" hit="정적으로 만들기" />
+    <option name="정적으로" path="ActionManager" hit="정적으로 만들기" />
+    <option name="관리" path="ActionManager" hit="종속 요소 관리…" />
+    <option name="요소" path="ActionManager" hit="종속 요소 관리…" />
+    <option name="종속" path="ActionManager" hit="종속 요소 관리…" />
+    <option name="내용" path="ActionManager" hit="종속성 변경 내용 확인" />
+    <option name="변경" path="ActionManager" hit="종속성 변경 내용 확인" />
+    <option name="종속성" path="ActionManager" hit="종속성 변경 내용 확인" />
+    <option name="확인" path="ActionManager" hit="종속성 변경 내용 확인" />
+    <option name="내용이" path="ActionManager" hit="종속성에 로컬 변경 내용이 있는지 확인" />
+    <option name="로컬" path="ActionManager" hit="종속성에 로컬 변경 내용이 있는지 확인" />
+    <option name="변경" path="ActionManager" hit="종속성에 로컬 변경 내용이 있는지 확인" />
+    <option name="있는지" path="ActionManager" hit="종속성에 로컬 변경 내용이 있는지 확인" />
+    <option name="종속성에" path="ActionManager" hit="종속성에 로컬 변경 내용이 있는지 확인" />
+    <option name="확인" path="ActionManager" hit="종속성에 로컬 변경 내용이 있는지 확인" />
+    <option name="진단" path="ActionManager" hit="진단" />
+    <option name="버전으로" path="ActionManager" hit="최신 버전으로 컴포저 자체 업데이트" />
+    <option name="업데이트" path="ActionManager" hit="최신 버전으로 컴포저 자체 업데이트" />
+    <option name="자체" path="ActionManager" hit="최신 버전으로 컴포저 자체 업데이트" />
+    <option name="최신" path="ActionManager" hit="최신 버전으로 컴포저 자체 업데이트" />
+    <option name="컴포저" path="ActionManager" hit="최신 버전으로 컴포저 자체 업데이트" />
+    <option name="지우기" path="ActionManager" hit="캐시 지우기" />
+    <option name="캐시" path="ActionManager" hit="캐시 지우기" />
+    <option name="관리" path="ActionManager" hit="컴포저 종속성 관리" />
+    <option name="종속성" path="ActionManager" hit="컴포저 종속성 관리" />
+    <option name="컴포저" path="ActionManager" hit="컴포저 종속성 관리" />
+    <option name="디렉터리에서" path="ActionManager" hit="컴포저의 캐시 디렉터리에서 모든 콘텐츠 삭제" />
+    <option name="모든" path="ActionManager" hit="컴포저의 캐시 디렉터리에서 모든 콘텐츠 삭제" />
+    <option name="삭제" path="ActionManager" hit="컴포저의 캐시 디렉터리에서 모든 콘텐츠 삭제" />
+    <option name="캐시" path="ActionManager" hit="컴포저의 캐시 디렉터리에서 모든 콘텐츠 삭제" />
+    <option name="컴포저의" path="ActionManager" hit="컴포저의 캐시 디렉터리에서 모든 콘텐츠 삭제" />
+    <option name="콘텐츠" path="ActionManager" hit="컴포저의 캐시 디렉터리에서 모든 콘텐츠 삭제" />
+    <option name="만들기" path="ActionManager" hit="클래스 메서드를 정적으로 만들기" />
+    <option name="메서드를" path="ActionManager" hit="클래스 메서드를 정적으로 만들기" />
+    <option name="정적으로" path="ActionManager" hit="클래스 메서드를 정적으로 만들기" />
+    <option name="클래스" path="ActionManager" hit="클래스 메서드를 정적으로 만들기" />
+    <option name="추출" path="ActionManager" hit="클래스 추출…" />
+    <option name="클래스" path="ActionManager" hit="클래스 추출…" />
+    <option name="복사" path="ActionManager" hit="타입 복사" />
+    <option name="타입" path="ActionManager" hit="타입 복사" />
+    <option name="메서드" path="ActionManager" hit="테스트 메서드" />
+    <option name="테스트" path="ActionManager" hit="테스트 메서드" />
+    <option name="phpstorm" path="ActionManager" hit="파일 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성 " />
+    <option name="wi" path="ActionManager" hit="파일 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성 " />
+    <option name="youtrack" path="ActionManager" hit="파일 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성 " />
+    <option name="생성" path="ActionManager" hit="파일 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성 " />
+    <option name="이슈" path="ActionManager" hit="파일 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성 " />
+    <option name="컨텐츠로부터" path="ActionManager" hit="파일 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성 " />
+    <option name="파일" path="ActionManager" hit="파일 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성 " />
+    <option name="프로젝트내에" path="ActionManager" hit="파일 컨텐츠로부터 WI(PhpStorm) 프로젝트내에 YouTrack 이슈 생성 " />
+    <option name="php" path="ActionManager" hit="프로젝트 PHP 인터프리터 변경" />
+    <option name="변경" path="ActionManager" hit="프로젝트 PHP 인터프리터 변경" />
+    <option name="인터프리터" path="ActionManager" hit="프로젝트 PHP 인터프리터 변경" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 PHP 인터프리터 변경" />
+    <option name="phar" path="ActionManager" hit="프로젝트에 phar 포함 또는 제외" />
+    <option name="또는" path="ActionManager" hit="프로젝트에 phar 포함 또는 제외" />
+    <option name="제외" path="ActionManager" hit="프로젝트에 phar 포함 또는 제외" />
+    <option name="포함" path="ActionManager" hit="프로젝트에 phar 포함 또는 제외" />
+    <option name="프로젝트에" path="ActionManager" hit="프로젝트에 phar 포함 또는 제외" />
+    <option name="구성" path="ActionManager" hit="프록시 구성" />
+    <option name="프록시" path="ActionManager" hit="프록시 구성" />
+    <option name="중지" path="ActionManager" hit="프록시 중지" />
+    <option name="프록시" path="ActionManager" hit="프록시 중지" />
+    <option name="초기화" path="ActionManager" hit="프록시 초기화" />
+    <option name="프록시" path="ActionManager" hit="프록시 초기화" />
+    <option name="phpdoc" path="ActionManager" hit="함수, 클래스 및 필드에 대한 PHPDoc 블록 추가" />
+    <option name="대한" path="ActionManager" hit="함수, 클래스 및 필드에 대한 PHPDoc 블록 추가" />
+    <option name="및" path="ActionManager" hit="함수, 클래스 및 필드에 대한 PHPDoc 블록 추가" />
+    <option name="블록" path="ActionManager" hit="함수, 클래스 및 필드에 대한 PHPDoc 블록 추가" />
+    <option name="추가" path="ActionManager" hit="함수, 클래스 및 필드에 대한 PHPDoc 블록 추가" />
+    <option name="클래스" path="ActionManager" hit="함수, 클래스 및 필드에 대한 PHPDoc 블록 추가" />
+    <option name="필드에" path="ActionManager" hit="함수, 클래스 및 필드에 대한 PHPDoc 블록 추가" />
+    <option name="함수" path="ActionManager" hit="함수, 클래스 및 필드에 대한 PHPDoc 블록 추가" />
+  </configurable>
+  <configurable id="editor.breadcrumbs" configurable_name="이동 경로">
+    <option name="php" hit="PHP" />
+  </configurable>
+</options>

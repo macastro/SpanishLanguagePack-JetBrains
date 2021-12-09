@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>모든 요소에 대한 조건을 확인하기 위해 <code>fold</code>의 사용을 보고합니다.</p>
+
+<p>빠른 수정은 <code>fold</code>를 동등한 <code>forall</code>로 바꿉니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  var x: Seq[Int]
+  x.foldLeft(true)((x,y) => x && p(y))
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  var x: Seq[Int]
+  x.forall(y => p(y))
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

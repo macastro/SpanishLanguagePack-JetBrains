@@ -1,0 +1,18 @@
+<html>
+<body>
+<p><code>web.xml</code>에 등록되었으나 웹 루트에 필요한 XML 애플리케이션 컨텍스트가 없는 <a href="https://docs.spring.io/spring-ws/sites/2.0/apidocs/org/springframework/ws/transport/http/MessageDispatcherServlet.html">MessageDispatcherServlet</a> 서블릿을 보고합니다.</p>
+
+<p><b>web.xml 예시:</b></p>
+<pre><code>
+&lt;web-app&gt;
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;<strong>spring-ws</strong>&lt;/servlet-name&gt;  &lt;!-- Cannot find application context WEB-INF/spring-ws-servlet.xml --&gt;
+    &lt;servlet-class&gt;org.springframework.ws.transport.http.MessageDispatcherServlet&lt;/servlet-class&gt;
+    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+  &lt;/servlet&gt;
+&lt;/web-app&gt;
+</code></pre>
+</body>
+</html>
+</body>
+</html>
