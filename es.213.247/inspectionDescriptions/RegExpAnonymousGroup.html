@@ -1,19 +1,19 @@
 <html>
 <body>
-RegExp 내에서의 익명 캡처 그룹과 숫자 역참조를 보고합니다.
-이들은 RegExp 파생 언어가 이름이 지정된 그룹과 이름이 지정된 그룹 참조를 지원하는 경우에만 보고됩니다.
-이름이 지정된 그룹과 이름이 지정된 역참조는 코드의 가독성을 높여주며 사용 가능한 경우 사용하도록 권장됩니다.
-캡처가 필요하지 않은 경우 일치 작업의 성능이 더 기준에 부합할 수 있으며 예를 들어 <code>(xxx)</code>대신 <code>(?:xxx)</code>와
-같은 비 캡처 그룹을 사용해 메모리 사용량을 줄일 수 있습니다.
-<p><b>예:</b></p>
+Reports anonymous capturing groups and numeric back references in a RegExp.
+These are only reported when the RegExp dialect supports named group and named group references.
+Named groups and named back references improve code readability and are recommended to use instead.
+When a capture is not needed, matching can be more performant and use less memory by using a non-capturing group,
+i.e. <code>(?:xxx)</code> instead of <code>(xxx)</code>.
+<p><b>Example:</b></p>
 <pre><code>
   (\d\d\d\d)\1
 </code></pre>
-<p>더 나은 정규식 패턴은 다음과 같습니다.</p>
+<p>A better regex pattern could look like this:</p>
 <pre><code>
   (?&lt;quad>\d\d\d\d)\k&lt;quad>
 </code></pre>
 <!-- tooltip end -->
-<p><small>2017.2의 새로운 기능</small>
+<p><small>New in 2017.2</small>
 </body>
 </html>

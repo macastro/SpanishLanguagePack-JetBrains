@@ -1,32 +1,32 @@
 <options>
-  <configurable id="preferences.keymap" configurable_name="키맵">
+  <configurable id="preferences.keymap" configurable_name="Keymap">
     <option name="" path="ActionManager" hit="" />
-    <option name="검색을" path="ActionManager" hit="검색을 다시 실행합니다" />
-    <option name="다시" path="ActionManager" hit="검색을 다시 실행합니다" />
-    <option name="실행합니다" path="ActionManager" hit="검색을 다시 실행합니다" />
-    <option name="다시" path="ActionManager" hit="다시 실행" />
-    <option name="실행" path="ActionManager" hit="다시 실행" />
-    <option name="구조" path="ActionManager" hit="디렉터리 구조" />
-    <option name="디렉터리" path="ActionManager" hit="디렉터리 구조" />
-    <option name="그룹화" path="ActionManager" hit="디렉터리별로 그룹화" />
-    <option name="디렉터리별로" path="ActionManager" hit="디렉터리별로 그룹화" />
-    <option name="모듈" path="ActionManager" hit="모듈" />
-    <option name="모듈" path="ActionManager" hit="모듈 평면화" />
-    <option name="평면화" path="ActionManager" hit="모듈 평면화" />
-    <option name="그룹화" path="ActionManager" hit="사용 위치 뷰 그룹화" />
-    <option name="뷰" path="ActionManager" hit="사용 위치 뷰 그룹화" />
-    <option name="사용" path="ActionManager" hit="사용 위치 뷰 그룹화" />
-    <option name="위치" path="ActionManager" hit="사용 위치 뷰 그룹화" />
-    <option name="사용" path="ActionManager" hit="사용 타입" />
-    <option name="타입" path="ActionManager" hit="사용 타입" />
-    <option name="사용" path="ActionManager" hit="이 사용 위치를 처리에서 제거합니다" />
-    <option name="위치를" path="ActionManager" hit="이 사용 위치를 처리에서 제거합니다" />
-    <option name="이" path="ActionManager" hit="이 사용 위치를 처리에서 제거합니다" />
-    <option name="제거합니다" path="ActionManager" hit="이 사용 위치를 처리에서 제거합니다" />
-    <option name="처리에서" path="ActionManager" hit="이 사용 위치를 처리에서 제거합니다" />
-    <option name="제거" path="ActionManager" hit="제거" />
-    <option name="생산" path="ActionManager" hit="테스트/생산" />
-    <option name="테스트" path="ActionManager" hit="테스트/생산" />
-    <option name="파일구조" path="ActionManager" hit="파일구조" />
+    <option name="directory" path="ActionManager" hit="Directory Structure" />
+    <option name="structure" path="ActionManager" hit="Directory Structure" />
+    <option name="file" path="ActionManager" hit="File Structure" />
+    <option name="structure" path="ActionManager" hit="File Structure" />
+    <option name="flatten" path="ActionManager" hit="Flatten Modules" />
+    <option name="modules" path="ActionManager" hit="Flatten Modules" />
+    <option name="by" path="ActionManager" hit="Group by Directory" />
+    <option name="directory" path="ActionManager" hit="Group by Directory" />
+    <option name="group" path="ActionManager" hit="Group by Directory" />
+    <option name="module" path="ActionManager" hit="Module" />
+    <option name="remove" path="ActionManager" hit="Remove" />
+    <option name="from" path="ActionManager" hit="Remove this usage(s) from processing" />
+    <option name="processing" path="ActionManager" hit="Remove this usage(s) from processing" />
+    <option name="remove" path="ActionManager" hit="Remove this usage(s) from processing" />
+    <option name="s" path="ActionManager" hit="Remove this usage(s) from processing" />
+    <option name="this" path="ActionManager" hit="Remove this usage(s) from processing" />
+    <option name="usage" path="ActionManager" hit="Remove this usage(s) from processing" />
+    <option name="rerun" path="ActionManager" hit="Rerun" />
+    <option name="rerun" path="ActionManager" hit="Rerun search" />
+    <option name="search" path="ActionManager" hit="Rerun search" />
+    <option name="production" path="ActionManager" hit="Test/Production" />
+    <option name="test" path="ActionManager" hit="Test/Production" />
+    <option name="type" path="ActionManager" hit="Usage Type" />
+    <option name="usage" path="ActionManager" hit="Usage Type" />
+    <option name="grouping" path="ActionManager" hit="Usage View Grouping" />
+    <option name="usage" path="ActionManager" hit="Usage View Grouping" />
+    <option name="view" path="ActionManager" hit="Usage View Grouping" />
   </configurable>
 </options>

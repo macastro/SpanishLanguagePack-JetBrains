@@ -1,21 +1,20 @@
 <options>
-  <configurable id="preferences.keymap" configurable_name="키맵">
+  <configurable id="preferences.keymap" configurable_name="Keymap">
     <option name="" path="ActionManager" hit="" />
-    <option name="lvcs" path="ActionManager" hit="VCS/LVCS 액션" />
-    <option name="vcs" path="ActionManager" hit="VCS/LVCS 액션" />
-    <option name="액션" path="ActionManager" hit="VCS/LVCS 액션" />
-    <option name="기록" path="ActionManager" hit="기록 표시" />
-    <option name="표시" path="ActionManager" hit="기록 표시" />
-    <option name="라벨" path="ActionManager" hit="라벨 추가" />
-    <option name="추가" path="ActionManager" hit="라벨 추가" />
-    <option name="기록" path="ActionManager" hit="로컬 기록" />
-    <option name="로컬" path="ActionManager" hit="로컬 기록" />
-    <option name="기록" path="ActionManager" hit="선택 항목의 기록 표시" />
-    <option name="선택" path="ActionManager" hit="선택 항목의 기록 표시" />
-    <option name="표시" path="ActionManager" hit="선택 항목의 기록 표시" />
-    <option name="항목의" path="ActionManager" hit="선택 항목의 기록 표시" />
-    <option name="내용" path="ActionManager" hit="최근 변경 내용" />
-    <option name="변경" path="ActionManager" hit="최근 변경 내용" />
-    <option name="최근" path="ActionManager" hit="최근 변경 내용" />
+    <option name="history" path="ActionManager" hit="Local History" />
+    <option name="local" path="ActionManager" hit="Local History" />
+    <option name="label" path="ActionManager" hit="Put Label…" />
+    <option name="put" path="ActionManager" hit="Put Label…" />
+    <option name="changes" path="ActionManager" hit="Recent Changes" />
+    <option name="recent" path="ActionManager" hit="Recent Changes" />
+    <option name="history" path="ActionManager" hit="Show History" />
+    <option name="show" path="ActionManager" hit="Show History" />
+    <option name="for" path="ActionManager" hit="Show History for Selection" />
+    <option name="history" path="ActionManager" hit="Show History for Selection" />
+    <option name="selection" path="ActionManager" hit="Show History for Selection" />
+    <option name="show" path="ActionManager" hit="Show History for Selection" />
+    <option name="actions" path="ActionManager" hit="VCS/LVCS Actions" />
+    <option name="lvcs" path="ActionManager" hit="VCS/LVCS Actions" />
+    <option name="vcs" path="ActionManager" hit="VCS/LVCS Actions" />
   </configurable>
 </options>

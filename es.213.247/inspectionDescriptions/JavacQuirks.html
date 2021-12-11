@@ -1,15 +1,15 @@
 <html>
 <body>
-알려진 Javac 이슈, 성능 문제 및 비호환성을 보고합니다.
-예를 들어, 타입 추론은 많은 중첩 호출을 처리해야 할 경우 느려질 수 있습니다.
-<p>50개가 넘는 여러 인수를 가진 vararg 메서드 호출로 인해, 다음의 코드는 경고를 발생시킬 수 있습니다.</p>
+Reports known Javac issues, performance problems, and incompatibilities.
+For example, type inference may be slow when it has to process many nested calls.
+<p>The following code triggers a warning, as vararg method call has 50+ poly arguments:</p>
 <pre><code>
   Arrays.asList(
       Arrays.asList("a", "b"),
       ...
       Arrays.asList("a100", "b100"));
 </code></pre>
-<p>빠른 수정은 명시적 타입 인수를 추가하여 컴파일 및 처리를 더 빠르게 합니다.</p>
+<p>The quick-fix adds explicit type arguments, which makes compilation and IDE processing much faster:</p>
 <pre><code>
   //noinspection RedundantTypeArguments
   Arrays.&lt;List&lt;String&gt;&gt;asList(

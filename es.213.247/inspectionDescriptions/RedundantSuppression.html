@@ -1,16 +1,16 @@
 <html>
 <body>
-영향을 미치는 검사가 이 컨텍스트에서 더 이상 적용되지 않으므로 안전하게 제거할 수 있는 다음 요소의 사용 위치를 보고합니다.
+Reports usages of the following elements that can be safely removed because the inspection they affect is no longer applicable in this context:
 <ul>
-  <li><code>@SuppressWarning</code> 어노테이션, 또는</li>
-  <li><code>// noinspection</code> 줄 주석, 또는</li>
-  <li><code>/** noinspection */</code> JavaDoc 주석</li>
+  <li><code>@SuppressWarning</code> annotation, or</li>
+  <li><code>// noinspection</code> line comment, or</li>
+  <li><code>/** noinspection */</code> JavaDoc comment</li>
 </ul>
-<p>예:</p>
+<p>Example:</p>
 <pre><code>
 <b><font color="#000080">public class</font></b> C {
- // 심볼이 이미 private이지만,
- // 여전히 어노테이션으로 감싸져 있습니다
+ // symbol is already private,
+ // but annotation is still around
   @SuppressWarnings({"WeakerAccess"})
  <b><font color="#000080">private boolean</font></b> CONST = <b><font color="#000080">true</font></b>;
  <b><font color="#000080">void</font></b> f() {

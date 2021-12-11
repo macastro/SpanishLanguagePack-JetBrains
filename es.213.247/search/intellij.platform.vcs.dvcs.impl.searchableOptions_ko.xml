@@ -1,33 +1,38 @@
 <options>
-  <configurable id="preferences.keymap" configurable_name="키맵">
+  <configurable id="preferences.keymap" configurable_name="Keymap">
     <option name="" path="ActionManager" hit="" />
+    <option name="but" path="ActionManager" hit="Check Ignored but not Excluded Directories" />
+    <option name="check" path="ActionManager" hit="Check Ignored but not Excluded Directories" />
+    <option name="directories" path="ActionManager" hit="Check Ignored but not Excluded Directories" />
+    <option name="excluded" path="ActionManager" hit="Check Ignored but not Excluded Directories" />
+    <option name="ignored" path="ActionManager" hit="Check Ignored but not Excluded Directories" />
+    <option name="not" path="ActionManager" hit="Check Ignored but not Excluded Directories" />
+    <option name="and" path="ActionManager" hit="Check presense of ignored directories which may be excluded from indexing and search" />
+    <option name="be" path="ActionManager" hit="Check presense of ignored directories which may be excluded from indexing and search" />
+    <option name="check" path="ActionManager" hit="Check presense of ignored directories which may be excluded from indexing and search" />
+    <option name="directories" path="ActionManager" hit="Check presense of ignored directories which may be excluded from indexing and search" />
+    <option name="excluded" path="ActionManager" hit="Check presense of ignored directories which may be excluded from indexing and search" />
+    <option name="from" path="ActionManager" hit="Check presense of ignored directories which may be excluded from indexing and search" />
+    <option name="ignored" path="ActionManager" hit="Check presense of ignored directories which may be excluded from indexing and search" />
+    <option name="indexing" path="ActionManager" hit="Check presense of ignored directories which may be excluded from indexing and search" />
+    <option name="may" path="ActionManager" hit="Check presense of ignored directories which may be excluded from indexing and search" />
+    <option name="of" path="ActionManager" hit="Check presense of ignored directories which may be excluded from indexing and search" />
+    <option name="presense" path="ActionManager" hit="Check presense of ignored directories which may be excluded from indexing and search" />
+    <option name="search" path="ActionManager" hit="Check presense of ignored directories which may be excluded from indexing and search" />
+    <option name="which" path="ActionManager" hit="Check presense of ignored directories which may be excluded from indexing and search" />
     <option name="cherry" path="ActionManager" hit="Cherry-Pick" />
     <option name="pick" path="ActionManager" hit="Cherry-Pick" />
-    <option name="디렉터리" path="ActionManager" hit="무시되었지만 제외되지 않은 디렉터리 확인" />
-    <option name="무시되었지만" path="ActionManager" hit="무시되었지만 제외되지 않은 디렉터리 확인" />
-    <option name="않은" path="ActionManager" hit="무시되었지만 제외되지 않은 디렉터리 확인" />
-    <option name="제외되지" path="ActionManager" hit="무시되었지만 제외되지 않은 디렉터리 확인" />
-    <option name="확인" path="ActionManager" hit="무시되었지만 제외되지 않은 디렉터리 확인" />
-    <option name="검색에서" path="ActionManager" hit="색인 생성 및 검색에서 제외될 수 있는 무시된 디렉터리를 확인합니다" />
-    <option name="디렉터리를" path="ActionManager" hit="색인 생성 및 검색에서 제외될 수 있는 무시된 디렉터리를 확인합니다" />
-    <option name="무시된" path="ActionManager" hit="색인 생성 및 검색에서 제외될 수 있는 무시된 디렉터리를 확인합니다" />
-    <option name="및" path="ActionManager" hit="색인 생성 및 검색에서 제외될 수 있는 무시된 디렉터리를 확인합니다" />
-    <option name="색인" path="ActionManager" hit="색인 생성 및 검색에서 제외될 수 있는 무시된 디렉터리를 확인합니다" />
-    <option name="생성" path="ActionManager" hit="색인 생성 및 검색에서 제외될 수 있는 무시된 디렉터리를 확인합니다" />
-    <option name="수" path="ActionManager" hit="색인 생성 및 검색에서 제외될 수 있는 무시된 디렉터리를 확인합니다" />
-    <option name="있는" path="ActionManager" hit="색인 생성 및 검색에서 제외될 수 있는 무시된 디렉터리를 확인합니다" />
-    <option name="제외될" path="ActionManager" hit="색인 생성 및 검색에서 제외될 수 있는 무시된 디렉터리를 확인합니다" />
-    <option name="확인합니다" path="ActionManager" hit="색인 생성 및 검색에서 제외될 수 있는 무시된 디렉터리를 확인합니다" />
-    <option name="vcs에서" path="ActionManager" hit="선택한 커밋이 여러 VCS에서 추적됩니다" />
-    <option name="선택한" path="ActionManager" hit="선택한 커밋이 여러 VCS에서 추적됩니다" />
-    <option name="여러" path="ActionManager" hit="선택한 커밋이 여러 VCS에서 추적됩니다" />
-    <option name="추적됩니다" path="ActionManager" hit="선택한 커밋이 여러 VCS에서 추적됩니다" />
-    <option name="커밋이" path="ActionManager" hit="선택한 커밋이 여러 VCS에서 추적됩니다" />
-    <option name="저장소" path="ActionManager" hit="저장소" />
-    <option name="푸시" path="ActionManager" hit="푸시" />
-    <option name="강제" path="ActionManager" hit="푸시 강제 실행" />
-    <option name="실행" path="ActionManager" hit="푸시 강제 실행" />
-    <option name="푸시" path="ActionManager" hit="푸시 강제 실행" />
-    <option name="푸시" path="ActionManager" hit="푸시…" />
+    <option name="force" path="ActionManager" hit="Force Push" />
+    <option name="push" path="ActionManager" hit="Force Push" />
+    <option name="push" path="ActionManager" hit="Push" />
+    <option name="push" path="ActionManager" hit="Push…" />
+    <option name="repository" path="ActionManager" hit="Repository" />
+    <option name="are" path="ActionManager" hit="Selected commits are tracked by different vcses" />
+    <option name="by" path="ActionManager" hit="Selected commits are tracked by different vcses" />
+    <option name="commits" path="ActionManager" hit="Selected commits are tracked by different vcses" />
+    <option name="different" path="ActionManager" hit="Selected commits are tracked by different vcses" />
+    <option name="selected" path="ActionManager" hit="Selected commits are tracked by different vcses" />
+    <option name="tracked" path="ActionManager" hit="Selected commits are tracked by different vcses" />
+    <option name="vcses" path="ActionManager" hit="Selected commits are tracked by different vcses" />
   </configurable>
 </options>

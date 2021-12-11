@@ -1,16 +1,52 @@
 <options>
-  <configurable id="preferences.keymap" configurable_name="키맵">
+  <configurable id="preferences.keymap" configurable_name="Keymap">
     <option name="" path="ActionManager" hit="" />
-    <option name="데이터" path="ActionManager" hit="커버리지 데이터 표시..." />
-    <option name="커버리지" path="ActionManager" hit="커버리지 데이터 표시..." />
-    <option name="표시" path="ActionManager" hit="커버리지 데이터 표시..." />
-    <option name="데이터를" path="ActionManager" hit="커버리지 데이터를 숨깁니다." />
-    <option name="숨깁니다" path="ActionManager" hit="커버리지 데이터를 숨깁니다." />
-    <option name="커버리지" path="ActionManager" hit="커버리지 데이터를 숨깁니다." />
-    <option name="보고서" path="ActionManager" hit="커버리지 보고서 생성…" />
-    <option name="생성" path="ActionManager" hit="커버리지 보고서 생성…" />
-    <option name="커버리지" path="ActionManager" hit="커버리지 보고서 생성…" />
-    <option name="숨기기" path="ActionManager" hit="커버리지 숨기기" />
-    <option name="커버리지" path="ActionManager" hit="커버리지 숨기기" />
+    <option name="coverage" path="ActionManager" hit="Generate Coverage Report..." />
+    <option name="generate" path="ActionManager" hit="Generate Coverage Report..." />
+    <option name="report" path="ActionManager" hit="Generate Coverage Report..." />
+    <option name="coverage" path="ActionManager" hit="Hide coverage" />
+    <option name="hide" path="ActionManager" hit="Hide coverage" />
+    <option name="coverage" path="ActionManager" hit="Hide coverage data" />
+    <option name="data" path="ActionManager" hit="Hide coverage data" />
+    <option name="hide" path="ActionManager" hit="Hide coverage data" />
+    <option name="coverage" path="ActionManager" hit="Show Coverage Data..." />
+    <option name="data" path="ActionManager" hit="Show Coverage Data..." />
+    <option name="show" path="ActionManager" hit="Show Coverage Data..." />
+  </configurable>
+  <configurable id="coverage" configurable_name="Coverage">
+    <option name="activate" hit="Activate Coverage View" />
+    <option name="coverage" hit="Activate Coverage View" />
+    <option name="view" hit="Activate Coverage View" />
+    <option name="active" hit="Add to the active suites" />
+    <option name="add" hit="Add to the active suites" />
+    <option name="suites" hit="Add to the active suites" />
+    <option name="the" hit="Add to the active suites" />
+    <option name="to" hit="Add to the active suites" />
+    <option name="coverage" hit="Coverage" />
+    <option name="apply" hit="Do not apply collected coverage" />
+    <option name="collected" hit="Do not apply collected coverage" />
+    <option name="coverage" hit="Do not apply collected coverage" />
+    <option name="do" hit="Do not apply collected coverage" />
+    <option name="not" hit="Do not apply collected coverage" />
+    <option name="active" hit="Replace active suites with the new one" />
+    <option name="new" hit="Replace active suites with the new one" />
+    <option name="one" hit="Replace active suites with the new one" />
+    <option name="replace" hit="Replace active suites with the new one" />
+    <option name="suites" hit="Replace active suites with the new one" />
+    <option name="the" hit="Replace active suites with the new one" />
+    <option name="with" hit="Replace active suites with the new one" />
+    <option name="applying" hit="Show options before applying coverage to the editor" />
+    <option name="before" hit="Show options before applying coverage to the editor" />
+    <option name="coverage" hit="Show options before applying coverage to the editor" />
+    <option name="editor" hit="Show options before applying coverage to the editor" />
+    <option name="options" hit="Show options before applying coverage to the editor" />
+    <option name="show" hit="Show options before applying coverage to the editor" />
+    <option name="the" hit="Show options before applying coverage to the editor" />
+    <option name="to" hit="Show options before applying coverage to the editor" />
+    <option name="coverage" hit="When new coverage is gathered" />
+    <option name="gathered" hit="When new coverage is gathered" />
+    <option name="is" hit="When new coverage is gathered" />
+    <option name="new" hit="When new coverage is gathered" />
+    <option name="when" hit="When new coverage is gathered" />
   </configurable>
 </options>

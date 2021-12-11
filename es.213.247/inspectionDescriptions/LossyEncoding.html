@@ -1,14 +1,16 @@
 <html>
 <body>
 
-현재 문서 인코딩으로 인해 표시할 수 없는 문자를 보고합니다.
-<p>예:</p>
+Reports characters that cannot be displayed because of the current document encoding.
+<p>Examples:</p>
 <ul>
-  <li><b>US-ASCII</b> 문자 집합이 있는 문서에 국제 문자를 입력하면 저장 시 일부 문자가 손실됩니다.</li>
-  <li><b>ISO-8859-1</b> 1바이트 문자 집합을 사용하여 <b>UTF-8</b> 인코딩 파일을 로드하면 일부 문자가 잘못 표시됩니다.</li>
+  <li>If you type international characters in a document with the <b>US-ASCII</b> charset, some characters will be lost on save.</li>
+  <li>If you load a <b>UTF-8</b>-encoded file using the <b>ISO-8859-1</b> one-byte charset, some characters will be displayed incorrectly.</li>
 </ul>
 
-<p>이 문제를 해결하려면 파일에 직접 인코딩을 지정(예: XML 파일의 XML prolog에서 <code>encoding=</code> 속성을 편집)하거나 <b>Settings(설정) | Editor(에디터) | File Encodings(파일 인코딩)</b>에서 해당 옵션을 변경하여 파일 인코딩을 변경하면 됩니다.</p>
+<p>You can fix this by changing the file encoding
+either by specifying the encoding directly in the file, e.g. by editing <code>encoding=</code> attribute in the XML prolog of XML file,
+  or by changing the corresponding options in <b>Settings | Editor | File Encodings</b>.</p>
 
 </body>
 </html>

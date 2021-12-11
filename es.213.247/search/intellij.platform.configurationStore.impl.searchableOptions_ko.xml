@@ -1,28 +1,30 @@
 <options>
-  <configurable id="preferences.keymap" configurable_name="키맵">
+  <configurable id="preferences.keymap" configurable_name="Keymap">
     <option name="" path="ActionManager" hit="" />
-    <option name="ide" path="ActionManager" hit="IDE 설정 관리" />
-    <option name="관리" path="ActionManager" hit="IDE 설정 관리" />
-    <option name="설정" path="ActionManager" hit="IDE 설정 관리" />
-    <option name="디폴트" path="ActionManager" hit="디폴트 설정 복원…" />
-    <option name="복원" path="ActionManager" hit="디폴트 설정 복원…" />
-    <option name="설정" path="ActionManager" hit="디폴트 설정 복원…" />
-    <option name="값으로" path="ActionManager" hit="모든 설정을 디폴트 값으로 재설정" />
-    <option name="디폴트" path="ActionManager" hit="모든 설정을 디폴트 값으로 재설정" />
-    <option name="모든" path="ActionManager" hit="모든 설정을 디폴트 값으로 재설정" />
-    <option name="설정을" path="ActionManager" hit="모든 설정을 디폴트 값으로 재설정" />
-    <option name="재설정" path="ActionManager" hit="모든 설정을 디폴트 값으로 재설정" />
-    <option name="가져오기" path="ActionManager" hit="설정 가져오기…" />
-    <option name="설정" path="ActionManager" hit="설정 가져오기…" />
-    <option name="내보내기" path="ActionManager" hit="설정 내보내기" />
-    <option name="설정" path="ActionManager" hit="설정 내보내기" />
-    <option name="내보내기" path="ActionManager" hit="설정 내보내기…" />
-    <option name="설정" path="ActionManager" hit="설정 내보내기…" />
-    <option name="가져옵니다" path="ActionManager" hit="전역 설정을 가져옵니다" />
-    <option name="설정을" path="ActionManager" hit="전역 설정을 가져옵니다" />
-    <option name="전역" path="ActionManager" hit="전역 설정을 가져옵니다" />
-    <option name="내보냅니다" path="ActionManager" hit="전역 설정을 내보냅니다" />
-    <option name="설정을" path="ActionManager" hit="전역 설정을 내보냅니다" />
-    <option name="전역" path="ActionManager" hit="전역 설정을 내보냅니다" />
+    <option name="export" path="ActionManager" hit="Export Settings" />
+    <option name="settings" path="ActionManager" hit="Export Settings" />
+    <option name="export" path="ActionManager" hit="Export Settings…" />
+    <option name="settings" path="ActionManager" hit="Export Settings…" />
+    <option name="export" path="ActionManager" hit="Export global settings" />
+    <option name="global" path="ActionManager" hit="Export global settings" />
+    <option name="settings" path="ActionManager" hit="Export global settings" />
+    <option name="import" path="ActionManager" hit="Import Settings…" />
+    <option name="settings" path="ActionManager" hit="Import Settings…" />
+    <option name="global" path="ActionManager" hit="Import global settings" />
+    <option name="import" path="ActionManager" hit="Import global settings" />
+    <option name="settings" path="ActionManager" hit="Import global settings" />
+    <option name="ide" path="ActionManager" hit="Manage IDE Settings" />
+    <option name="manage" path="ActionManager" hit="Manage IDE Settings" />
+    <option name="settings" path="ActionManager" hit="Manage IDE Settings" />
+    <option name="all" path="ActionManager" hit="Reset all settings to their default values" />
+    <option name="default" path="ActionManager" hit="Reset all settings to their default values" />
+    <option name="reset" path="ActionManager" hit="Reset all settings to their default values" />
+    <option name="settings" path="ActionManager" hit="Reset all settings to their default values" />
+    <option name="their" path="ActionManager" hit="Reset all settings to their default values" />
+    <option name="to" path="ActionManager" hit="Reset all settings to their default values" />
+    <option name="values" path="ActionManager" hit="Reset all settings to their default values" />
+    <option name="default" path="ActionManager" hit="Restore Default Settings…" />
+    <option name="restore" path="ActionManager" hit="Restore Default Settings…" />
+    <option name="settings" path="ActionManager" hit="Restore Default Settings…" />
   </configurable>
 </options>

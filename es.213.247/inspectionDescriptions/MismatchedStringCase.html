@@ -1,12 +1,14 @@
 <html>
 <body>
-대문자만 포함된 문자열에서 소문자를 검색하거나 그 반대로 검색하기 때문에 항상 같은 값(<code>-1</code> 또는 <code>false</code>)을 반환하는 <code>String</code> 메서드 호출을 보고합니다.
-<p>보고된 메서드에는 <code>equals</code>, <code>startsWith</code>, <code>endsWith</code>, <code>contains</code>, <code>indexOf</code> 및 <code>lastIndexOf</code>가 포함됩니다.</p>
-<p><b>예:</b></p>
+Reports <code>String</code> method calls that always return the same value (<code>-1</code> or <code>false</code>)
+because a lowercase character is searched in an uppercase-only string or vice versa.
+<p>Reported methods include <code>equals</code>, <code>startsWith</code>, <code>endsWith</code>, <code>contains</code>,
+  <code>indexOf</code>, and <code>lastIndexOf</code>.</p>
+<p><b>Example:</b></p>
 <pre>
   if (columnName.toLowerCase().equals("ID")) {...}
 </pre>
 <!-- tooltip end -->
-<p><small>2019.3의 새로운 기능</small></p>
+<p><small>New in 2019.3</small></p>
 </body>
 </html>

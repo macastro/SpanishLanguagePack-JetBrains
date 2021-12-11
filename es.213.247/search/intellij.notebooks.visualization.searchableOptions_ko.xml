@@ -1,5 +1,30 @@
 <options>
-  <configurable id="preferences.keymap" configurable_name="키맵">
+  <configurable id="preferences.keymap" configurable_name="Keymap">
     <option name="" path="ActionManager" hit="" />
+    <option name="clear" path="ActionManager" hit="Clear" />
+    <option name="clear" path="ActionManager" hit="Clear output" />
+    <option name="output" path="ActionManager" hit="Clear output" />
+    <option name="all" path="ActionManager" hit="Collapse All Cell Outputs" />
+    <option name="cell" path="ActionManager" hit="Collapse All Cell Outputs" />
+    <option name="collapse" path="ActionManager" hit="Collapse All Cell Outputs" />
+    <option name="outputs" path="ActionManager" hit="Collapse All Cell Outputs" />
+    <option name="all" path="ActionManager" hit="Collapse All Notebook Outputs" />
+    <option name="collapse" path="ActionManager" hit="Collapse All Notebook Outputs" />
+    <option name="notebook" path="ActionManager" hit="Collapse All Notebook Outputs" />
+    <option name="outputs" path="ActionManager" hit="Collapse All Notebook Outputs" />
+    <option name="collapse" path="ActionManager" hit="Collapse Selected Output" />
+    <option name="output" path="ActionManager" hit="Collapse Selected Output" />
+    <option name="selected" path="ActionManager" hit="Collapse Selected Output" />
+    <option name="clipboard" path="ActionManager" hit="Copy image to clipboard" />
+    <option name="copy" path="ActionManager" hit="Copy image to clipboard" />
+    <option name="image" path="ActionManager" hit="Copy image to clipboard" />
+    <option name="to" path="ActionManager" hit="Copy image to clipboard" />
+    <option name="clipboard" path="ActionManager" hit="Copy to Clipboard" />
+    <option name="copy" path="ActionManager" hit="Copy to Clipboard" />
+    <option name="to" path="ActionManager" hit="Copy to Clipboard" />
+    <option name="as" path="ActionManager" hit="Save As" />
+    <option name="save" path="ActionManager" hit="Save As" />
+    <option name="as" path="ActionManager" hit="Save as" />
+    <option name="save" path="ActionManager" hit="Save as" />
   </configurable>
 </options>

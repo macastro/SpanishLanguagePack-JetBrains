@@ -30,6 +30,8 @@ Nos gustaría extender nuestro agradecimiento a los siguientes patrocinadores po
 
 212.237	Para versiones:	2021.2 — 2021.2.1	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.212.237.jar)**
 
+213.247	Para versiones:	2021.3 — 2021.3.1	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.213.247.jar)**
+
 Arrastre el archivo es.201.16.jar al IDE y proceda a reiniciar.
 
 ## Contribuyendo

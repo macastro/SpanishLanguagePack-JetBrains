@@ -4,14 +4,15 @@
 
 <html>
 <body>
-RegExp에서 일치 작업을 매우 느리게 만들 수 있는 지수적 역추적을 보고합니다.
-단일 문자열이 여러 방식으로 일치될 수 있어 런타임이 폭발적으로 늘어나면 지수식 역추적이 발생할 수 있습니다.
-지수식 역추적은 정규 표현식 서비스 거부(ReDoS), 재난적 역추적, 폭발적 수량자 또는 지수식 일치라고도 합니다.
-이 조사는 제한적인 형식의 지수식 역추적만을 탐지하므로
-경고가 없다고 패턴에서 지수식 역추적 문제가 발생하지 않는다고 보장할 수 없습니다.
+Reports exponential backtracking in a RegExp, which can lead to extremely slow matching.
+Exponential backtracking can happen when a single string can be matched in multiple ways, leading to exponential runtime.
+Exponential backtracking is also known as Regular Expression Denial of Service (ReDoS), catastrophic backtracking, explosive quantifiers
+and exponential matching.
+This inspection only detects a limited form of exponential backtracking,
+so the absence of a warning is not a guarantee the pattern does not contain a exponential backtracking problem.
 
 <!-- tooltip end -->
 <p>
-  <small>2017.1의 새로운 기능</small>
+  <small>New in 2017.1</small>
 </body>
 </html>
