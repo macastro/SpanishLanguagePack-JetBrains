@@ -1,9 +1,0 @@
-<html>
-<body>
-치환 횟수에 <code>-1</code> 대신 <code>0</code>이 사용된 <code>strings.Replace</code> 호출을 보고합니다.
-<p>문자열이 치환되어야 하는 횟수를 나타내는 횟수 인수는 <code>0</code>이 사용되어서는 안됩니다. 문자열을 치환하지 않으며 함수 호출이 불필요해지기 때문입니다. 대신 <code>-1</code>을 사용하세요.</p>
-<p>예:</p>
-<pre><code>a := strings.Replace("SSS", "S", "H", 0) // 아무것도 치환하지 않음
-b := strings.Replace("SSS", "S", "H", -1) // 모든 S를 H로 치환</code></pre>
-</body>
-</html>
