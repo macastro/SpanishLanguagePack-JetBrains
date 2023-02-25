@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>프로시저 구문을 포함하는 메서드 선언을 보고합니다.</p>
+<p>메서드에 프로시저와 같은 구문을 사용하는 것은 권장되지 않습니다.
+    이는 일관되지 않고 오류로 이어질 수 있으며 Scala 3에서 제거될 예정입니다.</p>
+<p>빠른 수정에서는 선언을 프로시저 구문에서 함수 구문으로 변환합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  trait Test {
+    def method()
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  trait Test {
+    def method(): Unit
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><em>힌트:</em> 분석 / 이름별로 검사 실행(Ctrl+Alt+Shift+I)을 사용해 이 검사를 전체 프로젝트에 적용할 수 있습니다.</p>
+</body>
+</html>

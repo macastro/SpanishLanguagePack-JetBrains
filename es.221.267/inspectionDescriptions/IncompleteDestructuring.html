@@ -1,0 +1,17 @@
+<html>
+<body>
+불완전한 구조 분해 선언을 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  data class Person(val name: String, val age: Int)
+  val person = Person("", 0)
+  val (name) = person
+</code></pre>
+<p>빠른 수정에서는 새 변수를 사용해 구조 분해 선언을 완성합니다.</p>
+<pre><code>
+  data class Person(val name: String, val age: Int)
+  val person = Person("", 0)
+  val (name, age) = person
+</code></pre>
+</body>
+</html>

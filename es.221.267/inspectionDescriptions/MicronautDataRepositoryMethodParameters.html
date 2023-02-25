@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>잘못된 Micronaut Data 저장소 메서드 매개변수 타입을 보고합니다.</p>
+<!-- tooltip end -->
+<p><b>예:</b></p>
+<pre><code>
+  public class Person {
+    private int id;
+    private String lastname;
+    private Address address;
+  }
+
+  public class Address {
+    private int zipCode;
+  }
+
+  public interface CustomerRepository extends CrudRepository&lt;Person, Integer&gt; {
+    List&lt;Person&gt; <strong>findByAddress</strong>(String lastname);  // 'Address' 타입이 필요합니다
+    List&lt;Person&gt; <strong>findByAddressZipCode</strong>(String str);   // 'int' 타입이 필요합니다
+  }
+</code></pre>
+</body>
+</html>

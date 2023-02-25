@@ -1,0 +1,25 @@
+<html>
+<body>
+Javadoc의 태그 중, 주석을 소유한 메서드나 주석을 소유한 메서드의 상위 메서드, 주석을 포함하는 클래스를 참조하는 <code>@see</code>, <code>{@link}</code>, <code>{@linkplain}</code> 태그를 보고합니다.
+<p>관련 링크는 불필요하며 검사의 빠른 수정을 통해 안전하게 제거할 수 있습니다. 빠른 수정에서는 태그가 주석의 유일한 내용인 경우 전체 Javadoc 주석을 제거합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Example {
+    /**
+     * @see Example#method
+     */
+    public void method() { }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+class Example {
+  public void method() { }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+아래의 체크박스를 사용하여 상위 메서드의 인라인 링크(<code>{@link}</code> 및 <code>{@linkplain}</code>)를 무시합니다. 모든 상위 메서드의 링크는 Javadoc 도구에 자동으로 추가되지만, 상위 메서드의 인라인 링크는 Javadoc 주석의 텍스트 내에서 필요한 경우가 있습니다.
+
+</body>
+</html>

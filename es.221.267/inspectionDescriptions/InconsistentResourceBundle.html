@@ -1,0 +1,82 @@
+<html>
+<body>
+리소스 번들에 포함된 프로퍼티 파일의 문제를 보고합니다.
+<ul>
+  <li><b>누락된 번역 보고</b>
+  </li>
+</ul>
+이 옵션은 번역되지 않은 프로퍼티 검색을 제어합니다. <br>
+상위 프로퍼티 파일에 포함되어 있지만 상속에서 누락된 프로퍼티를 보고합니다(파생 언어가 아닌 경우). <br>
+예: 이 리소스 번들이 있는 경우: <br>
+
+<b>messages.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
+<b>messages_fr.properties</b> : 비어 있음 <br>
+
+프로퍼티 <font color="#000080"><b>abc</b></font>가 번역되지 않은 것으로 보고됩니다.
+<ul>
+  <li>
+
+    <b>일관되지 않은 프로퍼티 보고</b>
+  </li>
+</ul>
+이 옵션은 잘못된 리소스 번들 구조 검사를 제어합니다. <br>
+상속된 프로퍼티 파일에 포함되어 있지만 상위 항목(또는 상위 항목이 없는 경우 형제 항목)에서 누락된 프로퍼티를 보고합니다. <br>
+예: 이 리소스 번들이 있는 경우: <br>
+<b>messages.properties</b> : 비어 있음 <br>
+<b>messages_fr.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
+
+여기에서 프로퍼티 <font color="#000080"><b>abc</b></font> 번역은 프랑스어 이외의 언어로는 제공되지 않습니다. 따라서 (디폴트) 프로퍼티 파일 <b>messages.properties</b>에서 누락된 것으로 보고됩니다.
+
+<ul>
+  <li>
+
+    <b>같은 값으로 재정의된 프로퍼티 보고</b>
+  </li>
+</ul>
+이 옵션은 여러 프로퍼티 파일에 그대로 복사하여 붙여넣은 프로퍼티를 확인합니다. <br>
+예: 이 리소스 번들에서: <br>
+<b>messages.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
+<b>messages_fr.properties</b> : <font color="#000080"><b>abc=xxx</b></font> <br>
+
+프로퍼티 <font color="#000080"><b>abc</b></font>는 파일 <b>messages_fr.properties</b>에서 불필요하게 상속된 것으로 보고됩니다.
+<br>
+
+<ul>
+  <li>
+
+    <b>서로 다른 자리표시자로 재정의된 프로퍼티 보고</b>
+  </li>
+</ul>
+이 옵션은 자리표시자 일관성을 위해 재정의된 프로퍼티를 확인합니다. <br>
+예: 이 리소스 번들에서: <br>
+<b>messages.properties</b> : <br>
+<font color="#000080"><b>qwe={0}xxx{1}</b></font> <br>
+<font color="#000080"><b>abc={0}yyy{1}</b></font> <br>
+<b>messages_fr.properties</b> : <br>
+<font color="#000080"><b>qwe={0}xxx{0}xxx{1}</b></font> <br>
+<font color="#000080"><b>abc={0}yyy</b></font> <br>
+
+
+프로퍼티 <font color="#000080"><b>abc</b></font>는 <b>messages.properties</b>에 해당되지 않는 값이 있는 메시지 형식 자리표시자가 프로퍼티에 포함된 것으로 보고됩니다.
+<br>
+
+<ul>
+  <li>
+
+    <b>서로 다른 값의 끝 부분으로 재정의된 프로퍼티 보고</b>
+  </li>
+</ul>
+이 옵션은 끝 부분 일관성을 위해 재정의된 프로퍼티를 확인합니다. <br>
+예: 이 리소스 번들에서: <br>
+<b>messages.properties</b> : <br>
+<font color="#000080"><b>abc=xxxzzz</b></font> <br>
+<b>messages_fr.properties</b> : <br>
+<font color="#000080"><b>abc=xxx;</b></font> <br>
+
+
+프로퍼티 <font color="#000080"><b>abc</b></font>는 값의 끝에 특수 기호( <b>'!'</b> , <b>'?'</b> , <b>'.'</b> , <b>':'</b> 또는 <b>';'</b> )가 포함되어 있지만
+<b>messages.properties</b>의 값은 그렇지 않은 것으로 보고됩니다.
+<br>
+
+</body>
+</html>

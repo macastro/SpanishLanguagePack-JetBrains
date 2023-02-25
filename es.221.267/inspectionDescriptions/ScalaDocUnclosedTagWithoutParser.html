@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>Scaladoc 내 닫히지 않은 태그를 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  /**
+   * ''
+   *
+   * [[
+   *
+   * '
+   */
+  class A
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  /**
+   * &#39;&#39;
+   *
+   * &#91;&#91;
+   *
+   * &#96;
+   */
+  class A
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

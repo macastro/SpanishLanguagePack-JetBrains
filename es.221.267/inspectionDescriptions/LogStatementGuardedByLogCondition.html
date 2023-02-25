@@ -1,0 +1,40 @@
+<html>
+<body>
+가드 조건으로 둘러싸여 있지 않은 비상수 인수를 사용하는 로깅 호출을 보고합니다.
+로깅 호출의 인수 평가는 비용이 많이 들 수 있습니다.
+로깅 구문이 사용하는 수준에 대해 로깅이 비활성화된 경우 guard 절을 사용하여 로깅 호출을 둘러싸면 이 비용을 피할 수 있습니다. 이는 가장 덜 심각한 수준(trace, debug, finest)의 로깅 호출에 특히 유용합니다. 이러한 호출은 프로덕션 환경에서 매우 자주 비활성화되기 때문입니다.
+<p><b>예:</b></p>
+<pre><code>
+  <b>public class</b> Principal {
+    <b>void</b> bad(Object object) {
+      <b>if</b> (true) {
+        LOG.debug("log log log " + expensiveCalculation(object));
+      }
+      LOG.debug("some more logging " + expensiveCalculation(1));
+    }
+
+    <b>void</b> good(Object) {
+      <b>if</b> (LOG.isDebug()) {
+        LOG.debug("value: " + expensiveCalculation(object));
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  검사 구성:
+</p>
+<ul>
+  <li>
+      <b>로거 클래스 이름</b> 필드를 사용하여, 사용된 로거 클래스 이름을 지정합니다.
+  </li>
+  <li>
+    <p>
+      이 테이블을 사용하여 이 검사에서 경고해야 하는 로깅 메서드와 해당 로그 조건 텍스트를 지정합니다.
+  </li>
+  <li>
+      <b>로깅 호출로 보호되지 않는 모든 항목에 플래그 표시</b> 옵션을 사용하여 이 검사에서 비상수 인수가 있는 호출뿐만 아니라 보호되지 않은 모든 로그 호출에 플래그를 표시하도록 합니다.
+  </li>
+</ul>
+</body>
+</html>

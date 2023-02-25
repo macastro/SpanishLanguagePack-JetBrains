@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>
+    <code>StackOverflowError</code>를 발생시킬 수 있는 재귀 프로퍼티 접근자 호출을 보고합니다.
+    그러한 호출은 보통 백킹 필드 액세스와 혼동됩니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  var counter: Int = 0
+      set(value) {
+          <b>counter</b> = if (value < 0) 0 else value
+      }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  var counter: Int = 0
+      set(value) {
+          <b>field</b> = if (value < 0) 0 else value
+      }
+</code></pre>
+</body>
+</html>

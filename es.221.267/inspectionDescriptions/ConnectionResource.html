@@ -1,0 +1,12 @@
+<html>
+<body>
+<code>try</code> 블록 전에 열지 않고 해당하는 <code>finally</code> 블록에서 닫지 않은 Java ME <code>javax.microedition.io.Connection</code> 리소스를 보고합니다. 리소스를 닫기 전에 예외가 발생할 경우 의도치 않게 리소스의 누수가 발생할 수 있습니다.
+<p><b>예:</b></p>
+<pre><code>
+  void example() throws IOException {
+    Connection c = Connector.open("foo");
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

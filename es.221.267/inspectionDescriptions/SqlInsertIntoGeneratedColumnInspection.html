@@ -1,0 +1,16 @@
+<html>
+<body>
+생선된 열에 값을 할당하는 INSERT 문을 보고합니다. 생성된 열은 읽을 수 있지만 해당 열의 값은 직접 쓸 수는 없습니다.
+<p>예(PostgreSQL):</p>
+<pre><code>CREATE TABLE foo
+(
+   col1 INT,
+   col2 INT GENERATED ALWAYS AS (col1 + 1) STORED
+);
+INSERT INTO foo(col1, col2) VALUES (1, 2);</code>
+</pre>
+<p><code>2</code>를 생성된 열인 <code>col2</code> 열에 삽입할 수 없습니다.
+  이 스크립트가 작동하려면 <code>2</code>를 DEFAULT로 변경해야 합니다.</p>
+<code>INSERT INTO foo(col1, col2) VALUES (1, DEFAULT);</code>
+</body>
+</html>

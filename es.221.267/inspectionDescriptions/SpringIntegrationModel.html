@@ -1,0 +1,46 @@
+<html>
+<body>
+<p><a href="https://spring.io/projects/spring-integration">Spring Integration</a> XML 기반 애플리케이션 컨텍스트 관련 문제를 보고합니다.</p>
+<ul>
+  <li>해결되지 않은 bean 참조</li>
+  <li>필요한 태그 및 속성 누락</li>
+  <li>잘못된 프로퍼티 타입</li>
+  <li>일관성 없는 <code>enum</code> 프로퍼티</li>
+  <li>참조된 bean의 잘못된 타입</li>
+</ul>
+
+<p><b>예:</b></p>
+<pre><code>
+  &lt;beans ... &gt;
+  &lt;int:channel id="channel"&gt; &lt;!-- 'dispatcher' and 'queue' can't be used together  --&gt;
+    &lt;int:dispatcher failover="true"/&gt;
+    &lt;int:priority-queue capacity="4"/&gt;
+  &lt;/int:channel&gt;
+  
+  &lt;int:channel id="another" &gt;
+    &lt;int:queue &lt;!--Exactly one of 'message-store' or 'ref' is required  --&gt;
+              capacity="4" message-store="myMessageStore" ref="myQueue"/&gt;
+  &lt;/int:channel&gt;
+  
+   &lt;int:gateway id="asyncGatewayError"
+                async-executor="dummyBean"/&gt; &lt;!--Bean must be of 'java.util.concurrent.Executor' type  --&gt;
+
+   &lt;int:delayer default-delay="3"
+              message-store="myMessageStore"
+              scheduler="scheduler"
+              wait-for-tasks-to-complete-on-shutdown="false"/&gt;
+  &lt;!--Bean must be of 'java.util.concurrent.Executor' type  --&gt;
+  &lt;int:delayer
+    default-delay="INVALID_VALUE"  &lt;!--Cannot convert string 'INVALID_VALUE' to target class 'java.lang.Integer' --&gt;
+               message-store="dummyBean" &lt;!-- Bean must be of 'org.springframework.integration.store.MessageStore' type--&gt;
+               scheduler="dummyBean" &lt;!-- Bean must be one of these types: java.util.concurrent.ScheduledExecutorService,org.springframework.scheduling.TaskScheduler--&gt;
+               wait-for-tasks-to-complete-on-shutdown="INVALID_VALUE"/&gt; &lt;!-- Cannot resolve symbol 'INVALID_VALUE' --&gt;
+
+  &lt;bean id="dummyBean" class="java.lang.String"/&gt;
+  &lt;bean id="myMessageStore" class="org.springframework.integration.store.SimpleMessageStore"/&gt;
+  &lt;task:scheduler id="scheduler"/&gt;
+&lt;/beans&gt;
+</code></pre>
+</body>
+</html>
+

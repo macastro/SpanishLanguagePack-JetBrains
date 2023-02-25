@@ -1,0 +1,15 @@
+<html>
+<body>
+이전 스타일 생성자 선언 (<code>ClassName()</code>)을 보고하고, 새 스타일 생성자 (<code>__construct()</code>)를 사용하도록 제안합니다.
+<!-- tooltip end -->
+<p>
+  PHP 8.0 이전에는 전역 네임스페이스의 클래스에 사용되는 이전 스타일 생성자 구문이 곧 사용할 수 없게 될 구문으로 처리되며 <code>E_DEPRECATED</code> 오류를 발생시킵니다. <code>__construct()</code> 및 <code>ClassName()</code> 메서드가 둘 다 정의된 경우, <code>__construct()</code>가 호출됩니다.
+</p>
+<p>네임스페이스된 클래스 또는 PHP 8.0의 모든 클래스에서 <code>ClassName()</code> 메서드는 특별한 의미가 없으며 생성자로 호출되지 않습니다. PHP 언어 수준이 8.0이상인 경우, 검사는 이러한 사례를 보고하지 않습니다.
+</p>
+<p>
+  자세한 내용은 <a href="https://www.php.net/manual/en/language.oop5.decon.php">Constructors and destructors 
+ (php.net)</a>(을)를 참고하세요.
+</p>
+</body>
+</html>

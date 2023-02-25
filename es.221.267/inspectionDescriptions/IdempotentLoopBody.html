@@ -1,0 +1,21 @@
+<html>
+<body>
+두 번째 및 그 후의 모든 이터레이션이 첫 번째 이터레이션에서 생성된 것 외의 부수 효과를 추가로 생성하지 않는 루프를 보고합니다. 이러한 부수 효과는 프로그래밍 오류의 징후일 수 있습니다.
+<p>이러한 루프는 0번, 1번 또는 무한 번 반복할 수 있습니다.
+case가 무한 번 시도를 통해 도달할 수 없는 경우 이러한 루프를 <code>if</code> 문으로 바꿀 수 있습니다.
+  그렇지 않으면, 프로그램이 멈출 수 있습니다.</p>
+<p>예:</p>
+<pre><code>
+    public void foo(String baseName, String names) {
+        int suffix = 1;
+        String name = baseName;
+        while (names.contains(name)) {
+            // 오류: suffix가 업데이트되지 않으므로 루프 본문이 여러 번 실행된 결과가 한 번 실행된 결과와 같습니다
+            name = baseName + suffix;
+        }
+    }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2018.1의 새로운 기능</small></p>
+</body>
+</html>

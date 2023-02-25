@@ -1,0 +1,33 @@
+<html>
+<body>
+클래스, 메서드 또는 필드에 속하지 않는 Javadoc 주석을 보고합니다.
+Javadoc 도구는 속한 곳이 없는 Javadoc 주석을 무시하며 생성된 HTML 문서에 포함하지 않습니다.
+<p><b>예:</b></p>
+<pre><code>
+  class A {
+    /**
+     * Dangling comment
+     */
+    /**
+     * Method javadoc
+     */
+     public void m(){}
+  }
+</code></pre>
+<p>빠른 수정을 통해 해당 주석을 완전히 삭제하거나 블록 주석으로 변환할 수 있습니다. 빠른 수정 적용 후:</p>
+<pre><code>
+  class A {
+    /*
+      Dangling comment
+    */
+    /**
+     * Method javadoc
+     */
+    public void m(){}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><b>Javadoc 서식의 파일 헤더 무시</b> 옵션을 사용하여 Java 파일 시작 부분의 주석을 무시합니다.
+이것은 보통 저작권 문구입니다.
+</body>
+</html>

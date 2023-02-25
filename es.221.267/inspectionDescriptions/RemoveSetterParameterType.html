@@ -1,0 +1,23 @@
+<html>
+<body>
+프로퍼티 setter에서 명시적으로 지정된 매개변수를 보고합니다.
+<p>
+    setter 매개변수는 항상 프로퍼티 타입과 일치하므로 명시적일 필요가 없습니다.
+    '명시적 타입 사양 제거' 빠른 수정을 사용하면 코드를 적절히 수정할 수 있습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  fun process(x: Int) {}
+
+  var x: Int = 0
+      set(value: Int) = process(value) // &lt;== 'Int' 사양은 안전하게 생략할 수 있습니다
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  fun process(x: Int) {}
+
+  var x: Int = 0
+      set(value) = process(value)
+</code></pre>
+</body>
+</html>

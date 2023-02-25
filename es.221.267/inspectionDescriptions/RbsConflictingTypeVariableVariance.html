@@ -1,0 +1,15 @@
+<html>
+<body>
+분산(<code>in</code>, <code>out</code>, 또는 <code>unchecked</code>)이 다른 선언과 충돌하는 유형 변수를 보고합니다. 
+타입 변수는 이름이 다르더라도 그 변형이 동일한 클래스 또는 모듈의 부분 선언 간에 일치해야 합니다.
+<p>예:</p>
+<pre><code># 클래스 'Example'의 타입 변수 'B'에 다른 선언과 충돌하는 변형이 있습니다 ...
+class Example[A, in B, out C]
+end
+
+# 클래스 'Example'의 타입 변수 'Y'에 다른 선언과 충돌하는 변형이 있습니다 ...
+class Example[X, Y, Z]
+end
+</code></pre>
+</body>
+</html>

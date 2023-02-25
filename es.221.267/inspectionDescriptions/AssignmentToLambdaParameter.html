@@ -1,0 +1,23 @@
+<html>
+<body>
+람다 매개변수에 대한 대입 또는 수정을 보고합니다.
+의도된 경우도 있으나 이 구문은 혼란스러울 수 있고, 오타 또는 잘못된 변수 사용으로 인해 종종 발생하기도 합니다.
+<p>빠른 수정은 새로운 변수 선언을 추가합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  list.forEach(s -> {
+    s = s.trim();
+    System.out.println("String: " + s);
+  });
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  list.forEach(s -> {
+    String trimmed = s.trim();
+    System.out.println("String: " + trimmed);
+  });
+</code></pre>
+<!-- tooltip end -->
+<p><b>대입이 원본 매개변수의 변형인 경우 무시</b> 옵션을 사용하여 이전 값에 따라 매개변수 값을 수정하는 대입을 무시합니다.</p>
+</body>
+</html>

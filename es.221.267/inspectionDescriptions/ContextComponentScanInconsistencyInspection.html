@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>XML 애플리케이션 컨텍스트의 <strong>&lt;component-scan&gt;</strong>에서 일관성 없는 <strong>&lt;filter&gt;</strong> 정의를 보고합니다.</p>
+
+<p><b>예:</b></p>
+
+<pre><code>
+  public class NonAnnotationTypeClass {}
+  &lt;beans&gt;
+    &lt;ctx:component-scan base-package="com.my.company"&gt;
+      &lt;ctx:exclude-filter expression="com.my.company.anno.NonAnnotationTypeClass" type="annotation"/&gt;
+    &lt;/ctx:component-scan&gt;
+  &lt;/beans&gt;
+</code></pre>
+
+<p>이 예시의 경우 <code>NonAnnotationTypeClass</code>가 어노테이션 타입이어야 합니다.</p>
+</body>
+</html>

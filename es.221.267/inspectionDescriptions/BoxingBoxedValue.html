@@ -1,0 +1,20 @@
+<html>
+<body>
+이미 박싱된 값을 박싱한 경우 보고합니다.
+<p>
+  박싱된 값은 해당 값을 다시 박싱하기 전 먼저 자동으로 언박싱되므로 이는 불필요한 작업입니다. 내부 루프에서 수행될 경우, 이러한 코드는 성능 문제를 초래할 수 있습니다.
+</p>
+<!-- tooltip end -->
+<p><b>예:</b></p>
+<pre><code>
+  Integer value = 1;
+  method(Integer.valueOf(value));
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  Integer value = 1;
+  method(value);
+</code></pre>
+<p>
+</body>
+</html>

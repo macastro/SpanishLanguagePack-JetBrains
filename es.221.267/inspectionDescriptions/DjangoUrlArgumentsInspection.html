@@ -1,0 +1,15 @@
+<html>
+<body>
+<p><code>url()</code> 함수의 URL 경로에 매개변수를 포함하는 
+템플릿 파일 내 누락된 매개변수를 보고합니다.</p>
+<p><b>예:</b></p>
+<p><code>url.py</code> 파일 내</p>
+<pre style="font-family: monospace">
+url(r'^(?P&lt;question_id&gt;[0-9]+)/', views.detail, name='detail')
+</pre>
+<p>템플릿 파일 내</p>
+<pre style="font-family: monospace">
+{% url 'polls:detail' %}
+</pre>
+</body>
+</html>

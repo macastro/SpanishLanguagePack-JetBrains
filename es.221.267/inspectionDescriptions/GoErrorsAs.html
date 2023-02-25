@@ -1,0 +1,19 @@
+<html>
+<body>
+<code>error.As</code> 함수의 두 번째 인수가 인터페이스에 대한 포인터나 오류를 구현하는 타입에 대한 포인터가 아닌 경우 해당 함수의 호출을 보고합니다.
+<p>이러한 호출은 런타임에서 panic을 발생시킵니다.</p>
+<p><code>As</code> 함수에 대한 더 자세한 내용은 <a href="https://golang.org/pkg/errors/#As">golang.org의 func As</a>(을)를 참고하세요.</p>
+<p>예:</p>
+<pre><code>_, err := os.Open("non-existing")
+var pathError *fs.PathError
+if errors.As(err, pathError) { // *fs.PathError로의 포인터를 사용해야 함
+}</code></pre>
+<p><b>앞에 '&' 추가</b> 빠른 수정 적용 후:</p>
+<pre><code>_, err := os.Open("non-existing")
+var pathError *fs.PathError
+if errors.As(err, &pathError) {
+}</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 언어 수준이 1.13 이상인 경우에만 보고합니다.</p>
+</body>
+</html>
