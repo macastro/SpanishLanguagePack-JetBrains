@@ -16,7 +16,7 @@ Este complemento es una versión PAA(Programa de acceso anticipado) y estamos tr
 
 Nos gustaría extender nuestro agradecimiento a los siguientes patrocinadores por ayudar a en el desarrollo de este paquete:
 
-- **[Intusist](https://intusist.com)**
+- **[Intusyst](https://intusyst.com)**
 
 ## Instrucciones
 
@@ -31,6 +31,14 @@ Nos gustaría extender nuestro agradecimiento a los siguientes patrocinadores po
 212.237	Para versiones:	2021.2 — 2021.2.1	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.212.237.jar)**
 
 213.247	Para versiones:	2021.3 — 2021.3.1	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.213.247.jar)**
+
+221.267	Para versiones:	2022.1 — 2022.1.4	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.221.267.jar)**
+
+222.207	Para versiones:	2022.2 — 2022.2.5	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.222.207.jar)**
+
+223.237	Para versiones:	2022.3 — 2022.3.2	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.223.237.jar)**
+
+231.197	Para versiones:	2023.1 — 2023.3.1	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.231.197.jar)**
 
 Arrastre el archivo es.201.16.jar al IDE y proceda a reiniciar.
 
