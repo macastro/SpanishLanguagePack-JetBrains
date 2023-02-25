@@ -1,0 +1,133 @@
+<html>
+<body>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse; border-color:#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+      버전 6 이상의 PHPUnit 테스트를 위한 기본 제공 템플릿.
+      프로젝트 뷰 중 하나에서 팝업 메뉴의 <b>새로 만들기 | PHP 테스트</b> 선택 후 'PHPUnit'을 테스팅 라이브러리로 선택하여 새로운 PHPUnit 테스트를 생성할 때마다 사용됩니다.<br>
+템플릿은 편집할 수 있습니다. PHP 구문, 표현식 및 주석 뿐만 아니라 아래에 표시된 사전 정의 변수도 사용할 수 있습니다. 모든 변수는 매크로와 같이 해당하는 값으로 확장될 수 있습니다.<br> <b>#parse</b> 지시문을 사용하면, 원하는 템플릿의 전체 이름을 따옴표로 묶은 매개변수로 지정하여 <b>Includes</b> 탭에서 템플릿을 포함할 수 있습니다.</font>
+    </td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse; border-color:#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">사전 정의된 변수는 다음의 값을 사용합니다:</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${TESTED_NAME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">테스트된 클래스 이름</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${TESTED_NAMESPACE}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">테스트된 클래스의 네임스페이스</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">테스트 클래스 이름</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${NAMESPACE}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">테스트 클래스 네임스페이스</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${FILE_NAME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">현재 파일 이름</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">현재 유저 시스템 로그인 이름</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시스템 날짜</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시스템 시간</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">현재 년도</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">현재 월</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">현재 일</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">현재 분</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${PRODUCT_NAME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">현재 IDE 이름</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">달러 표시, '$' 기호로 표시됩니다.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">현재 프로젝트 이름</font></td>
+  </tr>
+</table>
+
+</body>
+</html>
