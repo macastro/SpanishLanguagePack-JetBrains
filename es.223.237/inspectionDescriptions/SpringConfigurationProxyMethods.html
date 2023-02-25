@@ -1,0 +1,68 @@
+<html>
+<body>
+부적절하게 사용된 프록시 메서드에 대한 경고를 보고합니다.
+
+Spring Framework 5.2에는 @Configuration 클래스 처리 최적화가 도입되었으며, 이는 @Configuration(proxyBeanMethods = false) 속성을 통해 활성화할 수 있습니다.
+<br><br>
+다음을 비활성화할 경우,
+<pre><code>proxyBeanMethods</code></pre>
+프록시 인스턴스가 더 이상 생성되지 않으며 메서드를 호출하면 다시 호출됩니다(매번 새 인스턴스 반환).
+그 결과, 컨텍스트에 해당 Bean이 실제로 삽입되는 것이 보장되지 않습니다.
+<!-- tooltip end -->
+<br><br>
+<strong>잘못된 Bean 메서드 호출 예시:</strong><br><br>
+<pre>
+@Configuration(proxyBeanMethods = false)
+class TestConfiguration {
+  @Bean
+  public FirstBean firstBean() {
+    return new FirstBean();
+  }
+
+  @Bean
+  public SecondBean secondBean() {
+    return new SecondBean(firstBean()); // -> <strong>잘못된 호출</strong>
+  }
+}
+</pre>
+<br>
+
+<hr>
+<strong><pre><code>proxyBeanMethods</code></pre>를
+true로 설정하거나 다음과 같이
+코드를 다시 작성할 수 있습니다.</strong><br><br>
+<pre>
+@Configuration(proxyBeanMethods = false)
+class TestConfiguration {
+  @Bean
+  public FirstBean firstBean() {
+    return new FirstBean();
+  }
+
+  @Bean
+  public SecondBean secondBean(FirstBean someBean) { // -> <strong>올바른 삽입된 인스턴스</strong>
+    return new SecondBean(someBean);
+  }
+}
+</pre>
+<br>
+
+<hr>
+<strong>또한 이 검사는 @Configuration 스테레오타입이 없는 클래스에서 @Bean 메서드 호출을 검사합니다('Bean Lite Mode'에서):</strong><br><br>
+<pre>
+@Component
+class TestComponent {
+  @Bean
+  public FirstBean firstBean() {
+    return new FirstBean();
+  }
+
+  @Bean
+  public SecondBean secondBean() {
+    return new SecondBean(firstBean()); // -> <strong>잘못된 호출</strong>
+  }
+}
+</pre>
+
+</body>
+</html>

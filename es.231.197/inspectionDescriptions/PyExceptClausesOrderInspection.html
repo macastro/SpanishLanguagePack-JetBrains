@@ -1,0 +1,26 @@
+<html>
+<body>
+<p><code>except</code> 절이 더 구체적인 것부터 더 일반적인 것으로 적절한 순서로 나열되어 있지 않은 경우, 또는 하나의 예외 클래스가 두 번 포착된 경우 보고합니다. </p>
+<p>
+  순서를 수정하지 않으면 일부 예외는 가장 구체적인 핸들러에 의해 포착되지 않을 수 있습니다.
+</p>
+<p><b>예:</b></p>
+<pre style="font-family: monospace">
+try:
+    call()
+except ValueError:
+    pass
+except UnicodeError:
+    pass
+</pre>
+<p>IDE는 해당 절을 위로 이동할 것을 권장합니다. 빠른 수정이 적용되면 코드는 다음과 같이 변경됩니다:</p>
+<pre style="font-family: monospace">
+try:
+    call()
+except UnicodeError:
+    pass
+except ValueError:
+    pass
+</pre>
+</body>
+</html>

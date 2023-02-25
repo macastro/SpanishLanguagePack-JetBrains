@@ -1,0 +1,19 @@
+<html>
+<body>
+상위 클래스와 이름이 같은 메서드를 보고합니다. 그러한 메서드 이름은 혼란을 일으킬 수 있습니다.
+<p>이 검사는 계층 구조의 깊은 곳에 위치한 인터페이스 또는 상위 클래스를 검사하지 않습니다.</p>
+<p><b>예:</b>
+<pre><code>
+  class Parent {}
+  class Child extends Parent {
+     public Parent Parent() {
+       return null;
+     }
+  }
+</code></pre>
+<p>그러한 메서드의 이름을 변경하는 빠른 수정은 에디터에서만 사용할 수 있습니다.</p>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

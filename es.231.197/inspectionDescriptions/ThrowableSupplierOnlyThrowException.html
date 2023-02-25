@@ -1,0 +1,17 @@
+<html>
+<body>
+Reports <code>Supplier</code> lambdas in <code>Optional.orElseThrow()</code> calls that throw an exception, instead of returning it.
+<p><b>예:</b></p>
+<pre><code>
+optional.orElseThrow(() -> {
+    throw new RuntimeException();
+});
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+optional.orElseThrow(() -> new RuntimeException());
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.1의 새로운 기능</small></p>
+</body>
+</html>

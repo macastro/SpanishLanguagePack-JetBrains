@@ -1,0 +1,24 @@
+<html>
+<body>
+<p><a href="https://www.python.org/dev/peps/pep-0589/">TypedDict</a>의 유효하지 않은 정의 및 사용 사례를 보고합니다.</p>
+<p><b>예:</b></p>
+<pre style="font-family: monospace">
+from typing import TypedDict
+
+
+class Movie(TypedDict):
+    name: str
+    year: int
+    rate: int = 10  # 우측 값은 지원되지 않음
+
+    def method(self): # TypedDict 정의 내 유효하지 않은 구문
+        pass
+
+
+m = Movie(name="name", year=1000, rate=9)
+print(m["director"])  # 'Movie'에 'director' 키가 없음
+del m["name"]  # 'name' 키를 삭제할 수 없음
+m["year"] = "1001"  # 'int'가 기대되나 got 'str'을 얻음
+</pre>
+</body>
+</html>

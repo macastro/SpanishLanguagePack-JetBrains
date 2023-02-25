@@ -1,0 +1,27 @@
+<html>
+<body>
+구조 분해가 가능한 선언을 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  data class My(val first: String, val second: Int, val third: Boolean)
+
+  fun foo(list: List&lt;My>) {
+      list.forEach { my ->
+          println(my.second)
+          println(my.third)
+      }
+  }
+</code></pre>
+<p>빠른 수정에서는 선언을 구조 분해하여 해당 클래스의 이름이 있는 새로운 변수를 삽입합니다.</p>
+<pre><code>
+  data class My(val first: String, val second: Int, val third: Boolean)
+
+  fun foo(list: List&lt;My>) {
+      list.forEach { (_, second, third) ->
+          println(second)
+          println(third)
+      }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+임의의 매개변수 개수를 허용하는 메서드(vararg 메서드라고도 함)을 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  enum EnumConstants {
+  A(null), B, C;
+
+  EnumConstants(String... ss) {}
+}
+</code></pre>
+<p>가변 인수 매개변수를 동등한 배열 매개변수로 대체하는 빠른 수정을 사용할 수 있습니다. 메서드 호출의 관련 인수는 배열 이니셜라이저 표현식으로 래핑됩니다.
+  빠른 수정 적용 후:</p>
+<pre><code>
+  enum EnumConstants {
+  A(null), B(new String[]{}), C(new String[]{});
+
+  EnumConstants(String[] ss) {}
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  <i>Varargs 메서드</i>는 Java 5에 등장했습니다.
+  이 검사는 이전 Java 버전과의 하위 호환성을 위해 다운그레이드하는 데 도움이 될 수 있습니다.
+</p>
+</body>
+</html>

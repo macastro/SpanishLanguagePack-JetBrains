@@ -1,0 +1,18 @@
+<html>
+<body>
+<code>await await</code>처럼 <code>await</code>의 불필요한 사용 또는 promise가 아닌 결과의 대기를 보고합니다.
+<!-- tooltip end -->
+<p>
+  'Report for promises'(promise 보고) 옵션을 선택하면, 해당하는 경우(<code>return</code> 문에서, 그리고 <code>Promise.resolve/reject</code>를 사용할 때) promise 앞의 <code>await</code>를 제거하도록 제안합니다.
+</p>
+<p>이러한 컨텍스트에서 <code>await</code>를 제거하면 두 가지 문제가 발생합니다.</p>
+<ul>
+  <li>
+    <code>try-catch</code>로 코드를 둘러싸고 <code>await</code>를 추가하지 않으면 눈치채지 못하는 사이 코드 의미가 달라집니다.
+  </li>
+  <li>
+    명시적 <code>await</code>를 사용하면 V8 런타임이 <a href="http://bit.ly/v8-zero-cost-async-stack-traces">비동기 스택 추적</a>을 제공하지 못할 수 있습니다.
+  </li>
+</ul>
+</body>
+</html>

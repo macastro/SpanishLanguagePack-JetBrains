@@ -1,0 +1,16 @@
+<html>
+<body>
+다음과 같은 EJB 사양 위반 사례를 보고합니다.
+<ul>
+  <li><code>create()</code>가 올바르게 정의되어 있지 않은 경우</li>
+  <li><code>finder()</code>가 허용되지 않는 경우</li>
+</ul>
+
+<p><b>예:</b></p>
+<pre><code>
+public interface SessionHome extends javax.ejb.EJBHome {
+  Session create() throws java.rmi.RemoteException; // 오류: 'javax.ejb.CreateException'도 던져야 합니다
+}
+</code></pre>
+</body>
+</html>

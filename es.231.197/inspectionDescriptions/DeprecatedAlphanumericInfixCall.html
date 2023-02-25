@@ -1,0 +1,88 @@
+<html>
+<body>
+<p>'infix' 제어자를 infix 연산자로 포함하지 않는 영숫자 정의의 사용 위치를 보고합니다.</p>
+
+<ul>
+<li>'백틱으로 래핑' 빠른 수정은 호출 주위로 <code>`</code> 심볼을 추가합니다.</li>
+<li>'infix 표현식에서 변환' 빠른 수정은 infix 호출을 <code>.method(...)</code> 메서드 구문으로 변환합니다.</li>
+<li>'infix 타입에서 변환' 빠른 수정은 infix 타입을 <code>Type[...]</code> 접두사 구문으로 변환합니다.</li>
+<li>'infix 패턴에서 변환' 빠른 수정은 infix 패턴을 <code>pattern(...)</code> 접두사 구문으로 변환합니다.</li>
+</ul>
+
+<p><b>예:</b></p>
+<pre><code>
+  class C:
+    def op(x: Int): Int = ???
+  type Or[X, Y]
+  case class Pair[T](x: T, y: T)
+
+  val c = C()
+  val p = Pair(1, 2)
+
+  c op 2
+  val or: Int Or String = ???
+  val _ Pair _ = p
+</code></pre>
+
+<p>'백틱으로 래핑' 빠른 수정 적용 후:</p>
+<pre><code>
+  class C:
+    def op(x: Int): Int = ???
+  type Or[X, Y]
+  case class Pair[T](x: T, y: T)
+
+  val c = C()
+  val p = Pair(1, 2)
+
+  c 'op' 2
+  val or: Int 'Or' String = ???
+  val _ 'Pair' _ = p
+</code></pre>
+
+<p>'infix 표현식에서 변환' 빠른 수정 적용 후:</p>
+<pre><code>
+  class C:
+    def op(x: Int): Int = ???
+  type Or[X, Y]
+  case class Pair[T](x: T, y: T)
+
+  val c = C()
+  val p = Pair(1, 2)
+
+  c.op(2)
+  val or: Int Or String = ???
+  val _ Pair _ = p
+</code></pre>
+
+<p>'infix 타입에서 변환' 빠른 수정 적용 후:</p>
+<pre><code>
+  class C:
+    def op(x: Int): Int = ???
+  type Or[X, Y]
+  case class Pair[T](x: T, y: T)
+
+  val c = C()
+  val p = Pair(1, 2)
+
+  c op 2
+  val or: Or[Int, String] = ???
+  val _ Pair _ = p
+</code></pre>
+
+<p>'infix 패턴에서 변환' 빠른 수정 적용 후:</p>
+<pre><code>
+  class C:
+    def op(x: Int): Int = ???
+  type Or[X, Y]
+  case class Pair[T](x: T, y: T)
+
+  val c = C()
+  val p = Pair(1, 2)
+
+  c op 2
+  val or: Int Or String = ???
+  val Pair(_, _) = p
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

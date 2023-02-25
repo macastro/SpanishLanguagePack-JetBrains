@@ -1,0 +1,38 @@
+<html>
+<body>
+<p>정의된 배포가 없는 Arquillian 테스트 케이스 클래스를 보고합니다.</p>
+<p>
+  <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/en-US/html/gettingstarted.html#d0e451">Arquillian 문서</a>에 따르면 Arquillian 테스트 클래스는 <code>@Deployment</code> 어노테이션이 추가된 특정 시그니처를 가진 public static 메서드를 사용해 배포 아카이브를 정의해야 합니다.
+</p>
+<p>빠른 수정에서는 사용자가 수정할 수 있는 <em>Arquillian 배포 메서드</em> 코드 템플릿에 따라 필요한 메서드를 추가합니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  // 이 테스트 케이스는 Arquillian에 의해 시작될 수 없습니다
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    @Test
+    public void testSomething() {
+      Assert.fail("To be implemented");
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    // 빠른 수정에 의해 추가됨
+    @Deployment
+    public static JavaArchive ${DEPLOYMENT_NAME}() {
+      return ShrinkWrap.create(JavaArchive.class)
+                       .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
+
+    @Test
+    public void testSomething() {
+      Assert.fail("To be implemented");
+    }
+  }
+</code></pre>
+</body>
+</html>

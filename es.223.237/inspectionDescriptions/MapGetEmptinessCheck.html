@@ -1,0 +1,18 @@
+<html>
+<body>
+<p><code>Map.get</code> 결과의 빈 값 검사를 보고하고 <code>Map.contains</code> 호출로 바꿀 것을 제안합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.get(key).nonEmpty
+  map.get(key).isEmpty
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.contains(key)
+  !map.contains(key)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

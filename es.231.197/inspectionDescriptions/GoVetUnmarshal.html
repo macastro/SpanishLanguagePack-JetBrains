@@ -1,0 +1,14 @@
+<html>
+<body>
+결과를 저장하기 위해 전달된 인수가 포인터나 인터페이스가 아닌 경우 <code>json.Unmarshal</code> 및 유사한 함수 호출을 보고합니다.
+<p>이러한 호출은 실패하며 오류를 반환합니다.</p>
+<p><code>Unmarshal </code>에 대한 더 자세한 내용은 <a href="https://pkg.go.dev/encoding/json#Unmarshal">go.dev의 func Unmarshal</a>(을)를 참고하세요.</p>
+<p>예:</p>
+<pre><code>var animals []Animal
+err := json.Unmarshal(jsonData, animals) // 항상 오류를 반환</code></pre>
+<p><b>앞에 '&' 추가</b> 빠른 수정 적용 후:</p>
+<pre><code>var animals []Animal
+err := json.Unmarshal(jsonData, &animals)</code>
+</pre>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+클래스를 참조하는 포함 호출(<code>include</code>, <code>prepend</code> 및 <code>extend</code>)을 보고합니다. 포함 호출은 모듈 또는 인터페이스를 참조하는 데만 허용됩니다.
+<p>잘못된 inclusion 호출을 제거하기 위해 빠른 수정을 사용할 수 있습니다.</p>
+<p>예:</p>
+<pre><code>class Example
+  # 'include' 호출에 사용된 클래스 'Object'
+  include Object
+end</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>class Example
+end</code></pre>
+</body>
+</html>

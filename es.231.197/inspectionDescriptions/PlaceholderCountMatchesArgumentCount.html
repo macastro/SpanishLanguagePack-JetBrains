@@ -1,0 +1,18 @@
+<html>
+<body>
+로거 메시지의 <code>{}</code> 자리표시자 숫자가 로깅 호출에 대한 다른 인수의 숫자와 일치하지 않는 <code>logger.info("{}: {}", key)</code>와 같은 SLF4J 또는 Log4j 2 로깅 호출을 보고합니다.
+<!-- tooltip end -->
+<p>
+검사 옵션을 사용하여 SLF4J가 사용하는 구현을 지정합니다.
+<strong>자동 확인</strong>을 선택하면 클래스 경로에서 <code>org.apache.logging.slf4j.Log4jLogger</code>가 검색됩니다.
+이 파일을 찾거나 <strong>예</strong>를 선택한 경우, 예외 타입이 있는 마지막 매개변수에 자리 표시자가 있으면
+  SLFJ4 API에 대해 보고되지 않습니다.
+예:
+<pre><code>
+// 보고되지 않음
+log.error("For id {}: {}", id, new RuntimeException());
+</code></pre>
+이 옵션은 SLF4J에서만 작동합니다.
+<p>
+</body>
+</html>

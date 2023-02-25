@@ -1,0 +1,27 @@
+<html>
+<body>
+더 간결한 메서드로 대체 가능하거나 중간 단계를 제거할 수 있는 <code>forEach()</code> 호출을 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  List&lt;String&gt; findNStrings(List&lt;String&gt; list, int n) {
+    List&lt;String&gt; other = new ArrayList&lt;>();
+    list.forEach(s -> {
+      if(s.length() > n) other.add(s);
+    });
+    return other;
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  List&lt;String&gt; findNStrings(List&lt;String&gt; list, int n) {
+    List&lt;String&gt; other = list.stream()
+      .filter(s -> s.length() > n)
+      .collect(Collectors.toList());
+    return other;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 8 이상인 경우에만 보고합니다.</p>
+<p><small>2017.3의 새로운 기능</small></p>
+</body>
+</html>

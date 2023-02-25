@@ -1,0 +1,27 @@
+<html>
+<body>
+메서드에서 실제로 발생하는 예외보다 더 일반적인 예외를 가진 <code>throws</code> 절을 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  public void createFile() throws Exception { // 경고: 'throws Exception'은 너무 광범위하고 'IOException' 예외를 숨깁니다
+    File file = new File("pathToFile");
+    file.createNewFile();
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  public void createFile() throws IOException {
+    File file = new File("pathToFile");
+    file.createNewFile();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<ul>
+  <li>지정된 것보다 많은 수의 다른 예외를 숨기려면 <b>경고할 최대 숨겨진 예외 수</b> 필드를 사용하여 예외를 무시합니다.</li>
+  <li><b>RuntimeException, Exception, Error 또는 Throwable에 대해서만 경고</b> 옵션을 사용하여 이 검사로 가장 일반적인 예외에 대해서만 경고합니다.</li>
+  <li><b>라이브러리 메서드를 재정의하는 메서드에 선언된 예외 무시</b> 옵션을 사용하여 라이브러리 메서드를 재정의하는 메서드에서 너무 광범위한 <code>throws</code> 절을 무시합니다.</li>
+  <li><b>다른 예외를 감추지만 자신은 던져지는 예외 무시</b> 옵션을 사용하여 다른 예외를 감추지만 여전히 메서드 본문에서 던져질 수 있어서 기술적으로 너무 광범위하지 않은 예외를 무시합니다.</li>
+</ul>
+</body>
+</html>

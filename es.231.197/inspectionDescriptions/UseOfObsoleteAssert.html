@@ -1,0 +1,27 @@
+<html>
+<body>
+<code>junit.framework.Assert</code> 클래스에서 이루어지는 모든 메서드 호출을 보고합니다. 이 클래스는 사용이 중단되었으며 이 호출은 <code>org.junit.Assert</code> 클래스의 메서드 호출로 바꿀 수 있습니다.
+<p>예:</p>
+<pre><code>
+  <b>import</b> org.junit.*;
+  <b>public class</b> NecessaryTest {
+    @Test
+    <b>public void</b> testIt() {
+      junit.framework.Assert.assertEquals("expected", "actual");
+    }
+  }
+</code></pre>
+<p>빠른 수정이 적용된 후 결과는 다음과 같습니다.</p>
+<pre><code>
+  <b>import</b> org.junit;
+  <b>public class</b> NecessaryTest {
+
+    <b>public void</b> testIt() {
+      Assert.assertEquals("expected", "actual");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

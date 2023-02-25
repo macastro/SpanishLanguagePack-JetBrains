@@ -1,0 +1,30 @@
+<html>
+<body>
+안전하게 닫히지 않은 JDBC 리소스를 보고합니다. 이 검사에서 보고되는 JDBC 리소스에는 <code>java.sql.Connection</code>,
+<code>java.sql.Statement</code>, <code>java.sql.PreparedStatement</code>,
+<code>java.sql.CallableStatement</code>, <code>java.sql.ResultSet</code>이 포함됩니다.
+<p>
+  이 검사는 기본적으로 리소스의 이름에 'close' 또는 'cleanup'이 붙는 모든 메서드에 의해 닫힐 수 있다고 가정합니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  ResultSet findAllElements(Connection connection) throws SQLException {
+    PreparedStatement statement = connection.prepareStatement("SELECT * FROM TABLE"); // 구문이 닫히지 않았습니다
+    statement.execute();
+    return statement.getResultSet();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  다음 옵션을 사용해 검사를 구성하세요.
+</p>
+<ul>
+  <li>
+    JDBC 리소스를 <code>try</code> 블록 내부에서 여는 것을 허용할지 여부를 설정합니다. 이 스타일은 <code>try</code> 블록 앞에서 리소스를 여는 것보다 장황하기 때문에 그다지 바람직하지 않습니다.
+  </li>
+  <li>
+    인수로서 전달된 리소스를 메서드 호출로 닫을 수 있는지 여부를 설정합니다.
+  </li>
+</ul>
+</body>
+</html>

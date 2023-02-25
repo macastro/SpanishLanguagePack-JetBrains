@@ -1,0 +1,13 @@
+<html>
+<body>
+인스턴스 변수에 저장된 소유한 객체 중 릴리스되지 않은 객체를 보고합니다.<br>
+객체의 소유권은 다음의 경우에 가지게 됩니다.<br>
+- 이름이 <code>alloc</code> 또는 <code>new</code>로 시작하거나 <code>copy</code>를 포함하는 메서드를 사용해 객체를 생성하는 경우<br>
+- 객체에 <code>retain</code> 메시지를 전송하는 경우<br>
+- <code>retain</code> 또는 <code>copy</code> 속성을 포함하고 있으며 인스턴스 변수와 통합된 프로퍼티의 값을 설정하는 경우<br>
+객체의 소유권을 포기하려면 다음을 수행하세요.<br>
+- 객체에 <code>release</code> 또는 <code>autorelease</code> 메시지를 전송<br>
+- 인스턴스 변수와 통합된 프로퍼티에 <code>nil</code> 대입<br>
+자동 참조 집계(ARC)를 사용하면 이 검사가 비활성화됩니다. 아래의 체크박스를 끄면 클래스의 어떤 메서드에서도 인스턴스 변수를 릴리스할 수 있습니다. 체크박스를 켜면 <code>dealloc</code>, <code>tearDown</code>, <code>applicationWillTerminate:</code>, <code>didTurnIntoFault</code> 메서드는 물론 이러한 메서드에서 호출되는 모든 메서드에서 인스턴스 변수를 릴리스할 수 있습니다.
+</body>
+</html>

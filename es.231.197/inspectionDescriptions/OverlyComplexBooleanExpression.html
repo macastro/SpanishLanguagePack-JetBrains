@@ -1,0 +1,15 @@
+<html>
+<body>
+항이 너무 많은 bool 표현식을 보고합니다. 그러한 표현식은 혼란을 일으킬 수 있어 버그가 발생하기 쉽습니다.
+<p>예:</p>
+<pre><code>
+  cond(x1) &amp;&amp; cond(x2) ^ cond(x3) &amp;&amp; cond(x4);
+</code></pre>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<ul>
+  <li><b>최대 항 수</b> 필드를 사용하여 bool 표현식에 허용되는 항의 최대 개수를 지정하세요.</li>
+  <li>하나의 부울 연산자를 반복적으로 사용하는 bool 식을 무시하려면 <b>순수 결합어 및 분리어 무시</b> 옵션을 사용하세요.</li>
+</ul>
+</body>
+</html>

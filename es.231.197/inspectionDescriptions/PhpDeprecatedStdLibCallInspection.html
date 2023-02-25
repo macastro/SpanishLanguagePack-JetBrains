@@ -1,0 +1,29 @@
+<html>
+<body>
+PHP 8.1부터 지원 중단된 표준 PHP 라이브러리 함수에 대한 호출을 보고합니다.
+<!-- tooltip end -->
+<p>
+  다음과 같은 호출이 보고됩니다.
+</p>
+<ul>
+  <li>
+    객체를 인수로 사용한 <code>key()</code>, <code>current()</code>, <code>next()</code>, <code>prev()</code> 및 <code>reset()</code> 호출
+  </li>
+  <li>
+    인수 없는 <code>mb_check_encoding()</code> 호출
+  </li>
+  <li>
+    인수가 없는 <code>get_class()</code>, <code>get_parent_class()</code> 및 <code>get_called_class()</code> 호출
+  </li>
+  <li>
+    부울을 <code>$value</code> 인수로 전달한 <code>IntlCalendar::roll()</code> 호출
+  </li>
+  <li>
+    문자열이 아닌 인수를 사용하는 <code>ctype_*()</code> 호출
+  </li>
+</ul>
+<p>
+  자세한 내용은 <a href="https://wiki.php.net/rfc/deprecations_php_8_1">PHP RFC: Deprecations for PHP 8.1</a>을 참고하세요.
+</p>
+</body>
+</html>

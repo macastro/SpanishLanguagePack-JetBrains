@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>일련의 if-else 문 내 타입 검사 및 타입 변환을 보고하고 패턴 매칭으로 바꿉니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  val value = 0
+  if (value.isInstanceOf[Int]) {
+    val x = value.asInstanceOf[Int] + 1
+    val y = value.asInstanceOf[Int] + 2
+  } else if (value.isInstanceOf[Long]) {
+    val x = value.asInstanceOf[Long]
+    println(x)
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  val value = 0
+  value match {
+    case i: Int =>
+      val x = i + 1
+      val y = i + 2
+    case x: Long =>
+      println(x)
+    case _ =>
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>지원되지 않는 타입의 리소스 메서드 매개변수(<code>@PathParam</code>, <code>@QueryParam</code> 등의 어노테이션이 추가됨)를 보고합니다.</p>
+<p>어노테이션이 추가된 매개변수, 필드 또는 프로퍼티의 타입은 다음 요구 조건 중 하나를 만족해야 합니다.</p>
+<ol>
+  <li>기본 타입이어야 함</li>
+  <li>하나의 <code>String</code> 인수를 허용하는 생성자가 있어야 함</li>
+  <li>하나의 <code>String</code> 인수를 허용하고, 이름이 <code>valueOf()</code> 또는 <code>fromString()</code>인 static 메서드(예: <code>Integer.valueOf(String)</code>)가 있음
+  </li>
+  <li>문자열을 특정 타입으로 변환할 수 있는 <code>ParamConverter</code> 인스턴스를 반환하는 <code>ParamConverterProvider</code> JAX-RS 확장 SPI의 구현이 등록되어 있음
+  </li>
+  <li>T가 위의 2, 3 또는 4를 만족하는 <code>List&lt;T&gt;</code>, <code>Set&lt;T&gt;</code> 또는 <code>SortedSet&lt;T&gt;</code>이어야 함 결과 컬렉션은 읽기 전용입니다.</li>
+</ol>
+</body>
+</html>

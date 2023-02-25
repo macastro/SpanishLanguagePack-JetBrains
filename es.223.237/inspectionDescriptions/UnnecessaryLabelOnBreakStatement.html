@@ -1,0 +1,23 @@
+<html>
+<body>
+불필요한 라벨이 지정된 <code>break</code> 문을 보고합니다. 그러한 라벨은 제어 흐름을 변경하지 않지만 코드를 이해하기 어렵게 만듭니다.
+<p><b>예:</b></p>
+<pre><code>
+  label:
+  for(int i = 0; i &lt; 10; i++) {
+    if (shouldBreak()) break label;
+    // 작업 수행
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  label:
+  for(int i = 0; i &lt; 10; i++) {
+    if (shouldBreak()) break;
+    // 작업 수행
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

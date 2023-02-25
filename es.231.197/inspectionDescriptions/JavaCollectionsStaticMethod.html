@@ -1,0 +1,23 @@
+<html>
+<body>
+Kotlin stdlib으로 대체 가능한 Java <code>Collections</code> static 메서드 호출을 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  import java.util.Collections
+
+  fun test() {
+      val mutableList = mutableListOf(1, 2)
+      Collections.fill(mutableList, 3)
+  }
+</code></pre>
+<p>빠른 수정에서는 Java <code>Collections</code> static 메서드 호출을 그에 상응하는 Kotlin stdlib 메서드 호출로 대체합니다.</p>
+<pre><code>
+  import java.util.Collections
+
+  fun test() {
+      val mutableList = mutableListOf(1, 2)
+      mutableList.fill(3)
+  }
+</code></pre>
+</body>
+</html>

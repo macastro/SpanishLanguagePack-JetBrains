@@ -1,0 +1,20 @@
+<!-- Copyright 2000-2022 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+<html>
+<body>
+<code>isAfter()</code>, <code>isBefore()</code> 혹은 <code>isEqual()</code> 호출로 대체될 수 있는 <code>compareTo()</code> 호출을 이용한 <code>java.time</code> 비교를 보고합니다.
+<p>예:</p>
+<pre><code>
+  LocalDate date1 = LocalDate.now();
+  LocalDate date2 = LocalDate.now();
+  boolean t = date1.compareTo(date2) > 0;
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  LocalDate date1 = LocalDate.now();
+  LocalDate date2 = LocalDate.now();
+  boolean t = date1.isAfter(date2);
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.3의 새로운 기능</small></p>
+</body>
+</html>

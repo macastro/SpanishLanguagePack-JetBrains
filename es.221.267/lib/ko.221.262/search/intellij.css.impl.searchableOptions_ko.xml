@@ -1,0 +1,356 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="스타일시트" path="ActionManager" hit="스타일시트" />
+    <option name="생성" path="ActionManager" hit="스타일시트 생성" />
+    <option name="스타일시트" path="ActionManager" hit="스타일시트 생성" />
+    <option name="스타일" path="ActionManager" hit="태그에 적용된 스타일 표시" />
+    <option name="적용된" path="ActionManager" hit="태그에 적용된 스타일 표시" />
+    <option name="태그에" path="ActionManager" hit="태그에 적용된 스타일 표시" />
+    <option name="표시" path="ActionManager" hit="태그에 적용된 스타일 표시" />
+  </configurable>
+  <configurable id="editor.breadcrumbs" configurable_name="이동 경로">
+    <option name="css" hit="CSS" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.CSS" configurable_name="CSS">
+    <option name="css" hit="CSS" />
+    <option name="hex" hit="HEX 색상" />
+    <option name="색상" hit="HEX 색상" />
+    <option name="id" hit="ID 선택자" />
+    <option name="선택자" hit="ID 선택자" />
+    <option name="url" hit="URL" />
+    <option name="대괄호" hit="대괄호" />
+    <option name="마침표" hit="마침표" />
+    <option name="문자열" hit="문자열" />
+    <option name="세미콜론" hit="세미콜론" />
+    <option name="소괄호" hit="소괄호" />
+    <option name="속성" hit="속성 이름" />
+    <option name="이름" hit="속성 이름" />
+    <option name="숫자" hit="숫자" />
+    <option name="쉼표" hit="쉼표" />
+    <option name="식별자" hit="식별자" />
+    <option name="기호" hit="연산 기호" />
+    <option name="연산" hit="연산 기호" />
+    <option name="범위" hit="유니코드 범위" />
+    <option name="유니코드" hit="유니코드 범위" />
+    <option name="선택자" hit="의사 선택자" />
+    <option name="의사" hit="의사 선택자" />
+    <option name="문자" hit="잘못된 문자" />
+    <option name="잘못된" hit="잘못된 문자" />
+    <option name="주석" hit="주석" />
+    <option name="중괄호" hit="중괄호" />
+    <option name="중요" hit="중요" />
+    <option name="콜론" hit="콜론" />
+    <option name="이름" hit="클래스 이름" />
+    <option name="클래스" hit="클래스 이름" />
+    <option name="키워드" hit="키워드" />
+    <option name="이름" hit="태그 이름" />
+    <option name="태그" hit="태그 이름" />
+    <option name="값" hit="프로퍼티 값" />
+    <option name="프로퍼티" hit="프로퍼티 값" />
+    <option name="이름" hit="프로퍼티 이름" />
+    <option name="프로퍼티" hit="프로퍼티 이름" />
+    <option name="함수" hit="함수" />
+  </configurable>
+  <configurable id="reference.idesettings.emmet.css" configurable_name="CSS">
+    <option name="css" hit="CSS" />
+    <option name="c" hit="CSS Emmet 활성화 C " />
+    <option name="css" hit="CSS Emmet 활성화 C " />
+    <option name="emmet" hit="CSS Emmet 활성화 C " />
+    <option name="활성화" hit="CSS Emmet 활성화 C " />
+    <option name="css" hit="CSS 벤더 접두사 자동 삽입 P " />
+    <option name="p" hit="CSS 벤더 접두사 자동 삽입 P " />
+    <option name="벤더" hit="CSS 벤더 접두사 자동 삽입 P " />
+    <option name="삽입" hit="CSS 벤더 접두사 자동 삽입 P " />
+    <option name="자동" hit="CSS 벤더 접두사 자동 삽입 P " />
+    <option name="접두사" hit="CSS 벤더 접두사 자동 삽입 P " />
+    <option name="css" hit="CSS 약어에서 퍼지 검색 활성화 F " />
+    <option name="f" hit="CSS 약어에서 퍼지 검색 활성화 F " />
+    <option name="검색" hit="CSS 약어에서 퍼지 검색 활성화 F " />
+    <option name="약어에서" hit="CSS 약어에서 퍼지 검색 활성화 F " />
+    <option name="퍼지" hit="CSS 약어에서 퍼지 검색 활성화 F " />
+    <option name="활성화" hit="CSS 약어에서 퍼지 검색 활성화 F " />
+    <option name="u" hit="알 수 없는 프로퍼티의 확장 활성화  unknown 에서  unknown    으로  U " />
+    <option name="unknown" hit="알 수 없는 프로퍼티의 확장 활성화  unknown 에서  unknown    으로  U " />
+    <option name="수" hit="알 수 없는 프로퍼티의 확장 활성화  unknown 에서  unknown    으로  U " />
+    <option name="알" hit="알 수 없는 프로퍼티의 확장 활성화  unknown 에서  unknown    으로  U " />
+    <option name="없는" hit="알 수 없는 프로퍼티의 확장 활성화  unknown 에서  unknown    으로  U " />
+    <option name="에서" hit="알 수 없는 프로퍼티의 확장 활성화  unknown 에서  unknown    으로  U " />
+    <option name="으로" hit="알 수 없는 프로퍼티의 확장 활성화  unknown 에서  unknown    으로  U " />
+    <option name="프로퍼티의" hit="알 수 없는 프로퍼티의 확장 활성화  unknown 에서  unknown    으로  U " />
+    <option name="확장" hit="알 수 없는 프로퍼티의 확장 활성화  unknown 에서  unknown    으로  U " />
+    <option name="활성화" hit="알 수 없는 프로퍼티의 확장 활성화  unknown 에서  unknown    으로  U " />
+  </configurable>
+  <configurable id="preferences.sourceCode.CSS" configurable_name="CSS">
+    <option name="" path="기타" hit="  진수 색상 형식을 다음으로 변환 F  " />
+    <option name="f" path="기타" hit="  진수 색상 형식을 다음으로 변환 F  " />
+    <option name="다음으로" path="기타" hit="  진수 색상 형식을 다음으로 변환 F  " />
+    <option name="변환" path="기타" hit="  진수 색상 형식을 다음으로 변환 F  " />
+    <option name="색상" path="기타" hit="  진수 색상 형식을 다음으로 변환 F  " />
+    <option name="진수" path="기타" hit="  진수 색상 형식을 다음으로 변환 F  " />
+    <option name="형식을" path="기타" hit="  진수 색상 형식을 다음으로 변환 F  " />
+    <option name="" path="기타" hit="  진수 색상을 다음으로 변환 H  " />
+    <option name="h" path="기타" hit="  진수 색상을 다음으로 변환 H  " />
+    <option name="다음으로" path="기타" hit="  진수 색상을 다음으로 변환 H  " />
+    <option name="변환" path="기타" hit="  진수 색상을 다음으로 변환 H  " />
+    <option name="색상을" path="기타" hit="  진수 색상을 다음으로 변환 H  " />
+    <option name="진수" path="기타" hit="  진수 색상을 다음으로 변환 H  " />
+    <option name="css" hit="CSS" />
+    <option name="css" path="정렬" hit="CSS 프로퍼티 정렬 S " />
+    <option name="s" path="정렬" hit="CSS 프로퍼티 정렬 S " />
+    <option name="정렬" path="정렬" hit="CSS 프로퍼티 정렬 S " />
+    <option name="프로퍼티" path="정렬" hit="CSS 프로퍼티 정렬 S " />
+    <option name="hex" path="기타" hit="Hex 색상" />
+    <option name="색상" path="기타" hit="Hex 색상" />
+    <option name="값" path="기타" hit="값 위치" />
+    <option name="위치" path="기타" hit="값 위치" />
+    <option name="a" path="기타" hit="값 정렬 A  " />
+    <option name="값" path="기타" hit="값 정렬 A  " />
+    <option name="정렬" path="기타" hit="값 정렬 A  " />
+    <option name="공백" path="기타" hit="공백" />
+    <option name="구성표" hit="구성표 " />
+    <option name="기타" path="기타" hit="기타" />
+    <option name="l" path="기타" hit="긴 형식 L " />
+    <option name="긴" path="기타" hit="긴 형식 L " />
+    <option name="형식" path="기타" hit="긴 형식 L " />
+    <option name="다음" path="기타" hit="다음 줄" />
+    <option name="줄" path="기타" hit="다음 줄" />
+    <option name="다음에서" hit="다음에서 설정   " />
+    <option name="설정" hit="다음에서 설정   " />
+    <option name="p" path="기타" hit="닫는 중괄호를 프로퍼티에 정렬 P " />
+    <option name="닫는" path="기타" hit="닫는 중괄호를 프로퍼티에 정렬 P " />
+    <option name="정렬" path="기타" hit="닫는 중괄호를 프로퍼티에 정렬 P " />
+    <option name="중괄호를" path="기타" hit="닫는 중괄호를 프로퍼티에 정렬 P " />
+    <option name="프로퍼티에" path="기타" hit="닫는 중괄호를 프로퍼티에 정렬 P " />
+    <option name="u" path="기타" hit="대문자 U " />
+    <option name="대문자" path="기타" hit="대문자 U " />
+    <option name="더블" path="기타" hit="더블" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="들여쓰기 " />
+    <option name="q" path="기타" hit="따옴표 Q  " />
+    <option name="따옴표" path="기타" hit="따옴표 Q  " />
+    <option name="로드" hit="로드 중   " />
+    <option name="중" hit="로드 중   " />
+    <option name="공백" path="기타" hit="블록 주석 주변에 공백 추가" />
+    <option name="블록" path="기타" hit="블록 주석 주변에 공백 추가" />
+    <option name="주변에" path="기타" hit="블록 주석 주변에 공백 추가" />
+    <option name="주석" path="기타" hit="블록 주석 주변에 공백 추가" />
+    <option name="추가" path="기타" hit="블록 주석 주변에 공백 추가" />
+    <option name="비활성화" hit="비활성화" />
+    <option name="빈" path="빈 줄" hit="빈 줄" />
+    <option name="줄" path="빈 줄" hit="빈 줄" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="빈" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="유지" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="줄에" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="c" path="정렬" hit="사용자 지정 순서 C  " />
+    <option name="사용자" path="정렬" hit="사용자 지정 순서 C  " />
+    <option name="순서" path="정렬" hit="사용자 지정 순서 C  " />
+    <option name="지정" path="정렬" hit="사용자 지정 순서 C  " />
+    <option name="강제" path="기타" hit="서식 다시 지정 시 강제 적용" />
+    <option name="다시" path="기타" hit="서식 다시 지정 시 강제 적용" />
+    <option name="서식" path="기타" hit="서식 다시 지정 시 강제 적용" />
+    <option name="시" path="기타" hit="서식 다시 지정 시 강제 적용" />
+    <option name="적용" path="기타" hit="서식 다시 지정 시 강제 적용" />
+    <option name="지정" path="기타" hit="서식 다시 지정 시 강제 적용" />
+    <option name="e" path="기타" hit="서식에 강제 적용 E " />
+    <option name="강제" path="기타" hit="서식에 강제 적용 E " />
+    <option name="서식에" path="기타" hit="서식에 강제 적용 E " />
+    <option name="적용" path="기타" hit="서식에 강제 적용 E " />
+    <option name="w" path="기타" hit="소문자 W " />
+    <option name="소문자" path="기타" hit="소문자 W " />
+    <option name="css" path="정렬" hit="쉼표로 분리된 벤더 접두사 없는 CSS 프로퍼티 목록" />
+    <option name="목록" path="정렬" hit="쉼표로 분리된 벤더 접두사 없는 CSS 프로퍼티 목록" />
+    <option name="벤더" path="정렬" hit="쉼표로 분리된 벤더 접두사 없는 CSS 프로퍼티 목록" />
+    <option name="분리된" path="정렬" hit="쉼표로 분리된 벤더 접두사 없는 CSS 프로퍼티 목록" />
+    <option name="쉼표로" path="정렬" hit="쉼표로 분리된 벤더 접두사 없는 CSS 프로퍼티 목록" />
+    <option name="없는" path="정렬" hit="쉼표로 분리된 벤더 접두사 없는 CSS 프로퍼티 목록" />
+    <option name="접두사" path="정렬" hit="쉼표로 분리된 벤더 접두사 없는 CSS 프로퍼티 목록" />
+    <option name="프로퍼티" path="정렬" hit="쉼표로 분리된 벤더 접두사 없는 CSS 프로퍼티 목록" />
+    <option name="스마트" path="탭 및 들여쓰기" hit="스마트 탭" />
+    <option name="탭" path="탭 및 들여쓰기" hit="스마트 탭" />
+    <option name="e" path="기타" hit="여는 중괄호 앞 E " />
+    <option name="앞" path="기타" hit="여는 중괄호 앞 E " />
+    <option name="여는" path="기타" hit="여는 중괄호 앞 E " />
+    <option name="중괄호" path="기타" hit="여는 중괄호 앞 E " />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="연속 들여쓰기 " />
+    <option name="연속" path="탭 및 들여쓰기" hit="연속 들여쓰기 " />
+    <option name="b" path="정렬" hit="이름순 B " />
+    <option name="이름순" path="정렬" hit="이름순 B " />
+    <option name="작은따옴표" path="기타" hit="작은따옴표" />
+    <option name="정렬" path="정렬" hit="정렬" />
+    <option name="안" path="기타" hit="정렬 안 함" />
+    <option name="정렬" path="기타" hit="정렬 안 함" />
+    <option name="함" path="기타" hit="정렬 안 함" />
+    <option name="주석" path="기타" hit="주석" />
+    <option name="끝" path="기타" hit="줄 끝" />
+    <option name="줄" path="기타" hit="줄 끝" />
+    <option name="공백" path="기타" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="부분에" path="기타" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="시작" path="기타" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="주석" path="기타" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="줄" path="기타" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="추가" path="기타" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="b" path="기타" hit="중괄호 배치 B  " />
+    <option name="배치" path="기타" hit="중괄호 배치 B  " />
+    <option name="중괄호" path="기타" hit="중괄호 배치 B  " />
+    <option name="선택자" path="빈 줄" hit="중첩된 선택자 주변 " />
+    <option name="주변" path="빈 줄" hit="중첩된 선택자 주변 " />
+    <option name="중첩된" path="빈 줄" hit="중첩된 선택자 주변 " />
+    <option name="s" path="기타" hit="짧은 형식 S " />
+    <option name="짧은" path="기타" hit="짧은 형식 S " />
+    <option name="형식" path="기타" hit="짧은 형식 S " />
+    <option name="번째" path="기타" hit="첫 번째 열의 블록 주석" />
+    <option name="블록" path="기타" hit="첫 번째 열의 블록 주석" />
+    <option name="열의" path="기타" hit="첫 번째 열의 블록 주석" />
+    <option name="주석" path="기타" hit="첫 번째 열의 블록 주석" />
+    <option name="첫" path="기타" hit="첫 번째 열의 블록 주석" />
+    <option name="번째" path="기타" hit="첫 번째 열의 줄 주석" />
+    <option name="열의" path="기타" hit="첫 번째 열의 줄 주석" />
+    <option name="주석" path="기타" hit="첫 번째 열의 줄 주석" />
+    <option name="줄" path="기타" hit="첫 번째 열의 줄 주석" />
+    <option name="첫" path="기타" hit="첫 번째 열의 줄 주석" />
+    <option name="빈" path="빈 줄" hit="최대 빈 줄 유지" />
+    <option name="유지" path="빈 줄" hit="최대 빈 줄 유지" />
+    <option name="줄" path="빈 줄" hit="최대 빈 줄 유지" />
+    <option name="최대" path="빈 줄" hit="최대 빈 줄 유지" />
+    <option name="블록" path="빈 줄" hit="최상위 블록 주변 " />
+    <option name="주변" path="빈 줄" hit="최상위 블록 주변 " />
+    <option name="최상위" path="빈 줄" hit="최상위 블록 주변 " />
+    <option name="빈" path="빈 줄" hit="최소 빈 줄" />
+    <option name="줄" path="빈 줄" hit="최소 빈 줄" />
+    <option name="최소" path="빈 줄" hit="최소 빈 줄" />
+    <option name="내" path="빈 줄" hit="코드 내 " />
+    <option name="코드" path="빈 줄" hit="코드 내 " />
+    <option name="c" path="기타" hit="콜론 뒤 C " />
+    <option name="뒤" path="기타" hit="콜론 뒤 C " />
+    <option name="콜론" path="기타" hit="콜론 뒤 C " />
+    <option name="위치" path="기타" hit="콜론 위치" />
+    <option name="콜론" path="기타" hit="콜론 위치" />
+    <option name="문자" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="사용" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="및" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="크기" path="탭 및 들여쓰기" hit="탭 크기 " />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 크기 " />
+    <option name="k" path="기타" hit="한 줄 블록 유지 K " />
+    <option name="블록" path="기타" hit="한 줄 블록 유지 K " />
+    <option name="유지" path="기타" hit="한 줄 블록 유지 K " />
+    <option name="줄" path="기타" hit="한 줄 블록 유지 K " />
+    <option name="한" path="기타" hit="한 줄 블록 유지 K " />
+  </configurable>
+  <configurable id="copyright.filetypes.CSS" configurable_name="CSS">
+    <option name="css" hit="CSS" />
+    <option name="각" hit="각 줄에 접두사 사용" />
+    <option name="사용" hit="각 줄에 접두사 사용" />
+    <option name="접두사" hit="각 줄에 접두사 사용" />
+    <option name="줄에" hit="각 줄에 접두사 사용" />
+    <option name="구분" hit="구분 기호 " />
+    <option name="기호" hit="구분 기호 " />
+    <option name="길이" hit="길이 " />
+    <option name="r" hit="다른 주석 뒤 R " />
+    <option name="다른" hit="다른 주석 뒤 R " />
+    <option name="뒤" hit="다른 주석 뒤 R " />
+    <option name="주석" hit="다른 주석 뒤 R " />
+    <option name="o" hit="다른 주석 앞 O " />
+    <option name="다른" hit="다른 주석 앞 O " />
+    <option name="앞" hit="다른 주석 앞 O " />
+    <option name="주석" hit="다른 주석 앞 O " />
+    <option name="구분" hit="뒤에 구분 기호" />
+    <option name="기호" hit="뒤에 구분 기호" />
+    <option name="뒤에" hit="뒤에 구분 기호" />
+    <option name="d" hit="뒤에 빈 줄 추가 D " />
+    <option name="뒤에" hit="뒤에 빈 줄 추가 D " />
+    <option name="빈" hit="뒤에 빈 줄 추가 D " />
+    <option name="줄" hit="뒤에 빈 줄 추가 D " />
+    <option name="추가" hit="뒤에 빈 줄 추가 D " />
+    <option name="디폴트" hit="디폴트 설정 사용" />
+    <option name="사용" hit="디폴트 설정 사용" />
+    <option name="설정" hit="디폴트 설정 사용" />
+    <option name="블록" hit="블록 주석 사용" />
+    <option name="사용" hit="블록 주석 사용" />
+    <option name="주석" hit="블록 주석 사용" />
+    <option name="사용" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="사용자" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="서식" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="옵션" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="지정" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="상대" hit="상대 위치" />
+    <option name="위치" hit="상대 위치" />
+    <option name="상자" hit="상자" />
+    <option name="구분" hit="앞에 구분 기호" />
+    <option name="기호" hit="앞에 구분 기호" />
+    <option name="앞에" hit="앞에 구분 기호" />
+    <option name="b" hit="앞에 빈 줄 추가 B " />
+    <option name="빈" hit="앞에 빈 줄 추가 B " />
+    <option name="앞에" hit="앞에 빈 줄 추가 B " />
+    <option name="줄" hit="앞에 빈 줄 추가 B " />
+    <option name="추가" hit="앞에 빈 줄 추가 B " />
+    <option name="없음" hit="저작권 없음" />
+    <option name="저작권" hit="저작권 없음" />
+    <option name="주석" hit="주석 타입" />
+    <option name="타입" hit="주석 타입" />
+    <option name="사용" hit="줄 주석 사용" />
+    <option name="주석" hit="줄 주석 사용" />
+    <option name="줄" hit="줄 주석 사용" />
+    <option name="테두리" hit="테두리" />
+  </configurable>
+  <configurable id="copyright.filetypes.Stylus" configurable_name="Stylus">
+    <option name="stylus" hit="Stylus" />
+    <option name="각" hit="각 줄에 접두사 사용" />
+    <option name="사용" hit="각 줄에 접두사 사용" />
+    <option name="접두사" hit="각 줄에 접두사 사용" />
+    <option name="줄에" hit="각 줄에 접두사 사용" />
+    <option name="구분" hit="구분 기호 " />
+    <option name="기호" hit="구분 기호 " />
+    <option name="길이" hit="길이 " />
+    <option name="r" hit="다른 주석 뒤 R " />
+    <option name="다른" hit="다른 주석 뒤 R " />
+    <option name="뒤" hit="다른 주석 뒤 R " />
+    <option name="주석" hit="다른 주석 뒤 R " />
+    <option name="o" hit="다른 주석 앞 O " />
+    <option name="다른" hit="다른 주석 앞 O " />
+    <option name="앞" hit="다른 주석 앞 O " />
+    <option name="주석" hit="다른 주석 앞 O " />
+    <option name="구분" hit="뒤에 구분 기호" />
+    <option name="기호" hit="뒤에 구분 기호" />
+    <option name="뒤에" hit="뒤에 구분 기호" />
+    <option name="d" hit="뒤에 빈 줄 추가 D " />
+    <option name="뒤에" hit="뒤에 빈 줄 추가 D " />
+    <option name="빈" hit="뒤에 빈 줄 추가 D " />
+    <option name="줄" hit="뒤에 빈 줄 추가 D " />
+    <option name="추가" hit="뒤에 빈 줄 추가 D " />
+    <option name="디폴트" hit="디폴트 설정 사용" />
+    <option name="사용" hit="디폴트 설정 사용" />
+    <option name="설정" hit="디폴트 설정 사용" />
+    <option name="블록" hit="블록 주석 사용" />
+    <option name="사용" hit="블록 주석 사용" />
+    <option name="주석" hit="블록 주석 사용" />
+    <option name="사용" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="사용자" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="서식" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="옵션" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="지정" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="상대" hit="상대 위치" />
+    <option name="위치" hit="상대 위치" />
+    <option name="상자" hit="상자" />
+    <option name="구분" hit="앞에 구분 기호" />
+    <option name="기호" hit="앞에 구분 기호" />
+    <option name="앞에" hit="앞에 구분 기호" />
+    <option name="b" hit="앞에 빈 줄 추가 B " />
+    <option name="빈" hit="앞에 빈 줄 추가 B " />
+    <option name="앞에" hit="앞에 빈 줄 추가 B " />
+    <option name="줄" hit="앞에 빈 줄 추가 B " />
+    <option name="추가" hit="앞에 빈 줄 추가 B " />
+    <option name="없음" hit="저작권 없음" />
+    <option name="저작권" hit="저작권 없음" />
+    <option name="주석" hit="주석 타입" />
+    <option name="타입" hit="주석 타입" />
+    <option name="사용" hit="줄 주석 사용" />
+    <option name="주석" hit="줄 주석 사용" />
+    <option name="줄" hit="줄 주석 사용" />
+    <option name="테두리" hit="테두리" />
+  </configurable>
+  <configurable id="configurable.stylesheets" configurable_name="스타일시트" />
+</options>

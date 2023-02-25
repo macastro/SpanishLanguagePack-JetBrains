@@ -1,0 +1,34 @@
+<html>
+<body>
+'super' 생성자 또는 동일한 클래스의 또 다른 생성자 호출로 시작하지 않는 생성자를 보고합니다.
+<p>이러한 생성자는 묵시적으로 <code>super()</code> 호출로 시작된다고 생각할 수 있습니다. 일부 코딩 표준에서는 이러한 <code>super()</code> 호출을 명시적으로 지정하는 것을 선호합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Foo {
+    Foo() {}
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Foo {
+    Foo() {
+      super();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  검사 옵션을 사용하여 <code>Object</code>에서 직접 확장되는 클래스를 무시합니다.
+  예:
+</p>
+<pre><code>
+  class Foo {
+    Foo() {} // 보고 안 함
+  }
+
+  class Bar extends Foo {
+    Bar() {} // 'super()'에 대한 묵시적 호출
+  }
+</code></pre>
+</body>
+</html>

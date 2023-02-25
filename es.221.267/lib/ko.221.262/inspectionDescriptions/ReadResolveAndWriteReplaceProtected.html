@@ -1,0 +1,23 @@
+<html>
+<body>
+<code>java.io.Serializable</code>을 구현하는 클래스의 <code>readResolve()</code>
+또는 <code>writeReplace()</code> 메서드가 <code>protected</code>로 선언되어 있지 않은 경우를 보고합니다.
+<p>
+  <code>readResolve()</code> 및 <code>writeReplace()</code> 메서드를 <code>private</code>으로 선언하면 하위 클래스가 확인 없이 이 메서드를 무시할 수 있습니다. 반면 <code>public</code>으로 선언하면 신뢰할 수 없는 코드에 의해 호출될 수 있습니다.
+</p>
+<p>
+  포함하는 클래스가 <code>final</code>로 선언된 경우 이 메서드를 <code>private</code>으로 선언할 수 있습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  class ClassWithSerialization implements Serializable {
+    public Object writeReplace() { // 경고: 'writeReplace()'가 protected로 선언되지 않았습니다
+        ...
+    }
+  }
+  </code>
+</pre>
+<!-- tooltip end -->
+
+</body>
+</html>

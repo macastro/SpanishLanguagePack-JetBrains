@@ -1,0 +1,14 @@
+<html>
+<body>
+참조 언어가 사용 컨텍스트에서 기대되는 언어와 일치하지 않는 경우 보고합니다.
+
+<p>예:</p>
+<pre><code>
+  @Language("JavaScript")
+  String JS_CODE = "var x;";
+
+  @Language("XPath")
+  String XPATH_CODE = JS_CODE; // 여기서 경고
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<body>
+불필요한 제어자를 보고하고 제거를 제안합니다.
+그 결과 코드는 더 간단해지지만 동작 및 의미는 변하지 않습니다.
+<p><b>예시 1:</b></p>
+<pre><code>
+  // Java 17 이상에서 모든 코드는 묵시적으로 strictfp입니다
+  strictfp class X {
+
+    // 내부 열거형은 묵시적으로 static입니다
+    static enum Inner {
+        A, B, C
+    }
+
+    // 내부 레코드는 묵시적으로 static입니다
+    static record R() {
+    }
+  }
+</code></pre>
+<p><b>예시 2:</b></p>
+<pre><code>
+  final record R() {
+    // 모든 레코드는 묵시적으로 final입니다
+  }
+</code></pre>
+<p><b>예시 3:</b></p>
+<pre><code>
+  // 모든 인터페이스는 묵시적으로 추상적입니다
+  abstract interface Printer {
+
+    // 모든 인터페이스 멤버는 묵시적으로 public입니다
+    public int size();
+
+    // 인터페이스의 모든 내부 클래스는 묵시적으로 static입니다
+    static class Inner {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

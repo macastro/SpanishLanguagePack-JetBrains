@@ -1,0 +1,33 @@
+<html>
+<body>
+불필요한 단항 빼기를 보고합니다. 그러한 표현식은 이해하기 어려울 수 있으며 오류를 포함할 수 있습니다.
+<p><b>예:</b></p>
+<pre><code>void unaryMinus(int i) {
+    int x = - -i;
+  }</code></pre>
+<p>여기에서는 다음과 같은 빠른 수정이 제안됩니다.</p>
+<ul>
+  <li><p><code>i</code> 변수 앞의 <code>-</code> 연산자를 제거합니다.</p>
+    <pre><code>void unaryMinus(int i) {
+    int x = i;
+  }</code></pre>
+  </li>
+  <li>
+ <p><code>+</code> 연산자를 접두사 감소 연산자로 바꿉니다.</p>
+    <pre><code>void unaryMinus(int i) {
+    int x = --i;
+  }</code></pre>
+  </li>
+</ul>
+
+<p><b>다른 예:</b></p>
+<pre><code>void unaryMinus(int i) {
+    i += - 8;
+  }</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>void unaryMinus(int i) {
+    i -= 8;
+  }</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

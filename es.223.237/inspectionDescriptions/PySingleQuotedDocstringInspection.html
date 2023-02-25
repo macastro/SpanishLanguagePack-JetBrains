@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>삼중 큰 따옴표 문자열 서식을 준수하지 않는 docstring을 보고합니다.</p>
+<p><b>예:</b></p>
+<pre style="font-family: monospace">
+def calc(self, balance=0):
+    'param: balance'
+    self.balance = balance
+</pre>
+<p>빠른 수정이 적용되면 코드는 다음과 같이 변경됩니다:</p>
+<pre style="font-family: monospace">
+def calc(self, balance=0):
+    """param: balance"""
+    self.balance = balance
+</pre>
+</body>
+</html>

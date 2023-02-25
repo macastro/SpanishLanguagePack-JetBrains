@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>배열과 반복자에서 'equals' 사용을 보고합니다.</p>
+<p>배열 및 반복자에 대한 equals는 참조의 상등을 검사하며, 이는 유용한 경우가 거의 없습니다.
+    이 검사는 <code>sameElements</code>를 사용해 내용을 비교할 것을 제안합니다.</p>
+<pre><code>
+  Array(1) == Array(1) //false
+  Iterator(1) == Iterator(1) //false
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  Array(1) sameElements Array(1) //true
+  Iterator(1) sameElements Iterator(1) //true
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

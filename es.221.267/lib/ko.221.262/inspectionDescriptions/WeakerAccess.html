@@ -1,0 +1,16 @@
+<html>
+<body>
+접근 제어자의 범위가 좁혀진 지정된 검사 범위에서 발견되는 모든 필드, 메서드 또는 클래스를 보고합니다.
+<p>예:</p>
+<pre><code>
+  class Sample {
+    void foo() {
+        bar("foo", "foo");
+    }
+    void bar(String x, String y) { } // private일 수 있습니다
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>검사의 옵션을 사용하여 제어자 변경 제안의 규칙을 정의합니다.</p>
+</body>
+</html>

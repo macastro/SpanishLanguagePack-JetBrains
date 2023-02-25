@@ -1,0 +1,22 @@
+<html>
+<body>
+JSDoc 주석 안의 매개변수 이름 및 개수와 실제 함수 매개변수 사이의 불일치를 보고합니다.
+JSDoc 주석에서 매개변수를 업데이트할 것을 제안합니다.
+<!-- tooltip end -->
+<p><b>예:</b></p>
+<pre><code>
+/**
+ * @param height Height in pixels
+ */
+function sq(height, width) {} // 가로 길이가 문서화되어 있지 않습니다
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+/**
+ * @param height Height in pixels
+ * @param width
+ */
+function sq(height, width) {}
+</code></pre>
+</body>
+</html>

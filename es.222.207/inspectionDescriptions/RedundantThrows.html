@@ -1,0 +1,27 @@
+<html>
+<body>
+메서드의 시그니처에 선언되었지만 메서드 자체 또는 메서드의 구현 및 재정의하는 메서드에서 던지지 않은 예외를 보고합니다.
+<p>이 검사는 직렬화와 관련된 메서드를 무시합니다(예: <code>readObject()</code> 및 <code>writeObject()</code> 메서드).</p>
+<p><b>예:</b></p>
+<pre><code>
+  void method() throws InterruptedException {
+    System.out.println();
+  }
+</code></pre>
+<p>빠른 수정에서는 선언에서 불필요한 예외를 제거하며 불필요한 <code>try</code>-<code>catch</code> 문을 정규화합니다.</p>
+<pre><code>
+  void method() {
+    System.out.println();
+  }
+</code></pre>
+<p>
+  <b>참고:</b> 에디터 내 강조 표시가 되는 동안 성능상의 이유로 일부 예외는 보고되지 않을 수 있습니다.
+  모든 결과를 확인하려면 메인 메뉴의 <b>Code(코드) | Inspect Code(코드 검사)</b> 또는 <b>Code(코드) | Analyze Code(코드 분석) | Run Inspection by Name(이름별로 검사 실행)</b>을 선택하여 검사를 실행합니다.
+</p>
+<!-- tooltip end -->
+<p><b>진입점 메서드에서 던진 예외 무시</b> 옵션을 사용하면 일례로 <code>main()</code> 메서드에서 던진 예외를 무시합니다.
+  진입점 메서드는 <a href="settings://Errors?Unused%20Declaration%20entry%20point"> Java | 선언 중복성 | 사용되지 않은 선언</a> 검사의
+  설정에서 구성할 수 있습니다.
+  <br><br></p>
+</body>
+</html>

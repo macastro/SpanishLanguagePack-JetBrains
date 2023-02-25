@@ -1,0 +1,24 @@
+<html>
+<body>
+1.9 이후 컴파일 오류를 일으킬 수 있는 Enum의 'declaringClass' 프로퍼티 호출을 보고합니다.
+<p>'Enum.getDeclaringClass'는 일반적으로는 Resolve에서는 보이지 않는 "숨겨진" Java 함수입니다. 그러나 통합 프로퍼티를 통해서
+표시되고 있으며 이는 프론트엔드 버그입니다.</p>
+<p><b>상세 정보:</b> <a href="https://youtrack.jetbrains.com/issue/KT-49653">KT-49653의 사용이 중단되었으며, Enum.declaringClass 통합 프로퍼티를 제거하세요</a></p>
+<p>빠른 수정에서는 호출을 'declaringJavaClass'로 바꿉니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  fun &lt;E: Enum&lt;E&gt;&gt; foo(values: Array&lt;E&gt;) {
+    EnumSet.noneOf(values.first().declaringClass)
+  }
+</code></pre>
+
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  fun &lt;E: Enum&lt;E&gt;&gt; foo(values: Array&lt;E&gt;) {
+    EnumSet.noneOf(values.first().declaringJavaClass)
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 프로젝트 또는 모듈의 Kotlin 언어 수준이 1.7 이상인 경우에만 보고합니다.</p>
+</body>
+</html>

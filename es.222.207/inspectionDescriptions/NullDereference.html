@@ -1,0 +1,14 @@
+<html>
+<body>
+<code>nullptr</code>을 포함할 수 있는 포인터의 역참조를 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  using namespace std;
+  void process(string *a, string b) {
+    if (a != nullptr || a->length()) {
+      a = &#38b;
+    }
+  }
+</code></pre>
+</body>
+</html>

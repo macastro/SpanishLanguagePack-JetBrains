@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>SAM(단일 추상 메서드)으로 변환할 수 있는 표현식을 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  new Thread(new Runnable {
+      override def run() = println()
+  })
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  new Thread(() => println())
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<body>
+<code>java.net.URL</code> 객체가 포함된 <code>java.util.Set</code> 및 <code>java.util.Map</code> 변수를 보고합니다.
+이러한 컬렉션은 삽입된 객체에서 <code>equals()</code> 및 <code>hashCode()</code> 메서드를 호출합니다. 이는 <code>URL</code> 객체에서 성능 문제를 일으킬 수 있습니다.
+<p>
+  <code>URL</code>의 <code>equals()</code> 및 <code>hashCode()</code> 메서드는 호스트 이름을 해결하기 위해 DNS 조회를 수행할 수 있습니다.
+  이는 네트워크 및 DNS 서버의 가용성 및 속도에 따라 심각한 지연을 일으킬 수 있습니다.
+  <code>java.net.URL</code> 대신 <code>java.net.URI</code>를 사용하면 DNS 조회를 피할 수 있습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  Set&lt;URL&gt; set = new HashSet&lt;URL&gt;();
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

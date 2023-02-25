@@ -1,0 +1,25 @@
+<html>
+<body>
+접근 제어자가 좁혀진 필드, 메서드 혹은 클래스를 보고합니다.
+<p>예:</p>
+<pre><code>
+  class Sample {
+    void foo() {
+        bar("foo", "foo");
+    }
+    void bar(String x, String y) { } // private일 수 있습니다
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Sample {
+    void foo() {
+        bar("foo", "foo");
+    }
+    private void bar(String x, String y) { }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>검사의 옵션을 사용하여 제어자 변경 제안의 규칙을 정의합니다.</p>
+</body>
+</html>

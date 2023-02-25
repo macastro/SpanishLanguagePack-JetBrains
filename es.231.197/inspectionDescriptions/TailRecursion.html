@@ -1,0 +1,34 @@
+<html>
+<body>
+꼬리 재귀, 즉 메서드가 반환 전 마지막 액션으로 그 자체를 호출하는 경우를 보고합니다.
+<p>
+  꼬리 재귀는 항상 루프로 대체할 수 있으며, 그래야 훨씬 빠르게 처리됩니다.
+  일부 JVM에서는 tail-call 최적화가 수행됩니다. 그러므로 꼬리 재귀 솔루션은 가상 머신에 따라 성능 특성이 상당히 다를 수 있습니다.
+</p>
+<p>예:</p>
+<pre><code>
+  int factorial(int val, int runningVal) {
+    if (val == 1) {
+      return runningVal;
+    } else {
+      return factorial(val - 1, runningVal * val);
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  int factorial(int val, int runningVal) {
+    while (true) {
+      if (val == 1) {
+        return runningVal;
+      } else {
+        runningVal = runningVal * val;
+        val = val - 1;
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<body>
+<code>catch</code> 블록 매개변수로의 대입을 보고합니다.
+<p><code>catch</code> 블록 매개변수를 변경하면 매우 혼동될 수 있어 권장하지 않습니다.</p>
+<p>빠른 수정은 새로운 변수 선언을 추가합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  void processFile(String fileName) throws Exception {
+    try {
+      doProcessFile(fileName);
+    } catch(Exception ex) {
+      if (ex instanceof UncheckedIOException) {
+        // Warning: catch block parameter reassigned
+        ex = ((UncheckedIOException) ex).getCause();
+      }
+      throw ex;
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  void processFile(String fileName) throws Exception {
+    try {
+      doProcessFile(fileName);
+    } catch(Exception ex) {
+      Exception unwrapped = ex;
+      if (unwrapped instanceof UncheckedIOException) {
+        unwrapped = ((UncheckedIOException)
+          unwrapped).getCause();
+      }
+      throw unwrapped;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

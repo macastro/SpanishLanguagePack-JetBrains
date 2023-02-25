@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>
+  올바르지 않은 Spring Shell 명령어 선언을 보고합니다.
+</p>
+<ul>
+  <li>명령어 설명 누락</li>
+  <li>명령어가 <code>org.springframework.shell.standard.@ShellComponent</code> 안에 없습니다</li>
+</ul>
+<p>예:</p>
+<pre><code>
+// @ShellComponent가 없으므로 모든 메서드가 보고됩니다
+class MathCommands {
+
+  @ShellMethod("")
+  public int sum(int a, int b) { // 설명이 비어 있으므로 메서드가 보고됩니다
+    return a + b;
+  }
+
+  @ShellMethod
+  public int mul(int a, int b) { // 설명이 비어 있으므로 메서드가 보고됩니다
+    return a * b;
+  }
+}
+</code></pre>
+</body>
+</html>

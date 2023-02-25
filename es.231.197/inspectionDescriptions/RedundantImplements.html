@@ -1,0 +1,24 @@
+<html>
+<body>
+클래스의 <code>implements</code> 목록의 인터페이스 또는 상위 클래스에 의해 이미 구현되었거나 해당 클래스의 상위 인터페이스에 의해 확장된 인터페이스의 <code>extends</code> 목록을 보고합니다.
+그러한 선언은 불필요하며 안전하게 제거할 수 있습니다.
+<p><b>예:</b></p>
+<pre><code>
+  class X implements One, Two {
+  }
+  interface One {}
+  interface Two extends One {}
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class X implements Two {
+  }
+  interface One {}
+  interface Two extends One {}
+</code></pre>
+<!-- tooltip end -->
+<p>
+<code>extends</code> 또는 <code>implements</code> 목록의 
+<code>Serializable</code> 또는 <code>Externalizable</code>에 대해 보고하지 않으려면 이 옵션을 사용합니다.
+</body>
+</html>

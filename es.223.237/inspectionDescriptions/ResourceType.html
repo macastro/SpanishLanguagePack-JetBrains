@@ -1,0 +1,17 @@
+<html>
+<body>
+이 검사는 다양한 지원 어노테이션(RequiresPermission나 UiThread 등)이 추가된 Android API 호출을 살펴보고 어노테이션에 명시된 대로 API를 올바르게 사용하지 않는 호출을 플래그 표시합니다.
+<br><br>
+이 검사에서 플래그 표시하는 오류의 예시:
+<ul>
+  <li>잘못된 타입의 리소스 정수(예: R.string)을 다른 타입(예: R.dimen)이 필요한 API에 전달하는 경우</li>
+  <li>재정의된 메서드가 필요한 메서드에서 (super를 통해) 해당 메서드를 호출하는 것을 잊은 경우</li>
+  <li>매니페스트에서 권한을 선언하지 않고 권한이 필요한 메서드를 호출하는 경우</li>
+  <li>RGB 정수 값이 필요한 메서드에 리소스 색상 참조를 전달하는 경우</li>
+</ul>
+...기타 등등
+<br><br>
+자세한 정보는
+<a href="http://developer.android.com/tools/debugging/annotations.html">http://developer.android.com/tools/debugging/annotations.html</a>에서 문서를 참조하세요
+</body>
+</html>

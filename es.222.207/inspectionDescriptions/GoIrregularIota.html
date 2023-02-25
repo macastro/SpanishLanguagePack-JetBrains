@@ -1,0 +1,26 @@
+<html>
+<body>
+상수 선언 내에서 불규칙한 <code>iota</code>의 사용 위치를 보고합니다.
+<p><code>iota</code> 식별자는 모든 상수 선언에 대해 재설정되고 모든 상수 사양에 대해 자동으로 증가합니다.
+  하나의 상수 사양 내에서 식별자는 해당 값을 유지합니다. <code>iota</code>를 명시적으로 참조해도 카운터가 재설정되지 않습니다.</p>
+<p>자세한 내용은 Go 사양의 <a href="https://go.dev/ref/spec#Iota">Iota</a>를 참조하세요.</p>
+<p>이 검사는 두 개의 상수 사양에 <code>iota</code>에 대한 참조가 하나 이상 포함된 텍스트와 동일한 표현식 목록이 있고 그 사이에 표현식 목록이 없는 전용 상수 사양이 있는 경우 트리거됩니다.</p>
+<p>불필요한 표현식 목록을 생략하거나 매번 표현식 목록을 작성하세요.</p>
+<p>예:</p>
+<pre><code>const (
+  a = iota  // 0
+  b         // 1
+  c = iota  // 2
+)
+</code></pre>
+<p><code>c</code> 정의에서 <code>iota</code>가 불필요하므로 검사를 트리거합니다.</p>
+<p>예:</p>
+<pre><code>const (
+  a, aa = iota, iota       // 0, 0
+  b, bb                    // 1, 1
+  c, cc = iota + 40, iota  // 42, 2
+)
+</code></pre>
+<p>불필요한 표현식 목록이 없으므로 검사를 트리거하지 않습니다.</p>
+</body>
+</html>

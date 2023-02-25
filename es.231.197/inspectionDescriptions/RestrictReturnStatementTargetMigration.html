@@ -1,0 +1,23 @@
+<html>
+<body>
+함수를 가리키지 않는 라벨을 보고합니다.
+<p>함수를 가리키지 않는 대상 라벨을 선언하는 것은 금지되어 있습니다.</p>
+<p>빠른 수정에서는 그러한 라벨을 제거합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  fun testValLabelInReturn() {
+      L@ val fn = { return@L }
+      fn()
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  fun testValLabelInReturn() {
+      L@ val fn = { return }
+      fn()
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 프로젝트 또는 모듈의 언어 버전이 1.4 이상인 경우에만 보고합니다.</p>
+</body>
+</html>

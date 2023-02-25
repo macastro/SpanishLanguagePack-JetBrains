@@ -1,0 +1,22 @@
+<html>
+<body>
+<p><code>sum</code>, <code>product</code>, <code>max</code> 또는 <code>min</code>으로 바꿀 수 있는 <code>fold</code> 및 <code>reduce</code> 메서드를 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  List(1, 2, 3).foldLeft(1){(x,y) => x * y}
+  List(1, 2, 3).fold(0)(_ + _)
+  List(1, 2, 3).reduce(_ + _)
+  List(1, 2, 3).reduceLeft(_ min _)
+  List(1, 2, 3).reduce((x, y) => math.max(x, y))
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  List(1, 2, 3).product
+  List(1, 2, 3).sum
+  List(1, 2, 3).sum
+  List(1, 2, 3).min
+  List(1, 2, 3).max
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

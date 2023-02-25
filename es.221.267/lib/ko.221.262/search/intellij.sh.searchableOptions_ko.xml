@@ -1,0 +1,197 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="for" path="ActionManager" hit="for 루프" />
+    <option name="루프" path="ActionManager" hit="for 루프" />
+    <option name="for" path="ActionManager" hit="for 루프 생성" />
+    <option name="루프" path="ActionManager" hit="for 루프 생성" />
+    <option name="생성" path="ActionManager" hit="for 루프 생성" />
+    <option name="until" path="ActionManager" hit="until 루프" />
+    <option name="루프" path="ActionManager" hit="until 루프" />
+    <option name="until" path="ActionManager" hit="until 루프 생성" />
+    <option name="루프" path="ActionManager" hit="until 루프 생성" />
+    <option name="생성" path="ActionManager" hit="until 루프 생성" />
+    <option name="while" path="ActionManager" hit="while 루프" />
+    <option name="루프" path="ActionManager" hit="while 루프" />
+    <option name="while" path="ActionManager" hit="while 루프 생성" />
+    <option name="루프" path="ActionManager" hit="while 루프 생성" />
+    <option name="생성" path="ActionManager" hit="while 루프 생성" />
+    <option name="셸" path="ActionManager" hit="터미널에서 현재 셸 파일 실행" />
+    <option name="실행" path="ActionManager" hit="터미널에서 현재 셸 파일 실행" />
+    <option name="터미널에서" path="ActionManager" hit="터미널에서 현재 셸 파일 실행" />
+    <option name="파일" path="ActionManager" hit="터미널에서 현재 셸 파일 실행" />
+    <option name="현재" path="ActionManager" hit="터미널에서 현재 셸 파일 실행" />
+    <option name="실행" path="ActionManager" hit="파일 실행" />
+    <option name="파일" path="ActionManager" hit="파일 실행" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.Shell Script" configurable_name="Shell Script">
+    <option name="script" hit="Shell Script" />
+    <option name="shell" hit="Shell Script" />
+    <option name="here" hit="Here 문서" />
+    <option name="문서" hit="Here 문서" />
+    <option name="here" hit="Here 문서 끝" />
+    <option name="끝" hit="Here 문서 끝" />
+    <option name="문서" hit="Here 문서 끝" />
+    <option name="here" hit="Here 문서 시작" />
+    <option name="문서" hit="Here 문서 시작" />
+    <option name="시작" hit="Here 문서 시작" />
+    <option name="shebang" hit="Shebang 주석" />
+    <option name="주석" hit="Shebang 주석" />
+    <option name="괄호" hit="괄호//대괄호" />
+    <option name="대괄호" hit="괄호//대괄호" />
+    <option name="괄호" hit="괄호//소괄호" />
+    <option name="소괄호" hit="괄호//소괄호" />
+    <option name="괄호" hit="괄호//중괄호" />
+    <option name="중괄호" hit="괄호//중괄호" />
+    <option name="리디렉션" hit="리디렉션" />
+    <option name="명령어" hit="명령어//제네릭 명령어" />
+    <option name="제네릭" hit="명령어//제네릭 명령어" />
+    <option name="명령어" hit="명령어//하위 셸 명령어" />
+    <option name="셸" hit="명령어//하위 셸 명령어" />
+    <option name="하위" hit="명령어//하위 셸 명령어" />
+    <option name="문자열" hit="문자열" />
+    <option name="변수" hit="변수//변수 사용 위치" />
+    <option name="사용" hit="변수//변수 사용 위치" />
+    <option name="위치" hit="변수//변수 사용 위치" />
+    <option name="변수" hit="변수//변수 선언" />
+    <option name="선언" hit="변수//변수 선언" />
+    <option name="변수" hit="변수//합성 변수" />
+    <option name="합성" hit="변수//합성 변수" />
+    <option name="숫자" hit="숫자" />
+    <option name="역따옴표" hit="역따옴표" />
+    <option name="문자열" hit="원시 문자열" />
+    <option name="원시" hit="원시 문자열" />
+    <option name="연산자" hit="조건 연산자" />
+    <option name="조건" hit="조건 연산자" />
+    <option name="주석" hit="줄 주석" />
+    <option name="줄" hit="줄 주석" />
+    <option name="키워드" hit="키워드" />
+    <option name="선언" hit="함수 선언" />
+    <option name="함수" hit="함수 선언" />
+  </configurable>
+  <configurable id="preferences.sourceCode.Shell Script" configurable_name="Shell Script">
+    <option name="script" hit="Shell Script" />
+    <option name="shell" hit="Shell Script" />
+    <option name="shfmt" hit="Shfmt 서식 지정 도구" />
+    <option name="도구" hit="Shfmt 서식 지정 도구" />
+    <option name="서식" hit="Shfmt 서식 지정 도구" />
+    <option name="지정" hit="Shfmt 서식 지정 도구" />
+    <option name="n" hit="Unix 줄 구분 기호 사용  n " />
+    <option name="unix" hit="Unix 줄 구분 기호 사용  n " />
+    <option name="구분" hit="Unix 줄 구분 기호 사용  n " />
+    <option name="기호" hit="Unix 줄 구분 기호 사용  n " />
+    <option name="사용" hit="Unix 줄 구분 기호 사용  n " />
+    <option name="줄" hit="Unix 줄 구분 기호 사용  n " />
+    <option name="case" hit="case 문 들여쓰기" />
+    <option name="들여쓰기" hit="case 문 들여쓰기" />
+    <option name="문" hit="case 문 들여쓰기" />
+    <option name="shfmt" hit="shfmt 서식 지정 도구를 다운로드할 수 없습니다  수동으로 설치하세요 " />
+    <option name="다운로드할" hit="shfmt 서식 지정 도구를 다운로드할 수 없습니다  수동으로 설치하세요 " />
+    <option name="도구를" hit="shfmt 서식 지정 도구를 다운로드할 수 없습니다  수동으로 설치하세요 " />
+    <option name="서식" hit="shfmt 서식 지정 도구를 다운로드할 수 없습니다  수동으로 설치하세요 " />
+    <option name="설치하세요" hit="shfmt 서식 지정 도구를 다운로드할 수 없습니다  수동으로 설치하세요 " />
+    <option name="수" hit="shfmt 서식 지정 도구를 다운로드할 수 없습니다  수동으로 설치하세요 " />
+    <option name="수동으로" hit="shfmt 서식 지정 도구를 다운로드할 수 없습니다  수동으로 설치하세요 " />
+    <option name="없습니다" hit="shfmt 서식 지정 도구를 다운로드할 수 없습니다  수동으로 설치하세요 " />
+    <option name="지정" hit="shfmt 서식 지정 도구를 다운로드할 수 없습니다  수동으로 설치하세요 " />
+    <option name="경로" hit="경로 " />
+    <option name="경로가" hit="경로가 올바르지 않습니다 " />
+    <option name="않습니다" hit="경로가 올바르지 않습니다 " />
+    <option name="올바르지" hit="경로가 올바르지 않습니다 " />
+    <option name="구성표" hit="구성표 " />
+    <option name="누락된" hit="누락된 서식 지정 도구" />
+    <option name="도구" hit="누락된 서식 지정 도구" />
+    <option name="서식" hit="누락된 서식 지정 도구" />
+    <option name="지정" hit="누락된 서식 지정 도구" />
+    <option name="다운로드" hit="다운로드" />
+    <option name="다음에서" hit="다음에서 설정   " />
+    <option name="설정" hit="다음에서 설정   " />
+    <option name="들여쓰기" hit="들여쓰기" />
+    <option name="들여쓰기" hit="들여쓰기 " />
+    <option name="로드" hit="로드 중   " />
+    <option name="중" hit="로드 중   " />
+    <option name="공백" hit="리다이렉트 연산자 뒤 공백 추가" />
+    <option name="뒤" hit="리다이렉트 연산자 뒤 공백 추가" />
+    <option name="리다이렉트" hit="리다이렉트 연산자 뒤 공백 추가" />
+    <option name="연산자" hit="리다이렉트 연산자 뒤 공백 추가" />
+    <option name="추가" hit="리다이렉트 연산자 뒤 공백 추가" />
+    <option name="비활성화" hit="비활성화" />
+    <option name="안쪽" hit="열 정렬 안쪽 여백 유지" />
+    <option name="여백" hit="열 정렬 안쪽 여백 유지" />
+    <option name="열" hit="열 정렬 안쪽 여백 유지" />
+    <option name="유지" hit="열 정렬 안쪽 여백 유지" />
+    <option name="정렬" hit="열 정렬 안쪽 여백 유지" />
+    <option name="뒤" hit="이항 연산자 뒤 줄 바꿈 허용" />
+    <option name="바꿈" hit="이항 연산자 뒤 줄 바꿈 허용" />
+    <option name="연산자" hit="이항 연산자 뒤 줄 바꿈 허용" />
+    <option name="이항" hit="이항 연산자 뒤 줄 바꿈 허용" />
+    <option name="줄" hit="이항 연산자 뒤 줄 바꿈 허용" />
+    <option name="허용" hit="이항 연산자 뒤 줄 바꿈 허용" />
+    <option name="줄이도록" hit="크기를 줄이도록 프로그램 최소화" />
+    <option name="최소화" hit="크기를 줄이도록 프로그램 최소화" />
+    <option name="크기를" hit="크기를 줄이도록 프로그램 최소화" />
+    <option name="프로그램" hit="크기를 줄이도록 프로그램 최소화" />
+    <option name="문자" hit="탭 문자 사용" />
+    <option name="사용" hit="탭 문자 사용" />
+    <option name="탭" hit="탭 문자 사용" />
+    <option name="크기" hit="탭 크기 " />
+    <option name="탭" hit="탭 크기 " />
+  </configurable>
+  <configurable id="copyright.filetypes.Shell Script" configurable_name="Shell Script">
+    <option name="script" hit="Shell Script" />
+    <option name="shell" hit="Shell Script" />
+    <option name="각" hit="각 줄에 접두사 사용" />
+    <option name="사용" hit="각 줄에 접두사 사용" />
+    <option name="접두사" hit="각 줄에 접두사 사용" />
+    <option name="줄에" hit="각 줄에 접두사 사용" />
+    <option name="구분" hit="구분 기호 " />
+    <option name="기호" hit="구분 기호 " />
+    <option name="길이" hit="길이 " />
+    <option name="r" hit="다른 주석 뒤 R " />
+    <option name="다른" hit="다른 주석 뒤 R " />
+    <option name="뒤" hit="다른 주석 뒤 R " />
+    <option name="주석" hit="다른 주석 뒤 R " />
+    <option name="o" hit="다른 주석 앞 O " />
+    <option name="다른" hit="다른 주석 앞 O " />
+    <option name="앞" hit="다른 주석 앞 O " />
+    <option name="주석" hit="다른 주석 앞 O " />
+    <option name="구분" hit="뒤에 구분 기호" />
+    <option name="기호" hit="뒤에 구분 기호" />
+    <option name="뒤에" hit="뒤에 구분 기호" />
+    <option name="d" hit="뒤에 빈 줄 추가 D " />
+    <option name="뒤에" hit="뒤에 빈 줄 추가 D " />
+    <option name="빈" hit="뒤에 빈 줄 추가 D " />
+    <option name="줄" hit="뒤에 빈 줄 추가 D " />
+    <option name="추가" hit="뒤에 빈 줄 추가 D " />
+    <option name="디폴트" hit="디폴트 설정 사용" />
+    <option name="사용" hit="디폴트 설정 사용" />
+    <option name="설정" hit="디폴트 설정 사용" />
+    <option name="블록" hit="블록 주석 사용" />
+    <option name="사용" hit="블록 주석 사용" />
+    <option name="주석" hit="블록 주석 사용" />
+    <option name="사용" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="사용자" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="서식" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="옵션" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="지정" hit="사용자 지정 서식 지정 옵션 사용" />
+    <option name="상대" hit="상대 위치" />
+    <option name="위치" hit="상대 위치" />
+    <option name="상자" hit="상자" />
+    <option name="구분" hit="앞에 구분 기호" />
+    <option name="기호" hit="앞에 구분 기호" />
+    <option name="앞에" hit="앞에 구분 기호" />
+    <option name="b" hit="앞에 빈 줄 추가 B " />
+    <option name="빈" hit="앞에 빈 줄 추가 B " />
+    <option name="앞에" hit="앞에 빈 줄 추가 B " />
+    <option name="줄" hit="앞에 빈 줄 추가 B " />
+    <option name="추가" hit="앞에 빈 줄 추가 B " />
+    <option name="없음" hit="저작권 없음" />
+    <option name="저작권" hit="저작권 없음" />
+    <option name="주석" hit="주석 타입" />
+    <option name="타입" hit="주석 타입" />
+    <option name="사용" hit="줄 주석 사용" />
+    <option name="주석" hit="줄 주석 사용" />
+    <option name="줄" hit="줄 주석 사용" />
+    <option name="테두리" hit="테두리" />
+  </configurable>
+</options>

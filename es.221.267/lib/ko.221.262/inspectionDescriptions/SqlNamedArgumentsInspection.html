@@ -1,0 +1,21 @@
+<html>
+<body>
+루틴 호출 시 이름 없이 사용되는 인수를 보고합니다. 디폴트로 이 검사는 비활성화되어 있습니다.
+<p>명명된 매개변수와 명명되지 않은 매개변수의 차이에 관한 더 자세한 내용은 <a
+    href="https://docs.microsoft.com/en-us/sql/odbc/reference/develop-app/binding-parameters-by-name-named-parameters">docs.microsoft.com에서 이름으로 매개변수 바인딩(명명된 매개변수)</a>를 참고하세요.</p>
+<p>예(Microsoft SQL 서버):</p>
+<pre><code>CREATE FUNCTION foo(n INT, m INT) RETURNS INT AS
+BEGIN
+    RETURN n + m;
+END;
+
+CREATE PROCEDURE test AS
+BEGIN
+    foo n = 1, m = 2;
+
+--- 다음 호출에 매개변수 이름이 누락되어 강조 표시됨
+    foo 1, 2;
+END;</code></pre>
+<p><code>foo 1, 2;</code> 호출 내 매개변수 <code>1, 2</code>는 이름이 없으므로 강조 표시됩니다.</p>
+</body>
+</html>

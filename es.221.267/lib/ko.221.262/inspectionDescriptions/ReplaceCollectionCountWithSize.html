@@ -1,0 +1,24 @@
+<html>
+<body>
+<code>Collection&lt;T&gt;.count()</code> 호출을 보고합니다.
+<p>
+    이 함수 호출은 <code>.size</code>로 바꿀 수 있습니다.
+</p>
+<p>
+    <code>.size</code> 양식은 연산이 O(1)이며 여분의 객체를 할당하지 않도록 보장하는 반면 <code>count()</code>는, O(n)이자 할당하는 <code>Iterable&lt;T&gt;.count()</code>와 혼동될 수 있습니다.
+    <br>
+</p>
+<p><b>예:</b></p>
+<pre><code>  fun foo() {
+      var list = listOf(1,2,3)
+      list.count() // 바꿀 수 있는 'count()'
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>  fun foo() {
+      var list = listOf(1,2,3)
+      list.size
+  }
+</code></pre>
+</body>
+</html>

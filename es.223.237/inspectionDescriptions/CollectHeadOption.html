@@ -1,0 +1,16 @@
+<html>
+<body>
+<p><code>collection.collect(f).headOption</code>을 보고하고 가능한 경우 <code>collection.collectFirst(f)</code>로 바꿀 것을 제안합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  val x: Set[Int]
+  x.collect(f).headOption
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  val x: Set[Int]
+  x.collectFirst(f)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,884 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="java" path="ActionManager" hit="Java 파일을 Kotlin 파일로 변환" />
+    <option name="kotlin" path="ActionManager" hit="Java 파일을 Kotlin 파일로 변환" />
+    <option name="변환" path="ActionManager" hit="Java 파일을 Kotlin 파일로 변환" />
+    <option name="파일로" path="ActionManager" hit="Java 파일을 Kotlin 파일로 변환" />
+    <option name="파일을" path="ActionManager" hit="Java 파일을 Kotlin 파일로 변환" />
+    <option name="kotlin" path="ActionManager" hit="Kotlin" />
+    <option name="kotlin" path="ActionManager" hit="Kotlin 리팩터링 테스트" />
+    <option name="리팩터링" path="ActionManager" hit="Kotlin 리팩터링 테스트" />
+    <option name="테스트" path="ActionManager" hit="Kotlin 리팩터링 테스트" />
+    <option name="kotlin" path="ActionManager" hit="Kotlin 스크립트" />
+    <option name="스크립트" path="ActionManager" hit="Kotlin 스크립트" />
+    <option name="kotlin" path="ActionManager" hit="Kotlin 워크시트" />
+    <option name="워크시트" path="ActionManager" hit="Kotlin 워크시트" />
+    <option name="kotlin" path="ActionManager" hit="Kotlin 클래스/파일" />
+    <option name="클래스" path="ActionManager" hit="Kotlin 클래스/파일" />
+    <option name="파일" path="ActionManager" hit="Kotlin 클래스/파일" />
+    <option name="kotlin" path="ActionManager" hit="Kotlin 프로젝트 개요를 클립보드에 복사" />
+    <option name="개요를" path="ActionManager" hit="Kotlin 프로젝트 개요를 클립보드에 복사" />
+    <option name="복사" path="ActionManager" hit="Kotlin 프로젝트 개요를 클립보드에 복사" />
+    <option name="클립보드에" path="ActionManager" hit="Kotlin 프로젝트 개요를 클립보드에 복사" />
+    <option name="프로젝트" path="ActionManager" hit="Kotlin 프로젝트 개요를 클립보드에 복사" />
+    <option name="kotlin" path="ActionManager" hit="Kotlin 플러그인 업데이트 구성" />
+    <option name="구성" path="ActionManager" hit="Kotlin 플러그인 업데이트 구성" />
+    <option name="업데이트" path="ActionManager" hit="Kotlin 플러그인 업데이트 구성" />
+    <option name="플러그인" path="ActionManager" hit="Kotlin 플러그인 업데이트 구성" />
+    <option name="kotlin" path="ActionManager" hit="Kotlin 플러그인의 자동 업데이트를 구성합니다" />
+    <option name="구성합니다" path="ActionManager" hit="Kotlin 플러그인의 자동 업데이트를 구성합니다" />
+    <option name="업데이트를" path="ActionManager" hit="Kotlin 플러그인의 자동 업데이트를 구성합니다" />
+    <option name="자동" path="ActionManager" hit="Kotlin 플러그인의 자동 업데이트를 구성합니다" />
+    <option name="플러그인의" path="ActionManager" hit="Kotlin 플러그인의 자동 업데이트를 구성합니다" />
+    <option name="setup" path="ActionManager" hit="SetUp 함수" />
+    <option name="함수" path="ActionManager" hit="SetUp 함수" />
+    <option name="teardown" path="ActionManager" hit="TearDown 함수" />
+    <option name="함수" path="ActionManager" hit="TearDown 함수" />
+    <option name="test" path="ActionManager" hit="Test 함수" />
+    <option name="함수" path="ActionManager" hit="Test 함수" />
+    <option name="equals" path="ActionManager" hit="equals() 및 hashCode()" />
+    <option name="hashcode" path="ActionManager" hit="equals() 및 hashCode()" />
+    <option name="및" path="ActionManager" hit="equals() 및 hashCode()" />
+    <option name="tostring" path="ActionManager" hit="toString()" />
+    <option name="매개변수" path="ActionManager" hit="매개변수 함수" />
+    <option name="함수" path="ActionManager" hit="매개변수 함수" />
+    <option name="보조" path="ActionManager" hit="보조 생성자" />
+    <option name="생성자" path="ActionManager" hit="보조 생성자" />
+    <option name="kotlin" path="ActionManager" hit="새 Kotlin 스크립트를 생성합니다." />
+    <option name="새" path="ActionManager" hit="새 Kotlin 스크립트를 생성합니다." />
+    <option name="생성합니다" path="ActionManager" hit="새 Kotlin 스크립트를 생성합니다." />
+    <option name="스크립트를" path="ActionManager" hit="새 Kotlin 스크립트를 생성합니다." />
+    <option name="kotlin" path="ActionManager" hit="새 Kotlin 워크시트 생성" />
+    <option name="새" path="ActionManager" hit="새 Kotlin 워크시트 생성" />
+    <option name="생성" path="ActionManager" hit="새 Kotlin 워크시트 생성" />
+    <option name="워크시트" path="ActionManager" hit="새 Kotlin 워크시트 생성" />
+    <option name="kotlin" path="ActionManager" hit="새 Kotlin 클래스 또는 파일 생성" />
+    <option name="또는" path="ActionManager" hit="새 Kotlin 클래스 또는 파일 생성" />
+    <option name="새" path="ActionManager" hit="새 Kotlin 클래스 또는 파일 생성" />
+    <option name="생성" path="ActionManager" hit="새 Kotlin 클래스 또는 파일 생성" />
+    <option name="클래스" path="ActionManager" hit="새 Kotlin 클래스 또는 파일 생성" />
+    <option name="파일" path="ActionManager" hit="새 Kotlin 클래스 또는 파일 생성" />
+    <option name="리팩터링" path="ActionManager" hit="열려 있는 프로젝트에서 이동 리팩터링 테스트" />
+    <option name="열려" path="ActionManager" hit="열려 있는 프로젝트에서 이동 리팩터링 테스트" />
+    <option name="이동" path="ActionManager" hit="열려 있는 프로젝트에서 이동 리팩터링 테스트" />
+    <option name="있는" path="ActionManager" hit="열려 있는 프로젝트에서 이동 리팩터링 테스트" />
+    <option name="테스트" path="ActionManager" hit="열려 있는 프로젝트에서 이동 리팩터링 테스트" />
+    <option name="프로젝트에서" path="ActionManager" hit="열려 있는 프로젝트에서 이동 리팩터링 테스트" />
+    <option name="매개변수" path="ActionManager" hit="타입 매개변수…" />
+    <option name="타입" path="ActionManager" hit="타입 매개변수…" />
+    <option name="별칭" path="ActionManager" hit="타입 별칭…" />
+    <option name="타입" path="ActionManager" hit="타입 별칭…" />
+    <option name="프로퍼티" path="ActionManager" hit="프로퍼티…" />
+    <option name="함수" path="ActionManager" hit="함수…" />
+    <option name="범위로" path="ActionManager" hit="함수를 범위로…" />
+    <option name="함수를" path="ActionManager" hit="함수를 범위로…" />
+  </configurable>
+  <configurable id="editor.breadcrumbs" configurable_name="이동 경로">
+    <option name="kotlin" hit="Kotlin" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.Kotlin" configurable_name="Kotlin">
+    <option name="kotlin" hit="Kotlin" />
+    <option name="and" hit="Classes and Interfaces//인터페이스" />
+    <option name="classes" hit="Classes and Interfaces//인터페이스" />
+    <option name="interfaces" hit="Classes and Interfaces//인터페이스" />
+    <option name="인터페이스" hit="Classes and Interfaces//인터페이스" />
+    <option name="dsl" hit="Dsl//스타일1" />
+    <option name="스타일" hit="Dsl//스타일1" />
+    <option name="dsl" hit="Dsl//스타일2" />
+    <option name="스타일" hit="Dsl//스타일2" />
+    <option name="dsl" hit="Dsl//스타일3" />
+    <option name="스타일" hit="Dsl//스타일3" />
+    <option name="dsl" hit="Dsl//스타일4" />
+    <option name="스타일" hit="Dsl//스타일4" />
+    <option name="null이" hit="괄호 및 연산자//null이 아닌 어설션" />
+    <option name="괄호" hit="괄호 및 연산자//null이 아닌 어설션" />
+    <option name="및" hit="괄호 및 연산자//null이 아닌 어설션" />
+    <option name="아닌" hit="괄호 및 연산자//null이 아닌 어설션" />
+    <option name="어설션" hit="괄호 및 연산자//null이 아닌 어설션" />
+    <option name="연산자" hit="괄호 및 연산자//null이 아닌 어설션" />
+    <option name="괄호" hit="괄호 및 연산자//대괄호" />
+    <option name="대괄호" hit="괄호 및 연산자//대괄호" />
+    <option name="및" hit="괄호 및 연산자//대괄호" />
+    <option name="연산자" hit="괄호 및 연산자//대괄호" />
+    <option name="괄호" hit="괄호 및 연산자//람다 식 괄호 및 화살표" />
+    <option name="람다" hit="괄호 및 연산자//람다 식 괄호 및 화살표" />
+    <option name="및" hit="괄호 및 연산자//람다 식 괄호 및 화살표" />
+    <option name="식" hit="괄호 및 연산자//람다 식 괄호 및 화살표" />
+    <option name="연산자" hit="괄호 및 연산자//람다 식 괄호 및 화살표" />
+    <option name="화살표" hit="괄호 및 연산자//람다 식 괄호 및 화살표" />
+    <option name="괄호" hit="괄호 및 연산자//마침표" />
+    <option name="마침표" hit="괄호 및 연산자//마침표" />
+    <option name="및" hit="괄호 및 연산자//마침표" />
+    <option name="연산자" hit="괄호 및 연산자//마침표" />
+    <option name="괄호" hit="괄호 및 연산자//세미콜론" />
+    <option name="및" hit="괄호 및 연산자//세미콜론" />
+    <option name="세미콜론" hit="괄호 및 연산자//세미콜론" />
+    <option name="연산자" hit="괄호 및 연산자//세미콜론" />
+    <option name="괄호" hit="괄호 및 연산자//소괄호" />
+    <option name="및" hit="괄호 및 연산자//소괄호" />
+    <option name="소괄호" hit="괄호 및 연산자//소괄호" />
+    <option name="연산자" hit="괄호 및 연산자//소괄호" />
+    <option name="괄호" hit="괄호 및 연산자//쉼표" />
+    <option name="및" hit="괄호 및 연산자//쉼표" />
+    <option name="쉼표" hit="괄호 및 연산자//쉼표" />
+    <option name="연산자" hit="괄호 및 연산자//쉼표" />
+    <option name="괄호" hit="괄호 및 연산자//안전한 액세스 마침표" />
+    <option name="마침표" hit="괄호 및 연산자//안전한 액세스 마침표" />
+    <option name="및" hit="괄호 및 연산자//안전한 액세스 마침표" />
+    <option name="안전한" hit="괄호 및 연산자//안전한 액세스 마침표" />
+    <option name="액세스" hit="괄호 및 연산자//안전한 액세스 마침표" />
+    <option name="연산자" hit="괄호 및 연산자//안전한 액세스 마침표" />
+    <option name="괄호" hit="괄호 및 연산자//연산자 기호" />
+    <option name="기호" hit="괄호 및 연산자//연산자 기호" />
+    <option name="및" hit="괄호 및 연산자//연산자 기호" />
+    <option name="연산자" hit="괄호 및 연산자//연산자 기호" />
+    <option name="괄호" hit="괄호 및 연산자//이중 콜론" />
+    <option name="및" hit="괄호 및 연산자//이중 콜론" />
+    <option name="연산자" hit="괄호 및 연산자//이중 콜론" />
+    <option name="이중" hit="괄호 및 연산자//이중 콜론" />
+    <option name="콜론" hit="괄호 및 연산자//이중 콜론" />
+    <option name="괄호" hit="괄호 및 연산자//중괄호" />
+    <option name="및" hit="괄호 및 연산자//중괄호" />
+    <option name="연산자" hit="괄호 및 연산자//중괄호" />
+    <option name="중괄호" hit="괄호 및 연산자//중괄호" />
+    <option name="괄호" hit="괄호 및 연산자//콜론" />
+    <option name="및" hit="괄호 및 연산자//콜론" />
+    <option name="연산자" hit="괄호 및 연산자//콜론" />
+    <option name="콜론" hit="괄호 및 연산자//콜론" />
+    <option name="null" hit="괄호 및 연산자//타입 null 값 가능성 마커" />
+    <option name="가능성" hit="괄호 및 연산자//타입 null 값 가능성 마커" />
+    <option name="값" hit="괄호 및 연산자//타입 null 값 가능성 마커" />
+    <option name="괄호" hit="괄호 및 연산자//타입 null 값 가능성 마커" />
+    <option name="마커" hit="괄호 및 연산자//타입 null 값 가능성 마커" />
+    <option name="및" hit="괄호 및 연산자//타입 null 값 가능성 마커" />
+    <option name="연산자" hit="괄호 및 연산자//타입 null 값 가능성 마커" />
+    <option name="타입" hit="괄호 및 연산자//타입 null 값 가능성 마커" />
+    <option name="괄호" hit="괄호 및 연산자//화살표" />
+    <option name="및" hit="괄호 및 연산자//화살표" />
+    <option name="연산자" hit="괄호 및 연산자//화살표" />
+    <option name="화살표" hit="괄호 및 연산자//화살표" />
+    <option name="강조" hit="구문 강조 표시" />
+    <option name="구문" hit="구문 강조 표시" />
+    <option name="표시" hit="구문 강조 표시" />
+    <option name="라벨" hit="라벨" />
+    <option name="디폴트" hit="매개변수//람다 식 디폴트 매개변수" />
+    <option name="람다" hit="매개변수//람다 식 디폴트 매개변수" />
+    <option name="매개변수" hit="매개변수//람다 식 디폴트 매개변수" />
+    <option name="식" hit="매개변수//람다 식 디폴트 매개변수" />
+    <option name="매개변수" hit="매개변수//매개변수" />
+    <option name="매개변수" hit="매개변수//타입 매개변수" />
+    <option name="타입" hit="매개변수//타입 매개변수" />
+    <option name="명명된" hit="명명된 인수" />
+    <option name="인수" hit="명명된 인수" />
+    <option name="괄호" hit="문자열// 문자열 및 템플릿 괄호 내 이스케이프" />
+    <option name="내" hit="문자열// 문자열 및 템플릿 괄호 내 이스케이프" />
+    <option name="문자열" hit="문자열// 문자열 및 템플릿 괄호 내 이스케이프" />
+    <option name="및" hit="문자열// 문자열 및 템플릿 괄호 내 이스케이프" />
+    <option name="이스케이프" hit="문자열// 문자열 및 템플릿 괄호 내 이스케이프" />
+    <option name="템플릿" hit="문자열// 문자열 및 템플릿 괄호 내 이스케이프" />
+    <option name="문자열" hit="문자열//문자열 텍스트" />
+    <option name="텍스트" hit="문자열//문자열 텍스트" />
+    <option name="문자열" hit="문자열//이스케이프 시퀀스//유효" />
+    <option name="시퀀스" hit="문자열//이스케이프 시퀀스//유효" />
+    <option name="유효" hit="문자열//이스케이프 시퀀스//유효" />
+    <option name="이스케이프" hit="문자열//이스케이프 시퀀스//유효" />
+    <option name="숫자" hit="숫자" />
+    <option name="상수" hit="스마트 캐스트//스마트 상수" />
+    <option name="스마트" hit="스마트 캐스트//스마트 상수" />
+    <option name="캐스트" hit="스마트 캐스트//스마트 상수" />
+    <option name="값" hit="스마트 캐스트//스마트 캐스트 값" />
+    <option name="스마트" hit="스마트 캐스트//스마트 캐스트 값" />
+    <option name="캐스트" hit="스마트 캐스트//스마트 캐스트 값" />
+    <option name="리시버" hit="스마트 캐스트//스마트 캐스트 묵시적 리시버" />
+    <option name="묵시적" hit="스마트 캐스트//스마트 캐스트 묵시적 리시버" />
+    <option name="스마트" hit="스마트 캐스트//스마트 캐스트 묵시적 리시버" />
+    <option name="캐스트" hit="스마트 캐스트//스마트 캐스트 묵시적 리시버" />
+    <option name="속성" hit="어노테이션//어노테이션 속성 이름" />
+    <option name="어노테이션" hit="어노테이션//어노테이션 속성 이름" />
+    <option name="이름" hit="어노테이션//어노테이션 속성 이름" />
+    <option name="어노테이션" hit="어노테이션//어노테이션 이름" />
+    <option name="이름" hit="어노테이션//어노테이션 이름" />
+    <option name="kdoc" hit="주석//KDoc//KDoc 주석" />
+    <option name="주석" hit="주석//KDoc//KDoc 주석" />
+    <option name="kdoc" hit="주석//KDoc//KDoc 태그" />
+    <option name="주석" hit="주석//KDoc//KDoc 태그" />
+    <option name="태그" hit="주석//KDoc//KDoc 태그" />
+    <option name="kdoc" hit="주석//KDoc//KDoc 태그 내 링크" />
+    <option name="내" hit="주석//KDoc//KDoc 태그 내 링크" />
+    <option name="링크" hit="주석//KDoc//KDoc 태그 내 링크" />
+    <option name="주석" hit="주석//KDoc//KDoc 태그 내 링크" />
+    <option name="태그" hit="주석//KDoc//KDoc 태그 내 링크" />
+    <option name="블록" hit="주석//블록 주석" />
+    <option name="주석" hit="주석//블록 주석" />
+    <option name="주석" hit="주석//줄 주석" />
+    <option name="줄" hit="주석//줄 주석" />
+    <option name="객체" hit="클래스 및 인터페이스//객체" />
+    <option name="및" hit="클래스 및 인터페이스//객체" />
+    <option name="인터페이스" hit="클래스 및 인터페이스//객체" />
+    <option name="클래스" hit="클래스 및 인터페이스//객체" />
+    <option name="및" hit="클래스 및 인터페이스//열거형" />
+    <option name="열거형" hit="클래스 및 인터페이스//열거형" />
+    <option name="인터페이스" hit="클래스 및 인터페이스//열거형" />
+    <option name="클래스" hit="클래스 및 인터페이스//열거형" />
+    <option name="및" hit="클래스 및 인터페이스//열거형 항목" />
+    <option name="열거형" hit="클래스 및 인터페이스//열거형 항목" />
+    <option name="인터페이스" hit="클래스 및 인터페이스//열거형 항목" />
+    <option name="클래스" hit="클래스 및 인터페이스//열거형 항목" />
+    <option name="항목" hit="클래스 및 인터페이스//열거형 항목" />
+    <option name="및" hit="클래스 및 인터페이스//추상 클래스" />
+    <option name="인터페이스" hit="클래스 및 인터페이스//추상 클래스" />
+    <option name="추상" hit="클래스 및 인터페이스//추상 클래스" />
+    <option name="클래스" hit="클래스 및 인터페이스//추상 클래스" />
+    <option name="및" hit="클래스 및 인터페이스//클래스" />
+    <option name="인터페이스" hit="클래스 및 인터페이스//클래스" />
+    <option name="클래스" hit="클래스 및 인터페이스//클래스" />
+    <option name="및" hit="클래스 및 인터페이스//타입 별칭" />
+    <option name="별칭" hit="클래스 및 인터페이스//타입 별칭" />
+    <option name="인터페이스" hit="클래스 및 인터페이스//타입 별칭" />
+    <option name="클래스" hit="클래스 및 인터페이스//타입 별칭" />
+    <option name="타입" hit="클래스 및 인터페이스//타입 별칭" />
+    <option name="val" hit="키워드//'val'" />
+    <option name="키워드" hit="키워드//'val'" />
+    <option name="var" hit="키워드//'var'" />
+    <option name="키워드" hit="키워드//'var'" />
+    <option name="제어자" hit="키워드//제어자" />
+    <option name="키워드" hit="키워드//제어자" />
+    <option name="키워드" hit="키워드//키워드" />
+    <option name="android" hit="프로퍼티 및 변수//Android Extensions 통합 프로퍼티" />
+    <option name="extensions" hit="프로퍼티 및 변수//Android Extensions 통합 프로퍼티" />
+    <option name="및" hit="프로퍼티 및 변수//Android Extensions 통합 프로퍼티" />
+    <option name="변수" hit="프로퍼티 및 변수//Android Extensions 통합 프로퍼티" />
+    <option name="통합" hit="프로퍼티 및 변수//Android Extensions 통합 프로퍼티" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//Android Extensions 통합 프로퍼티" />
+    <option name="var" hit="프로퍼티 및 변수//Var(가변 변수, 매개변수 또는 프로퍼티)" />
+    <option name="가변" hit="프로퍼티 및 변수//Var(가변 변수, 매개변수 또는 프로퍼티)" />
+    <option name="또는" hit="프로퍼티 및 변수//Var(가변 변수, 매개변수 또는 프로퍼티)" />
+    <option name="매개변수" hit="프로퍼티 및 변수//Var(가변 변수, 매개변수 또는 프로퍼티)" />
+    <option name="및" hit="프로퍼티 및 변수//Var(가변 변수, 매개변수 또는 프로퍼티)" />
+    <option name="변수" hit="프로퍼티 및 변수//Var(가변 변수, 매개변수 또는 프로퍼티)" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//Var(가변 변수, 매개변수 또는 프로퍼티)" />
+    <option name="동적" hit="프로퍼티 및 변수//동적 프로퍼티" />
+    <option name="및" hit="프로퍼티 및 변수//동적 프로퍼티" />
+    <option name="변수" hit="프로퍼티 및 변수//동적 프로퍼티" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//동적 프로퍼티" />
+    <option name="및" hit="프로퍼티 및 변수//백킹 필드 변수" />
+    <option name="백킹" hit="프로퍼티 및 변수//백킹 필드 변수" />
+    <option name="변수" hit="프로퍼티 및 변수//백킹 필드 변수" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//백킹 필드 변수" />
+    <option name="필드" hit="프로퍼티 및 변수//백킹 필드 변수" />
+    <option name="및" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 인스턴스 프로퍼티" />
+    <option name="변수" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 인스턴스 프로퍼티" />
+    <option name="사용자" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 인스턴스 프로퍼티" />
+    <option name="선언이" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 인스턴스 프로퍼티" />
+    <option name="인스턴스" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 인스턴스 프로퍼티" />
+    <option name="있는" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 인스턴스 프로퍼티" />
+    <option name="지정" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 인스턴스 프로퍼티" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 인스턴스 프로퍼티" />
+    <option name="및" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 패키지 수준 프로퍼티" />
+    <option name="변수" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 패키지 수준 프로퍼티" />
+    <option name="사용자" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 패키지 수준 프로퍼티" />
+    <option name="선언이" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 패키지 수준 프로퍼티" />
+    <option name="수준" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 패키지 수준 프로퍼티" />
+    <option name="있는" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 패키지 수준 프로퍼티" />
+    <option name="지정" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 패키지 수준 프로퍼티" />
+    <option name="패키지" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 패키지 수준 프로퍼티" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//사용자 지정 프로퍼티 선언이 있는 패키지 수준 프로퍼티" />
+    <option name="및" hit="프로퍼티 및 변수//인스턴스 프로퍼티" />
+    <option name="변수" hit="프로퍼티 및 변수//인스턴스 프로퍼티" />
+    <option name="인스턴스" hit="프로퍼티 및 변수//인스턴스 프로퍼티" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//인스턴스 프로퍼티" />
+    <option name="값" hit="프로퍼티 및 변수//지역 변수 또는 값" />
+    <option name="또는" hit="프로퍼티 및 변수//지역 변수 또는 값" />
+    <option name="및" hit="프로퍼티 및 변수//지역 변수 또는 값" />
+    <option name="변수" hit="프로퍼티 및 변수//지역 변수 또는 값" />
+    <option name="지역" hit="프로퍼티 및 변수//지역 변수 또는 값" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//지역 변수 또는 값" />
+    <option name="값" hit="프로퍼티 및 변수//클로저에서 캡처된 변수 및 값" />
+    <option name="및" hit="프로퍼티 및 변수//클로저에서 캡처된 변수 및 값" />
+    <option name="변수" hit="프로퍼티 및 변수//클로저에서 캡처된 변수 및 값" />
+    <option name="캡처된" hit="프로퍼티 및 변수//클로저에서 캡처된 변수 및 값" />
+    <option name="클로저에서" hit="프로퍼티 및 변수//클로저에서 캡처된 변수 및 값" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//클로저에서 캡처된 변수 및 값" />
+    <option name="및" hit="프로퍼티 및 변수//통합 확장 프로퍼티" />
+    <option name="변수" hit="프로퍼티 및 변수//통합 확장 프로퍼티" />
+    <option name="통합" hit="프로퍼티 및 변수//통합 확장 프로퍼티" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//통합 확장 프로퍼티" />
+    <option name="확장" hit="프로퍼티 및 변수//통합 확장 프로퍼티" />
+    <option name="및" hit="프로퍼티 및 변수//패키지 수준 프로퍼티" />
+    <option name="변수" hit="프로퍼티 및 변수//패키지 수준 프로퍼티" />
+    <option name="수준" hit="프로퍼티 및 변수//패키지 수준 프로퍼티" />
+    <option name="패키지" hit="프로퍼티 및 변수//패키지 수준 프로퍼티" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//패키지 수준 프로퍼티" />
+    <option name="같은" hit="프로퍼티 및 변수//함수 같은 호출로서의 변수" />
+    <option name="및" hit="프로퍼티 및 변수//함수 같은 호출로서의 변수" />
+    <option name="변수" hit="프로퍼티 및 변수//함수 같은 호출로서의 변수" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//함수 같은 호출로서의 변수" />
+    <option name="함수" hit="프로퍼티 및 변수//함수 같은 호출로서의 변수" />
+    <option name="호출로서의" hit="프로퍼티 및 변수//함수 같은 호출로서의 변수" />
+    <option name="및" hit="프로퍼티 및 변수//함수 호출로서의 변수" />
+    <option name="변수" hit="프로퍼티 및 변수//함수 호출로서의 변수" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//함수 호출로서의 변수" />
+    <option name="함수" hit="프로퍼티 및 변수//함수 호출로서의 변수" />
+    <option name="호출로서의" hit="프로퍼티 및 변수//함수 호출로서의 변수" />
+    <option name="및" hit="프로퍼티 및 변수//확장 프로퍼티" />
+    <option name="변수" hit="프로퍼티 및 변수//확장 프로퍼티" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//확장 프로퍼티" />
+    <option name="확장" hit="프로퍼티 및 변수//확장 프로퍼티" />
+    <option name="동적" hit="함수//동적 함수 호출" />
+    <option name="함수" hit="함수//동적 함수 호출" />
+    <option name="호출" hit="함수//동적 함수 호출" />
+    <option name="생성자" hit="함수//생성자 호출" />
+    <option name="함수" hit="함수//생성자 호출" />
+    <option name="호출" hit="함수//생성자 호출" />
+    <option name="수준" hit="함수//패키지 수준 함수 호출" />
+    <option name="패키지" hit="함수//패키지 수준 함수 호출" />
+    <option name="함수" hit="함수//패키지 수준 함수 호출" />
+    <option name="호출" hit="함수//패키지 수준 함수 호출" />
+    <option name="선언" hit="함수//함수 선언" />
+    <option name="함수" hit="함수//함수 선언" />
+    <option name="함수" hit="함수//함수 호출" />
+    <option name="호출" hit="함수//함수 호출" />
+    <option name="일시" hit="함수//함수 호출 일시 중지" />
+    <option name="중지" hit="함수//함수 호출 일시 중지" />
+    <option name="함수" hit="함수//함수 호출 일시 중지" />
+    <option name="호출" hit="함수//함수 호출 일시 중지" />
+    <option name="함수" hit="함수//확장 함수 호출" />
+    <option name="호출" hit="함수//확장 함수 호출" />
+    <option name="확장" hit="함수//확장 함수 호출" />
+  </configurable>
+  <configurable id="preferences.sourceCode.Kotlin" configurable_name="Kotlin">
+    <option name="" path="빈 줄" hit="    앞 " />
+    <option name="앞" path="빈 줄" hit="    앞 " />
+    <option name="" path="가져오기" hit="   가 있는 import 문 사용" />
+    <option name="import" path="가져오기" hit="   가 있는 import 문 사용" />
+    <option name="가" path="가져오기" hit="   가 있는 import 문 사용" />
+    <option name="문" path="가져오기" hit="   가 있는 import 문 사용" />
+    <option name="사용" path="가져오기" hit="   가 있는 import 문 사용" />
+    <option name="있는" path="가져오기" hit="   가 있는 import 문 사용" />
+    <option name="" path="가져오기" hit="   가 포함된 import 문을 사용하는 패키지" />
+    <option name="import" path="가져오기" hit="   가 포함된 import 문을 사용하는 패키지" />
+    <option name="가" path="가져오기" hit="   가 포함된 import 문을 사용하는 패키지" />
+    <option name="문을" path="가져오기" hit="   가 포함된 import 문을 사용하는 패키지" />
+    <option name="사용하는" path="가져오기" hit="   가 포함된 import 문을 사용하는 패키지" />
+    <option name="패키지" path="가져오기" hit="   가 포함된 import 문을 사용하는 패키지" />
+    <option name="포함된" path="가져오기" hit="   가 포함된 import 문을 사용하는 패키지" />
+    <option name="" path="빈 줄" hit="  가 있는  when  브랜치 주위" />
+    <option name="when" path="빈 줄" hit="  가 있는  when  브랜치 주위" />
+    <option name="가" path="빈 줄" hit="  가 있는  when  브랜치 주위" />
+    <option name="브랜치" path="빈 줄" hit="  가 있는  when  브랜치 주위" />
+    <option name="있는" path="빈 줄" hit="  가 있는  when  브랜치 주위" />
+    <option name="주위" path="빈 줄" hit="  가 있는  when  브랜치 주위" />
+    <option name="" path="가져오기" hit=" 사용된 이름" />
+    <option name="사용된" path="가져오기" hit=" 사용된 이름" />
+    <option name="이름" path="가져오기" hit=" 사용된 이름" />
+    <option name="java" path="가져오기" hit="Java static 및 열거형 멤버" />
+    <option name="static" path="가져오기" hit="Java static 및 열거형 멤버" />
+    <option name="멤버" path="가져오기" hit="Java static 및 열거형 멤버" />
+    <option name="및" path="가져오기" hit="Java static 및 열거형 멤버" />
+    <option name="열거형" path="가져오기" hit="Java static 및 열거형 멤버" />
+    <option name="kotlin" hit="Kotlin" />
+    <option name="coding" path="로드/저장" hit="Kotlin Coding Conventions" />
+    <option name="conventions" path="로드/저장" hit="Kotlin Coding Conventions" />
+    <option name="kotlin" path="로드/저장" hit="Kotlin Coding Conventions" />
+    <option name="idea" path="로드/저장" hit="Kotlin 오래된 IntelliJ IDEA 코드 스타일" />
+    <option name="intellij" path="로드/저장" hit="Kotlin 오래된 IntelliJ IDEA 코드 스타일" />
+    <option name="kotlin" path="로드/저장" hit="Kotlin 오래된 IntelliJ IDEA 코드 스타일" />
+    <option name="스타일" path="로드/저장" hit="Kotlin 오래된 IntelliJ IDEA 코드 스타일" />
+    <option name="오래된" path="로드/저장" hit="Kotlin 오래된 IntelliJ IDEA 코드 스타일" />
+    <option name="코드" path="로드/저장" hit="Kotlin 오래된 IntelliJ IDEA 코드 스타일" />
+    <option name="가져오기" path="가져오기" hit="가져오기" />
+    <option name="공백" path="공백" hit="공백" />
+    <option name="구성표" hit="구성표 " />
+    <option name="기타" path="가져오기" hit="기타" />
+    <option name="다음에서" hit="다음에서 설정   " />
+    <option name="설정" hit="다음에서 설정   " />
+    <option name="import" path="가져오기" hit="다음의 경우    가 있는 import 문 사용" />
+    <option name="가" path="가져오기" hit="다음의 경우    가 있는 import 문 사용" />
+    <option name="경우" path="가져오기" hit="다음의 경우    가 있는 import 문 사용" />
+    <option name="다음의" path="가져오기" hit="다음의 경우    가 있는 import 문 사용" />
+    <option name="문" path="가져오기" hit="다음의 경우    가 있는 import 문 사용" />
+    <option name="사용" path="가져오기" hit="다음의 경우    가 있는 import 문 사용" />
+    <option name="있는" path="가져오기" hit="다음의 경우    가 있는 import 문 사용" />
+    <option name="값" path="로드/저장" hit="다음의 디폴트 값 사용 " />
+    <option name="다음의" path="로드/저장" hit="다음의 디폴트 값 사용 " />
+    <option name="디폴트" path="로드/저장" hit="다음의 디폴트 값 사용 " />
+    <option name="사용" path="로드/저장" hit="다음의 디폴트 값 사용 " />
+    <option name="import" path="가져오기" hit="단일 이름 import 문 사용" />
+    <option name="단일" path="가져오기" hit="단일 이름 import 문 사용" />
+    <option name="문" path="가져오기" hit="단일 이름 import 문 사용" />
+    <option name="사용" path="가져오기" hit="단일 이름 import 문 사용" />
+    <option name="이름" path="가져오기" hit="단일 이름 import 문 사용" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="들여쓰기 " />
+    <option name="가져오기" path="가져오기" hit="레이아웃 가져오기" />
+    <option name="레이아웃" path="가져오기" hit="레이아웃 가져오기" />
+    <option name="로드" path="로드/저장" hit="로드 저장" />
+    <option name="저장" path="로드/저장" hit="로드 저장" />
+    <option name="로드" hit="로드 중   " />
+    <option name="중" hit="로드 중   " />
+    <option name="가져오기" path="가져오기" hit="별칭을 개별적으로 가져오기" />
+    <option name="개별적으로" path="가져오기" hit="별칭을 개별적으로 가져오기" />
+    <option name="별칭을" path="가져오기" hit="별칭을 개별적으로 가져오기" />
+    <option name="공백" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="블록" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="주변에" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="주석" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="추가" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="비활성화" hit="비활성화" />
+    <option name="빈" path="빈 줄" hit="빈 줄" />
+    <option name="줄" path="빈 줄" hit="빈 줄" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="빈" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="유지" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="줄에" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="강제" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="다시" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="서식" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="시" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="적용" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="지정" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="내" path="빈 줄" hit="선언 내 " />
+    <option name="선언" path="빈 줄" hit="선언 내 " />
+    <option name="스마트" path="탭 및 들여쓰기" hit="스마트 탭" />
+    <option name="탭" path="탭 및 들여쓰기" hit="스마트 탭" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="연속 들여쓰기 " />
+    <option name="연속" path="탭 및 들여쓰기" hit="연속 들여쓰기 " />
+    <option name="또는" path="빈 줄" hit="주석 또는 어노테이션이 있는 선언 앞" />
+    <option name="선언" path="빈 줄" hit="주석 또는 어노테이션이 있는 선언 앞" />
+    <option name="앞" path="빈 줄" hit="주석 또는 어노테이션이 있는 선언 앞" />
+    <option name="어노테이션이" path="빈 줄" hit="주석 또는 어노테이션이 있는 선언 앞" />
+    <option name="있는" path="빈 줄" hit="주석 또는 어노테이션이 있는 선언 앞" />
+    <option name="주석" path="빈 줄" hit="주석 또는 어노테이션이 있는 선언 앞" />
+    <option name="괄호" path="줄 바꿈 및 괄호" hit="줄 바꿈 및 괄호" />
+    <option name="및" path="줄 바꿈 및 괄호" hit="줄 바꿈 및 괄호" />
+    <option name="바꿈" path="줄 바꿈 및 괄호" hit="줄 바꿈 및 괄호" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="줄 바꿈 및 괄호" />
+    <option name="공백" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="부분에" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="시작" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="주석" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="줄" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="추가" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="import" path="가져오기" hit="중첩된 클래스에 대한 import 문 삽입" />
+    <option name="대한" path="가져오기" hit="중첩된 클래스에 대한 import 문 삽입" />
+    <option name="문" path="가져오기" hit="중첩된 클래스에 대한 import 문 삽입" />
+    <option name="삽입" path="가져오기" hit="중첩된 클래스에 대한 import 문 삽입" />
+    <option name="중첩된" path="가져오기" hit="중첩된 클래스에 대한 import 문 삽입" />
+    <option name="클래스에" path="가져오기" hit="중첩된 클래스에 대한 import 문 삽입" />
+    <option name="번째" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="블록" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="열의" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="주석" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="첫" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="번째" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="열의" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="주석" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="줄" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="첫" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="빈" path="빈 줄" hit="최대 빈 줄 유지" />
+    <option name="유지" path="빈 줄" hit="최대 빈 줄 유지" />
+    <option name="줄" path="빈 줄" hit="최대 빈 줄 유지" />
+    <option name="최대" path="빈 줄" hit="최대 빈 줄 유지" />
+    <option name="심볼" path="가져오기" hit="최상위 심볼" />
+    <option name="최상위" path="가져오기" hit="최상위 심볼" />
+    <option name="빈" path="빈 줄" hit="최소 빈 줄" />
+    <option name="줄" path="빈 줄" hit="최소 빈 줄" />
+    <option name="최소" path="빈 줄" hit="최소 빈 줄" />
+    <option name="내" path="빈 줄" hit="코드 내 " />
+    <option name="코드" path="빈 줄" hit="코드 내 " />
+    <option name="생성" path="코드 생성" hit="코드 생성" />
+    <option name="코드" path="코드 생성" hit="코드 생성" />
+    <option name="주석" path="코드 생성" hit="코드 주석" />
+    <option name="코드" path="코드 생성" hit="코드 주석" />
+    <option name="뒤" path="빈 줄" hit="클래스 헤더 뒤 " />
+    <option name="클래스" path="빈 줄" hit="클래스 헤더 뒤 " />
+    <option name="헤더" path="빈 줄" hit="클래스 헤더 뒤 " />
+    <option name="문자" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="사용" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="및" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="크기" path="탭 및 들여쓰기" hit="탭 크기 " />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 크기 " />
+    <option name="쉼표" path="기타" hit="후행 쉼표" />
+    <option name="후행" path="기타" hit="후행 쉼표" />
+    <option name="사용" path="기타" hit="후행 쉼표 사용" />
+    <option name="쉼표" path="기타" hit="후행 쉼표 사용" />
+    <option name="후행" path="기타" hit="후행 쉼표 사용" />
+    <option name="" path="공백" hit="&quot;when&quot; 절의 화살표 주위" />
+    <option name="when" path="공백" hit="&quot;when&quot; 절의 화살표 주위" />
+    <option name="절의" path="공백" hit="&quot;when&quot; 절의 화살표 주위" />
+    <option name="주위" path="공백" hit="&quot;when&quot; 절의 화살표 주위" />
+    <option name="화살표" path="공백" hit="&quot;when&quot; 절의 화살표 주위" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
+    <option name="뒤에" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'case' 브랜치 들여쓰기" />
+    <option name="case" path="줄 바꿈 및 괄호" hit="'case' 브랜치 들여쓰기" />
+    <option name="들여쓰기" path="줄 바꿈 및 괄호" hit="'case' 브랜치 들여쓰기" />
+    <option name="브랜치" path="줄 바꿈 및 괄호" hit="'case' 브랜치 들여쓰기" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'case'의 'break' 들여쓰기" />
+    <option name="break" path="줄 바꿈 및 괄호" hit="'case'의 'break' 들여쓰기" />
+    <option name="case" path="줄 바꿈 및 괄호" hit="'case'의 'break' 들여쓰기" />
+    <option name="들여쓰기" path="줄 바꿈 및 괄호" hit="'case'의 'break' 들여쓰기" />
+    <option name="의" path="줄 바꿈 및 괄호" hit="'case'의 'break' 들여쓰기" />
+    <option name="" path="공백" hit="'catch' 소괄호" />
+    <option name="catch" path="공백" hit="'catch' 소괄호" />
+    <option name="소괄호" path="공백" hit="'catch' 소괄호" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'do ... while()' 문" />
+    <option name="do" path="줄 바꿈 및 괄호" hit="'do ... while()' 문" />
+    <option name="while" path="줄 바꿈 및 괄호" hit="'do ... while()' 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="'do ... while()' 문" />
+    <option name="" path="공백" hit="'for' 소괄호" />
+    <option name="for" path="공백" hit="'for' 소괄호" />
+    <option name="소괄호" path="공백" hit="'for' 소괄호" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'for()' 문" />
+    <option name="for" path="줄 바꿈 및 괄호" hit="'for()' 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="'for()' 문" />
+    <option name="" path="공백" hit="'if' 소괄호" />
+    <option name="if" path="공백" hit="'if' 소괄호" />
+    <option name="소괄호" path="공백" hit="'if' 소괄호" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'if()' 문" />
+    <option name="if" path="줄 바꿈 및 괄호" hit="'if()' 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="'if()' 문" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'switch' 문" />
+    <option name="switch" path="줄 바꿈 및 괄호" hit="'switch' 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="'switch' 문" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'try' 문" />
+    <option name="try" path="줄 바꿈 및 괄호" hit="'try' 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="'try' 문" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'try-with-resources'" />
+    <option name="resources" path="줄 바꿈 및 괄호" hit="'try-with-resources'" />
+    <option name="try" path="줄 바꿈 및 괄호" hit="'try-with-resources'" />
+    <option name="with" path="줄 바꿈 및 괄호" hit="'try-with-resources'" />
+    <option name="" path="공백" hit="'when' 소괄호" />
+    <option name="when" path="공백" hit="'when' 소괄호" />
+    <option name="소괄호" path="공백" hit="'when' 소괄호" />
+    <option name="" path="공백" hit="'while' 소괄호" />
+    <option name="while" path="공백" hit="'while' 소괄호" />
+    <option name="소괄호" path="공백" hit="'while' 소괄호" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'while()' 문" />
+    <option name="while" path="줄 바꿈 및 괄호" hit="'while()' 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="'while()' 문" />
+    <option name="" path="줄 바꿈 및 괄호" hit="'{' 뒤에 새 줄" />
+    <option name="뒤에" path="줄 바꿈 및 괄호" hit="'{' 뒤에 새 줄" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="'{' 뒤에 새 줄" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="'{' 뒤에 새 줄" />
+    <option name="elvis" path="줄 바꿈 및 괄호" hit="Elvis 식" />
+    <option name="식" path="줄 바꿈 및 괄호" hit="Elvis 식" />
+    <option name="extends" path="줄 바꿈 및 괄호" hit="Extends/implements/permits 목록" />
+    <option name="implements" path="줄 바꿈 및 괄호" hit="Extends/implements/permits 목록" />
+    <option name="permits" path="줄 바꿈 및 괄호" hit="Extends/implements/permits 목록" />
+    <option name="목록" path="줄 바꿈 및 괄호" hit="Extends/implements/permits 목록" />
+    <option name="extends" path="줄 바꿈 및 괄호" hit="Extends/implements/permits 키워드" />
+    <option name="implements" path="줄 바꿈 및 괄호" hit="Extends/implements/permits 키워드" />
+    <option name="permits" path="줄 바꿈 및 괄호" hit="Extends/implements/permits 키워드" />
+    <option name="키워드" path="줄 바꿈 및 괄호" hit="Extends/implements/permits 키워드" />
+    <option name="assert" path="줄 바꿈 및 괄호" hit="assert 문" />
+    <option name="문" path="줄 바꿈 및 괄호" hit="assert 문" />
+    <option name="간단한" path="공백" hit="간단한 한 줄 메서드로" />
+    <option name="메서드로" path="공백" hit="간단한 한 줄 메서드로" />
+    <option name="줄" path="공백" hit="간단한 한 줄 메서드로" />
+    <option name="한" path="공백" hit="간단한 한 줄 메서드로" />
+    <option name="곱셈" path="공백" hit="곱셈 연산자(*, /, %)" />
+    <option name="연산자" path="공백" hit="곱셈 연산자(*, /, %)" />
+    <option name="그룹" path="줄 바꿈 및 괄호" hit="그룹 선언" />
+    <option name="선언" path="줄 바꿈 및 괄호" hit="그룹 선언" />
+    <option name="기타" path="줄 바꿈 및 괄호" hit="기타" />
+    <option name="논리" path="공백" hit="논리 연산자(&amp;&amp;, ||)" />
+    <option name="연산자" path="공백" hit="논리 연산자(&amp;&amp;, ||)" />
+    <option name="기호" path="줄 바꿈 및 괄호" hit="다음 줄의 ':' 기호" />
+    <option name="다음" path="줄 바꿈 및 괄호" hit="다음 줄의 ':' 기호" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="다음 줄의 ':' 기호" />
+    <option name="기호" path="줄 바꿈 및 괄호" hit="다음 줄의 '?' 및 ':' 기호" />
+    <option name="다음" path="줄 바꿈 및 괄호" hit="다음 줄의 '?' 및 ':' 기호" />
+    <option name="및" path="줄 바꿈 및 괄호" hit="다음 줄의 '?' 및 ':' 기호" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="다음 줄의 '?' 및 ':' 기호" />
+    <option name="기호" path="줄 바꿈 및 괄호" hit="다음 줄의 작업 기호" />
+    <option name="다음" path="줄 바꿈 및 괄호" hit="다음 줄의 작업 기호" />
+    <option name="작업" path="줄 바꿈 및 괄호" hit="다음 줄의 작업 기호" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="다음 줄의 작업 기호" />
+    <option name="기호" path="줄 바꿈 및 괄호" hit="다음 줄의 할당 기호" />
+    <option name="다음" path="줄 바꿈 및 괄호" hit="다음 줄의 할당 기호" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="다음 줄의 할당 기호" />
+    <option name="할당" path="줄 바꿈 및 괄호" hit="다음 줄의 할당 기호" />
+    <option name="다음에서" path="줄 바꿈 및 괄호" hit="다음에서 하드 랩:" />
+    <option name="랩" path="줄 바꿈 및 괄호" hit="다음에서 하드 랩:" />
+    <option name="하드" path="줄 바꿈 및 괄호" hit="다음에서 하드 랩:" />
+    <option name="단항" path="공백" hit="단항 연산자(!, -, +, ++, --)" />
+    <option name="연산자" path="공백" hit="단항 연산자(!, -, +, ++, --)" />
+    <option name="구문" path="줄 바꿈 및 괄호" hit="대입 구문" />
+    <option name="대입" path="줄 바꿈 및 괄호" hit="대입 구문" />
+    <option name="대입" path="공백" hit="대입 연산자(=, +=, ...)" />
+    <option name="연산자" path="공백" hit="대입 연산자(=, +=, ...)" />
+    <option name="던지기" path="줄 바꿈 및 괄호" hit="던지기 목록" />
+    <option name="목록" path="줄 바꿈 및 괄호" hit="던지기 목록" />
+    <option name="던지기" path="줄 바꿈 및 괄호" hit="던지기 키워드" />
+    <option name="키워드" path="줄 바꿈 및 괄호" hit="던지기 키워드" />
+    <option name="덧셈" path="공백" hit="덧셈 연산자(+, -)" />
+    <option name="연산자" path="공백" hit="덧셈 연산자(+, -)" />
+    <option name="람다" path="줄 바꿈 및 괄호" hit="람다 선언에서" />
+    <option name="선언에서" path="줄 바꿈 및 괄호" hit="람다 선언에서" />
+    <option name="람다" path="공백" hit="람다 화살표 앞" />
+    <option name="앞" path="공백" hit="람다 화살표 앞" />
+    <option name="화살표" path="공백" hit="람다 화살표 앞" />
+    <option name="매개변수" path="줄 바꿈 및 괄호" hit="매개변수 어노테이션" />
+    <option name="어노테이션" path="줄 바꿈 및 괄호" hit="매개변수 어노테이션" />
+    <option name="매개변수" path="줄 바꿈 및 괄호" hit="메서드 선언 매개변수" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="메서드 선언 매개변수" />
+    <option name="선언" path="줄 바꿈 및 괄호" hit="메서드 선언 매개변수" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="메서드 선언에서" />
+    <option name="선언에서" path="줄 바꿈 및 괄호" hit="메서드 선언에서" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="메서드 소괄호" />
+    <option name="소괄호" path="줄 바꿈 및 괄호" hit="메서드 소괄호" />
+    <option name="throws" path="줄 바꿈 및 괄호" hit="메서드 시작에 'throws' 정렬" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="메서드 시작에 'throws' 정렬" />
+    <option name="시작에" path="줄 바꿈 및 괄호" hit="메서드 시작에 'throws' 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="메서드 시작에 'throws' 정렬" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="메서드 어노테이션" />
+    <option name="어노테이션" path="줄 바꿈 및 괄호" hit="메서드 어노테이션" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="메서드 호출 인수" />
+    <option name="인수" path="줄 바꿈 및 괄호" hit="메서드 호출 인수" />
+    <option name="호출" path="줄 바꿈 및 괄호" hit="메서드 호출 인수" />
+    <option name="배열" path="줄 바꿈 및 괄호" hit="배열 이니셜라이저" />
+    <option name="이니셜라이저" path="줄 바꿈 및 괄호" hit="배열 이니셜라이저" />
+    <option name="범위" path="공백" hit="범위 연산자 (.., ..&lt;)" />
+    <option name="연산자" path="공백" hit="범위 연산자 (.., ..&lt;)" />
+    <option name="case" path="줄 바꿈 및 괄호" hit="별도의 줄에 'case' 각각" />
+    <option name="각각" path="줄 바꿈 및 괄호" hit="별도의 줄에 'case' 각각" />
+    <option name="별도의" path="줄 바꿈 및 괄호" hit="별도의 줄에 'case' 각각" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="별도의 줄에 'case' 각각" />
+    <option name="비교" path="공백" hit="비교 연산자(&lt;, &gt;, &lt;=, &gt;=)" />
+    <option name="연산자" path="공백" hit="비교 연산자(&lt;, &gt;, &lt;=, &gt;=)" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="빌더 메서드" />
+    <option name="빌더" path="줄 바꿈 및 괄호" hit="빌더 메서드" />
+    <option name="들여쓰기" path="줄 바꿈 및 괄호" hit="빌더 메서드 들여쓰기 유지" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="빌더 메서드 들여쓰기 유지" />
+    <option name="빌더" path="줄 바꿈 및 괄호" hit="빌더 메서드 들여쓰기 유지" />
+    <option name="유지" path="줄 바꿈 및 괄호" hit="빌더 메서드 들여쓰기 유지" />
+    <option name="삼항" path="줄 바꿈 및 괄호" hit="삼항 연산" />
+    <option name="연산" path="줄 바꿈 및 괄호" hit="삼항 연산" />
+    <option name="상등" path="공백" hit="상등 연산자(==, !=)" />
+    <option name="연산자" path="공백" hit="상등 연산자(==, !=)" />
+    <option name="배치" path="줄 바꿈 및 괄호" hit="새 줄에 ')' 배치" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="새 줄에 ')' 배치" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="새 줄에 ')' 배치" />
+    <option name="catch" path="줄 바꿈 및 괄호" hit="새 줄에 'catch'" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="새 줄에 'catch'" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="새 줄에 'catch'" />
+    <option name="else" path="줄 바꿈 및 괄호" hit="새 줄에 'else'" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="새 줄에 'else'" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="새 줄에 'else'" />
+    <option name="finally" path="줄 바꿈 및 괄호" hit="새 줄에 'finally" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="새 줄에 'finally" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="새 줄에 'finally" />
+    <option name="while" path="줄 바꿈 및 괄호" hit="새 줄에 'while'" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="새 줄에 'while'" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="새 줄에 'while'" />
+    <option name="배치" path="줄 바꿈 및 괄호" hit="새 줄에 '}' 배치" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="새 줄에 '}' 배치" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="새 줄에 '}' 배치" />
+    <option name="배치" path="줄 바꿈 및 괄호" hit="새 줄에 왼쪽 중괄호 배치" />
+    <option name="새" path="줄 바꿈 및 괄호" hit="새 줄에 왼쪽 중괄호 배치" />
+    <option name="왼쪽" path="줄 바꿈 및 괄호" hit="새 줄에 왼쪽 중괄호 배치" />
+    <option name="줄에" path="줄 바꿈 및 괄호" hit="새 줄에 왼쪽 중괄호 배치" />
+    <option name="중괄호" path="줄 바꿈 및 괄호" hit="새 줄에 왼쪽 중괄호 배치" />
+    <option name="내" path="공백" hit="새 타입 정의 내 콜론 뒤" />
+    <option name="뒤" path="공백" hit="새 타입 정의 내 콜론 뒤" />
+    <option name="새" path="공백" hit="새 타입 정의 내 콜론 뒤" />
+    <option name="정의" path="공백" hit="새 타입 정의 내 콜론 뒤" />
+    <option name="콜론" path="공백" hit="새 타입 정의 내 콜론 뒤" />
+    <option name="타입" path="공백" hit="새 타입 정의 내 콜론 뒤" />
+    <option name="내" path="공백" hit="새 타입 정의 내 콜론 앞" />
+    <option name="새" path="공백" hit="새 타입 정의 내 콜론 앞" />
+    <option name="앞" path="공백" hit="새 타입 정의 내 콜론 앞" />
+    <option name="정의" path="공백" hit="새 타입 정의 내 콜론 앞" />
+    <option name="콜론" path="공백" hit="새 타입 정의 내 콜론 앞" />
+    <option name="타입" path="공백" hit="새 타입 정의 내 콜론 앞" />
+    <option name="다시" path="줄 바꿈 및 괄호" hit="서식 다시 지정 시 유지" />
+    <option name="서식" path="줄 바꿈 및 괄호" hit="서식 다시 지정 시 유지" />
+    <option name="시" path="줄 바꿈 및 괄호" hit="서식 다시 지정 시 유지" />
+    <option name="유지" path="줄 바꿈 및 괄호" hit="서식 다시 지정 시 유지" />
+    <option name="지정" path="줄 바꿈 및 괄호" hit="서식 다시 지정 시 유지" />
+    <option name="소괄호" path="공백" hit="소괄호 앞" />
+    <option name="앞" path="공백" hit="소괄호 앞" />
+    <option name="뒤에" path="공백" hit="쉼표 뒤에" />
+    <option name="쉼표" path="공백" hit="쉼표 뒤에" />
+    <option name="쉼표" path="공백" hit="쉼표 앞" />
+    <option name="앞" path="공백" hit="쉼표 앞" />
+    <option name="가이드" path="줄 바꿈 및 괄호" hit="시각적 가이드" />
+    <option name="시각적" path="줄 바꿈 및 괄호" hit="시각적 가이드" />
+    <option name="새로운" path="줄 바꿈 및 괄호" hit="여러 줄의 입력 이후 새로운 줄" />
+    <option name="여러" path="줄 바꿈 및 괄호" hit="여러 줄의 입력 이후 새로운 줄" />
+    <option name="이후" path="줄 바꿈 및 괄호" hit="여러 줄의 입력 이후 새로운 줄" />
+    <option name="입력" path="줄 바꿈 및 괄호" hit="여러 줄의 입력 이후 새로운 줄" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="여러 줄의 입력 이후 새로운 줄" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="여러 줄의 입력 이후 새로운 줄" />
+    <option name="경우" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 소괄호로 정렬" />
+    <option name="소괄호로" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 소괄호로 정렬" />
+    <option name="여러" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 소괄호로 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 소괄호로 정렬" />
+    <option name="줄일" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 소괄호로 정렬" />
+    <option name="경우" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 정렬" />
+    <option name="여러" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 정렬" />
+    <option name="줄일" path="줄 바꿈 및 괄호" hit="여러 줄일 경우 정렬" />
+    <option name="연산자" path="공백" hit="연산자 주변" />
+    <option name="주변" path="공백" hit="연산자 주변" />
+    <option name="들여쓰기" path="줄 바꿈 및 괄호" hit="연속 들여쓰기 사용" />
+    <option name="사용" path="줄 바꿈 및 괄호" hit="연속 들여쓰기 사용" />
+    <option name="연속" path="줄 바꿈 및 괄호" hit="연속 들여쓰기 사용" />
+    <option name="상수" path="줄 바꿈 및 괄호" hit="열거형 상수" />
+    <option name="열거형" path="줄 바꿈 및 괄호" hit="열거형 상수" />
+    <option name="when" path="줄 바꿈 및 괄호" hit="열에 'when' 브랜치 정렬" />
+    <option name="브랜치" path="줄 바꿈 및 괄호" hit="열에 'when' 브랜치 정렬" />
+    <option name="열에" path="줄 바꿈 및 괄호" hit="열에 'when' 브랜치 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="열에 'when' 브랜치 정렬" />
+    <option name="단순" path="줄 바꿈 및 괄호" hit="열에 단순 메서드 정렬" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="열에 단순 메서드 정렬" />
+    <option name="열에" path="줄 바꿈 및 괄호" hit="열에 단순 메서드 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="열에 단순 메서드 정렬" />
+    <option name="대입" path="줄 바꿈 및 괄호" hit="열에 대입 정렬" />
+    <option name="열에" path="줄 바꿈 및 괄호" hit="열에 대입 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="열에 대입 정렬" />
+    <option name="변수" path="줄 바꿈 및 괄호" hit="열에 변수 정렬" />
+    <option name="열에" path="줄 바꿈 및 괄호" hit="열에 변수 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="열에 변수 정렬" />
+    <option name="열에" path="줄 바꿈 및 괄호" hit="열에 필드 정렬" />
+    <option name="정렬" path="줄 바꿈 및 괄호" hit="열에 필드 정렬" />
+    <option name="필드" path="줄 바꿈 및 괄호" hit="열에 필드 정렬" />
+    <option name="바꿈" path="줄 바꿈 및 괄호" hit="오른쪽 여백에서 줄 바꿈" />
+    <option name="여백에서" path="줄 바꿈 및 괄호" hit="오른쪽 여백에서 줄 바꿈" />
+    <option name="오른쪽" path="줄 바꿈 및 괄호" hit="오른쪽 여백에서 줄 바꿈" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="오른쪽 여백에서 줄 바꿈" />
+    <option name="않는지" path="줄 바꿈 및 괄호" hit="오른쪽 여백을 초과하지 않는지 확인" />
+    <option name="여백을" path="줄 바꿈 및 괄호" hit="오른쪽 여백을 초과하지 않는지 확인" />
+    <option name="오른쪽" path="줄 바꿈 및 괄호" hit="오른쪽 여백을 초과하지 않는지 확인" />
+    <option name="초과하지" path="줄 바꿈 및 괄호" hit="오른쪽 여백을 초과하지 않는지 확인" />
+    <option name="확인" path="줄 바꿈 및 괄호" hit="오른쪽 여백을 초과하지 않는지 확인" />
+    <option name="이진" path="줄 바꿈 및 괄호" hit="이진 표현식" />
+    <option name="표현식" path="줄 바꿈 및 괄호" hit="이진 표현식" />
+    <option name="바꿈" path="줄 바꿈 및 괄호" hit="입력 시 줄 바꿈" />
+    <option name="시" path="줄 바꿈 및 괄호" hit="입력 시 줄 바꿈" />
+    <option name="입력" path="줄 바꿈 및 괄호" hit="입력 시 줄 바꿈" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="입력 시 줄 바꿈" />
+    <option name="유지" path="줄 바꿈 및 괄호" hit="제어문을 한 줄로 유지" />
+    <option name="제어문을" path="줄 바꿈 및 괄호" hit="제어문을 한 줄로 유지" />
+    <option name="줄로" path="줄 바꿈 및 괄호" hit="제어문을 한 줄로 유지" />
+    <option name="한" path="줄 바꿈 및 괄호" hit="제어문을 한 줄로 유지" />
+    <option name="목록" path="줄 바꿈 및 괄호" hit="제어자 목록" />
+    <option name="제어자" path="줄 바꿈 및 괄호" hit="제어자 목록" />
+    <option name="뒤에" path="줄 바꿈 및 괄호" hit="제어자 목록 뒤에 줄 바꿈" />
+    <option name="목록" path="줄 바꿈 및 괄호" hit="제어자 목록 뒤에 줄 바꿈" />
+    <option name="바꿈" path="줄 바꿈 및 괄호" hit="제어자 목록 뒤에 줄 바꿈" />
+    <option name="제어자" path="줄 바꿈 및 괄호" hit="제어자 목록 뒤에 줄 바꿈" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="제어자 목록 뒤에 줄 바꿈" />
+    <option name="들여쓰기" path="줄 바꿈 및 괄호" hit="조건에서 연속 들여쓰기 사용" />
+    <option name="사용" path="줄 바꿈 및 괄호" hit="조건에서 연속 들여쓰기 사용" />
+    <option name="연속" path="줄 바꿈 및 괄호" hit="조건에서 연속 들여쓰기 사용" />
+    <option name="조건에서" path="줄 바꿈 및 괄호" hit="조건에서 연속 들여쓰기 사용" />
+    <option name="주석" path="줄 바꿈 및 괄호" hit="주석" />
+    <option name="바꿈" path="줄 바꿈 및 괄호" hit="줄 바꿈" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="줄 바꿈" />
+    <option name="강제" path="줄 바꿈 및 괄호" hit="중괄호 강제 적용" />
+    <option name="적용" path="줄 바꿈 및 괄호" hit="중괄호 강제 적용" />
+    <option name="중괄호" path="줄 바꿈 및 괄호" hit="중괄호 강제 적용" />
+    <option name="배치" path="줄 바꿈 및 괄호" hit="중괄호 배치" />
+    <option name="중괄호" path="줄 바꿈 및 괄호" hit="중괄호 배치" />
+    <option name="변수" path="줄 바꿈 및 괄호" hit="지역 변수 어노테이션" />
+    <option name="어노테이션" path="줄 바꿈 및 괄호" hit="지역 변수 어노테이션" />
+    <option name="지역" path="줄 바꿈 및 괄호" hit="지역 변수 어노테이션" />
+    <option name="번째" path="줄 바꿈 및 괄호" hit="첫 번째 열의 주석" />
+    <option name="열의" path="줄 바꿈 및 괄호" hit="첫 번째 열의 주석" />
+    <option name="주석" path="줄 바꿈 및 괄호" hit="첫 번째 열의 주석" />
+    <option name="첫" path="줄 바꿈 및 괄호" hit="첫 번째 열의 주석" />
+    <option name="바꿈" path="줄 바꿈 및 괄호" hit="첫 번째 호출 줄 바꿈" />
+    <option name="번째" path="줄 바꿈 및 괄호" hit="첫 번째 호출 줄 바꿈" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="첫 번째 호출 줄 바꿈" />
+    <option name="첫" path="줄 바꿈 및 괄호" hit="첫 번째 호출 줄 바꿈" />
+    <option name="호출" path="줄 바꿈 및 괄호" hit="첫 번째 호출 줄 바꿈" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="체인 메서드 호출" />
+    <option name="체인" path="줄 바꿈 및 괄호" hit="체인 메서드 호출" />
+    <option name="호출" path="줄 바꿈 및 괄호" hit="체인 메서드 호출" />
+    <option name="뒤" path="공백" hit="콜론 뒤, 선언 타입 앞" />
+    <option name="선언" path="공백" hit="콜론 뒤, 선언 타입 앞" />
+    <option name="앞" path="공백" hit="콜론 뒤, 선언 타입 앞" />
+    <option name="콜론" path="공백" hit="콜론 뒤, 선언 타입 앞" />
+    <option name="타입" path="공백" hit="콜론 뒤, 선언 타입 앞" />
+    <option name="뒤" path="공백" hit="콜론 앞, 선언 이름 뒤" />
+    <option name="선언" path="공백" hit="콜론 앞, 선언 이름 뒤" />
+    <option name="앞" path="공백" hit="콜론 앞, 선언 이름 뒤" />
+    <option name="이름" path="공백" hit="콜론 앞, 선언 이름 뒤" />
+    <option name="콜론" path="공백" hit="콜론 앞, 선언 이름 뒤" />
+    <option name="선언에서" path="줄 바꿈 및 괄호" hit="클래스 선언에서" />
+    <option name="클래스" path="줄 바꿈 및 괄호" hit="클래스 선언에서" />
+    <option name="어노테이션" path="줄 바꿈 및 괄호" hit="클래스 어노테이션" />
+    <option name="클래스" path="줄 바꿈 및 괄호" hit="클래스 어노테이션" />
+    <option name="else" path="줄 바꿈 및 괄호" hit="특별 'else if' 처리" />
+    <option name="if" path="줄 바꿈 및 괄호" hit="특별 'else if' 처리" />
+    <option name="처리" path="줄 바꿈 및 괄호" hit="특별 'else if' 처리" />
+    <option name="특별" path="줄 바꿈 및 괄호" hit="특별 'else if' 처리" />
+    <option name="본문" path="줄 바꿈 및 괄호" hit="표현식 본문 함수" />
+    <option name="표현식" path="줄 바꿈 및 괄호" hit="표현식 본문 함수" />
+    <option name="함수" path="줄 바꿈 및 괄호" hit="표현식 본문 함수" />
+    <option name="어노테이션" path="줄 바꿈 및 괄호" hit="필드 어노테이션" />
+    <option name="필드" path="줄 바꿈 및 괄호" hit="필드 어노테이션" />
+    <option name="간단한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 람다" />
+    <option name="람다" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 람다" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 람다" />
+    <option name="한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 람다" />
+    <option name="간단한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 메서드" />
+    <option name="메서드" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 메서드" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 메서드" />
+    <option name="한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 메서드" />
+    <option name="간단한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 블록" />
+    <option name="블록" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 블록" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 블록" />
+    <option name="한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 블록" />
+    <option name="간단한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 클래스" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 클래스" />
+    <option name="클래스" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 클래스" />
+    <option name="한" path="줄 바꿈 및 괄호" hit="한 줄의 간단한 클래스" />
+    <option name="여러" path="줄 바꿈 및 괄호" hit="한 줄의 여러 표현식" />
+    <option name="줄의" path="줄 바꿈 및 괄호" hit="한 줄의 여러 표현식" />
+    <option name="표현식" path="줄 바꿈 및 괄호" hit="한 줄의 여러 표현식" />
+    <option name="한" path="줄 바꿈 및 괄호" hit="한 줄의 여러 표현식" />
+    <option name="주위" path="공백" hit="함수 타입의 화살표 주위" />
+    <option name="타입의" path="공백" hit="함수 타입의 화살표 주위" />
+    <option name="함수" path="공백" hit="함수 타입의 화살표 주위" />
+    <option name="화살표" path="공백" hit="함수 타입의 화살표 주위" />
+    <option name="고려" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
+    <option name="바꿈보다" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
+    <option name="우선" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
+    <option name="줄" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
+    <option name="체인" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
+    <option name="호출" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
+  </configurable>
+  <configurable id="preferences.language.Kotlin.scripting" configurable_name="Kotlin 스크립트">
+    <option name="dsl" hit="Gradle Kotlin DSL 스크립트" />
+    <option name="gradle" hit="Gradle Kotlin DSL 스크립트" />
+    <option name="kotlin" hit="Gradle Kotlin DSL 스크립트" />
+    <option name="스크립트" hit="Gradle Kotlin DSL 스크립트" />
+    <option name="kotlin" hit="Kotlin 스크립트" />
+    <option name="스크립트" hit="Kotlin 스크립트" />
+    <option name="관리" hit="독립실행형 스크립트 관리" />
+    <option name="독립실행형" hit="독립실행형 스크립트 관리" />
+    <option name="스크립트" hit="독립실행형 스크립트 관리" />
+    <option name="관리" hit="스크립트 정의 관리" />
+    <option name="스크립트" hit="스크립트 정의 관리" />
+    <option name="정의" hit="스크립트 정의 관리" />
+    <option name="구성을" hit="파일 변경 시 스크립트 구성을 자동으로 로드하려면 자동 다시 로드를 활성화하세요" />
+    <option name="다시" hit="파일 변경 시 스크립트 구성을 자동으로 로드하려면 자동 다시 로드를 활성화하세요" />
+    <option name="로드를" hit="파일 변경 시 스크립트 구성을 자동으로 로드하려면 자동 다시 로드를 활성화하세요" />
+    <option name="로드하려면" hit="파일 변경 시 스크립트 구성을 자동으로 로드하려면 자동 다시 로드를 활성화하세요" />
+    <option name="변경" hit="파일 변경 시 스크립트 구성을 자동으로 로드하려면 자동 다시 로드를 활성화하세요" />
+    <option name="스크립트" hit="파일 변경 시 스크립트 구성을 자동으로 로드하려면 자동 다시 로드를 활성화하세요" />
+    <option name="시" hit="파일 변경 시 스크립트 구성을 자동으로 로드하려면 자동 다시 로드를 활성화하세요" />
+    <option name="자동" hit="파일 변경 시 스크립트 구성을 자동으로 로드하려면 자동 다시 로드를 활성화하세요" />
+    <option name="자동으로" hit="파일 변경 시 스크립트 구성을 자동으로 로드하려면 자동 다시 로드를 활성화하세요" />
+    <option name="파일" hit="파일 변경 시 스크립트 구성을 자동으로 로드하려면 자동 다시 로드를 활성화하세요" />
+    <option name="활성화하세요" hit="파일 변경 시 스크립트 구성을 자동으로 로드하려면 자동 다시 로드를 활성화하세요" />
+  </configurable>
+</options>

@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>어노테이션이 추가된 Seam 클래스의 구성 문제를 보고합니다.</p>
+<!-- tooltip end -->
+<p><strong>예:</strong></p>
+<pre><code>
+@Name("authenticator")
+class SeanComponent {
+  <strong>@Create</strong> // static 메서드는 허용되지 않습니다
+  private static void create() {...}
+
+   <strong>@Destroy</strong> // static 메서드는 허용되지 않습니다
+   private static void destroy() {...}
+
+   <strong>@DataModel</strong> // getter가 아닙니다
+   private Map method() {...}
+
+   <strong>@Factory</strong> // public이어야 합니다
+   private Map getUniverse2() {...}
+
+   <strong>@Unwrap</strong> // 매개변수가 없어야 합니다
+   private static Map createUniverse(int days) { ... }
+}</code></pre>
+</body>
+</html>

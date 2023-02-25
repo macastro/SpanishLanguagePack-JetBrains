@@ -1,0 +1,19 @@
+<html>
+<body>
+루프의 시작 또는 끝 부분에 조건부 줄 바꿈을 보고하고 코드를 줄이기 위해 루프 조건을 추가할 것을 제안합니다.
+<p>예:</p>
+<pre><code>
+  <b>while</b> (true) {
+    <b>if</b> (i  == 23) <b>break</b>;
+    i++;
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  <b>while</b> (i != 23) {
+    i++;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+<body>
+필요한 상위 바운드를 하위 타입으로 만들지 않는 제네릭 타입으로 전달된 타입 인수를 보고합니다. 타입 인수는 지정된 상위 바운드의 하위 타입이어야 합니다.
+<p>예:</p>
+<pre><code>class Example[A &lt; Numeric]
+end
+
+# 'String'이 'Numeric'의 하위 타입이 아닙니다
+타입 예시 = Example[String]
+</code></pre>
+</body>
+</html>

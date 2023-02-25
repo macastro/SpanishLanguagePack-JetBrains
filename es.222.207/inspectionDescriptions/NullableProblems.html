@@ -1,0 +1,30 @@
+<html>
+<body>
+null 값 가능성을 표시하는 어노테이션과 관련된 문제를 보고합니다.
+<p><b>예:</b></p>
+<ul>
+  <li>재정의하는 메서드에 어노테이션이 추가되지 않은 경우:
+    <pre><code>
+abstract class A {
+  @NotNull abstract String m();
+}
+class B extends A {
+    String m() { return "empty string"; }
+}
+    </code></pre>
+  </li>
+  <li>기본 타입의 어노테이션: <code>@NotNull int myFoo;</code> </li>
+  <li>동일한 멤버에 <code>@Nullable</code> 및 <code>@NotNull</code>이 모두 있는 경우: <code>@Nullable @NotNull String myFooString;</code></li>
+  <li>null 가능한 요소의 컬렉션이 null이 아닌 요소의 컬렉션에 대입된 경우:
+    <pre><code>
+void testList(List&lt;@Nullable String> nullableList) {
+   List&lt;@NotNull String> list2 = nullableList;
+}
+    </code></pre>
+  </li>
+</ul>
+<!-- tooltip end -->
+<p><b>어노테이션 구성</b> 버튼을 사용하여 null 값 가능성을 표시하는 어노테이션을 지정하고 체크박스를 사용하여 검사가 경고를 표시할 지점을 세밀하게 설정합니다.</p>
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 5 이상이며, 클래스 경로에서 null 값 가능성을 표시하는 어노테이션이 지원되는 경우에만 보고합니다.</p>
+</body>
+</html>

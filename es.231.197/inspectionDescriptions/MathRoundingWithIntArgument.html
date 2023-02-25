@@ -1,0 +1,20 @@
+<html>
+<body>
+<code>int</code>를 인수로 사용하는 <code>Math</code> 및 <code>StrictMath</code>의 <code>round()</code>, <code>ceil()</code>,
+<code>floor()</code>, <code>rint()</code> 메서드에 대한 호출을 보고합니다.
+<p>이러한 메서드는 인수가 <code>long</code> 또는 <code>double</code>이어야 하는 경우에 호출할 수가 있으며, 예기치 않은 결과가 나올 수 있습니다.</p>
+<p>이 검사는 <code>double</code>로 형 변환하기 위해 이러한 식(<code>round</code> 제외)을 단순화하는 수정을 제공합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  int i = 2;
+  double d1 = Math.floor(i);
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  int i = 2;
+  double d1 = i;
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.1의 새로운 기능</small></p>
+</body>
+</html>

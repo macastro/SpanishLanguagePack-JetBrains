@@ -1,0 +1,75 @@
+<html>
+<body>
+JUnit 테스트 구성원 선언의 형식이 잘못되어 JUnit 테스트 프레임워크에서 인식할 수 없는 경우를 보고합니다.
+이 검사에서는 다음 문제를 보고합니다.
+<ul>
+  <li><code>@RegisterExtension</code>로 어노테이션이 추가되었으며 필요한 경우 형식이 잘못되었거나 정적으로 선언되지 않은 필드</li>
+  <li><code>@Nested</code>로 어노테이션이 추가된 static 내부 클래스입니다</li>
+  <li>소스 없이 정의된 매개변수화된 테스트입니다</li>
+  <li>알 수 없거나 static이 아니거나 인수 대상이 없는 <code>@MethodSource</code>를 사용하는 매개변수화된 테스트</li>
+  <li>
+    메서드 매개변수로 변환할 수 없는 타입을 <code>@ValueSource</code> 또는 <code>@EnumSource</code>로 매개변수화한 테스트
+  </li>
+  <li><code>@Test</code>, <code>@ParameterizedTest</code> 또는 <code>@RepeatedTest</code> 중 하나 이상으로 어노테이션이 추가된 테스트</li>
+  <li><code>setup()</code> 또는 <code>teropDown()</code> 메서드 중 public이 아닌 메서드로서 반환 타입이 void가 아니거나 인수를 사용하는 메서드입니다.</li>
+  <li><code>suite()</code> 메서드는 private, 인수를 사용하거나 static이 아닙니다.</li>
+  <li>
+    <code>@BeforeClass</code>, <code>@AfterClass</code>, <code>@BeforeAll</code> 또는 <code>@AfterAll</code>로 어노테이션이 추가된 메서드로서 public이 아니고 static이 아니며 반환 타입이 void가 아니거나 올바른 매개변수 목록이 없습니다
+  </li>
+  <li>
+    <code>@Before</code>, <code>@After</code>, <code>@BeforeEach</code> 
+ 또는 <code>AfterEach</code>로 어노테이션이 추가되었으며 public이 아니고 반환 타입이 void가 아니거나 인수를 사용하는 메서드
+  </li>
+  <li><code>@BeforeAll</code> 또는 <code>@AfterAll</code> 메서드에 <code>RepetitionInfo</code>를 삽입했습니다</li>
+  <li>
+    <code>@Test</code>로 어노테이션이 추가된 테스트에서 사용되는 <code>@BeforeEach</code> 또는 <code>@AfterEach</code> 메서드에 <code>RepetitionInfo</code>를 삽입했습니다
+  </li>
+  <li><code>@DataPoint</code> 또는 <code>@DataPoints</code>로 어노테이션이 추가된 필드 및 메서드로서 public이 아니거나 static이 아닙니다</li>
+  <li>
+    <code>@Rule</code>로 어노테이션이 추가되었으며 public이 아니거나 <code>TestRule</code> 또는 <code>MethodRule</code>의 하위 타입이 아닌 필드 및 메서드
+  </li>
+  <li><code>@ClassRule</code>로 어노테이션이 추가되었으며 public이 아니거나 static이 아니거나 <code>TestRule</code>의 하위 타입이 아닌 필드 및 메서드</li>
+  <li>
+    반환 타입이 void가 아니거나 인수를 사용하거나 static이며 public이 아닌 <code>test</code> 접두사를 사용하는 <code>TestCase</code>의 하위 클래스 내부에 있는 메서드입니다.
+  </li>
+  <li>
+    <code>@Test</code>로 어노테이션이 추가되었으며 public이 아니고 반환 타입이 void가 아니거나 인수를 사용하거나 static인 메서드
+  </li>
+</ul>
+
+Kotlin에서 일시 중지 함수에는 인수와 void가 아닌 반환 타입이 있습니다. 따라서, JUnit 테스트 러너에 의해 실행되지 않습니다. 이 검사에서는 이 문제에 대해서도 보고할 것입니다.
+
+<p><b>잘못된 형식의 <code>@Before</code> 메서드 예(Java):</b></p>
+<pre><code>@Before private int foo(int arg) { ... } </code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>@Before public void foo() { ... } </code></pre>
+
+<p><b>누락된 메서드 소스 예(Kotlin):</b></p>
+<pre><code>
+  class Example {
+    @MethodSource("parameters")
+    @ParameterizedTest
+    fun foo(param: String) { ... }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Example {
+    @MethodSource("parameters")
+    @ParameterizedTest
+    fun foo(param: String) { ... }
+
+    companion object {
+      @JvmStatic
+      fun parameters(): Stream&lt;Arguments&gt; {
+        TODO("Not yet implemented")
+      }
+    }
+  }
+</code></pre>
+
+<!-- tooltip end -->
+<p>검사 옵션을 사용하여 어노테이션을 지정합니다. 해당 어노테이션 중 하나가 추가된 매개변수는 보고되지 않습니다.
+</p>
+</body>
+</html>

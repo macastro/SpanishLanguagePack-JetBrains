@@ -1,0 +1,17 @@
+<html>
+<body>
+해당 클래스의 permits 절에 동일한 파일의 일부 하위 클래스가 포함되지 않는 sealed 클래스를 보고합니다.
+<p>예:</p>
+<pre><code>
+  sealed class A {}
+  final class B extends A {}
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  sealed class A permits B {}
+  final class B extends A {}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2020.3의 새로운 기능</small></p>
+</body>
+</html>

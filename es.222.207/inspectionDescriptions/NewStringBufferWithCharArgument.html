@@ -1,0 +1,15 @@
+<html>
+<body>
+<code>char</code>가 인수로 사용된 <code>StringBuffer</code> 및 <code>StringBuilder</code> 생성자 호출을 보고합니다.
+이 경우<code>char</code>는 확인 없이 정수 타입으로 변환되며 버퍼의 초기 용량으로 해석됩니다.
+<p><b>예:</b></p>
+<pre><code>
+  new StringBuilder('(').append("1").append(')');
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  new StringBuilder("(").append("1").append(')');
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

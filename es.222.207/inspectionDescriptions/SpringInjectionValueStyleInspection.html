@@ -1,0 +1,29 @@
+<html>
+<body>
+<p><code>&lt;value&gt;</code> 또는 <code>&lt;ref&gt;</code> 하위 요소를 통해 구성된 프로퍼티를 보고하고 해당하는 속성으로 이를 대체하도록 제안합니다</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  &lt;beans&gt;
+    &lt;bean class="MyBean" id="myBean"/&gt;
+
+    &lt;bean class="MyFactory"&gt;
+      &lt;property name="bean"&gt;
+        &lt;ref bean="myBean"/&gt; // '명시적 &lt;ref&gt; 요소의 사용'을 보고합니다
+      &lt;/property&gt;
+    &lt;/bean&gt;
+  &lt;/beans&gt;
+</code></pre>
+
+<p>빠른 수정 적용 후:</p>
+
+<pre><code>
+  &lt;beans&gt;
+    &lt;bean class="MyBean" id="myBean"/&gt;
+    &lt;bean class="MyFactory"&gt;
+      &lt;property name="bean" ref="myBean"/&gt;
+    &lt;/bean&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

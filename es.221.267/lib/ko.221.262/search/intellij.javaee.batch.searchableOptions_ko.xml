@@ -1,0 +1,19 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="새" path="ActionManager" hit="새 일괄 처리 작업 파일" />
+    <option name="일괄" path="ActionManager" hit="새 일괄 처리 작업 파일" />
+    <option name="작업" path="ActionManager" hit="새 일괄 처리 작업 파일" />
+    <option name="처리" path="ActionManager" hit="새 일괄 처리 작업 파일" />
+    <option name="파일" path="ActionManager" hit="새 일괄 처리 작업 파일" />
+    <option name="생성" path="ActionManager" hit="일괄 처리 작업 파일 생성" />
+    <option name="일괄" path="ActionManager" hit="일괄 처리 작업 파일 생성" />
+    <option name="작업" path="ActionManager" hit="일괄 처리 작업 파일 생성" />
+    <option name="처리" path="ActionManager" hit="일괄 처리 작업 파일 생성" />
+    <option name="파일" path="ActionManager" hit="일괄 처리 작업 파일 생성" />
+  </configurable>
+  <configurable id="fileTemplates" configurable_name="파일 및 코드 템플릿">
+    <option name="batch" hit="batch" />
+    <option name="batch" hit="batch.2_0" />
+    <option name="job" hit="job" />
+  </configurable>
+</options>

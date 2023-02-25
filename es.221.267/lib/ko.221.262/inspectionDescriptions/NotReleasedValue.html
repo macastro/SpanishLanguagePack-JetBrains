@@ -1,0 +1,11 @@
+<html>
+<body>
+지역 변수 또는 매개변수에 저장된 소유한 객체 중 나중에 릴리스되지 않았거나 릴리스되기 전에 다른 값으로 덮어써지는 객체를 보고합니다.<br>
+&nbsp;- 이름이 <code>alloc</code> 또는 <code>new</code>로 시작하거나 <code>copy</code>를 포함하는 메서드를 사용해
+객체를 생성했거나 <code>retain</code> 메시지를 객체에 전송한 경우, 객체의 소유권을 가지게 됩니다.<br>
+&nbsp;- 객체의 소유권을 포기하려면 <code>release</code> 또는 <code>autorelease</code>를 사용하세요.<br>
+Objective-C 메모리 관리 규칙에 따르면 소유한 각 객체는 릴리스되거나 자동으로 릴리스되어야 합니다.
+<a href="https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/MemoryMgmt.html">메모리 관리 프로그래밍 가이드</a>를 참조하세요.<br>
+자동 참조 집계(ARC)를 사용하면 이 검사가 비활성화됩니다.
+</body>
+</html>

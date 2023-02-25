@@ -1,0 +1,17 @@
+<html>
+<body>
+기본 클래스에서 선언된 같은 시그니처를 포함하며 가상이 아닌 함수를 숨기는 함수를 보고합니다.
+<p>예:</p>
+<pre>
+class Base {
+  public:
+    void operate() {}
+};
+
+class Derived : public Base {
+  public:
+    void operate() {}
+}
+</pre>
+</body>
+</html>

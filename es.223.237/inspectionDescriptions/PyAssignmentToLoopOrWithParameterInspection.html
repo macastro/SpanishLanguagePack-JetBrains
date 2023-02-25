@@ -1,0 +1,18 @@
+<html>
+<body>
+내부 루프에서 루프 변수를 다시 작성하는 경우를 보고합니다:
+<pre style="font-family: monospace">
+    for i in range(5):
+      for i in range(20, 25):
+          print("Inner", i)
+      print("Outer", i)
+  </pre>
+
+<code>with</code> 문에 선언된 변수가 구문 본문 내부에서 다시 선언되는 경우 또한 경고합니다.
+<pre style="font-family: monospace">
+    with open("file") as f:
+      f.read()
+      with open("file") as f:
+  </pre>
+</body>
+</html>

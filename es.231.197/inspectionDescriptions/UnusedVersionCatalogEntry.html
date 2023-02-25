@@ -1,0 +1,23 @@
+<html>
+<body>                                            
+<p>버전 카탈로그의 TOML 설명자에서 사용되지 않은 키를 탐지합니다. </p>
+
+<p><b>예:</b></p>
+
+<pre><code>
+// build.gradle
+dependencies {
+  implementation libs.foo.bar
+}
+</code></pre>
+
+<pre><code>
+// libs.versions.toml
+[libraries]
+foo-bar = "com.gradle:example:1.0.0"
+bar-baz = "com.gradle:example:2.0.0" // bar-baz를 강조 표시합니다
+</code></pre>
+
+
+</body>
+</html>

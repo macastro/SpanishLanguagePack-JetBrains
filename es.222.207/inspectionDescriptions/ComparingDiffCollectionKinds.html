@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>카테고리가 다른 Scala 컬렉션이 비교되는 사례를 보고합니다.</p>
+<p>각기 다른 카테고리의 Scala 컬렉션(Set, Seq, Map 또는 Iterator)은 같을 수 없으며 배열과 비교될 수도 없습니다. 이 검사는 컬렉션 중 하나를 같은 카테고리로 변환할 것을 제안합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  seq == iterator
+  seq != array
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  seq.toIterator == iterator or seq == iterator.toSeq
+  seq != array.toSeq
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

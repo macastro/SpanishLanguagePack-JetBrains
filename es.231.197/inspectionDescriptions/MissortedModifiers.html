@@ -1,0 +1,34 @@
+<html>
+<body>
+제어자가 표준 선호 순서(Java 언어 사양에 명시된 대로)로 되어 있지 않은 선언을 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  class Foo {
+    native public final void foo();
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Foo {
+    public final native void foo();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>검사 설정을 사용하여 다음을 수행합니다.</p>
+<ul>
+  <li>
+    <p>
+      잘못 배치된 어노테이션(타입 바로 앞에 그리고 제어자 키워드 뒤에 <code>ElementType.TYPE_USE</code>가 <em>없는</em> 어노테이션 또는 제어자 키워드 앞에 <em>없는</em> 기타 어노테이션)에 대한 보고를 전환합니다.
+      이 옵션이 비활성화된 경우, 어노테이션을 제어자 키워드 앞 또는 뒤에 배치할 수 있습니다.
+      제어자 키워드 사이에 어노테이션이 있는 제어자 목록은 항상 보고됩니다.
+    </p>
+  </li>
+  <li>
+    <p>
+      <code>ElementType.TYPE_USE</code> 어노테이션에 다른 대상이 지정되어 있는 경우에도 이 어노테이션을 타입 바로 앞에 배치할지 여부를 지정합니다.
+    </p>
+  </li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>정규화된 참조를 사용하지 않는 import 문을 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  package org.something
+
+  import someInnerPackage
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  package org.something
+
+  import org.something.someInnerPackage
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

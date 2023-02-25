@@ -1,0 +1,24 @@
+<html>
+<body>
+'application.xml' 구성 파일 내부의 다음과 같은 문제를 보고합니다.
+<ul>
+  <li>인스턴스화할 수 없는 클래스 참조</li>
+  <li>필요한 클래스를 확장하지 않는 클래스 참조</li>
+  <li>부적절한 범위를 가진 클래스 참조</li>
+  <li>요구되는 패턴(예: Java 식별자)과 일치하지 않는 태그 및 속성 값</li>
+  <li>필요한 하위 태그 또는 속성을 포함하지 않는 태그</li>
+  <li>이름이 중복된 객체를 정의하는 태그</li>
+</ul>
+
+<p><b>예:</b></p><br/>
+<pre><code>
+&lt;application&gt;
+    &lt;module id="ExampleWebModule"&gt;
+      &lt;web&gt; // 오류: 'web-uri' 하위 태그가 정의되어야 합니다
+        &lt;context-root&gt;ExampleWebApp&lt;/context-root&gt;
+      &lt;/web&gt;
+    &lt;/module&gt;
+&lt;/application&gt;
+</code></pre>
+</body>
+</html>

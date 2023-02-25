@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>보간 문자열로 변환할 수 있는 기존 문자열 서식 지정 표현식("format", "formatted" 또는 문자열 연결을 통한)을 보고합니다.</p>
+<p>새 구문은 더 간결하며 더 정적인 검사를 가능하게 하며 개선된 런타임 성능을 제공합니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  val str = "test"
+  "test %s".format(str)
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  val str = "test"
+  s"test $str"
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

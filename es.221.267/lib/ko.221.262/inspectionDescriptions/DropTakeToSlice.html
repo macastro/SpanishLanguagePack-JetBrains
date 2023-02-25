@@ -1,0 +1,19 @@
+<html>
+<body>
+<p><code>drop</code>과 <code>take</code>의 조합을 보고하고 <code>slice</code>로 바꿉니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  var x: Seq[Int]
+  x.drop(n).take(m)
+  x.take(m).drop(n)
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  var x: Seq[Int]
+  x.slice(n, n + m)
+  x.slice(n, m)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

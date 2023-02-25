@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>지역이 아닌 return 문</title>
+</head>
+<body>
+<p>익명 함수 내부에서 <code>return</code> 키워드를 사용하여 일찍 빠져나왔을 때 보고합니다.
+    로컬이 아닌 반환이 <code>scala.runtime.NonLocalReturnException</code>-s를 던져서 구현됩니다.
+    이는 프로그래머의 의도인 경우가 매우 드뭅니다. 이렇게 하면 예외를 던지고 수집하는 숨겨진 성능 비용이 발생하여 문제가 될 수 있습니다. </p>
+<p>또한 누수가 있는 구현입니다. catch-all 예외 핸들러는 <code>NonLocalReturnException</code>를 인터셉트할 수 있습니다.</p>
+
+<pre><code>
+def foo(numbers: Seq[Int]): Int =
+  numbers.map { n =>
+    if (n > 5)
+      return 0 // highlighted
+    n * 2
+  }.sum
+</code></pre>
+
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<body>
+<code>String</code> 리터럴을 보고하고 텍스트 블록으로 대체하도록 제안합니다.
+<p>요건:</p>
+<ul>
+  <li><code>\n</code>이 2번 이상 발생</li>
+  <li>텍스트 블록이 연결되지 않음</li>
+</ul>
+<p>
+<b>단일 문자열 리터럴에 적용</b> 옵션을 사용하면 줄 바꿈이 포함된 단일 리터럴에 대한 수정이 제안됩니다.
+<p>
+<p><b>예:</b></p>
+<pre><code>
+  String html = "&lt;html&gt;\n" +
+                "    &lt;body&gt;\n" +
+                "        &lt;p&gt;Hello, world&lt;/p&gt;\n" +
+                "    &lt;/body&gt;\n" +
+                "&lt;/html&gt;\n";
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  String html = """
+                &lt;html&gt;
+                    &lt;body&gt;
+                        &lt;p&gt;Hello, world&lt;/p&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                """;
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 15 이상인 경우에만 보고합니다.</p>
+<p><small>2019.3의 새로운 기능</small></p>
+</body>
+</html>

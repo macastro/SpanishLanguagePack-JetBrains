@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>Kotlin 1.8 이상에서 컴파일 오류를 발생시키는 <code>when</code> 브랜치의 모호한 논리 식을 보고합니다.</p>
+<pre><code>
+  fun Int.matches(strict: Boolean): Boolean = when (strict) {
+      true -> this == 6
+      this in (4..7) -> true // is ambiguous
+      else -> false
+  }
+</code></pre>
+
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  fun Int.matches(strict: Boolean): Boolean = when (strict) {
+      true -> this == 6
+      (this in (4..7)) -> true // wrapped in parentheses
+      else -> false
+  }
+</code></pre>
+<p>Kotlin 언어 레벨은 1.7부터 검사가 가능합니다.</p>
+</body>
+</html>

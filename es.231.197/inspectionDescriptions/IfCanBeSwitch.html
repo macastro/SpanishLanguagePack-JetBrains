@@ -1,0 +1,41 @@
+<html>
+<body>
+<code>switch</code> 문으로 바꿀 수 있는 <code>if</code> 문을 보고합니다.
+<p>교체 결과는 일반적으로 더 짧고 명확해집니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  void test(String str) {
+    if (str.equals("1")) {
+      System.out.println(1);
+    } else if (str.equals("2")) {
+      System.out.println(2);
+    } else if (str.equals("3")) {
+      System.out.println(3);
+    } else {
+      System.out.println(4);
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  void test(String str) {
+    switch (str) {
+      case "1" -&gt; System.out.println(1);
+      case "2" -&gt; System.out.println(2);
+      case "3" -&gt; System.out.println(3);
+      default -&gt; System.out.println(4);
+    }
+  }
+  </code></pre>
+<!-- tooltip end -->
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 7 이상인 경우에만 보고합니다.</p>
+<p><b>'if' 조건 브랜치의 최소 수</b> 필드를 사용하여 보고할 필요가 있는 <code>if</code> 문의 <code>if</code> 조건 브랜치의 최소 수를 지정합니다. 터미널의 <code>else</code> 브랜치(<code>if</code> 없음)는 계산되지 않습니다.</p>
+<p>
+<b>숫자에 대한 switch 제안</b> 옵션을 사용하여 박싱된 기본 숫자와 문자에 대한 <code>switch</code> 문의 제안을 활성화합니다.
+<p>
+<b>열거형에 대한 switch 제안</b> 옵션을 사용하여 <code>enum</code> 상수에 대한 <code>switch</code> 문의 제안을 활성화합니다.
+<p>
+  <b>null 안전 표현식</b> 옵션을 사용하여 <code>NullPointerException</code>만을 삽입할 수는 없는 <code>switch</code> 문을 제안합니다.
+</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>
+    Kotlin 1.5 이상에서 더 이상 사용되지 않으며 컴파일 경고를 발생시키는 인라인 클래스를 보고합니다.
+    <a href="https://kotlinlang.org/docs/whatsnew15.html#inline-classes">Kotlin 1.5.0의 새로운 기능</a> 참조
+</p>
+
+<p>예:</p>
+<pre><code>
+  inline class Password(val s: String)
+</code></pre>
+
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  @JvmInline
+  value class Password(val s: String)
+</code></pre>
+
+<p>Kotlin 언어 레벨은 1.5부터 검사가 가능합니다.</p>
+</body>
+</html>

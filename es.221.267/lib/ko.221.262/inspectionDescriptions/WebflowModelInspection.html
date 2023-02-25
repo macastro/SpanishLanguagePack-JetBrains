@@ -1,0 +1,32 @@
+<html>
+<body>
+<p><a href="https://spring.io/projects/spring-webflow">Spring Webflow</a> XML 기반의<code>&lt;flow&gt;</code> 정의에서 구성 오류를 보고합니다.</p>
+
+<ul>
+  <li>해결되지 않은 bean 참조</li>
+  <li>필요한 태그 및 속성 누락</li>
+  <li>잘못된 프로퍼티 타입</li>
+  <li>일관성 없는 <code>enum</code> 프로퍼티</li>
+  <li>참조된 bean의 잘못된 타입</li>
+</ul>
+
+<p><b>예:</b></p>
+<pre><code>
+  &lt;flow
+    start-state="unknown-state" &lt;!-- 심볼 'unknown-state'를 해결할 수 없습니다 -&gt;
+    parent="<strong>unknownParentFlow</strong>,another-flow" &lt;!-- 흐름 'unknownParentFlow'를 찾을 수 없습니다 --&gt;&gt;
+
+    &lt;input name=<strong>""</strong> // 값이 비어 있으면 안 됩니다
+         type="<strong>foo.com.UnknownType</strong>" &lt;!-- 클래스 'UnknownType'을 해결할 수 없습니다 --&gt;
+         value="42"/&gt;
+
+    &lt;exception-handler bean="<strong>dummyBean</strong>"; &lt;!--Bean은 'org.springframework.webflow.engine.FlowExecutionExceptionHandler' 타입이어야 합니다 --&gt;
+
+    &lt;view-state id="validFlowButInvalidState_forParent"
+           parent="another-flow#<strong>unknownParentState</strong>"/&gt; &lt;!-- 상위 상태 'unknownParentState'를 해결할 수 없습니다 --&gt;
+
+    &lt;bean-import resource="<strong>foo.xml</strong>" /&gt; &lt;!-- 파일 'foo.xml'을 해결할 수 없습니다--&gt;
+    &lt;bean-import resource="<strong>highlighting-20-wrong-flow.xml</strong>"/&gt; &lt;!-- 올바른 spring.xml 파일이 아닙니다 --&gt;
+  &lt;/flow&gt;</code></pre>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+<code>else</code>와 함께 사용된 <code>unless</code> 문을 보고합니다. 긍정 조건문을 포함하는 분기를 먼저 두는 것이 더 좋습니다.
+<p>예:</p>
+<pre>
+<code># 나쁜 사례
+a = 1
+unless a > 2
+  puts 'a is 2 or less'
+else
+  puts 'a is greater than 2'
+end</code>
+</pre>
+
+<code>unless</code>를 <code>if</code>로 변환하기 위해 빠른 수정을 사용할 수 있습니다. 빠른 수정이 적용된 후 결과는 다음과 같습니다:
+
+<pre>
+<code># 좋은 사례
+a = 1
+if a > 2
+  puts 'a is greater than 2'
+else
+  puts 'a is 2 or less'
+end</code>
+</pre>
+<p><span style="font-size: smaller;"><a href="https://github.com/rubocop-hq/ruby-style-guide#no-else-with-unless">'Ruby 스타일 가이드'</a> 참고</span></p>
+</body>
+</html>

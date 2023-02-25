@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>메서드 <code>main</code>이 실행되는 경우에만 초기화되는 <code>DelayedInit</code>의 하위 클래스에 정의된 필드를 보고합니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Test {
+    println(MyApp.initializedLater) // 0 출력
+  }
+  object MyApp extends DelayedInit {
+    val initializedLater = 3
+    override def delayedInit(body: => Unit): Unit = {
+      new Test
+      body
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

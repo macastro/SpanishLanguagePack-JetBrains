@@ -1,0 +1,18 @@
+<html>
+<body>                                            
+<p>'plugins {}' 블록 앞에 허용되지 않는 구문을 탐지합니다. </p>
+Gradle Plugin DSL의 제한 때문에 '<code>plugins {}</code>' 블록 앞에 제한된 Groovy 구문 집합만 사용할 수 있습니다. 유일한 옵션은 '<code>buildscript {}</code>', '<code>pluginManagement {}</code>' 및 다른 '<code>plugins {}</code>'입니다. <br>
+  <a href="https://docs.gradle.org/current/userguide/plugins.html#plugins_dsl_limitations">Gradle 문서를 참조하세요.</a>
+
+<p><b>예:</b></p>
+<pre><code>
+import foo.bar.Baz
+plugins {} // reports 'plugins'
+plugins {
+  foo() // reporst 'foo'
+  id 'java'
+}
+</code></pre>
+
+</body>
+</html>

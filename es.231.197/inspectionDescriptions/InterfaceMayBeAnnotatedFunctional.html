@@ -1,0 +1,21 @@
+<html>
+<body>
+<code>@FunctionalInterface</code> 어노테이션을 추가할 수 있는 인터페이스를 보고합니다(JDK 1.8부터 이용 가능).
+<p>인터페이스에 <code>@FunctionalInterface</code> 어노테이션을 추가하는 것은 인터페이스가 함수형이며 더 이상 <code>abstract</code> 메서드를 추가할 수 없음을 의미합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  interface FileProcessor {
+    void execute(File file);
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  @FunctionalInterface
+  interface FileProcessor {
+    void execute(File file);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 8 이상인 경우에만 보고합니다.</p>
+</body>
+</html>

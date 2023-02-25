@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>모든 타입과 일치하는 <code>catch</code> 블록 내 패턴을 보고합니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  try f() catch {
+    case e => ???
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  try f() catch {
+    case e: Throwable => ???
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+내용의 타입이 열거형 클래스인 <code>java.util.Set</code> 객체의 인스턴스화를 보고합니다. <code>Set</code> 객체는 <code>java.util.EnumSet</code> 객체로 바꿀 수 있습니다.
+<p>
+  <code>EnumSet</code> 구현은 기본 데이터 구조가 비트 벡터이므로 다른 조합과 비교 시 더욱 효과적일 수 있습니다. 빠른 수정을 사용하여 이니셜라이저를 <code>EnumSet.noneOf()</code> 호출로 바꿉니다. 이 빠른 수정은 변수 타입이 <code>Set</code>의 하위 클래스인 경우에는 사용할 수 없습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  enum MyEnum { FOO, BAR; }
+
+  Set&lt;MyEnum&gt; enums = new HashSet&lt;MyEnum&gt;();
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  enum MyEnum { FOO, BAR; }
+
+  Set&lt;MyEnum&gt; enums = EnumSet.noneOf(MyEnum.class);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

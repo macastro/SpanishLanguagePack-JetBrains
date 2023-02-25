@@ -1,0 +1,121 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="가운데" path="ActionManager" hit="가운데" />
+    <option name="계층" path="ActionManager" hit="계층" />
+    <option name="계층적" path="ActionManager" hit="계층적 그룹" />
+    <option name="그룹" path="ActionManager" hit="계층적 그룹" />
+    <option name="그래프" path="ActionManager" hit="그래프" />
+    <option name="그리드" path="ActionManager" hit="그리드 표시" />
+    <option name="표시" path="ActionManager" hit="그리드 표시" />
+    <option name="그리드에" path="ActionManager" hit="그리드에 스냅" />
+    <option name="스냅" path="ActionManager" hit="그리드에 스냅" />
+    <option name="그물" path="ActionManager" hit="그물" />
+    <option name="내용" path="ActionManager" hit="내용 맞추기" />
+    <option name="맞추기" path="ActionManager" hit="내용 맞추기" />
+    <option name="간략하게" path="ActionManager" hit="노드를 간략하게 표시" />
+    <option name="노드를" path="ActionManager" hit="노드를 간략하게 표시" />
+    <option name="표시" path="ActionManager" hit="노드를 간략하게 표시" />
+    <option name="단일" path="ActionManager" hit="단일 순환" />
+    <option name="순환" path="ActionManager" hit="단일 순환" />
+    <option name="대상별" path="ActionManager" hit="대상별" />
+    <option name="동작" path="ActionManager" hit="동작" />
+    <option name="랜덤" path="ActionManager" hit="랜덤" />
+    <option name="레이아웃" path="ActionManager" hit="레이아웃" />
+    <option name="내용" path="ActionManager" hit="레이아웃 적용 후 내용 맞춤" />
+    <option name="레이아웃" path="ActionManager" hit="레이아웃 적용 후 내용 맞춤" />
+    <option name="맞춤" path="ActionManager" hit="레이아웃 적용 후 내용 맞춤" />
+    <option name="적용" path="ActionManager" hit="레이아웃 적용 후 내용 맞춤" />
+    <option name="후" path="ActionManager" hit="레이아웃 적용 후 내용 맞춤" />
+    <option name="매끄러운" path="ActionManager" hit="매끄러운 폴리라인" />
+    <option name="폴리라인" path="ActionManager" hit="매끄러운 폴리라인" />
+    <option name="맨" path="ActionManager" hit="맨 아래" />
+    <option name="아래" path="ActionManager" hit="맨 아래" />
+    <option name="맨" path="ActionManager" hit="맨 위" />
+    <option name="위" path="ActionManager" hit="맨 위" />
+    <option name="동일" path="ActionManager" hit="메인과 동일" />
+    <option name="메인과" path="ActionManager" hit="메인과 동일" />
+    <option name="모양" path="ActionManager" hit="모양" />
+    <option name="방사" path="ActionManager" hit="방사" />
+    <option name="방향" path="ActionManager" hit="방향" />
+    <option name="베지에" path="ActionManager" hit="베지에" />
+    <option name="브리지" path="ActionManager" hit="브리지 표시" />
+    <option name="표시" path="ActionManager" hit="브리지 표시" />
+    <option name="삭제" path="ActionManager" hit="선택 항목 삭제" />
+    <option name="선택" path="ActionManager" hit="선택 항목 삭제" />
+    <option name="항목" path="ActionManager" hit="선택 항목 삭제" />
+    <option name="구조" path="ActionManager" hit="선택된 노드의 구조 뷰 표시" />
+    <option name="노드의" path="ActionManager" hit="선택된 노드의 구조 뷰 표시" />
+    <option name="뷰" path="ActionManager" hit="선택된 노드의 구조 뷰 표시" />
+    <option name="선택된" path="ActionManager" hit="선택된 노드의 구조 뷰 표시" />
+    <option name="표시" path="ActionManager" hit="선택된 노드의 구조 뷰 표시" />
+    <option name="소스별" path="ActionManager" hit="소스별" />
+    <option name="수직으로" path="ActionManager" hit="수직으로" />
+    <option name="수평으로" path="ActionManager" hit="수평으로" />
+    <option name="스트레이트" path="ActionManager" hit="스트레이트 폴리라인" />
+    <option name="폴리라인" path="ActionManager" hit="스트레이트 폴리라인" />
+    <option name="스플라인" path="ActionManager" hit="스플라인" />
+    <option name="실제" path="ActionManager" hit="실제 크기" />
+    <option name="크기" path="ActionManager" hit="실제 크기" />
+    <option name="아크" path="ActionManager" hit="아크" />
+    <option name="에지" path="ActionManager" hit="에지 형상" />
+    <option name="형상" path="ActionManager" hit="에지 형상" />
+    <option name="라벨" path="ActionManager" hit="엣지 라벨 표시" />
+    <option name="엣지" path="ActionManager" hit="엣지 라벨 표시" />
+    <option name="표시" path="ActionManager" hit="엣지 라벨 표시" />
+    <option name="방사" path="ActionManager" hit="엣지 번들 방사" />
+    <option name="번들" path="ActionManager" hit="엣지 번들 방사" />
+    <option name="엣지" path="ActionManager" hit="엣지 번들 방사" />
+    <option name="번들" path="ActionManager" hit="엣지 번들 순환" />
+    <option name="순환" path="ActionManager" hit="엣지 번들 순환" />
+    <option name="엣지" path="ActionManager" hit="엣지 번들 순환" />
+    <option name="번들" path="ActionManager" hit="엣지 번들 유기" />
+    <option name="엣지" path="ActionManager" hit="엣지 번들 유기" />
+    <option name="유기" path="ActionManager" hit="엣지 번들 유기" />
+    <option name="번들" path="ActionManager" hit="엣지 번들 풍선" />
+    <option name="엣지" path="ActionManager" hit="엣지 번들 풍선" />
+    <option name="풍선" path="ActionManager" hit="엣지 번들 풍선" />
+    <option name="병합" path="ActionManager" hit="엣지 병합" />
+    <option name="엣지" path="ActionManager" hit="엣지 병합" />
+    <option name="병렬" path="ActionManager" hit="연속 병렬" />
+    <option name="연속" path="ActionManager" hit="연속 병렬" />
+    <option name="오른쪽" path="ActionManager" hit="오른쪽" />
+    <option name="와이드" path="ActionManager" hit="와이드" />
+    <option name="왼쪽" path="ActionManager" hit="왼쪽" />
+    <option name="원형" path="ActionManager" hit="원형" />
+    <option name="위아래" path="ActionManager" hit="위아래 중간" />
+    <option name="중간" path="ActionManager" hit="위아래 중간" />
+    <option name="유기적" path="ActionManager" hit="유기적" />
+    <option name="루트" path="ActionManager" hit="자동 루트 엣지" />
+    <option name="엣지" path="ActionManager" hit="자동 루트 엣지" />
+    <option name="자동" path="ActionManager" hit="자동 루트 엣지" />
+    <option name="제네릭" path="ActionManager" hit="제네릭" />
+    <option name="직교" path="ActionManager" hit="직교" />
+    <option name="그룹" path="ActionManager" hit="직교 그룹" />
+    <option name="직교" path="ActionManager" hit="직교 그룹" />
+    <option name="채널" path="ActionManager" hit="채널" />
+    <option name="축소" path="ActionManager" hit="축소" />
+    <option name="콤팩트" path="ActionManager" hit="콤팩트" />
+    <option name="곡선" path="ActionManager" hit="쿼드 곡선" />
+    <option name="쿼드" path="ActionManager" hit="쿼드 곡선" />
+    <option name="트리" path="ActionManager" hit="트리" />
+    <option name="패밀리" path="ActionManager" hit="패밀리" />
+    <option name="풍선" path="ActionManager" hit="풍선" />
+    <option name="레이아웃" path="ActionManager" hit="현재 레이아웃 적용" />
+    <option name="적용" path="ActionManager" hit="현재 레이아웃 적용" />
+    <option name="현재" path="ActionManager" hit="현재 레이아웃 적용" />
+    <option name="확대" path="ActionManager" hit="확대" />
+    <option name="" path="ActionManager" hit="🠈 오른쪽에서 왼쪽으로" />
+    <option name="오른쪽에서" path="ActionManager" hit="🠈 오른쪽에서 왼쪽으로" />
+    <option name="왼쪽으로" path="ActionManager" hit="🠈 오른쪽에서 왼쪽으로" />
+    <option name="" path="ActionManager" hit="🠉 아래에서 위로" />
+    <option name="아래에서" path="ActionManager" hit="🠉 아래에서 위로" />
+    <option name="위로" path="ActionManager" hit="🠉 아래에서 위로" />
+    <option name="" path="ActionManager" hit="🠊 왼쪽에서 오른쪽으로" />
+    <option name="오른쪽으로" path="ActionManager" hit="🠊 왼쪽에서 오른쪽으로" />
+    <option name="왼쪽에서" path="ActionManager" hit="🠊 왼쪽에서 오른쪽으로" />
+    <option name="" path="ActionManager" hit="🠋 위에서 아래로" />
+    <option name="아래로" path="ActionManager" hit="🠋 위에서 아래로" />
+    <option name="위에서" path="ActionManager" hit="🠋 위에서 아래로" />
+  </configurable>
+</options>

@@ -1,0 +1,32 @@
+<html>
+<body>
+인터페이스가 아닌 구체적 클래스의 사용을 보고합니다.
+이 선언은 추상화의 실패를 나타낼 수 있으며, 테스트 과정은 더 어려워질 수 있습니다.
+<p>
+시스템 또는 제3자 라이브러리에서 유래하는 클래스 선언은 검사를 통해 보고되지 않습니다.
+형 변환, instanceofs, 및 지역 변수는 <code>equals()</code> 메서드 구현에서 보고되지 않습니다.
+또는 형변환은 <code>clone()</code> 메서드 구현에서 보고되지 않습니다.
+</p>
+<p>예:</p>
+<pre><code>
+  interface Entity {}
+  class EntityImpl implements Entity {}
+
+  void processObject(Object obj) {
+    // 경고: 구체적 클래스의 instanceof
+    if (obj instanceof EntityImpl) {
+      // 경고: 인터페이스가 아닌
+      // 구체적 클래스로의 형 변환
+      processEntity((EntityImpl)obj);
+    }
+  }
+  // 경고: 구체적 클래스의 매개변수
+  void processEntity(EntityImpl obj) {
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  <b>추상 클래스 타입 무시</b> 옵션을 사용하여 추상 클래스로의 형 변환을 무시합니다.</p>
+<p>순차적인 옵션을 사용하여 문제가 보고된 컨텍스트를 제어합니다.</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>빈 매개변수 절을 가진 메서드를 참조하고, 인수 절이 없는 호출을 보고합니다.</p>
+
+<p>규칙에 따르면 메서드에 <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">부수 효과</a>가 있는 경우 괄호를 사용해야 합니다.
+    메서드 호출에 인수 절을 남겨둘 수 있는 반면(Java의 <a href="https://en.wikipedia.org/wiki/Uniform_access_principle">단일 접근 원칙</a>을 따르기 위해), 사용자는 호출된 메서드가 프로퍼티 이상을 나타내는 경우 하나의 빈 인수 절을 추가하도록 권장됩니다.</p>
+
+<p>빠른 수정에서는 빈 인수 절을 추가합니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  def test(): Int = ???
+
+  test
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  def test(): Int = ???
+
+  test()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

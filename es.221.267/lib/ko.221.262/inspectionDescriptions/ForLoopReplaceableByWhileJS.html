@@ -1,0 +1,19 @@
+<html>
+<body>
+초기화와 업데이트 구성 요소를 모두 포함하지 않는 <code>for</code> 루프를 보고합니다. 루프를 간단한 <code>while</code> 문으로 바꿀 것을 제안합니다.
+<p>예:</p>
+<pre><code>
+  for(; exitCondition(); ) {
+    process();
+  }
+</code></pre>
+<p>빠른 수정이 적용된 후 결과는 다음과 같습니다:</p>
+<pre><code>
+  while(exitCondition()) {
+    process();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사가 자명하거나 존재하지 않는 조건을 포함하는 <b>for</b> 루프를 무시하기를 원한다면 아래 체크박스를 사용하십시오.</p>
+</body>
+</html>

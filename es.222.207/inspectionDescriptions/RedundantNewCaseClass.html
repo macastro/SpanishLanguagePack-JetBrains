@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/html">
+<body>
+<p>케이스 클래스를 초기화하기 위해 사용된 <code>new</code>를 보고하고 제거할 것을 제안합니다.</p>
+
+<p><code>apply</code> 메서드가 케이스 클래스에 자동으로 제공됩니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  case class Book(isbn: String)
+  val guide = new Book("978-0345391803")
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  case class Book(isbn: String)
+  val guide = Book("978-0345391803")
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

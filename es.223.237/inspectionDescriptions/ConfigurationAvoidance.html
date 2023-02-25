@@ -1,0 +1,19 @@
+<html>
+<body>                                            
+<p>(Gradle 4.9+) 작업과 즉시 상호작용하는 API의 사용을 탐지합니다.</p>
+  작업과 즉시 상호작용하면 여러 문제가 발생할 수 있습니다.
+  <ul>
+  <li>작업 간 모든 종속성을 사용자가 수동으로 설정해야 합니다.</li>
+  <li> <a href="https://docs.gradle.org/current/userguide/build_lifecycle.html#sec:build_phases">구성 단계</a>에서 즉시 작동하는 API로 액세스된 모든 작업은 추후에 실행되지 않더라도 구성된 상태가 됩니다. 이에 따라 성능 저하가 발생합니다.</li>
+  </ul>
+  추후 즉시 작동하는 API는 지원 중단되고 지연되어 작동하는 API로 대체될 예정입니다. <br>
+  <a href="https://docs.gradle.org/current/userguide/task_configuration_avoidance.html">마이그레이션 가이드는 Gradle 문서를 참조하세요.</a>
+
+<p><b>예:</b></p>
+<pre><code>
+task foo { // reports 'task', suggests replacing it with 'task.register'
+  // ...
+}
+</code></pre>
+</body>
+</html>

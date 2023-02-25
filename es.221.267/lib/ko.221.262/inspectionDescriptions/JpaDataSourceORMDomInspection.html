@@ -1,0 +1,35 @@
+<html>
+<body>
+구성된 데이터 소스 내부에서 해결되지 않는 Persistence ORM XML 설명자를 보고하고 데이터 소스를 새로고침하거나 다른 데이터 소스를 할당할 것을 제안합니다.
+
+<p><b>데이터베이스 테이블 예:</b></p>
+<pre><code>
+  CREATE TABLE DATA_TABLE (
+    ID INTEGER,
+    DATA VARCHAR(100)
+  );
+</code></pre><br/>
+
+<p><b>JSP 파일 예:</b></p>
+<pre><code>
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0"&gt;
+    &lt;entity name="JavaEntity" class="JavaEntity"&gt;
+        &lt;table name="UNKNOWN_TABLE"/&gt; // 오류: 해결되지 않은 테이블
+        &lt;attributes&gt;
+          &lt;id name="id"&gt;
+            &lt;column name="ID" nullable="false"/&gt;
+          &lt;/id&gt;
+          &lt;basic name="UNKNOWN_COLUMN"&gt; // 오류: 해결되지 않은 열
+            &lt;column name="UNKNOWN_COLUMN" length="12"/&gt;
+          &lt;/basic&gt;
+        &lt;/attributes&gt;
+    &lt;/entity&gt;
+  &lt;/entity-mappings&gt;
+</code></pre><br/>
+<!-- tooltip end -->
+<p>
+  <b>참고:</b> 'Assign datasource'(데이터 소스 할당) 액션을 통해 데이터 소스를 구성할 수 있습니다
+</p>
+</body>
+</html>

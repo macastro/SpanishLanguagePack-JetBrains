@@ -1,0 +1,20 @@
+<html>
+<body>
+서로 변환될 수 있는 범위 함수(<code>let</code>, <code>run</code>, <code>apply</code>, <code>also</code>)를 보고합니다.
+<p>대응하는 함수를 사용하면 코드가 더 단순해집니다.</p>
+<p>빠른 수정에서는 범위 함수를 다른 함수로 바꿉니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  val x = &quot;&quot;.let {
+      it.length
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  val x = &quot;&quot;.run {
+      length
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

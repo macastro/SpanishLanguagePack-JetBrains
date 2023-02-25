@@ -1,0 +1,32 @@
+<html>
+<body>
+패턴이 있는 <code>instanceof</code>를 보고하며, 형 변환이 있는 일반 <code>instanceof</code>로 변환하는 것이 좋습니다.
+<p>이 검사는 빠른 수정 적용을 통해 이전 Java 버전을 사용하여 패턴이 있는 <code>instanceof</code>를 코드 베이스로 이동할 수 있도록 합니다.</p>
+<p>
+  <code>instanceof</code> 앞에 복잡한 표현식을 사용하는 경우 결과는 패턴이 있는 원래 <code>instanceof</code>와 완전히 동등하지 않을 수 있습니다. 이러한 경우 이 표현식이 다시 계산됩니다.
+</p>
+<!-- tooltip end -->
+<p>예:</p>
+<pre><code>
+  if (object instanceof String txt && txt.length() == 1) {
+      System.out.println(txt);
+  } else {
+      return;
+  }
+  System.out.println(txt);
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  if (object instanceof String && ((String) object).length() ==1) {
+      String txt = (String) object;
+      System.out.println(txt);
+  } else {
+      return;
+  }
+  String txt = (String) object;
+  System.out.println(txt);
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.1의 새로운 기능</small></p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+<code>*.properties</code> 파일에서 해결되지 않은 프로퍼티를 보고합니다.
+
+<p><b>JSP 파일 예:</b></p>
+<pre><code>
+&lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;
+&lt;%@ taglib uri="/tags/fmt" prefix="fmt" %&gt;
+
+&lt;fmt:message bundle="bundle.properties" key="unknown.property"/&gt; // 오류: 참조 파일 내에 해당 프로퍼티가 없습니다
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+더 이상 사용되지 않고 비용이 많이 드는 <code>ActionUpdateThread.OLD_EDT</code> 모드를
+  암시적으로 선언하는 액션, 액션 그룹 및 기타 <code>ActionUpdateThreadAware</code> 클래스를 보고합니다.
+
+<p>
+  액션이나 액션 그룹이 고유한 <code>update()</code> 메서드를 정의할 때, IntelliJ Platform은 <code>update()</code>와 <code>getChildren()</code> 메서드를 UI 스레드에서 호출하는 예전의 동기 방식을 따라하고 <code>AnActionEvent.dataContext()</code>의 모든 데이터를 제공합니다.
+  이를 위해 필요하지 않더라도 백그라운드 스레드에서 모든 가능한 데이터를 캐시에 미리 저장합니다.
+</p>
+<p>
+  <code>getActionUpdateThread()</code> 메서드를 재정의하여 신규 모드인 <code>ActionUpdateThread.EDT</code> 혹은 <code>ActionUpdateThread.BGT</code> 모드 중 하나를 제공합니다.
+</p>
+<p>
+  자세한 정보는 <code>ActionUpdateThread</code> 문서를 참조하세요.
+</p>
+<!-- tooltip end -->
+</body>
+</html>

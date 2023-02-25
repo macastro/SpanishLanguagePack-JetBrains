@@ -1,0 +1,15 @@
+<html>
+<body>
+표현식 스타일의 본문이 대신 사용될 수 있는 경우 코드 블록 본문이 포함된 람다 식을 보고합니다.
+변환 후 결과는 더욱 간결하고 명확합니다.
+<p>예:</p>
+<pre><code>
+  Comparable&lt;String&gt; c = o -> {return 0;};
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  Comparable&lt;String&gt; c = o -> 0;
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

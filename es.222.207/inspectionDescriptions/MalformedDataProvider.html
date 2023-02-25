@@ -1,0 +1,24 @@
+<html><body>
+존재하지 않거나 액세스할 수 없는 데이터 공급자 메서드 참조를 보고합니다.
+<!-- tooltip end -->
+<p>예:</p>
+<pre><code>
+public class InstanceDataProviderFromForeignClass {
+  // 메서드 data()가 클래스 A에 존재하지 않음
+  @Test(dataProvider = "data", dataProviderClass = A.class)
+  public void test() {
+  }
+}
+class A { }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+//필요한 data() 메서드가 클래스 A에서 생성됨
+class A {
+  @DataProvider
+  public Object[][] data() {
+    return new Object[][]{};
+  }
+}
+</code></pre>
+</body></html>

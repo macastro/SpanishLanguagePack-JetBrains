@@ -1,0 +1,14 @@
+<html>
+<body>
+<p><code>hashCode</code>에서 사용된 <code>var</code> 필드를 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Test {
+    var value = 3
+    override def hashCode(): Int =
+      value // value는 변경될 수 있으므로 hashCode()에서 사용하면 안 됩니다
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

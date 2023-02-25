@@ -1,0 +1,26 @@
+<html>
+<body>
+<code>async</code> 함수 내부에 기대되는 <code>await</code> 접두사가 없는 <code>async</code> 함수 호출을 보고합니다.
+그러한 호출은 <code>Promise</code>를 반환하며 제어 흐름이 즉시 계속 진행됩니다.
+<p>예:</p>
+<pre><code>
+async function bar() { /* ... */ }
+async function foo() {
+    bar(); // 나쁨
+}
+</code></pre>
+<p>
+빠른 수정은 적용된 후 <code>await</code> 접두사가 추가됩니다:</p>
+<pre><code>
+async function bar() { /* ... */ }
+async function foo() {
+    await bar(); // 좋음
+}
+</code></pre>
+<br/>
+'return 문의 프로미스 보고' 체크박스를 선택한 경우, return 문에 <code>await</code>를 추가할 것을 제안합니다.<br/>
+이는 일반적으로 필요하지 않지만 두 가지 주요 이점을 제공합니다.<br/><ul><li>
+코드를 <code>try-catch</code>로 둘러쌀 때 <code>await</code>를 추가하는 것을 잊지 않게 됩니다.</li>
+<li>명시적 <code>await</code>를 사용하면 V8 런타임이 <a href="https://bit.ly/v8-zero-cost-async-stack-traces">비동기 스택 추적</a>을 제공하는 데 도움이 됩니다.</li></ul>
+</body>
+</html>

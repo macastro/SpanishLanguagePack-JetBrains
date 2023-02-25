@@ -1,0 +1,31 @@
+<html>
+<body>
+다른 브랜치에 동일한 코드가 포함된 <code>switch</code> 문 또는 표현식을 보고하고 중복 브랜치 병합을 제안합니다.
+<p>예:</p>
+<pre><code>
+  <b>switch</b> (n) {
+    <b>case</b> 1:
+      System.out.println(n);
+      <b>break</b>;
+    <b>case</b> 2:
+      System.out.println(n);
+      <b>break</b>;
+    <b>default</b>:
+      System.out.println("default");
+  }
+</code></pre>
+<p>다음으로 대체 가능:</p>
+<pre><code>
+  <b>switch</b> (n) {
+    <b>case</b> 1:
+    <b>case</b> 2:
+      System.out.println(n);
+      <b>break</b>;
+    <b>default</b>:
+      System.out.println("default");
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2019.1의 새로운 기능</small></p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="ssh" path="ActionManager" hit="SSH 세션 시작" />
+    <option name="세션" path="ActionManager" hit="SSH 세션 시작" />
+    <option name="시작" path="ActionManager" hit="SSH 세션 시작" />
+    <option name="ssh" path="ActionManager" hit="SSH 세션 시작..." />
+    <option name="세션" path="ActionManager" hit="SSH 세션 시작..." />
+    <option name="시작" path="ActionManager" hit="SSH 세션 시작..." />
+  </configurable>
+  <configurable id="preferences.remoteExternalTools" configurable_name="원격 SSH 외부 도구">
+    <option name="ssh" hit="원격 SSH 외부 도구" />
+    <option name="도구" hit="원격 SSH 외부 도구" />
+    <option name="외부" hit="원격 SSH 외부 도구" />
+    <option name="원격" hit="원격 SSH 외부 도구" />
+  </configurable>
+  <configurable id="sshConsole" configurable_name="SSH 터미널">
+    <option name="ssh" hit="SSH 구성" />
+    <option name="구성" hit="SSH 구성" />
+    <option name="ssh" hit="SSH 터미널" />
+    <option name="터미널" hit="SSH 터미널" />
+    <option name="utf" hit="UTF  " />
+    <option name="구성" hit="구성 설정" />
+    <option name="설정" hit="구성 설정" />
+    <option name="디폴트" hit="디폴트 인코딩 " />
+    <option name="인코딩" hit="디폴트 인코딩 " />
+    <option name="ssh" hit="실행 시마다 SSH 구성 선택" />
+    <option name="구성" hit="실행 시마다 SSH 구성 선택" />
+    <option name="선택" hit="실행 시마다 SSH 구성 선택" />
+    <option name="시마다" hit="실행 시마다 SSH 구성 선택" />
+    <option name="실행" hit="실행 시마다 SSH 구성 선택" />
+    <option name="설정" hit="연결 설정" />
+    <option name="연결" hit="연결 설정" />
+    <option name="vagrant" hit="현재 Vagrant" />
+    <option name="현재" hit="현재 Vagrant" />
+  </configurable>
+</options>

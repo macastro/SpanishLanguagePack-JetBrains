@@ -1,0 +1,34 @@
+<html>
+<body>
+가능한 모든 값이 <code>case</code> 브랜치에서 다뤄지기 때문에 도달할 수 없는 <code>default</code> 브랜치를 포함하는 열거형 <code>switch</code> 구문 또는 표현식을 보고합니다.
+<p>그러한 요소는 모든 열거형 상수가 <code>case</code> 브랜치에서 다뤄지지 않는 경우 컴파일되지 않기 때문에 특히 <code>switch</code> 식에서 불필요합니다.</p>
+<p>
+  <code>switch</code> 식을 보고하려면 언어 수준을 14로 구성해야 합니다.
+</p>
+<p>제공된 빠른 수정은 <code>default</code> 브랜치를 제거합니다.</p>
+<p>예:</p>
+<pre><code>
+  enum E { A, B }
+  int foo(E e) {
+    return switch (e) {
+      case A -&gt; 1;
+      case B -&gt; 2;
+      default -&gt; 3;
+    };
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  enum E { A, B }
+  int foo(E e) {
+    return switch (e) {
+      case A -&gt; 1;
+      case B -&gt; 2;
+    };
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>switch 식 내 불필요한 <code>default</code> 브랜치만 보고하려면 <b>switch 식만 보고</b> 옵션을 사용하세요.</p>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>클래스 또는 특성 필드의 의심스러운 그림자화</title>
+</head>
+<body>
+<p>클래스의 필드를 선언한 다음 메소드에서 같은 이름의 로컬 값 또는 변수를 사용하는 경우가 가장 일반적입니다.</p>
+<pre><code>
+class Foo(foo: Int) {
+  def test(): Int = {
+    val foo: Int = 1 // highlighted
+    foo
+  }
+}
+</code></pre>
+
+<p>잡기 쉽지만, 필드가 상위 클래스 또는 다른 파일의 특성으로 선언되면 더 까다로워집니다.
+그러면 필드가 잘 보이지 않을 수 있고 오류가 발생하기 쉽습니다.</p>
+
+<pre><code>
+// TraitA.scala
+trait TraitA {
+  def n: Int = 1
+}
+
+// ObjectA.scala
+object ObjectA extends TraitA {
+  def foo(): Unit = {
+    val n: Int = 0 // highlighted
+  }
+}
+</code></pre>
+
+<p>클래스가 변수를 정의하고 하위 클래스가 동일한 이름의 값을 정의하는 코너 케이스입니다. 하위 클래스 값은 상위 클래스 변수를 재정의할 수 없으며 가리기만 합니다. 때때로 사소한 오류로 이어집니다.
+    Scala 컴파일러는 -Xlint:private-shadow 옵션을 사용하여 이러한 경우에 경고를 발생시킵니다.</p>
+<p> 옵션 섹션의 콤보박스를 사용하여 이 코너 케이스를 강조 표시하는 방법을 제어할 수 있습니다. 클래스 또는 특성 필드를 가리는 로컬 필드의 강조 표시와 함께 <b>항상</b> 강조 표시하도록 선택할 수 있으며, 강조 표시하지 <b>않고</b> 다른 강조 표시는 유지하며 <b>컴파일러 옵션 확인</b>을 선택하고 검사가 적절하게 작동하도록 하거나, 다른 그림자화 케이스가 아닌 코너 케이스(컴파일러 옵션이 있는 경우)<b>만</b> 강조 표시하도록 선택할 수 있습니다.</p>
+
+<pre><code>
+class C(var c: Int)
+
+// `c` shadows `var c` from the `C` class
+class D(c: Int) extends C(c) {
+  def f: Int = c
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

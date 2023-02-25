@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>
+  빌더가 해당 쿼리를 생성할 수 없는 Jakarta No SQL 저장소 메서드를 보고합니다.
+</p>
+
+<p><b>예:</b></p>
+<pre><code>
+interface PersonRepository extends Repository&lt;Person, Long&gt; {
+  List&lt;Person&gt; findByEmailAndLastname(String email, String lastname);
+  List&lt;Person&gt; findBy<strong>Unknown</strong>AndLastname(EmailAddress emailAddress, String lastname); // 'Unknown' 프로퍼티를 해결할 수 없습니다
+  List&lt;Person&gt; <strong>findByAndLastname</strong>(String email, String lastname); // 프로퍼티 이름 누락
+
+  List&lt;Person&gt; findByLastnameOrderByFirstnameAsc(String lastname);
+  List&lt;Person&gt; findByLastnameOrderBy<strong>Unknown</strong>Desc(String lastname);  // 'Unknown' 프로퍼티를 해결할 수 없습니다
+}
+</code></pre>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+<code>java.sql.ResultSet</code> 또는 <code>java.sql.PreparedStatement</code>의 열 0으로 액세스를 시도하는 경우를 보고합니다.
+역사적인 이유로 <code>java.sql.ResultSet</code> 및 <code>java.sql.PreparedStatement</code>의 열에는 <b>0</b>이 아닌 <b>1</b>부터 번호가 매겨져 있으며 0열로의 액세스는 JDBC 프로그래밍에서 자주 발생하는 오류입니다.
+<p><b>예:</b></p>
+<pre><code>
+  String getName(ResultSet rs) {
+    <b>return</b> rs.getString(0);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

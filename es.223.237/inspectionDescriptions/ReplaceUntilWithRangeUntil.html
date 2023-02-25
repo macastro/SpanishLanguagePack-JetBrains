@@ -1,0 +1,25 @@
+<html>
+<body>
+<p><code>..&lt;</code> 연산자로 바꿀 수 있는 <code>until</code> 사용 위치를 보고합니다.</p>
+<p><code>until</code>을 <code>..&lt;</code> 바꾸는 어떠한 경우에도 의미가 변하지 않습니다.</p>
+<p>UX 조사 결과 개발자들이 <code>until</code>보다 <code>..&lt;</code>을 포함한 코드를 읽을 때 오류를 20-30% 더 적게 만드는 것으로 밝혀졌습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  fun main(args: Array&lt;String&gt;) {
+      for (index in 0 until args.size) {
+          println(index)
+      }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  fun main(args: Array&lt;String&gt;) {
+      for (index in 0..&lt;args.size) {
+          println(index)
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 프로젝트나 모듈의 코틀린 언어 수준이 1.7 이상일 때만 보고하며, <code>-opt-in=kotlin.ExperimentalStdlibApi</code> 컴파일러 플래그가 제공됩니다.</p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<body>
+<code>@Deprecated</code> 어노테이션으로 채워져 1.9 이후에서 컴파일 오류를 일으키는 선언을 보고합니다.
+<p>동기 유형:</p>
+<ul>
+    <li>
+        구현 설계/구조적 이유로 인해 구현 변경이 필요합니다
+    </li>
+    <li>
+        디자인이 일관적이지 않음(다른 컨텍스트에서 다르게 처리됨)
+    </li>
+</ul>
+
+<p><b>상세 사항:</b> <a href="https://youtrack.jetbrains.com/issue/KT-47902">KT-47902: 재정의로 메서드 중단을 표시하지 마십시오</a></p>
+<p>빠른 수정이 <code>@Deprecated</code> 어노테이션을 부모 선언에서 복사합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  open class <b>Base</b> {
+      @Deprecated("Don't use")
+      open fun foo() {}
+  }
+
+  class <b>Derived</b> : <b>Base</b>() {
+      override fun foo() {}
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  open class <b>Base</b> {
+      @Deprecated("Don't use")
+      open fun foo() {}
+  }
+
+  class <b>Derived</b> : <b>Base</b>() {
+      @Deprecated("Don't use")
+      override fun foo() {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 프로젝트 또는 모듈의 Kotlin 언어 수준이 1.6 이상인 경우에만 보고합니다.</p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+<p><code>find</code> 및 <code>map</code> 호출을 보고하고 <code>get</code>으로 바꿀 것을 제안합니다.</p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.find(_._1 == k).map(_._2)
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.get(k)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

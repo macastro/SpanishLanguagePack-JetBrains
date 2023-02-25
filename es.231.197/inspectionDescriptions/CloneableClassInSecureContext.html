@@ -1,0 +1,23 @@
+<html>
+<body>
+복제될 수 있는 클래스를 보고합니다.
+<p>
+  클래스가 <code>Cloneable</code> 인터페이스를 지원하고 해당 <code>clone()</code> 메서드가 즉시 오류를 던지도록 정의되지 않은 경우 이 클래스를 복제할 수 있습니다. 복제 가능한 클래스는 안전한 사용을 위한 코드에서 위험할 수 있습니다.
+</p>
+<p><b>예:</b></p>
+<code>class SecureBean implements Cloneable {}</code>
+<p>빠른 수정 적용 후:</p><code>class SecureBean {}</code>
+<p>
+클래스가 기존의 복제 가능한 클래스를 확장하거나 복제 가능한 인터페이스를 구현하는 경우, 빠른 수정을 적용하면 코드가 다음과 같이 됩니다. 
+<pre><code>class SecureBean extends ParentBean {
+    @Override
+    protected SecureBean clone() throws CloneNotSupportedException {
+        throw new CloneNotSupportedException();
+    }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

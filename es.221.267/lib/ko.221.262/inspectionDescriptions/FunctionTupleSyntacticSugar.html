@@ -1,0 +1,15 @@
+<html>
+<body><p>문법적 설탕으로 바꿀 수 있는 FunctionN 및 TupleN에 대한 명시적 참조를 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  val func: Function1[Int, Int] =
+    a => a + 4
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  val func: (Int) => Int =
+    a => a + 4
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

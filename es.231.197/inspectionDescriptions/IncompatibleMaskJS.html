@@ -1,0 +1,16 @@
+<!-- Copied from community/plugins/InspectionGadgets/src/inspectionDescriptions/IncompatibleMask.html -->
+<html>
+<body>
+반드시 <code>true</code> 또는 <code>false</code>로 평가되는 비트 마스크 식을 보고합니다.
+<code>constant1</code> 및 <code>constant2</code>가 호환되지 않은 
+비트마스크 상수인 경우 표현식 양식은 <code>(var & constant1) == constant2</code> 
+또는 <code>(var | constant1) == constant2</code>입니다.
+<p>예:</p>
+<pre>
+// 호환되지 않는 마스크: 마스크의 마지막 바이트가 0이므로,
+// 0x1200 등은 가능하나 0x1234는 불가능합니다
+if ((mask & 0xFF00) == 0x1234) {...}
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

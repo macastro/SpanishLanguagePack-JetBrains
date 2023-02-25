@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>Spring 구성 요소에서 오토와이어링되거나 삽입된 static 메서드/필드를 보고합니다.</p>
+
+<p><b>예:</b></p>
+<pre>
+@Component
+public class MyComponent {
+	@Autowired
+	static FooInterface foo;  // "static 멤버를 오토와이어링하면 안 됩니다"라고 보고됩니다
+}
+</pre>
+</body>
+</html>
