@@ -153,9 +153,9 @@
     <option name="페이지" path="ActionManager" hit="다음 페이지" />
     <option name="다음과" path="ActionManager" hit="다음과 비교" />
     <option name="비교" path="ActionManager" hit="다음과 비교" />
-    <option name="다음으로" path="ActionManager" hit="다음으로 테이블을 복사..." />
-    <option name="복사" path="ActionManager" hit="다음으로 테이블을 복사..." />
-    <option name="테이블을" path="ActionManager" hit="다음으로 테이블을 복사..." />
+    <option name="다음으로" path="ActionManager" hit="Copiar tabla a..." />
+    <option name="복사" path="ActionManager" hit="Copiar tabla a..." />
+    <option name="테이블을" path="ActionManager" hit="Copiar tabla a..." />
     <option name="다음으로" path="ActionManager" hit="다음으로 표시" />
     <option name="표시" path="ActionManager" hit="다음으로 표시" />
     <option name="내보내기" path="ActionManager" hit="데이터 내보내기..." />
@@ -778,12 +778,12 @@
   <configurable id="database.data.views" configurable_name="데이터 뷰">
     <option name="alt" hit="Alt 클릭" />
     <option name="클릭" hit="Alt 클릭" />
-    <option name="l" hit="값당 로드되는 최대 바이트 수 L  " />
-    <option name="값당" hit="값당 로드되는 최대 바이트 수 L  " />
-    <option name="로드되는" hit="값당 로드되는 최대 바이트 수 L  " />
-    <option name="바이트" hit="값당 로드되는 최대 바이트 수 L  " />
-    <option name="수" hit="값당 로드되는 최대 바이트 수 L  " />
-    <option name="최대" hit="값당 로드되는 최대 바이트 수 L  " />
+    <option name="l" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="값당" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="로드되는" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="바이트" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="수" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="최대" hit="Número máximo de bytes cargados por valor L  " />
     <option name="f" hit="결과 집합의 프리페치 크기 F  " />
     <option name="결과" hit="결과 집합의 프리페치 크기 F  " />
     <option name="집합의" hit="결과 집합의 프리페치 크기 F  " />
@@ -806,11 +806,11 @@
     <option name="다음으로" hit="부울 값을 다음으로 표시 " />
     <option name="부울" hit="부울 값을 다음으로 표시 " />
     <option name="표시" hit="부울 값을 다음으로 표시 " />
-    <option name="기본" hit="숫자 기본 키로 테이블 정렬" />
-    <option name="숫자" hit="숫자 기본 키로 테이블 정렬" />
-    <option name="정렬" hit="숫자 기본 키로 테이블 정렬" />
-    <option name="키로" hit="숫자 기본 키로 테이블 정렬" />
-    <option name="테이블" hit="숫자 기본 키로 테이블 정렬" />
+    <option name="기본" hit="Ordenar tabla por clave primaria numérica" />
+    <option name="숫자" hit="Ordenar tabla por clave primaria numérica" />
+    <option name="정렬" hit="Ordenar tabla por clave primaria numérica" />
+    <option name="키로" hit="Ordenar tabla por clave primaria numérica" />
+    <option name="테이블" hit="Ordenar tabla por clave primaria numérica" />
     <option name="안" hit="안 함" />
     <option name="함" hit="안 함" />
     <option name="오름차순" hit="오름차순" />
@@ -922,9 +922,9 @@
     <option name="헤더" hit="헤더 서식 지정" />
  </configurable>
   <configurable id="database.main" configurable_name="데이터베이스">
-    <option name="ansi" hit="ANSI SQL 구문으로" />
-    <option name="sql" hit="ANSI SQL 구문으로" />
-    <option name="구문으로" hit="ANSI SQL 구문으로" />
+    <option name="ansi" hit="Con sintaxis ANSI SQL" />
+    <option name="sql" hit="Con sintaxis ANSI SQL" />
+    <option name="구문으로" hit="Con sintaxis ANSI SQL" />
     <option name="ctrl" hit="Ctrl Enter" />
     <option name="enter" hit="Ctrl Enter" />
     <option name="ansi" hit="Generic 및 ANSI SQL 파생 언어로 실행하기 위해 스크립트 분할 " />
@@ -957,16 +957,16 @@
     <option name="다음" hit="구문 내에 있을 경우 다음 실행 " />
     <option name="실행" hit="구문 내에 있을 경우 다음 실행 " />
     <option name="있을" hit="구문 내에 있을 경우 다음 실행 " />
-    <option name="구문의" hit="구문의 구분 기호로" />
-    <option name="구분" hit="구문의 구분 기호로" />
-    <option name="기호로" hit="구문의 구분 기호로" />
+    <option name="구문의" hit="Como delimitador de sintaxis" />
+    <option name="구분" hit="Como delimitador de sintaxis" />
+    <option name="기호로" hit="Como delimitador de sintaxis" />
     <option name="그렇지" hit="그렇지 않으면 다음 실행 " />
     <option name="다음" hit="그렇지 않으면 다음 실행 " />
     <option name="실행" hit="그렇지 않으면 다음 실행 " />
     <option name="않으면" hit="그렇지 않으면 다음 실행 " />
-    <option name="기존" hit="기존 콘솔에 추가" />
-    <option name="추가" hit="기존 콘솔에 추가" />
-    <option name="콘솔에" hit="기존 콘솔에 추가" />
+    <option name="기존" hit="Agregar a la consola existente" />
+    <option name="추가" hit="Agregar a la consola existente" />
+    <option name="콘솔에" hit="Agregar a la consola existente" />
     <option name="기타" hit="기타" />
     <option name="다음" hit="다음 뒤의 텍스트를 제목으로 처리" />
     <option name="뒤의" hit="다음 뒤의 텍스트를 제목으로 처리" />
@@ -993,9 +993,9 @@
     <option name="데이터" hit="문서의 데이터 행" />
     <option name="문서의" hit="문서의 데이터 행" />
     <option name="행" hit="문서의 데이터 행" />
-    <option name="내" hit="새 콘솔 내" />
-    <option name="새" hit="새 콘솔 내" />
-    <option name="콘솔" hit="새 콘솔 내" />
+    <option name="내" hit="En nueva consola" />
+    <option name="새" hit="En nueva consola" />
+    <option name="콘솔" hit="En nueva consola" />
     <option name="b" hit="새 탭에서 결과 열기 B " />
     <option name="결과" hit="새 탭에서 결과 열기 B " />
     <option name="새" hit="새 탭에서 결과 열기 B " />
@@ -1041,13 +1041,13 @@
     <option name="및" hit="오류 및 결과 세트에 대한" />
     <option name="세트에" hit="오류 및 결과 세트에 대한" />
     <option name="오류" hit="오류 및 결과 세트에 대한" />
-    <option name="ansi" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
-    <option name="sql" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
-    <option name="구문으로" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
-    <option name="구분" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
-    <option name="기호로" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
-    <option name="또는" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
-    <option name="유효한" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
+    <option name="ansi" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="sql" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="구문으로" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="구분" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="기호로" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="또는" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="유효한" hit="En sintaxis ANSI SQL válida o como delimitador" />
     <option name="경고" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />
     <option name="실행하기" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />
     <option name="안전하지" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />

@@ -541,10 +541,10 @@
     <option name="데이터" path="ActionManager" hit="연결된 데이터 소스" />
     <option name="소스" path="ActionManager" hit="연결된 데이터 소스" />
     <option name="연결된" path="ActionManager" hit="연결된 데이터 소스" />
-    <option name="설정" path="ActionManager" hit="연결된 세션 설정 전환" />
-    <option name="세션" path="ActionManager" hit="연결된 세션 설정 전환" />
-    <option name="연결된" path="ActionManager" hit="연결된 세션 설정 전환" />
-    <option name="전환" path="ActionManager" hit="연결된 세션 설정 전환" />
+    <option name="설정" path="ActionManager" hit="Alternar configuración de sesión conectada" />
+    <option name="세션" path="ActionManager" hit="Alternar configuración de sesión conectada" />
+    <option name="연결된" path="ActionManager" hit="Alternar configuración de sesión conectada" />
+    <option name="전환" path="ActionManager" hit="Alternar configuración de sesión conectada" />
     <option name="너비" path="ActionManager" hit="열 너비 재설정" />
     <option name="열" path="ActionManager" hit="열 너비 재설정" />
     <option name="재설정" path="ActionManager" hit="열 너비 재설정" />
@@ -810,9 +810,9 @@
     <option name="퍼지" hit="퍼지 일치 - 일치" />
   </configurable>
   <configurable id="database.query.execution" configurable_name="쿼리 실행">
-    <option name="ansi" hit="ANSI SQL 구문으로" />
-    <option name="sql" hit="ANSI SQL 구문으로" />
-    <option name="구문으로" hit="ANSI SQL 구문으로" />
+    <option name="ansi" hit="Con sintaxis ANSI SQL" />
+    <option name="sql" hit="Con sintaxis ANSI SQL" />
+    <option name="구문으로" hit="Con sintaxis ANSI SQL" />
     <option name="ctrl" hit="Ctrl Enter" />
     <option name="enter" hit="Ctrl Enter" />
     <option name="ansi" hit="Generic 및 ANSI SQL 파생 언어로 실행하기 위해 스크립트 분할 " />
@@ -846,13 +846,13 @@
     <option name="밖의" hit="구문 밖의 캐럿이 실행될 때 " />
     <option name="실행될" hit="구문 밖의 캐럿이 실행될 때 " />
     <option name="캐럿이" hit="구문 밖의 캐럿이 실행될 때 " />
-    <option name="구문의" hit="구문의 구분 기호로" />
-    <option name="구분" hit="구문의 구분 기호로" />
-    <option name="기호로" hit="구문의 구분 기호로" />
+    <option name="구문의" hit="Como delimitador de sintaxis" />
+    <option name="구분" hit="Como delimitador de sintaxis" />
+    <option name="기호로" hit="Como delimitador de sintaxis" />
     <option name="단축키" hit="단축키 " />
-    <option name="구문으로" hit="별도의 구문으로 정확히" />
-    <option name="별도의" hit="별도의 구문으로 정확히" />
-    <option name="정확히" hit="별도의 구문으로 정확히" />
+    <option name="구문으로" hit="Exactamente en una sintaxis separada" />
+    <option name="별도의" hit="Exactamente en una sintaxis separada" />
+    <option name="정확히" hit="Exactamente en una sintaxis separada" />
     <option name="b" hit="새 탭에서 결과 열기 B " />
     <option name="결과" hit="새 탭에서 결과 열기 B " />
     <option name="새" hit="새 탭에서 결과 열기 B " />
@@ -871,13 +871,13 @@
     <option name="실행할" hit="실행할 항목 묻기" />
     <option name="항목" hit="실행할 항목 묻기" />
     <option name="없음" hit="없음" />
-    <option name="ansi" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
-    <option name="sql" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
-    <option name="구문으로" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
-    <option name="구분" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
-    <option name="기호로" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
-    <option name="또는" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
-    <option name="유효한" hit="유효한 ANSI SQL 구문으로 또는 구분 기호로" />
+    <option name="ansi" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="sql" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="구문으로" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="구분" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="기호로" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="또는" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="유효한" hit="En sintaxis ANSI SQL válida o como delimitador" />
     <option name="경고" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />
     <option name="실행하기" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />
     <option name="안전하지" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />
@@ -1017,12 +1017,12 @@
     <option name="order" hit="ORDER BY로 정렬" />
     <option name="정렬" hit="ORDER BY로 정렬" />
     <option name="uuid" hit="UUID" />
-    <option name="l" hit="값당 로드되는 최대 바이트 수 L  " />
-    <option name="값당" hit="값당 로드되는 최대 바이트 수 L  " />
-    <option name="로드되는" hit="값당 로드되는 최대 바이트 수 L  " />
-    <option name="바이트" hit="값당 로드되는 최대 바이트 수 L  " />
-    <option name="수" hit="값당 로드되는 최대 바이트 수 L  " />
-    <option name="최대" hit="값당 로드되는 최대 바이트 수 L  " />
+    <option name="l" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="값당" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="로드되는" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="바이트" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="수" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="최대" hit="Número máximo de bytes cargados por valor L  " />
     <option name="f" hit="결과 집합의 프리페치 크기 F  " />
     <option name="결과" hit="결과 집합의 프리페치 크기 F  " />
     <option name="집합의" hit="결과 집합의 프리페치 크기 F  " />
@@ -1048,8 +1048,8 @@
     <option name="에디터" hit="데이터 에디터 및 뷰어" />
     <option name="데이터" hit="Intercalación" />
     <option name="정렬" hit="Intercalación" />
-    <option name="데이터" hit="데이터 프레젠테이션" />
-    <option name="프레젠테이션" hit="데이터 프레젠테이션" />
+    <option name="데이터" hit="Presentación de datos" />
+    <option name="프레젠테이션" hit="Presentación de datos" />
     <option name="먼저" hit="먼저 표시" />
     <option name="표시" hit="먼저 표시" />
     <option name="내의" hit="미리보기 내의 데이터 열" />
@@ -1073,11 +1073,11 @@
     <option name="시간" hit="사용자 지정 날짜 시간 양식" />
     <option name="양식" hit="사용자 지정 날짜 시간 양식" />
     <option name="지정" hit="사용자 지정 날짜 시간 양식" />
-    <option name="기본" hit="숫자 기본 키로 테이블 정렬" />
-    <option name="숫자" hit="숫자 기본 키로 테이블 정렬" />
-    <option name="정렬" hit="숫자 기본 키로 테이블 정렬" />
-    <option name="키로" hit="숫자 기본 키로 테이블 정렬" />
-    <option name="테이블" hit="숫자 기본 키로 테이블 정렬" />
+    <option name="기본" hit="Ordenar tabla por clave primaria numérica" />
+    <option name="숫자" hit="Ordenar tabla por clave primaria numérica" />
+    <option name="정렬" hit="Ordenar tabla por clave primaria numérica" />
+    <option name="키로" hit="Ordenar tabla por clave primaria numérica" />
+    <option name="테이블" hit="Ordenar tabla por clave primaria numérica" />
     <option name="시간" hit="시간" />
     <option name="날짜" hit="시간대가 있는 날짜 및 시간 타임스탬프" />
     <option name="및" hit="시간대가 있는 날짜 및 시간 타임스탬프" />
@@ -1085,9 +1085,9 @@
     <option name="시간대가" hit="시간대가 있는 날짜 및 시간 타임스탬프" />
     <option name="있는" hit="시간대가 있는 날짜 및 시간 타임스탬프" />
     <option name="타임스탬프" hit="시간대가 있는 날짜 및 시간 타임스탬프" />
-    <option name="시간" hit="시간대가 있는 시간" />
-    <option name="시간대가" hit="시간대가 있는 시간" />
-    <option name="있는" hit="시간대가 있는 시간" />
+    <option name="시간" hit="Tiempo con zona horaria" />
+    <option name="시간대가" hit="Tiempo con zona horaria" />
+    <option name="있는" hit="Tiempo con zona horaria" />
     <option name="안" hit="안 함" />
     <option name="함" hit="안 함" />
     <option name="오름차순" hit="오름차순" />
@@ -1193,30 +1193,30 @@
     <option name="매핑" hit="DDL 매핑" />
     <option name="객체" hit="객체 수정" />
     <option name="수정" hit="객체 수정" />
-    <option name="기존" hit="기존 콘솔에 추가" />
-    <option name="추가" hit="기존 콘솔에 추가" />
-    <option name="콘솔에" hit="기존 콘솔에 추가" />
+    <option name="기존" hit="Agregar a la consola existente" />
+    <option name="추가" hit="Agregar a la consola existente" />
+    <option name="콘솔에" hit="Agregar a la consola existente" />
     <option name="기타" hit="기타" />
     <option name="데이터베이스" hit="데이터베이스 탐색기" />
     <option name="탐색기" hit="데이터베이스 탐색기" />
     <option name="리팩터링" hit="리팩터링" />
-    <option name="내" hit="새 콘솔 내" />
-    <option name="새" hit="새 콘솔 내" />
-    <option name="콘솔" hit="새 콘솔 내" />
-    <option name="ddl" hit="새로운 매핑에 대해 DDL 덤프 제안" />
-    <option name="대해" hit="새로운 매핑에 대해 DDL 덤프 제안" />
-    <option name="덤프" hit="새로운 매핑에 대해 DDL 덤프 제안" />
-    <option name="매핑에" hit="새로운 매핑에 대해 DDL 덤프 제안" />
-    <option name="새로운" hit="새로운 매핑에 대해 DDL 덤프 제안" />
-    <option name="제안" hit="새로운 매핑에 대해 DDL 덤프 제안" />
-    <option name="때" hit="소스 텍스트를 업데이트할 때 유효한 스크립트의 미리보기를 생성" />
-    <option name="미리보기를" hit="소스 텍스트를 업데이트할 때 유효한 스크립트의 미리보기를 생성" />
-    <option name="생성" hit="소스 텍스트를 업데이트할 때 유효한 스크립트의 미리보기를 생성" />
-    <option name="소스" hit="소스 텍스트를 업데이트할 때 유효한 스크립트의 미리보기를 생성" />
-    <option name="스크립트의" hit="소스 텍스트를 업데이트할 때 유효한 스크립트의 미리보기를 생성" />
-    <option name="업데이트할" hit="소스 텍스트를 업데이트할 때 유효한 스크립트의 미리보기를 생성" />
-    <option name="유효한" hit="소스 텍스트를 업데이트할 때 유효한 스크립트의 미리보기를 생성" />
-    <option name="텍스트를" hit="소스 텍스트를 업데이트할 때 유효한 스크립트의 미리보기를 생성" />
+    <option name="내" hit="En nueva consola" />
+    <option name="새" hit="En nueva consola" />
+    <option name="콘솔" hit="En nueva consola" />
+    <option name="ddl" hit="Sugerencias de volcado DDL para nuevas asignaciones" />
+    <option name="대해" hit="Sugerencias de volcado DDL para nuevas asignaciones" />
+    <option name="덤프" hit="Sugerencias de volcado DDL para nuevas asignaciones" />
+    <option name="매핑에" hit="Sugerencias de volcado DDL para nuevas asignaciones" />
+    <option name="새로운" hit="Sugerencias de volcado DDL para nuevas asignaciones" />
+    <option name="제안" hit="Sugerencias de volcado DDL para nuevas asignaciones" />
+    <option name="때" hit="Genere una vista previa de scripts válidos al actualizar el texto fuente" />
+    <option name="미리보기를" hit="Genere una vista previa de scripts válidos al actualizar el texto fuente" />
+    <option name="생성" hit="Genere una vista previa de scripts válidos al actualizar el texto fuente" />
+    <option name="소스" hit="Genere una vista previa de scripts válidos al actualizar el texto fuente" />
+    <option name="스크립트의" hit="Genere una vista previa de scripts válidos al actualizar el texto fuente" />
+    <option name="업데이트할" hit="Genere una vista previa de scripts válidos al actualizar el texto fuente" />
+    <option name="유효한" hit="Genere una vista previa de scripts válidos al actualizar el texto fuente" />
+    <option name="텍스트를" hit="Genere una vista previa de scripts válidos al actualizar el texto fuente" />
     <option name="대화상자" hit="스키마를 수정하는 대화상자 취소 확인" />
     <option name="수정하는" hit="스키마를 수정하는 대화상자 취소 확인" />
     <option name="스키마를" hit="스키마를 수정하는 대화상자 취소 확인" />
@@ -1227,10 +1227,10 @@
     <option name="템플릿" hit="컨텍스트 템플릿 생성 " />
     <option name="생성" hit="코드 생성" />
     <option name="코드" hit="코드 생성" />
-    <option name="기억하기" hit="필터가 켜져 있는지 여부 기억하기" />
-    <option name="여부" hit="필터가 켜져 있는지 여부 기억하기" />
-    <option name="있는지" hit="필터가 켜져 있는지 여부 기억하기" />
-    <option name="켜져" hit="필터가 켜져 있는지 여부 기억하기" />
-    <option name="필터가" hit="필터가 켜져 있는지 여부 기억하기" />
+    <option name="기억하기" hit="Recordar si el filtro está activado" />
+    <option name="여부" hit="Recordar si el filtro está activado" />
+    <option name="있는지" hit="Recordar si el filtro está activado" />
+    <option name="켜져" hit="Recordar si el filtro está activado" />
+    <option name="필터가" hit="Recordar si el filtro está activado" />
   </configurable>
 </options>
