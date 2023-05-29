@@ -530,9 +530,9 @@
     <option name="커널" path="ActionManager" hit="커널 종료" />
     <option name="중단" path="ActionManager" hit="커널 중단" />
     <option name="커널" path="ActionManager" hit="커널 중단" />
-    <option name="모드" path="ActionManager" hit="편집 모드 켜기" />
-    <option name="켜기" path="ActionManager" hit="편집 모드 켜기" />
-    <option name="편집" path="ActionManager" hit="편집 모드 켜기" />
+    <option name="모드" path="ActionManager" hit="Activar el modo de edición" />
+    <option name="켜기" path="ActionManager" hit="Activar el modo de edición" />
+    <option name="Editar" path="ActionManager" hit="Activar el modo de edición" />
     <option name="붙여넣기" path="ActionManager" hit="하단 셀 붙여넣기" />
     <option name="셀" path="ActionManager" hit="하단 셀 붙여넣기" />
     <option name="하단" path="ActionManager" hit="하단 셀 붙여넣기" />
@@ -610,11 +610,11 @@
     <option name="배경" hit="코드 셀 배경" />
     <option name="셀" hit="코드 셀 배경" />
     <option name="코드" hit="코드 셀 배경" />
-    <option name="모드의" hit="편집 모드의 현재 셀 줄" />
-    <option name="셀" hit="편집 모드의 현재 셀 줄" />
-    <option name="줄" hit="편집 모드의 현재 셀 줄" />
-    <option name="편집" hit="편집 모드의 현재 셀 줄" />
-    <option name="현재" hit="편집 모드의 현재 셀 줄" />
+    <option name="모드의" hit="Línea de celda actual en modo de edición" />
+    <option name="셀" hit="Línea de celda actual en modo de edición" />
+    <option name="줄" hit="Línea de celda actual en modo de edición" />
+    <option name="Editar" hit="Línea de celda actual en modo de edición" />
+    <option name="현재" hit="Línea de celda actual en modo de edición" />
   </configurable>
   <configurable id="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" configurable_name="Jupyter 서버">
     <option name="jupyter" hit="Jupyter 서버" />

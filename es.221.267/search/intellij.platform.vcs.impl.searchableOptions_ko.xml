@@ -169,7 +169,7 @@
     <option name="삭제" path="ActionManager" hit="변경 목록 삭제" />
     <option name="목록" path="ActionManager" hit="변경 목록 편집..." />
     <option name="변경" path="ActionManager" hit="변경 목록 편집..." />
-    <option name="편집" path="ActionManager" hit="변경 목록 편집..." />
+    <option name="Editar" path="ActionManager" hit="변경 목록 편집..." />
     <option name="목록" path="ActionManager" hit="변경 목록 활성화" />
     <option name="변경" path="ActionManager" hit="변경 목록 활성화" />
     <option name="활성화" path="ActionManager" hit="변경 목록 활성화" />
@@ -229,7 +229,7 @@
     <option name="위해" path="ActionManager" hit="선택 파일을 편집하기 위해 체크아웃합니다" />
     <option name="체크아웃합니다" path="ActionManager" hit="선택 파일을 편집하기 위해 체크아웃합니다" />
     <option name="파일을" path="ActionManager" hit="선택 파일을 편집하기 위해 체크아웃합니다" />
-    <option name="편집하기" path="ActionManager" hit="선택 파일을 편집하기 위해 체크아웃합니다" />
+    <option name="Editar" path="ActionManager" hit="선택 파일을 편집하기 위해 체크아웃합니다" />
     <option name="기록" path="ActionManager" hit="선택 항목의 기록 표시" />
     <option name="선택" path="ActionManager" hit="선택 항목의 기록 표시" />
     <option name="표시" path="ActionManager" hit="선택 항목의 기록 표시" />
@@ -310,7 +310,7 @@
     <option name="선택한" path="ActionManager" hit="선택한 변경 목록의 이름 및 설명을 편집합니다" />
     <option name="설명을" path="ActionManager" hit="선택한 변경 목록의 이름 및 설명을 편집합니다" />
     <option name="이름" path="ActionManager" hit="선택한 변경 목록의 이름 및 설명을 편집합니다" />
-    <option name="편집합니다" path="ActionManager" hit="선택한 변경 목록의 이름 및 설명을 편집합니다" />
+    <option name="Editar" path="ActionManager" hit="선택한 변경 목록의 이름 및 설명을 편집합니다" />
     <option name="목록의" path="ActionManager" hit="선택한 변경 목록의 전체 정보를 표시합니다" />
     <option name="변경" path="ActionManager" hit="선택한 변경 목록의 전체 정보를 표시합니다" />
     <option name="선택한" path="ActionManager" hit="선택한 변경 목록의 전체 정보를 표시합니다" />
@@ -381,7 +381,7 @@
     <option name="정보" path="ActionManager" hit="세부 정보 표시" />
     <option name="표시" path="ActionManager" hit="세부 정보 표시" />
     <option name="소스" path="ActionManager" hit="소스 편집" />
-    <option name="편집" path="ActionManager" hit="소스 편집" />
+    <option name="Editar" path="ActionManager" hit="소스 편집" />
     <option name="닫습니다" path="ActionManager" hit="수정되지 않은 모든 에디터를 닫습니다" />
     <option name="모든" path="ActionManager" hit="수정되지 않은 모든 에디터를 닫습니다" />
     <option name="수정되지" path="ActionManager" hit="수정되지 않은 모든 에디터를 닫습니다" />
@@ -793,18 +793,18 @@
     <option name="생성" hit="패치 생성 시 " />
     <option name="시" hit="패치 생성 시 " />
     <option name="패치" hit="패치 생성 시 " />
-    <option name="편집" hit="편집" />
-    <option name="때" hit="편집을 시도할 때 읽기 전용으로 설정된 파일을 잠금 해제하도록 메시지 표시" />
-    <option name="메시지" hit="편집을 시도할 때 읽기 전용으로 설정된 파일을 잠금 해제하도록 메시지 표시" />
-    <option name="설정된" hit="편집을 시도할 때 읽기 전용으로 설정된 파일을 잠금 해제하도록 메시지 표시" />
-    <option name="시도할" hit="편집을 시도할 때 읽기 전용으로 설정된 파일을 잠금 해제하도록 메시지 표시" />
-    <option name="읽기" hit="편집을 시도할 때 읽기 전용으로 설정된 파일을 잠금 해제하도록 메시지 표시" />
-    <option name="잠금" hit="편집을 시도할 때 읽기 전용으로 설정된 파일을 잠금 해제하도록 메시지 표시" />
-    <option name="전용으로" hit="편집을 시도할 때 읽기 전용으로 설정된 파일을 잠금 해제하도록 메시지 표시" />
-    <option name="파일을" hit="편집을 시도할 때 읽기 전용으로 설정된 파일을 잠금 해제하도록 메시지 표시" />
-    <option name="편집을" hit="편집을 시도할 때 읽기 전용으로 설정된 파일을 잠금 해제하도록 메시지 표시" />
-    <option name="표시" hit="편집을 시도할 때 읽기 전용으로 설정된 파일을 잠금 해제하도록 메시지 표시" />
-    <option name="해제하도록" hit="편집을 시도할 때 읽기 전용으로 설정된 파일을 잠금 해제하도록 메시지 표시" />
+    <option name="Editar" hit="Editar" />
+    <option name="때" hit="Preguntar para desbloquear archivos configurados como de solo lectura al intentar editar" />
+    <option name="메시지" hit="Preguntar para desbloquear archivos configurados como de solo lectura al intentar editar" />
+    <option name="설정된" hit="Preguntar para desbloquear archivos configurados como de solo lectura al intentar editar" />
+    <option name="시도할" hit="Preguntar para desbloquear archivos configurados como de solo lectura al intentar editar" />
+    <option name="읽기" hit="Preguntar para desbloquear archivos configurados como de solo lectura al intentar editar" />
+    <option name="잠금" hit="Preguntar para desbloquear archivos configurados como de solo lectura al intentar editar" />
+    <option name="전용으로" hit="Preguntar para desbloquear archivos configurados como de solo lectura al intentar editar" />
+    <option name="파일을" hit="Preguntar para desbloquear archivos configurados como de solo lectura al intentar editar" />
+    <option name="Editar" hit="Preguntar para desbloquear archivos configurados como de solo lectura al intentar editar" />
+    <option name="표시" hit="Preguntar para desbloquear archivos configurados como de solo lectura al intentar editar" />
+    <option name="해제하도록" hit="Preguntar para desbloquear archivos configurados como de solo lectura al intentar editar" />
     <option name="강조" hit="프로젝트 트리에서 수정된 파일이 포함된 디렉터리 강조 표시" />
     <option name="디렉터리" hit="프로젝트 트리에서 수정된 파일이 포함된 디렉터리 강조 표시" />
     <option name="수정된" hit="프로젝트 트리에서 수정된 파일이 포함된 디렉터리 강조 표시" />
@@ -895,7 +895,7 @@
     <option name="변경" hit="비활성화된 변경 목록의 파일을 편집하려 할 경우 대화상자 표시 D " />
     <option name="비활성화된" hit="비활성화된 변경 목록의 파일을 편집하려 할 경우 대화상자 표시 D " />
     <option name="파일을" hit="비활성화된 변경 목록의 파일을 편집하려 할 경우 대화상자 표시 D " />
-    <option name="편집하려" hit="비활성화된 변경 목록의 파일을 편집하려 할 경우 대화상자 표시 D " />
+    <option name="Para editar" hit="비활성화된 변경 목록의 파일을 편집하려 할 경우 대화상자 표시 D " />
     <option name="표시" hit="비활성화된 변경 목록의 파일을 편집하려 할 경우 대화상자 표시 D " />
     <option name="할" hit="비활성화된 변경 목록의 파일을 편집하려 할 경우 대화상자 표시 D " />
     <option name="경우" hit="빈 변경 목록이 비활성화된 경우 " />
