@@ -1,11 +1,11 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="키맵">
     <option name="" path="ActionManager" hit="" />
-    <option name="edit" path="ActionManager" hit="Edit Starters..." />
-    <option name="starters" path="ActionManager" hit="Edit Starters..." />
     <option name="경로" path="ActionManager" hit="디폴트 경로 편집" />
     <option name="디폴트" path="ActionManager" hit="디폴트 경로 편집" />
     <option name="편집" path="ActionManager" hit="디폴트 경로 편집" />
+    <option name="스타터" path="ActionManager" hit="스타터 편집..." />
+    <option name="편집" path="ActionManager" hit="스타터 편집..." />
   </configurable>
   <configurable id="spring.boot" configurable_name="Spring Boot">
     <option name="boot" hit="Spring Boot" />

@@ -1,10 +1,11 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="키맵">
     <option name="" path="ActionManager" hit="" />
+    <option name="" path="ActionManager" hit=" 복사" />
+    <option name="복사" path="ActionManager" hit=" 복사" />
     <option name="csv" path="ActionManager" hit="CSV 형식 구성…" />
     <option name="구성" path="ActionManager" hit="CSV 형식 구성…" />
     <option name="형식" path="ActionManager" hit="CSV 형식 구성…" />
-    <option name="copy" path="ActionManager" hit="Copy" />
     <option name="column" path="ActionManager" hit="Select Column" />
     <option name="select" path="ActionManager" hit="Select Column" />
     <option name="값" path="ActionManager" hit="값 에디터" />
@@ -48,9 +49,9 @@
     <option name="뷰" path="ActionManager" hit="데이터 뷰 모양 설정 열기…" />
     <option name="설정" path="ActionManager" hit="데이터 뷰 모양 설정 열기…" />
     <option name="열기" path="ActionManager" hit="데이터 뷰 모양 설정 열기…" />
-    <option name="데이터" path="ActionManager" hit="데이터 추출기 선택" />
-    <option name="선택" path="ActionManager" hit="데이터 추출기 선택" />
-    <option name="추출기" path="ActionManager" hit="데이터 추출기 선택" />
+    <option name="데이터" path="ActionManager" hit="데이터 추출기 변경" />
+    <option name="변경" path="ActionManager" hit="데이터 추출기 변경" />
+    <option name="추출기" path="ActionManager" hit="데이터 추출기 변경" />
     <option name="데이터" path="ActionManager" hit="데이터 추출기를 선택합니다" />
     <option name="선택합니다" path="ActionManager" hit="데이터 추출기를 선택합니다" />
     <option name="추출기를" path="ActionManager" hit="데이터 추출기를 선택합니다" />

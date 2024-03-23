@@ -3664,6 +3664,10 @@
     <option name="문서에" hit="XML 문서에 &lt;inheritdoc /&gt; 태그 추가" />
     <option name="추가" hit="XML 문서에 &lt;inheritdoc /&gt; 태그 추가" />
     <option name="태그" hit="XML 문서에 &lt;inheritdoc /&gt; 태그 추가" />
+    <option name="" hit="[AI] Implement this" />
+    <option name="ai" hit="[AI] Implement this" />
+    <option name="implement" hit="[AI] Implement this" />
+    <option name="this" hit="[AI] Implement this" />
     <option name="abstract" hit="abstract/virtual/비 abstract/비 virtual 멤버로" />
     <option name="virtual" hit="abstract/virtual/비 abstract/비 virtual 멤버로" />
     <option name="멤버로" hit="abstract/virtual/비 abstract/비 virtual 멤버로" />
@@ -4519,11 +4523,6 @@
     <option name="범위를" hit="숫자 매개변수가 범위를 벗어났는지 검사" />
     <option name="벗어났는지" hit="숫자 매개변수가 범위를 벗어났는지 검사" />
     <option name="숫자" hit="숫자 매개변수가 범위를 벗어났는지 검사" />
-    <option name="동작" hit="스마트 붙여넣기 동작 적용(팝업)" />
-    <option name="붙여넣기" hit="스마트 붙여넣기 동작 적용(팝업)" />
-    <option name="스마트" hit="스마트 붙여넣기 동작 적용(팝업)" />
-    <option name="적용" hit="스마트 붙여넣기 동작 적용(팝업)" />
-    <option name="팝업" hit="스마트 붙여넣기 동작 적용(팝업)" />
     <option name="setter" hit="스타일로 프로퍼티 setter 추출" />
     <option name="스타일로" hit="스타일로 프로퍼티 setter 추출" />
     <option name="추출" hit="스타일로 프로퍼티 setter 추출" />
@@ -5325,6 +5324,9 @@
     <option name="식별자" hit="식별자//함수 호출" />
     <option name="함수" hit="식별자//함수 호출" />
     <option name="호출" hit="식별자//함수 호출" />
+    <option name="디폴트" hit="인라인 힌트//디폴트" />
+    <option name="인라인" hit="인라인 힌트//디폴트" />
+    <option name="힌트" hit="인라인 힌트//디폴트" />
     <option name="값" hit="인라인 힌트//리팩터링 옵션//디폴트 값" />
     <option name="디폴트" hit="인라인 힌트//리팩터링 옵션//디폴트 값" />
     <option name="리팩터링" hit="인라인 힌트//리팩터링 옵션//디폴트 값" />
@@ -5357,6 +5359,12 @@
     <option name="인라인" hit="인라인 힌트//매개변수//현재" />
     <option name="현재" hit="인라인 힌트//매개변수//현재" />
     <option name="힌트" hit="인라인 힌트//매개변수//현재" />
+    <option name="배경" hit="인라인 힌트//배경 없이 텍스트 보기" />
+    <option name="보기" hit="인라인 힌트//배경 없이 텍스트 보기" />
+    <option name="없이" hit="인라인 힌트//배경 없이 텍스트 보기" />
+    <option name="인라인" hit="인라인 힌트//배경 없이 텍스트 보기" />
+    <option name="텍스트" hit="인라인 힌트//배경 없이 텍스트 보기" />
+    <option name="힌트" hit="인라인 힌트//배경 없이 텍스트 보기" />
     <option name="문자" hit="잘못된 문자" />
     <option name="잘못된" hit="잘못된 문자" />
     <option name="브랜치" hit="전처리기//비활성화된 브랜치" />
@@ -5444,15 +5452,6 @@
     <option name="키워드" hit="키워드//키워드" />
     <option name="언어" hit="템플릿 언어" />
     <option name="템플릿" hit="템플릿 언어" />
-    <option name="디폴트" hit="힌트 인라인화//디폴트" />
-    <option name="인라인화" hit="힌트 인라인화//디폴트" />
-    <option name="힌트" hit="힌트 인라인화//디폴트" />
-    <option name="배경" hit="힌트 인라인화//배경 없이 텍스트 보기" />
-    <option name="보기" hit="힌트 인라인화//배경 없이 텍스트 보기" />
-    <option name="없이" hit="힌트 인라인화//배경 없이 텍스트 보기" />
-    <option name="인라인화" hit="힌트 인라인화//배경 없이 텍스트 보기" />
-    <option name="텍스트" hit="힌트 인라인화//배경 없이 텍스트 보기" />
-    <option name="힌트" hit="힌트 인라인화//배경 없이 텍스트 보기" />
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.일반" configurable_name="일반">
     <option name="일반" hit="일반" />
@@ -6673,13 +6672,12 @@
   </configurable>
   <configurable id="SolutionBuilderGeneralOptionsPage" configurable_name="도구 모음 및 빌드">
     <option name="" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
-    <option name="07" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
-    <option name="09" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
-    <option name="13" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
-    <option name="17" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
+    <option name="05" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
+    <option name="11" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
+    <option name="14" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
     <option name="2023" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
-    <option name="37" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
-    <option name="6365" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
+    <option name="44" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
+    <option name="6070" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
     <option name="jetbrainslog" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
     <option name="log" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
     <option name="msbuild" hit=" MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다  파일 이름 예  JetBrainsLog ReSharperBuild                          log" />
@@ -6796,20 +6794,20 @@
     <option name="따라" hit="1개(CPU에 따라 자동으로)" />
     <option name="자동으로" hit="1개(CPU에 따라 자동으로)" />
     <option name="2" hit="2" />
-    <option name="jetbrainslog" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
-    <option name="log" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
-    <option name="msbuild" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
-    <option name="resharperbuild202307171337096365" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
-    <option name="로그" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
-    <option name="빌드별로" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
-    <option name="수행됩니다" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
-    <option name="쓰기가" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
-    <option name="예" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
-    <option name="이름" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
-    <option name="지정된" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
-    <option name="파일" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
-    <option name="파일은" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
-    <option name="폴더에" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202307171337096365.log" />
+    <option name="jetbrainslog" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
+    <option name="log" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
+    <option name="msbuild" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
+    <option name="resharperbuild202311141405446070" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
+    <option name="로그" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
+    <option name="빌드별로" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
+    <option name="수행됩니다" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
+    <option name="쓰기가" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
+    <option name="예" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
+    <option name="이름" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
+    <option name="지정된" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
+    <option name="파일" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
+    <option name="파일은" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
+    <option name="폴더에" hit="MSBuild 로그 파일은 빌드별로 지정된 폴더에 쓰기가 수행됩니다.&#10;파일 이름 예: JetBrainsLog.ReSharperBuild202311141405446070.log" />
     <option name="msbuild" hit="MSBuild 로그를 출력에 쓰기" />
     <option name="로그를" hit="MSBuild 로그를 출력에 쓰기" />
     <option name="쓰기" hit="MSBuild 로그를 출력에 쓰기" />
@@ -6962,26 +6960,40 @@
     <option name="플랫폼" hit="플랫폼 고유 도구 모음" />
   </configurable>
   <configurable id="SolutionBuilderPresentationOptionsPageId" configurable_name="프레젠테이션">
-    <option name="" hit=" 도구 창  빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="도구" hit=" 도구 창  빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="보고되면" hit=" 도구 창  빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="뷰로" hit=" 도구 창  빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="빌드" hit=" 도구 창  빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="이벤트가" hit=" 도구 창  빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="전환" hit=" 도구 창  빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="창" hit=" 도구 창  빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="트리" hit=" 도구 창  빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="후" hit=" 도구 창  빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="" hit=" 도구 창  빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="도구" hit=" 도구 창  빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="뷰" hit=" 도구 창  빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="빌드" hit=" 도구 창  빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="빌드가" hit=" 도구 창  빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="시작되면" hit=" 도구 창  빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="열기" hit=" 도구 창  빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="진행률" hit=" 도구 창  빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="창" hit=" 도구 창  빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="창에서" hit=" 도구 창  빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="" hit=" 도구 창  빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="도구" hit=" 도구 창  빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="명시적으로" hit=" 도구 창  빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="뷰" hit=" 도구 창  빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="빌드" hit=" 도구 창  빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="빌드가" hit=" 도구 창  빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="열기" hit=" 도구 창  빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="진행률" hit=" 도구 창  빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="창" hit=" 도구 창  빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="창에서" hit=" 도구 창  빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="호출되면" hit=" 도구 창  빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="도구" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="디버그" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="때에도" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="묵시적으로" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="뷰" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="빌드" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="빌드가" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="실행" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="열기" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="예" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="진행률" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="창" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="창에서" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="호출될" hit=" 도구 창  빌드가 묵시적으로 호출될 때에도 예  실행 디버그  도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="" hit=" 도구 창  콘솔 출력에 전체 경로 표시" />
+    <option name="경로" hit=" 도구 창  콘솔 출력에 전체 경로 표시" />
+    <option name="도구" hit=" 도구 창  콘솔 출력에 전체 경로 표시" />
+    <option name="전체" hit=" 도구 창  콘솔 출력에 전체 경로 표시" />
+    <option name="창" hit=" 도구 창  콘솔 출력에 전체 경로 표시" />
+    <option name="출력에" hit=" 도구 창  콘솔 출력에 전체 경로 표시" />
+    <option name="콘솔" hit=" 도구 창  콘솔 출력에 전체 경로 표시" />
+    <option name="표시" hit=" 도구 창  콘솔 출력에 전체 경로 표시" />
     <option name="" hit=" 상태 표시줄  상태 표시줄에 빌드 진행률 표시" />
     <option name="빌드" hit=" 상태 표시줄  상태 표시줄에 빌드 진행률 표시" />
     <option name="상태" hit=" 상태 표시줄  상태 표시줄에 빌드 진행률 표시" />
@@ -6990,24 +7002,37 @@
     <option name="표시줄" hit=" 상태 표시줄  상태 표시줄에 빌드 진행률 표시" />
     <option name="표시줄에" hit=" 상태 표시줄  상태 표시줄에 빌드 진행률 표시" />
     <option name="iddqd" hit="iddqd" />
-    <option name="도구" hit="도구 창: 빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="보고되면" hit="도구 창: 빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="뷰로" hit="도구 창: 빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="빌드" hit="도구 창: 빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="이벤트가" hit="도구 창: 빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="전환" hit="도구 창: 빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="창" hit="도구 창: 빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="트리" hit="도구 창: 빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="후" hit="도구 창: 빌드 이벤트가 보고되면 빌드 후 트리 뷰로 전환" />
-    <option name="도구" hit="도구 창: 빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="뷰" hit="도구 창: 빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="빌드" hit="도구 창: 빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="빌드가" hit="도구 창: 빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="시작되면" hit="도구 창: 빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="열기" hit="도구 창: 빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="진행률" hit="도구 창: 빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="창" hit="도구 창: 빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
-    <option name="창에서" hit="도구 창: 빌드가 시작되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="도구" hit="도구 창: 빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="명시적으로" hit="도구 창: 빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="뷰" hit="도구 창: 빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="빌드" hit="도구 창: 빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="빌드가" hit="도구 창: 빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="열기" hit="도구 창: 빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="진행률" hit="도구 창: 빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="창" hit="도구 창: 빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="창에서" hit="도구 창: 빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="호출되면" hit="도구 창: 빌드가 명시적으로 호출되면 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="도구" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="디버그" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="때에도" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="묵시적으로" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="뷰" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="빌드" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="빌드가" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="실행" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="열기" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="예" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="진행률" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="창" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="창에서" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="호출될" hit="도구 창: 빌드가 묵시적으로 호출될 때에도(예: 실행/디버그) 도구 창에서 빌드 진행률 뷰 열기" />
+    <option name="경로" hit="도구 창: 콘솔 출력에 전체 경로 표시" />
+    <option name="도구" hit="도구 창: 콘솔 출력에 전체 경로 표시" />
+    <option name="전체" hit="도구 창: 콘솔 출력에 전체 경로 표시" />
+    <option name="창" hit="도구 창: 콘솔 출력에 전체 경로 표시" />
+    <option name="출력에" hit="도구 창: 콘솔 출력에 전체 경로 표시" />
+    <option name="콘솔" hit="도구 창: 콘솔 출력에 전체 경로 표시" />
+    <option name="표시" hit="도구 창: 콘솔 출력에 전체 경로 표시" />
     <option name="결과를" hit="빌드 완료 후 빌드 결과를 표시" />
     <option name="빌드" hit="빌드 완료 후 빌드 결과를 표시" />
     <option name="완료" hit="빌드 완료 후 빌드 결과를 표시" />
@@ -14745,6 +14770,14 @@
     <option name="재정의" hit="'params' 제어자는 재정의 시에 항상 무시됩니다" />
     <option name="제어자는" hit="'params' 제어자는 재정의 시에 항상 무시됩니다" />
     <option name="항상" hit="'params' 제어자는 재정의 시에 항상 무시됩니다" />
+    <option name="" hit="'return' 또는 'continue' 뒤에 지역 함수 배치" />
+    <option name="continue" hit="'return' 또는 'continue' 뒤에 지역 함수 배치" />
+    <option name="return" hit="'return' 또는 'continue' 뒤에 지역 함수 배치" />
+    <option name="뒤에" hit="'return' 또는 'continue' 뒤에 지역 함수 배치" />
+    <option name="또는" hit="'return' 또는 'continue' 뒤에 지역 함수 배치" />
+    <option name="배치" hit="'return' 또는 'continue' 뒤에 지역 함수 배치" />
+    <option name="지역" hit="'return' 또는 'continue' 뒤에 지역 함수 배치" />
+    <option name="함수" hit="'return' 또는 'continue' 뒤에 지역 함수 배치" />
     <option name="" hit="'switch' 구문을 'switch' 식으로 대체" />
     <option name="switch" hit="'switch' 구문을 'switch' 식으로 대체" />
     <option name="구문을" hit="'switch' 구문을 'switch' 식으로 대체" />
@@ -14766,15 +14799,45 @@
     <option name="구문에" hit="'using' 구문에 중괄호 강제 적용" />
     <option name="적용" hit="'using' 구문에 중괄호 강제 적용" />
     <option name="중괄호" hit="'using' 구문에 중괄호 강제 적용" />
+    <option name="" hit="'using' 문으로 캡처된 변수의 반환" />
+    <option name="using" hit="'using' 문으로 캡처된 변수의 반환" />
+    <option name="문으로" hit="'using' 문으로 캡처된 변수의 반환" />
+    <option name="반환" hit="'using' 문으로 캡처된 변수의 반환" />
+    <option name="변수의" hit="'using' 문으로 캡처된 변수의 반환" />
+    <option name="캡처된" hit="'using' 문으로 캡처된 변수의 반환" />
+    <option name="" hit="'using' 변수에 객체 이니셜라이저 사용 금지" />
+    <option name="using" hit="'using' 변수에 객체 이니셜라이저 사용 금지" />
+    <option name="객체" hit="'using' 변수에 객체 이니셜라이저 사용 금지" />
+    <option name="금지" hit="'using' 변수에 객체 이니셜라이저 사용 금지" />
+    <option name="변수에" hit="'using' 변수에 객체 이니셜라이저 사용 금지" />
+    <option name="사용" hit="'using' 변수에 객체 이니셜라이저 사용 금지" />
+    <option name="이니셜라이저" hit="'using' 변수에 객체 이니셜라이저 사용 금지" />
     <option name="" hit="'using' 선언으로 변환" />
     <option name="using" hit="'using' 선언으로 변환" />
     <option name="변환" hit="'using' 선언으로 변환" />
     <option name="선언으로" hit="'using' 선언으로 변환" />
+    <option name="" hit="'using'으로 캡처된 객체로 생성된 작업의 반환" />
+    <option name="using" hit="'using'으로 캡처된 객체로 생성된 작업의 반환" />
+    <option name="객체로" hit="'using'으로 캡처된 객체로 생성된 작업의 반환" />
+    <option name="반환" hit="'using'으로 캡처된 객체로 생성된 작업의 반환" />
+    <option name="생성된" hit="'using'으로 캡처된 객체로 생성된 작업의 반환" />
+    <option name="으로" hit="'using'으로 캡처된 객체로 생성된 작업의 반환" />
+    <option name="작업의" hit="'using'으로 캡처된 객체로 생성된 작업의 반환" />
+    <option name="캡처된" hit="'using'으로 캡처된 객체로 생성된 작업의 반환" />
     <option name="" hit="'value' 매개변수가 사용되지 않습니다" />
     <option name="value" hit="'value' 매개변수가 사용되지 않습니다" />
     <option name="매개변수가" hit="'value' 매개변수가 사용되지 않습니다" />
     <option name="사용되지" hit="'value' 매개변수가 사용되지 않습니다" />
     <option name="않습니다" hit="'value' 매개변수가 사용되지 않습니다" />
+    <option name="" hit="'var' 키워드를 소괄호 밖에 유지: 'var (x, y, ...) = source'" />
+    <option name="source" hit="'var' 키워드를 소괄호 밖에 유지: 'var (x, y, ...) = source'" />
+    <option name="var" hit="'var' 키워드를 소괄호 밖에 유지: 'var (x, y, ...) = source'" />
+    <option name="x" hit="'var' 키워드를 소괄호 밖에 유지: 'var (x, y, ...) = source'" />
+    <option name="y" hit="'var' 키워드를 소괄호 밖에 유지: 'var (x, y, ...) = source'" />
+    <option name="밖에" hit="'var' 키워드를 소괄호 밖에 유지: 'var (x, y, ...) = source'" />
+    <option name="소괄호" hit="'var' 키워드를 소괄호 밖에 유지: 'var (x, y, ...) = source'" />
+    <option name="유지" hit="'var' 키워드를 소괄호 밖에 유지: 'var (x, y, ...) = source'" />
+    <option name="키워드를" hit="'var' 키워드를 소괄호 밖에 유지: 'var (x, y, ...) = source'" />
     <option name="" hit="'void' 메서드는 [MustUseReturnValue] 속성으로 어노테이션되었습니다" />
     <option name="mustusereturnvalue" hit="'void' 메서드는 [MustUseReturnValue] 속성으로 어노테이션되었습니다" />
     <option name="void" hit="'void' 메서드는 [MustUseReturnValue] 속성으로 어노테이션되었습니다" />
@@ -14972,14 +15035,6 @@
     <option name="through" hit="Access to a member through 'base' keyword from anonymous method, lambda expression, query expression or iterator results in unverifiable code" />
     <option name="to" hit="Access to a member through 'base' keyword from anonymous method, lambda expression, query expression or iterator results in unverifiable code" />
     <option name="unverifiable" hit="Access to a member through 'base' keyword from anonymous method, lambda expression, query expression or iterator results in unverifiable code" />
-    <option name="add" hit="Add explicit 'return' or 'continue' before local functions" />
-    <option name="before" hit="Add explicit 'return' or 'continue' before local functions" />
-    <option name="continue" hit="Add explicit 'return' or 'continue' before local functions" />
-    <option name="explicit" hit="Add explicit 'return' or 'continue' before local functions" />
-    <option name="functions" hit="Add explicit 'return' or 'continue' before local functions" />
-    <option name="local" hit="Add explicit 'return' or 'continue' before local functions" />
-    <option name="or" hit="Add explicit 'return' or 'continue' before local functions" />
-    <option name="return" hit="Add explicit 'return' or 'continue' before local functions" />
     <option name="a" hit="Alignment value 'value' has a magnitude greater than 'magnitude limit' and may result in a large formatted string." />
     <option name="alignment" hit="Alignment value 'value' has a magnitude greater than 'magnitude limit' and may result in a large formatted string." />
     <option name="and" hit="Alignment value 'value' has a magnitude greater than 'magnitude limit' and may result in a large formatted string." />
@@ -15176,10 +15231,6 @@
     <option name="to" hit="Comparison to integral constant is useless; the constant is outside the range of type 'type'." />
     <option name="type" hit="Comparison to integral constant is useless; the constant is outside the range of type 'type'." />
     <option name="useless" hit="Comparison to integral constant is useless; the constant is outside the range of type 'type'." />
-    <option name="constructor" hit="Convert constructor into primary constructor" />
-    <option name="convert" hit="Convert constructor into primary constructor" />
-    <option name="into" hit="Convert constructor into primary constructor" />
-    <option name="primary" hit="Convert constructor into primary constructor" />
     <option name="converting" hit="Converting method group to non-delegate type 'object'." />
     <option name="group" hit="Converting method group to non-delegate type 'object'." />
     <option name="method" hit="Converting method group to non-delegate type 'object'." />
@@ -15246,14 +15297,6 @@
     <option name="of" hit="Dereference of a possibly null reference." />
     <option name="possibly" hit="Dereference of a possibly null reference." />
     <option name="reference" hit="Dereference of a possibly null reference." />
-    <option name="do" hit="Do not use object initializer for 'using' variable" />
-    <option name="for" hit="Do not use object initializer for 'using' variable" />
-    <option name="initializer" hit="Do not use object initializer for 'using' variable" />
-    <option name="not" hit="Do not use object initializer for 'using' variable" />
-    <option name="object" hit="Do not use object initializer for 'using' variable" />
-    <option name="use" hit="Do not use object initializer for 'using' variable" />
-    <option name="using" hit="Do not use object initializer for 'using' variable" />
-    <option name="variable" hit="Do not use object initializer for 'using' variable" />
     <option name="comment" hit="Duplicate param tag in XML comment" />
     <option name="duplicate" hit="Duplicate param tag in XML comment" />
     <option name="in" hit="Duplicate param tag in XML comment" />
@@ -15356,15 +15399,6 @@
     <option name="public" hit="JetBrains.Annotations 속성을 public API에서 유지" />
     <option name="속성을" hit="JetBrains.Annotations 속성을 public API에서 유지" />
     <option name="유지" hit="JetBrains.Annotations 속성을 public API에서 유지" />
-    <option name="keep" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
-    <option name="keyword" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
-    <option name="of" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
-    <option name="outside" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
-    <option name="parentheses" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
-    <option name="source" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
-    <option name="var" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
-    <option name="x" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
-    <option name="y" hit="Keep 'var' keyword outside of parentheses: 'var (x, y, ...) = source'" />
     <option name="is" hit="Keyword 'new' is redundant" />
     <option name="keyword" hit="Keyword 'new' is redundant" />
     <option name="new" hit="Keyword 'new' is redundant" />
@@ -15391,11 +15425,6 @@
     <option name="로" hit="LastOrDefault($args$) (으)로 바꾸기" />
     <option name="바꾸기" hit="LastOrDefault($args$) (으)로 바꾸기" />
     <option name="으" hit="LastOrDefault($args$) (으)로 바꾸기" />
-    <option name="confuse" hit="Local parameter name may confuse" />
-    <option name="local" hit="Local parameter name may confuse" />
-    <option name="may" hit="Local parameter name may confuse" />
-    <option name="name" hit="Local parameter name may confuse" />
-    <option name="parameter" hit="Local parameter name may confuse" />
     <option name="abs" hit="Math.Abs() 인수는 항상 음수가 아닙니다" />
     <option name="math" hit="Math.Abs() 인수는 항상 음수가 아닙니다" />
     <option name="아닙니다" hit="Math.Abs() 인수는 항상 음수가 아닙니다" />
@@ -16017,16 +16046,6 @@
     <option name="nullable" hit="Nullable value type may be null." />
     <option name="type" hit="Nullable value type may be null." />
     <option name="value" hit="Nullable value type may be null." />
-    <option name="exception" hit="Object initializer expression may throw exception while initializing 'using' variable" />
-    <option name="expression" hit="Object initializer expression may throw exception while initializing 'using' variable" />
-    <option name="initializer" hit="Object initializer expression may throw exception while initializing 'using' variable" />
-    <option name="initializing" hit="Object initializer expression may throw exception while initializing 'using' variable" />
-    <option name="may" hit="Object initializer expression may throw exception while initializing 'using' variable" />
-    <option name="object" hit="Object initializer expression may throw exception while initializing 'using' variable" />
-    <option name="throw" hit="Object initializer expression may throw exception while initializing 'using' variable" />
-    <option name="using" hit="Object initializer expression may throw exception while initializing 'using' variable" />
-    <option name="variable" hit="Object initializer expression may throw exception while initializing 'using' variable" />
-    <option name="while" hit="Object initializer expression may throw exception while initializing 'using' variable" />
     <option name="collection" hit="Object or collection initializer implicitly dereferences possibly null member." />
     <option name="dereferences" hit="Object or collection initializer implicitly dereferences possibly null member." />
     <option name="implicitly" hit="Object or collection initializer implicitly dereferences possibly null member." />
@@ -16254,27 +16273,6 @@
     <option name="mistaken" hit="Possible mistaken empty statement" />
     <option name="possible" hit="Possible mistaken empty statement" />
     <option name="statement" hit="Possible mistaken empty statement" />
-    <option name="1" hit="Possible multiple queries to the database (N+1 problem)" />
-    <option name="database" hit="Possible multiple queries to the database (N+1 problem)" />
-    <option name="multiple" hit="Possible multiple queries to the database (N+1 problem)" />
-    <option name="n" hit="Possible multiple queries to the database (N+1 problem)" />
-    <option name="possible" hit="Possible multiple queries to the database (N+1 problem)" />
-    <option name="problem" hit="Possible multiple queries to the database (N+1 problem)" />
-    <option name="queries" hit="Possible multiple queries to the database (N+1 problem)" />
-    <option name="the" hit="Possible multiple queries to the database (N+1 problem)" />
-    <option name="to" hit="Possible multiple queries to the database (N+1 problem)" />
-    <option name="1" hit="Possible multiple queries to the database for related entities (N+1 problem)" />
-    <option name="database" hit="Possible multiple queries to the database for related entities (N+1 problem)" />
-    <option name="entities" hit="Possible multiple queries to the database for related entities (N+1 problem)" />
-    <option name="for" hit="Possible multiple queries to the database for related entities (N+1 problem)" />
-    <option name="multiple" hit="Possible multiple queries to the database for related entities (N+1 problem)" />
-    <option name="n" hit="Possible multiple queries to the database for related entities (N+1 problem)" />
-    <option name="possible" hit="Possible multiple queries to the database for related entities (N+1 problem)" />
-    <option name="problem" hit="Possible multiple queries to the database for related entities (N+1 problem)" />
-    <option name="queries" hit="Possible multiple queries to the database for related entities (N+1 problem)" />
-    <option name="related" hit="Possible multiple queries to the database for related entities (N+1 problem)" />
-    <option name="the" hit="Possible multiple queries to the database for related entities (N+1 problem)" />
-    <option name="to" hit="Possible multiple queries to the database for related entities (N+1 problem)" />
     <option name="a" hit="Possible null reference argument for a parameter." />
     <option name="argument" hit="Possible null reference argument for a parameter." />
     <option name="for" hit="Possible null reference argument for a parameter." />
@@ -16296,42 +16294,12 @@
     <option name="unintended" hit="Possible unintended reference comparison" />
     <option name="accessibility" hit="Private accessibility" />
     <option name="private" hit="Private accessibility" />
-    <option name="after" hit="Put local function after 'return' or 'continue'" />
-    <option name="continue" hit="Put local function after 'return' or 'continue'" />
-    <option name="function" hit="Put local function after 'return' or 'continue'" />
-    <option name="local" hit="Put local function after 'return' or 'continue'" />
-    <option name="or" hit="Put local function after 'return' or 'continue'" />
-    <option name="put" hit="Put local function after 'return' or 'continue'" />
-    <option name="return" hit="Put local function after 'return' or 'continue'" />
-    <option name="can" hit="Query can return incomplete data for related entities" />
-    <option name="data" hit="Query can return incomplete data for related entities" />
-    <option name="entities" hit="Query can return incomplete data for related entities" />
-    <option name="for" hit="Query can return incomplete data for related entities" />
-    <option name="incomplete" hit="Query can return incomplete data for related entities" />
-    <option name="query" hit="Query can return incomplete data for related entities" />
-    <option name="related" hit="Query can return incomplete data for related entities" />
-    <option name="return" hit="Query can return incomplete data for related entities" />
-    <option name="be" hit="Raw string can be simplified" />
-    <option name="can" hit="Raw string can be simplified" />
-    <option name="raw" hit="Raw string can be simplified" />
-    <option name="simplified" hit="Raw string can be simplified" />
-    <option name="string" hit="Raw string can be simplified" />
     <option name="but" hit="Record defined 'Equals' but not 'GetHashCode'" />
     <option name="defined" hit="Record defined 'Equals' but not 'GetHashCode'" />
     <option name="equals" hit="Record defined 'Equals' but not 'GetHashCode'" />
     <option name="gethashcode" hit="Record defined 'Equals' but not 'GetHashCode'" />
     <option name="not" hit="Record defined 'Equals' but not 'GetHashCode'" />
     <option name="record" hit="Record defined 'Equals' but not 'GetHashCode'" />
-    <option name="invocation" hit="Redundant 'WithCancellation()' invocation" />
-    <option name="redundant" hit="Redundant 'WithCancellation()' invocation" />
-    <option name="withcancellation" hit="Redundant 'WithCancellation()' invocation" />
-    <option name="directive" hit="Redundant nullable directive" />
-    <option name="nullable" hit="Redundant nullable directive" />
-    <option name="redundant" hit="Redundant nullable directive" />
-    <option name="body" hit="Redundant type declaration body" />
-    <option name="declaration" hit="Redundant type declaration body" />
-    <option name="redundant" hit="Redundant type declaration body" />
-    <option name="type" hit="Redundant type declaration body" />
     <option name="a" hit="Reference to a volatile field will not be treated as volatile" />
     <option name="as" hit="Reference to a volatile field will not be treated as volatile" />
     <option name="be" hit="Reference to a volatile field will not be treated as volatile" />
@@ -16342,23 +16310,6 @@
     <option name="treated" hit="Reference to a volatile field will not be treated as volatile" />
     <option name="volatile" hit="Reference to a volatile field will not be treated as volatile" />
     <option name="will" hit="Reference to a volatile field will not be treated as volatile" />
-    <option name="-captured" hit="Return of a task produced by 'using'-captured object" />
-    <option name="a" hit="Return of a task produced by 'using'-captured object" />
-    <option name="by" hit="Return of a task produced by 'using'-captured object" />
-    <option name="object" hit="Return of a task produced by 'using'-captured object" />
-    <option name="of" hit="Return of a task produced by 'using'-captured object" />
-    <option name="produced" hit="Return of a task produced by 'using'-captured object" />
-    <option name="return" hit="Return of a task produced by 'using'-captured object" />
-    <option name="task" hit="Return of a task produced by 'using'-captured object" />
-    <option name="using" hit="Return of a task produced by 'using'-captured object" />
-    <option name="a" hit="Return of a variable captured by 'using' statement" />
-    <option name="by" hit="Return of a variable captured by 'using' statement" />
-    <option name="captured" hit="Return of a variable captured by 'using' statement" />
-    <option name="of" hit="Return of a variable captured by 'using' statement" />
-    <option name="return" hit="Return of a variable captured by 'using' statement" />
-    <option name="statement" hit="Return of a variable captured by 'using' statement" />
-    <option name="using" hit="Return of a variable captured by 'using' statement" />
-    <option name="variable" hit="Return of a variable captured by 'using' statement" />
     <option name="annotation" hit="Return value must be non-null because parameter mentioned in [NotNullIfNotNull] annotation is non-null." />
     <option name="be" hit="Return value must be non-null because parameter mentioned in [NotNullIfNotNull] annotation is non-null." />
     <option name="because" hit="Return value must be non-null because parameter mentioned in [NotNullIfNotNull] annotation is non-null." />
@@ -16513,22 +16464,6 @@
     <option name="returns" hit="Struct member returns 'this' or other instance members by reference." />
     <option name="struct" hit="Struct member returns 'this' or other instance members by reference." />
     <option name="this" hit="Struct member returns 'this' or other instance members by reference." />
-    <option name="a" hit="Suggest in nested scopes ending with a jump statement" />
-    <option name="ending" hit="Suggest in nested scopes ending with a jump statement" />
-    <option name="in" hit="Suggest in nested scopes ending with a jump statement" />
-    <option name="jump" hit="Suggest in nested scopes ending with a jump statement" />
-    <option name="nested" hit="Suggest in nested scopes ending with a jump statement" />
-    <option name="scopes" hit="Suggest in nested scopes ending with a jump statement" />
-    <option name="statement" hit="Suggest in nested scopes ending with a jump statement" />
-    <option name="suggest" hit="Suggest in nested scopes ending with a jump statement" />
-    <option name="with" hit="Suggest in nested scopes ending with a jump statement" />
-    <option name="discard-like" hit="Suspicious use of variable with discard-like name" />
-    <option name="name" hit="Suspicious use of variable with discard-like name" />
-    <option name="of" hit="Suspicious use of variable with discard-like name" />
-    <option name="suspicious" hit="Suspicious use of variable with discard-like name" />
-    <option name="use" hit="Suspicious use of variable with discard-like name" />
-    <option name="variable" hit="Suspicious use of variable with discard-like name" />
-    <option name="with" hit="Suspicious use of variable with discard-like name" />
     <option name="comment" hit="Syntax error in XML comment" />
     <option name="error" hit="Syntax error in XML comment" />
     <option name="in" hit="Syntax error in XML comment" />
@@ -17191,17 +17126,6 @@
     <option name="unreal" hit="Unreal 빌드 시스템" />
     <option name="빌드" hit="Unreal 빌드 시스템" />
     <option name="시스템" hit="Unreal 빌드 시스템" />
-    <option name="directive" hit="Unused nullable directive" />
-    <option name="nullable" hit="Unused nullable directive" />
-    <option name="unused" hit="Unused nullable directive" />
-    <option name="can" hit="Usage of navigational property can return incomplete data" />
-    <option name="data" hit="Usage of navigational property can return incomplete data" />
-    <option name="incomplete" hit="Usage of navigational property can return incomplete data" />
-    <option name="navigational" hit="Usage of navigational property can return incomplete data" />
-    <option name="of" hit="Usage of navigational property can return incomplete data" />
-    <option name="property" hit="Usage of navigational property can return incomplete data" />
-    <option name="return" hit="Usage of navigational property can return incomplete data" />
-    <option name="usage" hit="Usage of navigational property can return incomplete data" />
     <option name="literal" hit="Use UTF-8 string literal" />
     <option name="string" hit="Use UTF-8 string literal" />
     <option name="use" hit="Use UTF-8 string literal" />
@@ -17231,9 +17155,6 @@
     <option name="symbol" hit="Use of obsolete symbol (without message)" />
     <option name="use" hit="Use of obsolete symbol (without message)" />
     <option name="without" hit="Use of obsolete symbol (without message)" />
-    <option name="raw" hit="Use raw string" />
-    <option name="string" hit="Use raw string" />
-    <option name="use" hit="Use raw string" />
     <option name="all" hit="Using 'is' to test compatibility with 'dynamic' is essentially identical to testing compatibility with 'Object' and will succeed for all non-null values" />
     <option name="and" hit="Using 'is' to test compatibility with 'dynamic' is essentially identical to testing compatibility with 'Object' and will succeed for all non-null values" />
     <option name="compatibility" hit="Using 'is' to test compatibility with 'dynamic' is essentially identical to testing compatibility with 'Object' and will succeed for all non-null values" />
@@ -17766,6 +17687,17 @@
     <option name="빈" hit="객체 생성식에 불필요한 빈 인수 목록" />
     <option name="생성식에" hit="객체 생성식에 불필요한 빈 인수 목록" />
     <option name="인수" hit="객체 생성식에 불필요한 빈 인수 목록" />
+    <option name="using" hit="객체 이니셜라이저 표현식이 'using' 변수를 초기화하는 동안 예외를 던질 수 있음" />
+    <option name="객체" hit="객체 이니셜라이저 표현식이 'using' 변수를 초기화하는 동안 예외를 던질 수 있음" />
+    <option name="던질" hit="객체 이니셜라이저 표현식이 'using' 변수를 초기화하는 동안 예외를 던질 수 있음" />
+    <option name="동안" hit="객체 이니셜라이저 표현식이 'using' 변수를 초기화하는 동안 예외를 던질 수 있음" />
+    <option name="변수를" hit="객체 이니셜라이저 표현식이 'using' 변수를 초기화하는 동안 예외를 던질 수 있음" />
+    <option name="수" hit="객체 이니셜라이저 표현식이 'using' 변수를 초기화하는 동안 예외를 던질 수 있음" />
+    <option name="예외를" hit="객체 이니셜라이저 표현식이 'using' 변수를 초기화하는 동안 예외를 던질 수 있음" />
+    <option name="이니셜라이저" hit="객체 이니셜라이저 표현식이 'using' 변수를 초기화하는 동안 예외를 던질 수 있음" />
+    <option name="있음" hit="객체 이니셜라이저 표현식이 'using' 변수를 초기화하는 동안 예외를 던질 수 있음" />
+    <option name="초기화하는" hit="객체 이니셜라이저 표현식이 'using' 변수를 초기화하는 동안 예외를 던질 수 있음" />
+    <option name="표현식이" hit="객체 이니셜라이저 표현식이 'using' 변수를 초기화하는 동안 예외를 던질 수 있음" />
     <option name="경험적으로" hit="경험적으로 도달할 수 없는 코드" />
     <option name="도달할" hit="경험적으로 도달할 수 없는 코드" />
     <option name="수" hit="경험적으로 도달할 수 없는 코드" />
@@ -17792,6 +17724,17 @@
     <option name="추출" hit="공통 프로퍼티 패턴 추출" />
     <option name="패턴" hit="공통 프로퍼티 패턴 추출" />
     <option name="프로퍼티" hit="공통 프로퍼티 패턴 추출" />
+    <option name="1" hit="관련 엔티티의 데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="n" hit="관련 엔티티의 데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="가능한" hit="관련 엔티티의 데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="관련" hit="관련 엔티티의 데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="대해" hit="관련 엔티티의 데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="데이터베이스에" hit="관련 엔티티의 데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="문제" hit="관련 엔티티의 데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="실행" hit="관련 엔티티의 데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="엔티티의" hit="관련 엔티티의 데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="여러" hit="관련 엔티티의 데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="쿼리" hit="관련 엔티티의 데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
     <option name="구문" hit="구문 내 대괄호 주변" />
     <option name="내" hit="구문 내 대괄호 주변" />
     <option name="대괄호" hit="구문 내 대괄호 주변" />
@@ -18087,6 +18030,15 @@
     <option name="바꿈이" hit="대체하면 줄 바꿈이 제거되는 경우" />
     <option name="제거되는" hit="대체하면 줄 바꿈이 제거되는 경우" />
     <option name="줄" hit="대체하면 줄 바꿈이 제거되는 경우" />
+    <option name="1" hit="데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="n" hit="데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="가능한" hit="데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="대해" hit="데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="데이터베이스에" hit="데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="문제" hit="데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="실행" hit="데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="여러" hit="데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
+    <option name="쿼리" hit="데이터베이스에 대해 실행 가능한 여러 쿼리(N+1 문제)" />
     <option name="기본형의" hit="동기화 기본형의 의심스러운 잠금" />
     <option name="동기화" hit="동기화 기본형의 의심스러운 잠금" />
     <option name="의심스러운" hit="동기화 기본형의 의심스러운 잠금" />
@@ -18109,6 +18061,17 @@
     <option name="비동기식" hit="라이브러리 코드에서 비동기식 폐기의 '.ConfigureAwait(false)'가 누락됨" />
     <option name="코드에서" hit="라이브러리 코드에서 비동기식 폐기의 '.ConfigureAwait(false)'가 누락됨" />
     <option name="폐기의" hit="라이브러리 코드에서 비동기식 폐기의 '.ConfigureAwait(false)'가 누락됨" />
+    <option name="내의" hit="람다 또는 지역 함수 내의 혼동을 줄 수 있는 매개변수 이름" />
+    <option name="또는" hit="람다 또는 지역 함수 내의 혼동을 줄 수 있는 매개변수 이름" />
+    <option name="람다" hit="람다 또는 지역 함수 내의 혼동을 줄 수 있는 매개변수 이름" />
+    <option name="매개변수" hit="람다 또는 지역 함수 내의 혼동을 줄 수 있는 매개변수 이름" />
+    <option name="수" hit="람다 또는 지역 함수 내의 혼동을 줄 수 있는 매개변수 이름" />
+    <option name="이름" hit="람다 또는 지역 함수 내의 혼동을 줄 수 있는 매개변수 이름" />
+    <option name="있는" hit="람다 또는 지역 함수 내의 혼동을 줄 수 있는 매개변수 이름" />
+    <option name="줄" hit="람다 또는 지역 함수 내의 혼동을 줄 수 있는 매개변수 이름" />
+    <option name="지역" hit="람다 또는 지역 함수 내의 혼동을 줄 수 있는 매개변수 이름" />
+    <option name="함수" hit="람다 또는 지역 함수 내의 혼동을 줄 수 있는 매개변수 이름" />
+    <option name="혼동을" hit="람다 또는 지역 함수 내의 혼동을 줄 수 있는 매개변수 이름" />
     <option name="static" hit="람다 식/익명 메서드는 'static'으로 설정할 수 있습니다" />
     <option name="람다" hit="람다 식/익명 메서드는 'static'으로 설정할 수 있습니다" />
     <option name="메서드는" hit="람다 식/익명 메서드는 'static'으로 설정할 수 있습니다" />
@@ -18575,6 +18538,9 @@
     <option name="불필요한" hit="불필요한 'IEnumerable.Cast&lt;T&gt;' 혹은 'IEnumerable.OfType&lt;T&gt;' 호출" />
     <option name="호출" hit="불필요한 'IEnumerable.Cast&lt;T&gt;' 혹은 'IEnumerable.OfType&lt;T&gt;' 호출" />
     <option name="혹은" hit="불필요한 'IEnumerable.Cast&lt;T&gt;' 혹은 'IEnumerable.OfType&lt;T&gt;' 호출" />
+    <option name="withcancellation" hit="불필요한 'WithCancellation()' 호출" />
+    <option name="불필요한" hit="불필요한 'WithCancellation()' 호출" />
+    <option name="호출" hit="불필요한 'WithCancellation()' 호출" />
     <option name="abstract" hit="불필요한 'abstract' 제어자" />
     <option name="불필요한" hit="불필요한 'abstract' 제어자" />
     <option name="제어자" hit="불필요한 'abstract' 제어자" />
@@ -18631,6 +18597,10 @@
     <option name="using" hit="불필요한 global using 지시문" />
     <option name="불필요한" hit="불필요한 global using 지시문" />
     <option name="지시문" hit="불필요한 global using 지시문" />
+    <option name="null" hit="불필요한 null 가능 지시문" />
+    <option name="가능" hit="불필요한 null 가능 지시문" />
+    <option name="불필요한" hit="불필요한 null 가능 지시문" />
+    <option name="지시문" hit="불필요한 null 가능 지시문" />
     <option name="null" hit="불필요한 null 가능한 속성" />
     <option name="가능한" hit="불필요한 null 가능한 속성" />
     <option name="불필요한" hit="불필요한 null 가능한 속성" />
@@ -18747,6 +18717,10 @@
     <option name="축자" hit="불필요한 축자 접두사" />
     <option name="불필요한" hit="불필요한 코드" />
     <option name="코드" hit="불필요한 코드" />
+    <option name="본문" hit="불필요한 타입 선언 본문" />
+    <option name="불필요한" hit="불필요한 타입 선언 본문" />
+    <option name="선언" hit="불필요한 타입 선언 본문" />
+    <option name="타입" hit="불필요한 타입 선언 본문" />
     <option name="괄호" hit="불필요한 패턴 매칭 괄호 소제거" />
     <option name="매칭" hit="불필요한 패턴 매칭 괄호 소제거" />
     <option name="불필요한" hit="불필요한 패턴 매칭 괄호 소제거" />
@@ -18821,6 +18795,11 @@
     <option name="중괄호" hit="빈 중괄호 주변" />
     <option name="빈" hit="빈 지역" />
     <option name="지역" hit="빈 지역" />
+    <option name="null" hit="사용되지 않는 null 가능 지시문" />
+    <option name="가능" hit="사용되지 않는 null 가능 지시문" />
+    <option name="사용되지" hit="사용되지 않는 null 가능 지시문" />
+    <option name="않는" hit="사용되지 않는 null 가능 지시문" />
+    <option name="지시문" hit="사용되지 않는 null 가능 지시문" />
     <option name="라벨" hit="사용되지 않는 라벨" />
     <option name="사용되지" hit="사용되지 않는 라벨" />
     <option name="않는" hit="사용되지 않는 라벨" />
@@ -18894,6 +18873,10 @@
     <option name="생성자" hit="생성자 호출 제거" />
     <option name="제거" hit="생성자 호출 제거" />
     <option name="호출" hit="생성자 호출 제거" />
+    <option name="기본" hit="생성자를 기본 생성자로 변환" />
+    <option name="변환" hit="생성자를 기본 생성자로 변환" />
+    <option name="생성자로" hit="생성자를 기본 생성자로 변환" />
+    <option name="생성자를" hit="생성자를 기본 생성자로 변환" />
     <option name="멤버" hit="생성자를 멤버 이니셜라이저로 변환" />
     <option name="변환" hit="생성자를 멤버 이니셜라이저로 변환" />
     <option name="생성자를" hit="생성자를 멤버 이니셜라이저로 변환" />
@@ -19253,6 +19236,13 @@
     <option name="우선순위가" hit="우선순위가 명백하지 않은 경우를 방지하기 위해 소괄호를 추가" />
     <option name="위해" hit="우선순위가 명백하지 않은 경우를 방지하기 위해 소괄호를 추가" />
     <option name="추가" hit="우선순위가 명백하지 않은 경우를 방지하기 위해 소괄호를 추가" />
+    <option name="가능" hit="원시 문자열 단순화 가능" />
+    <option name="단순화" hit="원시 문자열 단순화 가능" />
+    <option name="문자열" hit="원시 문자열 단순화 가능" />
+    <option name="원시" hit="원시 문자열 단순화 가능" />
+    <option name="문자열" hit="원시 문자열 사용" />
+    <option name="사용" hit="원시 문자열 사용" />
+    <option name="원시" hit="원시 문자열 사용" />
     <option name="구조" hit="위치 지정 구조 분해 패턴 사용" />
     <option name="분해" hit="위치 지정 구조 분해 패턴 사용" />
     <option name="사용" hit="위치 지정 구조 분해 패턴 사용" />
@@ -19486,6 +19476,11 @@
     <option name="전처리기" hit="전처리기 지시문 주변" />
     <option name="주변" hit="전처리기 지시문 주변" />
     <option name="지시문" hit="전처리기 지시문 주변" />
+    <option name="끝나는" hit="점프문으로 끝나는 중첩된 범위에서 제안" />
+    <option name="범위에서" hit="점프문으로 끝나는 중첩된 범위에서 제안" />
+    <option name="점프문으로" hit="점프문으로 끝나는 중첩된 범위에서 제안" />
+    <option name="제안" hit="점프문으로 끝나는 중첩된 범위에서 제안" />
+    <option name="중첩된" hit="점프문으로 끝나는 중첩된 범위에서 제안" />
     <option name="않는" hit="접근되지 않는 위치 프로퍼티" />
     <option name="위치" hit="접근되지 않는 위치 프로퍼티" />
     <option name="접근되지" hit="접근되지 않는 위치 프로퍼티" />
@@ -19657,6 +19652,14 @@
     <option name="외부" hit="지역 함수 내의 변수가 외부 범위의 변수를 숨깁니다" />
     <option name="지역" hit="지역 함수 내의 변수가 외부 범위의 변수를 숨깁니다" />
     <option name="함수" hit="지역 함수 내의 변수가 외부 범위의 변수를 숨깁니다" />
+    <option name="continue" hit="지역 함수 앞에 명시적 'return' 또는 'continue' 추가" />
+    <option name="return" hit="지역 함수 앞에 명시적 'return' 또는 'continue' 추가" />
+    <option name="또는" hit="지역 함수 앞에 명시적 'return' 또는 'continue' 추가" />
+    <option name="명시적" hit="지역 함수 앞에 명시적 'return' 또는 'continue' 추가" />
+    <option name="앞에" hit="지역 함수 앞에 명시적 'return' 또는 'continue' 추가" />
+    <option name="지역" hit="지역 함수 앞에 명시적 'return' 또는 'continue' 추가" />
+    <option name="추가" hit="지역 함수 앞에 명시적 'return' 또는 'continue' 추가" />
+    <option name="함수" hit="지역 함수 앞에 명시적 'return' 또는 'continue' 추가" />
     <option name="런타임" hit="참조 마샬링 클래스의 캡쳐된 필드 참조는 런타임 예외를 발생시킬 수 있습니다" />
     <option name="마샬링" hit="참조 마샬링 클래스의 캡쳐된 필드 참조는 런타임 예외를 발생시킬 수 있습니다" />
     <option name="발생시킬" hit="참조 마샬링 클래스의 캡쳐된 필드 참조는 런타임 예외를 발생시킬 수 있습니다" />
@@ -19755,6 +19758,15 @@
     <option name="코드의" hit="코드의 일부를 분석할 수 없습니다" />
     <option name="주변" hit="콜론 주변" />
     <option name="콜론" hit="콜론 주변" />
+    <option name="관련된" hit="쿼리가 관련된 엔티티에 대한 불완전한 데이터를 반환할 수 있습니다" />
+    <option name="대한" hit="쿼리가 관련된 엔티티에 대한 불완전한 데이터를 반환할 수 있습니다" />
+    <option name="데이터를" hit="쿼리가 관련된 엔티티에 대한 불완전한 데이터를 반환할 수 있습니다" />
+    <option name="반환할" hit="쿼리가 관련된 엔티티에 대한 불완전한 데이터를 반환할 수 있습니다" />
+    <option name="불완전한" hit="쿼리가 관련된 엔티티에 대한 불완전한 데이터를 반환할 수 있습니다" />
+    <option name="수" hit="쿼리가 관련된 엔티티에 대한 불완전한 데이터를 반환할 수 있습니다" />
+    <option name="엔티티에" hit="쿼리가 관련된 엔티티에 대한 불완전한 데이터를 반환할 수 있습니다" />
+    <option name="있습니다" hit="쿼리가 관련된 엔티티에 대한 불완전한 데이터를 반환할 수 있습니다" />
+    <option name="쿼리가" hit="쿼리가 관련된 엔티티에 대한 불완전한 데이터를 반환할 수 있습니다" />
     <option name="않습니다" hit="클래스가 인스턴스화되지 않습니다" />
     <option name="인스턴스화되지" hit="클래스가 인스턴스화되지 않습니다" />
     <option name="클래스가" hit="클래스가 인스턴스화되지 않습니다" />
@@ -19895,6 +19907,14 @@
     <option name="사용되지" hit="타입이 사용되지 않습니다" />
     <option name="않습니다" hit="타입이 사용되지 않습니다" />
     <option name="타입이" hit="타입이 사용되지 않습니다" />
+    <option name="데이터가" hit="탐색 프로퍼티를 사용하면 불완전한 데이터가 반환될 수 있습니다" />
+    <option name="반환될" hit="탐색 프로퍼티를 사용하면 불완전한 데이터가 반환될 수 있습니다" />
+    <option name="불완전한" hit="탐색 프로퍼티를 사용하면 불완전한 데이터가 반환될 수 있습니다" />
+    <option name="사용하면" hit="탐색 프로퍼티를 사용하면 불완전한 데이터가 반환될 수 있습니다" />
+    <option name="수" hit="탐색 프로퍼티를 사용하면 불완전한 데이터가 반환될 수 있습니다" />
+    <option name="있습니다" hit="탐색 프로퍼티를 사용하면 불완전한 데이터가 반환될 수 있습니다" />
+    <option name="탐색" hit="탐색 프로퍼티를 사용하면 불완전한 데이터가 반환될 수 있습니다" />
+    <option name="프로퍼티를" hit="탐색 프로퍼티를 사용하면 불완전한 데이터가 반환될 수 있습니다" />
     <option name="공백" hit="탭/공백 불일치" />
     <option name="불일치" hit="탭/공백 불일치" />
     <option name="탭" hit="탭/공백 불일치" />
@@ -19954,6 +19974,13 @@
     <option name="입니다" hit="패턴이 항상 'true'이거나 항상 'false'입니다" />
     <option name="패턴이" hit="패턴이 항상 'true'이거나 항상 'false'입니다" />
     <option name="항상" hit="패턴이 항상 'true'이거나 항상 'false'입니다" />
+    <option name="가진" hit="폐기처럼 보이는 이름을 가진 의심스러운 변수의 사용" />
+    <option name="변수의" hit="폐기처럼 보이는 이름을 가진 의심스러운 변수의 사용" />
+    <option name="보이는" hit="폐기처럼 보이는 이름을 가진 의심스러운 변수의 사용" />
+    <option name="사용" hit="폐기처럼 보이는 이름을 가진 의심스러운 변수의 사용" />
+    <option name="의심스러운" hit="폐기처럼 보이는 이름을 가진 의심스러운 변수의 사용" />
+    <option name="이름을" hit="폐기처럼 보이는 이름을 가진 의심스러운 변수의 사용" />
+    <option name="폐기처럼" hit="폐기처럼 보이는 이름을 가진 의심스러운 변수의 사용" />
     <option name="주변" hit="표현식의 중괄호 주변" />
     <option name="중괄호" hit="표현식의 중괄호 주변" />
     <option name="표현식의" hit="표현식의 중괄호 주변" />
@@ -22900,6 +22927,14 @@
     <option name="항상" hit="항상 표시" />
   </configurable>
   <configurable id="CSharpOtherInlayHintsOptions" configurable_name="기타">
+    <option name="" hit=" pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명 " />
+    <option name="pragma" hit=" pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명 " />
+    <option name="경고에" hit=" pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명 " />
+    <option name="대한" hit=" pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명 " />
+    <option name="복원된" hit=" pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명 " />
+    <option name="비활성화되거나" hit=" pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명 " />
+    <option name="설명" hit=" pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명 " />
+    <option name="지시문으로" hit=" pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명 " />
     <option name="" hit=" 명명되지 않은 구성 요소의 타입 표시" />
     <option name="구성" hit=" 명명되지 않은 구성 요소의 타입 표시" />
     <option name="명명되지" hit=" 명명되지 않은 구성 요소의 타입 표시" />
@@ -22925,24 +22960,14 @@
     <option name="페이지에서" hit=" 인레이 힌트의 기본 가시성을 에디터   인레이 힌트 설정 페이지에서 설정할 수 있습니다 " />
     <option name="힌트" hit=" 인레이 힌트의 기본 가시성을 에디터   인레이 힌트 설정 페이지에서 설정할 수 있습니다 " />
     <option name="힌트의" hit=" 인레이 힌트의 기본 가시성을 에디터   인레이 힌트 설정 페이지에서 설정할 수 있습니다 " />
-    <option name="description" hit="Description for Warnings Disabled or Restored with  pragma Directives " />
-    <option name="directives" hit="Description for Warnings Disabled or Restored with  pragma Directives " />
-    <option name="disabled" hit="Description for Warnings Disabled or Restored with  pragma Directives " />
-    <option name="for" hit="Description for Warnings Disabled or Restored with  pragma Directives " />
-    <option name="or" hit="Description for Warnings Disabled or Restored with  pragma Directives " />
-    <option name="pragma" hit="Description for Warnings Disabled or Restored with  pragma Directives " />
-    <option name="restored" hit="Description for Warnings Disabled or Restored with  pragma Directives " />
-    <option name="warnings" hit="Description for Warnings Disabled or Restored with  pragma Directives " />
-    <option name="with" hit="Description for Warnings Disabled or Restored with  pragma Directives " />
-    <option name="description" hit="Description for Warnings Disabled or Restored with #pragma Directives:" />
-    <option name="directives" hit="Description for Warnings Disabled or Restored with #pragma Directives:" />
-    <option name="disabled" hit="Description for Warnings Disabled or Restored with #pragma Directives:" />
-    <option name="for" hit="Description for Warnings Disabled or Restored with #pragma Directives:" />
-    <option name="or" hit="Description for Warnings Disabled or Restored with #pragma Directives:" />
-    <option name="pragma" hit="Description for Warnings Disabled or Restored with #pragma Directives:" />
-    <option name="restored" hit="Description for Warnings Disabled or Restored with #pragma Directives:" />
-    <option name="warnings" hit="Description for Warnings Disabled or Restored with #pragma Directives:" />
-    <option name="with" hit="Description for Warnings Disabled or Restored with #pragma Directives:" />
+    <option name="" hit="#pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명:" />
+    <option name="pragma" hit="#pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명:" />
+    <option name="경고에" hit="#pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명:" />
+    <option name="대한" hit="#pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명:" />
+    <option name="복원된" hit="#pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명:" />
+    <option name="비활성화되거나" hit="#pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명:" />
+    <option name="설명" hit="#pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명:" />
+    <option name="지시문으로" hit="#pragma 지시문으로 비활성화되거나 복원된 경고에 대한 설명:" />
     <option name="push-to-hint" hit="Push-to-Hint" />
     <option name="iddqd" hit="iddqd" />
     <option name="가시성" hit="가시성  " />

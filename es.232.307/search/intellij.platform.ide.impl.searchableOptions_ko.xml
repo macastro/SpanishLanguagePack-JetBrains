@@ -254,9 +254,9 @@
     <option name="n" path="ActionManager" hit="CRLF - Windows(\r\n)" />
     <option name="r" path="ActionManager" hit="CRLF - Windows(\r\n)" />
     <option name="windows" path="ActionManager" hit="CRLF - Windows(\r\n)" />
-    <option name="change" path="ActionManager" hit="Change Project Color" />
-    <option name="color" path="ActionManager" hit="Change Project Color" />
-    <option name="project" path="ActionManager" hit="Change Project Color" />
+    <option name="call" path="ActionManager" hit="Call inline completion" />
+    <option name="completion" path="ActionManager" hit="Call inline completion" />
+    <option name="inline" path="ActionManager" hit="Call inline completion" />
     <option name="cmd" path="ActionManager" hit="Cmd 키로 디폴트" />
     <option name="디폴트" path="ActionManager" hit="Cmd 키로 디폴트" />
     <option name="키로" path="ActionManager" hit="Cmd 키로 디폴트" />
@@ -266,6 +266,16 @@
     <option name="docker" path="ActionManager" hit="Docker" />
     <option name="enter" path="ActionManager" hit="Enter" />
     <option name="escape" path="ActionManager" hit="Escape" />
+    <option name="and" path="ActionManager" hit="Generate suggestion for current cursor position and show as inline" />
+    <option name="as" path="ActionManager" hit="Generate suggestion for current cursor position and show as inline" />
+    <option name="current" path="ActionManager" hit="Generate suggestion for current cursor position and show as inline" />
+    <option name="cursor" path="ActionManager" hit="Generate suggestion for current cursor position and show as inline" />
+    <option name="for" path="ActionManager" hit="Generate suggestion for current cursor position and show as inline" />
+    <option name="generate" path="ActionManager" hit="Generate suggestion for current cursor position and show as inline" />
+    <option name="inline" path="ActionManager" hit="Generate suggestion for current cursor position and show as inline" />
+    <option name="position" path="ActionManager" hit="Generate suggestion for current cursor position and show as inline" />
+    <option name="show" path="ActionManager" hit="Generate suggestion for current cursor position and show as inline" />
+    <option name="suggestion" path="ActionManager" hit="Generate suggestion for current cursor position and show as inline" />
     <option name="gitlab" path="ActionManager" hit="GitLab" />
     <option name="google" path="ActionManager" hit="Google 검색" />
     <option name="검색" path="ActionManager" hit="Google 검색" />
@@ -310,14 +320,6 @@
     <option name="있도록" path="ActionManager" hit="IDE가 프로젝트 디렉터리를 감지하기 위해 내부를 볼 수 있도록 허용합니다" />
     <option name="프로젝트" path="ActionManager" hit="IDE가 프로젝트 디렉터리를 감지하기 위해 내부를 볼 수 있도록 허용합니다" />
     <option name="허용합니다" path="ActionManager" hit="IDE가 프로젝트 디렉터리를 감지하기 위해 내부를 볼 수 있도록 허용합니다" />
-    <option name="completion" path="ActionManager" hit="Insert current inline completion proposal" />
-    <option name="current" path="ActionManager" hit="Insert current inline completion proposal" />
-    <option name="inline" path="ActionManager" hit="Insert current inline completion proposal" />
-    <option name="insert" path="ActionManager" hit="Insert current inline completion proposal" />
-    <option name="proposal" path="ActionManager" hit="Insert current inline completion proposal" />
-    <option name="inline" path="ActionManager" hit="Insert inline proposal" />
-    <option name="insert" path="ActionManager" hit="Insert inline proposal" />
-    <option name="proposal" path="ActionManager" hit="Insert inline proposal" />
     <option name="jetbrains" path="ActionManager" hit="JetBrains 웹사이트에서 기술 지원을 문의합니다" />
     <option name="기술" path="ActionManager" hit="JetBrains 웹사이트에서 기술 지원을 문의합니다" />
     <option name="문의합니다" path="ActionManager" hit="JetBrains 웹사이트에서 기술 지원을 문의합니다" />
@@ -337,20 +339,12 @@
     <option name="n" path="ActionManager" hit="LF - Unix 및 macOS(\n)" />
     <option name="unix" path="ActionManager" hit="LF - Unix 및 macOS(\n)" />
     <option name="및" path="ActionManager" hit="LF - Unix 및 macOS(\n)" />
-    <option name="layouts" path="ActionManager" hit="Layouts" />
     <option name="mq" path="ActionManager" hit="MQ" />
     <option name="defender" path="ActionManager" hit="Microsoft Defender 알림 재설정" />
     <option name="microsoft" path="ActionManager" hit="Microsoft Defender 알림 재설정" />
     <option name="알림" path="ActionManager" hit="Microsoft Defender 알림 재설정" />
     <option name="재설정" path="ActionManager" hit="Microsoft Defender 알림 재설정" />
     <option name="profile" path="ActionManager" hit="Profile" />
-    <option name="custom" path="ActionManager" hit="Set Custom Project Icon..." />
-    <option name="icon" path="ActionManager" hit="Set Custom Project Icon..." />
-    <option name="project" path="ActionManager" hit="Set Custom Project Icon..." />
-    <option name="set" path="ActionManager" hit="Set Custom Project Icon..." />
-    <option name="gradient" path="ActionManager" hit="Show Project Gradient" />
-    <option name="project" path="ActionManager" hit="Show Project Gradient" />
-    <option name="show" path="ActionManager" hit="Show Project Gradient" />
     <option name="space" path="ActionManager" hit="Space" />
     <option name="url" path="ActionManager" hit="URL 복사" />
     <option name="복사" path="ActionManager" hit="URL 복사" />
@@ -1279,6 +1273,10 @@
     <option name="옵션" path="ActionManager" hit="사용자 지정 VM 옵션 편집..." />
     <option name="지정" path="ActionManager" hit="사용자 지정 VM 옵션 편집..." />
     <option name="편집" path="ActionManager" hit="사용자 지정 VM 옵션 편집..." />
+    <option name="사용자" path="ActionManager" hit="사용자 지정 아이콘 설정..." />
+    <option name="설정" path="ActionManager" hit="사용자 지정 아이콘 설정..." />
+    <option name="아이콘" path="ActionManager" hit="사용자 지정 아이콘 설정..." />
+    <option name="지정" path="ActionManager" hit="사용자 지정 아이콘 설정..." />
     <option name="사용자" path="ActionManager" hit="사용자 지정 프로퍼티 파일이 있는 에디터 탭을 엽니다" />
     <option name="에디터" path="ActionManager" hit="사용자 지정 프로퍼티 파일이 있는 에디터 탭을 엽니다" />
     <option name="엽니다" path="ActionManager" hit="사용자 지정 프로퍼티 파일이 있는 에디터 탭을 엽니다" />
@@ -1335,9 +1333,9 @@
     <option name="숨기기" path="ActionManager" hit="상태 표시줄 표시/숨기기" />
     <option name="표시" path="ActionManager" hit="상태 표시줄 표시/숨기기" />
     <option name="표시줄" path="ActionManager" hit="상태 표시줄 표시/숨기기" />
-    <option name="ui" path="ActionManager" hit="새 UI 만나보기" />
-    <option name="만나보기" path="ActionManager" hit="새 UI 만나보기" />
-    <option name="새" path="ActionManager" hit="새 UI 만나보기" />
+    <option name="ui" path="ActionManager" hit="새 UI 구성" />
+    <option name="구성" path="ActionManager" hit="새 UI 구성" />
+    <option name="새" path="ActionManager" hit="새 UI 구성" />
     <option name="ui" path="ActionManager" hit="새 UI 활성화..." />
     <option name="새" path="ActionManager" hit="새 UI 활성화..." />
     <option name="활성화" path="ActionManager" hit="새 UI 활성화..." />
@@ -2210,6 +2208,9 @@
     <option name="숨깁니다" path="ActionManager" hit="이쪽의 모든 창을 숨깁니다" />
     <option name="이쪽의" path="ActionManager" hit="이쪽의 모든 창을 숨깁니다" />
     <option name="창을" path="ActionManager" hit="이쪽의 모든 창을 숨깁니다" />
+    <option name="삽입" path="ActionManager" hit="인라인 제안 삽입" />
+    <option name="인라인" path="ActionManager" hit="인라인 제안 삽입" />
+    <option name="제안" path="ActionManager" hit="인라인 제안 삽입" />
     <option name="붙여넣기" path="ActionManager" hit="일반 텍스트로 붙여넣기" />
     <option name="일반" path="ActionManager" hit="일반 텍스트로 붙여넣기" />
     <option name="텍스트로" path="ActionManager" hit="일반 텍스트로 붙여넣기" />
@@ -2892,6 +2893,9 @@
     <option name="프레젠테이션" path="ActionManager" hit="프레젠테이션 모드를 전환합니다" />
     <option name="관리" path="ActionManager" hit="프로젝트 관리..." />
     <option name="프로젝트" path="ActionManager" hit="프로젝트 관리..." />
+    <option name="그라디언트" path="ActionManager" hit="프로젝트 그라디언트 표시" />
+    <option name="표시" path="ActionManager" hit="프로젝트 그라디언트 표시" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 그라디언트 표시" />
     <option name="다시" path="ActionManager" hit="프로젝트 다시 열기" />
     <option name="열기" path="ActionManager" hit="프로젝트 다시 열기" />
     <option name="프로젝트" path="ActionManager" hit="프로젝트 다시 열기" />
@@ -2911,6 +2915,9 @@
     <option name="설정" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴 설정 그룹" />
     <option name="팝업" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴 설정 그룹" />
     <option name="프로젝트" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴 설정 그룹" />
+    <option name="변경" path="ActionManager" hit="프로젝트 색상 변경" />
+    <option name="색상" path="ActionManager" hit="프로젝트 색상 변경" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 색상 변경" />
     <option name="위젯" path="ActionManager" hit="프로젝트 위젯" />
     <option name="프로젝트" path="ActionManager" hit="프로젝트 위젯" />
     <option name="첨부" path="ActionManager" hit="프로젝트 첨부..." />
@@ -2953,10 +2960,11 @@
     <option name="화면에" path="ActionManager" hit="한 줄 탭 레이아웃에서 화면에 맞지 않는 탭 목록을 드롭다운으로 표시합니다" />
     <option name="백스페이스" path="ActionManager" hit="헝그리 백스페이스" />
     <option name="헝그리" path="ActionManager" hit="헝그리 백스페이스" />
-    <option name="다음으로" path="ActionManager" hit="현재 레이아웃을 다음으로 저장..." />
-    <option name="레이아웃을" path="ActionManager" hit="현재 레이아웃을 다음으로 저장..." />
-    <option name="저장" path="ActionManager" hit="현재 레이아웃을 다음으로 저장..." />
-    <option name="현재" path="ActionManager" hit="현재 레이아웃을 다음으로 저장..." />
+    <option name="레아이웃으로" path="ActionManager" hit="현재 레이아웃을 새 레아이웃으로 저장..." />
+    <option name="레이아웃을" path="ActionManager" hit="현재 레이아웃을 새 레아이웃으로 저장..." />
+    <option name="새" path="ActionManager" hit="현재 레이아웃을 새 레아이웃으로 저장..." />
+    <option name="저장" path="ActionManager" hit="현재 레이아웃을 새 레아이웃으로 저장..." />
+    <option name="현재" path="ActionManager" hit="현재 레이아웃을 새 레아이웃으로 저장..." />
     <option name="레이아웃을" path="ActionManager" hit="현재 레이아웃을 새 이름으로 저장" />
     <option name="새" path="ActionManager" hit="현재 레이아웃을 새 이름으로 저장" />
     <option name="이름으로" path="ActionManager" hit="현재 레이아웃을 새 이름으로 저장" />
@@ -3014,6 +3022,11 @@
     <option name="줄" path="ActionManager" hit="현재 에디터에서 줄 번호 표시를 전환합니다" />
     <option name="표시를" path="ActionManager" hit="현재 에디터에서 줄 번호 표시를 전환합니다" />
     <option name="현재" path="ActionManager" hit="현재 에디터에서 줄 번호 표시를 전환합니다" />
+    <option name="삽입" path="ActionManager" hit="현재 인라인 완성 제안 삽입" />
+    <option name="완성" path="ActionManager" hit="현재 인라인 완성 제안 삽입" />
+    <option name="인라인" path="ActionManager" hit="현재 인라인 완성 제안 삽입" />
+    <option name="제안" path="ActionManager" hit="현재 인라인 완성 제안 삽입" />
+    <option name="현재" path="ActionManager" hit="현재 인라인 완성 제안 삽입" />
     <option name="새" path="ActionManager" hit="현재 줄 앞에 새 줄 시작" />
     <option name="시작" path="ActionManager" hit="현재 줄 앞에 새 줄 시작" />
     <option name="앞에" path="ActionManager" hit="현재 줄 앞에 새 줄 시작" />
@@ -3279,37 +3292,6 @@
     <option name="플러그인" hit="플러그인 저장소 관리…" />
   </configurable>
   <configurable id="consents" configurable_name="데이터 공유">
-    <option name="" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="accordance" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="account" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="address" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="any" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="at" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="by" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="can" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="consent" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="email" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="for" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="i" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="in" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="jetbrains" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="my" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="o" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="policy" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="privacy" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="process" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="purpose" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="r" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="s" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="settings" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="subscribing" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="the" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="this" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="time" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="understand" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="will" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="with" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="withdraw" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
     <option name="" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
     <option name="about" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
     <option name="and" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
@@ -3361,22 +3343,21 @@
     <option name="used" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
     <option name="will" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
     <option name="with" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
-    <option name="eap" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="send" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="statistics" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="usage" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="버전" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="사용" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="시" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="and" hit="Send me eap related feedback requests and surveys" />
-    <option name="eap-related" hit="Send me eap related feedback requests and surveys" />
-    <option name="feedback" hit="Send me eap related feedback requests and surveys" />
-    <option name="me" hit="Send me eap related feedback requests and surveys" />
-    <option name="requests" hit="Send me eap related feedback requests and surveys" />
-    <option name="send" hit="Send me eap related feedback requests and surveys" />
-    <option name="surveys" hit="Send me eap related feedback requests and surveys" />
+    <option name="send" hit="Send usage statistics" />
+    <option name="statistics" hit="Send usage statistics" />
+    <option name="usage" hit="Send usage statistics" />
     <option name="공유" hit="데이터 공유" />
     <option name="데이터" hit="데이터 공유" />
+    <option name="jetbrains" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="공유" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="데이터" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="모든" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="설정은" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="설치되어" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="있는" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="적용됩니다" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="제품에" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="환경" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
   </configurable>
   <configurable id="ide.date.format" configurable_name="날짜 형식">
     <option name="24시간" hit="  시간 사용" />
@@ -3414,9 +3395,9 @@
     <option name="자동으로" hit="신뢰할 수 없는 인증서 자동으로 수락 A " />
   </configurable>
   <configurable id="preferences.updates" configurable_name="업데이트">
-    <option name="ide" hit="IDE 업데이트 확인" />
-    <option name="업데이트" hit="IDE 업데이트 확인" />
-    <option name="확인" hit="IDE 업데이트 확인" />
+    <option name="ide" hit="IDE 업데이트 확인 " />
+    <option name="업데이트" hit="IDE 업데이트 확인 " />
+    <option name="확인" hit="IDE 업데이트 확인 " />
     <option name="ide" hit="IDE 업데이트 후 에디터에서 새로운 기능 표시" />
     <option name="기능" hit="IDE 업데이트 후 에디터에서 새로운 기능 표시" />
     <option name="새로운" hit="IDE 업데이트 후 에디터에서 새로운 기능 표시" />
@@ -3424,6 +3405,11 @@
     <option name="에디터에서" hit="IDE 업데이트 후 에디터에서 새로운 기능 표시" />
     <option name="표시" hit="IDE 업데이트 후 에디터에서 새로운 기능 표시" />
     <option name="후" hit="IDE 업데이트 후 에디터에서 새로운 기능 표시" />
+    <option name="릴리스" hit="안정화된 릴리스" />
+    <option name="안정화된" hit="안정화된 릴리스" />
+    <option name="액세스" hit="얼리 액세스 프로그램" />
+    <option name="얼리" hit="얼리 액세스 프로그램" />
+    <option name="프로그램" hit="얼리 액세스 프로그램" />
     <option name="업데이트" hit="업데이트" />
     <option name="c" hit="업데이트 확인 C  " />
     <option name="업데이트" hit="업데이트 확인 C  " />
@@ -3431,13 +3417,13 @@
     <option name="업데이트" hit="플러그인 업데이트 확인" />
     <option name="플러그인" hit="플러그인 업데이트 확인" />
     <option name="확인" hit="플러그인 업데이트 확인" />
-    <option name="2" hit="현재 버전  IntelliJ IDEA        EAP" />
-    <option name="2023" hit="현재 버전  IntelliJ IDEA        EAP" />
-    <option name="eap" hit="현재 버전  IntelliJ IDEA        EAP" />
-    <option name="idea" hit="현재 버전  IntelliJ IDEA        EAP" />
-    <option name="intellij" hit="현재 버전  IntelliJ IDEA        EAP" />
-    <option name="버전" hit="현재 버전  IntelliJ IDEA        EAP" />
-    <option name="현재" hit="현재 버전  IntelliJ IDEA        EAP" />
+    <option name="2" hit="현재 버전  IntelliJ IDEA         " />
+    <option name="2023" hit="현재 버전  IntelliJ IDEA         " />
+    <option name="5" hit="현재 버전  IntelliJ IDEA         " />
+    <option name="idea" hit="현재 버전  IntelliJ IDEA         " />
+    <option name="intellij" hit="현재 버전  IntelliJ IDEA         " />
+    <option name="버전" hit="현재 버전  IntelliJ IDEA         " />
+    <option name="현재" hit="현재 버전  IntelliJ IDEA         " />
   </configurable>
   <configurable id="editor.preferences.fonts.default" configurable_name="글꼴">
     <option name="" hit="  색 구성표에서 정의" />
