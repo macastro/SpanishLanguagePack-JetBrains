@@ -6,9 +6,6 @@
     <option name="csv" path="ActionManager" hit="CSV 형식 구성…" />
     <option name="구성" path="ActionManager" hit="CSV 형식 구성…" />
     <option name="형식" path="ActionManager" hit="CSV 형식 구성…" />
-    <option name="compact" path="ActionManager" hit="Compact" />
-    <option name="detailed" path="ActionManager" hit="Detailed" />
-    <option name="off" path="ActionManager" hit="Off" />
     <option name="값" path="ActionManager" hit="값 에디터" />
     <option name="에디터" path="ActionManager" hit="값 에디터" />
     <option name="값" path="ActionManager" hit="값 에디터 및 집계 뷰" />
@@ -27,8 +24,11 @@
     <option name="언어" path="ActionManager" hit="강조 표시 언어 설정…" />
     <option name="표시" path="ActionManager" hit="강조 표시 언어 설정…" />
     <option name="결과" path="ActionManager" hit="결과" />
+    <option name="결과" path="ActionManager" hit="결과 툴바" />
+    <option name="툴바" path="ActionManager" hit="결과 툴바" />
     <option name="결과" path="ActionManager" hit="결과 헤더" />
     <option name="헤더" path="ActionManager" hit="결과 헤더" />
+    <option name="끄기" path="ActionManager" hit="끄기" />
     <option name="내림차순" path="ActionManager" hit="내림차순" />
     <option name="내림차순" path="ActionManager" hit="내림차순 추가" />
     <option name="추가" path="ActionManager" hit="내림차순 추가" />
@@ -118,6 +118,7 @@
     <option name="삭제합니다" path="ActionManager" hit="선택한 행을 삭제합니다" />
     <option name="선택한" path="ActionManager" hit="선택한 행을 삭제합니다" />
     <option name="행을" path="ActionManager" hit="선택한 행을 삭제합니다" />
+    <option name="세부화" path="ActionManager" hit="세부화" />
     <option name="비교" path="ActionManager" hit="셀 비교…" />
     <option name="셀" path="ActionManager" hit="셀 비교…" />
     <option name="랩" path="ActionManager" hit="소프트 랩 전환" />
@@ -142,6 +143,9 @@
     <option name="이름" path="ActionManager" hit="열 이름 복사" />
     <option name="열" path="ActionManager" hit="열 추가" />
     <option name="추가" path="ActionManager" hit="열 추가" />
+    <option name="열" path="ActionManager" hit="열 통계 표시" />
+    <option name="통계" path="ActionManager" hit="열 통계 표시" />
+    <option name="표시" path="ActionManager" hit="열 통계 표시" />
     <option name="숨기기" path="ActionManager" hit="열 표시/숨기기" />
     <option name="열" path="ActionManager" hit="열 표시/숨기기" />
     <option name="표시" path="ActionManager" hit="열 표시/숨기기" />
@@ -174,8 +178,17 @@
     <option name="뷰" path="ActionManager" hit="집계 뷰 표시" />
     <option name="집계" path="ActionManager" hit="집계 뷰 표시" />
     <option name="표시" path="ActionManager" hit="집계 뷰 표시" />
+    <option name="닫기" path="ActionManager" hit="차트 닫기" />
+    <option name="차트" path="ActionManager" hit="차트 닫기" />
     <option name="차트" path="ActionManager" hit="차트 표시" />
     <option name="표시" path="ActionManager" hit="차트 표시" />
+    <option name="전환" path="ActionManager" hit="차트로 전환" />
+    <option name="차트로" path="ActionManager" hit="차트로 전환" />
+    <option name="결과로" path="ActionManager" hit="참조된 결과로 이동" />
+    <option name="이동" path="ActionManager" hit="참조된 결과로 이동" />
+    <option name="참조된" path="ActionManager" hit="참조된 결과로 이동" />
+    <option name="결과" path="ActionManager" hit="참조하는 결과" />
+    <option name="참조하는" path="ActionManager" hit="참조하는 결과" />
     <option name="번째" path="ActionManager" hit="첫 번째 행은 헤더" />
     <option name="첫" path="ActionManager" hit="첫 번째 행은 헤더" />
     <option name="행은" path="ActionManager" hit="첫 번째 행은 헤더" />
@@ -183,9 +196,12 @@
     <option name="첫" path="ActionManager" hit="첫 페이지" />
     <option name="페이지" path="ActionManager" hit="첫 페이지" />
     <option name="추출기" path="ActionManager" hit="추출기" />
+    <option name="콤팩트" path="ActionManager" hit="콤팩트" />
     <option name="결과" path="ActionManager" hit="쿼리 결과" />
     <option name="쿼리" path="ActionManager" hit="쿼리 결과" />
     <option name="테이블" path="ActionManager" hit="테이블" />
+    <option name="전환" path="ActionManager" hit="테이블로 전환" />
+    <option name="테이블로" path="ActionManager" hit="테이블로 전환" />
     <option name="텍스트" path="ActionManager" hit="텍스트" />
     <option name="트리" path="ActionManager" hit="트리" />
     <option name="내보냅니다" path="ActionManager" hit="파일 또는 클립보드로 모든 데이터를 내보냅니다" />
@@ -245,11 +261,11 @@
     <option name="색" hit="데이터 그리드//행마다 색 변경" />
     <option name="행마다" hit="데이터 그리드//행마다 색 변경" />
   </configurable>
-  <configurable id="database.data.csv.formats" configurable_name="CSV 형식">
+  <configurable id="database.data.csv.formats" configurable_name="CSV Formats">
     <option name="" hit=" N" />
     <option name="n" hit=" N" />
-    <option name="csv" hit="CSV 형식" />
-    <option name="형식" hit="CSV 형식" />
+    <option name="csv" hit="CSV Formats" />
+    <option name="formats" hit="CSV Formats" />
     <option name="n" hit="null 값 텍스트 N  " />
     <option name="null" hit="null 값 텍스트 N  " />
     <option name="값" hit="null 값 텍스트 N  " />

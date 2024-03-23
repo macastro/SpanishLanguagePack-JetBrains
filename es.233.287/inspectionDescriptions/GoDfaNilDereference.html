@@ -1,0 +1,14 @@
+<html>
+<body>
+<code>nil</code>을 포함할 수 있는 포인터의 역참조를 보고합니다.</body>
+
+<p>예:</p>
+<pre><code>
+func _(file *os.File) {
+ //수신자 'file'이 호출 내에서 'nil'일 수 있음
+ if file != nil || file.Name() != "" {
+  //code
+ }
+}
+</code></pre>
+</html>

@@ -1,26 +1,11 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="키맵">
     <option name="" path="ActionManager" hit="" />
-    <option name="allows" path="ActionManager" hit="Allows disabling or enabling PDF file inline" />
-    <option name="disabling" path="ActionManager" hit="Allows disabling or enabling PDF file inline" />
-    <option name="enabling" path="ActionManager" hit="Allows disabling or enabling PDF file inline" />
-    <option name="file" path="ActionManager" hit="Allows disabling or enabling PDF file inline" />
-    <option name="inline" path="ActionManager" hit="Allows disabling or enabling PDF file inline" />
-    <option name="or" path="ActionManager" hit="Allows disabling or enabling PDF file inline" />
-    <option name="pdf" path="ActionManager" hit="Allows disabling or enabling PDF file inline" />
     <option name="body" path="ActionManager" hit="Copy Response Body to Clipboard" />
     <option name="clipboard" path="ActionManager" hit="Copy Response Body to Clipboard" />
     <option name="copy" path="ActionManager" hit="Copy Response Body to Clipboard" />
     <option name="response" path="ActionManager" hit="Copy Response Body to Clipboard" />
     <option name="to" path="ActionManager" hit="Copy Response Body to Clipboard" />
-    <option name="enable" path="ActionManager" hit="Enable PDF preview inline" />
-    <option name="inline" path="ActionManager" hit="Enable PDF preview inline" />
-    <option name="pdf" path="ActionManager" hit="Enable PDF preview inline" />
-    <option name="preview" path="ActionManager" hit="Enable PDF preview inline" />
-    <option name="back" path="ActionManager" hit="Go Back" />
-    <option name="go" path="ActionManager" hit="Go Back" />
-    <option name="forward" path="ActionManager" hit="Go Forward" />
-    <option name="go" path="ActionManager" hit="Go Forward" />
     <option name="http" path="ActionManager" hit="HTTP 요청" />
     <option name="요청" path="ActionManager" hit="HTTP 요청" />
     <option name="http" path="ActionManager" hit="HTTP 요청 가져오기" />
@@ -34,27 +19,30 @@
     <option name="열기" path="ActionManager" hit="HTTP 요청 컬렉션 열기" />
     <option name="요청" path="ActionManager" hit="HTTP 요청 컬렉션 열기" />
     <option name="컬렉션" path="ActionManager" hit="HTTP 요청 컬렉션 열기" />
-    <option name="http" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일 생성" />
-    <option name="대한" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일 생성" />
-    <option name="비공개" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일 생성" />
-    <option name="생성" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일 생성" />
-    <option name="요청에" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일 생성" />
-    <option name="파일" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일 생성" />
-    <option name="환경" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일 생성" />
-    <option name="http" path="ActionManager" hit="HTTP 요청을 위한 환경 파일 생성" />
-    <option name="생성" path="ActionManager" hit="HTTP 요청을 위한 환경 파일 생성" />
-    <option name="요청을" path="ActionManager" hit="HTTP 요청을 위한 환경 파일 생성" />
-    <option name="위한" path="ActionManager" hit="HTTP 요청을 위한 환경 파일 생성" />
-    <option name="파일" path="ActionManager" hit="HTTP 요청을 위한 환경 파일 생성" />
-    <option name="환경" path="ActionManager" hit="HTTP 요청을 위한 환경 파일 생성" />
-    <option name="http" path="ActionManager" hit="HTTP 요청의 기본 제공 컬렉션 열기" />
-    <option name="기본" path="ActionManager" hit="HTTP 요청의 기본 제공 컬렉션 열기" />
-    <option name="열기" path="ActionManager" hit="HTTP 요청의 기본 제공 컬렉션 열기" />
-    <option name="요청의" path="ActionManager" hit="HTTP 요청의 기본 제공 컬렉션 열기" />
-    <option name="제공" path="ActionManager" hit="HTTP 요청의 기본 제공 컬렉션 열기" />
-    <option name="컬렉션" path="ActionManager" hit="HTTP 요청의 기본 제공 컬렉션 열기" />
+    <option name="http" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일을 생성합니다" />
+    <option name="대한" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일을 생성합니다" />
+    <option name="비공개" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일을 생성합니다" />
+    <option name="생성합니다" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일을 생성합니다" />
+    <option name="요청에" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일을 생성합니다" />
+    <option name="파일을" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일을 생성합니다" />
+    <option name="환경" path="ActionManager" hit="HTTP 요청에 대한 비공개 HTTP 환경 파일을 생성합니다" />
+    <option name="http" path="ActionManager" hit="HTTP 요청을 위한 환경 파일을 생성합니다" />
+    <option name="생성합니다" path="ActionManager" hit="HTTP 요청을 위한 환경 파일을 생성합니다" />
+    <option name="요청을" path="ActionManager" hit="HTTP 요청을 위한 환경 파일을 생성합니다" />
+    <option name="위한" path="ActionManager" hit="HTTP 요청을 위한 환경 파일을 생성합니다" />
+    <option name="파일을" path="ActionManager" hit="HTTP 요청을 위한 환경 파일을 생성합니다" />
+    <option name="환경" path="ActionManager" hit="HTTP 요청을 위한 환경 파일을 생성합니다" />
+    <option name="http" path="ActionManager" hit="HTTP 요청의 기본 제공 컬렉션을 엽니다" />
+    <option name="기본" path="ActionManager" hit="HTTP 요청의 기본 제공 컬렉션을 엽니다" />
+    <option name="엽니다" path="ActionManager" hit="HTTP 요청의 기본 제공 컬렉션을 엽니다" />
+    <option name="요청의" path="ActionManager" hit="HTTP 요청의 기본 제공 컬렉션을 엽니다" />
+    <option name="제공" path="ActionManager" hit="HTTP 요청의 기본 제공 컬렉션을 엽니다" />
+    <option name="컬렉션을" path="ActionManager" hit="HTTP 요청의 기본 제공 컬렉션을 엽니다" />
     <option name="http" path="ActionManager" hit="HTTP 클라이언트" />
     <option name="클라이언트" path="ActionManager" hit="HTTP 클라이언트" />
+    <option name="http" path="ActionManager" hit="HTTP 클라이언트에 추가..." />
+    <option name="추가" path="ActionManager" hit="HTTP 클라이언트에 추가..." />
+    <option name="클라이언트에" path="ActionManager" hit="HTTP 클라이언트에 추가..." />
     <option name="http" path="ActionManager" hit="HTTP 클라이언트에서 요청 생성" />
     <option name="생성" path="ActionManager" hit="HTTP 클라이언트에서 요청 생성" />
     <option name="요청" path="ActionManager" hit="HTTP 클라이언트에서 요청 생성" />
@@ -62,6 +50,40 @@
     <option name="http" path="ActionManager" hit="HTTP 환경 파일" />
     <option name="파일" path="ActionManager" hit="HTTP 환경 파일" />
     <option name="환경" path="ActionManager" hit="HTTP 환경 파일" />
+    <option name="pdf" path="ActionManager" hit="PDF 미리보기 인라인화 활성화" />
+    <option name="미리보기" path="ActionManager" hit="PDF 미리보기 인라인화 활성화" />
+    <option name="인라인화" path="ActionManager" hit="PDF 미리보기 인라인화 활성화" />
+    <option name="활성화" path="ActionManager" hit="PDF 미리보기 인라인화 활성화" />
+    <option name="pdf" path="ActionManager" hit="PDF 파일 인라인화를 비활성화하거나 활성화하도록 허용합니다" />
+    <option name="비활성화하거나" path="ActionManager" hit="PDF 파일 인라인화를 비활성화하거나 활성화하도록 허용합니다" />
+    <option name="인라인화를" path="ActionManager" hit="PDF 파일 인라인화를 비활성화하거나 활성화하도록 허용합니다" />
+    <option name="파일" path="ActionManager" hit="PDF 파일 인라인화를 비활성화하거나 활성화하도록 허용합니다" />
+    <option name="허용합니다" path="ActionManager" hit="PDF 파일 인라인화를 비활성화하거나 활성화하도록 허용합니다" />
+    <option name="활성화하도록" path="ActionManager" hit="PDF 파일 인라인화를 비활성화하거나 활성화하도록 허용합니다" />
+    <option name="http" path="ActionManager" hit="Postman 컬렉션 파일 형식을 .http 형식으로 변환합니다" />
+    <option name="postman" path="ActionManager" hit="Postman 컬렉션 파일 형식을 .http 형식으로 변환합니다" />
+    <option name="변환합니다" path="ActionManager" hit="Postman 컬렉션 파일 형식을 .http 형식으로 변환합니다" />
+    <option name="컬렉션" path="ActionManager" hit="Postman 컬렉션 파일 형식을 .http 형식으로 변환합니다" />
+    <option name="파일" path="ActionManager" hit="Postman 컬렉션 파일 형식을 .http 형식으로 변환합니다" />
+    <option name="형식으로" path="ActionManager" hit="Postman 컬렉션 파일 형식을 .http 형식으로 변환합니다" />
+    <option name="형식을" path="ActionManager" hit="Postman 컬렉션 파일 형식을 .http 형식으로 변환합니다" />
+    <option name="postman" path="ActionManager" hit="Postman 컬렉션 파일에서 가져오기" />
+    <option name="가져오기" path="ActionManager" hit="Postman 컬렉션 파일에서 가져오기" />
+    <option name="컬렉션" path="ActionManager" hit="Postman 컬렉션 파일에서 가져오기" />
+    <option name="파일에서" path="ActionManager" hit="Postman 컬렉션 파일에서 가져오기" />
+    <option name="http" path="ActionManager" hit="Postman 파일일 형식을 .http 형식으로 변환합니다" />
+    <option name="postman" path="ActionManager" hit="Postman 파일일 형식을 .http 형식으로 변환합니다" />
+    <option name="변환합니다" path="ActionManager" hit="Postman 파일일 형식을 .http 형식으로 변환합니다" />
+    <option name="파일일" path="ActionManager" hit="Postman 파일일 형식을 .http 형식으로 변환합니다" />
+    <option name="형식으로" path="ActionManager" hit="Postman 파일일 형식을 .http 형식으로 변환합니다" />
+    <option name="형식을" path="ActionManager" hit="Postman 파일일 형식을 .http 형식으로 변환합니다" />
+    <option name="http" path="ActionManager" hit="Postman 환경 파일 형식을 .http 형식으로 변환합니다" />
+    <option name="postman" path="ActionManager" hit="Postman 환경 파일 형식을 .http 형식으로 변환합니다" />
+    <option name="변환합니다" path="ActionManager" hit="Postman 환경 파일 형식을 .http 형식으로 변환합니다" />
+    <option name="파일" path="ActionManager" hit="Postman 환경 파일 형식을 .http 형식으로 변환합니다" />
+    <option name="형식으로" path="ActionManager" hit="Postman 환경 파일 형식을 .http 형식으로 변환합니다" />
+    <option name="형식을" path="ActionManager" hit="Postman 환경 파일 형식을 .http 형식으로 변환합니다" />
+    <option name="환경" path="ActionManager" hit="Postman 환경 파일 형식을 .http 형식으로 변환합니다" />
     <option name="preview" path="ActionManager" hit="Show Preview" />
     <option name="show" path="ActionManager" hit="Show Preview" />
     <option name="curl로" path="ActionManager" hit="cURL로 변환 및 복사" />
@@ -79,6 +101,10 @@
     <option name="http-client" path="ActionManager" hit="http-client.private.env.json" />
     <option name="json" path="ActionManager" hit="http-client.private.env.json" />
     <option name="private" path="ActionManager" hit="http-client.private.env.json" />
+    <option name="공개" path="ActionManager" hit="공개 파일 내의 변수" />
+    <option name="내의" path="ActionManager" hit="공개 파일 내의 변수" />
+    <option name="변수" path="ActionManager" hit="공개 파일 내의 변수" />
+    <option name="파일" path="ActionManager" hit="공개 파일 내의 변수" />
     <option name="http" path="ActionManager" hit="기존 REST 클라이언트 파일을 HTTP 요청으로 변환" />
     <option name="rest" path="ActionManager" hit="기존 REST 클라이언트 파일을 HTTP 요청으로 변환" />
     <option name="기존" path="ActionManager" hit="기존 REST 클라이언트 파일을 HTTP 요청으로 변환" />
@@ -93,58 +119,81 @@
     <option name="서식으로" path="ActionManager" hit="기존 REST 클라이언트 파일을 새 서식으로 변환" />
     <option name="클라이언트" path="ActionManager" hit="기존 REST 클라이언트 파일을 새 서식으로 변환" />
     <option name="파일을" path="ActionManager" hit="기존 REST 클라이언트 파일을 새 서식으로 변환" />
+    <option name="뒤로" path="ActionManager" hit="뒤로" />
     <option name="마이크로서비스" path="ActionManager" hit="마이크로서비스 템플릿" />
     <option name="템플릿" path="ActionManager" hit="마이크로서비스 템플릿" />
-    <option name="http" path="ActionManager" hit="새 HTTP 요청 파일 생성" />
-    <option name="새" path="ActionManager" hit="새 HTTP 요청 파일 생성" />
-    <option name="생성" path="ActionManager" hit="새 HTTP 요청 파일 생성" />
-    <option name="요청" path="ActionManager" hit="새 HTTP 요청 파일 생성" />
-    <option name="파일" path="ActionManager" hit="새 HTTP 요청 파일 생성" />
-    <option name="http" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일 열기" />
-    <option name="로그" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일 열기" />
-    <option name="실행된" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일 열기" />
-    <option name="열기" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일 열기" />
-    <option name="요청이" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일 열기" />
-    <option name="있는" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일 열기" />
-    <option name="파일" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일 열기" />
+    <option name="내의" path="ActionManager" hit="비공개 파일 내의 변수" />
+    <option name="변수" path="ActionManager" hit="비공개 파일 내의 변수" />
+    <option name="비공개" path="ActionManager" hit="비공개 파일 내의 변수" />
+    <option name="파일" path="ActionManager" hit="비공개 파일 내의 변수" />
+    <option name="http" path="ActionManager" hit="새 HTTP 요청 파일을 생성합니다" />
+    <option name="새" path="ActionManager" hit="새 HTTP 요청 파일을 생성합니다" />
+    <option name="생성합니다" path="ActionManager" hit="새 HTTP 요청 파일을 생성합니다" />
+    <option name="요청" path="ActionManager" hit="새 HTTP 요청 파일을 생성합니다" />
+    <option name="파일을" path="ActionManager" hit="새 HTTP 요청 파일을 생성합니다" />
+    <option name="구성을" path="ActionManager" hit="새 요청, 변수 또는 인증 구성을 추가합니다" />
+    <option name="또는" path="ActionManager" hit="새 요청, 변수 또는 인증 구성을 추가합니다" />
+    <option name="변수" path="ActionManager" hit="새 요청, 변수 또는 인증 구성을 추가합니다" />
+    <option name="새" path="ActionManager" hit="새 요청, 변수 또는 인증 구성을 추가합니다" />
+    <option name="요청" path="ActionManager" hit="새 요청, 변수 또는 인증 구성을 추가합니다" />
+    <option name="인증" path="ActionManager" hit="새 요청, 변수 또는 인증 구성을 추가합니다" />
+    <option name="추가합니다" path="ActionManager" hit="새 요청, 변수 또는 인증 구성을 추가합니다" />
+    <option name="http" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일을 엽니다" />
+    <option name="로그" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일을 엽니다" />
+    <option name="실행된" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일을 엽니다" />
+    <option name="엽니다" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일을 엽니다" />
+    <option name="요청이" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일을 엽니다" />
+    <option name="있는" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일을 엽니다" />
+    <option name="파일을" path="ActionManager" hit="실행된 HTTP 요청이 있는 로그 파일을 엽니다" />
+    <option name="앞으로" path="ActionManager" hit="앞으로" />
     <option name="요청" path="ActionManager" hit="요청 추가" />
     <option name="추가" path="ActionManager" hit="요청 추가" />
+    <option name="구성" path="ActionManager" hit="인증 구성" />
+    <option name="인증" path="ActionManager" hit="인증 구성" />
+    <option name="http" path="ActionManager" hit="컬렉션을 .http 파일로 변환" />
+    <option name="변환" path="ActionManager" hit="컬렉션을 .http 파일로 변환" />
+    <option name="컬렉션을" path="ActionManager" hit="컬렉션을 .http 파일로 변환" />
+    <option name="파일로" path="ActionManager" hit="컬렉션을 .http 파일로 변환" />
     <option name="내" path="ActionManager" hit="파일 내 모든 요청 실행" />
     <option name="모든" path="ActionManager" hit="파일 내 모든 요청 실행" />
     <option name="실행" path="ActionManager" hit="파일 내 모든 요청 실행" />
     <option name="요청" path="ActionManager" hit="파일 내 모든 요청 실행" />
     <option name="파일" path="ActionManager" hit="파일 내 모든 요청 실행" />
+    <option name="메뉴" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴" />
+    <option name="뷰" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴" />
+    <option name="팝업" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴" />
+    <option name="변수를" path="ActionManager" hit="현재 환경에 새 변수를 추가합니다" />
+    <option name="새" path="ActionManager" hit="현재 환경에 새 변수를 추가합니다" />
+    <option name="추가합니다" path="ActionManager" hit="현재 환경에 새 변수를 추가합니다" />
+    <option name="현재" path="ActionManager" hit="현재 환경에 새 변수를 추가합니다" />
+    <option name="환경에" path="ActionManager" hit="현재 환경에 새 변수를 추가합니다" />
+    <option name="구성을" path="ActionManager" hit="현재 환경에 새 인증 구성을 추가합니다" />
+    <option name="새" path="ActionManager" hit="현재 환경에 새 인증 구성을 추가합니다" />
+    <option name="인증" path="ActionManager" hit="현재 환경에 새 인증 구성을 추가합니다" />
+    <option name="추가합니다" path="ActionManager" hit="현재 환경에 새 인증 구성을 추가합니다" />
+    <option name="현재" path="ActionManager" hit="현재 환경에 새 인증 구성을 추가합니다" />
+    <option name="환경에" path="ActionManager" hit="현재 환경에 새 인증 구성을 추가합니다" />
+    <option name="http" path="ActionManager" hit="환경을 HTTP 클라이언트 형식으로 변환" />
+    <option name="변환" path="ActionManager" hit="환경을 HTTP 클라이언트 형식으로 변환" />
+    <option name="클라이언트" path="ActionManager" hit="환경을 HTTP 클라이언트 형식으로 변환" />
+    <option name="형식으로" path="ActionManager" hit="환경을 HTTP 클라이언트 형식으로 변환" />
+    <option name="환경을" path="ActionManager" hit="환경을 HTTP 클라이언트 형식으로 변환" />
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.HTTP 요청" configurable_name="HTTP 요청">
     <option name="http" hit="HTTP 요청" />
     <option name="요청" hit="HTTP 요청" />
-    <option name="arguments" hit="Dynamic Variable//Number arguments" />
-    <option name="dynamic" hit="Dynamic Variable//Number arguments" />
-    <option name="number" hit="Dynamic Variable//Number arguments" />
-    <option name="variable" hit="Dynamic Variable//Number arguments" />
-    <option name="arguments" hit="Dynamic Variable//String arguments" />
-    <option name="dynamic" hit="Dynamic Variable//String arguments" />
-    <option name="string" hit="Dynamic Variable//String arguments" />
-    <option name="variable" hit="Dynamic Variable//String arguments" />
-    <option name="escaped" hit="Escaped Value" />
-    <option name="value" hit="Escaped Value" />
-    <option name="begin" hit="File Variable//Variable begin" />
-    <option name="file" hit="File Variable//Variable begin" />
-    <option name="variable" hit="File Variable//Variable begin" />
-    <option name="file" hit="File Variable//Variable name" />
-    <option name="name" hit="File Variable//Variable name" />
-    <option name="variable" hit="File Variable//Variable name" />
-    <option name="file" hit="File Variable//Variable value" />
-    <option name="value" hit="File Variable//Variable value" />
-    <option name="variable" hit="File Variable//Variable value" />
-    <option name="and" hit="Response Handler and Pre-Request scripts" />
-    <option name="handler" hit="Response Handler and Pre-Request scripts" />
-    <option name="pre-request" hit="Response Handler and Pre-Request scripts" />
-    <option name="response" hit="Response Handler and Pre-Request scripts" />
-    <option name="scripts" hit="Response Handler and Pre-Request scripts" />
     <option name="강조" hit="구문 강조 표시" />
     <option name="구문" hit="구문 강조 표시" />
     <option name="표시" hit="구문 강조 표시" />
+    <option name="동적" hit="동적 변수//문자열 인수" />
+    <option name="문자열" hit="동적 변수//문자열 인수" />
+    <option name="변수" hit="동적 변수//문자열 인수" />
+    <option name="인수" hit="동적 변수//문자열 인수" />
+    <option name="동적" hit="동적 변수//숫자 인수" />
+    <option name="변수" hit="동적 변수//숫자 인수" />
+    <option name="숫자" hit="동적 변수//숫자 인수" />
+    <option name="인수" hit="동적 변수//숫자 인수" />
     <option name="경계" hit="멀티파트 경계" />
     <option name="멀티파트" hit="멀티파트 경계" />
     <option name="메서드" hit="메서드 타입" />
@@ -172,12 +221,29 @@
     <option name="기록" hit="응답 기록 기호" />
     <option name="기호" hit="응답 기록 기호" />
     <option name="응답" hit="응답 기록 기호" />
+    <option name="및" hit="응답 헤더 및 요청 전 스크립트" />
+    <option name="스크립트" hit="응답 헤더 및 요청 전 스크립트" />
+    <option name="요청" hit="응답 헤더 및 요청 전 스크립트" />
+    <option name="응답" hit="응답 헤더 및 요청 전 스크립트" />
+    <option name="전" hit="응답 헤더 및 요청 전 스크립트" />
+    <option name="헤더" hit="응답 헤더 및 요청 전 스크립트" />
+    <option name="값" hit="이스케이프된 값" />
+    <option name="이스케이프된" hit="이스케이프된 값" />
     <option name="경로" hit="입력 파일 경로" />
     <option name="입력" hit="입력 파일 경로" />
     <option name="파일" hit="입력 파일 경로" />
     <option name="기호" hit="입력 파일 기호" />
     <option name="입력" hit="입력 파일 기호" />
     <option name="파일" hit="입력 파일 기호" />
+    <option name="변수" hit="제자리 변수//변수 시작" />
+    <option name="시작" hit="제자리 변수//변수 시작" />
+    <option name="제자리" hit="제자리 변수//변수 시작" />
+    <option name="변수" hit="제자리 변수//변수 이름" />
+    <option name="이름" hit="제자리 변수//변수 이름" />
+    <option name="제자리" hit="제자리 변수//변수 이름" />
+    <option name="변수" hit="제자리 변수//변숫값" />
+    <option name="변숫값" hit="제자리 변수//변숫값" />
+    <option name="제자리" hit="제자리 변수//변숫값" />
     <option name="주석" hit="주석" />
     <option name="주석" hit="주석 태그" />
     <option name="태그" hit="주석 태그" />
@@ -216,10 +282,16 @@
     <option name="탭" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
     <option name="크기" path="탭 및 들여쓰기" hit="탭 크기 " />
     <option name="탭" path="탭 및 들여쓰기" hit="탭 크기 " />
+    <option name="" path="공백" hit="'&amp;' 앞 공백" />
+    <option name="공백" path="공백" hit="'&amp;' 앞 공백" />
+    <option name="앞" path="공백" hit="'&amp;' 앞 공백" />
     <option name="" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
     <option name="뒤에" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
     <option name="새" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
     <option name="줄" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
+    <option name="" path="공백" hit="'=' 전후로 공백" />
+    <option name="공백" path="공백" hit="'=' 전후로 공백" />
+    <option name="전후로" path="공백" hit="'=' 전후로 공백" />
     <option name="" path="줄 바꿈 및 괄호" hit="'case' 브랜치 들여쓰기" />
     <option name="case" path="줄 바꿈 및 괄호" hit="'case' 브랜치 들여쓰기" />
     <option name="들여쓰기" path="줄 바꿈 및 괄호" hit="'case' 브랜치 들여쓰기" />
@@ -250,17 +322,13 @@
     <option name="" path="줄 바꿈 및 괄호" hit="'while()' 문" />
     <option name="while" path="줄 바꿈 및 괄호" hit="'while()' 문" />
     <option name="문" path="줄 바꿈 및 괄호" hit="'while()' 문" />
-    <option name="" path="공백" hit="'x-www-form-urlencoded' parameters" />
-    <option name="parameters" path="공백" hit="'x-www-form-urlencoded' parameters" />
-    <option name="x-www-form-urlencoded" path="공백" hit="'x-www-form-urlencoded' parameters" />
+    <option name="" path="공백" hit="'x-www-form-urlencoded' 매개변수" />
+    <option name="x-www-form-urlencoded" path="공백" hit="'x-www-form-urlencoded' 매개변수" />
+    <option name="매개변수" path="공백" hit="'x-www-form-urlencoded' 매개변수" />
     <option name="" path="줄 바꿈 및 괄호" hit="'{' 뒤에 새 줄" />
     <option name="뒤에" path="줄 바꿈 및 괄호" hit="'{' 뒤에 새 줄" />
     <option name="새" path="줄 바꿈 및 괄호" hit="'{' 뒤에 새 줄" />
     <option name="줄" path="줄 바꿈 및 괄호" hit="'{' 뒤에 새 줄" />
-    <option name="before" path="공백" hit="Space before '&amp;'" />
-    <option name="space" path="공백" hit="Space before '&amp;'" />
-    <option name="around" path="공백" hit="Spaces around '='" />
-    <option name="spaces" path="공백" hit="Spaces around '='" />
     <option name="assert" path="줄 바꿈 및 괄호" hit="assert 문" />
     <option name="문" path="줄 바꿈 및 괄호" hit="assert 문" />
     <option name="extends" path="줄 바꿈 및 괄호" hit="extends/implements/permits 목록" />

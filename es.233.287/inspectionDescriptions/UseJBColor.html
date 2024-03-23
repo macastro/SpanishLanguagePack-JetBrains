@@ -7,5 +7,16 @@
 <p>
   빠른 수정에서는 '어두운' 색 변형을 정의하는 <code>JBColor</code>로 해당 사용 위치를 바꿉니다.
 </p>
+<p>예:</p>
+<pre><code lang="java">
+// 나쁨:
+Color darkGreen = new Color(12, 58, 27);
+Color blue = Color.BLUE;
+
+// 좋음:
+Color darkGreen = new JBColor(12, 58, 27);
+Color blue = JBColor.BLUE;
+Color green = new JBColor(new Color(12, 58, 27), new Color(27, 112, 39));
+</code></pre>
 </body>
 </html>

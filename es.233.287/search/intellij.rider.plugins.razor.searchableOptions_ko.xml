@@ -45,6 +45,7 @@
     <option name="을" hit="C#의 중괄호 스타일을 무시하고 '줄 끝(K&amp;R 스타일)'을 사용" />
     <option name="줄" hit="C#의 중괄호 스타일을 무시하고 '줄 끝(K&amp;R 스타일)'을 사용" />
     <option name="중괄호" hit="C#의 중괄호 스타일을 무시하고 '줄 끝(K&amp;R 스타일)'을 사용" />
+    <option name="other" hit="Other" />
     <option name="razor" path="Razor" hit="Razor" />
     <option name="functions" hit="Razor @functions 블록 주위에 빈 줄" />
     <option name="razor" hit="Razor @functions 블록 주위에 빈 줄" />
@@ -57,6 +58,12 @@
     <option name="바꿈" hit="Razor 구문 주위에서 줄 바꿈" />
     <option name="주위에서" hit="Razor 구문 주위에서 줄 바꿈" />
     <option name="줄" hit="Razor 구문 주위에서 줄 바꿈" />
+    <option name="razor" hit="Razor 서식 지정에 오래된 엔진을 사용합니다" />
+    <option name="사용합니다" hit="Razor 서식 지정에 오래된 엔진을 사용합니다" />
+    <option name="서식" hit="Razor 서식 지정에 오래된 엔진을 사용합니다" />
+    <option name="엔진을" hit="Razor 서식 지정에 오래된 엔진을 사용합니다" />
+    <option name="오래된" hit="Razor 서식 지정에 오래된 엔진을 사용합니다" />
+    <option name="지정에" hit="Razor 서식 지정에 오래된 엔진을 사용합니다" />
     <option name="razor" hit="Razor 섹션 주위에 빈 줄" />
     <option name="빈" hit="Razor 섹션 주위에 빈 줄" />
     <option name="섹션" hit="Razor 섹션 주위에 빈 줄" />
@@ -80,7 +87,6 @@
     <option name="유지" hit="공백을 내부에 유지" />
     <option name="구문" path="구문 스타일" hit="구문 스타일" />
     <option name="스타일" path="구문 스타일" hit="구문 스타일" />
-    <option name="기타" hit="기타" />
     <option name="그리고" hit="다른 요소는 포함하고 텍스트는 포함하지 않는 요소의 시작 태그 뒤에서, 그리고 종료 태그 앞에서 줄 바꿈" />
     <option name="다른" hit="다른 요소는 포함하고 텍스트는 포함하지 않는 요소의 시작 태그 뒤에서, 그리고 종료 태그 앞에서 줄 바꿈" />
     <option name="뒤에서" hit="다른 요소는 포함하고 텍스트는 포함하지 않는 요소의 시작 태그 뒤에서, 그리고 종료 태그 앞에서 줄 바꿈" />
@@ -261,6 +267,7 @@
     <option name="을" path="웹 양식" hit="C#의 중괄호 스타일을 무시하고 '줄 끝(K&amp;R 스타일)'을 사용" />
     <option name="줄" path="웹 양식" hit="C#의 중괄호 스타일을 무시하고 '줄 끝(K&amp;R 스타일)'을 사용" />
     <option name="중괄호" path="웹 양식" hit="C#의 중괄호 스타일을 무시하고 '줄 끝(K&amp;R 스타일)'을 사용" />
+    <option name="other" path="서식 지정" hit="Other" />
     <option name="functions" path="Razor" hit="Razor @functions 블록 주위에 빈 줄" />
     <option name="razor" path="Razor" hit="Razor @functions 블록 주위에 빈 줄" />
     <option name="블록" path="Razor" hit="Razor @functions 블록 주위에 빈 줄" />
@@ -272,6 +279,12 @@
     <option name="바꿈" path="Razor" hit="Razor 구문 주위에서 줄 바꿈" />
     <option name="주위에서" path="Razor" hit="Razor 구문 주위에서 줄 바꿈" />
     <option name="줄" path="Razor" hit="Razor 구문 주위에서 줄 바꿈" />
+    <option name="razor" path="Razor" hit="Razor 서식 지정에 오래된 엔진을 사용합니다" />
+    <option name="사용합니다" path="Razor" hit="Razor 서식 지정에 오래된 엔진을 사용합니다" />
+    <option name="서식" path="Razor" hit="Razor 서식 지정에 오래된 엔진을 사용합니다" />
+    <option name="엔진을" path="Razor" hit="Razor 서식 지정에 오래된 엔진을 사용합니다" />
+    <option name="오래된" path="Razor" hit="Razor 서식 지정에 오래된 엔진을 사용합니다" />
+    <option name="지정에" path="Razor" hit="Razor 서식 지정에 오래된 엔진을 사용합니다" />
     <option name="razor" path="Razor" hit="Razor 섹션 주위에 빈 줄" />
     <option name="빈" path="Razor" hit="Razor 섹션 주위에 빈 줄" />
     <option name="섹션" path="Razor" hit="Razor 섹션 주위에 빈 줄" />
@@ -293,7 +306,6 @@
     <option name="공백을" path="서식 지정" hit="공백을 내부에 유지" />
     <option name="내부에" path="서식 지정" hit="공백을 내부에 유지" />
     <option name="유지" path="서식 지정" hit="공백을 내부에 유지" />
-    <option name="기타" path="서식 지정" hit="기타" />
     <option name="그리고" path="서식 지정" hit="다른 요소는 포함하고 텍스트는 포함하지 않는 요소의 시작 태그 뒤에서, 그리고 종료 태그 앞에서 줄 바꿈" />
     <option name="다른" path="서식 지정" hit="다른 요소는 포함하고 텍스트는 포함하지 않는 요소의 시작 태그 뒤에서, 그리고 종료 태그 앞에서 줄 바꿈" />
     <option name="뒤에서" path="서식 지정" hit="다른 요소는 포함하고 텍스트는 포함하지 않는 요소의 시작 태그 뒤에서, 그리고 종료 태그 앞에서 줄 바꿈" />
@@ -433,22 +445,7 @@
   <configurable id="Inspections-Razor" configurable_name="Razor">
     <option name="razor" hit="Razor" />
     <option name="iddqd" hit="iddqd" />
-    <option name="값의" hit="마크업 속성 값의 오타" />
-    <option name="마크업" hit="마크업 속성 값의 오타" />
-    <option name="속성" hit="마크업 속성 값의 오타" />
-    <option name="오타" hit="마크업 속성 값의 오타" />
-    <option name="내의" hit="마크업 텍스트 내의 오타" />
-    <option name="마크업" hit="마크업 텍스트 내의 오타" />
-    <option name="오타" hit="마크업 텍스트 내의 오타" />
-    <option name="텍스트" hit="마크업 텍스트 내의 오타" />
-    <option name="내의" hit="문자열 리터럴 내의 오타" />
-    <option name="리터럴" hit="문자열 리터럴 내의 오타" />
-    <option name="문자열" hit="문자열 리터럴 내의 오타" />
-    <option name="오타" hit="문자열 리터럴 내의 오타" />
     <option name="설명" hit="설명" />
-    <option name="내의" hit="식별자 내의 오타" />
-    <option name="식별자" hit="식별자 내의 오타" />
-    <option name="오타" hit="식별자 내의 오타" />
     <option name="razor" hit="알 수 없는 Razor 레이아웃" />
     <option name="레이아웃" hit="알 수 없는 Razor 레이아웃" />
     <option name="수" hit="알 수 없는 Razor 레이아웃" />
@@ -463,11 +460,6 @@
     <option name="잠재적" hit="잠재적 코드 품질 문제" />
     <option name="코드" hit="잠재적 코드 품질 문제" />
     <option name="품질" hit="잠재적 코드 품질 문제" />
-    <option name="내의" hit="주석 내의 오타" />
-    <option name="오타" hit="주석 내의 오타" />
-    <option name="주석" hit="주석 내의 오타" />
-    <option name="이슈" hit="철자 이슈" />
-    <option name="철자" hit="철자 이슈" />
   </configurable>
   <configurable id="RiderRazorFileTemplatesSettingsId" configurable_name="Razor">
     <option name="razor" hit="Razor" />
@@ -679,18 +671,6 @@
     <option name="수" hit="리소스를 해결할 수 없습니다" />
     <option name="없습니다" hit="리소스를 해결할 수 없습니다" />
     <option name="해결할" hit="리소스를 해결할 수 없습니다" />
-    <option name="값의" hit="마크업 속성 값의 오타" />
-    <option name="마크업" hit="마크업 속성 값의 오타" />
-    <option name="속성" hit="마크업 속성 값의 오타" />
-    <option name="오타" hit="마크업 속성 값의 오타" />
-    <option name="내의" hit="마크업 텍스트 내의 오타" />
-    <option name="마크업" hit="마크업 텍스트 내의 오타" />
-    <option name="오타" hit="마크업 텍스트 내의 오타" />
-    <option name="텍스트" hit="마크업 텍스트 내의 오타" />
-    <option name="내의" hit="문자열 리터럴 내의 오타" />
-    <option name="리터럴" hit="문자열 리터럴 내의 오타" />
-    <option name="문자열" hit="문자열 리터럴 내의 오타" />
-    <option name="오타" hit="문자열 리터럴 내의 오타" />
     <option name="모델" hit="불일치하는 모델 타입" />
     <option name="불일치하는" hit="불일치하는 모델 타입" />
     <option name="타입" hit="불일치하는 모델 타입" />
@@ -713,9 +693,6 @@
     <option name="속성" hit="선택적 값 문제가 있는 속성" />
     <option name="있는" hit="선택적 값 문제가 있는 속성" />
     <option name="설명" hit="설명" />
-    <option name="내의" hit="식별자 내의 오타" />
-    <option name="식별자" hit="식별자 내의 오타" />
-    <option name="오타" hit="식별자 내의 오타" />
     <option name="내" hit="심볼 선언 내 불필요한 항목" />
     <option name="불필요한" hit="심볼 선언 내 불필요한 항목" />
     <option name="선언" hit="심볼 선언 내 불필요한 항목" />
@@ -796,14 +773,9 @@
     <option name="않는" hit="접근되지 않는 필드" />
     <option name="접근되지" hit="접근되지 않는 필드" />
     <option name="필드" hit="접근되지 않는 필드" />
-    <option name="내의" hit="주석 내의 오타" />
-    <option name="오타" hit="주석 내의 오타" />
-    <option name="주석" hit="주석 내의 오타" />
     <option name="pageparserfiltertype" hit="지원되지 않는 pageParserFilterType" />
     <option name="않는" hit="지원되지 않는 pageParserFilterType" />
     <option name="지원되지" hit="지원되지 않는 pageParserFilterType" />
-    <option name="이슈" hit="철자 이슈" />
-    <option name="철자" hit="철자 이슈" />
     <option name="멤버가" hit="타입 멤버가 전혀 사용되지 않습니다" />
     <option name="사용되지" hit="타입 멤버가 전혀 사용되지 않습니다" />
     <option name="않습니다" hit="타입 멤버가 전혀 사용되지 않습니다" />

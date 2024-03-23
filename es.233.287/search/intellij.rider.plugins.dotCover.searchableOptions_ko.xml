@@ -122,6 +122,10 @@
     <option name="내보내기" path="ActionManager" hit="커버리지 보고서 내보내기" />
     <option name="보고서" path="ActionManager" hit="커버리지 보고서 내보내기" />
     <option name="커버리지" path="ActionManager" hit="커버리지 보고서 내보내기" />
+    <option name="세부" path="ActionManager" hit="커버리지 세부 정보 표시" />
+    <option name="정보" path="ActionManager" hit="커버리지 세부 정보 표시" />
+    <option name="커버리지" path="ActionManager" hit="커버리지 세부 정보 표시" />
+    <option name="표시" path="ActionManager" hit="커버리지 세부 정보 표시" />
     <option name="강조" path="ActionManager" hit="코드 강조 표시" />
     <option name="코드" path="ActionManager" hit="코드 강조 표시" />
     <option name="표시" path="ActionManager" hit="코드 강조 표시" />
@@ -192,6 +196,16 @@
     <option name="기본" hit=" NGen 기본 이미지 사용 N " />
     <option name="사용" hit=" NGen 기본 이미지 사용 N " />
     <option name="이미지" hit=" NGen 기본 이미지 사용 N " />
+    <option name="" hit=" 유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다 " />
+    <option name="경우에" hit=" 유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다 " />
+    <option name="다음의" hit=" 유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다 " />
+    <option name="도구" hit=" 유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다 " />
+    <option name="열립니다" hit=" 유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다 " />
+    <option name="유닛" hit=" 유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다 " />
+    <option name="자동으로" hit=" 유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다 " />
+    <option name="창이" hit=" 유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다 " />
+    <option name="커버리지" hit=" 유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다 " />
+    <option name="테스트" hit=" 유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다 " />
     <option name="" hit=" 테스트 러너 사전 로드" />
     <option name="러너" hit=" 테스트 러너 사전 로드" />
     <option name="로드" hit=" 테스트 러너 사전 로드" />
@@ -300,6 +314,17 @@
     <option name="이미지" hit="NGen 기본 이미지 사용(N)" />
     <option name="dotcover" hit="dotCover" />
     <option name="iddqd" hit="iddqd" />
+    <option name="안" hit="안 함" />
+    <option name="함" hit="안 함" />
+    <option name="경우에" hit="유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다." />
+    <option name="다음의" hit="유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다." />
+    <option name="도구" hit="유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다." />
+    <option name="열립니다" hit="유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다." />
+    <option name="유닛" hit="유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다." />
+    <option name="자동으로" hit="유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다." />
+    <option name="창이" hit="유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다." />
+    <option name="커버리지" hit="유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다." />
+    <option name="테스트" hit="유닛 테스트 커버리지 도구 창이 다음의 경우에 자동으로 열립니다." />
     <option name="러너" hit="테스트 러너 사전 로드" />
     <option name="로드" hit="테스트 러너 사전 로드" />
     <option name="사전" hit="테스트 러너 사전 로드" />
@@ -327,6 +352,15 @@
     <option name="최대" hit="테스트 러너가 사전 로드되어 커버리지 분석이 더 빨리 시작됩니다. 사전 로드되는 러너의 최대 수는 빌드, 실행, 배포 &gt; 유닛 테스트 &gt; 최대 X개의 테스트 러너를 병렬 실행을 사용해 정의합니다." />
     <option name="커버리지" hit="테스트 러너가 사전 로드되어 커버리지 분석이 더 빨리 시작됩니다. 사전 로드되는 러너의 최대 수는 빌드, 실행, 배포 &gt; 유닛 테스트 &gt; 최대 X개의 테스트 러너를 병렬 실행을 사용해 정의합니다." />
     <option name="테스트" hit="테스트 러너가 사전 로드되어 커버리지 분석이 더 빨리 시작됩니다. 사전 로드되는 러너의 최대 수는 빌드, 실행, 배포 &gt; 유닛 테스트 &gt; 최대 X개의 테스트 러너를 병렬 실행을 사용해 정의합니다." />
+    <option name="시" hit="테스트 커버리지 첫 실행 시" />
+    <option name="실행" hit="테스트 커버리지 첫 실행 시" />
+    <option name="첫" hit="테스트 커버리지 첫 실행 시" />
+    <option name="커버리지" hit="테스트 커버리지 첫 실행 시" />
+    <option name="테스트" hit="테스트 커버리지 첫 실행 시" />
+    <option name="때마다" hit="테스트 커버리지를 실행할 때마다" />
+    <option name="실행할" hit="테스트 커버리지를 실행할 때마다" />
+    <option name="커버리지를" hit="테스트 커버리지를 실행할 때마다" />
+    <option name="테스트" hit="테스트 커버리지를 실행할 때마다" />
     <option name="p" hit="테스트 클래스를 병렬 실행(P)" />
     <option name="병렬" hit="테스트 클래스를 병렬 실행(P)" />
     <option name="실행" hit="테스트 클래스를 병렬 실행(P)" />

@@ -3,15 +3,15 @@
 JPA 속성의 프로퍼티 타입 불일치를 보고합니다.
 
 <p><b>예:</b></p><br/>
-<pre><code>
+<pre><code lang="java">
   @Entity
   public class JavaEntity {
 
     @OneToOne
-    Map<Integer, AnotherEntity> incorrectRelationship; // 오류: 'One To One' 속성 타입은 map이 아니라 entity여야 합니다
+    Map&lt;Integer, AnotherEntity&gt; incorrectRelationship; // 오류: 'One To One' 속성 타입은 map이 아니라 entity여야 합니다
 
     @ManyToMany
-    Map<Integer, AnotherEntity> correctRelationship;
+    Map&lt;Integer, AnotherEntity&gt; correctRelationship;
   }
 </code></pre>
 </body>

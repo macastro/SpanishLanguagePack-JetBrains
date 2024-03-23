@@ -8,5 +8,11 @@
 func Exported() hidden { // 내보내기되지 않은 'hidden' 반환 타입을 사용하는 내보내기된 함수
  return hidden{}
 }</code></pre>
+<p><b>내보내기</b> 빠른 수정을 적용하여 타입을 내보낼 수 있습니다. 빠른 수정이 적용된 후 타입 이름은 대문자로 표시됩니다.</p>
+<pre><code>type Hidden struct{}
+
+func Exported() Hidden { // 수정됨
+ return Hidden{}
+}</code></pre>
 </body>
 </html>

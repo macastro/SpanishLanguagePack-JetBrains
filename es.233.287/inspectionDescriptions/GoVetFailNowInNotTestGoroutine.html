@@ -3,7 +3,7 @@
 테스트 파일의 고루틴에 위치한 <code>testing.T.FailNow</code> 및 유사한 메서드에 대한 호출을 보고합니다.
 <p><code>FailNow</code>와 같은 메서드는 <code>runtime.Goexit</code>를 호출하여 테스트가 아닌, 고루틴 호출을 중지합니다.
   그러므로 이 메서드는 테스트나 벤치마크를 실행하는 고루틴에서만 호출되어야 합니다.</p>
-<p><code>FailNow</code>에 대한 더 자세한 내용은 <a href="https://golang.org/pkg/testing/#T.FailNow">golang.org의 func (*T) FailNow</a>(을)를 참고하세요.</p>
+<p><code>FailNow</code>에 대한 자세한 내용은 <a href="https://pkg.go.dev/testing#T.FailNow">go.dev의 func (*T) FailNow</a>를 참조하세요.</p>
 <p>예:</p>
 <pre><code>func TestFoo(t *testing.T) {
   go func() {

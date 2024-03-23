@@ -31,17 +31,20 @@
     <option name="전" hit="IDE 종료 전 확인" />
     <option name="종료" hit="IDE 종료 전 확인" />
     <option name="확인" hit="IDE 종료 전 확인" />
-    <option name="ide" hit="IDE 창으로 전환하거나 에디터 탭을 열 때 외부 변경 내용 동기화" />
-    <option name="내용" hit="IDE 창으로 전환하거나 에디터 탭을 열 때 외부 변경 내용 동기화" />
-    <option name="동기화" hit="IDE 창으로 전환하거나 에디터 탭을 열 때 외부 변경 내용 동기화" />
-    <option name="때" hit="IDE 창으로 전환하거나 에디터 탭을 열 때 외부 변경 내용 동기화" />
-    <option name="변경" hit="IDE 창으로 전환하거나 에디터 탭을 열 때 외부 변경 내용 동기화" />
-    <option name="에디터" hit="IDE 창으로 전환하거나 에디터 탭을 열 때 외부 변경 내용 동기화" />
-    <option name="열" hit="IDE 창으로 전환하거나 에디터 탭을 열 때 외부 변경 내용 동기화" />
-    <option name="외부" hit="IDE 창으로 전환하거나 에디터 탭을 열 때 외부 변경 내용 동기화" />
-    <option name="전환하거나" hit="IDE 창으로 전환하거나 에디터 탭을 열 때 외부 변경 내용 동기화" />
-    <option name="창으로" hit="IDE 창으로 전환하거나 에디터 탭을 열 때 외부 변경 내용 동기화" />
-    <option name="탭을" hit="IDE 창으로 전환하거나 에디터 탭을 열 때 외부 변경 내용 동기화" />
+    <option name="ide" hit="IDE 창으로 전환하거나 다른 에디터 탭을 열 때" />
+    <option name="다른" hit="IDE 창으로 전환하거나 다른 에디터 탭을 열 때" />
+    <option name="때" hit="IDE 창으로 전환하거나 다른 에디터 탭을 열 때" />
+    <option name="에디터" hit="IDE 창으로 전환하거나 다른 에디터 탭을 열 때" />
+    <option name="열" hit="IDE 창으로 전환하거나 다른 에디터 탭을 열 때" />
+    <option name="전환하거나" hit="IDE 창으로 전환하거나 다른 에디터 탭을 열 때" />
+    <option name="창으로" hit="IDE 창으로 전환하거나 다른 에디터 탭을 열 때" />
+    <option name="탭을" hit="IDE 창으로 전환하거나 다른 에디터 탭을 열 때" />
+    <option name="ide가" hit="IDE가 비활성화 상태일 때 주기적으로 실험적 " />
+    <option name="때" hit="IDE가 비활성화 상태일 때 주기적으로 실험적 " />
+    <option name="비활성화" hit="IDE가 비활성화 상태일 때 주기적으로 실험적 " />
+    <option name="상태일" hit="IDE가 비활성화 상태일 때 주기적으로 실험적 " />
+    <option name="실험적" hit="IDE가 비활성화 상태일 때 주기적으로 실험적 " />
+    <option name="주기적으로" hit="IDE가 비활성화 상태일 때 주기적으로 실험적 " />
     <option name="ide가" hit="IDE가 유휴 상태인 경우 파일 저장" />
     <option name="경우" hit="IDE가 유휴 상태인 경우 파일 저장" />
     <option name="상태인" hit="IDE가 유휴 상태인 경우 파일 저장" />
@@ -83,6 +86,10 @@
     <option name="프로세스가" hit="실행 중인 프로세스가 있는 도구 창을 닫을 때 " />
     <option name="연결" hit="연결 해제" />
     <option name="해제" hit="연결 해제" />
+    <option name="내용" hit="외부 변경 내용 동기화 " />
+    <option name="동기화" hit="외부 변경 내용 동기화 " />
+    <option name="변경" hit="외부 변경 내용 동기화 " />
+    <option name="외부" hit="외부 변경 내용 동기화 " />
     <option name="자동" hit="자동 저장" />
     <option name="저장" hit="자동 저장" />
     <option name="백업" hit="저장하기 전에 파일 백업" />
@@ -228,30 +235,16 @@
     <option name="n" path="ActionManager" hit="CRLF - Windows(\r\n)" />
     <option name="r" path="ActionManager" hit="CRLF - Windows(\r\n)" />
     <option name="windows" path="ActionManager" hit="CRLF - Windows(\r\n)" />
-    <option name="call" path="ActionManager" hit="Call Inline Completion" />
-    <option name="completion" path="ActionManager" hit="Call Inline Completion" />
-    <option name="inline" path="ActionManager" hit="Call Inline Completion" />
-    <option name="cmd" path="ActionManager" hit="Cmd 키로 디폴트" />
-    <option name="디폴트" path="ActionManager" hit="Cmd 키로 디폴트" />
-    <option name="키로" path="ActionManager" hit="Cmd 키로 디폴트" />
+    <option name="cmd" path="ActionManager" hit="Cmd 키로 디폴트 값" />
+    <option name="값" path="ActionManager" hit="Cmd 키로 디폴트 값" />
+    <option name="디폴트" path="ActionManager" hit="Cmd 키로 디폴트 값" />
+    <option name="키로" path="ActionManager" hit="Cmd 키로 디폴트 값" />
     <option name="ddl" path="ActionManager" hit="DDL 매핑" />
     <option name="매핑" path="ActionManager" hit="DDL 매핑" />
-    <option name="default" path="ActionManager" hit="Default" />
     <option name="dock" path="ActionManager" hit="Dock" />
     <option name="docker" path="ActionManager" hit="Docker" />
     <option name="enter" path="ActionManager" hit="Enter" />
     <option name="escape" path="ActionManager" hit="Escape" />
-    <option name="a" path="ActionManager" hit="Generate a suggestion for current cursor position and show as inline" />
-    <option name="and" path="ActionManager" hit="Generate a suggestion for current cursor position and show as inline" />
-    <option name="as" path="ActionManager" hit="Generate a suggestion for current cursor position and show as inline" />
-    <option name="current" path="ActionManager" hit="Generate a suggestion for current cursor position and show as inline" />
-    <option name="cursor" path="ActionManager" hit="Generate a suggestion for current cursor position and show as inline" />
-    <option name="for" path="ActionManager" hit="Generate a suggestion for current cursor position and show as inline" />
-    <option name="generate" path="ActionManager" hit="Generate a suggestion for current cursor position and show as inline" />
-    <option name="inline" path="ActionManager" hit="Generate a suggestion for current cursor position and show as inline" />
-    <option name="position" path="ActionManager" hit="Generate a suggestion for current cursor position and show as inline" />
-    <option name="show" path="ActionManager" hit="Generate a suggestion for current cursor position and show as inline" />
-    <option name="suggestion" path="ActionManager" hit="Generate a suggestion for current cursor position and show as inline" />
     <option name="gitlab" path="ActionManager" hit="GitLab" />
     <option name="google" path="ActionManager" hit="Google 검색" />
     <option name="검색" path="ActionManager" hit="Google 검색" />
@@ -259,6 +252,7 @@
     <option name="검색합니다" path="ActionManager" hit="Google에서 선택 범위를 검색합니다" />
     <option name="범위를" path="ActionManager" hit="Google에서 선택 범위를 검색합니다" />
     <option name="선택" path="ActionManager" hit="Google에서 선택 범위를 검색합니다" />
+    <option name="helm" path="ActionManager" hit="Helm" />
     <option name="hidpi" path="ActionManager" hit="HiDPI 정보 표시" />
     <option name="정보" path="ActionManager" hit="HiDPI 정보 표시" />
     <option name="표시" path="ActionManager" hit="HiDPI 정보 표시" />
@@ -301,6 +295,12 @@
     <option name="문의합니다" path="ActionManager" hit="JetBrains 웹사이트에서 기술 지원을 문의합니다" />
     <option name="웹사이트에서" path="ActionManager" hit="JetBrains 웹사이트에서 기술 지원을 문의합니다" />
     <option name="지원을" path="ActionManager" hit="JetBrains 웹사이트에서 기술 지원을 문의합니다" />
+    <option name="jetbrains" path="ActionManager" hit="JetBrains 이슈 트래커에 버그 보고서를 제출합니다" />
+    <option name="버그" path="ActionManager" hit="JetBrains 이슈 트래커에 버그 보고서를 제출합니다" />
+    <option name="보고서를" path="ActionManager" hit="JetBrains 이슈 트래커에 버그 보고서를 제출합니다" />
+    <option name="이슈" path="ActionManager" hit="JetBrains 이슈 트래커에 버그 보고서를 제출합니다" />
+    <option name="제출합니다" path="ActionManager" hit="JetBrains 이슈 트래커에 버그 보고서를 제출합니다" />
+    <option name="트래커에" path="ActionManager" hit="JetBrains 이슈 트래커에 버그 보고서를 제출합니다" />
     <option name="jetbrains" path="ActionManager" hit="JetBrains 제품의 기능을 소개하는 짧은 라이브 데모를 시청하세요." />
     <option name="기능을" path="ActionManager" hit="JetBrains 제품의 기능을 소개하는 짧은 라이브 데모를 시청하세요." />
     <option name="데모를" path="ActionManager" hit="JetBrains 제품의 기능을 소개하는 짧은 라이브 데모를 시청하세요." />
@@ -309,6 +309,7 @@
     <option name="시청하세요" path="ActionManager" hit="JetBrains 제품의 기능을 소개하는 짧은 라이브 데모를 시청하세요." />
     <option name="제품의" path="ActionManager" hit="JetBrains 제품의 기능을 소개하는 짧은 라이브 데모를 시청하세요." />
     <option name="짧은" path="ActionManager" hit="JetBrains 제품의 기능을 소개하는 짧은 라이브 데모를 시청하세요." />
+    <option name="kubernetes" path="ActionManager" hit="Kubernetes" />
     <option name="-" path="ActionManager" hit="LF - Unix 및 macOS(\n)" />
     <option name="lf" path="ActionManager" hit="LF - Unix 및 macOS(\n)" />
     <option name="macos" path="ActionManager" hit="LF - Unix 및 macOS(\n)" />
@@ -320,41 +321,9 @@
     <option name="microsoft" path="ActionManager" hit="Microsoft Defender 알림 재설정" />
     <option name="알림" path="ActionManager" hit="Microsoft Defender 알림 재설정" />
     <option name="재설정" path="ActionManager" hit="Microsoft Defender 알림 재설정" />
-    <option name="profile" path="ActionManager" hit="Profile" />
-    <option name="font" path="ActionManager" hit="Reset Font Size" />
-    <option name="reset" path="ActionManager" hit="Reset Font Size" />
-    <option name="size" path="ActionManager" hit="Reset Font Size" />
-    <option name="1" path="ActionManager" hit="Reset inline completion onboarding (1)" />
-    <option name="completion" path="ActionManager" hit="Reset inline completion onboarding (1)" />
-    <option name="inline" path="ActionManager" hit="Reset inline completion onboarding (1)" />
-    <option name="onboarding" path="ActionManager" hit="Reset inline completion onboarding (1)" />
-    <option name="reset" path="ActionManager" hit="Reset inline completion onboarding (1)" />
-    <option name="2" path="ActionManager" hit="Reset inline completion onboarding (2)" />
-    <option name="completion" path="ActionManager" hit="Reset inline completion onboarding (2)" />
-    <option name="inline" path="ActionManager" hit="Reset inline completion onboarding (2)" />
-    <option name="onboarding" path="ActionManager" hit="Reset inline completion onboarding (2)" />
-    <option name="reset" path="ActionManager" hit="Reset inline completion onboarding (2)" />
-    <option name="4" path="ActionManager" hit="Reset inline completion onboarding (4)" />
-    <option name="completion" path="ActionManager" hit="Reset inline completion onboarding (4)" />
-    <option name="inline" path="ActionManager" hit="Reset inline completion onboarding (4)" />
-    <option name="onboarding" path="ActionManager" hit="Reset inline completion onboarding (4)" />
-    <option name="reset" path="ActionManager" hit="Reset inline completion onboarding (4)" />
-    <option name="completion" path="ActionManager" hit="Reset onboarding for inline completion" />
-    <option name="for" path="ActionManager" hit="Reset onboarding for inline completion" />
-    <option name="inline" path="ActionManager" hit="Reset onboarding for inline completion" />
-    <option name="onboarding" path="ActionManager" hit="Reset onboarding for inline completion" />
-    <option name="reset" path="ActionManager" hit="Reset onboarding for inline completion" />
-    <option name="default" path="ActionManager" hit="Reset the tool window layout to factory default" />
-    <option name="factory" path="ActionManager" hit="Reset the tool window layout to factory default" />
-    <option name="layout" path="ActionManager" hit="Reset the tool window layout to factory default" />
-    <option name="reset" path="ActionManager" hit="Reset the tool window layout to factory default" />
-    <option name="the" path="ActionManager" hit="Reset the tool window layout to factory default" />
-    <option name="to" path="ActionManager" hit="Reset the tool window layout to factory default" />
-    <option name="tool" path="ActionManager" hit="Reset the tool window layout to factory default" />
-    <option name="window" path="ActionManager" hit="Reset the tool window layout to factory default" />
+    <option name="assistant" path="ActionManager" hit="Presentation Assistant" />
+    <option name="presentation" path="ActionManager" hit="Presentation Assistant" />
     <option name="space" path="ActionManager" hit="Space" />
-    <option name="search" path="ActionManager" hit="Speed Search" />
-    <option name="speed" path="ActionManager" hit="Speed Search" />
     <option name="url" path="ActionManager" hit="URL 복사" />
     <option name="복사" path="ActionManager" hit="URL 복사" />
     <option name="vcs" path="ActionManager" hit="VCS 저장소 찾아보기" />
@@ -410,8 +379,6 @@
     <option name="감소" path="ActionManager" hit="감소 높이" />
     <option name="높이" path="ActionManager" hit="감소 높이" />
     <option name="감싸기" path="ActionManager" hit="감싸기" />
-    <option name="결과" path="ActionManager" hit="결과 툴바" />
-    <option name="툴바" path="ActionManager" hit="결과 툴바" />
     <option name="경로" path="ActionManager" hit="경로 복사" />
     <option name="복사" path="ActionManager" hit="경로 복사" />
     <option name="경로" path="ActionManager" hit="경로 입력 필드 표시/숨기기" />
@@ -572,6 +539,8 @@
     <option name="문제" path="ActionManager" hit="다음 문제 파일 선택" />
     <option name="선택" path="ActionManager" hit="다음 문제 파일 선택" />
     <option name="파일" path="ActionManager" hit="다음 문제 파일 선택" />
+    <option name="다음" path="ActionManager" hit="다음 분할" />
+    <option name="분할" path="ActionManager" hit="다음 분할" />
     <option name="다음" path="ActionManager" hit="다음 스플리터 창으로 이동합니다" />
     <option name="스플리터" path="ActionManager" hit="다음 스플리터 창으로 이동합니다" />
     <option name="이동합니다" path="ActionManager" hit="다음 스플리터 창으로 이동합니다" />
@@ -613,6 +582,10 @@
     <option name="다음" path="ActionManager" hit="다음 탭을 활성화합니다" />
     <option name="탭을" path="ActionManager" hit="다음 탭을 활성화합니다" />
     <option name="활성화합니다" path="ActionManager" hit="다음 탭을 활성화합니다" />
+    <option name="다음" path="ActionManager" hit="다음 툴바 메뉴로 이동" />
+    <option name="메뉴로" path="ActionManager" hit="다음 툴바 메뉴로 이동" />
+    <option name="이동" path="ActionManager" hit="다음 툴바 메뉴로 이동" />
+    <option name="툴바" path="ActionManager" hit="다음 툴바 메뉴로 이동" />
     <option name="다음" path="ActionManager" hit="다음 편집 위치" />
     <option name="위치" path="ActionManager" hit="다음 편집 위치" />
     <option name="편집" path="ActionManager" hit="다음 편집 위치" />
@@ -694,6 +667,12 @@
     <option name="도구" path="ActionManager" hit="도구 창 레이아웃" />
     <option name="레이아웃" path="ActionManager" hit="도구 창 레이아웃" />
     <option name="창" path="ActionManager" hit="도구 창 레이아웃" />
+    <option name="기본" path="ActionManager" hit="도구 창 레이아웃을 기본 설정으로 재설정합니다" />
+    <option name="도구" path="ActionManager" hit="도구 창 레이아웃을 기본 설정으로 재설정합니다" />
+    <option name="레이아웃을" path="ActionManager" hit="도구 창 레이아웃을 기본 설정으로 재설정합니다" />
+    <option name="설정으로" path="ActionManager" hit="도구 창 레이아웃을 기본 설정으로 재설정합니다" />
+    <option name="재설정합니다" path="ActionManager" hit="도구 창 레이아웃을 기본 설정으로 재설정합니다" />
+    <option name="창" path="ActionManager" hit="도구 창 레이아웃을 기본 설정으로 재설정합니다" />
     <option name="도구" path="ActionManager" hit="도구 창 버튼 표시/숨기기" />
     <option name="버튼" path="ActionManager" hit="도구 창 버튼 표시/숨기기" />
     <option name="숨기기" path="ActionManager" hit="도구 창 버튼 표시/숨기기" />
@@ -890,6 +869,7 @@
     <option name="디스크에서" path="ActionManager" hit="디스크에서 플러그인 설치…" />
     <option name="설치" path="ActionManager" hit="디스크에서 플러그인 설치…" />
     <option name="플러그인" path="ActionManager" hit="디스크에서 플러그인 설치…" />
+    <option name="디폴트" path="ActionManager" hit="디폴트" />
     <option name="디폴트" path="ActionManager" hit="디폴트 브라우저에서 열기" />
     <option name="브라우저에서" path="ActionManager" hit="디폴트 브라우저에서 열기" />
     <option name="열기" path="ActionManager" hit="디폴트 브라우저에서 열기" />
@@ -1059,11 +1039,6 @@
     <option name="메인" path="ActionManager" hit="메인 메뉴 표시/숨기기" />
     <option name="숨기기" path="ActionManager" hit="메인 메뉴 표시/숨기기" />
     <option name="표시" path="ActionManager" hit="메인 메뉴 표시/숨기기" />
-    <option name="메뉴를" path="ActionManager" hit="메인 메뉴를 별도의 툴바로 표시" />
-    <option name="메인" path="ActionManager" hit="메인 메뉴를 별도의 툴바로 표시" />
-    <option name="별도의" path="ActionManager" hit="메인 메뉴를 별도의 툴바로 표시" />
-    <option name="툴바로" path="ActionManager" hit="메인 메뉴를 별도의 툴바로 표시" />
-    <option name="표시" path="ActionManager" hit="메인 메뉴를 별도의 툴바로 표시" />
     <option name="메인" path="ActionManager" hit="메인 툴바에 추가" />
     <option name="추가" path="ActionManager" hit="메인 툴바에 추가" />
     <option name="툴바에" path="ActionManager" hit="메인 툴바에 추가" />
@@ -1199,6 +1174,9 @@
     <option name="창을" path="ActionManager" hit="백그라운드 작업 창을 표시하거나 숨깁니다" />
     <option name="표시하거나" path="ActionManager" hit="백그라운드 작업 창을 표시하거나 숨깁니다" />
     <option name="백스페이스" path="ActionManager" hit="백스페이스" />
+    <option name="버그" path="ActionManager" hit="버그 보고서 제출..." />
+    <option name="보고서" path="ActionManager" hit="버그 보고서 제출..." />
+    <option name="제출" path="ActionManager" hit="버그 보고서 제출..." />
     <option name="가져오기" path="ActionManager" hit="버전 관리로 가져오기" />
     <option name="관리로" path="ActionManager" hit="버전 관리로 가져오기" />
     <option name="버전" path="ActionManager" hit="버전 관리로 가져오기" />
@@ -1209,11 +1187,17 @@
     <option name="변경된" path="ActionManager" hit="변경된 파일만 전환" />
     <option name="전환" path="ActionManager" hit="변경된 파일만 전환" />
     <option name="파일만" path="ActionManager" hit="변경된 파일만 전환" />
+    <option name="메뉴" path="ActionManager" hit="별도의 툴바에 메인 메뉴 표시" />
+    <option name="메인" path="ActionManager" hit="별도의 툴바에 메인 메뉴 표시" />
+    <option name="별도의" path="ActionManager" hit="별도의 툴바에 메인 메뉴 표시" />
+    <option name="툴바에" path="ActionManager" hit="별도의 툴바에 메인 메뉴 표시" />
+    <option name="표시" path="ActionManager" hit="별도의 툴바에 메인 메뉴 표시" />
     <option name="보기" path="ActionManager" hit="보기" />
     <option name="복사" path="ActionManager" hit="복사" />
     <option name="부드러운" path="ActionManager" hit="부드러운 스크롤 옵션" />
     <option name="스크롤" path="ActionManager" hit="부드러운 스크롤 옵션" />
     <option name="옵션" path="ActionManager" hit="부드러운 스크롤 옵션" />
+    <option name="분할" path="ActionManager" hit="분할" />
     <option name="모드" path="ActionManager" hit="분할 모드" />
     <option name="분할" path="ActionManager" hit="분할 모드" />
     <option name="및" path="ActionManager" hit="분할 및 아래로 이동" />
@@ -1224,6 +1208,8 @@
     <option name="분할" path="ActionManager" hit="분할 및 오른쪽으로 이동" />
     <option name="오른쪽으로" path="ActionManager" hit="분할 및 오른쪽으로 이동" />
     <option name="이동" path="ActionManager" hit="분할 및 오른쪽으로 이동" />
+    <option name="분할" path="ActionManager" hit="분할 없이" />
+    <option name="없이" path="ActionManager" hit="분할 없이" />
     <option name="분할" path="ActionManager" hit="분할 해제" />
     <option name="해제" path="ActionManager" hit="분할 해제" />
     <option name="늘이기" path="ActionManager" hit="분할된 에디터를 상단으로 늘이기" />
@@ -1259,6 +1245,8 @@
     <option name="패널" path="ActionManager" hit="브랜치 패널 설정" />
     <option name="비활성화" path="ActionManager" hit="비활성화" />
     <option name="빌드" path="ActionManager" hit="빌드" />
+    <option name="검색" path="ActionManager" hit="빠른 검색" />
+    <option name="빠른" path="ActionManager" hit="빠른 검색" />
     <option name="구성표" path="ActionManager" hit="빠른 구성표 전환..." />
     <option name="빠른" path="ActionManager" hit="빠른 구성표 전환..." />
     <option name="전환" path="ActionManager" hit="빠른 구성표 전환..." />
@@ -1343,6 +1331,9 @@
     <option name="숨기기" path="ActionManager" hit="상태 표시줄 표시/숨기기" />
     <option name="표시" path="ActionManager" hit="상태 표시줄 표시/숨기기" />
     <option name="표시줄" path="ActionManager" hit="상태 표시줄 표시/숨기기" />
+    <option name="kubernetes" path="ActionManager" hit="새 Kubernetes 컨텍스트" />
+    <option name="새" path="ActionManager" hit="새 Kubernetes 컨텍스트" />
+    <option name="컨텍스트" path="ActionManager" hit="새 Kubernetes 컨텍스트" />
     <option name="ui" path="ActionManager" hit="새 UI 구성" />
     <option name="구성" path="ActionManager" hit="새 UI 구성" />
     <option name="새" path="ActionManager" hit="새 UI 구성" />
@@ -1632,6 +1623,14 @@
     <option name="에디터로" path="ActionManager" hit="선택 항목을 에디터로 엽니다" />
     <option name="엽니다" path="ActionManager" hit="선택 항목을 에디터로 엽니다" />
     <option name="항목을" path="ActionManager" hit="선택 항목을 에디터로 엽니다" />
+    <option name="선택기" path="ActionManager" hit="선택기 종료" />
+    <option name="종료" path="ActionManager" hit="선택기 종료" />
+    <option name="분할" path="ActionManager" hit="선택기 탐색으로 분할" />
+    <option name="선택기" path="ActionManager" hit="선택기 탐색으로 분할" />
+    <option name="탐색으로" path="ActionManager" hit="선택기 탐색으로 분할" />
+    <option name="분할에서" path="ActionManager" hit="선택기로 분할에서 열기..." />
+    <option name="선택기로" path="ActionManager" hit="선택기로 분할에서 열기..." />
+    <option name="열기" path="ActionManager" hit="선택기로 분할에서 열기..." />
     <option name="끝에" path="ActionManager" hit="선택한 줄 끝에 캐럿 추가" />
     <option name="선택한" path="ActionManager" hit="선택한 줄 끝에 캐럿 추가" />
     <option name="줄" path="ActionManager" hit="선택한 줄 끝에 캐럿 추가" />
@@ -1816,6 +1815,12 @@
     <option name="스크롤" path="ActionManager" hit="아래로 이동 및 스크롤" />
     <option name="아래로" path="ActionManager" hit="아래로 이동 및 스크롤" />
     <option name="이동" path="ActionManager" hit="아래로 이동 및 스크롤" />
+    <option name="또는" path="ActionManager" hit="아래쪽 분할 사용 또는 아래로 전환" />
+    <option name="분할" path="ActionManager" hit="아래쪽 분할 사용 또는 아래로 전환" />
+    <option name="사용" path="ActionManager" hit="아래쪽 분할 사용 또는 아래로 전환" />
+    <option name="아래로" path="ActionManager" hit="아래쪽 분할 사용 또는 아래로 전환" />
+    <option name="아래쪽" path="ActionManager" hit="아래쪽 분할 사용 또는 아래로 전환" />
+    <option name="전환" path="ActionManager" hit="아래쪽 분할 사용 또는 아래로 전환" />
     <option name="늘이기" path="ActionManager" hit="아래쪽으로 늘이기" />
     <option name="아래쪽으로" path="ActionManager" hit="아래쪽으로 늘이기" />
     <option name="동시에" path="ActionManager" hit="아랫줄에 보조 커서를 삽입하여 여러 줄의 코드를 동시에 편집합니다." />
@@ -1957,6 +1962,18 @@
     <option name="늘이기" path="ActionManager" hit="에디터를 하단으로 늘이기" />
     <option name="에디터를" path="ActionManager" hit="에디터를 하단으로 늘이기" />
     <option name="하단으로" path="ActionManager" hit="에디터를 하단으로 늘이기" />
+    <option name="거기에서" path="ActionManager" hit="에디터에서 대화식으로 분할 위치를 선택하고, 선택한 파일을 거기에서 열거나 이동할 수 있습니다" />
+    <option name="대화식으로" path="ActionManager" hit="에디터에서 대화식으로 분할 위치를 선택하고, 선택한 파일을 거기에서 열거나 이동할 수 있습니다" />
+    <option name="분할" path="ActionManager" hit="에디터에서 대화식으로 분할 위치를 선택하고, 선택한 파일을 거기에서 열거나 이동할 수 있습니다" />
+    <option name="선택하고" path="ActionManager" hit="에디터에서 대화식으로 분할 위치를 선택하고, 선택한 파일을 거기에서 열거나 이동할 수 있습니다" />
+    <option name="선택한" path="ActionManager" hit="에디터에서 대화식으로 분할 위치를 선택하고, 선택한 파일을 거기에서 열거나 이동할 수 있습니다" />
+    <option name="수" path="ActionManager" hit="에디터에서 대화식으로 분할 위치를 선택하고, 선택한 파일을 거기에서 열거나 이동할 수 있습니다" />
+    <option name="에디터에서" path="ActionManager" hit="에디터에서 대화식으로 분할 위치를 선택하고, 선택한 파일을 거기에서 열거나 이동할 수 있습니다" />
+    <option name="열거나" path="ActionManager" hit="에디터에서 대화식으로 분할 위치를 선택하고, 선택한 파일을 거기에서 열거나 이동할 수 있습니다" />
+    <option name="위치를" path="ActionManager" hit="에디터에서 대화식으로 분할 위치를 선택하고, 선택한 파일을 거기에서 열거나 이동할 수 있습니다" />
+    <option name="이동할" path="ActionManager" hit="에디터에서 대화식으로 분할 위치를 선택하고, 선택한 파일을 거기에서 열거나 이동할 수 있습니다" />
+    <option name="있습니다" path="ActionManager" hit="에디터에서 대화식으로 분할 위치를 선택하고, 선택한 파일을 거기에서 열거나 이동할 수 있습니다" />
+    <option name="파일을" path="ActionManager" hit="에디터에서 대화식으로 분할 위치를 선택하고, 선택한 파일을 거기에서 열거나 이동할 수 있습니다" />
     <option name="로컬" path="ActionManager" hit="에디터에서 로컬 파일을 엽니다" />
     <option name="에디터에서" path="ActionManager" hit="에디터에서 로컬 파일을 엽니다" />
     <option name="엽니다" path="ActionManager" hit="에디터에서 로컬 파일을 엽니다" />
@@ -2015,6 +2032,12 @@
     <option name="열려" path="ActionManager" hit="열려 있는 파일 선택" />
     <option name="있는" path="ActionManager" hit="열려 있는 파일 선택" />
     <option name="파일" path="ActionManager" hit="열려 있는 파일 선택" />
+    <option name="또는" path="ActionManager" hit="오른쪽 분할 사용 또는 오른쪽으로 전환" />
+    <option name="분할" path="ActionManager" hit="오른쪽 분할 사용 또는 오른쪽으로 전환" />
+    <option name="사용" path="ActionManager" hit="오른쪽 분할 사용 또는 오른쪽으로 전환" />
+    <option name="오른쪽" path="ActionManager" hit="오른쪽 분할 사용 또는 오른쪽으로 전환" />
+    <option name="오른쪽으로" path="ActionManager" hit="오른쪽 분할 사용 또는 오른쪽으로 전환" />
+    <option name="전환" path="ActionManager" hit="오른쪽 분할 사용 또는 오른쪽으로 전환" />
     <option name="분할에서" path="ActionManager" hit="오른쪽 분할에서 열기" />
     <option name="열기" path="ActionManager" hit="오른쪽 분할에서 열기" />
     <option name="오른쪽" path="ActionManager" hit="오른쪽 분할에서 열기" />
@@ -2059,6 +2082,12 @@
     <option name="탐지하고" path="ActionManager" hit="외부에서 변경된 모든 파일을 탐지하고 디스크에서 다시 로드합니다" />
     <option name="파일을" path="ActionManager" hit="외부에서 변경된 모든 파일을 탐지하고 디스크에서 다시 로드합니다" />
     <option name="왼쪽" path="ActionManager" hit="왼쪽" />
+    <option name="또는" path="ActionManager" hit="왼쪽 분할 사용 또는 왼쪽으로 전환" />
+    <option name="분할" path="ActionManager" hit="왼쪽 분할 사용 또는 왼쪽으로 전환" />
+    <option name="사용" path="ActionManager" hit="왼쪽 분할 사용 또는 왼쪽으로 전환" />
+    <option name="왼쪽" path="ActionManager" hit="왼쪽 분할 사용 또는 왼쪽으로 전환" />
+    <option name="왼쪽으로" path="ActionManager" hit="왼쪽 분할 사용 또는 왼쪽으로 전환" />
+    <option name="전환" path="ActionManager" hit="왼쪽 분할 사용 또는 왼쪽으로 전환" />
     <option name="닫기" path="ActionManager" hit="왼쪽 탭 닫기" />
     <option name="왼쪽" path="ActionManager" hit="왼쪽 탭 닫기" />
     <option name="탭" path="ActionManager" hit="왼쪽 탭 닫기" />
@@ -2076,6 +2105,10 @@
     <option name="왼쪽으로" path="ActionManager" hit="왼쪽으로 스크롤" />
     <option name="왼쪽으로" path="ActionManager" hit="왼쪽으로 이동" />
     <option name="이동" path="ActionManager" hit="왼쪽으로 이동" />
+    <option name="로그에서" path="ActionManager" hit="운영 로그에서 캐시 복원" />
+    <option name="복원" path="ActionManager" hit="운영 로그에서 캐시 복원" />
+    <option name="운영" path="ActionManager" hit="운영 로그에서 캐시 복원" />
+    <option name="캐시" path="ActionManager" hit="운영 로그에서 캐시 복원" />
     <option name="위로" path="ActionManager" hit="위로" />
     <option name="스크롤" path="ActionManager" hit="위로 스크롤" />
     <option name="위로" path="ActionManager" hit="위로 스크롤" />
@@ -2088,6 +2121,12 @@
     <option name="스크롤" path="ActionManager" hit="위로 이동 및 스크롤" />
     <option name="위로" path="ActionManager" hit="위로 이동 및 스크롤" />
     <option name="이동" path="ActionManager" hit="위로 이동 및 스크롤" />
+    <option name="또는" path="ActionManager" hit="위쪽 분할 사용 또는 위로 전환" />
+    <option name="분할" path="ActionManager" hit="위쪽 분할 사용 또는 위로 전환" />
+    <option name="사용" path="ActionManager" hit="위쪽 분할 사용 또는 위로 전환" />
+    <option name="위로" path="ActionManager" hit="위쪽 분할 사용 또는 위로 전환" />
+    <option name="위쪽" path="ActionManager" hit="위쪽 분할 사용 또는 위로 전환" />
+    <option name="전환" path="ActionManager" hit="위쪽 분할 사용 또는 위로 전환" />
     <option name="늘이기" path="ActionManager" hit="위쪽으로 늘이기" />
     <option name="위쪽으로" path="ActionManager" hit="위쪽으로 늘이기" />
     <option name="동시에" path="ActionManager" hit="윗줄에 보조 커서를 삽입하여 여러 줄의 코드를 동시에 편집합니다." />
@@ -2153,6 +2192,8 @@
     <option name="선택" path="ActionManager" hit="이전 문제 파일 선택" />
     <option name="이전" path="ActionManager" hit="이전 문제 파일 선택" />
     <option name="파일" path="ActionManager" hit="이전 문제 파일 선택" />
+    <option name="분할" path="ActionManager" hit="이전 분할" />
+    <option name="이전" path="ActionManager" hit="이전 분할" />
     <option name="스플리터" path="ActionManager" hit="이전 스플리터 창으로 이동합니다" />
     <option name="이동합니다" path="ActionManager" hit="이전 스플리터 창으로 이동합니다" />
     <option name="이전" path="ActionManager" hit="이전 스플리터 창으로 이동합니다" />
@@ -2184,6 +2225,10 @@
     <option name="이전" path="ActionManager" hit="이전 탭을 활성화합니다" />
     <option name="탭을" path="ActionManager" hit="이전 탭을 활성화합니다" />
     <option name="활성화합니다" path="ActionManager" hit="이전 탭을 활성화합니다" />
+    <option name="메뉴로" path="ActionManager" hit="이전 툴바 메뉴로 이동" />
+    <option name="이동" path="ActionManager" hit="이전 툴바 메뉴로 이동" />
+    <option name="이전" path="ActionManager" hit="이전 툴바 메뉴로 이동" />
+    <option name="툴바" path="ActionManager" hit="이전 툴바 메뉴로 이동" />
     <option name="선택" path="ActionManager" hit="이전 행 선택" />
     <option name="이전" path="ActionManager" hit="이전 행 선택" />
     <option name="행" path="ActionManager" hit="이전 행 선택" />
@@ -2211,6 +2256,11 @@
     <option name="숨깁니다" path="ActionManager" hit="이쪽의 모든 창을 숨깁니다" />
     <option name="이쪽의" path="ActionManager" hit="이쪽의 모든 창을 숨깁니다" />
     <option name="창을" path="ActionManager" hit="이쪽의 모든 창을 숨깁니다" />
+    <option name="완성" path="ActionManager" hit="인라인 완성" />
+    <option name="인라인" path="ActionManager" hit="인라인 완성" />
+    <option name="완성" path="ActionManager" hit="인라인 완성 호출" />
+    <option name="인라인" path="ActionManager" hit="인라인 완성 호출" />
+    <option name="호출" path="ActionManager" hit="인라인 완성 호출" />
     <option name="삽입" path="ActionManager" hit="인라인 제안 삽입" />
     <option name="인라인" path="ActionManager" hit="인라인 제안 삽입" />
     <option name="제안" path="ActionManager" hit="인라인 제안 삽입" />
@@ -2346,6 +2396,7 @@
     <option name="열로" path="ActionManager" hit="줄:열로 이동..." />
     <option name="이동" path="ActionManager" hit="줄:열로 이동..." />
     <option name="줄" path="ActionManager" hit="줄:열로 이동..." />
+    <option name="중복" path="ActionManager" hit="중복" />
     <option name="너비" path="ActionManager" hit="증분 너비" />
     <option name="증분" path="ActionManager" hit="증분 너비" />
     <option name="높이" path="ActionManager" hit="증분 높이" />
@@ -2521,10 +2572,6 @@
     <option name="제거하는" path="ActionManager" hit="캐럿 앞에 있는 모든 공백 기호(있는 경우)를 제거하는 것을 외에는 백스페이스키의 역할을 합니다" />
     <option name="캐럿" path="ActionManager" hit="캐럿 앞에 있는 모든 공백 기호(있는 경우)를 제거하는 것을 외에는 백스페이스키의 역할을 합니다" />
     <option name="합니다" path="ActionManager" hit="캐럿 앞에 있는 모든 공백 기호(있는 경우)를 제거하는 것을 외에는 백스페이스키의 역할을 합니다" />
-    <option name="또는" path="ActionManager" hit="캐럿 추가 또는 제거" />
-    <option name="제거" path="ActionManager" hit="캐럿 추가 또는 제거" />
-    <option name="추가" path="ActionManager" hit="캐럿 추가 또는 제거" />
-    <option name="캐럿" path="ActionManager" hit="캐럿 추가 또는 제거" />
     <option name="다음" path="ActionManager" hit="캐럿을 다음 단어로 이동" />
     <option name="단어로" path="ActionManager" hit="캐럿을 다음 단어로 이동" />
     <option name="이동" path="ActionManager" hit="캐럿을 다음 단어로 이동" />
@@ -2614,6 +2661,8 @@
     <option name="ui로" path="ActionManager" hit="클래식 UI로 전환합니다" />
     <option name="전환합니다" path="ActionManager" hit="클래식 UI로 전환합니다" />
     <option name="클래식" path="ActionManager" hit="클래식 UI로 전환합니다" />
+    <option name="상호작용" path="ActionManager" hit="클러스터와 상호작용" />
+    <option name="클러스터와" path="ActionManager" hit="클러스터와 상호작용" />
     <option name="잘라내기" path="ActionManager" hit="클립보드로 잘라내기" />
     <option name="클립보드로" path="ActionManager" hit="클립보드로 잘라내기" />
     <option name="복사" path="ActionManager" hit="클립보드에 복사" />
@@ -2936,8 +2985,6 @@
     <option name="표시합니다" path="ActionManager" hit="플랫폼의 파일 관리자에서 파일을 강조 표시합니다" />
     <option name="플랫폼의" path="ActionManager" hit="플랫폼의 파일 관리자에서 파일을 강조 표시합니다" />
     <option name="플러그인" path="ActionManager" hit="플러그인" />
-    <option name="devkit" path="ActionManager" hit="플러그인 DevKit" />
-    <option name="플러그인" path="ActionManager" hit="플러그인 DevKit" />
     <option name="분석" path="ActionManager" hit="플러그인 시작 성능 분석" />
     <option name="성능" path="ActionManager" hit="플러그인 시작 성능 분석" />
     <option name="시작" path="ActionManager" hit="플러그인 시작 성능 분석" />
@@ -2961,6 +3008,9 @@
     <option name="화면에" path="ActionManager" hit="한 줄 탭 레이아웃에서 화면에 맞지 않는 탭 목록을 드롭다운으로 표시합니다" />
     <option name="백스페이스" path="ActionManager" hit="헝그리 백스페이스" />
     <option name="헝그리" path="ActionManager" hit="헝그리 백스페이스" />
+    <option name="레이아웃" path="ActionManager" hit="현재 레이아웃 복원" />
+    <option name="복원" path="ActionManager" hit="현재 레이아웃 복원" />
+    <option name="현재" path="ActionManager" hit="현재 레이아웃 복원" />
     <option name="레아이웃으로" path="ActionManager" hit="현재 레이아웃을 새 레아이웃으로 저장..." />
     <option name="레이아웃을" path="ActionManager" hit="현재 레이아웃을 새 레아이웃으로 저장..." />
     <option name="새" path="ActionManager" hit="현재 레이아웃을 새 레아이웃으로 저장..." />
@@ -2971,6 +3021,16 @@
     <option name="이름으로" path="ActionManager" hit="현재 레이아웃을 새 이름으로 저장" />
     <option name="저장" path="ActionManager" hit="현재 레이아웃을 새 이름으로 저장" />
     <option name="현재" path="ActionManager" hit="현재 레이아웃을 새 이름으로 저장" />
+    <option name="레이아웃을" path="ActionManager" hit="현재 선택된 레이아웃을 복원합니다" />
+    <option name="복원합니다" path="ActionManager" hit="현재 선택된 레이아웃을 복원합니다" />
+    <option name="선택된" path="ActionManager" hit="현재 선택된 레이아웃을 복원합니다" />
+    <option name="현재" path="ActionManager" hit="현재 선택된 레이아웃을 복원합니다" />
+    <option name="레이아웃의" path="ActionManager" hit="현재 선택된 레이아웃의 변경 사항을 저장합니다" />
+    <option name="변경" path="ActionManager" hit="현재 선택된 레이아웃의 변경 사항을 저장합니다" />
+    <option name="사항을" path="ActionManager" hit="현재 선택된 레이아웃의 변경 사항을 저장합니다" />
+    <option name="선택된" path="ActionManager" hit="현재 선택된 레이아웃의 변경 사항을 저장합니다" />
+    <option name="저장합니다" path="ActionManager" hit="현재 선택된 레이아웃의 변경 사항을 저장합니다" />
+    <option name="현재" path="ActionManager" hit="현재 선택된 레이아웃의 변경 사항을 저장합니다" />
     <option name="구성표" path="ActionManager" hit="현재 에디터 색 구성표 변경" />
     <option name="변경" path="ActionManager" hit="현재 에디터 색 구성표 변경" />
     <option name="색" path="ActionManager" hit="현재 에디터 색 구성표 변경" />
@@ -3045,6 +3105,14 @@
     <option name="초점을" path="ActionManager" hit="현재 초점을 맞춘 콘텐츠를 닫습니다" />
     <option name="콘텐츠를" path="ActionManager" hit="현재 초점을 맞춘 콘텐츠를 닫습니다" />
     <option name="현재" path="ActionManager" hit="현재 초점을 맞춘 콘텐츠를 닫습니다" />
+    <option name="맞는" path="ActionManager" hit="현재 커서 위치에 맞는 제안을 생성하고 인라인으로 표시합니다" />
+    <option name="생성하고" path="ActionManager" hit="현재 커서 위치에 맞는 제안을 생성하고 인라인으로 표시합니다" />
+    <option name="위치에" path="ActionManager" hit="현재 커서 위치에 맞는 제안을 생성하고 인라인으로 표시합니다" />
+    <option name="인라인으로" path="ActionManager" hit="현재 커서 위치에 맞는 제안을 생성하고 인라인으로 표시합니다" />
+    <option name="제안을" path="ActionManager" hit="현재 커서 위치에 맞는 제안을 생성하고 인라인으로 표시합니다" />
+    <option name="커서" path="ActionManager" hit="현재 커서 위치에 맞는 제안을 생성하고 인라인으로 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="현재 커서 위치에 맞는 제안을 생성하고 인라인으로 표시합니다" />
+    <option name="현재" path="ActionManager" hit="현재 커서 위치에 맞는 제안을 생성하고 인라인으로 표시합니다" />
     <option name="구성표" path="ActionManager" hit="현재 코드 스타일 구성표, 색상 및 글꼴 구성표, 키맵 또는 룩앤필 변경합니다" />
     <option name="글꼴" path="ActionManager" hit="현재 코드 스타일 구성표, 색상 및 글꼴 구성표, 키맵 또는 룩앤필 변경합니다" />
     <option name="또는" path="ActionManager" hit="현재 코드 스타일 구성표, 색상 및 글꼴 구성표, 키맵 또는 룩앤필 변경합니다" />
@@ -3062,15 +3130,6 @@
     <option name="변경합니다" path="ActionManager" hit="현재 테마를 변경합니다" />
     <option name="테마를" path="ActionManager" hit="현재 테마를 변경합니다" />
     <option name="현재" path="ActionManager" hit="현재 테마를 변경합니다" />
-    <option name="동시에" path="ActionManager" hit="현재 파일에서 여러 커서를 설정하여 여러 줄의 코드를 동시에 편집합니다." />
-    <option name="설정하여" path="ActionManager" hit="현재 파일에서 여러 커서를 설정하여 여러 줄의 코드를 동시에 편집합니다." />
-    <option name="여러" path="ActionManager" hit="현재 파일에서 여러 커서를 설정하여 여러 줄의 코드를 동시에 편집합니다." />
-    <option name="줄의" path="ActionManager" hit="현재 파일에서 여러 커서를 설정하여 여러 줄의 코드를 동시에 편집합니다." />
-    <option name="커서를" path="ActionManager" hit="현재 파일에서 여러 커서를 설정하여 여러 줄의 코드를 동시에 편집합니다." />
-    <option name="코드를" path="ActionManager" hit="현재 파일에서 여러 커서를 설정하여 여러 줄의 코드를 동시에 편집합니다." />
-    <option name="파일에서" path="ActionManager" hit="현재 파일에서 여러 커서를 설정하여 여러 줄의 코드를 동시에 편집합니다." />
-    <option name="편집합니다" path="ActionManager" hit="현재 파일에서 여러 커서를 설정하여 여러 줄의 코드를 동시에 편집합니다." />
-    <option name="현재" path="ActionManager" hit="현재 파일에서 여러 커서를 설정하여 여러 줄의 코드를 동시에 편집합니다." />
     <option name="속성" path="ActionManager" hit="현재 파일의 읽기 전용 속성 전환" />
     <option name="읽기" path="ActionManager" hit="현재 파일의 읽기 전용 속성 전환" />
     <option name="전용" path="ActionManager" hit="현재 파일의 읽기 전용 속성 전환" />
@@ -3284,37 +3343,6 @@
     <option name="플러그인" hit="플러그인 저장소 관리…" />
   </configurable>
   <configurable id="consents" configurable_name="데이터 공유">
-    <option name="" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="accordance" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="account" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="address" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="any" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="at" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="by" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="can" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="consent" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="email" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="for" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="i" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="in" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="jetbrains" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="my" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="o" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="policy" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="privacy" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="process" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="purpose" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="r" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="s" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="settings" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="subscribing" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="the" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="this" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="time" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="understand" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="will" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="with" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
-    <option name="withdraw" hit=" By subscribing  I understand JetBrains s r o  will process my email address for this purpose in accordance with the Privacy Policy  I can withdraw my consent at any time in privacy settings in the JetBrains account " />
     <option name="" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
     <option name="about" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
     <option name="and" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
@@ -3366,22 +3394,21 @@
     <option name="used" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
     <option name="will" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
     <option name="with" hit=" Help JetBrains improve its products by sending anonymous data about features and plugins used  hardware and software configuration  statistics on types of files  number of files per project  etc  Please note that this will not include personal data or any sensitive information  such as source code  file names  etc  The data sent complies with the JetBrains Privacy Policy " />
-    <option name="eap" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="send" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="statistics" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="usage" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="버전" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="사용" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="시" hit="EAP 버전 사용 시 Send usage statistics" />
-    <option name="and" hit="Send me eap related feedback requests and surveys" />
-    <option name="eap-related" hit="Send me eap related feedback requests and surveys" />
-    <option name="feedback" hit="Send me eap related feedback requests and surveys" />
-    <option name="me" hit="Send me eap related feedback requests and surveys" />
-    <option name="requests" hit="Send me eap related feedback requests and surveys" />
-    <option name="send" hit="Send me eap related feedback requests and surveys" />
-    <option name="surveys" hit="Send me eap related feedback requests and surveys" />
+    <option name="send" hit="Send usage statistics" />
+    <option name="statistics" hit="Send usage statistics" />
+    <option name="usage" hit="Send usage statistics" />
     <option name="공유" hit="데이터 공유" />
     <option name="데이터" hit="데이터 공유" />
+    <option name="jetbrains" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="공유" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="데이터" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="모든" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="설정은" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="설치되어" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="있는" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="적용됩니다" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="제품에" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
+    <option name="환경" hit="데이터 공유 환경 설정은 설치되어 있는 모든 JetBrains 제품에 적용됩니다 " />
   </configurable>
   <configurable id="ide.date.format" configurable_name="날짜 형식">
     <option name="24시간" hit="  시간 사용" />
@@ -3419,9 +3446,9 @@
     <option name="자동으로" hit="신뢰할 수 없는 인증서 자동으로 수락 A " />
   </configurable>
   <configurable id="preferences.updates" configurable_name="업데이트">
-    <option name="ide" hit="IDE 업데이트 확인" />
-    <option name="업데이트" hit="IDE 업데이트 확인" />
-    <option name="확인" hit="IDE 업데이트 확인" />
+    <option name="ide" hit="IDE 업데이트 확인 " />
+    <option name="업데이트" hit="IDE 업데이트 확인 " />
+    <option name="확인" hit="IDE 업데이트 확인 " />
     <option name="ide" hit="IDE 업데이트 후 에디터에서 새로운 기능 표시" />
     <option name="기능" hit="IDE 업데이트 후 에디터에서 새로운 기능 표시" />
     <option name="새로운" hit="IDE 업데이트 후 에디터에서 새로운 기능 표시" />
@@ -3429,6 +3456,11 @@
     <option name="에디터에서" hit="IDE 업데이트 후 에디터에서 새로운 기능 표시" />
     <option name="표시" hit="IDE 업데이트 후 에디터에서 새로운 기능 표시" />
     <option name="후" hit="IDE 업데이트 후 에디터에서 새로운 기능 표시" />
+    <option name="릴리스" hit="안정화된 릴리스" />
+    <option name="안정화된" hit="안정화된 릴리스" />
+    <option name="액세스" hit="얼리 액세스 프로그램" />
+    <option name="얼리" hit="얼리 액세스 프로그램" />
+    <option name="프로그램" hit="얼리 액세스 프로그램" />
     <option name="업데이트" hit="업데이트" />
     <option name="c" hit="업데이트 확인 C  " />
     <option name="업데이트" hit="업데이트 확인 C  " />
@@ -3436,13 +3468,13 @@
     <option name="업데이트" hit="플러그인 업데이트 확인" />
     <option name="플러그인" hit="플러그인 업데이트 확인" />
     <option name="확인" hit="플러그인 업데이트 확인" />
-    <option name="2023" hit="현재 버전  IntelliJ IDEA        EAP" />
-    <option name="3" hit="현재 버전  IntelliJ IDEA        EAP" />
-    <option name="eap" hit="현재 버전  IntelliJ IDEA        EAP" />
-    <option name="idea" hit="현재 버전  IntelliJ IDEA        EAP" />
-    <option name="intellij" hit="현재 버전  IntelliJ IDEA        EAP" />
-    <option name="버전" hit="현재 버전  IntelliJ IDEA        EAP" />
-    <option name="현재" hit="현재 버전  IntelliJ IDEA        EAP" />
+    <option name="2023" hit="현재 버전  IntelliJ IDEA         " />
+    <option name="3" hit="현재 버전  IntelliJ IDEA         " />
+    <option name="5" hit="현재 버전  IntelliJ IDEA         " />
+    <option name="idea" hit="현재 버전  IntelliJ IDEA         " />
+    <option name="intellij" hit="현재 버전  IntelliJ IDEA         " />
+    <option name="버전" hit="현재 버전  IntelliJ IDEA         " />
+    <option name="현재" hit="현재 버전  IntelliJ IDEA         " />
   </configurable>
   <configurable id="editor.preferences.fonts.default" configurable_name="글꼴">
     <option name="" hit="  색 구성표에서 정의" />
@@ -3559,71 +3591,7 @@
     <option name="표시하기" hit="Code Vision  인레이 힌트를 표시하기 위해 필요한 최소 사용 위치 " />
     <option name="필요한" hit="Code Vision  인레이 힌트를 표시하기 위해 필요한 최소 사용 위치 " />
     <option name="힌트를" hit="Code Vision  인레이 힌트를 표시하기 위해 필요한 최소 사용 위치 " />
-    <option name="containers" hit="Dev Containers" />
-    <option name="dev" hit="Dev Containers" />
     <option name="docker" hit="Docker" />
-    <option name="a" hit="Enable completion for static methods  which uses qualifier as a first argument" />
-    <option name="argument" hit="Enable completion for static methods  which uses qualifier as a first argument" />
-    <option name="as" hit="Enable completion for static methods  which uses qualifier as a first argument" />
-    <option name="completion" hit="Enable completion for static methods  which uses qualifier as a first argument" />
-    <option name="enable" hit="Enable completion for static methods  which uses qualifier as a first argument" />
-    <option name="first" hit="Enable completion for static methods  which uses qualifier as a first argument" />
-    <option name="for" hit="Enable completion for static methods  which uses qualifier as a first argument" />
-    <option name="methods" hit="Enable completion for static methods  which uses qualifier as a first argument" />
-    <option name="qualifier" hit="Enable completion for static methods  which uses qualifier as a first argument" />
-    <option name="static" hit="Enable completion for static methods  which uses qualifier as a first argument" />
-    <option name="uses" hit="Enable completion for static methods  which uses qualifier as a first argument" />
-    <option name="which" hit="Enable completion for static methods  which uses qualifier as a first argument" />
-    <option name="containers" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
-    <option name="creating" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
-    <option name="dev" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
-    <option name="development" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
-    <option name="enable" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
-    <option name="from" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
-    <option name="gateway" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
-    <option name="remote" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
-    <option name="screen" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
-    <option name="the" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
-    <option name="welcome" hit="Enable creating Dev Containers from the Gateway  Remote Development  welcome screen" />
-    <option name="actions" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="available" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="enable" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="everywhere" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="experimental" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="fixing" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="in" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="only" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="search" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="tab" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="typo" hit="Enable experimental typo fixing in Search Everywhere  available only in Actions tab " />
-    <option name="actions" hit="Enable semantic search in the Actions tab" />
-    <option name="enable" hit="Enable semantic search in the Actions tab" />
-    <option name="in" hit="Enable semantic search in the Actions tab" />
-    <option name="search" hit="Enable semantic search in the Actions tab" />
-    <option name="semantic" hit="Enable semantic search in the Actions tab" />
-    <option name="tab" hit="Enable semantic search in the Actions tab" />
-    <option name="the" hit="Enable semantic search in the Actions tab" />
-    <option name="classes" hit="Enable semantic search in the Classes tab" />
-    <option name="enable" hit="Enable semantic search in the Classes tab" />
-    <option name="in" hit="Enable semantic search in the Classes tab" />
-    <option name="search" hit="Enable semantic search in the Classes tab" />
-    <option name="semantic" hit="Enable semantic search in the Classes tab" />
-    <option name="tab" hit="Enable semantic search in the Classes tab" />
-    <option name="the" hit="Enable semantic search in the Classes tab" />
-    <option name="enable" hit="Enable semantic search in the Files tab" />
-    <option name="files" hit="Enable semantic search in the Files tab" />
-    <option name="in" hit="Enable semantic search in the Files tab" />
-    <option name="search" hit="Enable semantic search in the Files tab" />
-    <option name="semantic" hit="Enable semantic search in the Files tab" />
-    <option name="tab" hit="Enable semantic search in the Files tab" />
-    <option name="the" hit="Enable semantic search in the Files tab" />
-    <option name="enable" hit="Enable semantic search in the Symbols tab" />
-    <option name="in" hit="Enable semantic search in the Symbols tab" />
-    <option name="search" hit="Enable semantic search in the Symbols tab" />
-    <option name="semantic" hit="Enable semantic search in the Symbols tab" />
-    <option name="symbols" hit="Enable semantic search in the Symbols tab" />
-    <option name="tab" hit="Enable semantic search in the Symbols tab" />
-    <option name="the" hit="Enable semantic search in the Symbols tab" />
     <option name="enter" hit="Enter 키 입력 시 에디터로 초점 이동" />
     <option name="시" hit="Enter 키 입력 시 에디터로 초점 이동" />
     <option name="에디터로" hit="Enter 키 입력 시 에디터로 초점 이동" />
@@ -3654,6 +3622,8 @@
     <option name="헤더에" hit="IDE 프레임 헤더에 파일 타입 아이콘 표시" />
     <option name="java" hit="Java" />
     <option name="kotlin" hit="Kotlin" />
+    <option name="kubernetes" hit="Kubernetes" />
+    <option name="mb" hit="MB" />
     <option name="markdown" hit="Markdown" />
     <option name="openssh" hit="OpenSSH" />
     <option name="openssh" hit="OpenSSH 도구에 대한 사용자 지정 경로 " />
@@ -3673,14 +3643,26 @@
     <option name="옵션을" hit="SELinux 시스템에서 거의 모든 바인드 볼륨에  z mount 옵션을 적용합니다 " />
     <option name="적용합니다" hit="SELinux 시스템에서 거의 모든 바인드 볼륨에  z mount 옵션을 적용합니다 " />
     <option name="ssh" hit="SSH" />
-    <option name="everywhere" hit="Search Everywhere" />
-    <option name="search" hit="Search Everywhere" />
-    <option name="cursor" hit="Show inlay Run to Cursor popup " />
-    <option name="inlay" hit="Show inlay Run to Cursor popup " />
-    <option name="popup" hit="Show inlay Run to Cursor popup " />
-    <option name="run" hit="Show inlay Run to Cursor popup " />
-    <option name="show" hit="Show inlay Run to Cursor popup " />
-    <option name="to" hit="Show inlay Run to Cursor popup " />
+    <option name="actions" hit="Sort results in the Actions tab based on machine learning" />
+    <option name="based" hit="Sort results in the Actions tab based on machine learning" />
+    <option name="in" hit="Sort results in the Actions tab based on machine learning" />
+    <option name="learning" hit="Sort results in the Actions tab based on machine learning" />
+    <option name="machine" hit="Sort results in the Actions tab based on machine learning" />
+    <option name="on" hit="Sort results in the Actions tab based on machine learning" />
+    <option name="results" hit="Sort results in the Actions tab based on machine learning" />
+    <option name="sort" hit="Sort results in the Actions tab based on machine learning" />
+    <option name="tab" hit="Sort results in the Actions tab based on machine learning" />
+    <option name="the" hit="Sort results in the Actions tab based on machine learning" />
+    <option name="based" hit="Sort results in the Files tab based on machine learning" />
+    <option name="files" hit="Sort results in the Files tab based on machine learning" />
+    <option name="in" hit="Sort results in the Files tab based on machine learning" />
+    <option name="learning" hit="Sort results in the Files tab based on machine learning" />
+    <option name="machine" hit="Sort results in the Files tab based on machine learning" />
+    <option name="on" hit="Sort results in the Files tab based on machine learning" />
+    <option name="results" hit="Sort results in the Files tab based on machine learning" />
+    <option name="sort" hit="Sort results in the Files tab based on machine learning" />
+    <option name="tab" hit="Sort results in the Files tab based on machine learning" />
+    <option name="the" hit="Sort results in the Files tab based on machine learning" />
     <option name="textconv" hit="TextConv" />
     <option name="macos" hit="macOS 키보드 단축키로 심볼 대신 단어 사용" />
     <option name="단어" hit="macOS 키보드 단축키로 심볼 대신 단어 사용" />
@@ -3733,6 +3715,10 @@
     <option name="시간" hit="기여자 대기 시간 초과 밀리초  " />
     <option name="초과" hit="기여자 대기 시간 초과 밀리초  " />
     <option name="기존" hit="기존" />
+    <option name="기존의" hit="기존의 임포트 대화상자 사용" />
+    <option name="대화상자" hit="기존의 임포트 대화상자 사용" />
+    <option name="사용" hit="기존의 임포트 대화상자 사용" />
+    <option name="임포트" hit="기존의 임포트 대화상자 사용" />
     <option name="긴" hit="긴 화살표" />
     <option name="화살표" hit="긴 화살표" />
     <option name="낮은" hit="낮은 우선순위로 컴파일 실행" />
@@ -3776,6 +3762,7 @@
     <option name="배치" hit="대화상자 내 디폴트 버튼에 마우스 커서 배치" />
     <option name="버튼에" hit="대화상자 내 디폴트 버튼에 마우스 커서 배치" />
     <option name="커서" hit="대화상자 내 디폴트 버튼에 마우스 커서 배치" />
+    <option name="데이터베이스" hit="데이터베이스" />
     <option name="도구" hit="도구 창" />
     <option name="창" hit="도구 창" />
     <option name="동일한" hit="동일한 탭에서 선언 소스 열기" />
@@ -3792,6 +3779,17 @@
     <option name="탭은" hit="로그 탭은 docker 컨테이너의 첫 번째 탭이어야 합니다 " />
     <option name="탭이어야" hit="로그 탭은 docker 컨테이너의 첫 번째 탭이어야 합니다 " />
     <option name="합니다" hit="로그 탭은 docker 컨테이너의 첫 번째 탭이어야 합니다 " />
+    <option name="crd" hit="로드할 CRD YAML 파일의 최대 크기 " />
+    <option name="yaml" hit="로드할 CRD YAML 파일의 최대 크기 " />
+    <option name="로드할" hit="로드할 CRD YAML 파일의 최대 크기 " />
+    <option name="최대" hit="로드할 CRD YAML 파일의 최대 크기 " />
+    <option name="크기" hit="로드할 CRD YAML 파일의 최대 크기 " />
+    <option name="파일의" hit="로드할 CRD YAML 파일의 최대 크기 " />
+    <option name="kubeconfig" hit="로드할 kubeconfig 파일의 최대 크기 " />
+    <option name="로드할" hit="로드할 kubeconfig 파일의 최대 크기 " />
+    <option name="최대" hit="로드할 kubeconfig 파일의 최대 크기 " />
+    <option name="크기" hit="로드할 kubeconfig 파일의 최대 크기 " />
+    <option name="파일의" hit="로드할 kubeconfig 파일의 최대 크기 " />
     <option name="기간" hit="로컬 기록 내 변경 내용 저장 기간 " />
     <option name="기록" hit="로컬 기록 내 변경 내용 저장 기간 " />
     <option name="내" hit="로컬 기록 내 변경 내용 저장 기간 " />
@@ -3849,6 +3847,9 @@
     <option name="심볼" hit="브랜치 이름 정리 심볼 " />
     <option name="이름" hit="브랜치 이름 정리 심볼 " />
     <option name="정리" hit="브랜치 이름 정리 심볼 " />
+    <option name="gradle" hit="빌드 도구  Gradle" />
+    <option name="도구" hit="빌드 도구  Gradle" />
+    <option name="빌드" hit="빌드 도구  Gradle" />
     <option name="뷰에서" hit="사용 위치 찾기 뷰에서 유사한 사용 위치 클러스터링 활성화" />
     <option name="사용" hit="사용 위치 찾기 뷰에서 유사한 사용 위치 클러스터링 활성화" />
     <option name="위치" hit="사용 위치 찾기 뷰에서 유사한 사용 위치 클러스터링 활성화" />
@@ -3904,6 +3905,8 @@
     <option name="임계값" hit="선행 입력 시간 지연 임계값 " />
     <option name="입력" hit="선행 입력 시간 지연 임계값 " />
     <option name="지연" hit="선행 입력 시간 지연 임계값 " />
+    <option name="다운로드" hit="소스 다운로드" />
+    <option name="소스" hit="소스 다운로드" />
     <option name="및" hit="수신 및 송신 커밋 확인" />
     <option name="송신" hit="수신 및 송신 커밋 확인" />
     <option name="수신" hit="수신 및 송신 커밋 확인" />
@@ -3921,8 +3924,16 @@
     <option name="최대" hit="신규 UI 내 최근 실행 구성의 최대 개수 " />
     <option name="디버그" hit="실행 디버그" />
     <option name="실행" hit="실행 디버그" />
-    <option name="멀티플랫폼" hit="실험적 멀티플랫폼" />
-    <option name="실험적" hit="실험적 멀티플랫폼" />
+    <option name="ide" hit="실험적 멀티플랫폼 IDE 기능 활성화" />
+    <option name="기능" hit="실험적 멀티플랫폼 IDE 기능 활성화" />
+    <option name="멀티플랫폼" hit="실험적 멀티플랫폼 IDE 기능 활성화" />
+    <option name="실험적" hit="실험적 멀티플랫폼 IDE 기능 활성화" />
+    <option name="활성화" hit="실험적 멀티플랫폼 IDE 기능 활성화" />
+    <option name="검색" hit="심볼 탭에 의미 검색 활성화" />
+    <option name="심볼" hit="심볼 탭에 의미 검색 활성화" />
+    <option name="의미" hit="심볼 탭에 의미 검색 활성화" />
+    <option name="탭에" hit="심볼 탭에 의미 검색 활성화" />
+    <option name="활성화" hit="심볼 탭에 의미 검색 활성화" />
     <option name="못했습니다" hit="아무것도 찾지 못했습니다" />
     <option name="아무것도" hit="아무것도 찾지 못했습니다" />
     <option name="찾지" hit="아무것도 찾지 못했습니다" />
@@ -3934,12 +3945,11 @@
     <option name="애플리케이션" hit="애플리케이션 제목 표시" />
     <option name="제목" hit="애플리케이션 제목 표시" />
     <option name="표시" hit="애플리케이션 제목 표시" />
-    <option name="결과를" hit="액션 탭의 결과를 머신러닝 기반으로 정렬" />
-    <option name="기반으로" hit="액션 탭의 결과를 머신러닝 기반으로 정렬" />
-    <option name="머신러닝" hit="액션 탭의 결과를 머신러닝 기반으로 정렬" />
-    <option name="액션" hit="액션 탭의 결과를 머신러닝 기반으로 정렬" />
-    <option name="정렬" hit="액션 탭의 결과를 머신러닝 기반으로 정렬" />
-    <option name="탭의" hit="액션 탭의 결과를 머신러닝 기반으로 정렬" />
+    <option name="검색" hit="액션 탭에 의미 검색 활성화" />
+    <option name="액션" hit="액션 탭에 의미 검색 활성화" />
+    <option name="의미" hit="액션 탭에 의미 검색 활성화" />
+    <option name="탭에" hit="액션 탭에 의미 검색 활성화" />
+    <option name="활성화" hit="액션 탭에 의미 검색 활성화" />
     <option name="없음" hit="없음" />
     <option name="에디터" hit="에디터" />
     <option name="에디터" hit="에디터 탭" />
@@ -4016,6 +4026,17 @@
     <option name="재시동" hit="재시동 시 자동으로 Docker에 연결" />
     <option name="검색" hit="전체 검색" />
     <option name="전체" hit="전체 검색" />
+    <option name="가능" hit="전체 검색 시 실험적인 오타 수정 기능 활성화 액션 탭에서만 가능 " />
+    <option name="검색" hit="전체 검색 시 실험적인 오타 수정 기능 활성화 액션 탭에서만 가능 " />
+    <option name="기능" hit="전체 검색 시 실험적인 오타 수정 기능 활성화 액션 탭에서만 가능 " />
+    <option name="수정" hit="전체 검색 시 실험적인 오타 수정 기능 활성화 액션 탭에서만 가능 " />
+    <option name="시" hit="전체 검색 시 실험적인 오타 수정 기능 활성화 액션 탭에서만 가능 " />
+    <option name="실험적인" hit="전체 검색 시 실험적인 오타 수정 기능 활성화 액션 탭에서만 가능 " />
+    <option name="액션" hit="전체 검색 시 실험적인 오타 수정 기능 활성화 액션 탭에서만 가능 " />
+    <option name="오타" hit="전체 검색 시 실험적인 오타 수정 기능 활성화 액션 탭에서만 가능 " />
+    <option name="전체" hit="전체 검색 시 실험적인 오타 수정 기능 활성화 액션 탭에서만 가능 " />
+    <option name="탭에서만" hit="전체 검색 시 실험적인 오타 수정 기능 활성화 액션 탭에서만 가능 " />
+    <option name="활성화" hit="전체 검색 시 실험적인 오타 수정 기능 활성화 액션 탭에서만 가능 " />
     <option name="줄" hit="줄" />
     <option name="간격을" hit="줄 간격을 포함한 문자 배경 채우기" />
     <option name="문자" hit="줄 간격을 포함한 문자 배경 채우기" />
@@ -4080,6 +4101,12 @@
     <option name="전환" hit="커밋 제어 전환" />
     <option name="제어" hit="커밋 제어 전환" />
     <option name="커밋" hit="커밋 제어 전환" />
+    <option name="실행" hit="커서 위치까지 인레이로 실행 팝업 표시" />
+    <option name="위치까지" hit="커서 위치까지 인레이로 실행 팝업 표시" />
+    <option name="인레이로" hit="커서 위치까지 인레이로 실행 팝업 표시" />
+    <option name="커서" hit="커서 위치까지 인레이로 실행 팝업 표시" />
+    <option name="팝업" hit="커서 위치까지 인레이로 실행 팝업 표시" />
+    <option name="표시" hit="커서 위치까지 인레이로 실행 팝업 표시" />
     <option name="컴파일러" hit="컴파일러" />
     <option name="색인" hit="컴파일러 참조 색인" />
     <option name="참조" hit="컴파일러 참조 색인" />
@@ -4095,6 +4122,11 @@
     <option name="툴바" hit="코드 편집용 플로팅 툴바 숨기기" />
     <option name="편집용" hit="코드 편집용 플로팅 툴바 숨기기" />
     <option name="플로팅" hit="코드 편집용 플로팅 툴바 숨기기" />
+    <option name="검색" hit="클래스 탭에 의미 검색 활성화" />
+    <option name="의미" hit="클래스 탭에 의미 검색 활성화" />
+    <option name="클래스" hit="클래스 탭에 의미 검색 활성화" />
+    <option name="탭에" hit="클래스 탭에 의미 검색 활성화" />
+    <option name="활성화" hit="클래스 탭에 의미 검색 활성화" />
     <option name="결과를" hit="클래스 탭의 결과를 머신러닝 기반으로 정렬" />
     <option name="기반으로" hit="클래스 탭의 결과를 머신러닝 기반으로 정렬" />
     <option name="머신러닝" hit="클래스 탭의 결과를 머신러닝 기반으로 정렬" />
@@ -4118,12 +4150,11 @@
     <option name="전체" hit="텍스트 검색 결과를 전체 검색에 표시" />
     <option name="텍스트" hit="텍스트 검색 결과를 전체 검색에 표시" />
     <option name="표시" hit="텍스트 검색 결과를 전체 검색에 표시" />
-    <option name="결과를" hit="파일 탭의 결과를 머신러닝 기반으로 정렬" />
-    <option name="기반으로" hit="파일 탭의 결과를 머신러닝 기반으로 정렬" />
-    <option name="머신러닝" hit="파일 탭의 결과를 머신러닝 기반으로 정렬" />
-    <option name="정렬" hit="파일 탭의 결과를 머신러닝 기반으로 정렬" />
-    <option name="탭의" hit="파일 탭의 결과를 머신러닝 기반으로 정렬" />
-    <option name="파일" hit="파일 탭의 결과를 머신러닝 기반으로 정렬" />
+    <option name="검색" hit="파일 탭에 의미 검색 활성화" />
+    <option name="의미" hit="파일 탭에 의미 검색 활성화" />
+    <option name="탭에" hit="파일 탭에 의미 검색 활성화" />
+    <option name="파일" hit="파일 탭에 의미 검색 활성화" />
+    <option name="활성화" hit="파일 탭에 의미 검색 활성화" />
     <option name="기본적으로" hit="파일로 이동 시  비활성화된 분할 패널에서 기본적으로 기존 탭 선택" />
     <option name="기존" hit="파일로 이동 시  비활성화된 분할 패널에서 기본적으로 기존 탭 선택" />
     <option name="분할" hit="파일로 이동 시  비활성화된 분할 패널에서 기본적으로 기존 탭 선택" />
@@ -4185,6 +4216,15 @@
     <option name="스레드" hit="프로젝트 전체 분석에 사용된 스레드 개수 " />
     <option name="전체" hit="프로젝트 전체 분석에 사용된 스레드 개수 " />
     <option name="프로젝트" hit="프로젝트 전체 분석에 사용된 스레드 개수 " />
+    <option name="sdkmanrc" hit="프로젝트를 열 때   sdkmanrc 의 변경 사항 리스닝 시작" />
+    <option name="때" hit="프로젝트를 열 때   sdkmanrc 의 변경 사항 리스닝 시작" />
+    <option name="리스닝" hit="프로젝트를 열 때   sdkmanrc 의 변경 사항 리스닝 시작" />
+    <option name="변경" hit="프로젝트를 열 때   sdkmanrc 의 변경 사항 리스닝 시작" />
+    <option name="사항" hit="프로젝트를 열 때   sdkmanrc 의 변경 사항 리스닝 시작" />
+    <option name="시작" hit="프로젝트를 열 때   sdkmanrc 의 변경 사항 리스닝 시작" />
+    <option name="열" hit="프로젝트를 열 때   sdkmanrc 의 변경 사항 리스닝 시작" />
+    <option name="의" hit="프로젝트를 열 때   sdkmanrc 의 변경 사항 리스닝 시작" />
+    <option name="프로젝트를" hit="프로젝트를 열 때   sdkmanrc 의 변경 사항 리스닝 시작" />
     <option name="모듈을" hit="프로젝트의 하위 모듈을 반복적으로 복제" />
     <option name="반복적으로" hit="프로젝트의 하위 모듈을 반복적으로 복제" />
     <option name="복제" hit="프로젝트의 하위 모듈을 반복적으로 복제" />
@@ -4195,6 +4235,16 @@
     <option name="플로팅" hit="플로팅 툴바 숨기기" />
     <option name="픽셀" hit="픽셀" />
     <option name="필터" hit="필터" />
+    <option name="static" hit="한정자를 첫 번째 인수로 사용하는 static 메서드의 코드 완성 활성화" />
+    <option name="메서드의" hit="한정자를 첫 번째 인수로 사용하는 static 메서드의 코드 완성 활성화" />
+    <option name="번째" hit="한정자를 첫 번째 인수로 사용하는 static 메서드의 코드 완성 활성화" />
+    <option name="사용하는" hit="한정자를 첫 번째 인수로 사용하는 static 메서드의 코드 완성 활성화" />
+    <option name="완성" hit="한정자를 첫 번째 인수로 사용하는 static 메서드의 코드 완성 활성화" />
+    <option name="인수로" hit="한정자를 첫 번째 인수로 사용하는 static 메서드의 코드 완성 활성화" />
+    <option name="첫" hit="한정자를 첫 번째 인수로 사용하는 static 메서드의 코드 완성 활성화" />
+    <option name="코드" hit="한정자를 첫 번째 인수로 사용하는 static 메서드의 코드 완성 활성화" />
+    <option name="한정자를" hit="한정자를 첫 번째 인수로 사용하는 static 메서드의 코드 완성 활성화" />
+    <option name="활성화" hit="한정자를 첫 번째 인수로 사용하는 static 메서드의 코드 완성 활성화" />
     <option name="글꼴" hit="행 번호의 글꼴 델타 " />
     <option name="델타" hit="행 번호의 글꼴 델타 " />
     <option name="번호의" hit="행 번호의 글꼴 델타 " />
@@ -4209,9 +4259,34 @@
     <option name="창을" hit="헤더로 도구 창을 끌어서 다른 위치로 옮길 수 있도록 허용" />
     <option name="허용" hit="헤더로 도구 창을 끌어서 다른 위치로 옮길 수 있도록 허용" />
     <option name="헤더로" hit="헤더로 도구 창을 끌어서 다른 위치로 옮길 수 있도록 허용" />
+    <option name="다수의" hit="헤드 앵커에서 다수의 대시를 스쿼시" />
+    <option name="대시를" hit="헤드 앵커에서 다수의 대시를 스쿼시" />
+    <option name="스쿼시" hit="헤드 앵커에서 다수의 대시를 스쿼시" />
+    <option name="앵커에서" hit="헤드 앵커에서 다수의 대시를 스쿼시" />
+    <option name="헤드" hit="헤드 앵커에서 다수의 대시를 스쿼시" />
     <option name="표시" hit="확대 표시기 표시" />
     <option name="표시기" hit="확대 표시기 표시" />
     <option name="확대" hit="확대 표시기 표시" />
+  </configurable>
+  <configurable id="com.intellij.platform.ide.impl.presentationAssistant.PresentationAssistantConfigurable" configurable_name="Presentation Assistant">
+    <option name="assistant" hit="Presentation Assistant" />
+    <option name="presentation" hit="Presentation Assistant" />
+    <option name="라벨" hit="라벨 " />
+    <option name="메인" hit="메인 " />
+    <option name="위치" hit="위치 " />
+    <option name="추가" hit="추가 " />
+    <option name="키맵" hit="키맵" />
+    <option name="내에서" hit="팝업 내에서 액션 이름 및 단축키 표시" />
+    <option name="단축키" hit="팝업 내에서 액션 이름 및 단축키 표시" />
+    <option name="및" hit="팝업 내에서 액션 이름 및 단축키 표시" />
+    <option name="액션" hit="팝업 내에서 액션 이름 및 단축키 표시" />
+    <option name="이름" hit="팝업 내에서 액션 이름 및 단축키 표시" />
+    <option name="팝업" hit="팝업 내에서 액션 이름 및 단축키 표시" />
+    <option name="표시" hit="팝업 내에서 액션 이름 및 단축키 표시" />
+    <option name="크기" hit="팝업 크기 " />
+    <option name="팝업" hit="팝업 크기 " />
+    <option name="시간" hit="표시 시간 " />
+    <option name="표시" hit="표시 시간 " />
   </configurable>
   <configurable id="editor.preferences.tabs" configurable_name="에디터 탭">
     <option name="" hit=" 가장 최근에 열린 탭" />

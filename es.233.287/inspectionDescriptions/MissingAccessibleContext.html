@@ -5,7 +5,8 @@
   해당 정보는 스크린 리더에서 사용됩니다. 이것이 제공되지 않으면 시각장애가 있는 사용자가 구성 요소에 액세스할 수 없습니다.
 </p>
 <p><b>예:</b></p>
-<pre><code>  ListCellRenderer&lt;String&gt; renderer = (list, val, index, sel, cell) -> {
+<pre><code lang="java">
+  ListCellRenderer&lt;String&gt; renderer = (list, val, index, sel, cell) -> {
     JPanel panel = new JPanel();
     return panel;
   };

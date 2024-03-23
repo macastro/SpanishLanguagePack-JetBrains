@@ -5,9 +5,6 @@
     <option name="2" path="ActionManager" hit="2" />
     <option name="3" path="ActionManager" hit="3" />
     <option name="4" path="ActionManager" hit="4" />
-    <option name="and" path="ActionManager" hit="Build and Reload" />
-    <option name="build" path="ActionManager" hit="Build and Reload" />
-    <option name="reload" path="ActionManager" hit="Build and Reload" />
     <option name="riderlink" path="ActionManager" hit="RiderLink 설치 설정 편집" />
     <option name="설정" path="ActionManager" hit="RiderLink 설치 설정 편집" />
     <option name="설치" path="ActionManager" hit="RiderLink 설치 설정 편집" />
@@ -56,6 +53,10 @@
     <option name="모드" path="ActionManager" hit="모드" />
     <option name="모바일" path="ActionManager" hit="모바일 미리보기" />
     <option name="미리보기" path="ActionManager" hit="모바일 미리보기" />
+    <option name="다시" path="ActionManager" hit="빌드 및 다시 로드" />
+    <option name="로드" path="ActionManager" hit="빌드 및 다시 로드" />
+    <option name="및" path="ActionManager" hit="빌드 및 다시 로드" />
+    <option name="빌드" path="ActionManager" hit="빌드 및 다시 로드" />
     <option name="새" path="ActionManager" hit="새 에디터 창" />
     <option name="에디터" path="ActionManager" hit="새 에디터 창" />
     <option name="창" path="ActionManager" hit="새 에디터 창" />
@@ -292,12 +293,6 @@
     <option name="프로젝트" hit=" 주의  엔진 프로젝트 및 엔진에 위치한 플러그인이 사전에 빌드된 경우 예  Epic Games Launcher에서 설치됨   추출하지 않고 항상 RiderLink를 설치합니다 " />
     <option name="플러그인이" hit=" 주의  엔진 프로젝트 및 엔진에 위치한 플러그인이 사전에 빌드된 경우 예  Epic Games Launcher에서 설치됨   추출하지 않고 항상 RiderLink를 설치합니다 " />
     <option name="항상" hit=" 주의  엔진 프로젝트 및 엔진에 위치한 플러그인이 사전에 빌드된 경우 예  Epic Games Launcher에서 설치됨   추출하지 않고 항상 RiderLink를 설치합니다 " />
-    <option name="engine" hit="Install in Engine" />
-    <option name="in" hit="Install in Engine" />
-    <option name="install" hit="Install in Engine" />
-    <option name="game" hit="Install in Game" />
-    <option name="in" hit="Install in Game" />
-    <option name="install" hit="Install in Game" />
     <option name="riderlink" hit="RiderLink 플러그인을 빌드하고 설치" />
     <option name="빌드하고" hit="RiderLink 플러그인을 빌드하고 설치" />
     <option name="설치" hit="RiderLink 플러그인을 빌드하고 설치" />
@@ -367,6 +362,8 @@
     <option name="riderlink" hit="게임에 RiderLink 추출" />
     <option name="게임에" hit="게임에 RiderLink 추출" />
     <option name="추출" hit="게임에 RiderLink 추출" />
+    <option name="게임에" hit="게임에 설치" />
+    <option name="설치" hit="게임에 설치" />
     <option name="ascii가" hit="경로에 ASCII가 아닌 기호가 포함된 경우 RiderLink 빌드가 실패할 수 있습니다.&#10;        RiderLink 빌드 중 빌드 출력 창에 '???'가 표시되는 문제가 발생하는 경우 해당 변수를 특수 문자가 없는 폴더로 설정해 보세요(예: C:\tempfolder). 설정할 때 현재 유저가 이 폴더에 쓰기 권한이 있는지 확인하세요." />
     <option name="c" hit="경로에 ASCII가 아닌 기호가 포함된 경우 RiderLink 빌드가 실패할 수 있습니다.&#10;        RiderLink 빌드 중 빌드 출력 창에 '???'가 표시되는 문제가 발생하는 경우 해당 변수를 특수 문자가 없는 폴더로 설정해 보세요(예: C:\tempfolder). 설정할 때 현재 유저가 이 폴더에 쓰기 권한이 있는지 확인하세요." />
     <option name="riderlink" hit="경로에 ASCII가 아닌 기호가 포함된 경우 RiderLink 빌드가 실패할 수 있습니다.&#10;        RiderLink 빌드 중 빌드 출력 창에 '???'가 표시되는 문제가 발생하는 경우 해당 변수를 특수 문자가 없는 폴더로 설정해 보세요(예: C:\tempfolder). 설정할 때 현재 유저가 이 폴더에 쓰기 권한이 있는지 확인하세요." />
@@ -446,6 +443,8 @@
     <option name="설치합니다" hit="엔진에 RiderLink 플러그인 설치합니다." />
     <option name="엔진에" hit="엔진에 RiderLink 플러그인 설치합니다." />
     <option name="플러그인" hit="엔진에 RiderLink 플러그인 설치합니다." />
+    <option name="설치" hit="엔진에 설치" />
+    <option name="엔진에" hit="엔진에 설치" />
     <option name="일반" hit="일반" />
     <option name="업데이트" hit="자동 업데이트" />
     <option name="자동" hit="자동 업데이트" />
@@ -480,16 +479,16 @@
     <option name="프로젝트에" hit="프로젝트에 설치하기 전에 RiderLink를 빌드하기 위해 사용되는 매개 폴더" />
   </configurable>
   <configurable id="UnrealLogSettings" configurable_name="UnrealLink">
-    <option name="and" hit="Replace  Build Startup Project  button with  Build and Reload " />
-    <option name="build" hit="Replace  Build Startup Project  button with  Build and Reload " />
-    <option name="button" hit="Replace  Build Startup Project  button with  Build and Reload " />
-    <option name="project" hit="Replace  Build Startup Project  button with  Build and Reload " />
-    <option name="reload" hit="Replace  Build Startup Project  button with  Build and Reload " />
-    <option name="replace" hit="Replace  Build Startup Project  button with  Build and Reload " />
-    <option name="startup" hit="Replace  Build Startup Project  button with  Build and Reload " />
-    <option name="with" hit="Replace  Build Startup Project  button with  Build and Reload " />
-    <option name="settings" hit="Toolbar Settings" />
-    <option name="toolbar" hit="Toolbar Settings" />
+    <option name="" hit=" 스타트업 프로젝트 빌드  버튼을  빌드 및 다시 로드 로 바꾸기" />
+    <option name="다시" hit=" 스타트업 프로젝트 빌드  버튼을  빌드 및 다시 로드 로 바꾸기" />
+    <option name="로" hit=" 스타트업 프로젝트 빌드  버튼을  빌드 및 다시 로드 로 바꾸기" />
+    <option name="로드" hit=" 스타트업 프로젝트 빌드  버튼을  빌드 및 다시 로드 로 바꾸기" />
+    <option name="및" hit=" 스타트업 프로젝트 빌드  버튼을  빌드 및 다시 로드 로 바꾸기" />
+    <option name="바꾸기" hit=" 스타트업 프로젝트 빌드  버튼을  빌드 및 다시 로드 로 바꾸기" />
+    <option name="버튼을" hit=" 스타트업 프로젝트 빌드  버튼을  빌드 및 다시 로드 로 바꾸기" />
+    <option name="빌드" hit=" 스타트업 프로젝트 빌드  버튼을  빌드 및 다시 로드 로 바꾸기" />
+    <option name="스타트업" hit=" 스타트업 프로젝트 빌드  버튼을  빌드 및 다시 로드 로 바꾸기" />
+    <option name="프로젝트" hit=" 스타트업 프로젝트 빌드  버튼을  빌드 및 다시 로드 로 바꾸기" />
     <option name="unreal" hit="Unreal 로그 설정" />
     <option name="로그" hit="Unreal 로그 설정" />
     <option name="설정" hit="Unreal 로그 설정" />
@@ -519,5 +518,7 @@
     <option name="문자" hit="최대 문자 너비의 카테고리별로" />
     <option name="최대" hit="최대 문자 너비의 카테고리별로" />
     <option name="카테고리별로" hit="최대 문자 너비의 카테고리별로" />
+    <option name="설정" hit="툴바 설정" />
+    <option name="툴바" hit="툴바 설정" />
   </configurable>
 </options>

@@ -1,6 +1,6 @@
 <html>
 <body>
-<a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">확장</a> 내에서 컴패니언 객체가 잘못 사용된 위치를 보고합니다.
+<a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">확장 프로그램</a> 내에서 컴패니언 객체가 잘못 사용된 위치를 보고합니다.
 <p>
   Kotlin 컴패니언 객체는 항상 포함하는 클래스를 로드하려고 시도할 때 생성되며 확장 지점 구현은 생성 비용이 적습니다.
   플러그인에서 과도한 클래스 로딩은 IDE 시작 시 큰 문제를 야기합니다.
@@ -30,14 +30,14 @@
   확장 지점 구현 내의 Kotlin 컴패니언 객체는 로거와 간단한 상수만 포함할 수 있습니다.
   다른 선언으로 인해 과도한 클래스 로드가 일어나거나 무거운 리소스(TokenSet, Regex 등)가 조기에 초기화될 수 있습니다
   일찍 초기화될 수 있습니다.
-  <code>@JvmStatic</code>로 표시된 선언도 컴패니언 객체의 추가 클래스를 생성하며 비용이 큰 연산을 발생시킬 수 있습니다.
+  <code>@JvmStatic</code>으로 표시된 선언도 컴패니언 객체의 추가 클래스를 생성하며 비용이 큰 연산을 발생시킬 수 있습니다.
 </p>
 <p>
-  이러한 선언은 컴패니언 객체가 아닌 최상위나 객체에 저장해야 합니다.
+  이러한 선언은 컴패니언 객체가 아닌 최상위 수준이나 객체에 저장해야 합니다.
 </p>
 <h3>자주 하는 질문</h3>
 <h4>ConfigurationType을 재작성하고 실행하는 방법</h4>
-<p>선언을 최상위로 옮기세요.</p>
+<p>선언을 최상위 수준으로 옮기세요.</p>
 <pre><code lang="kotlin">
   // 올바른 방법: 최상위 fun 사용
   internal fun mnRunConfigurationType(): MnRunConfigurationType = runConfigurationType&lt;MnRunConfigurationType&gt;()

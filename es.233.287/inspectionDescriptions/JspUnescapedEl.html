@@ -8,8 +8,9 @@ JSP 페이지 내의 이스케이프되지 않은 EL 표현식의 안전하지 �
   안전한(untainted) 객체:
 </p>
 <ul>
-  <li>기본 데이터 유형(<code>char</code> 제외)</li>
+  <li>기본 데이터 타입(<code>char</code> 제외)</li>
   <li>untainted로 표시된 메서드가 호출된 결과</li>
+  <li>이스케이프하는 함수 호출의 결과</li>
   <li>untainted로 표시된 필드</li>
 </ul>
 JSP 페이지는 제공된 데이터에 따라 다른 컨텍스트를 가질 수 있으며 한 컨텍스트에서 데이터가 안전하더라도 다른 컨텍스트에서는 안전하지 않을 수 있습니다.
@@ -24,7 +25,7 @@ JSP 페이지는 제공된 데이터에 따라 다른 컨텍스트를 가질 수
 <p>
   이 검사는 안전하지 않은 데이터가 JSP 페이지 내의 안전한 태그에 도달하는 경우를 강조 표시하지 않습니다.
   예를 들어 JSTL taglib의 <code>out</code> 태그는 기본적으로 주어진 값을 이스케이프하므로 안전합니다.
-  안전한 태그의 목록을 구성할 수 있습니다(전체 범위를 정의하려면 <code>tag</code> 혹은 <code>attribute</code>를 생략하세요).
+  안전한 태그의 목록을 구성할 수 있습니다(전체 범위를 정의하려면 <code>tag</code> 또는 <code>attribute</code>를 생략하세요).
 </p>
 <p>&quot;JSTL &lt;out&gt; 태그로 래핑&quot; 빠른 수정이 EL 식을 JSTL <code>&lt;out&gt;</code> 태그로 래핑합니다.</p>
 <p>이전:</p>
@@ -56,6 +57,13 @@ JSP 페이지는 제공된 데이터에 따라 다른 컨텍스트를 가질 수
     &lt;custom:tag value=&quot;${fn:escapeXml(foo)}&quot;/&gt;
   </code>
 </pre>
-<p>이 외에도 선택된 태그를 안전한 태그에 추가하거나 관련 메서드 혹은 필드에 untainted 어노테이션을 추가할 수 있는 빠른 수정이 더 있습니다.</p>
+<p>이 외에도 선택된 태그를 안전한 태그에 추가하거나 관련 메서드 또는 필드에 untainted 어노테이션을 추가할 수 있는 빠른 수정이 더 있습니다.</p>
+<p>
+  사용자 지정 이스케이프 함수를 추가할 수 있습니다('이스케이프 함수' 탭 참조).
+  이제 안전한 값을 반환하는 JSTL의 함수가 포함됩니다(예: 잘 알려진 <code>escapeXml</code> 함수).
+  네임스페이스 URI가 다른 JSTL 함수를 정의할 필요가 없습니다.
+  'http://java.sun.com/jsp/jstl/functions' 또는 'http://java.sun.com/jstl/functions'가 사용 중인 경우 나머지도 확인합니다. 이스케이프 함수를 이름으로 어디에서든 건너뛸 수 있습니다.
+  이를 위해서는 네임스페이스 URI 필드를 비워두세요.
+</p>
 </body>
 </html>

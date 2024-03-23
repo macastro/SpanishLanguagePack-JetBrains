@@ -28,9 +28,6 @@
     <option name="setter" path="ActionManager" hit="Setter" />
     <option name="teardown" path="ActionManager" hit="TearDown 메서드" />
     <option name="메서드" path="ActionManager" hit="TearDown 메서드" />
-    <option name="jdk" path="ActionManager" hit="Update Project JDK" />
-    <option name="project" path="ActionManager" hit="Update Project JDK" />
-    <option name="update" path="ActionManager" hit="Update Project JDK" />
     <option name="createui" path="ActionManager" hit="createUI(...)" />
     <option name="createui" path="ActionManager" hit="createUI(...) 생성" />
     <option name="생성" path="ActionManager" hit="createUI(...) 생성" />
@@ -170,6 +167,9 @@
     <option name="메서드" path="ActionManager" hit="테스트 메서드" />
     <option name="테스트" path="ActionManager" hit="테스트 메서드" />
     <option name="패키지" path="ActionManager" hit="패키지" />
+    <option name="jdk" path="ActionManager" hit="프로젝트 JDK 업데이트" />
+    <option name="업데이트" path="ActionManager" hit="프로젝트 JDK 업데이트" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 JDK 업데이트" />
     <option name="메서드" path="ActionManager" hit="형제 메서드 표시" />
     <option name="표시" path="ActionManager" hit="형제 메서드 표시" />
     <option name="형제" path="ActionManager" hit="형제 메서드 표시" />
@@ -179,131 +179,25 @@
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.Java" configurable_name="Java">
     <option name="java" hit="Java" />
-    <option name="annotation" hit="Annotations//Annotation attribute name" />
-    <option name="annotations" hit="Annotations//Annotation attribute name" />
-    <option name="attribute" hit="Annotations//Annotation attribute name" />
-    <option name="name" hit="Annotations//Annotation attribute name" />
-    <option name="annotation" hit="Annotations//Annotation name" />
-    <option name="annotations" hit="Annotations//Annotation name" />
-    <option name="name" hit="Annotations//Annotation name" />
-    <option name="class" hit="Class Fields//Constant (static final field)" />
-    <option name="constant" hit="Class Fields//Constant (static final field)" />
-    <option name="field" hit="Class Fields//Constant (static final field)" />
-    <option name="fields" hit="Class Fields//Constant (static final field)" />
-    <option name="final" hit="Class Fields//Constant (static final field)" />
-    <option name="static" hit="Class Fields//Constant (static final field)" />
-    <option name="class" hit="Class Fields//Constant (static final imported field)" />
-    <option name="constant" hit="Class Fields//Constant (static final imported field)" />
-    <option name="field" hit="Class Fields//Constant (static final imported field)" />
-    <option name="fields" hit="Class Fields//Constant (static final imported field)" />
-    <option name="final" hit="Class Fields//Constant (static final imported field)" />
-    <option name="imported" hit="Class Fields//Constant (static final imported field)" />
-    <option name="static" hit="Class Fields//Constant (static final imported field)" />
-    <option name="class" hit="Class Fields//Instance field" />
-    <option name="field" hit="Class Fields//Instance field" />
-    <option name="fields" hit="Class Fields//Instance field" />
-    <option name="instance" hit="Class Fields//Instance field" />
-    <option name="class" hit="Class Fields//Instance final field" />
-    <option name="field" hit="Class Fields//Instance final field" />
-    <option name="fields" hit="Class Fields//Instance final field" />
-    <option name="final" hit="Class Fields//Instance final field" />
-    <option name="instance" hit="Class Fields//Instance final field" />
-    <option name="class" hit="Class Fields//Static field" />
-    <option name="field" hit="Class Fields//Static field" />
-    <option name="fields" hit="Class Fields//Static field" />
-    <option name="static" hit="Class Fields//Static field" />
-    <option name="class" hit="Class Fields//Static imported field" />
-    <option name="field" hit="Class Fields//Static imported field" />
-    <option name="fields" hit="Class Fields//Static imported field" />
-    <option name="imported" hit="Class Fields//Static imported field" />
-    <option name="static" hit="Class Fields//Static imported field" />
-    <option name="abstract" hit="Classes and Interfaces//Abstract class" />
-    <option name="and" hit="Classes and Interfaces//Abstract class" />
-    <option name="class" hit="Classes and Interfaces//Abstract class" />
-    <option name="classes" hit="Classes and Interfaces//Abstract class" />
-    <option name="interfaces" hit="Classes and Interfaces//Abstract class" />
-    <option name="and" hit="Classes and Interfaces//Anonymous class" />
-    <option name="anonymous" hit="Classes and Interfaces//Anonymous class" />
-    <option name="class" hit="Classes and Interfaces//Anonymous class" />
-    <option name="classes" hit="Classes and Interfaces//Anonymous class" />
-    <option name="interfaces" hit="Classes and Interfaces//Anonymous class" />
-    <option name="and" hit="Classes and Interfaces//Class" />
-    <option name="class" hit="Classes and Interfaces//Class" />
-    <option name="classes" hit="Classes and Interfaces//Class" />
-    <option name="interfaces" hit="Classes and Interfaces//Class" />
-    <option name="and" hit="Classes and Interfaces//Enum" />
-    <option name="classes" hit="Classes and Interfaces//Enum" />
-    <option name="enum" hit="Classes and Interfaces//Enum" />
-    <option name="interfaces" hit="Classes and Interfaces//Enum" />
-    <option name="and" hit="Classes and Interfaces//Interface" />
-    <option name="classes" hit="Classes and Interfaces//Interface" />
-    <option name="interface" hit="Classes and Interfaces//Interface" />
-    <option name="interfaces" hit="Classes and Interfaces//Interface" />
-    <option name="comments" hit="Comments//JavaDoc//Markup" />
-    <option name="javadoc" hit="Comments//JavaDoc//Markup" />
-    <option name="markup" hit="Comments//JavaDoc//Markup" />
-    <option name="comments" hit="Comments//JavaDoc//Tag" />
-    <option name="javadoc" hit="Comments//JavaDoc//Tag" />
-    <option name="tag" hit="Comments//JavaDoc//Tag" />
-    <option name="comments" hit="Comments//JavaDoc//Tag value" />
-    <option name="javadoc" hit="Comments//JavaDoc//Tag value" />
-    <option name="tag" hit="Comments//JavaDoc//Tag value" />
-    <option name="value" hit="Comments//JavaDoc//Tag value" />
-    <option name="comments" hit="Comments//JavaDoc//Text" />
-    <option name="javadoc" hit="Comments//JavaDoc//Text" />
-    <option name="text" hit="Comments//JavaDoc//Text" />
-    <option name="abstract" hit="Methods//Abstract method" />
-    <option name="method" hit="Methods//Abstract method" />
-    <option name="methods" hit="Methods//Abstract method" />
-    <option name="call" hit="Methods//Constructor call" />
-    <option name="constructor" hit="Methods//Constructor call" />
-    <option name="methods" hit="Methods//Constructor call" />
-    <option name="constructor" hit="Methods//Constructor declaration" />
-    <option name="declaration" hit="Methods//Constructor declaration" />
-    <option name="methods" hit="Methods//Constructor declaration" />
-    <option name="inherited" hit="Methods//Inherited method" />
-    <option name="method" hit="Methods//Inherited method" />
-    <option name="methods" hit="Methods//Inherited method" />
-    <option name="call" hit="Methods//Method call" />
-    <option name="method" hit="Methods//Method call" />
-    <option name="methods" hit="Methods//Method call" />
-    <option name="declaration" hit="Methods//Method declaration" />
-    <option name="method" hit="Methods//Method declaration" />
-    <option name="methods" hit="Methods//Method declaration" />
-    <option name="call" hit="Methods//Static imported method call" />
-    <option name="imported" hit="Methods//Static imported method call" />
-    <option name="method" hit="Methods//Static imported method call" />
-    <option name="methods" hit="Methods//Static imported method call" />
-    <option name="static" hit="Methods//Static imported method call" />
-    <option name="method" hit="Methods//Static method" />
-    <option name="methods" hit="Methods//Static method" />
-    <option name="static" hit="Methods//Static method" />
-    <option name="anonymous" hit="Parameters//Implicit anonymous class parameter" />
-    <option name="class" hit="Parameters//Implicit anonymous class parameter" />
-    <option name="implicit" hit="Parameters//Implicit anonymous class parameter" />
-    <option name="parameter" hit="Parameters//Implicit anonymous class parameter" />
-    <option name="parameters" hit="Parameters//Implicit anonymous class parameter" />
-    <option name="lambda" hit="Parameters//Lambda parameter" />
-    <option name="parameter" hit="Parameters//Lambda parameter" />
-    <option name="parameters" hit="Parameters//Lambda parameter" />
-    <option name="parameter" hit="Parameters//Reassigned parameter" />
-    <option name="parameters" hit="Parameters//Reassigned parameter" />
-    <option name="reassigned" hit="Parameters//Reassigned parameter" />
-    <option name="parameter" hit="Parameters//Type parameter" />
-    <option name="parameters" hit="Parameters//Type parameter" />
-    <option name="type" hit="Parameters//Type parameter" />
-    <option name="local" hit="Variables//Reassigned local variable" />
-    <option name="reassigned" hit="Variables//Reassigned local variable" />
-    <option name="variable" hit="Variables//Reassigned local variable" />
-    <option name="variables" hit="Variables//Reassigned local variable" />
-    <option name="package-private" hit="Visibility//Package-private" />
-    <option name="visibility" hit="Visibility//Package-private" />
-    <option name="private" hit="Visibility//Private" />
-    <option name="visibility" hit="Visibility//Private" />
-    <option name="protected" hit="Visibility//Protected" />
-    <option name="visibility" hit="Visibility//Protected" />
-    <option name="public" hit="Visibility//Public" />
-    <option name="visibility" hit="Visibility//Public" />
+    <option name="class" hit="Class Fields//상수 (static final imported field)" />
+    <option name="field" hit="Class Fields//상수 (static final imported field)" />
+    <option name="fields" hit="Class Fields//상수 (static final imported field)" />
+    <option name="final" hit="Class Fields//상수 (static final imported field)" />
+    <option name="imported" hit="Class Fields//상수 (static final imported field)" />
+    <option name="static" hit="Class Fields//상수 (static final imported field)" />
+    <option name="상수" hit="Class Fields//상수 (static final imported field)" />
+    <option name="and" hit="Classes and Interfaces//인터페이스" />
+    <option name="classes" hit="Classes and Interfaces//인터페이스" />
+    <option name="interfaces" hit="Classes and Interfaces//인터페이스" />
+    <option name="인터페이스" hit="Classes and Interfaces//인터페이스" />
+    <option name="package-private" hit="가시성//Package-private" />
+    <option name="가시성" hit="가시성//Package-private" />
+    <option name="private" hit="가시성//Private" />
+    <option name="가시성" hit="가시성//Private" />
+    <option name="protected" hit="가시성//Protected" />
+    <option name="가시성" hit="가시성//Protected" />
+    <option name="public" hit="가시성//Public" />
+    <option name="가시성" hit="가시성//Public" />
     <option name="괄호" hit="괄호 및 연산자//대괄호" />
     <option name="대괄호" hit="괄호 및 연산자//대괄호" />
     <option name="및" hit="괄호 및 연산자//대괄호" />
@@ -335,20 +229,115 @@
     <option name="강조" hit="구문 강조 표시" />
     <option name="구문" hit="구문 강조 표시" />
     <option name="표시" hit="구문 강조 표시" />
+    <option name="anonymous" hit="매개변수//Implicit anonymous class parameter" />
+    <option name="class" hit="매개변수//Implicit anonymous class parameter" />
+    <option name="implicit" hit="매개변수//Implicit anonymous class parameter" />
+    <option name="parameter" hit="매개변수//Implicit anonymous class parameter" />
+    <option name="매개변수" hit="매개변수//Implicit anonymous class parameter" />
+    <option name="lambda" hit="매개변수//Lambda parameter" />
+    <option name="parameter" hit="매개변수//Lambda parameter" />
+    <option name="매개변수" hit="매개변수//Lambda parameter" />
+    <option name="parameter" hit="매개변수//Reassigned parameter" />
+    <option name="reassigned" hit="매개변수//Reassigned parameter" />
+    <option name="매개변수" hit="매개변수//Reassigned parameter" />
     <option name="매개변수" hit="매개변수//매개변수" />
+    <option name="매개변수" hit="매개변수//타입 매개변수" />
+    <option name="타입" hit="매개변수//타입 매개변수" />
+    <option name="abstract" hit="메서드//Abstract method" />
+    <option name="method" hit="메서드//Abstract method" />
+    <option name="메서드" hit="메서드//Abstract method" />
+    <option name="call" hit="메서드//Constructor call" />
+    <option name="constructor" hit="메서드//Constructor call" />
+    <option name="메서드" hit="메서드//Constructor call" />
+    <option name="constructor" hit="메서드//Constructor declaration" />
+    <option name="declaration" hit="메서드//Constructor declaration" />
+    <option name="메서드" hit="메서드//Constructor declaration" />
+    <option name="inherited" hit="메서드//Inherited method" />
+    <option name="method" hit="메서드//Inherited method" />
+    <option name="메서드" hit="메서드//Inherited method" />
+    <option name="call" hit="메서드//Method call" />
+    <option name="method" hit="메서드//Method call" />
+    <option name="메서드" hit="메서드//Method call" />
+    <option name="declaration" hit="메서드//Method declaration" />
+    <option name="method" hit="메서드//Method declaration" />
+    <option name="메서드" hit="메서드//Method declaration" />
+    <option name="call" hit="메서드//Static imported method call" />
+    <option name="imported" hit="메서드//Static imported method call" />
+    <option name="method" hit="메서드//Static imported method call" />
+    <option name="static" hit="메서드//Static imported method call" />
+    <option name="메서드" hit="메서드//Static imported method call" />
+    <option name="method" hit="메서드//Static method" />
+    <option name="static" hit="메서드//Static method" />
+    <option name="메서드" hit="메서드//Static method" />
     <option name="문자열" hit="문자열//문자열 텍스트" />
     <option name="텍스트" hit="문자열//문자열 텍스트" />
     <option name="문자열" hit="문자열//이스케이프 시퀀스//유효" />
     <option name="시퀀스" hit="문자열//이스케이프 시퀀스//유효" />
     <option name="유효" hit="문자열//이스케이프 시퀀스//유효" />
     <option name="이스케이프" hit="문자열//이스케이프 시퀀스//유효" />
+    <option name="local" hit="변수//Reassigned local variable" />
+    <option name="reassigned" hit="변수//Reassigned local variable" />
+    <option name="variable" hit="변수//Reassigned local variable" />
+    <option name="변수" hit="변수//Reassigned local variable" />
     <option name="변수" hit="변수//지역 변수" />
     <option name="지역" hit="변수//지역 변수" />
     <option name="숫자" hit="숫자" />
+    <option name="속성" hit="어노테이션//어노테이션 속성 이름" />
+    <option name="어노테이션" hit="어노테이션//어노테이션 속성 이름" />
+    <option name="이름" hit="어노테이션//어노테이션 속성 이름" />
+    <option name="어노테이션" hit="어노테이션//어노테이션 이름" />
+    <option name="이름" hit="어노테이션//어노테이션 이름" />
+    <option name="javadoc" hit="주석//JavaDoc//Markup" />
+    <option name="markup" hit="주석//JavaDoc//Markup" />
+    <option name="주석" hit="주석//JavaDoc//Markup" />
+    <option name="javadoc" hit="주석//JavaDoc//Tag value" />
+    <option name="tag" hit="주석//JavaDoc//Tag value" />
+    <option name="value" hit="주석//JavaDoc//Tag value" />
+    <option name="주석" hit="주석//JavaDoc//Tag value" />
+    <option name="javadoc" hit="주석//JavaDoc//꼬리표" />
+    <option name="꼬리표" hit="주석//JavaDoc//꼬리표" />
+    <option name="주석" hit="주석//JavaDoc//꼬리표" />
+    <option name="javadoc" hit="주석//JavaDoc//텍스트" />
+    <option name="주석" hit="주석//JavaDoc//텍스트" />
+    <option name="텍스트" hit="주석//JavaDoc//텍스트" />
     <option name="블록" hit="주석//블록 주석" />
     <option name="주석" hit="주석//블록 주석" />
     <option name="주석" hit="주석//줄 주석" />
     <option name="줄" hit="주석//줄 주석" />
+    <option name="및" hit="클래스 및 인터페이스//열거형" />
+    <option name="열거형" hit="클래스 및 인터페이스//열거형" />
+    <option name="인터페이스" hit="클래스 및 인터페이스//열거형" />
+    <option name="클래스" hit="클래스 및 인터페이스//열거형" />
+    <option name="및" hit="클래스 및 인터페이스//익명 클래스" />
+    <option name="익명" hit="클래스 및 인터페이스//익명 클래스" />
+    <option name="인터페이스" hit="클래스 및 인터페이스//익명 클래스" />
+    <option name="클래스" hit="클래스 및 인터페이스//익명 클래스" />
+    <option name="및" hit="클래스 및 인터페이스//추상 클래스" />
+    <option name="인터페이스" hit="클래스 및 인터페이스//추상 클래스" />
+    <option name="추상" hit="클래스 및 인터페이스//추상 클래스" />
+    <option name="클래스" hit="클래스 및 인터페이스//추상 클래스" />
+    <option name="및" hit="클래스 및 인터페이스//클래스" />
+    <option name="인터페이스" hit="클래스 및 인터페이스//클래스" />
+    <option name="클래스" hit="클래스 및 인터페이스//클래스" />
+    <option name="가져온" hit="클래스 필드//가져온 정적 필드" />
+    <option name="정적" hit="클래스 필드//가져온 정적 필드" />
+    <option name="클래스" hit="클래스 필드//가져온 정적 필드" />
+    <option name="필드" hit="클래스 필드//가져온 정적 필드" />
+    <option name="final" hit="클래스 필드//상수(static final 필드)" />
+    <option name="static" hit="클래스 필드//상수(static final 필드)" />
+    <option name="상수" hit="클래스 필드//상수(static final 필드)" />
+    <option name="클래스" hit="클래스 필드//상수(static final 필드)" />
+    <option name="필드" hit="클래스 필드//상수(static final 필드)" />
+    <option name="인스턴스" hit="클래스 필드//인스턴스 최종 필드" />
+    <option name="최종" hit="클래스 필드//인스턴스 최종 필드" />
+    <option name="클래스" hit="클래스 필드//인스턴스 최종 필드" />
+    <option name="필드" hit="클래스 필드//인스턴스 최종 필드" />
+    <option name="인스턴스" hit="클래스 필드//인스턴스 필드" />
+    <option name="클래스" hit="클래스 필드//인스턴스 필드" />
+    <option name="필드" hit="클래스 필드//인스턴스 필드" />
+    <option name="정적" hit="클래스 필드//정적 필드" />
+    <option name="클래스" hit="클래스 필드//정적 필드" />
+    <option name="필드" hit="클래스 필드//정적 필드" />
     <option name="키워드" hit="키워드" />
   </configurable>
   <configurable id="preferences.sourceCode.Java" configurable_name="Java">
@@ -380,6 +369,8 @@
     <option name="어노테이션" path="코드 생성" hit=" Override 어노테이션 삽입 O " />
     <option name="ejb" path="Java EE 이름" hit="EJB 클래스  " />
     <option name="클래스" path="Java EE 이름" hit="EJB 클래스  " />
+    <option name="import" path="가져오기" hit="Import Layout" />
+    <option name="layout" path="가져오기" hit="Import Layout" />
     <option name="java" hit="Java" />
     <option name="ee" path="Java EE 이름" hit="Java EE 이름" />
     <option name="java" path="Java EE 이름" hit="Java EE 이름" />
@@ -467,8 +458,6 @@
     <option name="라벨" path="탭 및 들여쓰기" hit="라벨 들여쓰기 " />
     <option name="람다" path="코드 생성" hit="람다 본문" />
     <option name="본문" path="코드 생성" hit="람다 본문" />
-    <option name="가져오기" path="가져오기" hit="레이아웃 가져오기" />
-    <option name="레이아웃" path="가져오기" hit="레이아웃 가져오기" />
     <option name="로드" hit="로드 중   " />
     <option name="중" hit="로드 중   " />
     <option name="로컬" path="Java EE 이름" hit="로컬 홈 인터페이스  " />

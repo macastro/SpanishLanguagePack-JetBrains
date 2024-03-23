@@ -1,7 +1,7 @@
 <html>
 <body>
 애플리케이션 서비스가 static final 필드/불변 프로퍼티에 대입되는 것을 보고합니다.
-<h4>static final 필드(Java) 혹은 백킹 필드가 있는 static 불변 프로퍼티(Kotlin)</h4>
+<h4>static final 필드(Java) 또는 백킹 필드가 있는 static 불변 프로퍼티(Kotlin)</h4>
 <p>
   <b>주의:</b> 여기에서 Kotlin의 static이란 익명 객체나 최상위 선언의 멤버를 의미합니다.
 </p>
@@ -11,42 +11,42 @@
 </p>
 <p>
   서비스 저장을 피하기 위해 권장되는 방법은 서비스를 로컬로 받는 것입니다.
-  혹은 <code>java.util.function.Supplier</code>으로 래핑(Java, Kotlin)하거나 프로퍼티를 함수로 변환(Kotlin)할 수도 있습니다.
+  또는 <code>java.util.function.Supplier</code>으로 래핑(Java, Kotlin)하거나 프로퍼티를 함수로 변환(Kotlin)할 수도 있습니다.
 </p>
-<p>예시 (Java):</p>
+<p>예(Java):</p>
 <pre><code lang="java">
-// Bad:
-private static final ManagingFS ourInstance = ApplicationManager.getApplication().getService(ManagingFS.class);
+// 좋지 않은 방법:
+  private static final ManagingFS ourInstance = ApplicationManager.getApplication().getService(ManagingFS.class);
 </code></pre>
 <pre><code lang="java">
-// Good:
+// 좋은 방법:
 private static final Supplier&lt;ManagingFS&gt; ourInstance = CachedSingletonsRegistry.lazy(() -> {
   return ApplicationManager.getApplication().getService(ManagingFS.class);
 });
 </code></pre>
 <pre><code lang="java">
-// Exception:
+// 예외:
 private static final UniqueVFilePathBuilder DUMMY_BUILDER = new UniqueVFilePathBuilder()
 </code></pre>
-<h4>static 불변 프로퍼티를 통해 서비스 인스턴스를 가져오는 중(Kotlin)</h4>
+<h4>static 불변 프로퍼티를 통해 서비스 인스턴스 가져오기(Kotlin)</h4>
 <p>
-  백킹 필드 없이 프로퍼티에 서비스를 대입해도 앞서 언급된 문제가 발생하지는 않지만, 명시적인 <code>getInstance()</code> 메서드를 사용하여 서비스를 가져오는 것이 프로퍼티를 사용하는 것보다 권장됩니다.
+  백킹 필드 없이 프로퍼티에 서비스를 대입해도 앞서 언급된 문제가 발생하지는 않지만, 명시적인 <code>getInstance()</code> 메서드를 사용하여 서비스를 가져오는 것이 프로퍼티를 사용하는 것보다 좋습니다.
 </p>
 <ul>
-  <li>It makes it clearer on the call site that it can involve loading the service, which might not be cheap.</li>
+  <li>이렇게 하면 리소스가 많이 들 수 있는 서비스 로드 작업이 진행될 수 있음이 호출 위치에서 더 명확해집니다.</li>
   <li>서비스 로드는 예외를 던질 수 있으며, 프로퍼티의 액세스로 인한 예외보다는 메서드 호출로 인한 예외가 더 일반적입니다.</li>
-  <li>프로퍼티를 (과도하게) 사용하면 오류를 다수 발생시키며, 프로퍼티가 getter가 있으며 올바르고 상세한 프로퍼티 대신 이니셜라이저가 있는 프로퍼티로 변경될 수 있습니다. 이런 변경 사항은 쉽게 간과될 수 있습니다.</li>
+  <li>프로퍼티를 (과도하게) 사용하면 프로퍼티가 getter가 있는 올바른 (하지만 더 긴) 프로퍼티 대신 이니셜라이저가 있는 프로퍼티로 변경되는 오류가 발생할 수 있으며, 이러한 변경은 쉽게 간과될 수 있습니다.</li>
   <li>프로퍼티 대신 메서드를 사용하면 <code>MyApplicationService.getInstance()</code> 호출이 Kotlin 및 Java 모두에서 활용될 때 일관성이 유지됩니다.</li>
   <li>메서드를 활용하면 선언 및 호출 위치 모두에서 <code>MyApplicationService.getInstance()</code>가 <code>MyProjectService.getInstance(project)</code>와 일관성을 갖습니다.</li>
 </ul>
-<p>툴의 성능을 개선하려면 항상 명시적인 메서드 반환 타입을 유지하는 게 좋습니다.</p>
+<p>도구의 성능을 개선하려면 항상 명시적인 메서드 반환 타입을 유지하는 게 좋습니다.</p>
 <p>예:</p>
 <pre><code lang="kotlin">
 @Service
 class MyApplicationService {
   companion object {
     @JvmStatic
-    val instance: MyApplicationService // bad
+    val instance: MyApplicationService // 나쁨
        get() = service()
   }
 }
@@ -56,7 +56,7 @@ class MyApplicationService {
 class MyApplicationService {
   companion object {
     @JvmStatic
-    fun getInstance(): MyApplicationService = service() // good
+    fun getInstance(): MyApplicationService = service() // 좋음
   }
 }
 </code></pre>

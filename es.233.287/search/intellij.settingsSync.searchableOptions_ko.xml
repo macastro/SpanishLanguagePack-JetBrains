@@ -11,14 +11,20 @@
     <option name="설정" path="ActionManager" hit="설정 동기화..." />
   </configurable>
   <configurable id="settings.sync" configurable_name="설정 동기화">
+    <option name="code" hit="Code settings" />
+    <option name="settings" hit="Code settings" />
     <option name="idea" hit="IntelliJ IDEA 인스턴스만" />
     <option name="intellij" hit="IntelliJ IDEA 인스턴스만" />
     <option name="인스턴스만" hit="IntelliJ IDEA 인스턴스만" />
     <option name="jetbrains" hit="JetBrains 계정으로 로그인   " />
     <option name="계정으로" hit="JetBrains 계정으로 로그인   " />
     <option name="로그인" hit="JetBrains 계정으로 로그인   " />
-    <option name="ui" hit="UI 설정" />
-    <option name="설정" hit="UI 설정" />
+    <option name="keymaps" hit="Keymaps" />
+    <option name="plugins" hit="Plugins" />
+    <option name="settings" hit="System settings" />
+    <option name="system" hit="System settings" />
+    <option name="settings" hit="UI settings" />
+    <option name="ui" hit="UI settings" />
     <option name="구성" hit="구성" />
     <option name="다음에서" hit="다음에서 설정 동기화 " />
     <option name="동기화" hit="다음에서 설정 동기화 " />
@@ -44,11 +50,5 @@
     <option name="동기화" hit="설정 동기화 활성화   " />
     <option name="설정" hit="설정 동기화 활성화   " />
     <option name="활성화" hit="설정 동기화 활성화   " />
-    <option name="설정" hit="시스템 설정" />
-    <option name="시스템" hit="시스템 설정" />
-    <option name="설정" hit="코드 설정" />
-    <option name="코드" hit="코드 설정" />
-    <option name="키맵" hit="키맵" />
-    <option name="플러그인" hit="플러그인" />
   </configurable>
 </options>

@@ -1,20 +1,20 @@
 <html>
 <body>
 <p>
-  <code>plugin.xml</code> 파일에 등록된 모든 액션을 보고하고 생성자 내에서 <code>com.intellij.openapi.actionSystem.Presentation</code> 객체를 인스턴스화 합니다.
+  <code>plugin.xml</code> 파일에 등록되고 해당하는 생성자 내에서 <code>com.intellij.openapi.actionSystem.Presentation</code> 객체를 인스턴스화하는 모든 액션을 보고합니다.
 </p>
 <p>
-  매개 변수가 있는 <code>AnAction</code>의 생성자는 <code>Presentation</code> 객체를 인스턴스화합니다. 그러나 생성자 내에서 <code>Presentation</code> 객체를 인스턴스화하면 자원이 할당되며 이는 불필요할 수 있습니다. 텍스트, 설명 및 아이콘을 저장하는 <code>Presentation</code>의 인스턴스를 생성하는 대신 <code>AnAction</code> 및 다른 기본 클래스의 무인수 생성자를 활용하고 <code>plugin.xml</code> 내의 텍스트, 설명 및 아이콘 설정 규칙을 따르는 것이 더 효율적입니다. 액션이 실제로 UI 내의 어딘가에 표시될 때만 IDE가 텍스트, 설명 및 아이콘을 로드합니다.
+  매개변수가 있는 <code>AnAction</code>의 생성자는 <code>Presentation</code> 객체를 인스턴스화합니다. 그러나 생성자 내에서 <code>Presentation</code> 객체를 인스턴스화하면 리소스가 할당되며 이는 불필요할 수 있습니다. 텍스트, 설명 및 아이콘을 저장하는 <code>Presentation</code>의 인스턴스를 생성하는 대신 <code>AnAction</code> 및 다른 기본 클래스의 인수 없는 생성자를 활용하고 <code>plugin.xml</code> 내의 텍스트, 설명 및 아이콘 설정 규칙을 따르는 것이 더 효율적입니다. 액션이 실제로 UI 내의 어딘가에 표시될 때만 IDE가 텍스트, 설명 및 아이콘을 로드합니다.
 </p>
 <p>
   텍스트, 설명 및 아이콘 설정 규칙은 다음과 같습니다.
 </p>
 <ul>
   <li>
-    <code>plugin.xml</code> 파일에서 액션의 <code>id</code> 속성을 설정하세요.
+    <code>plugin.xml</code> 파일에서 액션의 <code>id</code> 속성을 설정합니다.
   </li>
   <li>
-    아이콘이 필요한 경우 <code>icon</code> 속성을 설정하세요.
+    아이콘이 필요한 경우 <code>icon</code> 속성을 설정합니다.
   </li>
   <li>
     연결된 메시지 번들(<code>&lt;actions&gt;</code>에서 재정의될 수 있음)에서 텍스트와 설명을 설정합니다.
@@ -55,7 +55,7 @@
 <pre><code lang="properties">
   # KotlinBundle.properties
   action.Kotlin.NewFile.text=Kotlin 클래스/파일
-  action.Kotlin.NewFile.description=새 Kotlin 클래스 혹은 파일을 생성
+  action.Kotlin.NewFile.description=새 Kotlin 클래스 또는 파일을 생성
 </code></pre>
 <p><small>2023.2의 새로운 기능</small></p>
 </body>

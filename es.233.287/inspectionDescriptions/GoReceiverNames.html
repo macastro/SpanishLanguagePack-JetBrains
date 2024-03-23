@@ -19,6 +19,6 @@
 <code>me</code>, <code>this</code>, <code>self</code>와 같은 리시버 이름을 보고하거나 이 타입의 다른 리시버 이름과 상이한 이름을 보고합니다.
 <p>예:</p>
 <pre><code>func (self *MeterSnapshot) Rate5() float64 { return math.Float64frombits(self.rate5) }</code></pre>
-<p><a href="https://golang.org/wiki/CodeReviewComments#receiver-names"> golang.org의 Receiver Names</a>에 따르면, 'me', 'this' 또는 'self'와 같은 일반적 이름을 사용해서는 안 됩니다. 이러한 식별자는 객체 지향 언어에서 전형적으로 쓰이며 메서드에 특별한 의미를 부여할 수 있습니다.</p>
+<p><a href="https://github.com/golang/go/wiki/CodeReviewComments#receiver-names"> github.com/golang의 Receiver Names</a>에 따르면, 'me', 'this' 또는 'self'와 같은 일반적 이름을 사용해서는 안 됩니다. 이러한 식별자는 객체 지향 언어에서 전형적으로 쓰이며 메서드에 특별한 의미를 부여할 수 있습니다.</p>
 </body>
 </html>

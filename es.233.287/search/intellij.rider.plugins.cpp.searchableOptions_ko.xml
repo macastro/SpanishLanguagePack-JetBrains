@@ -27,12 +27,22 @@
     <option name="현재" path="ActionManager" hit="현재 스크립트로 생성된 솔루션 선택" />
   </configurable>
   <configurable id="preferences.CppConfiguration" configurable_name="C++" />
-  <configurable id="CppGeneralOptionsId" configurable_name="General">
+  <configurable id="CppGeneralOptionsId" configurable_name="일반">
     <option name="" hit=" C   CLI 지원 켜기" />
     <option name="c++" hit=" C   CLI 지원 켜기" />
     <option name="cli" hit=" C   CLI 지원 켜기" />
     <option name="지원" hit=" C   CLI 지원 켜기" />
     <option name="켜기" hit=" C   CLI 지원 켜기" />
+    <option name="" hit=" MSBuild에서 읽어올 때 명령줄 기반 C   컴파일 프로퍼티를 사용합니다" />
+    <option name="c++" hit=" MSBuild에서 읽어올 때 명령줄 기반 C   컴파일 프로퍼티를 사용합니다" />
+    <option name="msbuild에서" hit=" MSBuild에서 읽어올 때 명령줄 기반 C   컴파일 프로퍼티를 사용합니다" />
+    <option name="기반" hit=" MSBuild에서 읽어올 때 명령줄 기반 C   컴파일 프로퍼티를 사용합니다" />
+    <option name="때" hit=" MSBuild에서 읽어올 때 명령줄 기반 C   컴파일 프로퍼티를 사용합니다" />
+    <option name="명령줄" hit=" MSBuild에서 읽어올 때 명령줄 기반 C   컴파일 프로퍼티를 사용합니다" />
+    <option name="사용합니다" hit=" MSBuild에서 읽어올 때 명령줄 기반 C   컴파일 프로퍼티를 사용합니다" />
+    <option name="읽어올" hit=" MSBuild에서 읽어올 때 명령줄 기반 C   컴파일 프로퍼티를 사용합니다" />
+    <option name="컴파일" hit=" MSBuild에서 읽어올 때 명령줄 기반 C   컴파일 프로퍼티를 사용합니다" />
+    <option name="프로퍼티를" hit=" MSBuild에서 읽어올 때 명령줄 기반 C   컴파일 프로퍼티를 사용합니다" />
     <option name="" hit=" 가져오기 액션의 팝업 표시" />
     <option name="가져오기" hit=" 가져오기 액션의 팝업 표시" />
     <option name="액션의" hit=" 가져오기 액션의 팝업 표시" />
@@ -61,6 +71,15 @@
     <option name="지원" hit="C++/CLI 지원 켜기" />
     <option name="켜기" hit="C++/CLI 지원 켜기" />
     <option name="general" hit="General" />
+    <option name="c++" hit="MSBuild에서 읽어올 때 명령줄 기반 C++ 컴파일 프로퍼티를 사용합니다" />
+    <option name="msbuild에서" hit="MSBuild에서 읽어올 때 명령줄 기반 C++ 컴파일 프로퍼티를 사용합니다" />
+    <option name="기반" hit="MSBuild에서 읽어올 때 명령줄 기반 C++ 컴파일 프로퍼티를 사용합니다" />
+    <option name="때" hit="MSBuild에서 읽어올 때 명령줄 기반 C++ 컴파일 프로퍼티를 사용합니다" />
+    <option name="명령줄" hit="MSBuild에서 읽어올 때 명령줄 기반 C++ 컴파일 프로퍼티를 사용합니다" />
+    <option name="사용합니다" hit="MSBuild에서 읽어올 때 명령줄 기반 C++ 컴파일 프로퍼티를 사용합니다" />
+    <option name="읽어올" hit="MSBuild에서 읽어올 때 명령줄 기반 C++ 컴파일 프로퍼티를 사용합니다" />
+    <option name="컴파일" hit="MSBuild에서 읽어올 때 명령줄 기반 C++ 컴파일 프로퍼티를 사용합니다" />
+    <option name="프로퍼티를" hit="MSBuild에서 읽어올 때 명령줄 기반 C++ 컴파일 프로퍼티를 사용합니다" />
     <option name="iddqd" hit="iddqd" />
     <option name="가져오기" hit="가져오기 액션의 팝업 표시" />
     <option name="액션의" hit="가져오기 액션의 팝업 표시" />
@@ -76,6 +95,21 @@
     <option name="컨텍스트" hit="솔루션 외부 파일에서 검사, 빠른 수정 및 컨텍스트 액션 활성화" />
     <option name="파일에서" hit="솔루션 외부 파일에서 검사, 빠른 수정 및 컨텍스트 액션 활성화" />
     <option name="활성화" hit="솔루션 외부 파일에서 검사, 빠른 수정 및 컨텍스트 액션 활성화" />
+    <option name="c++" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="getclcommandlines" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="가져오기" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="결과가" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="분석됩니다" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="실행되고" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="옵션이" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="위해" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="이" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="있으면" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="켜져" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="타깃이" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="프로젝트의" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="프로퍼티를" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
+    <option name="해당" hit="이 옵션이 켜져 있으면 'GetClCommandLines' 타깃이 실행되고, C++ 프로젝트의 프로퍼티를 가져오기 위해 해당 결과가 분석됩니다." />
     <option name="일반" hit="일반" />
     <option name="검사" hit="템플릿 코드 내부에 대한 검사 심각도" />
     <option name="내부에" hit="템플릿 코드 내부에 대한 검사 심각도" />
@@ -83,6 +117,8 @@
     <option name="심각도" hit="템플릿 코드 내부에 대한 검사 심각도" />
     <option name="코드" hit="템플릿 코드 내부에 대한 검사 심각도" />
     <option name="템플릿" hit="템플릿 코드 내부에 대한 검사 심각도" />
+    <option name="모델" hit="프로젝트 모델" />
+    <option name="프로젝트" hit="프로젝트 모델" />
     <option name="경고로" hit="해결 오류를 템플릿 코드에서 경고로 취급" />
     <option name="오류를" hit="해결 오류를 템플릿 코드에서 경고로 취급" />
     <option name="취급" hit="해결 오류를 템플릿 코드에서 경고로 취급" />
@@ -116,6 +152,14 @@
     <option name="표시" hit=" Blueprint 함수 강조 표시 활성화" />
     <option name="함수" hit=" Blueprint 함수 강조 표시 활성화" />
     <option name="활성화" hit=" Blueprint 함수 강조 표시 활성화" />
+    <option name="" hit=" HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="hlsl로" hit=" HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="않은" hit=" HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="억제" hit=" HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="오류를" hit=" HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="이름의" hit=" HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="정규화되지" hit=" HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="해결" hit=" HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
     <option name="" hit=" Unreal Engine 소스 파일 색인화" />
     <option name="engine" hit=" Unreal Engine 소스 파일 색인화" />
     <option name="unreal" hit=" Unreal Engine 소스 파일 색인화" />
@@ -182,16 +226,6 @@
     <option name="파일을" hit=" Unreal Engine 프로젝트 모델에서 Rider은 는  Unreal Engine이 생성한 매개 Visual Studio 프로젝트 파일을 사용하지 않고도 UnrealBuildTool에서 직접 프로젝트 프로퍼티를 읽을 수 있습니다" />
     <option name="프로젝트" hit=" Unreal Engine 프로젝트 모델에서 Rider은 는  Unreal Engine이 생성한 매개 Visual Studio 프로젝트 파일을 사용하지 않고도 UnrealBuildTool에서 직접 프로젝트 프로퍼티를 읽을 수 있습니다" />
     <option name="프로퍼티를" hit=" Unreal Engine 프로젝트 모델에서 Rider은 는  Unreal Engine이 생성한 매개 Visual Studio 프로젝트 파일을 사용하지 않고도 UnrealBuildTool에서 직접 프로젝트 프로퍼티를 읽을 수 있습니다" />
-    <option name="" hit=" Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="engine의" hit=" Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="hlsl에서" hit=" Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="unreal" hit=" Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="않은" hit=" Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="억제" hit=" Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="오류" hit=" Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="이름의" hit=" Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="한정되지" hit=" Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="해결을" hit=" Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
     <option name="" hit=" UnrealHeaderTool 검사 켜기" />
     <option name="unrealheadertool" hit=" UnrealHeaderTool 검사 켜기" />
     <option name="검사" hit=" UnrealHeaderTool 검사 켜기" />
@@ -213,6 +247,12 @@
     <option name="재생성" hit=" 구성이 변경되면 프로젝트 프로퍼티를 재생성" />
     <option name="프로젝트" hit=" 구성이 변경되면 프로젝트 프로퍼티를 재생성" />
     <option name="프로퍼티를" hit=" 구성이 변경되면 프로젝트 프로퍼티를 재생성" />
+    <option name="" hit=" 사전 컴파일링된 헤더 파일 무시" />
+    <option name="무시" hit=" 사전 컴파일링된 헤더 파일 무시" />
+    <option name="사전" hit=" 사전 컴파일링된 헤더 파일 무시" />
+    <option name="컴파일링된" hit=" 사전 컴파일링된 헤더 파일 무시" />
+    <option name="파일" hit=" 사전 컴파일링된 헤더 파일 무시" />
+    <option name="헤더" hit=" 사전 컴파일링된 헤더 파일 무시" />
     <option name="" hit=" 전체 검색 이동에서 Unreal Engine 심볼을 프로젝트가 아닌 것으로 취급" />
     <option name="engine" hit=" 전체 검색 이동에서 Unreal Engine 심볼을 프로젝트가 아닌 것으로 취급" />
     <option name="unreal" hit=" 전체 검색 이동에서 Unreal Engine 심볼을 프로젝트가 아닌 것으로 취급" />
@@ -292,6 +332,14 @@
     <option name="헤더" hit="C++20 헤더 단위처럼 강제 적용된 include의 색인 생성 활성화" />
     <option name="활성화" hit="C++20 헤더 단위처럼 강제 적용된 include의 색인 생성 활성화" />
     <option name="hlsl" hit="HLSL" />
+    <option name="hlsl로" hit="HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="않은" hit="HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="억제" hit="HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="오류를" hit="HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="이름의" hit="HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="정규화되지" hit="HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="해결" hit="HLSL로 정규화되지 않은 이름의 해결 오류를 억제" />
+    <option name="navigation" hit="Navigation" />
     <option name="engine" hit="Unreal Engine" />
     <option name="unreal" hit="Unreal Engine" />
     <option name="engine" hit="Unreal Engine 소스 파일 색인화" />
@@ -355,15 +403,6 @@
     <option name="파일을" hit="Unreal Engine 프로젝트 모델에서 Rider은(는) Unreal Engine이 생성한 매개 Visual Studio 프로젝트 파일을 사용하지 않고도 UnrealBuildTool에서 직접 프로젝트 프로퍼티를 읽을 수 있습니다" />
     <option name="프로젝트" hit="Unreal Engine 프로젝트 모델에서 Rider은(는) Unreal Engine이 생성한 매개 Visual Studio 프로젝트 파일을 사용하지 않고도 UnrealBuildTool에서 직접 프로젝트 프로퍼티를 읽을 수 있습니다" />
     <option name="프로퍼티를" hit="Unreal Engine 프로젝트 모델에서 Rider은(는) Unreal Engine이 생성한 매개 Visual Studio 프로젝트 파일을 사용하지 않고도 UnrealBuildTool에서 직접 프로젝트 프로퍼티를 읽을 수 있습니다" />
-    <option name="engine의" hit="Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="hlsl에서" hit="Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="unreal" hit="Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="않은" hit="Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="억제" hit="Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="오류" hit="Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="이름의" hit="Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="한정되지" hit="Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
-    <option name="해결을" hit="Unreal Engine의 HLSL에서 한정되지 않은 이름의 오류 해결을 억제" />
     <option name="unrealheadertool" hit="UnrealHeaderTool 검사 켜기" />
     <option name="검사" hit="UnrealHeaderTool 검사 켜기" />
     <option name="켜기" hit="UnrealHeaderTool 검사 켜기" />
@@ -388,6 +427,11 @@
     <option name="사용" hit="사용 안 함" />
     <option name="안" hit="사용 안 함" />
     <option name="함" hit="사용 안 함" />
+    <option name="무시" hit="사전 컴파일링된 헤더 파일 무시" />
+    <option name="사전" hit="사전 컴파일링된 헤더 파일 무시" />
+    <option name="컴파일링된" hit="사전 컴파일링된 헤더 파일 무시" />
+    <option name="파일" hit="사전 컴파일링된 헤더 파일 무시" />
+    <option name="헤더" hit="사전 컴파일링된 헤더 파일 무시" />
     <option name="engine" hit="전체 검색/이동에서 Unreal Engine 심볼을 프로젝트가 아닌 것으로 취급" />
     <option name="unreal" hit="전체 검색/이동에서 Unreal Engine 심볼을 프로젝트가 아닌 것으로 취급" />
     <option name="검색" hit="전체 검색/이동에서 Unreal Engine 심볼을 프로젝트가 아닌 것으로 취급" />
@@ -415,10 +459,24 @@
     <option name="코드" hit="코드 색인 생성" />
     <option name="완성" hit="코드 완성" />
     <option name="코드" hit="코드 완성" />
+    <option name="pch" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="경우" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="구성된" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="그렇게" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="기능에서" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="무시합니다" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="빌드에는" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="사용됩니다" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="여전히" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="이러한" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="지원" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="코딩" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="파일은" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="파일을" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
+    <option name="프로젝트" hit="코딩 지원 기능에서 PCH 파일을 무시합니다. 이러한 파일은 프로젝트 빌드에는 여전히 사용됩니다(그렇게 구성된 경우)." />
     <option name="색인화" hit="타사 코드 색인화" />
     <option name="코드" hit="타사 코드 색인화" />
     <option name="타사" hit="타사 코드 색인화" />
-    <option name="탐색" hit="탐색" />
     <option name="모델" hit="프로젝트 모델" />
     <option name="프로젝트" hit="프로젝트 모델" />
     <option name="변경되면" hit="프로젝트 파일이 변경되면 프로젝트 프로퍼티를 재생성" />
@@ -565,8 +623,8 @@
     <option name="켜기" hit="Clang-Tidy 지원 켜기(E)" />
     <option name="iddqd" hit="iddqd" />
     <option name="0" hit="번들 LLVM       부터  B " />
-    <option name="0부터" hit="번들 LLVM       부터  B " />
-    <option name="16" hit="번들 LLVM       부터  B " />
+    <option name="17" hit="번들 LLVM       부터  B " />
+    <option name="1부터" hit="번들 LLVM       부터  B " />
     <option name="b" hit="번들 LLVM       부터  B " />
     <option name="llvm" hit="번들 LLVM       부터  B " />
     <option name="번들" hit="번들 LLVM       부터  B " />
@@ -815,6 +873,12 @@
     <option name="생성자를" hit=" 변환하는 생성자를  explicit 으로 선언 D " />
     <option name="선언" hit=" 변환하는 생성자를  explicit 으로 선언 D " />
     <option name="으로" hit=" 변환하는 생성자를  explicit 으로 선언 D " />
+    <option name="" hit=" 빈 생성자 및 소멸자의 본문 " />
+    <option name="및" hit=" 빈 생성자 및 소멸자의 본문 " />
+    <option name="본문" hit=" 빈 생성자 및 소멸자의 본문 " />
+    <option name="빈" hit=" 빈 생성자 및 소멸자의 본문 " />
+    <option name="생성자" hit=" 빈 생성자 및 소멸자의 본문 " />
+    <option name="소멸자의" hit=" 빈 생성자 및 소멸자의 본문 " />
     <option name="" hit=" 재정의하는 함수의 본문에서 재정의된 함수 호출 C " />
     <option name="c" hit=" 재정의하는 함수의 본문에서 재정의된 함수 호출 C " />
     <option name="본문에서" hit=" 재정의하는 함수의 본문에서 재정의된 함수 호출 C " />
@@ -844,16 +908,31 @@
     <option name="디폴트" hit="디폴트 함수 본문:" />
     <option name="본문" hit="디폴트 함수 본문:" />
     <option name="함수" hit="디폴트 함수 본문:" />
+    <option name="f" hit="디폴트로 지정된 본문 F " />
+    <option name="디폴트로" hit="디폴트로 지정된 본문 F " />
+    <option name="본문" hit="디폴트로 지정된 본문 F " />
+    <option name="지정된" hit="디폴트로 지정된 본문 F " />
     <option name="d" hit="변환하는 생성자를 'explicit'으로 선언(D)" />
     <option name="explicit" hit="변환하는 생성자를 'explicit'으로 선언(D)" />
     <option name="변환하는" hit="변환하는 생성자를 'explicit'으로 선언(D)" />
     <option name="생성자를" hit="변환하는 생성자를 'explicit'으로 선언(D)" />
     <option name="선언" hit="변환하는 생성자를 'explicit'으로 선언(D)" />
     <option name="으로" hit="변환하는 생성자를 'explicit'으로 선언(D)" />
+    <option name="w" hit="본문 없음 W " />
+    <option name="본문" hit="본문 없음 W " />
+    <option name="없음" hit="본문 없음 W " />
+    <option name="m" hit="빈 본문 M " />
+    <option name="본문" hit="빈 본문 M " />
+    <option name="빈" hit="빈 본문 M " />
     <option name="e" hit="빈 본문 남겨두기 E " />
     <option name="남겨두기" hit="빈 본문 남겨두기 E " />
     <option name="본문" hit="빈 본문 남겨두기 E " />
     <option name="빈" hit="빈 본문 남겨두기 E " />
+    <option name="및" hit="빈 생성자 및 소멸자의 본문:" />
+    <option name="본문" hit="빈 생성자 및 소멸자의 본문:" />
+    <option name="빈" hit="빈 생성자 및 소멸자의 본문:" />
+    <option name="생성자" hit="빈 생성자 및 소멸자의 본문:" />
+    <option name="소멸자의" hit="빈 생성자 및 소멸자의 본문:" />
     <option name="본문" hit="생성된 함수의 본문" />
     <option name="생성된" hit="생성된 함수의 본문" />
     <option name="함수의" hit="생성된 함수의 본문" />
@@ -1235,6 +1314,10 @@
     <option name="while" hit="'while' 구문 내부" />
     <option name="구문" hit="'while' 구문 내부" />
     <option name="내부" hit="'while' 구문 내부" />
+    <option name="" hit="'{' 뒤에 주석 허용" />
+    <option name="뒤에" hit="'{' 뒤에 주석 허용" />
+    <option name="주석" hit="'{' 뒤에 주석 허용" />
+    <option name="허용" hit="'{' 뒤에 주석 허용" />
     <option name="" hit=".clang-format 파일에서 코드 스타일 읽어오기" />
     <option name="clang-format" hit=".clang-format 파일에서 코드 스타일 읽어오기" />
     <option name="스타일" hit=".clang-format 파일에서 코드 스타일 읽어오기" />
@@ -1245,6 +1328,30 @@
     <option name="연산자" hit="?: 연산자" />
     <option name="all" path="이름 지정" hit="ALL UPPER" />
     <option name="upper" path="이름 지정" hit="ALL UPPER" />
+    <option name="after" hit="After semicolon" />
+    <option name="semicolon" hit="After semicolon" />
+    <option name="before" hit="Before parentheses" />
+    <option name="parentheses" hit="Before parentheses" />
+    <option name="before" hit="Before semicolon" />
+    <option name="semicolon" hit="Before semicolon" />
+    <option name="blank" hit="Blank Lines" />
+    <option name="lines" hit="Blank Lines" />
+    <option name="-" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="after" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="break" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="in" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="line" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="return" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="trailing" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="types" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="-" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="before" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="break" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="in" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="line" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="return" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="trailing" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="types" hit="Break line before '-&gt;' in trailing return types" />
     <option name="c++" hit="C  " />
     <option name="c++" hit="C++/CLI 제네릭 제약 들여쓰기" />
     <option name="cli" hit="C++/CLI 제네릭 제약 들여쓰기" />
@@ -1278,6 +1385,11 @@
     <option name="제네릭" hit="C++/CLI 제네릭 제약 콜론 앞" />
     <option name="제약" hit="C++/CLI 제네릭 제약 콜론 앞" />
     <option name="콜론" hit="C++/CLI 제네릭 제약 콜론 앞" />
+    <option name="arguments" hit="Call arguments" />
+    <option name="call" hit="Call arguments" />
+    <option name="calls" hit="Chained method calls" />
+    <option name="chained" hit="Chained method calls" />
+    <option name="method" hit="Chained method calls" />
     <option name="clang-format" path="일반" hit="Clang format С " />
     <option name="с" path="일반" hit="Clang format С " />
     <option name="concepts" hit="Concepts" />
@@ -1285,6 +1397,7 @@
     <option name="upper" path="이름 지정" hit="First upper" />
     <option name="include" hit="Include 지시문" />
     <option name="지시문" hit="Include 지시문" />
+    <option name="other" hit="Other" />
     <option name="c++" hit="ReSharper C++ 서식 지정 도구를 사용하여 코드의 서식을 지정하고 서식 검사를 실행합니다. 서식 지정 도구는 수동으로 또는 자동 탐지를 통해 구성할 수 있습니다. 또한 .clang-format 구성 파일에서 서식 설정을 읽을 수 있습니다." />
     <option name="clang-format" hit="ReSharper C++ 서식 지정 도구를 사용하여 코드의 서식을 지정하고 서식 검사를 실행합니다. 서식 지정 도구는 수동으로 또는 자동 탐지를 통해 구성할 수 있습니다. 또한 .clang-format 구성 파일에서 서식 설정을 읽을 수 있습니다." />
     <option name="resharper" hit="ReSharper C++ 서식 지정 도구를 사용하여 코드의 서식을 지정하고 서식 검사를 실행합니다. 서식 지정 도구는 수동으로 또는 자동 탐지를 통해 구성할 수 있습니다. 또한 .clang-format 구성 파일에서 서식 설정을 읽을 수 있습니다." />
@@ -1344,6 +1457,9 @@
     <option name="uppercamelcase" path="이름 지정" hit="UpperCamelCase UnderscoreTolerant" />
     <option name="underscoretolerant" path="이름 지정" hit="UpperCamelCase underscoreTolerant" />
     <option name="uppercamelcase" path="이름 지정" hit="UpperCamelCase underscoreTolerant" />
+    <option name="lines" hit="Wrap long lines" />
+    <option name="long" hit="Wrap long lines" />
+    <option name="wrap" hit="Wrap long lines" />
     <option name="all" path="이름 지정" hit="all lower" />
     <option name="lower" path="이름 지정" hit="all lower" />
     <option name="cv" hit="cv 한정자의 위치" />
@@ -1471,12 +1587,8 @@
     <option name="바꿈" hit="기존 줄 바꿈 유지" />
     <option name="유지" hit="기존 줄 바꿈 유지" />
     <option name="줄" hit="기존 줄 바꿈 유지" />
-    <option name="기타" hit="기타" />
     <option name="기타" hit="기타 상수" />
     <option name="상수" hit="기타 상수" />
-    <option name="긴" hit="긴 줄 줄 바꿈" />
-    <option name="바꿈" hit="긴 줄 줄 바꿈" />
-    <option name="줄" hit="긴 줄 줄 바꿈" />
     <option name="내보내기" hit="내보내기 선언 블록 멤버 들여쓰기" />
     <option name="들여쓰기" hit="내보내기 선언 블록 멤버 들여쓰기" />
     <option name="멤버" hit="내보내기 선언 블록 멤버 들여쓰기" />
@@ -1689,7 +1801,7 @@
     <option name="첨자" hit="배열 아래 첨자 대괄호 앞" />
     <option name="0" path="일반" hit="번들 LLVM       부터  B " />
     <option name="0부터" path="일반" hit="번들 LLVM       부터  B " />
-    <option name="17" path="일반" hit="번들 LLVM       부터  B " />
+    <option name="18" path="일반" hit="번들 LLVM       부터  B " />
     <option name="b" path="일반" hit="번들 LLVM       부터  B " />
     <option name="llvm" path="일반" hit="번들 LLVM       부터  B " />
     <option name="번들" path="일반" hit="번들 LLVM       부터  B " />
@@ -1802,8 +1914,11 @@
     <option name="비트" hit="비트 필드 크기" />
     <option name="크기" hit="비트 필드 크기" />
     <option name="필드" hit="비트 필드 크기" />
-    <option name="빈" hit="빈 줄" />
-    <option name="줄" hit="빈 줄" />
+    <option name="내" hit="빈 블록 내" />
+    <option name="블록" hit="빈 블록 내" />
+    <option name="빈" hit="빈 블록 내" />
+    <option name="빈" path="빈 줄" hit="빈 줄" />
+    <option name="줄" path="빈 줄" hit="빈 줄" />
     <option name="빈" hit="빈 중괄호 서식 지정" />
     <option name="서식" hit="빈 중괄호 서식 지정" />
     <option name="중괄호" hit="빈 중괄호 서식 지정" />
@@ -1877,14 +1992,8 @@
     <option name="제거" hit="선언 내에서 '{' 및 '}' 전에 있는 공백 제거" />
     <option name="선언" hit="선언 이름" />
     <option name="이름" hit="선언 이름" />
-    <option name="뒤" hit="세미콜론 뒤" />
-    <option name="세미콜론" hit="세미콜론 뒤" />
-    <option name="세미콜론" hit="세미콜론 앞" />
-    <option name="앞" hit="세미콜론 앞" />
     <option name="내" hit="소괄호 내" />
     <option name="소괄호" hit="소괄호 내" />
-    <option name="소괄호" hit="소괄호 앞" />
-    <option name="앞" hit="소괄호 앞" />
     <option name="때" hit="소멸자를 재정의할 때 사용할 지정자" />
     <option name="사용할" hit="소멸자를 재정의할 때 사용할 지정자" />
     <option name="소멸자를" hit="소멸자를 재정의할 때 사용할 지정자" />
@@ -2076,9 +2185,6 @@
     <option name="열에서" hit="첫 번째 열에서 시작된 주석 들여쓰기" />
     <option name="주석" hit="첫 번째 열에서 시작된 주석 들여쓰기" />
     <option name="첫" hit="첫 번째 열에서 시작된 주석 들여쓰기" />
-    <option name="메서드" hit="체인 메서드 호출" />
-    <option name="체인" hit="체인 메서드 호출" />
-    <option name="호출" hit="체인 메서드 호출" />
     <option name="-" hit="체인 메서드 호출의 '.' 및 '-&gt;' 내어쓰기" />
     <option name="내어쓰기" hit="체인 메서드 호출의 '.' 및 '-&gt;' 내어쓰기" />
     <option name="메서드" hit="체인 메서드 호출의 '.' 및 '-&gt;' 내어쓰기" />
@@ -2426,8 +2532,6 @@
     <option name="앞에서" hit="호출 내에서는 ')' 앞에서 줄바꿈 선호" />
     <option name="줄바꿈" hit="호출 내에서는 ')' 앞에서 줄바꿈 선호" />
     <option name="호출" hit="호출 내에서는 ')' 앞에서 줄바꿈 선호" />
-    <option name="인수" hit="호출 인수" />
-    <option name="호출" hit="호출 인수" />
     <option name="바꿈" hit="호출 인수 줄 바꿈" />
     <option name="인수" hit="호출 인수 줄 바꿈" />
     <option name="줄" hit="호출 인수 줄 바꿈" />
@@ -2481,6 +2585,10 @@
     <option name="while" path="구문 스타일" hit="'while' 구문 내부" />
     <option name="구문" path="구문 스타일" hit="'while' 구문 내부" />
     <option name="내부" path="구문 스타일" hit="'while' 구문 내부" />
+    <option name="" path="중괄호 레이아웃" hit="'{' 뒤에 주석 허용" />
+    <option name="뒤에" path="중괄호 레이아웃" hit="'{' 뒤에 주석 허용" />
+    <option name="주석" path="중괄호 레이아웃" hit="'{' 뒤에 주석 허용" />
+    <option name="허용" path="중괄호 레이아웃" hit="'{' 뒤에 주석 허용" />
     <option name="" path="일반" hit=".clang-format 파일에서 코드 스타일 읽어오기" />
     <option name="clang-format" path="일반" hit=".clang-format 파일에서 코드 스타일 읽어오기" />
     <option name="스타일" path="일반" hit=".clang-format 파일에서 코드 스타일 읽어오기" />
@@ -2489,6 +2597,30 @@
     <option name="파일에서" path="일반" hit=".clang-format 파일에서 코드 스타일 읽어오기" />
     <option name="" path="들여쓰기 및 정렬" hit="?: 연산자" />
     <option name="연산자" path="들여쓰기 및 정렬" hit="?: 연산자" />
+    <option name="after" path="공백" hit="After semicolon" />
+    <option name="semicolon" path="공백" hit="After semicolon" />
+    <option name="before" path="공백" hit="Before parentheses" />
+    <option name="parentheses" path="공백" hit="Before parentheses" />
+    <option name="before" path="공백" hit="Before semicolon" />
+    <option name="semicolon" path="공백" hit="Before semicolon" />
+    <option name="blank" path="빈 줄" hit="Blank Lines" />
+    <option name="lines" path="빈 줄" hit="Blank Lines" />
+    <option name="-" path="줄 바꿈 및 래핑" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="after" path="줄 바꿈 및 래핑" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="break" path="줄 바꿈 및 래핑" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="in" path="줄 바꿈 및 래핑" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="line" path="줄 바꿈 및 래핑" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="return" path="줄 바꿈 및 래핑" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="trailing" path="줄 바꿈 및 래핑" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="types" path="줄 바꿈 및 래핑" hit="Break line after '-&gt;' in trailing return types" />
+    <option name="-" path="줄 바꿈 및 래핑" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="before" path="줄 바꿈 및 래핑" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="break" path="줄 바꿈 및 래핑" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="in" path="줄 바꿈 및 래핑" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="line" path="줄 바꿈 및 래핑" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="return" path="줄 바꿈 및 래핑" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="trailing" path="줄 바꿈 및 래핑" hit="Break line before '-&gt;' in trailing return types" />
+    <option name="types" path="줄 바꿈 및 래핑" hit="Break line before '-&gt;' in trailing return types" />
     <option name="c++" path="들여쓰기 및 정렬" hit="C++/CLI 제네릭 제약 들여쓰기" />
     <option name="cli" path="들여쓰기 및 정렬" hit="C++/CLI 제네릭 제약 들여쓰기" />
     <option name="들여쓰기" path="들여쓰기 및 정렬" hit="C++/CLI 제네릭 제약 들여쓰기" />
@@ -2521,9 +2653,15 @@
     <option name="제네릭" path="공백" hit="C++/CLI 제네릭 제약 콜론 앞" />
     <option name="제약" path="공백" hit="C++/CLI 제네릭 제약 콜론 앞" />
     <option name="콜론" path="공백" hit="C++/CLI 제네릭 제약 콜론 앞" />
+    <option name="arguments" path="들여쓰기 및 정렬" hit="Call arguments" />
+    <option name="call" path="들여쓰기 및 정렬" hit="Call arguments" />
+    <option name="calls" path="들여쓰기 및 정렬" hit="Chained method calls" />
+    <option name="chained" path="들여쓰기 및 정렬" hit="Chained method calls" />
+    <option name="method" path="들여쓰기 및 정렬" hit="Chained method calls" />
     <option name="concepts" path="이름 지정" hit="Concepts" />
     <option name="include" path="구문 스타일" hit="Include 지시문" />
     <option name="지시문" path="구문 스타일" hit="Include 지시문" />
+    <option name="other" path="공백" hit="Other" />
     <option name="c++" path="일반" hit="ReSharper C++ 서식 지정 도구를 사용하여 코드의 서식을 지정하고 서식 검사를 실행합니다. 서식 지정 도구는 수동으로 또는 자동 탐지를 통해 구성할 수 있습니다. 또한 .clang-format 구성 파일에서 서식 설정을 읽을 수 있습니다." />
     <option name="clang-format" path="일반" hit="ReSharper C++ 서식 지정 도구를 사용하여 코드의 서식을 지정하고 서식 검사를 실행합니다. 서식 지정 도구는 수동으로 또는 자동 탐지를 통해 구성할 수 있습니다. 또한 .clang-format 구성 파일에서 서식 설정을 읽을 수 있습니다." />
     <option name="resharper" path="일반" hit="ReSharper C++ 서식 지정 도구를 사용하여 코드의 서식을 지정하고 서식 검사를 실행합니다. 서식 지정 도구는 수동으로 또는 자동 탐지를 통해 구성할 수 있습니다. 또한 .clang-format 구성 파일에서 서식 설정을 읽을 수 있습니다." />
@@ -2573,6 +2711,9 @@
     <option name="코드" path="일반" hit="ReSharper가 .clang-format 파일에서 코드 스타일 구성을 읽어옵니다. Clang-Format은 C++, JavaScript 및 ProtoBuf 에서 사용되는 YAML 기반 서식입니다." />
     <option name="파일에서" path="일반" hit="ReSharper가 .clang-format 파일에서 코드 스타일 구성을 읽어옵니다. Clang-Format은 C++, JavaScript 및 ProtoBuf 에서 사용되는 YAML 기반 서식입니다." />
     <option name="typedef" path="이름 지정" hit="Typedef" />
+    <option name="lines" path="줄 바꿈 및 래핑" hit="Wrap long lines" />
+    <option name="long" path="줄 바꿈 및 래핑" hit="Wrap long lines" />
+    <option name="wrap" path="줄 바꿈 및 래핑" hit="Wrap long lines" />
     <option name="cv" path="구문 스타일" hit="cv 한정자의 위치" />
     <option name="위치" path="구문 스타일" hit="cv 한정자의 위치" />
     <option name="한정자의" path="구문 스타일" hit="cv 한정자의 위치" />
@@ -2684,12 +2825,8 @@
     <option name="바꿈" path="줄 바꿈 및 래핑" hit="기존 줄 바꿈 유지" />
     <option name="유지" path="줄 바꿈 및 래핑" hit="기존 줄 바꿈 유지" />
     <option name="줄" path="줄 바꿈 및 래핑" hit="기존 줄 바꿈 유지" />
-    <option name="기타" path="공백" hit="기타" />
     <option name="기타" path="이름 지정" hit="기타 상수" />
     <option name="상수" path="이름 지정" hit="기타 상수" />
-    <option name="긴" path="줄 바꿈 및 래핑" hit="긴 줄 줄 바꿈" />
-    <option name="바꿈" path="줄 바꿈 및 래핑" hit="긴 줄 줄 바꿈" />
-    <option name="줄" path="줄 바꿈 및 래핑" hit="긴 줄 줄 바꿈" />
     <option name="내보내기" path="들여쓰기 및 정렬" hit="내보내기 선언 블록 멤버 들여쓰기" />
     <option name="들여쓰기" path="들여쓰기 및 정렬" hit="내보내기 선언 블록 멤버 들여쓰기" />
     <option name="멤버" path="들여쓰기 및 정렬" hit="내보내기 선언 블록 멤버 들여쓰기" />
@@ -3004,8 +3141,9 @@
     <option name="비트" path="들여쓰기 및 정렬" hit="비트 필드 크기" />
     <option name="크기" path="들여쓰기 및 정렬" hit="비트 필드 크기" />
     <option name="필드" path="들여쓰기 및 정렬" hit="비트 필드 크기" />
-    <option name="빈" path="빈 줄" hit="빈 줄" />
-    <option name="줄" path="빈 줄" hit="빈 줄" />
+    <option name="내" path="공백" hit="빈 블록 내" />
+    <option name="블록" path="공백" hit="빈 블록 내" />
+    <option name="빈" path="공백" hit="빈 블록 내" />
     <option name="빈" path="중괄호 레이아웃" hit="빈 중괄호 서식 지정" />
     <option name="서식" path="중괄호 레이아웃" hit="빈 중괄호 서식 지정" />
     <option name="중괄호" path="중괄호 레이아웃" hit="빈 중괄호 서식 지정" />
@@ -3076,14 +3214,8 @@
     <option name="제거" path="빈 줄" hit="선언 내에서 '{' 및 '}' 전에 있는 공백 제거" />
     <option name="선언" path="들여쓰기 및 정렬" hit="선언 이름" />
     <option name="이름" path="들여쓰기 및 정렬" hit="선언 이름" />
-    <option name="뒤" path="공백" hit="세미콜론 뒤" />
-    <option name="세미콜론" path="공백" hit="세미콜론 뒤" />
-    <option name="세미콜론" path="공백" hit="세미콜론 앞" />
-    <option name="앞" path="공백" hit="세미콜론 앞" />
     <option name="내" path="공백" hit="소괄호 내" />
     <option name="소괄호" path="공백" hit="소괄호 내" />
-    <option name="소괄호" path="공백" hit="소괄호 앞" />
-    <option name="앞" path="공백" hit="소괄호 앞" />
     <option name="때" path="구문 스타일" hit="소멸자를 재정의할 때 사용할 지정자" />
     <option name="사용할" path="구문 스타일" hit="소멸자를 재정의할 때 사용할 지정자" />
     <option name="소멸자를" path="구문 스타일" hit="소멸자를 재정의할 때 사용할 지정자" />
@@ -3265,9 +3397,6 @@
     <option name="열에서" path="들여쓰기 및 정렬" hit="첫 번째 열에서 시작된 주석 들여쓰기" />
     <option name="주석" path="들여쓰기 및 정렬" hit="첫 번째 열에서 시작된 주석 들여쓰기" />
     <option name="첫" path="들여쓰기 및 정렬" hit="첫 번째 열에서 시작된 주석 들여쓰기" />
-    <option name="메서드" path="들여쓰기 및 정렬" hit="체인 메서드 호출" />
-    <option name="체인" path="들여쓰기 및 정렬" hit="체인 메서드 호출" />
-    <option name="호출" path="들여쓰기 및 정렬" hit="체인 메서드 호출" />
     <option name="-" path="들여쓰기 및 정렬" hit="체인 메서드 호출의 '.' 및 '-&gt;' 내어쓰기" />
     <option name="내어쓰기" path="들여쓰기 및 정렬" hit="체인 메서드 호출의 '.' 및 '-&gt;' 내어쓰기" />
     <option name="메서드" path="들여쓰기 및 정렬" hit="체인 메서드 호출의 '.' 및 '-&gt;' 내어쓰기" />
@@ -3611,8 +3740,6 @@
     <option name="앞에서" path="줄 바꿈 및 래핑" hit="호출 내에서는 ')' 앞에서 줄바꿈 선호" />
     <option name="줄바꿈" path="줄 바꿈 및 래핑" hit="호출 내에서는 ')' 앞에서 줄바꿈 선호" />
     <option name="호출" path="줄 바꿈 및 래핑" hit="호출 내에서는 ')' 앞에서 줄바꿈 선호" />
-    <option name="인수" path="들여쓰기 및 정렬" hit="호출 인수" />
-    <option name="호출" path="들여쓰기 및 정렬" hit="호출 인수" />
     <option name="바꿈" path="줄 바꿈 및 래핑" hit="호출 인수 줄 바꿈" />
     <option name="인수" path="줄 바꿈 및 래핑" hit="호출 인수 줄 바꿈" />
     <option name="줄" path="줄 바꿈 및 래핑" hit="호출 인수 줄 바꿈" />
@@ -3837,11 +3964,6 @@
     <option name="진단" hit="Clang 진단" />
     <option name="clang-tidy" hit="Clang-Tidy 검사" />
     <option name="검사" hit="Clang-Tidy 검사" />
-    <option name="be" hit="Conditional expression can be simplified" />
-    <option name="can" hit="Conditional expression can be simplified" />
-    <option name="conditional" hit="Conditional expression can be simplified" />
-    <option name="expression" hit="Conditional expression can be simplified" />
-    <option name="simplified" hit="Conditional expression can be simplified" />
     <option name="for" hit="For 반복문을 while 반복문으로 바꿀 수 있습니다" />
     <option name="while" hit="For 반복문을 while 반복문으로 바꿀 수 있습니다" />
     <option name="바꿀" hit="For 반복문을 while 반복문으로 바꿀 수 있습니다" />
@@ -3849,32 +3971,26 @@
     <option name="반복문을" hit="For 반복문을 while 반복문으로 바꿀 수 있습니다" />
     <option name="수" hit="For 반복문을 while 반복문으로 바꿀 수 있습니다" />
     <option name="있습니다" hit="For 반복문을 while 반복문으로 바꿀 수 있습니다" />
+    <option name="formatting" hit="Formatting" />
     <option name="inconsistent" hit="Inconsistent Naming" />
     <option name="naming" hit="Inconsistent Naming" />
     <option name="clang" hit="IndependentClass-attribute clang diagnostic" />
     <option name="diagnostic" hit="IndependentClass-attribute clang diagnostic" />
     <option name="independentclass-attribute" hit="IndependentClass-attribute clang diagnostic" />
-    <option name="because" hit="Keyword 'export' is redundant, because there is enclosing export declaration" />
-    <option name="declaration" hit="Keyword 'export' is redundant, because there is enclosing export declaration" />
-    <option name="enclosing" hit="Keyword 'export' is redundant, because there is enclosing export declaration" />
-    <option name="export" hit="Keyword 'export' is redundant, because there is enclosing export declaration" />
-    <option name="is" hit="Keyword 'export' is redundant, because there is enclosing export declaration" />
-    <option name="keyword" hit="Keyword 'export' is redundant, because there is enclosing export declaration" />
-    <option name="redundant" hit="Keyword 'export' is redundant, because there is enclosing export declaration" />
-    <option name="there" hit="Keyword 'export' is redundant, because there is enclosing export declaration" />
-    <option name="bound" hit="Method bound to delegate is not marked with UFUNCTION macro" />
-    <option name="delegate" hit="Method bound to delegate is not marked with UFUNCTION macro" />
-    <option name="is" hit="Method bound to delegate is not marked with UFUNCTION macro" />
-    <option name="macro" hit="Method bound to delegate is not marked with UFUNCTION macro" />
-    <option name="marked" hit="Method bound to delegate is not marked with UFUNCTION macro" />
-    <option name="method" hit="Method bound to delegate is not marked with UFUNCTION macro" />
-    <option name="not" hit="Method bound to delegate is not marked with UFUNCTION macro" />
-    <option name="to" hit="Method bound to delegate is not marked with UFUNCTION macro" />
-    <option name="ufunction" hit="Method bound to delegate is not marked with UFUNCTION macro" />
-    <option name="with" hit="Method bound to delegate is not marked with UFUNCTION macro" />
     <option name="clang" hit="NSObject-attribute clang diagnostic" />
     <option name="diagnostic" hit="NSObject-attribute clang diagnostic" />
     <option name="nsobject-attribute" hit="NSObject-attribute clang diagnostic" />
+    <option name="else" hit="Redundant 'else' keyword" />
+    <option name="keyword" hit="Redundant 'else' keyword" />
+    <option name="redundant" hit="Redundant 'else' keyword" />
+    <option name="control" hit="Redundant control flow jump statement" />
+    <option name="flow" hit="Redundant control flow jump statement" />
+    <option name="jump" hit="Redundant control flow jump statement" />
+    <option name="redundant" hit="Redundant control flow jump statement" />
+    <option name="statement" hit="Redundant control flow jump statement" />
+    <option name="braces" hit="Remove redundant braces" />
+    <option name="redundant" hit="Remove redundant braces" />
+    <option name="remove" hit="Remove redundant braces" />
     <option name="tab은" hit="Tab은 금지됩니다" />
     <option name="금지됩니다" hit="Tab은 금지됩니다" />
     <option name="rethrow" hit="Throw 식이 rethrow 식으로 대체될 수 있습니다." />
@@ -4113,12 +4229,6 @@
     <option name="clang" hit="apiModeling.Errno clang static analyzer check" />
     <option name="errno" hit="apiModeling.Errno clang static analyzer check" />
     <option name="static" hit="apiModeling.Errno clang static analyzer check" />
-    <option name="analyzer" hit="apiModeling.StdCLibraryFunctions clang static analyzer check" />
-    <option name="apimodeling" hit="apiModeling.StdCLibraryFunctions clang static analyzer check" />
-    <option name="check" hit="apiModeling.StdCLibraryFunctions clang static analyzer check" />
-    <option name="clang" hit="apiModeling.StdCLibraryFunctions clang static analyzer check" />
-    <option name="static" hit="apiModeling.StdCLibraryFunctions clang static analyzer check" />
-    <option name="stdclibraryfunctions" hit="apiModeling.StdCLibraryFunctions clang static analyzer check" />
     <option name="analyzer" hit="apiModeling.TrustNonnull clang static analyzer check" />
     <option name="apimodeling" hit="apiModeling.TrustNonnull clang static analyzer check" />
     <option name="check" hit="apiModeling.TrustNonnull clang static analyzer check" />
@@ -4351,6 +4461,9 @@
     <option name="bugprone-easily-swappable-parameters" hit="bugprone-easily-swappable-parameters clang-tidy check" />
     <option name="check" hit="bugprone-easily-swappable-parameters clang-tidy check" />
     <option name="clang-tidy" hit="bugprone-easily-swappable-parameters clang-tidy check" />
+    <option name="bugprone-empty-catch" hit="bugprone-empty-catch clang-tidy check" />
+    <option name="check" hit="bugprone-empty-catch clang-tidy check" />
+    <option name="clang-tidy" hit="bugprone-empty-catch clang-tidy check" />
     <option name="bugprone-exception-escape" hit="bugprone-exception-escape clang-tidy check" />
     <option name="check" hit="bugprone-exception-escape clang-tidy check" />
     <option name="clang-tidy" hit="bugprone-exception-escape clang-tidy check" />
@@ -4399,6 +4512,9 @@
     <option name="bugprone-move-forwarding-reference" hit="bugprone-move-forwarding-reference clang-tidy check" />
     <option name="check" hit="bugprone-move-forwarding-reference clang-tidy check" />
     <option name="clang-tidy" hit="bugprone-move-forwarding-reference clang-tidy check" />
+    <option name="bugprone-multiple-new-in-one-expression" hit="bugprone-multiple-new-in-one-expression clang-tidy check" />
+    <option name="check" hit="bugprone-multiple-new-in-one-expression clang-tidy check" />
+    <option name="clang-tidy" hit="bugprone-multiple-new-in-one-expression clang-tidy check" />
     <option name="bugprone-multiple-statement-macro" hit="bugprone-multiple-statement-macro clang-tidy check" />
     <option name="check" hit="bugprone-multiple-statement-macro clang-tidy check" />
     <option name="clang-tidy" hit="bugprone-multiple-statement-macro clang-tidy check" />
@@ -4408,6 +4524,9 @@
     <option name="bugprone-no-escape" hit="bugprone-no-escape clang-tidy check" />
     <option name="check" hit="bugprone-no-escape clang-tidy check" />
     <option name="clang-tidy" hit="bugprone-no-escape clang-tidy check" />
+    <option name="bugprone-non-zero-enum-to-bool-conversion" hit="bugprone-non-zero-enum-to-bool-conversion clang-tidy check" />
+    <option name="check" hit="bugprone-non-zero-enum-to-bool-conversion clang-tidy check" />
+    <option name="clang-tidy" hit="bugprone-non-zero-enum-to-bool-conversion clang-tidy check" />
     <option name="bugprone-not-null-terminated-result" hit="bugprone-not-null-terminated-result clang-tidy check" />
     <option name="check" hit="bugprone-not-null-terminated-result clang-tidy check" />
     <option name="clang-tidy" hit="bugprone-not-null-terminated-result clang-tidy check" />
@@ -4483,6 +4602,9 @@
     <option name="bugprone-swapped-arguments" hit="bugprone-swapped-arguments clang-tidy check" />
     <option name="check" hit="bugprone-swapped-arguments clang-tidy check" />
     <option name="clang-tidy" hit="bugprone-swapped-arguments clang-tidy check" />
+    <option name="bugprone-switch-missing-default-case" hit="bugprone-switch-missing-default-case clang-tidy check" />
+    <option name="check" hit="bugprone-switch-missing-default-case clang-tidy check" />
+    <option name="clang-tidy" hit="bugprone-switch-missing-default-case clang-tidy check" />
     <option name="bugprone-terminating-continue" hit="bugprone-terminating-continue clang-tidy check" />
     <option name="check" hit="bugprone-terminating-continue clang-tidy check" />
     <option name="clang-tidy" hit="bugprone-terminating-continue clang-tidy check" />
@@ -4507,6 +4629,12 @@
     <option name="bugprone-unhandled-self-assignment" hit="bugprone-unhandled-self-assignment clang-tidy check" />
     <option name="check" hit="bugprone-unhandled-self-assignment clang-tidy check" />
     <option name="clang-tidy" hit="bugprone-unhandled-self-assignment clang-tidy check" />
+    <option name="bugprone-unique-ptr-array-mismatch" hit="bugprone-unique-ptr-array-mismatch clang-tidy check" />
+    <option name="check" hit="bugprone-unique-ptr-array-mismatch clang-tidy check" />
+    <option name="clang-tidy" hit="bugprone-unique-ptr-array-mismatch clang-tidy check" />
+    <option name="bugprone-unsafe-functions" hit="bugprone-unsafe-functions clang-tidy check" />
+    <option name="check" hit="bugprone-unsafe-functions clang-tidy check" />
+    <option name="clang-tidy" hit="bugprone-unsafe-functions clang-tidy check" />
     <option name="bugprone-unused-raii" hit="bugprone-unused-raii clang-tidy check" />
     <option name="check" hit="bugprone-unused-raii clang-tidy check" />
     <option name="clang-tidy" hit="bugprone-unused-raii clang-tidy check" />
@@ -4606,6 +4734,15 @@
     <option name="c++20-extensions" hit="c++20-extensions clang diagnostic" />
     <option name="clang" hit="c++20-extensions clang diagnostic" />
     <option name="diagnostic" hit="c++20-extensions clang diagnostic" />
+    <option name="c++23-default-comp-relaxed-constexpr" hit="c++23-default-comp-relaxed-constexpr clang diagnostic" />
+    <option name="clang" hit="c++23-default-comp-relaxed-constexpr clang diagnostic" />
+    <option name="diagnostic" hit="c++23-default-comp-relaxed-constexpr clang diagnostic" />
+    <option name="c++23-extensions" hit="c++23-extensions clang diagnostic" />
+    <option name="clang" hit="c++23-extensions clang diagnostic" />
+    <option name="diagnostic" hit="c++23-extensions clang diagnostic" />
+    <option name="c++26-extensions" hit="c++26-extensions clang diagnostic" />
+    <option name="clang" hit="c++26-extensions clang diagnostic" />
+    <option name="diagnostic" hit="c++26-extensions clang diagnostic" />
     <option name="c++2a-compat-pedantic" hit="c++2a-compat-pedantic clang diagnostic" />
     <option name="clang" hit="c++2a-compat-pedantic clang diagnostic" />
     <option name="diagnostic" hit="c++2a-compat-pedantic clang diagnostic" />
@@ -4615,6 +4752,9 @@
     <option name="c++2b-extensions" hit="c++2b-extensions clang diagnostic" />
     <option name="clang" hit="c++2b-extensions clang diagnostic" />
     <option name="diagnostic" hit="c++2b-extensions clang diagnostic" />
+    <option name="c++2c-extensions" hit="c++2c-extensions clang diagnostic" />
+    <option name="clang" hit="c++2c-extensions clang diagnostic" />
+    <option name="diagnostic" hit="c++2c-extensions clang diagnostic" />
     <option name="c++98-c++11-c++14-c++17-compat" hit="c++98-c++11-c++14-c++17-compat clang diagnostic" />
     <option name="clang" hit="c++98-c++11-c++14-c++17-compat clang diagnostic" />
     <option name="diagnostic" hit="c++98-c++11-c++14-c++17-compat clang diagnostic" />
@@ -4771,12 +4911,18 @@
     <option name="cert-mem57-cpp" hit="cert-mem57-cpp clang-tidy check" />
     <option name="check" hit="cert-mem57-cpp clang-tidy check" />
     <option name="clang-tidy" hit="cert-mem57-cpp clang-tidy check" />
+    <option name="cert-msc24-c" hit="cert-msc24-c clang-tidy check" />
+    <option name="check" hit="cert-msc24-c clang-tidy check" />
+    <option name="clang-tidy" hit="cert-msc24-c clang-tidy check" />
     <option name="cert-msc30-c" hit="cert-msc30-c clang-tidy check" />
     <option name="check" hit="cert-msc30-c clang-tidy check" />
     <option name="clang-tidy" hit="cert-msc30-c clang-tidy check" />
     <option name="cert-msc32-c" hit="cert-msc32-c clang-tidy check" />
     <option name="check" hit="cert-msc32-c clang-tidy check" />
     <option name="clang-tidy" hit="cert-msc32-c clang-tidy check" />
+    <option name="cert-msc33-c" hit="cert-msc33-c clang-tidy check" />
+    <option name="check" hit="cert-msc33-c clang-tidy check" />
+    <option name="clang-tidy" hit="cert-msc33-c clang-tidy check" />
     <option name="cert-msc50-cpp" hit="cert-msc50-cpp clang-tidy check" />
     <option name="check" hit="cert-msc50-cpp clang-tidy check" />
     <option name="clang-tidy" hit="cert-msc50-cpp clang-tidy check" />
@@ -5019,9 +5165,9 @@
     <option name="static" hit="core.uninitialized.UndefReturn clang static analyzer check" />
     <option name="undefreturn" hit="core.uninitialized.UndefReturn clang static analyzer check" />
     <option name="uninitialized" hit="core.uninitialized.UndefReturn clang static analyzer check" />
-    <option name="clang" hit="coro-non-aligned-allocation-funciton clang diagnostic" />
-    <option name="coro-non-aligned-allocation-funciton" hit="coro-non-aligned-allocation-funciton clang diagnostic" />
-    <option name="diagnostic" hit="coro-non-aligned-allocation-funciton clang diagnostic" />
+    <option name="clang" hit="coro-non-aligned-allocation-function clang diagnostic" />
+    <option name="coro-non-aligned-allocation-function" hit="coro-non-aligned-allocation-function clang diagnostic" />
+    <option name="diagnostic" hit="coro-non-aligned-allocation-function clang diagnostic" />
     <option name="clang" hit="coroutine-missing-unhandled-exception clang diagnostic" />
     <option name="coroutine-missing-unhandled-exception" hit="coroutine-missing-unhandled-exception clang diagnostic" />
     <option name="diagnostic" hit="coroutine-missing-unhandled-exception clang diagnostic" />
@@ -5091,6 +5237,9 @@
     <option name="check" hit="cppcoreguidelines-avoid-c-arrays clang-tidy check" />
     <option name="clang-tidy" hit="cppcoreguidelines-avoid-c-arrays clang-tidy check" />
     <option name="cppcoreguidelines-avoid-c-arrays" hit="cppcoreguidelines-avoid-c-arrays clang-tidy check" />
+    <option name="check" hit="cppcoreguidelines-avoid-capturing-lambda-coroutines clang-tidy check" />
+    <option name="clang-tidy" hit="cppcoreguidelines-avoid-capturing-lambda-coroutines clang-tidy check" />
+    <option name="cppcoreguidelines-avoid-capturing-lambda-coroutines" hit="cppcoreguidelines-avoid-capturing-lambda-coroutines clang-tidy check" />
     <option name="check" hit="cppcoreguidelines-avoid-const-or-ref-data-members clang-tidy check" />
     <option name="clang-tidy" hit="cppcoreguidelines-avoid-const-or-ref-data-members clang-tidy check" />
     <option name="cppcoreguidelines-avoid-const-or-ref-data-members" hit="cppcoreguidelines-avoid-const-or-ref-data-members clang-tidy check" />
@@ -5124,12 +5273,27 @@
     <option name="check" hit="cppcoreguidelines-macro-usage clang-tidy check" />
     <option name="clang-tidy" hit="cppcoreguidelines-macro-usage clang-tidy check" />
     <option name="cppcoreguidelines-macro-usage" hit="cppcoreguidelines-macro-usage clang-tidy check" />
+    <option name="check" hit="cppcoreguidelines-misleading-capture-default-by-value clang-tidy check" />
+    <option name="clang-tidy" hit="cppcoreguidelines-misleading-capture-default-by-value clang-tidy check" />
+    <option name="cppcoreguidelines-misleading-capture-default-by-value" hit="cppcoreguidelines-misleading-capture-default-by-value clang-tidy check" />
+    <option name="check" hit="cppcoreguidelines-missing-std-forward clang-tidy check" />
+    <option name="clang-tidy" hit="cppcoreguidelines-missing-std-forward clang-tidy check" />
+    <option name="cppcoreguidelines-missing-std-forward" hit="cppcoreguidelines-missing-std-forward clang-tidy check" />
     <option name="check" hit="cppcoreguidelines-narrowing-conversions clang-tidy check" />
     <option name="clang-tidy" hit="cppcoreguidelines-narrowing-conversions clang-tidy check" />
     <option name="cppcoreguidelines-narrowing-conversions" hit="cppcoreguidelines-narrowing-conversions clang-tidy check" />
     <option name="check" hit="cppcoreguidelines-no-malloc clang-tidy check" />
     <option name="clang-tidy" hit="cppcoreguidelines-no-malloc clang-tidy check" />
     <option name="cppcoreguidelines-no-malloc" hit="cppcoreguidelines-no-malloc clang-tidy check" />
+    <option name="check" hit="cppcoreguidelines-noexcept-destructor clang-tidy check" />
+    <option name="clang-tidy" hit="cppcoreguidelines-noexcept-destructor clang-tidy check" />
+    <option name="cppcoreguidelines-noexcept-destructor" hit="cppcoreguidelines-noexcept-destructor clang-tidy check" />
+    <option name="check" hit="cppcoreguidelines-noexcept-move-operations clang-tidy check" />
+    <option name="clang-tidy" hit="cppcoreguidelines-noexcept-move-operations clang-tidy check" />
+    <option name="cppcoreguidelines-noexcept-move-operations" hit="cppcoreguidelines-noexcept-move-operations clang-tidy check" />
+    <option name="check" hit="cppcoreguidelines-noexcept-swap clang-tidy check" />
+    <option name="clang-tidy" hit="cppcoreguidelines-noexcept-swap clang-tidy check" />
+    <option name="cppcoreguidelines-noexcept-swap" hit="cppcoreguidelines-noexcept-swap clang-tidy check" />
     <option name="check" hit="cppcoreguidelines-non-private-member-variables-in-classes clang-tidy check" />
     <option name="clang-tidy" hit="cppcoreguidelines-non-private-member-variables-in-classes clang-tidy check" />
     <option name="cppcoreguidelines-non-private-member-variables-in-classes" hit="cppcoreguidelines-non-private-member-variables-in-classes clang-tidy check" />
@@ -5169,12 +5333,18 @@
     <option name="check" hit="cppcoreguidelines-pro-type-vararg clang-tidy check" />
     <option name="clang-tidy" hit="cppcoreguidelines-pro-type-vararg clang-tidy check" />
     <option name="cppcoreguidelines-pro-type-vararg" hit="cppcoreguidelines-pro-type-vararg clang-tidy check" />
+    <option name="check" hit="cppcoreguidelines-rvalue-reference-param-not-moved clang-tidy check" />
+    <option name="clang-tidy" hit="cppcoreguidelines-rvalue-reference-param-not-moved clang-tidy check" />
+    <option name="cppcoreguidelines-rvalue-reference-param-not-moved" hit="cppcoreguidelines-rvalue-reference-param-not-moved clang-tidy check" />
     <option name="check" hit="cppcoreguidelines-slicing clang-tidy check" />
     <option name="clang-tidy" hit="cppcoreguidelines-slicing clang-tidy check" />
     <option name="cppcoreguidelines-slicing" hit="cppcoreguidelines-slicing clang-tidy check" />
     <option name="check" hit="cppcoreguidelines-special-member-functions clang-tidy check" />
     <option name="clang-tidy" hit="cppcoreguidelines-special-member-functions clang-tidy check" />
     <option name="cppcoreguidelines-special-member-functions" hit="cppcoreguidelines-special-member-functions clang-tidy check" />
+    <option name="check" hit="cppcoreguidelines-use-default-member-init clang-tidy check" />
+    <option name="clang-tidy" hit="cppcoreguidelines-use-default-member-init clang-tidy check" />
+    <option name="cppcoreguidelines-use-default-member-init" hit="cppcoreguidelines-use-default-member-init clang-tidy check" />
     <option name="check" hit="cppcoreguidelines-virtual-class-destructor clang-tidy check" />
     <option name="clang-tidy" hit="cppcoreguidelines-virtual-class-destructor clang-tidy check" />
     <option name="cppcoreguidelines-virtual-class-destructor" hit="cppcoreguidelines-virtual-class-destructor clang-tidy check" />
@@ -5324,18 +5494,15 @@
     <option name="clang" hit="deprecated-enum-float-conversion clang diagnostic" />
     <option name="deprecated-enum-float-conversion" hit="deprecated-enum-float-conversion clang diagnostic" />
     <option name="diagnostic" hit="deprecated-enum-float-conversion clang diagnostic" />
-    <option name="clang" hit="deprecated-experimental-coroutine clang diagnostic" />
-    <option name="deprecated-experimental-coroutine" hit="deprecated-experimental-coroutine clang diagnostic" />
-    <option name="diagnostic" hit="deprecated-experimental-coroutine clang diagnostic" />
     <option name="clang" hit="deprecated-implementations clang diagnostic" />
     <option name="deprecated-implementations" hit="deprecated-implementations clang diagnostic" />
     <option name="diagnostic" hit="deprecated-implementations clang diagnostic" />
     <option name="clang" hit="deprecated-increment-bool clang diagnostic" />
     <option name="deprecated-increment-bool" hit="deprecated-increment-bool clang diagnostic" />
     <option name="diagnostic" hit="deprecated-increment-bool clang diagnostic" />
-    <option name="clang" hit="deprecated-module-ts clang diagnostic" />
-    <option name="deprecated-module-ts" hit="deprecated-module-ts clang diagnostic" />
-    <option name="diagnostic" hit="deprecated-module-ts clang diagnostic" />
+    <option name="clang" hit="deprecated-literal-operator clang diagnostic" />
+    <option name="deprecated-literal-operator" hit="deprecated-literal-operator clang diagnostic" />
+    <option name="diagnostic" hit="deprecated-literal-operator clang diagnostic" />
     <option name="clang" hit="deprecated-non-prototype clang diagnostic" />
     <option name="deprecated-non-prototype" hit="deprecated-non-prototype clang diagnostic" />
     <option name="diagnostic" hit="deprecated-non-prototype clang diagnostic" />
@@ -5351,6 +5518,9 @@
     <option name="clang" hit="deprecated-pragma clang diagnostic" />
     <option name="deprecated-pragma" hit="deprecated-pragma clang diagnostic" />
     <option name="diagnostic" hit="deprecated-pragma clang diagnostic" />
+    <option name="clang" hit="deprecated-redundant-constexpr-static-def clang diagnostic" />
+    <option name="deprecated-redundant-constexpr-static-def" hit="deprecated-redundant-constexpr-static-def clang diagnostic" />
+    <option name="diagnostic" hit="deprecated-redundant-constexpr-static-def clang diagnostic" />
     <option name="clang" hit="deprecated-register clang diagnostic" />
     <option name="deprecated-register" hit="deprecated-register clang diagnostic" />
     <option name="diagnostic" hit="deprecated-register clang diagnostic" />
@@ -5437,12 +5607,18 @@
     <option name="clang" hit="duplicate-protocol clang diagnostic" />
     <option name="diagnostic" hit="duplicate-protocol clang diagnostic" />
     <option name="duplicate-protocol" hit="duplicate-protocol clang diagnostic" />
+    <option name="clang" hit="dxil-validation clang diagnostic" />
+    <option name="diagnostic" hit="dxil-validation clang diagnostic" />
+    <option name="dxil-validation" hit="dxil-validation clang diagnostic" />
     <option name="clang" hit="dynamic-class-memaccess clang diagnostic" />
     <option name="diagnostic" hit="dynamic-class-memaccess clang diagnostic" />
     <option name="dynamic-class-memaccess" hit="dynamic-class-memaccess clang diagnostic" />
     <option name="clang" hit="dynamic-exception-spec clang diagnostic" />
     <option name="diagnostic" hit="dynamic-exception-spec clang diagnostic" />
     <option name="dynamic-exception-spec" hit="dynamic-exception-spec clang diagnostic" />
+    <option name="clang" hit="eager-load-cxx-named-modules clang diagnostic" />
+    <option name="diagnostic" hit="eager-load-cxx-named-modules clang diagnostic" />
+    <option name="eager-load-cxx-named-modules" hit="eager-load-cxx-named-modules clang diagnostic" />
     <option name="clang" hit="embedded-directive clang diagnostic" />
     <option name="diagnostic" hit="embedded-directive clang diagnostic" />
     <option name="embedded-directive" hit="embedded-directive clang diagnostic" />
@@ -5497,6 +5673,9 @@
     <option name="clang" hit="expansion-to-defined clang diagnostic" />
     <option name="diagnostic" hit="expansion-to-defined clang diagnostic" />
     <option name="expansion-to-defined" hit="expansion-to-defined clang diagnostic" />
+    <option name="clang" hit="experimental-header-units clang diagnostic" />
+    <option name="diagnostic" hit="experimental-header-units clang diagnostic" />
+    <option name="experimental-header-units" hit="experimental-header-units clang diagnostic" />
     <option name="clang" hit="explicit-initialize-call clang diagnostic" />
     <option name="diagnostic" hit="explicit-initialize-call clang diagnostic" />
     <option name="explicit-initialize-call" hit="explicit-initialize-call clang diagnostic" />
@@ -5506,9 +5685,6 @@
     <option name="clang" hit="export-unnamed clang diagnostic" />
     <option name="diagnostic" hit="export-unnamed clang diagnostic" />
     <option name="export-unnamed" hit="export-unnamed clang diagnostic" />
-    <option name="clang" hit="export-using-directive clang diagnostic" />
-    <option name="diagnostic" hit="export-using-directive clang diagnostic" />
-    <option name="export-using-directive" hit="export-using-directive clang diagnostic" />
     <option name="clang" hit="extern-c-compat clang diagnostic" />
     <option name="diagnostic" hit="extern-c-compat clang diagnostic" />
     <option name="extern-c-compat" hit="extern-c-compat clang diagnostic" />
@@ -5654,6 +5830,9 @@
     <option name="clang" hit="gcc-compat clang diagnostic" />
     <option name="diagnostic" hit="gcc-compat clang diagnostic" />
     <option name="gcc-compat" hit="gcc-compat clang diagnostic" />
+    <option name="clang" hit="generic-type-extension clang diagnostic" />
+    <option name="diagnostic" hit="generic-type-extension clang diagnostic" />
+    <option name="generic-type-extension" hit="generic-type-extension clang diagnostic" />
     <option name="clang" hit="global-constructors clang diagnostic" />
     <option name="diagnostic" hit="global-constructors clang diagnostic" />
     <option name="global-constructors" hit="global-constructors clang diagnostic" />
@@ -5909,6 +6088,9 @@
     <option name="check" hit="hicpp-vararg clang-tidy check" />
     <option name="clang-tidy" hit="hicpp-vararg clang-tidy check" />
     <option name="hicpp-vararg" hit="hicpp-vararg clang-tidy check" />
+    <option name="clang" hit="hip-omp-target-directives clang diagnostic" />
+    <option name="diagnostic" hit="hip-omp-target-directives clang diagnostic" />
+    <option name="hip-omp-target-directives" hit="hip-omp-target-directives clang diagnostic" />
     <option name="clang" hit="hip-only clang diagnostic" />
     <option name="diagnostic" hit="hip-only clang diagnostic" />
     <option name="hip-only" hit="hip-only clang diagnostic" />
@@ -6123,9 +6305,15 @@
     <option name="clang" hit="invalid-source-encoding clang diagnostic" />
     <option name="diagnostic" hit="invalid-source-encoding clang diagnostic" />
     <option name="invalid-source-encoding" hit="invalid-source-encoding clang diagnostic" />
+    <option name="clang" hit="invalid-static-assert-message clang diagnostic" />
+    <option name="diagnostic" hit="invalid-static-assert-message clang diagnostic" />
+    <option name="invalid-static-assert-message" hit="invalid-static-assert-message clang diagnostic" />
     <option name="clang" hit="invalid-token-paste clang diagnostic" />
     <option name="diagnostic" hit="invalid-token-paste clang diagnostic" />
     <option name="invalid-token-paste" hit="invalid-token-paste clang diagnostic" />
+    <option name="clang" hit="invalid-unevaluated-string clang diagnostic" />
+    <option name="diagnostic" hit="invalid-unevaluated-string clang diagnostic" />
+    <option name="invalid-unevaluated-string" hit="invalid-unevaluated-string clang diagnostic" />
     <option name="clang" hit="invalid-utf8 clang diagnostic" />
     <option name="diagnostic" hit="invalid-utf8 clang diagnostic" />
     <option name="invalid-utf8" hit="invalid-utf8 clang diagnostic" />
@@ -6197,6 +6385,9 @@
     <option name="check" hit="llvmlibc-implementation-in-namespace clang-tidy check" />
     <option name="clang-tidy" hit="llvmlibc-implementation-in-namespace clang-tidy check" />
     <option name="llvmlibc-implementation-in-namespace" hit="llvmlibc-implementation-in-namespace clang-tidy check" />
+    <option name="check" hit="llvmlibc-inline-function-decl clang-tidy check" />
+    <option name="clang-tidy" hit="llvmlibc-inline-function-decl clang-tidy check" />
+    <option name="llvmlibc-inline-function-decl" hit="llvmlibc-inline-function-decl clang-tidy check" />
     <option name="check" hit="llvmlibc-restrict-system-libc-headers clang-tidy check" />
     <option name="clang-tidy" hit="llvmlibc-restrict-system-libc-headers clang-tidy check" />
     <option name="llvmlibc-restrict-system-libc-headers" hit="llvmlibc-restrict-system-libc-headers clang-tidy check" />
@@ -6322,6 +6513,9 @@
     <option name="clang" hit="microsoft-include clang diagnostic" />
     <option name="diagnostic" hit="microsoft-include clang diagnostic" />
     <option name="microsoft-include" hit="microsoft-include clang diagnostic" />
+    <option name="clang" hit="microsoft-init-from-predefined clang diagnostic" />
+    <option name="diagnostic" hit="microsoft-init-from-predefined clang diagnostic" />
+    <option name="microsoft-init-from-predefined" hit="microsoft-init-from-predefined clang diagnostic" />
     <option name="clang" hit="microsoft-mutable-reference clang diagnostic" />
     <option name="diagnostic" hit="microsoft-mutable-reference clang diagnostic" />
     <option name="microsoft-mutable-reference" hit="microsoft-mutable-reference clang diagnostic" />
@@ -6364,6 +6558,12 @@
     <option name="check" hit="misc-definitions-in-headers clang-tidy check" />
     <option name="clang-tidy" hit="misc-definitions-in-headers clang-tidy check" />
     <option name="misc-definitions-in-headers" hit="misc-definitions-in-headers clang-tidy check" />
+    <option name="check" hit="misc-header-include-cycle clang-tidy check" />
+    <option name="clang-tidy" hit="misc-header-include-cycle clang-tidy check" />
+    <option name="misc-header-include-cycle" hit="misc-header-include-cycle clang-tidy check" />
+    <option name="check" hit="misc-include-cleaner clang-tidy check" />
+    <option name="clang-tidy" hit="misc-include-cleaner clang-tidy check" />
+    <option name="misc-include-cleaner" hit="misc-include-cleaner clang-tidy check" />
     <option name="check" hit="misc-misleading-bidirectional clang-tidy check" />
     <option name="clang-tidy" hit="misc-misleading-bidirectional clang-tidy check" />
     <option name="misc-misleading-bidirectional" hit="misc-misleading-bidirectional clang-tidy check" />
@@ -6448,6 +6648,9 @@
     <option name="clang" hit="missing-method-return-type clang diagnostic" />
     <option name="diagnostic" hit="missing-method-return-type clang diagnostic" />
     <option name="missing-method-return-type" hit="missing-method-return-type clang diagnostic" />
+    <option name="clang" hit="missing-multilib clang diagnostic" />
+    <option name="diagnostic" hit="missing-multilib clang diagnostic" />
+    <option name="missing-multilib" hit="missing-multilib clang diagnostic" />
     <option name="clang" hit="missing-noescape clang diagnostic" />
     <option name="diagnostic" hit="missing-noescape clang diagnostic" />
     <option name="missing-noescape" hit="missing-noescape clang diagnostic" />
@@ -6523,6 +6726,9 @@
     <option name="check" hit="modernize-shrink-to-fit clang-tidy check" />
     <option name="clang-tidy" hit="modernize-shrink-to-fit clang-tidy check" />
     <option name="modernize-shrink-to-fit" hit="modernize-shrink-to-fit clang-tidy check" />
+    <option name="check" hit="modernize-type-traits clang-tidy check" />
+    <option name="clang-tidy" hit="modernize-type-traits clang-tidy check" />
+    <option name="modernize-type-traits" hit="modernize-type-traits clang-tidy check" />
     <option name="check" hit="modernize-unary-static-assert clang-tidy check" />
     <option name="clang-tidy" hit="modernize-unary-static-assert clang-tidy check" />
     <option name="modernize-unary-static-assert" hit="modernize-unary-static-assert clang-tidy check" />
@@ -6556,6 +6762,9 @@
     <option name="check" hit="modernize-use-override clang-tidy check" />
     <option name="clang-tidy" hit="modernize-use-override clang-tidy check" />
     <option name="modernize-use-override" hit="modernize-use-override clang-tidy check" />
+    <option name="check" hit="modernize-use-std-print clang-tidy check" />
+    <option name="clang-tidy" hit="modernize-use-std-print clang-tidy check" />
+    <option name="modernize-use-std-print" hit="modernize-use-std-print clang-tidy check" />
     <option name="check" hit="modernize-use-trailing-return-type clang-tidy check" />
     <option name="clang-tidy" hit="modernize-use-trailing-return-type clang-tidy check" />
     <option name="modernize-use-trailing-return-type" hit="modernize-use-trailing-return-type clang-tidy check" />
@@ -6595,6 +6804,9 @@
     <option name="clang" hit="msvc-not-found clang diagnostic" />
     <option name="diagnostic" hit="msvc-not-found clang diagnostic" />
     <option name="msvc-not-found" hit="msvc-not-found clang diagnostic" />
+    <option name="clang" hit="multi-gpu clang diagnostic" />
+    <option name="diagnostic" hit="multi-gpu clang diagnostic" />
+    <option name="multi-gpu" hit="multi-gpu clang diagnostic" />
     <option name="clang" hit="multichar clang diagnostic" />
     <option name="diagnostic" hit="multichar clang diagnostic" />
     <option name="multichar" hit="multichar clang diagnostic" />
@@ -7137,6 +7349,9 @@
     <option name="clang" hit="pedantic-macros clang diagnostic" />
     <option name="diagnostic" hit="pedantic-macros clang diagnostic" />
     <option name="pedantic-macros" hit="pedantic-macros clang diagnostic" />
+    <option name="check" hit="performance-avoid-endl clang-tidy check" />
+    <option name="clang-tidy" hit="performance-avoid-endl clang-tidy check" />
+    <option name="performance-avoid-endl" hit="performance-avoid-endl clang-tidy check" />
     <option name="check" hit="performance-faster-string-find clang-tidy check" />
     <option name="clang-tidy" hit="performance-faster-string-find clang-tidy check" />
     <option name="performance-faster-string-find" hit="performance-faster-string-find clang-tidy check" />
@@ -7167,9 +7382,15 @@
     <option name="check" hit="performance-no-int-to-ptr clang-tidy check" />
     <option name="clang-tidy" hit="performance-no-int-to-ptr clang-tidy check" />
     <option name="performance-no-int-to-ptr" hit="performance-no-int-to-ptr clang-tidy check" />
+    <option name="check" hit="performance-noexcept-destructor clang-tidy check" />
+    <option name="clang-tidy" hit="performance-noexcept-destructor clang-tidy check" />
+    <option name="performance-noexcept-destructor" hit="performance-noexcept-destructor clang-tidy check" />
     <option name="check" hit="performance-noexcept-move-constructor clang-tidy check" />
     <option name="clang-tidy" hit="performance-noexcept-move-constructor clang-tidy check" />
     <option name="performance-noexcept-move-constructor" hit="performance-noexcept-move-constructor clang-tidy check" />
+    <option name="check" hit="performance-noexcept-swap clang-tidy check" />
+    <option name="clang-tidy" hit="performance-noexcept-swap clang-tidy check" />
+    <option name="performance-noexcept-swap" hit="performance-noexcept-swap clang-tidy check" />
     <option name="check" hit="performance-trivially-destructible clang-tidy check" />
     <option name="clang-tidy" hit="performance-trivially-destructible clang-tidy check" />
     <option name="performance-trivially-destructible" hit="performance-trivially-destructible clang-tidy check" />
@@ -7264,12 +7485,24 @@
     <option name="clang" hit="pre-c++20-compat-pedantic clang diagnostic" />
     <option name="diagnostic" hit="pre-c++20-compat-pedantic clang diagnostic" />
     <option name="pre-c++20-compat-pedantic" hit="pre-c++20-compat-pedantic clang diagnostic" />
-    <option name="clang" hit="pre-c++2b-compat clang diagnostic" />
-    <option name="diagnostic" hit="pre-c++2b-compat clang diagnostic" />
-    <option name="pre-c++2b-compat" hit="pre-c++2b-compat clang diagnostic" />
-    <option name="clang" hit="pre-c++2b-compat-pedantic clang diagnostic" />
-    <option name="diagnostic" hit="pre-c++2b-compat-pedantic clang diagnostic" />
-    <option name="pre-c++2b-compat-pedantic" hit="pre-c++2b-compat-pedantic clang diagnostic" />
+    <option name="clang" hit="pre-c++23-compat clang diagnostic" />
+    <option name="diagnostic" hit="pre-c++23-compat clang diagnostic" />
+    <option name="pre-c++23-compat" hit="pre-c++23-compat clang diagnostic" />
+    <option name="clang" hit="pre-c++23-compat-pedantic clang diagnostic" />
+    <option name="diagnostic" hit="pre-c++23-compat-pedantic clang diagnostic" />
+    <option name="pre-c++23-compat-pedantic" hit="pre-c++23-compat-pedantic clang diagnostic" />
+    <option name="clang" hit="pre-c++26-compat clang diagnostic" />
+    <option name="diagnostic" hit="pre-c++26-compat clang diagnostic" />
+    <option name="pre-c++26-compat" hit="pre-c++26-compat clang diagnostic" />
+    <option name="clang" hit="pre-c++26-compat-pedantic clang diagnostic" />
+    <option name="diagnostic" hit="pre-c++26-compat-pedantic clang diagnostic" />
+    <option name="pre-c++26-compat-pedantic" hit="pre-c++26-compat-pedantic clang diagnostic" />
+    <option name="clang" hit="pre-c++2c-compat clang diagnostic" />
+    <option name="diagnostic" hit="pre-c++2c-compat clang diagnostic" />
+    <option name="pre-c++2c-compat" hit="pre-c++2c-compat clang diagnostic" />
+    <option name="clang" hit="pre-c++2c-compat-pedantic clang diagnostic" />
+    <option name="diagnostic" hit="pre-c++2c-compat-pedantic clang diagnostic" />
+    <option name="pre-c++2c-compat-pedantic" hit="pre-c++2c-compat-pedantic clang diagnostic" />
     <option name="clang" hit="pre-c2x-compat clang diagnostic" />
     <option name="diagnostic" hit="pre-c2x-compat clang diagnostic" />
     <option name="pre-c2x-compat" hit="pre-c2x-compat clang diagnostic" />
@@ -7341,12 +7574,18 @@
     <option name="clang" hit="range-loop-construct clang diagnostic" />
     <option name="diagnostic" hit="range-loop-construct clang diagnostic" />
     <option name="range-loop-construct" hit="range-loop-construct clang diagnostic" />
+    <option name="clang" hit="read-modules-implicitly clang diagnostic" />
+    <option name="diagnostic" hit="read-modules-implicitly clang diagnostic" />
+    <option name="read-modules-implicitly" hit="read-modules-implicitly clang diagnostic" />
     <option name="clang" hit="read-only-types clang diagnostic" />
     <option name="diagnostic" hit="read-only-types clang diagnostic" />
     <option name="read-only-types" hit="read-only-types clang diagnostic" />
     <option name="check" hit="readability-avoid-const-params-in-decls clang-tidy check" />
     <option name="clang-tidy" hit="readability-avoid-const-params-in-decls clang-tidy check" />
     <option name="readability-avoid-const-params-in-decls" hit="readability-avoid-const-params-in-decls clang-tidy check" />
+    <option name="check" hit="readability-avoid-unconditional-preprocessor-if clang-tidy check" />
+    <option name="clang-tidy" hit="readability-avoid-unconditional-preprocessor-if clang-tidy check" />
+    <option name="readability-avoid-unconditional-preprocessor-if" hit="readability-avoid-unconditional-preprocessor-if clang-tidy check" />
     <option name="check" hit="readability-braces-around-statements clang-tidy check" />
     <option name="clang-tidy" hit="readability-braces-around-statements clang-tidy check" />
     <option name="readability-braces-around-statements" hit="readability-braces-around-statements clang-tidy check" />
@@ -7413,6 +7652,9 @@
     <option name="check" hit="readability-non-const-parameter clang-tidy check" />
     <option name="clang-tidy" hit="readability-non-const-parameter clang-tidy check" />
     <option name="readability-non-const-parameter" hit="readability-non-const-parameter clang-tidy check" />
+    <option name="check" hit="readability-operators-representation clang-tidy check" />
+    <option name="clang-tidy" hit="readability-operators-representation clang-tidy check" />
+    <option name="readability-operators-representation" hit="readability-operators-representation clang-tidy check" />
     <option name="check" hit="readability-qualified-auto clang-tidy check" />
     <option name="clang-tidy" hit="readability-qualified-auto clang-tidy check" />
     <option name="readability-qualified-auto" hit="readability-qualified-auto clang-tidy check" />
@@ -7529,6 +7771,9 @@
     <option name="clang" hit="reserved-macro-identifier clang diagnostic" />
     <option name="diagnostic" hit="reserved-macro-identifier clang diagnostic" />
     <option name="reserved-macro-identifier" hit="reserved-macro-identifier clang diagnostic" />
+    <option name="clang" hit="reserved-module-identifier clang diagnostic" />
+    <option name="diagnostic" hit="reserved-module-identifier clang diagnostic" />
+    <option name="reserved-module-identifier" hit="reserved-module-identifier clang diagnostic" />
     <option name="clang" hit="reserved-user-defined-literal clang diagnostic" />
     <option name="diagnostic" hit="reserved-user-defined-literal clang diagnostic" />
     <option name="reserved-user-defined-literal" hit="reserved-user-defined-literal clang diagnostic" />
@@ -7872,6 +8117,9 @@
     <option name="clang" hit="switch-enum clang diagnostic" />
     <option name="diagnostic" hit="switch-enum clang diagnostic" />
     <option name="switch-enum" hit="switch-enum clang diagnostic" />
+    <option name="clang" hit="sync-alignment clang diagnostic" />
+    <option name="diagnostic" hit="sync-alignment clang diagnostic" />
+    <option name="sync-alignment" hit="sync-alignment clang diagnostic" />
     <option name="clang" hit="sync-fetch-and-nand-semantics-changed clang diagnostic" />
     <option name="diagnostic" hit="sync-fetch-and-nand-semantics-changed clang diagnostic" />
     <option name="sync-fetch-and-nand-semantics-changed" hit="sync-fetch-and-nand-semantics-changed clang diagnostic" />
@@ -8503,6 +8751,14 @@
     <option name="인수" hit="동일한 boost::format 호출에 있는 위치 및 비위치 인수" />
     <option name="있는" hit="동일한 boost::format 호출에 있는 위치 및 비위치 인수" />
     <option name="호출에" hit="동일한 boost::format 호출에 있는 위치 및 비위치 인수" />
+    <option name="export" hit="둘러싸는 내보내기 선언이 있으므로 키워드 'export'는 불필요합니다" />
+    <option name="내보내기" hit="둘러싸는 내보내기 선언이 있으므로 키워드 'export'는 불필요합니다" />
+    <option name="는" hit="둘러싸는 내보내기 선언이 있으므로 키워드 'export'는 불필요합니다" />
+    <option name="둘러싸는" hit="둘러싸는 내보내기 선언이 있으므로 키워드 'export'는 불필요합니다" />
+    <option name="불필요합니다" hit="둘러싸는 내보내기 선언이 있으므로 키워드 'export'는 불필요합니다" />
+    <option name="선언이" hit="둘러싸는 내보내기 선언이 있으므로 키워드 'export'는 불필요합니다" />
+    <option name="있으므로" hit="둘러싸는 내보내기 선언이 있으므로 키워드 'export'는 불필요합니다" />
+    <option name="키워드" hit="둘러싸는 내보내기 선언이 있으므로 키워드 'export'는 불필요합니다" />
     <option name="들여쓰기" hit="들여쓰기 수준이 복원되지 않습니다" />
     <option name="복원되지" hit="들여쓰기 수준이 복원되지 않습니다" />
     <option name="수준이" hit="들여쓰기 수준이 복원되지 않습니다" />
@@ -8633,10 +8889,12 @@
     <option name="무효" hit="무효 포인터 삭제" />
     <option name="삭제" hit="무효 포인터 삭제" />
     <option name="포인터" hit="무효 포인터 삭제" />
-    <option name="내의" hit="문자열 리터럴 내의 오타" />
-    <option name="리터럴" hit="문자열 리터럴 내의 오타" />
-    <option name="문자열" hit="문자열 리터럴 내의 오타" />
-    <option name="오타" hit="문자열 리터럴 내의 오타" />
+    <option name="개의" hit="문자 리터럴에 여러 개의 문자가 있음" />
+    <option name="리터럴에" hit="문자 리터럴에 여러 개의 문자가 있음" />
+    <option name="문자" hit="문자 리터럴에 여러 개의 문자가 있음" />
+    <option name="문자가" hit="문자 리터럴에 여러 개의 문자가 있음" />
+    <option name="여러" hit="문자 리터럴에 여러 개의 문자가 있음" />
+    <option name="있음" hit="문자 리터럴에 여러 개의 문자가 있음" />
     <option name="개수를" hit="반복기와 개수를 받는 알고리즘을 쓸 수 있습니다" />
     <option name="반복기와" hit="반복기와 개수를 받는 알고리즘을 쓸 수 있습니다" />
     <option name="받는" hit="반복기와 개수를 받는 알고리즘을 쓸 수 있습니다" />
@@ -8716,9 +8974,6 @@
     <option name="역참조" hit="불필요한 역참조 및 주소 취득" />
     <option name="주소" hit="불필요한 역참조 및 주소 취득" />
     <option name="취득" hit="불필요한 역참조 및 주소 취득" />
-    <option name="불필요한" hit="불필요한 중괄호 제거" />
-    <option name="제거" hit="불필요한 중괄호 제거" />
-    <option name="중괄호" hit="불필요한 중괄호 제거" />
     <option name="불필요한" hit="불필요한 코드" />
     <option name="코드" hit="불필요한 코드" />
     <option name="불필요한" hit="불필요한 한정자" />
@@ -8860,8 +9115,6 @@
     <option name="함수에" hit="생성자/소멸자 내의 가상 함수에 대한 호출이 컴파일 때 해결됩니다" />
     <option name="해결됩니다" hit="생성자/소멸자 내의 가상 함수에 대한 호출이 컴파일 때 해결됩니다" />
     <option name="호출이" hit="생성자/소멸자 내의 가상 함수에 대한 호출이 컴파일 때 해결됩니다" />
-    <option name="서식" hit="서식 지정" />
-    <option name="지정" hit="서식 지정" />
     <option name="규제자" hit="선언 규제자(선언자 없음)" />
     <option name="선언" hit="선언 규제자(선언자 없음)" />
     <option name="선언자" hit="선언 규제자(선언자 없음)" />
@@ -8964,9 +9217,6 @@
     <option name="초기화되지" hit="스칼라 타입의 static 상수 로컬 변수가 초기화되지 않았습니다. 이는 비표준 Microsoft C++ 확장입니다" />
     <option name="타입의" hit="스칼라 타입의 static 상수 로컬 변수가 초기화되지 않았습니다. 이는 비표준 Microsoft C++ 확장입니다" />
     <option name="확장입니다" hit="스칼라 타입의 static 상수 로컬 변수가 초기화되지 않았습니다. 이는 비표준 Microsoft C++ 확장입니다" />
-    <option name="내의" hit="식별자 내의 오타" />
-    <option name="식별자" hit="식별자 내의 오타" />
-    <option name="오타" hit="식별자 내의 오타" />
     <option name="리소스" hit="안전하지 않은 리소스 획득" />
     <option name="안전하지" hit="안전하지 않은 리소스 획득" />
     <option name="않은" hit="안전하지 않은 리소스 획득" />
@@ -9026,11 +9276,25 @@
     <option name="오류가" hit="오류가 있을 수 있는 비어 있는 구문" />
     <option name="있는" hit="오류가 있을 수 있는 비어 있는 구문" />
     <option name="있을" hit="오류가 있을 수 있는 비어 있는 구문" />
+    <option name="개의" hit="와이드 문자 리터럴에 여러 개의 문자가 있음" />
+    <option name="리터럴에" hit="와이드 문자 리터럴에 여러 개의 문자가 있음" />
+    <option name="문자" hit="와이드 문자 리터럴에 여러 개의 문자가 있음" />
+    <option name="문자가" hit="와이드 문자 리터럴에 여러 개의 문자가 있음" />
+    <option name="여러" hit="와이드 문자 리터럴에 여러 개의 문자가 있음" />
+    <option name="와이드" hit="와이드 문자 리터럴에 여러 개의 문자가 있음" />
+    <option name="있음" hit="와이드 문자 리터럴에 여러 개의 문자가 있음" />
     <option name="매개변수의" hit="외부 범위로부터 템플릿 매개변수의 재선언" />
     <option name="범위로부터" hit="외부 범위로부터 템플릿 매개변수의 재선언" />
     <option name="외부" hit="외부 범위로부터 템플릿 매개변수의 재선언" />
     <option name="재선언" hit="외부 범위로부터 템플릿 매개변수의 재선언" />
     <option name="템플릿" hit="외부 범위로부터 템플릿 매개변수의 재선언" />
+    <option name="ufunction" hit="위임에 바운딩된 메서드가 UFUNCTION 매크로로 표시되지 않음" />
+    <option name="매크로로" hit="위임에 바운딩된 메서드가 UFUNCTION 매크로로 표시되지 않음" />
+    <option name="메서드가" hit="위임에 바운딩된 메서드가 UFUNCTION 매크로로 표시되지 않음" />
+    <option name="바운딩된" hit="위임에 바운딩된 메서드가 UFUNCTION 매크로로 표시되지 않음" />
+    <option name="않음" hit="위임에 바운딩된 메서드가 UFUNCTION 매크로로 표시되지 않음" />
+    <option name="위임에" hit="위임에 바운딩된 메서드가 UFUNCTION 매크로로 표시되지 않음" />
+    <option name="표시되지" hit="위임에 바운딩된 메서드가 UFUNCTION 매크로로 표시되지 않음" />
     <option name="int가" hit="유형 한정자 누락, int가 기본값" />
     <option name="기본값" hit="유형 한정자 누락, int가 기본값" />
     <option name="누락" hit="유형 한정자 누락, int가 기본값" />
@@ -9127,6 +9391,16 @@
     <option name="않음" hit="일부 제어 경로가 값을 반환하지 않음" />
     <option name="일부" hit="일부 제어 경로가 값을 반환하지 않음" />
     <option name="제어" hit="일부 제어 경로가 값을 반환하지 않음" />
+    <option name="#pragma" hit="일치하는 '#pragma endregion' 지시문 누락" />
+    <option name="endregion" hit="일치하는 '#pragma endregion' 지시문 누락" />
+    <option name="누락" hit="일치하는 '#pragma endregion' 지시문 누락" />
+    <option name="일치하는" hit="일치하는 '#pragma endregion' 지시문 누락" />
+    <option name="지시문" hit="일치하는 '#pragma endregion' 지시문 누락" />
+    <option name="#pragma" hit="일치하는 '#pragma region' 지시문 누락" />
+    <option name="region" hit="일치하는 '#pragma region' 지시문 누락" />
+    <option name="누락" hit="일치하는 '#pragma region' 지시문 누락" />
+    <option name="일치하는" hit="일치하는 '#pragma region' 지시문 누락" />
+    <option name="지시문" hit="일치하는 '#pragma region' 지시문 누락" />
     <option name="않는" hit="일치하지 않는 클래스 태그" />
     <option name="일치하지" hit="일치하지 않는 클래스 태그" />
     <option name="클래스" hit="일치하지 않는 클래스 태그" />
@@ -9209,9 +9483,10 @@
     <option name="인수" hit="조건부 식의 중복 인수" />
     <option name="조건부" hit="조건부 식의 중복 인수" />
     <option name="중복" hit="조건부 식의 중복 인수" />
-    <option name="내의" hit="주석 내의 오타" />
-    <option name="오타" hit="주석 내의 오타" />
-    <option name="주석" hit="주석 내의 오타" />
+    <option name="단순화할" hit="조건식을 단순화할 수 있습니다." />
+    <option name="수" hit="조건식을 단순화할 수 있습니다." />
+    <option name="있습니다" hit="조건식을 단순화할 수 있습니다." />
+    <option name="조건식을" hit="조건식을 단순화할 수 있습니다." />
     <option name="공백" hit="줄 끝에서 불필요한 공백" />
     <option name="끝에서" hit="줄 끝에서 불필요한 공백" />
     <option name="불필요한" hit="줄 끝에서 불필요한 공백" />
@@ -9240,9 +9515,6 @@
     <option name="const" hit="중복 'const' 지정자" />
     <option name="중복" hit="중복 'const' 지정자" />
     <option name="지정자" hit="중복 'const' 지정자" />
-    <option name="else" hit="중복 'else' 키워드" />
-    <option name="중복" hit="중복 'else' 키워드" />
-    <option name="키워드" hit="중복 'else' 키워드" />
     <option name="inline" hit="중복 'inline' 규제자" />
     <option name="규제자" hit="중복 'inline' 규제자" />
     <option name="중복" hit="중복 'inline' 규제자" />
@@ -9265,11 +9537,6 @@
     <option name="중복" hit="중복 무효 인수 목록" />
     <option name="조건식" hit="중복 조건식" />
     <option name="중복" hit="중복 조건식" />
-    <option name="문" hit="중복 컨트롤 흐름 이동 문" />
-    <option name="이동" hit="중복 컨트롤 흐름 이동 문" />
-    <option name="중복" hit="중복 컨트롤 흐름 이동 문" />
-    <option name="컨트롤" hit="중복 컨트롤 흐름 이동 문" />
-    <option name="흐름" hit="중복 컨트롤 흐름 이동 문" />
     <option name="인수" hit="중복 템플릿 인수" />
     <option name="중복" hit="중복 템플릿 인수" />
     <option name="템플릿" hit="중복 템플릿 인수" />
@@ -9298,8 +9565,6 @@
     <option name="영향이" hit="참조에 cv-한정자 추가는 영향이 없습니다." />
     <option name="참조에" hit="참조에 cv-한정자 추가는 영향이 없습니다." />
     <option name="추가는" hit="참조에 cv-한정자 추가는 영향이 없습니다." />
-    <option name="이슈" hit="철자 이슈" />
-    <option name="철자" hit="철자 이슈" />
     <option name="데이터" hit="초기화되지 않은 데이터 멤버로 인해 클래스에 사용자 정의 생성자가 필요합니다." />
     <option name="멤버로" hit="초기화되지 않은 데이터 멤버로 인해 클래스에 사용자 정의 생성자가 필요합니다." />
     <option name="사용자" hit="초기화되지 않은 데이터 멤버로 인해 클래스에 사용자 정의 생성자가 필요합니다." />

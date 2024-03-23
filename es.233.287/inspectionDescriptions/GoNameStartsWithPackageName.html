@@ -24,7 +24,7 @@ func MyPackageGetIP() {
 
 }</code></pre>
 <p><code>MyPackageGetIP</code> 이름은 패키지 이름으로 시작하므로 강조 표시됩니다.</p>
-<p><a href="https://golang.org/wiki/CodeReviewComments#package-names">golang.org의 Package Names</a>에 따르면, 패키지 내 모든 이름에 대한 참조는 패키지 이름을 사용하여 완료되므로 제어자에서 저 이름을 생략할 수 있습니다.
+<p><a href="https://github.com/golang/go/wiki/CodeReviewComments#package-names">github.com/golang의 Package Names</a>에 따르면, 패키지 내 이름에 대한 모든 참조는 패키지 이름을 사용하여 이루어지므로 식별자에서 해당 이름을 생략할 수 있습니다.
   예를 들어, <code>foo</code> 패키지 내에 있는 경우 <code>FooFile</code> 타입이 필요하지 않으며 이를 클라이언트가 <code>foo.FooFile</code>로 작성할 것입니다. 대신 타입을 <code>File</code>로 명명하면 이를 클라이언트는 <code>foo.File</code>로 작성할 것입니다.</p>
 </body>
 </html>

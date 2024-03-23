@@ -13,7 +13,7 @@
 데이터 소스를 새로고침하거나 다른 데이터 소스를 할당할 것을 제안합니다.<br/>
 
 <p><b>데이터베이스 테이블 예:</b></p>
-<pre><code>
+<pre><code lang="sql">
   CREATE TABLE DATA_TABLE (
     ID INTEGER,
     DATA VARCHAR(100)
@@ -21,7 +21,7 @@
 </code></pre><br/>
 
 <p><b>JPA 엔티티 클래스 예:</b></p>
-<pre><code>
+<pre><code lang="java">
   @Entity
   @Table(name = "UNKNOWN_TABLE") // 해결되지 않은 참조
   public class JavaEntity {

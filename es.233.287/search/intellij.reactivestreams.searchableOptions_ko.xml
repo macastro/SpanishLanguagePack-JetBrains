@@ -1,7 +1,5 @@
 <options>
   <configurable id="reactor" configurable_name="Reactive Streams">
-    <option name="automatically" hit="Detect automatically" />
-    <option name="detect" hit="Detect automatically" />
     <option name="hooks" hit="Hooks onOperatorDebug  " />
     <option name="onoperatordebug" hit="Hooks onOperatorDebug  " />
     <option name="flux" hit="Mono Flux 인스턴스를 지연 계산된 값으로 렌더링" />
@@ -50,6 +48,8 @@
     <option name="모드" hit="디버그 모드 초기화 메서드 " />
     <option name="초기화" hit="디버그 모드 초기화 메서드 " />
     <option name="없음" hit="없음" />
+    <option name="자동" hit="자동 탐지" />
+    <option name="탐지" hit="자동 탐지" />
     <option name="알아보기" hit="자세히 알아보기" />
     <option name="자세히" hit="자세히 알아보기" />
     <option name="초" hit="초" />

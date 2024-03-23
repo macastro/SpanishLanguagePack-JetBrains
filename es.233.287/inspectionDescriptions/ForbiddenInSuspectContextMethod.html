@@ -8,7 +8,7 @@ Kotlin 코루틴 내에서 스레딩 컨텍스트(<code>@RequiresBlockingContext
 예:
 <ul>
   <li><code>com.intellij.openapi.progress.ProgressManager.checkCanceled()</code>는<code>com.intellij.openapi.progress.checkCancelled()</code>로 바꿔야 합니다.</li>
-  <li><code>com.intellij.openapi.application.Application.invokeAndWait()</code>은 <code>withContext(Dispatchers.EDT)</code>로 대체되어야 합니다</li>
+  <li><code>com.intellij.openapi.application.Application.invokeAndWait()</code>는 <code>withContext(Dispatchers.EDT)</code>로 대체되어야 합니다</li>
   <li>기타</li>
 </ul>
 </body>

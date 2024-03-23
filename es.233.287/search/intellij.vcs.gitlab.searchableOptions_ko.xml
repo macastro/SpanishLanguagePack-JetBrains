@@ -1,30 +1,34 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="키맵">
     <option name="" path="ActionManager" hit="" />
-    <option name="create" path="ActionManager" hit="Create Snippet..." />
-    <option name="snippet" path="ActionManager" hit="Create Snippet..." />
-    <option name="a" path="ActionManager" hit="Create a GitLab snippet" />
-    <option name="create" path="ActionManager" hit="Create a GitLab snippet" />
-    <option name="gitlab" path="ActionManager" hit="Create a GitLab snippet" />
-    <option name="snippet" path="ActionManager" hit="Create a GitLab snippet" />
-    <option name="gitlab" path="ActionManager" hit="GitLab 병합 요청 표시" />
-    <option name="병합" path="ActionManager" hit="GitLab 병합 요청 표시" />
-    <option name="요청" path="ActionManager" hit="GitLab 병합 요청 표시" />
-    <option name="표시" path="ActionManager" hit="GitLab 병합 요청 표시" />
+    <option name="gitlab" path="ActionManager" hit="GitLab 스니펫 생성" />
+    <option name="생성" path="ActionManager" hit="GitLab 스니펫 생성" />
+    <option name="스니펫" path="ActionManager" hit="GitLab 스니펫 생성" />
     <option name="gitlab" path="ActionManager" hit="GitLab 저장소 링크 복사" />
     <option name="링크" path="ActionManager" hit="GitLab 저장소 링크 복사" />
     <option name="복사" path="ActionManager" hit="GitLab 저장소 링크 복사" />
     <option name="저장소" path="ActionManager" hit="GitLab 저장소 링크 복사" />
     <option name="gitlab에서" path="ActionManager" hit="GitLab에서 열기" />
     <option name="열기" path="ActionManager" hit="GitLab에서 열기" />
-    <option name="in" path="ActionManager" hit="Show Merge Request in Tool Window" />
-    <option name="merge" path="ActionManager" hit="Show Merge Request in Tool Window" />
-    <option name="request" path="ActionManager" hit="Show Merge Request in Tool Window" />
-    <option name="show" path="ActionManager" hit="Show Merge Request in Tool Window" />
-    <option name="tool" path="ActionManager" hit="Show Merge Request in Tool Window" />
-    <option name="window" path="ActionManager" hit="Show Merge Request in Tool Window" />
+    <option name="diff" path="ActionManager" hit="검토 Diff 표시" />
+    <option name="검토" path="ActionManager" hit="검토 Diff 표시" />
+    <option name="표시" path="ActionManager" hit="검토 Diff 표시" />
+    <option name="diff에서" path="ActionManager" hit="검토 Diff에서 선택된 변경 사항 표시" />
+    <option name="검토" path="ActionManager" hit="검토 Diff에서 선택된 변경 사항 표시" />
+    <option name="변경" path="ActionManager" hit="검토 Diff에서 선택된 변경 사항 표시" />
+    <option name="사항" path="ActionManager" hit="검토 Diff에서 선택된 변경 사항 표시" />
+    <option name="선택된" path="ActionManager" hit="검토 Diff에서 선택된 변경 사항 표시" />
+    <option name="표시" path="ActionManager" hit="검토 Diff에서 선택된 변경 사항 표시" />
+    <option name="검토" path="ActionManager" hit="검토 모드" />
+    <option name="모드" path="ActionManager" hit="검토 모드" />
     <option name="검토" path="ActionManager" hit="검토 제출…" />
     <option name="제출" path="ActionManager" hit="검토 제출…" />
+    <option name="내에" path="ActionManager" hit="도구 창 내에 병합 요청 표시" />
+    <option name="도구" path="ActionManager" hit="도구 창 내에 병합 요청 표시" />
+    <option name="병합" path="ActionManager" hit="도구 창 내에 병합 요청 표시" />
+    <option name="요청" path="ActionManager" hit="도구 창 내에 병합 요청 표시" />
+    <option name="창" path="ActionManager" hit="도구 창 내에 병합 요청 표시" />
+    <option name="표시" path="ActionManager" hit="도구 창 내에 병합 요청 표시" />
     <option name="목록" path="ActionManager" hit="목록 새로고침" />
     <option name="새로고침" path="ActionManager" hit="목록 새로고침" />
     <option name="url" path="ActionManager" hit="병합 요청 URL 복사" />
@@ -34,6 +38,9 @@
     <option name="병합" path="ActionManager" hit="병합 요청 새로고침" />
     <option name="새로고침" path="ActionManager" hit="병합 요청 새로고침" />
     <option name="요청" path="ActionManager" hit="병합 요청 새로고침" />
+    <option name="병합" path="ActionManager" hit="병합 요청 생성…" />
+    <option name="생성" path="ActionManager" hit="병합 요청 생성…" />
+    <option name="요청" path="ActionManager" hit="병합 요청 생성…" />
     <option name="병합" path="ActionManager" hit="병합 요청 이벤트 표시" />
     <option name="요청" path="ActionManager" hit="병합 요청 이벤트 표시" />
     <option name="이벤트" path="ActionManager" hit="병합 요청 이벤트 표시" />
@@ -59,6 +66,12 @@
     <option name="이벤트" path="ActionManager" hit="상태 혹은 담당자 변경과 같은 데이터 변경 이벤트 표시" />
     <option name="표시" path="ActionManager" hit="상태 혹은 담당자 변경과 같은 데이터 변경 이벤트 표시" />
     <option name="혹은" path="ActionManager" hit="상태 혹은 담당자 변경과 같은 데이터 변경 이벤트 표시" />
+    <option name="생성" path="ActionManager" hit="스니펫 생성…" />
+    <option name="스니펫" path="ActionManager" hit="스니펫 생성…" />
+    <option name="검토" path="ActionManager" hit="업데이트하고 검토 모드 활성화…" />
+    <option name="모드" path="ActionManager" hit="업데이트하고 검토 모드 활성화…" />
+    <option name="업데이트하고" path="ActionManager" hit="업데이트하고 검토 모드 활성화…" />
+    <option name="활성화" path="ActionManager" hit="업데이트하고 검토 모드 활성화…" />
     <option name="병합" path="ActionManager" hit="웹 브라우저에서 병합 요청을 엽니다" />
     <option name="브라우저에서" path="ActionManager" hit="웹 브라우저에서 병합 요청을 엽니다" />
     <option name="엽니다" path="ActionManager" hit="웹 브라우저에서 병합 요청을 엽니다" />
@@ -69,14 +82,13 @@
     <option name="표시" path="ActionManager" hit="컴토 토론 표시" />
   </configurable>
   <configurable id="org.jetbrains.plugins.gitlab.GitLabSettingsConfigurable" configurable_name="GitLab">
-    <option name="configure" hit="Configure password store" />
-    <option name="password" hit="Configure password store" />
-    <option name="store" hit="Configure password store" />
-    <option name="be" hit="Credentials will not be persisted " />
-    <option name="credentials" hit="Credentials will not be persisted " />
-    <option name="not" hit="Credentials will not be persisted " />
-    <option name="persisted" hit="Credentials will not be persisted " />
-    <option name="will" hit="Credentials will not be persisted " />
     <option name="gitlab" hit="GitLab" />
+    <option name="구성" hit="비밀번호 저장소 구성" />
+    <option name="비밀번호" hit="비밀번호 저장소 구성" />
+    <option name="저장소" hit="비밀번호 저장소 구성" />
+    <option name="보존되지" hit="자격 증명은 보존되지 않습니다 " />
+    <option name="않습니다" hit="자격 증명은 보존되지 않습니다 " />
+    <option name="자격" hit="자격 증명은 보존되지 않습니다 " />
+    <option name="증명은" hit="자격 증명은 보존되지 않습니다 " />
   </configurable>
 </options>

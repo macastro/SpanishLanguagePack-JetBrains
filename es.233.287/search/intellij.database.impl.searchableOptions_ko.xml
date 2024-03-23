@@ -35,6 +35,9 @@
     <option name="클립보드에" path="ActionManager" hit="DDL을 클립보드에 생성" />
     <option name="default" path="ActionManager" hit="DEFAULT 설정" />
     <option name="설정" path="ActionManager" hit="DEFAULT 설정" />
+    <option name="database" path="ActionManager" hit="Database View Settings" />
+    <option name="settings" path="ActionManager" hit="Database View Settings" />
+    <option name="view" path="ActionManager" hit="Database View Settings" />
     <option name="foreign" path="ActionManager" hit="Foreign Key(이전 UI)" />
     <option name="key" path="ActionManager" hit="Foreign Key(이전 UI)" />
     <option name="ui" path="ActionManager" hit="Foreign Key(이전 UI)" />
@@ -272,10 +275,6 @@
     <option name="항목" path="ActionManager" hit="데이터에서 텍스트 찾은 항목 검색" />
     <option name="도구" path="ActionManager" hit="도구" />
     <option name="드라이버" path="ActionManager" hit="드라이버" />
-    <option name="데이터" path="ActionManager" hit="드라이버 및 데이터 소스" />
-    <option name="드라이버" path="ActionManager" hit="드라이버 및 데이터 소스" />
-    <option name="및" path="ActionManager" hit="드라이버 및 데이터 소스" />
-    <option name="소스" path="ActionManager" hit="드라이버 및 데이터 소스" />
     <option name="디버그" path="ActionManager" hit="디버그" />
     <option name="디버그" path="ActionManager" hit="디버그 액션" />
     <option name="액션" path="ActionManager" hit="디버그 액션" />
@@ -383,9 +382,6 @@
     <option name="선택" path="ActionManager" hit="선택 범위의 데이터 소스 추가…" />
     <option name="소스" path="ActionManager" hit="선택 범위의 데이터 소스 추가…" />
     <option name="추가" path="ActionManager" hit="선택 범위의 데이터 소스 추가…" />
-    <option name="객체" path="ActionManager" hit="선택된 객체 새로고침" />
-    <option name="새로고침" path="ActionManager" hit="선택된 객체 새로고침" />
-    <option name="선택된" path="ActionManager" hit="선택된 객체 새로고침" />
     <option name="객체" path="ActionManager" hit="선택된 객체 활성화" />
     <option name="선택된" path="ActionManager" hit="선택된 객체 활성화" />
     <option name="활성화" path="ActionManager" hit="선택된 객체 활성화" />
@@ -507,6 +503,8 @@
     <option name="메뉴" path="ActionManager" hit="옵션 메뉴 표시" />
     <option name="옵션" path="ActionManager" hit="옵션 메뉴 표시" />
     <option name="표시" path="ActionManager" hit="옵션 메뉴 표시" />
+    <option name="옵션" path="ActionManager" hit="옵션 표시" />
+    <option name="표시" path="ActionManager" hit="옵션 표시" />
     <option name="드롭" path="ActionManager" hit="외래 키 드롭" />
     <option name="외래" path="ActionManager" hit="외래 키 드롭" />
     <option name="키" path="ActionManager" hit="외래 키 드롭" />
@@ -567,13 +565,6 @@
     <option name="데이터베이스" path="ActionManager" hit="캐시된 데이터베이스 구조 새로고침" />
     <option name="새로고침" path="ActionManager" hit="캐시된 데이터베이스 구조 새로고침" />
     <option name="캐시된" path="ActionManager" hit="캐시된 데이터베이스 구조 새로고침" />
-    <option name="객체를" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
-    <option name="고침" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
-    <option name="구조에서" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
-    <option name="데이터베이스" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
-    <option name="새로" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
-    <option name="선택된" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
-    <option name="캐시된" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
     <option name="데이터베이스" path="ActionManager" hit="캐시된 모든 데이터베이스 스키마를 지웁니다" />
     <option name="모든" path="ActionManager" hit="캐시된 모든 데이터베이스 스키마를 지웁니다" />
     <option name="스키마를" path="ActionManager" hit="캐시된 모든 데이터베이스 스키마를 지웁니다" />
@@ -916,14 +907,6 @@
     <option name="자동" hit=" 진 값 자동 탐지 " />
     <option name="탐지" hit=" 진 값 자동 탐지 " />
     <option name="alt+클릭" hit="Alt 클릭" />
-    <option name="custom" hit="Custom Number Formats" />
-    <option name="formats" hit="Custom Number Formats" />
-    <option name="number" hit="Custom Number Formats" />
-    <option name="decimal" hit="Decimal separator " />
-    <option name="separator" hit="Decimal separator " />
-    <option name="grouping" hit="Grouping separator" />
-    <option name="separator" hit="Grouping separator" />
-    <option name="infinity" hit="Infinity " />
     <option name="nan" hit="NaN " />
     <option name="by로" hit="ORDER BY로 정렬" />
     <option name="order" hit="ORDER BY로 정렬" />
@@ -940,6 +923,8 @@
     <option name="집합의" hit="결과 집합의 프리페치 크기 F  " />
     <option name="크기" hit="결과 집합의 프리페치 크기 F  " />
     <option name="프리페치" hit="결과 집합의 프리페치 크기 F  " />
+    <option name="구분자" hit="그루핑 구분자 " />
+    <option name="그루핑" hit="그루핑 구분자 " />
     <option name="날짜" hit="날짜" />
     <option name="날짜" hit="날짜 및 시간 타임스탬프" />
     <option name="및" hit="날짜 및 시간 타임스탬프" />
@@ -979,6 +964,7 @@
     <option name="모양" hit="모양 설정은 다음으로 이동되었습니다 " />
     <option name="설정은" hit="모양 설정은 다음으로 이동되었습니다 " />
     <option name="이동되었습니다" hit="모양 설정은 다음으로 이동되었습니다 " />
+    <option name="무한" hit="무한 " />
     <option name="내의" hit="미리보기 내의 데이터 열" />
     <option name="데이터" hit="미리보기 내의 데이터 열" />
     <option name="미리보기" hit="미리보기 내의 데이터 열" />
@@ -992,11 +978,19 @@
     <option name="시간" hit="사용자 지정 날짜 시간 양식" />
     <option name="양식" hit="사용자 지정 날짜 시간 양식" />
     <option name="지정" hit="사용자 지정 날짜 시간 양식" />
+    <option name="사용자" hit="사용자 지정 숫자 서식" />
+    <option name="서식" hit="사용자 지정 숫자 서식" />
+    <option name="숫자" hit="사용자 지정 숫자 서식" />
+    <option name="지정" hit="사용자 지정 숫자 서식" />
+    <option name="구분자" hit="소수점 구분자 " />
+    <option name="소수점" hit="소수점 구분자 " />
     <option name="기본" hit="숫자 기본 키로 테이블 정렬" />
     <option name="숫자" hit="숫자 기본 키로 테이블 정렬" />
     <option name="정렬" hit="숫자 기본 키로 테이블 정렬" />
     <option name="키로" hit="숫자 기본 키로 테이블 정렬" />
     <option name="테이블" hit="숫자 기본 키로 테이블 정렬" />
+    <option name="숫자" hit="숫자 패턴" />
+    <option name="패턴" hit="숫자 패턴" />
     <option name="시간" hit="시간" />
     <option name="날짜" hit="시간대가 있는 날짜 및 시간 타임스탬프" />
     <option name="및" hit="시간대가 있는 날짜 및 시간 타임스탬프" />

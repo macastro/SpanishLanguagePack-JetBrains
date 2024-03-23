@@ -1,5 +1,21 @@
 <html>
 <body>
 불필요한 형 변환 식을 보고합니다.
+
+<p>예:</p>
+<pre><code>
+  static Object toObject(String s) {
+    return (Object) s;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  명확화를 위한 형 변환(예: <code>Object</code>가 기대되는 컬렉션 호출 내 형 변환)을 무시하려면 아래 체크박스를 사용하세요.
+<pre><code>
+  static void removeFromList(List&lt;String&gt; l, Object o) {
+    l.remove((String)o);
+  } 
+</code></pre>
+
 </body>
 </html>

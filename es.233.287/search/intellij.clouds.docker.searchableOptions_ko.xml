@@ -13,9 +13,6 @@
     <option name="docker" path="ActionManager" hit="Docker 이미지 복사" />
     <option name="복사" path="ActionManager" hit="Docker 이미지 복사" />
     <option name="이미지" path="ActionManager" hit="Docker 이미지 복사" />
-    <option name="docker" path="ActionManager" hit="Docker 컨텍스트에서 Docker 연결" />
-    <option name="연결" path="ActionManager" hit="Docker 컨텍스트에서 Docker 연결" />
-    <option name="컨텍스트에서" path="ActionManager" hit="Docker 컨텍스트에서 Docker 연결" />
     <option name="dockerfile" path="ActionManager" hit="Dockerfile" />
     <option name="dockerfile을" path="ActionManager" hit="Dockerfile을 생성합니다" />
     <option name="생성합니다" path="ActionManager" hit="Dockerfile을 생성합니다" />
@@ -75,6 +72,7 @@
     <option name="이미지로" path="ActionManager" hit="새 이미지로 저장" />
     <option name="저장" path="ActionManager" hit="새 이미지로 저장" />
     <option name="새로고침" path="ActionManager" hit="새로고침" />
+    <option name="서비스" path="ActionManager" hit="서비스" />
     <option name="도구" path="ActionManager" hit="서비스 도구 창에 선택한 컨테이너의 이미지를 표시합니다" />
     <option name="서비스" path="ActionManager" hit="서비스 도구 창에 선택한 컨테이너의 이미지를 표시합니다" />
     <option name="선택한" path="ActionManager" hit="서비스 도구 창에 선택한 컨테이너의 이미지를 표시합니다" />
@@ -227,6 +225,8 @@
     <option name="중지" path="ActionManager" hit="컨테이너 중지 해제" />
     <option name="컨테이너" path="ActionManager" hit="컨테이너 중지 해제" />
     <option name="해제" path="ActionManager" hit="컨테이너 중지 해제" />
+    <option name="연결" path="ActionManager" hit="컨텍스트로부터의 연결" />
+    <option name="컨텍스트로부터의" path="ActionManager" hit="컨텍스트로부터의 연결" />
     <option name="없는" path="ActionManager" hit="태그 없는 이미지" />
     <option name="이미지" path="ActionManager" hit="태그 없는 이미지" />
     <option name="태그" path="ActionManager" hit="태그 없는 이미지" />
@@ -239,23 +239,21 @@
     <option name="프로세스" path="ActionManager" hit="프로세스 표시" />
   </configurable>
   <configurable id="Docker" configurable_name="Docker">
-    <option name="" hit=" Docker와의 통합을 구성하려면    를 클릭하세요 " />
-    <option name="+" hit=" Docker와의 통합을 구성하려면    를 클릭하세요 " />
-    <option name="docker와의" hit=" Docker와의 통합을 구성하려면    를 클릭하세요 " />
-    <option name="구성하려면" hit=" Docker와의 통합을 구성하려면    를 클릭하세요 " />
-    <option name="를" hit=" Docker와의 통합을 구성하려면    를 클릭하세요 " />
-    <option name="클릭하세요" hit=" Docker와의 통합을 구성하려면    를 클릭하세요 " />
-    <option name="통합을" hit=" Docker와의 통합을 구성하려면    를 클릭하세요 " />
+    <option name="" hit=" Docker와의 통합을 구성하려면  를 클릭하세요 " />
+    <option name="docker와의" hit=" Docker와의 통합을 구성하려면  를 클릭하세요 " />
+    <option name="구성하려면" hit=" Docker와의 통합을 구성하려면  를 클릭하세요 " />
+    <option name="를" hit=" Docker와의 통합을 구성하려면  를 클릭하세요 " />
+    <option name="클릭하세요" hit=" Docker와의 통합을 구성하려면  를 클릭하세요 " />
+    <option name="통합을" hit=" Docker와의 통합을 구성하려면  를 클릭하세요 " />
     <option name="docker" hit="Docker" />
   </configurable>
   <configurable id="DockerRegistry" configurable_name="Docker 레지스트리">
-    <option name="" hit=" Docker 레지스트리를 구성하려면    를 클릭하세요" />
-    <option name="+" hit=" Docker 레지스트리를 구성하려면    를 클릭하세요" />
-    <option name="docker" hit=" Docker 레지스트리를 구성하려면    를 클릭하세요" />
-    <option name="구성하려면" hit=" Docker 레지스트리를 구성하려면    를 클릭하세요" />
-    <option name="레지스트리를" hit=" Docker 레지스트리를 구성하려면    를 클릭하세요" />
-    <option name="를" hit=" Docker 레지스트리를 구성하려면    를 클릭하세요" />
-    <option name="클릭하세요" hit=" Docker 레지스트리를 구성하려면    를 클릭하세요" />
+    <option name="" hit=" Docker 레지스트리를 구성하려면  를 클릭하세요" />
+    <option name="docker" hit=" Docker 레지스트리를 구성하려면  를 클릭하세요" />
+    <option name="구성하려면" hit=" Docker 레지스트리를 구성하려면  를 클릭하세요" />
+    <option name="레지스트리를" hit=" Docker 레지스트리를 구성하려면  를 클릭하세요" />
+    <option name="를" hit=" Docker 레지스트리를 구성하려면  를 클릭하세요" />
+    <option name="클릭하세요" hit=" Docker 레지스트리를 구성하려면  를 클릭하세요" />
     <option name="docker" hit="Docker 레지스트리" />
     <option name="레지스트리" hit="Docker 레지스트리" />
   </configurable>

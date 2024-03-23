@@ -50,6 +50,8 @@
     <option name="선택된" path="ActionManager" hit="선택된 모듈이나 라이브러리에 대해 Gradle 구성 파일을 엽니다" />
     <option name="엽니다" path="ActionManager" hit="선택된 모듈이나 라이브러리에 대해 Gradle 구성 파일을 엽니다" />
     <option name="파일을" path="ActionManager" hit="선택된 모듈이나 라이브러리에 대해 Gradle 구성 파일을 엽니다" />
+    <option name="다운로드" path="ActionManager" hit="소스 다운로드" />
+    <option name="소스" path="ActionManager" hit="소스 다운로드" />
     <option name="모드" path="ActionManager" hit="오프라인 모드 전환" />
     <option name="오프라인" path="ActionManager" hit="오프라인 모드 전환" />
     <option name="전환" path="ActionManager" hit="오프라인 모드 전환" />
@@ -61,6 +63,13 @@
     <option name="프로젝트" path="ActionManager" hit="이 파일에 명시된 Gradle 프로젝트 연결" />
     <option name="분석" path="ActionManager" hit="종속성 분석..." />
     <option name="종속성" path="ActionManager" hit="종속성 분석..." />
+    <option name="다운로드합니다" path="ActionManager" hit="프로젝트에서 사용된 모든 라이브러리의 소스 코드를 다운로드합니다" />
+    <option name="라이브러리의" path="ActionManager" hit="프로젝트에서 사용된 모든 라이브러리의 소스 코드를 다운로드합니다" />
+    <option name="모든" path="ActionManager" hit="프로젝트에서 사용된 모든 라이브러리의 소스 코드를 다운로드합니다" />
+    <option name="사용된" path="ActionManager" hit="프로젝트에서 사용된 모든 라이브러리의 소스 코드를 다운로드합니다" />
+    <option name="소스" path="ActionManager" hit="프로젝트에서 사용된 모든 라이브러리의 소스 코드를 다운로드합니다" />
+    <option name="코드를" path="ActionManager" hit="프로젝트에서 사용된 모든 라이브러리의 소스 코드를 다운로드합니다" />
+    <option name="프로젝트에서" path="ActionManager" hit="프로젝트에서 사용된 모든 라이브러리의 소스 코드를 다운로드합니다" />
   </configurable>
   <configurable id="reference.settingsdialog.project.gradle" configurable_name="Gradle">
     <option name="" hit=" Gradle이 다운로드된 파일을 저장하는 디폴트 위치를 재정의합니다 예  Windows에서 백신 소프트웨어 조정하는 경우 사용 " />
@@ -78,11 +87,14 @@
     <option name="저장하는" hit=" Gradle이 다운로드된 파일을 저장하는 디폴트 위치를 재정의합니다 예  Windows에서 백신 소프트웨어 조정하는 경우 사용 " />
     <option name="조정하는" hit=" Gradle이 다운로드된 파일을 저장하는 디폴트 위치를 재정의합니다 예  Windows에서 백신 소프트웨어 조정하는 경우 사용 " />
     <option name="파일을" hit=" Gradle이 다운로드된 파일을 저장하는 디폴트 위치를 재정의합니다 예  Windows에서 백신 소프트웨어 조정하는 경우 사용 " />
-    <option name="dependencies" hit="Download sources for dependencies" />
-    <option name="download" hit="Download sources for dependencies" />
-    <option name="for" hit="Download sources for dependencies" />
-    <option name="sources" hit="Download sources for dependencies" />
     <option name="gradle" hit="Gradle" />
+    <option name="4에서" hit="Gradle    에서 병렬 Gradle 모델 페치 활성화" />
+    <option name="7" hit="Gradle    에서 병렬 Gradle 모델 페치 활성화" />
+    <option name="gradle" hit="Gradle    에서 병렬 Gradle 모델 페치 활성화" />
+    <option name="모델" hit="Gradle    에서 병렬 Gradle 모델 페치 활성화" />
+    <option name="병렬" hit="Gradle    에서 병렬 Gradle 모델 페치 활성화" />
+    <option name="페치" hit="Gradle    에서 병렬 Gradle 모델 페치 활성화" />
+    <option name="활성화" hit="Gradle    에서 병렬 Gradle 모델 페치 활성화" />
     <option name="gradle" hit="Gradle VM 옵션 " />
     <option name="vm" hit="Gradle VM 옵션 " />
     <option name="옵션" hit="Gradle VM 옵션 " />
@@ -97,5 +109,13 @@
     <option name="일반" hit="일반 설정" />
     <option name="선택" hit="자동 선택" />
     <option name="자동" hit="자동 선택" />
+    <option name="gradle" hit="프로젝트 재로드 시 병렬로 Gradle 모델을 수집하도록 허용합니다 " />
+    <option name="모델을" hit="프로젝트 재로드 시 병렬로 Gradle 모델을 수집하도록 허용합니다 " />
+    <option name="병렬로" hit="프로젝트 재로드 시 병렬로 Gradle 모델을 수집하도록 허용합니다 " />
+    <option name="수집하도록" hit="프로젝트 재로드 시 병렬로 Gradle 모델을 수집하도록 허용합니다 " />
+    <option name="시" hit="프로젝트 재로드 시 병렬로 Gradle 모델을 수집하도록 허용합니다 " />
+    <option name="재로드" hit="프로젝트 재로드 시 병렬로 Gradle 모델을 수집하도록 허용합니다 " />
+    <option name="프로젝트" hit="프로젝트 재로드 시 병렬로 Gradle 모델을 수집하도록 허용합니다 " />
+    <option name="허용합니다" hit="프로젝트 재로드 시 병렬로 Gradle 모델을 수집하도록 허용합니다 " />
   </configurable>
 </options>

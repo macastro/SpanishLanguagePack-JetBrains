@@ -15,15 +15,15 @@
     <option name="3" path="ActionManager" hit="3" />
     <option name="4" path="ActionManager" hit="4" />
     <option name="5" path="ActionManager" hit="5" />
-    <option name="active" path="ActionManager" hit="Always Select Active Service" />
-    <option name="always" path="ActionManager" hit="Always Select Active Service" />
-    <option name="select" path="ActionManager" hit="Always Select Active Service" />
-    <option name="service" path="ActionManager" hit="Always Select Active Service" />
     <option name="code" path="ActionManager" hit="Code Vision 표시" />
     <option name="vision" path="ActionManager" hit="Code Vision 표시" />
     <option name="표시" path="ActionManager" hit="Code Vision 표시" />
     <option name="emacs" path="ActionManager" hit="Emacs 탭" />
     <option name="탭" path="ActionManager" hit="Emacs 탭" />
+    <option name="fold" path="ActionManager" hit="Fold Lines Like This" />
+    <option name="like" path="ActionManager" hit="Fold Lines Like This" />
+    <option name="lines" path="ActionManager" hit="Fold Lines Like This" />
+    <option name="this" path="ActionManager" hit="Fold Lines Like This" />
     <option name="ide" path="ActionManager" hit="IDE 스크립팅 콘솔" />
     <option name="스크립팅" path="ActionManager" hit="IDE 스크립팅 콘솔" />
     <option name="콘솔" path="ActionManager" hit="IDE 스크립팅 콘솔" />
@@ -55,6 +55,9 @@
     <option name="java" path="ActionManager" hit="Java 분석 메뉴입니다" />
     <option name="메뉴입니다" path="ActionManager" hit="Java 분석 메뉴입니다" />
     <option name="분석" path="ActionManager" hit="Java 분석 메뉴입니다" />
+    <option name="by" path="ActionManager" hit="Sort by Name" />
+    <option name="name" path="ActionManager" hit="Sort by Name" />
+    <option name="sort" path="ActionManager" hit="Sort by Name" />
     <option name="todo" path="ActionManager" hit="TODO" />
     <option name="tab을" path="ActionManager" hit="Tab을 눌러 라이브 템플릿 펼치기" />
     <option name="눌러" path="ActionManager" hit="Tab을 눌러 라이브 템플릿 펼치기" />
@@ -300,10 +303,6 @@
     <option name="다음" path="ActionManager" hit="다음 항목 선택" />
     <option name="선택" path="ActionManager" hit="다음 항목 선택" />
     <option name="항목" path="ActionManager" hit="다음 항목 선택" />
-    <option name="같은" path="ActionManager" hit="다음과 같은 줄 접기" />
-    <option name="다음과" path="ActionManager" hit="다음과 같은 줄 접기" />
-    <option name="접기" path="ActionManager" hit="다음과 같은 줄 접기" />
-    <option name="줄" path="ActionManager" hit="다음과 같은 줄 접기" />
     <option name="검사" path="ActionManager" hit="다음에서 검사 실행…" />
     <option name="다음에서" path="ActionManager" hit="다음에서 검사 실행…" />
     <option name="실행" path="ActionManager" hit="다음에서 검사 실행…" />
@@ -1536,9 +1535,9 @@
     <option name="변경" path="ActionManager" hit="시그니처 변경..." />
     <option name="시그니처" path="ActionManager" hit="시그니처 변경..." />
     <option name="실행" path="ActionManager" hit="실행" />
-    <option name="구성" path="ActionManager" hit="실행 구성 타입" />
-    <option name="실행" path="ActionManager" hit="실행 구성 타입" />
-    <option name="타입" path="ActionManager" hit="실행 구성 타입" />
+    <option name="구성" path="ActionManager" hit="실행 구성 타입…" />
+    <option name="실행" path="ActionManager" hit="실행 구성 타입…" />
+    <option name="타입" path="ActionManager" hit="실행 구성 타입…" />
     <option name="구성을" path="ActionManager" hit="실행 중인 구성을 새 탭에서 열기" />
     <option name="새" path="ActionManager" hit="실행 중인 구성을 새 탭에서 열기" />
     <option name="실행" path="ActionManager" hit="실행 중인 구성을 새 탭에서 열기" />
@@ -1673,6 +1672,12 @@
     <option name="역방향" path="ActionManager" hit="역방향 종속 요소 분석..." />
     <option name="요소" path="ActionManager" hit="역방향 종속 요소 분석..." />
     <option name="종속" path="ActionManager" hit="역방향 종속 요소 분석..." />
+    <option name="기호" path="ActionManager" hit="연상 기호 다시 쓰기 전에 묻기" />
+    <option name="다시" path="ActionManager" hit="연상 기호 다시 쓰기 전에 묻기" />
+    <option name="묻기" path="ActionManager" hit="연상 기호 다시 쓰기 전에 묻기" />
+    <option name="쓰기" path="ActionManager" hit="연상 기호 다시 쓰기 전에 묻기" />
+    <option name="연상" path="ActionManager" hit="연상 기호 다시 쓰기 전에 묻기" />
+    <option name="전에" path="ActionManager" hit="연상 기호 다시 쓰기 전에 묻기" />
     <option name="기호" path="ActionManager" hit="연상 기호 변경..." />
     <option name="변경" path="ActionManager" hit="연상 기호 변경..." />
     <option name="연상" path="ActionManager" hit="연상 기호 변경..." />
@@ -1682,12 +1687,6 @@
     <option name="기호로" path="ActionManager" hit="연상 기호로 이동..." />
     <option name="연상" path="ActionManager" hit="연상 기호로 이동..." />
     <option name="이동" path="ActionManager" hit="연상 기호로 이동..." />
-    <option name="기호를" path="ActionManager" hit="연상 기호를 다시 쓰기 전에 묻기" />
-    <option name="다시" path="ActionManager" hit="연상 기호를 다시 쓰기 전에 묻기" />
-    <option name="묻기" path="ActionManager" hit="연상 기호를 다시 쓰기 전에 묻기" />
-    <option name="쓰기" path="ActionManager" hit="연상 기호를 다시 쓰기 전에 묻기" />
-    <option name="연상" path="ActionManager" hit="연상 기호를 다시 쓰기 전에 묻기" />
-    <option name="전에" path="ActionManager" hit="연상 기호를 다시 쓰기 전에 묻기" />
     <option name="북마크" path="ActionManager" hit="열린 탭을 북마크 지정…" />
     <option name="열린" path="ActionManager" hit="열린 탭을 북마크 지정…" />
     <option name="지정" path="ActionManager" hit="열린 탭을 북마크 지정…" />
@@ -1792,8 +1791,6 @@
     <option name="이름별로" path="ActionManager" hit="이름별로 문제를 정렬하도록 허용합니다" />
     <option name="정렬하도록" path="ActionManager" hit="이름별로 문제를 정렬하도록 허용합니다" />
     <option name="허용합니다" path="ActionManager" hit="이름별로 문제를 정렬하도록 허용합니다" />
-    <option name="이름순" path="ActionManager" hit="이름순 정렬" />
-    <option name="정렬" path="ActionManager" hit="이름순 정렬" />
     <option name="이름으로" path="ActionManager" hit="이름으로 파일을 정렬합니다" />
     <option name="정렬합니다" path="ActionManager" hit="이름으로 파일을 정렬합니다" />
     <option name="파일을" path="ActionManager" hit="이름으로 파일을 정렬합니다" />
@@ -2182,6 +2179,16 @@
     <option name="있는" path="ActionManager" hit="캐럿 위치에 있는 요소의 강조 표시 색상 옵션으로 이동합니다" />
     <option name="캐럿" path="ActionManager" hit="캐럿 위치에 있는 요소의 강조 표시 색상 옵션으로 이동합니다" />
     <option name="표시" path="ActionManager" hit="캐럿 위치에 있는 요소의 강조 표시 색상 옵션으로 이동합니다" />
+    <option name="경고의" path="ActionManager" hit="캐럿 위치에서 심볼 문서나 오류 혹은 경고의 설명을 툴팁에 표시합니다" />
+    <option name="문서나" path="ActionManager" hit="캐럿 위치에서 심볼 문서나 오류 혹은 경고의 설명을 툴팁에 표시합니다" />
+    <option name="설명을" path="ActionManager" hit="캐럿 위치에서 심볼 문서나 오류 혹은 경고의 설명을 툴팁에 표시합니다" />
+    <option name="심볼" path="ActionManager" hit="캐럿 위치에서 심볼 문서나 오류 혹은 경고의 설명을 툴팁에 표시합니다" />
+    <option name="오류" path="ActionManager" hit="캐럿 위치에서 심볼 문서나 오류 혹은 경고의 설명을 툴팁에 표시합니다" />
+    <option name="위치에서" path="ActionManager" hit="캐럿 위치에서 심볼 문서나 오류 혹은 경고의 설명을 툴팁에 표시합니다" />
+    <option name="캐럿" path="ActionManager" hit="캐럿 위치에서 심볼 문서나 오류 혹은 경고의 설명을 툴팁에 표시합니다" />
+    <option name="툴팁에" path="ActionManager" hit="캐럿 위치에서 심볼 문서나 오류 혹은 경고의 설명을 툴팁에 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="캐럿 위치에서 심볼 문서나 오류 혹은 경고의 설명을 툴팁에 표시합니다" />
+    <option name="혹은" path="ActionManager" hit="캐럿 위치에서 심볼 문서나 오류 혹은 경고의 설명을 툴팁에 표시합니다" />
     <option name="이동" path="ActionManager" hit="캐럿을 일치하는 중괄호로 이동" />
     <option name="일치하는" path="ActionManager" hit="캐럿을 일치하는 중괄호로 이동" />
     <option name="중괄호로" path="ActionManager" hit="캐럿을 일치하는 중괄호로 이동" />
@@ -2584,10 +2591,6 @@
     <option name="뷰" path="ActionManager" hit="프로젝트 뷰 옵션" />
     <option name="옵션" path="ActionManager" hit="프로젝트 뷰 옵션" />
     <option name="프로젝트" path="ActionManager" hit="프로젝트 뷰 옵션" />
-    <option name="메뉴" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴" />
-    <option name="뷰" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴" />
-    <option name="팝업" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴" />
-    <option name="프로젝트" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴" />
     <option name="그룹" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴 수정 그룹" />
     <option name="메뉴" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴 수정 그룹" />
     <option name="뷰" path="ActionManager" hit="프로젝트 뷰 팝업 메뉴 수정 그룹" />
@@ -2669,6 +2672,10 @@
     <option name="열린" path="ActionManager" hit="항상 열린 요소 선택" />
     <option name="요소" path="ActionManager" hit="항상 열린 요소 선택" />
     <option name="항상" path="ActionManager" hit="항상 열린 요소 선택" />
+    <option name="서비스" path="ActionManager" hit="항상 활성 서비스 선택" />
+    <option name="선택" path="ActionManager" hit="항상 활성 서비스 선택" />
+    <option name="항상" path="ActionManager" hit="항상 활성 서비스 선택" />
+    <option name="활성" path="ActionManager" hit="항상 활성 서비스 선택" />
     <option name="대한" path="ActionManager" hit="해당 루트에 대한 모듈 이름을 표시합니다" />
     <option name="루트에" path="ActionManager" hit="해당 루트에 대한 모듈 이름을 표시합니다" />
     <option name="모듈" path="ActionManager" hit="해당 루트에 대한 모듈 이름을 표시합니다" />
@@ -2819,6 +2826,8 @@
     <option name="표시" path="ActionManager" hit="현재 파일의 강조 표시 모드를 구성하기 위한 패널을 표시합니다" />
     <option name="표시합니다" path="ActionManager" hit="현재 파일의 강조 표시 모드를 구성하기 위한 패널을 표시합니다" />
     <option name="현재" path="ActionManager" hit="현재 파일의 강조 표시 모드를 구성하기 위한 패널을 표시합니다" />
+    <option name="정보" path="ActionManager" hit="호버 정보" />
+    <option name="호버" path="ActionManager" hit="호버 정보" />
     <option name="계층" path="ActionManager" hit="호출 계층 구조" />
     <option name="구조" path="ActionManager" hit="호출 계층 구조" />
     <option name="호출" path="ActionManager" hit="호출 계층 구조" />
@@ -3189,11 +3198,6 @@
     <option name="트리" hit="HTML XML 태그 트리 강조 표시 활성화" />
     <option name="표시" hit="HTML XML 태그 트리 강조 표시 활성화" />
     <option name="활성화" hit="HTML XML 태그 트리 강조 표시 활성화" />
-    <option name="caret" hit="Use full line height caret" />
-    <option name="full" hit="Use full line height caret" />
-    <option name="height" hit="Use full line height caret" />
-    <option name="line" hit="Use full line height caret" />
-    <option name="use" hit="Use full line height caret" />
     <option name="강조" hit="강조 표시할 수준 " />
     <option name="수준" hit="강조 표시할 수준 " />
     <option name="표시할" hit="강조 표시할 수준 " />
@@ -3246,6 +3250,11 @@
     <option name="인텐션" hit="인텐션 전구 표시" />
     <option name="전구" hit="인텐션 전구 표시" />
     <option name="표시" hit="인텐션 전구 표시" />
+    <option name="높이" hit="전차 행 높이 캐럿 사용" />
+    <option name="사용" hit="전차 행 높이 캐럿 사용" />
+    <option name="전차" hit="전차 행 높이 캐럿 사용" />
+    <option name="캐럿" hit="전차 행 높이 캐럿 사용" />
+    <option name="행" hit="전차 행 높이 캐럿 사용" />
     <option name="번호" hit="줄 번호 표시 " />
     <option name="줄" hit="줄 번호 표시 " />
     <option name="표시" hit="줄 번호 표시 " />
@@ -3307,10 +3316,13 @@
     <option name="유추된" hit=" var 을 유추된 타입으로 바꾸기" />
     <option name="을" hit=" var 을 유추된 타입으로 바꾸기" />
     <option name="타입으로" hit=" var 을 유추된 타입으로 바꾸기" />
-    <option name="android" hit="Android" />
     <option name="html" hit="HTML  style  속성" />
     <option name="style" hit="HTML  style  속성" />
     <option name="속성" hit="HTML  style  속성" />
+    <option name="helm" hit="Helm 템플릿의 값 참조" />
+    <option name="값" hit="Helm 템플릿의 값 참조" />
+    <option name="참조" hit="Helm 템플릿의 값 참조" />
+    <option name="템플릿의" hit="Helm 템플릿의 값 참조" />
     <option name="i18n" hit="I  n 문자열" />
     <option name="문자열" hit="I  n 문자열" />
     <option name="import" hit="Import 문" />
@@ -3326,6 +3338,7 @@
     <option name="및" hit="JavaScript 및 TypeScript의 인라인 함수" />
     <option name="인라인" hit="JavaScript 및 TypeScript의 인라인 함수" />
     <option name="함수" hit="JavaScript 및 TypeScript의 인라인 함수" />
+    <option name="kubernetes" hit="Kubernetes" />
     <option name="markdown" hit="Markdown" />
     <option name="sql" hit="SQL" />
     <option name="xml" hit="XML" />
@@ -3335,6 +3348,14 @@
     <option name="엔티티" hit="XML 엔티티" />
     <option name="xml" hit="XML 태그" />
     <option name="태그" hit="XML 태그" />
+    <option name="envvar" hit="YAML 파일의 EnvVar 정의" />
+    <option name="yaml" hit="YAML 파일의 EnvVar 정의" />
+    <option name="정의" hit="YAML 파일의 EnvVar 정의" />
+    <option name="파일의" hit="YAML 파일의 EnvVar 정의" />
+    <option name="execaction" hit="YAML 파일의 ExecAction 정의" />
+    <option name="yaml" hit="YAML 파일의 ExecAction 정의" />
+    <option name="정의" hit="YAML 파일의 ExecAction 정의" />
+    <option name="파일의" hit="YAML 파일의 ExecAction 정의" />
     <option name="front" hit="front matter 접기" />
     <option name="matter" hit="front matter 접기" />
     <option name="접기" hit="front matter 접기" />
@@ -3357,8 +3378,6 @@
     <option name="접기" hit="목차 접기" />
     <option name="문서" hit="문서 주석" />
     <option name="주석" hit="문서 주석" />
-    <option name="문자열" hit="문자열 참조" />
-    <option name="참조" hit="문자열 참조" />
     <option name="리터럴" hit="배열 리터럴" />
     <option name="배열" hit="배열 리터럴" />
     <option name="사용자" hit="사용자 지정 접기 영역" />
@@ -3406,10 +3425,6 @@
     <option name="화살표" hit="하단 화살표 표시" />
   </configurable>
   <configurable id="editor.preferences.completion" configurable_name="코드 완성">
-    <option name="code" hit="Full Line Code Completion" />
-    <option name="completion" hit="Full Line Code Completion" />
-    <option name="full" hit="Full Line Code Completion" />
-    <option name="line" hit="Full Line Code Completion" />
     <option name="html" hit="HTML" />
     <option name="html" hit="HTML 텍스트 내에서 입력 중일 때 태그 이름 코드 완성의 자동 팝업을 활성화" />
     <option name="내에서" hit="HTML 텍스트 내에서 입력 중일 때 태그 이름 코드 완성의 자동 팝업을 활성화" />
@@ -3436,16 +3451,6 @@
     <option name="javascript" hit="JavaScript" />
     <option name="kotlin" hit="Kotlin" />
     <option name="sql" hit="SQL" />
-    <option name="ai-based" hit="Show Full Line suggestions generated by an AI based local model" />
-    <option name="an" hit="Show Full Line suggestions generated by an AI based local model" />
-    <option name="by" hit="Show Full Line suggestions generated by an AI based local model" />
-    <option name="full" hit="Show Full Line suggestions generated by an AI based local model" />
-    <option name="generated" hit="Show Full Line suggestions generated by an AI based local model" />
-    <option name="line" hit="Show Full Line suggestions generated by an AI based local model" />
-    <option name="local" hit="Show Full Line suggestions generated by an AI based local model" />
-    <option name="model" hit="Show Full Line suggestions generated by an AI based local model" />
-    <option name="show" hit="Show Full Line suggestions generated by an AI based local model" />
-    <option name="suggestions" hit="Show Full Line suggestions generated by an AI based local model" />
     <option name="typescript" hit="TypeScript" />
     <option name="nullable" hit="nullable 타입에 대한 선택적 체인이 있는 항목 제안 O " />
     <option name="o" hit="nullable 타입에 대한 선택적 체인이 있는 항목 제안 O " />
@@ -3973,6 +3978,9 @@
     <option name="식별자" hit="식별자//함수 호출" />
     <option name="함수" hit="식별자//함수 호출" />
     <option name="호출" hit="식별자//함수 호출" />
+    <option name="디폴트" hit="인라인 힌트//디폴트" />
+    <option name="인라인" hit="인라인 힌트//디폴트" />
+    <option name="힌트" hit="인라인 힌트//디폴트" />
     <option name="값" hit="인라인 힌트//리팩터링 옵션//디폴트 값" />
     <option name="디폴트" hit="인라인 힌트//리팩터링 옵션//디폴트 값" />
     <option name="리팩터링" hit="인라인 힌트//리팩터링 옵션//디폴트 값" />
@@ -4005,6 +4013,12 @@
     <option name="인라인" hit="인라인 힌트//매개변수//현재" />
     <option name="현재" hit="인라인 힌트//매개변수//현재" />
     <option name="힌트" hit="인라인 힌트//매개변수//현재" />
+    <option name="배경" hit="인라인 힌트//배경 없이 텍스트 보기" />
+    <option name="보기" hit="인라인 힌트//배경 없이 텍스트 보기" />
+    <option name="없이" hit="인라인 힌트//배경 없이 텍스트 보기" />
+    <option name="인라인" hit="인라인 힌트//배경 없이 텍스트 보기" />
+    <option name="텍스트" hit="인라인 힌트//배경 없이 텍스트 보기" />
+    <option name="힌트" hit="인라인 힌트//배경 없이 텍스트 보기" />
     <option name="문자" hit="잘못된 문자" />
     <option name="잘못된" hit="잘못된 문자" />
     <option name="렌더링된" hit="주석//문서 주석//렌더링된 뷰의 링크" />
@@ -4057,15 +4071,6 @@
     <option name="키워드" hit="키워드" />
     <option name="언어" hit="템플릿 언어" />
     <option name="템플릿" hit="템플릿 언어" />
-    <option name="디폴트" hit="힌트 인라인화//디폴트" />
-    <option name="인라인화" hit="힌트 인라인화//디폴트" />
-    <option name="힌트" hit="힌트 인라인화//디폴트" />
-    <option name="배경" hit="힌트 인라인화//배경 없이 텍스트 보기" />
-    <option name="보기" hit="힌트 인라인화//배경 없이 텍스트 보기" />
-    <option name="없이" hit="힌트 인라인화//배경 없이 텍스트 보기" />
-    <option name="인라인화" hit="힌트 인라인화//배경 없이 텍스트 보기" />
-    <option name="텍스트" hit="힌트 인라인화//배경 없이 텍스트 보기" />
-    <option name="힌트" hit="힌트 인라인화//배경 없이 텍스트 보기" />
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.사용자 정의 파일 형식" configurable_name="사용자 정의 파일 형식">
     <option name="사용자" hit="사용자 정의 파일 형식" />
@@ -4553,24 +4558,6 @@
     <option name="프로퍼티" hit="프로퍼티 파일에 대한 디폴트 인코딩 " />
   </configurable>
   <configurable id="reference.settings.ide.settings.file-colors" configurable_name="파일 색상">
-    <option name="" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="경우" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="대해" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="두" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="목록에" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="번째" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="범위에" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="범위의" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="사용됩니다" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="색상이" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="속할" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="수" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="여러" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="있는" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="있습니다" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="첫" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="파일이" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
-    <option name="하나의" hit=" 파일이 여러 범위에 속할 수 있습니다  하나의 범위에 대해 두 색상이 있는 경우 목록에 있는 첫 번째 범위의 색상이 사용됩니다 " />
     <option name="m" hit="범위 관리 M  " />
     <option name="관리" hit="범위 관리 M  " />
     <option name="범위" hit="범위 관리 M  " />

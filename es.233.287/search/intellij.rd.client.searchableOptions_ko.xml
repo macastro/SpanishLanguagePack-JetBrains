@@ -1,4 +1,7 @@
 <options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+  </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.스택 추적" configurable_name="스택 추적">
     <option name="스택" hit="스택 추적" />
     <option name="추적" hit="스택 추적" />
@@ -28,19 +31,12 @@
     <option name="braces" hit="Braces and Operators//쉼표" />
     <option name="operators" hit="Braces and Operators//쉼표" />
     <option name="쉼표" hit="Braces and Operators//쉼표" />
-    <option name="and" hit="Properties and variables//Primary Constructor Parameter" />
-    <option name="constructor" hit="Properties and variables//Primary Constructor Parameter" />
-    <option name="parameter" hit="Properties and variables//Primary Constructor Parameter" />
-    <option name="primary" hit="Properties and variables//Primary Constructor Parameter" />
-    <option name="properties" hit="Properties and variables//Primary Constructor Parameter" />
-    <option name="variables" hit="Properties and variables//Primary Constructor Parameter" />
-    <option name="and" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
-    <option name="captured" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
-    <option name="constructor" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
-    <option name="parameter" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
-    <option name="primary" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
-    <option name="properties" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
-    <option name="variables" hit="Properties and variables//Primary Constructor Parameter (Captured)" />
+    <option name="block" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Block comment" />
+    <option name="comments" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Line comment" />
+    <option name="comments" hit="Comments//Line comment" />
+    <option name="line" hit="Comments//Line comment" />
     <option name="괄호" hit="괄호 및 연산자//괄호" />
     <option name="및" hit="괄호 및 연산자//괄호" />
     <option name="연산자" hit="괄호 및 연산자//괄호" />
@@ -98,10 +94,6 @@
     <option name="이름" hit="주석//문서 주석//태그 이름" />
     <option name="주석" hit="주석//문서 주석//태그 이름" />
     <option name="태그" hit="주석//문서 주석//태그 이름" />
-    <option name="블록" hit="주석//블록 주석" />
-    <option name="주석" hit="주석//블록 주석" />
-    <option name="주석" hit="주석//줄 주석" />
-    <option name="줄" hit="주석//줄 주석" />
     <option name="bool" hit="키워드//기본 제공 타입 키워드(int, short, bool 등)" />
     <option name="int" hit="키워드//기본 제공 타입 키워드(int, short, bool 등)" />
     <option name="short" hit="키워드//기본 제공 타입 키워드(int, short, bool 등)" />
@@ -165,6 +157,19 @@
     <option name="변수" hit="프로퍼티 및 변수//가변 지역 변수" />
     <option name="지역" hit="프로퍼티 및 변수//가변 지역 변수" />
     <option name="프로퍼티" hit="프로퍼티 및 변수//가변 지역 변수" />
+    <option name="기본" hit="프로퍼티 및 변수//기본 생성자 매개변수" />
+    <option name="매개변수" hit="프로퍼티 및 변수//기본 생성자 매개변수" />
+    <option name="및" hit="프로퍼티 및 변수//기본 생성자 매개변수" />
+    <option name="변수" hit="프로퍼티 및 변수//기본 생성자 매개변수" />
+    <option name="생성자" hit="프로퍼티 및 변수//기본 생성자 매개변수" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//기본 생성자 매개변수" />
+    <option name="기본" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
+    <option name="매개변수" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
+    <option name="및" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
+    <option name="변수" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
+    <option name="생성자" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
+    <option name="캡처됨" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
     <option name="동적" hit="프로퍼티 및 변수//동적" />
     <option name="및" hit="프로퍼티 및 변수//동적" />
     <option name="변수" hit="프로퍼티 및 변수//동적" />
@@ -195,6 +200,102 @@
     <option name="변수" hit="프로퍼티 및 변수//필드" />
     <option name="프로퍼티" hit="프로퍼티 및 변수//필드" />
     <option name="필드" hit="프로퍼티 및 변수//필드" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.F#" configurable_name="F#">
+    <option name="f#" hit="F " />
+    <option name="block" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Block comment" />
+    <option name="comments" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Line comment" />
+    <option name="comments" hit="Comments//Line comment" />
+    <option name="line" hit="Comments//Line comment" />
+    <option name="1" hit="Escape Character 1" />
+    <option name="character" hit="Escape Character 1" />
+    <option name="escape" hit="Escape Character 1" />
+    <option name="2" hit="Escape Character 2" />
+    <option name="character" hit="Escape Character 2" />
+    <option name="escape" hit="Escape Character 2" />
+    <option name="event" hit="Members//Event" />
+    <option name="members" hit="Members//Event" />
+    <option name="extension" hit="Members//Extension method" />
+    <option name="members" hit="Members//Extension method" />
+    <option name="method" hit="Members//Extension method" />
+    <option name="extension" hit="Members//Extension property" />
+    <option name="members" hit="Members//Extension property" />
+    <option name="property" hit="Members//Extension property" />
+    <option name="field" hit="Members//Field" />
+    <option name="members" hit="Members//Field" />
+    <option name="members" hit="Members//Method" />
+    <option name="method" hit="Members//Method" />
+    <option name="members" hit="Members//Property" />
+    <option name="property" hit="Members//Property" />
+    <option name="and" hit="Modules and namespaces//Module" />
+    <option name="module" hit="Modules and namespaces//Module" />
+    <option name="modules" hit="Modules and namespaces//Module" />
+    <option name="namespaces" hit="Modules and namespaces//Module" />
+    <option name="and" hit="Modules and namespaces//Namespace" />
+    <option name="modules" hit="Modules and namespaces//Namespace" />
+    <option name="namespace" hit="Modules and namespaces//Namespace" />
+    <option name="namespaces" hit="Modules and namespaces//Namespace" />
+    <option name="branch" hit="Preprocessor//Inactive branch" />
+    <option name="inactive" hit="Preprocessor//Inactive branch" />
+    <option name="preprocessor" hit="Preprocessor//Inactive branch" />
+    <option name="keyword" hit="Preprocessor//Keyword" />
+    <option name="preprocessor" hit="Preprocessor//Keyword" />
+    <option name="keyword" hit="Syntax//Keyword" />
+    <option name="syntax" hit="Syntax//Keyword" />
+    <option name="number" hit="Syntax//Number" />
+    <option name="syntax" hit="Syntax//Number" />
+    <option name="string" hit="Syntax//String" />
+    <option name="syntax" hit="Syntax//String" />
+    <option name="class" hit="Types//Class" />
+    <option name="types" hit="Types//Class" />
+    <option name="delegate" hit="Types//Delegate" />
+    <option name="types" hit="Types//Delegate" />
+    <option name="enum" hit="Types//Enum" />
+    <option name="types" hit="Types//Enum" />
+    <option name="interface" hit="Types//Interface" />
+    <option name="types" hit="Types//Interface" />
+    <option name="record" hit="Types//Record" />
+    <option name="types" hit="Types//Record" />
+    <option name="class" hit="Types//Static class" />
+    <option name="static" hit="Types//Static class" />
+    <option name="types" hit="Types//Static class" />
+    <option name="struct" hit="Types//Struct" />
+    <option name="types" hit="Types//Struct" />
+    <option name="parameter" hit="Types//Type parameter" />
+    <option name="type" hit="Types//Type parameter" />
+    <option name="types" hit="Types//Type parameter" />
+    <option name="types" hit="Types//Union" />
+    <option name="union" hit="Types//Union" />
+    <option name="case" hit="Types//Union Case" />
+    <option name="types" hit="Types//Union Case" />
+    <option name="union" hit="Types//Union Case" />
+    <option name="measure" hit="Types//Unit of measure" />
+    <option name="of" hit="Types//Unit of measure" />
+    <option name="types" hit="Types//Unit of measure" />
+    <option name="unit" hit="Types//Unit of measure" />
+    <option name="active" hit="Values//Active pattern case" />
+    <option name="case" hit="Values//Active pattern case" />
+    <option name="pattern" hit="Values//Active pattern case" />
+    <option name="values" hit="Values//Active pattern case" />
+    <option name="computation" hit="Values//Computation expression" />
+    <option name="expression" hit="Values//Computation expression" />
+    <option name="values" hit="Values//Computation expression" />
+    <option name="function" hit="Values//Function" />
+    <option name="values" hit="Values//Function" />
+    <option name="literal" hit="Values//Literal" />
+    <option name="values" hit="Values//Literal" />
+    <option name="function" hit="Values//Mutable function" />
+    <option name="mutable" hit="Values//Mutable function" />
+    <option name="values" hit="Values//Mutable function" />
+    <option name="mutable" hit="Values//Mutable value" />
+    <option name="value" hit="Values//Mutable value" />
+    <option name="values" hit="Values//Mutable value" />
+    <option name="operator" hit="Values//Operator" />
+    <option name="values" hit="Values//Operator" />
+    <option name="value" hit="Values//Value" />
+    <option name="values" hit="Values//Value" />
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.Xaml" configurable_name="Xaml">
     <option name="xaml" hit="Xaml" />
@@ -279,6 +380,12 @@
     <option name="braces" hit="Braces and Operators//쉼표" />
     <option name="operators" hit="Braces and Operators//쉼표" />
     <option name="쉼표" hit="Braces and Operators//쉼표" />
+    <option name="block" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Block comment" />
+    <option name="comments" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Line comment" />
+    <option name="comments" hit="Comments//Line comment" />
+    <option name="line" hit="Comments//Line comment" />
     <option name="engine" hit="Unreal Engine 리플렉션 지정자" />
     <option name="unreal" hit="Unreal Engine 리플렉션 지정자" />
     <option name="리플렉션" hit="Unreal Engine 리플렉션 지정자" />
@@ -353,6 +460,53 @@
     <option name="변수" hit="변수 및 필드//클래스 필드" />
     <option name="클래스" hit="변수 및 필드//클래스 필드" />
     <option name="필드" hit="변수 및 필드//클래스 필드" />
+    <option name="라벨" hit="어셈블러//라벨//라벨" />
+    <option name="어셈블러" hit="어셈블러//라벨//라벨" />
+    <option name="라벨" hit="어셈블러//라벨//변수" />
+    <option name="변수" hit="어셈블러//라벨//변수" />
+    <option name="어셈블러" hit="어셈블러//라벨//변수" />
+    <option name="라벨" hit="어셈블러//라벨//상수" />
+    <option name="상수" hit="어셈블러//라벨//상수" />
+    <option name="어셈블러" hit="어셈블러//라벨//상수" />
+    <option name="레지스터" hit="어셈블러//레지스터" />
+    <option name="어셈블러" hit="어셈블러//레지스터" />
+    <option name="equ" hit="어셈블러//명령//Equ 의사 명령" />
+    <option name="명령" hit="어셈블러//명령//Equ 의사 명령" />
+    <option name="어셈블러" hit="어셈블러//명령//Equ 의사 명령" />
+    <option name="의사" hit="어셈블러//명령//Equ 의사 명령" />
+    <option name="데이터" hit="어셈블러//명령//데이터 의사 명령" />
+    <option name="명령" hit="어셈블러//명령//데이터 의사 명령" />
+    <option name="어셈블러" hit="어셈블러//명령//데이터 의사 명령" />
+    <option name="의사" hit="어셈블러//명령//데이터 의사 명령" />
+    <option name="명령" hit="어셈블러//명령//명령" />
+    <option name="어셈블러" hit="어셈블러//명령//명령" />
+    <option name="명령" hit="어셈블러//명령//접두사" />
+    <option name="어셈블러" hit="어셈블러//명령//접두사" />
+    <option name="접두사" hit="어셈블러//명령//접두사" />
+    <option name="명령" hit="어셈블러//명령//지시문" />
+    <option name="어셈블러" hit="어셈블러//명령//지시문" />
+    <option name="지시문" hit="어셈블러//명령//지시문" />
+    <option name="리터럴" hit="어셈블러//문자열 리터럴" />
+    <option name="문자열" hit="어셈블러//문자열 리터럴" />
+    <option name="어셈블러" hit="어셈블러//문자열 리터럴" />
+    <option name="미해결" hit="어셈블러//미해결 식별자" />
+    <option name="식별자" hit="어셈블러//미해결 식별자" />
+    <option name="어셈블러" hit="어셈블러//미해결 식별자" />
+    <option name="리터럴" hit="어셈블러//숫자 리터럴" />
+    <option name="숫자" hit="어셈블러//숫자 리터럴" />
+    <option name="어셈블러" hit="어셈블러//숫자 리터럴" />
+    <option name="상수" hit="어셈블러//키워드//상수 키워드" />
+    <option name="어셈블러" hit="어셈블러//키워드//상수 키워드" />
+    <option name="키워드" hit="어셈블러//키워드//상수 키워드" />
+    <option name="어셈블러" hit="어셈블러//키워드//크기 키워드" />
+    <option name="크기" hit="어셈블러//키워드//크기 키워드" />
+    <option name="키워드" hit="어셈블러//키워드//크기 키워드" />
+    <option name="어셈블러" hit="어셈블러//키워드//키워드" />
+    <option name="키워드" hit="어셈블러//키워드//키워드" />
+    <option name="어셈블러" hit="어셈블러//한 줄 주석" />
+    <option name="주석" hit="어셈블러//한 줄 주석" />
+    <option name="줄" hit="어셈블러//한 줄 주석" />
+    <option name="한" hit="어셈블러//한 줄 주석" />
     <option name="브랜치" hit="전처리기//비활성화된 브랜치" />
     <option name="비활성화된" hit="전처리기//비활성화된 브랜치" />
     <option name="전처리기" hit="전처리기//비활성화된 브랜치" />
@@ -374,10 +528,6 @@
     <option name="doxygen" hit="주석//Doxygen//텍스트" />
     <option name="주석" hit="주석//Doxygen//텍스트" />
     <option name="텍스트" hit="주석//Doxygen//텍스트" />
-    <option name="블록" hit="주석//블록 주석" />
-    <option name="주석" hit="주석//블록 주석" />
-    <option name="주석" hit="주석//줄 주석" />
-    <option name="줄" hit="주석//줄 주석" />
     <option name="키워드" hit="키워드//키워드" />
     <option name="typedef" hit="타입//typedef" />
     <option name="타입" hit="타입//typedef" />
@@ -407,16 +557,18 @@
   <configurable id="reference.settingsdialog.IDE.editor.colors.Cg/HLSL" configurable_name="Cg/HLSL">
     <option name="cg" hit="Cg HLSL" />
     <option name="hlsl" hit="Cg HLSL" />
+    <option name="block" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Block comment" />
+    <option name="comments" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Line comment" />
+    <option name="comments" hit="Comments//Line comment" />
+    <option name="line" hit="Comments//Line comment" />
     <option name="변수" hit="변수 식별자" />
     <option name="식별자" hit="변수 식별자" />
     <option name="숫자" hit="숫자" />
     <option name="내용" hit="전처리기 줄 내용" />
     <option name="전처리기" hit="전처리기 줄 내용" />
     <option name="줄" hit="전처리기 줄 내용" />
-    <option name="블록" hit="주석//블록 주석" />
-    <option name="주석" hit="주석//블록 주석" />
-    <option name="주석" hit="주석//줄 주석" />
-    <option name="줄" hit="주석//줄 주석" />
     <option name="키워드" hit="키워드" />
     <option name="식별자" hit="타입 식별자" />
     <option name="타입" hit="타입 식별자" />
@@ -454,16 +606,27 @@
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.ShaderLab" configurable_name="ShaderLab">
     <option name="shaderlab" hit="ShaderLab" />
+    <option name="block" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Block comment" />
+    <option name="comments" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Line comment" />
+    <option name="comments" hit="Comments//Line comment" />
+    <option name="line" hit="Comments//Line comment" />
     <option name="문자열" hit="문자열" />
+    <option name="비활성화된" hit="비활성화된 셰이더 키워드" />
+    <option name="셰이더" hit="비활성화된 셰이더 키워드" />
+    <option name="키워드" hit="비활성화된 셰이더 키워드" />
     <option name="삽입된" hit="삽입된 언어 조각" />
     <option name="언어" hit="삽입된 언어 조각" />
     <option name="조각" hit="삽입된 언어 조각" />
     <option name="숫자" hit="숫자" />
-    <option name="블록" hit="주석//블록 주석" />
-    <option name="주석" hit="주석//블록 주석" />
-    <option name="주석" hit="주석//줄 주석" />
-    <option name="줄" hit="주석//줄 주석" />
+    <option name="셰이더" hit="억제된 셰이더 키워드" />
+    <option name="억제된" hit="억제된 셰이더 키워드" />
+    <option name="키워드" hit="억제된 셰이더 키워드" />
     <option name="키워드" hit="키워드" />
+    <option name="셰이더" hit="활성화된 셰이더 키워드" />
+    <option name="키워드" hit="활성화된 셰이더 키워드" />
+    <option name="활성화된" hit="활성화된 셰이더 키워드" />
   </configurable>
   <configurable id="reference.settingsdialog.IDE.editor.colors.T4" configurable_name="T4">
     <option name="t4" hit="T " />

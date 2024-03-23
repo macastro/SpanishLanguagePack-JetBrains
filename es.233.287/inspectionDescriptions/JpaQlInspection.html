@@ -9,7 +9,7 @@
 </ul>
 
 <p><b>쿼리 예:</b></p>
-<pre><code>
+<pre><code lang="sql">
 SELECT OBJECT(e) FROM JavaEntity e WHERE TRUE // 경고: 상수 조건
 
 SELECT OBJECT(e) FROM JavaEntity e WHERE e.id BETWEEN 0 AND '2' // 오류: 숫자 값이 필요하나 문자열이 사용되었습니다
