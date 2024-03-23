@@ -1,0 +1,23 @@
+<html>
+<body>
+단순화 가능한 <code>javax.swing.border.EmptyBorder</code> 및 <code>JBUI.Borders.emptyXyz()</code>가 사용된 경우를 보고합니다.
+<p>
+  <code>EmptyBorder</code> 인스턴스는 DPI를 인식하지 않기 때문에 UI 레이아웃에 문제가 발생할 수 있습니다.
+</p>
+<p>
+  빠른 수정에서는 <code>JBUI.Borders.empty()</code>로 이를 바꾸거나 표현식을 단순화합니다.
+</p>
+<p>예:</p>
+<pre><code lang="java">
+// 나쁨:
+Border border1 = new EmptyBorder(1, 2, 3, 4);
+Border border2 = new EmptyBorder(1, 2, 1, 2);
+Border border3 = new EmptyBorder(1, 0, 0, 0);
+
+// 좋음:
+Border border1 = JBUI.Borders.empty(1, 2, 3, 4);
+Border border2 = JBUI.Borders.empty(1, 2);
+Border border3 = JBUI.Borders.emptyTop(1);
+</code></pre>
+</body>
+</html>

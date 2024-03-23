@@ -1,0 +1,67 @@
+<html>
+<body>
+1.7 이후 컴파일 오류를 일으키는 불완전한 <code>when</code> 문을 보고합니다.
+<p>동기 타입:</p>
+<ul>
+    <li>
+        문제가 될 수 있는/의미 없는 사용 패턴은 지양되거나 차단되어야 합니다(예: 직관적이지 않은 동작)
+        <ul>
+            <li>
+                코드에 오류가 없습니다
+            </li>
+        </ul>
+    </li>
+    <li>
+        설계가 일관되지 않습니다(다른 컨텍스트에서 다르게 처리됨)
+    </li>
+</ul>
+<p>영향 타입:</p>
+<ul>
+    <li>
+        컴파일. 컴파일되던 일부 코드가 이제 컴파일되지 않습니다
+        <ul>
+            <li>
+                그 전에는 그러한 코드가 예외 없이 작동했습니다
+                <ul>
+                    <li>
+                        그러한 코드 중 일부는 경고 없이 컴파일될 수도 있습니다
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<p><b>자세한 정보:</b> <a href="https://youtrack.jetbrains.com/issue/KT-47709">KT-47709: 기본적으로 enum, sealed 및 부울을 가진 when 문을 완전하게 만들기</a></p>
+<p>빠른 수정에서는 누락된 <code>else -> {}</code> 브랜치를 추가합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  sealed class <b>Base</b> {
+      class <b>A</b> : <b>Base</b>()
+      class <b>B</b> : <b>Base</b>()
+  }
+
+  fun test(base: <b>Base</b>) {
+      when (base) {
+          is <b>Base</b>.<b>A</b> -> ""
+      }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  sealed class <b>Base</b> {
+      class <b>A</b> : <b>Base</b>()
+      class <b>B</b> : <b>Base</b>()
+  }
+
+  fun test(base: <b>Base</b>) {
+      when (base) {
+          is <b>Base</b>.<b>A</b> -> ""
+          else -> {}
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 프로젝트 또는 모듈의 Kotlin 언어 수준이 1.6 이상인 경우에만 보고합니다.</p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+레코드 패턴으로 바꿀 수 있는 패턴을 보고합니다.
+<p>예:</p>
+<pre><code>
+  record Point(int x, int y) {}
+
+  static void printSum(Object obj) {
+    if (obj instanceof Point p) {
+      int x = p.x();
+      int y = p.y();
+      System.out.println(x + y);
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  record Point(int x, int y) {}
+
+  static void printSum(Object obj) {
+    if (obj instanceof Point(int x, int y)) {
+      System.out.println(x + y);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.1의 새로운 기능</small></p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+<code>Comparator.compare()</code> 및 <code>Comparable.compareTo()</code> 구현의 문제를 보고합니다.
+<p>다음과 같은 경우가 보고됩니다:</p>
+<ul>
+  <li>
+    매개변수가 사용되지 않은 경우를 보고합니다. 이는 오타이며 나머지 매개변수가 자신과 비교되거나 메서드가 올바르게 구현되지 않을 가능성이 높습니다.
+  </li>
+  <li>
+    요소가 동일한 경우 메서드가 <code>0</code>을 반환하지 않는 것은 자명합니다. 이러한 비교 메서드는 동일한 요소가 나올 때 컨트랙트를 위반하며 예기치 않은 결과를 초래할 수 있습니다. 특히 일부 데이터에서 정렬 시 예외가 발생하며 실패할 수 있습니다.</li>
+  <li>
+    비교 메서드는 양수 또는 음수 값을 반환하지 않습니다. 컨트랙트를 충족하려면 비교 메서드가 양수 값을 반환하는 경우, 인수가 역순으로 제공되면 음수 값을 반환해야 합니다.
+  </li>
+  <li>
+    비교 메서드는 <code>Integer.MIN_VALUE</code>를 반환합니다. 컨트랙트에서 허용되지만, 일부 호출 사이트에서 단항 뺄셈 연산자를 사용하여 비교 메서드의 반환값을 올바르지 않게 반전시킬 수 있으므로 오류가 발생하기 쉽습니다.
+    <code>Integer.MIN_VALUE</code>의 부정 값은 <code>Integer.MIN_VALUE</code>입니다.
+  </li>
+</ul>
+<p><b>예:</b></p>
+<pre><code>
+  Comparator&lt;String&gt; lambda =
+    (a, b) -&gt; a.length() &gt; b.length()
+              ? 0
+              : Math.random() &gt; 0.5 ? -1 : 1;
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

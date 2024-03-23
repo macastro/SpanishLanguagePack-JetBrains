@@ -1,0 +1,39 @@
+<html>
+<body>
+  <code>@java.lang.Override</code> 어노테이션이 없는 상위 클래스 메서드를 재정의하는 메서드를 보고합니다.
+  <p>
+  메서드에 <code>@java.lang.Override</code> 어노테이션을 추가하면 의도를 알 수 있기 때문에 코드 가독성이 향상됩니다.
+  또한 컴파일러는 재정의된 메서드의 시그니처가상위 클래스 메서드와 일치하지 않는 경우 오류를 표시합니다.
+  <p><b>예:</b></p>
+  <pre><code>
+    class X {
+      public String toString() {
+        return "hello world";
+      }
+    }
+  </code></pre>
+  <p>빠른 수정 적용 후:</p>
+  <pre><code>
+    class X {
+      @Override
+      public String toString() {
+        return "hello world";
+      }
+    }
+  </code></pre>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<ul>
+  <li>
+    <b>'equals()', 'hashCode()', 'toString()' 무시</b> 옵션을 사용하여 <code>java.lang.Object</code> 메서드인 <code>equals()</code>, <code>hashCode()</code>, <code>toString()</code>을 무시합니다. 이러한 메서드가 <code>@Override</code> 어노테이션 때문에 사라지고 코드가 더 이상 컴파일되지 않을
+위험은 비교적 적습니다.
+  </li>
+  <li>
+    <b>익명 클래스의 메서드 무시</b> 옵션을 사용하여 익명 클래스에 있는 메서드를 무시합니다.
+  </li>
+  <li>
+    <code>@Override</code> 어노테이션이 누락된 메서드만 경고하고, 하나 이상의 하위 항목에 <code>@Override</code> 어노테이션이 누락된 재정의된 메서드는 경고하지 않으려면, <b>Highlight method when its overriding methods do not all have the '@Override' annotation(재정의하는 메서드에 '@Override' 어노테이션이 모두 없을 때 메서드 강조 표시)</b> 옵션을 비활성화합니다.
+  </li>
+</ul>
+</body>
+</html>

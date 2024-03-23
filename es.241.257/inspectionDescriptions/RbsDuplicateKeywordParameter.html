@@ -1,0 +1,11 @@
+<html>
+<body>
+메서드, 블록 및 proc 타입에 있는 중복 키워드 매개변수를 보고합니다. 각 키워드 매개변수의 첫 번째 선언만 인식됩니다.
+다른 모든 선언은 무시됩니다.
+<p>예:</p>
+<pre><code>class Example
+  # 중복 키워드 매개변수
+  def call: (keyword: untyped, keyword: untyped) -> untyped
+end</code></pre>
+</body>
+</html>

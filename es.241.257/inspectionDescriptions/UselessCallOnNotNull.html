@@ -1,0 +1,14 @@
+<html>
+<body>
+null 가능 리시버에서만 의미가 있는 null이 아닌 리시버에 대한 호출을 보고합니다.
+<p><code>orEmpty()</code> 또는 <code>isNullOrEmpty</code> 같은 표준 라이브러리의 여러 함수는 null 가능 타입의 리시버에서 호출했을 때에만 의미가 있습니다. 그렇지 않은 경우 결과가 같으므로 생략하거나 단순화할 수 있습니다.</p>
+<p><b>불필요한 호출 제거</b> 및 <b>호출을 다음으로 변경…</b> 빠른 수정을 사용해 코드를 자동으로 수정할 수 있습니다.</p>
+<p>예:</p>
+<pre><code>
+  fun test(s: String) {
+      val x = s.orEmpty() // 빠른 수정에서는 's'로 단순화합니다
+      val y = s.isNullOrEmpty() // 빠른 수정에서는  's.isEmpty()'로 단순화합니다
+  }
+</code></pre>
+</body>
+</html>

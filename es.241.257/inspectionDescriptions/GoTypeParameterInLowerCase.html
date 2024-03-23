@@ -1,0 +1,13 @@
+<html>
+<body>
+소문자로 선언된 타입 매개변수를 보고합니다.
+<p>공식 Go 문서의 예시는 타입 매개변수를 대문자로 사용합니다.
+  이 검사는 타입 매개변수에 대해 이 대문자 규칙을 따릅니다.</p>
+<pre><code>func PrintSlice[t any](s []t) {
+    for _, v := range s{
+        print(v)
+    }
+}</code></pre>
+<p>타입 매개변수 <code>t</code>가 소문자로 선언되었으므로 보고됩니다.</p>
+</body>
+</html>

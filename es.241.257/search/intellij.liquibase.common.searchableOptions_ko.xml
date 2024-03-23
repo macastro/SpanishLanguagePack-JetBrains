@@ -1,0 +1,268 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="init" path="ActionManager" hit="Liquibase Init 변경 로그" />
+    <option name="liquibase" path="ActionManager" hit="Liquibase Init 변경 로그" />
+    <option name="로그" path="ActionManager" hit="Liquibase Init 변경 로그" />
+    <option name="변경" path="ActionManager" hit="Liquibase Init 변경 로그" />
+    <option name="liquibase" path="ActionManager" hit="Liquibase 변경 로그 생성" />
+    <option name="로그" path="ActionManager" hit="Liquibase 변경 로그 생성" />
+    <option name="변경" path="ActionManager" hit="Liquibase 변경 로그 생성" />
+    <option name="생성" path="ActionManager" hit="Liquibase 변경 로그 생성" />
+    <option name="다른" path="ActionManager" hit="다른 변경 로그로 이동" />
+    <option name="로그로" path="ActionManager" hit="다른 변경 로그로 이동" />
+    <option name="변경" path="ActionManager" hit="다른 변경 로그로 이동" />
+    <option name="이동" path="ActionManager" hit="다른 변경 로그로 이동" />
+    <option name="데이터" path="ActionManager" hit="데이터 모델 스냅샷" />
+    <option name="모델" path="ActionManager" hit="데이터 모델 스냅샷" />
+    <option name="스냅샷" path="ActionManager" hit="데이터 모델 스냅샷" />
+    <option name="라벨" path="ActionManager" hit="라벨 설정" />
+    <option name="설정" path="ActionManager" hit="라벨 설정" />
+    <option name="목록에서" path="ActionManager" hit="무시 목록에서 복원" />
+    <option name="무시" path="ActionManager" hit="무시 목록에서 복원" />
+    <option name="복원" path="ActionManager" hit="무시 목록에서 복원" />
+    <option name="로그" path="ActionManager" hit="변경 로그 추가" />
+    <option name="변경" path="ActionManager" hit="변경 로그 추가" />
+    <option name="추가" path="ActionManager" hit="변경 로그 추가" />
+    <option name="로그에서" path="ActionManager" hit="변경 로그에서 제거" />
+    <option name="변경" path="ActionManager" hit="변경 로그에서 제거" />
+    <option name="제거" path="ActionManager" hit="변경 로그에서 제거" />
+    <option name="변경" path="ActionManager" hit="변경 사항 세트 추가" />
+    <option name="사항" path="ActionManager" hit="변경 사항 세트 추가" />
+    <option name="세트" path="ActionManager" hit="변경 사항 세트 추가" />
+    <option name="추가" path="ActionManager" hit="변경 사항 세트 추가" />
+    <option name="무시" path="ActionManager" hit="제거하고 무시" />
+    <option name="제거하고" path="ActionManager" hit="제거하고 무시" />
+    <option name="설정" path="ActionManager" hit="컨텍스트 설정" />
+    <option name="컨텍스트" path="ActionManager" hit="컨텍스트 설정" />
+  </configurable>
+  <configurable id="com.intellij.diffGeneration.databaseVersioning" configurable_name="데이터베이스 버저닝">
+    <option name="" hit="   TABLE NAME  " />
+    <option name="name" hit="   TABLE NAME  " />
+    <option name="table" hit="   TABLE NAME  " />
+    <option name="diff" hit="Diff 변경 사항" />
+    <option name="변경" hit="Diff 변경 사항" />
+    <option name="사항" hit="Diff 변경 사항" />
+    <option name="flyway" hit="Flyway" />
+    <option name="6" hit="Hibernate   전용" />
+    <option name="hibernate" hit="Hibernate   전용" />
+    <option name="전용" hit="Hibernate   전용" />
+    <option name="envers" hit="Hibernate Envers" />
+    <option name="hibernate" hit="Hibernate Envers" />
+    <option name="liquibase" hit="Liquibase" />
+    <option name="naming" hit="Physical Naming Strategy " />
+    <option name="physical" hit="Physical Naming Strategy " />
+    <option name="strategy" hit="Physical Naming Strategy " />
+    <option name="기본" hit="기본 키 제약 이름 " />
+    <option name="이름" hit="기본 키 제약 이름 " />
+    <option name="제약" hit="기본 키 제약 이름 " />
+    <option name="키" hit="기본 키 제약 이름 " />
+    <option name="단일" hit="단일 시퀀스" />
+    <option name="시퀀스" hit="단일 시퀀스" />
+    <option name="데이터베이스" hit="데이터베이스 버저닝" />
+    <option name="버저닝" hit="데이터베이스 버저닝" />
+    <option name="naming" hit="사용자 지정 physical naming strategy 클래스 다시 로드" />
+    <option name="physical" hit="사용자 지정 physical naming strategy 클래스 다시 로드" />
+    <option name="strategy" hit="사용자 지정 physical naming strategy 클래스 다시 로드" />
+    <option name="다시" hit="사용자 지정 physical naming strategy 클래스 다시 로드" />
+    <option name="로드" hit="사용자 지정 physical naming strategy 클래스 다시 로드" />
+    <option name="사용자" hit="사용자 지정 physical naming strategy 클래스 다시 로드" />
+    <option name="지정" hit="사용자 지정 physical naming strategy 클래스 다시 로드" />
+    <option name="클래스" hit="사용자 지정 physical naming strategy 클래스 다시 로드" />
+    <option name="명명" hit="시퀀스 명명 전략 " />
+    <option name="시퀀스" hit="시퀀스 명명 전략 " />
+    <option name="전략" hit="시퀀스 명명 전략 " />
+    <option name="시퀀스" hit="엔티티당 시퀀스" />
+    <option name="엔티티당" hit="엔티티당 시퀀스" />
+    <option name="색인" hit="연결 외래 키 제약의 색인 생성" />
+    <option name="생성" hit="연결 외래 키 제약의 색인 생성" />
+    <option name="연결" hit="연결 외래 키 제약의 색인 생성" />
+    <option name="외래" hit="연결 외래 키 제약의 색인 생성" />
+    <option name="제약의" hit="연결 외래 키 제약의 색인 생성" />
+    <option name="키" hit="연결 외래 키 제약의 색인 생성" />
+    <option name="않음" hit="이름이 지정되지 않음" />
+    <option name="이름이" hit="이름이 지정되지 않음" />
+    <option name="지정되지" hit="이름이 지정되지 않음" />
+    <option name="이름이" hit="이름이 지정됨" />
+    <option name="지정됨" hit="이름이 지정됨" />
+    <option name="감지" hit="자동 감지" />
+    <option name="자동" hit="자동 감지" />
+    <option name="db" hit="최대 DB 식별자 길이 " />
+    <option name="길이" hit="최대 DB 식별자 길이 " />
+    <option name="식별자" hit="최대 DB 식별자 길이 " />
+    <option name="최대" hit="최대 DB 식별자 길이 " />
+    <option name="매핑" hit="타입 매핑" />
+    <option name="타입" hit="타입 매핑" />
+  </configurable>
+  <configurable id="com.intellij.jpa.jpb.model.ui.settings.db.TypeMappingsConfigurable" configurable_name="타입 매핑">
+    <option name="" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="exists" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="sql" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="데이터베이스" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="마이그레이션" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="매핑" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="설정을" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="수" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="있습니다" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="재정의할" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="정의하거나" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="타입을" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="통해" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="매핑" hit="매핑 타입 " />
+    <option name="타입" hit="매핑 타입 " />
+    <option name="매핑" hit="타입 매핑" />
+    <option name="타입" hit="타입 매핑" />
+  </configurable>
+  <configurable id="com.intellij.liquibase.common.gui.settings.db.DiffChangesConfigurable" configurable_name="Diff 변경 사항">
+    <option name="" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="flyway" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="liquibase" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="강조" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="관리" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="관리할" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="다중" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="대화상자에서" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="도와줍니다" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="또한" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="로그" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="마이그레이션" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="미리보기" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="버전" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="버전을" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="변경" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="비활성화할" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="사용되는" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="사항" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="사항을" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="생성을" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="선택하여" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="수" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="여러" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="완전히" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="유사한" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="일부" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="있게" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="있습니다" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="카테고리에서" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="표시하며" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="한번에" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="혹은" hit=" Liquibase 변경 로그 혹은 Flyway 버전 관리 마이그레이션 미리보기 대화상자에서 사용되는 버전을 강조 표시하며 여러 유사한 변경 사항을 다중 선택하여 한번에 관리할 수 있게 도와줍니다  또한  일부 카테고리에서 변경 사항 생성을 완전히 비활성화할 수 있습니다 " />
+    <option name="diff" hit="Diff 변경 사항" />
+    <option name="변경" hit="Diff 변경 사항" />
+    <option name="사항" hit="Diff 변경 사항" />
+    <option name="diff" hit="Liquibase Flyway Diff 생성 시의 변경 사항 제외" />
+    <option name="flyway" hit="Liquibase Flyway Diff 생성 시의 변경 사항 제외" />
+    <option name="liquibase" hit="Liquibase Flyway Diff 생성 시의 변경 사항 제외" />
+    <option name="변경" hit="Liquibase Flyway Diff 생성 시의 변경 사항 제외" />
+    <option name="사항" hit="Liquibase Flyway Diff 생성 시의 변경 사항 제외" />
+    <option name="생성" hit="Liquibase Flyway Diff 생성 시의 변경 사항 제외" />
+    <option name="시의" hit="Liquibase Flyway Diff 생성 시의 변경 사항 제외" />
+    <option name="제외" hit="Liquibase Flyway Diff 생성 시의 변경 사항 제외" />
+  </configurable>
+  <configurable id="com.intellij.liquibase.common.gui.settings.db.LiquibaseConfigurable" configurable_name="Liquibase">
+    <option name="" hit=" Liquibase 기능을 활성화하려면 버전을 명시적으로 지정하세요" />
+    <option name="liquibase" hit=" Liquibase 기능을 활성화하려면 버전을 명시적으로 지정하세요" />
+    <option name="기능을" hit=" Liquibase 기능을 활성화하려면 버전을 명시적으로 지정하세요" />
+    <option name="명시적으로" hit=" Liquibase 기능을 활성화하려면 버전을 명시적으로 지정하세요" />
+    <option name="버전을" hit=" Liquibase 기능을 활성화하려면 버전을 명시적으로 지정하세요" />
+    <option name="지정하세요" hit=" Liquibase 기능을 활성화하려면 버전을 명시적으로 지정하세요" />
+    <option name="활성화하려면" hit=" Liquibase 기능을 활성화하려면 버전을 명시적으로 지정하세요" />
+    <option name="db" hit="DB 타입" />
+    <option name="타입" hit="DB 타입" />
+    <option name="json" hit="JSON" />
+    <option name="liquibase" hit="Liquibase" />
+    <option name="liquibase" hit="Liquibase 버전 " />
+    <option name="버전" hit="Liquibase 버전 " />
+    <option name="sql" hit="SQL" />
+    <option name="xml" hit="XML" />
+    <option name="yaml" hit="YAML" />
+    <option name="db2" hit="db " />
+    <option name="h2" hit="h " />
+    <option name="hsql" hit="hsql" />
+    <option name="maria" hit="maria" />
+    <option name="mssql" hit="mssql" />
+    <option name="mysql" hit="mysql" />
+    <option name="oracle" hit="oracle" />
+    <option name="postgres" hit="postgres" />
+    <option name="기본" hit="기본 디렉터리 " />
+    <option name="디렉터리" hit="기본 디렉터리 " />
+    <option name="기본" hit="기본 이름 " />
+    <option name="이름" hit="기본 이름 " />
+    <option name="롤백" hit="묵시적인 롤백을 지원하지 않는 변경 사항 세트에 빈 롤백 추가" />
+    <option name="롤백을" hit="묵시적인 롤백을 지원하지 않는 변경 사항 세트에 빈 롤백 추가" />
+    <option name="묵시적인" hit="묵시적인 롤백을 지원하지 않는 변경 사항 세트에 빈 롤백 추가" />
+    <option name="변경" hit="묵시적인 롤백을 지원하지 않는 변경 사항 세트에 빈 롤백 추가" />
+    <option name="빈" hit="묵시적인 롤백을 지원하지 않는 변경 사항 세트에 빈 롤백 추가" />
+    <option name="사항" hit="묵시적인 롤백을 지원하지 않는 변경 사항 세트에 빈 롤백 추가" />
+    <option name="세트에" hit="묵시적인 롤백을 지원하지 않는 변경 사항 세트에 빈 롤백 추가" />
+    <option name="않는" hit="묵시적인 롤백을 지원하지 않는 변경 사항 세트에 빈 롤백 추가" />
+    <option name="지원하지" hit="묵시적인 롤백을 지원하지 않는 변경 사항 세트에 빈 롤백 추가" />
+    <option name="추가" hit="묵시적인 롤백을 지원하지 않는 변경 사항 세트에 빈 롤백 추가" />
+    <option name="로그" hit="변경 로그 템플릿" />
+    <option name="변경" hit="변경 로그 템플릿" />
+    <option name="템플릿" hit="변경 로그 템플릿" />
+    <option name="변경" hit="변경 사항 세트 작성자 " />
+    <option name="사항" hit="변경 사항 세트 작성자 " />
+    <option name="세트" hit="변경 사항 세트 작성자 " />
+    <option name="작성자" hit="변경 사항 세트 작성자 " />
+    <option name="변경" hit="변경 사항 템플릿" />
+    <option name="사항" hit="변경 사항 템플릿" />
+    <option name="템플릿" hit="변경 사항 템플릿" />
+    <option name="디렉터리" hit="보조 디렉터리 " />
+    <option name="보조" hit="보조 디렉터리 " />
+    <option name="보조" hit="보조 이름 " />
+    <option name="이름" hit="보조 이름 " />
+    <option name="타입" hit="파일 타입 " />
+    <option name="파일" hit="파일 타입 " />
+  </configurable>
+  <configurable id="com.intellij.jpb.ui.settings.db.HibernateEnversConfigurable" configurable_name="Hibernate Envers">
+    <option name="" hit="  properties 파일에서 지정된 값 사용" />
+    <option name="properties" hit="  properties 파일에서 지정된 값 사용" />
+    <option name="값" hit="  properties 파일에서 지정된 값 사용" />
+    <option name="사용" hit="  properties 파일에서 지정된 값 사용" />
+    <option name="지정된" hit="  properties 파일에서 지정된 값 사용" />
+    <option name="파일에서" hit="  properties 파일에서 지정된 값 사용" />
+    <option name="envers" hit="Hibernate Envers" />
+    <option name="hibernate" hit="Hibernate Envers" />
+    <option name="각" hit="각 리비전마다 변경된 엔티티 이름" />
+    <option name="리비전마다" hit="각 리비전마다 변경된 엔티티 이름" />
+    <option name="변경된" hit="각 리비전마다 변경된 엔티티 이름" />
+    <option name="엔티티" hit="각 리비전마다 변경된 엔티티 이름" />
+    <option name="이름" hit="각 리비전마다 변경된 엔티티 이름" />
+    <option name="감사" hit="감사 테이블을 포함하는 스키마의 기본 이름 " />
+    <option name="기본" hit="감사 테이블을 포함하는 스키마의 기본 이름 " />
+    <option name="스키마의" hit="감사 테이블을 포함하는 스키마의 기본 이름 " />
+    <option name="이름" hit="감사 테이블을 포함하는 스키마의 기본 이름 " />
+    <option name="테이블을" hit="감사 테이블을 포함하는 스키마의 기본 이름 " />
+    <option name="포함하는" hit="감사 테이블을 포함하는 스키마의 기본 이름 " />
+    <option name="간주" hit="낙관적으로 락이 적용된 프로퍼티를 버전이 없는 것으로 간주" />
+    <option name="것으로" hit="낙관적으로 락이 적용된 프로퍼티를 버전이 없는 것으로 간주" />
+    <option name="낙관적으로" hit="낙관적으로 락이 적용된 프로퍼티를 버전이 없는 것으로 간주" />
+    <option name="락이" hit="낙관적으로 락이 적용된 프로퍼티를 버전이 없는 것으로 간주" />
+    <option name="버전이" hit="낙관적으로 락이 적용된 프로퍼티를 버전이 없는 것으로 간주" />
+    <option name="없는" hit="낙관적으로 락이 적용된 프로퍼티를 버전이 없는 것으로 간주" />
+    <option name="적용된" hit="낙관적으로 락이 적용된 프로퍼티를 버전이 없는 것으로 간주" />
+    <option name="프로퍼티를" hit="낙관적으로 락이 적용된 프로퍼티를 버전이 없는 것으로 간주" />
+    <option name="리비전" hit="리비전 타입 필드 이름 " />
+    <option name="이름" hit="리비전 타입 필드 이름 " />
+    <option name="타입" hit="리비전 타입 필드 이름 " />
+    <option name="필드" hit="리비전 타입 필드 이름 " />
+    <option name="리비전" hit="리비전 필드 이름 " />
+    <option name="이름" hit="리비전 필드 이름 " />
+    <option name="필드" hit="리비전 필드 이름 " />
+    <option name="수정된" hit="수정된 플래그 열의 접미사 " />
+    <option name="열의" hit="수정된 플래그 열의 접미사 " />
+    <option name="접미사" hit="수정된 플래그 열의 접미사 " />
+    <option name="플래그" hit="수정된 플래그 열의 접미사 " />
+    <option name="감사" hit="테이블 접두사 감사 " />
+    <option name="접두사" hit="테이블 접두사 감사 " />
+    <option name="테이블" hit="테이블 접두사 감사 " />
+    <option name="감사" hit="테이블 접미사 감사 " />
+    <option name="접미사" hit="테이블 접미사 감사 " />
+    <option name="테이블" hit="테이블 접미사 감사 " />
+    <option name="기능" hit="프로퍼티 수정 플래그 기능 활성화" />
+    <option name="수정" hit="프로퍼티 수정 플래그 기능 활성화" />
+    <option name="프로퍼티" hit="프로퍼티 수정 플래그 기능 활성화" />
+    <option name="플래그" hit="프로퍼티 수정 플래그 기능 활성화" />
+    <option name="활성화" hit="프로퍼티 수정 플래그 기능 활성화" />
+  </configurable>
+</options>

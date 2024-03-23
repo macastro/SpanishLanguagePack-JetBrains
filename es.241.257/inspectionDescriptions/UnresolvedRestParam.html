@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>메서드 시그니처에 선언되어 있으나 URL 경로에서 누락되었거나 그 반대인 <code>@PathParam</code> 매개변수를 보고합니다.</p>
+<p><strong>예:</strong></p>
+<pre><code lang="java">
+  @Get("/path/{myVariable}/")
+  public String handler(@PathParam("<b>name_is_not_equal_to_myVariable</b>") String myVariable) { // 오류
+    return "...";
+  }
+</code></pre>
+</body>
+</html>

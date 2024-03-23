@@ -1,0 +1,36 @@
+<html>
+<body>
+<code>String.valueOf()</code> 또는 <code>Integer.toString()</code>과 같이 매개변수를 문자열로 변환하는 불필요한 static 메서드 호출을 보고합니다.
+문자열 연결 시에 이러한 호출은 불필요합니다.
+<p>예:</p>
+<pre><code>
+  System.out.println("Number: " + Integer.toString(count));
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  System.out.println("Number: " + count);
+</code></pre>
+추가적으로 이러한 호출은 자체적으로 문자열을 변환하는 라이브러리 메서드의 인수로 사용될 때도 불필요합니다.
+다음은 문자열을 자체적으로 변환하는 라이브러리 메서드의 예시입니다.
+<ul>
+  <li>
+    <code>java.io.PrintWriter</code>, <code>java.io.PrintStream</code> 클래스
+    <ul><li><code>print()</code>, <code>println()</code></li></ul>
+  </li>
+  <li>
+    <code>java.lang.StringBuilder</code>, <code>java.lang.StringBuffer</code> 클래스
+    <ul><li><code>append()</code></li></ul>
+  </li>
+
+  <li>
+    <code>org.slf4j.Logger</code> 클래스
+    <ul>
+      <li><code>trace()</code>, <code>debug()</code>, <code>info()</code>, <code>warn()</code>, <code>error()</code></li>
+    </ul>
+  </li>
+</ul>
+<!-- tooltip end -->
+<p>
+  <b>빈 문자열 연결로 대체될 수 있는 호출을 보고</b> 옵션을 사용하면 <code>String.valueOf()</code> 호출 대신 빈 문자열 연결이 대신 사용될 수 있는 경우를 보고합니다.
+</body>
+</html>

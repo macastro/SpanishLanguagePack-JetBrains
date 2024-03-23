@@ -1,0 +1,35 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+루프 내부의 <code>defer</code> 구문을 보고합니다.
+<p>루프에 사용된 <code>defer</code> 문은 리소스 누수 또는 예측할 수 없는 구문 실행 순서로 이어질 수 있습니다.</p>
+<p>예:</p>
+<pre><code>func main() {
+ for {
+  field, err := db.Query("SELECT 1")
+  if err != nil {
+   // ...
+  }
+  defer field.Close()
+  // ...
+ }
+}</code></pre>
+<p>루프 내부의 <code>defer row.Close()</code> 호출은 함수가 실행을 마치기 전까지 실행되지 않습니다.
+  <code>for</code> 루프의 각 단계의 마지막에서 실행되는 것이 아닙니다. 이러한 구현은 함수 스택 오버플로우 또는 다른 이슈로 이어질 수 있습니다.</p>
+</body>
+</html>

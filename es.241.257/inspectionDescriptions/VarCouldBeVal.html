@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>업데이트되지 않으며 <code>val</code>이 될 수 있는 public이 아닌 <code>var</code>을 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Foo {
+    private var s = 0
+    println(s)
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Foo {
+    private val s = 0
+    println(s)
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

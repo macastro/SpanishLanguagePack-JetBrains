@@ -1,0 +1,756 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵" />
+  <configurable id="reference.settingsdialog.IDE.editor.colors.스택 추적" configurable_name="스택 추적">
+    <option name="스택" hit="스택 추적" />
+    <option name="추적" hit="스택 추적" />
+    <option name="rider" hit="Rider 예외 중단점 삽입 포인트" />
+    <option name="삽입" hit="Rider 예외 중단점 삽입 포인트" />
+    <option name="예외" hit="Rider 예외 중단점 삽입 포인트" />
+    <option name="중단점" hit="Rider 예외 중단점 삽입 포인트" />
+    <option name="포인트" hit="Rider 예외 중단점 삽입 포인트" />
+    <option name="경로" hit="경로" />
+    <option name="메서드" hit="메서드" />
+    <option name="의심되는" hit="의심되는 텍스트" />
+    <option name="텍스트" hit="의심되는 텍스트" />
+    <option name="타입" hit="타입" />
+    <option name="하이퍼링크" hit="하이퍼링크" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.C#" configurable_name="C#">
+    <option name="c#" hit="C " />
+    <option name="and" hit="Braces and Operators//대괄호" />
+    <option name="braces" hit="Braces and Operators//대괄호" />
+    <option name="operators" hit="Braces and Operators//대괄호" />
+    <option name="대괄호" hit="Braces and Operators//대괄호" />
+    <option name="and" hit="Braces and Operators//세미콜론" />
+    <option name="braces" hit="Braces and Operators//세미콜론" />
+    <option name="operators" hit="Braces and Operators//세미콜론" />
+    <option name="세미콜론" hit="Braces and Operators//세미콜론" />
+    <option name="and" hit="Braces and Operators//쉼표" />
+    <option name="braces" hit="Braces and Operators//쉼표" />
+    <option name="operators" hit="Braces and Operators//쉼표" />
+    <option name="쉼표" hit="Braces and Operators//쉼표" />
+    <option name="block" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Block comment" />
+    <option name="comments" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Line comment" />
+    <option name="comments" hit="Comments//Line comment" />
+    <option name="line" hit="Comments//Line comment" />
+    <option name="괄호" hit="괄호 및 연산자//괄호" />
+    <option name="및" hit="괄호 및 연산자//괄호" />
+    <option name="연산자" hit="괄호 및 연산자//괄호" />
+    <option name="괄호" hit="괄호 및 연산자//마침표" />
+    <option name="마침표" hit="괄호 및 연산자//마침표" />
+    <option name="및" hit="괄호 및 연산자//마침표" />
+    <option name="연산자" hit="괄호 및 연산자//마침표" />
+    <option name="괄호" hit="괄호 및 연산자//연산자" />
+    <option name="및" hit="괄호 및 연산자//연산자" />
+    <option name="연산자" hit="괄호 및 연산자//연산자" />
+    <option name="괄호" hit="괄호 및 연산자//중괄호" />
+    <option name="및" hit="괄호 및 연산자//중괄호" />
+    <option name="연산자" hit="괄호 및 연산자//중괄호" />
+    <option name="중괄호" hit="괄호 및 연산자//중괄호" />
+    <option name="static" hit="메서드//static 메서드" />
+    <option name="메서드" hit="메서드//static 메서드" />
+    <option name="메서드" hit="메서드//메서드" />
+    <option name="메서드" hit="메서드//오버로드된 연산자" />
+    <option name="연산자" hit="메서드//오버로드된 연산자" />
+    <option name="오버로드된" hit="메서드//오버로드된 연산자" />
+    <option name="메서드" hit="메서드//오버플로 확인/미확인 연산" />
+    <option name="미확인" hit="메서드//오버플로 확인/미확인 연산" />
+    <option name="연산" hit="메서드//오버플로 확인/미확인 연산" />
+    <option name="오버플로" hit="메서드//오버플로 확인/미확인 연산" />
+    <option name="확인" hit="메서드//오버플로 확인/미확인 연산" />
+    <option name="메서드" hit="메서드//접근자" />
+    <option name="접근자" hit="메서드//접근자" />
+    <option name="메서드" hit="메서드//지역 함수" />
+    <option name="지역" hit="메서드//지역 함수" />
+    <option name="함수" hit="메서드//지역 함수" />
+    <option name="메서드" hit="메서드//확장 메서드" />
+    <option name="확장" hit="메서드//확장 메서드" />
+    <option name="리터럴" hit="문자열//문자열 리터럴" />
+    <option name="문자열" hit="문자열//문자열 리터럴" />
+    <option name="1" hit="문자열//이스케이프 문자 1" />
+    <option name="문자" hit="문자열//이스케이프 문자 1" />
+    <option name="문자열" hit="문자열//이스케이프 문자 1" />
+    <option name="이스케이프" hit="문자열//이스케이프 문자 1" />
+    <option name="숫자" hit="숫자" />
+    <option name="브랜치" hit="전처리기//비활성화된 브랜치" />
+    <option name="비활성화된" hit="전처리기//비활성화된 브랜치" />
+    <option name="전처리기" hit="전처리기//비활성화된 브랜치" />
+    <option name="전처리기" hit="전처리기//키워드" />
+    <option name="키워드" hit="전처리기//키워드" />
+    <option name="문서" hit="주석//문서 주석//속성" />
+    <option name="속성" hit="주석//문서 주석//속성" />
+    <option name="주석" hit="주석//문서 주석//속성" />
+    <option name="값" hit="주석//문서 주석//속성 값" />
+    <option name="문서" hit="주석//문서 주석//속성 값" />
+    <option name="속성" hit="주석//문서 주석//속성 값" />
+    <option name="주석" hit="주석//문서 주석//속성 값" />
+    <option name="문서" hit="주석//문서 주석//주석" />
+    <option name="주석" hit="주석//문서 주석//주석" />
+    <option name="문서" hit="주석//문서 주석//태그 이름" />
+    <option name="이름" hit="주석//문서 주석//태그 이름" />
+    <option name="주석" hit="주석//문서 주석//태그 이름" />
+    <option name="태그" hit="주석//문서 주석//태그 이름" />
+    <option name="bool" hit="키워드//기본 제공 타입 키워드(int, short, bool 등)" />
+    <option name="int" hit="키워드//기본 제공 타입 키워드(int, short, bool 등)" />
+    <option name="short" hit="키워드//기본 제공 타입 키워드(int, short, bool 등)" />
+    <option name="기본" hit="키워드//기본 제공 타입 키워드(int, short, bool 등)" />
+    <option name="등" hit="키워드//기본 제공 타입 키워드(int, short, bool 등)" />
+    <option name="제공" hit="키워드//기본 제공 타입 키워드(int, short, bool 등)" />
+    <option name="키워드" hit="키워드//기본 제공 타입 키워드(int, short, bool 등)" />
+    <option name="타입" hit="키워드//기본 제공 타입 키워드(int, short, bool 등)" />
+    <option name="break" hit="키워드//제어 플로우 키워드(continue, break, return 등)" />
+    <option name="continue" hit="키워드//제어 플로우 키워드(continue, break, return 등)" />
+    <option name="return" hit="키워드//제어 플로우 키워드(continue, break, return 등)" />
+    <option name="등" hit="키워드//제어 플로우 키워드(continue, break, return 등)" />
+    <option name="제어" hit="키워드//제어 플로우 키워드(continue, break, return 등)" />
+    <option name="키워드" hit="키워드//제어 플로우 키워드(continue, break, return 등)" />
+    <option name="플로우" hit="키워드//제어 플로우 키워드(continue, break, return 등)" />
+    <option name="for" hit="키워드//제어 플로우 키워드(if, for, while 등)" />
+    <option name="if" hit="키워드//제어 플로우 키워드(if, for, while 등)" />
+    <option name="while" hit="키워드//제어 플로우 키워드(if, for, while 등)" />
+    <option name="등" hit="키워드//제어 플로우 키워드(if, for, while 등)" />
+    <option name="제어" hit="키워드//제어 플로우 키워드(if, for, while 등)" />
+    <option name="키워드" hit="키워드//제어 플로우 키워드(if, for, while 등)" />
+    <option name="플로우" hit="키워드//제어 플로우 키워드(if, for, while 등)" />
+    <option name="키워드" hit="키워드//키워드" />
+    <option name="static" hit="타입//static 클래스" />
+    <option name="클래스" hit="타입//static 클래스" />
+    <option name="타입" hit="타입//static 클래스" />
+    <option name="구조체" hit="타입//구조체" />
+    <option name="타입" hit="타입//구조체" />
+    <option name="네임스페이스" hit="타입//네임스페이스" />
+    <option name="타입" hit="타입//네임스페이스" />
+    <option name="레코드" hit="타입//레코드" />
+    <option name="타입" hit="타입//레코드" />
+    <option name="구조체" hit="타입//레코드 구조체" />
+    <option name="레코드" hit="타입//레코드 구조체" />
+    <option name="타입" hit="타입//레코드 구조체" />
+    <option name="속성" hit="타입//속성" />
+    <option name="타입" hit="타입//속성" />
+    <option name="열거형" hit="타입//열거형" />
+    <option name="타입" hit="타입//열거형" />
+    <option name="위임" hit="타입//위임" />
+    <option name="타입" hit="타입//위임" />
+    <option name="이벤트" hit="타입//이벤트" />
+    <option name="타입" hit="타입//이벤트" />
+    <option name="인터페이스" hit="타입//인터페이스" />
+    <option name="타입" hit="타입//인터페이스" />
+    <option name="클래스" hit="타입//클래스" />
+    <option name="타입" hit="타입//클래스" />
+    <option name="매개변수" hit="타입//타입 매개변수" />
+    <option name="타입" hit="타입//타입 매개변수" />
+    <option name="static" hit="프로퍼티 및 변수//static 프로퍼티" />
+    <option name="및" hit="프로퍼티 및 변수//static 프로퍼티" />
+    <option name="변수" hit="프로퍼티 및 변수//static 프로퍼티" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//static 프로퍼티" />
+    <option name="static" hit="프로퍼티 및 변수//static 필드" />
+    <option name="및" hit="프로퍼티 및 변수//static 필드" />
+    <option name="변수" hit="프로퍼티 및 변수//static 필드" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//static 필드" />
+    <option name="필드" hit="프로퍼티 및 변수//static 필드" />
+    <option name="가변" hit="프로퍼티 및 변수//가변 지역 변수" />
+    <option name="및" hit="프로퍼티 및 변수//가변 지역 변수" />
+    <option name="변수" hit="프로퍼티 및 변수//가변 지역 변수" />
+    <option name="지역" hit="프로퍼티 및 변수//가변 지역 변수" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//가변 지역 변수" />
+    <option name="기본" hit="프로퍼티 및 변수//기본 생성자 매개변수" />
+    <option name="매개변수" hit="프로퍼티 및 변수//기본 생성자 매개변수" />
+    <option name="및" hit="프로퍼티 및 변수//기본 생성자 매개변수" />
+    <option name="변수" hit="프로퍼티 및 변수//기본 생성자 매개변수" />
+    <option name="생성자" hit="프로퍼티 및 변수//기본 생성자 매개변수" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//기본 생성자 매개변수" />
+    <option name="기본" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
+    <option name="매개변수" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
+    <option name="및" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
+    <option name="변수" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
+    <option name="생성자" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
+    <option name="캡처됨" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//기본 생성자 매개변수(캡처됨)" />
+    <option name="동적" hit="프로퍼티 및 변수//동적" />
+    <option name="및" hit="프로퍼티 및 변수//동적" />
+    <option name="변수" hit="프로퍼티 및 변수//동적" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//동적" />
+    <option name="매개변수" hit="프로퍼티 및 변수//매개변수" />
+    <option name="및" hit="프로퍼티 및 변수//매개변수" />
+    <option name="변수" hit="프로퍼티 및 변수//매개변수" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//매개변수" />
+    <option name="및" hit="프로퍼티 및 변수//상수" />
+    <option name="변수" hit="프로퍼티 및 변수//상수" />
+    <option name="상수" hit="프로퍼티 및 변수//상수" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//상수" />
+    <option name="및" hit="프로퍼티 및 변수//지역 변수" />
+    <option name="변수" hit="프로퍼티 및 변수//지역 변수" />
+    <option name="지역" hit="프로퍼티 및 변수//지역 변수" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//지역 변수" />
+    <option name="구성" hit="프로퍼티 및 변수//튜플 구성 요소 이름" />
+    <option name="및" hit="프로퍼티 및 변수//튜플 구성 요소 이름" />
+    <option name="변수" hit="프로퍼티 및 변수//튜플 구성 요소 이름" />
+    <option name="요소" hit="프로퍼티 및 변수//튜플 구성 요소 이름" />
+    <option name="이름" hit="프로퍼티 및 변수//튜플 구성 요소 이름" />
+    <option name="튜플" hit="프로퍼티 및 변수//튜플 구성 요소 이름" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//튜플 구성 요소 이름" />
+    <option name="및" hit="프로퍼티 및 변수//프로퍼티" />
+    <option name="변수" hit="프로퍼티 및 변수//프로퍼티" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//프로퍼티" />
+    <option name="및" hit="프로퍼티 및 변수//필드" />
+    <option name="변수" hit="프로퍼티 및 변수//필드" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//필드" />
+    <option name="필드" hit="프로퍼티 및 변수//필드" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.F#" configurable_name="F#">
+    <option name="f#" hit="F " />
+    <option name="block" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Block comment" />
+    <option name="comments" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Line comment" />
+    <option name="comments" hit="Comments//Line comment" />
+    <option name="line" hit="Comments//Line comment" />
+    <option name="1" hit="Escape Character 1" />
+    <option name="character" hit="Escape Character 1" />
+    <option name="escape" hit="Escape Character 1" />
+    <option name="2" hit="Escape Character 2" />
+    <option name="character" hit="Escape Character 2" />
+    <option name="escape" hit="Escape Character 2" />
+    <option name="event" hit="Members//Event" />
+    <option name="members" hit="Members//Event" />
+    <option name="extension" hit="Members//Extension method" />
+    <option name="members" hit="Members//Extension method" />
+    <option name="method" hit="Members//Extension method" />
+    <option name="extension" hit="Members//Extension property" />
+    <option name="members" hit="Members//Extension property" />
+    <option name="property" hit="Members//Extension property" />
+    <option name="field" hit="Members//Field" />
+    <option name="members" hit="Members//Field" />
+    <option name="members" hit="Members//Method" />
+    <option name="method" hit="Members//Method" />
+    <option name="members" hit="Members//Property" />
+    <option name="property" hit="Members//Property" />
+    <option name="and" hit="Modules and namespaces//Module" />
+    <option name="module" hit="Modules and namespaces//Module" />
+    <option name="modules" hit="Modules and namespaces//Module" />
+    <option name="namespaces" hit="Modules and namespaces//Module" />
+    <option name="and" hit="Modules and namespaces//Namespace" />
+    <option name="modules" hit="Modules and namespaces//Namespace" />
+    <option name="namespace" hit="Modules and namespaces//Namespace" />
+    <option name="namespaces" hit="Modules and namespaces//Namespace" />
+    <option name="branch" hit="Preprocessor//Inactive branch" />
+    <option name="inactive" hit="Preprocessor//Inactive branch" />
+    <option name="preprocessor" hit="Preprocessor//Inactive branch" />
+    <option name="keyword" hit="Preprocessor//Keyword" />
+    <option name="preprocessor" hit="Preprocessor//Keyword" />
+    <option name="keyword" hit="Syntax//Keyword" />
+    <option name="syntax" hit="Syntax//Keyword" />
+    <option name="number" hit="Syntax//Number" />
+    <option name="syntax" hit="Syntax//Number" />
+    <option name="string" hit="Syntax//String" />
+    <option name="syntax" hit="Syntax//String" />
+    <option name="class" hit="Types//Class" />
+    <option name="types" hit="Types//Class" />
+    <option name="delegate" hit="Types//Delegate" />
+    <option name="types" hit="Types//Delegate" />
+    <option name="enum" hit="Types//Enum" />
+    <option name="types" hit="Types//Enum" />
+    <option name="interface" hit="Types//Interface" />
+    <option name="types" hit="Types//Interface" />
+    <option name="record" hit="Types//Record" />
+    <option name="types" hit="Types//Record" />
+    <option name="class" hit="Types//Static class" />
+    <option name="static" hit="Types//Static class" />
+    <option name="types" hit="Types//Static class" />
+    <option name="struct" hit="Types//Struct" />
+    <option name="types" hit="Types//Struct" />
+    <option name="parameter" hit="Types//Type parameter" />
+    <option name="type" hit="Types//Type parameter" />
+    <option name="types" hit="Types//Type parameter" />
+    <option name="types" hit="Types//Union" />
+    <option name="union" hit="Types//Union" />
+    <option name="case" hit="Types//Union Case" />
+    <option name="types" hit="Types//Union Case" />
+    <option name="union" hit="Types//Union Case" />
+    <option name="measure" hit="Types//Unit of measure" />
+    <option name="of" hit="Types//Unit of measure" />
+    <option name="types" hit="Types//Unit of measure" />
+    <option name="unit" hit="Types//Unit of measure" />
+    <option name="active" hit="Values//Active pattern case" />
+    <option name="case" hit="Values//Active pattern case" />
+    <option name="pattern" hit="Values//Active pattern case" />
+    <option name="values" hit="Values//Active pattern case" />
+    <option name="computation" hit="Values//Computation expression" />
+    <option name="expression" hit="Values//Computation expression" />
+    <option name="values" hit="Values//Computation expression" />
+    <option name="function" hit="Values//Function" />
+    <option name="values" hit="Values//Function" />
+    <option name="literal" hit="Values//Literal" />
+    <option name="values" hit="Values//Literal" />
+    <option name="function" hit="Values//Mutable function" />
+    <option name="mutable" hit="Values//Mutable function" />
+    <option name="values" hit="Values//Mutable function" />
+    <option name="mutable" hit="Values//Mutable value" />
+    <option name="value" hit="Values//Mutable value" />
+    <option name="values" hit="Values//Mutable value" />
+    <option name="operator" hit="Values//Operator" />
+    <option name="values" hit="Values//Operator" />
+    <option name="value" hit="Values//Value" />
+    <option name="values" hit="Values//Value" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.Xaml" configurable_name="Xaml">
+    <option name="xaml" hit="Xaml" />
+    <option name="styleclass" hit="StyleClass_Text" />
+    <option name="text" hit="StyleClass_Text" />
+    <option name="text" hit="TypesPredefinedElement_Text" />
+    <option name="typespredefinedelement" hit="TypesPredefinedElement_Text" />
+    <option name="네임스페이스" hit="네임스페이스 별칭" />
+    <option name="별칭" hit="네임스페이스 별칭" />
+    <option name="리소스" hit="리소스" />
+    <option name="클래스" hit="타입//클래스" />
+    <option name="타입" hit="타입//클래스" />
+    <option name="묵시적" hit="프로퍼티 및 변수//묵시적 필드" />
+    <option name="및" hit="프로퍼티 및 변수//묵시적 필드" />
+    <option name="변수" hit="프로퍼티 및 변수//묵시적 필드" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//묵시적 필드" />
+    <option name="필드" hit="프로퍼티 및 변수//묵시적 필드" />
+    <option name="및" hit="프로퍼티 및 변수//연결된 프로퍼티" />
+    <option name="변수" hit="프로퍼티 및 변수//연결된 프로퍼티" />
+    <option name="연결된" hit="프로퍼티 및 변수//연결된 프로퍼티" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//연결된 프로퍼티" />
+    <option name="및" hit="프로퍼티 및 변수//템플릿 필드" />
+    <option name="변수" hit="프로퍼티 및 변수//템플릿 필드" />
+    <option name="템플릿" hit="프로퍼티 및 변수//템플릿 필드" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//템플릿 필드" />
+    <option name="필드" hit="프로퍼티 및 변수//템플릿 필드" />
+    <option name="및" hit="프로퍼티 및 변수//프로퍼티" />
+    <option name="변수" hit="프로퍼티 및 변수//프로퍼티" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//프로퍼티" />
+    <option name="및" hit="프로퍼티 및 변수//필드" />
+    <option name="변수" hit="프로퍼티 및 변수//필드" />
+    <option name="프로퍼티" hit="프로퍼티 및 변수//필드" />
+    <option name="필드" hit="프로퍼티 및 변수//필드" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.ASP.NET" configurable_name="ASP.NET">
+    <option name="asp" hit="ASP NET" />
+    <option name="net" hit="ASP NET" />
+    <option name="aspx" hit="ASPX//RunAt 속성" />
+    <option name="runat" hit="ASPX//RunAt 속성" />
+    <option name="속성" hit="ASPX//RunAt 속성" />
+    <option name="aspx" hit="ASPX//블록 태그" />
+    <option name="블록" hit="ASPX//블록 태그" />
+    <option name="태그" hit="ASPX//블록 태그" />
+    <option name="aspx" hit="ASPX//속성 값" />
+    <option name="값" hit="ASPX//속성 값" />
+    <option name="속성" hit="ASPX//속성 값" />
+    <option name="aspx" hit="ASPX//속성 이름" />
+    <option name="속성" hit="ASPX//속성 이름" />
+    <option name="이름" hit="ASPX//속성 이름" />
+    <option name="aspx" hit="ASPX//지시문 이름" />
+    <option name="이름" hit="ASPX//지시문 이름" />
+    <option name="지시문" hit="ASPX//지시문 이름" />
+    <option name="razor" hit="Razor//코드 블록" />
+    <option name="블록" hit="Razor//코드 블록" />
+    <option name="코드" hit="Razor//코드 블록" />
+    <option name="razor" hit="Razor//코드 블록 태그" />
+    <option name="블록" hit="Razor//코드 블록 태그" />
+    <option name="코드" hit="Razor//코드 블록 태그" />
+    <option name="태그" hit="Razor//코드 블록 태그" />
+    <option name="razor" hit="Razor//키워드" />
+    <option name="키워드" hit="Razor//키워드" />
+    <option name="razor" hit="Razor//태그 헬퍼 속성" />
+    <option name="속성" hit="Razor//태그 헬퍼 속성" />
+    <option name="태그" hit="Razor//태그 헬퍼 속성" />
+    <option name="헬퍼" hit="Razor//태그 헬퍼 속성" />
+    <option name="razor" hit="Razor//태그 헬퍼 요소" />
+    <option name="요소" hit="Razor//태그 헬퍼 요소" />
+    <option name="태그" hit="Razor//태그 헬퍼 요소" />
+    <option name="헬퍼" hit="Razor//태그 헬퍼 요소" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.C++" configurable_name="C++">
+    <option name="c++" hit="C  " />
+    <option name="assembler" hit="Assembler//Instructions//Data pseudo-instruction" />
+    <option name="data" hit="Assembler//Instructions//Data pseudo-instruction" />
+    <option name="instructions" hit="Assembler//Instructions//Data pseudo-instruction" />
+    <option name="pseudo-instruction" hit="Assembler//Instructions//Data pseudo-instruction" />
+    <option name="assembler" hit="Assembler//Instructions//Directive" />
+    <option name="directive" hit="Assembler//Instructions//Directive" />
+    <option name="instructions" hit="Assembler//Instructions//Directive" />
+    <option name="assembler" hit="Assembler//Instructions//Equ pseudo-instruction" />
+    <option name="equ" hit="Assembler//Instructions//Equ pseudo-instruction" />
+    <option name="instructions" hit="Assembler//Instructions//Equ pseudo-instruction" />
+    <option name="pseudo-instruction" hit="Assembler//Instructions//Equ pseudo-instruction" />
+    <option name="assembler" hit="Assembler//Instructions//Instruction" />
+    <option name="instruction" hit="Assembler//Instructions//Instruction" />
+    <option name="instructions" hit="Assembler//Instructions//Instruction" />
+    <option name="assembler" hit="Assembler//Instructions//Prefix" />
+    <option name="instructions" hit="Assembler//Instructions//Prefix" />
+    <option name="prefix" hit="Assembler//Instructions//Prefix" />
+    <option name="assembler" hit="Assembler//Keywords//Constant keyword" />
+    <option name="constant" hit="Assembler//Keywords//Constant keyword" />
+    <option name="keyword" hit="Assembler//Keywords//Constant keyword" />
+    <option name="keywords" hit="Assembler//Keywords//Constant keyword" />
+    <option name="assembler" hit="Assembler//Keywords//Keyword" />
+    <option name="keyword" hit="Assembler//Keywords//Keyword" />
+    <option name="keywords" hit="Assembler//Keywords//Keyword" />
+    <option name="assembler" hit="Assembler//Keywords//Size keyword" />
+    <option name="keyword" hit="Assembler//Keywords//Size keyword" />
+    <option name="keywords" hit="Assembler//Keywords//Size keyword" />
+    <option name="size" hit="Assembler//Keywords//Size keyword" />
+    <option name="assembler" hit="Assembler//Labels//Constant" />
+    <option name="constant" hit="Assembler//Labels//Constant" />
+    <option name="labels" hit="Assembler//Labels//Constant" />
+    <option name="assembler" hit="Assembler//Labels//Label" />
+    <option name="label" hit="Assembler//Labels//Label" />
+    <option name="labels" hit="Assembler//Labels//Label" />
+    <option name="assembler" hit="Assembler//Labels//Variable" />
+    <option name="labels" hit="Assembler//Labels//Variable" />
+    <option name="variable" hit="Assembler//Labels//Variable" />
+    <option name="assembler" hit="Assembler//Numeric literal" />
+    <option name="literal" hit="Assembler//Numeric literal" />
+    <option name="numeric" hit="Assembler//Numeric literal" />
+    <option name="assembler" hit="Assembler//Register" />
+    <option name="register" hit="Assembler//Register" />
+    <option name="assembler" hit="Assembler//Single-line comment" />
+    <option name="comment" hit="Assembler//Single-line comment" />
+    <option name="single-line" hit="Assembler//Single-line comment" />
+    <option name="assembler" hit="Assembler//String literal" />
+    <option name="literal" hit="Assembler//String literal" />
+    <option name="string" hit="Assembler//String literal" />
+    <option name="assembler" hit="Assembler//Unresolved identifier" />
+    <option name="identifier" hit="Assembler//Unresolved identifier" />
+    <option name="unresolved" hit="Assembler//Unresolved identifier" />
+    <option name="and" hit="Braces and Operators//대괄호" />
+    <option name="braces" hit="Braces and Operators//대괄호" />
+    <option name="operators" hit="Braces and Operators//대괄호" />
+    <option name="대괄호" hit="Braces and Operators//대괄호" />
+    <option name="and" hit="Braces and Operators//세미콜론" />
+    <option name="braces" hit="Braces and Operators//세미콜론" />
+    <option name="operators" hit="Braces and Operators//세미콜론" />
+    <option name="세미콜론" hit="Braces and Operators//세미콜론" />
+    <option name="and" hit="Braces and Operators//쉼표" />
+    <option name="braces" hit="Braces and Operators//쉼표" />
+    <option name="operators" hit="Braces and Operators//쉼표" />
+    <option name="쉼표" hit="Braces and Operators//쉼표" />
+    <option name="block" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Block comment" />
+    <option name="comments" hit="Comments//Block comment" />
+    <option name="command" hit="Comments//Doxygen//Command value" />
+    <option name="comments" hit="Comments//Doxygen//Command value" />
+    <option name="doxygen" hit="Comments//Doxygen//Command value" />
+    <option name="value" hit="Comments//Doxygen//Command value" />
+    <option name="comment" hit="Comments//Line comment" />
+    <option name="comments" hit="Comments//Line comment" />
+    <option name="line" hit="Comments//Line comment" />
+    <option name="function" hit="Global Function Usage Identifier" />
+    <option name="global" hit="Global Function Usage Identifier" />
+    <option name="identifier" hit="Global Function Usage Identifier" />
+    <option name="usage" hit="Global Function Usage Identifier" />
+    <option name="keyword" hit="Keywords//'this' keyword" />
+    <option name="keywords" hit="Keywords//'this' keyword" />
+    <option name="this" hit="Keywords//'this' keyword" />
+    <option name="function" hit="Member Function Usage Identifier" />
+    <option name="identifier" hit="Member Function Usage Identifier" />
+    <option name="member" hit="Member Function Usage Identifier" />
+    <option name="usage" hit="Member Function Usage Identifier" />
+    <option name="function" hit="Static Member Function Usage Identifier" />
+    <option name="identifier" hit="Static Member Function Usage Identifier" />
+    <option name="member" hit="Static Member Function Usage Identifier" />
+    <option name="static" hit="Static Member Function Usage Identifier" />
+    <option name="usage" hit="Static Member Function Usage Identifier" />
+    <option name="engine" hit="Unreal Engine 리플렉션 지정자" />
+    <option name="unreal" hit="Unreal Engine 리플렉션 지정자" />
+    <option name="리플렉션" hit="Unreal Engine 리플렉션 지정자" />
+    <option name="지정자" hit="Unreal Engine 리플렉션 지정자" />
+    <option name="괄호" hit="괄호 및 연산자//괄호" />
+    <option name="및" hit="괄호 및 연산자//괄호" />
+    <option name="연산자" hit="괄호 및 연산자//괄호" />
+    <option name="괄호" hit="괄호 및 연산자//마침표" />
+    <option name="마침표" hit="괄호 및 연산자//마침표" />
+    <option name="및" hit="괄호 및 연산자//마침표" />
+    <option name="연산자" hit="괄호 및 연산자//마침표" />
+    <option name="괄호" hit="괄호 및 연산자//연산자 기호" />
+    <option name="기호" hit="괄호 및 연산자//연산자 기호" />
+    <option name="및" hit="괄호 및 연산자//연산자 기호" />
+    <option name="연산자" hit="괄호 및 연산자//연산자 기호" />
+    <option name="괄호" hit="괄호 및 연산자//중괄호" />
+    <option name="및" hit="괄호 및 연산자//중괄호" />
+    <option name="연산자" hit="괄호 및 연산자//중괄호" />
+    <option name="중괄호" hit="괄호 및 연산자//중괄호" />
+    <option name="네임스페이스" hit="네임스페이스" />
+    <option name="리터럴" hit="리터럴//문자 리터럴" />
+    <option name="문자" hit="리터럴//문자 리터럴" />
+    <option name="리터럴" hit="리터럴//문자열 리터럴" />
+    <option name="문자열" hit="리터럴//문자열 리터럴" />
+    <option name="리터럴" hit="리터럴//부동소수점 리터럴" />
+    <option name="부동소수점" hit="리터럴//부동소수점 리터럴" />
+    <option name="리터럴" hit="리터럴//올바른 문자열 이스케이프" />
+    <option name="문자열" hit="리터럴//올바른 문자열 이스케이프" />
+    <option name="올바른" hit="리터럴//올바른 문자열 이스케이프" />
+    <option name="이스케이프" hit="리터럴//올바른 문자열 이스케이프" />
+    <option name="리터럴" hit="리터럴//원시 문자열 리터럴" />
+    <option name="문자열" hit="리터럴//원시 문자열 리터럴" />
+    <option name="원시" hit="리터럴//원시 문자열 리터럴" />
+    <option name="리터럴" hit="리터럴//잘못된 문자열 이스케이프" />
+    <option name="문자열" hit="리터럴//잘못된 문자열 이스케이프" />
+    <option name="이스케이프" hit="리터럴//잘못된 문자열 이스케이프" />
+    <option name="잘못된" hit="리터럴//잘못된 문자열 이스케이프" />
+    <option name="리터럴" hit="리터럴//정수 리터럴" />
+    <option name="정수" hit="리터럴//정수 리터럴" />
+    <option name="모듈" hit="모듈 이름" />
+    <option name="이름" hit="모듈 이름" />
+    <option name="static" hit="변수 및 필드//static 필드" />
+    <option name="및" hit="변수 및 필드//static 필드" />
+    <option name="변수" hit="변수 및 필드//static 필드" />
+    <option name="필드" hit="변수 및 필드//static 필드" />
+    <option name="공용체" hit="변수 및 필드//공용체 멤버" />
+    <option name="멤버" hit="변수 및 필드//공용체 멤버" />
+    <option name="및" hit="변수 및 필드//공용체 멤버" />
+    <option name="변수" hit="변수 및 필드//공용체 멤버" />
+    <option name="필드" hit="변수 및 필드//공용체 멤버" />
+    <option name="구조체" hit="변수 및 필드//구조체 필드" />
+    <option name="및" hit="변수 및 필드//구조체 필드" />
+    <option name="변수" hit="변수 및 필드//구조체 필드" />
+    <option name="필드" hit="변수 및 필드//구조체 필드" />
+    <option name="매개변수" hit="변수 및 필드//매개변수" />
+    <option name="및" hit="변수 및 필드//매개변수" />
+    <option name="변수" hit="변수 및 필드//매개변수" />
+    <option name="필드" hit="변수 및 필드//매개변수" />
+    <option name="및" hit="변수 및 필드//열거자" />
+    <option name="변수" hit="변수 및 필드//열거자" />
+    <option name="열거자" hit="변수 및 필드//열거자" />
+    <option name="필드" hit="변수 및 필드//열거자" />
+    <option name="및" hit="변수 및 필드//전역 변수" />
+    <option name="변수" hit="변수 및 필드//전역 변수" />
+    <option name="전역" hit="변수 및 필드//전역 변수" />
+    <option name="필드" hit="변수 및 필드//전역 변수" />
+    <option name="및" hit="변수 및 필드//지역 변수" />
+    <option name="변수" hit="변수 및 필드//지역 변수" />
+    <option name="지역" hit="변수 및 필드//지역 변수" />
+    <option name="필드" hit="변수 및 필드//지역 변수" />
+    <option name="및" hit="변수 및 필드//클래스 필드" />
+    <option name="변수" hit="변수 및 필드//클래스 필드" />
+    <option name="클래스" hit="변수 및 필드//클래스 필드" />
+    <option name="필드" hit="변수 및 필드//클래스 필드" />
+    <option name="브랜치" hit="전처리기//비활성화된 브랜치" />
+    <option name="비활성화된" hit="전처리기//비활성화된 브랜치" />
+    <option name="전처리기" hit="전처리기//비활성화된 브랜치" />
+    <option name="매크로" hit="전처리기//전처리기 매크로" />
+    <option name="전처리기" hit="전처리기//전처리기 매크로" />
+    <option name="매개변수" hit="전처리기//전처리기 매크로 매개변수" />
+    <option name="매크로" hit="전처리기//전처리기 매크로 매개변수" />
+    <option name="전처리기" hit="전처리기//전처리기 매크로 매개변수" />
+    <option name="전처리기" hit="전처리기//지시문" />
+    <option name="지시문" hit="전처리기//지시문" />
+    <option name="경로" hit="전처리기//헤더 경로" />
+    <option name="전처리기" hit="전처리기//헤더 경로" />
+    <option name="헤더" hit="전처리기//헤더 경로" />
+    <option name="이름" hit="종속 이름" />
+    <option name="종속" hit="종속 이름" />
+    <option name="doxygen" hit="주석//Doxygen//명령어" />
+    <option name="명령어" hit="주석//Doxygen//명령어" />
+    <option name="주석" hit="주석//Doxygen//명령어" />
+    <option name="doxygen" hit="주석//Doxygen//텍스트" />
+    <option name="주석" hit="주석//Doxygen//텍스트" />
+    <option name="텍스트" hit="주석//Doxygen//텍스트" />
+    <option name="키워드" hit="키워드//키워드" />
+    <option name="typedef" hit="타입//typedef" />
+    <option name="타입" hit="타입//typedef" />
+    <option name="공용체" hit="타입//공용체" />
+    <option name="타입" hit="타입//공용체" />
+    <option name="구조체" hit="타입//구조체" />
+    <option name="타입" hit="타입//구조체" />
+    <option name="열거형" hit="타입//열거형" />
+    <option name="타입" hit="타입//열거형" />
+    <option name="콘셉트" hit="타입//콘셉트" />
+    <option name="타입" hit="타입//콘셉트" />
+    <option name="클래스" hit="타입//클래스" />
+    <option name="타입" hit="타입//클래스" />
+    <option name="매개변수" hit="템플릿 매개변수" />
+    <option name="템플릿" hit="템플릿 매개변수" />
+    <option name="static" hit="함수//static 멤버 함수" />
+    <option name="멤버" hit="함수//static 멤버 함수" />
+    <option name="함수" hit="함수//static 멤버 함수" />
+    <option name="멤버" hit="함수//멤버 함수" />
+    <option name="함수" hit="함수//멤버 함수" />
+    <option name="연산자" hit="함수//오버로드된 연산자" />
+    <option name="오버로드된" hit="함수//오버로드된 연산자" />
+    <option name="함수" hit="함수//오버로드된 연산자" />
+    <option name="전역" hit="함수//전역 함수" />
+    <option name="함수" hit="함수//전역 함수" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.IL (중간 언어)" configurable_name="IL (중간 언어)">
+    <option name="il" hit="IL  중간 언어 " />
+    <option name="언어" hit="IL  중간 언어 " />
+    <option name="중간" hit="IL  중간 언어 " />
+    <option name="매개변수" hit="매개변수 식별자" />
+    <option name="식별자" hit="매개변수 식별자" />
+    <option name="메서드" hit="메서드 식별자" />
+    <option name="식별자" hit="메서드 식별자" />
+    <option name="리터럴" hit="문자열 리터럴" />
+    <option name="문자열" hit="문자열 리터럴" />
+    <option name="동기화" hit="뷰어 동기화" />
+    <option name="뷰어" hit="뷰어 동기화" />
+    <option name="리터럴" hit="상수 리터럴" />
+    <option name="상수" hit="상수 리터럴" />
+    <option name="식별자" hit="식별자" />
+    <option name="이름" hit="정규화된 이름" />
+    <option name="정규화된" hit="정규화된 이름" />
+    <option name="지침" hit="지침" />
+    <option name="라벨" hit="코드 라벨" />
+    <option name="코드" hit="코드 라벨" />
+    <option name="추가" hit="코멘트 추가" />
+    <option name="코멘트" hit="코멘트 추가" />
+    <option name="키워드" hit="키워드" />
+    <option name="라벨" hit="타깃 코드 라벨" />
+    <option name="코드" hit="타깃 코드 라벨" />
+    <option name="타깃" hit="타깃 코드 라벨" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.ShaderLab" configurable_name="ShaderLab">
+    <option name="shaderlab" hit="ShaderLab" />
+    <option name="block" hit="Commands//Block Command" />
+    <option name="command" hit="Commands//Block Command" />
+    <option name="commands" hit="Commands//Block Command" />
+    <option name="command" hit="Commands//Command" />
+    <option name="commands" hit="Commands//Command" />
+    <option name="argument" hit="Commands//Special Argument" />
+    <option name="commands" hit="Commands//Special Argument" />
+    <option name="special" hit="Commands//Special Argument" />
+    <option name="block" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Block comment" />
+    <option name="comments" hit="Comments//Block comment" />
+    <option name="comment" hit="Comments//Line comment" />
+    <option name="comments" hit="Comments//Line comment" />
+    <option name="line" hit="Comments//Line comment" />
+    <option name="attribute" hit="Properties//Attribute" />
+    <option name="properties" hit="Properties//Attribute" />
+    <option name="name" hit="Properties//Name" />
+    <option name="properties" hit="Properties//Name" />
+    <option name="properties" hit="Properties//Type" />
+    <option name="type" hit="Properties//Type" />
+    <option name="disabled" hit="Shader Variants//Disabled shader keyword" />
+    <option name="keyword" hit="Shader Variants//Disabled shader keyword" />
+    <option name="shader" hit="Shader Variants//Disabled shader keyword" />
+    <option name="variants" hit="Shader Variants//Disabled shader keyword" />
+    <option name="enabled" hit="Shader Variants//Enabled shader keyword" />
+    <option name="keyword" hit="Shader Variants//Enabled shader keyword" />
+    <option name="shader" hit="Shader Variants//Enabled shader keyword" />
+    <option name="variants" hit="Shader Variants//Enabled shader keyword" />
+    <option name="implicitly" hit="Shader Variants//Implicitly shader keyword" />
+    <option name="keyword" hit="Shader Variants//Implicitly shader keyword" />
+    <option name="shader" hit="Shader Variants//Implicitly shader keyword" />
+    <option name="variants" hit="Shader Variants//Implicitly shader keyword" />
+    <option name="inactive" hit="Shader Variants//Inactive shader variant" />
+    <option name="shader" hit="Shader Variants//Inactive shader variant" />
+    <option name="variant" hit="Shader Variants//Inactive shader variant" />
+    <option name="variants" hit="Shader Variants//Inactive shader variant" />
+    <option name="keyword" hit="Shader Variants//Suppressed shader keyword" />
+    <option name="shader" hit="Shader Variants//Suppressed shader keyword" />
+    <option name="suppressed" hit="Shader Variants//Suppressed shader keyword" />
+    <option name="variants" hit="Shader Variants//Suppressed shader keyword" />
+    <option name="문자열" hit="문자열" />
+    <option name="삽입된" hit="삽입된 언어 조각" />
+    <option name="언어" hit="삽입된 언어 조각" />
+    <option name="조각" hit="삽입된 언어 조각" />
+    <option name="숫자" hit="숫자" />
+    <option name="키워드" hit="키워드" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.T4" configurable_name="T4">
+    <option name="t4" hit="T " />
+    <option name="block" hit="Code Block" />
+    <option name="code" hit="Code Block" />
+    <option name="attribute" hit="T4 Attribute Value" />
+    <option name="t4" hit="T4 Attribute Value" />
+    <option name="value" hit="T4 Attribute Value" />
+    <option name="directive" hit="T4 Directive" />
+    <option name="t4" hit="T4 Directive" />
+    <option name="attribute" hit="T4 Directive Attribute" />
+    <option name="directive" hit="T4 Directive Attribute" />
+    <option name="t4" hit="T4 Directive Attribute" />
+    <option name="environment" hit="T4 Environment Variable" />
+    <option name="t4" hit="T4 Environment Variable" />
+    <option name="variable" hit="T4 Environment Variable" />
+    <option name="macro" hit="T4 Macro" />
+    <option name="t4" hit="T4 Macro" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.Unity" configurable_name="Unity">
+    <option name="unity" hit="Unity" />
+    <option name="묵시적으로" hit="묵시적으로 사용되는 식별자" />
+    <option name="사용되는" hit="묵시적으로 사용되는 식별자" />
+    <option name="식별자" hit="묵시적으로 사용되는 식별자" />
+    <option name="camera" hit="부하가 높은 'Camera.main' 사용 위치" />
+    <option name="main" hit="부하가 높은 'Camera.main' 사용 위치" />
+    <option name="높은" hit="부하가 높은 'Camera.main' 사용 위치" />
+    <option name="부하가" hit="부하가 높은 'Camera.main' 사용 위치" />
+    <option name="사용" hit="부하가 높은 'Camera.main' 사용 위치" />
+    <option name="위치" hit="부하가 높은 'Camera.main' 사용 위치" />
+    <option name="null" hit="비용이 높은 null 비교" />
+    <option name="높은" hit="비용이 높은 null 비교" />
+    <option name="비교" hit="비용이 높은 null 비교" />
+    <option name="비용이" hit="비용이 높은 null 비교" />
+    <option name="높은" hit="비용이 높은 메서드 호출" />
+    <option name="메서드" hit="비용이 높은 메서드 호출" />
+    <option name="비용이" hit="비용이 높은 메서드 호출" />
+    <option name="호출" hit="비용이 높은 메서드 호출" />
+    <option name="곱셈" hit="비효율적인 곱셈 순서" />
+    <option name="비효율적인" hit="비효율적인 곱셈 순서" />
+    <option name="순서" hit="비효율적인 곱셈 순서" />
+    <option name="다차원" hit="비효율적인 다차원 배열 사용 위치" />
+    <option name="배열" hit="비효율적인 다차원 배열 사용 위치" />
+    <option name="비효율적인" hit="비효율적인 다차원 배열 사용 위치" />
+    <option name="사용" hit="비효율적인 다차원 배열 사용 위치" />
+    <option name="위치" hit="비효율적인 다차원 배열 사용 위치" />
+    <option name="마커" hit="성능이 중요한 줄 마커" />
+    <option name="성능이" hit="성능이 중요한 줄 마커" />
+    <option name="줄" hit="성능이 중요한 줄 마커" />
+    <option name="중요한" hit="성능이 중요한 줄 마커" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.어셈블리 탐색기" configurable_name="어셈블리 탐색기">
+    <option name="어셈블리" hit="어셈블리 탐색기" />
+    <option name="탐색기" hit="어셈블리 탐색기" />
+    <option name="강조된" hit="강조된 메타데이터" />
+    <option name="메타데이터" hit="강조된 메타데이터" />
+    <option name="private" hit="내부/Private" />
+    <option name="내부" hit="내부/Private" />
+    <option name="메타데이터" hit="메타데이터 사용 위치" />
+    <option name="사용" hit="메타데이터 사용 위치" />
+    <option name="위치" hit="메타데이터 사용 위치" />
+    <option name="메타데이터" hit="메타데이터 토큰" />
+    <option name="토큰" hit="메타데이터 토큰" />
+    <option name="베이스" hit="베이스/상속자" />
+    <option name="상속자" hit="베이스/상속자" />
+    <option name="정보" hit="추가 정보" />
+    <option name="추가" hit="추가 정보" />
+    <option name="요소" hit="타입 요소" />
+    <option name="타입" hit="타입 요소" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.기타" configurable_name="기타">
+    <option name="기타" hit="기타" />
+    <option name="asp" hit="ASP.NET 경로 템플릿 매개변수" />
+    <option name="net" hit="ASP.NET 경로 템플릿 매개변수" />
+    <option name="경로" hit="ASP.NET 경로 템플릿 매개변수" />
+    <option name="매개변수" hit="ASP.NET 경로 템플릿 매개변수" />
+    <option name="템플릿" hit="ASP.NET 경로 템플릿 매개변수" />
+    <option name="asp" hit="ASP.NET 경로 템플릿 토큰 대체" />
+    <option name="net" hit="ASP.NET 경로 템플릿 토큰 대체" />
+    <option name="경로" hit="ASP.NET 경로 템플릿 토큰 대체" />
+    <option name="대체" hit="ASP.NET 경로 템플릿 토큰 대체" />
+    <option name="템플릿" hit="ASP.NET 경로 템플릿 토큰 대체" />
+    <option name="토큰" hit="ASP.NET 경로 템플릿 토큰 대체" />
+    <option name="경고" hit="구성 파일 충돌 경고" />
+    <option name="구성" hit="구성 파일 충돌 경고" />
+    <option name="충돌" hit="구성 파일 충돌 경고" />
+    <option name="파일" hit="구성 파일 충돌 경고" />
+    <option name="구성" hit="구성 파일에 삽입할 텍스트" />
+    <option name="삽입할" hit="구성 파일에 삽입할 텍스트" />
+    <option name="텍스트" hit="구성 파일에 삽입할 텍스트" />
+    <option name="파일에" hit="구성 파일에 삽입할 텍스트" />
+    <option name="구성" hit="구성 파일에서 삭제할 텍스트" />
+    <option name="삭제할" hit="구성 파일에서 삭제할 텍스트" />
+    <option name="텍스트" hit="구성 파일에서 삭제할 텍스트" />
+    <option name="파일에서" hit="구성 파일에서 삭제할 텍스트" />
+    <option name="동적" hit="동적 프로그램 분석 하이라이터(이슈 프레임)" />
+    <option name="분석" hit="동적 프로그램 분석 하이라이터(이슈 프레임)" />
+    <option name="이슈" hit="동적 프로그램 분석 하이라이터(이슈 프레임)" />
+    <option name="프레임" hit="동적 프로그램 분석 하이라이터(이슈 프레임)" />
+    <option name="프로그램" hit="동적 프로그램 분석 하이라이터(이슈 프레임)" />
+    <option name="하이라이터" hit="동적 프로그램 분석 하이라이터(이슈 프레임)" />
+  </configurable>
+</options>

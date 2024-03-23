@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>Java Server Faces 구성 파일 내 잘못된 <code>&lt;managed-bean&gt;</code> 요소를 보고합니다.</p>
+
+<p><strong>예:</strong></p>
+
+<pre><code>
+ public class FooBean {
+    public void setSomeProperty(String foo) {}
+  }
+  &lt;faces-config &gt;
+    &lt;managed-bean&gt;
+      &lt;managed-bean-name&gt;myBean&lt;/managed-bean-name&gt;
+      &lt;managed-bean-class&gt;beans.FooBean&lt;/managed-bean-class&gt;
+      &lt;managed-bean-scope&gt;application&lt;/managed-bean-scope&gt;
+      &lt;managed-property&gt;
+        &lt;property-name&gt;<strong>someProperty</strong>&lt;/property-name&gt; &lt;!-- 매니지드 프로퍼티는 'java.lang.String' 타입이어야 합니다--&gt;
+        &lt;property-class&gt;my.company.BarClass&lt;/property-class&gt;
+        &lt;null-value/&gt;
+      &lt;/managed-property&gt;
+    &lt;/managed-bean&gt;
+  &lt;/faces-config&gt;
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+검사된 식에 <code>instanceof</code> 식의 오른쪽에 있는 클래스/인터페이스 타입을 확장/구현하지 않고 하위 클래스가 없는 클래스/인터페이스 타입이 있는 <code>instanceof</code> 식을 보고합니다.
+<p>
+  라이브러리 코드로 의도되긴 하였으나 프로젝트에서 선언된 클래스의 어떠한 인스턴스도 <code>instanceof</code> 테스트를 통과할 수 없기 때문에 이러한 구조는 오류를 일으키기 쉽습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Foo { }
+
+  interface Bar { }
+  
+  class Main {
+      void test(Foo f, Bar b) {
+          if (f instanceof Bar) { // 문제
+              System.out.println("fail");
+          }
+          if (b instanceof Foo) { // 문제
+              System.out.println("fail");
+          }
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

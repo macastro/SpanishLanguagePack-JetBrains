@@ -1,0 +1,17 @@
+<html>
+<body>
+다음과 같은 EJB 사양 위반 사례를 보고합니다.
+<ul>
+  <li>메서드가 <code>java.rmi.RemoteException</code>을 던진다고 선언하지 않는 경우</li>
+  <li>메서드 반환 타입 또는 인수가 RMI/IIOP와 호환되지 않는 경우</li>
+  <li>EJB 서비스 엔드포인트 인터페이스가 상수 선언을 포함하는 경우</li>
+</ul>
+
+<p><b>예:</b></p>
+<pre><code>
+public interface EntityRemote extends javax.ejb.EJBObject{
+  public int businessExample(String value) throws java.lang.RuntimeException; // 오류: 'RemoteException'을 선언해야 합니다
+}
+</code></pre>
+</body>
+</html>

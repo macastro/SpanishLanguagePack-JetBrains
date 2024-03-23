@@ -1,0 +1,16 @@
+<html>
+<body>
+불변 Kotlin 컬렉션의 Java 변경자 메서드 호출( <code>fill</code>, <code>reverse</code>, <code>shuffle</code>, <code>sort</code> 등)을 보고합니다.
+<p>이로 인해 런타임에서 <code>UnsupportedOperationException</code>이 발생할 수 있습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  import java.util.Collections
+
+  fun test() {
+      val immutableList = listOf(1, 2)
+      Collections.reverse(immutableList)
+  }
+</code></pre>
+<p>문제를 해결하려면 목록을 가변으로 설정합니다.</p>
+</body>
+</html>

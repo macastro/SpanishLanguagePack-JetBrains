@@ -1,0 +1,15 @@
+<html>
+<body>
+<code>continue</code> 문을 보고합니다.
+<p><code>continue</code> 문을 사용하면 리팩터링이 복잡해져 혼란스러울 수 있습니다.</p>
+<p>예:</p>
+<pre><code>
+  void foo(List&lt;String&gt; strs) {
+    for (String str : strs) {
+      if (str.contains("skip")) continue;
+      handleStr(str);
+    }
+  }
+</code></pre>
+</body>
+</html>

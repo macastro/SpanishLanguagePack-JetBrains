@@ -1,0 +1,16 @@
+<html>
+<body>
+<p><code>head</code> 또는 <code>last</code>를 정렬하고 사용하는 경우를 보고하고 <code>max</code> 또는 <code>min</code>으로 바꿀 것을 제안합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  Seq("abc", "defg", "h").sorted.head
+  Seq("abc", "defg", "h").sortBy(_.length).last
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  Seq("abc", "defg", "h").min
+  Seq("abc", "defg", "h").maxBy(_.length)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

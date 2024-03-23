@@ -1,0 +1,71 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="ddl" path="ActionManager" hit="DDL 표시" />
+    <option name="표시" path="ActionManager" hit="DDL 표시" />
+    <option name="flyway" path="ActionManager" hit="Flyway Init 마이그레이션" />
+    <option name="init" path="ActionManager" hit="Flyway Init 마이그레이션" />
+    <option name="마이그레이션" path="ActionManager" hit="Flyway Init 마이그레이션" />
+    <option name="flyway" path="ActionManager" hit="Flyway Java 마이그레이션" />
+    <option name="java" path="ActionManager" hit="Flyway Java 마이그레이션" />
+    <option name="마이그레이션" path="ActionManager" hit="Flyway Java 마이그레이션" />
+    <option name="flyway" path="ActionManager" hit="Flyway Java 콜백" />
+    <option name="java" path="ActionManager" hit="Flyway Java 콜백" />
+    <option name="콜백" path="ActionManager" hit="Flyway Java 콜백" />
+    <option name="flyway" path="ActionManager" hit="Flyway SQL 콜백" />
+    <option name="sql" path="ActionManager" hit="Flyway SQL 콜백" />
+    <option name="콜백" path="ActionManager" hit="Flyway SQL 콜백" />
+    <option name="flyway" path="ActionManager" hit="Flyway 빈 마이그레이션" />
+    <option name="마이그레이션" path="ActionManager" hit="Flyway 빈 마이그레이션" />
+    <option name="빈" path="ActionManager" hit="Flyway 빈 마이그레이션" />
+    <option name="ddl" path="ActionManager" hit="Init DDL 스키마 생성" />
+    <option name="init" path="ActionManager" hit="Init DDL 스키마 생성" />
+    <option name="생성" path="ActionManager" hit="Init DDL 스키마 생성" />
+    <option name="스키마" path="ActionManager" hit="Init DDL 스키마 생성" />
+    <option name="데이터" path="ActionManager" hit="데이터 모델 스냅샷" />
+    <option name="모델" path="ActionManager" hit="데이터 모델 스냅샷" />
+    <option name="스냅샷" path="ActionManager" hit="데이터 모델 스냅샷" />
+    <option name="목록에서" path="ActionManager" hit="무시 목록에서 복원" />
+    <option name="무시" path="ActionManager" hit="무시 목록에서 복원" />
+    <option name="복원" path="ActionManager" hit="무시 목록에서 복원" />
+    <option name="flyway" path="ActionManager" hit="버전 관리가 지원되는 Flyway 마이그레이션 생성" />
+    <option name="관리가" path="ActionManager" hit="버전 관리가 지원되는 Flyway 마이그레이션 생성" />
+    <option name="마이그레이션" path="ActionManager" hit="버전 관리가 지원되는 Flyway 마이그레이션 생성" />
+    <option name="버전" path="ActionManager" hit="버전 관리가 지원되는 Flyway 마이그레이션 생성" />
+    <option name="생성" path="ActionManager" hit="버전 관리가 지원되는 Flyway 마이그레이션 생성" />
+    <option name="지원되는" path="ActionManager" hit="버전 관리가 지원되는 Flyway 마이그레이션 생성" />
+    <option name="관리가" path="ActionManager" hit="버전 관리가 지원되는 다른 마이그레이션으로 이동" />
+    <option name="다른" path="ActionManager" hit="버전 관리가 지원되는 다른 마이그레이션으로 이동" />
+    <option name="마이그레이션으로" path="ActionManager" hit="버전 관리가 지원되는 다른 마이그레이션으로 이동" />
+    <option name="버전" path="ActionManager" hit="버전 관리가 지원되는 다른 마이그레이션으로 이동" />
+    <option name="이동" path="ActionManager" hit="버전 관리가 지원되는 다른 마이그레이션으로 이동" />
+    <option name="지원되는" path="ActionManager" hit="버전 관리가 지원되는 다른 마이그레이션으로 이동" />
+    <option name="관리가" path="ActionManager" hit="버전 관리가 지원되는 마이그레이션 추가" />
+    <option name="마이그레이션" path="ActionManager" hit="버전 관리가 지원되는 마이그레이션 추가" />
+    <option name="버전" path="ActionManager" hit="버전 관리가 지원되는 마이그레이션 추가" />
+    <option name="지원되는" path="ActionManager" hit="버전 관리가 지원되는 마이그레이션 추가" />
+    <option name="추가" path="ActionManager" hit="버전 관리가 지원되는 마이그레이션 추가" />
+    <option name="관리가" path="ActionManager" hit="버전 관리가 지원되는 마이그레이션에서 삭제" />
+    <option name="마이그레이션에서" path="ActionManager" hit="버전 관리가 지원되는 마이그레이션에서 삭제" />
+    <option name="버전" path="ActionManager" hit="버전 관리가 지원되는 마이그레이션에서 삭제" />
+    <option name="삭제" path="ActionManager" hit="버전 관리가 지원되는 마이그레이션에서 삭제" />
+    <option name="지원되는" path="ActionManager" hit="버전 관리가 지원되는 마이그레이션에서 삭제" />
+    <option name="ddl" path="ActionManager" hit="엔티티별로 DDL 생성" />
+    <option name="생성" path="ActionManager" hit="엔티티별로 DDL 생성" />
+    <option name="엔티티별로" path="ActionManager" hit="엔티티별로 DDL 생성" />
+  </configurable>
+  <configurable id="com.intellij.flyway.settings.FlywayConfigurable" configurable_name="Flyway">
+    <option name="flyway" hit="Flyway" />
+    <option name="구분자" hit="마이그레이션 구분자 " />
+    <option name="마이그레이션" hit="마이그레이션 구분자 " />
+    <option name="마이그레이션" hit="마이그레이션 설명 " />
+    <option name="설명" hit="마이그레이션 설명 " />
+    <option name="마이그레이션" hit="마이그레이션 접두사 " />
+    <option name="접두사" hit="마이그레이션 접두사 " />
+    <option name="버전" hit="버전 패턴 " />
+    <option name="패턴" hit="버전 패턴 " />
+    <option name="flyway" hit="종속성 없이 Flyway 사용" />
+    <option name="사용" hit="종속성 없이 Flyway 사용" />
+    <option name="없이" hit="종속성 없이 Flyway 사용" />
+    <option name="종속성" hit="종속성 없이 Flyway 사용" />
+  </configurable>
+</options>

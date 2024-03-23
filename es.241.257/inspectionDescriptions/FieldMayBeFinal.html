@@ -1,0 +1,45 @@
+<html>
+<body>
+안전하게 <code>final</code>로 만들 수 있는 필드를 보고합니다.
+모든 <code>final</code> 필드에는 값이 있으며 이 값은 변경되지 않으므로 코드를 더 쉽게 추론할 수 있습니다.
+<p>분석에 과도한 비용이 드는 것을 피하기 위해, 이 검사는 필드에 <code>private</code> 제어자가 있거나 이 필드가 로컬 또는 익명 클래스에서 정의된 경우만 보고합니다.
+  다음과 같은 경우 필드가 <code>final</code>일 수 있습니다.
+<ul>
+  <li><code>static</code>이며 해당 선언 또는 하나의 <code>static</code> 이니셜라이저에서 한 번 초기화된 경우.</li>
+  <li><code>static</code>이 아니며 해당 선언 또는 하나의 인스턴스 이니셜라이저 또는 모든 생성자에서 한 번 초기화되었으며</li>
+</ul>
+어디서도 수정되지 않은 경우.
+<p><b>예:</b></p>
+<pre><code>
+  public class Person {
+    private String name; // final일 수 있음
+
+    Person(String name) {
+      this.name = name;
+    }
+
+    public String getName() {
+      return name;
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  public class Person {
+    private final String name;
+
+    Person(String name) {
+      this.name = name;
+    }
+
+    public String getName() {
+      return name;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  '어노테이션' 버튼을 사용하여 묵시적 필드 쓰기를 가정하는 어노테이션의 목록을 수정하세요.
+</p>
+</body>
+</html>

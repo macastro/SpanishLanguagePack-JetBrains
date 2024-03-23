@@ -1,0 +1,23 @@
+<html>
+<body>
+<code>Objects</code> 혹은 <code>Stream</code>의 static 메서드 호출로 대체할 수 있는 <code>null</code> 검사를 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  if (message == null) {
+    application.messageStorage().save(new EmptyMessage());
+  } else {
+    application.messageStorage().save(message);
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  application.messageStorage()
+    .save(Objects.requireNonNullElseGet(message, () -> new EmptyMessage()));
+</code></pre>
+<!-- tooltip end -->
+<p>
+  <b>기존 코드보다 대체 코드의 길이가 더 긴 경우 경고하지 않음</b> 옵션을 사용하여 기존 코드보다 대체 코드가 긴 경우 무시합니다.
+</p>
+<p><small>2017.3의 새로운 기능</small></p>
+</body>
+</html>

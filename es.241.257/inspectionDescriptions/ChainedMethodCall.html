@@ -1,0 +1,38 @@
+<html>
+<body>
+대상이 다른 메서드 호출인 메서드 호출을 보고합니다.
+빠른 수정에서는 지역 변수를 삽입할 것을 제안합니다.
+<p><b>예:</b></p>
+<pre><code>
+  class X {
+    int foo(File f) {
+      return f.getName().length();
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class X {
+    int foo(File f) {
+      final String name = f.getName();
+      return name.length();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>검사 옵션을 사용하여 다음 경우에 대한 경고를 전환합니다.</p>
+<ul>
+  <li>
+    <p>
+      필드 이니셜라이저 내 체인 메서드 호출(예: <code>private final int i = new Random().nextInt();</code>)
+    </p>
+  </li>
+  <li>
+    <p>
+      동일한 타입에서 작동되는 체인 메서드 호출(예: <code>new StringBuilder().append("x: ").append(new X()).append("y: ").append(new Y()).toString();</code>).
+    </p>
+  </li>
+</ul>
+
+</body>
+</html>

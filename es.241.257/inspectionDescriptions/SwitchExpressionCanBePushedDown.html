@@ -1,0 +1,29 @@
+<html>
+<body>
+브랜치가 공통된 하위식을 포함하므로 switch가 내부로 이동될 수 있는 <code>switch</code> 식 및 문을 보고합니다.
+이 액션은 코드를 단축합니다. 대부분의 경우, 결과 switch 식을 별도의 변수나 메서드로 추출하는 것이 좋습니다.
+<p>예:</p>
+<pre><code>
+  switch (value) {
+    case 0 -> System.out.println("zero");
+    case 1 -> System.out.println("one");
+    case 2, 3, 4 -> System.out.println("few");
+    default -> System.out.println("many");
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  System.out.println(switch (value) {
+    case 0 -> "zero";
+    case 1 -> "one";
+    case 2, 3, 4 -> "few";
+    default -> "many";
+  });
+</code></pre>
+<!-- tooltip end -->
+<p>
+  이 검사는 화살표 구문으로 강화된 switch에만 적용됩니다.
+</p>
+<p><small>2022.3의 새로운 기능</small></p>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="db에서" path="ActionManager" hit="DB에서 JPA 엔티티 생성" />
+    <option name="jpa" path="ActionManager" hit="DB에서 JPA 엔티티 생성" />
+    <option name="생성" path="ActionManager" hit="DB에서 JPA 엔티티 생성" />
+    <option name="엔티티" path="ActionManager" hit="DB에서 JPA 엔티티 생성" />
+    <option name="db의" path="ActionManager" hit="DB의 JPA 엔티티" />
+    <option name="jpa" path="ActionManager" hit="DB의 JPA 엔티티" />
+    <option name="엔티티" path="ActionManager" hit="DB의 JPA 엔티티" />
+  </configurable>
+  <configurable id="com.intellij.reverseEngineering" configurable_name="JPA Reverse Engineering">
+    <option name="" hit=" Comment 어노테이션" />
+    <option name="comment" hit=" Comment 어노테이션" />
+    <option name="어노테이션" hit=" Comment 어노테이션" />
+    <option name="" hit=" Table   Column Comments" />
+    <option name="column" hit=" Table   Column Comments" />
+    <option name="comments" hit=" Table   Column Comments" />
+    <option name="table" hit=" Table   Column Comments" />
+    <option name="" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="exists" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="sql" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="데이터베이스" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="마이그레이션" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="매핑" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="설정을" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="수" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="있습니다" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="재정의할" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="정의하거나" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="타입을" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="통해" hit=" 데이터베이스 마이그레이션 설정을 통해 exists 매핑 SQL 타입을 정의하거나 재정의할 수 있습니다 " />
+    <option name="fetchtype" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용" />
+    <option name="lazy를" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용" />
+    <option name="manytoone" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용" />
+    <option name="onetoone" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용" />
+    <option name="및" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용" />
+    <option name="사용" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용" />
+    <option name="연결에" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용" />
+    <option name="engineering" hit="JPA Reverse Engineering" />
+    <option name="jpa" hit="JPA Reverse Engineering" />
+    <option name="reverse" hit="JPA Reverse Engineering" />
+    <option name="java" hit="Java 문서" />
+    <option name="문서" hit="Java 문서" />
+    <option name="notnull" hit="검증 어노테이션 사용 NotNull  Size 등 " />
+    <option name="size" hit="검증 어노테이션 사용 NotNull  Size 등 " />
+    <option name="검증" hit="검증 어노테이션 사용 NotNull  Size 등 " />
+    <option name="등" hit="검증 어노테이션 사용 NotNull  Size 등 " />
+    <option name="사용" hit="검증 어노테이션 사용 NotNull  Size 등 " />
+    <option name="어노테이션" hit="검증 어노테이션 사용 NotNull  Size 등 " />
+    <option name="구성" hit="구성" />
+    <option name="orm" hit="기본 타입 속성으로 ORM 참조 바꾸기" />
+    <option name="기본" hit="기본 타입 속성으로 ORM 참조 바꾸기" />
+    <option name="바꾸기" hit="기본 타입 속성으로 ORM 참조 바꾸기" />
+    <option name="속성으로" hit="기본 타입 속성으로 ORM 참조 바꾸기" />
+    <option name="참조" hit="기본 타입 속성으로 ORM 참조 바꾸기" />
+    <option name="타입" hit="기본 타입 속성으로 ORM 참조 바꾸기" />
+    <option name="다음으로" hit="다음으로 추가 " />
+    <option name="추가" hit="다음으로 추가 " />
+    <option name="매핑" hit="매핑 타입" />
+    <option name="타입" hit="매핑 타입" />
+    <option name="무시" hit="무시" />
+    <option name="알고리즘" hit="알고리즘" />
+    <option name="건너뛸" hit="열 이름에서 건너뛸 접두사 " />
+    <option name="열" hit="열 이름에서 건너뛸 접두사 " />
+    <option name="이름에서" hit="열 이름에서 건너뛸 접두사 " />
+    <option name="접두사" hit="열 이름에서 건너뛸 접두사 " />
+    <option name="건너뛸" hit="열 이름에서 건너뛸 접미사 " />
+    <option name="열" hit="열 이름에서 건너뛸 접미사 " />
+    <option name="이름에서" hit="열 이름에서 건너뛸 접미사 " />
+    <option name="접미사" hit="열 이름에서 건너뛸 접미사 " />
+    <option name="예약된" hit="예약된 키워드 필드 접미사 " />
+    <option name="접미사" hit="예약된 키워드 필드 접미사 " />
+    <option name="키워드" hit="예약된 키워드 필드 접미사 " />
+    <option name="필드" hit="예약된 키워드 필드 접미사 " />
+    <option name="규칙" hit="이름 지정 규칙" />
+    <option name="이름" hit="이름 지정 규칙" />
+    <option name="지정" hit="이름 지정 규칙" />
+    <option name="건너뛸" hit="테이블 이름에서 건너뛸 접미사 " />
+    <option name="이름에서" hit="테이블 이름에서 건너뛸 접미사 " />
+    <option name="접미사" hit="테이블 이름에서 건너뛸 접미사 " />
+    <option name="테이블" hit="테이블 이름에서 건너뛸 접미사 " />
+    <option name="단수형으로" hit="테이블 이름을 단수형으로 변환하여 클래스 이름 생성" />
+    <option name="변환하여" hit="테이블 이름을 단수형으로 변환하여 클래스 이름 생성" />
+    <option name="생성" hit="테이블 이름을 단수형으로 변환하여 클래스 이름 생성" />
+    <option name="이름" hit="테이블 이름을 단수형으로 변환하여 클래스 이름 생성" />
+    <option name="이름을" hit="테이블 이름을 단수형으로 변환하여 클래스 이름 생성" />
+    <option name="클래스" hit="테이블 이름을 단수형으로 변환하여 클래스 이름 생성" />
+    <option name="테이블" hit="테이블 이름을 단수형으로 변환하여 클래스 이름 생성" />
+    <option name="건너뛸" hit="테이블에서에서 건너뛸 접두사 " />
+    <option name="접두사" hit="테이블에서에서 건너뛸 접두사 " />
+    <option name="테이블에서에서" hit="테이블에서에서 건너뛸 접두사 " />
+  </configurable>
+  <configurable id="com.intellij.entityDeclaration" configurable_name="JPA 엔티티 선언">
+    <option name="" hit=" AllArgsConstructor 생성 " />
+    <option name="allargsconstructor" hit=" AllArgsConstructor 생성 " />
+    <option name="생성" hit=" AllArgsConstructor 생성 " />
+    <option name="" hit=" Builder 생성 " />
+    <option name="builder" hit=" Builder 생성 " />
+    <option name="생성" hit=" Builder 생성 " />
+    <option name="" hit=" Getter 및  Setter 생성 " />
+    <option name="getter" hit=" Getter 및  Setter 생성 " />
+    <option name="setter" hit=" Getter 및  Setter 생성 " />
+    <option name="및" hit=" Getter 및  Setter 생성 " />
+    <option name="생성" hit=" Getter 및  Setter 생성 " />
+    <option name="" hit=" NoArgsConstructor 생성 " />
+    <option name="noargsconstructor" hit=" NoArgsConstructor 생성 " />
+    <option name="생성" hit=" NoArgsConstructor 생성 " />
+    <option name="" hit=" ToString 생성 " />
+    <option name="tostring" hit=" ToString 생성 " />
+    <option name="생성" hit=" ToString 생성 " />
+    <option name="fetchtype" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용 " />
+    <option name="lazy를" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용 " />
+    <option name="manytoone" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용 " />
+    <option name="onetoone" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용 " />
+    <option name="및" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용 " />
+    <option name="사용" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용 " />
+    <option name="연결에" hit="FetchType LAZY를  OneToOne 및  ManyToOne 연결에 사용 " />
+    <option name="class" hit="Inner class" />
+    <option name="inner" hit="Inner class" />
+    <option name="jpa" hit="JPA 엔티티 선언" />
+    <option name="선언" hit="JPA 엔티티 선언" />
+    <option name="엔티티" hit="JPA 엔티티 선언" />
+    <option name="lombok" hit="Lombok" />
+    <option name="class" hit="Same class" />
+    <option name="same" hit="Same class" />
+    <option name="class" hit="Single class per persistence unit" />
+    <option name="per" hit="Single class per persistence unit" />
+    <option name="persistence" hit="Single class per persistence unit" />
+    <option name="single" hit="Single class per persistence unit" />
+    <option name="unit" hit="Single class per persistence unit" />
+    <option name="class" hit="Single class per project" />
+    <option name="per" hit="Single class per project" />
+    <option name="project" hit="Single class per project" />
+    <option name="single" hit="Single class per project" />
+    <option name="interface" hit="Single interface per project" />
+    <option name="per" hit="Single interface per project" />
+    <option name="project" hit="Single interface per project" />
+    <option name="single" hit="Single interface per project" />
+    <option name="getter" hit="getter 메서드에 JPA 어노테이션 생성 " />
+    <option name="jpa" hit="getter 메서드에 JPA 어노테이션 생성 " />
+    <option name="메서드에" hit="getter 메서드에 JPA 어노테이션 생성 " />
+    <option name="생성" hit="getter 메서드에 JPA 어노테이션 생성 " />
+    <option name="어노테이션" hit="getter 메서드에 JPA 어노테이션 생성 " />
+    <option name="lower" hit="lower" />
+    <option name="onlyexplicitlyincluded" hit="onlyExplicitlyIncluded   true로  ToString 생성 " />
+    <option name="tostring" hit="onlyExplicitlyIncluded   true로  ToString 생성 " />
+    <option name="true로" hit="onlyExplicitlyIncluded   true로  ToString 생성 " />
+    <option name="생성" hit="onlyExplicitlyIncluded   true로  ToString 생성 " />
+    <option name="upper" hit="upper" />
+    <option name="기본" hit="기본 엔티티 속성 액세스 제어자 " />
+    <option name="속성" hit="기본 엔티티 속성 액세스 제어자 " />
+    <option name="액세스" hit="기본 엔티티 속성 액세스 제어자 " />
+    <option name="엔티티" hit="기본 엔티티 속성 액세스 제어자 " />
+    <option name="제어자" hit="기본 엔티티 속성 액세스 제어자 " />
+    <option name="내부" hit="내부 클래스 이름" />
+    <option name="이름" hit="내부 클래스 이름" />
+    <option name="클래스" hit="내부 클래스 이름" />
+    <option name="보호됨" hit="보호됨" />
+    <option name="비공개" hit="비공개" />
+    <option name="상수" hit="상수 생성" />
+    <option name="생성" hit="상수 생성" />
+    <option name="놓을" hit="상수를 놓을 위치 " />
+    <option name="상수를" hit="상수를 놓을 위치 " />
+    <option name="위치" hit="상수를 놓을 위치 " />
+    <option name="객체" hit="새로운 객체 이름을 위한 상수 생성 " />
+    <option name="상수" hit="새로운 객체 이름을 위한 상수 생성 " />
+    <option name="새로운" hit="새로운 객체 이름을 위한 상수 생성 " />
+    <option name="생성" hit="새로운 객체 이름을 위한 상수 생성 " />
+    <option name="위한" hit="새로운 객체 이름을 위한 상수 생성 " />
+    <option name="이름을" hit="새로운 객체 이름을 위한 상수 생성 " />
+    <option name="상수" hit="색인 상수 이름 케이스 " />
+    <option name="색인" hit="색인 상수 이름 케이스 " />
+    <option name="이름" hit="색인 상수 이름 케이스 " />
+    <option name="케이스" hit="색인 상수 이름 케이스 " />
+    <option name="return" hit="속성 setter에  return this   생성 " />
+    <option name="setter에" hit="속성 setter에  return this   생성 " />
+    <option name="this" hit="속성 setter에  return this   생성 " />
+    <option name="생성" hit="속성 setter에  return this   생성 " />
+    <option name="속성" hit="속성 setter에  return this   생성 " />
+    <option name="uid" hit="시리얼 버전 UID 필드 생성 " />
+    <option name="버전" hit="시리얼 버전 UID 필드 생성 " />
+    <option name="생성" hit="시리얼 버전 UID 필드 생성 " />
+    <option name="시리얼" hit="시리얼 버전 UID 필드 생성 " />
+    <option name="필드" hit="시리얼 버전 UID 필드 생성 " />
+    <option name="엔티티" hit="엔티티 이름 " />
+    <option name="이름" hit="엔티티 이름 " />
+    <option name="hibernate" hit="엔티티에 Hibernate 사용자 지정 타입 등록 " />
+    <option name="등록" hit="엔티티에 Hibernate 사용자 지정 타입 등록 " />
+    <option name="사용자" hit="엔티티에 Hibernate 사용자 지정 타입 등록 " />
+    <option name="엔티티에" hit="엔티티에 Hibernate 사용자 지정 타입 등록 " />
+    <option name="지정" hit="엔티티에 Hibernate 사용자 지정 타입 등록 " />
+    <option name="타입" hit="엔티티에 Hibernate 사용자 지정 타입 등록 " />
+    <option name="열" hit="열 이름 " />
+    <option name="이름" hit="열 이름 " />
+    <option name="이름" hit="이름 템플릿" />
+    <option name="템플릿" hit="이름 템플릿" />
+    <option name="이름" hit="인터페이스 이름" />
+    <option name="인터페이스" hit="인터페이스 이름" />
+    <option name="이름" hit="클래스 이름" />
+    <option name="클래스" hit="클래스 이름" />
+    <option name="이름" hit="테이블 이름 " />
+    <option name="테이블" hit="테이블 이름 " />
+  </configurable>
+</options>

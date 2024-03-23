@@ -1,0 +1,30 @@
+<html>
+<body>
+로거 메시지의 <code>{}</code> 자리표시자 숫자가 로깅 호출에 대한 다른 인수의 숫자와 일치하지 않는 <code>logger.info("{}: {}", key)</code>와 같은 SLF4J, Log4j2 및 akka.event.LoggingAdapter 로깅 호출을 보고합니다.
+<!-- tooltip end -->
+<p>
+  검사 옵션을 사용하여 SLF4J가 사용하는 구현을 지정합니다.
+  <strong>자동 확인</strong>을 선택하면 클래스 경로에서 <code>org.apache.logging.slf4j.Log4jLogger</code>가 검색됩니다.
+  이 파일을 찾거나 <strong>예</strong>를 선택하였고, 예외 타입이 있는 마지막 매개변수에 자리표시자가 있는 경우, SLFJ4 API가 보고되지 않습니다.<br/>
+예시:
+<pre><code lang="java">
+//이 경우 '예' 옵션이 선택되면 보고되지 않습니다
+log.error("For id {}: {}", "1", new RuntimeException());
+</code></pre>
+이 경우 'toString()'을 사용하여 'new RuntimeException()'이 출력됩니다(스택 추적은 출력되지 않습니다).
+<pre><code lang="text">
+For id 1: java.lang.RuntimeException
+</code></pre>
+
+그렇지 않은 경우 마지막 자리표시자가 사용되지 않으므로 강조 표시됩니다.
+<pre><code lang="text">
+For id 1: {}
+java.lang.RuntimeException: null
+</code></pre>
+
+<strong>아니요</strong> 옵션을 사용하면 <code>org.apache.logging.slf4j.Log4jLogger</code>가 백엔드로 사용되더라도 자리표시자가 예외로 사용되는 경우 항상 강조 표시됩니다.<br/>
+
+이 옵션은 SLF4J만 지원합니다.
+<p>
+</body>
+</html>

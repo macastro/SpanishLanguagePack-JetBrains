@@ -1,0 +1,17 @@
+<html>
+<body><p>불필요한 변환 메서드 호출(<code>toInt</code>, <code>toString</code> 등)을 보고합니다.</p>
+
+<p>컬렉션 타입을 변화시키지 않는 변환은 불필요합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  "Test".toString
+  Seq(1, 2).toSeq
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  "Test"
+  Seq(1, 2)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

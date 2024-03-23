@@ -1,0 +1,205 @@
+<options>
+  <configurable id="diff.base" configurable_name="Diff 및 병합">
+    <option name="diff" hit="Diff" />
+    <option name="diff" hit="Diff 및 병합" />
+    <option name="및" hit="Diff 및 병합" />
+    <option name="병합" hit="Diff 및 병합" />
+    <option name="다음" hit="마지막 변경 항목에 도달한 후 다음 파일로 이동" />
+    <option name="도달한" hit="마지막 변경 항목에 도달한 후 다음 파일로 이동" />
+    <option name="마지막" hit="마지막 변경 항목에 도달한 후 다음 파일로 이동" />
+    <option name="변경" hit="마지막 변경 항목에 도달한 후 다음 파일로 이동" />
+    <option name="이동" hit="마지막 변경 항목에 도달한 후 다음 파일로 이동" />
+    <option name="파일로" hit="마지막 변경 항목에 도달한 후 다음 파일로 이동" />
+    <option name="항목에" hit="마지막 변경 항목에 도달한 후 다음 파일로 이동" />
+    <option name="후" hit="마지막 변경 항목에 도달한 후 다음 파일로 이동" />
+    <option name="병합" hit="병합" />
+    <option name="강조" hit="수정된 줄을 여백에서 강조 표시" />
+    <option name="수정된" hit="수정된 줄을 여백에서 강조 표시" />
+    <option name="여백에서" hit="수정된 줄을 여백에서 강조 표시" />
+    <option name="줄을" hit="수정된 줄을 여백에서 강조 표시" />
+    <option name="표시" hit="수정된 줄을 여백에서 강조 표시" />
+    <option name="내용을" hit="충돌하지 않는 변경 내용을 자동으로 적용" />
+    <option name="변경" hit="충돌하지 않는 변경 내용을 자동으로 적용" />
+    <option name="않는" hit="충돌하지 않는 변경 내용을 자동으로 적용" />
+    <option name="자동으로" hit="충돌하지 않는 변경 내용을 자동으로 적용" />
+    <option name="적용" hit="충돌하지 않는 변경 내용을 자동으로 적용" />
+    <option name="충돌하지" hit="충돌하지 않는 변경 내용을 자동으로 적용" />
+    <option name="줄" hit="컨텍스트 줄 " />
+    <option name="컨텍스트" hit="컨텍스트 줄 " />
+  </configurable>
+  <configurable id="diff.external" configurable_name="외부 Diff 도구">
+    <option name="diff" hit="외부 Diff 도구" />
+    <option name="도구" hit="외부 Diff 도구" />
+    <option name="외부" hit="외부 Diff 도구" />
+    <option name="구성" hit="외부 도구 구성 " />
+    <option name="도구" hit="외부 도구 구성 " />
+    <option name="외부" hit="외부 도구 구성 " />
+    <option name="도구" hit="외부 도구 활성화" />
+    <option name="외부" hit="외부 도구 활성화" />
+    <option name="활성화" hit="외부 도구 활성화" />
+    <option name="diff" hit="파일 타입과 연결된 외부 diff 합병 도구 구성 " />
+    <option name="구성" hit="파일 타입과 연결된 외부 diff 합병 도구 구성 " />
+    <option name="도구" hit="파일 타입과 연결된 외부 diff 합병 도구 구성 " />
+    <option name="연결된" hit="파일 타입과 연결된 외부 diff 합병 도구 구성 " />
+    <option name="외부" hit="파일 타입과 연결된 외부 diff 합병 도구 구성 " />
+    <option name="타입과" hit="파일 타입과 연결된 외부 diff 합병 도구 구성 " />
+    <option name="파일" hit="파일 타입과 연결된 외부 diff 합병 도구 구성 " />
+    <option name="합병" hit="파일 타입과 연결된 외부 diff 합병 도구 구성 " />
+  </configurable>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="2분할" path="ActionManager" hit="2분할 Diff에서 변경 사항 정렬을 켭니다" />
+    <option name="diff에서" path="ActionManager" hit="2분할 Diff에서 변경 사항 정렬을 켭니다" />
+    <option name="변경" path="ActionManager" hit="2분할 Diff에서 변경 사항 정렬을 켭니다" />
+    <option name="사항" path="ActionManager" hit="2분할 Diff에서 변경 사항 정렬을 켭니다" />
+    <option name="정렬을" path="ActionManager" hit="2분할 Diff에서 변경 사항 정렬을 켭니다" />
+    <option name="켭니다" path="ActionManager" hit="2분할 Diff에서 변경 사항 정렬을 켭니다" />
+    <option name="3면" path="ActionManager" hit="3면 뷰어 모드 변경" />
+    <option name="모드" path="ActionManager" hit="3면 뷰어 모드 변경" />
+    <option name="변경" path="ActionManager" hit="3면 뷰어 모드 변경" />
+    <option name="뷰어" path="ActionManager" hit="3면 뷰어 모드 변경" />
+    <option name="3면" path="ActionManager" hit="3면 뷰어 전환" />
+    <option name="뷰어" path="ActionManager" hit="3면 뷰어 전환" />
+    <option name="전환" path="ActionManager" hit="3면 뷰어 전환" />
+    <option name="diff" path="ActionManager" hit="Diff 나란히 보기에서 변경 사항 정렬" />
+    <option name="나란히" path="ActionManager" hit="Diff 나란히 보기에서 변경 사항 정렬" />
+    <option name="변경" path="ActionManager" hit="Diff 나란히 보기에서 변경 사항 정렬" />
+    <option name="보기에서" path="ActionManager" hit="Diff 나란히 보기에서 변경 사항 정렬" />
+    <option name="사항" path="ActionManager" hit="Diff 나란히 보기에서 변경 사항 정렬" />
+    <option name="정렬" path="ActionManager" hit="Diff 나란히 보기에서 변경 사항 정렬" />
+    <option name="diff" path="ActionManager" hit="Diff 및 병합" />
+    <option name="및" path="ActionManager" hit="Diff 및 병합" />
+    <option name="병합" path="ActionManager" hit="Diff 및 병합" />
+    <option name="diff" path="ActionManager" hit="Diff 표시" />
+    <option name="표시" path="ActionManager" hit="Diff 표시" />
+    <option name="결과에서" path="ActionManager" hit="결과에서 제외" />
+    <option name="제외" path="ActionManager" hit="결과에서 제외" />
+    <option name="나란히" path="ActionManager" hit="두 에디터를 나란히 열고 해당 콘텐츠를 비교합니다" />
+    <option name="두" path="ActionManager" hit="두 에디터를 나란히 열고 해당 콘텐츠를 비교합니다" />
+    <option name="비교합니다" path="ActionManager" hit="두 에디터를 나란히 열고 해당 콘텐츠를 비교합니다" />
+    <option name="에디터를" path="ActionManager" hit="두 에디터를 나란히 열고 해당 콘텐츠를 비교합니다" />
+    <option name="열고" path="ActionManager" hit="두 에디터를 나란히 열고 해당 콘텐츠를 비교합니다" />
+    <option name="콘텐츠를" path="ActionManager" hit="두 에디터를 나란히 열고 해당 콘텐츠를 비교합니다" />
+    <option name="해당" path="ActionManager" hit="두 에디터를 나란히 열고 해당 콘텐츠를 비교합니다" />
+    <option name="디폴트" path="ActionManager" hit="디폴트 설정" />
+    <option name="설정" path="ActionManager" hit="디폴트 설정" />
+    <option name="diff" path="ActionManager" hit="모든 파일을 하나의 Diff 보기에 표시" />
+    <option name="모든" path="ActionManager" hit="모든 파일을 하나의 Diff 보기에 표시" />
+    <option name="보기에" path="ActionManager" hit="모든 파일을 하나의 Diff 보기에 표시" />
+    <option name="파일을" path="ActionManager" hit="모든 파일을 하나의 Diff 보기에 표시" />
+    <option name="표시" path="ActionManager" hit="모든 파일을 하나의 Diff 보기에 표시" />
+    <option name="하나의" path="ActionManager" hit="모든 파일을 하나의 Diff 보기에 표시" />
+    <option name="미러를" path="ActionManager" hit="미러를 오른쪽으로 설정" />
+    <option name="설정" path="ActionManager" hit="미러를 오른쪽으로 설정" />
+    <option name="오른쪽으로" path="ActionManager" hit="미러를 오른쪽으로 설정" />
+    <option name="diff" path="ActionManager" hit="빈 Diff 창 열기" />
+    <option name="빈" path="ActionManager" hit="빈 Diff 창 열기" />
+    <option name="열기" path="ActionManager" hit="빈 Diff 창 열기" />
+    <option name="창" path="ActionManager" hit="빈 Diff 창 열기" />
+    <option name="빈" path="ActionManager" hit="빈 에디터로 전환" />
+    <option name="에디터로" path="ActionManager" hit="빈 에디터로 전환" />
+    <option name="전환" path="ActionManager" hit="빈 에디터로 전환" />
+    <option name="삭제" path="ActionManager" hit="삭제 설정" />
+    <option name="설정" path="ActionManager" hit="삭제 설정" />
+    <option name="경고" path="ActionManager" hit="삭제 시 경고" />
+    <option name="삭제" path="ActionManager" hit="삭제 시 경고" />
+    <option name="시" path="ActionManager" hit="삭제 시 경고" />
+    <option name="diff" path="ActionManager" hit="새 창이나 탭에서 Diff 표시" />
+    <option name="새" path="ActionManager" hit="새 창이나 탭에서 Diff 표시" />
+    <option name="창이나" path="ActionManager" hit="새 창이나 탭에서 Diff 표시" />
+    <option name="탭에서" path="ActionManager" hit="새 창이나 탭에서 Diff 표시" />
+    <option name="표시" path="ActionManager" hit="새 창이나 탭에서 Diff 표시" />
+    <option name="diff를" path="ActionManager" hit="새 창이나 탭에서 각 선택 영역에 대한 Diff를 엽니다" />
+    <option name="각" path="ActionManager" hit="새 창이나 탭에서 각 선택 영역에 대한 Diff를 엽니다" />
+    <option name="대한" path="ActionManager" hit="새 창이나 탭에서 각 선택 영역에 대한 Diff를 엽니다" />
+    <option name="새" path="ActionManager" hit="새 창이나 탭에서 각 선택 영역에 대한 Diff를 엽니다" />
+    <option name="선택" path="ActionManager" hit="새 창이나 탭에서 각 선택 영역에 대한 Diff를 엽니다" />
+    <option name="엽니다" path="ActionManager" hit="새 창이나 탭에서 각 선택 영역에 대한 Diff를 엽니다" />
+    <option name="영역에" path="ActionManager" hit="새 창이나 탭에서 각 선택 영역에 대한 Diff를 엽니다" />
+    <option name="창이나" path="ActionManager" hit="새 창이나 탭에서 각 선택 영역에 대한 Diff를 엽니다" />
+    <option name="탭에서" path="ActionManager" hit="새 창이나 탭에서 각 선택 영역에 대한 Diff를 엽니다" />
+    <option name="비교" path="ActionManager" hit="새 파일 서로 비교 취소" />
+    <option name="새" path="ActionManager" hit="새 파일 서로 비교 취소" />
+    <option name="서로" path="ActionManager" hit="새 파일 서로 비교 취소" />
+    <option name="취소" path="ActionManager" hit="새 파일 서로 비교 취소" />
+    <option name="파일" path="ActionManager" hit="새 파일 서로 비교 취소" />
+    <option name="비교" path="ActionManager" hit="새 파일을 서로 비교" />
+    <option name="새" path="ActionManager" hit="새 파일을 서로 비교" />
+    <option name="서로" path="ActionManager" hit="새 파일을 서로 비교" />
+    <option name="파일을" path="ActionManager" hit="새 파일을 서로 비교" />
+    <option name="두" path="ActionManager" hit="선택한 두 파일 또는 폴더를 비교합니다" />
+    <option name="또는" path="ActionManager" hit="선택한 두 파일 또는 폴더를 비교합니다" />
+    <option name="비교합니다" path="ActionManager" hit="선택한 두 파일 또는 폴더를 비교합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 두 파일 또는 폴더를 비교합니다" />
+    <option name="파일" path="ActionManager" hit="선택한 두 파일 또는 폴더를 비교합니다" />
+    <option name="폴더를" path="ActionManager" hit="선택한 두 파일 또는 폴더를 비교합니다" />
+    <option name="비교합니다" path="ActionManager" hit="선택한 파일을 에디터로 비교합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 파일을 에디터로 비교합니다" />
+    <option name="에디터로" path="ActionManager" hit="선택한 파일을 에디터로 비교합니다" />
+    <option name="파일을" path="ActionManager" hit="선택한 파일을 에디터로 비교합니다" />
+    <option name="설정" path="ActionManager" hit="아무것도 안 함 설정" />
+    <option name="아무것도" path="ActionManager" hit="아무것도 안 함 설정" />
+    <option name="안" path="ActionManager" hit="아무것도 안 함 설정" />
+    <option name="함" path="ActionManager" hit="아무것도 안 함 설정" />
+    <option name="바꾸기" path="ActionManager" hit="양쪽 창 위치 바꾸기" />
+    <option name="양쪽" path="ActionManager" hit="양쪽 창 위치 바꾸기" />
+    <option name="위치" path="ActionManager" hit="양쪽 창 위치 바꾸기" />
+    <option name="창" path="ActionManager" hit="양쪽 창 위치 바꾸기" />
+    <option name="복사" path="ActionManager" hit="오른쪽으로 복사 설정" />
+    <option name="설정" path="ActionManager" hit="오른쪽으로 복사 설정" />
+    <option name="오른쪽으로" path="ActionManager" hit="오른쪽으로 복사 설정" />
+    <option name="미러" path="ActionManager" hit="왼쪽으로 미러 설정" />
+    <option name="설정" path="ActionManager" hit="왼쪽으로 미러 설정" />
+    <option name="왼쪽으로" path="ActionManager" hit="왼쪽으로 미러 설정" />
+    <option name="복사" path="ActionManager" hit="왼쪽으로 복사 설정" />
+    <option name="설정" path="ActionManager" hit="왼쪽으로 복사 설정" />
+    <option name="왼쪽으로" path="ActionManager" hit="왼쪽으로 복사 설정" />
+    <option name="전환" path="ActionManager" hit="최근으로 전환" />
+    <option name="최근으로" path="ActionManager" hit="최근으로 전환" />
+    <option name="비교" path="ActionManager" hit="클립보드와 비교" />
+    <option name="클립보드와" path="ActionManager" hit="클립보드와 비교" />
+    <option name="또는" path="ActionManager" hit="파일 또는 리비전을 비교합니다." />
+    <option name="리비전을" path="ActionManager" hit="파일 또는 리비전을 비교합니다." />
+    <option name="비교합니다" path="ActionManager" hit="파일 또는 리비전을 비교합니다." />
+    <option name="파일" path="ActionManager" hit="파일 또는 리비전을 비교합니다." />
+    <option name="비교" path="ActionManager" hit="파일 비교" />
+    <option name="파일" path="ActionManager" hit="파일 비교" />
+    <option name="관한" path="ActionManager" hit="파일 쌍에 관한 액션" />
+    <option name="쌍에" path="ActionManager" hit="파일 쌍에 관한 액션" />
+    <option name="액션" path="ActionManager" hit="파일 쌍에 관한 액션" />
+    <option name="파일" path="ActionManager" hit="파일 쌍에 관한 액션" />
+    <option name="전환" path="ActionManager" hit="파일로 전환..." />
+    <option name="파일로" path="ActionManager" hit="파일로 전환..." />
+    <option name="비교" path="ActionManager" hit="파일을 에디터로 비교" />
+    <option name="에디터로" path="ActionManager" hit="파일을 에디터로 비교" />
+    <option name="파일을" path="ActionManager" hit="파일을 에디터로 비교" />
+    <option name="범위와" path="ActionManager" hit="현재 선택 범위와 클립보드를 비교합니다" />
+    <option name="비교합니다" path="ActionManager" hit="현재 선택 범위와 클립보드를 비교합니다" />
+    <option name="선택" path="ActionManager" hit="현재 선택 범위와 클립보드를 비교합니다" />
+    <option name="클립보드를" path="ActionManager" hit="현재 선택 범위와 클립보드를 비교합니다" />
+    <option name="현재" path="ActionManager" hit="현재 선택 범위와 클립보드를 비교합니다" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.Diff 및 병합" configurable_name="Diff 및 병합">
+    <option name="diff" hit="Diff 및 병합" />
+    <option name="및" hit="Diff 및 병합" />
+    <option name="병합" hit="Diff 및 병합" />
+    <option name="wave" hit="변경되지 않은 접힌 코드 조각//Wave" />
+    <option name="변경되지" hit="변경되지 않은 접힌 코드 조각//Wave" />
+    <option name="않은" hit="변경되지 않은 접힌 코드 조각//Wave" />
+    <option name="접힌" hit="변경되지 않은 접힌 코드 조각//Wave" />
+    <option name="조각" hit="변경되지 않은 접힌 코드 조각//Wave" />
+    <option name="코드" hit="변경되지 않은 접힌 코드 조각//Wave" />
+    <option name="변경된" hit="변경된 줄//변경됨" />
+    <option name="변경됨" hit="변경된 줄//변경됨" />
+    <option name="줄" hit="변경된 줄//변경됨" />
+    <option name="변경된" hit="변경된 줄//삭제됨" />
+    <option name="삭제됨" hit="변경된 줄//삭제됨" />
+    <option name="줄" hit="변경된 줄//삭제됨" />
+    <option name="변경된" hit="변경된 줄//삽입됨" />
+    <option name="삽입됨" hit="변경된 줄//삽입됨" />
+    <option name="줄" hit="변경된 줄//삽입됨" />
+    <option name="변경된" hit="변경된 줄//충돌" />
+    <option name="줄" hit="변경된 줄//충돌" />
+    <option name="충돌" hit="변경된 줄//충돌" />
+  </configurable>
+</options>

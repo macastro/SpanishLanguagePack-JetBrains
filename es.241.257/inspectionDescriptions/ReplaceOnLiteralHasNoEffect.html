@@ -1,0 +1,13 @@
+<html>
+<body>
+효과가 없는 <code>String</code> 메서드 <code>replace()</code>, <code>replaceAll()</code> 또는 <code>replaceFirst()</code>
+호출을 보고합니다. 이러한 호출은 한정자 및 검색 문자열이 컴파일 시간 상수이며 검색 문자열을 한정자에서 찾을 수 없을 때 아무 효과가 없습니다. 이러한 호출은 불필요하며 오류일 수 있습니다.
+<p><b>예:</b></p>
+<pre><code>
+  // 교체로 수행되는 작업이 없습니다
+  "hello".replace("$value$", value);
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.1의 새로운 기능</small></p>
+</body>
+</html>

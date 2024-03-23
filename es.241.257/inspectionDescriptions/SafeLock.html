@@ -1,0 +1,16 @@
+<html>
+<body>
+<code>try</code> 블록 전에 획득하지 않거나 대응하는 <code>finally</code> 블록에서 잠금이 해제되지 않은 <code>java.util.concurrent.locks.Lock</code> 리소스를 보고합니다. 이러한 리소스를 닫기 전에 예외가 던져질 경우 의도치 않게 리소스 누수가 발생할 수 있습니다.
+<p><b>예:</b></p>
+<pre><code>
+  lock.lock(); // 'finally' 블록이 누락되었으므로 보고됩니다
+  try {
+    doSmthWithLock();
+  } catch (IOException e) {
+    throw new UncheckedIOException(e);
+  }
+  lock.unlock();
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

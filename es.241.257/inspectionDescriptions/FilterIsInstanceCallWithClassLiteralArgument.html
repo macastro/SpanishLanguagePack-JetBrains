@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>클래스 리터럴 인수가 있는 Kotlin 표준 라이브러리 함수 <code>filterIsInstance</code>의 호출을 보고합니다. 구체화된 타입 매개변수를 포함한 이 함수의 버전을 사용하고 <code>::class.java</code> 구문을 지양하는 것이 관용적입니다.</p>
+
+<p>참고: 타입 인수 목록 내에서 <code>Class<*, *></code> 구문은 바람직하지 않을 수 있으므로 제네릭 클래스 리터럴이 검사에서 보고되지 않습니다.</p>
+
+<p>예:</p>
+<pre><code>
+  fun foo(list: List&lt;*>) {
+      list.filterIsInstance(Int::class.java)
+  }
+</code></pre>
+
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  fun foo(list: List&lt;*>) {
+      list.filterIsInstance&lt;Int>()
+  }
+</code></pre>
+</body>
+</html>

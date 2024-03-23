@@ -1,0 +1,23 @@
+<html>
+<body>
+<code>Thread.yield()</code> 호출을 보고합니다.
+<p>
+  <code>yield()</code>의 동작은 비결정적이고 플랫폼에 의존하기 때문에 이 메서드를 사용하는 것이 적절한 경우는 거의 없습니다.
+  이 메서드의 사용은 상세한 프로파일링 및 벤치마킹과 결합하여 실제로 원하는 효과를 얻을 수 있도록 해야 합니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  public static void main(String[] args) {
+    Runnable r = () -> {
+      for (int i = 0; i &lt; 10; i++) {
+        System.out.println(i);
+        Thread.yield();
+      }
+    };
+    new Thread(r).start();
+    new Thread(r).start();
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

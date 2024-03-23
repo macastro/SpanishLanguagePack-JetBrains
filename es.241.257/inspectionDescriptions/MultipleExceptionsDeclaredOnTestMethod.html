@@ -1,0 +1,27 @@
+<html>
+<body>
+하나 이상의 예외를 포함하는 JUnit 테스트 메서드 <code>throws</code> 절을 보고합니다.
+그러한 절은 불필요하게 장황합니다.
+테스트 메서드는 다른 프로젝트 코드에서 호출되지 않으므로 이러한 예외를 별도로 취급할 필요가 없습니다.
+<p>예:</p>
+<pre><code lang="java">
+  @Test
+  public void testReflection() throws NoSuchMethodException,
+      InvocationTargetException, IllegalAccessException {
+    String result = (String) String.class.getMethod("trim")
+        .invoke(" hello ");
+    assertEquals("hello", result);
+  }
+</code></pre>
+<p>여러 개의 예외 선언을 하나의 예외로 바꾸는 빠른 수정이 제공됩니다:</p>
+<pre><code lang="java">
+  @Test
+  public void testReflection() throws Exception {
+    String result = (String) String.class.getMethod("trim")
+        .invoke(" hello ");
+    assertEquals("hello", result);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

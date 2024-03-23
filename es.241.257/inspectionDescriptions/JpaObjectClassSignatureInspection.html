@@ -1,0 +1,21 @@
+<html>
+<body>
+다음과 같은 경우에 잘못 정의된 지속성 객체 클래스를 보고합니다.
+
+<ul>
+  <li>클래스가 최상위가 아닌 경우</li>
+  <li>클래스가 final인 경우</li>
+  <li>클래스에 어노테이션이 여러 번 추가된 경우</li>
+  <li>클래스가 지속성 엔티티 및 엔티티 리스너 둘 다로 정의된 경우</li>
+</ul>
+
+<p><b>예:</b></p><br/>
+<pre><code lang="java">
+  @Entity
+  @EntityListeners(value = JavaEntity.class) // 오류: @Entity 및 @EntityListener 어노테이션이 같은 클래스를 가리킵니다
+  public final class JavaEntity { // 오류: 지속성 엔티티는 final일 수 없습니다
+    ...
+  }
+</code></pre>
+</body>
+</html>

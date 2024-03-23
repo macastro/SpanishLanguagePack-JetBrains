@@ -1,0 +1,11 @@
+<body>
+해결되지 않은 모듈 종속 요소가 있음을 의미하는 빈 <code>module-info.java</code> 파일을 보고합니다. 임포트를 검사하여 자동으로 필요한 <code>requires</code> 구문을 추가합니다.
+경고를 억제하려면 모듈 구문 본문 내에 아래와 같은 주석을 작성할 수 있습니다.
+<pre><code>
+module module.name {
+    // 종속 요소 없음
+}
+</code></pre>
+<b>빠른 수정:</b> <i><0>Fill in module dependencies(모듈 종속 요소 채우기)</i>는 소스 코드 임포트를 기반으로 누락된 <code>requires</code>를 채웁니다.
+<small>2024.1에서 추가</small>
+</body>

@@ -1,0 +1,16 @@
+<html>
+<body>
+포착된 예외에 대한 액션을 수행하지 않고 해당 예외를 즉시 다시 던지는 <code>catch</code> 블록을 보고합니다.
+그러한 <code>catch</code> 블록은 불필요하며 오류를 처리하지 않습니다.
+<!-- tooltip end -->
+<p><b>예:</b></p>
+<pre><code>
+        try {
+            new FileInputStream("");
+        } catch (FileNotFoundException e) {
+            throw e;
+        }
+</code></pre>
+
+</body>
+</html>

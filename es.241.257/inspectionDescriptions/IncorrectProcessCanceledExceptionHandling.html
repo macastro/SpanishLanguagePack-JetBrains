@@ -1,0 +1,43 @@
+<html>
+<body>
+잘못된 방식으로 처리된 <code>ProcessCanceledException</code>을 보고합니다.
+
+<p>
+  <code>ProcessCanceledException</code>과 해당하는 상속자는 어떤 식으로든 캐칭하거나, 읽거나, 로깅하거나 처리해서는 안 됩니다.
+  대신 다시 던져서 인프라가 이를 올바른 방식으로 처리할 수 있도록 해야 합니다.
+</p>
+
+<p>
+  검사가 명시적인 <code>ProcessCanceledException</code>이나 해당 상속자를 캐칭하는 경우와 더불어 <code>ProcessCanceledException</code>를 포함하는 <code>RuntimeException</code>, <code>Exception</code> 및 <code>Throwable</code>을 캐칭하는 경우를 보고합니다.
+</p>
+
+<p>예:</p>
+
+<pre><code lang="java">
+// bad:
+try {
+  // ...
+} catch (ProcessCanceledException e) { // 예외를 읽으면 안 됩니다
+}
+
+// 좋지 않은 사례:
+try {
+  // ...
+} catch (ProcessCanceledException e) {
+  LOG.error("Error occurred", e); // 예외를 로깅하면 안 됩니다
+  throw e;
+}
+
+
+// 좋은 사례:
+try {
+  // ...
+} catch (ProcessCanceledException e) {
+  // 추가 액션
+  throw e;
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.2의 새로운 기능</small></p>
+</body>
+</html>

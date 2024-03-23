@@ -1,0 +1,22 @@
+<html>
+<body>
+JVM 플랫폼에서 <code>StringBuilder.appendRange(CharArray, startIndex, endIndex)</code> 함수 호출로 대체되어야 하는 <code>StringBuilder.append(CharArray, offset, len)</code> 함수 호출을 보고합니다.
+<p><code>append</code> 함수는 JVM, JS 및 Native 플랫폼에서 다르게 동작하므로 <code>appendRange</code> 함수를 사용하는 것이 좋습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  fun f(charArray: CharArray, offset: Int, len: Int): String {
+      return buildString {
+          append(charArray, offset, len)
+      }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  fun f(charArray: CharArray, offset: Int, len: Int): String {
+      return buildString {
+          appendRange(charArray, offset, offset + len)
+      }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+표준 Java API 호출로 마이그레이션할 수 있는 Guava의 함수 기본 타입의 사용을 보고합니다.
+<p>예를 들어, <code>FluentIterable</code>, <code>Optional</code>, <code>Function</code>,
+  <code>Predicate</code> 또는 <code>Supplier</code> 등의 클래스 및 인터페이스 사용 위치가 검사를 통해 보고됩니다.</p>
+<p>예:</p>
+<pre><code>
+  ImmutableList&lt;String&gt; results = FluentIterable.from(List.of(1, 2, 3)).transform(Object::toString).toList();
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  List&lt;String&gt; results = List.of(1, 2, 3).stream().map(Object::toString).collect(Collectors.toList());
+</code></pre>
+<p>
+빠른 수정으로 의미가 달라질 수 있습니다. 지연 평가된 Guava의 일부 iterable이 즉시 평가 대상으로 변환될 수 있습니다.
+</p>
+<!-- tooltip end -->
+</body>
+</html>

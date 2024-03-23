@@ -1,0 +1,25 @@
+<!-- Copyright 2000-2023 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+<html>
+<body>
+잘못된 메시지 형식 패턴이나 자리표시자의 잘못된 색인을 보고합니다
+<p>다음과 같은 오류가 보고됩니다.</p>
+<ul>
+  <li>분석되지 않았거나 음수인 색인</li>
+  <li>닫히지 않은 중괄호</li>
+  <li>짝이 없는 따옴표. 이 경우 패턴의 일부가 사용되지 않을 수 있습니다</li>
+  <li>따옴표의 개수가 잘못되었을 수 있습니다</li>
+  <li>중첩 choice 패턴의 하위 바운드가 잘못되었습니다</li>
+  <li>자리표시자의 색인이 잘못되었습니다. 이 경우 자리표시자가 대체되지 않거나 인수가 사용되지 않을 수 있습니다</li>
+</ul>
+<p>예:</p>
+<pre><code>
+  MessageFormat.format("{wrong}", 1); // 색인이 잘못됨
+  MessageFormat.format("{0", 1); // 중괄호의 짝이 없음
+  MessageFormat.format("'{0}", 1); // 따옴표의 짝이 없음
+  MessageFormat.format("It''''s {0}", 1); // 'It's' 대신 'It''s'가 출력됨
+  MessageFormat.format("{0}", 1, 2); // 패턴에서 색인이 '1'인 인수는 사용되지 않음
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.2의 새로운 기능</small>
+</body>
+</html>

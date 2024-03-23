@@ -1,0 +1,38 @@
+<html>
+<body>
+'orm.xml' 구성 파일 내 모든 데이터베이스 객체로의 해결되지 않은 참조를 보고합니다:
+<ul>
+  <li>테이블</li>
+  <li>열</li>
+  <li>스키마</li>
+  <li>카탈로그</li>
+  <li>시퀀스</li>
+</ul>
+
+<p><b>데이터베이스 테이블 예:</b></p><br/>
+<pre><code lang="sql">
+CREATE TABLE DATA_TABLE (
+  ID INTEGER,
+  DATA VARCHAR(100)
+);
+</code></pre><br/>
+
+<p><b>orm.xml 파일 예:</b></p><br/>
+<pre><code lang="xml">
+&lt;entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0"&gt;
+    &lt;package&gt;example&lt;/package&gt;
+    &lt;entity name="JavaEntity" class="JavaEntity"&gt;
+        &lt;table name="DATA_TABLE"/&gt;
+        &lt;attributes&gt;
+          &lt;id name="id"&gt;
+            &lt;column name="UNKNOWN_ID" nullable="false" length="20"/&gt; // 오류: 해결되지 않은 열 이름
+          &lt;/id&gt;
+          &lt;basic name="data"&gt;
+            &lt;column name="DATA" length="12"/&gt; // 좋음
+          &lt;/basic&gt;
+        &lt;/attributes&gt;
+    &lt;/entity&gt;
+&lt;/entity-mappings&gt;
+</code></pre>
+</body>
+</html>

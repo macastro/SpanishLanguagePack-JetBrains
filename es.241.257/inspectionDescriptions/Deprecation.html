@@ -1,0 +1,61 @@
+<html>
+<body>
+지원 중단된 클래스, 필드 및 메서드가 사용된 경우를 보고합니다.
+지원 중단된 멤버의 Javadoc에서 필요한 정보를 추출할 수 있는 경우 빠른 수정으로 지원 중단된 사용 위치를 자동으로 변환할 수 있습니다.
+<p><b>예:</b></p>
+<pre><code lang="java">
+  class Interesting {
+
+    /**
+     * @deprecated {@link #newHotness()}를 대신 사용합니다
+     */
+    @Deprecated
+    public void oldAndBusted() {}
+
+    public void newHotness() {}
+  }
+  class ElseWhere {
+    void x(Interesting i) {
+      i.oldAndBusted(); // 여기에 지원 중단 경고 표시됩니다
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code lang="java">
+  class Interesting {
+
+    /**
+     * @deprecated {@link #newHotness()}를 대신 사용합니다
+     */
+    @Deprecated
+    public void oldAndBusted() {}
+
+    public void newHotness() {}
+  }
+  class ElseWhere {
+    void x(Interesting i) {
+      i.newHotness();
+    }
+  }
+</code></pre>
+<p>기본적으로 이 검사는 이를 피하기 어렵거나 불가능한 경우 경고를 생성하지 않습니다.  예를 들어, 다음 코드는 보고하지 않습니다.</p>
+<pre><code lang="java">
+  abstract class A { //라이브러리 코드
+     @Deprecated
+     abstract void m();
+  }
+  class B extends A { //프로젝트 코드
+     @Override
+     void m() {
+        //작업 코드;
+     }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<p>
+  지원 중단된 멤버, 지원 중단된 추상 메서드 재정의, static이 아닌 import 문, 지원 중단된 클래스의 메서드 또는 동일한 최상위 클래스에서 검사를 비활성화하려면 검사 옵션을 사용하세요.
+</p>
+
+</body>
+</html>

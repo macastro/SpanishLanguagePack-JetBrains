@@ -1,0 +1,25 @@
+<html>
+<body>
+<p><code>headOption</code> 또는 <code>lastOption</code>이 에뮬레이션된 경우를 보고합니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  var seq: Seq[Int]
+  if (seq.nonEmpty) Some(seq.head) else None
+  seq.lift(0)
+
+  if (seq.size == 0) None else seq.lastOption
+  seq.lift(seq.size - 1)
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  var seq: Seq[Int]
+  seq.headOption
+  seq.headOption
+
+  seq.lastOption
+  seq.lastOption
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

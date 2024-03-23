@@ -1,0 +1,24 @@
+<html>
+<body>
+불필요하거나 지나치게 복잡한 부울 표현식을 보고합니다.
+<p>이러한 표현식은 <code>true</code>와 <code>&&</code>연산, <code>false</code>와 <code>||</code>연산, 부울 리터럴과 상등 비교 또는 부울 리터럴 부정을 포함합니다. 이러한 표현식은 단순화할 수 있습니다.</p>
+<p>예:
+<pre><code>
+  <b>boolean</b> a = !(x && <b>false</b>);
+  <b>boolean</b> b = <b>false</b> || x;
+  <b>boolean</b> c = x != <b>true</b>;
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  <b>boolean</b> a = <b>true</b>;
+  <b>boolean</b> b = x;
+  <b>boolean</b> c = !x;
+</code></pre>
+<!-- tooltip end -->
+<p>
+<p>검사 구성:</p>
+표현식이 무의미한지 판단할 때 이름이 지정된 상수를 무시하려면 <b>무의미한 표현식 결정 시 이름 지정된 상수 무시</b> 옵션을 사용하세요.
+<p>
+
+</body>
+</html>

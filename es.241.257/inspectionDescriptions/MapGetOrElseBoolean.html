@@ -1,0 +1,18 @@
+<html>
+<body>
+<p><code>map</code> 및 <code>getOrElse(false)</code> / <code>getOrElse(true)</code>를 보고하고 <code>exists</code> / <code>forall</code>로 바꿀 것을 제안합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  def p(x: Int): Boolean = ???
+  Option(0).map(p).getOrElse(false)
+  Option(0).map(p).getOrElse(true)
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  def p(x: Int): Boolean = ???
+  Option(0).exists(p)
+  Option(0).forall(p)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>
