@@ -1,0 +1,1020 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="f" path="ActionManager" hit="F# 대화형에서 디버그" />
+    <option name="대화형에서" path="ActionManager" hit="F# 대화형에서 디버그" />
+    <option name="디버그" path="ActionManager" hit="F# 대화형에서 디버그" />
+    <option name="f" path="ActionManager" hit="F# 대화형으로 보내기" />
+    <option name="대화형으로" path="ActionManager" hit="F# 대화형으로 보내기" />
+    <option name="보내기" path="ActionManager" hit="F# 대화형으로 보내기" />
+    <option name="f" path="ActionManager" hit="새 F# 대화형 세션 시작…" />
+    <option name="대화형" path="ActionManager" hit="새 F# 대화형 세션 시작…" />
+    <option name="새" path="ActionManager" hit="새 F# 대화형 세션 시작…" />
+    <option name="세션" path="ActionManager" hit="새 F# 대화형 세션 시작…" />
+    <option name="시작" path="ActionManager" hit="새 F# 대화형 세션 시작…" />
+    <option name="f" path="ActionManager" hit="프로젝트 참조를 F# 대화형으로 보내기" />
+    <option name="대화형으로" path="ActionManager" hit="프로젝트 참조를 F# 대화형으로 보내기" />
+    <option name="보내기" path="ActionManager" hit="프로젝트 참조를 F# 대화형으로 보내기" />
+    <option name="참조를" path="ActionManager" hit="프로젝트 참조를 F# 대화형으로 보내기" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 참조를 F# 대화형으로 보내기" />
+  </configurable>
+  <configurable id="editor.breadcrumbs" configurable_name="이동 경로">
+    <option name="f" hit="F#" />
+  </configurable>
+  <configurable id="Fsi" configurable_name="F# Interactive">
+    <option name="" hit=" Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="--debug" hit=" Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="--optimize-" hit=" Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="add" hit=" Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="allow" hit=" Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="always" hit=" Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="attaching" hit=" Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="debugger" hit=" Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="flags" hit=" Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="to" hit=" Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="" hit=" Choose F# Interactive automatically " />
+    <option name="automatically" hit=" Choose F# Interactive automatically " />
+    <option name="choose" hit=" Choose F# Interactive automatically " />
+    <option name="f" hit=" Choose F# Interactive automatically " />
+    <option name="interactive" hit=" Choose F# Interactive automatically " />
+    <option name="" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="a" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="assemblies" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="by" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="copy" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="directory" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="f" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="interactive" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="locking" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="prevent" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="process" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="referenced" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="temporary" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="the" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="to" hit=" Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="" hit=" Ensure correct launch options for debugging" />
+    <option name="correct" hit=" Ensure correct launch options for debugging" />
+    <option name="debugging" hit=" Ensure correct launch options for debugging" />
+    <option name="ensure" hit=" Ensure correct launch options for debugging" />
+    <option name="for" hit=" Ensure correct launch options for debugging" />
+    <option name="launch" hit=" Ensure correct launch options for debugging" />
+    <option name="options" hit=" Ensure correct launch options for debugging" />
+    <option name="" hit=" Execute recent commands immediately" />
+    <option name="commands" hit=" Execute recent commands immediately" />
+    <option name="execute" hit=" Execute recent commands immediately" />
+    <option name="immediately" hit=" Execute recent commands immediately" />
+    <option name="recent" hit=" Execute recent commands immediately" />
+    <option name="" hit=" Move editor caret down on Send Line" />
+    <option name="caret" hit=" Move editor caret down on Send Line" />
+    <option name="down" hit=" Move editor caret down on Send Line" />
+    <option name="editor" hit=" Move editor caret down on Send Line" />
+    <option name="line" hit=" Move editor caret down on Send Line" />
+    <option name="move" hit=" Move editor caret down on Send Line" />
+    <option name="on" hit=" Move editor caret down on Send Line" />
+    <option name="send" hit=" Move editor caret down on Send Line" />
+    <option name="" hit=" Move editor caret right on Send Selection" />
+    <option name="caret" hit=" Move editor caret right on Send Selection" />
+    <option name="editor" hit=" Move editor caret right on Send Selection" />
+    <option name="move" hit=" Move editor caret right on Send Selection" />
+    <option name="on" hit=" Move editor caret right on Send Selection" />
+    <option name="right" hit=" Move editor caret right on Send Selection" />
+    <option name="selection" hit=" Move editor caret right on Send Selection" />
+    <option name="send" hit=" Move editor caret right on Send Selection" />
+    <option name="" hit=" Shadow copy assemblies" />
+    <option name="assemblies" hit=" Shadow copy assemblies" />
+    <option name="copy" hit=" Shadow copy assemblies" />
+    <option name="shadow" hit=" Shadow copy assemblies" />
+    <option name="" hit=" Target specific language version" />
+    <option name="language" hit=" Target specific language version" />
+    <option name="specific" hit=" Target specific language version" />
+    <option name="target" hit=" Target specific language version" />
+    <option name="version" hit=" Target specific language version" />
+    <option name="" hit=" Use 64-bit F# Interactive (AnyCpu) " />
+    <option name="64-bit" hit=" Use 64-bit F# Interactive (AnyCpu) " />
+    <option name="anycpu" hit=" Use 64-bit F# Interactive (AnyCpu) " />
+    <option name="f" hit=" Use 64-bit F# Interactive (AnyCpu) " />
+    <option name="interactive" hit=" Use 64-bit F# Interactive (AnyCpu) " />
+    <option name="use" hit=" Use 64-bit F# Interactive (AnyCpu) " />
+    <option name="" hit=" When disabled, copy recent command to F# Interactive editor." />
+    <option name="command" hit=" When disabled, copy recent command to F# Interactive editor." />
+    <option name="copy" hit=" When disabled, copy recent command to F# Interactive editor." />
+    <option name="disabled" hit=" When disabled, copy recent command to F# Interactive editor." />
+    <option name="editor" hit=" When disabled, copy recent command to F# Interactive editor." />
+    <option name="f" hit=" When disabled, copy recent command to F# Interactive editor." />
+    <option name="interactive" hit=" When disabled, copy recent command to F# Interactive editor." />
+    <option name="recent" hit=" When disabled, copy recent command to F# Interactive editor." />
+    <option name="to" hit=" When disabled, copy recent command to F# Interactive editor." />
+    <option name="when" hit=" When disabled, copy recent command to F# Interactive editor." />
+    <option name="--debug" hit="Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="--optimize-" hit="Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="add" hit="Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="allow" hit="Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="always" hit="Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="attaching" hit="Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="debugger" hit="Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="flags" hit="Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="to" hit="Always add `--optimize- --debug+` flags to allow attaching debugger." />
+    <option name="automatically" hit="Choose F# Interactive automatically" />
+    <option name="choose" hit="Choose F# Interactive automatically" />
+    <option name="f" hit="Choose F# Interactive automatically" />
+    <option name="interactive" hit="Choose F# Interactive automatically" />
+    <option name="and" hit="Commands Execution and History" />
+    <option name="commands" hit="Commands Execution and History" />
+    <option name="execution" hit="Commands Execution and History" />
+    <option name="history" hit="Commands Execution and History" />
+    <option name="a" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="assemblies" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="by" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="copy" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="directory" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="f" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="interactive" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="locking" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="prevent" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="process" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="referenced" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="temporary" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="the" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="to" hit="Copy referenced assemblies to a temporary directory to prevent locking by the F# Interactive process." />
+    <option name="custom" hit="Custom path" />
+    <option name="path" hit="Custom path" />
+    <option name="debug" hit="Debug" />
+    <option name="default" hit="Default" />
+    <option name="correct" hit="Ensure correct launch options for debugging" />
+    <option name="debugging" hit="Ensure correct launch options for debugging" />
+    <option name="ensure" hit="Ensure correct launch options for debugging" />
+    <option name="for" hit="Ensure correct launch options for debugging" />
+    <option name="launch" hit="Ensure correct launch options for debugging" />
+    <option name="options" hit="Ensure correct launch options for debugging" />
+    <option name="commands" hit="Execute recent commands immediately" />
+    <option name="execute" hit="Execute recent commands immediately" />
+    <option name="immediately" hit="Execute recent commands immediately" />
+    <option name="recent" hit="Execute recent commands immediately" />
+    <option name="4" hit="F# 4.6" />
+    <option name="6" hit="F# 4.6" />
+    <option name="f" hit="F# 4.6" />
+    <option name="4" hit="F# 4.7" />
+    <option name="7" hit="F# 4.7" />
+    <option name="f" hit="F# 4.7" />
+    <option name="0" hit="F# 5.0" />
+    <option name="5" hit="F# 5.0" />
+    <option name="f" hit="F# 5.0" />
+    <option name="0" hit="F# 6.0" />
+    <option name="6" hit="F# 6.0" />
+    <option name="f" hit="F# 6.0" />
+    <option name="0" hit="F# 7.0" />
+    <option name="7" hit="F# 7.0" />
+    <option name="f" hit="F# 7.0" />
+    <option name="f" hit="F# Interactive" />
+    <option name="interactive" hit="F# Interactive" />
+    <option name="f" hit="F# Interactive tool" />
+    <option name="interactive" hit="F# Interactive tool" />
+    <option name="tool" hit="F# Interactive tool" />
+    <option name="language" hit="Language Version" />
+    <option name="version" hit="Language Version" />
+    <option name="language" hit="Language version" />
+    <option name="version" hit="Language version" />
+    <option name="latest" hit="Latest" />
+    <option name="latest" hit="Latest major" />
+    <option name="major" hit="Latest major" />
+    <option name="launch" hit="Launch Options" />
+    <option name="options" hit="Launch Options" />
+    <option name="arguments" hit="Launch arguments" />
+    <option name="launch" hit="Launch arguments" />
+    <option name="caret" hit="Move editor caret down on Send Line" />
+    <option name="down" hit="Move editor caret down on Send Line" />
+    <option name="editor" hit="Move editor caret down on Send Line" />
+    <option name="line" hit="Move editor caret down on Send Line" />
+    <option name="move" hit="Move editor caret down on Send Line" />
+    <option name="on" hit="Move editor caret down on Send Line" />
+    <option name="send" hit="Move editor caret down on Send Line" />
+    <option name="caret" hit="Move editor caret right on Send Selection" />
+    <option name="editor" hit="Move editor caret right on Send Selection" />
+    <option name="move" hit="Move editor caret right on Send Selection" />
+    <option name="on" hit="Move editor caret right on Send Selection" />
+    <option name="right" hit="Move editor caret right on Send Selection" />
+    <option name="selection" hit="Move editor caret right on Send Selection" />
+    <option name="send" hit="Move editor caret right on Send Selection" />
+    <option name="preview" hit="Preview" />
+    <option name="assemblies" hit="Shadow copy assemblies" />
+    <option name="copy" hit="Shadow copy assemblies" />
+    <option name="shadow" hit="Shadow copy assemblies" />
+    <option name="language" hit="Target specific language version" />
+    <option name="specific" hit="Target specific language version" />
+    <option name="target" hit="Target specific language version" />
+    <option name="version" hit="Target specific language version" />
+    <option name="64-bit" hit="Use 64-bit F# Interactive (AnyCpu)" />
+    <option name="anycpu" hit="Use 64-bit F# Interactive (AnyCpu)" />
+    <option name="f" hit="Use 64-bit F# Interactive (AnyCpu)" />
+    <option name="interactive" hit="Use 64-bit F# Interactive (AnyCpu)" />
+    <option name="use" hit="Use 64-bit F# Interactive (AnyCpu)" />
+    <option name="command" hit="When disabled, copy recent command to F# Interactive editor." />
+    <option name="copy" hit="When disabled, copy recent command to F# Interactive editor." />
+    <option name="disabled" hit="When disabled, copy recent command to F# Interactive editor." />
+    <option name="editor" hit="When disabled, copy recent command to F# Interactive editor." />
+    <option name="f" hit="When disabled, copy recent command to F# Interactive editor." />
+    <option name="interactive" hit="When disabled, copy recent command to F# Interactive editor." />
+    <option name="recent" hit="When disabled, copy recent command to F# Interactive editor." />
+    <option name="to" hit="When disabled, copy recent command to F# Interactive editor." />
+    <option name="when" hit="When disabled, copy recent command to F# Interactive editor." />
+    <option name="iddqd" hit="iddqd" />
+  </configurable>
+  <configurable id="FSharp" configurable_name="F#">
+    <option name="" hit=" Add 'open' declarations to top level module or namespace" />
+    <option name="add" hit=" Add 'open' declarations to top level module or namespace" />
+    <option name="declarations" hit=" Add 'open' declarations to top level module or namespace" />
+    <option name="level" hit=" Add 'open' declarations to top level module or namespace" />
+    <option name="module" hit=" Add 'open' declarations to top level module or namespace" />
+    <option name="namespace" hit=" Add 'open' declarations to top level module or namespace" />
+    <option name="open" hit=" Add 'open' declarations to top level module or namespace" />
+    <option name="or" hit=" Add 'open' declarations to top level module or namespace" />
+    <option name="to" hit=" Add 'open' declarations to top level module or namespace" />
+    <option name="top" hit=" Add 'open' declarations to top level module or namespace" />
+    <option name="" hit=" Analyze C# and VB.NET project references in-memory" />
+    <option name="analyze" hit=" Analyze C# and VB.NET project references in-memory" />
+    <option name="and" hit=" Analyze C# and VB.NET project references in-memory" />
+    <option name="c" hit=" Analyze C# and VB.NET project references in-memory" />
+    <option name="in-memory" hit=" Analyze C# and VB.NET project references in-memory" />
+    <option name="net" hit=" Analyze C# and VB.NET project references in-memory" />
+    <option name="project" hit=" Analyze C# and VB.NET project references in-memory" />
+    <option name="references" hit=" Analyze C# and VB.NET project references in-memory" />
+    <option name="vb" hit=" Analyze C# and VB.NET project references in-memory" />
+    <option name="" hit=" Analyze project references in parallel" />
+    <option name="analyze" hit=" Analyze project references in parallel" />
+    <option name="in" hit=" Analyze project references in parallel" />
+    <option name="parallel" hit=" Analyze project references in parallel" />
+    <option name="project" hit=" Analyze project references in parallel" />
+    <option name="references" hit=" Analyze project references in parallel" />
+    <option name="" hit=" Enable F# code formatter" />
+    <option name="code" hit=" Enable F# code formatter" />
+    <option name="enable" hit=" Enable F# code formatter" />
+    <option name="f" hit=" Enable F# code formatter" />
+    <option name="formatter" hit=" Enable F# code formatter" />
+    <option name="" hit=" Enable analysis of F# Interactive editor" />
+    <option name="analysis" hit=" Enable analysis of F# Interactive editor" />
+    <option name="editor" hit=" Enable analysis of F# Interactive editor" />
+    <option name="enable" hit=" Enable analysis of F# Interactive editor" />
+    <option name="f" hit=" Enable analysis of F# Interactive editor" />
+    <option name="interactive" hit=" Enable analysis of F# Interactive editor" />
+    <option name="of" hit=" Enable analysis of F# Interactive editor" />
+    <option name="" hit=" Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="analysis" hit=" Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="c" hit=" Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="enable" hit=" Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="generative" hit=" Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="in" hit=" Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="net" hit=" Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="projects" hit=" Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="providers" hit=" Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="type" hit=" Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="vb" hit=" Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="" hit=" Enable out of scope items completion" />
+    <option name="completion" hit=" Enable out of scope items completion" />
+    <option name="enable" hit=" Enable out of scope items completion" />
+    <option name="items" hit=" Enable out of scope items completion" />
+    <option name="of" hit=" Enable out of scope items completion" />
+    <option name="out" hit=" Enable out of scope items completion" />
+    <option name="scope" hit=" Enable out of scope items completion" />
+    <option name="" hit=" Enable postfix templates" />
+    <option name="enable" hit=" Enable postfix templates" />
+    <option name="postfix" hit=" Enable postfix templates" />
+    <option name="templates" hit=" Enable postfix templates" />
+    <option name="" hit=" Enable redundant paren analysis" />
+    <option name="analysis" hit=" Enable redundant paren analysis" />
+    <option name="enable" hit=" Enable redundant paren analysis" />
+    <option name="paren" hit=" Enable redundant paren analysis" />
+    <option name="redundant" hit=" Enable redundant paren analysis" />
+    <option name="" hit=" Experimental" />
+    <option name="experimental" hit=" Experimental" />
+    <option name="" hit=" Hide when |&gt; is on same line as argument" />
+    <option name="argument" hit=" Hide when |&gt; is on same line as argument" />
+    <option name="as" hit=" Hide when |&gt; is on same line as argument" />
+    <option name="hide" hit=" Hide when |&gt; is on same line as argument" />
+    <option name="is" hit=" Hide when |&gt; is on same line as argument" />
+    <option name="line" hit=" Hide when |&gt; is on same line as argument" />
+    <option name="on" hit=" Hide when |&gt; is on same line as argument" />
+    <option name="same" hit=" Hide when |&gt; is on same line as argument" />
+    <option name="when" hit=" Hide when |&gt; is on same line as argument" />
+    <option name="" hit=" Host type providers out-of-process" />
+    <option name="host" hit=" Host type providers out-of-process" />
+    <option name="out-of-process" hit=" Host type providers out-of-process" />
+    <option name="providers" hit=" Host type providers out-of-process" />
+    <option name="type" hit=" Host type providers out-of-process" />
+    <option name="" hit=" Requires restart" />
+    <option name="requires" hit=" Requires restart" />
+    <option name="restart" hit=" Requires restart" />
+    <option name="" hit=" Show return type hints in |&gt; chains" />
+    <option name="chains" hit=" Show return type hints in |&gt; chains" />
+    <option name="hints" hit=" Show return type hints in |&gt; chains" />
+    <option name="in" hit=" Show return type hints in |&gt; chains" />
+    <option name="return" hit=" Show return type hints in |&gt; chains" />
+    <option name="show" hit=" Show return type hints in |&gt; chains" />
+    <option name="type" hit=" Show return type hints in |&gt; chains" />
+    <option name="" hit=" Skip implementation files analysis when possible" />
+    <option name="analysis" hit=" Skip implementation files analysis when possible" />
+    <option name="files" hit=" Skip implementation files analysis when possible" />
+    <option name="implementation" hit=" Skip implementation files analysis when possible" />
+    <option name="possible" hit=" Skip implementation files analysis when possible" />
+    <option name="skip" hit=" Skip implementation files analysis when possible" />
+    <option name="when" hit=" Skip implementation files analysis when possible" />
+    <option name="" hit=" Target .NET Framework" />
+    <option name="framework" hit=" Target .NET Framework" />
+    <option name="net" hit=" Target .NET Framework" />
+    <option name="target" hit=" Target .NET Framework" />
+    <option name="add" hit="Add 'open' declarations to top level module or namespace" />
+    <option name="declarations" hit="Add 'open' declarations to top level module or namespace" />
+    <option name="level" hit="Add 'open' declarations to top level module or namespace" />
+    <option name="module" hit="Add 'open' declarations to top level module or namespace" />
+    <option name="namespace" hit="Add 'open' declarations to top level module or namespace" />
+    <option name="open" hit="Add 'open' declarations to top level module or namespace" />
+    <option name="or" hit="Add 'open' declarations to top level module or namespace" />
+    <option name="to" hit="Add 'open' declarations to top level module or namespace" />
+    <option name="top" hit="Add 'open' declarations to top level module or namespace" />
+    <option name="analyze" hit="Analyze C# and VB.NET project references in-memory" />
+    <option name="and" hit="Analyze C# and VB.NET project references in-memory" />
+    <option name="c" hit="Analyze C# and VB.NET project references in-memory" />
+    <option name="in-memory" hit="Analyze C# and VB.NET project references in-memory" />
+    <option name="net" hit="Analyze C# and VB.NET project references in-memory" />
+    <option name="project" hit="Analyze C# and VB.NET project references in-memory" />
+    <option name="references" hit="Analyze C# and VB.NET project references in-memory" />
+    <option name="vb" hit="Analyze C# and VB.NET project references in-memory" />
+    <option name="analyze" hit="Analyze project references in parallel" />
+    <option name="in" hit="Analyze project references in parallel" />
+    <option name="parallel" hit="Analyze project references in parallel" />
+    <option name="project" hit="Analyze project references in parallel" />
+    <option name="references" hit="Analyze project references in parallel" />
+    <option name="default" hit="Default" />
+    <option name="code" hit="Enable F# code formatter" />
+    <option name="enable" hit="Enable F# code formatter" />
+    <option name="f" hit="Enable F# code formatter" />
+    <option name="formatter" hit="Enable F# code formatter" />
+    <option name="analysis" hit="Enable analysis of F# Interactive editor" />
+    <option name="editor" hit="Enable analysis of F# Interactive editor" />
+    <option name="enable" hit="Enable analysis of F# Interactive editor" />
+    <option name="f" hit="Enable analysis of F# Interactive editor" />
+    <option name="interactive" hit="Enable analysis of F# Interactive editor" />
+    <option name="of" hit="Enable analysis of F# Interactive editor" />
+    <option name="analysis" hit="Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="c" hit="Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="enable" hit="Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="generative" hit="Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="in" hit="Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="net" hit="Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="projects" hit="Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="providers" hit="Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="type" hit="Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="vb" hit="Enable generative type providers analysis in C#/VB.NET projects" />
+    <option name="completion" hit="Enable out of scope items completion" />
+    <option name="enable" hit="Enable out of scope items completion" />
+    <option name="items" hit="Enable out of scope items completion" />
+    <option name="of" hit="Enable out of scope items completion" />
+    <option name="out" hit="Enable out of scope items completion" />
+    <option name="scope" hit="Enable out of scope items completion" />
+    <option name="enable" hit="Enable postfix templates" />
+    <option name="postfix" hit="Enable postfix templates" />
+    <option name="templates" hit="Enable postfix templates" />
+    <option name="analysis" hit="Enable redundant paren analysis" />
+    <option name="enable" hit="Enable redundant paren analysis" />
+    <option name="paren" hit="Enable redundant paren analysis" />
+    <option name="redundant" hit="Enable redundant paren analysis" />
+    <option name="experimental" hit="Experimental" />
+    <option name="experimental" hit="Experimental Features" />
+    <option name="features" hit="Experimental Features" />
+    <option name="f" hit="F#" />
+    <option name="4" hit="F# 4.6" />
+    <option name="6" hit="F# 4.6" />
+    <option name="f" hit="F# 4.6" />
+    <option name="4" hit="F# 4.7" />
+    <option name="7" hit="F# 4.7" />
+    <option name="f" hit="F# 4.7" />
+    <option name="0" hit="F# 5.0" />
+    <option name="5" hit="F# 5.0" />
+    <option name="f" hit="F# 5.0" />
+    <option name="0" hit="F# 6.0" />
+    <option name="6" hit="F# 6.0" />
+    <option name="f" hit="F# 6.0" />
+    <option name="0" hit="F# 7.0" />
+    <option name="7" hit="F# 7.0" />
+    <option name="f" hit="F# 7.0" />
+    <option name="compiler" hit="F# Compiler Service" />
+    <option name="f" hit="F# Compiler Service" />
+    <option name="service" hit="F# Compiler Service" />
+    <option name="argument" hit="Hide when |&gt; is on same line as argument" />
+    <option name="as" hit="Hide when |&gt; is on same line as argument" />
+    <option name="hide" hit="Hide when |&gt; is on same line as argument" />
+    <option name="is" hit="Hide when |&gt; is on same line as argument" />
+    <option name="line" hit="Hide when |&gt; is on same line as argument" />
+    <option name="on" hit="Hide when |&gt; is on same line as argument" />
+    <option name="same" hit="Hide when |&gt; is on same line as argument" />
+    <option name="when" hit="Hide when |&gt; is on same line as argument" />
+    <option name="host" hit="Host type providers out-of-process" />
+    <option name="out-of-process" hit="Host type providers out-of-process" />
+    <option name="providers" hit="Host type providers out-of-process" />
+    <option name="type" hit="Host type providers out-of-process" />
+    <option name="imports" hit="Imports" />
+    <option name="language" hit="Language version" />
+    <option name="version" hit="Language version" />
+    <option name="latest" hit="Latest" />
+    <option name="latest" hit="Latest major" />
+    <option name="major" hit="Latest major" />
+    <option name="preview" hit="Preview" />
+    <option name="requires" hit="Requires restart" />
+    <option name="restart" hit="Requires restart" />
+    <option name="editing" hit="Script Editing" />
+    <option name="script" hit="Script Editing" />
+    <option name="chains" hit="Show return type hints in |&gt; chains" />
+    <option name="hints" hit="Show return type hints in |&gt; chains" />
+    <option name="in" hit="Show return type hints in |&gt; chains" />
+    <option name="return" hit="Show return type hints in |&gt; chains" />
+    <option name="show" hit="Show return type hints in |&gt; chains" />
+    <option name="type" hit="Show return type hints in |&gt; chains" />
+    <option name="analysis" hit="Skip implementation files analysis when possible" />
+    <option name="files" hit="Skip implementation files analysis when possible" />
+    <option name="implementation" hit="Skip implementation files analysis when possible" />
+    <option name="possible" hit="Skip implementation files analysis when possible" />
+    <option name="skip" hit="Skip implementation files analysis when possible" />
+    <option name="when" hit="Skip implementation files analysis when possible" />
+    <option name="framework" hit="Target .NET Framework" />
+    <option name="net" hit="Target .NET Framework" />
+    <option name="target" hit="Target .NET Framework" />
+    <option name="hints" hit="Type Hints" />
+    <option name="type" hit="Type Hints" />
+    <option name="iddqd" hit="iddqd" />
+  </configurable>
+  <configurable id="preferences.sourceCode.F#" configurable_name="F#">
+    <option name="서식" path="서식 지정 스타일" hit="         " />
+    <option name="스타일" path="서식 지정 스타일" hit="         " />
+    <option name="지정" path="서식 지정 스타일" hit="         " />
+    <option name="로드" hit="    ..." />
+    <option name="중" hit="    ..." />
+    <option name="" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="-g" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="a" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="directory" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="dotnet" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="dotnet-tools" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="fantomas" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="file" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="globally" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="in" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="install" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="it" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="json" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="or" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="solution" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="specified" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="specify" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="the" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="to" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="tool" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="use" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="version" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="via" path="Fantomas" hit=" To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g' or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="align" hit="Align function signature to indentation" />
+    <option name="function" hit="Align function signature to indentation" />
+    <option name="indentation" hit="Align function signature to indentation" />
+    <option name="signature" hit="Align function signature to indentation" />
+    <option name="to" hit="Align function signature to indentation" />
+    <option name="align" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="and" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="array" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="braces" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="closing" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="expressions" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="list" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="of" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="opening" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="record" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="alternative" hit="Alternative long member definitions" />
+    <option name="definitions" hit="Alternative long member definitions" />
+    <option name="long" hit="Alternative long member definitions" />
+    <option name="member" hit="Alternative long member definitions" />
+    <option name="0" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="5" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="6" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="auto" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="bundled" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="detected" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="v" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="0" hit="Bundled (v.6.0.5)" />
+    <option name="5" hit="Bundled (v.6.0.5)" />
+    <option name="6" hit="Bundled (v.6.0.5)" />
+    <option name="bundled" hit="Bundled (v.6.0.5)" />
+    <option name="v" hit="Bundled (v.6.0.5)" />
+    <option name="at" hit="Don't indent comments started at first column" />
+    <option name="column" hit="Don't indent comments started at first column" />
+    <option name="comments" hit="Don't indent comments started at first column" />
+    <option name="don" hit="Don't indent comments started at first column" />
+    <option name="first" hit="Don't indent comments started at first column" />
+    <option name="indent" hit="Don't indent comments started at first column" />
+    <option name="started" hit="Don't indent comments started at first column" />
+    <option name="t" hit="Don't indent comments started at first column" />
+    <option name="f" hit="F#" />
+    <option name="fantomas" path="Fantomas" hit="Fantomas" />
+    <option name="fantomas" hit="Fantomas version" />
+    <option name="version" hit="Fantomas version" />
+    <option name="indent" hit="Indent on try with" />
+    <option name="on" hit="Indent on try with" />
+    <option name="try" hit="Indent on try with" />
+    <option name="with" hit="Indent on try with" />
+    <option name="and" hit="Keep if and then keywords in same line" />
+    <option name="if" hit="Keep if and then keywords in same line" />
+    <option name="in" hit="Keep if and then keywords in same line" />
+    <option name="keep" hit="Keep if and then keywords in same line" />
+    <option name="keywords" hit="Keep if and then keywords in same line" />
+    <option name="line" hit="Keep if and then keywords in same line" />
+    <option name="same" hit="Keep if and then keywords in same line" />
+    <option name="then" hit="Keep if and then keywords in same line" />
+    <option name="learn" hit="Learn more" />
+    <option name="more" hit="Learn more" />
+    <option name="elmish" hit="Maximum width of Elmish inspired expressions" />
+    <option name="expressions" hit="Maximum width of Elmish inspired expressions" />
+    <option name="inspired" hit="Maximum width of Elmish inspired expressions" />
+    <option name="maximum" hit="Maximum width of Elmish inspired expressions" />
+    <option name="of" hit="Maximum width of Elmish inspired expressions" />
+    <option name="width" hit="Maximum width of Elmish inspired expressions" />
+    <option name="binding" hit="Maximum width of function binding expressions" />
+    <option name="expressions" hit="Maximum width of function binding expressions" />
+    <option name="function" hit="Maximum width of function binding expressions" />
+    <option name="maximum" hit="Maximum width of function binding expressions" />
+    <option name="of" hit="Maximum width of function binding expressions" />
+    <option name="width" hit="Maximum width of function binding expressions" />
+    <option name="else" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="expressions" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="if" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="longer" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="maximum" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="multiline" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="non" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="of" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="then" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="width" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="array" hit="Maximum width of single line array expressions" />
+    <option name="expressions" hit="Maximum width of single line array expressions" />
+    <option name="line" hit="Maximum width of single line array expressions" />
+    <option name="maximum" hit="Maximum width of single line array expressions" />
+    <option name="of" hit="Maximum width of single line array expressions" />
+    <option name="single" hit="Maximum width of single line array expressions" />
+    <option name="width" hit="Maximum width of single line array expressions" />
+    <option name="expressions" hit="Maximum width of single line infix expressions" />
+    <option name="infix" hit="Maximum width of single line infix expressions" />
+    <option name="line" hit="Maximum width of single line infix expressions" />
+    <option name="maximum" hit="Maximum width of single line infix expressions" />
+    <option name="of" hit="Maximum width of single line infix expressions" />
+    <option name="single" hit="Maximum width of single line infix expressions" />
+    <option name="width" hit="Maximum width of single line infix expressions" />
+    <option name="expressions" hit="Maximum width of single line record expressions" />
+    <option name="line" hit="Maximum width of single line record expressions" />
+    <option name="maximum" hit="Maximum width of single line record expressions" />
+    <option name="of" hit="Maximum width of single line record expressions" />
+    <option name="record" hit="Maximum width of single line record expressions" />
+    <option name="single" hit="Maximum width of single line record expressions" />
+    <option name="width" hit="Maximum width of single line record expressions" />
+    <option name="binding" hit="Maximum width of value binding expressions" />
+    <option name="expressions" hit="Maximum width of value binding expressions" />
+    <option name="maximum" hit="Maximum width of value binding expressions" />
+    <option name="of" hit="Maximum width of value binding expressions" />
+    <option name="value" hit="Maximum width of value binding expressions" />
+    <option name="width" hit="Maximum width of value binding expressions" />
+    <option name="never" hit="Never outdent pipe operators" />
+    <option name="operators" hit="Never outdent pipe operators" />
+    <option name="outdent" hit="Never outdent pipe operators" />
+    <option name="pipe" hit="Never outdent pipe operators" />
+    <option name="and" hit="Newline between type definition and members" />
+    <option name="between" hit="Newline between type definition and members" />
+    <option name="definition" hit="Newline between type definition and members" />
+    <option name="members" hit="Newline between type definition and members" />
+    <option name="newline" hit="Newline between type definition and members" />
+    <option name="type" hit="Newline between type definition and members" />
+    <option name="binary" hit="Outdent binary operators" />
+    <option name="operators" hit="Outdent binary operators" />
+    <option name="outdent" hit="Outdent binary operators" />
+    <option name="at" hit="Place comments at first column when commenting out code" />
+    <option name="code" hit="Place comments at first column when commenting out code" />
+    <option name="column" hit="Place comments at first column when commenting out code" />
+    <option name="commenting" hit="Place comments at first column when commenting out code" />
+    <option name="comments" hit="Place comments at first column when commenting out code" />
+    <option name="first" hit="Place comments at first column when commenting out code" />
+    <option name="out" hit="Place comments at first column when commenting out code" />
+    <option name="place" hit="Place comments at first column when commenting out code" />
+    <option name="when" hit="Place comments at first column when commenting out code" />
+    <option name="at" hit="Semicolon at end of line" />
+    <option name="end" hit="Semicolon at end of line" />
+    <option name="line" hit="Semicolon at end of line" />
+    <option name="of" hit="Semicolon at end of line" />
+    <option name="semicolon" hit="Semicolon at end of line" />
+    <option name="argument" hit="Single argument Elmish expressions" />
+    <option name="elmish" hit="Single argument Elmish expressions" />
+    <option name="expressions" hit="Single argument Elmish expressions" />
+    <option name="single" hit="Single argument Elmish expressions" />
+    <option name="after" hit="Space after comma" />
+    <option name="comma" hit="Space after comma" />
+    <option name="space" hit="Space after comma" />
+    <option name="after" hit="Space after semicolon" />
+    <option name="semicolon" hit="Space after semicolon" />
+    <option name="space" hit="Space after semicolon" />
+    <option name="around" hit="Space around delimiter" />
+    <option name="delimiter" hit="Space around delimiter" />
+    <option name="space" hit="Space around delimiter" />
+    <option name="before" hit="Space before class constructor" />
+    <option name="class" hit="Space before class constructor" />
+    <option name="constructor" hit="Space before class constructor" />
+    <option name="space" hit="Space before class constructor" />
+    <option name="before" hit="Space before colon" />
+    <option name="colon" hit="Space before colon" />
+    <option name="space" hit="Space before colon" />
+    <option name="before" hit="Space before lowercase function invocation" />
+    <option name="function" hit="Space before lowercase function invocation" />
+    <option name="invocation" hit="Space before lowercase function invocation" />
+    <option name="lowercase" hit="Space before lowercase function invocation" />
+    <option name="space" hit="Space before lowercase function invocation" />
+    <option name="before" hit="Space before member" />
+    <option name="member" hit="Space before member" />
+    <option name="space" hit="Space before member" />
+    <option name="before" hit="Space before parameter" />
+    <option name="parameter" hit="Space before parameter" />
+    <option name="space" hit="Space before parameter" />
+    <option name="before" hit="Space before semicolon" />
+    <option name="semicolon" hit="Space before semicolon" />
+    <option name="space" hit="Space before semicolon" />
+    <option name="before" hit="Space before uppercase function invocation" />
+    <option name="function" hit="Space before uppercase function invocation" />
+    <option name="invocation" hit="Space before uppercase function invocation" />
+    <option name="space" hit="Space before uppercase function invocation" />
+    <option name="uppercase" hit="Space before uppercase function invocation" />
+    <option name="-g" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="a" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="directory" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="dotnet" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="dotnet-tools" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="file" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="globally" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="in" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="install" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="it" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="json" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="or" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="solution" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="specified" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="specify" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="the" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="to" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="tool" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="use" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="version" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="via" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="iddqd" hit="iddqd" />
+    <option name="다음에서" hit="다음에서 하드 랩" />
+    <option name="랩" hit="다음에서 하드 랩" />
+    <option name="하드" hit="다음에서 하드 랩" />
+    <option name="들여쓰기" hit="들여쓰기 크기" />
+    <option name="크기" hit="들여쓰기 크기" />
+    <option name="align" path="서식 지정 스타일" hit="Align function signature to indentation" />
+    <option name="function" path="서식 지정 스타일" hit="Align function signature to indentation" />
+    <option name="indentation" path="서식 지정 스타일" hit="Align function signature to indentation" />
+    <option name="signature" path="서식 지정 스타일" hit="Align function signature to indentation" />
+    <option name="to" path="서식 지정 스타일" hit="Align function signature to indentation" />
+    <option name="align" path="서식 지정 스타일" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="and" path="서식 지정 스타일" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="array" path="서식 지정 스타일" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="braces" path="서식 지정 스타일" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="closing" path="서식 지정 스타일" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="expressions" path="서식 지정 스타일" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="list" path="서식 지정 스타일" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="of" path="서식 지정 스타일" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="opening" path="서식 지정 스타일" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="record" path="서식 지정 스타일" hit="Align opening and closing braces of record, array and list expressions" />
+    <option name="alternative" path="서식 지정 스타일" hit="Alternative long member definitions" />
+    <option name="definitions" path="서식 지정 스타일" hit="Alternative long member definitions" />
+    <option name="long" path="서식 지정 스타일" hit="Alternative long member definitions" />
+    <option name="member" path="서식 지정 스타일" hit="Alternative long member definitions" />
+    <option name="0" path="Fantomas" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="5" path="Fantomas" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="6" path="Fantomas" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="auto" path="Fantomas" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="bundled" path="Fantomas" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="detected" path="Fantomas" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="v" path="Fantomas" hit="Auto detected (Bundled v.6.0.5)" />
+    <option name="0" path="Fantomas" hit="Bundled (v.6.0.5)" />
+    <option name="5" path="Fantomas" hit="Bundled (v.6.0.5)" />
+    <option name="6" path="Fantomas" hit="Bundled (v.6.0.5)" />
+    <option name="bundled" path="Fantomas" hit="Bundled (v.6.0.5)" />
+    <option name="v" path="Fantomas" hit="Bundled (v.6.0.5)" />
+    <option name="at" path="서식 지정 스타일" hit="Don't indent comments started at first column" />
+    <option name="column" path="서식 지정 스타일" hit="Don't indent comments started at first column" />
+    <option name="comments" path="서식 지정 스타일" hit="Don't indent comments started at first column" />
+    <option name="don" path="서식 지정 스타일" hit="Don't indent comments started at first column" />
+    <option name="first" path="서식 지정 스타일" hit="Don't indent comments started at first column" />
+    <option name="indent" path="서식 지정 스타일" hit="Don't indent comments started at first column" />
+    <option name="started" path="서식 지정 스타일" hit="Don't indent comments started at first column" />
+    <option name="t" path="서식 지정 스타일" hit="Don't indent comments started at first column" />
+    <option name="fantomas" path="Fantomas" hit="Fantomas version" />
+    <option name="version" path="Fantomas" hit="Fantomas version" />
+    <option name="indent" path="서식 지정 스타일" hit="Indent on try with" />
+    <option name="on" path="서식 지정 스타일" hit="Indent on try with" />
+    <option name="try" path="서식 지정 스타일" hit="Indent on try with" />
+    <option name="with" path="서식 지정 스타일" hit="Indent on try with" />
+    <option name="and" path="서식 지정 스타일" hit="Keep if and then keywords in same line" />
+    <option name="if" path="서식 지정 스타일" hit="Keep if and then keywords in same line" />
+    <option name="in" path="서식 지정 스타일" hit="Keep if and then keywords in same line" />
+    <option name="keep" path="서식 지정 스타일" hit="Keep if and then keywords in same line" />
+    <option name="keywords" path="서식 지정 스타일" hit="Keep if and then keywords in same line" />
+    <option name="line" path="서식 지정 스타일" hit="Keep if and then keywords in same line" />
+    <option name="same" path="서식 지정 스타일" hit="Keep if and then keywords in same line" />
+    <option name="then" path="서식 지정 스타일" hit="Keep if and then keywords in same line" />
+    <option name="learn" path="Fantomas" hit="Learn more" />
+    <option name="more" path="Fantomas" hit="Learn more" />
+    <option name="elmish" path="서식 지정 스타일" hit="Maximum width of Elmish inspired expressions" />
+    <option name="expressions" path="서식 지정 스타일" hit="Maximum width of Elmish inspired expressions" />
+    <option name="inspired" path="서식 지정 스타일" hit="Maximum width of Elmish inspired expressions" />
+    <option name="maximum" path="서식 지정 스타일" hit="Maximum width of Elmish inspired expressions" />
+    <option name="of" path="서식 지정 스타일" hit="Maximum width of Elmish inspired expressions" />
+    <option name="width" path="서식 지정 스타일" hit="Maximum width of Elmish inspired expressions" />
+    <option name="binding" path="서식 지정 스타일" hit="Maximum width of function binding expressions" />
+    <option name="expressions" path="서식 지정 스타일" hit="Maximum width of function binding expressions" />
+    <option name="function" path="서식 지정 스타일" hit="Maximum width of function binding expressions" />
+    <option name="maximum" path="서식 지정 스타일" hit="Maximum width of function binding expressions" />
+    <option name="of" path="서식 지정 스타일" hit="Maximum width of function binding expressions" />
+    <option name="width" path="서식 지정 스타일" hit="Maximum width of function binding expressions" />
+    <option name="else" path="서식 지정 스타일" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="expressions" path="서식 지정 스타일" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="if" path="서식 지정 스타일" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="longer" path="서식 지정 스타일" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="maximum" path="서식 지정 스타일" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="multiline" path="서식 지정 스타일" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="non" path="서식 지정 스타일" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="of" path="서식 지정 스타일" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="then" path="서식 지정 스타일" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="width" path="서식 지정 스타일" hit="Maximum width of longer (non multiline) if/then/else expressions" />
+    <option name="array" path="서식 지정 스타일" hit="Maximum width of single line array expressions" />
+    <option name="expressions" path="서식 지정 스타일" hit="Maximum width of single line array expressions" />
+    <option name="line" path="서식 지정 스타일" hit="Maximum width of single line array expressions" />
+    <option name="maximum" path="서식 지정 스타일" hit="Maximum width of single line array expressions" />
+    <option name="of" path="서식 지정 스타일" hit="Maximum width of single line array expressions" />
+    <option name="single" path="서식 지정 스타일" hit="Maximum width of single line array expressions" />
+    <option name="width" path="서식 지정 스타일" hit="Maximum width of single line array expressions" />
+    <option name="expressions" path="서식 지정 스타일" hit="Maximum width of single line infix expressions" />
+    <option name="infix" path="서식 지정 스타일" hit="Maximum width of single line infix expressions" />
+    <option name="line" path="서식 지정 스타일" hit="Maximum width of single line infix expressions" />
+    <option name="maximum" path="서식 지정 스타일" hit="Maximum width of single line infix expressions" />
+    <option name="of" path="서식 지정 스타일" hit="Maximum width of single line infix expressions" />
+    <option name="single" path="서식 지정 스타일" hit="Maximum width of single line infix expressions" />
+    <option name="width" path="서식 지정 스타일" hit="Maximum width of single line infix expressions" />
+    <option name="expressions" path="서식 지정 스타일" hit="Maximum width of single line record expressions" />
+    <option name="line" path="서식 지정 스타일" hit="Maximum width of single line record expressions" />
+    <option name="maximum" path="서식 지정 스타일" hit="Maximum width of single line record expressions" />
+    <option name="of" path="서식 지정 스타일" hit="Maximum width of single line record expressions" />
+    <option name="record" path="서식 지정 스타일" hit="Maximum width of single line record expressions" />
+    <option name="single" path="서식 지정 스타일" hit="Maximum width of single line record expressions" />
+    <option name="width" path="서식 지정 스타일" hit="Maximum width of single line record expressions" />
+    <option name="binding" path="서식 지정 스타일" hit="Maximum width of value binding expressions" />
+    <option name="expressions" path="서식 지정 스타일" hit="Maximum width of value binding expressions" />
+    <option name="maximum" path="서식 지정 스타일" hit="Maximum width of value binding expressions" />
+    <option name="of" path="서식 지정 스타일" hit="Maximum width of value binding expressions" />
+    <option name="value" path="서식 지정 스타일" hit="Maximum width of value binding expressions" />
+    <option name="width" path="서식 지정 스타일" hit="Maximum width of value binding expressions" />
+    <option name="never" path="서식 지정 스타일" hit="Never outdent pipe operators" />
+    <option name="operators" path="서식 지정 스타일" hit="Never outdent pipe operators" />
+    <option name="outdent" path="서식 지정 스타일" hit="Never outdent pipe operators" />
+    <option name="pipe" path="서식 지정 스타일" hit="Never outdent pipe operators" />
+    <option name="and" path="서식 지정 스타일" hit="Newline between type definition and members" />
+    <option name="between" path="서식 지정 스타일" hit="Newline between type definition and members" />
+    <option name="definition" path="서식 지정 스타일" hit="Newline between type definition and members" />
+    <option name="members" path="서식 지정 스타일" hit="Newline between type definition and members" />
+    <option name="newline" path="서식 지정 스타일" hit="Newline between type definition and members" />
+    <option name="type" path="서식 지정 스타일" hit="Newline between type definition and members" />
+    <option name="binary" path="서식 지정 스타일" hit="Outdent binary operators" />
+    <option name="operators" path="서식 지정 스타일" hit="Outdent binary operators" />
+    <option name="outdent" path="서식 지정 스타일" hit="Outdent binary operators" />
+    <option name="at" path="서식 지정 스타일" hit="Place comments at first column when commenting out code" />
+    <option name="code" path="서식 지정 스타일" hit="Place comments at first column when commenting out code" />
+    <option name="column" path="서식 지정 스타일" hit="Place comments at first column when commenting out code" />
+    <option name="commenting" path="서식 지정 스타일" hit="Place comments at first column when commenting out code" />
+    <option name="comments" path="서식 지정 스타일" hit="Place comments at first column when commenting out code" />
+    <option name="first" path="서식 지정 스타일" hit="Place comments at first column when commenting out code" />
+    <option name="out" path="서식 지정 스타일" hit="Place comments at first column when commenting out code" />
+    <option name="place" path="서식 지정 스타일" hit="Place comments at first column when commenting out code" />
+    <option name="when" path="서식 지정 스타일" hit="Place comments at first column when commenting out code" />
+    <option name="at" path="서식 지정 스타일" hit="Semicolon at end of line" />
+    <option name="end" path="서식 지정 스타일" hit="Semicolon at end of line" />
+    <option name="line" path="서식 지정 스타일" hit="Semicolon at end of line" />
+    <option name="of" path="서식 지정 스타일" hit="Semicolon at end of line" />
+    <option name="semicolon" path="서식 지정 스타일" hit="Semicolon at end of line" />
+    <option name="argument" path="서식 지정 스타일" hit="Single argument Elmish expressions" />
+    <option name="elmish" path="서식 지정 스타일" hit="Single argument Elmish expressions" />
+    <option name="expressions" path="서식 지정 스타일" hit="Single argument Elmish expressions" />
+    <option name="single" path="서식 지정 스타일" hit="Single argument Elmish expressions" />
+    <option name="after" path="서식 지정 스타일" hit="Space after comma" />
+    <option name="comma" path="서식 지정 스타일" hit="Space after comma" />
+    <option name="space" path="서식 지정 스타일" hit="Space after comma" />
+    <option name="after" path="서식 지정 스타일" hit="Space after semicolon" />
+    <option name="semicolon" path="서식 지정 스타일" hit="Space after semicolon" />
+    <option name="space" path="서식 지정 스타일" hit="Space after semicolon" />
+    <option name="around" path="서식 지정 스타일" hit="Space around delimiter" />
+    <option name="delimiter" path="서식 지정 스타일" hit="Space around delimiter" />
+    <option name="space" path="서식 지정 스타일" hit="Space around delimiter" />
+    <option name="before" path="서식 지정 스타일" hit="Space before class constructor" />
+    <option name="class" path="서식 지정 스타일" hit="Space before class constructor" />
+    <option name="constructor" path="서식 지정 스타일" hit="Space before class constructor" />
+    <option name="space" path="서식 지정 스타일" hit="Space before class constructor" />
+    <option name="before" path="서식 지정 스타일" hit="Space before colon" />
+    <option name="colon" path="서식 지정 스타일" hit="Space before colon" />
+    <option name="space" path="서식 지정 스타일" hit="Space before colon" />
+    <option name="before" path="서식 지정 스타일" hit="Space before lowercase function invocation" />
+    <option name="function" path="서식 지정 스타일" hit="Space before lowercase function invocation" />
+    <option name="invocation" path="서식 지정 스타일" hit="Space before lowercase function invocation" />
+    <option name="lowercase" path="서식 지정 스타일" hit="Space before lowercase function invocation" />
+    <option name="space" path="서식 지정 스타일" hit="Space before lowercase function invocation" />
+    <option name="before" path="서식 지정 스타일" hit="Space before member" />
+    <option name="member" path="서식 지정 스타일" hit="Space before member" />
+    <option name="space" path="서식 지정 스타일" hit="Space before member" />
+    <option name="before" path="서식 지정 스타일" hit="Space before parameter" />
+    <option name="parameter" path="서식 지정 스타일" hit="Space before parameter" />
+    <option name="space" path="서식 지정 스타일" hit="Space before parameter" />
+    <option name="before" path="서식 지정 스타일" hit="Space before semicolon" />
+    <option name="semicolon" path="서식 지정 스타일" hit="Space before semicolon" />
+    <option name="space" path="서식 지정 스타일" hit="Space before semicolon" />
+    <option name="before" path="서식 지정 스타일" hit="Space before uppercase function invocation" />
+    <option name="function" path="서식 지정 스타일" hit="Space before uppercase function invocation" />
+    <option name="invocation" path="서식 지정 스타일" hit="Space before uppercase function invocation" />
+    <option name="space" path="서식 지정 스타일" hit="Space before uppercase function invocation" />
+    <option name="uppercase" path="서식 지정 스타일" hit="Space before uppercase function invocation" />
+    <option name="-g" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="a" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="directory" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="dotnet" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="dotnet-tools" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="fantomas" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="file" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="globally" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="in" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="install" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="it" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="json" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="or" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="solution" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="specified" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="specify" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="the" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="to" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="tool" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="use" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="version" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="via" path="Fantomas" hit="To use a specified Fantomas version, install it globally via 'dotnet tool install fantomas -g'&#10;or specify it in dotnet-tools.json file in the solution directory." />
+    <option name="iddqd" path="서식 지정 스타일" hit="iddqd" />
+    <option name="다음에서" path="서식 지정 스타일" hit="다음에서 하드 랩" />
+    <option name="랩" path="서식 지정 스타일" hit="다음에서 하드 랩" />
+    <option name="하드" path="서식 지정 스타일" hit="다음에서 하드 랩" />
+    <option name="들여쓰기" path="서식 지정 스타일" hit="들여쓰기 크기" />
+    <option name="크기" path="서식 지정 스타일" hit="들여쓰기 크기" />
+  </configurable>
+  <configurable id="RiderFSharpFileTemplatesSettings" configurable_name="F#">
+    <option name="i" hit="                    (I)" />
+    <option name="식별자여야" hit="                    (I)" />
+    <option name="올바른" hit="                    (I)" />
+    <option name="이름이" hit="                    (I)" />
+    <option name="파일" hit="                    (I)" />
+    <option name="합니다" hit="                    (I)" />
+    <option name="q" hit="           (Q)" />
+    <option name="정규화된" hit="           (Q)" />
+    <option name="줄이기" hit="           (Q)" />
+    <option name="참조" hit="           (Q)" />
+    <option name="n" hit="        (N):" />
+    <option name="기본" hit="        (N):" />
+    <option name="이름" hit="        (N):" />
+    <option name="파일" hit="        (N):" />
+    <option name="r" hit="      (R)" />
+    <option name="서식" hit="      (R)" />
+    <option name="재지정" hit="      (R)" />
+    <option name="a" hit="     (A):" />
+    <option name="가능" hit="     (A):" />
+    <option name="사용" hit="     (A):" />
+    <option name="v" hit="     (V)" />
+    <option name="변수" hit="     (V)" />
+    <option name="편집" hit="     (V)" />
+    <option name="d" hit="  (D):" />
+    <option name="설명" hit="  (D):" />
+    <option name="g" hit="  (G):" />
+    <option name="그룹" hit="  (G):" />
+    <option name="옵션" hit="  :" />
+    <option name="" hit=" F# projects" />
+    <option name="f" hit=" F# projects" />
+    <option name="projects" hit=" F# projects" />
+    <option name="" hit="&quot;  (N) &quot;       " />
+    <option name="n" hit="&quot;  (N) &quot;       " />
+    <option name="메뉴에" hit="&quot;  (N) &quot;       " />
+    <option name="신규" hit="&quot;  (N) &quot;       " />
+    <option name="추가" hit="&quot;  (N) &quot;       " />
+    <option name="f" hit="F#" />
+    <option name="f" hit="F# projects" />
+    <option name="projects" hit="F# projects" />
+    <option name="script" hit="Script" />
+    <option name="file" hit="Signature file" />
+    <option name="signature" hit="Signature file" />
+    <option name="file" hit="Source file" />
+    <option name="source" hit="Source file" />
+    <option name="type" hit="Type" />
+    <option name="iddqd" hit="iddqd" />
+    <option name="g" hit="그룹(G):" />
+    <option name="그룹" hit="그룹(G):" />
+    <option name="n" hit="기본 파일 이름(N):" />
+    <option name="기본" hit="기본 파일 이름(N):" />
+    <option name="이름" hit="기본 파일 이름(N):" />
+    <option name="파일" hit="기본 파일 이름(N):" />
+    <option name="d" hit="설명(D):" />
+    <option name="설명" hit="설명(D):" />
+    <option name="옵션" hit="옵션:" />
+  </configurable>
+  <configurable id="Inspections-F#" configurable_name="F#">
+    <option name="설명" hit="  " />
+    <option name="" hit="'' 자기 id 사용" />
+    <option name="id" hit="'' 자기 id 사용" />
+    <option name="사용" hit="'' 자기 id 사용" />
+    <option name="자기" hit="'' 자기 id 사용" />
+    <option name="" hit="'if' 식을 조건과 바꿀 수 있습니다" />
+    <option name="if" hit="'if' 식을 조건과 바꿀 수 있습니다" />
+    <option name="바꿀" hit="'if' 식을 조건과 바꿀 수 있습니다" />
+    <option name="수" hit="'if' 식을 조건과 바꿀 수 있습니다" />
+    <option name="식을" hit="'if' 식을 조건과 바꿀 수 있습니다" />
+    <option name="있습니다" hit="'if' 식을 조건과 바꿀 수 있습니다" />
+    <option name="조건과" hit="'if' 식을 조건과 바꿀 수 있습니다" />
+    <option name="f" hit="F#" />
+    <option name="iddqd" hit="iddqd" />
+    <option name="기본" hit="람다 식을 기본 함수로 대체할 수 있습니다" />
+    <option name="대체할" hit="람다 식을 기본 함수로 대체할 수 있습니다" />
+    <option name="람다" hit="람다 식을 기본 함수로 대체할 수 있습니다" />
+    <option name="수" hit="람다 식을 기본 함수로 대체할 수 있습니다" />
+    <option name="식을" hit="람다 식을 기본 함수로 대체할 수 있습니다" />
+    <option name="있습니다" hit="람다 식을 기본 함수로 대체할 수 있습니다" />
+    <option name="함수로" hit="람다 식을 기본 함수로 대체할 수 있습니다" />
+    <option name="내부" hit="람다 식을 내부 식으로 바꿀수 있습니다" />
+    <option name="람다" hit="람다 식을 내부 식으로 바꿀수 있습니다" />
+    <option name="바꿀수" hit="람다 식을 내부 식으로 바꿀수 있습니다" />
+    <option name="식으로" hit="람다 식을 내부 식으로 바꿀수 있습니다" />
+    <option name="식을" hit="람다 식을 내부 식으로 바꿀수 있습니다" />
+    <option name="있습니다" hit="람다 식을 내부 식으로 바꿀수 있습니다" />
+    <option name="단순화할" hit="람다 식을 단순화할 수 있습니다" />
+    <option name="람다" hit="람다 식을 단순화할 수 있습니다" />
+    <option name="수" hit="람다 식을 단순화할 수 있습니다" />
+    <option name="식을" hit="람다 식을 단순화할 수 있습니다" />
+    <option name="있습니다" hit="람다 식을 단순화할 수 있습니다" />
+    <option name="as" hit="불필요한 'as' 패턴" />
+    <option name="불필요한" hit="불필요한 'as' 패턴" />
+    <option name="패턴" hit="불필요한 'as' 패턴" />
+    <option name="new" hit="불필요한 'new' 키워드" />
+    <option name="불필요한" hit="불필요한 'new' 키워드" />
+    <option name="키워드" hit="불필요한 'new' 키워드" />
+    <option name="open" hit="불필요한 'open' 지시문" />
+    <option name="불필요한" hit="불필요한 'open' 지시문" />
+    <option name="지시문" hit="불필요한 'open' 지시문" />
+    <option name="requirequalifiedaccess" hit="불필요한 RequireQualifiedAccess 속성" />
+    <option name="불필요한" hit="불필요한 RequireQualifiedAccess 속성" />
+    <option name="속성" hit="불필요한 RequireQualifiedAccess 속성" />
+    <option name="공용체" hit="불필요한 공용체 케이스 필드 매칭" />
+    <option name="매칭" hit="불필요한 공용체 케이스 필드 매칭" />
+    <option name="불필요한" hit="불필요한 공용체 케이스 필드 매칭" />
+    <option name="케이스" hit="불필요한 공용체 케이스 필드 매칭" />
+    <option name="필드" hit="불필요한 공용체 케이스 필드 매칭" />
+    <option name="문자열" hit="불필요한 문자열 보간" />
+    <option name="보간" hit="불필요한 문자열 보간" />
+    <option name="불필요한" hit="불필요한 문자열 보간" />
+    <option name="불필요한" hit="불필요한 속성 소괄호 인수" />
+    <option name="소괄호" hit="불필요한 속성 소괄호 인수" />
+    <option name="속성" hit="불필요한 속성 소괄호 인수" />
+    <option name="인수" hit="불필요한 속성 소괄호 인수" />
+    <option name="불필요한" hit="불필요한 식별자 이스케이프" />
+    <option name="식별자" hit="불필요한 식별자 이스케이프" />
+    <option name="이스케이프" hit="불필요한 식별자 이스케이프" />
+    <option name="불필요한" hit="불필요한 애플리케이션" />
+    <option name="애플리케이션" hit="불필요한 애플리케이션" />
+    <option name="불필요한" hit="불필요한 이름 한정자" />
+    <option name="이름" hit="불필요한 이름 한정자" />
+    <option name="한정자" hit="불필요한 이름 한정자" />
+    <option name="불필요한" hit="불필요한 코드" />
+    <option name="코드" hit="불필요한 코드" />
+    <option name="attribute" hit="불필요한'Attribute' 접미사" />
+    <option name="불필요한" hit="불필요한'Attribute' 접미사" />
+    <option name="접미사" hit="불필요한'Attribute' 접미사" />
+    <option name="목록이" hit="빈 목록이 포함된 불필요한 연결" />
+    <option name="불필요한" hit="빈 목록이 포함된 불필요한 연결" />
+    <option name="빈" hit="빈 목록이 포함된 불필요한 연결" />
+    <option name="연결" hit="빈 목록이 포함된 불필요한 연결" />
+    <option name="포함된" hit="빈 목록이 포함된 불필요한 연결" />
+    <option name="대체될" hit="서식 지정 문자열은 보간 문자열로 대체될 수 있습니다" />
+    <option name="문자열로" hit="서식 지정 문자열은 보간 문자열로 대체될 수 있습니다" />
+    <option name="문자열은" hit="서식 지정 문자열은 보간 문자열로 대체될 수 있습니다" />
+    <option name="보간" hit="서식 지정 문자열은 보간 문자열로 대체될 수 있습니다" />
+    <option name="서식" hit="서식 지정 문자열은 보간 문자열로 대체될 수 있습니다" />
+    <option name="수" hit="서식 지정 문자열은 보간 문자열로 대체될 수 있습니다" />
+    <option name="있습니다" hit="서식 지정 문자열은 보간 문자열로 대체될 수 있습니다" />
+    <option name="지정" hit="서식 지정 문자열은 보간 문자열로 대체될 수 있습니다" />
+    <option name="내" hit="인덱서 내 불필요한 '.'" />
+    <option name="불필요한" hit="인덱서 내 불필요한 '.'" />
+    <option name="인덱서" hit="인덱서 내 불필요한 '.'" />
+    <option name="괄호" hit="중복 된 괄호 제거" />
+    <option name="된" hit="중복 된 괄호 제거" />
+    <option name="제거" hit="중복 된 괄호 제거" />
+    <option name="중복" hit="중복 된 괄호 제거" />
+  </configurable>
+</options>
