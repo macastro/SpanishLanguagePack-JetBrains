@@ -1,0 +1,16 @@
+<html>
+<body>
+<p><code>find</code>를 호출하기 전에 컬렉션이 명시적으로 반전되는 경우를 보고합니다.</p>
+
+<p> 빠른 수정은 경우에 따라 더 효율적일 수 있는 <code>xs.findLast(f)</code>를 사용합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  Seq(1, 2).reverse.find(_ == 2)
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  Seq(1, 2).findLast(_ == 2)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

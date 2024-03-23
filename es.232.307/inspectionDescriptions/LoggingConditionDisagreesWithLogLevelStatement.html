@@ -1,0 +1,15 @@
+<html>
+<body>
+포함된 로깅 호출의 로그 수준과 일치하지 않는 <code>if</code> 문의 <em>is log enabled for</em> 조건을 보고합니다.
+<p>
+예:
+<pre><code lang="java">
+  if (LOG.isTraceEnabled()) {
+    // 디버그 수준이 기록되었지만 추적 수준이 확인되었습니다
+    LOG.debug("some log message");
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 <em>java.util.logging</em>, <em>Log4j</em>, <em>Log4j2</em>, <em>Apache Commons Logging</em> 및 <em>SLF4J</em> 로깅 프레임워크를 이해합니다.
+</body>
+</html>

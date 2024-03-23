@@ -1,0 +1,16 @@
+<html>
+<body>
+생성 시 하나의 요소만 쿼리되는 목록, 배열 및 문자열을 보고합니다.
+이런 표현식은 리팩터링 후에 나타날 수 있으며 대부분 액세스되는 요소로 대체할 수 있습니다.
+<p>예:</p>
+<pre><code>
+  System.out.println(new int[] {1,2,3,4,5}[2]);
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  System.out.println(3);
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.3의 새로운 기능</small></p>
+</body>
+</html>

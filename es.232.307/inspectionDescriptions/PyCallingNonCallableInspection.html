@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>속성과 같은 호출 불가능한 객체를 호출하고자 하는 경우 문제를 보고합니다:</p>
+<p><b>예:</b></p>
+<pre><code>
+class Record:
+    @property
+    def as_json(self):
+
+json = Record().as_json()
+</code></pre>
+</body>
+</html>

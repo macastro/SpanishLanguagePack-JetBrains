@@ -1,0 +1,7 @@
+<html>
+<body>
+  직접 전송된 <code>dealloc</code> 메시지를 보고합니다. 그러한 메시지는 절대로 직접 보내지 않아야 합니다.
+  대신 객체의 <code>dealloc</code> 메서드가 <code>release NSObject</code> 프로토콜 메서드를 통해 간접적으로 호출됩니다(<code>release</code> 메시지의 결과로 리시버의 보존 수가 0이 되는 경우).
+  이러한 메서드의 사용 방법에 대한 자세한 내용은 <a href="https://developer.apple.com/library/ios/documentation/cocoa/conceptual/MemoryMgmt/Articles/MemoryMgmt.html">Memory Management Programming Guide</a>(메모리 관리 프로그래밍 가이드)를 참조하세요.
+</body>
+</html>

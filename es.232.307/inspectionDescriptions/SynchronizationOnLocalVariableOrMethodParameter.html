@@ -1,0 +1,15 @@
+<html>
+<body>
+지역 변수 또는 매개변수의 동기화를 보고합니다. 
+<p>
+  그러한 동기화를 사용하면 정확한 연산을 보장하기가 매우 어렵습니다.
+  이 코드는 synchronized 래퍼 클래스를 사용하여 액세스를 제어하거나 필드에서 동기화를 진행하여 개선할 수 있습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  void bar() {
+    final Object lock = new Object();
+    synchronized (lock) { }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<body>
+<p><code>null</code>로 명시적으로 초기화되는 변수 정의를 보고합니다.</p>
+<p><code>var v: T = null</code>에는 다음 세 가지 경우가 있습니다.</p>
+<ol>
+    <li><code>v</code>가 <em>optional</em> 값인 경우<br>
+        &rarr; 관용적이고 타입이 안전한 <code>Option[T]</code> 타입 사용</li>
+    <li><code>v</code>가 <em>초기화되지 않은</em> 값인 경우(값이 대입되어야 함)<br>
+        &rarr; 이니셜라이저로 명확하고 간결하며 플랫폼 독립적인 <code>_</code>(Scala 2) 또는 <code>scala.compiletime.uninitialized</code>(Scala 3) 사용</li>
+    <li>성능 <em>최적화</em>인 경우(실제로 <code>null</code> 값을 사용함)<br>
+        &rarr; 안전하지 않은 코드에 대한 검사를 명시적으로 억제함</li>
+</ol>
+<p>다음 두 가지 빠른 수정이 제공됩니다.</p>
+<ul>
+    <li><em>_ 이니셜라이저 사용</em>을 실행하면 <code>null</code>이 바뀝니다 <code>_</code></li>
+    <li><em>Option 타입 사용</em>은 변수 타입을 <code>Option</code>으로 바꾸고 <code>None</code>으로 초기화합니다</li>
+</ul>
+<p><b>예:</b></p>
+<pre><code>
+  class Test {
+    var optional: String = null
+    var uninit: String = null
+
+    uninit = "initialized later"
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Test {
+    var optional: Option[String] = None
+    var uninit: String = _
+
+    uninit = "initialized later"
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

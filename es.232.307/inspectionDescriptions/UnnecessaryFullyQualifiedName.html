@@ -1,0 +1,30 @@
+<html>
+<body>
+축약될 수 있는 정규화된 클래스 이름을 보고합니다.
+<p>빠른 수정은 정규화된 이름을 축약하고 필요한 경우 import 문을 추가합니다.</p>
+<p>예:</p>
+<pre><code>
+  class ListWrapper {
+    java.util.List&lt;Integer&gt; l;
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  import java.util.List;
+  class ListWrapper {
+    List&lt;Integer&gt; l;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+
+<p>
+  Java 9 <code>provides</code> 및 <code>uses</code> 모듈 구문 내에서 정규화된 이름을 무시하려면 <b>Java 9 모듈 구문 무시</b> 옵션을 사용하세요.
+<p>
+  검사를 구성하려면 <a href="settings://preferences.sourceCode.Java?JavaDoc%20Inner">설정 | 에디터 | 코드 스타일 | Java | import 문</a>에서 다음 옵션을 사용하세요.</p>
+<ul>
+  <li>내부 클래스에 대한 참조가 외부 클래스와 정규화되어야 하는 경우 <b>내부 클래스에 대한 import 문 삽입</b> 옵션을 사용하세요.</li>
+  <li><b>JavaDoc에서 정규화된 클래스 이름 사용</b> 옵션을 사용하여 Javadoc에서 정규화된 이름을 허용하세요.</li>
+</ul>
+</body>
+</html>

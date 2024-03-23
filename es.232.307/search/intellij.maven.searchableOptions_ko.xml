@@ -1,0 +1,691 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="" path="ActionManager" hit="'테스트 건너뛰기' 모드를 전환합니다" />
+    <option name="건너뛰기" path="ActionManager" hit="'테스트 건너뛰기' 모드를 전환합니다" />
+    <option name="모드를" path="ActionManager" hit="'테스트 건너뛰기' 모드를 전환합니다" />
+    <option name="전환합니다" path="ActionManager" hit="'테스트 건너뛰기' 모드를 전환합니다" />
+    <option name="테스트" path="ActionManager" hit="'테스트 건너뛰기' 모드를 전환합니다" />
+    <option name="artifactid" path="ActionManager" hit="ArtifactId 항상 표시" />
+    <option name="표시" path="ActionManager" hit="ArtifactId 항상 표시" />
+    <option name="항상" path="ActionManager" hit="ArtifactId 항상 표시" />
+    <option name="maven" path="ActionManager" hit="Maven" />
+    <option name="goal" path="ActionManager" hit="Maven Goal 실행" />
+    <option name="maven" path="ActionManager" hit="Maven Goal 실행" />
+    <option name="실행" path="ActionManager" hit="Maven Goal 실행" />
+    <option name="maven" path="ActionManager" hit="Maven settings.xml을 엽니다" />
+    <option name="settings" path="ActionManager" hit="Maven settings.xml을 엽니다" />
+    <option name="xml을" path="ActionManager" hit="Maven settings.xml을 엽니다" />
+    <option name="엽니다" path="ActionManager" hit="Maven settings.xml을 엽니다" />
+    <option name="maven" path="ActionManager" hit="Maven 구성 열기" />
+    <option name="구성" path="ActionManager" hit="Maven 구성 열기" />
+    <option name="열기" path="ActionManager" hit="Maven 구성 열기" />
+    <option name="maven" path="ActionManager" hit="Maven 구조를 따라 프로젝트를 그룹화합니다" />
+    <option name="구조를" path="ActionManager" hit="Maven 구조를 따라 프로젝트를 그룹화합니다" />
+    <option name="그룹화합니다" path="ActionManager" hit="Maven 구조를 따라 프로젝트를 그룹화합니다" />
+    <option name="따라" path="ActionManager" hit="Maven 구조를 따라 프로젝트를 그룹화합니다" />
+    <option name="프로젝트를" path="ActionManager" hit="Maven 구조를 따라 프로젝트를 그룹화합니다" />
+    <option name="maven" path="ActionManager" hit="Maven 빌드 실행" />
+    <option name="빌드" path="ActionManager" hit="Maven 빌드 실행" />
+    <option name="실행" path="ActionManager" hit="Maven 빌드 실행" />
+    <option name="maven" path="ActionManager" hit="Maven 빌드에서 '테스트 건너뛰기' 모드를 전환합니다" />
+    <option name="건너뛰기" path="ActionManager" hit="Maven 빌드에서 '테스트 건너뛰기' 모드를 전환합니다" />
+    <option name="모드를" path="ActionManager" hit="Maven 빌드에서 '테스트 건너뛰기' 모드를 전환합니다" />
+    <option name="빌드에서" path="ActionManager" hit="Maven 빌드에서 '테스트 건너뛰기' 모드를 전환합니다" />
+    <option name="전환합니다" path="ActionManager" hit="Maven 빌드에서 '테스트 건너뛰기' 모드를 전환합니다" />
+    <option name="테스트" path="ActionManager" hit="Maven 빌드에서 '테스트 건너뛰기' 모드를 전환합니다" />
+    <option name="maven" path="ActionManager" hit="Maven 빌드에서 오프라인 모드를 전환합니다" />
+    <option name="모드를" path="ActionManager" hit="Maven 빌드에서 오프라인 모드를 전환합니다" />
+    <option name="빌드에서" path="ActionManager" hit="Maven 빌드에서 오프라인 모드를 전환합니다" />
+    <option name="오프라인" path="ActionManager" hit="Maven 빌드에서 오프라인 모드를 전환합니다" />
+    <option name="전환합니다" path="ActionManager" hit="Maven 빌드에서 오프라인 모드를 전환합니다" />
+    <option name="maven" path="ActionManager" hit="Maven 설정" />
+    <option name="설정" path="ActionManager" hit="Maven 설정" />
+    <option name="maven" path="ActionManager" hit="Maven 종속 요소로 이동" />
+    <option name="요소로" path="ActionManager" hit="Maven 종속 요소로 이동" />
+    <option name="이동" path="ActionManager" hit="Maven 종속 요소로 이동" />
+    <option name="종속" path="ActionManager" hit="Maven 종속 요소로 이동" />
+    <option name="maven" path="ActionManager" hit="Maven 커넥터 표시" />
+    <option name="커넥터" path="ActionManager" hit="Maven 커넥터 표시" />
+    <option name="표시" path="ActionManager" hit="Maven 커넥터 표시" />
+    <option name="maven" path="ActionManager" hit="Maven 프로젝트 연결 해제" />
+    <option name="연결" path="ActionManager" hit="Maven 프로젝트 연결 해제" />
+    <option name="프로젝트" path="ActionManager" hit="Maven 프로젝트 연결 해제" />
+    <option name="해제" path="ActionManager" hit="Maven 프로젝트 연결 해제" />
+    <option name="maven" path="ActionManager" hit="Maven 프로젝트로 추가" />
+    <option name="추가" path="ActionManager" hit="Maven 프로젝트로 추가" />
+    <option name="프로젝트로" path="ActionManager" hit="Maven 프로젝트로 추가" />
+    <option name="maven" path="ActionManager" hit="Maven 프로젝트를 가져올 때 재귀적 프로젝트 검색을 전환합니다" />
+    <option name="가져올" path="ActionManager" hit="Maven 프로젝트를 가져올 때 재귀적 프로젝트 검색을 전환합니다" />
+    <option name="검색을" path="ActionManager" hit="Maven 프로젝트를 가져올 때 재귀적 프로젝트 검색을 전환합니다" />
+    <option name="때" path="ActionManager" hit="Maven 프로젝트를 가져올 때 재귀적 프로젝트 검색을 전환합니다" />
+    <option name="재귀적" path="ActionManager" hit="Maven 프로젝트를 가져올 때 재귀적 프로젝트 검색을 전환합니다" />
+    <option name="전환합니다" path="ActionManager" hit="Maven 프로젝트를 가져올 때 재귀적 프로젝트 검색을 전환합니다" />
+    <option name="프로젝트" path="ActionManager" hit="Maven 프로젝트를 가져올 때 재귀적 프로젝트 검색을 전환합니다" />
+    <option name="프로젝트를" path="ActionManager" hit="Maven 프로젝트를 가져올 때 재귀적 프로젝트 검색을 전환합니다" />
+    <option name="maven" path="ActionManager" hit="Maven 프로젝트의 버전을 표시합니다" />
+    <option name="버전을" path="ActionManager" hit="Maven 프로젝트의 버전을 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="Maven 프로젝트의 버전을 표시합니다" />
+    <option name="프로젝트의" path="ActionManager" hit="Maven 프로젝트의 버전을 표시합니다" />
+    <option name="maven" path="ActionManager" hit="Maven 프로퍼티 추가" />
+    <option name="추가" path="ActionManager" hit="Maven 프로퍼티 추가" />
+    <option name="프로퍼티" path="ActionManager" hit="Maven 프로퍼티 추가" />
+    <option name="profiles" path="ActionManager" hit="profiles.xml 열기" />
+    <option name="xml" path="ActionManager" hit="profiles.xml 열기" />
+    <option name="열기" path="ActionManager" hit="profiles.xml 열기" />
+    <option name="settings" path="ActionManager" hit="settings.xml 열기" />
+    <option name="xml" path="ActionManager" hit="settings.xml 열기" />
+    <option name="열기" path="ActionManager" hit="settings.xml 열기" />
+    <option name="관리되는" path="ActionManager" hit="관리되는 종속성 추출" />
+    <option name="종속성" path="ActionManager" hit="관리되는 종속성 추출" />
+    <option name="추출" path="ActionManager" hit="관리되는 종속성 추출" />
+    <option name="그룹" path="ActionManager" hit="그룹 모듈" />
+    <option name="모듈" path="ActionManager" hit="그룹 모듈" />
+    <option name="기본" path="ActionManager" hit="기본 단계만 표시" />
+    <option name="단계만" path="ActionManager" hit="기본 단계만 표시" />
+    <option name="표시" path="ActionManager" hit="기본 단계만 표시" />
+    <option name="다시" path="ActionManager" hit="다시 빌드 전 실행" />
+    <option name="빌드" path="ActionManager" hit="다시 빌드 전 실행" />
+    <option name="실행" path="ActionManager" hit="다시 빌드 전 실행" />
+    <option name="전" path="ActionManager" hit="다시 빌드 전 실행" />
+    <option name="다시" path="ActionManager" hit="다시 빌드 후 실행" />
+    <option name="빌드" path="ActionManager" hit="다시 빌드 후 실행" />
+    <option name="실행" path="ActionManager" hit="다시 빌드 후 실행" />
+    <option name="후" path="ActionManager" hit="다시 빌드 후 실행" />
+    <option name="단축키" path="ActionManager" hit="단축키 지정..." />
+    <option name="지정" path="ActionManager" hit="단축키 지정..." />
+    <option name="리팩터링" path="ActionManager" hit="리팩터링" />
+    <option name="모두" path="ActionManager" hit="모두 접기" />
+    <option name="접기" path="ActionManager" hit="모두 접기" />
+    <option name="모두" path="ActionManager" hit="모두 펼치기" />
+    <option name="펼치기" path="ActionManager" hit="모두 펼치기" />
+    <option name="maven" path="ActionManager" hit="모든 Maven 프로젝트 다시 로드" />
+    <option name="다시" path="ActionManager" hit="모든 Maven 프로젝트 다시 로드" />
+    <option name="로드" path="ActionManager" hit="모든 Maven 프로젝트 다시 로드" />
+    <option name="모든" path="ActionManager" hit="모든 Maven 프로젝트 다시 로드" />
+    <option name="프로젝트" path="ActionManager" hit="모든 Maven 프로젝트 다시 로드" />
+    <option name="다운로드" path="ActionManager" hit="모든 종속성에 대한 문서 다운로드" />
+    <option name="대한" path="ActionManager" hit="모든 종속성에 대한 문서 다운로드" />
+    <option name="모든" path="ActionManager" hit="모든 종속성에 대한 문서 다운로드" />
+    <option name="문서" path="ActionManager" hit="모든 종속성에 대한 문서 다운로드" />
+    <option name="종속성에" path="ActionManager" hit="모든 종속성에 대한 문서 다운로드" />
+    <option name="다운로드합니다" path="ActionManager" hit="모든 종속성에 대한 문서를 다운로드합니다" />
+    <option name="대한" path="ActionManager" hit="모든 종속성에 대한 문서를 다운로드합니다" />
+    <option name="모든" path="ActionManager" hit="모든 종속성에 대한 문서를 다운로드합니다" />
+    <option name="문서를" path="ActionManager" hit="모든 종속성에 대한 문서를 다운로드합니다" />
+    <option name="종속성에" path="ActionManager" hit="모든 종속성에 대한 문서를 다운로드합니다" />
+    <option name="다운로드" path="ActionManager" hit="모든 종속성에 대한 소스 및 문서 다운로드" />
+    <option name="대한" path="ActionManager" hit="모든 종속성에 대한 소스 및 문서 다운로드" />
+    <option name="모든" path="ActionManager" hit="모든 종속성에 대한 소스 및 문서 다운로드" />
+    <option name="문서" path="ActionManager" hit="모든 종속성에 대한 소스 및 문서 다운로드" />
+    <option name="및" path="ActionManager" hit="모든 종속성에 대한 소스 및 문서 다운로드" />
+    <option name="소스" path="ActionManager" hit="모든 종속성에 대한 소스 및 문서 다운로드" />
+    <option name="종속성에" path="ActionManager" hit="모든 종속성에 대한 소스 및 문서 다운로드" />
+    <option name="대해" path="ActionManager" hit="모든 프로젝트에 대해 소스 생성 및 폴드 업데이트" />
+    <option name="모든" path="ActionManager" hit="모든 프로젝트에 대해 소스 생성 및 폴드 업데이트" />
+    <option name="및" path="ActionManager" hit="모든 프로젝트에 대해 소스 생성 및 폴드 업데이트" />
+    <option name="생성" path="ActionManager" hit="모든 프로젝트에 대해 소스 생성 및 폴드 업데이트" />
+    <option name="소스" path="ActionManager" hit="모든 프로젝트에 대해 소스 생성 및 폴드 업데이트" />
+    <option name="업데이트" path="ActionManager" hit="모든 프로젝트에 대해 소스 생성 및 폴드 업데이트" />
+    <option name="폴드" path="ActionManager" hit="모든 프로젝트에 대해 소스 생성 및 폴드 업데이트" />
+    <option name="프로젝트에" path="ActionManager" hit="모든 프로젝트에 대해 소스 생성 및 폴드 업데이트" />
+    <option name="무시된" path="ActionManager" hit="무시된 프로젝트 표시" />
+    <option name="표시" path="ActionManager" hit="무시된 프로젝트 표시" />
+    <option name="프로젝트" path="ActionManager" hit="무시된 프로젝트 표시" />
+    <option name="무시된" path="ActionManager" hit="무시된 프로젝트를 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="무시된 프로젝트를 표시합니다" />
+    <option name="프로젝트를" path="ActionManager" hit="무시된 프로젝트를 표시합니다" />
+    <option name="다운로드" path="ActionManager" hit="문서 다운로드" />
+    <option name="문서" path="ActionManager" hit="문서 다운로드" />
+    <option name="버전" path="ActionManager" hit="버전 표시" />
+    <option name="표시" path="ActionManager" hit="버전 표시" />
+    <option name="maven" path="ActionManager" hit="부모 Maven 구성 파일의 종속 요소로 이동합니다" />
+    <option name="구성" path="ActionManager" hit="부모 Maven 구성 파일의 종속 요소로 이동합니다" />
+    <option name="부모" path="ActionManager" hit="부모 Maven 구성 파일의 종속 요소로 이동합니다" />
+    <option name="요소로" path="ActionManager" hit="부모 Maven 구성 파일의 종속 요소로 이동합니다" />
+    <option name="이동합니다" path="ActionManager" hit="부모 Maven 구성 파일의 종속 요소로 이동합니다" />
+    <option name="종속" path="ActionManager" hit="부모 Maven 구성 파일의 종속 요소로 이동합니다" />
+    <option name="파일의" path="ActionManager" hit="부모 Maven 구성 파일의 종속 요소로 이동합니다" />
+    <option name="빌드" path="ActionManager" hit="빌드 전 실행" />
+    <option name="실행" path="ActionManager" hit="빌드 전 실행" />
+    <option name="전" path="ActionManager" hit="빌드 전 실행" />
+    <option name="빌드" path="ActionManager" hit="빌드 후 실행" />
+    <option name="실행" path="ActionManager" hit="빌드 후 실행" />
+    <option name="후" path="ActionManager" hit="빌드 후 실행" />
+    <option name="단계" path="ActionManager" hit="빌드하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="목표를" path="ActionManager" hit="빌드하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="빌드하기" path="ActionManager" hit="빌드하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="선택한" path="ActionManager" hit="빌드하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="실행합니다" path="ActionManager" hit="빌드하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="전에" path="ActionManager" hit="빌드하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="단계" path="ActionManager" hit="빌드한 후에 선택한 단계/목표를 실행합니다" />
+    <option name="목표를" path="ActionManager" hit="빌드한 후에 선택한 단계/목표를 실행합니다" />
+    <option name="빌드한" path="ActionManager" hit="빌드한 후에 선택한 단계/목표를 실행합니다" />
+    <option name="선택한" path="ActionManager" hit="빌드한 후에 선택한 단계/목표를 실행합니다" />
+    <option name="실행합니다" path="ActionManager" hit="빌드한 후에 선택한 단계/목표를 실행합니다" />
+    <option name="후에" path="ActionManager" hit="빌드한 후에 선택한 단계/목표를 실행합니다" />
+    <option name="생성" path="ActionManager" hit="생성" />
+    <option name="maven" path="ActionManager" hit="선택된 Maven 프로젝트를 가져오기에 제외/포함합니다" />
+    <option name="가져오기에" path="ActionManager" hit="선택된 Maven 프로젝트를 가져오기에 제외/포함합니다" />
+    <option name="선택된" path="ActionManager" hit="선택된 Maven 프로젝트를 가져오기에 제외/포함합니다" />
+    <option name="제외" path="ActionManager" hit="선택된 Maven 프로젝트를 가져오기에 제외/포함합니다" />
+    <option name="포함합니다" path="ActionManager" hit="선택된 Maven 프로젝트를 가져오기에 제외/포함합니다" />
+    <option name="프로젝트를" path="ActionManager" hit="선택된 Maven 프로젝트를 가져오기에 제외/포함합니다" />
+    <option name="단계나" path="ActionManager" hit="선택된 단계나 목표를 실행합니다" />
+    <option name="목표를" path="ActionManager" hit="선택된 단계나 목표를 실행합니다" />
+    <option name="선택된" path="ActionManager" hit="선택된 단계나 목표를 실행합니다" />
+    <option name="실행합니다" path="ActionManager" hit="선택된 단계나 목표를 실행합니다" />
+    <option name="maven" path="ActionManager" hit="선택된 모듈이나 라이브러리에 대해 Maven 구성 파일을 엽니다" />
+    <option name="구성" path="ActionManager" hit="선택된 모듈이나 라이브러리에 대해 Maven 구성 파일을 엽니다" />
+    <option name="대해" path="ActionManager" hit="선택된 모듈이나 라이브러리에 대해 Maven 구성 파일을 엽니다" />
+    <option name="라이브러리에" path="ActionManager" hit="선택된 모듈이나 라이브러리에 대해 Maven 구성 파일을 엽니다" />
+    <option name="모듈이나" path="ActionManager" hit="선택된 모듈이나 라이브러리에 대해 Maven 구성 파일을 엽니다" />
+    <option name="선택된" path="ActionManager" hit="선택된 모듈이나 라이브러리에 대해 Maven 구성 파일을 엽니다" />
+    <option name="엽니다" path="ActionManager" hit="선택된 모듈이나 라이브러리에 대해 Maven 구성 파일을 엽니다" />
+    <option name="파일을" path="ActionManager" hit="선택된 모듈이나 라이브러리에 대해 Maven 구성 파일을 엽니다" />
+    <option name="profiles" path="ActionManager" hit="선택된 프로젝트에서 profiles.xml을 엽니다" />
+    <option name="xml을" path="ActionManager" hit="선택된 프로젝트에서 profiles.xml을 엽니다" />
+    <option name="선택된" path="ActionManager" hit="선택된 프로젝트에서 profiles.xml을 엽니다" />
+    <option name="엽니다" path="ActionManager" hit="선택된 프로젝트에서 profiles.xml을 엽니다" />
+    <option name="프로젝트에서" path="ActionManager" hit="선택된 프로젝트에서 profiles.xml을 엽니다" />
+    <option name="다운로드합니다" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 문서를 다운로드합니다" />
+    <option name="모든" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 문서를 다운로드합니다" />
+    <option name="문서를" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 문서를 다운로드합니다" />
+    <option name="선택된" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 문서를 다운로드합니다" />
+    <option name="종속성의" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 문서를 다운로드합니다" />
+    <option name="프로젝트에서" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 문서를 다운로드합니다" />
+    <option name="다운로드합니다" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스 및 문서를 다운로드합니다" />
+    <option name="모든" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스 및 문서를 다운로드합니다" />
+    <option name="문서를" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스 및 문서를 다운로드합니다" />
+    <option name="및" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스 및 문서를 다운로드합니다" />
+    <option name="선택된" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스 및 문서를 다운로드합니다" />
+    <option name="소스" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스 및 문서를 다운로드합니다" />
+    <option name="종속성의" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스 및 문서를 다운로드합니다" />
+    <option name="프로젝트에서" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스 및 문서를 다운로드합니다" />
+    <option name="다운로드합니다" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스를 다운로드합니다" />
+    <option name="모든" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스를 다운로드합니다" />
+    <option name="선택된" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스를 다운로드합니다" />
+    <option name="소스를" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스를 다운로드합니다" />
+    <option name="종속성의" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스를 다운로드합니다" />
+    <option name="프로젝트에서" path="ActionManager" hit="선택된 프로젝트에서 모든 종속성의 소스를 다운로드합니다" />
+    <option name="maven" path="ActionManager" hit="선택한 Maven 프로젝트를 다시 로드합니다." />
+    <option name="다시" path="ActionManager" hit="선택한 Maven 프로젝트를 다시 로드합니다." />
+    <option name="로드합니다" path="ActionManager" hit="선택한 Maven 프로젝트를 다시 로드합니다." />
+    <option name="선택한" path="ActionManager" hit="선택한 Maven 프로젝트를 다시 로드합니다." />
+    <option name="프로젝트를" path="ActionManager" hit="선택한 Maven 프로젝트를 다시 로드합니다." />
+    <option name="단계" path="ActionManager" hit="선택한 단계/목표에 단축키를 지정합니다" />
+    <option name="단축키를" path="ActionManager" hit="선택한 단계/목표에 단축키를 지정합니다" />
+    <option name="목표에" path="ActionManager" hit="선택한 단계/목표에 단축키를 지정합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 단계/목표에 단축키를 지정합니다" />
+    <option name="지정합니다" path="ActionManager" hit="선택한 단계/목표에 단축키를 지정합니다" />
+    <option name="다운로드" path="ActionManager" hit="소스 다운로드" />
+    <option name="소스" path="ActionManager" hit="소스 다운로드" />
+    <option name="다운로드" path="ActionManager" hit="소스 및 문서 다운로드" />
+    <option name="문서" path="ActionManager" hit="소스 및 문서 다운로드" />
+    <option name="및" path="ActionManager" hit="소스 및 문서 다운로드" />
+    <option name="소스" path="ActionManager" hit="소스 및 문서 다운로드" />
+    <option name="및" path="ActionManager" hit="소스 및 업데이트 폴더 생성" />
+    <option name="생성" path="ActionManager" hit="소스 및 업데이트 폴더 생성" />
+    <option name="소스" path="ActionManager" hit="소스 및 업데이트 폴더 생성" />
+    <option name="업데이트" path="ActionManager" hit="소스 및 업데이트 폴더 생성" />
+    <option name="폴더" path="ActionManager" hit="소스 및 업데이트 폴더 생성" />
+    <option name="다운로드" path="ActionManager" hit="소스 및/또는 문서 다운로드" />
+    <option name="또는" path="ActionManager" hit="소스 및/또는 문서 다운로드" />
+    <option name="문서" path="ActionManager" hit="소스 및/또는 문서 다운로드" />
+    <option name="및" path="ActionManager" hit="소스 및/또는 문서 다운로드" />
+    <option name="소스" path="ActionManager" hit="소스 및/또는 문서 다운로드" />
+    <option name="구성" path="ActionManager" hit="실행 구성 제거" />
+    <option name="실행" path="ActionManager" hit="실행 구성 제거" />
+    <option name="제거" path="ActionManager" hit="실행 구성 제거" />
+    <option name="구성" path="ActionManager" hit="실행 구성 편집..." />
+    <option name="실행" path="ActionManager" hit="실행 구성 편집..." />
+    <option name="편집" path="ActionManager" hit="실행 구성 편집..." />
+    <option name="구성을" path="ActionManager" hit="실행/디버그 구성을 시작하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="단계" path="ActionManager" hit="실행/디버그 구성을 시작하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="디버그" path="ActionManager" hit="실행/디버그 구성을 시작하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="목표를" path="ActionManager" hit="실행/디버그 구성을 시작하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="선택한" path="ActionManager" hit="실행/디버그 구성을 시작하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="시작하기" path="ActionManager" hit="실행/디버그 구성을 시작하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="실행" path="ActionManager" hit="실행/디버그 구성을 시작하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="실행합니다" path="ActionManager" hit="실행/디버그 구성을 시작하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="전에" path="ActionManager" hit="실행/디버그 구성을 시작하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="디버그" path="ActionManager" hit="실행/디버그 전에 실행..." />
+    <option name="실행" path="ActionManager" hit="실행/디버그 전에 실행..." />
+    <option name="전에" path="ActionManager" hit="실행/디버그 전에 실행..." />
+    <option name="모드" path="ActionManager" hit="오프라인 모드 전환" />
+    <option name="오프라인" path="ActionManager" hit="오프라인 모드 전환" />
+    <option name="전환" path="ActionManager" hit="오프라인 모드 전환" />
+    <option name="단계" path="ActionManager" hit="완전히 재빌드하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="목표를" path="ActionManager" hit="완전히 재빌드하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="선택한" path="ActionManager" hit="완전히 재빌드하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="실행합니다" path="ActionManager" hit="완전히 재빌드하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="완전히" path="ActionManager" hit="완전히 재빌드하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="재빌드하기" path="ActionManager" hit="완전히 재빌드하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="전에" path="ActionManager" hit="완전히 재빌드하기 전에 선택한 단계/목표를 실행합니다" />
+    <option name="단계" path="ActionManager" hit="완전히 재빌드한 후에 선택한 단계/목표를 실행합니다" />
+    <option name="목표를" path="ActionManager" hit="완전히 재빌드한 후에 선택한 단계/목표를 실행합니다" />
+    <option name="선택한" path="ActionManager" hit="완전히 재빌드한 후에 선택한 단계/목표를 실행합니다" />
+    <option name="실행합니다" path="ActionManager" hit="완전히 재빌드한 후에 선택한 단계/목표를 실행합니다" />
+    <option name="완전히" path="ActionManager" hit="완전히 재빌드한 후에 선택한 단계/목표를 실행합니다" />
+    <option name="재빌드한" path="ActionManager" hit="완전히 재빌드한 후에 선택한 단계/목표를 실행합니다" />
+    <option name="후에" path="ActionManager" hit="완전히 재빌드한 후에 선택한 단계/목표를 실행합니다" />
+    <option name="pom" path="ActionManager" hit="유효한 POM 표시" />
+    <option name="유효한" path="ActionManager" hit="유효한 POM 표시" />
+    <option name="표시" path="ActionManager" hit="유효한 POM 표시" />
+    <option name="pom을" path="ActionManager" hit="유효한 POM을 생성하고 표시합니다" />
+    <option name="생성하고" path="ActionManager" hit="유효한 POM을 생성하고 표시합니다" />
+    <option name="유효한" path="ActionManager" hit="유효한 POM을 생성하고 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="유효한 POM을 생성하고 표시합니다" />
+    <option name="maven" path="ActionManager" hit="재귀적 Maven 프로젝트 검색 전환" />
+    <option name="검색" path="ActionManager" hit="재귀적 Maven 프로젝트 검색 전환" />
+    <option name="재귀적" path="ActionManager" hit="재귀적 Maven 프로젝트 검색 전환" />
+    <option name="전환" path="ActionManager" hit="재귀적 Maven 프로젝트 검색 전환" />
+    <option name="프로젝트" path="ActionManager" hit="재귀적 Maven 프로젝트 검색 전환" />
+    <option name="분석" path="ActionManager" hit="종속성 분석..." />
+    <option name="종속성" path="ActionManager" hit="종속성 분석..." />
+    <option name="다시" path="ActionManager" hit="프로젝트 다시 로드" />
+    <option name="로드" path="ActionManager" hit="프로젝트 다시 로드" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 다시 로드" />
+    <option name="무시" path="ActionManager" hit="프로젝트 무시" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 무시" />
+    <option name="artifactid를" path="ActionManager" hit="프로젝트 이름 대신 ArtifactId를 항상 표시합니다" />
+    <option name="대신" path="ActionManager" hit="프로젝트 이름 대신 ArtifactId를 항상 표시합니다" />
+    <option name="이름" path="ActionManager" hit="프로젝트 이름 대신 ArtifactId를 항상 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="프로젝트 이름 대신 ArtifactId를 항상 표시합니다" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 이름 대신 ArtifactId를 항상 표시합니다" />
+    <option name="항상" path="ActionManager" hit="프로젝트 이름 대신 ArtifactId를 항상 표시합니다" />
+    <option name="maven" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트 추가 및 다시 로드" />
+    <option name="다시" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트 추가 및 다시 로드" />
+    <option name="로드" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트 추가 및 다시 로드" />
+    <option name="및" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트 추가 및 다시 로드" />
+    <option name="추가" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트 추가 및 다시 로드" />
+    <option name="트리에" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트 추가 및 다시 로드" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트 추가 및 다시 로드" />
+    <option name="maven" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트를 추가 및 다시 로드합니다." />
+    <option name="다시" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트를 추가 및 다시 로드합니다." />
+    <option name="로드합니다" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트를 추가 및 다시 로드합니다." />
+    <option name="및" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트를 추가 및 다시 로드합니다." />
+    <option name="추가" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트를 추가 및 다시 로드합니다." />
+    <option name="트리에" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트를 추가 및 다시 로드합니다." />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트를 추가 및 다시 로드합니다." />
+    <option name="프로젝트를" path="ActionManager" hit="프로젝트 트리에 Maven 프로젝트를 추가 및 다시 로드합니다." />
+    <option name="maven" path="ActionManager" hit="프로젝트 트리에서 선택된 Maven 프로젝트와 하위 프로젝트를 연결 해제합니다" />
+    <option name="선택된" path="ActionManager" hit="프로젝트 트리에서 선택된 Maven 프로젝트와 하위 프로젝트를 연결 해제합니다" />
+    <option name="연결" path="ActionManager" hit="프로젝트 트리에서 선택된 Maven 프로젝트와 하위 프로젝트를 연결 해제합니다" />
+    <option name="트리에서" path="ActionManager" hit="프로젝트 트리에서 선택된 Maven 프로젝트와 하위 프로젝트를 연결 해제합니다" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 트리에서 선택된 Maven 프로젝트와 하위 프로젝트를 연결 해제합니다" />
+    <option name="프로젝트를" path="ActionManager" hit="프로젝트 트리에서 선택된 Maven 프로젝트와 하위 프로젝트를 연결 해제합니다" />
+    <option name="프로젝트와" path="ActionManager" hit="프로젝트 트리에서 선택된 Maven 프로젝트와 하위 프로젝트를 연결 해제합니다" />
+    <option name="하위" path="ActionManager" hit="프로젝트 트리에서 선택된 Maven 프로젝트와 하위 프로젝트를 연결 해제합니다" />
+    <option name="해제합니다" path="ActionManager" hit="프로젝트 트리에서 선택된 Maven 프로젝트와 하위 프로젝트를 연결 해제합니다" />
+    <option name="전환" path="ActionManager" hit="프로파일 전환" />
+    <option name="프로파일" path="ActionManager" hit="프로파일 전환" />
+    <option name="비활성화" path="ActionManager" hit="프로파일 활성화/비활성화" />
+    <option name="프로파일" path="ActionManager" hit="프로파일 활성화/비활성화" />
+    <option name="활성화" path="ActionManager" hit="프로파일 활성화/비활성화" />
+    <option name="프로퍼티" path="ActionManager" hit="프로퍼티" />
+    <option name="maven" path="ActionManager" hit="현재 프로젝트의 Maven 통합 설정을 편집합니다" />
+    <option name="설정을" path="ActionManager" hit="현재 프로젝트의 Maven 통합 설정을 편집합니다" />
+    <option name="통합" path="ActionManager" hit="현재 프로젝트의 Maven 통합 설정을 편집합니다" />
+    <option name="편집합니다" path="ActionManager" hit="현재 프로젝트의 Maven 통합 설정을 편집합니다" />
+    <option name="프로젝트의" path="ActionManager" hit="현재 프로젝트의 Maven 통합 설정을 편집합니다" />
+    <option name="현재" path="ActionManager" hit="현재 프로젝트의 Maven 통합 설정을 편집합니다" />
+  </configurable>
+  <configurable id="MavenSettings" configurable_name="Maven">
+    <option name="-t" hit=" T 옵션" />
+    <option name="옵션" hit=" T 옵션" />
+    <option name="" hit=" mvn maven config의 설정 사용" />
+    <option name="config의" hit=" mvn maven config의 설정 사용" />
+    <option name="maven" hit=" mvn maven config의 설정 사용" />
+    <option name="mvn" hit=" mvn maven config의 설정 사용" />
+    <option name="사용" hit=" mvn maven config의 설정 사용" />
+    <option name="설정" hit=" mvn maven config의 설정 사용" />
+    <option name="" hit=" usr share maven" />
+    <option name="maven" hit=" usr share maven" />
+    <option name="share" hit=" usr share maven" />
+    <option name="usr" hit=" usr share maven" />
+    <option name="" hit=" 다시 가져오면 해당 구성에 적용된 변경 내용이 사라질 수 있습니다 " />
+    <option name="가져오면" hit=" 다시 가져오면 해당 구성에 적용된 변경 내용이 사라질 수 있습니다 " />
+    <option name="구성에" hit=" 다시 가져오면 해당 구성에 적용된 변경 내용이 사라질 수 있습니다 " />
+    <option name="내용이" hit=" 다시 가져오면 해당 구성에 적용된 변경 내용이 사라질 수 있습니다 " />
+    <option name="다시" hit=" 다시 가져오면 해당 구성에 적용된 변경 내용이 사라질 수 있습니다 " />
+    <option name="변경" hit=" 다시 가져오면 해당 구성에 적용된 변경 내용이 사라질 수 있습니다 " />
+    <option name="사라질" hit=" 다시 가져오면 해당 구성에 적용된 변경 내용이 사라질 수 있습니다 " />
+    <option name="수" hit=" 다시 가져오면 해당 구성에 적용된 변경 내용이 사라질 수 있습니다 " />
+    <option name="있습니다" hit=" 다시 가져오면 해당 구성에 적용된 변경 내용이 사라질 수 있습니다 " />
+    <option name="적용된" hit=" 다시 가져오면 해당 구성에 적용된 변경 내용이 사라질 수 있습니다 " />
+    <option name="해당" hit=" 다시 가져오면 해당 구성에 적용된 변경 내용이 사라질 수 있습니다 " />
+    <option name="3" hit="Bundled  Maven   " />
+    <option name="bundled" hit="Bundled  Maven   " />
+    <option name="maven" hit="Bundled  Maven   " />
+    <option name="g" hit="Goal을 재귀적으로 실행 G " />
+    <option name="goal을" hit="Goal을 재귀적으로 실행 G " />
+    <option name="실행" hit="Goal을 재귀적으로 실행 G " />
+    <option name="재귀적으로" hit="Goal을 재귀적으로 실행 G " />
+    <option name="maven" hit="Maven" />
+    <option name="h" hit="Maven 홈 경로 H  " />
+    <option name="maven" hit="Maven 홈 경로 H  " />
+    <option name="경로" hit="Maven 홈 경로 H  " />
+    <option name="홈" hit="Maven 홈 경로 H  " />
+    <option name="maven" hit="Use Maven wrapper" />
+    <option name="use" hit="Use Maven wrapper" />
+    <option name="wrapper" hit="Use Maven wrapper" />
+    <option name="경고" hit="경고" />
+    <option name="글로벌" hit="글로벌 정책 없음" />
+    <option name="없음" hit="글로벌 정책 없음" />
+    <option name="정책" hit="글로벌 정책 없음" />
+    <option name="끝난" hit="끝난 후에 실패" />
+    <option name="실패" hit="끝난 후에 실패" />
+    <option name="후에" hit="끝난 후에 실패" />
+    <option name="디버그" hit="디버그" />
+    <option name="디폴트" hit="디폴트" />
+    <option name="r" hit="로컬 저장소 R  " />
+    <option name="로컬" hit="로컬 저장소 R  " />
+    <option name="저장소" hit="로컬 저장소 R  " />
+    <option name="f" hit="멀티 프로젝트 빌드 실패 정책 F  " />
+    <option name="멀티" hit="멀티 프로젝트 빌드 실패 정책 F  " />
+    <option name="빌드" hit="멀티 프로젝트 빌드 실패 정책 F  " />
+    <option name="실패" hit="멀티 프로젝트 빌드 실패 정책 F  " />
+    <option name="정책" hit="멀티 프로젝트 빌드 실패 정책 F  " />
+    <option name="프로젝트" hit="멀티 프로젝트 빌드 실패 정책 F  " />
+    <option name="비활성화됨" hit="비활성화됨" />
+    <option name="s" hit="사용자 설정 파일 S  " />
+    <option name="사용자" hit="사용자 설정 파일 S  " />
+    <option name="설정" hit="사용자 설정 파일 S  " />
+    <option name="파일" hit="사용자 설정 파일 S  " />
+    <option name="d" hit="새 Maven 프로젝트에 대한 설정 대화상자 표시 D " />
+    <option name="maven" hit="새 Maven 프로젝트에 대한 설정 대화상자 표시 D " />
+    <option name="대한" hit="새 Maven 프로젝트에 대한 설정 대화상자 표시 D " />
+    <option name="대화상자" hit="새 Maven 프로젝트에 대한 설정 대화상자 표시 D " />
+    <option name="새" hit="새 Maven 프로젝트에 대한 설정 대화상자 표시 D " />
+    <option name="설정" hit="새 Maven 프로젝트에 대한 설정 대화상자 표시 D " />
+    <option name="표시" hit="새 Maven 프로젝트에 대한 설정 대화상자 표시 D " />
+    <option name="프로젝트에" hit="새 Maven 프로젝트에 대한 설정 대화상자 표시 D " />
+    <option name="s" hit="스냅샷 항상 업데이트 S " />
+    <option name="스냅샷" hit="스냅샷 항상 업데이트 S " />
+    <option name="업데이트" hit="스냅샷 항상 업데이트 S " />
+    <option name="항상" hit="스냅샷 항상 업데이트 S " />
+    <option name="수" hit="스레드 수" />
+    <option name="스레드" hit="스레드 수" />
+    <option name="실패" hit="실패" />
+    <option name="실패" hit="실패 없음" />
+    <option name="없음" hit="실패 없음" />
+    <option name="e" hit="예외 스택 추적 출력 E " />
+    <option name="스택" hit="예외 스택 추적 출력 E " />
+    <option name="예외" hit="예외 스택 추적 출력 E " />
+    <option name="추적" hit="예외 스택 추적 출력 E " />
+    <option name="출력" hit="예외 스택 추적 출력 E " />
+    <option name="오류" hit="오류" />
+    <option name="o" hit="오프라인으로 작업 O " />
+    <option name="오프라인으로" hit="오프라인으로 작업 O " />
+    <option name="작업" hit="오프라인으로 작업 O " />
+    <option name="재정의" hit="재정의" />
+    <option name="정보" hit="정보" />
+    <option name="실패" hit="조기 실패" />
+    <option name="조기" hit="조기 실패" />
+    <option name="c" hit="체크섬 정책 C  " />
+    <option name="정책" hit="체크섬 정책 C  " />
+    <option name="체크섬" hit="체크섬 정책 C  " />
+    <option name="l" hit="출력 수준 L  " />
+    <option name="수준" hit="출력 수준 L  " />
+    <option name="출력" hit="출력 수준 L  " />
+    <option name="치명적" hit="치명적" />
+    <option name="r" hit="플러그인 레지스트리 사용 R " />
+    <option name="레지스트리" hit="플러그인 레지스트리 사용 R " />
+    <option name="사용" hit="플러그인 레지스트리 사용 R " />
+    <option name="플러그인" hit="플러그인 레지스트리 사용 R " />
+  </configurable>
+  <configurable id="reference.settings.project.maven.importing" configurable_name="가져오기">
+    <option name="" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="idea는" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="intellij" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="maven" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="test-" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="검색하기" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="구성된" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="나열된" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="단계" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="단계에서는" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="먼저" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="모든" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="생성된" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="소스" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="소스가" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="실행해야" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="위해" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="중" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="참고" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="컴파일됩니다" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="통해" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="폴더를" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="프로덕션" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="플러그인을" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="하나를" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="합니다" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="후" hit=" IntelliJ IDEA는 Maven 플러그인을 통해 구성된 모든 소스 폴더를 검색하기 위해 나열된 단계 중 하나를 실행해야 합니다  참고  모든 test   단계에서는 프로덕션 소스가 먼저 생성된 후 컴파일됩니다 " />
+    <option name="" hit=" target generated sources 의 하위 디렉터리" />
+    <option name="generated-sources" hit=" target generated sources 의 하위 디렉터리" />
+    <option name="target" hit=" target generated sources 의 하위 디렉터리" />
+    <option name="디렉터리" hit=" target generated sources 의 하위 디렉터리" />
+    <option name="의" hit=" target generated sources 의 하위 디렉터리" />
+    <option name="하위" hit=" target generated sources 의 하위 디렉터리" />
+    <option name="" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="api를" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="idea" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="가져오기" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="가져온" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="것을" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="고려하세요" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="내부" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="더" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="루트에" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="마이그레이션하는" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="모듈" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="비활성화하거나" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="사용되지" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="사용자" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="사용하여" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="새" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="설정은" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="수동" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="스토리지에" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="않습니다" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="않으며" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="앞으로" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="옵션은" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="옵션을" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="위해" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="이" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="이상" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="작업공간" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="저장되며" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="저장됩니다" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="지원되지" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="지정은" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="폴더의" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="프로젝트" hit=" 이 옵션은 더 이상 사용되지 않으며 앞으로 지원되지 않습니다  이 옵션을 비활성화하거나 새 작업공간 API를 사용하여 가져오기 위해 마이그레이션하는 것을 고려하세요  가져온 모듈 설정은 내부 스토리지에 저장되며  수동 사용자 지정은  idea 폴더의 프로젝트 루트에 저장됩니다  " />
+    <option name="maven" hit="Maven 출력 디렉터리 사용 O " />
+    <option name="o" hit="Maven 출력 디렉터리 사용 O " />
+    <option name="디렉터리" hit="Maven 출력 디렉터리 사용 O " />
+    <option name="사용" hit="Maven 출력 디렉터리 사용 O " />
+    <option name="출력" hit="Maven 출력 디렉터리 사용 O " />
+    <option name="generate-resources" hit="generate resources" />
+    <option name="generate-sources" hit="generate sources" />
+    <option name="generate-test-resources" hit="generate test resources" />
+    <option name="generate-test-sources" hit="generate test sources" />
+    <option name="process-resources" hit="process resources" />
+    <option name="process-sources" hit="process sources" />
+    <option name="process-test-resources" hit="process test resources" />
+    <option name="process-test-sources" hit="process test sources" />
+    <option name="generated-sources" hit="target generated sources" />
+    <option name="target" hit="target generated sources" />
+    <option name="가져오기" hit="가져오기" />
+    <option name="가져와야" hit="가져와야 할 종속성 타입의 쉼표로 구분된 목록" />
+    <option name="구분된" hit="가져와야 할 종속성 타입의 쉼표로 구분된 목록" />
+    <option name="목록" hit="가져와야 할 종속성 타입의 쉼표로 구분된 목록" />
+    <option name="쉼표로" hit="가져와야 할 종속성 타입의 쉼표로 구분된 목록" />
+    <option name="종속성" hit="가져와야 할 종속성 타입의 쉼표로 구분된 목록" />
+    <option name="타입의" hit="가져와야 할 종속성 타입의 쉼표로 구분된 목록" />
+    <option name="할" hit="가져와야 할 종속성 타입의 쉼표로 구분된 목록" />
+    <option name="sdk" hit="내부 런타임이 대체 수단으로 사용됩니다  프로젝트 SDK 구성에는 영향을 주지 않습니다 " />
+    <option name="구성에는" hit="내부 런타임이 대체 수단으로 사용됩니다  프로젝트 SDK 구성에는 영향을 주지 않습니다 " />
+    <option name="내부" hit="내부 런타임이 대체 수단으로 사용됩니다  프로젝트 SDK 구성에는 영향을 주지 않습니다 " />
+    <option name="대체" hit="내부 런타임이 대체 수단으로 사용됩니다  프로젝트 SDK 구성에는 영향을 주지 않습니다 " />
+    <option name="런타임이" hit="내부 런타임이 대체 수단으로 사용됩니다  프로젝트 SDK 구성에는 영향을 주지 않습니다 " />
+    <option name="사용됩니다" hit="내부 런타임이 대체 수단으로 사용됩니다  프로젝트 SDK 구성에는 영향을 주지 않습니다 " />
+    <option name="수단으로" hit="내부 런타임이 대체 수단으로 사용됩니다  프로젝트 SDK 구성에는 영향을 주지 않습니다 " />
+    <option name="않습니다" hit="내부 런타임이 대체 수단으로 사용됩니다  프로젝트 SDK 구성에는 영향을 주지 않습니다 " />
+    <option name="영향을" hit="내부 런타임이 대체 수단으로 사용됩니다  프로젝트 SDK 구성에는 영향을 주지 않습니다 " />
+    <option name="주지" hit="내부 런타임이 대체 수단으로 사용됩니다  프로젝트 SDK 구성에는 영향을 주지 않습니다 " />
+    <option name="프로젝트" hit="내부 런타임이 대체 수단으로 사용됩니다  프로젝트 SDK 구성에는 영향을 주지 않습니다 " />
+    <option name="g" hit="멀티 모듈 Maven 프로젝트에 대한 모듈 그룹 생성 G " />
+    <option name="maven" hit="멀티 모듈 Maven 프로젝트에 대한 모듈 그룹 생성 G " />
+    <option name="그룹" hit="멀티 모듈 Maven 프로젝트에 대한 모듈 그룹 생성 G " />
+    <option name="대한" hit="멀티 모듈 Maven 프로젝트에 대한 모듈 그룹 생성 G " />
+    <option name="멀티" hit="멀티 모듈 Maven 프로젝트에 대한 모듈 그룹 생성 G " />
+    <option name="모듈" hit="멀티 모듈 Maven 프로젝트에 대한 모듈 그룹 생성 G " />
+    <option name="생성" hit="멀티 모듈 Maven 프로젝트에 대한 모듈 그룹 생성 G " />
+    <option name="프로젝트에" hit="멀티 모듈 Maven 프로젝트에 대한 모듈 그룹 생성 G " />
+    <option name="d" hit="문서 D " />
+    <option name="문서" hit="문서 D " />
+    <option name="project" hit="빌드 디렉터리 제외  PROJECT ROOT  target " />
+    <option name="root" hit="빌드 디렉터리 제외  PROJECT ROOT  target " />
+    <option name="target" hit="빌드 디렉터리 제외  PROJECT ROOT  target " />
+    <option name="디렉터리" hit="빌드 디렉터리 제외  PROJECT ROOT  target " />
+    <option name="빌드" hit="빌드 디렉터리 제외  PROJECT ROOT  target " />
+    <option name="제외" hit="빌드 디렉터리 제외  PROJECT ROOT  target " />
+    <option name="가져오기" hit="빠른 가져오기 활성화" />
+    <option name="빠른" hit="빠른 가져오기 활성화" />
+    <option name="활성화" hit="빠른 가져오기 활성화" />
+    <option name="생성된" hit="생성된 소스 폴더 " />
+    <option name="소스" hit="생성된 소스 폴더 " />
+    <option name="폴더" hit="생성된 소스 폴더 " />
+    <option name="루트" hit="생성된 프로젝트 파일을 프로젝트 루트 아래에 저장  지원 중단됨 " />
+    <option name="생성된" hit="생성된 프로젝트 파일을 프로젝트 루트 아래에 저장  지원 중단됨 " />
+    <option name="아래에" hit="생성된 프로젝트 파일을 프로젝트 루트 아래에 저장  지원 중단됨 " />
+    <option name="저장" hit="생성된 프로젝트 파일을 프로젝트 루트 아래에 저장  지원 중단됨 " />
+    <option name="중단됨" hit="생성된 프로젝트 파일을 프로젝트 루트 아래에 저장  지원 중단됨 " />
+    <option name="지원" hit="생성된 프로젝트 파일을 프로젝트 루트 아래에 저장  지원 중단됨 " />
+    <option name="파일을" hit="생성된 프로젝트 파일을 프로젝트 루트 아래에 저장  지원 중단됨 " />
+    <option name="프로젝트" hit="생성된 프로젝트 파일을 프로젝트 루트 아래에 저장  지원 중단됨 " />
+    <option name="r" hit="소스 R " />
+    <option name="소스" hit="소스 R " />
+    <option name="idea" hit="애그리게이터 프로젝트의 IntelliJ IDEA 모듈 생성  pom  패키징으로  M " />
+    <option name="intellij" hit="애그리게이터 프로젝트의 IntelliJ IDEA 모듈 생성  pom  패키징으로  M " />
+    <option name="m" hit="애그리게이터 프로젝트의 IntelliJ IDEA 모듈 생성  pom  패키징으로  M " />
+    <option name="pom" hit="애그리게이터 프로젝트의 IntelliJ IDEA 모듈 생성  pom  패키징으로  M " />
+    <option name="모듈" hit="애그리게이터 프로젝트의 IntelliJ IDEA 모듈 생성  pom  패키징으로  M " />
+    <option name="생성" hit="애그리게이터 프로젝트의 IntelliJ IDEA 모듈 생성  pom  패키징으로  M " />
+    <option name="애그리게이터" hit="애그리게이터 프로젝트의 IntelliJ IDEA 모듈 생성  pom  패키징으로  M " />
+    <option name="패키징으로" hit="애그리게이터 프로젝트의 IntelliJ IDEA 모듈 생성  pom  패키징으로  M " />
+    <option name="프로젝트의" hit="애그리게이터 프로젝트의 IntelliJ IDEA 모듈 생성  pom  패키징으로  M " />
+    <option name="어노테이션" hit="어노테이션" />
+    <option name="config" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="jvm" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="mvn" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="옵션은" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="옵션을" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="이" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="재정의합니다" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="지정된" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="파일의" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="필드에" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="jdk" hit="임포터의 JDK " />
+    <option name="임포터의" hit="임포터의 JDK " />
+    <option name="vm" hit="임포터의 VM 옵션 " />
+    <option name="옵션" hit="임포터의 VM 옵션 " />
+    <option name="임포터의" hit="임포터의 VM 옵션 " />
+    <option name="다운로드" hit="자동 다운로드 " />
+    <option name="자동" hit="자동 다운로드 " />
+    <option name="자동" hit="자동 탐지" />
+    <option name="탐지" hit="자동 탐지" />
+    <option name="종속성" hit="종속성 타입 " />
+    <option name="타입" hit="종속성 타입 " />
+    <option name="자동" hit="컴파일러 자동 탐지" />
+    <option name="컴파일러" hit="컴파일러 자동 탐지" />
+    <option name="탐지" hit="컴파일러 자동 탐지" />
+    <option name="안" hit="탐지 안 함" />
+    <option name="탐지" hit="탐지 안 함" />
+    <option name="함" hit="탐지 안 함" />
+    <option name="u" hit="폴더 업데이트에 사용할 단계 U  " />
+    <option name="단계" hit="폴더 업데이트에 사용할 단계 U  " />
+    <option name="사용할" hit="폴더 업데이트에 사용할 단계 U  " />
+    <option name="업데이트에" hit="폴더 업데이트에 사용할 단계 U  " />
+    <option name="폴더" hit="폴더 업데이트에 사용할 단계 U  " />
+    <option name="f" hit="프로젝트 다시 로드 시 소스 및 테스트 폴더 유지 F " />
+    <option name="다시" hit="프로젝트 다시 로드 시 소스 및 테스트 폴더 유지 F " />
+    <option name="로드" hit="프로젝트 다시 로드 시 소스 및 테스트 폴더 유지 F " />
+    <option name="및" hit="프로젝트 다시 로드 시 소스 및 테스트 폴더 유지 F " />
+    <option name="소스" hit="프로젝트 다시 로드 시 소스 및 테스트 폴더 유지 F " />
+    <option name="시" hit="프로젝트 다시 로드 시 소스 및 테스트 폴더 유지 F " />
+    <option name="유지" hit="프로젝트 다시 로드 시 소스 및 테스트 폴더 유지 F " />
+    <option name="테스트" hit="프로젝트 다시 로드 시 소스 및 테스트 폴더 유지 F " />
+    <option name="폴더" hit="프로젝트 다시 로드 시 소스 및 테스트 폴더 유지 F " />
+    <option name="프로젝트" hit="프로젝트 다시 로드 시 소스 및 테스트 폴더 유지 F " />
+    <option name="k" hit="프로젝트 파일을 다음에 보관 K  " />
+    <option name="다음에" hit="프로젝트 파일을 다음에 보관 K  " />
+    <option name="보관" hit="프로젝트 파일을 다음에 보관 K  " />
+    <option name="파일을" hit="프로젝트 파일을 다음에 보관 K  " />
+    <option name="프로젝트" hit="프로젝트 파일을 다음에 보관 K  " />
+    <option name="s" hit="프로젝트를 재귀적으로 검색 S " />
+    <option name="검색" hit="프로젝트를 재귀적으로 검색 S " />
+    <option name="재귀적으로" hit="프로젝트를 재귀적으로 검색 S " />
+    <option name="프로젝트를" hit="프로젝트를 재귀적으로 검색 S " />
+  </configurable>
+  <configurable id="reference.settings.project.maven.ignored.files" configurable_name="무시된 파일">
+    <option name="경로" hit="경로 패턴 쉼표로 구분      및     와일드카드 허용  " />
+    <option name="구분" hit="경로 패턴 쉼표로 구분      및     와일드카드 허용  " />
+    <option name="및" hit="경로 패턴 쉼표로 구분      및     와일드카드 허용  " />
+    <option name="쉼표로" hit="경로 패턴 쉼표로 구분      및     와일드카드 허용  " />
+    <option name="와일드카드" hit="경로 패턴 쉼표로 구분      및     와일드카드 허용  " />
+    <option name="패턴" hit="경로 패턴 쉼표로 구분      및     와일드카드 허용  " />
+    <option name="허용" hit="경로 패턴 쉼표로 구분      및     와일드카드 허용  " />
+    <option name="무시된" hit="무시된 파일" />
+    <option name="파일" hit="무시된 파일" />
+  </configurable>
+  <configurable id="reference.settings.project.maven.runner" configurable_name="러너">
+    <option name="d" hit="IDE 빌드 실행 액션을 Maven에 위임 D " />
+    <option name="ide" hit="IDE 빌드 실행 액션을 Maven에 위임 D " />
+    <option name="maven에" hit="IDE 빌드 실행 액션을 Maven에 위임 D " />
+    <option name="빌드" hit="IDE 빌드 실행 액션을 Maven에 위임 D " />
+    <option name="실행" hit="IDE 빌드 실행 액션을 Maven에 위임 D " />
+    <option name="액션을" hit="IDE 빌드 실행 액션을 Maven에 위임 D " />
+    <option name="위임" hit="IDE 빌드 실행 액션을 Maven에 위임 D " />
+    <option name="j" hit="JRE J  " />
+    <option name="jre" hit="JRE J  " />
+    <option name="v" hit="VM 옵션 V  " />
+    <option name="vm" hit="VM 옵션 V  " />
+    <option name="옵션" hit="VM 옵션 V  " />
+    <option name="러너" hit="러너" />
+    <option name="b" hit="백그라운드에서 실행 B " />
+    <option name="백그라운드에서" hit="백그라운드에서 실행 B " />
+    <option name="실행" hit="백그라운드에서 실행 B " />
+    <option name="config" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="jvm" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="mvn" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="옵션은" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="옵션을" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="이" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="재정의합니다" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="지정된" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="파일의" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="필드에" hit="이 필드에 지정된 옵션은  mvn jvm config 파일의 옵션을 재정의합니다" />
+    <option name="t" hit="테스트 건너뛰기 T " />
+    <option name="건너뛰기" hit="테스트 건너뛰기 T " />
+    <option name="테스트" hit="테스트 건너뛰기 T " />
+    <option name="프로퍼티" hit="프로퍼티 " />
+    <option name="e" hit="환경 변수 E  " />
+    <option name="변수" hit="환경 변수 E  " />
+    <option name="환경" hit="환경 변수 E  " />
+  </configurable>
+  <configurable id="reference.settings.project.maven.archetype.catalogs" configurable_name="원형 카탈로그">
+    <option name="원형" hit="원형 카탈로그" />
+    <option name="카탈로그" hit="원형 카탈로그" />
+    <option name="및" hit="원형 카탈로그를 추가  제거 및 편집" />
+    <option name="원형" hit="원형 카탈로그를 추가  제거 및 편집" />
+    <option name="제거" hit="원형 카탈로그를 추가  제거 및 편집" />
+    <option name="추가" hit="원형 카탈로그를 추가  제거 및 편집" />
+    <option name="카탈로그를" hit="원형 카탈로그를 추가  제거 및 편집" />
+    <option name="편집" hit="원형 카탈로그를 추가  제거 및 편집" />
+  </configurable>
+</options>

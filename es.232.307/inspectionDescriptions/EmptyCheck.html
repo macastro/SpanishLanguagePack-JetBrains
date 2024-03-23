@@ -1,0 +1,32 @@
+<html>
+<body>
+<p>컬렉션 및 <code>Options</code>의 빈 값을 검사하는 다양한 방식을 보고하고 <code>.isEmpty</code>, <code>.nonEmpty</code> 또는 <code>.isDefined.</code>로 바꿀 것을 제안합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  !Seq(1).isEmpty
+  Seq(1).size == 0
+  Seq(1).size != 0
+  !(Seq(1).length > 0)
+  Seq(1).exists(_ => true)
+  import scala.Function.const
+  Seq(1).exists(const(true))
+  !Option(0).isEmpty
+  Option(0) == None
+  Option(0) != None
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  Seq(1).nonEmpty
+  Seq(1).isEmpty
+  Seq(1).nonEmpty
+  Seq(1).isEmpty
+  Seq(1).nonEmpty
+  import scala.Function.const
+  Seq(1).nonEmpty
+  Option(0).isDefined
+  Option(0).isEmpty
+  Option(0).isDefined
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

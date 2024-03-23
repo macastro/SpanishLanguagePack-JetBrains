@@ -1,0 +1,26 @@
+<html>
+<body>
+<code>err.(*MyErr)</code> 혹은 <code>switch err.(type)</code>와 같은 오류 타입 어설션 혹은 타입 switch를 보고하고 대신 <code>errors.As</code>를 사용하도록 제안합니다.
+<p>Go 1.13부터 에러는 <code>%w</code> 동사로 <code>fmt.Errorf</code> 함수를 사용하여 래핑할 수 있습니다. 따라서 오류 타입 어설션 혹은 타입 switch는 래핑된 오류에서 실패할 수 있습니다. Go 1.13 이후 표준 라이브러리의 <code>errors.Is</code> 함수를 사용하여 특정한 오류를 검사하는 것이 선호됩니다.</p>
+<p>빠른 수정이 오류 타입 어설션 및 타입 switch를 <code>errors.As</code> 호출로 대체합니다.</p>
+<p><b>예</b></p>
+<pre><code>
+errFoo, ok := err.(*ErrFoo)
+
+
+switch err.(type) {
+  case *ErrBar:
+}
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+var errFoo *ErrFoo
+ok := errors.As(err, &errFoo)
+
+var errBar *ErrBar
+switch {
+case errors.As(err, &errBar):
+}
+</code></pre>
+</body>
+</html>

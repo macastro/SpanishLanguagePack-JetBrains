@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>정렬되지 않은 컬렉션을 비교하는 <code>sameElements</code> 및 <code>corresponds</code>의 사용 위치를 보고합니다.</p>
+
+<p>메서드 <code>sameElements</code> 및 <code>corresponds</code>는 요소를 컬렉션 내 위치순으로 비교하기 위해, 주어진 컬렉션의 반복자를 사용합니다.
+    그러므로 순서 없는 Set 또는 Map과 같이 요소의 순서가 잘 정의되어 있지 않은 경우 결과를 예측할 수 없습니다.</p>
+<p>이를 수정하려면 <code>==</code>, <code>subsetOf</code>을 사용하거나 요소를 특정 순서로 정렬하여 가져오세요.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  Set(3,2,1) sameElements Set(1, 2, 3) // 이는 false
+
+  // 하지만
+
+  Set(1, 2, 3, 4, 5) sameElements Set(5, 4, 3, 2, 1) // 이는 true
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>사용되지 않는 선언을 보고합니다.</p>
+
+<p>빠른 수정에서는 사용되지 않는 선언을 제거합니다.</p>
+
+<p>아래 <b>옵션</b>에서 검사가 public 및/또는 지역 선언에 대해 작동해야 하는지 여부를 제어할 수 있습니다.
+  지역 선언의 경우 검사 활성화 및 비활성화 외에도 해당 선언을 <code>-Wunused:locals</code>, <code>-Wunused:linted</code> 또는 <code>-Xlint:unused</code>의 세 가지 컴파일러 옵션 중 하나에 종속시킬 수도 있습니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  def test(): Int = {
+    val unused = 3
+    3
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  def test(): Int = {
+    3
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body><p>단순화할 수 있는 타입을 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  def test: ({type l[a] = Either[String, a]})#l[Int] = ???
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  def test: Either[String, Int] = ???
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

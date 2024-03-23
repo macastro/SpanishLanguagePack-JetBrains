@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>결과 타입이 <code>Unit</code>인 접근자식 이름을 가진 메서드를 보고합니다.</p>
+<p>접근자에 대해 <a href="https://en.wikipedia.org/wiki/JavaBean">JavaBean</a> 이름 지정 컨트랙트를 따르는 메서드는 <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">부수 효과</a>가 없을 것으로 기대됩니다. 하지만 결과 타입이 <code>Unit</code>인 메서드는 해당 부수 효과에 대해서만 실행됩니다.</p>
+<p>그러므로 메서드는 <code>Unit</code> 타입이 아니어야 하거나 부수 효과를 더 잘 반영하는 이름으로 변경되어야 합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  trait Test {
+    def getTarget(): Unit
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 다른 멤버를 재정의하는 메서드를 보고하지 않습니다.</p>
+</body>
+</html>

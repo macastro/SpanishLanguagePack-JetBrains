@@ -1,0 +1,24 @@
+<html>
+<body>
+인수 중 하나가 빈 문자열인 문자열 연결을 보고합니다.
+이러한 연결은 필요하지 않습니다. 때때로 비 <code>String</code> 객체 또는 기본 타입을 <code>String</code>으로 변환하는 관용구로 사용되지만, 이 경우 <code>String.valueOf</code> 같은 메서드를 사용하는 것이 더 명확합니다.
+<p>
+  빠른 수정에서는 연결을 단순화하도록 제안합니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  void foo(int x, int y) {
+    String s = "" + x + " ; " + y;
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  void foo(int x, int y) {
+    String s = x + " ; " + y;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  <b>다른 변경 사항 없이 빈 문자열을 제거할 수 있는 경우만 보고</b> 옵션을 사용하면 <code>String.valueOf</code>로 다른 피연산자를 변환하지 않아도 빈 문자열을 삭제할 수 있는 경우만 보고합니다.
+</body>
+</html>

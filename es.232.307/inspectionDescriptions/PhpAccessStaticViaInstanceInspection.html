@@ -1,0 +1,26 @@
+<html>
+<body>
+클래스 자체가 아닌 클래스 인스턴스를 통해 static 메서드 및 필드에 대한 참조를 보고합니다.
+<p>PHP에서 인스턴스 변수를 통한 static 멤버 참조가 허용되지만, 코드를 읽는 이는 메서드 결과가 인스턴스에 따라 달라진다고 생각할 수 있으므로 코드가 혼동될 수 있습니다.</p>
+<p>빠른 수정은 인스턴스 변수를 클래스 이름으로 대체합니다.</p>
+<p>예:</p>
+<pre><code>
+  class StaticClass {
+    public static function someStaticFunction(): int
+    {
+        return 3;
+    }
+
+  }
+
+  $var = new StaticClass
+  $var::someStaticFunction();
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  StaticClass::someStaticFunction()
+</code></pre>
+<p>
+
+</body>
+</html>

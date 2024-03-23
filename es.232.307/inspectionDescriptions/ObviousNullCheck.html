@@ -1,0 +1,15 @@
+<html>
+<body>
+null 검사 메서드(예: <code>Objects.requireNonNull</code> 또는 <code>Assert.assertNotNull</code>)가 null이 확실히 아닌 값(예: 새로 생성된 객체)에 호출된 경우를 보고합니다. 이러한 검사를 불필요하며 프로그래밍 오류일 수 있습니다.
+<p><b>예:</b></p>
+<pre><code>
+  final String greeting = Objects.requireNonNull("Hi!");
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  final String greeting = "Hi!";
+</code></pre>
+<!-- tooltip end -->
+<p>2017.2의 새로운 기능</p>
+</body>
+</html>

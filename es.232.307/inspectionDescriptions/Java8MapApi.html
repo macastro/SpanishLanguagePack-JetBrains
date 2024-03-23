@@ -1,0 +1,52 @@
+<html>
+<body>
+<code>java.util.Map</code>의 일반적인 사용 패턴을 보고하고 다음으로 대체하도록 제안합니다.
+<code>getOrDefault()</code>, <code>computeIfAbsent()</code>, <code>putIfAbsent()</code>, <code>merge()</code> 또는 <code>replaceAll()</code>
+<p>예:</p>
+<pre><code>
+  map.containsKey(key) ? map.get(key) : "default";
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  map.getOrDefault(key, "default");
+</code></pre>
+<p>예:</p>
+<pre><code>
+  List&lt;String&gt; list = map.get(key);
+  if (list == null) {
+    list = new ArrayList&lt;&gt;();
+    map.put(key, list);
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  map.computeIfAbsent(key, localKey -> new ArrayList&lt;&gt;());
+</code></pre>
+<p>예:</p>
+<pre><code>
+  Integer val = map.get(key);
+  if (val == null) map.put(key, 1);
+  else map.put(key, val + 1);
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  map.merge(key, 1, (localKey, localValue) -> localValue + 1);
+</code></pre>
+<p>예:</p>
+<pre><code>
+  for (Map.Entry&lt;String, String&gt; entry : map.entrySet()) {
+    map.put(entry.getKey(), transform(entry.getValue()));
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  map.replaceAll((localKey, localValue) -> transform(localValue));
+</code></pre>
+
+<!-- tooltip end -->
+<p>람다 식으로 추출된 코드가 동일한 <code>Map</code>을 수정하는 경우, 일부 <code>Map</code> 구현에서 <code>computeIfAbsent()</code> 또는 <code>merge()</code>로 올바르게 대체되지 않을 수 있습니다. 기본적으로 이 코드에 부수 효과가 있으면 경고가 표시되지 않습니다. 필요한 경우 <b>람다에 부수 효과가 있더라도 대체 제안</b> 옵션을 사용하여 경고를 항상 표시하세요.</p>
+<p>또한 <code>put()</code>과 같은 기존 메서드와 <code>computeIfAbsent()</code> 또는 <code>merge()</code>와 같은 최신 메서드에서 <code>null</code> 값이 다르게 처리되므로, 지정된 <code>Map</code>에 <code>null</code> 값을 저장하는 것이 중요한 경우 의미가 변경될 수 있습니다. 해당 값이 정적으로 null 가능한 값으로 알려진 경우 검사에서 대체를 제안하지 않지만 알려지지 않은 null 값 가능성이 있는 값에는 대체가 제안됩니다. 이 경우 경고를 억제하고 주석 설명을 추가하는 것이 좋습니다.
+</p>
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 8 이상인 경우에만 보고합니다.</p>
+</body>
+</html>

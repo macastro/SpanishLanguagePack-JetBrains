@@ -1,0 +1,34 @@
+<html>
+<body>
+문자열 결합 또는 명시적 문자열 변환이 필요없는 라이브러리 메서드에 사용된 <code>String.valueOf()</code> 또는 <code>Integer.toString()</code>와 같은 static 메서드 호출을 보고합니다.
+<p>예:</p>
+<pre><code>
+  System.out.println("Number: " + Integer.toString(count));
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  System.out.println("Number: " + count);
+</code></pre>
+<!-- tooltip end -->
+<p>라이브러리 메서드 내 명시적 문자열 변환은 불필요한 것으로 간주됩니다:</p>
+<ul>
+  <li>
+    <code>java.io.PrintWriter</code>, <code>java.io.PrintStream</code> 클래스
+    <ul><li><code>print()</code>, <code>println()</code></li></ul>
+  </li>
+  <li>
+    <code>java.lang.StringBuilder</code>, <code>java.lang.StringBuffer</code> 클래스
+    <ul><li><code>append()</code></li></ul>
+  </li>
+
+  <li>
+    <code>org.slf4j.Logger</code> 클래스
+    <ul>
+      <li><code>trace()</code>, <code>debug()</code>, <code>info()</code>, <code>warn()</code>, <code>error()</code></li>
+    </ul>
+  </li>
+</ul>
+<p>
+  <b>빈 문자열이 있는 연결로 대체될 수 있는 호출을 보고</b> 옵션을 사용하면 <code>String.valueOf()</code> 대신 빈 문자열이 있는 연결이 사용될 수 있는 경우를 추가적으로 보고합니다.
+</body>
+</html>

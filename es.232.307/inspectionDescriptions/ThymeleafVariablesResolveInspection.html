@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>해결되지 않은 참조 및 잘못된 Thymeleaf 표현식을 보고합니다.</p>
+
+<p><strong>예:</strong></p>
+<pre><code lang="html">
+&lt;html xmlns:th="https://www.thymeleaf.org"&gt;
+&lt;body&gt;
+  &lt;form th:object="${<strong>unknownPet</strong>}"  &lt;!-- 'unknownPet'을 해결할 수 없습니다  --&gt;
+        class="form-horizontal" method="post"&gt;
+    &lt;input type="hidden" name="id" th:value="*{<strong>id</strong>}" /&gt; &lt;!-- 'id'를 해결할 수 없습니다  --&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</body>
+</html>

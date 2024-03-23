@@ -1,0 +1,24 @@
+<html>
+<body>
+클래스에서 <code>@Immutable</code> 어노테이션이 추가된 비 final 필드를 보고합니다.
+이는 <code>@Immutable</code> 어노테이션 컨트랙트에 위배됩니다.
+<p>예:</p>
+<pre><code>
+  import javax.annotation.concurrent.Immutable;
+  @Immutable
+  class Foo {
+    String bar = "foo";
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>지원되는 <code>@GuardedBy</code> 어노테이션:</p>
+<ul>
+  <li><code>net.jcip.annotations.GuardedBy</code></li>
+  <li><code>javax.annotation.concurrent.GuardedBy</code></li>
+  <li><code>org.apache.http.annotation.GuardedBy</code></li>
+  <li><code>com.android.annotations.concurrency.GuardedBy</code></li>
+  <li><code>androidx.annotation.GuardedBy</code></li>
+  <li><code>com.google.errorprone.annotations.concurrent.GuardedBy</code></li>
+</ul>
+</body>
+</html>

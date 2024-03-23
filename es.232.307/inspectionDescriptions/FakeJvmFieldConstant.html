@@ -1,0 +1,30 @@
+<html>
+<body>
+<code>const</code>가 아니고 Java 어노테이션 인수로 사용되는 Kotlin 프로퍼티를 보고합니다.
+<p>
+예를 들어 <code>@JvmField</code> 어노테이션을 포함하는 프로퍼티는 컴파일 시 평가할 수 있는 이니셜라이저와 기본 또는 <code>String</code> 타입을 가지고 있습니다.
+</p>
+
+<p>
+그러한 프로퍼티는 Kotlin 1.1~1.2의 바이트코드에서 <code>ConstantValue</code> 속성을 가지고 있습니다.
+이 속성은 대응하는 필드의 사용 위치를 javac이 접고 어노테이션에서 그 필드를 사용할 수 있도록 허용합니다.
+이렇게 되면 Java/Kotlin 혼합 코드 내 개별 또는 증분 컴파일에서 부정확한 동작으로 이어질 수 있습니다.
+이 동작은 Kotlin 1.3(<code>ConstantValue</code> 속성을 더 이상 사용하지 않음)에서 변경되기 쉽습니다.
+</p>
+<p><b>예:</b></p>
+<p>foo.kt 파일의 Kotlin 코드:</p>
+<pre><code>
+  annotation class Ann(val s: String)
+  @JvmField val importantString = "important"
+</code></pre>
+<p>Java 코드:</p>
+<pre><code>
+  public class JavaUser {
+      // This is dangerous
+      @Ann(s = FooKt.importantString)
+      public void foo() {}
+  }
+</code></pre>
+<p>문제를 해결하려면 관련된 Kotlin 프로퍼티에서 <code>const</code> 제어자가 포함된 <code>@JvmField</code> 어노테이션을 대체하거나 인라인화합니다.</p>
+</body>
+</html>

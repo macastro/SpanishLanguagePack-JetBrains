@@ -1,0 +1,84 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="actions" path="ActionManager" hit="AI Actions" />
+    <option name="ai" path="ActionManager" hit="AI Actions" />
+    <option name="ai" path="ActionManager" hit="AI 지원" />
+    <option name="지원" path="ActionManager" hit="AI 지원" />
+    <option name="all" path="ActionManager" hit="Delete All Chats" />
+    <option name="chats" path="ActionManager" hit="Delete All Chats" />
+    <option name="delete" path="ActionManager" hit="Delete All Chats" />
+    <option name="chat" path="ActionManager" hit="Delete Chat" />
+    <option name="delete" path="ActionManager" hit="Delete Chat" />
+    <option name="dislike" path="ActionManager" hit="Dislike this response" />
+    <option name="response" path="ActionManager" hit="Dislike this response" />
+    <option name="this" path="ActionManager" hit="Dislike this response" />
+    <option name="chat" path="ActionManager" hit="Dump Chat" />
+    <option name="dump" path="ActionManager" hit="Dump Chat" />
+    <option name="ai" path="ActionManager" hit="Explain error message with AI" />
+    <option name="error" path="ActionManager" hit="Explain error message with AI" />
+    <option name="explain" path="ActionManager" hit="Explain error message with AI" />
+    <option name="message" path="ActionManager" hit="Explain error message with AI" />
+    <option name="with" path="ActionManager" hit="Explain error message with AI" />
+    <option name="ai" path="ActionManager" hit="Generate Commit Message with AI Assistant" />
+    <option name="assistant" path="ActionManager" hit="Generate Commit Message with AI Assistant" />
+    <option name="commit" path="ActionManager" hit="Generate Commit Message with AI Assistant" />
+    <option name="generate" path="ActionManager" hit="Generate Commit Message with AI Assistant" />
+    <option name="message" path="ActionManager" hit="Generate Commit Message with AI Assistant" />
+    <option name="with" path="ActionManager" hit="Generate Commit Message with AI Assistant" />
+    <option name="at" path="ActionManager" hit="Insert Snippet at Caret" />
+    <option name="caret" path="ActionManager" hit="Insert Snippet at Caret" />
+    <option name="insert" path="ActionManager" hit="Insert Snippet at Caret" />
+    <option name="snippet" path="ActionManager" hit="Insert Snippet at Caret" />
+    <option name="like" path="ActionManager" hit="Like this response" />
+    <option name="response" path="ActionManager" hit="Like this response" />
+    <option name="this" path="ActionManager" hit="Like this response" />
+    <option name="dialog" path="ActionManager" hit="Remove Dialog" />
+    <option name="remove" path="ActionManager" hit="Remove Dialog" />
+    <option name="chat" path="ActionManager" hit="Rename Chat" />
+    <option name="rename" path="ActionManager" hit="Rename Chat" />
+    <option name="settings" path="ActionManager" hit="Settings..." />
+    <option name="복사" path="ActionManager" hit="클립보드에 복사" />
+    <option name="클립보드에" path="ActionManager" hit="클립보드에 복사" />
+    <option name="편집" path="ActionManager" hit="편집" />
+  </configurable>
+  <configurable id="ml.llm.LLMConfigurable" configurable_name="AI 지원">
+    <option name="ai" hit="AI 지원" />
+    <option name="지원" hit="AI 지원" />
+    <option name="ai로" hit="AI로 생성된 이름 제안을 제공합니다" />
+    <option name="생성된" hit="AI로 생성된 이름 제안을 제공합니다" />
+    <option name="이름" hit="AI로 생성된 이름 제안을 제공합니다" />
+    <option name="제공합니다" hit="AI로 생성된 이름 제안을 제공합니다" />
+    <option name="제안을" hit="AI로 생성된 이름 제안을 제공합니다" />
+    <option name="cancel" hit="Cancel" />
+    <option name="ai" hit="Log in to JetBrains AI" />
+    <option name="in" hit="Log in to JetBrains AI" />
+    <option name="jetbrains" hit="Log in to JetBrains AI" />
+    <option name="log" hit="Log in to JetBrains AI" />
+    <option name="to" hit="Log in to JetBrains AI" />
+    <option name="show" hit="Show token" />
+    <option name="token" hit="Show token" />
+    <option name="ai" hit="You re logged in to JetBrains AI" />
+    <option name="in" hit="You re logged in to JetBrains AI" />
+    <option name="jetbrains" hit="You re logged in to JetBrains AI" />
+    <option name="logged" hit="You re logged in to JetBrains AI" />
+    <option name="re" hit="You re logged in to JetBrains AI" />
+    <option name="to" hit="You re logged in to JetBrains AI" />
+    <option name="you" hit="You re logged in to JetBrains AI" />
+    <option name="기능" hit="기능" />
+    <option name="로그아웃" hit="로그아웃" />
+    <option name="로그인" hit="브라우저로 이동하여 로그인 완료" />
+    <option name="브라우저로" hit="브라우저로 이동하여 로그인 완료" />
+    <option name="완료" hit="브라우저로 이동하여 로그인 완료" />
+    <option name="이동하여" hit="브라우저로 이동하여 로그인 완료" />
+  </configurable>
+  <configurable id="ml.llm.LLMDataSharingConfigurable" configurable_name="데이터 공유">
+    <option name="ai" hit="Send AI Assistant usage statistics" />
+    <option name="assistant" hit="Send AI Assistant usage statistics" />
+    <option name="send" hit="Send AI Assistant usage statistics" />
+    <option name="statistics" hit="Send AI Assistant usage statistics" />
+    <option name="usage" hit="Send AI Assistant usage statistics" />
+    <option name="공유" hit="데이터 공유" />
+    <option name="데이터" hit="데이터 공유" />
+  </configurable>
+</options>

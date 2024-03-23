@@ -1,0 +1,24 @@
+<html>
+<body>
+<code>defer</code> 및 <code>go</code> 구문의 <code>func</code> 리터럴 내 루프 변수에 대한 참조를 보고합니다.
+  이러한 변수는 <code>func</code> 리터럴로 복사되지 않기 때문에 예기치 못한 값을 가질 수 있습니다. 또한 <code>defer</code> 및 <code>go</code> 구문의 <code>func</code> 리터럴은 즉시 실행되지 않습니다.
+
+<p>클로저 및 고루틴에 대한 자세한 내용은 <a href="https://go.dev/doc/faq#closures_and_goroutines">golang.org의 What happens with closures running as goroutines?</a>를 참조하세요.</p>
+<p>예:</p>
+<pre><code>for _, v := range []string{"a", "b", "c"} {
+  go func() {
+    fmt.Println(v) // 출력이 'a b c' 가 아닌  'c c c'가 될 가능성이 큼
+  }()
+}</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>for _, v := range []string{"a", "b", "c"} {
+  v := v // 'v' 가 지금 복사됨
+  go func() {
+    fmt.Println(v)
+  }()
+}</code></pre>
+<!-- tooltip end -->
+<p>분석기는 <code>defer</code> 및 <code>go</code> 구문이 루프 본문의 마지막 구문일 경우에만 해당 구문을 검사합니다.
+  다른 경우 분석기는 잘못 감지할 수 있습니다.</p>
+</body>
+</html>

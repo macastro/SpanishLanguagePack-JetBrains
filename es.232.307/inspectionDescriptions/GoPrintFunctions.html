@@ -1,0 +1,31 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html>
+<body>
+<code>fmt.Printf</code>, <code>fmt.Println</code> 및 유사한 형식 지정 및 출력 함수의 잘못된 사용 사례를 보고합니다.
+<p>이러한 함수의 서식 지정 문자열에서 서식 지정 함수는 <code>%s</code>, <code>%d</code>, <code>%v</code> 및 기타와 같은 서식화 동사를 사용합니다.
+  서식화 동사의 사용이 잘못된 경우 서식 지정 함수의 결과는 오류를 포함할 수 있습니다.
+  서식 지정 동사에 대한 자세한 내용은 <a href="https://pkg.go.dev/fmt">go.dev의 Package fmt</a>를 참조하세요.
+</p>
+<p>예:</p>
+<pre><code>fmt.Printf("id: %s", 42)</code></pre>
+<p>이 함수의 출력은 <code>id: %!s(int=42)</code>입니다. 이것은 원하는 결과가 아닐 수 있습니다.
+  다음 함수는 <code>%d</code> 서식화 동사를 사용합니다.
+  서식화 동사 <code>%d</code>를 사용한 출력은 <code>id: 42</code>입니다.</p>
+<pre><code>fmt.Printf("id: %d", 42)</code></pre>
+</body>
+</html>

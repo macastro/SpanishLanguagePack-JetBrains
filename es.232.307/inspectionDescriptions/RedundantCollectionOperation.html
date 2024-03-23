@@ -1,0 +1,22 @@
+<html>
+<body>
+더 간단한 대안이 있는 불필요하게 복잡한 컬렉션 연산을 보고합니다.
+<p>예:</p>
+<pre><code>
+  void f(String[] array, Collection&lt;String&gt; collection) {
+    String[] strings = Arrays.asList(array).subList(0, 10).toArray(new String[0]);
+    boolean contains = collection.containsAll(Collections.singletonList("x"));
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  void f(String[] array, Collection&lt;String&gt; collection) {
+    String[] strings = Arrays.copyOf(array, 10);
+    boolean contains = collection.contains("x");
+  }
+</code></pre>
+
+<!-- tooltip end -->
+<p><small>2018.1의 새로운 기능</small></p>
+</body>
+</html>

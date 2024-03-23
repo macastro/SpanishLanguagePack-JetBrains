@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>잘못된 Bean 정의 규칙을 보고합니다.</p>
+<p>최상위 Java 클래스는 다음 경우에 단순한 Bean이 될 수 있습니다.</p>
+<ul>
+  <li>매개변수화된 타입이 아닌 경우</li>
+  <li>비 static 내부 클래스가 아닌 경우</li>
+  <li>구체 클래스이거나 <code>@Decorator</code> 어노테이션이 추가된 클래스인 경우</li>
+  <li>적절한 생성자를 포함하는 경우: 클래스에 매개변수가 없는 생성자가 있거나 클래스가 <code>@Initializer</code> 어노테이션이 추가된 생성자를 선언하는 경우
+  </li>
+  <li>다음 인터페이스 중 하나를 구현하지 않는 경우: 
+    <code>javax.servlet.Servlet</code>,
+    <code>javax.servlet.Filter</code>,
+    <code>javax.servlet.ServletContextListener</code>,
+    <code>javax.servlet.http.HttpSessionListener</code>,
+    <code>javax.servlet.ServletRequestListener</code>,
+    <code>javax.ejb.EnterpriseBean</code>
+  </li>
+  <li><code>javax.faces.component.UIComponent</code>를 확장하지 않는 경우</li>
+</ul>
+</body>
+</html>

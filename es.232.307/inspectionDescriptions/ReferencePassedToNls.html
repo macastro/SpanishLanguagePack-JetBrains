@@ -1,0 +1,13 @@
+<html>
+<body>
+<p><code>@Nls</code> 어노테이션이 추가되지 않은 표현식이 <code>@Nls</code> 문자열을 요구하는 매개변수로 전달된 경우를 보고합니다.</p>
+<p>이는 일반 문자열에서 자연어 문자열로의 원치 않는 변환을 나타냅니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  def setTitle(@Nls title: String) = ???
+
+  setTitle("Hardcoded title") // 이 문자열은 번들로 추출되어야 합니다
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

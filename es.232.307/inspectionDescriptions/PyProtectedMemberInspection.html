@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>protected 멤버가 클래스, 정의된 클래스의 하위 클래스, 또는 모듈 외부에서 접근된 경우를 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+class Foo:
+    def _protected_method(self):
+        pass
+
+
+class Bar(Foo):
+    def public_method(self):
+        self._protected_method()
+
+
+foo = Foo()
+foo._protected_method() # protected 메서드에 대한 액세스
+</code></pre>
+</body>
+</html>

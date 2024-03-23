@@ -1,0 +1,34 @@
+<html>
+<body>
+<code>ChangeScope</code>에서 <code>new</code> 혹은 <code>getOrCreate</code> 함수로 생성할 때 <code>Entity</code>의 대입되지 않은 프로퍼티를 보고합니다.
+<p>
+  <code>Entity</code>의 null이 될 수 없는 모든 프로퍼티를 대입하거나 <code>@Many</code> 어노테이션으로 표시해야 합니다.
+  그렇지 않은 경우 런타임 예외가 발생합니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  interface A: Entity {
+    var x: Int
+    var y: Int?
+    @Many var z: Int
+    var p: Int
+  }
+
+  fun ChangeScope.foo() {
+    new(A::class) {
+      this.p = 0
+    }
+  }
+</code></pre>
+<p>빠른 수정에서는 누락된 필수 프로퍼티에 대한 대입을 생성합니다</p>
+<pre><code>
+  fun ChangeScope.foo() {
+    new(A::class) {
+      this.x = x
+      this.p = 0
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

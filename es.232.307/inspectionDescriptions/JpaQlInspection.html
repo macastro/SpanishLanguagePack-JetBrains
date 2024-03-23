@@ -1,0 +1,20 @@
+<html>
+<body>
+지속성 QL 쿼리 내부의 다음과 같은 오류를 보고합니다.
+<ul>
+  <li>일치하지 않는 표현식 타입</li>
+  <li>잘못된 매개변수</li>
+  <li>빈 조건 또는 상수 조건</li>
+  <li>해결되지 않은 심볼</li>
+</ul>
+
+<p><b>쿼리 예:</b></p>
+<pre><code lang="sql">
+SELECT OBJECT(e) FROM JavaEntity e WHERE TRUE // 경고: 상수 조건
+
+SELECT OBJECT(e) FROM JavaEntity e WHERE e.id BETWEEN 0 AND '2' // 오류: 숫자 값이 필요하나 문자열이 사용되었습니다
+
+SELECT e from JavaEntity e where e.id=?1 and e.name=?3 // 오류: 실제 쿼리 매개변수가 2개 밖에 없습니다
+</code></pre>
+</body>
+</html>

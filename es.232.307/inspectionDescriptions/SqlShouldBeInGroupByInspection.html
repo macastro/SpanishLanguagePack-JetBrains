@@ -1,0 +1,11 @@
+<html>
+<body>
+GROUP BY 절에서 또는 집계 함수 호출 내에서 사용되지 않는 열을 보고합니다.
+<p>예(Microsoft SQL 서버):</p>
+<pre><code>CREATE TABLE t1 (a INT, b INT);
+SELECT a, b FROM t1 GROUP BY a;</code></pre>
+<p>SELECT 쿼리를 실행하면 Microsoft SQL Server는 <code>b</code> 열이 GROUP BY에서 사용되거나 집계 함수 내에서 사용될 것으로 기대하기 때문에 오류가 발생합니다. 다음 두 예시는 오류를 수정합니다.</p>
+<pre><code>SELECT a, b FROM t1 GROUP BY a, b;
+SELECT a, max(b) max_b FROM t1 GROUP BY a;</code></pre>
+</body>
+</html>

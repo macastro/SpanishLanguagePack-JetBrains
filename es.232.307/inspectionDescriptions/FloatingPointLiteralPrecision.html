@@ -1,0 +1,24 @@
+<html>
+<body>
+<a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a>의 <code>Float</code> 및 <code>Double</code> 타입을 사용하여, 필요한 정밀도로 표현할 수 없는 부동 소수점 리터럴을 보고합니다.
+
+<p>
+    예를 들어, <code>1.9999999999999999999</code>에는 유효 숫자가 너무 많으므로 <code>Double</code>로 표현하면 <code>2.0</code>으로 반올림됩니다.
+    계산 시 반올림된 값이 대신 사용된다는 사실은 숨겨지므로 숫자를 과하게 지정할 경우 오해의 소지가 있습니다.
+</p>
+
+<p>
+    빠른 수정에서는 해당 리터럴을 상수의 실제 표현과 일치하는 반올림된 값으로 대체합니다.
+</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  val x: Float = 3.14159265359f
+</code></pre>
+
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  val x: Float = 3.1415927f
+</code></pre>
+</body>
+</html>

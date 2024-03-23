@@ -1,0 +1,15 @@
+<html>
+<body>
+색인이 배열 또는 할당된 버퍼의 범위를 벗어난 경우 배열 또는 포인터 변수 액세스 표현식을 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  void foo() {
+      int buffer[100];
+
+      for (int i = 0; i &lt;= 100; i ++)
+          buffer[i] = 0; // buffer overflow when <i>i</i> is equal to <i>100</i>
+  }
+</code></pre>
+<p><small>2022.2의 새로운 기능</small></p>
+</body>
+</html>

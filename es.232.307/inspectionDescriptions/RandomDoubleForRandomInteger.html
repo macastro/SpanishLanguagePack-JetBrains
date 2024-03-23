@@ -1,0 +1,23 @@
+<html>
+<body>
+호출에 인자 배수를 곱하고 정수형으로 변환하여 정수를 생성하기 위해 사용한 <code>java.util.Random.nextDouble()</code> 호출을 보고합니다.
+<p>
+  범위 내의 무작위 정수를 생성하기 위해 <code>java.util.Random.nextInt(int)</code>를 사용하는 것이 더 간단하고 효율적입니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  int getRandomInt() {
+    return (int) ((new Random()).nextDouble() * SIZE);
+  }
+  </code>
+</pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  int getRandomInt() {
+    return (new Random()).nextInt(SIZE);
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

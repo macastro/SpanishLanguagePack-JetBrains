@@ -1,0 +1,20 @@
+<html>
+<body>
+열거형으로 변환할 수 있는 유틸리티 클래스를 보고합니다.
+<p>일부 코딩 스타일 가이드라인에서는 <code>private</code> 생성자에서 코드 커버리지 문제를 피하기 위해 유틸리티 클래스를 열거형으로 구현하도록 요구합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  class StringUtils {
+    public static final String EMPTY = "";
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  enum StringUtils {
+    ;
+    public static final String EMPTY = "";
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

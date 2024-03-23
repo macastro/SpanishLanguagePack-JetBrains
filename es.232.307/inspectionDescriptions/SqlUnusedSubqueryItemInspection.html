@@ -1,0 +1,10 @@
+<html>
+<body>
+외부 쿼리 식에서 참조되지 않은 열, 별칭 등 하위 쿼리 항목 등을 보고합니다.
+<p>예(PostgreSQL):</p>
+<pre><code>CREATE TABLE for_subquery(id INT);
+SELECT a, q FROM (SELECT 1 AS a, 10 AS b, 2 + 3 AS q, id
+      FROM for_subquery) x;</code></pre>
+<p>하위 쿼리에서 <code>a</code> 및 <code>q</code>를 참조합니다. 하지만 <code>b</code> 별칭 및 <code>id</code> 열은 외부 SELECT 문에서 참조되지 않습니다. 그러므로 <code>b</code> 및 <code>id</code>가 회색으로 표시됩니다.</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+실수로 사용되었을 가능성이 있는 날짜 형식 패턴을 보고합니다.
+<p>다음과 같은 패턴이 보고됩니다.</p>
+<ul>
+  <li>'w'가 근처에 없는 대문자 'Y'를 보고합니다. 이는 일반 'Year'(소문자 'y' 패턴)와 마찬가지로 거의 항상 'Week year'를 의미하지만 12월의 끝에 다음 년도를 가리킬 수 있습니다.</li>
+  <li>'H', 'K', 'h', 'k'(시간)에 가까운 대문자 'M'(월)을 보고합니다. 이는 소문자 'm'(분)을 의도한 것일 수 있습니다.</li>
+  <li>'y'(연도) 또는 'd'(월의 일)와 가까운 소문자 'm'(분)을 보고합니다. 대문자 'M'(월)을 의도한 것일 수 있습니다.</li>
+  <li>'M' 또는 'L'(월)과 가까운 대문자 'D'(년의 일)를 보고합니다. 이는 소문자 'd'(월의 일)를 의도한 것일 수 있습니다.</li>
+  <li>'m'(분)과 가까운 대문자 'S'(밀리초)를 보고합니다. 이는 소문자 's'(초)를 의도한 것일 수 있습니다.</li>
+</ul>
+<p>
+  예:<br>
+  <code>new SimpleDateFormat("YYYY-MM-dd")</code>: <code>"yyyy-MM-dd"</code>를 의도한 것일 수 있습니다.<br>
+  <code>new SimpleDateFormat("yyyy-MM-DD")</code>: <code>"yyyy-MM-dd"</code>를 의도한 것일 수 있습니다.<br>
+  <code>new SimpleDateFormat("HH:MM")</code>: <code>"HH:mm"</code>을 의도한 것일 수 있습니다.
+</p>
+<!-- tooltip end -->
+<p><small>2020.1의 새로운 기능</small></p>
+</body>
+</html>
