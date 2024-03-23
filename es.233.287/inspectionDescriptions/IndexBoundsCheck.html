@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>색인 바운드를 명시적으로 검사하는 경우를 보고합니다.</p>
+
+<p>빠른 수정에서는 대신 <code>lift</code>를 사용합니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  var x: Seq[Int]
+  if (i &lt; x.length) Some(x(i)) else None
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  var x: Seq[Int]
+  x.lift(i)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>
+  JSON 배열 양식에서 작은따옴표로 둘러싸인 문자열을 보고합니다.
+</p>
+<p>
+  JSON 배열 양식은 반드시 작은따옴표(')가 아닌 큰따옴표(")로 단어를 둘러싸야 합니다. 그렇지 않으면 Docker 빌드는 실패합니다.
+</p>
+<!-- tooltip end -->
+<p><b>예:</b></p>
+<pre><code>
+  # 아래 명령어는 모두 실패합니다
+  RUN ['/bin/bash', '-c', 'echo hello']
+  ADD ['binaryA.jar', 'binary2.jar', 'destination/']
+  COPY ['binaryA.jar', 'binary2.jar', 'destination/']
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  RUN ["/bin/bash", "-c", "echo hello"]
+  ADD ["binaryA.jar", "binary2.jar", "destination/"]
+  COPY ["binaryA.jar", "binary2.jar", "destination/"]
+</code></pre>
+</body>
+</html>

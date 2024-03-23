@@ -1,0 +1,31 @@
+<html>
+<body>
+true, false, null 또는 0과 같이 항상 같은 결과를 도출하는 표현식과 조건을 보고합니다.
+이러한 표현식은 그에 해당하는 상숫값으로 바꿀 수 있습니다. 이런 경우는 코드 내에 버그가 있다는 것을 의미할 확률이 매우 높습니다.
+<p>예:</p>
+<pre><code>  // 항상 true
+  // 근본 원인: ||이 && 대신 사용됩니다
+  if (x &gt; 0 || x &lt; 10) {}
+
+  System.out.println(str.trim());
+  // 항상 false
+  // 근본 원인: null 검사 전에 변수가 역참조되었습니다
+  if (str == null) {}
+</code></pre>
+<p>
+  <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">null 값 가능성을 표시하는</a> 어노테이션,
+  <code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code> 어노테이션, 
+  <code>@Range</code> 어노테이션 등 여러 어노테이션으로 검사 동작이 제어될 수 있습니다.
+</p>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<ul>
+  <li><b>항상 true임이 정적으로 입증된 조건이 포함된 어설션을 보고하지 않음</b> 옵션을 사용하여 항상 true임이 정적으로 입증된 어설션을 보고하지 않습니다. <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code>와 같은 조건도 이에 포함됩니다.</li>
+  <li><b>assert 문 무시</b> 옵션을 사용하여 검사에서 <code>assert</code> 문이 취급되는 방식을 제어합니다. 기본적으로 이 옵션은 비활성화되어 있습니다. 즉, 어설션이 실행되는 것으로 간주됩니다(-ea 모드). 이 옵션을 활성화하면 어설션이 완전히 무시됩니다(-da 모드).</li>
+  <li><b>상수가 변수에 저장되면 경고</b> 옵션을 사용하여 값이 상수로 알려진 변수가 사용되면 경고를 표시합니다.</li>
+</ul>
+<p>
+  IntelliJ IDEA 2022.3 이전에 이 검사는 '상수 조건 및 예외' 검사의 일부였습니다. 이제는 두 가지 검사인 '상숫값'과 'Null 가능성 및 데이터 흐름 문제'로 나뉩니다.
+</p>
+</body>
+</html>

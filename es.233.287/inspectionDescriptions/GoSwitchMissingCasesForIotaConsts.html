@@ -1,0 +1,47 @@
+<html>
+<body>
+Reports unhandled values in <code>switch</code> statements when the <code>iota</code> identifier is present in the <code>const</code> declaration. To handle these values, consider using <code>case</code> or <code>default</code> clauses.
+<p>
+  The <code>iota</code> keyword in Go creates a sequence of integers in a <code>const</code> block. While the Go compiler does not require handling all <code>iota</code> values, missing some of them could indicate a bug.
+</p>
+<p>For more information about <code>iota</code>, refer to <a href="https://go.dev/ref/spec#Iota">Iota at go.dev</a>.</p>
+<p>예:</p>
+<pre><code>const (
+  a = iota
+  b
+  c = -5
+)
+
+func main() {
+  v := 5
+  switch v {
+  case a:
+    break;
+  case b:
+    break;
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  The IDE triggers an inspection because <code>c</code> is not processed by the <code>switch</code> statement. Note that even though <code>c</code> does not use <code>iota</code>, it is used in the same <code>const</code> block.
+</p>
+
+<p>Quick-fix options include <b>Create 'case' clause for values</b> and <b>Create 'default' clause</b>. After the <b>Create 'default' clause</b> quick-fix is applied:</p>
+<pre><code>const (
+  a = iota
+  b
+  c
+)
+
+func main() {
+  v := 5
+  switch v {
+  case a:
+    break;
+  default:
+  }
+}
+</code></pre>
+</body>
+</html>

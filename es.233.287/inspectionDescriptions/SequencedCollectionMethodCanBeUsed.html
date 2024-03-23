@@ -1,0 +1,16 @@
+<html>
+<body>
+Java 21 <code>SequencedCollection</code> 메서드를 활용해서 단순화할 수 있는 모든 컬렉션 API 메서드 호출을 보고합니다.
+<p>다음의 변환이 지원됩니다.</p>
+<ul>
+  <li><code>list.add(0, element)</code> &rarr; <code>list.addFirst(element);</code></li>
+  <li><code>list.get(0)</code> &rarr; <code>list.getFirst();</code></li>
+  <li><code>list.get(list.size() - 1)</code> &rarr; <code>list.getLast();</code></li>
+  <li><code>list.remove(0)</code> &rarr; <code>list.removeFirst();</code></li>
+  <li><code>list.remove(list.size() - 1)</code> &rarr; <code>list.removeLast();</code></li>
+  <li><code>collection.iterator().next()</code> &rarr; <code>collection.getFirst();</code></li>
+</ul>
+<!-- tooltip end -->
+<p><small>2023.3의 새로운 기능</small></p>
+</body>
+</html>

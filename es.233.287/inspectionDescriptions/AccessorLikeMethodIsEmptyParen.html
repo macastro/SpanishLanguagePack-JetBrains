@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>매개변수 절이 비어 있는 접근자식 이름을 가진 메서드를 보고합니다.</p>
+<p>접근자에 대해 <a href="https://en.wikipedia.org/wiki/JavaBean">JavaBean</a> 이름 지정 컨트랙트를 따르는 메서드는 <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">부수 효과</a>가 없을 것으로 기대됩니다.
+    이러한 메서드에서 권장되는 규칙은 매개변수가 없는 경우 소괄호가 없는 메서드를 사용하는 것입니다.</p>
+<p>이 규칙은 속성을 필드나 메서드로 구현하려는 결정이 클라이언트 코드에 영향을 주어서는 안 된다는 <a href="https://en.wikipedia.org/wiki/Uniform_access_principle">단일 접근 원칙</a>을 권장합니다.</p>
+<p>빠른 수정에서는 빈 매개변수 절을 제거합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  trait Test {
+    def hasProperty(): Boolean
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  trait Test {
+    def hasProperty: Boolean
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 다른 멤버를 재정의하는 메서드를 보고하지 않습니다.</p>
+</body>
+</html>

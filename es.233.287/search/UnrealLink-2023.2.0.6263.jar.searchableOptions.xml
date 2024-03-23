@@ -1,0 +1,587 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="Keymap">
+    <option name="" path="ActionManager" hit="" />
+    <option name="1" path="ActionManager" hit="1" />
+    <option name="2" path="ActionManager" hit="2" />
+    <option name="3" path="ActionManager" hit="3" />
+    <option name="4" path="ActionManager" hit="4" />
+    <option name="attach" path="ActionManager" hit="Attach Debugger to Connected Unreal Editor Executable" />
+    <option name="connected" path="ActionManager" hit="Attach Debugger to Connected Unreal Editor Executable" />
+    <option name="debugger" path="ActionManager" hit="Attach Debugger to Connected Unreal Editor Executable" />
+    <option name="editor" path="ActionManager" hit="Attach Debugger to Connected Unreal Editor Executable" />
+    <option name="executable" path="ActionManager" hit="Attach Debugger to Connected Unreal Editor Executable" />
+    <option name="to" path="ActionManager" hit="Attach Debugger to Connected Unreal Editor Executable" />
+    <option name="unreal" path="ActionManager" hit="Attach Debugger to Connected Unreal Editor Executable" />
+    <option name="attach" path="ActionManager" hit="Attach to Unreal Editor" />
+    <option name="editor" path="ActionManager" hit="Attach to Unreal Editor" />
+    <option name="to" path="ActionManager" hit="Attach to Unreal Editor" />
+    <option name="unreal" path="ActionManager" hit="Attach to Unreal Editor" />
+    <option name="and" path="ActionManager" hit="Build and Reload" />
+    <option name="build" path="ActionManager" hit="Build and Reload" />
+    <option name="reload" path="ActionManager" hit="Build and Reload" />
+    <option name="cancel" path="ActionManager" hit="Cancel Installation" />
+    <option name="installation" path="ActionManager" hit="Cancel Installation" />
+    <option name="cancel" path="ActionManager" hit="Cancel installation of RiderLink plugin" />
+    <option name="installation" path="ActionManager" hit="Cancel installation of RiderLink plugin" />
+    <option name="of" path="ActionManager" hit="Cancel installation of RiderLink plugin" />
+    <option name="plugin" path="ActionManager" hit="Cancel installation of RiderLink plugin" />
+    <option name="riderlink" path="ActionManager" hit="Cancel installation of RiderLink plugin" />
+    <option name="before" path="ActionManager" hit="Compile Before Play" />
+    <option name="compile" path="ActionManager" hit="Compile Before Play" />
+    <option name="play" path="ActionManager" hit="Compile Before Play" />
+    <option name="camera" path="ActionManager" hit="Current Camera Location" />
+    <option name="current" path="ActionManager" hit="Current Camera Location" />
+    <option name="location" path="ActionManager" hit="Current Camera Location" />
+    <option name="default" path="ActionManager" hit="Default Player Start" />
+    <option name="player" path="ActionManager" hit="Default Player Start" />
+    <option name="start" path="ActionManager" hit="Default Player Start" />
+    <option name="edit" path="ActionManager" hit="Edit RiderLink Installation Settings" />
+    <option name="installation" path="ActionManager" hit="Edit RiderLink Installation Settings" />
+    <option name="riderlink" path="ActionManager" hit="Edit RiderLink Installation Settings" />
+    <option name="settings" path="ActionManager" hit="Edit RiderLink Installation Settings" />
+    <option name="edit" path="ActionManager" hit="Edit UnrealLink Settings" />
+    <option name="settings" path="ActionManager" hit="Edit UnrealLink Settings" />
+    <option name="unreallink" path="ActionManager" hit="Edit UnrealLink Settings" />
+    <option name="auto-update" path="ActionManager" hit="Enable Auto-Update" />
+    <option name="enable" path="ActionManager" hit="Enable Auto-Update" />
+    <option name="building" path="ActionManager" hit="Extract RiderLink in Engine without building" />
+    <option name="engine" path="ActionManager" hit="Extract RiderLink in Engine without building" />
+    <option name="extract" path="ActionManager" hit="Extract RiderLink in Engine without building" />
+    <option name="in" path="ActionManager" hit="Extract RiderLink in Engine without building" />
+    <option name="riderlink" path="ActionManager" hit="Extract RiderLink in Engine without building" />
+    <option name="without" path="ActionManager" hit="Extract RiderLink in Engine without building" />
+    <option name="building" path="ActionManager" hit="Extract RiderLink in Game without building" />
+    <option name="extract" path="ActionManager" hit="Extract RiderLink in Game without building" />
+    <option name="game" path="ActionManager" hit="Extract RiderLink in Game without building" />
+    <option name="in" path="ActionManager" hit="Extract RiderLink in Game without building" />
+    <option name="riderlink" path="ActionManager" hit="Extract RiderLink in Game without building" />
+    <option name="without" path="ActionManager" hit="Extract RiderLink in Game without building" />
+    <option name="engine" path="ActionManager" hit="Install RiderLink in Engine" />
+    <option name="in" path="ActionManager" hit="Install RiderLink in Engine" />
+    <option name="install" path="ActionManager" hit="Install RiderLink in Engine" />
+    <option name="riderlink" path="ActionManager" hit="Install RiderLink in Engine" />
+    <option name="game" path="ActionManager" hit="Install RiderLink in Game" />
+    <option name="in" path="ActionManager" hit="Install RiderLink in Game" />
+    <option name="install" path="ActionManager" hit="Install RiderLink in Game" />
+    <option name="riderlink" path="ActionManager" hit="Install RiderLink in Game" />
+    <option name="mobile" path="ActionManager" hit="Mobile Preview" />
+    <option name="preview" path="ActionManager" hit="Mobile Preview" />
+    <option name="mode" path="ActionManager" hit="Mode" />
+    <option name="editor" path="ActionManager" hit="New Editor Window" />
+    <option name="new" path="ActionManager" hit="New Editor Window" />
+    <option name="window" path="ActionManager" hit="New Editor Window" />
+    <option name="number" path="ActionManager" hit="Number of Players" />
+    <option name="of" path="ActionManager" hit="Number of Players" />
+    <option name="players" path="ActionManager" hit="Number of Players" />
+    <option name="pause" path="ActionManager" hit="Pause Play-in-Editor Session" />
+    <option name="play-in-editor" path="ActionManager" hit="Pause Play-in-Editor Session" />
+    <option name="session" path="ActionManager" hit="Pause Play-in-Editor Session" />
+    <option name="active" path="ActionManager" hit="Play Level in the Active Editor Viewport" />
+    <option name="editor" path="ActionManager" hit="Play Level in the Active Editor Viewport" />
+    <option name="in" path="ActionManager" hit="Play Level in the Active Editor Viewport" />
+    <option name="level" path="ActionManager" hit="Play Level in the Active Editor Viewport" />
+    <option name="play" path="ActionManager" hit="Play Level in the Active Editor Viewport" />
+    <option name="the" path="ActionManager" hit="Play Level in the Active Editor Viewport" />
+    <option name="viewport" path="ActionManager" hit="Play Level in the Active Editor Viewport" />
+    <option name="refresh" path="ActionManager" hit="Refresh Solution" />
+    <option name="solution" path="ActionManager" hit="Refresh Solution" />
+    <option name="files" path="ActionManager" hit="Refresh Solution Files" />
+    <option name="refresh" path="ActionManager" hit="Refresh Solution Files" />
+    <option name="solution" path="ActionManager" hit="Refresh Solution Files" />
+    <option name="play-in-editor" path="ActionManager" hit="Resume Play-in-Editor Session" />
+    <option name="resume" path="ActionManager" hit="Resume Play-in-Editor Session" />
+    <option name="session" path="ActionManager" hit="Resume Play-in-Editor Session" />
+    <option name="installation" path="ActionManager" hit="RiderLink Installation Settings…" />
+    <option name="riderlink" path="ActionManager" hit="RiderLink Installation Settings…" />
+    <option name="settings" path="ActionManager" hit="RiderLink Installation Settings…" />
+    <option name="dedicated" path="ActionManager" hit="Run Dedicated Server" />
+    <option name="run" path="ActionManager" hit="Run Dedicated Server" />
+    <option name="server" path="ActionManager" hit="Run Dedicated Server" />
+    <option name="selected" path="ActionManager" hit="Selected Viewport" />
+    <option name="viewport" path="ActionManager" hit="Selected Viewport" />
+    <option name="actions" path="ActionManager" hit="Show Editor Play Actions" />
+    <option name="editor" path="ActionManager" hit="Show Editor Play Actions" />
+    <option name="play" path="ActionManager" hit="Show Editor Play Actions" />
+    <option name="show" path="ActionManager" hit="Show Editor Play Actions" />
+    <option name="simulate" path="ActionManager" hit="Simulate" />
+    <option name="at" path="ActionManager" hit="Spawn Player at…" />
+    <option name="player" path="ActionManager" hit="Spawn Player at…" />
+    <option name="spawn" path="ActionManager" hit="Spawn Player at…" />
+    <option name="game" path="ActionManager" hit="Standalone Game" />
+    <option name="standalone" path="ActionManager" hit="Standalone Game" />
+    <option name="play-in-editor" path="ActionManager" hit="Start Play-in-Editor Session" />
+    <option name="session" path="ActionManager" hit="Start Play-in-Editor Session" />
+    <option name="start" path="ActionManager" hit="Start Play-in-Editor Session" />
+    <option name="frame" path="ActionManager" hit="Step Single Frame" />
+    <option name="single" path="ActionManager" hit="Step Single Frame" />
+    <option name="step" path="ActionManager" hit="Step Single Frame" />
+    <option name="play-in-editor" path="ActionManager" hit="Stop Play-in-Editor Session" />
+    <option name="session" path="ActionManager" hit="Stop Play-in-Editor Session" />
+    <option name="stop" path="ActionManager" hit="Stop Play-in-Editor Session" />
+    <option name="settings" path="ActionManager" hit="UnrealLink Settings…" />
+    <option name="unreallink" path="ActionManager" hit="UnrealLink Settings…" />
+    <option name="preview" path="ActionManager" hit="VR Preview" />
+    <option name="vr" path="ActionManager" hit="VR Preview" />
+    <option name="preview" path="ActionManager" hit="Vulkan Preview" />
+    <option name="vulkan" path="ActionManager" hit="Vulkan Preview" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.Unreal Log" configurable_name="Unreal Log">
+    <option name="log" hit="Unreal Log" />
+    <option name="unreal" hit="Unreal Log" />
+    <option name="display" hit="Display" />
+    <option name="error" hit="Error" />
+    <option name="fatal" hit="Fatal" />
+    <option name="log" hit="Log" />
+    <option name="verbose" hit="Verbose" />
+    <option name="veryverbose" hit="VeryVerbose" />
+    <option name="warning" hit="Warning" />
+  </configurable>
+  <configurable id="UnrealLinkOptionsId" configurable_name="Unreal Engine">
+    <option name="" hit=" Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="automatically" hit=" Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="editor" hit=" Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="for" hit=" Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="plugin" hit=" Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="riderlink" hit=" Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="unreal" hit=" Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="update" hit=" Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="a" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="access" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="build" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="building" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="but" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="c" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="characters" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="contains" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="current" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="e" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="fail" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="folder" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="g" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="has" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="have" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="if" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="in" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="issues" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="make" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="might" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="non-ascii" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="output" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="path" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="riderlink" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="setting" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="shows" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="special" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="sure" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="symbols" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="temp" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="that" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="the" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="this" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="to" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="try" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="user" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="variable" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="window" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="with" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="without" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="write" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="you" hit=" Building RiderLink might fail if the path contains non-ASCII symbols. If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\temp_folder), but make sure that current user has write access to this folder" />
+    <option name="" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="available" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="build" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="current" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="every" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="extract" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="fails" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="for" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="game" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="if" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="in" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="installation" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="into" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="it" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="not" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="note" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="of" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="option" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="plugin" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="project" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="reason" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="riderlink" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="solution" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="some" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="the" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="this" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="to" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="try" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="use" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="will" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="your" hit=" Extract RiderLink plugin into every Game available in the Solution. Note: It will not try to build RiderLink for your current project. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="and" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="built" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="engine" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="epic" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="extract" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="fails" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="for" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="from" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="games" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="if" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="in" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="installation" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="into" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="it" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="launcher" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="not" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="note" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="of" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="only" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="option" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="plugin" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="reason" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="riderlink" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="solution" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="some" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="source" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="the" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="this" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="ue4" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="ue5" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="unreal" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="use" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="version" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="will" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="with" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="work" hit=" Extract RiderLink plugin into the Engine in the Solution. Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher. Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="any" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="available" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="every" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="fail" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="game" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="if" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="in" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="install" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="installation" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="into" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="it" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="ll" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="of" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="plugin" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="process" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="projects" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="revert" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="rider" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="riderlink" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="solution" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="the" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="to" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="will" hit=" Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="" hit=" Install RiderLink plugin into the Engine." />
+    <option name="engine" hit=" Install RiderLink plugin into the Engine." />
+    <option name="install" hit=" Install RiderLink plugin into the Engine." />
+    <option name="into" hit=" Install RiderLink plugin into the Engine." />
+    <option name="plugin" hit=" Install RiderLink plugin into the Engine." />
+    <option name="riderlink" hit=" Install RiderLink plugin into the Engine." />
+    <option name="the" hit=" Install RiderLink plugin into the Engine." />
+    <option name="" hit=" Installation is in progress..." />
+    <option name="in" hit=" Installation is in progress..." />
+    <option name="installation" hit=" Installation is in progress..." />
+    <option name="is" hit=" Installation is in progress..." />
+    <option name="progress" hit=" Installation is in progress..." />
+    <option name="" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="always" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="and" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="e" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="engine" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="epic" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="extracting" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="from" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="g" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="games" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="if" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="in" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="install" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="installed" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="instead" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="is" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="it" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="launcher" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="note" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="of" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="placed" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="plugin" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="pre-built" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="project" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="riderlink" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="the" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="will" hit=" Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="auto-update" hit="Auto-Update" />
+    <option name="automatically" hit="Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="editor" hit="Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="for" hit="Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="plugin" hit="Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="riderlink" hit="Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="unreal" hit="Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="update" hit="Automatically update RiderLink plugin for Unreal Editor" />
+    <option name="and" hit="Build and install the RiderLink plugin" />
+    <option name="build" hit="Build and install the RiderLink plugin" />
+    <option name="install" hit="Build and install the RiderLink plugin" />
+    <option name="plugin" hit="Build and install the RiderLink plugin" />
+    <option name="riderlink" hit="Build and install the RiderLink plugin" />
+    <option name="the" hit="Build and install the RiderLink plugin" />
+    <option name="a" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="access" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="build" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="building" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="but" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="c" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="characters" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="contains" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="current" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="e" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="fail" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="folder" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="g" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="has" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="have" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="if" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="in" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="issues" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="make" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="might" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="non-ascii" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="output" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="path" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="riderlink" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="setting" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="shows" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="special" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="sure" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="symbols" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="tempfolder" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="that" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="the" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="this" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="to" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="try" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="user" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="variable" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="window" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="with" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="without" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="write" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="you" hit="Building RiderLink might fail if the path contains non-ASCII symbols.&#13;&#10;        If you have issues with building RiderLink that shows '???' symbols in the build Output window, try setting this variable to a folder without special characters (e.g. C:\tempfolder), but make sure that current user has write access to this folder" />
+    <option name="engine" hit="Extract RiderLink in Engine" />
+    <option name="extract" hit="Extract RiderLink in Engine" />
+    <option name="in" hit="Extract RiderLink in Engine" />
+    <option name="riderlink" hit="Extract RiderLink in Engine" />
+    <option name="extract" hit="Extract RiderLink in Game" />
+    <option name="game" hit="Extract RiderLink in Game" />
+    <option name="in" hit="Extract RiderLink in Game" />
+    <option name="riderlink" hit="Extract RiderLink in Game" />
+    <option name="available" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="build" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="current" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="every" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="extract" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="fails" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="for" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="game" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="if" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="in" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="installation" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="into" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="it" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="not" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="note" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="of" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="option" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="plugin" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="project" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="reason" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="riderlink" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="solution" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="some" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="the" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="this" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="to" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="try" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="use" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="will" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="your" hit="Extract RiderLink plugin into every Game available in the Solution.&#13;&#10;Note: It will not try to build RiderLink for your current project.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="and" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="built" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="engine" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="epic" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="extract" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="fails" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="for" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="from" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="games" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="if" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="in" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="installation" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="into" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="it" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="launcher" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="not" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="note" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="of" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="only" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="option" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="plugin" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="reason" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="riderlink" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="solution" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="some" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="source" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="the" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="this" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="ue4" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="ue5" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="unreal" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="use" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="version" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="will" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="with" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="work" hit="Extract RiderLink plugin into the Engine in the Solution.&#13;&#10;Note: Use it for Unreal Engine version built from source only. It will not work with UE4 and UE5 from Epic Games Launcher.&#13;&#10;Use this option if installation of RiderLink plugin fails for some reason." />
+    <option name="build" hit="Extract the source code, don't build the RiderLink plugin" />
+    <option name="code" hit="Extract the source code, don't build the RiderLink plugin" />
+    <option name="don" hit="Extract the source code, don't build the RiderLink plugin" />
+    <option name="extract" hit="Extract the source code, don't build the RiderLink plugin" />
+    <option name="plugin" hit="Extract the source code, don't build the RiderLink plugin" />
+    <option name="riderlink" hit="Extract the source code, don't build the RiderLink plugin" />
+    <option name="source" hit="Extract the source code, don't build the RiderLink plugin" />
+    <option name="t" hit="Extract the source code, don't build the RiderLink plugin" />
+    <option name="the" hit="Extract the source code, don't build the RiderLink plugin" />
+    <option name="general" hit="General" />
+    <option name="engine" hit="Install RiderLink in Engine" />
+    <option name="in" hit="Install RiderLink in Engine" />
+    <option name="install" hit="Install RiderLink in Engine" />
+    <option name="riderlink" hit="Install RiderLink in Engine" />
+    <option name="game" hit="Install RiderLink in Game" />
+    <option name="in" hit="Install RiderLink in Game" />
+    <option name="install" hit="Install RiderLink in Game" />
+    <option name="riderlink" hit="Install RiderLink in Game" />
+    <option name="any" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="available" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="every" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="fail" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="game" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="if" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="in" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="install" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="installation" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="into" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="it" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="ll" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="of" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="plugin" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="process" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="projects" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="revert" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="rider" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="riderlink" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="solution" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="the" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="to" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="will" hit="Install RiderLink plugin into every Game available in the Solution. If Rider will fail to install RiderLink plugin to any of the Game projects, It'll revert the installation process." />
+    <option name="engine" hit="Install RiderLink plugin into the Engine." />
+    <option name="install" hit="Install RiderLink plugin into the Engine." />
+    <option name="into" hit="Install RiderLink plugin into the Engine." />
+    <option name="plugin" hit="Install RiderLink plugin into the Engine." />
+    <option name="riderlink" hit="Install RiderLink plugin into the Engine." />
+    <option name="the" hit="Install RiderLink plugin into the Engine." />
+    <option name="in" hit="Installation is in progress..." />
+    <option name="installation" hit="Installation is in progress..." />
+    <option name="is" hit="Installation is in progress..." />
+    <option name="progress" hit="Installation is in progress..." />
+    <option name="before" hit="Intermediate folder to build RiderLink, before installing into the project" />
+    <option name="build" hit="Intermediate folder to build RiderLink, before installing into the project" />
+    <option name="folder" hit="Intermediate folder to build RiderLink, before installing into the project" />
+    <option name="installing" hit="Intermediate folder to build RiderLink, before installing into the project" />
+    <option name="intermediate" hit="Intermediate folder to build RiderLink, before installing into the project" />
+    <option name="into" hit="Intermediate folder to build RiderLink, before installing into the project" />
+    <option name="project" hit="Intermediate folder to build RiderLink, before installing into the project" />
+    <option name="riderlink" hit="Intermediate folder to build RiderLink, before installing into the project" />
+    <option name="the" hit="Intermediate folder to build RiderLink, before installing into the project" />
+    <option name="to" hit="Intermediate folder to build RiderLink, before installing into the project" />
+    <option name="installation" hit="Manual Installation" />
+    <option name="manual" hit="Manual Installation" />
+    <option name="always" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="and" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="e" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="engine" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="epic" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="extracting" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="from" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="g" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="games" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="if" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="in" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="install" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="installed" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="instead" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="is" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="it" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="launcher" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="note" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="of" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="placed" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="plugin" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="pre-built" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="project" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="riderlink" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="the" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="will" hit="Note: if the plugin is placed in the Engine project and the Engine is pre-built (e.g. installed from the Epic Games Launcher), it will always Install RiderLink, instead of extracting" />
+    <option name="engine" hit="Unreal Engine" />
+    <option name="unreal" hit="Unreal Engine" />
+    <option name="iddqd" hit="iddqd" />
+  </configurable>
+  <configurable id="UnrealLogSettings" configurable_name="UnrealLink">
+    <option name="align" hit="Align log messages by category of maximum of" />
+    <option name="by" hit="Align log messages by category of maximum of" />
+    <option name="category" hit="Align log messages by category of maximum of" />
+    <option name="log" hit="Align log messages by category of maximum of" />
+    <option name="maximum" hit="Align log messages by category of maximum of" />
+    <option name="messages" hit="Align log messages by category of maximum of" />
+    <option name="of" hit="Align log messages by category of maximum of" />
+    <option name="clear" hit="Clear log on engine start" />
+    <option name="engine" hit="Clear log on engine start" />
+    <option name="log" hit="Clear log on engine start" />
+    <option name="on" hit="Clear log on engine start" />
+    <option name="start" hit="Clear log on engine start" />
+    <option name="and" hit="Replace 'Build Startup Project' button with 'Build and Reload'" />
+    <option name="build" hit="Replace 'Build Startup Project' button with 'Build and Reload'" />
+    <option name="button" hit="Replace 'Build Startup Project' button with 'Build and Reload'" />
+    <option name="project" hit="Replace 'Build Startup Project' button with 'Build and Reload'" />
+    <option name="reload" hit="Replace 'Build Startup Project' button with 'Build and Reload'" />
+    <option name="replace" hit="Replace 'Build Startup Project' button with 'Build and Reload'" />
+    <option name="startup" hit="Replace 'Build Startup Project' button with 'Build and Reload'" />
+    <option name="with" hit="Replace 'Build Startup Project' button with 'Build and Reload'" />
+    <option name="engine" hit="Show log on engine start" />
+    <option name="log" hit="Show log on engine start" />
+    <option name="on" hit="Show log on engine start" />
+    <option name="show" hit="Show log on engine start" />
+    <option name="start" hit="Show log on engine start" />
+    <option name="message" hit="Show message timestamps" />
+    <option name="show" hit="Show message timestamps" />
+    <option name="timestamps" hit="Show message timestamps" />
+    <option name="message" hit="Show message verbosity types" />
+    <option name="show" hit="Show message verbosity types" />
+    <option name="types" hit="Show message verbosity types" />
+    <option name="verbosity" hit="Show message verbosity types" />
+    <option name="settings" hit="Toolbar Settings" />
+    <option name="toolbar" hit="Toolbar Settings" />
+    <option name="log" hit="Unreal Log Settings" />
+    <option name="settings" hit="Unreal Log Settings" />
+    <option name="unreal" hit="Unreal Log Settings" />
+    <option name="unreallink" hit="UnrealLink" />
+    <option name="characters" hit="characters wide" />
+    <option name="wide" hit="characters wide" />
+  </configurable>
+</options>

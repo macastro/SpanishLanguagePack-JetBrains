@@ -1,0 +1,46 @@
+<html>
+<body>
+<code>finally</code> 블록 내부에서 수행되지 않는 JUnit 3의 <code>super.tearDown()</code> 메서드 호출을 보고합니다.
+<code>super.tearDown()</code> 호출 전에 예외가 던져지면 비일관성 및 누수가 발생할 수 있습니다.
+<p><b>예:</b></p>
+<pre><code lang="java">
+  public class AnotherTest extends CompanyTestCase {
+    private Path path;
+
+    @Override
+    protected void setUp() throws Exception {
+      super.setUp();
+      path = Files.createTempFile("File", ".tmp");
+    }
+
+    @Override
+    protected void tearDown() throws Exception {
+      Files.delete(path);
+      super.tearDown();
+    }
+  }
+</code></pre>
+<p>개선된 코드:</p>
+<pre><code lang="java">
+  public class AnotherTest extends CompanyTestCase {
+    private Path path;
+
+    @Override
+    protected void setUp() throws Exception {
+      super.setUp();
+      path = Files.createTempFile("File", ".tmp");
+    }
+
+    @Override
+    protected void tearDown() throws Exception {
+      try {
+        Files.delete(path);
+      } finally {
+        super.tearDown();
+      }
+    }
+  }
+</code></pre>
+  <!-- tooltip end -->
+</body>
+</html>

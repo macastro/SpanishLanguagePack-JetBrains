@@ -1,0 +1,71 @@
+<html>
+<body>
+형식이 잘못되어 JUnit 프레임워크에서 인식되지 않는 JUnit 멤버 선언을 보고합니다.
+이 검사에서는 다음 문제를 보고합니다.
+<ul>
+  <li><code>@RegisterExtension</code> 어노테이션이 추가되었으며 타입이 잘못되었거나, 필요한 static으로 선언되지 않은 필드.</li>
+  <li><code>@Nested</code> 어노테이션이 추가된 static 내부 클래스.</li>
+  <li>소스 없이 정의된 매개변수화된 테스트.</li>
+  <li>알 수 없거나 static이 아니거나 인수 대상이 없는 <code>MethodSource</code>를 사용하는 매개변수화된 테스트.</li>
+  <li>
+    타입을 메서드 매개변수로 변환할 수 없는 <code>ValueSource</code> 또는 <code>EnumSource</code>를 사용한 매개변수화된 테스트.
+  </li>
+  <li>'@Test', '@ParameterizedTest' 또는 '@RepeatedTest' 중 2개로 어노테이션을 추가한 테스트.</li>
+  <li><code>setup()</code> 또는 <code>tearDown()</code></li> public이 아니거나 반환 타입이 void가 아니거나 인수를 취하는 메서드.
+  <li>
+    <code>@BeforeClass</code>, <code>@AfterClass</code>, <code>@BeforeAll</code> 또는 <code>@AfterAll</code>로 어노테이션이 추가되었으며 public이 아니거나 static이 아니거나 반환 타입이 void가 아니거나 올바른 매개변수 목록이 없는 메서드.
+  </li>
+  <li>
+    <code>@Before</code>, <code>@After</code>, <code>@BeforeEach</code> 또는 <code>AfterEach</code>로 어노테이션이 추가되었으며 public이 아니거나 반환 타입이 void가 아니거나 인수를 취하는 메서드.
+  </li>
+  <li><code>@BeforeAll</code> 또는 <code>@AfterAll</code> 메서드에 삽입된 <code>RepetitionInfo</code>.</li>
+  <li>
+    <code>@Test</code>로 어노테이션이 추가된 테스트에서 사용되는 <code>@BeforeEach</code> 또는 <code>@AfterEach</code> 메서드에 삽입된 <code>RepetitionInfo</code>.
+  </li>
+  <li><code>@DataPoint</code> 또는 <code>@DataPoints</code>로 어노테이션이 추가되었으며, public이 아니거나 static이 아닌 필드 및 메서드.</li>
+  <li>
+    <code>@Rule</code>로 어노테이션이 추가되었으며, public이 아니거나 <code>TestRule</code> 또는 <code>MethodRule</code>의 하위 타입이 아닌 필드 및 메서드.
+  </li>
+  <li><code>@ClassRule</code>로 어노테이션이 추가되었으며, public이 아니거나 static이 아니거나 <code>TestRule</code>의 하위 타입이 아닌 필드 및 메서드.</li>
+  <li>
+    public이 아니거나 반환 타입이 void가 아니거나 인수를 취하거나 static이며 <code>test</code> 접두사가 있는 <code>TestCase</code> 내 메서드.
+  </li>
+  <li>
+    <code>@Test</code>로 어노테이션이 추가되었으며, public이 아니거나 반환 타입이 void가 아니거나 인수를 취하거나 static인 메서드.
+  </li>
+</ul>
+
+<p><b>잘못된 형식의 <code>@Before</code> 메서드 예(Java):</b></p>
+<pre><code>@Before private int foo(int arg) { ... } </code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>@Before public void foo() { ... } </code></pre>
+
+<p><b>누락된 메서드 소스의 예(Kotlin):</b></p>
+<pre><code>
+  class Example {
+    @MethodSource("parameters")
+    @ParameterizedTest
+    fun foo(param: String) { ... }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Example {
+    @MethodSource("parameters")
+    @ParameterizedTest
+    fun foo(param: String) { ... }
+
+    companion object {
+      @JvmStatic
+      fun parameters(): Stream&lt;Arguments&gt; {
+        TODO("Not yet implemented")
+      }
+    }
+  }
+</code></pre>
+
+<!-- tooltip end -->
+<p>검사 옵션을 사용하여 어노테이션을 지정합니다. 이러한 어노테이션 중 하나가 추가된 매개변수는 테스트 메서드에서 보고되지 않습니다.
+</p>
+</body>
+</html>

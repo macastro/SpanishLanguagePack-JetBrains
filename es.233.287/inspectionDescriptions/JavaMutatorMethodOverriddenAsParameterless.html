@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>변경자식 이름을 가진 Java 메서드를 재정의하는 매개변수 절이 없는 메서드를 보고합니다.</p>
+<p>Scala는 매개변수가 없는 Java 메서드를 매개변수 절 없이 재정의하도록 허용합니다.
+    이는 주로 Scala 코드가 Java 접근자 메서드를 Scala 접근자 메서드와 같은 방식으로 재정의하도록 허용하기 위함입니다.
+    즉, 매개변수 절이 없으므로 속성을 필드나 메서드로 구현하려는 결정이 클라이언트 코드에 영향을 주어서는 안 된다는 <a href="https://en.wikipedia.org/wiki/Uniform_access_principle">단일 접근 원칙</a>을 준수합니다.</p>
+
+<p>하지만 <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">부작용</a> 있는 메서드는 빈 매개변수 절을 가지는 것이 규칙입니다.
+    이는 재정의된 메서드에 부수 효과가 있는 경우 재정의하는 메서드 역시 부작용이 있는 메서드로 선언되어야 한다는 <a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">리스코프의 치환 원칙</a>을 따릅니다.</p>
+
+<p>빠른 수정에서는 빈 매개변수 절을 추가합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  import java.util
+
+  class Test extends util.ArrayList[String] {
+    override def clear: Unit = ???
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  import java.util
+
+  class Test extends util.ArrayList[String] {
+    override def clear(): Unit = ???
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

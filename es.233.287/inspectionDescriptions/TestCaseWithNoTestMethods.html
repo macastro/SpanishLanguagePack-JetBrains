@@ -1,0 +1,19 @@
+<html>
+<body>
+테스트 메서드를 사용하지 않는 비 <code>abstract</code> 테스트 사례를 보고합니다. Such test cases usually indicate unfinished code or could be a
+refactoring leftover that should be removed.
+<p>예:</p>
+<pre><code>
+  public class CrucialTest {
+    @Before
+    public void setUp() {
+      System.out.println("setting up");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  <b>테스트 메서드를 사용하는 상위 클래스가 있는 테스트 사례 무시</b> 옵션을 사용하여 테스트 메서드가 포함된 상위 클래스를 가진 테스트 사례를 무시합니다.
+<p>
+</body>
+</html>

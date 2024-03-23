@@ -1,0 +1,16 @@
+<html>
+<body>
+색인 오버플로 없이 완료 불가능한 루프 또는 전혀 실행되지 않는 루프를 보고합니다.
+일반적으로 이는 업데이트 연산 중 실수로 인해 발생합니다.
+<p>예:</p>
+<pre><code>
+  void foo(int s) {
+    for (int i = s; i > 12; i++) { // i-- should be here
+      System.out.println(i);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2019.1의 새로운 기능</small></p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<body>
+<code>Double.NaN</code> 또는 <code>Float.NaN</code>에 대한 비교를 보고합니다.
+NaN은 자신을 포함하여 어느 것과도 동등하지 않으므로 비교는 의미가 없습니다.
+<code>Double.isNaN()</code> 또는 <code>Float.isNaN()</code> 메서드를 대신 사용합니다.
+<p><b>예:</b></p>
+<pre><code>
+  if (x == Double.NaN) {...}
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  if (Double.isNaN(x)) {...}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

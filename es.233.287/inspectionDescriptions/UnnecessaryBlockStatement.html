@@ -1,0 +1,21 @@
+<html>
+<body>
+프로그램의 의미상 불필요하며 해당 블록의 본문으로 대체될 수 있는 코드 블록을 보고합니다.
+<p><code>if</code>, <code>do</code>, <code>while</code>, 또는 <code>for</code> 구문의 본문인 코드 블록은 이 검사에서 보고하지 않습니다.</p>
+<p>예:</p>
+<pre><code>
+  void foo() {
+    { // 불필요함
+      int result = call();
+      analyze(result);
+    } // 불필요함
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<p>
+switch 구문 분기에 사용된 코드 블록을 무시하려면 <b>'switch' 문의 분기 무시</b> 옵션을 사용하세요.
+<p>
+
+</body>
+</html>

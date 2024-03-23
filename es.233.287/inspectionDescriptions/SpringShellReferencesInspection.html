@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>
+  Spring Shell <code>org.springframework.shell.standard.ShellMethodAvailability</code> 어노테이션 내부의 잘못된 참조를 보고합니다.
+</p>
+<p>예:</p>
+<pre><code lang="java">
+@ShellComponent
+public class MyCommands {
+
+    @ShellMethod("sum")
+    @ShellMethodAvailability("sumAvailability") // 어노테이션 값이 미해결 심볼로 강조 표시됨
+    public int sum(int a, int b) {
+        return a + b;
+    }
+
+    @ShellMethodAvailability("sumMethod") // 어노테이션 값이 미해결 심볼로 강조 표시됨
+    public Availability isSumAvailable() {
+        return Availability.available();
+    }
+}
+</code></pre>
+</body>
+</html>

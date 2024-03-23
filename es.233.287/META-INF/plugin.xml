@@ -1,0 +1,14 @@
+<idea-plugin>
+ <id>com.intellij.ko</id>
+ <version>233.100</version>
+ <idea-version since-build="233" until-build="233.*"/>
+ <name>Korean Language Pack / 한국어 언어 팩</name>
+ <vendor>JetBrains</vendor>
+ <description><![CDATA[The Korean Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, DataGrip, GoLand, PyCharm, PhpStorm, RubyMine, WebStorm, and Rider into Korean.<br>Your feedback is very much appreciated. You can submit it directly from the <a target="_blank" href="https://www.jetbrains.com/help/idea/getting-help.html#report-bug">IDE</a> or via <a target="_blank" href="https://youtrack.jetbrains.com/newIssue?project=IDEA&summary=Issue%20name%20(English%20or%20Korean)&description=Describe%20your%20problem&c=Subsystem%20Localization.%20Korean">YouTrack</a> either in English or Korean.<br><br>한국어 언어팩은 IntelliJ IDEA, AppCode, CLion, DataGrip, GoLand, PyCharm, PhpStorm, RubyMine, WebStorm, Rider의 사용자 인터페이스를 한국어로 현지화하는 플러그인 입니다. 사용해보시고 여러분의 의견을 저희에게 알려주세요. 의견은 <a target="_blank" href="https://www.jetbrains.com/help/idea/getting-help.html#report-bug">IDE</a> 에서 바로 제출하시거나 <a target="_blank" href="https://youtrack.jetbrains.com/newIssue?project=IDEA&summary=Issue%20name%20(English%20or%20Korean)&description=Describe%20your%20problem&c=Subsystem%20Localization.%20Korean">YouTrack</a> 에서 영어 또는 한국어로 제출하실 수 있습니다. 감사합니다!]]></description>
+ <change-notes><![CDATA[새 소식<br><a target="_blank" href="https://youtrack.jetbrains.com/articles/IDEA-A-2100661408">릴리스 노트</a><br><a target="_blank" href="https://www.jetbrains.com/ko-kr/lp/language-pack/">2023년 4월 19일</a>(Rider에서 한국어 언어팩 지원)<br><a target="_blank" href="https://blog.jetbrains.com/ko/idea/2021/07/language-packs-public-release/">2021년 7월 21일</a>(공식 릴리스)<br><a target="_blank" href="https://blog.jetbrains.com/ko/idea/2021/04/use-updated-language-packs-for-intellij-based-ides-with-translation-plugin/">2021년 4월 26일</a> (업데이트 안내)<br><a target="_blank" href="https://blog.jetbrains.com/ko/idea/2021/01/another-update-for-intellij-idea-localization-plugins-is-available/">2021년 1월 4일</a> (업데이트 안내)<br><a target="_blank" href="https://blog.jetbrains.com/ko/idea/2020/10/korean-lang-pack-eap-updated-ko/">2020년 10월 30일</a> (업데이트 안내)<br><a target="_blank" href="https://blog.jetbrains.com/ko/2020/05/11/intellij-localization-eap/">2020년 5월 11일</a> (플러그인 소개) ]]></change-notes>
+ <depends>com.intellij.modules.platform</depends>
+ <locale>ko</locale>
+ <extensions defaultExtensionNs="com.intellij">
+   <languageBundle locale="ko"/>
+ </extensions>
+</idea-plugin>

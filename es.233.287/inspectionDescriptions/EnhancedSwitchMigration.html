@@ -1,0 +1,44 @@
+<html>
+<body>
+개선된 <code>switch</code> 문 또는 식으로 자동 대체 가능한 <code>switch</code> 문을 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  double getPrice(String fruit) {
+    // Switch 문을 개선된 'switch'로 대체 가능합니다
+    switch (fruit) {
+      case "Apple":
+        return 1.0;
+      case "Orange":
+        return 1.5;
+      case "Mango":
+        return 2.0;
+      default:
+        throw new IllegalArgumentException();
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  double getPrice(String fruit) {
+    return switch (fruit) {
+      case "Apple" -> 1.0;
+      case "Orange" -> 1.5;
+      case "Mango" -> 2.0;
+      default -> throw new IllegalArgumentException();
+    };
+  }
+  </code></pre>
+<!-- tooltip end -->
+<p>
+<ul>
+  <li>
+    <code>switch</code> 문으로 변환될 때 경고를 표시하지 않으려는 경우 <b>표현식으로 변환할 수 있을 때만 경고 표시</b> 옵션을 사용하세요.
+  </li>
+  <li>
+    표현식으로 변환 시에 각 브랜치의 구문 수가 설정된 수보다 적을 때만 경고를 표시하려는 경우 <b>한 브랜치 내에서 switch 식으로 변환할 최대 구문 수</b> 옵션을 사용하세요.
+  </li>
+</ul>
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 14 이상인 경우에만 보고합니다</p>
+<p><small>2019.1의 새로운 기능</small></p>
+</body>
+</html>

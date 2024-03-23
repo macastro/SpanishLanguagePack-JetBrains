@@ -1,0 +1,16 @@
+<html>
+<body>
+정확도를 떨어뜨릴 수 있는 기본 숫자 타입 간 형 변환 연산을 보고합니다.
+<p>이러한 형 변환이 반드시 문제인 것은 아니지만, 예기치 않은 정확도의 저하가 발생한 경우 버그를 추적하기가 어려울 수 있습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  int a = 420;
+  byte b = (byte) a;
+</code></pre>
+<!-- tooltip end -->
+<p><b>int에서 및 char로의 형 변환 무시</b> 옵션을 사용하여 <code>int</code>에서 <code>char</code>로의 형 변환을 무시합니다.
+  이러한 타입의 형 변환은 <code>java.io.Reader</code> 클래스의 <code>read()</code> 메서드가 <code>int</code>를 반환하기 때문에 I/O 연산을 구현할 때 종종 사용됩니다.</p>
+<p><b>int 128~255에서 byte로의 형 변환 무시</b> 옵션을 사용하여 <code>int</code>의 상수값(128~255)에서 <code>byte</code>로의 형 변환을 무시합니다.
+  이러한 값은 여전히 ​​1바이트 내에 들어갈 수 있는 음수로 오버플로됩니다.</p>
+</body>
+</html>

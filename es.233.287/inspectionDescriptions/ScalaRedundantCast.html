@@ -1,0 +1,15 @@
+<html>
+<body><p>불필요한 <code>asInstanceOf</code> 형 변환을 보고하고 제거할 것을 제안합니다.</p>
+<p>표현식의 타입이 형 변환 타입과 같은 경우 형 변환은 불필요합니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  "test".asInstanceOf[String]
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  "test"
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

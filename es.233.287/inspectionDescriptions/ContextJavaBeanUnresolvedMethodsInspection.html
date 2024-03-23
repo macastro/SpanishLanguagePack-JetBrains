@@ -1,0 +1,19 @@
+<html>
+<body>
+<p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Bean.html">@Bean</a> 어노테이션의 <code>initMethod</code> 및 <code>destroyMethod</code>에서 확인되지 않은 메서드 참조를 보고합니다.</p>
+
+<p><b>예:</b></p>
+MyBean 클래스에 'public void 'doInit'(){...}' 메서드가 포함되지 않을 경우, 'doInit' 표현식에서 "메서드를 해결할 수 없습니다"라고 보고됩니다.
+<pre><code lang="java">
+  public class MyBean {...}
+
+  @Component
+  public class MyComponent {
+     @Bean(initMethod="doInit" )
+     public MyBean myBean() {...}
+  }
+</code></pre>
+
+<p>이 예시에서 <code>MyBean</code>이 <code>doInit()</code> 메서드를 정의하지 않을 경우, 검사는 해결되지 않은 메서드 참조를 보고합니다.</p>
+</body>
+</html>

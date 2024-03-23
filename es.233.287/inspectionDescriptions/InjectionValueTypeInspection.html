@@ -1,0 +1,35 @@
+<html>
+<body>
+<p>잘못된 삽입점 타입(프로퍼티 및 생성자 인수)을 보고합니다.</p>
+
+<p>허용되는 삽입점 타입은 <code>ref</code>, <code>idref</code> 및 모든 컬렉션 타입, 내부 Bean 등입니다.</p>
+
+<p><b>예:</b></p>
+
+<pre><code lang="java">
+  public class InjectionValueTypes{
+  public List&lt;MyBean&gt; setListBeans() {...} 
+    public MyBean setMyBean() {...}
+    }
+  }
+</code></pre>
+<pre><code lang="xml">
+  &lt;beans&gt;
+    &lt;bean class="MyBean" id="myBean"/&gt;
+    &lt;bean class="ErrTypeBean" id="errTypeBean"/&gt;
+    &lt;bean class="InjectionValueTypes" id="kt"&gt;
+      &lt;property name="myBean" ref="errTypeBean"/&gt;
+      &lt;!-- " 'MyBean' 타입의 프로퍼티는 'ErrTypeBean'에 의해 삽입될 수 없습니다"라고 보고됩니다 --&gt;
+      &lt;property name="listBeans"&gt;
+        &lt;list&gt;
+          &lt;idref local="myBean"/&gt;
+          &lt;ref bean="myBean"/&gt;
+          &lt;ref bean="errTypeBean"/&gt; &lt;!-- " 'MyBean' 타입의 컬렉션에 추가할 수 없습니다"라고 보고됩니다 --&gt;
+          &lt;bean class="ErrTypeBean"/&gt; &lt;!-- "Bean은 'MyBean' 타입이어야 합니다"라고 보고됩니다 --&gt;
+        &lt;/list&gt;
+      &lt;/property&gt;
+    &lt;/bean&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

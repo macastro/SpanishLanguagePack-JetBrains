@@ -1,0 +1,17 @@
+<html>
+<body>
+Declaration of custom property must contain following properties: <a href="https://developer.mozilla.org/en-US/docs/web/css/@property/syntax">syntax</a>, <a href="https://developer.mozilla.org/en-US/docs/web/css/@property/inherits">inherits</a> and <a href="https://developer.mozilla.org/en-US/docs/web/css/@property/initial-value">initial-value</a> if syntax is not universal
+<pre><code>
+@property --my-not-universal-property {
+  syntax: "number";
+  initial-value: 42;
+  inherits: false;
+}
+
+@property --my-universal-property {
+  syntax: "*";
+  inherits: false;
+}
+</code></pre>
+</body>
+</html>

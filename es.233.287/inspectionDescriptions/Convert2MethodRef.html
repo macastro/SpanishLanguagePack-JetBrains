@@ -1,0 +1,19 @@
+<html>
+<body>
+메서드 참조로 바꿀 수 있는 람다를 보고합니다. 취향의 차이인 경우가 많지만 람다보다 메서드 참조가 더 명확하고 가독성이 좋습니다.
+<p>예:</p>
+<pre><code>
+  Runnable r = () -> System.out.println();
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  Runnable r = System.out::println;
+</code></pre>
+<!-- tooltip end -->
+<p>
+  검사는 람다가 메서드를 호출하지 않는 경우에도 메서드 참조를 제안할 수 있습니다(예: <code>obj -> obj != null</code>을 <code>Objects::nonNull</code>로 대체). 
+  <a href="settings://preferences.sourceCode.Java?Lambda%20Body">Settings(설정) | Editor(에디터) | Code Style(코드 스타일) | Java | Code Generation(코드 생성)</a> 설정을 통해 특수 메서드 참조를 구성합니다.
+</p>
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 8 이상인 경우에만 보고합니다.</p>
+</body>
+</html>

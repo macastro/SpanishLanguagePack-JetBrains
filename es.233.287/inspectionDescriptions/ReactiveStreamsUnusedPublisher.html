@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>사용되지 않는 <code>Publisher</code> 인스턴스를 보고합니다.</p>
+<p>
+  새 <code>Publisher</code> 인스턴스를 생성하는 연산자(Mono/Flux/Flowable을 반환하는 Mono/Flux/Flowable 객체의 메서드)를 사용하려면 <code>subscribe()</code>를 통해 생성된 <code>Publisher</code>를 구독해야 합니다.
+</p>
+<p>
+  반환된 <code>Publisher</code>를 구독하지 않고 팩토리(예: <code>Mono.just()</code>)를 사용할 경우, 사용되지 않으며 불필요한 메모리 할당으로 취급되는 객체가 생성됩니다.
+</p>
+<p>
+  예를 들어, 이 <code>Publisher</code>를 구독하지 않는 경우나 연산자를 적용하여 새 <code>Publisher</code>를 생성한 후 구독하지 않는 경우, <code>Mono.just(1, 2, 3).map(i -> i + 3)</code>은 실행되지 않습니다.
+</p>
+<p><b>예:</b></p>
+<p>사용되지 않는 <code>Flux</code> 인스턴스:</p>
+<pre><code lang="java">
+Flux.just(1, 2, 3);
+</code></pre>
+<p>컨슈머가 사용하는 <code>Flux</code> 인스턴스:</p>
+<pre><code lang="java">
+Flux.just(1, 2, 3).subscribe(System.out::println);
+</code></pre>
+<p>Error Prone 또는 AssertJ의 <code>@CanIgnoreReturnValue</code> 어노테이션이 추가된 메서드 호출은 보고되지 않습니다.
+<!-- tooltip end -->
+<p><small>2019.3의 새로운 기능</small></p>
+</body>
+</html>

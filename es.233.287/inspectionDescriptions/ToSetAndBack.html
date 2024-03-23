@@ -1,0 +1,16 @@
+<html>
+<body>
+<p><code>Set</code>으로의 시퀀스 연속 변환 및 역변환을 보고하고 <code>.distinct</code> 호출로 바꿀 것을 제안합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  Seq(1).toSet.toSeq
+  List(1).toSet.toList
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  Seq(1).distinct
+  List(1).distinct
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

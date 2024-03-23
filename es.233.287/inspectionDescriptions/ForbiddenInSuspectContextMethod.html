@@ -1,0 +1,15 @@
+<html>
+<body>
+Kotlin 코루틴 내에서 스레딩 컨텍스트(<code>@RequiresBlockingContext</code>로 어노테이션됨)를 사용하는 잘못된 메서드 사용 위치를 보고합니다.
+이러한 메서드 중 상당수는 그에 대응하는 코루틴 친화적인 유사체가 있으며 <code>suspend</code> 컨텍스트에서 사용될 수 있습니다.
+
+<!-- tooltip end -->
+
+예:
+<ul>
+  <li><code>com.intellij.openapi.progress.ProgressManager.checkCanceled()</code>는<code>com.intellij.openapi.progress.checkCancelled()</code>로 바꿔야 합니다.</li>
+  <li><code>com.intellij.openapi.application.Application.invokeAndWait()</code>은 <code>withContext(Dispatchers.EDT)</code>로 대체되어야 합니다</li>
+  <li>기타</li>
+</ul>
+</body>
+</html>

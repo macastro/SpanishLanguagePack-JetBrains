@@ -1,0 +1,17 @@
+<html>
+<body>
+EJB 및 Interceptor 클래스로 동시에 정의된 클래스를 보고합니다.
+
+<p><b>예:</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+
+  @Interceptors(ExampleBean.class) // 오류: 클래스가 EJB 및 Interceptor로 동시에 정의됩니다
+  public void getAnotherBean() {
+    ...
+  }
+}
+</code></pre>
+</body>
+</html>

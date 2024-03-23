@@ -1,0 +1,19 @@
+<html>
+<body>
+'and' 및 'or' bool 연산자(<code>&</code> 및 <code>|</code>)의 비단락 형식을
+보고합니다.
+<p>
+  이러한 비단락 버전은 유용할 때도 있지만 비단락 형식(<code>&&</code> 및 <code>||</code>)의 오타인 경우가 많아 탐지하기 어려운 버그를 발생시킬 수 있습니다.
+</p>
+
+<p><b>예:</b></p>
+<pre><code>
+if (a & b) {}
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+if (a && b) {}
+</code></pre>
+
+</body>
+</html>

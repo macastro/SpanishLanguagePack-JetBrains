@@ -1,0 +1,47 @@
+<html>
+<body>
+try-with-resources 문에서 사용되지 않은 <code>AutoCloseable</code> 인스턴스(<i>자동 리소스 관리</i>라고도 불림)를 보고합니다.
+<p>
+  try-with-resources가 사용되기 이전에 사용되던 '<code>try</code> 앞/내에서 리소스를 열고, <code>finally</code> 내에서 닫기' 스타일 또한 보고됩니다.
+  이 검사는 Java 7 이후 버전에서 개발 시 <i>열렸으나 안전하게 닫히지 않은</i> 모든 검사를 바꾸는 것을 목적으로 합니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  private static void foo() throws IOException {
+    InputStream profile = Thread.currentThread().getContextClassLoader().getResourceAsStream("/someFile");
+    System.out.println(profile.read());
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  다음 옵션을 사용해 검사를 구성하세요.
+</p>
+<ul>
+  <li>
+    닫을 필요가 없으며 이 검사에서 무시되어야 하는 <code>AutoCloseable</code>의 하위 클래스를 나열합니다.
+    <br/>
+    <b>참고</b>: 이 검사는 <code>java.util.stream.Stream</code>이 무시되어야 할 목록에 포함된 경우에도<code>java.nio.file.Files</code> 메서드인 <code>lines()</code>, <code>walk()</code>, <code>list()</code>, <code>find()</code>에서 반환된 스트림을 보고합니다.
+    이러한 스트림은 닫을 필요가 없는 관련 I/O 리소스를 포함합니다.
+  </li>
+  <li>
+    호출 시 무시되어야 하는 <code>AutoCloseable</code>를 반환하는 메서드를 나열합니다.
+  </li>
+  <li>
+    메서드 호출의 결과인 경우 <code>AutoCloseable</code>을 무시할지 여부를 설정합니다.
+    이 옵션을 활성화하면 factory 메서드의 결과 또한 무시됩니다.
+  </li>
+  <li>
+    <code>AutoCloseable</code> 인스턴스가 메서드 호출 인수로 전달된 경우 검사에서 보고되어야 하는지 여부를 설정합니다.
+    이 옵션을 활성화하면 검사는 리소스가 호출된 메서드에서 닫힌 것으로 가정합니다.
+    이름에 'close'를 포함하며 <code> AutoCloseable </code> 인수를 사용하는 <code> finally</code> 블록 내부의 메서드 호출은 무시되지 않습니다.
+  </li>
+  <li>
+    리소스 클래스의 생성자에 대한 메서드 참조를 무시할지 여부를 설정합니다.
+  </li>
+  <li>
+    리소스를 반환하며 이름이 'get'으로 시작하는 메서드를 무시할지 여부를 설정합니다.
+    대부분의 getter가 리소스의 소유권을 전달하지 않으며 호출 지점에서 리소스를 닫아야 할 책임이 없으므로 이렇게 하면 거짓 양성을 줄일 수 있습니다.
+  </li>
+</ul>
+</body>
+</html>

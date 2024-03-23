@@ -1,0 +1,100 @@
+<html>
+<body>
+<a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">확장</a> 내에서 컴패니언 객체가 잘못 사용된 위치를 보고합니다.
+<p>
+  Kotlin 컴패니언 객체는 항상 포함하는 클래스를 로드하려고 시도할 때 생성되며 확장 지점 구현은 생성 비용이 적습니다.
+  플러그인에서 과도한 클래스 로딩은 IDE 시작 시 큰 문제를 야기합니다.
+</p>
+<p>잘못된 패턴:</p>
+<pre><code lang="kotlin">
+  class KotlinDocumentationProvider : AbstractDocumentationProvider(), ExternalDocumentationProvider {
+
+      companion object {
+          private val LOG = Logger.getInstance(KotlinDocumentationProvider::class.java)
+          private val javaDocumentProvider = JavaDocumentationProvider()
+      }
+  }
+</code></pre>
+<p>
+  여기에서 <code>KotlinDocumentationProvider</code>는 <code>plugin.xml</code>에 등록된 확장입니다.
+</p>
+<pre><code lang="xml">
+  &lt;lang.documentationProvider language="JAVA"
+                              implementationClass="org.jetbrains.kotlin.idea.KotlinDocumentationProvider"
+                              order="first"/&gt;
+</code></pre>
+<p>
+  이 예시에서 <code>JavaDocumentationProvider</code>는 <code>new KotlinDocumentationProvider()</code>가 호출될 때 디스크에서 로드됩니다.
+</p>
+<p>
+  확장 지점 구현 내의 Kotlin 컴패니언 객체는 로거와 간단한 상수만 포함할 수 있습니다.
+  다른 선언으로 인해 과도한 클래스 로드가 일어나거나 무거운 리소스(TokenSet, Regex 등)가 조기에 초기화될 수 있습니다
+  일찍 초기화될 수 있습니다.
+  <code>@JvmStatic</code>로 표시된 선언도 컴패니언 객체의 추가 클래스를 생성하며 비용이 큰 연산을 발생시킬 수 있습니다.
+</p>
+<p>
+  이러한 선언은 컴패니언 객체가 아닌 최상위나 객체에 저장해야 합니다.
+</p>
+<h3>자주 하는 질문</h3>
+<h4>ConfigurationType을 재작성하고 실행하는 방법</h4>
+<p>선언을 최상위로 옮기세요.</p>
+<pre><code lang="kotlin">
+  // 올바른 방법: 최상위 fun 사용
+  internal fun mnRunConfigurationType(): MnRunConfigurationType = runConfigurationType&lt;MnRunConfigurationType&gt;()
+
+  internal class MnRunConfigurationType : ConfigurationType {
+    companion object { // DON'T
+      fun getInstance(): MnRunConfigurationType = runConfigurationType&lt;MnRunConfigurationType&gt;()
+    }
+    .
+</code></pre>
+<h4>FileType을 재작성하는 방법</h4>
+<p>이전:</p>
+<pre><code lang="kotlin">
+  internal class SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
+    companion object {
+      val FILE_TYPE = SpringBootImportsFileType()
+      ...
+</code></pre>
+<p>이후:</p>
+<pre><code lang="kotlin">
+  internal object SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
+  ...
+</code></pre>
+<p><code>plugin.xml</code> 내에서 <code>INSTANCE</code> fieldName을 사용하세요.</p>
+<pre><code lang="xml">
+  &lt;fileType name="Spring Boot Imports"
+              fieldName="INSTANCE"
+              implementationClass="com.intellij.spring.boot.spi.SpringBootImportsFileType"/&gt;
+</code></pre>
+<h4>CounterUsagesCollector 재작성 방법
+</h4>
+<h5>내부 API</h5>
+<p>이전:</p>
+<pre><code lang="kotlin">
+  class AntActionsUsagesCollector : CounterUsagesCollector() {
+    override fun getGroup(): EventLogGroup = GROUP
+
+    companion object {
+      private val GROUP = EventLogGroup("build.ant.actions", 1)
+
+      @JvmField
+      val runSelectedBuildAction = GROUP.registerEvent("RunSelectedBuild")
+   }
+}
+</code></pre>
+<p>이후:</p>
+<pre><code lang="kotlin">
+ object AntActionsUsagesCollector : CounterUsagesCollector() {
+  override fun getGroup(): EventLogGroup = GROUP
+
+  private val GROUP = EventLogGroup("build.ant.actions", 1)
+
+  @JvmField
+  val runSelectedBuildAction = GROUP.registerEvent("RunSelectedBuild")
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.3의 새로운 기능</small>
+</body>
+</html>

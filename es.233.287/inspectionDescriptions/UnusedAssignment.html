@@ -1,0 +1,60 @@
+<html>
+<body>
+대입 후 사용되지 않은 대입 값을 보고합니다.
+대입 값이 사용되지 않을 경우 대입을 제거하여 코드 길이를 줄이고 불필요한 대입을 피하는 것이 좋습니다.
+<p>다음과 같은 경우가 보고됩니다:</p>
+<ul>
+  <li>변수가 대입 후 한 번도 읽히지 않습니다</li>
+  <li>변수가 읽히기 전에 항상 새 값으로 덮어쓰이는 경우</li>
+  <li>(위의 두 가지 이유 중 하나로) 변수 이니셜라이저가 불필요한 경우</li>
+</ul>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<p>
+<b>Report redundant initializers(불필요한 이니셜라이저 보고)</b> 옵션을 사용하여 불필요한 이니셜라이저를 보고합니다.
+</p>
+<pre><code>
+  int getI() {
+    int i = 0; // 불필요한 이니셜라이저
+    i = 2;
+    return i;
+  }
+</code></pre>
+<p>
+<b>이항식으로 대체될 수 있는 접두사 식을 보고</b> 옵션을 사용하면 <code>++i</code>가 <code>i + 1</code>로 대체될 수 있는 경우를 보고합니다.
+</p>
+<pre><code>
+  int preInc(int value) {
+    int res = value;
+    return ++res;
+  }
+</code></pre>
+<p>
+<b>변경된 값이 사용되지 않는 접미사 식을 보고</b> 옵션을 사용하면 <code>i</code>의 값이 추후에 사용되지 않는 <code>i++</code> 케이스를 보고합니다.
+</p>
+<pre><code>
+  int postInc(int value) {
+    int res = value;
+    return res++;
+  }
+</code></pre>
+<p>
+<b>값이 사용되지 않는 패턴 변수 보고</b> 옵션을 사용하면 패턴 변수의 값이 사용되기 전에 재정의되는 경우를 보고합니다.
+</p>
+<pre><code>
+  if (object instanceof String s) {
+      s = "hello";
+      System.out.println(s);
+  }
+</code></pre>
+<p>
+<b>값이 사용되지 않는 반복 매개변수를 보고</b> 옵션을 사용하면 강화된 <code>for</code> 구문 내에서 반복 매개변수의 값이 사용되기 전에 재정의되는 경우를 보고합니다.
+</p>
+<pre><code>
+  for (String arg : args) {
+      arg = "test";
+      System.out.println(arg);
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<code>java.lang.String.concat()</code> 호출을 보고합니다.
+<p>
+  메서드가 상수 인수로 상수에서 호출된 경우 명확성과 성능 개선 가능성을 위해 해당 호출을 <code>+</code> 연산자로 바꿀 수 있습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  String foo(String name) {
+    return name.concat("foo");
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  String foo(String name) {
+    return name + "foo";
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

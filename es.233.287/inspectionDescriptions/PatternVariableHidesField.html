@@ -1,0 +1,24 @@
+<html>
+<body>
+주변 클래스와 이름이 동일하게 지정된 패턴 변수를 보고합니다.
+이와 같이 이름이 지정될 경우, 필드를 사용하려다가 동일한 이름의 패턴 변수를 실수로 사용할 수 있습니다.
+<p>
+  빠른 수정은 변수 이름을 변경하도록 제안합니다.
+<p><b>예:</b></p>
+<pre><code>
+  class Pointless {
+    Point p = new Point();
+
+    public void test(Object a) {
+      if (a instanceof Point p) {
+        System.out.print("a is a point (" + p.x + ", " + p.y + ')');
+      } else {
+        System.out.print("p is a point (" + p.x + ", " + p.y + ')');
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.2의 새로운 기능</small></p>
+</body>
+</html>

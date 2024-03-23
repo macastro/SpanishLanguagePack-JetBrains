@@ -1,0 +1,24 @@
+<html>
+<body>
+<p><code>Set</code>의 <code>filter</code> 또는 <code>filterNot</code>을 보고하고 대신 <code>intersect</code> 또는 <code>diff</code>를 사용할 것을 제안합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  val set = Set(1, 2)
+  val others = Set(2, 3)
+  set.filter(others.contains(_))
+  set.filterNot(others.contains)
+  set.filter(x => !others.contains(x))
+  set.filterNot(x => !others.contains(x))
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  val set = Set(1, 2)
+  val others = Set(2, 3)
+  set.intersect(others)
+  set.diff(others)
+  set.diff(others)
+  set.intersect(others)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

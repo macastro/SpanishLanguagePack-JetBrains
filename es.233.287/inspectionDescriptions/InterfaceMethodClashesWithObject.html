@@ -1,0 +1,17 @@
+<html>
+<body>
+<b>java.lang.Object</b> 클래스의 <b>protected</b> 메서드 <code>clone()</code> 및 <code>finalize()</code>와 충돌하는 인터페이스 메서드를 보고합니다.
+<p>인터페이스에서는 <code>java.lang.Object</code> 메서드와 호환되지 않는 반환 타입을 갖는 이러한 메서드를 선언하는 것이 가능합니다.
+  그러나 그러한 인터페이스를 구현하는 클래스는 컴파일할 수 없습니다.
+  인터페이스가 함수형인 경우, 인터페이스에서 람다를 생성하는 것은 가능하지만 권장하지 않습니다.</p>
+<p>예:</p>
+<pre><code>
+  // 경고: 이 인터페이스는 어떤 클래스에서도 구현될 수 없으며
+  // 오로지 람다 또는 메서드 참조에 의해서만 구현될 수 있습니다
+  interface MyInterface {
+    double clone();
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

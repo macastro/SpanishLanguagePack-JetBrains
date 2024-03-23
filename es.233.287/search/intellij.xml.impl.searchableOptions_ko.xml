@@ -1,0 +1,736 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="emmet" path="ActionManager" hit="Emmet" />
+    <option name="emmet" path="ActionManager" hit="Emmet 미리보기" />
+    <option name="미리보기" path="ActionManager" hit="Emmet 미리보기" />
+    <option name="emmet" path="ActionManager" hit="Emmet 약어로 기존 HTML 태그를 업데이트합니다" />
+    <option name="html" path="ActionManager" hit="Emmet 약어로 기존 HTML 태그를 업데이트합니다" />
+    <option name="기존" path="ActionManager" hit="Emmet 약어로 기존 HTML 태그를 업데이트합니다" />
+    <option name="약어로" path="ActionManager" hit="Emmet 약어로 기존 HTML 태그를 업데이트합니다" />
+    <option name="업데이트합니다" path="ActionManager" hit="Emmet 약어로 기존 HTML 태그를 업데이트합니다" />
+    <option name="태그를" path="ActionManager" hit="Emmet 약어로 기존 HTML 태그를 업데이트합니다" />
+    <option name="emmet" path="ActionManager" hit="Emmet 약어의 미리보기를 표시합니다" />
+    <option name="미리보기를" path="ActionManager" hit="Emmet 약어의 미리보기를 표시합니다" />
+    <option name="약어의" path="ActionManager" hit="Emmet 약어의 미리보기를 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="Emmet 약어의 미리보기를 표시합니다" />
+    <option name="emmet으로" path="ActionManager" hit="Emmet으로 둘러싸기" />
+    <option name="둘러싸기" path="ActionManager" hit="Emmet으로 둘러싸기" />
+    <option name="emmet으로" path="ActionManager" hit="Emmet으로 태그 업데이트" />
+    <option name="업데이트" path="ActionManager" hit="Emmet으로 태그 업데이트" />
+    <option name="태그" path="ActionManager" hit="Emmet으로 태그 업데이트" />
+    <option name="html" path="ActionManager" hit="HTML 파일" />
+    <option name="파일" path="ActionManager" hit="HTML 파일" />
+    <option name="xml" path="ActionManager" hit="XML" />
+    <option name="xml" path="ActionManager" hit="XML 액션" />
+    <option name="액션" path="ActionManager" hit="XML 액션" />
+    <option name="xml" path="ActionManager" hit="XML 태그..." />
+    <option name="태그" path="ActionManager" hit="XML 태그..." />
+    <option name="html" path="ActionManager" hit="XML/HTML 특수 문자 인코딩" />
+    <option name="xml" path="ActionManager" hit="XML/HTML 특수 문자 인코딩" />
+    <option name="문자" path="ActionManager" hit="XML/HTML 특수 문자 인코딩" />
+    <option name="인코딩" path="ActionManager" hit="XML/HTML 특수 문자 인코딩" />
+    <option name="특수" path="ActionManager" hit="XML/HTML 특수 문자 인코딩" />
+    <option name="html" path="ActionManager" hit="XML/HTML 특수 문자를 엔티티로 이스케이프합니다" />
+    <option name="xml" path="ActionManager" hit="XML/HTML 특수 문자를 엔티티로 이스케이프합니다" />
+    <option name="문자를" path="ActionManager" hit="XML/HTML 특수 문자를 엔티티로 이스케이프합니다" />
+    <option name="엔티티로" path="ActionManager" hit="XML/HTML 특수 문자를 엔티티로 이스케이프합니다" />
+    <option name="이스케이프합니다" path="ActionManager" hit="XML/HTML 특수 문자를 엔티티로 이스케이프합니다" />
+    <option name="특수" path="ActionManager" hit="XML/HTML 특수 문자를 엔티티로 이스케이프합니다" />
+    <option name="emmet" path="ActionManager" hit="다음 Emmet 편집 지점" />
+    <option name="다음" path="ActionManager" hit="다음 Emmet 편집 지점" />
+    <option name="지점" path="ActionManager" hit="다음 Emmet 편집 지점" />
+    <option name="편집" path="ActionManager" hit="다음 Emmet 편집 지점" />
+    <option name="emmet" path="ActionManager" hit="다음 Emmet 편집 지점으로 이동합니다" />
+    <option name="다음" path="ActionManager" hit="다음 Emmet 편집 지점으로 이동합니다" />
+    <option name="이동합니다" path="ActionManager" hit="다음 Emmet 편집 지점으로 이동합니다" />
+    <option name="지점으로" path="ActionManager" hit="다음 Emmet 편집 지점으로 이동합니다" />
+    <option name="편집" path="ActionManager" hit="다음 Emmet 편집 지점으로 이동합니다" />
+    <option name="html" path="ActionManager" hit="새 HTML 파일을 생성합니다" />
+    <option name="새" path="ActionManager" hit="새 HTML 파일을 생성합니다" />
+    <option name="생성합니다" path="ActionManager" hit="새 HTML 파일을 생성합니다" />
+    <option name="파일을" path="ActionManager" hit="새 HTML 파일을 생성합니다" />
+    <option name="emmet" path="ActionManager" hit="선택한 코드를 Emmet 약어로 둘러쌉니다" />
+    <option name="둘러쌉니다" path="ActionManager" hit="선택한 코드를 Emmet 약어로 둘러쌉니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 코드를 Emmet 약어로 둘러쌉니다" />
+    <option name="약어로" path="ActionManager" hit="선택한 코드를 Emmet 약어로 둘러쌉니다" />
+    <option name="코드를" path="ActionManager" hit="선택한 코드를 Emmet 약어로 둘러쌉니다" />
+    <option name="xml" path="ActionManager" hit="스키마 정보에 따라 새 XML 태그를 생성합니다" />
+    <option name="따라" path="ActionManager" hit="스키마 정보에 따라 새 XML 태그를 생성합니다" />
+    <option name="새" path="ActionManager" hit="스키마 정보에 따라 새 XML 태그를 생성합니다" />
+    <option name="생성합니다" path="ActionManager" hit="스키마 정보에 따라 새 XML 태그를 생성합니다" />
+    <option name="스키마" path="ActionManager" hit="스키마 정보에 따라 새 XML 태그를 생성합니다" />
+    <option name="정보에" path="ActionManager" hit="스키마 정보에 따라 새 XML 태그를 생성합니다" />
+    <option name="태그를" path="ActionManager" hit="스키마 정보에 따라 새 XML 태그를 생성합니다" />
+    <option name="emmet" path="ActionManager" hit="이전 Emmet 편집 지점" />
+    <option name="이전" path="ActionManager" hit="이전 Emmet 편집 지점" />
+    <option name="지점" path="ActionManager" hit="이전 Emmet 편집 지점" />
+    <option name="편집" path="ActionManager" hit="이전 Emmet 편집 지점" />
+    <option name="emmet" path="ActionManager" hit="이전 Emmet 편집 지점으로 이동합니다" />
+    <option name="이동합니다" path="ActionManager" hit="이전 Emmet 편집 지점으로 이동합니다" />
+    <option name="이전" path="ActionManager" hit="이전 Emmet 편집 지점으로 이동합니다" />
+    <option name="지점으로" path="ActionManager" hit="이전 Emmet 편집 지점으로 이동합니다" />
+    <option name="편집" path="ActionManager" hit="이전 Emmet 편집 지점으로 이동합니다" />
+  </configurable>
+  <configurable id="editor.breadcrumbs" configurable_name="이동 경로">
+    <option name="xml" hit="XML" />
+  </configurable>
+  <configurable id="editor.breadcrumbs" configurable_name="이동 경로">
+    <option name="xhtml" hit="XHTML" />
+  </configurable>
+  <configurable id="editor.breadcrumbs" configurable_name="이동 경로">
+    <option name="html" hit="HTML" />
+  </configurable>
+  <configurable id="editor.preferences.webOptions" configurable_name="HTML/CSS">
+    <option name="" hit="     입력 시 태그 자동 닫기" />
+    <option name="닫기" hit="     입력 시 태그 자동 닫기" />
+    <option name="시" hit="     입력 시 태그 자동 닫기" />
+    <option name="입력" hit="     입력 시 태그 자동 닫기" />
+    <option name="자동" hit="     입력 시 태그 자동 닫기" />
+    <option name="태그" hit="     입력 시 태그 자동 닫기" />
+    <option name="" hit="    및 속성 완성을 입력할 때 속성 값에 따옴표 추가" />
+    <option name="값에" hit="    및 속성 완성을 입력할 때 속성 값에 따옴표 추가" />
+    <option name="따옴표" hit="    및 속성 완성을 입력할 때 속성 값에 따옴표 추가" />
+    <option name="때" hit="    및 속성 완성을 입력할 때 속성 값에 따옴표 추가" />
+    <option name="및" hit="    및 속성 완성을 입력할 때 속성 값에 따옴표 추가" />
+    <option name="속성" hit="    및 속성 완성을 입력할 때 속성 값에 따옴표 추가" />
+    <option name="완성을" hit="    및 속성 완성을 입력할 때 속성 값에 따옴표 추가" />
+    <option name="입력할" hit="    및 속성 완성을 입력할 때 속성 값에 따옴표 추가" />
+    <option name="추가" hit="    및 속성 완성을 입력할 때 속성 값에 따옴표 추가" />
+    <option name="css" hit="CSS" />
+    <option name="css" hit="HTML CSS" />
+    <option name="html" hit="HTML CSS" />
+    <option name="html" hit="XML HTML" />
+    <option name="xml" hit="XML HTML" />
+    <option name="동시" hit="동시      편집" />
+    <option name="편집" hit="동시      편집" />
+    <option name="css" hit="두 번 클릭으로 전체 CSS 식별자 선택" />
+    <option name="두" hit="두 번 클릭으로 전체 CSS 식별자 선택" />
+    <option name="번" hit="두 번 클릭으로 전체 CSS 식별자 선택" />
+    <option name="선택" hit="두 번 클릭으로 전체 CSS 식별자 선택" />
+    <option name="식별자" hit="두 번 클릭으로 전체 CSS 식별자 선택" />
+    <option name="전체" hit="두 번 클릭으로 전체 CSS 식별자 선택" />
+    <option name="클릭으로" hit="두 번 클릭으로 전체 CSS 식별자 선택" />
+    <option name="닫는" hit="태그 완료 시 닫는 태그 삽입" />
+    <option name="삽입" hit="태그 완료 시 닫는 태그 삽입" />
+    <option name="시" hit="태그 완료 시 닫는 태그 삽입" />
+    <option name="완료" hit="태그 완료 시 닫는 태그 삽입" />
+    <option name="태그" hit="태그 완료 시 닫는 태그 삽입" />
+    <option name="속성" hit="태그 완료 시 속성 시작" />
+    <option name="시" hit="태그 완료 시 속성 시작" />
+    <option name="시작" hit="태그 완료 시 속성 시작" />
+    <option name="완료" hit="태그 완료 시 속성 시작" />
+    <option name="태그" hit="태그 완료 시 속성 시작" />
+    <option name="삽입" hit="태그 완료 시 필수 속성 삽입" />
+    <option name="속성" hit="태그 완료 시 필수 속성 삽입" />
+    <option name="시" hit="태그 완료 시 필수 속성 삽입" />
+    <option name="완료" hit="태그 완료 시 필수 속성 삽입" />
+    <option name="태그" hit="태그 완료 시 필수 속성 삽입" />
+    <option name="필수" hit="태그 완료 시 필수 속성 삽입" />
+    <option name="삽입" hit="태그 완료 시 필수 하위 태그 삽입" />
+    <option name="시" hit="태그 완료 시 필수 하위 태그 삽입" />
+    <option name="완료" hit="태그 완료 시 필수 하위 태그 삽입" />
+    <option name="태그" hit="태그 완료 시 필수 하위 태그 삽입" />
+    <option name="필수" hit="태그 완료 시 필수 하위 태그 삽입" />
+    <option name="하위" hit="태그 완료 시 필수 하위 태그 삽입" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.HTML" configurable_name="HTML">
+    <option name="html" hit="HTML" />
+    <option name="html" hit="HTML 코드" />
+    <option name="코드" hit="HTML 코드" />
+    <option name="사용자" hit="사용자 지정 태그 이름" />
+    <option name="이름" hit="사용자 지정 태그 이름" />
+    <option name="지정" hit="사용자 지정 태그 이름" />
+    <option name="태그" hit="사용자 지정 태그 이름" />
+    <option name="삽입된" hit="삽입된 언어 조각" />
+    <option name="언어" hit="삽입된 언어 조각" />
+    <option name="조각" hit="삽입된 언어 조각" />
+    <option name="값" hit="속성 값" />
+    <option name="속성" hit="속성 값" />
+    <option name="속성" hit="속성 이름" />
+    <option name="이름" hit="속성 이름" />
+    <option name="엔티티" hit="엔티티 참조" />
+    <option name="참조" hit="엔티티 참조" />
+    <option name="주석" hit="주석" />
+    <option name="태그" hit="태그" />
+    <option name="이름" hit="태그 이름" />
+    <option name="태그" hit="태그 이름" />
+    <option name="1" hit="태그 트리(수준 1)" />
+    <option name="수준" hit="태그 트리(수준 1)" />
+    <option name="태그" hit="태그 트리(수준 1)" />
+    <option name="트리" hit="태그 트리(수준 1)" />
+    <option name="2" hit="태그 트리(수준 2)" />
+    <option name="수준" hit="태그 트리(수준 2)" />
+    <option name="태그" hit="태그 트리(수준 2)" />
+    <option name="트리" hit="태그 트리(수준 2)" />
+    <option name="3" hit="태그 트리(수준 3)" />
+    <option name="수준" hit="태그 트리(수준 3)" />
+    <option name="태그" hit="태그 트리(수준 3)" />
+    <option name="트리" hit="태그 트리(수준 3)" />
+    <option name="4" hit="태그 트리(수준 4)" />
+    <option name="수준" hit="태그 트리(수준 4)" />
+    <option name="태그" hit="태그 트리(수준 4)" />
+    <option name="트리" hit="태그 트리(수준 4)" />
+    <option name="5" hit="태그 트리(수준 5)" />
+    <option name="수준" hit="태그 트리(수준 5)" />
+    <option name="태그" hit="태그 트리(수준 5)" />
+    <option name="트리" hit="태그 트리(수준 5)" />
+    <option name="6" hit="태그 트리(수준 6)" />
+    <option name="수준" hit="태그 트리(수준 6)" />
+    <option name="태그" hit="태그 트리(수준 6)" />
+    <option name="트리" hit="태그 트리(수준 6)" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.XML" configurable_name="XML">
+    <option name="xml" hit="XML" />
+    <option name="네임스페이스" hit="네임스페이스 접두사" />
+    <option name="접두사" hit="네임스페이스 접두사" />
+    <option name="사용자" hit="사용자 지정 태그 이름" />
+    <option name="이름" hit="사용자 지정 태그 이름" />
+    <option name="지정" hit="사용자 지정 태그 이름" />
+    <option name="태그" hit="사용자 지정 태그 이름" />
+    <option name="삽입된" hit="삽입된 언어 조각" />
+    <option name="언어" hit="삽입된 언어 조각" />
+    <option name="조각" hit="삽입된 언어 조각" />
+    <option name="값" hit="속성 값" />
+    <option name="속성" hit="속성 값" />
+    <option name="속성" hit="속성 이름" />
+    <option name="이름" hit="속성 이름" />
+    <option name="엔티티" hit="엔티티 참조" />
+    <option name="참조" hit="엔티티 참조" />
+    <option name="일치하는" hit="일치하는 태그" />
+    <option name="태그" hit="일치하는 태그" />
+    <option name="주석" hit="주석" />
+    <option name="태그" hit="태그" />
+    <option name="데이터" hit="태그 데이터" />
+    <option name="태그" hit="태그 데이터" />
+    <option name="이름" hit="태그 이름" />
+    <option name="태그" hit="태그 이름" />
+    <option name="프롤로그" hit="프롤로그" />
+  </configurable>
+  <configurable id="reference.idesettings.emmet" configurable_name="Emmet">
+    <option name="emmet" hit="Emmet" />
+    <option name="enter" hit="Enter" />
+    <option name="space" hit="Space" />
+    <option name="tab" hit="Tab" />
+    <option name="사용자" hit="사용자 지정   " />
+    <option name="지정" hit="사용자 지정   " />
+    <option name="a" hit="약어 확장 A " />
+    <option name="약어" hit="약어 확장 A " />
+    <option name="확장" hit="약어 확장 A " />
+  </configurable>
+  <configurable id="reference.idesettings.emmet.xml" configurable_name="HTML">
+    <option name="bem" hit="BEM" />
+    <option name="html" hit="HTML" />
+    <option name="e" hit="XML HTML Emmet 활성화 E " />
+    <option name="emmet" hit="XML HTML Emmet 활성화 E " />
+    <option name="html" hit="XML HTML Emmet 활성화 E " />
+    <option name="xml" hit="XML HTML Emmet 활성화 E " />
+    <option name="활성화" hit="XML HTML Emmet 활성화 E " />
+    <option name="xsl" hit="XSL 튜닝" />
+    <option name="튜닝" hit="XSL 튜닝" />
+    <option name="디폴트로" hit="디폴트로 활성화된 필터" />
+    <option name="필터" hit="디폴트로 활성화된 필터" />
+    <option name="활성화된" hit="디폴트로 활성화된 필터" />
+    <option name="a" hit="약어 미리보기 활성화 A " />
+    <option name="미리보기" hit="약어 미리보기 활성화 A " />
+    <option name="약어" hit="약어 미리보기 활성화 A " />
+    <option name="활성화" hit="약어 미리보기 활성화 A " />
+    <option name="이스케이프" hit="이스케이프" />
+    <option name="주석" hit="주석 태그" />
+    <option name="태그" hit="주석 태그" />
+    <option name="마커" hit="줄 마커 자르기" />
+    <option name="자르기" hit="줄 마커 자르기" />
+    <option name="줄" hit="줄 마커 자르기" />
+    <option name="요소" hit="짧은 요소 접두사 " />
+    <option name="접두사" hit="짧은 요소 접두사 " />
+    <option name="짧은" hit="짧은 요소 접두사 " />
+    <option name="구분" hit="클래스 이름 내 요소 구분 기호 " />
+    <option name="기호" hit="클래스 이름 내 요소 구분 기호 " />
+    <option name="내" hit="클래스 이름 내 요소 구분 기호 " />
+    <option name="요소" hit="클래스 이름 내 요소 구분 기호 " />
+    <option name="이름" hit="클래스 이름 내 요소 구분 기호 " />
+    <option name="클래스" hit="클래스 이름 내 요소 구분 기호 " />
+    <option name="구분" hit="클래스 이름 내 제어자 구분 기호 " />
+    <option name="기호" hit="클래스 이름 내 제어자 구분 기호 " />
+    <option name="내" hit="클래스 이름 내 제어자 구분 기호 " />
+    <option name="이름" hit="클래스 이름 내 제어자 구분 기호 " />
+    <option name="제어자" hit="클래스 이름 내 제어자 구분 기호 " />
+    <option name="클래스" hit="클래스 이름 내 제어자 구분 기호 " />
+    <option name="u" hit="텍스트를   태그로 래핑하는 동안 자동 URL 인식 활성화 U " />
+    <option name="url" hit="텍스트를   태그로 래핑하는 동안 자동 URL 인식 활성화 U " />
+    <option name="동안" hit="텍스트를   태그로 래핑하는 동안 자동 URL 인식 활성화 U " />
+    <option name="래핑하는" hit="텍스트를   태그로 래핑하는 동안 자동 URL 인식 활성화 U " />
+    <option name="인식" hit="텍스트를   태그로 래핑하는 동안 자동 URL 인식 활성화 U " />
+    <option name="자동" hit="텍스트를   태그로 래핑하는 동안 자동 URL 인식 활성화 U " />
+    <option name="태그로" hit="텍스트를   태그로 래핑하는 동안 자동 URL 인식 활성화 U " />
+    <option name="텍스트를" hit="텍스트를   태그로 래핑하는 동안 자동 URL 인식 활성화 U " />
+    <option name="활성화" hit="텍스트를   태그로 래핑하는 동안 자동 URL 인식 활성화 U " />
+    <option name="p" hit="템플릿 끝에 편집 지점 추가 P " />
+    <option name="끝에" hit="템플릿 끝에 편집 지점 추가 P " />
+    <option name="지점" hit="템플릿 끝에 편집 지점 추가 P " />
+    <option name="추가" hit="템플릿 끝에 편집 지점 추가 P " />
+    <option name="템플릿" hit="템플릿 끝에 편집 지점 추가 P " />
+    <option name="편집" hit="템플릿 끝에 편집 지점 추가 P " />
+    <option name="줄" hit="한 줄" />
+    <option name="한" hit="한 줄" />
+  </configurable>
+  <configurable id="preferences.externalResources" configurable_name="스키마 및 DTD">
+    <option name="dtd" hit="스키마 및 DTD" />
+    <option name="및" hit="스키마 및 DTD" />
+    <option name="스키마" hit="스키마 및 DTD" />
+  </configurable>
+  <configurable id="xml.defaultSchemas" configurable_name="디폴트 XML 스키마">
+    <option name="5" hit="HTML  " />
+    <option name="html" hit="HTML  " />
+    <option name="4" hit="HTML    http   www w  org TR html  loose dtd  " />
+    <option name="dtd" hit="HTML    http   www w  org TR html  loose dtd  " />
+    <option name="html" hit="HTML    http   www w  org TR html  loose dtd  " />
+    <option name="html4" hit="HTML    http   www w  org TR html  loose dtd  " />
+    <option name="http" hit="HTML    http   www w  org TR html  loose dtd  " />
+    <option name="loose" hit="HTML    http   www w  org TR html  loose dtd  " />
+    <option name="org" hit="HTML    http   www w  org TR html  loose dtd  " />
+    <option name="tr" hit="HTML    http   www w  org TR html  loose dtd  " />
+    <option name="w3" hit="HTML    http   www w  org TR html  loose dtd  " />
+    <option name="www" hit="HTML    http   www w  org TR html  loose dtd  " />
+    <option name="0" hit="XML 스키마    " />
+    <option name="1" hit="XML 스키마    " />
+    <option name="xml" hit="XML 스키마    " />
+    <option name="스키마" hit="XML 스키마    " />
+    <option name="xml" hit="XML 스키마 버전" />
+    <option name="버전" hit="XML 스키마 버전" />
+    <option name="스키마" hit="XML 스키마 버전" />
+    <option name="html" hit="기본 HTML 언어 수준" />
+    <option name="기본" hit="기본 HTML 언어 수준" />
+    <option name="수준" hit="기본 HTML 언어 수준" />
+    <option name="언어" hit="기본 HTML 언어 수준" />
+    <option name="doctype" hit="기타 doctype " />
+    <option name="기타" hit="기타 doctype " />
+    <option name="xml" hit="디폴트 XML 스키마" />
+    <option name="디폴트" hit="디폴트 XML 스키마" />
+    <option name="스키마" hit="디폴트 XML 스키마" />
+  </configurable>
+  <configurable id="xml.catalog" configurable_name="XML 카탈로그">
+    <option name="xml" hit="XML 카탈로그" />
+    <option name="카탈로그" hit="XML 카탈로그" />
+    <option name="카탈로그" hit="카탈로그 프로퍼티 파일 " />
+    <option name="파일" hit="카탈로그 프로퍼티 파일 " />
+    <option name="프로퍼티" hit="카탈로그 프로퍼티 파일 " />
+  </configurable>
+  <configurable id="preferences.sourceCode.HTML" configurable_name="HTML">
+    <option name="" path="탭 및 들여쓰기" hit="  및   태그 내 HTML 들여쓰기 사용" />
+    <option name="html" path="탭 및 들여쓰기" hit="  및   태그 내 HTML 들여쓰기 사용" />
+    <option name="내" path="탭 및 들여쓰기" hit="  및   태그 내 HTML 들여쓰기 사용" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="  및   태그 내 HTML 들여쓰기 사용" />
+    <option name="및" path="탭 및 들여쓰기" hit="  및   태그 내 HTML 들여쓰기 사용" />
+    <option name="사용" path="탭 및 들여쓰기" hit="  및   태그 내 HTML 들여쓰기 사용" />
+    <option name="태그" path="탭 및 들여쓰기" hit="  및   태그 내 HTML 들여쓰기 사용" />
+    <option name="120" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="1개의" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="80" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="가이드" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="개의" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="또는" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="를" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="여러" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="지정하세요" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="html" hit="HTML" />
+    <option name="jsx" path="기타" hit="JSX 속성에 추가 " />
+    <option name="속성에" path="기타" hit="JSX 속성에 추가 " />
+    <option name="추가" path="기타" hit="JSX 속성에 추가 " />
+    <option name="공백" path="기타" hit="공백" />
+    <option name="공백" path="기타" hit="공백 유지" />
+    <option name="유지" path="기타" hit="공백 유지" />
+    <option name="구성표" hit="구성표 " />
+    <option name="규칙" path="정렬" hit="그룹화 규칙 " />
+    <option name="그룹화" path="정렬" hit="그룹화 규칙 " />
+    <option name="기타" path="기타" hit="기타" />
+    <option name="경우" path="기타" hit="긴 경우 자르기" />
+    <option name="긴" path="기타" hit="긴 경우 자르기" />
+    <option name="자르기" path="기타" hit="긴 경우 자르기" />
+    <option name="경우" path="기타" hit="긴 경우 줄 바꿈" />
+    <option name="긴" path="기타" hit="긴 경우 줄 바꿈" />
+    <option name="바꿈" path="기타" hit="긴 경우 줄 바꿈" />
+    <option name="줄" path="기타" hit="긴 경우 줄 바꿈" />
+    <option name="공백을" path="기타" hit="내부에 공백을 유지 " />
+    <option name="내부에" path="기타" hit="내부에 공백을 유지 " />
+    <option name="유지" path="기타" hit="내부에 공백을 유지 " />
+    <option name="다음" path="기타" hit="다음 앞에 새 줄 삽입 " />
+    <option name="삽입" path="기타" hit="다음 앞에 새 줄 삽입 " />
+    <option name="새" path="기타" hit="다음 앞에 새 줄 삽입 " />
+    <option name="앞에" path="기타" hit="다음 앞에 새 줄 삽입 " />
+    <option name="줄" path="기타" hit="다음 앞에 새 줄 삽입 " />
+    <option name="다음" path="기타" hit="다음 앞의 새 줄 제거 " />
+    <option name="새" path="기타" hit="다음 앞의 새 줄 제거 " />
+    <option name="앞의" path="기타" hit="다음 앞의 새 줄 제거 " />
+    <option name="제거" path="기타" hit="다음 앞의 새 줄 제거 " />
+    <option name="줄" path="기타" hit="다음 앞의 새 줄 제거 " />
+    <option name="다음에서" hit="다음에서 설정   " />
+    <option name="설정" hit="다음에서 설정   " />
+    <option name="다음에서" path="기타" hit="다음에서 하드 랩 " />
+    <option name="랩" path="기타" hit="다음에서 하드 랩 " />
+    <option name="하드" path="기타" hit="다음에서 하드 랩 " />
+    <option name="다음의" path="기타" hit="다음의 하위 항목을 들여쓰지 않음 " />
+    <option name="들여쓰지" path="기타" hit="다음의 하위 항목을 들여쓰지 않음 " />
+    <option name="않음" path="기타" hit="다음의 하위 항목을 들여쓰지 않음 " />
+    <option name="하위" path="기타" hit="다음의 하위 항목을 들여쓰지 않음 " />
+    <option name="항목을" path="기타" hit="다음의 하위 항목을 들여쓰지 않음 " />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="들여쓰기 " />
+    <option name="값" path="기타" hit="디폴트 값  아니요" />
+    <option name="디폴트" path="기타" hit="디폴트 값  아니요" />
+    <option name="아니요" path="기타" hit="디폴트 값  아니요" />
+    <option name="따옴표" path="기타" hit="따옴표" />
+    <option name="경우" path="기타" hit="또는 태그 크기가 다음보다 큰 경우" />
+    <option name="다음보다" path="기타" hit="또는 태그 크기가 다음보다 큰 경우" />
+    <option name="또는" path="기타" hit="또는 태그 크기가 다음보다 큰 경우" />
+    <option name="크기가" path="기타" hit="또는 태그 크기가 다음보다 큰 경우" />
+    <option name="큰" path="기타" hit="또는 태그 크기가 다음보다 큰 경우" />
+    <option name="태그" path="기타" hit="또는 태그 크기가 다음보다 큰 경우" />
+    <option name="래핑" path="기타" hit="래핑 안 함" />
+    <option name="안" path="기타" hit="래핑 안 함" />
+    <option name="함" path="기타" hit="래핑 안 함" />
+    <option name="로드" hit="로드 중   " />
+    <option name="중" hit="로드 중   " />
+    <option name="l" path="기타" hit="마지막 속성 뒤에 새 줄 L  " />
+    <option name="뒤에" path="기타" hit="마지막 속성 뒤에 새 줄 L  " />
+    <option name="마지막" path="기타" hit="마지막 속성 뒤에 새 줄 L  " />
+    <option name="새" path="기타" hit="마지막 속성 뒤에 새 줄 L  " />
+    <option name="속성" path="기타" hit="마지막 속성 뒤에 새 줄 L  " />
+    <option name="줄" path="기타" hit="마지막 속성 뒤에 새 줄 L  " />
+    <option name="공백" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="블록" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="주변에" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="주석" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="추가" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="비활성화" hit="비활성화" />
+    <option name="빈" path="기타" hit="빈 줄 유지 " />
+    <option name="유지" path="기타" hit="빈 줄 유지 " />
+    <option name="줄" path="기타" hit="빈 줄 유지 " />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="빈" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="유지" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="줄에" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="내" path="기타" hit="빈 태그 내" />
+    <option name="빈" path="기타" hit="빈 태그 내" />
+    <option name="태그" path="기타" hit="빈 태그 내" />
+    <option name="기호" path="기타" hit="생성된 따옴표 기호 " />
+    <option name="따옴표" path="기타" hit="생성된 따옴표 기호 " />
+    <option name="생성된" path="기타" hit="생성된 따옴표 기호 " />
+    <option name="강제" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="다시" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="서식" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="시" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="적용" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="지정" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="강제" path="기타" hit="서식에 강제 적용" />
+    <option name="서식에" path="기타" hit="서식에 강제 적용" />
+    <option name="적용" path="기타" hit="서식에 강제 적용" />
+    <option name="속성" path="기타" hit="속성 정렬" />
+    <option name="정렬" path="기타" hit="속성 정렬" />
+    <option name="바꿈" path="기타" hit="속성 줄 바꿈 " />
+    <option name="속성" path="기타" hit="속성 줄 바꿈 " />
+    <option name="줄" path="기타" hit="속성 줄 바꿈 " />
+    <option name="속성의" path="기타" hit="속성의     주위" />
+    <option name="주위" path="기타" hit="속성의     주위" />
+    <option name="스마트" path="탭 및 들여쓰기" hit="스마트 탭" />
+    <option name="탭" path="탭 및 들여쓰기" hit="스마트 탭" />
+    <option name="가이드" path="기타" hit="시각적 가이드 " />
+    <option name="시각적" path="기타" hit="시각적 가이드 " />
+    <option name="아니요" path="기타" hit="아니요" />
+    <option name="안" path="기타" hit="안 함" />
+    <option name="함" path="기타" hit="안 함" />
+    <option name="없음" path="기타" hit="없음" />
+    <option name="경우" path="기타" hit="여러 줄일 경우" />
+    <option name="여러" path="기타" hit="여러 줄일 경우" />
+    <option name="줄일" path="기타" hit="여러 줄일 경우" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="연속 들여쓰기 " />
+    <option name="연속" path="탭 및 들여쓰기" hit="연속 들여쓰기 " />
+    <option name="열" path="기타" hit="열" />
+    <option name="예" path="기타" hit="예" />
+    <option name="요소" path="기타" hit="인라인 요소 " />
+    <option name="인라인" path="기타" hit="인라인 요소 " />
+    <option name="경우" path="기타" hit="인라인 콘텐츠인 경우 줄 바꿈 안 함 " />
+    <option name="바꿈" path="기타" hit="인라인 콘텐츠인 경우 줄 바꿈 안 함 " />
+    <option name="안" path="기타" hit="인라인 콘텐츠인 경우 줄 바꿈 안 함 " />
+    <option name="인라인" path="기타" hit="인라인 콘텐츠인 경우 줄 바꿈 안 함 " />
+    <option name="줄" path="기타" hit="인라인 콘텐츠인 경우 줄 바꿈 안 함 " />
+    <option name="콘텐츠인" path="기타" hit="인라인 콘텐츠인 경우 줄 바꿈 안 함 " />
+    <option name="함" path="기타" hit="인라인 콘텐츠인 경우 줄 바꿈 안 함 " />
+    <option name="규칙" path="정렬" hit="일치 규칙 " />
+    <option name="일치" path="정렬" hit="일치 규칙 " />
+    <option name="바꿈" path="기타" hit="입력 시 줄 바꿈" />
+    <option name="시" path="기타" hit="입력 시 줄 바꿈" />
+    <option name="입력" path="기타" hit="입력 시 줄 바꿈" />
+    <option name="줄" path="기타" hit="입력 시 줄 바꿈" />
+    <option name="작은따옴표" path="기타" hit="작은따옴표" />
+    <option name="재설정" path="기타" hit="재설정" />
+    <option name="정렬" path="정렬" hit="정렬" />
+    <option name="주석" path="코드 생성" hit="주석" />
+    <option name="바꿈" path="기타" hit="줄 바꿈 유지" />
+    <option name="유지" path="기타" hit="줄 바꿈 유지" />
+    <option name="줄" path="기타" hit="줄 바꿈 유지" />
+    <option name="공백" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="부분에" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="시작" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="주석" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="줄" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="추가" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="중괄호" path="기타" hit="중괄호" />
+    <option name="f" path="기타" hit="첫 번째 속성 앞에 새 줄 F  " />
+    <option name="번째" path="기타" hit="첫 번째 속성 앞에 새 줄 F  " />
+    <option name="새" path="기타" hit="첫 번째 속성 앞에 새 줄 F  " />
+    <option name="속성" path="기타" hit="첫 번째 속성 앞에 새 줄 F  " />
+    <option name="앞에" path="기타" hit="첫 번째 속성 앞에 새 줄 F  " />
+    <option name="줄" path="기타" hit="첫 번째 속성 앞에 새 줄 F  " />
+    <option name="첫" path="기타" hit="첫 번째 속성 앞에 새 줄 F  " />
+    <option name="번째" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="블록" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="열의" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="주석" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="첫" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="번째" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="열의" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="주석" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="줄" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="첫" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="생성" path="코드 생성" hit="코드 생성" />
+    <option name="코드" path="코드 생성" hit="코드 생성" />
+    <option name="큰따옴표" path="기타" hit="큰따옴표" />
+    <option name="기반" path="기타" hit="타입 기반" />
+    <option name="타입" path="기타" hit="타입 기반" />
+    <option name="뒤" path="기타" hit="태그 이름 뒤" />
+    <option name="이름" path="기타" hit="태그 이름 뒤" />
+    <option name="태그" path="기타" hit="태그 이름 뒤" />
+    <option name="문자" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="사용" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="및" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="크기" path="탭 및 들여쓰기" hit="탭 크기 " />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 크기 " />
+    <option name="내" path="기타" hit="텍스트 내 줄 바꿈 유지" />
+    <option name="바꿈" path="기타" hit="텍스트 내 줄 바꿈 유지" />
+    <option name="유지" path="기타" hit="텍스트 내 줄 바꿈 유지" />
+    <option name="줄" path="기타" hit="텍스트 내 줄 바꿈 유지" />
+    <option name="텍스트" path="기타" hit="텍스트 내 줄 바꿈 유지" />
+    <option name="정렬" path="기타" hit="텍스트 정렬" />
+    <option name="텍스트" path="기타" hit="텍스트 정렬" />
+    <option name="바꿈" path="기타" hit="텍스트 줄 바꿈" />
+    <option name="줄" path="기타" hit="텍스트 줄 바꿈" />
+    <option name="텍스트" path="기타" hit="텍스트 줄 바꿈" />
+    <option name="바꿈" path="기타" hit="항상 줄 바꿈" />
+    <option name="줄" path="기타" hit="항상 줄 바꿈" />
+    <option name="항상" path="기타" hit="항상 줄 바꿈" />
+    <option name="행" path="기타" hit="행" />
+  </configurable>
+  <configurable id="preferences.sourceCode.XML" configurable_name="XML">
+    <option name="120" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="1개의" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="80" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="가이드" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="개의" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="또는" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="를" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="여러" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="지정하세요" path="기타" hit=" 개의 가이드     또는 여러 개의 가이드         를 지정하세요 " />
+    <option name="android" path="Android" hit="Android" />
+    <option name="android" path="Android" hit="Android XML 파일에 사용자 지정 서식 설정 사용" />
+    <option name="xml" path="Android" hit="Android XML 파일에 사용자 지정 서식 설정 사용" />
+    <option name="사용" path="Android" hit="Android XML 파일에 사용자 지정 서식 설정 사용" />
+    <option name="사용자" path="Android" hit="Android XML 파일에 사용자 지정 서식 설정 사용" />
+    <option name="서식" path="Android" hit="Android XML 파일에 사용자 지정 서식 설정 사용" />
+    <option name="설정" path="Android" hit="Android XML 파일에 사용자 지정 서식 설정 사용" />
+    <option name="지정" path="Android" hit="Android XML 파일에 사용자 지정 서식 설정 사용" />
+    <option name="파일에" path="Android" hit="Android XML 파일에 사용자 지정 서식 설정 사용" />
+    <option name="androidmanifest" path="Android" hit="AndroidManifest xml" />
+    <option name="xml" path="Android" hit="AndroidManifest xml" />
+    <option name="cdata" path="기타" hit="CDATA" />
+    <option name="declarations" path="Android" hit="Include namespace declarations" />
+    <option name="include" path="Android" hit="Include namespace declarations" />
+    <option name="namespace" path="Android" hit="Include namespace declarations" />
+    <option name="before" path="Android" hit="Insert blank line before tag" />
+    <option name="blank" path="Android" hit="Insert blank line before tag" />
+    <option name="insert" path="Android" hit="Insert blank line before tag" />
+    <option name="line" path="Android" hit="Insert blank line before tag" />
+    <option name="tag" path="Android" hit="Insert blank line before tag" />
+    <option name="after" path="Android" hit="Insert line break after last attribute" />
+    <option name="attribute" path="Android" hit="Insert line break after last attribute" />
+    <option name="break" path="Android" hit="Insert line break after last attribute" />
+    <option name="insert" path="Android" hit="Insert line break after last attribute" />
+    <option name="last" path="Android" hit="Insert line break after last attribute" />
+    <option name="line" path="Android" hit="Insert line break after last attribute" />
+    <option name="attribute" path="Android" hit="Insert line break before first attribute" />
+    <option name="before" path="Android" hit="Insert line break before first attribute" />
+    <option name="break" path="Android" hit="Insert line break before first attribute" />
+    <option name="first" path="Android" hit="Insert line break before first attribute" />
+    <option name="insert" path="Android" hit="Insert line break before first attribute" />
+    <option name="line" path="Android" hit="Insert line break before first attribute" />
+    <option name="files" path="Android" hit="Layout Files" />
+    <option name="layout" path="Android" hit="Layout Files" />
+    <option name="files" path="Android" hit="Other XML Resource Files" />
+    <option name="other" path="Android" hit="Other XML Resource Files" />
+    <option name="resource" path="Android" hit="Other XML Resource Files" />
+    <option name="xml" path="Android" hit="Other XML Resource Files" />
+    <option name="and" path="Android" hit="Value Resource Files and Selectors" />
+    <option name="files" path="Android" hit="Value Resource Files and Selectors" />
+    <option name="resource" path="Android" hit="Value Resource Files and Selectors" />
+    <option name="selectors" path="Android" hit="Value Resource Files and Selectors" />
+    <option name="value" path="Android" hit="Value Resource Files and Selectors" />
+    <option name="xml" hit="XML" />
+    <option name="강제" path="정렬" hit="강제 재정렬 " />
+    <option name="재정렬" path="정렬" hit="강제 재정렬 " />
+    <option name="같은" path="Android" hit="같은 이름의 태그를 그룹화" />
+    <option name="그룹화" path="Android" hit="같은 이름의 태그를 그룹화" />
+    <option name="이름의" path="Android" hit="같은 이름의 태그를 그룹화" />
+    <option name="태그를" path="Android" hit="같은 이름의 태그를 그룹화" />
+    <option name="공백" path="기타" hit="공백" />
+    <option name="공백" path="기타" hit="공백 유지" />
+    <option name="유지" path="기타" hit="공백 유지" />
+    <option name="구성표" hit="구성표 " />
+    <option name="규칙" path="정렬" hit="그룹화 규칙 " />
+    <option name="그룹화" path="정렬" hit="그룹화 규칙 " />
+    <option name="기타" path="기타" hit="기타" />
+    <option name="경우" path="기타" hit="긴 경우 자르기" />
+    <option name="긴" path="기타" hit="긴 경우 자르기" />
+    <option name="자르기" path="기타" hit="긴 경우 자르기" />
+    <option name="경우" path="기타" hit="긴 경우 줄 바꿈" />
+    <option name="긴" path="기타" hit="긴 경우 줄 바꿈" />
+    <option name="바꿈" path="기타" hit="긴 경우 줄 바꿈" />
+    <option name="줄" path="기타" hit="긴 경우 줄 바꿈" />
+    <option name="공백을" path="기타" hit="내부에 공백을 유지" />
+    <option name="내부에" path="기타" hit="내부에 공백을 유지" />
+    <option name="유지" path="기타" hit="내부에 공백을 유지" />
+    <option name="다음에서" hit="다음에서 설정   " />
+    <option name="설정" hit="다음에서 설정   " />
+    <option name="다음에서" path="기타" hit="다음에서 하드 랩 " />
+    <option name="랩" path="기타" hit="다음에서 하드 랩 " />
+    <option name="하드" path="기타" hit="다음에서 하드 랩 " />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="들여쓰기 " />
+    <option name="값" path="기타" hit="디폴트 값  아니요" />
+    <option name="디폴트" path="기타" hit="디폴트 값  아니요" />
+    <option name="아니요" path="기타" hit="디폴트 값  아니요" />
+    <option name="래핑" path="기타" hit="래핑 안 함" />
+    <option name="안" path="기타" hit="래핑 안 함" />
+    <option name="함" path="기타" hit="래핑 안 함" />
+    <option name="로드" hit="로드 중   " />
+    <option name="중" hit="로드 중   " />
+    <option name="보존" path="기타" hit="보존" />
+    <option name="공백" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="블록" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="주변에" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="주석" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="추가" path="코드 생성" hit="블록 주석 주변에 공백 추가" />
+    <option name="비활성화" hit="비활성화" />
+    <option name="빈" path="기타" hit="빈 줄 유지 " />
+    <option name="유지" path="기타" hit="빈 줄 유지 " />
+    <option name="줄" path="기타" hit="빈 줄 유지 " />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="빈" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="유지" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="줄에" path="탭 및 들여쓰기" hit="빈 줄에 들여쓰기 유지" />
+    <option name="내" path="기타" hit="빈 태그 내" />
+    <option name="빈" path="기타" hit="빈 태그 내" />
+    <option name="태그" path="기타" hit="빈 태그 내" />
+    <option name="새로운" path="기타" hit="새로운 행 추가" />
+    <option name="추가" path="기타" hit="새로운 행 추가" />
+    <option name="행" path="기타" hit="새로운 행 추가" />
+    <option name="강제" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="다시" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="서식" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="시" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="적용" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="지정" path="코드 생성" hit="서식 다시 지정 시 강제 적용" />
+    <option name="속성" path="기타" hit="속성 정렬" />
+    <option name="정렬" path="기타" hit="속성 정렬" />
+    <option name="바꿈" path="기타" hit="속성 줄 바꿈 " />
+    <option name="속성" path="기타" hit="속성 줄 바꿈 " />
+    <option name="줄" path="기타" hit="속성 줄 바꿈 " />
+    <option name="속성의" path="기타" hit="속성의     주위" />
+    <option name="주위" path="기타" hit="속성의     주위" />
+    <option name="스마트" path="탭 및 들여쓰기" hit="스마트 탭" />
+    <option name="탭" path="탭 및 들여쓰기" hit="스마트 탭" />
+    <option name="바꿈" path="Android" hit="스타일 선언 주위에서 줄 바꿈" />
+    <option name="선언" path="Android" hit="스타일 선언 주위에서 줄 바꿈" />
+    <option name="스타일" path="Android" hit="스타일 선언 주위에서 줄 바꿈" />
+    <option name="주위에서" path="Android" hit="스타일 선언 주위에서 줄 바꿈" />
+    <option name="줄" path="Android" hit="스타일 선언 주위에서 줄 바꿈" />
+    <option name="가이드" path="기타" hit="시각적 가이드 " />
+    <option name="시각적" path="기타" hit="시각적 가이드 " />
+    <option name="아니요" path="기타" hit="아니요" />
+    <option name="안" path="정렬" hit="안 함" />
+    <option name="함" path="정렬" hit="안 함" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="연속 들여쓰기 " />
+    <option name="연속" path="탭 및 들여쓰기" hit="연속 들여쓰기 " />
+    <option name="열" path="기타" hit="열" />
+    <option name="예" path="기타" hit="예" />
+    <option name="규칙" path="정렬" hit="일치 규칙 " />
+    <option name="일치" path="정렬" hit="일치 규칙 " />
+    <option name="바꿈" path="기타" hit="입력 시 줄 바꿈" />
+    <option name="시" path="기타" hit="입력 시 줄 바꿈" />
+    <option name="입력" path="기타" hit="입력 시 줄 바꿈" />
+    <option name="줄" path="기타" hit="입력 시 줄 바꿈" />
+    <option name="재설정" path="기타" hit="재설정" />
+    <option name="정렬" path="정렬" hit="정렬" />
+    <option name="유지" path="기타" hit="제거 태그로 유지 " />
+    <option name="제거" path="기타" hit="제거 태그로 유지 " />
+    <option name="태그로" path="기타" hit="제거 태그로 유지 " />
+    <option name="공백" path="기타" hit="주변 공백 " />
+    <option name="주변" path="기타" hit="주변 공백 " />
+    <option name="주석" path="코드 생성" hit="주석" />
+    <option name="바꿈" path="기타" hit="줄 바꿈 유지" />
+    <option name="유지" path="기타" hit="줄 바꿈 유지" />
+    <option name="줄" path="기타" hit="줄 바꿈 유지" />
+    <option name="공백" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="부분에" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="시작" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="주석" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="줄" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="추가" path="코드 생성" hit="줄 주석 시작 부분에 공백 추가" />
+    <option name="번째" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="블록" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="열의" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="주석" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="첫" path="코드 생성" hit="첫 번째 열의 블록 주석" />
+    <option name="번째" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="열의" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="주석" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="줄" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="첫" path="코드 생성" hit="첫 번째 열의 줄 주석" />
+    <option name="설정" path="정렬" hit="추가 설정" />
+    <option name="추가" path="정렬" hit="추가 설정" />
+    <option name="생성" path="코드 생성" hit="코드 생성" />
+    <option name="코드" path="코드 생성" hit="코드 생성" />
+    <option name="뒤" path="기타" hit="태그 이름 뒤" />
+    <option name="이름" path="기타" hit="태그 이름 뒤" />
+    <option name="태그" path="기타" hit="태그 이름 뒤" />
+    <option name="문자" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="사용" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 문자 사용" />
+    <option name="들여쓰기" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="및" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
+    <option name="크기" path="탭 및 들여쓰기" hit="탭 크기 " />
+    <option name="탭" path="탭 및 들여쓰기" hit="탭 크기 " />
+    <option name="내" path="기타" hit="텍스트 내 줄 바꿈 유지" />
+    <option name="바꿈" path="기타" hit="텍스트 내 줄 바꿈 유지" />
+    <option name="유지" path="기타" hit="텍스트 내 줄 바꿈 유지" />
+    <option name="줄" path="기타" hit="텍스트 내 줄 바꿈 유지" />
+    <option name="텍스트" path="기타" hit="텍스트 내 줄 바꿈 유지" />
+    <option name="바꿈" path="기타" hit="텍스트 줄 바꿈" />
+    <option name="줄" path="기타" hit="텍스트 줄 바꿈" />
+    <option name="텍스트" path="기타" hit="텍스트 줄 바꿈" />
+    <option name="항상" path="정렬" hit="항상" />
+    <option name="바꿈" path="기타" hit="항상 줄 바꿈" />
+    <option name="줄" path="기타" hit="항상 줄 바꿈" />
+    <option name="항상" path="기타" hit="항상 줄 바꿈" />
+    <option name="다시" path="정렬" hit="현재 모드 사용 코드 서식 다시 지정 대화상자에서 전환 " />
+    <option name="대화상자에서" path="정렬" hit="현재 모드 사용 코드 서식 다시 지정 대화상자에서 전환 " />
+    <option name="모드" path="정렬" hit="현재 모드 사용 코드 서식 다시 지정 대화상자에서 전환 " />
+    <option name="사용" path="정렬" hit="현재 모드 사용 코드 서식 다시 지정 대화상자에서 전환 " />
+    <option name="서식" path="정렬" hit="현재 모드 사용 코드 서식 다시 지정 대화상자에서 전환 " />
+    <option name="전환" path="정렬" hit="현재 모드 사용 코드 서식 다시 지정 대화상자에서 전환 " />
+    <option name="지정" path="정렬" hit="현재 모드 사용 코드 서식 다시 지정 대화상자에서 전환 " />
+    <option name="코드" path="정렬" hit="현재 모드 사용 코드 서식 다시 지정 대화상자에서 전환 " />
+    <option name="현재" path="정렬" hit="현재 모드 사용 코드 서식 다시 지정 대화상자에서 전환 " />
+  </configurable>
+</options>

@@ -1,0 +1,14 @@
+<html>
+<body>
+클래스에 인수 타입으로 <code>Any?</code>를 취하는 다른 <code>equals()</code>가 없는 경우, <code>Any?</code> 외의 인수 타입을 취하는 <code>equals()</code>를 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  class Foo {
+      fun equals(other: Foo?): Boolean {
+          return true
+      }
+  }
+</code></pre>
+<p>문제를 해결하려면 <code>Any?</code> 타입의 인수를 취하는 <code>equals()</code> 메서드를 생성합니다.</p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>'reactive' 메서드의 <code>subscribe()</code> 호출을 보고합니다.</p>
+<p>Publisherfmf 반환하는 메서드(<code>Uni</code> 및 <code>Multi</code> 포함)의 경우 <code>subscribe()</code> 메서드를 직접 호출해서는 안 됩니다. 그러면 Reactive 호출 체인이 끊어질 수 있기 때문입니다.</p>
+<p><code>subscribe()</code> 대신 <code>flatMap()</code>, <code>merge()</code> 등의 합성 연산자를 사용해보세요.</p>
+<p><b>예:</b></p>
+<pre><code lang="java">
+  Multi&lt;String&gt; stringMulti(){
+    Multi&lt;String&gt; multi = Multi.createFrom().item("abc");
+    multi.subscribe(); // &lt;- 비차단 컨텍스트에서 'subscribe' 호출 차단
+    return multi;
+  }
+</code></pre>
+</body>
+</html>

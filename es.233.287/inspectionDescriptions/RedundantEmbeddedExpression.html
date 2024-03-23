@@ -1,0 +1,16 @@
+<html>
+<body>
+Reports redundant embedded expressions in <code>STR</code> templates, such as trivial literals or empty expressions.
+<p>예:</p>
+<pre><code>
+  System.out.println(STR."Hello \{"world"}");
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  System.out.println(STR."Hello world");
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 21 이상인 경우에만 보고합니다.</p>
+<p><small>2023.3의 새로운 기능</small></p>
+</body>
+</html>

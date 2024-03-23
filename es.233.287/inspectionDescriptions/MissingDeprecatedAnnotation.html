@@ -1,0 +1,26 @@
+<html>
+<body>
+<code>@deprecated</code> Javadoc 태그가 있지만 <code>@java.lang.Deprecated</code> 어노테이션은 없는
+모듈 선언, 클래스, 필드 또는 메서드를 보고합니다.
+<p><b>예:</b></p>
+<pre><code>
+  /**
+   * @deprecated use {@code example()} instead
+   */
+  void sample(){ }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  /**
+   * @deprecated use {@code example()} instead
+   */
+  @Deprecated
+  void sample(){ }
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 5 이상인 경우에만 보고합니다.</p>
+<p>
+<code>@Deprecated</code> 어노테이션이 있지만 Javadoc <code>@deprecated</code> 태그에 설명이 없는 멤버를 보고하려면 아래의 체크박스를 사용하세요.
+
+</body>
+</html>

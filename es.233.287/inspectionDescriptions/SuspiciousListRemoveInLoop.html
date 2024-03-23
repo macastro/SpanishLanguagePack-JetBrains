@@ -1,0 +1,29 @@
+<html>
+<body>
+오름차순 카운트 루프 내부의 <code>list.remove(index)</code> 호출을 보고합니다.
+<p>
+  항목 제거 후 목록이 짧아지며 다음 요소를 건너뛰므로 이러한 호출은 의심스럽습니다. 간단한 수정은 제거 후에 색인 변수를 줄이는 것이지만, 반복자를 통해 제거하거나 <code>removeIf()</code> 메서드(Java 8 이후)를 사용하는 것이 더 강력한 대안압니다.
+  <code>remove()</code>가 루프에서 한 번 이상 호출되지 않을 것으로 기대하는 경우 뒤에 <code>break</code>를 추가해 보세요.
+</p>
+
+<p><b>예:</b></p>
+<pre><code>  public static void main(String[] args) {
+    process(new ArrayList&lt;>(
+      Arrays.asList("1", "2", "|", "3", "4")));
+  }
+
+  static void process(List&lt;String&gt; list) {
+    for (int i = 0; i &lt; list.size(); i++) {
+      if (list.get(i).equals("|")) {
+        list.remove(i);
+        continue;
+      }
+      System.out.println(list.get(i));
+    }
+  }
+</code></pre>
+<p>코드는 <code>1 2 3 4</code>가 출력될 것처럼 보이지만 실제로는 <code>3</code>이 출력에서 건너뛰어집니다.</p>
+<!-- tooltip end -->
+<p><small>2018.2의 새로운 기능</small></p>
+</body>
+</html>

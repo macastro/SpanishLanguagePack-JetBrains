@@ -1,0 +1,16 @@
+<html>
+<body>
+<p><code>Option</code>과 <code>Some(x)</code>의 상등 관계 검사를 단순화할 수 있음을 보고한다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  option == Some(x)
+  Some(x) != option
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  option.contains(x)
+  !option.contains(x)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

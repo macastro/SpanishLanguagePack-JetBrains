@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>잘못된 형식의 소스가 있는 매개변수화된 테스트를 보고합니다.</p>
+<ul>
+  <li><code>MethodSource</code>가 알 수 없는 대상을 포함하거나 메서드가 static이 아닌 <code>no-arg</code>입니다.</li>
+  <li><code>ValueSource</code> 및 <code>EnumSource</code> 타입은 메서드 매개변수로 변환할 수 없습니다.</li>
+  <li>정의된 소스가 없습니다.</li>
+</ul>
+<p>예:</p>
+<pre><code>
+  class Test {
+    @MethodSource("parameters")
+    @ParameterizedTest
+    void foo(String param) {}
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Test {
+    private static Stream&lt;Arguments&gt; parameters() {
+        return Stream.empty();
+    }
+
+    @MethodSource("parameters")
+    @ParameterizedTest
+    void foo(String param) {}
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

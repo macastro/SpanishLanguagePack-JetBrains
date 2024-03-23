@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>메서드, 필드 또는 변수에 사용되는 불필요한 <code>non-sealed</code> 제어자를 보고합니다.</p>
+<p>이 제어자는 클래스, 인터페이스 및 특성에서만 의미가 있습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  <b>non-sealed</b> boolean foo() {} // 제어자가 불필요합니다
+  <b>non-sealed</b> Object bar // 제어자가 불필요합니다
+
+  // 제어자가 필요하므로 강조 표시되지 않습니다
+  <b>non-sealed</b> class A {}
+</code></pre>
+</body>
+</html>

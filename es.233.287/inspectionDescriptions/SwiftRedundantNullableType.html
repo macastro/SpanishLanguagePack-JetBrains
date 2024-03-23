@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>
+  생략할 수 있는 <code>?</code>가 사용된 경우를 보고합니다. 예를 들어, 대입된 표현식의 추론 타입이 null 가능하지 않은 경우 등을 보고합니다.
+</p>
+<p>
+  타입 선언에서 불필요한 <code>?</code>의 제거를 제안합니다.
+</p>
+<!-- tooltip end -->
+<p>
+  <b>예:</b>
+</p>
+<pre><code>
+  let x: Int? = 42
+</code></pre>
+<p>
+  빠른 수정 적용 후:
+</p>
+<pre><code>
+  let x: Int = 42
+</code></pre>
+</body>
+</html>

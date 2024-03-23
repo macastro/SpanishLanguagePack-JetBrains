@@ -1,0 +1,16 @@
+<html>
+<body>
+<p><code>dataclasses</code> 또는 <code>attr</code> 모듈로 생성된 클래스의 유효하지 않은 정의 및 사용 사례를 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+import dataclasses
+
+
+@dataclasses.dataclass
+class FullName:
+    first: str
+    middle: str = ""
+    last: str
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+안전하게 제거할 수 있는 불필요한 옵트인 어노테이션을 보고합니다.
+
+<p><code>@OptIn</code> 어노테이션은 나중에 언제든지 변경될 수 있는 실험적 API를 사용하는 코드에 필요합니다. 이러한 API를 사용하지 않으면 이 어노테이션이 불필요하며 오해의 소지가 생깁니다(예: 실험적 API가 안정화되어 해당 API를 사용할 때 더 이상 옵트인이 필요하지 않은 경우).
+</p>
+<p>
+    <b>Remove annotation(어노테이션 제거)</b> 빠른 수정을 사용하면 불필요한 <code>@OptIn</code> 어노테이션을 제거할 수 있습니다.
+</p>
+<p>예:</p>
+<pre><code>
+  @OptIn(ExperimentalApi::class)
+  fun foo(x: Bar) {
+      x.baz()
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  fun foo(x: Bar) {
+      x.baz()
+  }
+</code></pre>
+</body>
+</html>
