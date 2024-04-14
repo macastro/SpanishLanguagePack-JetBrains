@@ -34,7 +34,7 @@ Nos gustaría extender nuestro agradecimiento a los siguientes patrocinadores po
 
 221.267	Para versiones:	2022.1 — 2022.1.4	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.221.267.jar)**
 
-222.207	Para versiones:	2022.2 — 2022.2.5	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.222.207.jar)**
+222.207	Para versiones:	2022.2 — 2022.2.5	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.222.427.jar)**
 
 223.237	Para versiones:	2022.3 — 2022.3.2	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.223.237.jar)**
 

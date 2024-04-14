@@ -23,9 +23,9 @@
   <configurable id="editor.breadcrumbs" configurable_name="이동 경로">
     <option name="protobuf" hit="protobuf" />
   </configurable>
-  <configurable id="reference.settingsdialog.IDE.editor.colors.프로토콜 버퍼" configurable_name="프로토콜 버퍼">
-    <option name="버퍼" hit="프로토콜 버퍼" />
-    <option name="프로토콜" hit="프로토콜 버퍼" />
+  <configurable id="reference.settingsdialog.IDE.editor.colors.Buffer de protocolo" configurable_name="Buffer de protocolo">
+    <option name="버퍼" hit="Buffer de protocolo" />
+    <option name="프로토콜" hit="Buffer de protocolo" />
     <option name="대괄호" hit="대괄호" />
     <option name="마침표" hit="마침표" />
     <option name="문자열" hit="문자열" />
@@ -50,10 +50,10 @@
     <option name="중괄호" hit="중괄호" />
     <option name="키워드" hit="키워드" />
   </configurable>
-  <configurable id="reference.settingsdialog.IDE.editor.colors.프로토콜 버퍼 텍스트" configurable_name="프로토콜 버퍼 텍스트">
-    <option name="버퍼" hit="프로토콜 버퍼 텍스트" />
-    <option name="텍스트" hit="프로토콜 버퍼 텍스트" />
-    <option name="프로토콜" hit="프로토콜 버퍼 텍스트" />
+  <configurable id="reference.settingsdialog.IDE.editor.colors.Texto del buffer de protocolo" configurable_name="Texto del buffer de protocolo">
+    <option name="버퍼" hit="Texto del buffer de protocolo" />
+    <option name="텍스트" hit="Texto del buffer de protocolo" />
+    <option name="프로토콜" hit="Texto del buffer de protocolo" />
     <option name="대괄호" hit="대괄호" />
     <option name="마침표" hit="마침표" />
     <option name="문자열" hit="문자열" />
@@ -77,7 +77,7 @@
     <option name="중괄호" hit="중괄호" />
     <option name="키워드" hit="키워드" />
   </configurable>
-  <configurable id="preferences.sourceCode.프로토콜 버퍼" configurable_name="프로토콜 버퍼">
+  <configurable id="preferences.sourceCode.Buffer de protocolo" configurable_name="Buffer de protocolo">
     <option name="공백" path="공백" hit="공백" />
     <option name="구성표" hit="구성표 " />
     <option name="다음에서" hit="다음에서 설정   " />
@@ -114,8 +114,8 @@
     <option name="탭" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
     <option name="크기" path="탭 및 들여쓰기" hit="탭 크기 " />
     <option name="탭" path="탭 및 들여쓰기" hit="탭 크기 " />
-    <option name="버퍼" hit="프로토콜 버퍼" />
-    <option name="프로토콜" hit="프로토콜 버퍼" />
+    <option name="버퍼" hit="Buffer de protocolo" />
+    <option name="프로토콜" hit="Buffer de protocolo" />
     <option name="" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
     <option name="뒤에" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
     <option name="새" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
@@ -372,7 +372,7 @@
     <option name="체인" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
     <option name="호출" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
   </configurable>
-  <configurable id="preferences.sourceCode.프로토콜 버퍼 텍스트" configurable_name="프로토콜 버퍼 텍스트">
+  <configurable id="preferences.sourceCode.Texto del buffer de protocolo" configurable_name="Texto del buffer de protocolo">
     <option name="공백" path="공백" hit="공백" />
     <option name="구성표" hit="구성표 " />
     <option name="다음에서" hit="다음에서 설정   " />
@@ -409,9 +409,9 @@
     <option name="탭" path="탭 및 들여쓰기" hit="탭 및 들여쓰기" />
     <option name="크기" path="탭 및 들여쓰기" hit="탭 크기 " />
     <option name="탭" path="탭 및 들여쓰기" hit="탭 크기 " />
-    <option name="버퍼" hit="프로토콜 버퍼 텍스트" />
-    <option name="텍스트" hit="프로토콜 버퍼 텍스트" />
-    <option name="프로토콜" hit="프로토콜 버퍼 텍스트" />
+    <option name="버퍼" hit="Texto del buffer de protocolo" />
+    <option name="텍스트" hit="Texto del buffer de protocolo" />
+    <option name="프로토콜" hit="Texto del buffer de protocolo" />
     <option name="" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
     <option name="뒤에" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
     <option name="새" path="줄 바꿈 및 괄호" hit="'(' 뒤에 새 줄" />
@@ -670,7 +670,7 @@
     <option name="체인" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
     <option name="호출" path="줄 바꿈 및 괄호" hit="호출 체인 줄 바꿈보다 우선 고려" />
   </configurable>
-  <configurable id="google.protobuf.language" configurable_name="프로토콜 버퍼">
+  <configurable id="google.protobuf.language" configurable_name="Buffer de protocolo">
     <option name="descriptor" hit="google protobuf descriptor proto" />
     <option name="google" hit="google protobuf descriptor proto" />
     <option name="proto" hit="google protobuf descriptor proto" />
@@ -698,8 +698,8 @@
     <option name="컨텐츠" hit="프로젝트 컨텐츠 루트 포함" />
     <option name="포함" hit="프로젝트 컨텐츠 루트 포함" />
     <option name="프로젝트" hit="프로젝트 컨텐츠 루트 포함" />
-    <option name="버퍼" hit="프로토콜 버퍼" />
-    <option name="프로토콜" hit="프로토콜 버퍼" />
+    <option name="버퍼" hit="Buffer de protocolo" />
+    <option name="프로토콜" hit="Buffer de protocolo" />
   </configurable>
   <configurable id="google.prototext.language" configurable_name="텍스트 서식">
     <option name="경고" hit="스키마 연결이 누락되면 경고" />

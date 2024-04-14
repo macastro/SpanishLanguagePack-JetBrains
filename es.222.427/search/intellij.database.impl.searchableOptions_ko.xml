@@ -1,0 +1,1281 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="" path="ActionManager" hit="(2) 실행" />
+    <option name="실행" path="ActionManager" hit="(2) 실행" />
+    <option name="" path="ActionManager" hit="(3) 실행" />
+    <option name="실행" path="ActionManager" hit="(3) 실행" />
+    <option name="csv" path="ActionManager" hit="CSV 형식 구성…" />
+    <option name="구성" path="ActionManager" hit="CSV 형식 구성…" />
+    <option name="형식" path="ActionManager" hit="CSV 형식 구성…" />
+    <option name="column" path="ActionManager" hit="Column(이전 UI)" />
+    <option name="ui" path="ActionManager" hit="Column(이전 UI)" />
+    <option name="이전" path="ActionManager" hit="Column(이전 UI)" />
+    <option name="ddl" path="ActionManager" hit="DDL" />
+    <option name="ddl" path="ActionManager" hit="DDL 데이터 소스로 덤프" />
+    <option name="덤프" path="ActionManager" hit="DDL 데이터 소스로 덤프" />
+    <option name="데이터" path="ActionManager" hit="DDL 데이터 소스로 덤프" />
+    <option name="소스로" path="ActionManager" hit="DDL 데이터 소스로 덤프" />
+    <option name="ddl" path="ActionManager" hit="Generar mapeo DDL…" />
+    <option name="매핑" path="ActionManager" hit="Generar mapeo DDL…" />
+    <option name="생성" path="ActionManager" hit="Generar mapeo DDL…" />
+    <option name="ddl" path="ActionManager" hit="DDL 매핑 적용…" />
+    <option name="매핑" path="ActionManager" hit="DDL 매핑 적용…" />
+    <option name="적용" path="ActionManager" hit="DDL 매핑 적용…" />
+    <option name="ddl" path="ActionManager" hit="DDL 에디터 툴바" />
+    <option name="에디터" path="ActionManager" hit="DDL 에디터 툴바" />
+    <option name="툴바" path="ActionManager" hit="DDL 에디터 툴바" />
+    <option name="ddl" path="ActionManager" hit="DDL 파일 다시 생성" />
+    <option name="다시" path="ActionManager" hit="DDL 파일 다시 생성" />
+    <option name="생성" path="ActionManager" hit="DDL 파일 다시 생성" />
+    <option name="파일" path="ActionManager" hit="DDL 파일 다시 생성" />
+    <option name="ddl로" path="ActionManager" hit="DDL로 이동" />
+    <option name="이동" path="ActionManager" hit="DDL로 이동" />
+    <option name="ddl을" path="ActionManager" hit="DDL을 클립보드에 생성" />
+    <option name="생성" path="ActionManager" hit="DDL을 클립보드에 생성" />
+    <option name="클립보드에" path="ActionManager" hit="DDL을 클립보드에 생성" />
+    <option name="default" path="ActionManager" hit="DEFAULT 설정" />
+    <option name="설정" path="ActionManager" hit="DEFAULT 설정" />
+    <option name="explain" path="ActionManager" hit="Explain Plan" />
+    <option name="plan" path="ActionManager" hit="Explain Plan" />
+    <option name="foreign" path="ActionManager" hit="Foreign Key(이전 UI)" />
+    <option name="key" path="ActionManager" hit="Foreign Key(이전 UI)" />
+    <option name="ui" path="ActionManager" hit="Foreign Key(이전 UI)" />
+    <option name="이전" path="ActionManager" hit="Foreign Key(이전 UI)" />
+    <option name="geo" path="ActionManager" hit="Geo 뷰어 표시" />
+    <option name="뷰어" path="ActionManager" hit="Geo 뷰어 표시" />
+    <option name="표시" path="ActionManager" hit="Geo 뷰어 표시" />
+    <option name="index" path="ActionManager" hit="Index(이전 UI)" />
+    <option name="ui" path="ActionManager" hit="Index(이전 UI)" />
+    <option name="이전" path="ActionManager" hit="Index(이전 UI)" />
+    <option name="jdbc" path="ActionManager" hit="JDBC 로그 설정" />
+    <option name="로그" path="ActionManager" hit="JDBC 로그 설정" />
+    <option name="설정" path="ActionManager" hit="JDBC 로그 설정" />
+    <option name="jdbc" path="ActionManager" hit="JDBC 로깅 설정(_S)" />
+    <option name="s" path="ActionManager" hit="JDBC 로깅 설정(_S)" />
+    <option name="로깅" path="ActionManager" hit="JDBC 로깅 설정(_S)" />
+    <option name="설정" path="ActionManager" hit="JDBC 로깅 설정(_S)" />
+    <option name="js" path="ActionManager" hit="JS 스크립트 표시" />
+    <option name="스크립트" path="ActionManager" hit="JS 스크립트 표시" />
+    <option name="표시" path="ActionManager" hit="JS 스크립트 표시" />
+    <option name="lob" path="ActionManager" hit="LOB 저장…" />
+    <option name="저장" path="ActionManager" hit="LOB 저장…" />
+    <option name="null" path="ActionManager" hit="NULL 설정" />
+    <option name="설정" path="ActionManager" hit="NULL 설정" />
+    <option name="by" path="ActionManager" hit="ORDER BY 절 편집" />
+    <option name="order" path="ActionManager" hit="ORDER BY 절 편집" />
+    <option name="절" path="ActionManager" hit="ORDER BY 절 편집" />
+    <option name="Editar" path="ActionManager" hit="ORDER BY 절 편집" />
+    <option name="by을" path="ActionManager" hit="ORDER BY을(를) 통해 정렬" />
+    <option name="order" path="ActionManager" hit="ORDER BY을(를) 통해 정렬" />
+    <option name="를" path="ActionManager" hit="ORDER BY을(를) 통해 정렬" />
+    <option name="정렬" path="ActionManager" hit="ORDER BY을(를) 통해 정렬" />
+    <option name="통해" path="ActionManager" hit="ORDER BY을(를) 통해 정렬" />
+    <option name="key" path="ActionManager" hit="Primary Key(이전 UI)" />
+    <option name="primary" path="ActionManager" hit="Primary Key(이전 UI)" />
+    <option name="ui" path="ActionManager" hit="Primary Key(이전 UI)" />
+    <option name="이전" path="ActionManager" hit="Primary Key(이전 UI)" />
+    <option name="sql" path="ActionManager" hit="SQL 로그 표시" />
+    <option name="로그" path="ActionManager" hit="SQL 로그 표시" />
+    <option name="표시" path="ActionManager" hit="SQL 로그 표시" />
+    <option name="sql" path="ActionManager" hit="SQL 루틴 디버그" />
+    <option name="디버그" path="ActionManager" hit="SQL 루틴 디버그" />
+    <option name="루틴" path="ActionManager" hit="SQL 루틴 디버그" />
+    <option name="sql" path="ActionManager" hit="SQL 루틴 실행" />
+    <option name="루틴" path="ActionManager" hit="SQL 루틴 실행" />
+    <option name="실행" path="ActionManager" hit="SQL 루틴 실행" />
+    <option name="sql" path="ActionManager" hit="SQL 스크립트" />
+    <option name="스크립트" path="ActionManager" hit="SQL 스크립트" />
+    <option name="sql" path="ActionManager" hit="SQL 스크립트 실행…" />
+    <option name="스크립트" path="ActionManager" hit="SQL 스크립트 실행…" />
+    <option name="실행" path="ActionManager" hit="SQL 스크립트 실행…" />
+    <option name="sql" path="ActionManager" hit="SQL 제너레이터…" />
+    <option name="제너레이터" path="ActionManager" hit="SQL 제너레이터…" />
+    <option name="sql" path="ActionManager" hit="SQL 쿼리 디버그" />
+    <option name="디버그" path="ActionManager" hit="SQL 쿼리 디버그" />
+    <option name="쿼리" path="ActionManager" hit="SQL 쿼리 디버그" />
+    <option name="js로" path="ActionManager" hit="SQL에서 JS로 번역 미리보기 표시" />
+    <option name="sql에서" path="ActionManager" hit="SQL에서 JS로 번역 미리보기 표시" />
+    <option name="미리보기" path="ActionManager" hit="SQL에서 JS로 번역 미리보기 표시" />
+    <option name="번역" path="ActionManager" hit="SQL에서 JS로 번역 미리보기 표시" />
+    <option name="표시" path="ActionManager" hit="SQL에서 JS로 번역 미리보기 표시" />
+    <option name="js로의" path="ActionManager" hit="SQL에서 JS로의 번역 결과를 클립보드에 복사" />
+    <option name="sql에서" path="ActionManager" hit="SQL에서 JS로의 번역 결과를 클립보드에 복사" />
+    <option name="결과를" path="ActionManager" hit="SQL에서 JS로의 번역 결과를 클립보드에 복사" />
+    <option name="번역" path="ActionManager" hit="SQL에서 JS로의 번역 결과를 클립보드에 복사" />
+    <option name="복사" path="ActionManager" hit="SQL에서 JS로의 번역 결과를 클립보드에 복사" />
+    <option name="클립보드에" path="ActionManager" hit="SQL에서 JS로의 번역 결과를 클립보드에 복사" />
+    <option name="table" path="ActionManager" hit="Table(이전 UI)" />
+    <option name="ui" path="ActionManager" hit="Table(이전 UI)" />
+    <option name="이전" path="ActionManager" hit="Table(이전 UI)" />
+    <option name="tx" path="ActionManager" hit="Tx 격리" />
+    <option name="격리" path="ActionManager" hit="Tx 격리" />
+    <option name="url" path="ActionManager" hit="URL 데이터 소스" />
+    <option name="데이터" path="ActionManager" hit="URL 데이터 소스" />
+    <option name="소스" path="ActionManager" hit="URL 데이터 소스" />
+    <option name="가져오기" path="ActionManager" hit="Importar/Exportar" />
+    <option name="내보내기" path="ActionManager" hit="Importar/Exportar" />
+    <option name="값" path="ActionManager" hit="값" />
+    <option name="값" path="ActionManager" hit="값 에디터 숨기기" />
+    <option name="숨기기" path="ActionManager" hit="값 에디터 숨기기" />
+    <option name="에디터" path="ActionManager" hit="값 에디터 숨기기" />
+    <option name="값" path="ActionManager" hit="값 에디터 표시" />
+    <option name="에디터" path="ActionManager" hit="값 에디터 표시" />
+    <option name="표시" path="ActionManager" hit="값 에디터 표시" />
+    <option name="강조" path="ActionManager" hit="Cambiar el lenguaje de resaltado…" />
+    <option name="설정" path="ActionManager" hit="Cambiar el lenguaje de resaltado…" />
+    <option name="언어" path="ActionManager" hit="Cambiar el lenguaje de resaltado…" />
+    <option name="표시" path="ActionManager" hit="Cambiar el lenguaje de resaltado…" />
+    <option name="객체" path="ActionManager" hit="객체 변경 내용 보기" />
+    <option name="내용" path="ActionManager" hit="객체 변경 내용 보기" />
+    <option name="변경" path="ActionManager" hit="객체 변경 내용 보기" />
+    <option name="보기" path="ActionManager" hit="객체 변경 내용 보기" />
+    <option name="객체" path="ActionManager" hit="객체 수정…" />
+    <option name="수정" path="ActionManager" hit="객체 수정…" />
+    <option name="ui" path="ActionManager" hit="객체 수정… (이전 UI)" />
+    <option name="객체" path="ActionManager" hit="객체 수정… (이전 UI)" />
+    <option name="수정" path="ActionManager" hit="객체 수정… (이전 UI)" />
+    <option name="이전" path="ActionManager" hit="객체 수정… (이전 UI)" />
+    <option name="결과" path="ActionManager" hit="결과" />
+    <option name="결과" path="ActionManager" hit="결과 셀 에디터" />
+    <option name="셀" path="ActionManager" hit="결과 셀 에디터" />
+    <option name="에디터" path="ActionManager" hit="결과 셀 에디터" />
+    <option name="결과" path="ActionManager" hit="결과 위치를 전환합니다" />
+    <option name="위치를" path="ActionManager" hit="결과 위치를 전환합니다" />
+    <option name="전환합니다" path="ActionManager" hit="결과 위치를 전환합니다" />
+    <option name="결과" path="ActionManager" hit="Encabezado de resultado" />
+    <option name="헤더" path="ActionManager" hit="Encabezado de resultado" />
+    <option name="경로에" path="ActionManager" hit="경로에 데이터 소스" />
+    <option name="데이터" path="ActionManager" hit="경로에 데이터 소스" />
+    <option name="소스" path="ActionManager" hit="경로에 데이터 소스" />
+    <option name="경로에서" path="ActionManager" hit="경로에서 데이터 소스" />
+    <option name="데이터" path="ActionManager" hit="경로에서 데이터 소스" />
+    <option name="소스" path="ActionManager" hit="경로에서 데이터 소스" />
+    <option name="건너뛰기" path="ActionManager" hit="계산된 열 건너뛰기" />
+    <option name="계산된" path="ActionManager" hit="계산된 열 건너뛰기" />
+    <option name="열" path="ActionManager" hit="계산된 열 건너뛰기" />
+    <option name="계획" path="ActionManager" hit="계획 설명" />
+    <option name="설명" path="ActionManager" hit="계획 설명" />
+    <option name="계획" path="ActionManager" hit="계획 설명 (원시)" />
+    <option name="설명" path="ActionManager" hit="계획 설명 (원시)" />
+    <option name="원시" path="ActionManager" hit="계획 설명 (원시)" />
+    <option name="계획" path="ActionManager" hit="계획 설명(원시)" />
+    <option name="설명" path="ActionManager" hit="계획 설명(원시)" />
+    <option name="원시" path="ActionManager" hit="계획 설명(원시)" />
+    <option name="구문을" path="ActionManager" hit="구문을 실행합니다(대체)" />
+    <option name="대체" path="ActionManager" hit="구문을 실행합니다(대체)" />
+    <option name="실행합니다" path="ActionManager" hit="구문을 실행합니다(대체)" />
+    <option name="구문을" path="ActionManager" hit="구문을 실행합니다(추가)" />
+    <option name="실행합니다" path="ActionManager" hit="구문을 실행합니다(추가)" />
+    <option name="추가" path="ActionManager" hit="구문을 실행합니다(추가)" />
+    <option name="구조" path="ActionManager" hit="구조 비교…" />
+    <option name="비교" path="ActionManager" hit="구조 비교…" />
+    <option name="구체화" path="ActionManager" hit="구체화 뷰 새로고침" />
+    <option name="뷰" path="ActionManager" hit="구체화 뷰 새로고침" />
+    <option name="새로고침" path="ActionManager" hit="구체화 뷰 새로고침" />
+    <option name="권한" path="ActionManager" hit="권한 수정…" />
+    <option name="수정" path="ActionManager" hit="권한 수정…" />
+    <option name="기본" path="ActionManager" hit="기본 키 드롭" />
+    <option name="드롭" path="ActionManager" hit="기본 키 드롭" />
+    <option name="키" path="ActionManager" hit="기본 키 드롭" />
+    <option name="기본" path="ActionManager" hit="기본 키를 선택된 테이블에서 드롭합니다" />
+    <option name="드롭합니다" path="ActionManager" hit="기본 키를 선택된 테이블에서 드롭합니다" />
+    <option name="선택된" path="ActionManager" hit="기본 키를 선택된 테이블에서 드롭합니다" />
+    <option name="키를" path="ActionManager" hit="기본 키를 선택된 테이블에서 드롭합니다" />
+    <option name="테이블에서" path="ActionManager" hit="기본 키를 선택된 테이블에서 드롭합니다" />
+    <option name="Orden descendente" path="ActionManager" hit="Orden descendente" />
+    <option name="Orden descendente" path="ActionManager" hit="Agregar orden descendente" />
+    <option name="추가" path="ActionManager" hit="Agregar orden descendente" />
+    <option name="검사" path="ActionManager" hit="내부 검사 수준" />
+    <option name="내부" path="ActionManager" hit="내부 검사 수준" />
+    <option name="수준" path="ActionManager" hit="내부 검사 수준" />
+    <option name="p" path="ActionManager" hit="내부 검사 진단 정보 준비(_P)" />
+    <option name="검사" path="ActionManager" hit="내부 검사 진단 정보 준비(_P)" />
+    <option name="내부" path="ActionManager" hit="내부 검사 진단 정보 준비(_P)" />
+    <option name="정보" path="ActionManager" hit="내부 검사 진단 정보 준비(_P)" />
+    <option name="준비" path="ActionManager" hit="내부 검사 진단 정보 준비(_P)" />
+    <option name="진단" path="ActionManager" hit="내부 검사 진단 정보 준비(_P)" />
+    <option name="검사기" path="ActionManager" hit="내부 검사기 진단 준비" />
+    <option name="내부" path="ActionManager" hit="내부 검사기 진단 준비" />
+    <option name="준비" path="ActionManager" hit="내부 검사기 진단 준비" />
+    <option name="진단" path="ActionManager" hit="내부 검사기 진단 준비" />
+    <option name="내용" path="ActionManager" hit="내용 비교" />
+    <option name="비교" path="ActionManager" hit="내용 비교" />
+    <option name="내보내기" path="ActionManager" hit="네이티브 내보내기…" />
+    <option name="네이티브" path="ActionManager" hit="네이티브 내보내기…" />
+    <option name="네이티브" path="ActionManager" hit="네이티브 복원…" />
+    <option name="복원" path="ActionManager" hit="네이티브 복원…" />
+    <option name="다른" path="ActionManager" hit="Ocultar otras columnas" />
+    <option name="숨기기" path="ActionManager" hit="Ocultar otras columnas" />
+    <option name="열" path="ActionManager" hit="Ocultar otras columnas" />
+    <option name="다시" path="ActionManager" hit="다시 컴파일…" />
+    <option name="컴파일" path="ActionManager" hit="다시 컴파일…" />
+    <option name="다음" path="ActionManager" hit="다음 찾은 항목 선택" />
+    <option name="선택" path="ActionManager" hit="다음 찾은 항목 선택" />
+    <option name="찾은" path="ActionManager" hit="다음 찾은 항목 선택" />
+    <option name="항목" path="ActionManager" hit="다음 찾은 항목 선택" />
+    <option name="다음" path="ActionManager" hit="다음 페이지" />
+    <option name="페이지" path="ActionManager" hit="다음 페이지" />
+    <option name="다음으로" path="ActionManager" hit="다음으로 표시" />
+    <option name="표시" path="ActionManager" hit="다음으로 표시" />
+    <option name="다이어그램" path="ActionManager" hit="다이어그램" />
+    <option name="내용" path="ActionManager" hit="대기 중인 변경 내용 미리 보기" />
+    <option name="대기" path="ActionManager" hit="대기 중인 변경 내용 미리 보기" />
+    <option name="미리" path="ActionManager" hit="대기 중인 변경 내용 미리 보기" />
+    <option name="변경" path="ActionManager" hit="대기 중인 변경 내용 미리 보기" />
+    <option name="보기" path="ActionManager" hit="대기 중인 변경 내용 미리 보기" />
+    <option name="중인" path="ActionManager" hit="대기 중인 변경 내용 미리 보기" />
+    <option name="내보내기" path="ActionManager" hit="데이터 내보내기…" />
+    <option name="데이터" path="ActionManager" hit="데이터 내보내기…" />
+    <option name="데이터" path="ActionManager" hit="데이터 뷰 설정 열기…" />
+    <option name="뷰" path="ActionManager" hit="데이터 뷰 설정 열기…" />
+    <option name="설정" path="ActionManager" hit="데이터 뷰 설정 열기…" />
+    <option name="열기" path="ActionManager" hit="데이터 뷰 설정 열기…" />
+    <option name="데이터" path="ActionManager" hit="데이터 비교" />
+    <option name="비교" path="ActionManager" hit="데이터 비교" />
+    <option name="가져오기" path="ActionManager" hit="데이터 소스 가져오기…" />
+    <option name="데이터" path="ActionManager" hit="데이터 소스 가져오기…" />
+    <option name="소스" path="ActionManager" hit="데이터 소스 가져오기…" />
+    <option name="데이터" path="ActionManager" hit="데이터 소스 복사" />
+    <option name="복사" path="ActionManager" hit="데이터 소스 복사" />
+    <option name="소스" path="ActionManager" hit="데이터 소스 복사" />
+    <option name="데이터" path="ActionManager" hit="데이터 소스 붙여넣기" />
+    <option name="붙여넣기" path="ActionManager" hit="데이터 소스 붙여넣기" />
+    <option name="소스" path="ActionManager" hit="데이터 소스 붙여넣기" />
+    <option name="데이터" path="ActionManager" hit="데이터 소스 생성" />
+    <option name="생성" path="ActionManager" hit="데이터 소스 생성" />
+    <option name="소스" path="ActionManager" hit="데이터 소스 생성" />
+    <option name="데이터" path="ActionManager" hit="데이터 소스 잘라내기" />
+    <option name="소스" path="ActionManager" hit="데이터 소스 잘라내기" />
+    <option name="잘라내기" path="ActionManager" hit="데이터 소스 잘라내기" />
+    <option name="데이터" path="ActionManager" hit="데이터 소스 프로퍼티" />
+    <option name="소스" path="ActionManager" hit="데이터 소스 프로퍼티" />
+    <option name="프로퍼티" path="ActionManager" hit="데이터 소스 프로퍼티" />
+    <option name="데이터" path="ActionManager" hit="데이터 에디터" />
+    <option name="에디터" path="ActionManager" hit="데이터 에디터" />
+    <option name="데이터" path="ActionManager" hit="Elija un extractor de datos" />
+    <option name="선택" path="ActionManager" hit="Elija un extractor de datos" />
+    <option name="추출기" path="ActionManager" hit="Elija un extractor de datos" />
+    <option name="데이터" path="ActionManager" hit="데이터 추출기를 선택합니다" />
+    <option name="선택합니다" path="ActionManager" hit="데이터 추출기를 선택합니다" />
+    <option name="추출기를" path="ActionManager" hit="데이터 추출기를 선택합니다" />
+    <option name="데이터" path="ActionManager" hit="데이터 편집" />
+    <option name="Editar" path="ActionManager" hit="데이터 편집" />
+    <option name="객체를" path="ActionManager" hit="데이터베이스 객체를 드롭하거나 데이터 소스를 제거합니다" />
+    <option name="데이터" path="ActionManager" hit="데이터베이스 객체를 드롭하거나 데이터 소스를 제거합니다" />
+    <option name="데이터베이스" path="ActionManager" hit="데이터베이스 객체를 드롭하거나 데이터 소스를 제거합니다" />
+    <option name="드롭하거나" path="ActionManager" hit="데이터베이스 객체를 드롭하거나 데이터 소스를 제거합니다" />
+    <option name="소스를" path="ActionManager" hit="데이터베이스 객체를 드롭하거나 데이터 소스를 제거합니다" />
+    <option name="제거합니다" path="ActionManager" hit="데이터베이스 객체를 드롭하거나 데이터 소스를 제거합니다" />
+    <option name="데이터베이스" path="ActionManager" hit="데이터베이스 및 스키마 숨기기" />
+    <option name="및" path="ActionManager" hit="데이터베이스 및 스키마 숨기기" />
+    <option name="숨기기" path="ActionManager" hit="데이터베이스 및 스키마 숨기기" />
+    <option name="스키마" path="ActionManager" hit="데이터베이스 및 스키마 숨기기" />
+    <option name="데이터베이스" path="ActionManager" hit="데이터베이스 및 스키마 표시 및 숨기기" />
+    <option name="및" path="ActionManager" hit="데이터베이스 및 스키마 표시 및 숨기기" />
+    <option name="숨기기" path="ActionManager" hit="데이터베이스 및 스키마 표시 및 숨기기" />
+    <option name="스키마" path="ActionManager" hit="데이터베이스 및 스키마 표시 및 숨기기" />
+    <option name="표시" path="ActionManager" hit="데이터베이스 및 스키마 표시 및 숨기기" />
+    <option name="데이터베이스" path="ActionManager" hit="데이터베이스 스크립트" />
+    <option name="스크립트" path="ActionManager" hit="데이터베이스 스크립트" />
+    <option name="데이터베이스" path="ActionManager" hit="데이터베이스 탐색기" />
+    <option name="탐색기" path="ActionManager" hit="데이터베이스 탐색기" />
+    <option name="데이터베이스" path="ActionManager" hit="데이터베이스 탐색기 툴바" />
+    <option name="탐색기" path="ActionManager" hit="데이터베이스 탐색기 툴바" />
+    <option name="툴바" path="ActionManager" hit="데이터베이스 탐색기 툴바" />
+    <option name="데이터베이스" path="ActionManager" hit="데이터베이스 탐색기에서 선택" />
+    <option name="선택" path="ActionManager" hit="데이터베이스 탐색기에서 선택" />
+    <option name="탐색기에서" path="ActionManager" hit="데이터베이스 탐색기에서 선택" />
+    <option name="가져오기" path="ActionManager" hit="데이터베이스로 가져오기" />
+    <option name="데이터베이스로" path="ActionManager" hit="데이터베이스로 가져오기" />
+    <option name="가져오기" path="ActionManager" hit="데이터베이스로 가져오기…" />
+    <option name="데이터베이스로" path="ActionManager" hit="데이터베이스로 가져오기…" />
+    <option name="내용" path="ActionManager" hit="데이터베이스에 변경 내용 제출" />
+    <option name="데이터베이스에" path="ActionManager" hit="데이터베이스에 변경 내용 제출" />
+    <option name="변경" path="ActionManager" hit="데이터베이스에 변경 내용 제출" />
+    <option name="제출" path="ActionManager" hit="데이터베이스에 변경 내용 제출" />
+    <option name="내용을" path="ActionManager" hit="데이터베이스에 변경 내용을 제출합니다" />
+    <option name="데이터베이스에" path="ActionManager" hit="데이터베이스에 변경 내용을 제출합니다" />
+    <option name="변경" path="ActionManager" hit="데이터베이스에 변경 내용을 제출합니다" />
+    <option name="제출합니다" path="ActionManager" hit="데이터베이스에 변경 내용을 제출합니다" />
+    <option name="데이터베이스에" path="ActionManager" hit="데이터베이스에 복사" />
+    <option name="복사" path="ActionManager" hit="데이터베이스에 복사" />
+    <option name="데이터베이스에" path="ActionManager" hit="데이터베이스에 복사…" />
+    <option name="복사" path="ActionManager" hit="데이터베이스에 복사…" />
+    <option name="검색" path="ActionManager" hit="데이터에서 텍스트 찾은 항목 검색" />
+    <option name="데이터에서" path="ActionManager" hit="데이터에서 텍스트 찾은 항목 검색" />
+    <option name="찾은" path="ActionManager" hit="데이터에서 텍스트 찾은 항목 검색" />
+    <option name="텍스트" path="ActionManager" hit="데이터에서 텍스트 찾은 항목 검색" />
+    <option name="항목" path="ActionManager" hit="데이터에서 텍스트 찾은 항목 검색" />
+    <option name="도구" path="ActionManager" hit="도구" />
+    <option name="드라이버" path="ActionManager" hit="드라이버" />
+    <option name="데이터" path="ActionManager" hit="드라이버 및 데이터 소스" />
+    <option name="드라이버" path="ActionManager" hit="드라이버 및 데이터 소스" />
+    <option name="및" path="ActionManager" hit="드라이버 및 데이터 소스" />
+    <option name="소스" path="ActionManager" hit="드라이버 및 데이터 소스" />
+    <option name="디버그" path="ActionManager" hit="디버그" />
+    <option name="디버그" path="ActionManager" hit="디버그 액션" />
+    <option name="액션" path="ActionManager" hit="디버그 액션" />
+    <option name="디폴트" path="ActionManager" hit="디폴트({0})" />
+    <option name="롤백" path="ActionManager" hit="롤백" />
+    <option name="디버그" path="ActionManager" hit="루틴 디버그…" />
+    <option name="루틴" path="ActionManager" hit="루틴 디버그…" />
+    <option name="루틴" path="ActionManager" hit="루틴 실행…" />
+    <option name="실행" path="ActionManager" hit="루틴 실행…" />
+    <option name="마지막" path="ActionManager" hit="마지막 페이지" />
+    <option name="페이지" path="ActionManager" hit="마지막 페이지" />
+    <option name="매개변수" path="ActionManager" hit="매개변수 보기" />
+    <option name="보기" path="ActionManager" hit="매개변수 보기" />
+    <option name="매개변수" path="ActionManager" hit="매개변수 편집" />
+    <option name="Editar" path="ActionManager" hit="매개변수 편집" />
+    <option name="대상" path="ActionManager" hit="매핑 대상" />
+    <option name="매핑" path="ActionManager" hit="매핑 대상" />
+    <option name="매핑" path="ActionManager" hit="매핑 지우기" />
+    <option name="지우기" path="ActionManager" hit="매핑 지우기" />
+    <option name="맨" path="ActionManager" hit="맨 아래로 이동" />
+    <option name="아래로" path="ActionManager" hit="맨 아래로 이동" />
+    <option name="이동" path="ActionManager" hit="맨 아래로 이동" />
+    <option name="객체를" path="ActionManager" hit="모델 객체를 텍스트로 표시" />
+    <option name="모델" path="ActionManager" hit="모델 객체를 텍스트로 표시" />
+    <option name="텍스트로" path="ActionManager" hit="모델 객체를 텍스트로 표시" />
+    <option name="표시" path="ActionManager" hit="모델 객체를 텍스트로 표시" />
+    <option name="덤프" path="ActionManager" hit="모델 덤프" />
+    <option name="모델" path="ActionManager" hit="모델 덤프" />
+    <option name="닫기" path="ActionManager" hit="모든 세션 닫기" />
+    <option name="모든" path="ActionManager" hit="모든 세션 닫기" />
+    <option name="세션" path="ActionManager" hit="모든 세션 닫기" />
+    <option name="닫습니다" path="ActionManager" hit="모든 세션을 닫습니다" />
+    <option name="모든" path="ActionManager" hit="모든 세션을 닫습니다" />
+    <option name="세션을" path="ActionManager" hit="모든 세션을 닫습니다" />
+    <option name="모든" path="ActionManager" hit="모든 애그리게이터 비활성화" />
+    <option name="비활성화" path="ActionManager" hit="모든 애그리게이터 비활성화" />
+    <option name="애그리게이터" path="ActionManager" hit="모든 애그리게이터 비활성화" />
+    <option name="모든" path="ActionManager" hit="모든 애그리게이터 활성화" />
+    <option name="애그리게이터" path="ActionManager" hit="모든 애그리게이터 활성화" />
+    <option name="활성화" path="ActionManager" hit="모든 애그리게이터 활성화" />
+    <option name="모든" path="ActionManager" hit="모든 연관된 행" />
+    <option name="연관된" path="ActionManager" hit="모든 연관된 행" />
+    <option name="행" path="ActionManager" hit="모든 연관된 행" />
+    <option name="모든" path="ActionManager" hit="모든 찾은 항목 선택" />
+    <option name="선택" path="ActionManager" hit="모든 찾은 항목 선택" />
+    <option name="찾은" path="ActionManager" hit="모든 찾은 항목 선택" />
+    <option name="항목" path="ActionManager" hit="모든 찾은 항목 선택" />
+    <option name="목록" path="ActionManager" hit="Abrir lista" />
+    <option name="열기" path="ActionManager" hit="Abrir lista" />
+    <option name="내용" path="ActionManager" hit="변경 내용 표시" />
+    <option name="변경" path="ActionManager" hit="변경 내용 표시" />
+    <option name="표시" path="ActionManager" hit="변경 내용 표시" />
+    <option name="복사" path="ActionManager" hit="복사/붙여넣기" />
+    <option name="붙여넣기" path="ActionManager" hit="복사/붙여넣기" />
+    <option name="복제" path="ActionManager" hit="복제" />
+    <option name="분석" path="ActionManager" hit="분석 설명" />
+    <option name="설명" path="ActionManager" hit="분석 설명" />
+    <option name="분석" path="ActionManager" hit="분석 설명(원시)" />
+    <option name="설명" path="ActionManager" hit="분석 설명(원시)" />
+    <option name="원시" path="ActionManager" hit="분석 설명(원시)" />
+    <option name="뷰" path="ActionManager" hit="뷰 재설정" />
+    <option name="재설정" path="ActionManager" hit="뷰 재설정" />
+    <option name="비활성화" path="ActionManager" hit="비활성화" />
+    <option name="삭제" path="ActionManager" hit="삭제" />
+    <option name="데이터" path="ActionManager" hit="새 데이터 소스 생성" />
+    <option name="새" path="ActionManager" hit="새 데이터 소스 생성" />
+    <option name="생성" path="ActionManager" hit="새 데이터 소스 생성" />
+    <option name="소스" path="ActionManager" hit="새 데이터 소스 생성" />
+    <option name="새" path="ActionManager" hit="새 쿼리 콘솔 열기" />
+    <option name="열기" path="ActionManager" hit="새 쿼리 콘솔 열기" />
+    <option name="콘솔" path="ActionManager" hit="새 쿼리 콘솔 열기" />
+    <option name="쿼리" path="ActionManager" hit="새 쿼리 콘솔 열기" />
+    <option name="만들기" path="ActionManager" hit="새로 만들기…" />
+    <option name="새로" path="ActionManager" hit="새로 만들기…" />
+    <option name="새로" path="ActionManager" hit="새로 작성" />
+    <option name="작성" path="ActionManager" hit="새로 작성" />
+    <option name="새로고침" path="ActionManager" hit="새로고침" />
+    <option name="강제" path="ActionManager" hit="새로고침 강제 실행" />
+    <option name="새로고침" path="ActionManager" hit="새로고침 강제 실행" />
+    <option name="실행" path="ActionManager" hit="새로고침 강제 실행" />
+    <option name="기본" path="ActionManager" hit="새로운 기본 키를 선택된 테이블에 추가" />
+    <option name="새로운" path="ActionManager" hit="새로운 기본 키를 선택된 테이블에 추가" />
+    <option name="선택된" path="ActionManager" hit="새로운 기본 키를 선택된 테이블에 추가" />
+    <option name="추가" path="ActionManager" hit="새로운 기본 키를 선택된 테이블에 추가" />
+    <option name="키를" path="ActionManager" hit="새로운 기본 키를 선택된 테이블에 추가" />
+    <option name="테이블에" path="ActionManager" hit="새로운 기본 키를 선택된 테이블에 추가" />
+    <option name="새로운" path="ActionManager" hit="새로운 열을 선택된 테이블에 추가" />
+    <option name="선택된" path="ActionManager" hit="새로운 열을 선택된 테이블에 추가" />
+    <option name="열을" path="ActionManager" hit="새로운 열을 선택된 테이블에 추가" />
+    <option name="추가" path="ActionManager" hit="새로운 열을 선택된 테이블에 추가" />
+    <option name="테이블에" path="ActionManager" hit="새로운 열을 선택된 테이블에 추가" />
+    <option name="새로운" path="ActionManager" hit="새로운 외래 키를 선택된 테이블에 추가" />
+    <option name="선택된" path="ActionManager" hit="새로운 외래 키를 선택된 테이블에 추가" />
+    <option name="외래" path="ActionManager" hit="새로운 외래 키를 선택된 테이블에 추가" />
+    <option name="추가" path="ActionManager" hit="새로운 외래 키를 선택된 테이블에 추가" />
+    <option name="키를" path="ActionManager" hit="새로운 외래 키를 선택된 테이블에 추가" />
+    <option name="테이블에" path="ActionManager" hit="새로운 외래 키를 선택된 테이블에 추가" />
+    <option name="새로운" path="ActionManager" hit="새로운 테이블을 선택된 스키마에 추가합니다" />
+    <option name="선택된" path="ActionManager" hit="새로운 테이블을 선택된 스키마에 추가합니다" />
+    <option name="스키마에" path="ActionManager" hit="새로운 테이블을 선택된 스키마에 추가합니다" />
+    <option name="추가합니다" path="ActionManager" hit="새로운 테이블을 선택된 스키마에 추가합니다" />
+    <option name="테이블을" path="ActionManager" hit="새로운 테이블을 선택된 스키마에 추가합니다" />
+    <option name="색상" path="ActionManager" hit="색상 설정…" />
+    <option name="설정" path="ActionManager" hit="색상 설정…" />
+    <option name="색인" path="ActionManager" hit="색인 수정" />
+    <option name="수정" path="ActionManager" hit="색인 수정" />
+    <option name="색인을" path="ActionManager" hit="색인을 일괄 수정합니다" />
+    <option name="수정합니다" path="ActionManager" hit="색인을 일괄 수정합니다" />
+    <option name="일괄" path="ActionManager" hit="색인을 일괄 수정합니다" />
+    <option name="건너뛰기" path="ActionManager" hit="생성된 열 건너뛰기" />
+    <option name="생성된" path="ActionManager" hit="생성된 열 건너뛰기" />
+    <option name="열" path="ActionManager" hit="생성된 열 건너뛰기" />
+    <option name="붙여넣기" path="ActionManager" hit="Pegar formato" />
+    <option name="서식" path="ActionManager" hit="Pegar formato" />
+    <option name="서식" path="ActionManager" hit="서식 지정 전환" />
+    <option name="전환" path="ActionManager" hit="서식 지정 전환" />
+    <option name="지정" path="ActionManager" hit="서식 지정 전환" />
+    <option name="범위" path="ActionManager" hit="선택 범위 축소" />
+    <option name="선택" path="ActionManager" hit="선택 범위 축소" />
+    <option name="축소" path="ActionManager" hit="선택 범위 축소" />
+    <option name="범위" path="ActionManager" hit="선택 범위 확장" />
+    <option name="선택" path="ActionManager" hit="선택 범위 확장" />
+    <option name="확장" path="ActionManager" hit="선택 범위 확장" />
+    <option name="데이터" path="ActionManager" hit="선택 범위의 데이터 소스 추가…" />
+    <option name="범위의" path="ActionManager" hit="선택 범위의 데이터 소스 추가…" />
+    <option name="선택" path="ActionManager" hit="선택 범위의 데이터 소스 추가…" />
+    <option name="소스" path="ActionManager" hit="선택 범위의 데이터 소스 추가…" />
+    <option name="추가" path="ActionManager" hit="선택 범위의 데이터 소스 추가…" />
+    <option name="되돌리기" path="ActionManager" hit="Revertir selección" />
+    <option name="선택" path="ActionManager" hit="Revertir selección" />
+    <option name="영역" path="ActionManager" hit="Revertir selección" />
+    <option name="객체" path="ActionManager" hit="선택된 객체 새로고침" />
+    <option name="새로고침" path="ActionManager" hit="선택된 객체 새로고침" />
+    <option name="선택된" path="ActionManager" hit="선택된 객체 새로고침" />
+    <option name="객체" path="ActionManager" hit="선택된 객체 활성화" />
+    <option name="선택된" path="ActionManager" hit="선택된 객체 활성화" />
+    <option name="활성화" path="ActionManager" hit="선택된 객체 활성화" />
+    <option name="객체에서" path="ActionManager" hit="선택된 객체에서 확장 스크립트를 실행합니다" />
+    <option name="선택된" path="ActionManager" hit="선택된 객체에서 확장 스크립트를 실행합니다" />
+    <option name="스크립트를" path="ActionManager" hit="선택된 객체에서 확장 스크립트를 실행합니다" />
+    <option name="실행합니다" path="ActionManager" hit="선택된 객체에서 확장 스크립트를 실행합니다" />
+    <option name="확장" path="ActionManager" hit="선택된 객체에서 확장 스크립트를 실행합니다" />
+    <option name="매개변수를" path="ActionManager" hit="선택된 매개변수를 편집합니다" />
+    <option name="선택된" path="ActionManager" hit="선택된 매개변수를 편집합니다" />
+    <option name="Editar" path="ActionManager" hit="선택된 매개변수를 편집합니다" />
+    <option name="드롭합니다" path="ActionManager" hit="선택된 열에서 외래 키를 드롭합니다" />
+    <option name="선택된" path="ActionManager" hit="선택된 열에서 외래 키를 드롭합니다" />
+    <option name="열에서" path="ActionManager" hit="선택된 열에서 외래 키를 드롭합니다" />
+    <option name="외래" path="ActionManager" hit="선택된 열에서 외래 키를 드롭합니다" />
+    <option name="키를" path="ActionManager" hit="선택된 열에서 외래 키를 드롭합니다" />
+    <option name="범위" path="ActionManager" hit="선택된 열의 범위 좁히기" />
+    <option name="선택된" path="ActionManager" hit="선택된 열의 범위 좁히기" />
+    <option name="열의" path="ActionManager" hit="선택된 열의 범위 좁히기" />
+    <option name="좁히기" path="ActionManager" hit="선택된 열의 범위 좁히기" />
+    <option name="선택된" path="ActionManager" hit="선택된 열의 주석을 수정합니다" />
+    <option name="수정합니다" path="ActionManager" hit="선택된 열의 주석을 수정합니다" />
+    <option name="열의" path="ActionManager" hit="선택된 열의 주석을 수정합니다" />
+    <option name="주석을" path="ActionManager" hit="선택된 열의 주석을 수정합니다" />
+    <option name="선택된" path="ActionManager" hit="선택된 테이블을 자릅니다" />
+    <option name="자릅니다" path="ActionManager" hit="선택된 테이블을 자릅니다" />
+    <option name="테이블을" path="ActionManager" hit="선택된 테이블을 자릅니다" />
+    <option name="객체" path="ActionManager" hit="선택한 객체 다시 컴파일" />
+    <option name="다시" path="ActionManager" hit="선택한 객체 다시 컴파일" />
+    <option name="선택한" path="ActionManager" hit="선택한 객체 다시 컴파일" />
+    <option name="컴파일" path="ActionManager" hit="선택한 객체 다시 컴파일" />
+    <option name="객체" path="ActionManager" hit="선택한 객체 비활성화" />
+    <option name="비활성화" path="ActionManager" hit="선택한 객체 비활성화" />
+    <option name="선택한" path="ActionManager" hit="선택한 객체 비활성화" />
+    <option name="구체화" path="ActionManager" hit="선택한 구체화 뷰 새로고침" />
+    <option name="뷰" path="ActionManager" hit="선택한 구체화 뷰 새로고침" />
+    <option name="새로고침" path="ActionManager" hit="선택한 구체화 뷰 새로고침" />
+    <option name="선택한" path="ActionManager" hit="선택한 구체화 뷰 새로고침" />
+    <option name="내용을" path="ActionManager" hit="선택한 변경 내용을 되돌립니다" />
+    <option name="되돌립니다" path="ActionManager" hit="선택한 변경 내용을 되돌립니다" />
+    <option name="변경" path="ActionManager" hit="선택한 변경 내용을 되돌립니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 변경 내용을 되돌립니다" />
+    <option name="닫습니다" path="ActionManager" hit="선택한 세션을 닫습니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 세션을 닫습니다" />
+    <option name="세션을" path="ActionManager" hit="선택한 세션을 닫습니다" />
+    <option name="변경합니다" path="ActionManager" hit="선택한 세션의 이름을 변경합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 세션의 이름을 변경합니다" />
+    <option name="세션의" path="ActionManager" hit="선택한 세션의 이름을 변경합니다" />
+    <option name="이름을" path="ActionManager" hit="선택한 세션의 이름을 변경합니다" />
+    <option name="값의" path="ActionManager" hit="선택한 셀 값의 차이를 표시합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀 값의 차이를 표시합니다" />
+    <option name="셀" path="ActionManager" hit="선택한 셀 값의 차이를 표시합니다" />
+    <option name="차이를" path="ActionManager" hit="선택한 셀 값의 차이를 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="선택한 셀 값의 차이를 표시합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 셀을 편집합니다" />
+    <option name="셀을" path="ActionManager" hit="선택한 셀을 편집합니다" />
+    <option name="Editar" path="ActionManager" hit="선택한 셀을 편집합니다" />
+    <option name="삭제" path="ActionManager" hit="Eliminar columnas seleccionadas" />
+    <option name="선택한" path="ActionManager" hit="Eliminar columnas seleccionadas" />
+    <option name="열" path="ActionManager" hit="Eliminar columnas seleccionadas" />
+    <option name="선택한" path="ActionManager" hit="선택한 열 확장" />
+    <option name="열" path="ActionManager" hit="선택한 열 확장" />
+    <option name="확장" path="ActionManager" hit="선택한 열 확장" />
+    <option name="대한" path="ActionManager" hit="선택한 열에 대한 별도 색인을 추가합니다" />
+    <option name="별도" path="ActionManager" hit="선택한 열에 대한 별도 색인을 추가합니다" />
+    <option name="색인을" path="ActionManager" hit="선택한 열에 대한 별도 색인을 추가합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 열에 대한 별도 색인을 추가합니다" />
+    <option name="열에" path="ActionManager" hit="선택한 열에 대한 별도 색인을 추가합니다" />
+    <option name="추가합니다" path="ActionManager" hit="선택한 열에 대한 별도 색인을 추가합니다" />
+    <option name="새로운" path="ActionManager" hit="선택한 열에 새로운 색인을 추가합니다" />
+    <option name="색인을" path="ActionManager" hit="선택한 열에 새로운 색인을 추가합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 열에 새로운 색인을 추가합니다" />
+    <option name="열에" path="ActionManager" hit="선택한 열에 새로운 색인을 추가합니다" />
+    <option name="추가합니다" path="ActionManager" hit="선택한 열에 새로운 색인을 추가합니다" />
+    <option name="데이터" path="ActionManager" hit="선택한 파일에서 새로운 데이터 소스를 생성합니다" />
+    <option name="새로운" path="ActionManager" hit="선택한 파일에서 새로운 데이터 소스를 생성합니다" />
+    <option name="생성합니다" path="ActionManager" hit="선택한 파일에서 새로운 데이터 소스를 생성합니다" />
+    <option name="선택한" path="ActionManager" hit="선택한 파일에서 새로운 데이터 소스를 생성합니다" />
+    <option name="소스를" path="ActionManager" hit="선택한 파일에서 새로운 데이터 소스를 생성합니다" />
+    <option name="파일에서" path="ActionManager" hit="선택한 파일에서 새로운 데이터 소스를 생성합니다" />
+    <option name="세션" path="ActionManager" hit="세션" />
+    <option name="닫기" path="ActionManager" hit="세션 닫기" />
+    <option name="세션" path="ActionManager" hit="세션 닫기" />
+    <option name="변경" path="ActionManager" hit="세션 이름 변경" />
+    <option name="세션" path="ActionManager" hit="세션 이름 변경" />
+    <option name="이름" path="ActionManager" hit="세션 이름 변경" />
+    <option name="세션" path="ActionManager" hit="세션 첨부" />
+    <option name="첨부" path="ActionManager" hit="세션 첨부" />
+    <option name="비교" path="ActionManager" hit="셀 비교…" />
+    <option name="셀" path="ActionManager" hit="셀 비교…" />
+    <option name="변경" path="ActionManager" hit="셀 타입 변경" />
+    <option name="셀" path="ActionManager" hit="셀 타입 변경" />
+    <option name="타입" path="ActionManager" hit="셀 타입 변경" />
+    <option name="랩" path="ActionManager" hit="소프트 랩 전환" />
+    <option name="소프트" path="ActionManager" hit="소프트 랩 전환" />
+    <option name="전환" path="ActionManager" hit="소프트 랩 전환" />
+    <option name="수정" path="ActionManager" hit="수정" />
+    <option name="수준" path="ActionManager" hit="수준 1: 이름만" />
+    <option name="이름만" path="ActionManager" hit="수준 1: 이름만" />
+    <option name="건너뛰기" path="ActionManager" hit="수준 2: 소스 건너뛰기" />
+    <option name="소스" path="ActionManager" hit="수준 2: 소스 건너뛰기" />
+    <option name="수준" path="ActionManager" hit="수준 2: 소스 건너뛰기" />
+    <option name="모두" path="ActionManager" hit="수준 3: 모두" />
+    <option name="수준" path="ActionManager" hit="수준 3: 모두" />
+    <option name="디렉터리로" path="ActionManager" hit="Ir al directorio de secuencias de comandos" />
+    <option name="스크립트" path="ActionManager" hit="Ir al directorio de secuencias de comandos" />
+    <option name="이동" path="ActionManager" hit="Ir al directorio de secuencias de comandos" />
+    <option name="숨기기" path="ActionManager" hit="스키마 숨기기" />
+    <option name="스키마" path="ActionManager" hit="스키마 숨기기" />
+    <option name="실행" path="ActionManager" hit="실행" />
+    <option name="구문을" path="ActionManager" hit="실행 중이거나 대기 중인 구문을 취소합니다" />
+    <option name="대기" path="ActionManager" hit="실행 중이거나 대기 중인 구문을 취소합니다" />
+    <option name="실행" path="ActionManager" hit="실행 중이거나 대기 중인 구문을 취소합니다" />
+    <option name="중이거나" path="ActionManager" hit="실행 중이거나 대기 중인 구문을 취소합니다" />
+    <option name="중인" path="ActionManager" hit="실행 중이거나 대기 중인 구문을 취소합니다" />
+    <option name="취소합니다" path="ActionManager" hit="실행 중이거나 대기 중인 구문을 취소합니다" />
+    <option name="구문" path="ActionManager" hit="실행 중인 구문 취소" />
+    <option name="실행" path="ActionManager" hit="실행 중인 구문 취소" />
+    <option name="중인" path="ActionManager" hit="실행 중인 구문 취소" />
+    <option name="취소" path="ActionManager" hit="실행 중인 구문 취소" />
+    <option name="애그리게이터" path="ActionManager" hit="애그리게이터" />
+    <option name="결과" path="ActionManager" hit="에디터 내 결과" />
+    <option name="내" path="ActionManager" hit="에디터 내 결과" />
+    <option name="에디터" path="ActionManager" hit="에디터 내 결과" />
+    <option name="ddl" path="ActionManager" hit="연결된 DDL 데이터 소스로 덤프" />
+    <option name="덤프" path="ActionManager" hit="연결된 DDL 데이터 소스로 덤프" />
+    <option name="데이터" path="ActionManager" hit="연결된 DDL 데이터 소스로 덤프" />
+    <option name="소스로" path="ActionManager" hit="연결된 DDL 데이터 소스로 덤프" />
+    <option name="연결된" path="ActionManager" hit="연결된 DDL 데이터 소스로 덤프" />
+    <option name="데이터" path="ActionManager" hit="연결된 데이터 소스" />
+    <option name="소스" path="ActionManager" hit="연결된 데이터 소스" />
+    <option name="연결된" path="ActionManager" hit="연결된 데이터 소스" />
+    <option name="설정" path="ActionManager" hit="Alternar configuración de sesión conectada" />
+    <option name="세션" path="ActionManager" hit="Alternar configuración de sesión conectada" />
+    <option name="연결된" path="ActionManager" hit="Alternar configuración de sesión conectada" />
+    <option name="전환" path="ActionManager" hit="Alternar configuración de sesión conectada" />
+    <option name="너비" path="ActionManager" hit="열 너비 재설정" />
+    <option name="열" path="ActionManager" hit="열 너비 재설정" />
+    <option name="재설정" path="ActionManager" hit="열 너비 재설정" />
+    <option name="목록" path="ActionManager" hit="열 목록" />
+    <option name="열" path="ActionManager" hit="열 목록" />
+    <option name="복제" path="ActionManager" hit="열 복제" />
+    <option name="열" path="ActionManager" hit="열 복제" />
+    <option name="숨기기" path="ActionManager" hit="Ocultar columna" />
+    <option name="열" path="ActionManager" hit="Ocultar columna" />
+    <option name="복사" path="ActionManager" hit="열 이름 복사" />
+    <option name="열" path="ActionManager" hit="열 이름 복사" />
+    <option name="이름" path="ActionManager" hit="열 이름 복사" />
+    <option name="열" path="ActionManager" hit="열 추가" />
+    <option name="추가" path="ActionManager" hit="열 추가" />
+    <option name="숨기기" path="ActionManager" hit="열 표시/숨기기" />
+    <option name="열" path="ActionManager" hit="열 표시/숨기기" />
+    <option name="표시" path="ActionManager" hit="열 표시/숨기기" />
+    <option name="ui" path="ActionManager" hit="열당 인덱스(이전 UI)" />
+    <option name="열당" path="ActionManager" hit="열당 인덱스(이전 UI)" />
+    <option name="이전" path="ActionManager" hit="열당 인덱스(이전 UI)" />
+    <option name="인덱스" path="ActionManager" hit="열당 인덱스(이전 UI)" />
+    <option name="오른쪽으로" path="ActionManager" hit="오른쪽으로 이동" />
+    <option name="이동" path="ActionManager" hit="오른쪽으로 이동" />
+    <option name="Orden ascendente" path="ActionManager" hit="Orden ascendente" />
+    <option name="Orden ascendente" path="ActionManager" hit="오름차순 추가" />
+    <option name="추가" path="ActionManager" hit="오름차순 추가" />
+    <option name="메뉴" path="ActionManager" hit="옵션 메뉴 표시" />
+    <option name="옵션" path="ActionManager" hit="옵션 메뉴 표시" />
+    <option name="표시" path="ActionManager" hit="옵션 메뉴 표시" />
+    <option name="드롭" path="ActionManager" hit="외래 키 드롭" />
+    <option name="외래" path="ActionManager" hit="외래 키 드롭" />
+    <option name="키" path="ActionManager" hit="외래 키 드롭" />
+    <option name="ddl" path="ActionManager" hit="원본 DDL 요청 및 복사" />
+    <option name="및" path="ActionManager" hit="원본 DDL 요청 및 복사" />
+    <option name="복사" path="ActionManager" hit="원본 DDL 요청 및 복사" />
+    <option name="요청" path="ActionManager" hit="원본 DDL 요청 및 복사" />
+    <option name="원본" path="ActionManager" hit="원본 DDL 요청 및 복사" />
+    <option name="원본" path="ActionManager" hit="원본 쿼리를 표시합니다" />
+    <option name="쿼리를" path="ActionManager" hit="원본 쿼리를 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="원본 쿼리를 표시합니다" />
+    <option name="변경" path="ActionManager" hit="이름 변경…" />
+    <option name="이름" path="ActionManager" hit="이름 변경…" />
+    <option name="선택" path="ActionManager" hit="이전 찾은 항목 선택 취소" />
+    <option name="이전" path="ActionManager" hit="이전 찾은 항목 선택 취소" />
+    <option name="찾은" path="ActionManager" hit="이전 찾은 항목 선택 취소" />
+    <option name="취소" path="ActionManager" hit="이전 찾은 항목 선택 취소" />
+    <option name="항목" path="ActionManager" hit="이전 찾은 항목 선택 취소" />
+    <option name="이전" path="ActionManager" hit="이전 페이지" />
+    <option name="페이지" path="ActionManager" hit="이전 페이지" />
+    <option name="일반" path="ActionManager" hit="일반" />
+    <option name="자르기" path="ActionManager" hit="자르기…" />
+    <option name="검색" path="ActionManager" hit="전체 텍스트 검색…" />
+    <option name="전체" path="ActionManager" hit="전체 텍스트 검색…" />
+    <option name="텍스트" path="ActionManager" hit="전체 텍스트 검색…" />
+    <option name="전치" path="ActionManager" hit="전치" />
+    <option name="정렬" path="ActionManager" hit="정렬" />
+    <option name="정렬" path="ActionManager" hit="Sin ordenar" />
+    <option name="지우기" path="ActionManager" hit="Sin ordenar" />
+    <option name="재생성" path="ActionManager" hit="정의 재생성" />
+    <option name="정의" path="ActionManager" hit="정의 재생성" />
+    <option name="제출" path="ActionManager" hit="제출" />
+    <option name="및" path="ActionManager" hit="제출 및 커밋" />
+    <option name="제출" path="ActionManager" hit="제출 및 커밋" />
+    <option name="커밋" path="ActionManager" hit="제출 및 커밋" />
+    <option name="수정" path="ActionManager" hit="주석 수정…" />
+    <option name="주석" path="ActionManager" hit="주석 수정…" />
+    <option name="데이터" path="ActionManager" hit="중복 데이터 소스" />
+    <option name="소스" path="ActionManager" hit="중복 데이터 소스" />
+    <option name="중복" path="ActionManager" hit="중복 데이터 소스" />
+    <option name="진단" path="ActionManager" hit="진단" />
+    <option name="새로고침" path="ActionManager" hit="진단 새로고침" />
+    <option name="진단" path="ActionManager" hit="진단 새로고침" />
+    <option name="r" path="ActionManager" hit="진단 정보 수집 새로고침(_R)" />
+    <option name="새로고침" path="ActionManager" hit="진단 정보 수집 새로고침(_R)" />
+    <option name="수집" path="ActionManager" hit="진단 정보 수집 새로고침(_R)" />
+    <option name="정보" path="ActionManager" hit="진단 정보 수집 새로고침(_R)" />
+    <option name="진단" path="ActionManager" hit="진단 정보 수집 새로고침(_R)" />
+    <option name="결과" path="ActionManager" hit="Copiar resultado de agregación" />
+    <option name="복사" path="ActionManager" hit="Copiar resultado de agregación" />
+    <option name="집계" path="ActionManager" hit="Copiar resultado de agregación" />
+    <option name="뷰" path="ActionManager" hit="집계 뷰 옵션" />
+    <option name="옵션" path="ActionManager" hit="집계 뷰 옵션" />
+    <option name="집계" path="ActionManager" hit="집계 뷰 옵션" />
+    <option name="뷰" path="ActionManager" hit="집계 뷰 표시" />
+    <option name="집계" path="ActionManager" hit="집계 뷰 표시" />
+    <option name="표시" path="ActionManager" hit="집계 뷰 표시" />
+    <option name="참조된" path="ActionManager" hit="참조된 행" />
+    <option name="행" path="ActionManager" hit="참조된 행" />
+    <option name="참조하는" path="ActionManager" hit="참조하는 행" />
+    <option name="행" path="ActionManager" hit="참조하는 행" />
+    <option name="번째" path="ActionManager" hit="La primera fila es el encabezado" />
+    <option name="첫" path="ActionManager" hit="La primera fila es el encabezado" />
+    <option name="행은" path="ActionManager" hit="La primera fila es el encabezado" />
+    <option name="헤더" path="ActionManager" hit="La primera fila es el encabezado" />
+    <option name="첫" path="ActionManager" hit="첫 페이지" />
+    <option name="페이지" path="ActionManager" hit="첫 페이지" />
+    <option name="최대화" path="ActionManager" hit="최대화" />
+    <option name="최대화된" path="ActionManager" hit="최대화된 편집" />
+    <option name="Editar" path="ActionManager" hit="최대화된 편집" />
+    <option name="추출기" path="ActionManager" hit="추출기" />
+    <option name="구조" path="ActionManager" hit="Actualización de estructuras de bases de datos en caché" />
+    <option name="데이터베이스" path="ActionManager" hit="Actualización de estructuras de bases de datos en caché" />
+    <option name="새로고침" path="ActionManager" hit="Actualización de estructuras de bases de datos en caché" />
+    <option name="캐시된" path="ActionManager" hit="Actualización de estructuras de bases de datos en caché" />
+    <option name="객체를" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
+    <option name="고침" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
+    <option name="구조에서" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
+    <option name="데이터베이스" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
+    <option name="새로" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
+    <option name="선택된" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
+    <option name="캐시된" path="ActionManager" hit="캐시된 데이터베이스 구조에서 선택된 객체를 새로 고침" />
+    <option name="데이터베이스" path="ActionManager" hit="캐시된 데이터베이스 스키마를 지웁니다" />
+    <option name="스키마를" path="ActionManager" hit="캐시된 데이터베이스 스키마를 지웁니다" />
+    <option name="지웁니다" path="ActionManager" hit="캐시된 데이터베이스 스키마를 지웁니다" />
+    <option name="캐시된" path="ActionManager" hit="캐시된 데이터베이스 스키마를 지웁니다" />
+    <option name="스키마" path="ActionManager" hit="캐시된 스키마 잊기" />
+    <option name="잊기" path="ActionManager" hit="캐시된 스키마 잊기" />
+    <option name="캐시된" path="ActionManager" hit="캐시된 스키마 잊기" />
+    <option name="및" path="ActionManager" hit="캐시된 스키마 지우기 및 처음부터 새로고침" />
+    <option name="새로고침" path="ActionManager" hit="캐시된 스키마 지우기 및 처음부터 새로고침" />
+    <option name="스키마" path="ActionManager" hit="캐시된 스키마 지우기 및 처음부터 새로고침" />
+    <option name="지우기" path="ActionManager" hit="캐시된 스키마 지우기 및 처음부터 새로고침" />
+    <option name="처음부터" path="ActionManager" hit="캐시된 스키마 지우기 및 처음부터 새로고침" />
+    <option name="캐시된" path="ActionManager" hit="캐시된 스키마 지우기 및 처음부터 새로고침" />
+    <option name="커밋" path="ActionManager" hit="커밋" />
+    <option name="컨텍스트" path="ActionManager" hit="컨텍스트 템플릿" />
+    <option name="템플릿" path="ActionManager" hit="컨텍스트 템플릿" />
+    <option name="콘솔" path="ActionManager" hit="콘솔 툴바" />
+    <option name="툴바" path="ActionManager" hit="콘솔 툴바" />
+    <option name="실행합니다" path="ActionManager" hit="콘솔에서 쿼리를 실행합니다" />
+    <option name="콘솔에서" path="ActionManager" hit="콘솔에서 쿼리를 실행합니다" />
+    <option name="쿼리를" path="ActionManager" hit="콘솔에서 쿼리를 실행합니다" />
+    <option name="결과" path="ActionManager" hit="쿼리 결과" />
+    <option name="쿼리" path="ActionManager" hit="쿼리 결과" />
+    <option name="기록" path="ActionManager" hit="쿼리 기록 찾아보기" />
+    <option name="찾아보기" path="ActionManager" hit="쿼리 기록 찾아보기" />
+    <option name="쿼리" path="ActionManager" hit="쿼리 기록 찾아보기" />
+    <option name="뷰" path="ActionManager" hit="쿼리 뷰" />
+    <option name="쿼리" path="ActionManager" hit="쿼리 뷰" />
+    <option name="설정" path="ActionManager" hit="쿼리 실행 설정 열기…" />
+    <option name="실행" path="ActionManager" hit="쿼리 실행 설정 열기…" />
+    <option name="열기" path="ActionManager" hit="쿼리 실행 설정 열기…" />
+    <option name="쿼리" path="ActionManager" hit="쿼리 실행 설정 열기…" />
+    <option name="콘솔" path="ActionManager" hit="쿼리 콘솔" />
+    <option name="쿼리" path="ActionManager" hit="쿼리 콘솔" />
+    <option name="열기" path="ActionManager" hit="쿼리 콘솔 열기" />
+    <option name="콘솔" path="ActionManager" hit="쿼리 콘솔 열기" />
+    <option name="쿼리" path="ActionManager" hit="쿼리 콘솔 열기" />
+    <option name="이동" path="ActionManager" hit="쿼리 콘솔로 이동…" />
+    <option name="콘솔로" path="ActionManager" hit="쿼리 콘솔로 이동…" />
+    <option name="쿼리" path="ActionManager" hit="쿼리 콘솔로 이동…" />
+    <option name="ddl" path="ActionManager" hit="쿼리 콘솔에 DDL 생성" />
+    <option name="생성" path="ActionManager" hit="쿼리 콘솔에 DDL 생성" />
+    <option name="콘솔에" path="ActionManager" hit="쿼리 콘솔에 DDL 생성" />
+    <option name="쿼리" path="ActionManager" hit="쿼리 콘솔에 DDL 생성" />
+    <option name="복사" path="ActionManager" hit="쿼리를 콘솔로 복사" />
+    <option name="콘솔로" path="ActionManager" hit="쿼리를 콘솔로 복사" />
+    <option name="쿼리를" path="ActionManager" hit="쿼리를 콘솔로 복사" />
+    <option name="내보내기" path="ActionManager" hit="클립보드로 테이블 내보내기" />
+    <option name="클립보드로" path="ActionManager" hit="클립보드로 테이블 내보내기" />
+    <option name="테이블" path="ActionManager" hit="클립보드로 테이블 내보내기" />
+    <option name="js" path="ActionManager" hit="클립보드에 JS 스크립트 복사" />
+    <option name="복사" path="ActionManager" hit="클립보드에 JS 스크립트 복사" />
+    <option name="스크립트" path="ActionManager" hit="클립보드에 JS 스크립트 복사" />
+    <option name="클립보드에" path="ActionManager" hit="클립보드에 JS 스크립트 복사" />
+    <option name="가져오기" path="ActionManager" hit="클립보드에서 가져오기" />
+    <option name="클립보드에서" path="ActionManager" hit="클립보드에서 가져오기" />
+    <option name="변경" path="ActionManager" hit="타입 변경" />
+    <option name="타입" path="ActionManager" hit="타입 변경" />
+    <option name="탐색" path="ActionManager" hit="탐색" />
+    <option name="변경" path="ActionManager" hit="탭 이름 변경" />
+    <option name="이름" path="ActionManager" hit="탭 이름 변경" />
+    <option name="탭" path="ActionManager" hit="탭 이름 변경" />
+    <option name="변경합니다" path="ActionManager" hit="탭 이름을 변경합니다" />
+    <option name="이름을" path="ActionManager" hit="탭 이름을 변경합니다" />
+    <option name="탭" path="ActionManager" hit="탭 이름을 변경합니다" />
+    <option name="제목" path="ActionManager" hit="탭 제목 줄이기" />
+    <option name="줄이기" path="ActionManager" hit="탭 제목 줄이기" />
+    <option name="탭" path="ActionManager" hit="탭 제목 줄이기" />
+    <option name="테이블" path="ActionManager" hit="테이블" />
+    <option name="변경" path="ActionManager" hit="테이블 샘플링 변경" />
+    <option name="샘플링" path="ActionManager" hit="테이블 샘플링 변경" />
+    <option name="테이블" path="ActionManager" hit="테이블 샘플링 변경" />
+    <option name="테이블로" path="ActionManager" hit="테이블로 편집" />
+    <option name="Editar" path="ActionManager" hit="테이블로 편집" />
+    <option name="다음으로" path="ActionManager" hit="테이블을 다음으로 복사…" />
+    <option name="복사" path="ActionManager" hit="테이블을 다음으로 복사…" />
+    <option name="테이블을" path="ActionManager" hit="테이블을 다음으로 복사…" />
+    <option name="텍스트" path="ActionManager" hit="텍스트" />
+    <option name="트랜잭션" path="ActionManager" hit="트랜잭션" />
+    <option name="롤백합니다" path="ActionManager" hit="트랜잭션을 롤백합니다" />
+    <option name="트랜잭션을" path="ActionManager" hit="트랜잭션을 롤백합니다" />
+    <option name="및" path="ActionManager" hit="트랜잭션을 제출 및 커밋합니다" />
+    <option name="제출" path="ActionManager" hit="트랜잭션을 제출 및 커밋합니다" />
+    <option name="커밋합니다" path="ActionManager" hit="트랜잭션을 제출 및 커밋합니다" />
+    <option name="트랜잭션을" path="ActionManager" hit="트랜잭션을 제출 및 커밋합니다" />
+    <option name="격리" path="ActionManager" hit="트랜잭션의 격리 수준을 변경합니다" />
+    <option name="변경합니다" path="ActionManager" hit="트랜잭션의 격리 수준을 변경합니다" />
+    <option name="수준을" path="ActionManager" hit="트랜잭션의 격리 수준을 변경합니다" />
+    <option name="트랜잭션의" path="ActionManager" hit="트랜잭션의 격리 수준을 변경합니다" />
+    <option name="트리" path="ActionManager" hit="트리" />
+    <option name="사용" path="ActionManager" hit="트리거/제약 사용" />
+    <option name="제약" path="ActionManager" hit="트리거/제약 사용" />
+    <option name="트리거" path="ActionManager" hit="트리거/제약 사용" />
+    <option name="사용" path="ActionManager" hit="트리거/제약 사용 안 함" />
+    <option name="안" path="ActionManager" hit="트리거/제약 사용 안 함" />
+    <option name="제약" path="ActionManager" hit="트리거/제약 사용 안 함" />
+    <option name="트리거" path="ActionManager" hit="트리거/제약 사용 안 함" />
+    <option name="함" path="ActionManager" hit="트리거/제약 사용 안 함" />
+    <option name="내보내기" path="ActionManager" hit="파일 또는 클립보드로 모든 데이터 내보내기" />
+    <option name="데이터" path="ActionManager" hit="파일 또는 클립보드로 모든 데이터 내보내기" />
+    <option name="또는" path="ActionManager" hit="파일 또는 클립보드로 모든 데이터 내보내기" />
+    <option name="모든" path="ActionManager" hit="파일 또는 클립보드로 모든 데이터 내보내기" />
+    <option name="클립보드로" path="ActionManager" hit="파일 또는 클립보드로 모든 데이터 내보내기" />
+    <option name="파일" path="ActionManager" hit="파일 또는 클립보드로 모든 데이터 내보내기" />
+    <option name="이동" path="ActionManager" hit="파일로 이동" />
+    <option name="파일로" path="ActionManager" hit="파일로 이동" />
+    <option name="가져오기" path="ActionManager" hit="파일에서 데이터 가져오기…" />
+    <option name="데이터" path="ActionManager" hit="파일에서 데이터 가져오기…" />
+    <option name="파일에서" path="ActionManager" hit="파일에서 데이터 가져오기…" />
+    <option name="데이터" path="ActionManager" hit="파일에서 새로운 데이터 소스를 만듭니다" />
+    <option name="만듭니다" path="ActionManager" hit="파일에서 새로운 데이터 소스를 만듭니다" />
+    <option name="새로운" path="ActionManager" hit="파일에서 새로운 데이터 소스를 만듭니다" />
+    <option name="소스를" path="ActionManager" hit="파일에서 새로운 데이터 소스를 만듭니다" />
+    <option name="파일에서" path="ActionManager" hit="파일에서 새로운 데이터 소스를 만듭니다" />
+    <option name="다시" path="ActionManager" hit="페이지 다시 로드" />
+    <option name="로드" path="ActionManager" hit="페이지 다시 로드" />
+    <option name="페이지" path="ActionManager" hit="페이지 다시 로드" />
+    <option name="변경" path="ActionManager" hit="페이지 크기 변경" />
+    <option name="크기" path="ActionManager" hit="페이지 크기 변경" />
+    <option name="페이지" path="ActionManager" hit="페이지 크기 변경" />
+    <option name="Editar" path="ActionManager" hit="Editar" />
+    <option name="이동" path="ActionManager" hit="폴더로 이동…" />
+    <option name="폴더로" path="ActionManager" hit="폴더로 이동…" />
+    <option name="변경" path="ActionManager" hit="표시 타입 변경" />
+    <option name="타입" path="ActionManager" hit="표시 타입 변경" />
+    <option name="표시" path="ActionManager" hit="표시 타입 변경" />
+    <option name="관리" path="ActionManager" hit="표시된 스키마 관리…" />
+    <option name="스키마" path="ActionManager" hit="표시된 스키마 관리…" />
+    <option name="표시된" path="ActionManager" hit="표시된 스키마 관리…" />
+    <option name="가져옵니다" path="ActionManager" hit="프로젝트 파일에서 데이터 소스를 가져옵니다" />
+    <option name="데이터" path="ActionManager" hit="프로젝트 파일에서 데이터 소스를 가져옵니다" />
+    <option name="소스를" path="ActionManager" hit="프로젝트 파일에서 데이터 소스를 가져옵니다" />
+    <option name="파일에서" path="ActionManager" hit="프로젝트 파일에서 데이터 소스를 가져옵니다" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 파일에서 데이터 소스를 가져옵니다" />
+    <option name="필터" path="ActionManager" hit="필터" />
+    <option name="기준" path="ActionManager" hit="필터 기준 텍스트를 편집합니다" />
+    <option name="텍스트를" path="ActionManager" hit="필터 기준 텍스트를 편집합니다" />
+    <option name="Editar" path="ActionManager" hit="필터 기준 텍스트를 편집합니다" />
+    <option name="필터" path="ActionManager" hit="필터 기준 텍스트를 편집합니다" />
+    <option name="기준" path="ActionManager" hit="필터 기준 편집" />
+    <option name="Editar" path="ActionManager" hit="필터 기준 편집" />
+    <option name="필터" path="ActionManager" hit="필터 기준 편집" />
+    <option name="표시" path="ActionManager" hit="필터 표시" />
+    <option name="필터" path="ActionManager" hit="필터 표시" />
+    <option name="기준" path="ActionManager" hit="필터링 기준" />
+    <option name="필터링" path="ActionManager" hit="필터링 기준" />
+    <option name="개수" path="ActionManager" hit="행 개수 세기" />
+    <option name="세기" path="ActionManager" hit="행 개수 세기" />
+    <option name="행" path="ActionManager" hit="행 개수 세기" />
+    <option name="복제" path="ActionManager" hit="Clonar fila" />
+    <option name="행" path="ActionManager" hit="Clonar fila" />
+    <option name="선택" path="ActionManager" hit="행 선택" />
+    <option name="행" path="ActionManager" hit="행 선택" />
+    <option name="추가" path="ActionManager" hit="Añadir fila" />
+    <option name="행" path="ActionManager" hit="Añadir fila" />
+    <option name="행" path="ActionManager" hit="행…" />
+    <option name="데이터" path="ActionManager" hit="현재 디렉터리에 새 데이터 소스 생성" />
+    <option name="디렉터리에" path="ActionManager" hit="현재 디렉터리에 새 데이터 소스 생성" />
+    <option name="새" path="ActionManager" hit="현재 디렉터리에 새 데이터 소스 생성" />
+    <option name="생성" path="ActionManager" hit="현재 디렉터리에 새 데이터 소스 생성" />
+    <option name="소스" path="ActionManager" hit="현재 디렉터리에 새 데이터 소스 생성" />
+    <option name="현재" path="ActionManager" hit="현재 디렉터리에 새 데이터 소스 생성" />
+    <option name="설정" path="ActionManager" hit="현재 스키마 설정" />
+    <option name="스키마" path="ActionManager" hit="현재 스키마 설정" />
+    <option name="현재" path="ActionManager" hit="현재 스키마 설정" />
+    <option name="설정합니다" path="ActionManager" hit="현재 스키마를 설정합니다" />
+    <option name="스키마를" path="ActionManager" hit="현재 스키마를 설정합니다" />
+    <option name="현재" path="ActionManager" hit="현재 스키마를 설정합니다" />
+    <option name="찾기" path="ActionManager" hit="현재 페이지에서 찾기" />
+    <option name="페이지에서" path="ActionManager" hit="현재 페이지에서 찾기" />
+    <option name="현재" path="ActionManager" hit="현재 페이지에서 찾기" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.데이터베이스" configurable_name="데이터베이스">
+    <option name="데이터베이스" hit="데이터베이스" />
+    <option name="null" hit="데이터 그리드//Null 데이터" />
+    <option name="그리드" hit="데이터 그리드//Null 데이터" />
+    <option name="데이터" hit="데이터 그리드//Null 데이터" />
+    <option name="그리드" hit="데이터 그리드//오류 데이터" />
+    <option name="데이터" hit="데이터 그리드//오류 데이터" />
+    <option name="오류" hit="데이터 그리드//오류 데이터" />
+    <option name="그리드" hit="데이터 그리드//이미지 데이터" />
+    <option name="데이터" hit="데이터 그리드//이미지 데이터" />
+    <option name="이미지" hit="데이터 그리드//이미지 데이터" />
+    <option name="매개변수" hit="매개변수//매개변수" />
+    <option name="매개변수" hit="매개변수//매개변수 사용 위치" />
+    <option name="사용" hit="매개변수//매개변수 사용 위치" />
+    <option name="위치" hit="매개변수//매개변수 사용 위치" />
+    <option name="구문" hit="실행할 콘솔//구문" />
+    <option name="실행할" hit="실행할 콘솔//구문" />
+    <option name="콘솔" hit="실행할 콘솔//구문" />
+  </configurable>
+  <configurable id="reference.settingsdialog.IDE.editor.colors.테이블 Diff" configurable_name="테이블 Diff">
+    <option name="diff" hit="테이블 Diff" />
+    <option name="테이블" hit="테이블 Diff" />
+    <option name="diff에서" hit="Diff에서 제외됨" />
+    <option name="제외됨" hit="Diff에서 제외됨" />
+    <option name="불일치" hit="퍼지 일치 - 불일치" />
+    <option name="일치" hit="퍼지 일치 - 불일치" />
+    <option name="퍼지" hit="퍼지 일치 - 불일치" />
+    <option name="일치" hit="퍼지 일치 - 일치" />
+    <option name="퍼지" hit="퍼지 일치 - 일치" />
+  </configurable>
+  <configurable id="database.query.execution" configurable_name="쿼리 실행">
+    <option name="ansi" hit="Con sintaxis ANSI SQL" />
+    <option name="sql" hit="Con sintaxis ANSI SQL" />
+    <option name="구문으로" hit="Con sintaxis ANSI SQL" />
+    <option name="ctrl" hit="Ctrl Enter" />
+    <option name="enter" hit="Ctrl Enter" />
+    <option name="ansi" hit="Generic 및 ANSI SQL 파생 언어로 실행하기 위해 스크립트 분할 " />
+    <option name="generic" hit="Generic 및 ANSI SQL 파생 언어로 실행하기 위해 스크립트 분할 " />
+    <option name="sql" hit="Generic 및 ANSI SQL 파생 언어로 실행하기 위해 스크립트 분할 " />
+    <option name="및" hit="Generic 및 ANSI SQL 파생 언어로 실행하기 위해 스크립트 분할 " />
+    <option name="분할" hit="Generic 및 ANSI SQL 파생 언어로 실행하기 위해 스크립트 분할 " />
+    <option name="스크립트" hit="Generic 및 ANSI SQL 파생 언어로 실행하기 위해 스크립트 분할 " />
+    <option name="실행하기" hit="Generic 및 ANSI SQL 파생 언어로 실행하기 위해 스크립트 분할 " />
+    <option name="언어로" hit="Generic 및 ANSI SQL 파생 언어로 실행하기 위해 스크립트 분할 " />
+    <option name="위해" hit="Generic 및 ANSI SQL 파생 언어로 실행하기 위해 스크립트 분할 " />
+    <option name="파생" hit="Generic 및 ANSI SQL 파생 언어로 실행하기 위해 스크립트 분할 " />
+    <option name="or" hit="Smallest subquery or statement" />
+    <option name="smallest" hit="Smallest subquery or statement" />
+    <option name="statement" hit="Smallest subquery or statement" />
+    <option name="subquery" hit="Smallest subquery or statement" />
+    <option name="가장" hit="가장 긴 구문" />
+    <option name="구문" hit="가장 긴 구문" />
+    <option name="긴" hit="가장 긴 구문" />
+    <option name="가장" hit="가장 긴 구문 또는 배치" />
+    <option name="구문" hit="가장 긴 구문 또는 배치" />
+    <option name="긴" hit="가장 긴 구문 또는 배치" />
+    <option name="또는" hit="가장 긴 구문 또는 배치" />
+    <option name="배치" hit="가장 긴 구문 또는 배치" />
+    <option name="가장" hit="가장 짧은 구문" />
+    <option name="구문" hit="가장 짧은 구문" />
+    <option name="짧은" hit="가장 짧은 구문" />
+    <option name="경우" hit="구문 내에 있을 경우 다음 실행 " />
+    <option name="구문" hit="구문 내에 있을 경우 다음 실행 " />
+    <option name="내에" hit="구문 내에 있을 경우 다음 실행 " />
+    <option name="다음" hit="구문 내에 있을 경우 다음 실행 " />
+    <option name="실행" hit="구문 내에 있을 경우 다음 실행 " />
+    <option name="있을" hit="구문 내에 있을 경우 다음 실행 " />
+    <option name="구문의" hit="Como delimitador de sintaxis" />
+    <option name="구분" hit="Como delimitador de sintaxis" />
+    <option name="기호로" hit="Como delimitador de sintaxis" />
+    <option name="단축키" hit="단축키 " />
+    <option name="구문으로" hit="Exactamente en una sintaxis separada" />
+    <option name="별도의" hit="Exactamente en una sintaxis separada" />
+    <option name="정확히" hit="Exactamente en una sintaxis separada" />
+    <option name="b" hit="새 탭에서 결과 열기 B " />
+    <option name="결과" hit="새 탭에서 결과 열기 B " />
+    <option name="새" hit="새 탭에서 결과 열기 B " />
+    <option name="열기" hit="새 탭에서 결과 열기 B " />
+    <option name="탭에서" hit="새 탭에서 결과 열기 B " />
+    <option name="선택" hit="선택 실행 " />
+    <option name="실행" hit="선택 실행 " />
+    <option name="스마트" hit="스크립트로 스마트 확장" />
+    <option name="스크립트로" hit="스크립트로 스마트 확장" />
+    <option name="확장" hit="스크립트로 스마트 확장" />
+    <option name="검토" hit="실행 전 매개변수 검토" />
+    <option name="매개변수" hit="실행 전 매개변수 검토" />
+    <option name="실행" hit="실행 전 매개변수 검토" />
+    <option name="전" hit="실행 전 매개변수 검토" />
+    <option name="묻기" hit="실행할 항목 묻기" />
+    <option name="실행할" hit="실행할 항목 묻기" />
+    <option name="항목" hit="실행할 항목 묻기" />
+    <option name="없음" hit="없음" />
+    <option name="ansi" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="sql" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="구문으로" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="구분" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="기호로" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="또는" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="유효한" hit="En sintaxis ANSI SQL válida o como delimitador" />
+    <option name="경고" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />
+    <option name="실행하기" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />
+    <option name="안전하지" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />
+    <option name="않은" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />
+    <option name="잠재적으로" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />
+    <option name="전에" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />
+    <option name="쿼리를" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />
+    <option name="표시" hit="잠재적으로 안전하지 않은 쿼리를 실행하기 전에 경고 표시" />
+    <option name="스크립트" hit="전체 스크립트" />
+    <option name="전체" hit="전체 스크립트" />
+    <option name="구문으로" hit="정확히 하나의 구문으로" />
+    <option name="정확히" hit="정확히 하나의 구문으로" />
+    <option name="하나의" hit="정확히 하나의 구문으로" />
+    <option name="구문" hit="캐럿 위치 다음의 모든 구문" />
+    <option name="다음의" hit="캐럿 위치 다음의 모든 구문" />
+    <option name="모든" hit="캐럿 위치 다음의 모든 구문" />
+    <option name="위치" hit="캐럿 위치 다음의 모든 구문" />
+    <option name="캐럿" hit="캐럿 위치 다음의 모든 구문" />
+    <option name="구문" hit="캐럿 위치의 모든 구문" />
+    <option name="모든" hit="캐럿 위치의 모든 구문" />
+    <option name="위치의" hit="캐럿 위치의 모든 구문" />
+    <option name="캐럿" hit="캐럿 위치의 모든 구문" />
+    <option name="실행" hit="쿼리 실행" />
+    <option name="쿼리" hit="쿼리 실행" />
+    <option name="다음을" hit="혹은 다음을 실행 " />
+    <option name="실행" hit="혹은 다음을 실행 " />
+    <option name="혹은" hit="혹은 다음을 실행 " />
+  </configurable>
+  <configurable id="database.output.results" configurable_name="출력 및 결과">
+    <option name="결과" hit="결과" />
+    <option name="결과" hit="결과 집합" />
+    <option name="집합" hit="결과 집합" />
+    <option name="다음" hit="다음 뒤의 텍스트를 제목으로 처리" />
+    <option name="뒤의" hit="다음 뒤의 텍스트를 제목으로 처리" />
+    <option name="제목으로" hit="다음 뒤의 텍스트를 제목으로 처리" />
+    <option name="처리" hit="다음 뒤의 텍스트를 제목으로 처리" />
+    <option name="텍스트를" hit="다음 뒤의 텍스트를 제목으로 처리" />
+    <option name="다음" hit="다음 쿼리 콘솔 출력을 위한 서비스 도구 창 표시 " />
+    <option name="도구" hit="다음 쿼리 콘솔 출력을 위한 서비스 도구 창 표시 " />
+    <option name="서비스" hit="다음 쿼리 콘솔 출력을 위한 서비스 도구 창 표시 " />
+    <option name="위한" hit="다음 쿼리 콘솔 출력을 위한 서비스 도구 창 표시 " />
+    <option name="창" hit="다음 쿼리 콘솔 출력을 위한 서비스 도구 창 표시 " />
+    <option name="출력을" hit="다음 쿼리 콘솔 출력을 위한 서비스 도구 창 표시 " />
+    <option name="콘솔" hit="다음 쿼리 콘솔 출력을 위한 서비스 도구 창 표시 " />
+    <option name="쿼리" hit="다음 쿼리 콘솔 출력을 위한 서비스 도구 창 표시 " />
+    <option name="표시" hit="다음 쿼리 콘솔 출력을 위한 서비스 도구 창 표시 " />
+    <option name="모든" hit="모든 출력" />
+    <option name="출력" hit="모든 출력" />
+    <option name="도구" hit="서비스 도구 창" />
+    <option name="서비스" hit="서비스 도구 창" />
+    <option name="창" hit="서비스 도구 창" />
+    <option name="대해서만" hit="선택된 쿼리 콘솔에 대해서만 서비스 출력 패널 활성화" />
+    <option name="서비스" hit="선택된 쿼리 콘솔에 대해서만 서비스 출력 패널 활성화" />
+    <option name="선택된" hit="선택된 쿼리 콘솔에 대해서만 서비스 출력 패널 활성화" />
+    <option name="출력" hit="선택된 쿼리 콘솔에 대해서만 서비스 출력 패널 활성화" />
+    <option name="콘솔에" hit="선택된 쿼리 콘솔에 대해서만 서비스 출력 패널 활성화" />
+    <option name="쿼리" hit="선택된 쿼리 콘솔에 대해서만 서비스 출력 패널 활성화" />
+    <option name="패널" hit="선택된 쿼리 콘솔에 대해서만 서비스 출력 패널 활성화" />
+    <option name="활성화" hit="선택된 쿼리 콘솔에 대해서만 서비스 출력 패널 활성화" />
+    <option name="services" hit="세션의 새 Services 서비스  탭 열기" />
+    <option name="새" hit="세션의 새 Services 서비스  탭 열기" />
+    <option name="서비스" hit="세션의 새 Services 서비스  탭 열기" />
+    <option name="세션의" hit="세션의 새 Services 서비스  탭 열기" />
+    <option name="열기" hit="세션의 새 Services 서비스  탭 열기" />
+    <option name="탭" hit="세션의 새 Services 서비스  탭 열기" />
+    <option name="안" hit="안 함" />
+    <option name="함" hit="안 함" />
+    <option name="결과" hit="에디터에 결과 표시" />
+    <option name="에디터에" hit="에디터에 결과 표시" />
+    <option name="표시" hit="에디터에 결과 표시" />
+    <option name="결과" hit="오류 및 결과 세트" />
+    <option name="및" hit="오류 및 결과 세트" />
+    <option name="세트" hit="오류 및 결과 세트" />
+    <option name="오류" hit="오류 및 결과 세트" />
+    <option name="도구" hit="창 모드에서 서비스 도구 창에 초점 맞추기" />
+    <option name="맞추기" hit="창 모드에서 서비스 도구 창에 초점 맞추기" />
+    <option name="모드에서" hit="창 모드에서 서비스 도구 창에 초점 맞추기" />
+    <option name="서비스" hit="창 모드에서 서비스 도구 창에 초점 맞추기" />
+    <option name="창" hit="창 모드에서 서비스 도구 창에 초점 맞추기" />
+    <option name="창에" hit="창 모드에서 서비스 도구 창에 초점 맞추기" />
+    <option name="초점" hit="창 모드에서 서비스 도구 창에 초점 맞추기" />
+    <option name="출력" hit="출력" />
+    <option name="결과" hit="출력 및 결과" />
+    <option name="및" hit="출력 및 결과" />
+    <option name="출력" hit="출력 및 결과" />
+    <option name="결과" hit="쿼리 전 주석에서 결과 제목 생성" />
+    <option name="생성" hit="쿼리 전 주석에서 결과 제목 생성" />
+    <option name="전" hit="쿼리 전 주석에서 결과 제목 생성" />
+    <option name="제목" hit="쿼리 전 주석에서 결과 제목 생성" />
+    <option name="주석에서" hit="쿼리 전 주석에서 결과 제목 생성" />
+    <option name="쿼리" hit="쿼리 전 주석에서 결과 제목 생성" />
+    <option name="결과" hit="쿼리 출력  오류 및 결과 세트" />
+    <option name="및" hit="쿼리 출력  오류 및 결과 세트" />
+    <option name="세트" hit="쿼리 출력  오류 및 결과 세트" />
+    <option name="오류" hit="쿼리 출력  오류 및 결과 세트" />
+    <option name="출력" hit="쿼리 출력  오류 및 결과 세트" />
+    <option name="쿼리" hit="쿼리 출력  오류 및 결과 세트" />
+    <option name="출력의" hit="쿼리 출력의 타임스탬프 표시" />
+    <option name="쿼리" hit="쿼리 출력의 타임스탬프 표시" />
+    <option name="타임스탬프" hit="쿼리 출력의 타임스탬프 표시" />
+    <option name="표시" hit="쿼리 출력의 타임스탬프 표시" />
+  </configurable>
+  <configurable id="database.sql.templating" configurable_name="사용자 매개변수">
+    <option name="sql" hit="SQL 문자열 내부 대체" />
+    <option name="내부" hit="SQL 문자열 내부 대체" />
+    <option name="대체" hit="SQL 문자열 내부 대체" />
+    <option name="문자열" hit="SQL 문자열 내부 대체" />
+    <option name="sql" hit="SQL 삽입이 있는 문자열 리터럴에서 활성화" />
+    <option name="리터럴에서" hit="SQL 삽입이 있는 문자열 리터럴에서 활성화" />
+    <option name="문자열" hit="SQL 삽입이 있는 문자열 리터럴에서 활성화" />
+    <option name="삽입이" hit="SQL 삽입이 있는 문자열 리터럴에서 활성화" />
+    <option name="있는" hit="SQL 삽입이 있는 문자열 리터럴에서 활성화" />
+    <option name="활성화" hit="SQL 삽입이 있는 문자열 리터럴에서 활성화" />
+    <option name="매개변수" hit="매개변수 패턴 " />
+    <option name="패턴" hit="매개변수 패턴 " />
+    <option name="매개변수" hit="사용자 매개변수" />
+    <option name="사용자" hit="사용자 매개변수" />
+    <option name="sql" hit="쿼리 콘솔 및 SQL 파일에서 활성화" />
+    <option name="및" hit="쿼리 콘솔 및 SQL 파일에서 활성화" />
+    <option name="콘솔" hit="쿼리 콘솔 및 SQL 파일에서 활성화" />
+    <option name="쿼리" hit="쿼리 콘솔 및 SQL 파일에서 활성화" />
+    <option name="파일에서" hit="쿼리 콘솔 및 SQL 파일에서 활성화" />
+    <option name="활성화" hit="쿼리 콘솔 및 SQL 파일에서 활성화" />
+  </configurable>
+  <configurable id="database.data.views" configurable_name="데이터 에디터 및 뷰어">
+    <option name="" hit=" 진 값 자동 탐지 " />
+    <option name="값" hit=" 진 값 자동 탐지 " />
+    <option name="자동" hit=" 진 값 자동 탐지 " />
+    <option name="진" hit=" 진 값 자동 탐지 " />
+    <option name="탐지" hit=" 진 값 자동 탐지 " />
+    <option name="alt" hit="Alt 클릭" />
+    <option name="클릭" hit="Alt 클릭" />
+    <option name="by로" hit="ORDER BY로 정렬" />
+    <option name="order" hit="ORDER BY로 정렬" />
+    <option name="정렬" hit="ORDER BY로 정렬" />
+    <option name="uuid" hit="UUID" />
+    <option name="l" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="값당" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="로드되는" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="바이트" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="수" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="최대" hit="Número máximo de bytes cargados por valor L  " />
+    <option name="f" hit="결과 집합의 프리페치 크기 F  " />
+    <option name="결과" hit="결과 집합의 프리페치 크기 F  " />
+    <option name="집합의" hit="결과 집합의 프리페치 크기 F  " />
+    <option name="크기" hit="결과 집합의 프리페치 크기 F  " />
+    <option name="프리페치" hit="결과 집합의 프리페치 크기 F  " />
+    <option name="Orden descendente" hit="Orden descendente" />
+    <option name="다음으로" hit="다음으로 페이지 크기 제한 " />
+    <option name="제한" hit="다음으로 페이지 크기 제한 " />
+    <option name="크기" hit="다음으로 페이지 크기 제한 " />
+    <option name="페이지" hit="다음으로 페이지 크기 제한 " />
+    <option name="데이터" hit="데이터 수정" />
+    <option name="수정" hit="데이터 수정" />
+    <option name="데이터" hit="데이터 에디터 및 뷰어" />
+    <option name="및" hit="데이터 에디터 및 뷰어" />
+    <option name="뷰어" hit="데이터 에디터 및 뷰어" />
+    <option name="에디터" hit="데이터 에디터 및 뷰어" />
+    <option name="데이터" hit="Intercalación" />
+    <option name="정렬" hit="Intercalación" />
+    <option name="데이터" hit="Presentación de datos" />
+    <option name="프레젠테이션" hit="Presentación de datos" />
+    <option name="먼저" hit="먼저 표시" />
+    <option name="표시" hit="먼저 표시" />
+    <option name="내의" hit="미리보기 내의 데이터 열" />
+    <option name="데이터" hit="미리보기 내의 데이터 열" />
+    <option name="미리보기" hit="미리보기 내의 데이터 열" />
+    <option name="열" hit="미리보기 내의 데이터 열" />
+    <option name="변경" hit="변경 사항을 즉시 제출" />
+    <option name="사항을" hit="변경 사항을 즉시 제출" />
+    <option name="제출" hit="변경 사항을 즉시 제출" />
+    <option name="즉시" hit="변경 사항을 즉시 제출" />
+    <option name="값을" hit="부울 값을 다음으로 표시 " />
+    <option name="다음으로" hit="부울 값을 다음으로 표시 " />
+    <option name="부울" hit="부울 값을 다음으로 표시 " />
+    <option name="표시" hit="부울 값을 다음으로 표시 " />
+    <option name="글꼴" hit="사용자 지정 글꼴 사용 " />
+    <option name="사용" hit="사용자 지정 글꼴 사용 " />
+    <option name="사용자" hit="사용자 지정 글꼴 사용 " />
+    <option name="지정" hit="사용자 지정 글꼴 사용 " />
+    <option name="기본" hit="Ordenar tabla por clave primaria numérica" />
+    <option name="숫자" hit="Ordenar tabla por clave primaria numérica" />
+    <option name="정렬" hit="Ordenar tabla por clave primaria numérica" />
+    <option name="키로" hit="Ordenar tabla por clave primaria numérica" />
+    <option name="테이블" hit="Ordenar tabla por clave primaria numérica" />
+    <option name="안" hit="안 함" />
+    <option name="함" hit="안 함" />
+    <option name="Orden ascendente" hit="Orden ascendente" />
+    <option name="열" hit="정렬에 열 추가 " />
+    <option name="정렬에" hit="정렬에 열 추가 " />
+    <option name="추가" hit="정렬에 열 추가 " />
+    <option name="사항" hit="제한 사항" />
+    <option name="제한" hit="제한 사항" />
+    <option name="간격" hit="줄 간격 " />
+    <option name="줄" hit="줄 간격 " />
+    <option name="체크박스" hit="체크박스" />
+    <option name="크기" hit="크기 " />
+    <option name="클릭" hit="클릭" />
+    <option name="자동" hit="테이블 자동 전치 " />
+    <option name="전치" hit="테이블 자동 전치 " />
+    <option name="테이블" hit="테이블 자동 전치 " />
+    <option name="경우" hit="테이블에 하나의 레코드만 있는 경우" />
+    <option name="레코드만" hit="테이블에 하나의 레코드만 있는 경우" />
+    <option name="있는" hit="테이블에 하나의 레코드만 있는 경우" />
+    <option name="테이블에" hit="테이블에 하나의 레코드만 있는 경우" />
+    <option name="하나의" hit="테이블에 하나의 레코드만 있는 경우" />
+    <option name="텍스트" hit="텍스트" />
+    <option name="h" hit="필터 기록 크기 H  " />
+    <option name="기록" hit="필터 기록 크기 H  " />
+    <option name="크기" hit="필터 기록 크기 H  " />
+    <option name="필터" hit="필터 기록 크기 H  " />
+    <option name="항상" hit="항상" />
+  </configurable>
+  <configurable id="database.data.csv.formats" configurable_name="CSV 형식">
+    <option name="" hit=" N" />
+    <option name="n" hit=" N" />
+    <option name="csv" hit="CSV 형식" />
+    <option name="형식" hit="CSV 형식" />
+    <option name="n" hit="Texto de valor nulo N  " />
+    <option name="null" hit="Texto de valor nulo N  " />
+    <option name="값" hit="Texto de valor nulo N  " />
+    <option name="텍스트" hit="Texto de valor nulo N  " />
+    <option name="s" hit="값 구분 기호 S  " />
+    <option name="값" hit="값 구분 기호 S  " />
+    <option name="구분" hit="값 구분 기호 S  " />
+    <option name="기호" hit="값 구분 기호 S  " />
+    <option name="q" hit="Encerrar valor entre comillas Q  " />
+    <option name="값을" hit="Encerrar valor entre comillas Q  " />
+    <option name="따옴표로" hit="Encerrar valor entre comillas Q  " />
+    <option name="묶기" hit="Encerrar valor entre comillas Q  " />
+    <option name="공백" hit="공백" />
+    <option name="w" hit="Recortar espacios W " />
+    <option name="공백" hit="Recortar espacios W " />
+    <option name="자르기" hit="Recortar espacios W " />
+    <option name="따옴표" hit="따옴표 " />
+    <option name="문자열" hit="빈 문자열" />
+    <option name="빈" hit="빈 문자열" />
+    <option name="새" hit="새 줄" />
+    <option name="줄" hit="새 줄" />
+    <option name="서식" hit="서식 지정 " />
+    <option name="지정" hit="서식 지정 " />
+    <option name="세미콜론" hit="세미콜론" />
+    <option name="쉼표" hit="쉼표" />
+    <option name="안" hit="안 함" />
+    <option name="함" hit="안 함" />
+    <option name="않음" hit="정의되지 않음" />
+    <option name="정의되지" hit="정의되지 않음" />
+    <option name="h" hit="La primera fila es el encabezado H " />
+    <option name="번째" hit="La primera fila es el encabezado H " />
+    <option name="첫" hit="La primera fila es el encabezado H " />
+    <option name="행은" hit="La primera fila es el encabezado H " />
+    <option name="헤더" hit="La primera fila es el encabezado H " />
+    <option name="h" hit="La primera columna es el encabezado H " />
+    <option name="열은" hit="La primera columna es el encabezado H " />
+    <option name="첫" hit="La primera columna es el encabezado H " />
+    <option name="헤더" hit="La primera columna es el encabezado H " />
+    <option name="탭" hit="탭" />
+    <option name="파이프" hit="파이프" />
+    <option name="때" hit="필요할 때" />
+    <option name="필요할" hit="필요할 때" />
+    <option name="항상" hit="항상" />
+    <option name="r" hit="행 구분 기호 R  " />
+    <option name="구분" hit="행 구분 기호 R  " />
+    <option name="기호" hit="행 구분 기호 R  " />
+    <option name="행" hit="행 구분 기호 R  " />
+    <option name="x" hit="행 접두사 X  " />
+    <option name="접두사" hit="행 접두사 X  " />
+    <option name="행" hit="행 접두사 X  " />
+    <option name="접두사" hit="행 접두사 접미사 추가" />
+    <option name="접미사" hit="행 접두사 접미사 추가" />
+    <option name="추가" hit="행 접두사 접미사 추가" />
+    <option name="행" hit="행 접두사 접미사 추가" />
+    <option name="i" hit="행 접미사 I  " />
+    <option name="접미사" hit="행 접미사 I  " />
+    <option name="행" hit="행 접미사 I  " />
+    <option name="서식" hit="헤더 서식 지정" />
+    <option name="지정" hit="헤더 서식 지정" />
+    <option name="헤더" hit="헤더 서식 지정" />
+  </configurable>
+  <configurable id="database.other" configurable_name="기타">
+    <option name="ddl" hit="DDL 매핑" />
+    <option name="매핑" hit="DDL 매핑" />
+    <option name="객체" hit="객체 수정" />
+    <option name="수정" hit="객체 수정" />
+    <option name="기존" hit="Agregar a la consola existente" />
+    <option name="추가" hit="Agregar a la consola existente" />
+    <option name="콘솔에" hit="Agregar a la consola existente" />
+    <option name="기타" hit="기타" />
+    <option name="데이터베이스" hit="데이터베이스 리팩터링 미리보기 보기" />
+    <option name="리팩터링" hit="데이터베이스 리팩터링 미리보기 보기" />
+    <option name="미리보기" hit="데이터베이스 리팩터링 미리보기 보기" />
+    <option name="보기" hit="데이터베이스 리팩터링 미리보기 보기" />
+    <option name="리팩터링" hit="리팩터링" />
+    <option name="내" hit="En nueva consola" />
+    <option name="새" hit="En nueva consola" />
+    <option name="콘솔" hit="En nueva consola" />
+    <option name="ddl" hit="Sugerencias de volcado DDL para nuevas asignaciones" />
+    <option name="대해" hit="Sugerencias de volcado DDL para nuevas asignaciones" />
+    <option name="덤프" hit="Sugerencias de volcado DDL para nuevas asignaciones" />
+    <option name="매핑에" hit="Sugerencias de volcado DDL para nuevas asignaciones" />
+    <option name="새로운" hit="Sugerencias de volcado DDL para nuevas asignaciones" />
+    <option name="제안" hit="Sugerencias de volcado DDL para nuevas asignaciones" />
+    <option name="대화상자" hit="스키마를 수정하는 대화상자 취소 확인" />
+    <option name="수정하는" hit="스키마를 수정하는 대화상자 취소 확인" />
+    <option name="스키마를" hit="스키마를 수정하는 대화상자 취소 확인" />
+    <option name="취소" hit="스키마를 수정하는 대화상자 취소 확인" />
+    <option name="확인" hit="스키마를 수정하는 대화상자 취소 확인" />
+    <option name="생성" hit="컨텍스트 템플릿 생성 " />
+    <option name="컨텍스트" hit="컨텍스트 템플릿 생성 " />
+    <option name="템플릿" hit="컨텍스트 템플릿 생성 " />
+    <option name="생성" hit="코드 생성" />
+    <option name="코드" hit="코드 생성" />
+  </configurable>
+</options>
