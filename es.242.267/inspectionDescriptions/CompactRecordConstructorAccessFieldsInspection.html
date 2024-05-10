@@ -1,0 +1,22 @@
+<html>
+<body>
+레코드의 컴팩트 생성자 내의 메서드가 필드에 액세스하는 경우 해당 메서드의 호출을 보고합니다.
+<p>레코드 필드가 호출 시 초기화되지 않을 수 있으므로 의심스러운 호출입니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+public record MyRecord(String name, int id) {
+    public MyRecord {
+        validateMyFields(); // 의심스럽습니다
+    }
+
+    private void validateMyFields() {
+        if (this.name.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+    }
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>2024.1의 새로운 기능</small></p>
+</body>
+</html>

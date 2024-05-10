@@ -1,0 +1,19 @@
+<html>
+<body>
+정적 컨텍스트에서 동적 타입의 사용 위치를 보고합니다(<code>instance</code>, <code>class</code>, <code>self</code>). 정적 컨텍스트에서는 타입이 절대 변경되지 않으므로 동적 타입을 사용하면 혼란스러워 보일 수 있습니다.
+<p>동적 타입의 사용 위치를 정적 타입으로 교체하기 위해 빠른 수정을 사용할 수 있습니다.</p>
+<p>예:</p>
+<pre><code>class Example
+  # 정적 컨텍스트에 'instance'가 사용됩니다
+  INSTANCE: instance
+  # 정적 컨텍스트에 'class'가 사용됩니다
+  CLASS: class
+end
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>class Example
+  INSTANCE: Example
+  CLASS: singleton(Example)
+end</code></pre>
+</body>
+</html>

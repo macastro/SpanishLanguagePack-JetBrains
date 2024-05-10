@@ -1,0 +1,34 @@
+<html>
+<body>
+<p>중복 프로바이더를 보고합니다.</p>
+
+<p>문제 예시:</p>
+<pre><code>
+provider "kubernetes" {
+  config_path = "~/.kube/config"
+}
+
+provider "kubernetes" {
+  config_path = "~/kube/kubeconfig-0728633f-2c4a-4d2b-9eb7-bc629d5e7f37"
+}</code>
+</pre>
+<p>
+  이 문제를 해결하는 방법 중 하나는 <b>별칭</b>을 추가하고 필요한 제공자 내에서 리소스를 생성할 때 명시적으로 지정하는 것입니다.
+</p>
+
+<p>수정 방법 예시:</p>
+<pre><code>
+  provider "kubernetes" {
+  config_path = "~/.kube/config"
+}
+
+provider "kubernetes" {
+  config_path = "~/kube/kubeconfig-0728633f-2c4a-4d2b-9eb7-bc629d5e7f37"
+  alias = "cloud"
+}
+</code>
+</pre>
+
+<em>Powered by</em>: <a href="https://plugins.jetbrains.com/plugin/7808-terraform-and-hcl">Terraform and HCL plugin</a>
+</body>
+</html>

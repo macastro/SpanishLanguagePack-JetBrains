@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>
+  gRPC 요청 내에서 불필요한 'grpc' 또는 표준 'http[s]' 구성표를 보고합니다
+</p>
+<p>
+  요청 예시:
+</p>
+<pre><code>
+# 기본적으로 안전하지 않은 연결이 가정되므로 'grpc' 스키마는 누락될 수 있습니다
+GRPC grpc://localhost/TestService/testRpc
+</code></pre>
+
+<pre><code>
+# 'http' 스키마는 생략될 수 있습니다. 안전하지 않은 연결에서는 빈 스키마가, 안전한 연결에서는 전용 'grpcs' 스키마가 선호됩니다
+GRPC http://localhost/TestService/testRpc
+</code></pre>
+
+<pre><code>
+# 'https' 스키마는 'grpcs'로 대체되어야 합니다. 요청을 실행하려면 Transport Layer Security(TLS)가 활성화되어야 함을 표시하려는 경우 'grpcs'가 선호됩니다
+GRPC https://localhost/TestService/testRpc
+</code></pre>
+<!-- tooltip end -->
+<p>
+  요청이 안전한 채널을 사용해야 하는 경우 혼란을 방지하기 위해 gRPC 요청에 전용 'grpcs' 구성표를 사용하는 것이 권장됩니다. 그러지 않으면 구성표가 완전히 누락될 수 있습니다
+</p>
+</body>
+</html>

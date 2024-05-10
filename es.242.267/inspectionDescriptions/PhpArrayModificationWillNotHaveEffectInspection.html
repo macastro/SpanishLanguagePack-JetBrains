@@ -1,0 +1,17 @@
+<html>
+<body>
+값으로 배열을 반환하여 대입 연산을 할 수 없게 만드는 함수에 대한 호출을 보고합니다. 참조에 의한 반환이 대신 사용됩니다.
+<p><b>예:</b></p>
+<pre><code>
+&lt?php
+class A {
+    private $values = [];
+    public function getValues() {
+        return $this->values;
+    }
+}
+$config = new A();
+$config->getValues()['a'] = 'a';
+</code></pre>
+</body>
+</html>

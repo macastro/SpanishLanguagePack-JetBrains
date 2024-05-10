@@ -1,0 +1,28 @@
+<html>
+<body>
+Javadoc 주석의 일반 텍스트 링크를 보고합니다.
+<p>
+  빠른 수정에서는 <code>&lt;a&gt;</code> 태그로 링크를 래핑하도록 제안합니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Main {
+   /**
+    * https://en.wikipedia.org/
+    */
+    void foo() {}
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class Main {
+   /**
+    * &lt;a href="https://en.wikipedia.org/"&gt;https://en.wikipedia.org/&lt;/a&gt;
+    */
+    void foo() {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2022.1의 새로운 기능</small></p>
+</body>
+</html>

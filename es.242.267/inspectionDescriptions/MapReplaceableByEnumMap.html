@@ -1,0 +1,17 @@
+<html>
+<body>
+키 타입이 열거형 클래스인 <code>java.util.Map</code> 객체의 인스턴스화를 보고합니다. 이러한 <code>java.util.Map</code> 객체는 <code>java.util.EnumMap</code> 객체로 대체될 수 있습니다.
+<p>
+  기본 데이터 구조가 단순한 배열이기 때문에 <code>java.util.EnumMap</code> 구현이 훨씬 더 효율적일 수 있습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  Map&lt;MyEnum, String&gt; myEnums = new HashMap&lt;&gt;();
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  Map&lt;MyEnum, String&gt; myEnums = new EnumMap&lt;&gt;(MyEnum.class);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+<code>new</code> 키워드를 사용한 유틸리티 클래스의 인스턴스화를 보고합니다.
+<p>
+  유틸리티 클래스에서는 모든 필드 및 메서드가 <code>static</code>입니다.
+  그러한 클래스의 인스턴스화는 불필요할 가능성이 높으며 실수를 나타냅니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  class MyUtils {
+    public static double cube(double x) {
+      return x * x * x;
+    }
+  }
+  class Main {
+    public static void main(String[] args) {
+      // 유틸리티 클래스의 인스턴스화
+      MyUtils utils = new MyUtils();
+    }
+  }
+</code></pre>
+<p>
+  유틸리티 클래스가 인스턴스화되는 것을 방지하려면 <code>private</code> 생성자를 사용하는 것이 좋습니다.
+</p>
+<!-- tooltip end -->
+</body>
+</html>

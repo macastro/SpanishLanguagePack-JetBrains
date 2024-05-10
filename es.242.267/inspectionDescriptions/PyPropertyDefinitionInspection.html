@@ -1,0 +1,24 @@
+<html>
+<body>
+<p><code>property()</code>의 인수 및 <code>@property</code>로 어노테이션이 지정된 함수의 문제를 보고합니다.</p>
+<pre><code>
+class C:
+    @property
+    def abc(self):  # Getter는 무언가 반환하거나 산출해야 합니다
+        pass
+
+    @abc.setter
+    def foo(self, value):  # 함수 및 데코레이터 이름이 일치하지 않습니다
+        pass
+
+    @abc.setter
+    def abc(self, v1, v2):  # Setter 시그니처는 (self, value)여야 합니다
+        pass
+
+    @abc.deleter
+    def abc(self, v1):  # Deleter 시그니처는 (self)여야 합니다
+        pass
+</code></pre>
+<p>빠른 수정은 매개변수를 업데이트할 것을 제의합니다.</p>
+</body>
+</html>

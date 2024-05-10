@@ -1,0 +1,13 @@
+<html>
+<body>
+클래스 또는 모듈 별칭이 순환적으로 정의된 경우 보고합니다.
+
+<p>
+  예:
+</p>
+<pre><code>
+class Foo = Bar
+class Bar = Foo         # Error: 순환 정의
+</code></pre>
+</body>
+</html>

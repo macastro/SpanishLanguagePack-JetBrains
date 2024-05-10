@@ -1,0 +1,18 @@
+<html>
+<body>
+지정된 타입의 객체의 public 프로퍼티를 보고합니다. <code>#[ObjectShape]</code> 속성을 통해 반환된 객체의 형태나 PHPDoc 주석 내 객체 형태를 지정하도록 제안합니다.
+</body>
+<p><b>예:</b></p>
+<pre><code>
+  $a = new stdClass();
+  $a->name = "name";
+  $a->age = 2;
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  /** @var $a object{name: string, age: int} */
+  $a = new stdClass();
+  $a->name = "name";
+  $a->age = 2;
+</code></pre>
+</html>

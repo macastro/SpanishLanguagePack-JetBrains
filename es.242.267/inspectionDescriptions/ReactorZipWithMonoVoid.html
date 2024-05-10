@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>Reactor 체인에서 <code>Mono&lt;Void&gt;</code> 반환값을 가진 인수를 포함한 zip 연산을 보고합니다.</p>
+
+<p>
+  들어오는 <code>Mono&lt;Void&gt;</code>가 완료되는 즉시 <code>Zip</code>이 빈 채로 완료됩니다.
+  빠른 수정에서는 <code>zip()</code>, <code>zipWhen()</code> 및 <code>zipWith()</code>를 <code>when</code>으로 바꾸도록 제안합니다.
+</p>
+<!-- tooltip end -->
+<p><b>예:</b></p>
+<pre><code lang="java">Mono.zip(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
+                .map(v -> "New value")
+                .doFinally(System.out::println);
+</code></pre>
+
+<p>빠른 수정 적용 후:</p>
+<pre><code lang="java">Mono.when(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
+                .then(Mono.fromCallable(() -> "New value"))
+                .doFinally(System.out::println);
+</code></pre>
+
+<p><small>2023.1의 새로운 기능</small></p>
+</body>
+</html>

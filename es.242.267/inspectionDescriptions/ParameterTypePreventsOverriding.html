@@ -1,0 +1,30 @@
+<html>
+<body>
+하위 클래스 메서드의 매개변수 타입이 해당 상위 메서드의 매개변수 타입과 이름은 같지만 다른 패키지에 속하는 경우를 보고합니다.
+이러한 경우에 하위 클래스 메서드는 상위 메서드를 재정의할 수 없습니다.
+<p><b>예:</b></p>
+<pre><code>
+<b>public class</b> A {
+ <b>public void</b> method(Object o) {}
+}
+
+<b>public class</b> B <b>extends</b> A {
+ <b>public void</b> method(Object o) {} // 매개변수 타입 경고
+ <b>class</b> Object {}
+}
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+<b>public class</b> A {
+ <b>public void</b> method(Object o) {}
+}
+
+<b>public class</b> B <b>extends</b> A {
+ <b>public void</b> method(java.lang.Object o) {} // 새 매개변수 타입
+ <b>class</b> Object {}
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

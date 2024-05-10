@@ -1,0 +1,24 @@
+<html>
+<body>
+코루틴 컨텍스트에서 <code>Process.waitFor()</code>와 <code>Process.onExit()</code>가 사용되는 경우를 보고합니다.
+코루틴 컨텍스트에서 이러한 메서드는 사용이 금지됩니다.
+
+<p><code>com.intellij.util.io.awaitExit()</code>를 대신 사용하세요.</p>
+
+<p>예:</p>
+<pre><code lang="kotlin">
+suspend fun doSomething(process: Process) {
+  val exitCode = process.waitFor() // 나쁨
+  // ...
+}
+
+suspend fun doSomething(process: Process) {
+  val exitCode = process.awaitExit() // 좋음
+  // ...
+}
+</code></pre>
+
+<!-- tooltip end -->
+<p><small>2023.3의 새로운 기능</small>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<body>
+<p><b>specs2</b>의 기본 제공 매처가 사용될 수 있음을 보고합니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  class TestSpec extends Specification { def is = s2"""
+    This is a spec
+    opt
+      should contain 1                                  $e1
+                                                        """
+    def e1 = {
+
+      val opt = Some(1)
+
+      opt must equalTo (Some(1))
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class TestSpec extends Specification { def is = s2"""
+    This is a spec
+    opt
+      should contain 1                                  $e1
+                                                        """
+    def e1 = {
+
+      val opt = Some(1)
+
+      opt must beSome(1)
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

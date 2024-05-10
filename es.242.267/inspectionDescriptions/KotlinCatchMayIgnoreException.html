@@ -1,0 +1,32 @@
+<html>
+<body>
+비어 있거나 예외를 무시할 수 있는 <code>catch</code> 블록을 보고합니다.
+<p>의도된 경우도 있으나 빈 <code>catch</code> 블록은 디버그 작업을 복잡하게 만들 수 있습니다.
+    또한 <code>catch</code> 매개변수를 무시하는 것은 잘못된 코드일 수 있습니다.</p>
+
+<p>
+    이 검사는 <code>ignore</code>, <code>ignored</code> 또는 <code>_</code>라는 이름의 <code>catch</code> 매개변수를 보고하지 않습니다.
+</p>
+<p>
+    예외 이름을 <code>_</code>로 변경하는 빠른 수정을 사용할 수 있습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  try {
+    throwingMethod()
+  } catch (ex: IOException) {
+
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  try {
+    throwingMethod()
+  } catch (_: IOException) {
+
+  }
+</code></pre>
+<!-- tooltip end -->
+주석이 있는 <code>catch</code> 블록을 무시하려면 <b>'catch' 블록에 주석이 포함되어 있을 경우 경고 안 함</b> 옵션을 사용하세요.
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+<code>call_user_func($callable)</code>에서 지원되지만 <code>$callable()</code>에서는 지원되지 않는 지원 중단된 호출 요소의 사용을 보고합니다.
+<!-- tooltip end -->
+<p>PHP 8.2부터 다음의 호출 가능 요소는 지원 중단됩니다.</p>
+<pre><code>"self::method"</code>
+<code>"parent::method"</code>
+<code>"static::method"</code>
+<code>["self", "method"]</code>
+<code>["parent", "method"]</code>
+<code>["static", "method"]</code>
+<code>["Foo", "Bar::method"]</code>
+<code>[new Foo, "Bar::method"]</code></pre>
+<p>
+  자세한 정보는 <a href="https://wiki.php.net/rfc/deprecate_partially_supported_callables">Deprecate partially supported callables (php.net)</a>를 참조하세요.
+</p>
+
+</body>
+</html>

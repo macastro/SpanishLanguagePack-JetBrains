@@ -1,0 +1,47 @@
+<html>
+<body>
+<p>현재 파일에서 활성화되지 않은 고급 언어 기능의 사용을 보고합니다.</p>
+
+<p>고급 언어 기능은 사용되는 파일에 명시적 기능 플래그를 가져오거나 해당 컴파일러 옵션을 사용하여 활성화해야 합니다.</p>
+
+<p>
+    후위 연산자 표기:<br>
+    <code>val s = 123 toString</code>
+</p>
+
+<p>
+    리플렉션 호출:<br>
+    <code>def foo(v: {def bar()}) = v.bar()</code>
+</p>
+
+<p>
+    동적 멤버 선택:<br>
+    <code>class Foo extends Dynamic</code>
+</p>
+
+<p>
+    묵시적 변환:<br>
+    <code>implicit def toInt(s: String) = s.toInt</code>
+</p>
+
+<p>
+    상위 타입<small>(<em>Scala 2.13.1</em>부터 기본적으로 활성화됨):<br>
+    <code>class Bar[M[A]]</code>
+</p>
+
+<p>
+    존재 타입:<br>
+    <code>def foo(v: Seq[T] forSome { type T })</code>
+</p>
+
+<p>
+    매크로 정의:<br>
+    <code>def assert(s: String) = macro Asserts.assertImpl</code>
+</p>
+<!-- tooltip end -->
+
+<p>또한 '-feature' 옵션이 제공되는 경우 Scala 컴파일러에서 이 경고가 생략될 수 있습니다. </p>
+
+<p>컴파일러 옵션은 <a href="settings://scala.compiler?Features">파일 | 설정 | 빌드, 실행, 배포 | 컴파일러 | Scala 컴파일러 | 기능</a>을 참조하세요.</p>
+</body>
+</html>

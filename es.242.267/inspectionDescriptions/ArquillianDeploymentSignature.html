@@ -1,0 +1,40 @@
+<html>
+<body>
+<p><code>@Deployment</code> 어노테이션이 추가된 메서드의 잘못된 시그니처를 보고합니다.</p>
+<p>
+  <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/en-US/html/gettingstarted.html#d0e451">Arquillian 문서</a>에 따르면 Arquillian 테스트 클래스는 <code>@Deployment</code> 어노테이션이 추가된 특정 시그니처를 가진 public static 메서드를 사용해 배포 아카이브를 정의해야 합니다.
+</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  // 이 테스트 케이스는 Arquillian에 의해 시작될 수 없습니다. Deployment 메서드가 static이 아닙니다
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    @Deployment
+    public JavaArchive createDeployment() {
+      throw new UnsupportedOperationException("Implement me");
+    }
+
+    @Test
+    public void testSomething() {
+      Assert.fail("To be implemented");
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    @Deployment
+    public static JavaArchive createDeployment() {
+      throw new UnsupportedOperationException("Implement me");
+    }
+
+    @Test
+    public void testSomething() {
+      Assert.fail("To be implemented");
+    }
+  }
+</code></pre>
+</body>
+</html>

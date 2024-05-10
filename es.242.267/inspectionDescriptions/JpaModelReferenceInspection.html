@@ -1,0 +1,25 @@
+<html>
+<body>
+다음과 같은 JPA 어노테이션 및 API 메서드 내 해결되지 않은 심볼을 보고합니다:
+<ul>
+  <li><code>AttributeOverride</code></li>
+  <li><code>AssociationOverride</code></li>
+  <li><code>MapsId</code></li>
+  <li><code>MapKey</code></li>
+  <li><code>Criteria API 메서드</code></li>
+</ul>
+
+<p><b>예:</b></p><br/>
+<pre><code>
+  @Entity
+  @AssociationOverrides({
+    @AssociationOverride(name = "missingAttribute", joinColumns = { ... }), // 오류: 해결돠지 않은 속성
+    @AssociationOverride(name = "existingAttribute", joinColumns = { ... })
+  })
+  public class JavaEntity {
+    @OneToOne
+    AnotherEntity existingAttribute;
+  }
+</code></pre>
+</body>
+</html>

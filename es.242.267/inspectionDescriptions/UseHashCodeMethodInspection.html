@@ -1,0 +1,17 @@
+<html>
+<body>
+비트 단위 연산이 <code>Long.hashCode</code> 또는 <code>Double.hashCode()</code> 메서드 호출로 대체될 수 있는 경우 보고합니다.
+<code>x</code>가 타입이 <code>long</code>인 변수거나 이전 <code>Double.doubleToLongBits()</code> 호출의 결과인 생성자 <code>(int)(x ^ (x >>> 32))</code>를 탐지합니다. 이렇게 대체하면 코드의 가독성이 좋아집니다.
+<p><b>예:</b></p>
+<pre><code>
+  int result = (int)(var ^ (var >>> 32));
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  int result = Long.hashCode(var);
+</code></pre>
+<!-- tooltip end -->
+<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 8 이상인 경우에만 보고합니다.
+<p><small>2024.1의 새로운 기능</small></p>
+</body>
+</html>

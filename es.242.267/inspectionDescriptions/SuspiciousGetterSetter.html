@@ -1,0 +1,24 @@
+<html>
+<body>
+이름에 따라 필요하지 않는 필드에 액세스하는 getter 또는 setter 메서드를 보고합니다.
+예를 들어, <code>getY()</code>가 <code>x</code> 필드를 반환하는 경우를 말합니다. 이는 보통 복사-붙여넣기 오류일 수 있습니다.
+<p><b>예:</b></p>
+<pre><code>class Point {
+    private int x;
+    private int y;
+
+    public void setX(int x) { // 경고: setter 'setX()'가  필드 'y'를 대입합니다
+      this.y = x;
+    }
+
+    public int getY() { // 경고: getter 'getY()'가 필드 'x'를 반환합니다
+      return x;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  아래 체크박스를 사용하여 클래스 내 필드의 이름이 getter 또는 setter의 이름과 일치하는 경우를 보고하세요.
+<p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>메서드가 @override로 지정되었지만 그 상위 클래스에 일치하는 메서드가 없는 경우 보고합니다</p>
+<p><b>예:</b></p>
+<pre><code>
+from typing import override
+
+class Parent:
+    def foo(self) -> int:
+        return 1
+
+    def bar(self, x: str) -> str:
+        return x
+
+class Child(Parent):
+    @override
+    def foo(self) -> int:
+        return 2
+
+    @override # override 함수의 super 메서드 누락
+    def baz(self) -> int:
+        return 1
+</code></pre>
+</body>
+</html>

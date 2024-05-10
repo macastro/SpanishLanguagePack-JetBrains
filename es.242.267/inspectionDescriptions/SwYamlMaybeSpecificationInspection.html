@@ -1,0 +1,34 @@
+<html>
+<body>
+OpenAPI/Swagger 사양의 일부로 해석될 수 있는 YAML 파일을 탐지합니다.
+<p>
+  이러한 파일은 명시적인 사양 속성은 포함하지 않으나 인접한 기본 사양 파일에서 참조됩니다.
+</p>
+<!-- tooltip end -->
+
+<p>
+  다음의 예시는 같은 디렉터리에 있는 두 파일을 포함합니다. 첫 번째 파일은 일반적인 기본 사양 파일입니다.
+  두 번째 파일은 첫 번째 파일에서 참조되며 따라서 사양으로 간주될 수 있다고 제안됩니다.
+</p>
+
+<p><b>기본 사양 파일 <code>openapi.yaml</code>:</b></p>
+<pre><code>
+openapi: 3.1.0
+components:
+  schemas:
+    CustomSchema:
+      description: Custom schema object
+      properties:
+        foo:
+          $ref: 'common.components.yaml#/components/schemas/CommonSchema'
+</code></pre>
+
+<p><b>사양 파일 후보 <code>common.components.yaml</code>:</b></p>
+<pre><code>
+components: # 'Mark file as OpenAPI specification' highlighting
+  schemas:
+    CommonSchema:
+      description: Common schema object reused in several specifications
+</code></pre>
+</body>
+</html>

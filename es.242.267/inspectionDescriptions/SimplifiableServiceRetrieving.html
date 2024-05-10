@@ -1,0 +1,32 @@
+<html>
+<body>
+기존의 static <code>getInstance()</code> 또는 <code>getInstance(Project)</code> 메서드에 대한 호출로 대체될 수 있는 호출을 받은 서비스를 보고합니다.
+<p>예(Java):</p>
+<pre><code lang="java">
+@Service
+public class MyAppService {
+  public static MyAppService getInstance() {
+    return ApplicationManager.getApplication().getService(MyAppService.class);
+  }
+}
+
+@Service(Service.Level.PROJECT)
+public class MyProjectService {
+  public static MyProjectService getInstance(Project project) {
+    return project.getService(MyProjectService.class);
+  }
+}
+</code></pre>
+<pre><code lang="java">
+// 나쁨:
+MyAppService applicationService = ApplicationManager.getApplication().getService(MyAppService.class);
+MyProjectService projectService = project.getService(MyProjectService.class);
+</code></pre>
+<pre><code lang="java">
+// 좋음:
+MyAppService applicationService = MyAppService.getInstance();
+MyProjectService projectService = MyProjectService.getInstance(project);
+</code></pre>
+<p><small>2023.2의 새로운 기능</small>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+예외 생성자가 <code>Throwable cause</code> 인수도 취하는 <code>Throwable.initCause()</code> 호출을 보고합니다.
+<p>이 경우 <code>initCause()</code> 호출이 제거되고, 예외의 생성자 호출에 그 인수가 추가될 수 있습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  try {
+      process();
+  }
+  catch (RuntimeException ex) {
+    RuntimeException wrapper = new RuntimeException("Error while processing");
+    wrapper.initCause(ex); // 불필요한 'Throwable.initCause()' 호출
+    throw wrapper;
+  }
+</code></pre>
+<p>원인 인수를 생성자로 전달하는 빠른 수정을 사용할 수 있습니다. 빠른 수정 적용 후:</p>
+<pre><code>
+  try {
+      process();
+  }
+  catch (RuntimeException ex) {
+    RuntimeException wrapper = new RuntimeException("Error while processing", ex);
+    throw wrapper;
+  }
+  </code></pre>
+<!-- tooltip end -->
+</body>
+</html>

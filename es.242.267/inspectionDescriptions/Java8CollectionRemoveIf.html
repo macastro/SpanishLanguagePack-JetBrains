@@ -1,0 +1,19 @@
+<html>
+<body>
+Reports loops which can be collapsed into a single <code>Collection.removeIf()</code> call.
+<p>예:</p>
+<pre><code>
+  for (Iterator&lt;String&gt; it = collection.iterator(); it.hasNext(); ) {
+    String aValue = it.next();
+    if(shouldBeRemoved(aValue)) {
+      it.remove();
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  collection.removeIf(aValue -> shouldBeRemoved(aValue));
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+클래스 및 모듈 별칭이 일관적이지 않게 선언된 경우를 보고합니다. 클래스는 모듈 별칭을 사용할 수 없으며 모듈은 클래스 별칭을 사용할 수 없습니다.
+<p>
+  클래스에 모듈 별칭을 설정하거나 모듈에 클래스 별칭을 설정하면 <code>InconsistentClassModuleAliasError</code>가 발생합니다.
+</p>
+<p>빠른 수정을 사용하여 충돌하는 선언으로 이동할 수 있습니다.</p>
+<p>
+  예:
+</p>
+<pre><code>
+class User
+end
+
+# 클래스 'User'가 모듈 별칭 대상으로 사용됨
+module Customer = User
+</code></pre>
+</body>
+</html>

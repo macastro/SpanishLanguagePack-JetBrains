@@ -1,0 +1,29 @@
+<html>
+<body>
+<code>static</code>일 수 있는 인스턴스 이니셜라이저를 보고합니다.
+<p>
+  인스턴스 이니셜라이저가 클래스의 static이 아닌 멤버를 참조하지 않는 경우 static일 수 있습니다.
+  static 이니셜라이저는 클래스가 확인되면 실행되며 인스턴스 이니셜라이저는 클래스가 인스턴스화될 때마다 실행됩니다.</p>
+<p>이 검사는 인스턴스가 비어 있는 이니셜라이저와 익명 클래스의 이니셜라이저를 보고하지 않습니다.
+<p><b>예:</b></p>
+<pre><code>
+  class A {
+     public static String CONSTANT;
+     {
+        CONSTANT = "Hello";
+     }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  class A {
+     public static String CONSTANT;
+     static {
+        CONSTANT = "Hello"; // 클래스당 1회만 초기화됩니다
+     }
+  }
+</code></pre>
+
+<!-- tooltip end -->
+</body>
+</html>

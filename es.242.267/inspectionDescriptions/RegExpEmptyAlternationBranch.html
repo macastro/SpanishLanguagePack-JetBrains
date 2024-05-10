@@ -1,0 +1,17 @@
+<html>
+<body>
+정규식 대체 항목에 있는 빈 브랜치를 보고합니다.
+빈 브랜치는 빈 문자열하고만 일치하며 대부분의 경우 이는 기대한 결과가 아닙니다.
+이 검사는 대체 항목의 앞 또는 뒤에 있는 단일한 빈 브랜치는 보고하지 않습니다.
+<p><b>예:</b></p>
+<pre><code>
+  (alpha||bravo)
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  (alpha|bravo)
+</code></pre>
+<!-- tooltip end -->
+<p><small>2017.2의 새로운 기능</small>
+</body>
+</html>

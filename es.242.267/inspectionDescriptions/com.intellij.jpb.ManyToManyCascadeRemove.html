@@ -1,0 +1,13 @@
+<!--
+  ~ Copyright (c) Haulmont 2022. All Rights Reserved.
+  ~ Use is subject to license terms.
+  -->
+
+<html>
+<body>
+이 검사는 CascadeType.REMOVE 속성이 있는 @ManyToMany 연결을 확인합니다.
+@ManyTOMany에 CascadeType.REMOVE를 지정하면 링크 테이블 외부로 전파되므로 캐스케이드 처리해도 의미가 없습니다. 다른 쪽을 부모의 엔티티가 참조할 수 있으므로, 자동으로 제거하면 ConstraintViolationException이 발생할 수 있습니다.
+예를 들어 @ManyToMany(cascade = CascadeType.ALL)이 정의되고 첫 번째 사람이 삭제된다면 삭제되는 주소와 다른 사람이 아직 연결되어 있으므로 Hibernate가 예외를 던집니다.
+자세한 정보는 <a href="https://vladmihalcea.com/hypersistence-optimizer/docs/user-guide/#ManyToManyCascadeRemoveEvent">이 자료</a>를 참조하세요.
+</body>
+</html>

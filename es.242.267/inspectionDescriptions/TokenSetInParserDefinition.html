@@ -1,0 +1,84 @@
+<html>
+<body>
+<code>ParserDefinition</code> 클래스에서 비 플랫폼 요소 타입을 참조하는 <code>TokenSet</code> 필드 선언을 보고합니다.
+<p>
+  모든 언어의 <code>ParserDefinition</code>은 애플리케이션이 시작될 때 생성됩니다.
+  비 플랫폼 언어 요소 타입을 참조하는 <code>TokenSet</code>을 선언하는 경우 프로젝트에 해당 언어의 파일이 전혀 포함되지 않더라도 참조된 타입의 홀더 클래스에 모든 언어 요소 타입이 생성되고 등록될 수 있습니다.
+</p>
+
+<p>예:</p>
+<pre><code lang="java">
+// 요소 타입 홀더:
+public interface MyLangTokenTypes {
+  IElementType COMMENT = new MyLangTokenType("COMMENT");
+  IElementType TYPE1 = new MyLangTokenType("TYPE1");
+  IElementType TYPE2 = new MyLangTokenType("TYPE2");
+  // 기타 타입...
+}
+
+
+// 나쁨:
+
+public class MyLangParserDefinition implements ParserDefinition {
+  // 이 필드로 인해 MyLangTokenTypes의 모든 타입이 초기화 및 등록됩니다
+  private static final TokenSet COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
+
+  @NotNull
+  @Override
+  public TokenSet getCommentTokens() {
+    return COMMENTS;
+  }
+  ...
+}
+
+
+// 좋음:
+
+public final class MyLangTokenSets {
+  public static final TokenSet COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
+}
+
+public class MyLangParserDefinition implements ParserDefinition {
+  @NotNull
+  @Override
+  public TokenSet getCommentTokens() {
+    // 이 메서드가 호출될 때만 타입이 참조 및 등록됩니다
+    return MyLangTokenSets.COMMENTS;
+  }
+  ...
+}
+
+// 좋음 (Kotlin):
+
+// getCommentTokens() 메서드가 호출될 때까지 최상위 수준의 선언이 로드되지 않습니다
+private val COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
+
+class MyLangParserDefinition : ParserDefinition {
+  override getCommentTokens(): TokenSet {
+    return COMMENTS;
+  }
+  ...
+}
+
+// 좋음:
+
+public class MyLangParserDefinition implements ParserDefinition {
+  // 플랫폼 TokenSet이 허용됩니다
+  private static final TokenSet COMMENTS1 = TokenSet.EMPTY;
+  // 플랫폼 TokenType이 허용됩니다
+  private static final TokenSet COMMENTS2 = TokenSet.create(TokenType.WHITE_SPACE);
+
+  @NotNull
+  @Override
+  public TokenSet getCommentTokens() {
+    ...
+  }
+  ...
+}
+
+</code></pre>
+
+<!-- tooltip end -->
+<p><small>2023.2의 새로운 기능</small>
+</body>
+</html>

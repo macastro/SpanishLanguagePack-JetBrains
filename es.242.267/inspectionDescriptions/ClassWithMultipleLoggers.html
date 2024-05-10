@@ -1,0 +1,20 @@
+<html>
+<body>
+여러 개의 로거가 선언된 클래스를 보고합니다.
+각 클래스에 하나의 전용 로거를 포함시키는 것은 애플리케이션에 통합 로깅 구현을 제공하는 데 중요한 단계입니다.
+<p>예:</p>
+<pre><code>
+  <b>public class</b> Critical {
+    <b>protected static final</b> Logger LOG = Logger.getLogger(Critical.class);
+
+    <b>protected static final</b> Logger myLogger = Logger.getLogger(getClass());
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+아래 테이블을 사용하여 Logger 클래스 이름을 지정하세요.
+지정된 클래스 중 하나의 타입을 가진 여러 필드를 선언하는 클래스는 이 검사에서 보고됩니다.
+<p>
+
+</body>
+</html>

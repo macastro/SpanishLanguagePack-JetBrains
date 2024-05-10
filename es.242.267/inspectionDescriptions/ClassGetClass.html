@@ -1,0 +1,22 @@
+<html>
+<body>
+<code>java.lang.Class</code> 인스턴스에서 호출되는 <code>getClass()</code> 메서드를 보고합니다.
+<p>결과는 항상 <code>Class.class</code>와 동일하므로, 이런 경우는 대개 실수입니다.
+실수인 경우 <code>getClass()</code> 호출을 제거하고 한정자를 직접 사용하는 것이 좋습니다.
+  의도된 동작인 경우 혼동을 피하기 위해 <code>Class.class</code>를 명시적으로 작성하는 것이 좋습니다.</p>
+<p>예:</p>
+<pre><code>
+  void test(Class&lt;?&gt; clazz) {
+    String name = clazz.getClass().getName();
+  }
+</code></pre>
+<p>가능한 빠른 수정 중 하나가 적용된 후:</p>
+<pre><code>
+  void test(Class&lt;?&gt; clazz) {
+    String name = clazz.getName();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>2018.2의 새로운 기능</small></p>
+</body>
+</html>

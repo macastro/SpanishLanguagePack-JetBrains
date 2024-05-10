@@ -1,0 +1,19 @@
+<!-- Copyright 2000-2023 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+<html>
+<body>
+<code>java.time.temporal.ChronoField</code> 및
+<code>java.time.temporal.ChronoUnit</code>을 인수로 취하는 <code>java.time</code> 메서드 호출을 더 구체적인 메서드 호출로 바꿀 수 있는 경우 보고합니다.
+<p>예:</p>
+<pre><code>
+LocalTime localTime = LocalTime.now();
+int minute = localTime.get(ChronoField.MINUTE_OF_HOUR);
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+LocalTime localTime = LocalTime.now();
+int minute = localTime.getMinute();
+</code></pre>
+<!-- tooltip end -->
+<p><small>2023.2의 새로운 기능</small></p>
+</body>
+</html>

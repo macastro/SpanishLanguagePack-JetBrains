@@ -1,0 +1,29 @@
+<html>
+<body>
+<code>System.out</code> 또는 <code>System.err</code>의 사용 위치를 보고합니다.
+<p>그러한 구문은 보통 일시적인 디버그에 자주 사용되기 때문에 프로덕션 코드에서 제거하거나 더욱 강력한 기록 기능으로 바꿔야 합니다.</p>
+
+<p>The provided quick-fix supports <b>SLF4J</b> and <b>Log4j 2</b>.
+ It replaces <code>System.out</code> and <code>System.err</code> calls with log calls</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  public static void test(Object o) {
+    System.out.println("Test: "+ o);
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  private static final Logger log = LoggerFactory.getLogger(Test.class);
+
+  public static void test(Object o) {
+      log.info("Test: {}", o);;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Use the <b>Log method for 'System.err'</b> option to specify a method which it is used to log a message for 'System.err' calls.
+  Use the <b>Log method for 'System.out'</b> option to specify a method which it is used to log a message for 'System.out' calls.
+</p>
+</body>
+</html>

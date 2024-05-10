@@ -1,0 +1,18 @@
+<html>
+<body>
+런타임이 아닐 시 어노테이션의 존재를 반영적으로 검사하려는 시도를 보고합니다.
+<p>보존 정책이 <code>SOURCE</code> 또는 <code>CLASS</code>(디폴트)로 설정된 어노테이션을  테스트하기 위해 <code>Class.isAnnotationPresent()</code>를 사용하면 항상 부정적인 결과가 발생합니다. 이러한 실수는 간과하기 쉽습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  {
+    getClass().isAnnotationPresent(SourceAnnotation.class); //항상 false
+  }
+
+  @Retention(RetentionPolicy.SOURCE)
+  @interface SourceAnnotation {}
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

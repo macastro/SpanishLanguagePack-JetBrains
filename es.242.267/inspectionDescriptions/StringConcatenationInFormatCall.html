@@ -1,0 +1,25 @@
+<html>
+<body>
+서식 문자열 인수로 사용된, 상수가 아닌 문자열 연결을 보고합니다.
+<p>
+  의도된 경우도 있으나 보통 서식 지정 메서드를 잘못 사용한 것이며 연결된 문자열에서 사용된 변수가 <code>%</code>와 같은 특수문자를 포함하는 경우 예기치 않은 예외가 발생할 수 있습니다.
+</p>
+<p>
+  또한 이는 종종 <code>,</code>가 필요한 곳에 <code>+</code>를 입력하여 문자열 포맷 인수를 실수로 연결한 결과일 수 있습니다.
+</p>
+<p><b>예:</b></p>
+<pre><code>
+  static String formatGreeting(String userName) {
+    return String.format("Hello, " + userName);
+  }
+</code></pre>
+<p>
+  여기서 <code>userName</code>은 서식 문자열의 일부로 해석됩니다. 이 때문에 <code>IllegalFormatException</code>(예: <code>userName</code>이 <code>'%'</code>인 경우)이 발생하거나 거대한 양의 메모리를 사용(예: <code>userName</code>이 <code>'%2000000000%'</code>인 경우)할 수 있습니다.
+  이 호출은 <code>String.format("Hello, %s", userName);</code>과 같이 바꿔야 합니다.
+</p>
+<p>
+  이 검사는 <code>java.util.Formatter</code>, <code>java.lang.String</code>, <code>java.io.PrintWriter</code> 또는 <code>java.io.PrintStream</code>의 서식 지정 메서드 호출을 검사합니다.
+</p>
+<!-- tooltip end -->
+</body>
+</html>

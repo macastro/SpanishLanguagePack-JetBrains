@@ -1,0 +1,34 @@
+<html>
+<body>
+<code>case</code> 라벨 수가 너무 적은 <code>switch</code> 문을 보고하고, 이를 <code>if</code> 및 <code>else if</code> 문으로 다시 작성하도록 제안합니다.
+<p>Example (minimum branches == 3):</p>
+<pre><code>
+  switch (expression) {
+    case "foo" -&gt; foo();
+    case "bar" -&gt; bar();
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  if ("foo".equals(expression)) {
+    foo();
+  } else if ("bar".equals(expression)) {
+    bar();
+  }
+</code></pre>
+<p>'default' 브랜치가 없는 완전한 switch 식(Java 14+) 또는 패턴 switch 문(Java 17 테스트 버전)은 보고되지 않습니다.
+  이 경우 <code>switch</code>가 바람직하지 않은 <code>if</code>로 변환될 때 컴파일 시간 완전성 검사가 손실되기 때문입니다.
+</p>
+<!-- tooltip end -->
+<p>검사 구성:</p>
+<p><b>최소 분기 수</b> 필드를 사용하여 <code>case</code> 라벨의 최소 개수를 지정하세요.</p>
+<p>패턴 브랜치가 있는 switch 문 및 식을 보고하지 않으려면 <b>패턴 switch 문을 보고하지 않음</b> 옵션을 사용합니다. 예:</p>
+<pre><code>
+  String result = switch(obj) {
+    case String str -> str.trim();
+    default -> "none";
+  };
+</code></pre>
+<p><code>instanceof</code> 문을 사용하는 것보다 단일 패턴 브랜치로 switch를 유지하는 것이 좋을 수 있습니다.</p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<body>
+<code>static</code>이 될 수 있는 내부 클래스를 보고합니다.
+<p><code>static</code> 내부 클래스는 둘러싸는 인스턴스에 대한 묵시적 참조를 유지하지 않습니다.
+  When using Java 17 or before,
+  this prevents a common cause of memory leaks and uses less memory per instance of the class.</p>
+<p><b>예:</b></p>
+<pre><code>
+  <b>public class</b> Outer {
+    <b>class</b> Inner { // not static
+      <b>public void</b> foo() {
+        bar("x");
+      }
+
+      <b>private void</b> bar(String string) {}
+    }
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  <b>public class</b> Outer {
+    <b>static class</b> Inner {
+      <b>public void</b> foo() {
+        bar("x");
+      }
+
+      <b>private void</b> bar(String string) {}
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

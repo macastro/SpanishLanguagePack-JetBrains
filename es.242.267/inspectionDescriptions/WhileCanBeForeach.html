@@ -1,0 +1,21 @@
+<html>
+<body>
+컬렉션을 반복하며 개선된 <code>for</code> 루프(foreach 반복 구문)로 대체 가능한 <code>while</code> 루프를 보고합니다.
+<!--  'foreach' still used in this description so that the inspection continues to be found using this keyword -->
+<p><b>예:</b></p>
+<pre><code>
+  Iterator it = c.iterator();
+  while(it.hasNext()) {
+    Object obj = it.next();
+    System.out.println(obj);
+  }
+</code></pre>
+<p>다음으로 대체 가능:</p>
+<pre><code>
+  for (Object obj : c) {
+    System.out.println(obj);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

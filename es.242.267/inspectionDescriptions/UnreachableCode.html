@@ -1,0 +1,14 @@
+<html>
+<body>
+데이터 흐름 분석에 따르면 절대 도달되지 않는 코드를 보고합니다. 
+이는 항상 참이거나 항상 거짓인 이전 조건의 결과이거나 도달할 수 없는 반복문 본문 혹은 catch 섹션일 수 있습니다. 일반적으로(항상 그렇지는 않음) 도달할 수 없는 코드는 이전 경고의 결과일 수 있으므로 "Null 가능성 및 데이터 흐름 문제," "상수값," 혹은 "빈 컨테이너 내의 중복 연산"과 같은 검사의 경고를 확인하면 원인을 이해하는 데 도움이 됩니다.
+<p>예:</p>
+<pre><code>
+  void finishApplication() {
+    System.exit(0);
+    System.out.println("Application is terminated"); // 도달할 수 없는 코드
+  }
+</code></pre>
+<p><small>2024.1의 새로운 기능</small></p>
+</body>
+</html>

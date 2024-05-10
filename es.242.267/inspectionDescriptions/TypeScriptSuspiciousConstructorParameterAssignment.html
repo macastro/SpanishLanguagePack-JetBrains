@@ -1,0 +1,13 @@
+<html>
+<body>
+TypeScript 코드 내 클래스 필드가 생성자 파라미터로 선언되고 나서 이 파라미터가 대입되는 일반적인 실수를 보고합니다.<br/>
+이 경우, 대응하는 필드는 대입되지 <i>않고</i> 로컬 파라미터 값만 변경됩니다.
+<pre><code>
+class Foo {
+  constructor(private p: number) {
+    p = 1; //must be this.p = 1;
+  }
+}
+</code></pre>
+</body>
+</html>

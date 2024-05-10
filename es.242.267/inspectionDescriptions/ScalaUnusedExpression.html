@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>값이 사용되지 않는 표현식을 보고합니다.</p>
+
+<p>부수 효과가 있거나 흐름 제어를 전환하는 표현식은 보고되지 않습니다.</p>
+
+<p><b>예:</b></p>
+<pre><code>
+  def test(): Int = {
+    3 // 사용되지 않음
+    3
+  }
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  def test(): Int = {
+    3
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

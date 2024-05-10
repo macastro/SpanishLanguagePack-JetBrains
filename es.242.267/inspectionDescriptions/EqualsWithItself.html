@@ -1,0 +1,25 @@
+<html>
+<body>
+객체와 자신의 상등성을 비교하는 <code>equals()</code>, <code>compareTo()</code> 또는 이와 유사한 호출을 보고합니다.
+이러한 메서드의 메서드 컨트랙트는 이러한 호출이 <code>true</code>(<code>equals()</code> 호출 시) 또는 <code>0</code>(<code>compareTo()</code> 호출 시)을 항상 반환하도록 지정합니다.
+이 검사는 <code>Objects.equals()</code>, <code>Objects.deepEquals()</code>,
+<code>Arrays.equals()</code>, <code>Comparator.compare()</code>, 테스트 프레임워크(JUnit, TestNG, AssertJ)의 <code>assertEquals()</code> 메서드, <code>Integer.compare()</code>, <code>Integer.compareUnsigned()</code> 및 유사한 메서드의 호출도 검사합니다.
+<p><b>예:</b></p>
+<pre><code>
+  class Foo {
+    boolean foo(Object o) {
+        return o.equals(o); // 경고
+    }
+
+    boolean bar(String[] ss) {
+        return Arrays.equals(ss, ss); // 경고
+    }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  이 옵션을 사용하여, 확장할 수 없는 라이브러리 클래스(예: <code>String</code>) 및 기본 타입에 대해서만 테스트 어설션 보고서를 보고합니다.
+  이 옵션은 <code>equals()</code> 메서드를 테스트하는 경우 유용합니다.
+</p>
+</body>
+</html>

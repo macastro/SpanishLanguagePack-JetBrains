@@ -1,0 +1,21 @@
+<html>
+<body>
+기본 패키지(<b>설정 | 언어 및 프레임워크 | Scala | 기본 패키지</b>)에 상대적일 수 있는 정규화된 import 문을 보고합니다.
+<p><b>설정 | 에디터 | 코드 스타일 | Scala | Import 문</b>에서 <b>기본 패키지 제외</b> 옵션을 활성화한 경우에만 적용됩니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  package org.example.application
+  package ui
+
+  import org.example.application.model.Data
+</code></pre>
+<p>빠른 수정 적용 후:</p>
+<pre><code>
+  package org.example.application
+  package ui
+
+  import model.Data
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+문자열 또는 템플릿 리터럴의 중첩된 인스턴스를 보고합니다. 중첩된 인스턴스를 상위 템플릿 문자열로 인라인화할 것을 제안합니다.
+<!-- tooltip end -->
+<p>예: </p>
+<pre><code>
+let a = 'Hello, ${'Brave ${"New"}'} ${"World"}!'
+</code></pre>
+<p>빠른 수정이 적용된 후 코드는 다음과 같습니다:</p>
+<pre><code>
+let a = 'Hello, Brave New World!'
+</code></pre>
+</body>
+</html>
