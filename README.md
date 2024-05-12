@@ -34,17 +34,19 @@ Nos gustaría extender nuestro agradecimiento a los siguientes patrocinadores po
 
 221.267	Para versiones:	2022.1 — 2022.1.4	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.221.267.jar)**
 
-222.207	Para versiones:	2022.2 — 2022.2.5	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.222.427.jar)**
+222.427	Para versiones:	2022.2 — 2022.2.5	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.222.427.jar)**
 
 223.237	Para versiones:	2022.3 — 2022.3.2	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.223.237.jar)**
 
-231.197	Para versiones:	2023.1 — 2023.1.6	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.231.297.jar)**
+231.297	Para versiones:	2023.1 — 2023.1.6	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.231.297.jar)**
 
-231.197	Para versiones:	2023.2 — 2023.2.6	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.232.307.jar)**
+231.307	Para versiones:	2023.2 — 2023.2.6	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.232.307.jar)**
 
-231.197	Para versiones:	2023.3 — 2023.3.6	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.233.287.jar)**
+231.287	Para versiones:	2023.3 — 2023.3.6	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.233.287.jar)**
 
-231.197	Para versiones:	2024.1 — 2024.1.4	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.241.257.jar)**
+231.257	Para versiones:	2024.1 — 2024.1.4	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.241.257.jar)**
+
+242.267	Para versiones:	2024.1 — 2024.1.4	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.242.267.jar)**
 
 Arrastre el archivo es.203.709.jar al IDE y proceda a reiniciar.
 
@@ -54,7 +56,7 @@ Gracias por considerar contribuir a este paquete de lenguajes.
 
 Cualquier ayuda es bienvenida a:
 
-**[PayPal](https://www.paypal.com/paypalme/intusist/5)**
+**[PayPal](https://www.paypal.com/paypalme/intusist/3)**
 
 ## Licencia
 
