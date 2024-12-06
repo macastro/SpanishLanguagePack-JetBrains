@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>El informe puede devolver operaciones zip con <code>Mono con valor void</code> en la cadena Reactive Stream.</p>
+
+<p>
+  Los métodos de conversión zip en Reactive Streams con parámetros Mono Void no tendrán ningún efecto.
+  Esta solución rápida sugerirá reemplazar <code>zip(), zipWhen(), zipWith()</code> por <code>when</code>, que devuelve Mono con valor Void.
+</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>Mono.zip(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
+                .map(v -> "New value")
+                .doFinally(System.out::println);
+</code></pre>
+
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>Mono.when(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
+                .then(Mono.fromCallable(() -> "New value"))
+                .doFinally(System.out::println);
+</code></pre>
+
+<p><small>Nuevo en 2023.1</small></p>
+</body>
+</html>

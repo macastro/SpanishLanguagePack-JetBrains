@@ -1,0 +1,20 @@
+<html>
+<body>
+Reporta declaraciones heredadas de miembros obsoletos.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+clase abierta BaseService {
+  @Deprecated("obsoleto", replaceWith = ReplaceWith("connection"))
+  función abierta connect() {}
+
+  función abierta connection() {}
+} 
+
+clase SomeService: BaseService() {
+  override función connect() {
+    super.connect()
+  }
+}
+</code></pre>
+</body>
+</html>

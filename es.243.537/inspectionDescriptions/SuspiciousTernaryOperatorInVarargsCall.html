@@ -1,0 +1,35 @@
+<html>
+<body>
+Informa las llamadas al método `vararg` que usan un operador condicional ternario con ramas de arreglos y sin arreglos mezcladas.
+<p>
+Cuando se compila, ambas ramas se convierten en arreglos. Como resultado, la rama del arreglo se convierte en un arreglo bidimensional, lo que puede indicar un problema.
+</p>
+<p>
+La corrección rápida convierte la rama sin arreglo en un arreglo para evitar que el compilador realice la conversión.
+</p>
+<!-- tooltip end -->
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    static void bar(boolean flag) {
+        Object[] a = {1, 2};
+        Object b = "hello";
+        foo(flag ? a : b);
+    }
+    static void foo(Object... obj) {
+    }
+</code></pre>
+
+<p>Después de la corrección rápida: </p>
+<pre><code>
+    static void bar(boolean flag) {
+        Object[] a = {1, 2};
+        Object b = "hello";
+        foo(flag ? a : new Object[]{b});
+    }
+    static void foo(Object... obj) {
+    }
+</code></pre>
+
+<p><small>Nuevo en 2020.3</small></p>
+</body>
+</html>

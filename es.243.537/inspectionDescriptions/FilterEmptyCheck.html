@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>Devolver errores de colecciones filtradas vacías.</p>
+
+<p>Los arreglos rápidos usan <code>exists</code> o <code>forall</code> para revisar si están vacíos.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  var x: Seq[Int]
+  x.filter(p).size == 0
+  x.filter(p).length > 0
+  x.filterNot(p).isEmpty
+  x.filterNot(p).nonEmpty
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  var x: Seq[Int]
+  !x.exists(p)
+  x.exists(p)
+  x.forall(p)
+  !x.forall(p)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

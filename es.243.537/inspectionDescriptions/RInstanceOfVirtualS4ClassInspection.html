@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>Informa sobre un problema cuando creas un objeto de la clase <code>VIRTUAL</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+setClass('MiClase', slots = c('aa', 'bb'), contains = "VIRTUAL")
+new('MiClase')
+</code></pre>
+<p>
+  El uso más común de una clase <code>VIRTUAL</code> es la unión de clases, una clase virtual que se define en la llamada a <code>setClassUnion()</code> en lugar de en la llamada a <code>setClass()</code>.
+</p>
+</body>
+</html>

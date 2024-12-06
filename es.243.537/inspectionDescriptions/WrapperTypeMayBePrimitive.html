@@ -1,0 +1,41 @@
+**Inspección: Clases primitivas enmascaradas**
+
+**Descripción:**
+Esta inspección informa sobre variables locales del tipo envoltorio que se utilizan principalmente como tipos primitivos.
+
+**Problemas:**
+En algunos casos, particularmente dentro de bucles, el envoltorio puede causar una disminución significativa en el rendimiento.
+
+**Detección:**
+Se aplica una heurística para estimar la cantidad de operaciones de envoltorio. Por ejemplo, las conversiones dentro de bucles se consideran que ocurren con mucha más frecuencia.
+
+**Ejemplo:**
+```java
+  public void example() {
+    Integer value = 12;
+    needBox(value);
+    for (int i = 0; i < 10; i++) {
+      // Los usos del bucle se consideran más frecuentes
+      needPrimitive(value);
+    }
+  }
+
+  void needPrimitive(int value) {}
+  void needBox(Integer value) {}
+```
+
+**Solución rápida:**
+Después de aplicar la solución rápida:
+```java
+  public void example() {
+    int value = 12;
+    needBox(value);
+    for (int i = 0; i < 10; i++) {
+      // Los usos del bucle se consideran más frecuentes
+      needPrimitive(value);
+    }
+  }
+
+  void needPrimitive(int value) {}
+  void needBox(Integer value) {}
+```

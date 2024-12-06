@@ -1,0 +1,39 @@
+<html>
+<body>
+Inspecciona llamadas a un setter de propiedad simple en la clase de la propiedad.
+<p>
+  Un setter de propiedad simple está definido como aquel que simplemente asigna el valor de su parámetro a un campo y no realiza ningún otro cálculo. Tales llamadas simples a setter pueden ser interpoladas de forma segura.
+  Algunos estándares de codificación también sugieren no utilizar setters simples por razones de claridad de código.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+  private int index;
+    public Foo(int idx) {
+       setIndex(idx);
+    }
+    public void setIndex(int idx) {
+       index = idx;
+    }
+  }
+</code></pre>
+<p>Después de que la corrección rápida es aplicada:</p>
+<pre><code>
+  class Foo {
+    private int index;
+    public Foo(int idx) {
+      index = idx;
+    }
+    public void setIndex(int idx) {
+      index = idx;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Utiliza las siguientes opciones para configurar la inspección:</p>
+<ul>
+  <li>Si se debe informar solo de llamadas a setter en <code>this</code>, no en objetos del mismo tipo pasados como parámetro.</li>
+  <li>Si se deben ignorar los setter no <code>private</code>.</li>
+</ul>
+</body>
+</html>

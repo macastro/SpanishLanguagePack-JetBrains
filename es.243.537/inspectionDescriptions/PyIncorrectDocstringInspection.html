@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>Informa de parámetros desparejados en un docstring. Por ejemplo, se resalta <code>b</code>, porque no hay un parámetro así en la función <code>add</code>.</p>
+<pre><code>
+    def add(a, c):
+    """
+    @param a:
+    @param b:
+    @return:
+    """
+    pass
+</code></pre>
+<p>La inspección no le advierte de parámetros que faltan si ninguno de ellos se menciona en un docstring:</p>
+<pre><code>
+def mult(a, c):
+    """
+    @return:
+    """
+    pass
+</code></pre>
+</body>
+</html>

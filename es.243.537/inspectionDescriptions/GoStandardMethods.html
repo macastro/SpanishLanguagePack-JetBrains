@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa sobre los métodos con determinados nombres en los siguientes casos:
+<ul>
+  <li>el nombre del método coincide con el nombre de varios métodos de interfaz conocidos de la biblioteca estándar</li>
+  <li>la firma no coincide con la firma del método de interfaz correspondiente</li>
+</ul>
+<p>Dichos métodos podrían indicar que el tipo de receptor está diseñado para cumplir una interfaz de la biblioteca estándar,
+  pero falla al hacerlo debido a un error en la firma del método.</p>
+<p>Ejemplo:</p>
+<pre><code>type MyReader []byte
+
+func (r MyReader) ReadByte(data []byte) (byte, error) {
+}</code></pre>
+<p>El uso es sospechoso porque parece un intento de implementar <code>io.ByteReader</code> pero la firma es incorrecta.
+  Una versión más correcta sería la siguiente:</p>
+<pre><code>type MyReader []byte
+
+func (r MyReader) ReadByte() (byte, error) {
+}</code></pre>
+</body>
+</html>

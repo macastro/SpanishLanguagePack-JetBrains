@@ -1,0 +1,31 @@
+<html>
+<body>
+<code>{@inheritDoc}</code> informar comentarios Javadoc que solo contienen la etiqueta. Dado que Javadoc copia los comentarios de la superclase cuando no hay comentarios, los comentarios que solo contienen <code>{@inheritDoc}</code> no agregan nada.
+<p>También informes del uso de <code>{@inheritDoc}</code> en lugares no válidos, como dentro de campos.</p>
+<p>Sugiere eliminar los comentarios Javadoc innecesarios.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Ejemplo implementa Comparable&lt;Ejemplo&gt; {
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int compareTo(Ejemplo o) {
+      return 0;
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Ejemplo implementa Comparable&lt;Ejemplo&gt; {
+    @Override
+    public int compareTo(Ejemplo o) {
+      return 0;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

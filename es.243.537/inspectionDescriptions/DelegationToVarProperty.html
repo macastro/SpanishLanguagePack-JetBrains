@@ -1,0 +1,21 @@
+<html>
+<body>
+Inspecciona la delegación de la interfaz a una propiedad <code>var</code>.
+<p>Solo se utiliza el valor inicial de una propiedad para la delegación, cualquier asignación posterior no la afecta.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Example(var texto: CharSequence): CharSequence by texto
+</code></pre>
+<p>La corrección rápida reemplaza una propiedad por una inmutable:</p>
+<pre><code>
+  class Example(val texto: CharSequence): CharSequence by texto
+</code></pre>
+<p>Forma alternativa, si por alguna razón confía en la mutabilidad:</p>
+<pre><code>
+  class Example(texto: CharSequence): CharSequence by texto {
+      var texto = texto
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

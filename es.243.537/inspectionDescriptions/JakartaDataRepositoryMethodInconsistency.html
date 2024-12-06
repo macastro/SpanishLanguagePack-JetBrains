@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>
+  El generador de informes no pudo generar el equivalente consultas Pruebas para los métodos del repositorio de Jakarta Dat.
+</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+interface PersonRepository extends Repository&lt;Person, Long&gt; {
+  List&lt;Person&gt; findByEmailAndLastname(String email, String lastname);
+  List&lt;Person&gt; findByUnknownAndLastname(EmailAddress emailAddress, String lastname); // No se pudo resolver el atributo 'Unknown'
+  List&lt;Person&gt; findByAndLastname(String email, String lastname); // Falta el nombre del atributo
+
+  List&lt;Person&gt; findByLastnameOrderByFirstnameAsc(String lastname);
+  List&lt;Person&gt; findByLastnameOrderByUnknownDesc(String lastname);  // No se pudo resolver el atributo 'Unknown'
+}
+</code></pre>
+</body>
+</html>

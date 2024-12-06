@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre referencias de métodos, como <code>MyClass::myMethod</code> y <code>myObject::myMethod</code>, y sugiere reemplazarlas con una expresión lambda equivalente.
+<p>Las expresiones lambda pueden ser más fáciles de modificar que las referencias de métodos.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  System.out::println
+</code></pre>
+<p>Después de aplicar la corrección rápida: </p>
+<pre><code>
+  s -&gt; System.out.println(s)
+</code></pre>
+<!-- tooltip end -->
+<p>Por defecto, esta inspección no resalta el código en el editor, sino que solo proporciona una corrección rápida.</p>
+</body>
+</html>

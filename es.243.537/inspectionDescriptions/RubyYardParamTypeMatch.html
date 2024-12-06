@@ -1,0 +1,16 @@
+<html>
+<body>
+Se informa cuando el argumento de llamada a método no coincide con su tipo inferido y la etiqueta <code>@param</code> del argumento.
+<p>Ejemplo:</p>
+<pre>
+<code>class ArrayMax
+  # @param [Integer] val
+  def parameter(val) end
+
+  def error_with_param
+    parameter([1, 2])
+  end
+end</code>
+</pre>
+</body>
+</html>

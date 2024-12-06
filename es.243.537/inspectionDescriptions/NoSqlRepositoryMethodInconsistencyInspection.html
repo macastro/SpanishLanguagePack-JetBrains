@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>
+  Reporta métodos de repositorio de Jakarta No SQL para los cuales el generador no puede generar la consulta correspondiente.
+</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+interface PersonRepository extends Repository&lt;Person, Long&gt; {
+  List&lt;Person&gt; findByEmailAndLastname(String email, String lastname);
+  List&lt;Person&gt; findByUnknownAndLastname(EmailAddress emailAddress, String lastname); // No se puede resolver la propiedad 'Unknown'
+  List&lt;Person&gt; findByAndLastname(String email, String lastname); // Falta el nombre de la propiedad
+
+  List&lt;Person&gt; findByLastnameOrderByFirstnameAsc(String lastname);
+  List&lt;Person&gt; findByLastnameOrderByUnknownDesc(String lastname);  // No se puede resolver la propiedad 'Unknown'
+}
+</code></pre>
+</body>
+</html>

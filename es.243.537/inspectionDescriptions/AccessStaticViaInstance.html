@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa referencias a métodos y campos <code>static</code> mediante una instancia de clase en lugar de la propia clase.
+<p>Aunque la especificación del lenguaje Java permite hacer referencia a miembros estáticos mediante variables de instancia,
+esto hace que el código resulte confuso, ya que el lector podría pensar que el resultado del método depende de la instancia.</p>
+<p>La corrección rápida reemplaza la variable de instancia con el nombre de la clase.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  String s1 = s.valueOf(0);
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+  String s = String.valueOf(0);
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

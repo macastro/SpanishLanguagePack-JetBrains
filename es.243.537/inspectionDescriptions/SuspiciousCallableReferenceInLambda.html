@@ -1,0 +1,12 @@
+<html>
+<body>
+Informa expresiones lambda con una referencia invocable.
+<p>Es un error común reemplazar una lambda con una referencia invocable sin cambiar las llaves por paréntesis.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  listOf(1,2,3).map { it::toString }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>  listOf(1,2,3).map(Int::toString)
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>Informa de <code>@SpringBootApplication</code> en el paquete predeterminado y de anotaciones redundantes <code>@EnableAutoConfiguration</code> o <code>@ComponentScan</code>.</p>
+<p>La corrección rápida elimina las anotaciones redundantes.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+@SpringBootApplication
+@ComponentScan // Se informa de 'Declaración redundante: @SpringBootApplication ya implica @ComponentScan'
+public class DemoApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="java">
+  @SpringBootApplication
+  public class DemoApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2018.2</small></p>
+</body>
+</html>

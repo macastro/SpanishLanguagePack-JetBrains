@@ -1,0 +1,28 @@
+<html>
+<body>
+Reporta bloqueos que son pasados por error por valores.
+<p>Copiar accidentalmente un valor que contiene un bloqueo puede hacer que ambas copias funcionen incorrectamente. Generalmente, a estos valores se les debe hacer referencia mediante un puntero. Aquí, un bloqueo implica un tipo que implementa <code>sync.Locker</code>, como <code>sync.Mutex</code> o <code>sync.WaitGroup</code>.</p>
+<p>Ejemplo:</p>
+<pre><code>type SafeInt struct {
+  m sync.Mutex
+  i int
+}
+
+func (s SafeInt) Inc() { // mutex se copia
+  s.m.Lock()
+  s.i++
+  s.m.Unlock()
+}</code></pre>
+<p>Tras aplicar la solución rápida <b>Agregar puntero</b>:</p>
+<pre><code>type SafeInt struct {
+  m sync.Mutex
+  i int
+}
+
+func (s *SafeInt) Inc() {
+  s.m.Lock()
+  s.i++
+  s.m.Unlock()
+}</code></pre>
+</body>
+</html>

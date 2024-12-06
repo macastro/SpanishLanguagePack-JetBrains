@@ -1,0 +1,31 @@
+<html>
+<body>
+Informa cláusulas <code>throws</code> con excepciones que son más genéricas que las excepciones que el método lanza realmente.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public void createFile() throws Exception { // advertencia: 'throws Exception' es demasiado amplia y enmascara la excepción 'IOException'
+    File file = new File("pathToFile");
+    file.createNewFile();
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  public void createFile() throws IOException {
+    File file = new File("pathToFile");
+    file.createNewFile();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Configura la inspección:</p>
+<ul>
+  <li>Utiliza el campo <b>Número máximo de excepciones ocultas para advertir</b> para ignorar excepciones que ocultan un número de excepciones más amplio que el especificado.</li>
+  <li>Utiliza la opción <b>Solo advertir en RuntimeException, Exception, Error o Throwable</b> para que esta inspección avise solo en las excepciones más genéricas.
+    </li>
+  <li>Utiliza la opción <b>Ignorar excepciones declaradas en métodos que sobrescriben un método de biblioteca</b> para ignorar cláusulas <code>throws</code> demasiado amplias
+    en métodos que sobrescriben un método de biblioteca.</li>
+  <li>Utiliza la opción <b>Ignorar excepciones que ocultan otras pero se lanzan ellas mismas</b> para ignorar excepciones que ocultan otras excepciones
+    pero que todavía se pueden lanzar desde el cuerpo del método y, por lo tanto,
+    técnicamente no son demasiado amplias.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<html>
+<body>
+Informa código en el que el compilador javac emitirá una advertencia sin verificar.
+Cada advertencia sin verificar puede potencialmente desencadenar <code>ClassCastException</code> en tiempo de ejecución.
+<p>Ejemplo:</p>
+<pre><code>
+  List items = Arrays.asList("string", "string");
+  List&lt;Integer&gt; numbers = Collections.unmodifiableList(items); // asignación sin verificar
+</code></pre>
+</body>
+</html>

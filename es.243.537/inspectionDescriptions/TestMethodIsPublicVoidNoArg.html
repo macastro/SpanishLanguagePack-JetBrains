@@ -1,0 +1,25 @@
+<html>
+<body>
+Informar de cualquier método de prueba de JUnit declarado como <code>static</code>, no declarado como <code>public</code>, que no devuelva <code>void</code> o que tenga parámetros formales.
+Estos métodos de prueba pueden crearse fácilmente por error, pero el ejecutor de pruebas de JUnit no los ejecutará.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  @Test
+  void test() {
+    assertEquals(1, 1);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  @Test
+  public void test() {
+    assertEquals(1, 1);
+  }
+</code></pre>
+<!-- tooltip end -->
+
+Puede especificar anotaciones mediante las opciones de la inspección.
+No se informará de parámetros formales que tengan anotaciones con una de estas anotaciones.
+<p>
+</body>
+</html>

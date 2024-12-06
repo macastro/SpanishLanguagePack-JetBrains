@@ -1,0 +1,9 @@
+<html>
+<body>
+Si los símbolos de contexto se pueden resolver implícitamente al tipo <code>any</code>, se notificarán las llamadas a funciones que contengan parámetros, valores devueltos, expresiones de asignación o tipos incorrectos.
+<pre>
+declare var test: any;
+test.hasOwnProperty(true); // notifica 'true'
+</pre>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+Reemplaza una llamada a <code>Collections.emptyList()</code> o <code>Collections.singletonList()</code> por una llamada a <code>Arrays.asList()</code>.
+<p>Cuando el proyecto o módulo usa el nivel de lenguaje 9:</p>
+<ul>
+  <li>La intención reemplaza <code>Collections.emptyList()</code> o <code>Collections.singletonList()</code>
+    por una llamada a <code>java.util.List.of()</code>.</li>
+  <li>Reemplaza una llamada a <code>Collections.emptySet()</code> o <code>Collections.singleton()</code> por
+    <code>java.util.Set.of()</code>.</li>
+  <li>Reemplaza una llamada a <code>Collections.emptyMap()</code> o <code>Collections.singletonMap()</code> por
+    <code>java.util.Map.of()</code>.</li>
+</ul>
+<p>Cuando el proyecto o módulo utiliza la biblioteca Guava y el nivel de lenguaje es 9 o inferior, la intención reemplaza una
+  llamada a <code>Collections.emptyList()</code> o <code>Collections.singletonList()</code> por
+<code>com.google.common.collect.ImmutableList</code>, <code>com.google.common.collect.ImmutableSet</code> o
+<code>com.google.common.collect.ImmutableMap</code> respectivamente.</p>
+</body>
+</html>

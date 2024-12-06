@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>Informa declaraciones que no se usan.</p>
+
+<p>La corrección rápida elimina la declaración sin uso.</p>
+
+<p>En las <b>Opciones</b> de abajo, puedes controlar si la inspección deberá funcionar para declaraciones públicas y/o locales.
+  En el caso de declaraciones locales, además de habilitar y deshabilitar la inspección, también puedes hacerla depender
+  de la existencia de una de tres opciones del compilador: <code>-Wunused:locals</code>, <code>-Wunused:linted</code> o <code>-Xlint:unused</code>.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  def test(): Int = {
+    val unused = 3
+    3
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  def test(): Int = {
+    3
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

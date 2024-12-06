@@ -1,0 +1,77 @@
+<html>
+<body>
+<code>this</code> を返している、またはパラメーターとして受け取っているメソッドを持つ EJB クラスを報告します。
+
+<p><b>例:</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+  private AnotherBean anotherBean;
+
+  public ExampleBean setAnotherBean(AnotherBean anotherBean) {
+    this.anotherBean = anotherBean;
+    return this; // エラー: ここでは `this` を返すべきではありません
+  }
+}
+</code></pre>
+</body>
+</html>
+
+<html>
+<body>
+<code>this</code>返したり、パラメータとして受け取ったりするメソッドを持つEJBクラスを報告します。
+
+<p><b>例:</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+  private AnotherBean anotherBean;
+
+  public ExampleBean setAnotherBean(AnotherBean anotherBean) {
+    this.anotherBean = anotherBean;
+    return this; // エラー: aquí no se debe devolver `this`
+  }
+}
+</code></pre>
+</body>
+</html>
+
+<html>
+<body>
+<code>this</code>返したり、パラメータとして受け取ったりするメソッドを持つEJBクラスを報告します。
+
+<p><b>例:</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+  private AnotherBean anotherBean;
+
+  public ExampleBean setAnotherBean(AnotherBean anotherBean) {
+    this.anotherBean = anotherBean;
+    return this; // 오류: 여기에서 'this'를 반환해야 합니다
+  }
+}
+</code></pre>
+</body>
+</html>
+
+**Spanish translation:**
+
+<html>
+<body>
+<code>this</code> devuelve o recibe como parámetro los métodos con clases EJB.
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+  private AnotherBean anotherBean;
+
+  public ExampleBean setAnotherBean(AnotherBean anotherBean) {
+    this.anotherBean = anotherBean;
+    return this; // Error: aquí no debería devolver `this`
+  }
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<body>
+Informa sobre la asignación o modificación de campos que se declaran en una superclase desde un constructor de una subclase.
+<p>Se considera preferible inicializar los campos de una superclase en su propio constructor y
+  delegar en dicho constructor en una subclase. Esto también permitirá declarar un campo <code>final</code>
+  si no se cambia después de la construcción.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Super {
+    int x;
+  }
+  class Sub extends Super {
+    Sub(int _x) {
+      // Advertencia: x se declara en una superclase
+      x = _x;
+    }
+  }
+</code></pre>
+<p>Para evitar el problema, declara un constructor de superclase:</p>
+<pre><code>
+  class Super {
+    final int x;
+
+    Super(int _x) {
+      x = _x;
+    }
+  }
+  class Sub extends Super {
+    Sub(int _x) {
+      super(_x);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

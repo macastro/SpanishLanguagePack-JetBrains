@@ -1,0 +1,25 @@
+<html>
+<body>
+Reporta llamados a métodos estáticos donde el llamado es calificado
+por una subclase de la clase declarada, en lugar de por la propia clase declarada.
+<p>
+  Java permite tal calificación para clases, pero tales llamadas
+  pueden indicar una sutil confusión de herencia y anulación.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Padre {
+    public static void print(String str) {}
+  }
+  class Hijo extends Padre {}
+
+  Hijo.print("Hello, world!");
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  Padre.print("Hello, world!");
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

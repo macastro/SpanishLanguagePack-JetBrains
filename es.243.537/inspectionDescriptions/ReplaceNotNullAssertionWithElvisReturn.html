@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa sobre las llamadas de aserción de no nulo (<code>!!</code>) que se pueden reemplazar con el operador elvis y return (<code>?: return</code>).
+<p>Una aserción de no nulo puede provocar un NPE (NullPointerException) que no se espera. Es una buena práctica evitar el uso de <code>!!</code>.</p>
+<p>El arreglo rápido reemplaza la aserción de no nulo con <code>return</code> o <code>return null</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun test(number: Int?) {
+      val x = number!!
+  }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  fun test(number: Int?) {
+      val x = number ?: return
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>Informa de llamadas innecesarias a <code>Map.get</code>/<code>Option.get</code> al obtener un valor de un mapa mediante una clave</p>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.get(k).get
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map(k)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

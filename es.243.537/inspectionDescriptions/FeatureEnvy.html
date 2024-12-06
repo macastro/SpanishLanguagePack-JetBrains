@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa sobre el código con olor a <em>Envidia de Características</em>. Se lanza la advertencia cuando un método llama a métodos de otra clase tres o más veces. Las llamadas a clases de biblioteca, clases principales, clases incluidas o contenedoras no se cuentan en esta inspección. La envidia de características suele ser una indicación de que esta funcionalidad se encuentra en una clase errónea.
+<p>Ejemplo:</p>
+<pre><code>
+  class JobManager {
+    // Advertencia: este método llama a tres métodos
+    // de la clase Job
+    // Sería mejor mover esta cadena de
+    // llamadas a la propia clase Job.
+    void performJob(Job job) {
+      job.beforeStart();
+      job.process();
+      job.afterProcessing();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

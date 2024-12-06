@@ -1,0 +1,23 @@
+<html>
+<body>
+Reporta sentencias <code>break</code> con etiquetas innecesarias. Dichas etiquetas no cambian el flujo de control pero dificultan el seguimiento del código.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  etiqueta:
+  for(int i = 0; i &lt; 10; i++) {
+    if (shouldBreak()) break etiqueta;
+    //hacerAlgo
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  etiqueta:
+  for(int i = 0; i &lt; 10; i++) {
+    if (shouldBreak()) break;
+    //hacerAlgo
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

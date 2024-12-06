@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa situaciones cuando CASE e IF son intercambiables.
+<p>Ejemplo (MySQL):</p>
+<pre><code>SELECT CASE
+WHEN C1 IS NULL THEN 1
+ELSE 0
+END
+FROM dual;</code></pre>
+<p>Para mantener tu código corto, puedes reemplazar la estructura CASE por IF. Puedes hacerlo aplicando la acción de intención <b>"Reemplazar con llamada a 'IF'"</b>. El código de ejemplo se verá como a continuación:</p>
+<pre><code>SELECT IF(C1 IS NULL, 1, 0)
+FROM dual;</code></pre>
+<p>Para revertir IF a CASE, haz clic en IF y aplica la acción de intención <b>"Reemplazar con expresión CASE"</b>.</p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+Reporta llamadas a métodos de aridad variable que tienen un solo argumento (ya sea <code>null</code> o un arreglo de un subtipo del parámetro de aridad variable) en la posición del parámetro de aridad variable.
+Tales argumentos pueden resultar confusos, ya que no está claro si se pretende realizar una llamada de argumento variable o no variable.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  String[] ss = new String[]{"foo", "bar"};
+  System.out.printf("%s", ss);
+</code></pre>
+<p>En este ejemplo, solo se imprimirá el primer elemento del arreglo, no todo el arreglo.</p>
+<!-- tooltip end -->
+
+</body>
+</html>

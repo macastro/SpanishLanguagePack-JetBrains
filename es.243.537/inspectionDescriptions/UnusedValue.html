@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa sobre valores de varibles que no se utilizan tras ser asignados. Esto puede ocurrir en los siguientes casos:
+<ul>
+  <li>La variable no es leída en ningún momento después de la asignación.</li>
+  <li>El valor se sobrescribe mediante otra asignación antes de que se haya accedido por lectura.</li>
+  <li>El inicializador de la variable es redundante (por una de las dos razones anteriores).</li>
+  <li>La variable en sí no se utiliza.</li>
+</ul>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class C {
+    int field;
+
+    void foo() {
+      field = unused_value;
+    }
+
+    void bar() {
+      use(field);
+      foo();
+    }
+  };
+</code></pre>
+<!-- tooltip end -->
+<p>Utiliza la siguiente casilla de verificación para hacer que esta inspección ignore los inicializadores de variables.</p>
+</body>
+</html>

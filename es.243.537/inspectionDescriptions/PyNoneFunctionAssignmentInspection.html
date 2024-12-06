@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>Informa situaciones en las que se realiza una asignación sobre una función que no devuelve nada.</p>
+Esta inspección es similar a <a href="https://docs.pylint.org/en/1.6.0/features.html#id6">la inspección E1111 de pylint</a>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+def just_print():
+    print("¡Hola!")
+
+
+action = just_print()
+</code></pre>
+<p>Como solución rápida, la IDE ofrece eliminar la asignación.</p>
+</body>
+</html>

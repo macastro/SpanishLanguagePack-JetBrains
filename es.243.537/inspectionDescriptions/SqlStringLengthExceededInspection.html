@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa sobre variables que superan la longitud definida en caracteres.
+<p>Ejemplo (Microsoft SQL Server):</p>
+<pre><code>CREATE PROCEDURE test() AS
+BEGIN
+DECLARE myVarOk VARCHAR(5) = 'abcde';
+DECLARE myVarExceeded VARCHAR(5) = 'abcde12345';
+
+SET myVarOk = 'xyz';
+SET myVarExceeded = '123456789';
+END;</code></pre>
+<p>La variable <code>myVarExceeded</code> está definida como <code>VARCHAR(5)</code> pero ambos valores asignados (<code>'abcde12345'</code> y
+  <code>'123456789'</code>) exceden esta limitación. Puedes recortar los valores asignados o incrementar la longitud definida. 
+  Para incrementar la longitud, usa el quick-fix <b>Incrementar longitud de tipo</b>.
+</p>
+<p>Después de que el quick-fix sea aplicado:</p>
+<pre><code>CREATE PROCEDURE test() AS
+BEGIN
+DECLARE myVarOk VARCHAR(5) = 'abcde';
+DECLARE myVarExceeded VARCHAR(10) = 'abcde12345';
+
+SET myVarOk = 'xyz';
+SET myVarExceeded = '123456789';
+END;</code></pre>
+</body>
+</html>

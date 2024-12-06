@@ -1,0 +1,31 @@
+<html>
+<body>
+Se informa cuando múltiples instancias consecutivas de <code>java.nio.file.Path</code> se pueden construir con <code>java.nio.file.Paths.get</code> o <code>java.nio.file.Path.of</code>, y reemplazarlas con una única variable <code>java.nio.file.Path</code>.
+<p>Ejemplo:</p>
+<pre><code>
+if (Files.isRegularFile(Path.of(fileName))) {
+  try(InputStream is = Files.newInputStream(Path.of(fileName))) {
+    // Algo de código
+  }
+  catch (IOException e) {
+    throw new UncheckedIOException(e);
+  }
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+Path path = Path.of(fileName);
+if (Files.isRegularFile(path)) {
+  try(InputStream is = Files.newInputStream(path)) {
+    // Algo de código
+  }
+  catch (IOException e) {
+    throw new UncheckedIOException(e);
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección sólo se reporta cuando el nivel de lenguaje del proyecto o módulo es 7 o superior.</p>
+<p><small>Novedades de 2022.1</small></p>
+</body>
+</html>

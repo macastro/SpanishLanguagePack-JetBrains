@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>Reporta métodos con nombres tipo accesor que tienen un tipo de resultado <code>Unit</code>.</p>
+<p>Se espera que los métodos que siguen el contrato de nomenclatura de <a href="https://en.wikipedia.org/wiki/JavaBean">JavaBean</a> para accesores no tengan <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">efectos secundarios</a>. Sin embargo, los métodos con un tipo de resultado de <code>Unit</code> solo se ejecutan para sus efectos secundarios.</p>
+<p>Esto indica que el método debería resultar en un tipo distinto de <code>Unit</code> o renombrarse para reflejar mejor el efecto secundario.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  trait Test {
+    def getTarget(): Unit
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección no reportará los métodos que anulan otros miembros.</p>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<body>
+Reporta un archivo <code>module-info.java</code> vacío, indicando dependencias de módulos no resueltas. Agrega automáticamente declaraciones necesarias de <code>requires</code> mediante la inspección de importaciones.
+Para suprimir esta advertencia, puedes escribir cualquier comentario dentro del cuerpo de la declaración del módulo, así:
+<pre><code>
+module module.name {
+    // sin dependencias
+}
+</code></pre>
+<b>Solución rápida:</b> <i>Rellenar dependencias de módulo</i> rellena <code>requires</code> faltantes según las importaciones del código fuente.
+<small>Novedad en 2024.1</small>
+</body>

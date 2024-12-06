@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa de métodos <code>clone()</code> sin el modificador <code>final</code>.
+<p>
+  Dado que <code>clone()</code> se puede usar para instanciar objetos sin usar un constructor, permitir que el método <code>clone()</code> se reemplace puede ocasionar la corrupción de objetos e incluso en la explotación de seguridad. Esto se puede prevenir haciendo que el método <code>clone()</code> o la clase que lo encierra sea en sí misma <code>final</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main implements Cloneable {
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+      return super.clone();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

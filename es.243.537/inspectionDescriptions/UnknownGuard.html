@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre las anotaciones <code>@GuardedBy</code> en las que se desconoce el campo de protección especificado.
+<p>Ejemplo:</p>
+<pre><code>
+    private Object state;
+
+    @GuardedBy("lock") //referencia de protección desconocida
+    public void bar() {
+        state = new Object();
+    }
+</code></pre>
+<!-- fin información sobre herramientas -->
+<p>Las anotaciones <code>@GuardedBy</code> compatibles son:</p>
+<ul>
+  <li><code>net.jcip.annotations.GuardedBy</code></li>
+  <li><code>javax.annotation.concurrent.GuardedBy</code></li>
+  <li><code>org.apache.http.annotation.GuardedBy</code></li>
+  <li><code>com.android.annotations.concurrency.GuardedBy</code></li>
+  <li><code>androidx.annotation.GuardedBy</code></li>
+  <li><code>com.google.errorprone.annotations.concurrent.GuardedBy</code></li>
+</ul>
+</body>
+</html>

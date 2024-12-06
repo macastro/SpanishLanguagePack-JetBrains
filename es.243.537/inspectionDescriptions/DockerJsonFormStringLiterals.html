@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>
+  Informa de una cadena con comillas simples en un formato de arreglo JSON.
+</p>
+<p>
+  El formato de arreglo JSON debe usar comillas dobles (") alrededor de las palabras, no comillas simples ('). De lo contrario, la compilación de Docker fallará.
+</p>
+<!-- tooltip end -->
+<p><b>Ejemplos:</b></p>
+<pre><code>
+  # todos los siguientes comandos fallarán.
+  RUN ['/bin/bash', '-c', 'echo hello']
+  ADD ['binaryA.jar', 'binary2.jar', 'destination/']
+  COPY ['binaryA.jar', 'binary2.jar', 'destination/']
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  RUN ["/bin/bash", "-c", "echo hello"]
+  ADD ["binaryA.jar", "binary2.jar", "destination/"]
+  COPY ["binaryA.jar", "binary2.jar", "destination/"]
+</code></pre>
+</body>
+</html>

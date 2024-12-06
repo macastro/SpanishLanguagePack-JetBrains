@@ -1,0 +1,45 @@
+<html>
+<body>
+Informa del método setter estándar que puede ser reemplazado por la anotación lombok <code>@Setter</code>.
+<p>Ejemplo:</p>
+<pre><code>
+import java.util.Date;
+
+public class MyClass {
+    /**
+     * La fecha del proceso.
+     */
+    private Date processDate;
+
+    /**
+     * Establece la fecha.
+     *
+     * @param La fecha
+     */
+    public void setProcessDate(Date param) {
+      processDate = param;
+    }
+  }
+</code></pre>
+<p>Tras aplicar el arreglo/limpieza rápidos:</p>
+<pre><code>
+import lombok.Setter;
+import java.util.Date;
+
+@Setter
+public class MyClass {
+    /**
+     * La fecha del proceso.
+     * -- SETTER --
+     * Establece la fecha.
+     *
+     * @param La fecha
+     */
+    private Date processDate;
+  }
+</code></pre>
+<p>Sólo informa cuando la biblioteca lombok está configurada. Para eliminar el lombok, consulte el sitio de lombok.</p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2023.2</small></p>
+</body>
+</html>

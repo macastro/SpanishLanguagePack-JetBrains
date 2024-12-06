@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre el uso obsoleto de invocables admitidos por <code>call_user_func($callable)</code>, pero no por <code>$callable()</code>.
+<!-- tooltip end -->
+<p>A partir de PHP 8.2, los siguientes invocables están obsoletos:</p>
+<pre><code>"self::method"</code>
+<code>"parent::method"</code>
+<code>"static::method"</code>
+<code>["self", "method"]</code>
+<code>["parent", "method"]</code>
+<code>["static", "method"]</code>
+<code>["Foo", "Bar::method"]</code>
+<code>[new Foo, "Bar::method"]</code></pre>
+<p>
+  Consulte <a href="https://wiki.php.net/rfc/deprecate_partially_supported_callables">Deprecación de invocables parcialmente compatibles (php.net)</a> para obtener más información.
+</p>
+
+</body>
+</html>

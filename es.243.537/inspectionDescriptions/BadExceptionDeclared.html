@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa de los métodos que declaran una excepción no apropiada en su cláusula <code>throws</code>.
+Por ejemplo, una excepción puede ser inapropiada porque es demasiado genérica,
+como <code>java.lang.Exception</code> o <code>java.lang.Throwable</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void describeModule(String module) throws Exception {} // advertencia: Excepción prohibida 'Exception' declarada
+</code></pre>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+<ul>
+  <li>Utiliza la lista <b>Excepciones prohibidas</b> para especificar qué excepciones deben informarse.</li>
+  <li>Utiliza la opción <b>Ignorar excepciones declaradas en métodos que sobreescriben un método de biblioteca</b> para ignorar las excepciones declaradas por los métodos
+    que sobreescriben un método de biblioteca.</li>
+</ul>
+</body>
+</html>

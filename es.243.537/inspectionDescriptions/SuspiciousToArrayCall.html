@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporta llamadas sospechosas a <code>Collection.toArray()</code>.
+<p>Los siguientes tipos de llamadas se consideran sospechosas:</p>
+<ul>
+  <li>
+    cuando el tipo del argumento de la matriz
+    no es el mismo que el tipo de matriz al que se lanza el resultado.
+  </li>
+  <li>
+    cuando el tipo del argumento de la matriz no coincide con el parámetro de tipo en la declaración de la colección.
+  </li>
+</ul>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+void m1(List list) {
+  Number[] ns = (Number[]) list.toArray(new String[0]);
+}
+
+void m2(List&lt;Number&gt; list) {
+  Number[] ns = list.toArray(new String[0]);
+}
+</code></pre>
+
+
+</body>
+</html>

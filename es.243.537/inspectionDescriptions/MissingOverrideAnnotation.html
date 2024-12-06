@@ -1,0 +1,43 @@
+<html>
+<body>
+  Reporta métodos que sobreescriben métodos de la superclase pero no están anotados con <code>@java.lang.Override</code>.
+  <p>
+  Anotar métodos con <code>@java.lang.Override</code> mejora la legibilidad del código ya que muestra la intención.
+  Además, el compilador emite un error cuando la firma del método sobreescrito no coincide con el método de la superclase.
+  <p><b>Ejemplo:</b></p>
+  <pre><code>
+    class X {
+      public String toString() {
+        return "hello world";
+      }
+    }
+  </code></pre>
+  <p>Después de aplicar la corrección rápida:</p>
+  <pre><code>
+    class X {
+      @Override
+      public String toString() {
+        return "hello world";
+      }
+    }
+  </code></pre>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+<ul>
+  <li>
+    Utilice la opción <b>Ignorar 'equals()', 'hashCode()' y 'toString()'</b> para ignorar estos métodos de
+    <code>java.lang.Object</code>: <code>equals()</code>, <code>hashCode()</code> y
+    <code>toString()</code>. El riesgo de que estos métodos desaparezcan y
+    su código ya no se compile debido a la anotación <code>@Override</code>
+    es relativamente pequeño.
+  </li>
+  <li>
+    Utilice la opción <b>Ignorar métodos en clases anónimas</b> para ignorar métodos
+    en clases anónimas.
+  </li>
+  <li>
+    Deshabilite la opción <b>Resaltar método cuando sus métodos de sobreescritura no tienen la anotación '@Override'</b> para advertir solo sobre los métodos que faltan una anotación <code>@Override</code>, y no en los métodos sobreescritos donde a uno o más descendientes les falta una anotación <code>@Override</code>.
+  </li>
+</ul>
+</body>
+</html>

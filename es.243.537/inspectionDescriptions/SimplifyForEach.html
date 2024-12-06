@@ -1,0 +1,26 @@
+<html>
+<body>
+Inspecciona las llamadas a <code>forEach()</code> que se pueden reemplazar por un método más conciso, o de las que se pueden extraer pasos intermedios.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  List&lt;String&gt; findNStrings(List&lt;String&gt; list, int n) {
+    List&lt;String&gt; other = new ArrayList&lt;>();
+    list.forEach(s -> {
+      if(s.length() > n) other.add(s);
+    });
+    return other;
+  }
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+  List&lt;String&gt; findNStrings(List&lt;String&gt; list, int n) {
+    List&lt;String&gt; other = list.stream()
+      .filter(s -> s.length() > n)
+      .collect(Collectors.toList());
+    return other;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2017.3</small></p>
+</body>
+</html>

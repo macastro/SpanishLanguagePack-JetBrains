@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta funciones con <code>= { ... }</code> y tipo de retorno inferido.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun sum(a: Int, b: Int) = { a + b } // El tipo de retorno de esta función es '() -> Int'.
+</code></pre>
+<p>La corrección rápida elimina los corchetes:</p>
+<pre><code>
+  fun sum(a: Int, b: Int) = a + b
+</code></pre>
+</body>
+</html>

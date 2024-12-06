@@ -1,0 +1,19 @@
+**Inspección de nombres exportados que inician con un nombre de paquete**
+
+Inspecciona los nombres exportados que inician con un nombre de paquete. Esta inspección no reporta dichos nombres dentro del paquete `principal`.
+
+**Ejemplo:**
+
+```go
+package miPaquete
+
+func MiPaqueteObtenerIP() {
+
+}
+```
+
+El nombre 'MiPaqueteObtenerIP' se remarcará porque empieza con el nombre del paquete.
+
+De acuerdo a <a href="https://github.com/golang/go/wiki/CodeReviewComments#package-names">Nombres de paquete en github.com/golang</a>, todas las referencias a nombres dentro de un paquete se harán usando el nombre del paquete, entonces se puede omitir ese nombre de los identificadores.
+
+Por ejemplo, si te encuentras en un paquete `foo`, no necesitas un tipo `FooArchivo`, el cual los clientes escribirían como `foo.FooArchivo`. En su lugar, se nombra el tipo `Archivo`, el cual los clientes escribirían como `foo.Archivo`.

@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta los bloques vacíos <code>finally</code>.
+<p>Los bloques vacíos <code>finally</code> en general indican errores de programación. También pueden permanecer tras la refactorización del código y pueden eliminarse sin peligro.</p>
+<p>Esta inspección no reporta los bloques vacíos <code>finally</code> hallados en los archivos JSP.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  try {
+    Files.readString(Paths.get("in.txt"));
+  } catch (IOException e) {
+    throw new RuntimeException(e);
+  } finally {
+
+  }
+</code></pre>
+<p>Tras aplicar la corrección rápida:
+<pre><code>
+  try {
+    Files.readString(Paths.get("in.txt"));
+  } catch (IOException e) {
+    throw new RuntimeException(e);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

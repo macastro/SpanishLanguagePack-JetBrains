@@ -1,0 +1,42 @@
+<html>
+<body>
+Ofrece los siguientes defectos en los comentarios Javadoc:
+<ul>
+  <li>No hay Javadoc donde se necesita</li>
+  <li>Faltan etiquetas requeridas</li>
+  <li>Las etiquetas son inválidas o incompletas</li>
+  <li>La descripción de Javadoc falta o está incompleta</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code>
+  class Main {
+  }
+</code></pre>
+<p>Después de aplicar la reparación rápida:</p>
+<pre><code>
+  /**
+   *
+   */
+  class Main {
+  }
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code>
+  String id(String value) {
+    return value;
+  }
+</code></pre>
+<p>Después de aplicar la reparación rápida:</p>
+<pre><code>
+  /**
+   * @param value
+   * @return
+   */
+  String id(String value) {
+    return value;
+  }
+</code></pre>
+<!-- tooltip end -->
+Utiliza pestañas y la opción de inspección correspondiente para definir el alcance de visibilidad necesario para Javadoc, así como las etiquetas Javadoc necesarias para clases, métodos, campos y clases internas.
+</body>
+</html>

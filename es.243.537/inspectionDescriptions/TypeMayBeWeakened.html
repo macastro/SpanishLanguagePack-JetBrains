@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporta tipos de retorno de variables y métodos que se pueden cambiar a un tipo más abstracto (más débil).
+Esto permite hacer que el código sea más abstracto, por lo tanto, más reutilizable.
+<p>Ejemplo:</p>
+<pre><code>
+  // Type of parameter can be weakened to java.util.List
+  void processList(ArrayList&lt;String&gt; list) {
+    if (list.isEmpty()) return;
+    System.out.println("Processing");
+    for (String s : list) {
+      System.out.println("String: " + s);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Habilita el checkbox <b>Sólo debilitar a una interfaz</b> debajo para sólo reportar un problema cuando el tipo puede ser debilitado a un tipo de interfaz.
+</p>
+<p>
+  Habilita el checkbox <b>No sugerir debilitar variables declaradas como 'var'</b> debajo para prevenir reportar variables locales declaradas usando la palabra clave 'var' (Java 10+)
+</p>
+<p>
+Las <b>Clases de parada</b> pretenden prevenir debilitar a clases menores que las de parada, aún cuando sea posible.
+En algunos casos, esto puede mejorar la legibilidad.
+</body>
+</html>

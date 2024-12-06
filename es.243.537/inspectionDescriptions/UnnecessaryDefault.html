@@ -1,0 +1,34 @@
+<html>
+<body>
+Reporta enumeración <code>switch</code> declaraciones o expresiones con ramas <code>default</code> que nunca pueden tomarse, porque todos los valores posibles están cubiertos por una rama <code>case</code>.
+<p>Tales elementos son redundantes, especialmente para expresiones <code>switch</code>, porque no se compilan cuando todas las constantes de enumeración no están cubiertas por una rama <code>case</code>.</p>
+<p>
+  El nivel de idioma debe configurarse a 14 para reportar expresiones <code>switch</code>.
+</p>
+<p>La corrección rápida provista quita ramas <code>default</code>.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  enum E { A, B }
+  int foo(E e) {
+    return switch (e) {
+      case A -&gt; 1;
+      case B -&gt; 2;
+      default -&gt; 3;
+    };
+  }
+</code></pre>
+<p>La corrección rápida ya aplicada:</p>
+<pre><code>
+  enum E { A, B }
+  int foo(E e) {
+    return switch (e) {
+      case A -&gt; 1;
+      case B -&gt; 2;
+    };
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Use la opción <b>Sólo reportar expresiones switch</b> para reportar sólo ramas <code>default</code> redundantes en expresiones switch.</p>
+
+</body>
+</html>

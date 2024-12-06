@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>Esta inspección identifica llamadas de métodos donde la persona que recibe la llamada podría ser <code>nula</code>, lo que ayuda a detectar <code>NullPointerExceptions</code> potenciales antes de que ocurran en tiempo de ejecución.</p>
+<p><b>Ejemplo:</b></p>
+<pre>
+<code>
+def sayHello(@Nullable greeting: String): Unit = {
+  println(greeting.toLowerCase)
+}
+</code>
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

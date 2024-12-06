@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa las comparaciones con NULL que pueden ser reemplazadas con operadores IS NULL o IS NOT NULL.
+<p>Ejemplo (Microsoft SQL Server):</p>
+<pre><code>CREATE TABLE foo ( id int );
+
+SELECT * FROM foo WHERE NULL = NULL;
+SELECT * FROM foo WHERE NULL != NULL;</code></pre>
+<p><code>NULL = NULL</code> puede ser reemplazado por <code>IS NULL</code>, y las comparaciones <code>NULL != NULL</code>
+  con <code>IS NOT NULL</code>. Para realizar este reemplazo, puedes usar las correcciones rápidas <b>Usar operador IS NULL</b> o <b>Usar operador IS NOT NULL</b>.</p>
+<pre><code>SELECT * FROM foo WHERE NULL IS NULL;
+SELECT * FROM foo WHERE NULL IS NOT NULL;</code></pre>
+</body>
+</html>

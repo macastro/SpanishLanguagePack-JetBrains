@@ -1,0 +1,21 @@
+<html>
+<body>
+Inspecciona métodos y clases anotados con <code>@TestOnly</code> y <code>@VisibleForTesting</code> que se utilizan en código de producción. También informa del uso de la aplicación de <code>@TestOnly</code> <code>@VisibleForTesting</code> al mismo elemento.
+
+<p>Los problemas no se informan si se hace referencia a dicho método o clase desde:</p>
+<ul>
+  <li>Código bajo la carpeta <b>Fuentes de prueba</b>.
+  <li>Una clase de prueba (JUnit/TestNG)
+  <li>Otro método anotado con <code>@TestOnly</code>
+</ul>
+<p><b>Ejemplo (en código de producción):</b></p>
+<pre><code lang="kotlin">
+  @TestOnly
+  fun foo() { ... }
+
+  fun main () {
+    foo()
+  }
+</code></pre>
+</body>
+</html>

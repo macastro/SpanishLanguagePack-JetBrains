@@ -1,0 +1,20 @@
+<html>
+<body>
+ Reporta las sentencias <code>return</code>, <code>throw</code>, <code>break</code>, <code>continue</code>, y <code>yield</code> que se utilizan dentro de los bloques <code>finally</code>.
+Esto provoca que el bloque <code>finally</code> no se complete normalmente, sino que se complete abruptamente.
+Cualquier excepción lanzada desde los bloques <code>try</code> y <code>catch</code> de la misma sentencia <code>try</code>-<code>catch</code> quedará suprimida.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void x() {
+    <b>try</b> {
+      throw new RuntimeException();
+    } <b>finally</b> {
+      // si bar() devuelve true, la RuntimeException quedará suprimida
+      <b>if</b> (bar()) <b>return</b>;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

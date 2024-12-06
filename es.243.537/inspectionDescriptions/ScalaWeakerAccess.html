@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa de clases, métodos y variables cuyo acceso puede ser más débil.
+<p>Ejemplo:</p>
+<pre><code>
+  def foo() {
+    onlyUsedInFoo("foo", "foo")
+  }
+  def onlyUsedInFoo(x: String, y: String): Unit = {} // puede ser privado
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

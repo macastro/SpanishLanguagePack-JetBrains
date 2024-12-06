@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa de variables interpoladas (de instancia o globales) sin llaves en sustituciones de expresiones.
+<p>Ejemplo:</p>
+<pre>
+<code># Mala práctica
+@name = 'John Doe'
+puts &quot;Hi #@name&quot;</code>
+</pre>
+
+Hay disponible una corrección rápida para insertar las llaves que faltan. Después de aplicar la corrección rápida, el resultado se ve así:
+
+<pre>
+<code># Buena práctica
+@name = 'John Doe'
+puts &quot;Hi #{@name}&quot;</code>
+</pre>
+</body>
+</html>

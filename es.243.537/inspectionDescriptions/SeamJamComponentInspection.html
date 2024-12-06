@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>Informes de problemas de configuración de las clases de Seam anotadas</p>
+<!-- tooltip end -->
+<p><strong>Ejemplo:</strong></p>
+<pre><code>
+@Nombre ("authenticator")
+clase SeanComponent {
+  <strong>@Crear</strong> // No se permite el uso de métodos estáticos
+  estático privado anular crear() {...}
+
+   <strong>@Destruir</strong> // No se permite el uso de métodos estáticos
+   estático privado anular destruir() {...}
+
+   <strong>@ModeloDatos</strong> // No es getter
+   mapa método privado() {...}
+
+   <strong>@Fábrica</strong> // Debe ser público
+   mapa privado obtenerUniverso2() {...}
+
+   <strong>@Desenvolver</strong> // No debe tener parámetros de forma
+   mapa estático privado crearUniverso (int días) { ... }
+}</code></pre>
+</body>
+</html>

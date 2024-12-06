@@ -1,0 +1,9 @@
+<html>
+<body>
+Informa los tipos exportados que no se utilizan en el paquete <code>main</code> y en las pruebas. Para más información acerca de los identificadores exportados, consulta <a href="https://go.dev/ref/spec#Exported_identifiers">Identificadores exportados en go.dev</a>.
+<pre><code>type User struct {}
+
+func main() {}</code></pre>
+<p>El tipo de estructura <code>User</code> está declarado pero nunca se utiliza en el código. Este tipo se mostrará en gris.</p>
+</body>
+</html>

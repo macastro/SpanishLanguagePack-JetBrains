@@ -1,0 +1,12 @@
+<html>
+<body>
+Informa de métodos cuyos nombres son demasiado cortos, demasiado largos o no siguen el patrón de la expresión regular especificada.
+<p>Los métodos de instancias que sobrescriben métodos y constructores de biblioteca se ignoran por esta inspección.</p>
+<p><b>Ejemplo:</b> si la inspección está habilitada para métodos estáticos y la longitud mínima del nombre del método es 4 (el valor predeterminado), el siguiente método estático produce una advertencia, porque su nombre mide 3, lo cual es menor que 4: <code>public static int max(int a, int b)</code>.
+<p>Existe una corrección rápida para renombrar dichos métodos, y solo está disponible en el editor.</p>
+<!-- tooltip end -->
+<p>Configura la inspección:</p>
+<p>Utiliza la lista en la sección <b>Opciones</b> para especificar qué métodos se deben verificar. Anula la selección de las casillas de verificación para los tipos de método que se van a omitir de la verificación. Especifica <b>0</b> en los campos de longitud para omitir las verificaciones correspondientes.</p>
+<p>Las expresiones regulares se deben especificar con el formato estándar <code>java.util.regex</code>.</p>
+</body>
+</html>

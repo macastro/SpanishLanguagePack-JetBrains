@@ -1,0 +1,13 @@
+<html>
+<body><p>Reporta tipos que podrían ser simplificados.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  def test: ({type l[a] = Either[String, a]})#l[Int] = ???
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  def test: Either[String, Int] = ???
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

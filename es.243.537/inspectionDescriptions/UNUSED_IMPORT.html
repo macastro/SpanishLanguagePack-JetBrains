@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre las instrucciones redundantes de <code>import</code>.
+<p>Las instrucciones regulares de <code>import</code> no son necesarias cuando no se usan clases y paquetes importados en el archivo fuente.
+Lo mismo se aplica a los campos y métodos <code>static</code> importados que no se usan en el archivo fuente.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import java.util.ArrayList;
+  public class Example {
+    public static void main(String[] args) {
+      System.out.println("Hello World!");
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:
+<pre><code>
+  public class Example {
+    public static void main(String[] args) {
+      System.out.println("Hello World!");
+    }
+  }
+</code></pre>
+</body>
+</html>

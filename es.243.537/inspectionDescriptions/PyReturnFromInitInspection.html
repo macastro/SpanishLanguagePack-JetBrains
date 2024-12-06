@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>
+  Reporta ocurrencias de sentencias <code>return</code> con un valor de retorno dentro de los métodos <code>__init__</code> de clases.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class Sum:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+        self.sum = a + b
+        return self.sum
+</code></pre>
+<p>Un constructor no debe regresar ningún valor. El método <code>__init__</code> sólo debe inicializar los valores de los miembros de instancia para objetos nuevos.</p>
+<p>Como solución rápida, el IDE se ofrece a eliminar la sentencia <code>return</code>.</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>Reporta tipos de parámetros de método de repositorio incorrectos.</p>
+<!-- tooltip end -->
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  public class Person {
+    private int id;
+    @Column
+    private String lastname;
+
+    @Column
+    private int age;
+  }
+
+  public interface CustomerRepository extends Repository&lt;Person, Integer&gt; {
+    List&lt;Person&gt; <strong>findByAddress</strong>(int lastname);  // Se necesita tipo 'String'
+    List&lt;Person&gt; <strong>deleteByAge</strong>(String str);   // Se necesita tipo 'int'
+  }
+</code></pre>
+</body>
+</html>

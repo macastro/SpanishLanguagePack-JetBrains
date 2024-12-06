@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa símbolos no resueltos en las siguientes anotaciones JPA y métodos de API:
+<ul>
+  <li><code>AttributeOverride</code></li>
+  <li><code>AssociationOverride</code></li>
+  <li><code>MapsId</code></li>
+  <li><code>MapKey</code></li>
+  <li><code>Métodos de Criteria API</code></li>
+</ul>
+
+<p><b>Ejemplo:</b></p><br/>
+<pre><code lang="java">
+  @Entity
+  @AssociationOverrides({
+    @AssociationOverride(name = "missingAttribute", joinColumns = { ... }), // Error: atributo no resuelto
+    @AssociationOverride(name = "existingAttribute", joinColumns = { ... })
+  })
+  public class JavaEntity {
+    @OneToOne
+    AnotherEntity existingAttribute;
+  }
+</code></pre>
+</body>
+</html>

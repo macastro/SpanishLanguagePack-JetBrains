@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>Informa sobre expresiones que serán del tipo <code>Int</code>, provocando errores de compilación en Kotlin 1.9 y versiones posteriores.</p>
+
+<p>Ejemplo:</p>
+<pre><code>
+  fun takeByte(x: Byte) {}
+
+  fun foo() {
+      takeByte(1 + 1) // se resolverá a Int en 1.9
+  }
+</code></pre>
+
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun takeByte(x: Byte) {}
+
+  fun foo() {
+      takeByte((1 + 1).toByte()) // se resolverá a Int en 1.9
+  }
+</code></pre>
+
+<p>La inspección está disponible para el lenguaje Kotlin a partir del nivel 1.7.</p>
+</body>
+</html>

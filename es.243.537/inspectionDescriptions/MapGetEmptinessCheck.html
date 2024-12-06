@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>Informa una comprobación de vacío del resultado de <code>Map.get</code> y sugiere reemplazarla por una llamada a <code>Map.contains</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.get(key).nonEmpty
+  map.get(key).isEmpty
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.contains(key)
+  !map.contains(key)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

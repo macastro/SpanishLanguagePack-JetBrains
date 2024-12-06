@@ -1,0 +1,21 @@
+<html>
+<body>
+Notifica condiciones de comprobación de nulos y sugiere reemplazarlas con cadenas <code>Optional</code>.
+<p>Ejemplo:</p>
+<pre><code>
+  return str == null ? "" : str.trim();
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  return Optional.ofNullable(str).map(String::trim).orElse("");
+</code></pre>
+<p>Aunque el reemplazo no siempre resulta más breve, podría ser útil para realizar refactorizaciones adicionales
+  (por ejemplo, para cambiar el valor de retorno del método a <code>Optional</code>).</p>
+<p>Tenga en cuenta que cuando una rama no nula de la condición devuelve null, el paso de asignación correspondiente
+  producirá un <code>Optional</code> vacío, lo cual posiblemente cambie la semántica. Si no puede comprobarse estáticamente
+  que se preservará la semántica, el nombre de la acción de corrección rápida contendrá el aviso "(puede cambiar la semántica)"
+  y se desactivará el resaltado de inspección.</p>
+<!-- tooltip end -->
+<p><small>Novedad en 2018.1</small></p>
+</body>
+</html>

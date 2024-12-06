@@ -1,0 +1,31 @@
+<html>
+<body>
+Reporta los bloques <code>catch</code> con parámetros que son más genéricos que
+la excepción emitida por el bloque <code>try</code> correspondiente.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  try  {
+    File file = new File(pathToFile);
+    return file.getAbsolutePath();
+  } catch (Exception ex) { // advertencia: 'catch' de 'Exception' es demasiado amplia, enmascara las excepciones 'RuntimeException'
+    return defaultFilePath;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  try  {
+    File file = new File(pathToFile);
+    return file.getAbsolutePath();
+  } catch (RuntimeException ex) {
+    return defaultFilePath;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+<ul>
+  <li>Use la opción <b>Advertir solo sobre RuntimeException, Exception, Error o Throwable</b> para que esta inspección advierta solo sobre las excepciones más genéricas.</li>
+  <li>Use la opción <b>Ignorar excepciones que ocultan a otras pero que son lanzadas por sí mismas</b> para ignorar cualquier excepción que oculte a otras excepciones pero
+que aún pueda ser lanzada y, por lo tanto, técnicamente no es demasiado amplia.</li>
+</ul>
+</body>
+</html>

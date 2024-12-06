@@ -1,0 +1,26 @@
+<html>
+<body>
+Inspecciona clases <code>Serializable</code> donde los métodos <code>readObject</code> o <code>writeObject</code> no están declarados como privados.
+No hay razones para que estos métodos tengan una visibilidad superior a <code>private</code>.
+<p>
+  Se sugiere una corrección rápida para hacer que el método correspondiente sea <code>private</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Test implements Serializable {
+    public void readObject(ObjectInputStream stream) {
+      /* ... */
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  public class Test implements Serializable {
+    private void readObject(ObjectInputStream stream) {
+      /* ... */
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

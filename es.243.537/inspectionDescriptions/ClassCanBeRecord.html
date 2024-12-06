@@ -1,0 +1,54 @@
+<html>
+<body>
+Informa las clases que se pueden convertir en clases de registro.
+<p>Las clases de registro se centran en el modelado de datos inmutables en lugar de un comportamiento extensible.
+La implementación implícita automática de métodos basados en datos, como <code>equals()</code> y accesores, ayuda a reducir el código repetitivo.</p>
+<p>
+  Tenga en cuenta que no todas las clases pueden ser clases de registro. Estas son algunas de las restricciones:
+</p>
+<ul>
+  <li>La clase debe ser de nivel superior y no debe tener subclases.</li>
+  <li>Todos los campos no estáticos de la clase deben ser finales.</li>
+  <li>No deben existir inicializadores, constructores genéricos ni métodos nativos.</li>
+</ul>
+<p>Para obtener una descripción completa de las clases de registro, consulte
+  <a href="https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.10">Especificación del lenguaje Java</a>.</p>
+<!-- tooltip end -->
+<p>Ejemplo:</p>
+<pre><code>
+  class Punto {
+    private final double x;
+    private final double y;
+
+    Punto(double x, double y) {
+      this.x = x;
+      this.y = y;
+    }
+
+    double getX() {
+      return x;
+    }
+
+    double getY() {
+      return y;
+    }
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  registro Punto(int x, int y) {
+  }
+</code></pre>
+<p>Habilite la opción <b>Sugerir renombrar métodos accesores</b> para renombrar los accesores <code>getX()</code>/<code>isX()</code> a <code>x()</code> automáticamente.</p>
+<p>
+  Utilice la opción <b>Si los miembros se vuelven más accesibles</b> para especificar qué hacer cuando la conversión hará que los miembros sean más accesibles:
+<ul>
+  <li>Elija la opción <b>No sugerir conversión</b> para no convertir cuando los miembros se vuelvan más accesibles.</li>
+  <li>Elija la opción <b>Mostrar vista de conflictos</b> para mostrar los miembros afectados y solicitar que continúe. En el modo batch, no se sugerirá la conversión.</li>
+  <li>Elija la opción <b>Convertir silenciosamente</b> para aumentar la accesibilidad de forma silenciosa cuando sea necesario.</li>
+</ul>
+<p>Utilice la lista <b>Suprimir conversión si la clase está anotada por</b> para excluir clases de la conversión cuando están anotadas por anotaciones que coinciden con los patrones especificados.
+</p>
+<p><small>Novedad de 2020.3</small></p>
+</body>
+</html>

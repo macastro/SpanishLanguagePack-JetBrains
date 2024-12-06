@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa de llamadas a métodos y constructores que utilizan implícitamente el juego de caracteres predeterminado de la plataforma. Estas llamadas pueden producir resultados diferentes en sistemas que usan un juego de caracteres predeterminado diferente y pueden dar resultados inesperados.
+<p><b>Ejemplo:</b></p>
+<pre><code>void foo(byte[] bytes) {
+  String s = new String(bytes);
+}</code>
+</pre>
+<p>Puedes usar un arreglo rápido que especifique el juego de caracteres explícito UTF-8 si el método sobrecargado correspondiente está disponible.
+  Después de aplicar el arreglo rápido:</p>
+<pre><code>void foo(byte[] bytes) {
+  String s = new String(bytes, StandardCharsets.UTF_8);
+}</code>
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

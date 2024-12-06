@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre propiedades <code>var</code> con un setter y getter predeterminados que no hacen referencia al campo de respaldo.
+<p>
+Estas propiedades no afectan a la llamada de su setter; por lo tanto, será más claro cambiar dicha propiedad a <code>val</code> y eliminar el inicializador.
+</p>
+<p>Se puede utilizar la corrección rápida <b>Cambiar a val y eliminar el inicializador</b> para modificar el código automáticamente.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  // Esta propiedad siempre devuelve '1' y no importa que la propiedad sea 'var'
+  var foo: Int = 0
+      get() = 1
+</code></pre>
+</body>
+</html>

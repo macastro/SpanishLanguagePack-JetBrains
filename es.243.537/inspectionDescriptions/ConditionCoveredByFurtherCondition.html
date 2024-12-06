@@ -1,0 +1,11 @@
+<html>
+<body>
+Informa condiciones que se vuelven redundantes porque están completamente cubiertas por una condición posterior.
+<p>Por ejemplo, en la condición <code>value != -1 && value > 0</code> la primera parte es redundante:
+si es falsa, entonces la segunda parte también es falsa.
+O en una condición como <code>obj != null && obj instanceof String</code>,
+  la verificación nula es redundante ya que el operador <code>instanceof</code> implica no nulidad.</p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2018.3</small></p>
+</body>
+</html>

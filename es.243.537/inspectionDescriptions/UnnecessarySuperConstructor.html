@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa de llamadas a constructores no argumentados de superclase durante la construcción de objetos.
+<p>Estas llamadas no son necesarias y pueden eliminarse.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+    Foo() {
+      super();
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Foo {
+    Foo() {
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

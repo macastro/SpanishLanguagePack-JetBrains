@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa las conversiones de expresiones similares a <code>string(x)</code> donde <code>x</code> es un entero, pero no un byte o una runa.
+
+<p>Estas conversiones están desaconsejadas porque devuelven la representación UTF-8 del punto de código Unicode <code>x</code>, y no una representación de cadena decimal de <code>x</code> como podría esperarse. Además, si <code>x</code> denota un punto de código no válido, la conversión no puede ser rechazada estáticamente.</p>
+
+<p>Para conversiones que pretenden utilizar el punto de código, considera reemplazarlas con <code>string(runa(x))</code>. De lo contrario, <code>strconv.Itoa</code> y sus equivalentes devuelven la representación de cadena del valor en la base deseada.</p>
+<p>Ejemplo:</p>
+<pre><code>func main() {
+ a := 1
+ _ = string(a)
+}</code></pre>
+<p>Después de aplicar la corrección rápida <b>Convertir entero a runa</b>:</p>
+<pre><code>func main() {
+ a := 1
+ _ = string(runa(a))
+}</code></pre>
+</body>
+</html>

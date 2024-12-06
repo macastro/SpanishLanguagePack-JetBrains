@@ -1,0 +1,35 @@
+ <html>
+<body>
+Se informa de los campos en las implementaciones de <code>LocalQuickFix</code> y <code>IntentionAction</code> que impiden que la vista previa de intención funcione correctamente. Además, se informa del uso excesivo de la anotación <code>@SafeFieldForPreview</code> en campos cuyo tipo se conoce como seguro.
+<p>
+  La vista previa de intención es una funcionalidad de la plataforma IntelliJ que muestra cómo cambiará el archivo actual cuando se aplique una corrección rápida o una acción de intención. Para implementar esta funcionalidad en una corrección rápida, se llama a <code>LocalQuickFix.generatePreview()</code> con un <code>ProblemDescriptor</code> personalizado que hace referencia a una copia no física del archivo actual. Para las acciones de intención, se llama a <code>IntentionAction.generatePreview()</code> con una copia no física del archivo actual y un editor virtual.
+  Normalmente, estos métodos sólo se delegan en <code>LocalQuickFix.applyFix()</code> o <code>IntentionAction.invoke()</code>.
+  Sin embargo, algunas correcciones rápidas pueden hacer referencia directa o indirectamente a elementos físicos y utilizarlos para escribir. Como tales correcciones intentan actualizar el PSI físico en lugar del PSI no físico, la vista previa no funciona.
+  Para evitar este problema, la implementación predeterminada de <code>generatePreview()</code> sólo delega si todos los campos de instancia de la clase de corrección rápida o de acción de intención tienen tipos seguros (como primitivos o cadenas).
+</p>
+<p>
+  Este problema se puede solucionar de varias maneras:
+</p>
+<ol>
+  <li>
+    Si el campo en realidad no contiene ninguna referencia PSI, o si ese PSI sólo se utiliza para lectura, se puede anotar el campo con <code>@SafeFieldForPreview</code>. También se puede utilizar <code>@SafeTypeForPreview</code> si el tipo de campo nunca puede contener ninguna referencia PSI que se pueda escribir.
+  </li>
+  <li>
+    Se puede anular el método <code>getFileModifierForPreview()</code> para crear una copia de la corrección rápida que se vuelve a enlazar a la copia no física del archivo proporcionada como parámetro. Para encontrar el elemento PSI correspondiente dentro de la copia no física proporcionada, utilizar <code>PsiTreeUtil.findSameElementInCopy()</code>.
+  </li>
+  <li>
+    En lugar de almacenar referencias PSI en los campos, se intenta extraer toda la información necesaria de <code>ProblemDescriptor.getPsiElement()</code> en las correcciones rápidas o de los archivos/editores proporcionados en las acciones de intención. También se puede heredar la clase abstracta <code>LocalQuickFixAndIntentionActionOnPsiElement</code> e implementar los métodos <code>invoke()</code> e <code>isAvailable()</code> que tienen parámetros <code>startElement</code> y <code>endElement</code>. Estos parámetros se mapean automáticamente a la copia de archivo no física.
+  </li>
+  <li>
+    Se puede anular el método <code>generatePreview()</code> para proporcionar un comportamiento de vista previa totalmente personalizado.
+    Por ejemplo, se puede mostrar un documento HTML personalizado en lugar de una vista previa real siempre que la acción realice acciones distintas a la modificación del archivo actual.
+  </li>
+</ol>
+<p>
+  Esta inspección no informa de implementaciones personalizadas de <code>getFileModifierForPreview()</code> o <code>generatePreview()</code>. Sin embargo, esto no significa que la implementación sea correcta y que la vista previa funcione.
+  Realizar pruebas. Además, los resultados de la vista previa se calculan en un hilo en segundo plano, por lo que no se puede iniciar una acción de escritura ni realizar ninguna operación que requiera una acción de escritura durante la vista previa. Por último, si <code>startInWriteAction()</code> devuelve <code>false</code>, no se generará automáticamente una vista previa. En este caso, se necesita una implementación personalizada de <code>generatePreview()</code>.
+</p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2022.1</small></p>
+</body>
+</html>

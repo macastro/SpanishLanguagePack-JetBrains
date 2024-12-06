@@ -1,0 +1,26 @@
+<html>
+<body>
+Los informes reflejan el acceso a campos y métodos que no existen o no son visibles.
+<p>Ejemplo:</p>
+<pre><code>
+  Field stringHashField() throws NoSuchFieldException {
+    return String.class.getField("hash");
+  }
+</code></pre>
+<p>Después de que se aplica la corrección rápida:</p>
+<pre><code>
+  Field stringHashField() throws NoSuchFieldException {
+    return String.class.getDeclaredField("hash");
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Con una clase <code>final</code>, está claro si hay un campo o método con el nombre especificado en la clase.
+</p>
+<p>
+  Con clases que no son <code>final</code>, es posible que una subclase tenga un campo o método con ese nombre, por lo que podría haber falsos positivos.
+  Utiliza la configuración de la inspección para deshacerte de dichos falsos positivos en todas partes o con clases específicas.
+</p>
+<p><small>Nuevo en 2017.2</small></p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+<code>java.lang.Random</code> o <code>java.lang.Math.random()</code> se usa reportan.
+<p>
+  En entornos seguros, es más razonable optar por <code>java.secure.SecureRandom</code>, ya que puede realizar una generación de números aleatorios segura desde el punto de vista criptográfico.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  long token = new Random().nextLong();
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

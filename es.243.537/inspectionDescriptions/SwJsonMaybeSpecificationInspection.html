@@ -1,0 +1,39 @@
+<html>
+<body>
+Detecta archivos JSON que se pueden interpretar como parte de la especificación OpenAPI/Swagger.
+<p>
+  Dichos archivos no contienen atributos de especificación explícitos, pero se hace referencia a ellos desde archivos de especificación primarios ubicados cerca.
+</p>
+<!-- tooltip end -->
+
+<p>
+  El siguiente ejemplo contiene dos archivos ubicados en el mismo directorio. El primero es un archivo de especificación primaria simple.
+  El segundo se referencia desde el primero y, por lo tanto, se sugiere que también sea considerado una especificación.
+</p>
+
+<p><b>Archivo de especificación primaria <code>openapi.yaml</code>:</b></p>
+<pre><code lang="yaml">
+openapi: 3.1.0
+components:
+  schemas:
+    CustomSchema:
+      description: Objeto de esquema personalizado
+      properties:
+        foo:
+          $ref: 'common.components.json#/components/schemas/CommonSchema'
+</code></pre>
+
+<p><b>Candidato a archivo de especificación <code>common.components.json</code>:</b></p>
+<pre><code lang="json">
+{
+  "components": { // Resaltado de 'Marcar archivo como especificación OpenAPI'
+    "schemas": {
+      "CommonSchema": {
+        "description": "Objeto de esquema común reutilizado en varias especificaciones"
+      }
+    }
+  }
+}
+</code></pre>
+</body>
+</html>

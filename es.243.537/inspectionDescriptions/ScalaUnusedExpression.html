@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>Informa sobre las expresiones cuyo valor no se utiliza.</p>
+
+<p>No se informa sobre las expresiones que tienen efectos secundarios o que desvían el flujo de control.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  def test(): Int = {
+    3 // sin usar
+    3
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  def test(): Int = {
+    3
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<body>
+<b>Inspecciones de IDE: Métodos con múltiples declaraciones de bucle</b>
+
+Informa métodos que contienen más de una declaración de bucle.
+<p><b>Ejemplo:</b></p>
+<p>El siguiente método se informará porque contiene dos bucles:</p>
+<pre><code>
+  void methodWithTwoLoops(int n1, int n2) {
+    for (int i = 0; i &lt; n1; i++) {
+      System.out.println(i);
+    }
+
+    int j = 0;
+    while (j &lt; n2) {
+      System.out.println(j);
+      j++;
+    }
+  }
+</code></pre>
+<p>El siguiente método también se informará porque contiene un bucle anidado:</p>
+<pre><code>
+  void methodWithNestedLoop(int n1, int n2) {
+    for (int i = 0; i &lt; n1; i++) {
+      for (int j = 0; j &lt; n2; j++) {
+        System.out.println(i + j);
+      }
+    }
+  }
+</code></pre>
+</body>
+</html>

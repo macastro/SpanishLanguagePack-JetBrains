@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporta <a href="https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html">bloqueo doblemente verificado</a>.
+<p>
+  El bloqueo doblemente verificado intenta inicializar un campo a pedido y de manera segura para subprocesos, al tiempo que evita el costo de la sincronización.
+  Desafortunadamente, no es seguro para subprocesos cuando se utiliza en un campo que no está declarado como <code>volatile</code>.
+  Cuando se utiliza Java 1.4 o una versión anterior, el bloqueo doblemente verificado no funciona ni siquiera con un campo <code>volatile</code>.
+  Lea el artículo vinculado anteriormente para obtener una explicación detallada del problema.
+</p>
+<p>Ejemplo de bloqueo doblemente verificado incorrecto:</p>
+<pre><code>
+  clase Foo {
+    private Helper helper = null;
+    public Helper obtenerHelper() {
+      si (helper == null)
+        sincronizado(esto) {
+          si (helper == null) helper = nuevo Helper();
+        }
+        devolver helper;
+      }
+    }
+    // otras funciones y miembros...
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

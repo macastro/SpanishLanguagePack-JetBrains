@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa de excepciones comprobadas esperadas por un método de prueba de TestNG que nunca se lanzan dentro del cuerpo del método.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  @Test(expectedExceptions = Exception.class) // advertencia: nunca se lanza 'Exception' esperada
+  public void testEngineIsRunning() {
+    assertTrue(engine.isRunning());
+  }
+  </code>
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

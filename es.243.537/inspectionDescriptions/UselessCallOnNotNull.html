@@ -1,0 +1,14 @@
+<html>
+<body>
+Reporta llamadas en un receptor no nulo que tienen sentido solo para un receptor nulo.
+<p>Varias funciones de la biblioteca estándar como <code>orEmpty()</code> o <code>isNullOrEmpty</code> solo tienen sentido cuando se llaman a receptores de tipos nulos. De lo contrario, pueden omitirse o simplificarse ya que el resultado será el mismo.</p>
+<p>Se pueden usar las correcciones rápidas "<b>Eliminar llamada redundante</b>" y "<b>Cambiar llamada a ...</b>" para enmendar el código automáticamente.</p>
+<p>Ejemplos:</p>
+<pre><code>
+  fun test(s: String) {
+      val x = s.orEmpty() // la corrección rápida simplifica a 's'
+      val y = s.isNullOrEmpty() // la corrección rápida simplifica a 's.isEmpty()'
+  }
+</code></pre>
+</body>
+</html>

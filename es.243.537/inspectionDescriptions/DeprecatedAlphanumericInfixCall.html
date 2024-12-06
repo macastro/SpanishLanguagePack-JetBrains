@@ -1,0 +1,88 @@
+<html>
+<body>
+<p>Informa de los usos de las definiciones alfanuméricas sin el modificador `infix` como operador infijo.</p>
+
+<ul>
+<li>La corrección rápida "Encerrar entre comillas invertidas" agrega símbolos ``` alrededor de las llamadas.</li>
+<li>La corrección rápida "Convertir de expresión infija" convierte la llamada infija a la sintaxis del método `método(...)`.</li>
+<li>La corrección rápida "Convertir de tipo infijo" convierte el tipo infijo a la sintaxis del prefijo "`Tipo[...]]`.</li>
+<li>La corrección rápida "Convertir de patrón infijo" convierte el patrón infijo a la sintaxis del prefijo "patrón(...)".</li>
+</ul>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class C:
+    def op(x: Int): Int = ???
+  type Or[X, Y]
+  case class Pair[T](x: T, y: T)
+
+  val c = C()
+  val p = Pair(1, 2)
+
+  c op 2
+  val or: Int Or String = ???
+  val _ Pair _ = p
+</code></pre>
+
+<p>Después de aplicar la corrección rápida "Encerrar entre comillas invertidas":</p>
+<pre><code>
+  class C:
+    def op(x: Int): Int = ???
+  type Or[X, Y]
+  case class Pair[T](x: T, y: T)
+
+  val c = C()
+  val p = Pair(1, 2)
+
+  c `op` 2
+  val or: Int `Or` String = ???
+  val _ `Pair` _ = p
+</code></pre>
+
+<p>Después de aplicar la corrección rápida "Convertir de expresión infija":</p>
+<pre><code>
+  class C:
+    def op(x: Int): Int = ???
+  type Or[X, Y]
+  case class Pair[T](x: T, y: T)
+
+  val c = C()
+  val p = Pair(1, 2)
+
+  c.op(2)
+  val or: Int Or String = ???
+  val _ Pair _ = p
+</code></pre>
+
+<p>Después de aplicar la corrección rápida "Convertir de tipo infijo":</p>
+<pre><code>
+  class C:
+    def op(x: Int): Int = ???
+  type Or[X, Y]
+  case class Pair[T](x: T, y: T)
+
+  val c = C()
+  val p = Pair(1, 2)
+
+  c op 2
+  val or: Or[Int, String] = ???
+  val _ Pair _ = p
+</code></pre>
+
+<p>Después de aplicar la corrección rápida "Convertir de patrón infijo":</p>
+<pre><code>
+  class C:
+    def op(x: Int): Int = ???
+  type Or[X, Y]
+  case class Pair[T](x: T, y: T)
+
+  val c = C()
+  val p = Pair(1, 2)
+
+  c op 2
+  val or: Int Or String = ???
+  val Pair(_, _) = p
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

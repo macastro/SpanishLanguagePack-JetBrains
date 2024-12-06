@@ -1,0 +1,23 @@
+**Inspección en español:**
+
+Reporta variables o constantes exportadas en listas de declaraciones separadas por coma.
+
+**Ejemplo:**
+
+```
+const C1, C3, C2, C44, C9, C11, C6 = 1, 2, 3, 1, 3, 2, 1
+```
+
+Esta declaración dificulta entender qué valor tiene cada constante. Puedes aplicar la rápida solución de **Extraer a su propia declaración** para que sea más legible. Cuando se aplica la rápida solución a cada constante, la declaración se ve así:
+
+```
+const (
+ C3  = 2
+ C2  = 3
+ C44 = 1
+ C9  = 3
+ C11 = 2
+ C6  = 1
+ C1  = 1
+)
+```

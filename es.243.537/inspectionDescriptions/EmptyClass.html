@@ -1,0 +1,43 @@
+<html>
+<body>
+Reporta clases vacías y archivos Java vacíos.
+<p>Una clase está vacía si no contiene algún campo, método, constructor o inicializador. Las clases vacías a veces son dejadas desatendidas después de cambios significativos o refactorizaciones.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  clase Ejemplo {
+    Lista&lt;String&gt; obtenerLista() {
+       return new ArrayList&lt;&gt;() {
+
+       };
+    }
+  }
+</code></pre>
+<p>Después de que la reparación rápida es aplicada:</p>
+<pre><code>
+  clase Ejemplo {
+    Lista&lt;String&gt; obtenerLista() {
+       return new ArrayList&lt;&gt;();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Configurar el examen:</p>
+<ul>
+  <li>
+    Usa la opción <b>Ignorar si está anotada por</b> para especificar anotaciones especiales. El examen ignorará las clases marcadas con estas
+    anotaciones.
+  </li>
+  <li><p>
+    Usa la opción <b>Ignorar clase si es una parametrización de un supertipo</b> para ignorar las clases que parametrizan una superclase. Por ejemplo:
+  </p>
+    <pre><code>clase MiLista extiende ArrayList&lt;String&gt; {}</code></pre>
+  </li>
+  <li>
+    Usa la opción <b>Ignorar subclases de java.lang.Throwable</b> para ignorar las clases que extienden <code>java.lang.Throwable</code>.
+  </li>
+  <li>
+    Usa la opción <b>Los comentarios cuentan como contenido</b> para ignorar clases que contienen comentarios.
+  </li>
+</ul>
+</body>
+</html>

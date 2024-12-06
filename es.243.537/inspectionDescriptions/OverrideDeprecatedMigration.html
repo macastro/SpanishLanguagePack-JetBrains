@@ -1,0 +1,42 @@
+<html>
+<body>
+Informa sobre declaraciones propagadas mediante la anotación <code>@Deprecated</code> que provocarán un error de compilación desde la versión 1.9.
+<p>Tipos de motivación:</p>
+<ul>
+    <li>
+        Se requieren cambios de implementación por razones de diseño o arquitectura de la implementación
+    </li>
+    <li>
+        Incoherencia en el diseño (las cosas se hacen de manera diferente en diferentes contextos)
+    </li>
+</ul>
+
+<p><b>Más detalles:</b> <a href="https://youtrack.jetbrains.com/issue/KT-47902">KT-47902: No propagar la deprecación de métodos a través de las anulaciones</a></p>
+<p>La corrección rápida copia la anotación <code>@Deprecated</code> de la declaración principal.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  open class <b>Base</b> {
+      @Deprecated("Don't use")
+      open fun foo() {}
+  }
+
+  class <b>Derived</b> : <b>Base</b>() {
+      override fun foo() {}
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  open class <b>Base</b> {
+      @Deprecated("Don't use")
+      open fun foo() {}
+  }
+
+  class <b>Derived</b> : <b>Base</b>() {
+      @Deprecated("Don't use")
+      override fun foo() {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de lenguaje Kotlin del proyecto o módulo es 1.6 o superior.</p>
+</body>
+</html>

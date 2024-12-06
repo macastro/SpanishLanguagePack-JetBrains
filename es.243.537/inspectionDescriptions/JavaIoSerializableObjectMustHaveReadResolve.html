@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>
+    Informa sobre los <code>objetos</code> (incluido <code>objeto de datos</code>) que implementan <code>java.io.Serializable</code> pero que no implementan
+    <a href="https://docs.oracle.com/en/java/javase/11/docs/specs/serialization/input.html#the-readresolve-method">readResolve</a>
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import java.io.Serializable
+
+  object Foo : Serializable
+</code></pre>
+<p>La corrección rápida implementa el método <code>readResolve</code>:</p>
+<pre><code>
+  import java.io.Serializable
+
+  object Foo : Serializable {
+      private fun readResolve() = Foo
+  }
+</code></pre>
+</body>
+</html>

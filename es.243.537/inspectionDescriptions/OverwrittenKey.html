@@ -1,0 +1,16 @@
+<html>
+<body>
+Inspecciona código que sobrescribe una clave de un <code>Map</code>, un elemento de un <code>Set</code> o un elemento de un arreglo en una secuencia de llamadas <code>add</code>/<code>put</code> usando un método factory de Java 9 como <code>Set.of</code> (lo cual resultará en una excepción de tiempo de ejecución).
+<p>Esto por lo general sucede por un error de copiar y pegar.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  map.put("A", 1);
+  map.put("B", 2);
+  map.put("C", 3);
+  map.put("D", 4);
+  map.put("A", 5); // se duplica la clave "A", se sobrescribe la entrada escrita anteriormente
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2017.3</small></p>
+</body>
+</html>

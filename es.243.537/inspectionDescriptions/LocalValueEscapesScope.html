@@ -1,0 +1,12 @@
+<html>
+<body>
+Se reporta referencias de variables locales que escapan a la función
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  int *escapeLocalScope() {
+    int lv = 100;
+    return &#38lv;
+  }
+</code></pre>
+</body>
+</html>

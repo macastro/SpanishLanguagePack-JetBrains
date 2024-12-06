@@ -1,0 +1,45 @@
+<html>
+<body>
+<p>Informa de los problemas con el contexto de la aplicación basado en XML de <a href="https://spring.io/projects/spring-integration">Spring Integration</a>:</p>
+<ul>
+  <li>Referencias de beans sin resolver</li>
+  <li>Etiquetas o atributos necesarios que faltan</li>
+  <li>Tipos de propiedad incorrectos</li>
+  <li>Propiedades <code>enum</code> incoherentes</li>
+  <li>Tipos incorrectos de beans referenciados</li>
+</ul>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  &lt;beans ... &gt;
+  &lt;int:channel id="channel"&gt; &lt;!-- 'dispatcher' y 'queue' no se pueden usar juntos  --&gt;
+    &lt;int:dispatcher failover="true"/&gt;
+    &lt;int:priority-queue capacity="4"/&gt;
+  &lt;/int:channel&gt;
+  
+  &lt;int:channel id="another" &gt;
+    &lt;int:queue &lt;!--Exactly one of 'message-store' or 'ref' is required  --&gt;
+              capacity="4" message-store="myMessageStore" ref="myQueue"/&gt;
+  &lt;/int:channel&gt;
+  
+   &lt;int:gateway id="asyncGatewayError"
+                async-executor="dummyBean"/&gt; &lt;!--El bean debe ser de tipo 'java.util.concurrent.Executor'  --&gt;
+
+   &lt;int:delayer default-delay="3"
+              message-store="myMessageStore"
+              scheduler="scheduler"
+              wait-for-tasks-to-complete-on-shutdown="false"/&gt;
+  &lt;!--El bean debe ser de tipo 'java.util.concurrent.Executor'  --&gt;
+  &lt;int:delayer
+    default-delay="INVALID_VALUE"  &lt;!--Cannot convert string 'INVALID_VALUE' to target class 'java.lang.Integer' --&gt;
+               message-store="dummyBean" &lt;!-- El bean debe ser de tipo 'org.springframework.integration.store.MessageStore' --&gt;
+               scheduler="dummyBean" &lt;!-- El bean debe ser uno de estos tipos: java.util.concurrent.ScheduledExecutorService,org.springframework.scheduling.TaskScheduler --&gt;
+               wait-for-tasks-to-complete-on-shutdown="INVALID_VALUE"/&gt; &lt;!-- No se puede resolver el símbolo 'INVALID_VALUE' --&gt;
+
+  &lt;bean id="dummyBean" class="java.lang.String"/&gt;
+  &lt;bean id="myMessageStore" class="org.springframework.integration.store.SimpleMessageStore"/&gt;
+  &lt;task:scheduler id="scheduler"/&gt;
+&lt;/beans&gt;
+</code></pre>
+</body>
+</html>

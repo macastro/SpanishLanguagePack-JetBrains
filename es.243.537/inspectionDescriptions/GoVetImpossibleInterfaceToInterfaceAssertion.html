@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa de aserciones de tipo imposible de interfaz a interfaz.
+<p>Comprueba las aserciones de tipo <code>v.(T)</code> y los casos de cambio de tipo correspondientes en los que el tipo estático <code>V</code> de <code>v</code> es la interfaz que no puede implementar la interfaz de destino <code>T</code>. Esto ocurre cuando <code>V</code> y <code>T</code> contienen métodos con el mismo nombre pero firmas diferentes.</p>
+
+<p>Ejemplo:</p>
+<pre><code>var v interface {
+  Read()
+}
+_ = v.(io.Reader)</code></pre>
+
+<p>El método <code>Read</code> en <code>v</code> tiene una firma diferente que el método <code>Read</code> en <code>io.Reader</code>, por lo que esta aserción no puede tener éxito.</p>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si la versión del lenguaje es 1.15 o superior.</p>
+</body>
+</html>

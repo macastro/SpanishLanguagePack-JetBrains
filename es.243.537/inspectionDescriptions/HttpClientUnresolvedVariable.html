@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>Reporta las variables sin declarar en el entorno actual del Cliente HTTP.</p>
+<p>
+  Ejecutar solicitudes con variables no declaradas probablemente fallará.
+  Considera añadir una variable al entorno o selecciona un entorno con esta variable.
+</p>
+<!-- fin información sobre herramientas -->
+<p>La inspección no reporta las variables en los cuerpos de las solicitudes, ya que pueden ser una sintaxis válida del cuerpo.</p>
+<p>
+  Es posible que algunas variables no se reporten como no resueltas, ya que se declaran en los scripts de respuesta o de controlador previo a la solicitud mediante la llamada a las funciones
+  <code>client.global.set</code> o <code>request.variables.set</code>.
+</p>
+</body>
+</html>

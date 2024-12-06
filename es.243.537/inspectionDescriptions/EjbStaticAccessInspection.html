@@ -1,0 +1,19 @@
+<html>
+<body>
+Inspecciona las clases EJB que escriben en campos estáticos.
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+  private static int counter = 0;
+  private AnotherBean anotherBean;
+
+  public void setAnotherBean(AnotherBean anotherBean) {
+    this.anotherBean = anotherBean;
+    counter++; // Error: No se debe escribir en ningún campo estático aquí.
+  }
+}
+</code></pre>
+</body>
+</html>

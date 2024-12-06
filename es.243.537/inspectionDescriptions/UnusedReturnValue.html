@@ -1,0 +1,46 @@
+<html>
+<body>
+Informa de los métodos cuyos valores devueltos nunca se usan cuando son llamados.
+El tipo de retorno de dichos métodos puede configurarse como <code>void</code>.
+<p>No se informará de los métodos anotados con la anotación <code>@CanIgnoreReturnValue</code> de Error Prone o AssertJ.
+  La corrección rápida actualiza la firma del método y elimina sentencias <code>return</code> del interior del método.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // informado si la configuración de visibilidad es Protected o Public
+  protected String myToUpperCase(String s) {
+    return s.toUpperCase();
+  }
+
+  // simple setter, reporting depends on setting
+  public String setStr(String str) {
+    myStr = str;
+    return myStr;
+  }
+
+  void test() {
+    setStr("value");          // el valor devuelto no se usa
+    myToUpperCase("result");  // el valor devuelto no se usa
+  }
+</code></pre>
+<p>Tras aplicar la corrección rápida a ambos métodos:</p>
+<pre><code>
+    protected void myToUpperCase(String s) {
+      // 'return' eliminado por completo
+      // ya que 's.toUpperCase()' no tiene efectos secundarios
+    }
+
+    public void setStr(String str) {
+      myStr = str;
+      // 'return' eliminado
+    }
+  ...
+</code></pre>
+<p>
+  <b>NOTA:</b> Puede que algunos métodos no se informen durante el resaltado en el editor por motivos de rendimiento.
+  Para ver todos los resultados, ejecutar la inspección usando <b>Código | Inspeccionar código</b> o <b>Código | Analizar código | Ejecutar inspección por nombre</b>>
+</p>
+<!-- tooltip end -->
+<p>Utiliza la opción <b>Ignorar métodos encadenables</b> para ignorar los valores devueltos no usados de llamadas encadenables.</p>
+<p>Utiliza la opción <b>Visibilidad máxima de método informada</b> para controlar la visibilidad máxima de los métodos a informar.</p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+Reporta cualquier invocación de un método de aridad variable, en la que la invocación tiene un array primitivo en la posición del parámetro de aridad variable (por ejemplo, <code>System.out.printf("%s", new int[]{1, 2, 3})</code>).
+Este tipo de argumentos de array primitivo puede llevar a confusión, ya que se envolverá como un array de un solo elemento, en lugar de boxear cada elemento individual como se esperaría.
+<!-- tooltip end -->
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  String.format("%s", new int[]{1, 2, 3});
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+  String.format("%s", (Object) new int[]{1, 2, 3});
+</code></pre>
+</body>
+</html>

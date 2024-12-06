@@ -1,0 +1,32 @@
+<html>
+<body>
+<p>Informa sobre la comparación <code>.length</code> o <code>.size</code> y sugiere reemplazarla por <code>.sizeIs</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  var seq: Seq[Int]
+  seq.length == n
+  seq.length != n
+  seq.length &lt; n
+  seq.length > n
+
+  seq.size == n
+  seq.size != n
+  seq.size &lt; n
+  seq.size > n
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+  var seq: Seq[Int]
+  seq.sizeIs == n
+  seq.sizeIs != n
+  seq.sizeIs &lt; n
+  seq.sizeIs > n
+
+  seq.sizeIs == n
+  seq.sizeIs != n
+  seq.sizeIs &lt; n
+  seq.sizeIs > n
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>
