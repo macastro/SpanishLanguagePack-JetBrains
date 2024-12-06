@@ -1,21 +1,22 @@
 <html>
 <body>
-오른쪽이 정수로 잘려서는 안 되는 나눗셈인 대입을 보고합니다.
-<p>이 구문은 의도된 경우도 있으나 보통 버그입니다.</p>
-<p><b>예:</b></p>
+Informa las asignaciones cuyo lado derecho sea una división que no debería truncarse como entero.
+<p>Aunque a veces es intencional, esta construcción es, con frecuencia, defectuosa.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   int x = 18;
-  x *= 3/2; // 정수 나눗셈의 결과 때문에 x는 변경되지 않음
+  x *= 3/2; // no cambia x por el resultado de la división entera
 </code></pre>
 <p>
-이 코드는 다음으로 바꿔야 합니다.
+Este código debería reemplazarse por:
 <pre><code>
   int x = 18;
   x *= 3.0/2;
 </code></pre>
 <!-- tooltip end -->
 <p>
-  검사 옵션에서 의심스러우나 올바른 나눗셈에 대한 경고(예: 피제수를 정적으로 계산할 수 없는 경우)를 비활성화할 수 있습니다.
+  En las opciones de inspección, puede deshabilitar las advertencias para divisiones sospechosas, pero posiblemente correctas;
+  por ejemplo, cuando el dividendo no puede calcularse estáticamente.
 <pre><code>
   void calc(int d) {
      int x = 18;
@@ -24,7 +25,7 @@
 </code></pre>
 
 <p>
-  <small>2019.2의 새로운 기능</small>
+  <small>Nuevo en la versión 2019.2</small>
 </p>
 </body>
 </html>

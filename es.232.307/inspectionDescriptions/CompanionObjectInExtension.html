@@ -1,11 +1,11 @@
-<html>
+ <html>
 <body>
-<a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">IDE 확장</a> 내에서 컴패니언 객체가 잘못 사용된 위치를 보고합니다.
+Se informa en las <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">Extensiones</a> un uso incorrecto del objeto compañero.
 <p>
-  Kotlin 컴패니언 객체는 항상 포함하는 클래스를 로드하려고 시도할 때 생성되며 IDE 확장은 생성 비용이 적습니다.
-  플러그인에서 과도한 클래스 로딩은 IDE 시작 시 큰 문제를 야기합니다.
+  Los objetos compañeros de Kotlin siempre se crean cuando intentas cargar la clase que los contiene, y la implementación de los puntos de extensión debería ser de bajo costo.
+  Una carga excesiva de clases en los complementos es un gran problema para el inicio del IDE.
 </p>
-<p>잘못된 패턴:</p>
+<p>Patrón incorrecto:</p>
 <pre><code lang="kotlin">
   class KotlinDocumentationProvider : AbstractDocumentationProvider(), ExternalDocumentationProvider {
 
@@ -16,7 +16,7 @@
   }
 </code></pre>
 <p>
-  여기에서 <code>KotlinDocumentationProvider</code>는 <code>plugin.xml</code>에 등록된 확장입니다.
+  Aquí <code>KotlinDocumentationProvider</code> es una extensión registrada en <code>plugin.xml</code>:
 </p>
 <pre><code lang="xml">
   &lt;lang.documentationProvider language="JAVA"
@@ -24,49 +24,76 @@
                               order="first"/&gt;
 </code></pre>
 <p>
-  이 예시에서 <code>JavaDocumentationProvider</code>는 <code>new KotlinDocumentationProvider()</code>가 호출될 때 디스크에서 로드됩니다.
+  En este ejemplo, <code>JavaDocumentationProvider</code> se carga desde el disco cada vez que alguien invoca <code>new KotlinDocumentationProvider()</code>.
 </p>
 <p>
-  확장 구현 내의 Kotlin 컴패니언 객체는 로거와 간단한 상수만 포함할 수 있습니다.
-  다른 선언으로 인해 과도한 클래스 로드가 일어나거나 무거운 리소스(TokenSet, Regex 등)가 조기에 초기화될 수 있습니다
-  일찍 초기화될 수 있습니다.
+  Los objetos compañeros de Kotlin en las implementaciones del punto de extensión solo pueden contener registradores y constantes simples.
+  Otras declaraciones pueden provocar una carga excesiva de clases o una inicialización anticipada de recursos de gran tamaño (TokenSet, Regex, etc.).
+  Ten en cuenta que incluso las declaraciones marcadas como <code>@JvmStatic</code> generarán una clase adicional para el objeto compañero, lo que puede provocar un cálculo costoso.
 </p>
 <p>
-  이러한 선언은 컴패니언 객체가 아닌 최상위나 객체에 저장해야 합니다.
+  Estas declaraciones deben almacenarse en objetos o estar en el nivel superior, en lugar de almacenarse en el objeto compañero.
 </p>
-<h3>자주 하는 질문</h3>
-<h4>ConfigurationType을 재작성하고 실행하는 방법</h4>
-<p>선언을 최상위로 옮기세요.</p>
+<h3>Preguntas frecuentes</h3>
+<h4>¿Cómo reescribir un ConfigurationType para ejecutarlo?</h4>
+<p>Mover la declaración al nivel superior:</p>
 <pre><code lang="kotlin">
-  // 올바른 방법
+  // Forma correcta: usa una función de nivel superior
   internal fun mnRunConfigurationType(): MnRunConfigurationType = runConfigurationType&lt;MnRunConfigurationType&gt;()
 
   internal class MnRunConfigurationType : ConfigurationType {
-    companion object { // DON'T
-      fun getInstance(): MnRunConfigurationType = findConfigurationType(MnRunConfigurationType::class.java)
+    companion object { // Forma incorrecta
+      fun getInstance(): MnRunConfigurationType = runConfigurationType&lt;MnRunConfigurationType&gt;()
     }
-  }
+    ...
 </code></pre>
-<h4>FileType을 재작성하는 방법</h4>
-<p>이전:</p>
+<h4>¿Cómo reescribir FileType?</h4>
+<p>Antes:</p>
 <pre><code lang="kotlin">
   internal class SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
     companion object {
       val FILE_TYPE = SpringBootImportsFileType()
-   }
-  }
+      ...
 </code></pre>
-<p>이후:</p>
+<p>Después:</p>
 <pre><code lang="kotlin">
   internal object SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
+  ...
 </code></pre>
-<p><code>plugin.xml</code> 내에서 <code>INSTANCE</code> fieldName을 사용하세요.</p>
+<p>Usa el fieldName <code>INSTANCE</code> en <code>plugin.xml</code>:</p>
 <pre><code lang="xml">
   &lt;fileType name="Spring Boot Imports"
               fieldName="INSTANCE"
               implementationClass="com.intellij.spring.boot.spi.SpringBootImportsFileType"/&gt;
 </code></pre>
+<h4>¿Cómo reescribir CounterUsagesCollector？
+</h4>
+<h5>Interfaz del programa de aplicación (API) interna</h5>
+<p>Antes:</p>
+<pre><code lang="kotlin">
+  class AntActionsUsagesCollector : CounterUsagesCollector() {
+    override fun getGroup(): EventLogGroup = GROUP
+
+    companion object {
+      private val GROUP = EventLogGroup("build.ant.actions", 1)
+
+      @JvmField
+      val runSelectedBuildAction = GROUP.registerEvent("RunSelectedBuild")
+   }
+}
+</code></pre>
+<p>Después:</p>
+<pre><code lang="kotlin">
+ object AntActionsUsagesCollector : CounterUsagesCollector() {
+  override fun getGroup(): EventLogGroup = GROUP
+
+  private val GROUP = EventLogGroup("build.ant.actions", 1)
+
+  @JvmField
+  val runSelectedBuildAction = GROUP.registerEvent("RunSelectedBuild")
+}
+</code></pre>
 <!-- tooltip end -->
-<p><small>2023.2의 새로운 기능</small>
+<p><small>Novedades en 2023.3</small>
 </body>
 </html>

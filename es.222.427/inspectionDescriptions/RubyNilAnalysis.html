@@ -1,15 +1,15 @@
 <html>
 <body>
-가능한 <code>nil</code> 역참조를 보고합니다. <code>nil</code> 역참조는 <code>NoMethodError</code>를 일으킬 수 있습니다.
-<p><i>무시된 리시버</i> 목록을 사용하여 무시되어야 하는 리시버로 사용되는 메서드 호출을 지정하세요(예:  <code>Foo#call</code> 혹은 <code>Foo::call</code>을 각각 인스턴스 혹은 싱글턴 메서드로 사용).</p>
-<p>예:</p>
+Informa posibles desreferencias de <code>nil</code>. La desreferenciación de <code>nil</code> puede provocar un <code>NoMethodError</code>.
+<p>Utiliza la lista de <i>receivers ignorados</i> para especificar las llamadas al método utilizadas como receivers que deben ignorarse (por ejemplo, <code>Foo#call</code> o <code>Foo::call</code> para un método de instancia o un método singleton respectivamente).</p>
+<p>Ejemplo:</p>
 <pre>
 <code>def foo
   rand(2) == 1 ? nil : 1
 end
 
 a = foo
-a.nomethod # 메서드 호출 시 NoMethodError가 발생할 수 있음</code>
+a.nomethod # la invocación del método puede producir un NoMethodError</code>
 </pre>
 </body>
 </html>

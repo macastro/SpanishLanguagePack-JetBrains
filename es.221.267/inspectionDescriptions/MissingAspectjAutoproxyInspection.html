@@ -1,14 +1,16 @@
 <html>
 <body>
-<p>Spring 2.5 이전 버전에서 XML 구성에 <strong>&lt;aop:aspectj-autoproxy/&gt;</strong> 요소가 없는 경우 <code>@Aspect</code> 어노테이션을 보고합니다.</p>
+<p>Informa de las anotaciones <code>@Aspect</code> en las versiones de Spring anteriores a la 2.5
+  si no hay ningún elemento <strong>&lt;aop:aspectj-autoproxy/&gt;</strong> en la configuración XML.</p>
 
-<p><b>예:</b></p>
-<pre><code>
-<strong>@Aspect</strong> // '@AspectJ 지원이 활성화되어 있지 않습니다
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+@Aspect // No se ha habilitado el soporte de '@AspectJ
 class MyAspect {
    ...
 }
-
+</code></pre>
+<pre><code lang="xml">
 &lt;beans&gt;
    &lt;!-- &lt;aop:aspectj-autoproxy/&gt; --&gt;
 &lt;/beans&gt;

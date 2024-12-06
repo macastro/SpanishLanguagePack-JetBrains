@@ -1,15 +1,16 @@
 <html>
 <body>
-권장하는 이름 생성 규칙을 따르지 않는 <code>const</code> 프로퍼티 이름을 보고합니다.
+Informa nombres de propiedad <code>const</code> que no siguen las convenciones de nomenclatura recomendadas.
 <p>
-    이름을 생성할 때 일관성을 유지하면 코드를 읽고 이해하기 쉽습니다.
-    <a href="https://kotlinlang.org/docs/coding-conventions.html#property-names">Kotlin 공식 스타일 가이드</a>에 따르면 <code>const</code> 프로퍼티는 대문자를 사용해야 하며 이름을 밑줄로 구분해야 합니다.
+    Una nomenclatura constante permite una lectura y comprensión de código más sencilla.
+    De acuerdo con la <a href="https://kotlinlang.org/docs/coding-conventions.html#property-names">guía de estilo oficial de Kotlin</a>,
+    las propiedades <code>const</code> deben usar nombres separados por guión bajo y en mayúsculas.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   const val Planck: Double = 6.62607015E-34
 </code></pre>
-<p>빠른 수정에서는 프로퍼티의 이름을 변경합니다.</p>
+<p>El arreglo rápido renombra la propiedad:</p>
 <pre><code>
   const val PLANCK: Double = 6.62607015E-34
 </code></pre>

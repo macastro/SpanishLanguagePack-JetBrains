@@ -1,20 +1,20 @@
 <html>
 <body>
-타입 변수 개수 간의 불일치로 인해 충돌하는 부분 컨테이너 선언을 보고합니다. 타입 변수의 수가 다른 부분 컨테이너를 선언하는 것은 오류입니다.
-<p>빠른 수정을 사용하여 선언된 타입 변수의 수를 수정하거나 충돌하는 선언으로 이동할 수 있습니다.</p>
-<p>예:</p>
-<pre><code># 클래스 'Example'에 다른 선언과 충돌하는 타입 변수 1개가 있습니다
-class Example[A]
+Se informa un conflicto en la declaración de un contenedor parcial debido a una discrepancia en el número de variables de tipo. Declarar un contenedor parcial con un número diferente de variables de tipo es un error.
+<p>Hay correcciones rápidas disponibles para corregir el número de variables de tipo declaradas o navegar a la declaración en conflicto.</p>
+<p>Ejemplo:</p>
+<pre><code># La clase 'Ejemplo' tiene 1 variable de tipo que entra en conflicto con otras declaraciones
+class Ejemplo[A]
 end
 
-# 클래스 'Example'에 다른 선언과 충돌하는 타입 변수 2개가 있습니다
-class Example[Y, Z]
+# La clase 'Ejemplo' tiene 2 variables de tipo que entran en conflicto con otras declaraciones
+class Ejemplo[Y, Z]
 end</code></pre>
-<p>빠른 수정 적용 후:</p>
-<pre><code>class Example[A, B]
+<p>Después de la corrección rápida:</p>
+<pre><code>class Ejemplo[A, B]
 end
 
-class Example[Y, Z]
+class Ejemplo[Y, Z]
 end</code></pre>
 </body>
 </html>

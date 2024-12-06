@@ -1,8 +1,12 @@
 <html>
 <body>
-다른 객체의 <code>private</code> 또는 <code>protected</code> 필드로의 액세스를 보고합니다.
-Java는 현재 객체와 동일한 클래스의 객체인 경우 이러한 필드 액세스를 허용하지만 일부 코드 스타일에서는 이러한 사용을 추천하지 않습니다. 또한 <code>private</code> 필드에 대한 직접적 액세스는 Spring 및 Hibernate와 같은 구성요소 지향의 아키텍처에서 실패할 수 있습니다. 이러한 아키텍처에서는 다른 객체에 대한 모든 액세스가 메서드 호출을 통해 이루어져, 프레임워크가 프록시를 사용하여 액세스를 중개할 수 있도록 기대됩니다.
-<p><b>예:</b></p>
+Informa accesos a campos <code>private</code> o <code>protected</code> de otro objeto.
+Java permite el acceso a dichos campos para objetos de la misma clase que el objeto actual, pero
+algunos estilos de codificación desaconsejan este uso. Además, dicho acceso directo a campos <code>private</code>
+puede fallar en arquitecturas orientadas a componentes, como Spring o Hibernate, que esperan que todos los accesos
+a otros objetos sean a través de llamadas a métodos para que el framework pueda mediar en el acceso
+utilizando proxies.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class Base {
     protected int bar;
@@ -13,14 +17,15 @@ Java는 현재 객체와 동일한 클래스의 객체인 경우 이러한 필�
     }
   }
 </code></pre>
-이 필드를 캡슐화하는 빠른 수정을 사용할 수 있습니다.
+Hay una corrección rápida disponible para encapsular el campo.
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configurar la inspección:</p>
 <ul>
-  <li><b>동일한 클래스의 액세스 무시</b> 옵션을 사용하여 동일한 클래스의 액세스를 무시하고 내부 또는 외부 클래스의 액세스를 보고합니다.
-    <p>내부 클래스의 액세스도 무시하는 경우 중첩된 <b>내부 클래스의 액세스 무시</b>를 사용합니다.</p>
+  <li>Utilice la opción <b>Ignorar accesos desde la misma clase</b> para ignorar el acceso desde la misma clase y solo informar el acceso
+    desde clases internas o externas.
+    <p>Para ignorar también el acceso desde clases internas, utilice el anidado <b>Ignorar accesos desde clases internas</b>.</p>
   </li>
-  <li><b>'equals()' 메서드의 액세스 무시</b>를 사용하여 <code>equals()</code> 메서드의 액세스를 무시합니다.</li>
+  <li>Utilice <b>Ignorar accesos desde el método 'equals()'</b> para ignorar el acceso desde un método <code>equals()</code>.</li>
 </ul>
 </body>
 </html>

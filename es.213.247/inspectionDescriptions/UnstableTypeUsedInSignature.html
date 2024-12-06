@@ -1,13 +1,12 @@
 <html>
 <body>
-시그니처의 불안정한 API 유형을 참조하지만, 마찬가지로 불안정한 어노테이션으로 표시되지 않은 클래스,
-메서드 및 필드의 선언을 보고합니다.
+Informa de las declaraciones de clases, métodos y campos que hacen referencia a un tipo de API inestable en la firma, pero que no están marcados con la misma anotación inestable.
 <p>
-  이 검사는 <i>unstable</i>(내부, 실험적) 유형을 노출하지 않는 공용 API의 시그니처를 보장합니다.
-  예를 들어 메서드가 <i>experimental</i> 클래스를 반환한다면 메서드 자체가 <i>experimental</i>로 간주됩니다.
-  이는 해당 유형의 호환되지 않는 변경 내용(삭제 또는 다른 패키지로의 이동)이 호환되지 않는 메서드 시그니처 변경 내용으로 이어지지 않기 때문입니다.
+  Esta inspección garantiza que las firmas de una API pública no expongan ningún tipo <i>inestable</i> (interno, experimental).
+  Por ejemplo, si un método devuelve una clase <i>experimental</i>, el método en sí se considera <i>experimental</i>
+  porque los cambios incompatibles del tipo (supresión o traslado a otro paquete) llevan a cambios incompatibles de firma de método.
 </p>
 <!-- tooltip end -->
-<p>어떤 어노테이션이 불안정한 API로 표시될지 지정하려면 아래 목록을 사용하세요.</p>
+<p>Utilice la siguiente lista para especificar qué anotaciones marcan una API inestable.</p>
 </body>
 </html>

@@ -1,16 +1,13 @@
-<html>
-<body>
-언박싱 변환(원시 값으로 객체 자동 래핑 해제)의 영향을 받는 표현식을 보고합니다.
-원시 타입 대신 객체를 사용하지 않도록 하세요. 이는 성능에 상당한 영향을 미칠 수 있습니다.
-<p><b>예:</b></p>
+<html><body>Informa expresiones afectadas por conversión de desempaquetado (desempaquetado automático de objetos en valores primitivos).
+Intenta no utilizar objetos en lugar de primitivos. Podría afectar significativamente al rendimiento.
+<p><b>Ejemplo:</b></p>
 <pre><code>int x = new Integer(42);</code></pre>
-<p>빠른 수정은 변환을 명시적으로 만듭니다.</p>
+<p>La solución rápida explicita la conversión:</p>
 <pre><code>int x = new Integer(42).intValue();</code></pre>
 <!-- tooltip end -->
 <p>
-  <i>AutoUnboxing</i> Java 5에 표시되었습니다.
-  이 검사는 이전 Java 버전과의 하위 호환성을 위해 다운그레이드하는 데 도움이 될 수 있습니다.
+  <i>Desempaquetado automático</i> apareció en Java 5.
+  Esta inspección puede ayudar a realizar una degradación para compatibilidad inversa con versiones anteriores de Java.
 </p>
 
-</body>
-</html>
+</body></html>

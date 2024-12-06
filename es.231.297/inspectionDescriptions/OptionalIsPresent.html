@@ -1,17 +1,15 @@
 <html>
 <body>
-Reports <code>Optional</code> expressions used as <code>if</code> or conditional expression conditions,
-that can be rewritten in a functional style.
-The result is often shorter and easier to read.
-<p>예:</p>
+Informa las expresiones <code>Optional</code> utilizadas como condiciones <code>if</code> o en expresiones condicionales que se pueden reescribir en un estilo funcional.
+El resultado es generalmente más corto y fácil de leer.
+<p>Ejemplo:</p>
 <pre><code>
   if (str.isPresent()) str.get().trim();
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   str.ifPresent(String::trim);
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 8 이상인 경우에만 보고합니다.</p>
 </body>
 </html>

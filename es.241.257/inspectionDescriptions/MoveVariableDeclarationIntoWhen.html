@@ -1,7 +1,7 @@
 <html>
 <body>
-<code>when</code> 식 내부로 이동 가능한 변수 선언을 보고합니다.
-<p><b>예:</b></p>
+Reporta declaraciones de variables que se pueden mover dentro de una expresión <code>when</code>.
+<p><b>Ejemplo:</b></p>
 <pre><code>
 fun someCalc(x: Int) = x * 42
 
@@ -14,7 +14,7 @@ fun foo(x: Int): Int {
   }
 }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la intervención rápida:</p>
 <pre><code>
 fun foo(x: Int): Int {
   return when (val a = someCalc(x)) {

@@ -1,21 +1,22 @@
 <html>
 <body>
-중괄호 없는 제어문 뒤의 구문의 의심스러운 들여쓰기를 보고합니다.
+Inspecciona saltos de línea sospechosos de sentencias tras una sentencia de control sin llaves.
 <p>
-  그러한 들여쓰기는 구문이 실제로는 제어문 실행 후 무조건 실행되지만 제어문 내부에 있는 것처럼 보이게 할 수 있습니다.
+  Estos saltos de línea pueden hacer que parezca que la sentencia está dentro de la sentencia de control,
+  cuando en realidad se ejecuta sin condición tras la sentencia de control.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Bar {
       void foo(int i) {
           if (i == 0)
               System.out.println("foo");
-              System.out.println("bar"); // 경고
+              System.out.println("bar"); // warning
           if (i == 1);
-              System.out.println("great"); // 경고
+              System.out.println("great"); // warning
           if (i == 42)
               System.out.println("answer");
-                  System.out.println("question"); // 경고
+                  System.out.println("question"); // warning
       }
   }
 </code></pre>

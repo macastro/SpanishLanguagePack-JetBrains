@@ -1,16 +1,16 @@
 <html>
 <body>
-유사한 로그 메시지를 가지며 <code>logger.info("message: {}", key)</code>와 같은 SLF4J, Log4j2 로그 호출이 한 클래스에 있는 경우 보고합니다.
-이러한 호출은 서로 분간하기가 불가능할 수 있으며 특정 로그 메시지의 출처가 어디인지 파악하기 어려울 수 있습니다.
-<p><b>예(Java):</b></p>
+Informa llamadas de registro SLF4J, Log4j2 en una clase, tales como <code>logger.info("message: {}", key)</code> con mensajes de registro similares.
+Estas llamadas pueden no ser distinguibles entre sí, y esto introduce dificultades para entender de dónde proviene un determinado mensaje de registro.
+<p><b>Ejemplo (para Java):</b></p>
 <pre><code lang="java">
   private static void request1(String text) {
-      log.info("Message: {}", text); //유사한 호출
+      log.info("Message: {}", text); //llamada similar
       doSomething1();
   }
 
   private static void request2(int i) {
-      log.info("Message: {}", i); //유사한 호출
+      log.info("Message: {}", i); //llamada similar
       doSomething2();
   }
 </code></pre>
@@ -18,14 +18,14 @@
 <!-- tooltip end -->
 <ul>
   <li>
-    <b>Minimum length of a similar sequence(유사한 시퀀스의 최소 길이)</b> 옵션을 사용하여 호출이 보고되는 유사 시퀀스의 최소 길이를 지정하세요
+    Utiliza la opción <b>Longitud mínima de una secuencia similar</b> para establecer la longitud mínima de secuencias similares después de la cual se informarán las llamadas
   </li>
   <li>
-    <b>Do not report calls with the 'error' log level('error' 로그 레벨이 있는 호출은 보고하지 않음)</b> 옵션을 사용하면 메시지에 `error` 로그 레벨이 있거나 예외가 있는 경우 무시합니다.
-    호출 위치는 여전히 스택 추적으로 찾을 수 있기 때문에 경고를 숨기는 데 유용합니다.
+    Utiliza la opción <b>No informar llamadas con el nivel de registro 'error'</b> para ignorar mensajes con nivel de registro `error` y cuando hay una excepción.
+    Puede ser útil ocultar las advertencias, ya que las ubicaciones de llamada aún pueden localizarse mediante seguimientos de pila
   </li>
 </ul>
 
-<p><small>2024.1의 새로운 기능</small></p>
+<p><small>Novedades en 2024.1</small></p>
 </body>
 </html>

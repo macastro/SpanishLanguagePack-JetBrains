@@ -1,25 +1,25 @@
 <html>
 <body>
-<p>long으로 묵시적 형 변환되는 정수 곱셈 또는 좌측 시프트 연산을 보고합니다.</p>
-<p><b>예:</b></p>
+Informes de multiplicaciones y desplazamientos a la izquierda enteros que se convierten implícitamente a tipo long.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void f(int i) {
     long val = 65536 * i;
   }
 </code></pre>
-<p>빠른 수정이 적용된 후 코드는 다음과 같이 변경됩니다:</p>
+<p>Después de que se aplica una corrección rápida, el código cambia a:</p>
 <pre><code>
   void x(int i) {
     long val = 65536<b>L</b> * i;
   }
 </code></pre>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void f(int i) {
     long value = i &lt;&lt; 24;
   }
 </code></pre>
-<p>빠른 수정이 적용된 후 코드는 다음과 같이 변경됩니다:</p>
+<p>Después de que se aplica una corrección rápida, el código cambia a:</p>
 <pre><code>
   void f(int i) {
     long value = (long) i &lt;&lt; 24;
@@ -27,8 +27,8 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  이러한 곱셈은 보통 실수이며 예기치 않게 오버플로 절단이 발생할 수 있습니다.
-  <code>int</code> 리터럴을 <code>long</code> 리터럴(<code>65536<b>L</b></code>)로 변환하면 문제를 해결할 수 있습니다.
+  Tales multiplicaciones suelen ser errores, ya que pueden provocar un truncamiento de desbordamiento inesperado.
+  El problema se puede corregir convirtiendo el literal int en un literal long (<code>65536<b>L</b></code>).
 </p>
 
 </body>

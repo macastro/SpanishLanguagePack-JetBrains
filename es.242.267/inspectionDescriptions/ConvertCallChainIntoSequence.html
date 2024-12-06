@@ -1,11 +1,12 @@
 <html>
 <body>
-<b>Sequence</b>로 변환해야 하는 <code>Collection</code>에서의 호출 체인을 보고합니다.
-<p><code>Collection</code>을 변환하는 각 함수(예: <code>map()</code> 또는 <code>filter()</code>)는 내부에서 새 <code>Collection</code>(보통 <code>List</code> 또는 <code>Set</code>)을 생성합니다.
-    여러 연속 호출의 경우 <code>Collection</code>에 대량의 항목이 있으면 메모리 트래픽이 크게 증가할 수 있습니다.
-    그럴 경우 <code>Sequence</code>를 사용하는 것이 좋습니다.
+Se reportan cadenas de llamada en un <code>Collection</code> que debería ser convertido a <b>Sequence</b>.
+<p>Cada función de transformación <code>Collection</code> (como <code>map()</code> o <code>filter()</code>) crea un nuevo
+    <code>Collection</code> (normalmente <code>List</code> o <code>Set</code>) internamente.
+    En caso de múltiples llamadas consecuentes, y un gran número de elementos en <code>Collection</code>, el tráfico de memoria podría ser significativo.
+    En tal caso, es preferible usar <code>Sequence</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Entity(val key: String, val value: String)
 
@@ -15,7 +16,7 @@
       .filter { it.size == 2 }
       .map { Entity(it[0], it[1]) }
 </code></pre>
-<p>빠른 수정에서는 호출 체인을 <code>asSequence()</code> 및 <code>toList()</code>로 래핑합니다.</p>
+<p>La corrección rápida envuelve la cadena de llamada en <code>asSequence()</code> and <code>toList()</code>:</p>
 <pre><code>
   class Entity(val key: String, val value: String)
 

@@ -1,20 +1,20 @@
 <html>
 <body>
-Kotlin의 <b>forEach</b>로 대체 가능한 Java Map.<code>forEach</code> 메서드 호출을 보고합니다.
-<p><b>예:</b></p>
+Informa una llamada al método Java Map.<code>forEach</code> que puede ser reemplazada con <b>forEach</b> de Kotlin.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun test(map: HashMap&lt;Int, String>) {
-      map.forEach { (key, value) ->
+      map.forEach { key, value ->
           foo(key, value)
       }
   }
 
   fun foo(i: Int, s: String) {}
 </code></pre>
-<p>빠른 수정에서는 소괄호를 제거합니다.</p>
+<p>El arreglo rápido agrega paréntesis:</p>
 <pre><code>
   fun test(map: HashMap&lt;Int, String>) {
-      map.forEach { key, value ->
+      map.forEach { (key, value) ->
           foo(key, value)
       }
   }

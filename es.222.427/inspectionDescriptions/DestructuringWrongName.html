@@ -1,7 +1,7 @@
 <html>
 <body>
-구조 분해된 데이터 클래스의 다른 프로퍼티 이름과 일치하는 구조 분해 선언의 항목을 보고합니다.
-<p><b>예:</b></p>
+Reporta entradas de declaraciones de desestructuración que coinciden con el nombre de una propiedad diferente de la clase de datos desestructurada.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   data class Foo(val a: String, val b: Int, val c: String)
 
@@ -9,7 +9,7 @@
       val (a, c) = f
   }
 </code></pre>
-<p>빠른 수정에서는 변수 이름이 해당 클래스 필드의 이름과 일치하도록 변경합니다.</p>
+<p>La corrección rápida cambia el nombre de la variable para que coincida con el nombre del campo de clase correspondiente:</p>
 <pre><code>
   data class Foo(val a: String, val b: Int, val c: String)
 

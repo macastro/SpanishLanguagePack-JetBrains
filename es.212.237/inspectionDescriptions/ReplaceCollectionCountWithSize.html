@@ -1,21 +1,21 @@
 <html>
 <body>
-<code>Collection&lt;T&gt;.count()</code> 호출을 보고합니다.
+Informa llamadas a <code>Collection&lt;T&gt;.count()</code>.
 <p>
-    이 함수 호출은 <code>.size</code>로 바꿀 수 있습니다.
+    Esta llamada de función puede ser reemplazada por <code>.size</code>.
 </p>
 <p>
-    <code>.size</code> 양식은 연산이 O(1)이며 여분의 객체가 대입되지 않도록 보장하는 반면
-    <code>count()</code>는 O(n)이며 개입이 가능한 <code>Iterable&lt;T&gt;.count()</code>와 혼동할 수 있습니다.
+    La estructura <code>.size</code> asegura que la operación sea de O(1) y que no se asignen objetos extra, 
+    mientras que <code>count()</code> puede ser confundido con <code>Iterable&lt;T&gt;.count()</code>, que es O(n) y de asignación.
     <br>
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>  fun foo() {
       var list = listOf(1,2,3)
-      list.count() // 바꿀 수 있는 'count()'
+      list.count() // 'count()' reemplazable
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>  fun foo() {
       var list = listOf(1,2,3)
       list.size

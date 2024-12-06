@@ -1,10 +1,12 @@
 <html>
 <body>
-JDBC 연결을 얻기 위한 <code>java.sql.DriverManager</code> 사용을 보고합니다. 
+Informa acerca de cualquier uso de <code>java.sql.DriverManager</code> para adquirir una conexión JDBC. 
 <p>
-  <code>java.sql.DriverManager</code>는 연결 풀링 및 기타 최적화를 허용하는 <code>javax.sql.Datasource</code>로 대체되었습니다.
+  <code>java.sql.DriverManager</code>
+  ha sido reemplazado por <code>javax.sql.DataSource</code>, que
+  permite agrupamiento de conexiones y otras optimizaciones.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>  Connection conn = DriverManager.getConnection(url, username, password);
 </code></pre>
 <!-- tooltip end -->

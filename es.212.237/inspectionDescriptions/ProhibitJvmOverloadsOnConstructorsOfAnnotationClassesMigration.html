@@ -1,16 +1,16 @@
 <html>
 <body>
-<p>어노테이션의 생성자에 있는 <code>@JvmOverloads</code>는 의미가 없으므로 이를 보고합니다.</p>
+<p>Reporta <code>@JvmOverloads</code> en constructores de clases de anotación porque no tiene significado.</p>
 <p>
-    생성된 바이트코드 및 Kotlin 메타데이터에 <code>@JvmOverloads</code> 발자국이 없으므로
-    <code>@JvmOverloads</code>가 생성된 바이트코드 및 코드 동작에 영향을 주지 않습니다.
+    No hay una huella de <code>@JvmOverloads</code> en el bytecode generado y metadatos de Kotlin,
+    por lo que <code>@JvmOverloads</code> no afecta el bytecode generado y el comportamiento del código.
 </p>
-<p>어노테이션 클래스의 생성자에 있는 <code>@JvmOverloads</code>는 Kotlin 1.4 버전부터 컴파일 오류를 일으킵니다.</p>
-<p><b>예:</b></p>
+<p><code>@JvmOverloads</code> en constructores de clases de anotación causa un error de compilación desde Kotlin 1.4.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   annotation class A <b>@JvmOverloads</b> constructor(val x: Int = 1)
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que el arreglo rápido se aplica:</p>
 <pre><code>
   annotation class A constructor(val x: Int = 1)
 </code></pre>

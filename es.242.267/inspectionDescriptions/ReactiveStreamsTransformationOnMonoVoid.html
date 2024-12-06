@@ -1,24 +1,21 @@
 <html>
 <body>
-<p>Reactive Stream 체인에서 <code>Void 값이 있는 Mono</code>에 호출된 변환 연산자를 보고합니다.</p>
+<p>Informa las operaciones de transformación invocadas en un <code>Mono con valor vacío</code> dentro de una cadena Reactive Stream.</p>
 
-<p>
-  Void 값이 있는 Mono에 대한 Reactive Streams 체인 호출은 효과가 없습니다.
-  빠른 수정에서는 <code>map(), flatMap()</code>을 다른 Mono를 반환하는 <code>then()</code>으로 바꾸도록 제안합니다.
-</p>
+<p>Las invocaciones de cadena Reactive Streams en un Mono con valor vacío no tienen ningún efecto. La corrección rápida sugiere reemplazar <code>map(), flatMap()</code> con <code>then()</code> que devuelva otro Mono.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>Mono.when(Mono.just(1), Mono.just(2))
-                .map(v -> "New value")
+                .map(v -> "Nuevo valor")
                 .doFinally(System.out::println);
 </code></pre>
 
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>Mono.when(Mono.just(1), Mono.just(2))
-                .then(Mono.fromCallable(() -> "New value"))
+                .then(Mono.fromCallable(() -> "Nuevo valor"))
                 .doFinally(System.out::println);
 </code></pre>
 
-<p><small>2023.1의 새로운 기능</small></p>
+<p><small>Nuevo en 2023.1</small></p>
 </body>
 </html>

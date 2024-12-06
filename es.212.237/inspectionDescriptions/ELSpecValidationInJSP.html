@@ -1,13 +1,14 @@
 <html>
 <body>
-비표준 EL 확장에 의해 발생했을 가능성이 있는 문제를 보고합니다: 속성 외부의 JSF EL 표현, 비표준 EL 표현 등.
+Reporta posibles problemas causados por extensiones no estándar de Expression Language (EL):
+Expresiones EL de JSF fuera de atributos, expresiones EL no estándar, etcétera.
 
-<p><b>예:</b></p><br/>
+<p><b>Ejemplo:</b></p><br/>
 <pre><code>
 &lt;f:view&gt;
   &lt;h:form&gt;
     &lt;f:loadBundle var="example"/&gt;
-    &lt;h:commandButton action="${example.size()}"/&gt; // 경고: 메서드 호출이 비표준 확장임
+    &lt;h:commandButton action="${example.size()}"/&gt; // Advertencia: llamada a método es una extensión no estándar
   &lt;/h:form&gt;
 &lt;/f:view&gt;
 </code></pre>

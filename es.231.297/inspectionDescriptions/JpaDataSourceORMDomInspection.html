@@ -1,26 +1,26 @@
 <html>
 <body>
-구성된 데이터 소스 내부에서 해결되지 않는 Persistence ORM XML 설명자를 보고하고 데이터 소스를 새로고침하거나 다른 데이터 소스를 할당할 것을 제안합니다.
+Persiste informes de descriptores XML de ORM que no pueden resolverse dentro del origen de datos configurado y sugiere actualizar el origen de datos o asignar uno diferente.
 
-<p><b>데이터베이스 테이블 예:</b></p>
-<pre><code>
+<p><b>Tabla de base de datos de ejemplo:</b></p>
+<pre><code lang="sql">
   CREATE TABLE DATA_TABLE (
     ID INTEGER,
     DATA VARCHAR(100)
   );
 </code></pre><br/>
 
-<p><b>JSP 파일 예:</b></p>
-<pre><code>
+<p><b>Archivo JSP de ejemplo:</b></p>
+<pre><code lang="jsp">
   &lt;?xml version="1.0" encoding="UTF-8"?&gt;
   &lt;entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0"&gt;
     &lt;entity name="JavaEntity" class="JavaEntity"&gt;
-        &lt;table name="UNKNOWN_TABLE"/&gt; // 오류: 해결되지 않은 테이블
+        &lt;table name="UNKNOWN_TABLE"/&gt; // Error: tabla no resuelta
         &lt;attributes&gt;
           &lt;id name="id"&gt;
             &lt;column name="ID" nullable="false"/&gt;
           &lt;/id&gt;
-          &lt;basic name="UNKNOWN_COLUMN"&gt; // 오류: 해결되지 않은 열
+          &lt;basic name="UNKNOWN_COLUMN"&gt; // Error: columna no resuelta
             &lt;column name="UNKNOWN_COLUMN" length="12"/&gt;
           &lt;/basic&gt;
         &lt;/attributes&gt;
@@ -29,7 +29,7 @@
 </code></pre><br/>
 <!-- tooltip end -->
 <p>
-  <b>참고:</b> 'Assign datasource'(데이터 소스 할당) 액션을 통해 데이터 소스를 구성할 수 있습니다
+  <b>NOTA:</b> El origen de datos puede configurarse mediante la acción "Asignar origen de datos".
 </p>
 </body>
 </html>

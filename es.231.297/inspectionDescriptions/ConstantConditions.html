@@ -1,6 +1,6 @@
 <html>
 <body>
-데이터 플로우 분석에 기반하여 항상 null 값 가능성 컨트랙트를 위배하거나, 예외를 발생시키거나, 불필요한 코드 구문을 보고합니다.
+데이터 흐름 분석을 기반으로 항상 null 값 가능성 컨트랙트를 위배하거나, 예외를 발생시키거나, 불필요한 코드 구문을 보고합니다.
 <p>예:</p>
 <pre><code>if (array.length &lt; index) {
   System.out.println(array[index]);
@@ -33,8 +33,7 @@ Integer square(@Nullable Integer input) {
   </li>
 </ul>
 <p>
-  IntelliJ IDEA 2022.3 이전에는 이 조사가 "상수 조건 및 예외" 검사의 일부였습니다. 이제는 두 가지 검사, 
-"상수값" 과 "Null 가능성 및 데이터 플로우 문제"로 나뉩니다.
+  IntelliJ IDEA 2022.3 이전에 이 검사는 '상수 조건 및 예외' 검사의 일부였습니다. 이제는 두 가지 검사인 '상숫값'과 'Null 가능성 및 데이터 흐름 문제'로 나뉩니다.
 </p>
 </body>
 </html>

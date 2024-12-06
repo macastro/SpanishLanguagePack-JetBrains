@@ -1,15 +1,15 @@
 <html>
 <body>
-<code>count()</code> 호출 직전에 있는 <code>map()</code> 혹은 <code>boxed()</code>와 같이 불필요한 <code>Stream</code> API 호출을 보고합니다.
+<code>count()</code> llama a <code>map()</code> o <code>boxed()</code> justo antes, reportando esto como un llamado redundante de la API de <code>Stream</code>.
 <p>
-  이러한 호출은 최종 count를 변경하지 않으므로 제거될 수 있습니다. 이러한 매핑 호출 내의 lambda의 부수 효과에 코드가 의존하는 것일 수도 있습니다. 그러나 스트림 체인 내의 부수 효과에 의존 하는 것은 좋지 않습니다. 해당 호출이 추후의 Java 버전에서 제거되지 않는다는 보장은 없습니다.
+  Este tipo de llamados se pueden eliminar porque no modifican el conteo final. Es posible que el código dependa de los efectos secundarios de algún lambda dentro de este tipo de llamadas de <code>map</code>. Sin embargo, depender de los efectos secundarios de una cadena de <code>stream</code> es una muy mala práctica. No hay garantía de que este llamado no sea optimizado en versiones futuras de Java.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  // map() 호출은 불필요합니다
+  // El llamado a `map()` es redundante
   long count = list.stream().filter(s -> !s.isEmpty()).map(s -> s.trim()).count();
 </code></pre>
 <!-- tooltip end -->
-<p><small>2024.1의 새로운 기능</small></p>
+<p><small>Nuevo en 2024.1</small></p>
 </body>
 </html>

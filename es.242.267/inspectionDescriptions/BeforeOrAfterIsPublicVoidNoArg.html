@@ -1,12 +1,12 @@
 <html>
 <body>
-<code>public</code>으로 선언되지 않거나 <code>void</code>를 반환하거나 인수를 취하지 않는 JUnit 4 <code>@Before</code> 또는 <code>@After</code> 메서드를 보고합니다. 해당 메서드는 실수로 생성되기 쉽지만 JUnit 테스트 러너를 통해 실행되지 않습니다.
-<p>이 검사는 메서드 시그니처의 수정을 제공합니다.</p>
-<p><b>예:</b></p>
+Se informa de métodos JUnit 4 <code>@Before</code> o <code>@After</code> que no se declaran como <code>public</code>, devuelven algo distinto de <code>void</code> o aceptan argumentos. Estos métodos se pueden crear fácilmente por descuido, pero el ejecutor de pruebas JUnit no los ejecutará.
+<p>Esta inspección proporciona una corrección para la signatura del método.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   @Before private int foo(int arg) { ... }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   @Before public void foo() { ... }
 </code></pre>

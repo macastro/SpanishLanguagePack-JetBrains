@@ -1,9 +1,9 @@
 <html>
 <body>
-대입을 사용하는 필드 초기화를 필드 선언 내 초기화로 바꿀 것을 제안합니다
-<p>필드 대입이 인스턴스나 static 이니셜라이저에 있고 이 대입을 필드 선언과 결합하는 것이 안전한 경우에만 보고합니다.
-  다른 경우(예: 생성자 내에 대입이 있는 경우) 수정으로 의미가 바뀔 수 있으므로, 빠른 수정이 강조 표시 없이 제공됩니다.</p>
-<p>예:</p>
+Sugiere reemplazar la inicialización de los campos que usan asignaciones con la inicialización en la declaración de campo.
+<p>Solo informa si la asignación del campo se encuentra en una instancia o inicializador estático y es probable que unirlo con la declaración de campo sea seguro.
+  En otros casos, como la asignación dentro de un constructor, la corrección rápida se proporciona sin resaltado, ya que la corrección puede cambiar la semántica.</p>
+<p>Ejemplo:</p>
 <pre><code>
   class MyClass {
     static final int intConstant;
@@ -13,13 +13,13 @@
     }
   }
 </code></pre>
-빠른 수정은 대입된 값을 필드 이니셜라이저로 이동하고, 가능한 경우 클래스 이니셜라이저를 제거합니다.
+La corrección rápida mueve el valor asignado al inicializador de campo eliminando el inicializador de clase si es posible:
 <pre><code>
   class MyClass {
     static final int intConstant = 10;
   }
 </code></pre>
 <!-- tooltip end -->
-<small>2017.2부터 적용</small>
+<small>Desde 2017.2</small>
 </body>
 </html>

@@ -1,12 +1,12 @@
 <html>
 <body>
-다음과 같은 EJB 사양 위반 사례를 보고합니다.
+Informa de las siguientes violaciones de las especificaciones de EJB:
 <ul>
-  <li>삽입된 프로퍼티의 타입이 유효하지 않은 경우</li>
-  <li>EJB 참조가 'ejb-jar.xml'과 일관되지 않는 경우</li>
+  <li>El tipo de la propiedad inyectada es inválido</li>
+  <li>Los EJB referenciados son inconsistentes con el `ejb-jar.xml`</li>
 </ul>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 @LocalBean
 @Stateless
@@ -15,7 +15,7 @@ public class ExampleBean {
   private AnotherBean anotherBean;
 
   @Inject
-  public void getAnotherBean() { // 오류: 필드 또는 setter 메서드로의 삽입이 수행되어야 합니다
+  public void getAnotherBean() { // Error: La inyección debe realizarse en un campo o un método setter
     return anotherBean;
   }
 

@@ -1,23 +1,23 @@
 <html>
 <body>
-직렬화되거나 역직렬화될 수 있는 클래스를 보고합니다.
+Reporta clases que pueden ser serializadas o des-serializadas.
 <p>
-  클래스가 <code>Serializable</code> 인터페이스를 지원하며 <code>readObject()</code> 및 <code>writeObject()</code> 메서드가 항상 예외를 던지도록 정의되어 있지 않은 경우 직렬화될 수 있습니다. 직렬화 가능한 클래스는 안전한 사용을 위해 목적으로 한 코드 내에서 위험할 수 있습니다.
+  Una clase puede ser serializada si soporta la interfaz <code>Serializable</code> y sus métodos <code>readObject()</code> y <code>writeObject()</code> no están definidos para lanzar siempre una excepción. Las clases serializables pueden ser peligrosas en código que se supone es para uso seguro.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class DeserializableClass implements Serializable { // 클래스가 예외를 던지는 'writeObject()' 메서드를 포함하지 않음
-    private int sensitive = 736326;
+  class DeserializableClass implements Serializable { // La clase no contiene un método 'writeObject()' que lance una excepción
+    private int sensitiva = 736326;
 
     private void readObject(ObjectInputStream in) {
         throw new Error();
     }
 }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el quickfix:</p>
 <pre><code>
   class DeserializableClass implements Serializable {
-    private int sensitive = 736326;
+    private int sensitiva = 736326;
 
     private void readObject(ObjectInputStream in) {
         throw new Error();
@@ -30,17 +30,17 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  다음 옵션을 사용해 검사를 구성하세요:
+  Puedes configurar esta inspección utilizando las siguientes opciones:
 </p>
 <ul>
   <li>
-    상속자가 이 검사에서 보고되어서는 안 되는 클래스를 나열합니다.
-    상위 클래스에서 <code>Serializable</code>를 상속받지만 직렬화를 의도하지 않은 클래스를 말합니다.
-    그러한 클래스를 무시하는 대신 항상 예외를 던지는 <code>readObject()</code> 및 <code>writeObject()</code> 메서드를 추가하는 것이 더 안전할 수 있습니다.
- </li>
+    Lista las clases cuyos sucesores no deben ser reportados por esta inspección.
+    Esto aplica a clases que heredan <code>Serializable</code> de una superclase pero que no están destinadas a serializarse.
+    Es posible que en lugar de ignorar esas clases sea más seguro agregar los métodos <code>readObject()</code> y <code>writeObject()</code> que siempre lanzan una excepción.
+  </li>
   <li>
-    직렬화 가능한 익명 클래스를 무시할지 여부를 설정합니다.
- </li>
+    Establece si se ignoran las clases anónimas serializables.
+  </li>
 </ul>
 </body>
 </html>

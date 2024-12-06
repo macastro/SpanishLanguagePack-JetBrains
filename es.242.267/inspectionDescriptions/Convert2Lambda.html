@@ -1,30 +1,31 @@
 <html>
 <body>
-람다 식으로 대체 가능한 익명 클래스를 보고합니다.
-<p>예:</p>
+Reporta clases anónimas que pueden ser reemplazadas con expresiones lambda.
+<p>Ejemplo:</p>
 <pre><code>
   new Thread(new Runnable() {
     @Override
     public void run() {
-      // run thread
+      // corre hilo
     }
   });
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   new Thread(() -> {
-    // run thread
+    // corre hilo
   });
 </code></pre>
 <p>
-익명 클래스가 무상태 람다로 변환되는 경우, 
-후속 호출 중 Java 런타임에서 동일 람다 객체를 다시 사용할 수 있습니다. 반면 익명 클래스를 사용하면
- 매번 별도의 객체가 생성됩니다. 따라서 빠른 수정 적용 시 드물게 의미가 변경될 수 있습니다.
-예: 익명 클래스 인스턴스가 <code>HashMap</code> 키로 사용되는 경우.
+Tenga en cuenta que si una clase anónima es convertida en una lambda sin estado, el mismo objeto lambda
+puede ser reutilizado por el runtime Java durante invocaciones subsecuentes. Por otro lado, cuando se emplea una clase anónima,
+se crean objetos separados cada vez. Por tanto, aplicar la corrección rápida puede causar un cambio en la semántica en casos raros,
+por ejemplo, cuando las instancias de una clase anónima se utilizan como claves en un <code>HashMap</code>.
 </p>
 <!-- tooltip end -->
 <p>
-<b>인터페이스에 @FunctionalInterface로 어노테이션이 추가되지 않은 경우 보고</b> 옵션을 사용하여 익명 클래스가 <code>@FunctionalInterface</code> 어노테이션이 없는 인터페이스를 구현한 경우를 무시합니다.
+Utilice la opción <b>Reportar cuando la interfaz no esté anotada con @FunctionalInterface </b> para ignorar los casos en los que una clase anónima
+implementa una interfaz sin la anotación <code>@FunctionalInterface</code>.
 </p>
 </body>
 </html>

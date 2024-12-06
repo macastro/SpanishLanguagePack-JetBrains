@@ -1,16 +1,17 @@
 <html>
 <body>
-UAST <code>UElement</code>를 <code>PsiElement</code>로 사용하는 위치를 보고합니다.
+Reporta el uso de <code>UElement</code> del UAST como un <code>PsiElement</code>.
+
 <p>
-  이런 방식으로 얻은 <code>PsiElement</code>는 모호합니다.
+Los <code>PsiElement</code> obtenidos de esta manera son ambiguos.
 </p>
+
 <p>
-  "물리적인" <code>PsiElement</code>를 얻으려면 <code>UElementKt.getSourcePsiElement()</code>를 사용하고
-  Java 요소(<code>PsiClass</code>, <code>PsiMethod</code> 등)의 동작을 "흉내내는" <code>PsiElement</code>는
-  <code>UElementKt.getAsJavaPsiElement()</code>를 사용하세요.
+Para obtener un <code>PsiElement</code> "físico", utiliza <code>UElementKt.getSourcePsiElement()</code>. Para los <code>PsiElement</code> que "emulen" el comportamiento de elementos Java (<code>PsiClass</code>, <code>PsiMethod</code>, etc.), utiliza <code>UElementKt.getAsJavaPsiElement()</code>.
 </p>
+
 <p>
-  SDK Docs에서 <a href="https://plugins.jetbrains.com/docs/intellij/uast.html">UAST - 통합 추상 구문 트리</a>를 참조하세요.
+Para más información, consulta <a href="https://plugins.jetbrains.com/docs/intellij/uast.html">UAST - Árbol de sintaxis abstracto unificado</a> en la documentación del SDK.
 </p>
 </body>
 </html>

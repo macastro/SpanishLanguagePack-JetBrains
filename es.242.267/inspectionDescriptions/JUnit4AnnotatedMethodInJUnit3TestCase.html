@@ -1,21 +1,21 @@
 <html>
 <body>
-<code>junit.framework.TestCase</code> 상속자 내부의 JUnit 4 <code>@Test</code> 어노테이션이 추가된 메서드를 보고합니다. JUnit의 API를 결합하면 테스트 실행 문제가 발생할 수 있습니다. 
-<p><b>예:</b></p>
+Inspecciona métodos anotados con JUnit 4 <code>@Test</code> en el heredero <code>junit.framework.TestCase</code>. Mezclar API de JUnit puede causar problemas al ejecutar pruebas.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class MyTest extends TestCase {
-      @Test //이름이 'test'로 시작되지 않으므로 무시됩니다
+      @Test //El nombre no comienza con "test", por lo que se ignorará
       public void wouldBeIgnored() {}
   
-      @Test   //이름이 'test'로 시작되므로
-      @Ignore //@Ignore 어노테이션이 있어도 실행됩니다
+      @Test   //El nombre comienza con "test"
+      @Ignore //Por lo tanto, se ejecutará incluso con la anotación @Ignore
       public void testWouldBeExecuted() {}
   }
 </code></pre>
-<p><b>제공된 수정:</b></p>
+<p><b>Correcciones proporcionadas:</b></p>
 <ul>
-  <li><code>@Ignore</code> 어노테이션을 제거하고 테스트 메서드 이름이 'test'로 시작되지 않도록 변경합니다.</li>
-  <li>JUnit 3 테스트 클래스를 JUnit 4로 변환합니다.</li>
+  <li>Elimine la anotación <code>@Ignore</code> y cambie el nombre del método de prueba para que no comience con "test".</li>
+  <li>Convierta la clase de prueba JUnit 3 a JUnit 4.</li>
 </ul>
 <!-- tooltip end -->
 </body>

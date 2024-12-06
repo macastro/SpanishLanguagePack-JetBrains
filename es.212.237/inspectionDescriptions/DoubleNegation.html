@@ -1,19 +1,19 @@
 <html>
 <body>
-단순화할 수 있는 이중 부정을 보고합니다.
-<p>예:</p>
+Informa duplicados negados que pueden simplificarse.
+<p>Ejemplo:</p>
 <pre><code>
   if (!!functionCall()) {}
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   if (functionCall()) {}
 </code></pre>
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   if (!(a != b)) {}
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   if (a == b) {}
 </code></pre>

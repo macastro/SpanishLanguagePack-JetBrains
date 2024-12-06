@@ -1,7 +1,7 @@
 <html>
 <body>
-클래스 초기화 시 초기화할 수 없는 <code>static</code> 변수를 보고합니다.
-<p><b>예:</b></p>
+Informa de variables <code>static</code> que pueden no estar inicializadas durante la inicialización de clase.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
     public static int bar;
@@ -9,8 +9,8 @@
     static { }
   }
 </code></pre>
-<p>이 검사는 매우 보수적인 데이터 흐름 알고리즘을 사용하므로 <code>static</code> 변수를 초기화되지 않은 것으로 잘못 보고할 수 있습니다. 초기화된 것으로 보고된 변수는 항상 초기화됩니다.</p>
+<p>Ten en cuenta que esta inspección usa un algoritmo de flujo de datos muy conservador y puede informar incorrectamente de que las variables <code>static</code> no están inicializadas. Las variables que se informa que están inicializadas siempre lo estarán.</p>
 <!-- tooltip end -->
-<p><b>기본 필드 무시</b> 옵션을 사용하여, 초기화되지 않은 기본 필드를 무시합니다.</p>
+<p>Usa la opción <b>Ignorar campos primitivos</b> para ignorar campos primitivos no inicializados.</p>
 </body>
 </html>

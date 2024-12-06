@@ -1,11 +1,15 @@
 <html>
 <body>
-    <p>재귀 <code>equals</code>(<code>==</code>) 호출을 보고합니다.</p>
+<p>Reporta llamadas recursivas de <code>equals</code>(<code>==</code>).</p>
 <p>
-    <code>==</code> (Kotlin의 구조 비교) Java 개발자는 참조 비교로 잘못 해석할 수 있습니다.
-    따라서 검사에서는 이러한 사례를 보고하고 <code>==</code>를 <code>===</code>(Kotlin의 참조 비교)로 교체하도록 제안합니다.
+    En Kotlin, <code>==</code> compara valores de objetos llamando al método <code>equals</code> bajo el capó.
+    Por otro lado, <code>===</code> compara objetos por referencia.
 </p>
-<p><b>예:</b></p>
+<p>
+    <code>===</code> se usa comúnmente en la implementación del método <code>equals</code>.
+    Pero <code>===</code> puede mezclarse erróneamente con <code>==</code>, lo que lleva a una recursión infinita.
+</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class X {
       override fun equals(other: Any?): Boolean {
@@ -14,7 +18,7 @@
       }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que se aplique la corrección rápida:</p>
 <pre><code>
   class X {
       override fun equals(other: Any?): Boolean {

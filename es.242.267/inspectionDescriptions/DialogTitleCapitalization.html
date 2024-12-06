@@ -1,12 +1,12 @@
 <html><body>
-<code>@Nls</code> 어노테이션이 추가되어 있으며 대부분의 플랫폼 UI 가이드라인에 존재하는 대문자 표기 규칙을 준수하는 대문자 표기 매개변수를 포함하는 매서드 매개변수 및 반환 값 내 문자열을 보고합니다.
-<p><b>예:</b></p>
-<pre><code lang="java">
+Reporta cadenas en los parámetros de métodos y valores de retorno anotados con <code>@Nls</code> y que tienen el parámetro de capitalización para ajustarse a las reglas de capitalización que existen en la mayoría de las guías de interfaz de usuario de la plataforma.
+<p><b>Ejemplo:</b></p>
+<pre><code>
   void setTitle(@NlsContexts.DialogTitle String title) {}
-  setTitle("This is sentence capitalization but should be title"); 
+  setTitle("Esto es capitalización de oración pero debería ser título"); 
 </code></pre>
-<p>빠른 수정 적용 후:</p>
-<pre><code lang="java">
-  setTitle("This Is Sentence Capitalization but Should Be Title"); 
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  setTitle("Esto es capitalización de oración pero debería ser título"); 
 </code></pre>
 </body></html>

@@ -1,10 +1,10 @@
 <html>
 <body>
-(<code>$arr[] = value</code>과 같은) 위험한 배열 초기화를 보고합니다.
+Reporta inicializaciones de arreglos peligrosas (como <code>$arr[] = value</code>).
 <p>
-  <code>$arr</code>에 이미 일부 값 (예: 요청 변수의 문자열)이 포함되어 있으면 이 값은 변하지 않으며 <code>[]</code>은 실제 문자열 접근 연산자를 나타낼 수 있으므로 이러한 사용은 권장하지 않습니다. It is always preferable to initialize a variable by direct assignment.
+  Se desaconseja esta práctica porque si <code>$arr</code> ya contiene algún valor (por ejemplo, una cadena de una variable de solicitud), este valor permanecerá en su lugar y <code>[]</code> puede representar realmente al operador de acceso a cadena. Siempre es preferible inicializar una variable por asignación directa.
 </p>
-<p>자세한 내용은 <a href="https://www.php.net/manual/en/language.types.array.php#language.types.array.syntax.modifying">Creating/modifying with square bracket syntax (php.net)</a>(을)를 참고하세요.
+<p>Consulte <a href="https://www.php.net/manual/en/language.types.array.php#language.types.array.syntax.modifying">Crear/modificar con sintaxis de corchetes (php.net)</a> para obtener más detalles.
 </p>
 </body>
 </html>

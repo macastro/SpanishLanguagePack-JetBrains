@@ -1,23 +1,59 @@
 <html>
 <body>
-<code>new Thread().stop();</code>과 같이 지원이 중단된 API의 사용 사례(클래스, 필드 및 메서드)를 보고합니다.
-<p>디폴트로 검사는 이를 회피하기 어렵거나 회피가 불가능한 경우 경고를 생성하지 않습니다.  예를 들어, 다음 코드는 보고되지 않습니다:</p>
-<pre><code>
-  abstract class A { //라이브러리 코드
+Informa de los usos de clases, campos y métodos obsoletos.
+Hay disponible una solución rápida para convertir automáticamente el uso obsoleto, cuando la información necesaria se puede extraer de la documentación Javadoc del miembro obsoleto.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  class Interessante {
+
+    /**
+     * @deprecated Use {@link #newHotness()} en su lugar
+     */
+    @Deprecated
+    public void oldAndBusted() {}
+
+    public void newHotness() {}
+  }
+  class EnOtraParte {
+    void x(Interesante i) {
+      i.oldAndBusted(); // advertencia de obsoleto aquí
+    }
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code lang="java">
+  class Interessante {
+
+    /**
+     * @deprecated Use {@link #newHotness()} en su lugar
+     */
+    @Deprecated
+    public void oldAndBusted() {}
+
+    public void newHotness() {}
+  }
+  class EnOtraParte {
+    void x(Interesante i) {
+      i.newHotness();
+    }
+  }
+</code></pre>
+<p>De forma predeterminada, la inspección no produce una advertencia si es imposible o difícil evitarla. Por ejemplo, el siguiente código no será informado:</p>
+<pre><code lang="java">
+  abstract class A { //código de biblioteca
      @Deprecated
      abstract void m();
   }
-  class B extends A { //프로젝트 코드
+  class B extends A { //código de proyecto
      @Override
      void m() {
-        //작업 코드;
+        //doSmth;
      }
   }
 </code></pre>
-<!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configurar la inspección:</p>
 <p>
-  지원 중단된 멤버, 지원 중단된 추상 메서드 재정의, static이 아닌 import 문, 지원 중단된 클래스의 메서드 또는 동일한 최상위 클래스에서 검사를 비활성화하려면 검사 옵션을 사용하세요.
+  Utiliza las opciones para desactivar esta inspección dentro de miembros obsoletos, anulaciones de métodos obsoletos abstractos, sentencias de importación no estáticas, métodos de clases obsoletas o mismas clases de nivel superior.
 </p>
 
 </body>

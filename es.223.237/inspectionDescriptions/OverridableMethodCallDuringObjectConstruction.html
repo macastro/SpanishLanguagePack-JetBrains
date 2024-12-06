@@ -1,34 +1,36 @@
 <html>
 <body>
-객체 생성 중 현재 클래스의 재정의 가능한 메서드 호출을 보고합니다.
-<p>메서드가 다음 내부에 있는 경우 객체 생성 중에 호출됩니다.
+Informa de llamadas a métodos que se pueden anular de la clase actual durante la construcción del objeto.
+<p>Se llama a un método durante la construcción del objeto si se encuentra dentro de:
 <ul>
-  <li>생성자</li>
-  <li>비 static 인스턴스 이니셜라이저</li>
-  <li>비 static 필드 이니셜라이저</li>
-  <li><code>clone()</code> 메서드</li>
-  <li><code>readObject()</code> 메서드</li>
-  <li><code>readObjectNoData()</code> 메서드</li>
-<p>메서드는 <code>final</code>, <code>static</code> 또는 <code>private</code>으로 선언되지 않은 경우 재정의할 수 있습니다.
-  package-local 메서드는 재정의 가능할지라도 안전한 것으로 간주됩니다. 객체 초기화가 메서드 호출 전에 발생할 수 있으므로 이러한 호출로 인해 탐지하기 어려운 버그가 발생할 수 있습니다.</p>
-<p><b>예:</b></p>
+  <li>Constructor</li>
+  <li>Inicializador de instancias no estático</li>
+  <li>Inicializador de campo no estático</li>
+  <li>Método <code>clone()</code></li>
+  <li>Método <code>readObject()</code></li>
+  <li>Método <code>readObjectNoData()</code></li>
+</ul>
+<p>Los métodos se pueden anular si no se declaran como <code>final</code>, <code>static</code> o <code>private</code>.
+  Los métodos locales de paquetes se consideran seguros, aunque se puedan anular. Estas llamadas pueden provocar errores sutiles,
+  ya que la inicialización del objeto puede producirse antes de la llamada al método.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class Parent {
+  class Padre {
     void someMethod() { }
   }
 
-  class Child extends Parent {
-    Child() {
+  class Hijo extends Padre {
+    Hijo() {
       someMethod();
     }
   }
 </code></pre>
 <!-- tooltip end -->
-  <p>이 검사는 다음 검사와 기능을 공유합니다.</p>
+  <p>Esta inspección comparte la funcionalidad con las siguientes inspecciones:</p>
 <ul>
-  <li>객체 생성 중에 호출된 추상 메서드</li>
-  <li>객체 생성 중에 호출된 재정의된 메서드</li>
+  <li>Método abstracto llamado durante la construcción del objeto</li>
+  <li>Método anulado llamado durante la construcción del objeto</li>
 </ul>
-  <p>경고 중복을 피하기 위해 한 번에 하나의 검사만 활성화해야 합니다.</p>
+  <p>Sólo debe habilitarse una inspección a la vez para evitar la duplicación de advertencias.</p>
 </body>
 </html>

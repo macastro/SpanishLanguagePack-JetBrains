@@ -1,18 +1,18 @@
 <html>
 <body>
-자동으로 추론할 수 있는 유형 인수를 포함하는 함수 호출을 보고합니다. 그러한 유형 인수는 불필요하며 안전하게 생략할 수 있습니다.
-<p>코드를 정리하려면 '명시적 유형 인수 제거' 빠른 수정을 사용하세요.</p>
-<p><b>예:</b></p>
+ Informa de llamadas a funciones con argumentos de tipo que pueden ser inferidos automáticamente. Dichos argumentos de tipo son redundantes y pueden omitirse de forma segura.
+<p>Utiliza la acción rápida "Eliminar argumentos de tipo explícitos" para limpiar el código.</p>
+<p><b>Ejemplos:</b></p>
 <pre><code>
-  // 여기서 'String' 유형을 추론할 수 있음
+  // El tipo 'String' puede inferirse aquí
   fun foo(): MutableList&lt;String&gt; = mutableListOf&lt;String&gt;()
 
-  // 여기서는 'String'을 추론할 수 있으며 유형 인수가 필요합니다.
+  // Aquí no se puede inferir 'String', se necesita el argumento de tipo.
   fun bar() = mutableListOf&lt;String&gt;()
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicar la acción rápida:</p>
 <pre><code>
-  fun foo(): MutableList&lt;String&gt; = mutableListOf() &lt;== Updated
+  fun foo(): MutableList&lt;String&gt; = mutableListOf() &lt;== Actualizado
 
   fun bar() = mutableListOf&lt;String&gt;()
 </code></pre>

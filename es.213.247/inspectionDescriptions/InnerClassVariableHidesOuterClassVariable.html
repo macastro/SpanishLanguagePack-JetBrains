@@ -1,9 +1,10 @@
 <html>
 <body>
-주변 클래스의 필드와 이름이 동일하게 지정된 내부 클래스 필드를 보고합니다.
-이와 같이 이름이 지정될 경우, 주변 클래스의 필드를 사용하려다가 내부 클래스의 이름이 동일한 필드를 실수로 사용할 수 있습니다.
-<p>빠른 수정은 내부 클래스 필드 이름을 변경하도록 제안합니다.</p>
-<p><b>예:</b></p>
+Reporta los campos de clase interna con el mismo nombre que un campo de la clase circundante.
+Como resultado de esta denominación, puede usar accidentalmente el campo de la clase interna cuando se pretende utilizar el campo con el mismo nombre de una clase circundante.
+
+<p>Se sugiere una solución rápida para renombrar el campo de clase interna.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Outer {
     private String name;
@@ -15,7 +16,7 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  이 검사가 모든 이름 충돌을 보고해야 하는지 혹은 내부 클래스에서 표시된 필드와 충돌만을 보고해야 하는지 선택하는 옵션을 사용합니다.
+  Utilice la opción para elegir si esta inspección debe reportar todos los conflictos de nombres o solo los conflictos con campos que son visibles desde la clase interna.
 </p>
 
 </body>

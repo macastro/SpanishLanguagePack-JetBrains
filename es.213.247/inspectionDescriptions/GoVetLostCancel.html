@@ -1,11 +1,16 @@
 <html>
 <body>
-<code>context.WithCancel</code> 또는 유사한 함수에 의해 반환되는 <code>cancel</code> 함수를 호출하지 않는 실행 경로를 보고합니다.
-<p><code>WithCancel</code>, <code>WithDeadline</code> 및 <code>WithTimeout</code> 함수는 (상위)<code>Context</code>를 가지며 파생된 (하위)<code>Context</code> 및 <code>CancelFunc</code>을 반환합니다.
-  <code>CancelFunc</code> 호출은 하위 항목과 해당 하위 항목의 하위 항목까지 취소합니다. 또한, 상위 항목에서 하위 항목으로의 참조를 제거하고 관련된 모든 타이머를 중지합니다.
-  CancelFunc 호출이 실패하는 경우 상위 항목이 취소되거나 타이머가 시작될 때까지 하위 항목과 해당 하위 항목의 하위 항목에 누수가 발생합니다.</p>
-<p><code>context</code> 패키지에 대한 더 자세한 내용은 <a href="https://golang.org/pkg/context/">golang.org의 Package context</a>(을)를 참고하세요.</p>
-<p>예:</p>
+Informa sobre las rutas de ejecución que no llaman a la función <code>cancel</code> devuelta por
+  las funciones <code>context.WithCancel</code> y otras similares.
+<p>Las funciones <code>WithCancel</code>, <code>WithDeadline</code> y <code>WithTimeout</code> toman un <code>Context</code> (el padre) y
+  devuelven un
+  <code>Context</code> derivado (el hijo) y un <code>CancelFunc</code>.
+  Al llamar a <code>CancelFunc</code> se cancela el hijo y sus hijos, se elimina la referencia del padre al hijo, y se detienen todos los
+  temporizadores asociados.
+  Si no se llama a <code>CancelFunc</code> se pierde el hijo y sus hijos hasta que se cancela el padre o se dispara el temporizador.</p>
+<p>Para más información sobre el paquete <code>context</code>, referirse a <a href="https://pkg.go.dev/context">Paquete context en
+  go.dev</a>.</p>
+<p>Ejemplo:</p>
 <pre><code>func _(ctx context.Context, cancel func()) {
  var ctx2 context.Context
  ctx2, cancel = context.WithCancel(ctx)

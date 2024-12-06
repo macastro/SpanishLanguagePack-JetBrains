@@ -1,10 +1,10 @@
 <html>
 <body>
-클래스 초기화 중에 <code>final</code>이 아닌 <code>static</code> 변수 사용을 보고합니다.
-<p>이러한 경우, 코드 의미는 클래스 생성 순서에 따라 달라질 수 있습니다. 또한 이러한 경우, 변수가 초기화되기 전에 사용될 수 있어, 파악하기 어렵고 혼란스러운 오류가 보통 발생합니다.</p>
-<p><b>예:</b></p>
+Informa sobre el uso de variables <code>static</code> no <code>final</code> durante la inicialización de clases.
+<p>En tales casos, la semántica del código puede depender del orden de creación de la clase. También puede provocar el uso de variables no inicializadas, lo que a menudo provoca errores difíciles de detectar y confusos.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class Foo {
+  clase Foo {
     public static int bar = 0;
 
     static {

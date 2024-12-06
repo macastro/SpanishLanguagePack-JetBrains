@@ -1,29 +1,27 @@
 <html>
 <body>
-<p>잘못된
-<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Profile.html">@Profile</a>
-표현식을 보고합니다.</p>
+<p>Reporta expresiones incorrectas de <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Profile.html">@Profile</a>:</p>
 
 <ul>
-  <li>Spring 프로파일은 공백일 수 없습니다</li>
-  <li>Spring 프로파일 표현식에서 '&' 및 '|' 연산자는 괄호 없이 결합할 수 없습니다</li>
+  <li>Los profiles de Spring no deben estar vacíos</li>
+  <li>Los operadores '&' y '|' no se deben mezclar sin paréntesis en las expresiones de profiles de Spring</li>
 </ul>
 
-<p><b>예:</b></p>
-<pre><code>
-  <!-- correctly configured -->
+<p><b>Ejemplos:</b></p>
+<pre><code lang="java">
+  // Configurado correctamente
   @Configuration
   @Profile("a & (b | c)")
   public class MyConfiguration {...}
 
-  <!-- empty  -->
+  // Vacío
   @Configuration
-  @Profile() // reports "Profile expression must contain text"
+  @Profile() // Reporta "Una expresión de Profile debe contener texto"
   public class MyConfiguration {...}
 
-  <!-- mixed operators without  parentheses -->
+  // Operadores mezclados sin paréntesis
   @Configuration
-  @Profile("a & b | c") // reports "Malformed profile expression"
+  @Profile("a & b | c") // Reporta "Expresión de Profile mal formada"
   public class MyConfiguration {...}
 </code></pre>
 </body>

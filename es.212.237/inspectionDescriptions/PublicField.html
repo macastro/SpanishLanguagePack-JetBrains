@@ -1,14 +1,14 @@
 <html>
 <body>
-<code>public</code> 필드를 보고합니다.
-상수(<code>static</code> 및 <code>final</code>로 표기된 필드)는 보고되지 않습니다.
-<p><b>예:</b></p>
+Reporta campos <code>public</code>.
+Las constantes (campos marcados con <code>static</code> y <code>final</code>) no son reportadas.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Main {
     public String name;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   class Main {
     private String name;
@@ -23,10 +23,12 @@
   }
 </code></pre>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configurar la inspección:</p>
 <ul>
-  <li><b>다음으로 어노테이션이 추가된 경우 무시:</b> 목록을 사용하여 무시할 어노테이션을 지정합니다. 검사는 해당 어노테이션이 추가된 필드를 무시합니다.</li>
-  <li><b>열거형의 'public final' 필드 무시</b> 옵션을 사용하여 <code>enum</code> 타입의 <code>public final</code> 필드를 무시합니다.</li>
+  <li>Usa la lista <b>Ignorar si cuenta con anotaciones</b> para especificar anotaciones a ignorar. La inspección ignorará los campos con
+    cualquiera de estas anotaciones.</li>
+  <li>Usa la opción <b>Ignorar campos 'public final' de enums</b> para ignorar los campos <code>public final</code>
+    del tipo <code>enum</code>.</li>
 </ul>
 </body>
 </html>

@@ -1,19 +1,20 @@
 <html>
 <body>
-현재 스레드가 두 개의 잠금을 유지하는 동안 발생할 수 있는 <code>wait()</code> 메서드 호출을 보고합니다.
+Informa de llamadas a los métodos <code>wait()</code> que pueden darse mientras el hilo actual sujeta dos bloqueos.
 <p>
-  <code>wait()</code>을 호출하면 대상에서 하나의 잠금만 해제되므로 두 개의 잠금이 걸린 상태로 대기하면 교착상태를 초래하기 쉽습니다.
+  Dado que invocar <code>wait()</code> sólo libera un bloqueo en su objetivo,
+  esperar con dos bloqueos sujetos puede llevar fácilmente a un punto muerto.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   synchronized (lockA) {
     synchronized (lockB) {
-      lockB.wait(); //경고
-      // 스레드 A가 lockA를 유지하며 갇혀 있음
+      lockB.wait(); //advertencia
+      //el hilo A está atascado aquí sujetando lockA
     }
   }
 
-  synchronized (lockA) { // 스레드 B가 블록에 들어가서 스레드 A를 해제할 수 없음
+  synchronized (lockA) { //el hilo B no puede entrar en el bloque y liberar al hilo A
     lockB.notify();
   }
 </code></pre>

@@ -1,36 +1,35 @@
 <html>
 <body>
-수정 불가하지만 최신 컬렉션 factory 메서드로 변환 가능한 <code>java.util.Collections</code> 컬렉션 호출을 보고합니다.
-이는 Java 9에 도입된 <code>List.of()</code>나 <code>Set.of()</code> 또는 Java 10에 도입된 <code>List.copyOf()</code>로 대체할 수 있습니다.
+Informa a las llamadas de colección inalterable <code>java.util.Collections</code> que se pueden convertir a los métodos más nuevos de la colección de fábrica.
+Estos se pueden reemplazar con, por ejemplo, <code>List.of()</code> o <code>Set.of()</code> introducidos en Java 9 o <code>List.copyOf()</code> introducido en Java 10.
 
-<p><code>java.util.Collections</code> 메서드와 Java 9 컬렉션 factory 메서드의 차이는 다음과 같습니다. 
+<p>Tenga en cuenta que, en contraste con los métodos de <code>java.util.Collections</code>, los métodos de fábrica de colecciones Java 9:
 <ul>
-  <li><code>null</code> 값이 허용되지 않습니다
-  <li>고유한 요소 및 맵 키가 필요합니다
-  <li>반환된 컬렉션의 <code>List.contains()</code> 또는 <code>Map.get()</code> 등 쿼리 메서드에 <code>null</code> 인수가 허용되지 않습니다
+  <li>No aceptan valores <code>null</code>.
+  <li>Requieren elementos de conjunto únicos y claves de mapa.
+  <li>No aceptan argumentos <code>null</code> para consultar métodos como <code>List.contains()</code> o <code>Map.get()</code> de las colecciones devueltas.
 </ul>
-<p>이 경우에 위반이 발생하면 예외가 던져집니다.
-  이로써 마이그레이션 후 코드 의미가 변경될 수 있습니다.</p>
-<p>예:
+<p>Cuando se violan estos casos, se lanzan excepciones.
+  Esto puede cambiar la semántica del código después de la migración.</p>
+<p>Ejemplo:
 <pre><code>
   List&lt;Integer> even = Collections.unmodifiableList(
     Arrays.asList(2, 4, 6, 8, 10, 2));
   List&lt;Integer> evenCopy = Collections.unmodifiableList(
     new ArrayList&lt;>(list1));
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que se aplique la solución rápida:</p>
 <pre><code>
   List&lt;Integer> even = List.of(2, 4, 6, 8, 10, 2);
   List&lt;Integer> evenCopy = List.copyOf(list);
 </code></pre>
 
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 9 이상인 경우에만 보고합니다.
 <p>
-제공된 인수가 컴파일 타임 상수인 경우에만 보고하려면 <b>비상수 콘텐츠를 경고하지 않음</b> 옵션을 사용합니다.
-해당 옵션을 사용하면 기존 요소가 고유하고 <code>null</code>이 아닌지 정적으로 확인하는 것이 가능하지 않을 때도 있으므로 동작 변경 가능성이 감소합니다.
+Utilice la opción <b>No advertir cuando el contenido no es constante</b> para informar solo en los casos en que los argumentos proporcionados sean constantes de tiempo de compilación.
+Esto reduce las posibilidades de que el comportamiento cambie, ya que no siempre es posible verificar estáticamente si los elementos originales son únicos y no <code>null</code>.
 <p>
-  <b>'Map.ofEntries' 제안</b> 옵션을 사용하면 <code>Map.ofEntries()</code>를 통해 수정 불가한 맵을 11개 이상의 항목으로 대체하도록 제안합니다.
-<p><small>2017.2의 새로운 기능</small>
+  Utilice la opción <b>Sugerir 'Map.ofEntries'</b> para sugerir reemplazar mapas inalterables con más de 10 entradas con <code>Map.ofEntries()</code>.
+<p><small>Novedad en 2017.2</small></p>
 </body>
 </html>

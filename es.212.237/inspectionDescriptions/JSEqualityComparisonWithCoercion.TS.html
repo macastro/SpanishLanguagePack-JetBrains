@@ -1,22 +1,24 @@
 <html>
 <body>
-예기치 않은 타입 강제 변환을 일으킬 수 있는 상등 연산자의 사용 위치를 보고합니다.
-<code>==</code> 또는 <code>!=</code> 상등 연산자를 타입 세이프 <code>===</code> 또는 <code>!==</code> 연산자로 바꿀 것을 제안합니다.
+Informa un uso de operadores de igualdad que pueden causar conversiones inesperadas de tipo.
+Sugiere reemplazar los operadores de igualdad <code>==</code> o <code>!=</code> con operadores seguros <code>===</code> o <code>!==</code>.
 
-<p>선택한 옵션에 따라 다음 경우 중 하나가 보고됩니다:</p>
+<p>Dependiendo de la opción seleccionada, se informará uno de los siguientes casos:</p>
 
 <ul>
   <li>
-    <code>==</code> 및 <code>!=</code> 연산자의 모든 사용 위치.
- </li>
+    Todos los usos de los operadores <code>==</code> y <code>!=</code>.
+  </li>
   <li>
-    null과의 비교를 제외한 모든 사용 위치. 일부 코드 스타일은 <code>x == null</code>을 <code>x === null || x === undefined</code>의 대체 코드로 사용하는 것을 허용합니다.
- </li>
+    Todos los usos excepto la comparación con nulo. Algunos estilos de código permiten usar <code>x == null</code> como reemplazo de
+    <code>x === null || x === undefined</code>.
+  </li>
   <li>
-    의심스러운 표현식만(예: <code>0</code>, <code>''</code>, 
-<code>null</code>, <code>true</code>, 
-<code>false</code>, 또는 <code>undefined</code>와의 <code>==</code> 또는 <code>!=</code> 비교).
- </li>
+    Sólo expresiones sospechosas, tales como: comparaciones <code>==</code> o <code>!=</code>
+    con <code>0</code>, <code>''</code>,
+    <code>null</code>, <code>true</code>,
+    <code>false</code>, o <code>undefined</code>.
+  </li>
 </ul>
 </body>
 </html>

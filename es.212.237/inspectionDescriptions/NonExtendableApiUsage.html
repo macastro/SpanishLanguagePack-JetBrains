@@ -1,12 +1,9 @@
 <html>
 <body>
-<code>@ApiStatus.NonExtendable</code>로 표시된 API 요소를 확장, 구현 또는 재정의하는 클래스, 인터페이스 및 메서드를 보고합니다.
+Reporta clases, interfaces y métodos que extienden, implementan o anulan elementos de API marcados con <code>@ApiStatus.NonExtendable</code>.
 <p>
-  <code>@ApiStatus.NonExtendable</code> 어노테이션은 클래스, 인터페이스 또는 메서드가 <strong>확장되거나, 
-  구현되거나, 재정의되어서는 안 된다는 것을 나타냅니다</strong>.
-  그러한 인터페이스 및 클래스를 내부 라이브러리 구현으로 형 변환하는 것은 꽤 흔한 일이므로
-  클라이언트에서 다른 구현을 제공한다면 <code>ClassCastException</code>이 발생합니다.
-  그러한 클래스 및 인터페이스에 새 추상 메서드를 추가하면 클라이언트 구현에 대한 호환성을 잃습니다.
+  La anotación <code>@ApiStatus.NonExtendable</code> indica que la clase, interfaz o método <strong>no debe ser extendido, implementado o anulado</strong>.
+  Como es bastante común hacer un cast de dichas interfaces y clases en la implementación de la biblioteca interna, si un cliente proporciona una implementación diferente, obtendrá <code>ClassCastException</code>. Añadir nuevos métodos abstractos a dichas clases e interfaces romperá la compatibilidad con las implementaciones del cliente.
 </p>
 </body>
 </html>

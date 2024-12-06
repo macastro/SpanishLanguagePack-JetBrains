@@ -1,5 +1,19 @@
 <html>
 <body>
-elvis(?:</b>) 표현식으로 접을 수 있는 <b><b>if-then</b> 표현식을 보고합니다.
+<b>Inspección:</b> Reporta las expresiones `if-then` que pueden ser convertidas a expresiones Elvis (`?:`)
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun puedeSerFoo(): String? = "foo"
+
+  var foo = puedeSerFoo()
+  val bar = if (foo == null) "hola" else foo
+</code></pre>
+<p>La corrección rápida convierte la expresión `if-then` a una expresión Elvis (`?:`):</p>
+<pre><code>
+  fun puedeSerFoo(): String? = "foo"
+
+  var foo = puedeSerFoo()
+  val bar = foo ?: "hola"
+</code></pre>
 </body>
 </html>

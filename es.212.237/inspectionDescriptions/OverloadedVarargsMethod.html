@@ -1,12 +1,16 @@
 <html>
 <body>
-클래스 또는 슈퍼 클래스의 다른 메서드와 동일한 이름을 가진 varargs 메서드를 보고합니다.
-인수의 변수명을 갖는 오버로드 메서드는 어떤 오버로드가 호출되었는지 확실하지 않은 경우가 많아 혼란을 야기할 수 있습니다.
-<p><b>예:</b></p>
+Reporta métodos varargs con el mismo nombre que otros métodos en la clase o en una superclase.
+Los métodos sobrecargados que reciben un número variable de argumentos pueden ser muy confusos
+debido a que con frecuencia no está claro qué sobrecarga se invoca.
+<p><b>Ejemplo:</b></p>
 <pre><code>
-    public void execute(Runnable... r) {} // 경고
+    public void execute(Runnable... r) {} // advertencia
     public void execute(Runnable r1, Runnable r2) {}
 </code></pre>
 <!-- tooltip end -->
+<p>
+  Utilice la opción para ignorar aquellos métodos sobrecargados cuyos tipos de parámetro son definitivamente incompatibles.
+</p>
 </body>
 </html>

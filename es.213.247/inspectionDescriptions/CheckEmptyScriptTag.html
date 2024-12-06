@@ -1,5 +1,17 @@
 <html>
 <body>
-Reports an empty tag (such as <code>script</code>) that does not work in some browsers.
+Informa de etiquetas vacías que no funcionan en algunos navegadores.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  &lt;html>
+    &lt;script/>
+  &lt;/html>
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+  &lt;html>
+    &lt;script>&lt;/script>
+  &lt;/html>
+</code></pre>
 </body>
 </html>

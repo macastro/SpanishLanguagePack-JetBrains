@@ -1,15 +1,18 @@
 <html>
 <body>
-<p>지원되지 않는 타입의 리소스 메서드 매개변수(<code>@PathParam</code>, <code>@QueryParam</code> 등의 어노테이션이 추가됨)를 보고합니다.</p>
-<p>어노테이션이 추가된 매개변수, 필드 또는 프로퍼티의 타입은 다음 요구 조건 중 하나를 만족해야 합니다.</p>
+<p>Reporta parámetros de métodos de recursos (anotados con <code>@PathParam</code>, <code>@QueryParam</code>, etc.) con tipos no soportados.</p>
+<p>El tipo del parámetro, campo o propiedad anotado debe cumplir con uno de los siguientes requisitos:</p>
 <ol>
-  <li>기본 타입이어야 함</li>
-  <li>하나의 <code>String</code> 인수를 허용하는 생성자가 있어야 함</li>
-  <li>하나의 <code>String</code> 인수를 허용하고, 이름이 <code>valueOf()</code> 또는 <code>fromString()</code>인 static 메서드(예: <code>Integer.valueOf(String)</code>)가 있음
+  <li>Ser un tipo primitivo</li>
+  <li>Tener un constructor que acepte un único argumento <code>String</code></li>
+  <li>Tener un método estático llamado <code>valueOf()</code> o <code>fromString()</code> que acepte un único argumento <code>String</code>,
+    por ejemplo, <code>Integer.valueOf(String)</code>.
   </li>
-  <li>문자열을 특정 타입으로 변환할 수 있는 <code>ParamConverter</code> 인스턴스를 반환하는 <code>ParamConverterProvider</code> JAX-RS 확장 SPI의 구현이 등록되어 있음
+  <li>Tener una implementación registrada de <code>ParamConverterProvider</code> JAX-RS SPI de extensión que devuelva una instancia de <code>ParamConverter</code>
+    capaz de convertir una cadena a un tipo particular.
   </li>
-  <li>T가 위의 2, 3 또는 4를 만족하는 <code>List&lt;T&gt;</code>, <code>Set&lt;T&gt;</code> 또는 <code>SortedSet&lt;T&gt;</code>이어야 함 결과 컬렉션은 읽기 전용입니다.</li>
+  <li>Ser <code>List&lt;T&gt;</code>, <code>Set&lt;T&gt;</code> o <code>SortedSet&lt;T&gt;</code>,
+    donde T cumple 2, 3 o 4 arriba. La colección resultante es de solo lectura.</li>
 </ol>
 </body>
 </html>

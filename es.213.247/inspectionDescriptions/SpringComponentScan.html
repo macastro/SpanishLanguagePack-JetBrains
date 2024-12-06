@@ -1,14 +1,17 @@
 <html>
 <body>
-<p><a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html>@ComponentScan</a> 어노테이션 및 <code>@ComponentScan</code> 메타 어노테이션의 해당하는 별칭 속성에서 해결되지 않은 패키지를 보고합니다.<br></p>
+<p>Reporta los paquetes sin resolverse en
+<a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html>@ComponentScan</a>
+anotaciones y atributos alias correspondientes de la meta anotación <code>@ComponentScan</code>.<br></p>
 
-<p><b>예:</b></p>
-<pre><code>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
   @ComponentScan(basePackages = {
      "com.my.company",
-     "com.unknown" // "패키지 'unknown'을 해결할 수 없습니다"라고 보고됩니다
+     "com.unknown" // reporta "El paquete 'unknown' no se puede resolver"
   }) +
   @Configuration +
-  public class MyConfiguration {}</code></pre>
+  public class MyConfiguration {}
+</code></pre>
 </body>
 </html>

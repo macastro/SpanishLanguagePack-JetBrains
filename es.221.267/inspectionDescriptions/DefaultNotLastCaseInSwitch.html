@@ -1,10 +1,10 @@
 <html>
 <body>
-<code>default</code> case가 다른 case 앞에 오는 <code>switch</code> 문 또는 식을 보고합니다.
-<p>이 구문은 불필요하게 혼동을 줄 수 있습니다.
-<code>default</code> case를 마지막 위치로 이동하는 빠른 수정이 있습니다.
-  이 수정은 주어진 브랜치의 끝에 <code>break</code>/<code>yield</code>가 있는 경우에만 제공됩니다.</p>
-<p>예:</p>
+Reporta declaraciones o expresiones <code>switch</code> en los cuales la cláusula <code>default</code>
+está posicionada antes de otro caso.
+Un constructo así es innecesariamente confuso.
+Se provee una corrección rápida para mover la cláusula <code>default</code> a la última posición, si es posible.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   switch (n) {
       default:
@@ -14,7 +14,7 @@
           break;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   switch (n) {
     case 1:

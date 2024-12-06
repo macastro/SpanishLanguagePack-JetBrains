@@ -1,10 +1,10 @@
 <html>
 <body>
-<code>@ApiStatus.OverrideOnly</code>로 표시된 API 메서드 호출을 보고합니다.
+Reporta llamadas a métodos de API marcados con <code>@ApiStatus.OverrideOnly</code>.
 <p>
-  <code>@ApiStatus.OverrideOnly</code> 어노테이션은 메서드가 서비스 제공자 인터페이스(SPI)의 일부임을 나타냅니다.
-  선언하는 라이브러리의 클라이언트는 그러한 메서드를 직접 호출하는 것이 아니라 구현하거나 재정의해야 합니다.
-  이 어노테이션으로 클래스 또는 인터페이스를 표시하는 것은 해당 어노테이션으로 모든 메서드를 표시하는 것과 같습니다.
+  La anotación <code>@ApiStatus.OverrideOnly</code> indica que el método es parte de la SPI (Interfaz del proveedor de servicios).
+  Los clientes de la biblioteca declarada deben implementar o anular dichos métodos, no llamarlos directamente.
+  Marcar una clase o interfaz con esta anotación es lo mismo que marcar todos los métodos con ella.
 </p>
 </body>
 </html>

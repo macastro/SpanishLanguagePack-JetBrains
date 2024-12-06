@@ -1,16 +1,20 @@
 <html>
 <body>
-<p>Spring bean의 주입점에서 자동 주입 문제를 보고합니다.</p>
+<p>Reporta problemas de autowire en puntos de inyección de Spring beans
+<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html">@Component</a>,
+<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html">@Service</a>,
+y así sucesivamente.</p>
 
 <ul>
-  <li>'concrete' 타입 bean 2개 이상</li>
-  <li>'concrete' 타입 bean 없음</li>
-  <li>한정자가 있는 bean 없음</li>
-  <li>매개변수 없이 자동 주입된 메서드 또는 생성자</li>
+  <li>Más de un bean del tipo 'concrete'</li>
+  <li>No hay beans del tipo 'concrete'</li>
+  <li>No hay bean con calificador</li>
+  <li>Usos incorrectos de <code>@Autowired</code> sobre constructores de Spring bean</li>
+  <li>Campos/métodos inyectados o autowire en clases que no son Spring beans válidos</li>
 </ul>
 
-<p><b>예:</b></p>
-<pre>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
 public interface FooInterface {...}
   @Component public class FooBean implements FooInterface {...}
   @Component public class OtherBean implements FooInterface {...}
@@ -18,9 +22,36 @@ public interface FooInterface {...}
 @Component
 public class MyComponent {
 	@Autowired
-	FooInterface foo;  // "Could not autowire. There is more than one bean of 'FooInterface' type.
+	FooInterface foo;  // "No se pudo autowire. Hay más de un bean del tipo 'FooInterface'.
                      // Beans: fooBean(FooBean.java), otherBean(OtherBean.java)"
 }
-</pre>
+</code></pre>
+
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+@Component
+public class MyComponent {
+	@Autowired
+	public MyComponent(BarBean bean) {...} // informa 'Solo se permite un constructor @Autowired'
+
+	@Autowired
+	public MyComponent(FooBean bean) {...} // informa 'Solo se permite un constructor @Autowired'
+}
+
+@Component
+public class MyFactory {  // informa 'No se encontró ningún constructor @Autowired coincidente'
+	public MyFactory(String str) {...}
+	public MyFactory(int count) {...}
+}
+</code></pre>
+
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+public class FooBeanClass {
+  @Autowired   // informa 'Los miembros autowire deben definirse en Spring beans válidos: @Component, @Service, etc.'
+  ServiceBean bean;
+  }
+</code></pre>
+
 </body>
 </html>

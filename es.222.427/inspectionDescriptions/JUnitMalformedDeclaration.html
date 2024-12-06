@@ -1,59 +1,66 @@
 <html>
 <body>
-JUnit 테스트 구성원 선언의 형식이 잘못되어 JUnit 테스트 프레임워크에서 인식할 수 없는 경우를 보고합니다.
-이 검사에서는 다음 문제를 보고합니다.
+Informa las declaraciones de miembros de prueba de JUnit que están mal formadas y es probable que el framework de prueba de JUnit no las reconozca.
+Esta inspección informa los siguientes problemas:
 <ul>
-  <li><code>@RegisterExtension</code>로 어노테이션이 추가되었으며 필요한 경우 형식이 잘못되었거나 정적으로 선언되지 않은 필드</li>
-  <li><code>@Nested</code>로 어노테이션이 추가된 static 내부 클래스입니다</li>
-  <li>소스 없이 정의된 매개변수화된 테스트입니다</li>
-  <li>알 수 없거나 static이 아니거나 인수 대상이 없는 <code>@MethodSource</code>를 사용하는 매개변수화된 테스트</li>
+  <li>Clases de prueba que no se pueden construir</li>
+  <li>Campos anotados por <code>@RegisterExtension</code> que tienen el tipo incorrecto o que no se declaran como estáticos cuando es requerido</li>
+  <li>Clases internas estáticas o privadas anotadas con <code>@Nested</code></li>
+  <li>Pruebas parametrizadas que se definen sin un origen</li>
+  <li>Pruebas parametrizadas con un <code>@MethodSource</code> que tiene un destino desconocido, no estático o sin argumentos</li>
+  <li>Tipos incompatibles entre el parámetro del método de prueba parametrizado y los valores especificados de <code>@ValueSource</code> o <code>@EnumSource</code></li>
+  <li>Pruebas anotadas por más de uno de <code>@Test</code>, <code>@ParameterizedTest</code> o <code>@RepeatedTest</code></li>
+  <li>Métodos <code>setup()</code> o <code>tearDown()</code> que no son públicos, cuyo tipo de retorno no es nulo o que toman argumentos</li>
+  <li>Métodos <code>suite()</code> que son privados, toman argumentos o no son estáticos</li>
   <li>
-    메서드 매개변수로 변환할 수 없는 타입을 <code>@ValueSource</code> 또는 <code>@EnumSource</code>로 매개변수화한 테스트
-  </li>
-  <li><code>@Test</code>, <code>@ParameterizedTest</code> 또는 <code>@RepeatedTest</code> 중 하나 이상으로 어노테이션이 추가된 테스트</li>
-  <li><code>setup()</code> 또는 <code>teropDown()</code> 메서드 중 public이 아닌 메서드로서 반환 타입이 void가 아니거나 인수를 사용하는 메서드입니다.</li>
-  <li><code>suite()</code> 메서드는 private, 인수를 사용하거나 static이 아닙니다.</li>
-  <li>
-    <code>@BeforeClass</code>, <code>@AfterClass</code>, <code>@BeforeAll</code> 또는 <code>@AfterAll</code>로 어노테이션이 추가된 메서드로서 public이 아니고 static이 아니며 반환 타입이 void가 아니거나 올바른 매개변수 목록이 없습니다
-  </li>
-  <li>
-    <code>@Before</code>, <code>@After</code>, <code>@BeforeEach</code> 
- 또는 <code>AfterEach</code>로 어노테이션이 추가되었으며 public이 아니고 반환 타입이 void가 아니거나 인수를 사용하는 메서드
-  </li>
-  <li><code>@BeforeAll</code> 또는 <code>@AfterAll</code> 메서드에 <code>RepetitionInfo</code>를 삽입했습니다</li>
-  <li>
-    <code>@Test</code>로 어노테이션이 추가된 테스트에서 사용되는 <code>@BeforeEach</code> 또는 <code>@AfterEach</code> 메서드에 <code>RepetitionInfo</code>를 삽입했습니다
-  </li>
-  <li><code>@DataPoint</code> 또는 <code>@DataPoints</code>로 어노테이션이 추가된 필드 및 메서드로서 public이 아니거나 static이 아닙니다</li>
-  <li>
-    <code>@Rule</code>로 어노테이션이 추가되었으며 public이 아니거나 <code>TestRule</code> 또는 <code>MethodRule</code>의 하위 타입이 아닌 필드 및 메서드
-  </li>
-  <li><code>@ClassRule</code>로 어노테이션이 추가되었으며 public이 아니거나 static이 아니거나 <code>TestRule</code>의 하위 타입이 아닌 필드 및 메서드</li>
-  <li>
-    반환 타입이 void가 아니거나 인수를 사용하거나 static이며 public이 아닌 <code>test</code> 접두사를 사용하는 <code>TestCase</code>의 하위 클래스 내부에 있는 메서드입니다.
+    Métodos anotados por <code>@BeforeClass</code>, <code>@AfterClass</code>, <code>@BeforeAll</code> o <code>@AfterAll</code> que no son públicos,
+    no estáticos, cuyo tipo de retorno no es void o no tienen una lista de parámetros válida
   </li>
   <li>
-    <code>@Test</code>로 어노테이션이 추가되었으며 public이 아니고 반환 타입이 void가 아니거나 인수를 사용하거나 static인 메서드
+    Métodos anotados por <code>@Before</code>, <code>@After</code>, <code>@BeforeEach</code> o <code>@AfterEach</code> que no son públicos, 
+    cuyo tipo de retorno no es void o aceptan argumentos
+  </li>
+  <li><code>RepetitionInfo</code> inyectado en métodos <code>@BeforeAll</code> o <code>@AfterAll</code></li>
+  <li>
+    <code>RepetitionInfo</code> inyectado en métodos <code>@BeforeEach</code> o <code>@AfterEach</code> que son utilizados por 
+    pruebas anotadas con <code>@Test</code>
+  </li>
+  <li>Campos y métodos anotados por <code>@DataPoint</code> o <code>@DataPoints</code> que no son públicos o estáticos</li>
+  <li>
+    Campos y métodos anotados por <code>@Rule</code> que no son públicos o no son un subtipo de <code>TestRule</code>
+    o <code>MethodRule</code>
+  </li>
+  <li>Campos y métodos anotados por <code>@ClassRule</code> que no son públicos, no estáticos o no son un subtipo de <code>TestRule</code></li>
+  <li>
+    Métodos dentro de una subclase de <code>TestCase</code> con un prefijo <code>test</code> que no son públicos, cuyo tipo de retorno 
+    no es void, aceptan argumentos o son estáticos
+  </li>
+  <li>
+    Métodos anotados por <code>@Test</code> que no son públicos, cuyo tipo de retorno no es void, aceptan argumentos o son estáticos
   </li>
 </ul>
 
-Kotlin에서 일시 중지 함수에는 인수와 void가 아닌 반환 타입이 있습니다. 따라서, JUnit 테스트 러너에 의해 실행되지 않습니다. 이 검사에서는 이 문제에 대해서도 보고할 것입니다.
+Ten en cuenta que en Kotlin, las funciones de suspensión tienen argumentos y un tipo de retorno que no es void. Por lo tanto, tampoco serán ejecutadas por el corredor de pruebas de JUnit. Esta inspección también informará sobre este problema.
 
-<p><b>잘못된 형식의 <code>@Before</code> 메서드 예(Java):</b></p>
-<pre><code>@Before private int foo(int arg) { ... } </code></pre>
-<p>빠른 수정 적용 후:</p>
-<pre><code>@Before public void foo() { ... } </code></pre>
+<p><b>Ejemplo de un método <code>@Before</code> mal formado:</b></p>
+<pre><code lang="java">
+  @Before private int foo(int arg) { }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="java">
+  @Before public void foo() { }
+</code></pre>
 
-<p><b>누락된 메서드 소스 예(Kotlin):</b></p>
-<pre><code>
+<p><b>Ejemplo de falta de origen del método (Kotlin):</b></p>
+<pre><code lang="kotlin">
   class Example {
     @MethodSource("parameters")
     @ParameterizedTest
     fun foo(param: String) { ... }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
-<pre><code>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="kotlin">
   class Example {
     @MethodSource("parameters")
     @ParameterizedTest
@@ -69,7 +76,7 @@ Kotlin에서 일시 중지 함수에는 인수와 void가 아닌 반환 타입�
 </code></pre>
 
 <!-- tooltip end -->
-<p>검사 옵션을 사용하여 어노테이션을 지정합니다. 해당 어노테이션 중 하나가 추가된 매개변수는 보고되지 않습니다.
+<p>Utiliza las opciones de inspección para especificar anotaciones. Cualquier parámetro anotado con una de estas anotaciones no será informado.
 </p>
 </body>
 </html>

@@ -1,10 +1,10 @@
 <html>
 <body>
-리시버와 인수가 기본, 열거형 또는 문자열 유형과 호환하지
-않는 <code>equals()</code> 호출을 보고합니다.
+Reporta llamadas a <code>equals()</code> cuando el receptor y el argumento son
+de tipos primitivos, enum o cadena incompatibles.
 
-<p>그러한 호출은 이론적으로 유용할 수 있지만 버그일 가능성이 매우 높습니다.</p>
-<p><b>예:</b></p>
+<p>Si bien dicha llamada podría ser teóricamente útil, lo más probable es que represente un error.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>  5.equals("");
 </code></pre>
 <!-- tooltip end -->

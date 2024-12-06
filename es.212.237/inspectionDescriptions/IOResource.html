@@ -1,34 +1,36 @@
 <html>
 <body>
-안전하게 닫히지 않은 I/O 리소스를 보고합니다. 이 검사에서 검사되는 I/O 리소스에는 <code>java.io.InputStream</code>,
+Informa sobre los recursos de E/S que no se cierran de forma segura. Los recursos de E/S comprobados
+por esta inspección incluyen <code>java.io.InputStream</code>,
 <code>java.io.OutputStream</code>, <code>java.io.Reader</code>,
-<code>java.io.Writer</code>, <code>java.util.zip.ZipFile</code>, <code>java.io.Closeable</code>, <code>java.io.RandomAccessFile</code>이 포함됩니다.
+<code>java.io.Writer</code>, <code>java.util.zip.ZipFile</code>, <code>java.io.Closeable</code> y <code>java.io.RandomAccessFile</code>.
 <p>
-  래핑된 리소스는 래핑하는 리소스에 의해 닫히기 때문에 다른 I/O 리소스로 래핑된 I/O 리소스는 보고되지 않습니다.
+  No se informa sobre los recursos de E/S que están envueltos por otros recursos de E/S, ya que el recurso envuelto será cerrado por el recurso envolvente.
 </p>
 <p>
-  이 검사는 기본적으로 리소스가 이름에 'close' 또는 'cleanup'을 포함하는 모든 메서드에 의해 닫힐 수 있다고 가정합니다.
+  Por defecto, la inspección asume que los recursos pueden ser cerrados por cualquier método con
+  'close' o 'cleanup' en su nombre.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void save() throws IOException {
-    FileWriter writer = new FileWriter("filename.txt"); // 경고
+    FileWriter writer = new FileWriter("filename.txt"); //advertencia
     writer.write("sample");
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-  다음 옵션을 사용해 검사를 구성하세요:
+  Usa las siguientes opciones para configurar la inspección:
 </p>
 <ul>
-  <li>닫을 필요 없으며 이 검사에서 무시되어야 하는 I/O 리소스 클래스를 나열합니다.</li>
+  <li>Lista las clases de recursos de E/S que no necesitan ser cerrados y que deben ser ignoradas por esta inspección.</li>
   <li>
-    I/O 리소스를 <code>try</code> 블록 내부에서 여는 것을 허용할지 여부를 설정합니다.
-    이 스타일은 <code>try</code> 블록 앞에서 리소스를 여는 것보다 장황하기 때문에 그다지 바람직하지 않습니다.
- </li>
+    Si un recurso de E/S está permitido para ser abierto dentro de un bloque <code>try</code>.
+    Este estilo es menos deseable porque es más detallado que abrir un recurso antes de un bloque <code>try</code>.
+  </li>
   <li>
-    리소스가 인수로 전달된 메서드 호출에 의해 리소스가 닫힐 수 있는지 여부를 설정합니다.
- </li>
+    Si el recurso puede ser cerrado por cualquier llamada a un método con el recurso pasado como argumento.
+  </li>
 </ul>
 </body>
 </html>

@@ -1,11 +1,11 @@
 <html>
 <body>
-알려진 길이가 0인 배열의 할당을 보고합니다.
+Informa de las asignaciones de arreglos con longitudes de cero conocidas.
 <p>
-  Java 에서 배열 길이를 변경할 수 없으므로 새로운 배열을 반복적으로 할당하는 것보다 길이 0의 배열을 공유하는 것은 거의 항상 가능합니다. 이러한 공유는 프로그램 런타임 또는 점유 공간을 유용하게 최적화할 수 있습니다.
+  Dado que las longitudes de los arreglos en Java no se pueden modificar, casi siempre es posible compartir arreglos de longitud cero, en lugar de asignar repetidamente arreglos nuevos. Dicha acción puede proporcionar optimizaciones útiles en el tiempo de ejecución del programa o su espacio en memoria.
 </p>
 <p>
-  이 검사는 static final 필드로 할당된 길이가 0인 배열을 보고하지 않습니다. 이 배열은 배열 공유를 구현하기 위해 사용되는 것으로 생각할 수 있기 때문입니다.
+  Ten en cuenta que la inspección no informa de arreglos de longitud cero asignados como campos estáticos final, ya que se asume que dichos arreglos se utilizan para implementar el uso compartido de arreglos.
 </p>
 <!-- tooltip end -->
 

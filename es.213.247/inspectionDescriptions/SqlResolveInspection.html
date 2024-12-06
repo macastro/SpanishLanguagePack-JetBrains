@@ -1,11 +1,11 @@
 <html>
 <body>
-해결되지 않은 SQL 참조를 보고합니다.
-<p>예(MySQL):</p>
+Reporta referencias de SQL no resueltas.
+<p>Ejemplo (MySQL):</p>
 <pre><code>CREATE TABLE users(id INT, name VARCHAR(40));
 CREATE TABLE admins(id INT, col1 INT);
 
 SELECT users.id, admins.id FROM admins WHERE admins.id > 1;</code></pre>
-<p>FROM 절에 <code>users</code> 테이블이 누락되어 있기 때문에 <code>users.id</code> 열을 해결할 수 없습니다.</p>
+<p>La columna <code>users.id</code> no está resuelta porque la tabla <code>users</code> no está en la cláusula FROM.</p>
 </body>
 </html>

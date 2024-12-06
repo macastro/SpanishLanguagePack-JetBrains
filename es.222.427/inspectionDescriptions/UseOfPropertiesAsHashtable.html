@@ -1,6 +1,6 @@
 <html>
 <body>
-<code>java.util.Properties</code> 객체에서 다음 메서드를 호출하는 경우를 보고합니다.
+<code>java.util.Properties</code> objeto en las siguientes llamadas al método:
 <ul>
   <li><code>put()</code></li>
   <li><code>putIfAbsent()</code></li>
@@ -8,14 +8,13 @@
   <li><code>get()</code></li>
 </ul>
 <p>
-  역사적인 이유로 <code>java.util.Properties</code>는 <code>java.util.Hashtable</code>를 상속받지만 <code>String</code> 외의 타입을 가진 프로퍼티 값의 손상을 방지하기 위해 그러한 메서드는 사용하지 않는 것이 좋습니다.
+  Por razones históricas, <code>java.util.Properties</code> hereda de <code>java.util.Hashtable</code>, pero no se recomienda utilizar estos métodos para evitar la contaminación de valores de propiedades que no sean de tipo <code>String</code>.
 </p>
 <p>
-  맵 내의 키와 값 매개변수가 모두 <code>String</> 타입인 경우
-<code>java.util.Properties.putAll</code> 호출은 보고되지 않습니다.
-  이러한 호출은 안전하며 더 나은 대안이 없습니다.
+  Si tanto los parámetros de clave como de valor en el mapa son de tipo <code>String</code>, no se notificará la llamada a <code>java.util.Properties.putAll()</code>.
+  Estas llamadas son seguras y no hay una alternativa mejor.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   Object f(Properties props) {
     props.put("hello", "world");
@@ -24,7 +23,7 @@
     return props.get("Hello");
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   Object f(Properties props) {
     props.setProperty("hello", "world");

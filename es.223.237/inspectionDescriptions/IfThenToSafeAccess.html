@@ -1,7 +1,7 @@
 <html>
 <body>
-safe-access(<code>?.</code>) 식으로 접을 수 있는 <code>if-then</code> 식을 보고합니다.
-<p><b>예:</b></p>
+Informa expresiones <code>if-then</code> que se pueden plegar en expresiones de acceso seguro (<code>?.</code>).
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun bar(x: String) = ""
 
@@ -9,7 +9,7 @@ safe-access(<code>?.</code>) 식으로 접을 수 있는 <code>if-then</code> �
      if (a != null) bar(a) else null
   }
 </code></pre>
-<p>빠른 수정에서는 <code>if-then</code> 식을 safe-access(<code>?.</code>) 식으로 변환합니다.</p>
+<p>La corrección rápida convierte la expresión <code>if-then</code> en una expresión de acceso seguro (<code>?.</code>):</p>
 <pre><code>
   fun bar(x: String) = ""
 

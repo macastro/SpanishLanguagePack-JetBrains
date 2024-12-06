@@ -1,18 +1,18 @@
 <html>
 <body>
-클래스 및 모듈 별칭이 일관적이지 않게 선언된 경우를 보고합니다. 클래스는 모듈 별칭을 사용할 수 없으며 모듈은 클래스 별칭을 사용할 수 없습니다.
+Informa de casos en los que los alias de clases y módulos se declaran de forma incoherente. Las clases no pueden usar alias de módulo y los módulos no pueden usar alias de clase.
 <p>
-  클래스에 모듈 별칭을 설정하거나 모듈에 클래스 별칭을 설정하면 <code>InconsistentClassModuleAliasError</code>가 발생합니다.
+  Establecer un alias de módulo en una clase o establecer un alias de clase en un módulo genera <code>InconsistentClassModuleAliasError</code>.
 </p>
-<p>빠른 수정을 사용하여 충돌하는 선언으로 이동할 수 있습니다.</p>
+<p>Puede utilizar una solución rápida para navegar a declaraciones contradictorias.</p>
 <p>
-  예:
+  Sí:
 </p>
 <pre><code>
 class User
 end
 
-# 클래스 'User'가 모듈 별칭 대상으로 사용됨
+# La clase 'Usuario' se utiliza como destino del alias del módulo
 module Customer = User
 </code></pre>
 </body>

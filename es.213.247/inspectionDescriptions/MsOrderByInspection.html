@@ -1,9 +1,11 @@
 <html>
 <body>
-<code>ORDER BY</code> 절이 뷰, 인라인 함수, 파생 테이블, 하위 쿼리, 공통 테이블 표현식에서 <code>TOP</code>, <code>OFFSET</code>, 또는 <code>FOR XML</code> 없이 사용된 위치를 보고합니다.
-<p><code>ORDER BY</code> 사용에 관한 더 자세한 내용은 <a
-    href="https://docs.microsoft.com/en-us/sql/t-sql/queries/select-order-by-clause-transact-sql">docs.microsoft.com에서 SELECT - ORDER BY 절(Transact-SQL)</a>를 참고하세요.</p>
-<p>예(Microsoft SQL 서버):</p>
+Informa usos cuando la cláusula <code>ORDER BY</code> se utiliza sin <code>TOP</code>, <code>OFFSET</code> o <code>FOR XML</code> en vistas,
+funciones en línea, tablas derivadas, subconsultas y expresiones de tabla comunes.
+<p>Para más información sobre usos de <code>ORDER BY</code>, ver <a
+    href="https://docs.microsoft.com/es-es/sql/t-sql/queries/select-order-by-clause-transact-sql">SELECT - Cláusula ORDER BY (Transact-SQL) en
+  docs.microsoft.com</a>.</p>
+<p>Ejemplo (Microsoft SQL Server):</p>
 <pre><code>CREATE TABLE foo (a INT NOT NULL, b  INT NOT NULL);
 
 SELECT *
@@ -12,9 +14,9 @@ FROM foo A
 WHERE a &lt; 89
 ORDER BY b) ALIAS;
 </code></pre>
-<p>하위 쿼리에서 ORDER BY는 오류로 강조 표시됩니다. TOP, OFFSET, FOR XML를 하위 쿼리에 추가할 수 있습니다.
-  아니면 <b>요소 삭제</b> 빠른 수정을 사용하여 ORDER BY 섹션을 삭제하세요.</p>
-<p>빠른 수정 적용 후:</p>
+<p>En una subconsulta, ORDER BY se resaltará como un error. Se puede añadir TOP, OFFSET o FOR XML a una subconsulta.
+  Alternativamente, utilice la corrección rápida <b>Eliminar elemento</b> para eliminar la sección ORDER BY.</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>SELECT *
 FROM (SELECT a, b
 FROM foo A

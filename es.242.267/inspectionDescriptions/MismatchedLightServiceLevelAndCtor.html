@@ -1,30 +1,30 @@
 <html>
 <body>
-라이트 서비스 수준과 생성자 간에 불일치가 있을 경우 보고합니다.
-<p>다음과 같은 문제가 보고됩니다.</p>
+Informa sobre la discrepancia entre el nivel de un servicio ligero y sus constructores.
+<p>Se informan los siguientes problemas:</p>
 <ul>
-  <li>라이트 서비스 클래스가 타입이 <code>com.intellij.openapi.project.Project</code> 및 <code>kotlinx.coroutines.CoroutineScope</code>인 두 개의 매개변수를 가진 생성자를 갖고 있거나 타입이 <code>Project</code>인 매개변수가 프로젝트 수준의 서비스로 어노테이션 추가되지 않았습니다.
+  <li>Una clase de servicio ligero que tiene un constructor con dos parámetros de tipo <code>com.intellij.openapi.project.Project</code> y <code>kotlinx.coroutines.CoroutineScope</code>, o un constructor con un parámetro de tipo <code>Project</code> que no está anotado como servicio de nivel de proyecto.
   </li>
-  <li>애플리케이션 수준의 서비스로 어노테이션이 추가된 라이트 서비스가 인수가 없는 생성자나 <code>CoroutineScope</code> 타입의 매개변수 하나를 취하는 생성자를 갖고 있지 않습니다.
+  <li>Un servicio ligero anotado como servicio de nivel de aplicación que no tiene un constructor sin argumentos ni un constructor con un parámetro de tipo <code>CoroutineScope</code>.
   </li>
 </ul>
 <p></p>
-<p>예시 (Kotlin):</p>
+<p>Ejemplo (Kotlin):</p>
 <pre><code lang="kotlin">
-@Service                              // '@Service' 어노테이션 내의 'Service.Level.PROJECT' 매개변수를 지정하는 것이 제안됩니다
-class MyService(val project: Project) // 생성자 'MyService'에서 매개변수를 제거하는 것이 제안됩니다
+@Service                              // Se sugiere especificar el parámetro 'Service.Level.PROJECT' en la anotación '@Service'
+class MyService(val project: Project) // Se sugiere eliminar el parámetro del constructor 'MyService'
 </code></pre>
 <p></p>
-<p>'@Service' 어노테이션 내에서 'Service.Level.PROJECT' 매개변수를 지정하는 빠른 수정이 적용된 후:</p>
+<p>Después de aplicar la corrección rápida que sugiere especificar el parámetro 'Service.Level.PROJECT' en la anotación '@Service':</p>
 <pre><code lang="kotlin">
 @Service(Service.Level.PROJECT)
 class MyService(val project: Project)
 </code></pre>
-<p>생성자 'MyService'로부터 매개변수를 제거하는 빠른 수정을 적용한 후:</p>
+<p>Después de aplicar la corrección rápida que sugiere eliminar el parámetro del constructor 'MyService':</p>
 <pre><code lang="kotlin">
 @Service
 class MyService()
 </code></pre>
-<p><small>2023.2의 새로운 기능</small>
+<p><small>Novedad en 2023.2</small>
 </body>
 </html>

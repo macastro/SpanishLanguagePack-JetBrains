@@ -1,25 +1,26 @@
 <html>
 <body>
-클래스를 레코드로 바꾸도록 제안합니다.
-<p>이 검사는 확장 가능한 동작보다는 불변 데이터를 모델링하는 데 초점을 두는 경우 유용합니다.
-  equals 및 접근자와 같은 데이터 중심 메서드의 자동 구현은 보일러플레이트를 제거하는 데 도움을 줍니다.</p>
+Informa las clases que se pueden convertir en clases de registro.
+<p>Las clases de registro se centran en el modelado de datos inmutables en lugar de un comportamiento extensible.
+La implementación implícita automática de métodos basados en datos, como <code>equals()</code> y accesores, ayuda a reducir el código repetitivo.</p>
 <p>
-  모든 클래스가 레코드가 될 수 있는 것은 아닙니다. 다음 몇 가지 제한 사항입니다:
+  Tenga en cuenta que no todas las clases pueden ser clases de registro. Estas son algunas de las restricciones:
 </p>
 <ul>
-  <li>클래스는 상속자를 포함하지 않아야하며, 반드시 최상위 클래스여야합니다.</li>
-  <li>클래스 내 모든 비 정적 필드는 final이여야합니다.</li>
-  <li>클래스는 인스턴스 이니셜라이저, 제네릭 생성자 또는 네이티브 메서드를 포함하지 않아야합니다.</li>
+  <li>La clase debe ser de nivel superior y no debe tener subclases.</li>
+  <li>Todos los campos no estáticos de la clase deben ser finales.</li>
+  <li>No deben existir inicializadores, constructores genéricos ni métodos nativos.</li>
 </ul>
-<p>모든 제한 사항 목록을 확인하려면, <a href="https://docs.oracle.com/javase/specs/jls/se15/preview/specs/records-jls.html">Oracle documentation</a>을 참조하세요.</p>
+<p>Para obtener una descripción completa de las clases de registro, consulte
+  <a href="https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.10">Especificación del lenguaje Java</a>.</p>
 <!-- tooltip end -->
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
-  class Point {
+  class Punto {
     private final double x;
     private final double y;
 
-    Point(double x, double y) {
+    Punto(double x, double y) {
       this.x = x;
       this.y = y;
     }
@@ -33,12 +34,21 @@
     }
   }
 </code></pre>
-<p>이 레코드는 다음으로 변환됩니다:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
-  record Point(int x, int y) {
+  registro Punto(int x, int y) {
   }
 </code></pre>
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 14 테스트 버전 이상인 경우에만 보고합니다.</p>
-<p><small>2020.3의 새로운 기능</small></p>
+<p>Habilite la opción <b>Sugerir renombrar métodos accesores</b> para renombrar los accesores <code>getX()</code>/<code>isX()</code> a <code>x()</code> automáticamente.</p>
+<p>
+  Utilice la opción <b>Si los miembros se vuelven más accesibles</b> para especificar qué hacer cuando la conversión hará que los miembros sean más accesibles:
+<ul>
+  <li>Elija la opción <b>No sugerir conversión</b> para no convertir cuando los miembros se vuelvan más accesibles.</li>
+  <li>Elija la opción <b>Mostrar vista de conflictos</b> para mostrar los miembros afectados y solicitar que continúe. En el modo batch, no se sugerirá la conversión.</li>
+  <li>Elija la opción <b>Convertir silenciosamente</b> para aumentar la accesibilidad de forma silenciosa cuando sea necesario.</li>
+</ul>
+<p>Utilice la lista <b>Suprimir conversión si la clase está anotada por</b> para excluir clases de la conversión cuando están anotadas por anotaciones que coinciden con los patrones especificados.
+</p>
+<p><small>Novedad de 2020.3</small></p>
 </body>
 </html>

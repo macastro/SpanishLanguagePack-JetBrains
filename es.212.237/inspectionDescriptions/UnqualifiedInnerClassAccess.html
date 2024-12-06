@@ -1,8 +1,8 @@
 <html>
 <body>
-외부 클래스의 이름으로 한정되지 않는 내부 클래스의 참조를 보고합니다.
-<p><b>예:</b></p>
-<pre>
+Informa de las referencias a clases internas que no están cualificadas con el nombre de la clase que las abarca.
+<p><b>Ejemplo:</b></p>
+<pre><code>
   import foo.Foo.Bar;
 
   class Foo {
@@ -12,9 +12,9 @@
   class Baz {
     void f(Bar bar) {}
   }
-</pre>
-<p>빠른 수정 적용 후:</p>
-<pre>
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
   class Foo {
     class Bar {}
   }
@@ -22,10 +22,10 @@
   class Baz {
     void f(Foo.Bar bar) {}
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
-  검사 설정을 사용하여 동일한 클래스 내에서 내부의 클래스를 무시합니다. 이 경우 import 문이 필요하지 않습니다.
+  Usa la configuración de la inspección para ignorar referencias a clases internas dentro de la misma clase, que por tanto no requieren una importación.
 <p>
 </body>
 </html>

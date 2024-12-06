@@ -1,13 +1,13 @@
 <html>
 <body>
-<a href="https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html">이중 검사된 잠금</a>을 보고합니다.
+Informa <a href="https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html">bloqueo de doble verificación</a>.
 <p>
-  이중 검사된 잠금은 동기화 비용을 줄이는 한편 스레드가 안전한 방식으로 요청 기반의 필드 초기화를 시도합니다.
-  안타깝지만 이 방식이 <code>volatile</code>로 선언되지 않은 필드에서 사용될 경우 스레드 안전하지 않습니다.
-  Java 1.4 또는 이전 버전을 사용할 경우 이중 검사된 잠금은 <code>volatile</code> 필드에서도 작동하지 않습니다.
-  해당 문제와 관련한 자세한 설명은 위에 링크된 글을 참조하세요.
+  El bloqueo de doble verificación intenta inicializar un campo a petición y de una manera segura para subprocesos, evitando al mismo tiempo el costo de la sincronización.
+  Desafortunadamente, no es seguro para subprocesos cuando se utiliza en un campo que no está declarado como <code>volatile</code>.
+  Cuando se utiliza Java 1.4 o anterior, el bloqueo de doble verificación no funciona incluso con un campo <code>volatile</code>.
+  Lea el artículo enlazado arriba para una explicación detallada del problema.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
       private Helper helper = null

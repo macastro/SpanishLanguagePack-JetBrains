@@ -1,24 +1,24 @@
 <html>
 <body>
-<p>Reactive Stream 체인에서 <code>void 값이 있는 Mono</code>를 반환할 수 있는 zip 연산을 보고합니다.</p>
+<p>El informe puede devolver operaciones zip con <code>Mono con valor void</code> en la cadena Reactive Stream.</p>
 
 <p>
-  Mono Void 매개변수가 있는 Reactive Streams zip 변환 메서드는 효과가 없습니다.
-  빠른 수정에서는 <code>zip(), zipWhen(), zipWith()</code>를 Void 값이 있는 Mono를 반환하는 <code>when</code>으로 바꾸도록 제안합니다.
+  Los métodos de conversión zip en Reactive Streams con parámetros Mono Void no tendrán ningún efecto.
+  Esta solución rápida sugerirá reemplazar <code>zip(), zipWhen(), zipWith()</code> por <code>when</code>, que devuelve Mono con valor Void.
 </p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>Mono.zip(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
                 .map(v -> "New value")
                 .doFinally(System.out::println);
 </code></pre>
 
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>Mono.when(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
                 .then(Mono.fromCallable(() -> "New value"))
                 .doFinally(System.out::println);
 </code></pre>
 
-<p><small>2023.1의 새로운 기능</small></p>
+<p><small>Nuevo en 2023.1</small></p>
 </body>
 </html>

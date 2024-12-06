@@ -1,24 +1,24 @@
 <html>
 <body>
 <p>
-  올바르지 않은 Spring Shell 명령어 선언을 보고합니다.
+  Se reportan declaraciones de comandos Spring Shell no válidas:
 </p>
 <ul>
-  <li>명령어 설명 누락</li>
-  <li>명령어가 <code>org.springframework.shell.standard.@ShellComponent</code> 안에 없습니다</li>
+  <li>Falta la descripción del comando</li>
+  <li>El comando no está dentro de <code>org.springframework.shell.standard.@ShellComponent</code></li>
 </ul>
-<p>예:</p>
-<pre><code>
-// @ShellComponent가 없으므로 모든 메서드가 보고됩니다
+<p>Ejemplo:</p>
+<pre><code lang="java">
+// Se reportarán todos los métodos porque falta @ShellComponent
 class MathCommands {
 
   @ShellMethod("")
-  public int sum(int a, int b) { // 설명이 비어 있으므로 메서드가 보고됩니다
+  public int sum(int a, int b) { // Se reportará el método porque la descripción está vacía
     return a + b;
   }
 
   @ShellMethod
-  public int mul(int a, int b) { // 설명이 비어 있으므로 메서드가 보고됩니다
+  public int mul(int a, int b) { // Se reportará el método porque falta la descripción
     return a * b;
   }
 }

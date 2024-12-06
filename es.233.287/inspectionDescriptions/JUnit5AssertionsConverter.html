@@ -1,8 +1,10 @@
 <html>
 <body>
-<p>JUnit 5 테스트의 <code>junit.framework.Assert</code>, <code>org.junit.Assert</code> 또는 <code>org.junit.Assume</code> 클래스에 있는 메서드에 대한 호출을 보고합니다.</p>
-<p>테스트가 적절히 작동하더라도 <code>org.junit.jupiter.api.Assertions</code>/<code>org.junit.jupiter.api.Assumptions</code>로 마이그레이션은 이전 JUnit 버전의 종속성을 줄이는 데 도움이 됩니다.</p>
-<p><b>예:</b></p>
+<p>Reporta cualquier llamada a métodos de las clases <code>junit.framework.Assert</code>, <code>org.junit.Assert</code>, o <code>org.junit.Assume</code>
+ dentro de pruebas de JUnit 5.</p>
+<p>Aunque las pruebas funcionan correctamente, la migración a <code>org.junit.jupiter.api.Assertions</code>/<code>org.junit.jupiter.api.Assumptions</code>
+te ayudará a evitar dependencias en versiones anteriores de JUnit.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   import org.junit.Assert;
   import org.junit.jupiter.api.Test;
@@ -14,7 +16,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code lang="java">
   import org.junit.jupiter.api.Assertions;
   import org.junit.jupiter.api.Test;

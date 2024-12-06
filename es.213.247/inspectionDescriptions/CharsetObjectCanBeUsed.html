@@ -1,21 +1,22 @@
 <html>
 <body>
-문자형 상수 집합 <code>String</code> 리터럴 (예를 들어, <code>"UTF-8"</code>) 을 사전 정의된 <code>StandardCharsets.UTF_8</code> 코드로 바꿀 수 있는 메서드 및 생성자를 보고합니다.
-<p>문자 집합 조회가 불필요해지므로 수정 후 코드가 빨라질 수 있습니다.
-  또한, <code>UnsupportedEncodingException</code>을 catch할 필요가 없어질 수 있습니다. 이 경우 catch 블록은 자동으로 제거됩니다.</p>
-<p>예:</p>
+Informa de los métodos y constructores en los que una constante de <code>String</code> literal de juego de caracteres (por ejemplo, <code>"UTF-8"</code>) puede reemplazarse por un código predeterminado de <code>StandardCharsets.UTF_8</code>.
+<p>El código después de la corrección puede funcionar más rápido, porque la búsqueda de juego de caracteres se vuelve innecesaria.
+  De igual modo, es posible que dejar de capturar <code>UnsupportedEncodingException</code> sea innecesario también. En este caso,
+  el bloque catch se eliminará automáticamente.</p>
+<p>Ejemplo:</p>
 <pre><code>
   try {
     byte[] bytes = "str".getBytes("UTF-8");
   } catch (UnsupportedEncodingException e) {
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar una corrección rápida:</p>
 <pre><code>
   byte[] bytes = "str".getBytes(StandardCharsets.UTF_8);
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 Java 7 이상에서 사용 가능합니다.</p>
-<p><small>2018.2의 새로운 기능</small></p>
+<p>La inspección está disponible en Java 7 y versiones posteriores.</p>
+<p><small>Nuevo en 2018.2</small></p>
 </body>
 </html>

@@ -1,10 +1,9 @@
 <html>
 <body>
-<code>Thread.stop()</code>,
-<code>Thread.suspend()</code> 및 <code>Thread.resume()</code> 호출을 보고합니다.
+INspecciona las llamadas hacia <code>Thread.stop()</code>, <code>Thread.suspend()</code> y <code>Thread.resume()</code>.
 <p>
-  이러한 호출은 본질적으로 데이터 손상 및 교착상태로 이어지기 쉬우므로 사용하지 않는 것이 좋습니다.
-  <code>stop</code> 대신 협조적 취소를, <code>suspend</code> 및 <code>resume</code>을 직접 호출하는 대신 중단을 사용하는 것이 더 낫습니다.
+  Se recomienda enfáticamente NO utilizar estas llamadas, ya que son propensas a provocar daños en los datos y bloqueos.
+  Se sugiere utilizar la cancelación cooperativa en lugar de <code>stop</code>, y usar interrupciones en lugar de llamar directamente a <code>suspend</code> y <code>resume</code>.
 </p>
 <!-- tooltip end -->
 </body>

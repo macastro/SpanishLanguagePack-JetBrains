@@ -1,14 +1,18 @@
 <html>
 <body>
-<code>String</code> 객체에서 다음 메서드가 호출된 경우를 보고합니다:
+Inspecciona llamadas de:
 <ul>
   <li><code>equals()</code></li>
   <li><code>equalsIgnoreCase()</code></li>
   <li><code>compareTo()</code></li>
-  <li><code>compareToIgnoreCase()</code></li>
+  <li><code>compareToIgnoreCase()</code> and</li>
+  <li><code>trim()</code></li>
 </ul>
 <p>
-    그러한 호출은 보통 국제화된 환경에서 올바르지 않습니다.
+  sobre objetos <code>String</code>.
+  La comparación de cadenas internacionalizadas probablemente debería utilizar <code>java.text.Collator</code> en su lugar.
+  <code>String.trim()</code> sólo elimina caracteres de control entre 0x00 y 0x20.
+  El método <code>String.strip()</code> introducido en Java 11 es más compatible con Unicode y puede usarse como reemplazo.
 </p>
 <!-- tooltip end -->
 </body>

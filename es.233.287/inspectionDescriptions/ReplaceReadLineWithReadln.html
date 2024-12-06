@@ -1,18 +1,18 @@
 <html>
 <body>
-<code>readln()</code> 또는 <code>readlnOrNull()</code>로 바꿀 수 있는 <code>readLine()</code>을 보고합니다.
+Reporta llamadas a <code>readLine()</code> que pueden remplazarse con <code>readln()</code> o <code>readlnOrNull()</code>.
 <p>
-    대응하는 함수를 사용하면 코드가 더 단순해집니다.
+    Usar las funciones correspondientes hace que tu código sea más simple.
 </p>
 <p>
-    빠른 수정에서는 <code>readLine()!!</code>을 <code>readln()</code>으로 바꾸고 <code>readLine()</code>을 <code>readlnOrNull()</code>로 바꿉니다.
+    El arreglo rápido reemplaza <code>readLine()!!</code> con <code>readln()</code> y <code>readLine()</code> con <code>readlnOrNull()</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplos:</b></p>
 <pre><code>
     val x = readLine()!!
     val y = readLine()?.length
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
     val x = readln()
     val y = readlnOrNull()?.length

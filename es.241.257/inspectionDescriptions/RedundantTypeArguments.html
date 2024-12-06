@@ -1,14 +1,14 @@
 <html>
 <body>
-컴파일러에서 명백히 추론되므로 생략 가능한 명시적 인수 타입을 가진 매개변수화된 메서드의 호출을 보고합니다.
+Informa las llamadas a métodos parametrizados con tipos de argumentos explícitos que pueden omitirse ya que el compilador los inferirá inequívocamente.
 <p>
-  불필요한 타입 인수는 사용할 필요가 없으며 코드 가독성을 저해합니다.
+  El uso de argumentos de tipo redundantes es innecesario y dificulta la lectura del código.
 </p>
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   List&lt;String&gt; list = Arrays.&lt;String&gt;asList("Hello", "World");
 </code></pre>
-<p>불필요한 타입 인수를 제거하는 빠른 수정이 제공됩니다.</p>
+<p>Se proporciona un arreglo rápido para eliminar los argumentos de tipo redundantes:</p>
 <pre><code>
   List&lt;String&gt; list = Arrays.asList("Hello", "World");
 </code></pre>

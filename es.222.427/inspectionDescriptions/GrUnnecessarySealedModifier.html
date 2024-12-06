@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>메서드, 필드 또는 변수에 사용되는 불필요한 <code>sealed</code> 제어자를 보고합니다.</p>
-<p>이 제어자는 클래스, 인터페이스 및 특성에서만 의미가 있습니다.</p>
-<p><b>예:</b></p>
+<p>Informa sobre modificadores <code>sealed</code> innecesarios que se utilizan en métodos, campos o variables.</p>
+<p>Este modificador sólo tiene efecto en clases, interfaces y rasgos.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  <b>sealed</b> boolean foo() {} // 제어자가 불필요합니다
-  <b>sealed</b> Object bar // 제어자가 불필요합니다
+  <b>sealed</b> boolean foo() {} // el modificador es innecesario
+  <b>sealed</b> Object bar // el modificador es innecesario
 
-  // 제어자가 필요하므로 강조 표시되지 않습니다
+  // el modificador es necesario y por tanto no está resaltado
   <b>sealed</b> class A {}
 </code></pre>
 </body>

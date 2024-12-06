@@ -1,19 +1,19 @@
 <html>
 <body>
-Reports anonymous capturing groups and numeric back references in a RegExp.
-These are only reported when the RegExp dialect supports named group and named group references.
-Named groups and named back references improve code readability and are recommended to use instead.
-When a capture is not needed, matching can be more performant and use less memory by using a non-capturing group,
-i.e. <code>(?:xxx)</code> instead of <code>(xxx)</code>.
-<p><b>Example:</b></p>
+Informa sobre grupos de captura anónimos y referencias inversas numéricas en un RegExp.
+Solo se informa cuando el dialecto de RegExp admite grupos con nombre y referencias de grupos con nombre.
+Los grupos con nombre y las referencias inversas con nombre mejoran la legibilidad del código y se recomienda usarlos en su lugar.
+Cuando no se necesita una captura, la coincidencia puede tener un mejor rendimiento y utilizar menos memoria mediante el uso de un grupo sin captura,
+es decir, <code>(?:xxx)</code> en lugar de <code>(xxx)</code>.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   (\d\d\d\d)\1
 </code></pre>
-<p>A better regex pattern could look like this:</p>
+<p>Un mejor patrón de expresión regular podría verse así:</p>
 <pre><code>
   (?&lt;quad>\d\d\d\d)\k&lt;quad>
 </code></pre>
 <!-- tooltip end -->
-<p><small>New in 2017.2</small>
+<p><small>Nuevo en 2017.2</small>
 </body>
 </html>

@@ -1,11 +1,11 @@
 <html>
 <body>
-<code>hashCode()</code>, <code>equals()</code>, <code>toString()</code>과 같은 표준 <code>Object</code> 메서드를 프록시하지 않는 <code>InvocationHandler</code> 구현을 보고합니다.
-<p>이러한 메서드를 처리하지 못하면 프록시 인스턴스에서 해당 메서드 호출 시 예기치 않은 문제가 발생할 수 있습니다.</p>
-<p><b>예:</b></p>
+Informa sobre las implementaciones de <code>InvocationHandler</code> que no delegan los métodos estándar de <code>Object</code> como <code>hashCode()</code>, <code>equals()</code> y <code>toString()</code>.
+<p>Si no se gestionan estos métodos, al invocarlos en una instancia de proxy puede producirse problemas inesperados.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   InvocationHandler myHandler = (proxy, method, params) -&gt; {
-    System.out.println("Hello World!");
+    System.out.println("¡Hola Mundo!");
     <b>return</b> null;
   };
   Runnable myProxy = (Runnable) Proxy.newProxyInstance(
@@ -14,11 +14,11 @@
   );
 </code></pre>
 <p>
-  이 코드 스니펫은 <code>Runnable.run()</code> 메서드만 프록시하도록 설계되어 있습니다.
-  하지만 <code>hashCode()</code>와 같은 <code>Object</code> 메서드 호출 또한 프록시됩니다.
-  이 때문에 예를 들어 <code>myProxy</code>를 <code>HashSet</code>에 추가하는 경우에 <code>NullPointerException</code>과 같은 문제가 발생할 수 있습니다.
+  Este fragmento de código está diseñado para delegar solo el método <code>Runnable.run()</code>.
+  Sin embargo, también se delegan las llamadas a cualquier método de <code>Object</code>, como <code>hashCode()</code>.
+  Esto puede generar problemas como una <code>NullPointerException</code>, por ejemplo, al añadir <code>myProxy</code> a un <code>HashSet</code>.
 </p>
 <!-- tooltip end -->
-<p><small>2020.2의 새로운 기능</small>
+<p><small>Novedad en 2020.2</small>
 </body>
 </html>

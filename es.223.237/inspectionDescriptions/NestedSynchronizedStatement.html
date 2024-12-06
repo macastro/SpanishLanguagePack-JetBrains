@@ -1,18 +1,18 @@
 <html>
 <body>
-중첩된 <code>synchronized</code> 문을 보고합니다.
-일부 경우엔 교착 상태가 발생할 수 있으므로 가능하다면 중첩된 동기화를 사용하지 않는 것이 좋습니다.
-<p><b>예:</b></p>
+Reporta sentencias <code>synchronized</code> anidadas.
+Es recomendable evitar la sincronización anidada si es posible, porque en algunos casos puede provocar un interbloqueo.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   synchronized (lockA){
-    //스레드 1에서 lockB 대기 중
-    synchronized (lockB){ //경고
+    // el hilo 1 está esperando por lockB
+    synchronized (lockB){ //advertencia
     }
   }
   ...
   synchronized (lockB) {
-    //스레드 2에서 lockA 대기 중
-    synchronized (lockA) { //경고
+    // el hilo 2 está esperando por lockA
+    synchronized (lockA) { //advertencia
     }
   }
 </code></pre>

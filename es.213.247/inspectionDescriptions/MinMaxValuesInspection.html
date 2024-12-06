@@ -1,12 +1,12 @@
 <html>
 <body>
-<p>Bean Validation 제약 어노테이션 내 잘못된 <code>max</code> 및 <code>min</code> 값을 보고합니다.</p>
+<p>Informa valores incorrectos de <code>m&aacute;x</code> y <code>m&iacute;n</code> en anotaciones de restricci&oacute;n de Validaci&oacute;n de Bean.</p>
 
-<p><strong>예:</strong></p>
+<p><strong>Ejemplo:</strong></p>
 <pre><code>
 public class Car {
   @NotNull
-  @Size(min = 14, max = <strong>2</strong>) // 'max' 값이 'min' 값보다 작습니다
+  @Size(min = 14, max = <strong>2</strong>) // El valor de 'max' es menor que el valor de 'min'
   private String licensePlate;
 }
 </code></pre>

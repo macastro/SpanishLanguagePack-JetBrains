@@ -1,62 +1,59 @@
 <html>
 <body>
-Reports usages of deprecated classes, fields, and methods.
-A quick-fix is available to automatically convert the deprecated usage,
-when the necessary information can be extracted from the Javadoc of the deprecated member.
-<p><b>예:</b></p>
-<pre><code>
-  class Interesting {
+Informa de los usos de clases, campos y métodos obsoletos.
+Hay disponible una solución rápida para convertir automáticamente el uso obsoleto, cuando la información necesaria se puede extraer de la documentación Javadoc del miembro obsoleto.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  class Interessante {
 
     /**
-     * @deprecated Use {@link #newHotness()} instead
+     * @deprecated Use {@link #newHotness()} en su lugar
      */
     @Deprecated
     public void oldAndBusted() {}
 
     public void newHotness() {}
   }
-  class ElseWhere {
-    void x(Interesting i) {
-      i.oldAndBusted(); // deprecated warning here
+  class EnOtraParte {
+    void x(Interesante i) {
+      i.oldAndBusted(); // advertencia de obsoleto aquí
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
-<pre><code>
-  class Interesting {
+<p>Después de aplicar la solución rápida:</p>
+<pre><code lang="java">
+  class Interessante {
 
     /**
-     * @deprecated Use {@link #newHotness()} instead
+     * @deprecated Use {@link #newHotness()} en su lugar
      */
     @Deprecated
     public void oldAndBusted() {}
 
     public void newHotness() {}
   }
-  class ElseWhere {
-    void x(Interesting i) {
+  class EnOtraParte {
+    void x(Interesante i) {
       i.newHotness();
     }
   }
 </code></pre>
-<p>디폴트로 검사는 이를 회피하기 어렵거나 회피가 불가능한 경우 경고를 생성하지 않습니다.  예를 들어, 다음 코드는 보고되지 않습니다:</p>
-<pre><code>
-  abstract class A { //라이브러리 코드
+<p>De forma predeterminada, la inspección no produce una advertencia si es imposible o difícil evitarla. Por ejemplo, el siguiente código no será informado:</p>
+<pre><code lang="java">
+  abstract class A { //código de biblioteca
      @Deprecated
      abstract void m();
   }
-  class B extends A { //프로젝트 코드
+  class B extends A { //código de proyecto
      @Override
      void m() {
-        //작업 코드;
+        //doSmth;
      }
   }
 </code></pre>
-<!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configurar la inspección:</p>
 <p>
-  Use the options to disable this inspection inside deprecated members,
-  overrides of abstract deprecated methods, non-static import statements, methods of deprecated classes, or same top-level classes.
+  Utiliza las opciones para desactivar esta inspección dentro de miembros obsoletos, anulaciones de métodos obsoletos abstractos, sentencias de importación no estáticas, métodos de clases obsoletas o mismas clases de nivel superior.
 </p>
 
 </body>

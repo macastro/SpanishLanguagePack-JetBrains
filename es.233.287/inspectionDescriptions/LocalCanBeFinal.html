@@ -1,13 +1,13 @@
 <html>
 <body>
-매개변수 혹은 지역 변수 중 선언에 <code>final</code> 제어자가 추가될 수 있는 항목을 보고합니다.
-<p>예:</p>
+Informa parámetros o variables locales que pueden tener el modificador <code>final</code> añadido a su declaración.
+<p>Ejemplo:</p>
 <pre><code>
   ArrayList&lt;Integer&gt; list = new ArrayList();
   fill(list);
   return list;
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que se aplica la corrección rápida:</p>
 <pre><code>
   final ArrayList&lt;Integer&gt; list = new ArrayList();
   fill(list);
@@ -15,7 +15,7 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  검사 옵션을 사용하여 매개변수 또는 지역 변수가 보고되어야 하는지 정의합니다.
+  Utilice las opciones de la inspección para definir si los parámetros o las variables locales se deben informar.
 </p>
 </body>
 </html>

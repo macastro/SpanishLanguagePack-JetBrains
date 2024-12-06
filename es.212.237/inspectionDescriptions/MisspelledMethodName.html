@@ -1,15 +1,15 @@
 <html>
 <body>
-클래스의 여러 메서드의 이름이 대/소문자 표기만 다른 경우를 보고합니다. 그러한 이름은 혼란을 일으킬 수 있습니다.
-<p><b>예:</b><pre>
-<code>
-public int hashcode() {// 보고됨, hashCode여야 함
-  return 0;
-}
+Informa de los casos en los que varios métodos de una clase tienen nombres que sólo difieren en el uso de mayúsculas o minúsculas. Estos nombres pueden resultar muy confusos.
+<p><b>Ejemplo:</b>
+<pre><code>
+  public int hashcode() { // informado; ¿debería ser hashCode probablemente?
+    return 0;
+  }
 </code></pre>
-<p>그러한 메서드의 이름을 변경하는 빠른 수정은 에디터에서만 사용할 수 있습니다.</p>
+<p>El editor es el único que puede utilizar la corrección rápida para renombrar estos métodos.</p>
 <!-- tooltip end -->
-<p>상위 클래스의 메서드를 재정의하거나 구현하는 메서드를 무시하려면 <b>상위 메서드를 재정의/구현하는 메서드 무시(&O)</b> 옵션을 사용하세요.
+<p>Utiliza la opción <b>Ignorar métodos que reemplacen o implementen un método de superclase</b> para ignorar los métodos que reemplacen o implementen un método de la superclase.
 <p>
 
 </body>

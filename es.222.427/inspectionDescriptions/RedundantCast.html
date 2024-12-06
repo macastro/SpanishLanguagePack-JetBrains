@@ -1,5 +1,21 @@
 <html>
 <body>
-불필요한 형 변환 식을 보고합니다.
+Informa de expresiones de conversión innecesarias.
+
+<p>Ejemplo:</p>
+<pre><code>
+  static Object toObject(String s) {
+    return (Object) s;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Utiliza la casilla de verificación siguiente para ignorar conversiones aclaratorias, por ejemplo, conversiones en llamadas de colección donde se espera un <code>Object</code>:
+<pre><code>
+  static void removeFromList(List&lt;String&gt; l, Object o) {
+    l.remove((String)o);
+  } 
+</code></pre>
+
 </body>
 </html>

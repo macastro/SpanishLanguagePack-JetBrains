@@ -1,19 +1,19 @@
 <html>
 <body>
-하위 클래스 중 하나에 대한 참조를 포함하는 클래스를 보고합니다.
-이러한 참조는 혼란을 유발하며 객체 지향 설계의 여러 규칙에 위배될 수 있습니다.
-<p>예:</p>
-<pre>
+Se informa de las clases que hacen referencia a sus propias subclases.
+Estas referencias pueden ser confusas y violan varias reglas de diseño orientado a objetos.
+<p>Ejemplo:</p>
+<pre><code>
   class Entity {
-    // 경고: 클래스가 하위 클래스를 참조합니다
+    // Advertencia: La clase hace referencia a su subclase
     void compare(SimpleEntity entity) {
-     ...
+      ...
     }
   }
   class SimpleEntity extends Entity {
-   ...
+    ...
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

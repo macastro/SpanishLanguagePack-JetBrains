@@ -1,8 +1,8 @@
 <html>
 <body>
-<p><code>&lt;bean&gt;</code> 요소의 <code>autowire</code> 속성을 보고하고 가능한 경우 bean 프로퍼티를 명시적으로 주입하도록 제안합니다.</p>
+<p>Informa de atributos <code>autowire</code> en elementos <code>&lt;bean&gt;</code> y sugiere inyectar propiedades del bean explícitamente si es posible.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   public class MyComponent {
     public void setOtherBean(OtherBean bean){...}
@@ -12,12 +12,12 @@
   &lt;beans&gt;
     &lt;bean class="beans.OtherBean" id="bar"/&gt;
     &lt;bean autowire="byType" class="beans.MyComponent"/&gt;
-    &lt;!-- "오토와이어링된 종속성이 불필요합니다" --&gt;
-    &lt;!-- "오토와이어링된 종속성을 명시적으로 만들 것"을 제안합니다 --&gt;
+    &lt;!-- "Dependencia autocableada innecesaria" --&gt;
+    &lt;!-- sugiere "Hacer dependencia autocableada explícita" --&gt;
   &lt;/beans&gt;
 </code></pre>
 
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 
 <pre><code lang="xml">
   &lt;beans&gt;

@@ -1,23 +1,23 @@
 <html>
 <body>
-<p>긴 Reactive Streams 변환 체인을 보고합니다.</p>
-<p><code>map()</code> 또는 <code>filter()</code>와 같은 각 연산자 메서드 호출은 해당 연산자에 대한 일부 객체를 생성합니다. 
-  각 구독에서 각 스트림 요소에 대한 긴 연산자 체인을 호출하면 성능 오버헤드가 발생할 수 있습니다.
-  이를 방지하려면 가능한 경우 긴 호출 체인을 연산자 호출 하나로 결합합니다.
+<p>Reporta cadenas largas de transformaciones de Reactive Streams.</p>
+<p>Cada llamada de método operador, como <code>map()</code> o <code>filter()</code>, crea algunos objetos para esos operadores.
+  Llamar a una cadena larga de operadores en cada suscripción, para cada elemento de la secuencia, puede causar una sobrecarga de rendimiento.
+  Para evitarlo, combine una cadena larga de llamadas en una sola llamada de operador cuando sea posible.
 </p>
-<p><b>예:</b></p>
-<pre><code>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
 Flux.just(1, 2, 3)
         .map(it -> it + 1)
         .map(it -> it + 2)
         .map(it -> it + 3)
 </code></pre>
-<p>빠른 수정 적용 후:</p>
-<pre><code>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="java">
 Flux.just(1, 2, 3)
         .map(it -> it + 1 + 2 + 3)
 </code></pre>
 <!-- tooltip end -->
-<p><small>2019.3의 새로운 기능</small></p>
+<p><small>Nuevo en 2019.3</small></p>
 </body>
 </html>

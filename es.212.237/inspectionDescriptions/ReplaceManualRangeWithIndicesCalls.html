@@ -1,9 +1,9 @@
 <html>
 <body>
-<code>for</code> 루프 내에서 <code>Collection.indices</code> 또는 컬렉션에 대한 반복으로 바꿀 수 있는 <code>until</code> 및 <code>rangeTo</code> 연산자를 보고합니다.
-<p>문법적 설탕을 사용하면 코드를 단순화할 수 있습니다.</p>
-<p>빠른 수정이 수동 범위를 대응하는 구문으로 바꿉니다.</p>
-<p><b>예:</b></p>
+Reporta los operadores <code>until</code> y <code>rangeTo</code> que pueden ser reemplazados con <code>Collection.indices</code> o iteración sobre la colección dentro del ciclo <code>for</code>.
+<p>Usar azúcar sintáctica hace tu código más simple.</p>
+<p>La corrección rápida reemplaza el rango manual con la construcción correspondiente.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun main(args: Array&lt;String&gt;) {
       for (index in 0..args.size - 1) {
@@ -11,7 +11,7 @@
       }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun main(args: Array&lt;String&gt;) {
       for (element in args) {

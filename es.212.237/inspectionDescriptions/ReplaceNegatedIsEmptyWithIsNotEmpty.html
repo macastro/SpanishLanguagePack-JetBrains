@@ -1,23 +1,23 @@
 <html>
 <body>
-컬렉션 및 <code>String</code>에 대한 부정 <code>isEmpty()</code> 및 <code>isNotEmpty()</code> 또는 <code>String</code>에 대한 <code>isBlank()</code> 및 <code>isNotBlank()</code>을 보고합니다.
-<p>대응하는 함수를 사용하면 코드가 더 단순해집니다.</p>
-<p>빠른 수정이 부정 호출을 표준 라이브러리에서 대응하는 호출로 바꿉니다.</p>
-<p><b>예:</b></p>
+Reporta la negación <code>isEmpty()</code> e <code>isNotEmpty()</code> para colecciones y <code>String</code>, o <code>isBlank()</code> e <code>isNotBlank()</code> para <code>String</code>.
+<p>Usar las funciones correspondientes simplifica tu código.</p>
+<p>La corrección rápida reemplaza la llamada de negación con la llamada correspondiente de la librería estándar.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun main() {
       val list = listOf(1,2,3)
       if (!list.isEmpty()) {
-          // 뭔가 함
+          // hacer algo
       }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun main() {
       val list = listOf(1,2,3)
       if (list.isNotEmpty()) {
-          // 뭔가 함
+          // hacer algo
       }
   }
 </code></pre>

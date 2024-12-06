@@ -1,6 +1,19 @@
 <html>
 <body>
-드 모르간의 법칙을 따라서 결합 또는 분리 연산을 부정된 연산으로 바꿉니다.
-<p>bool 표현식이 <code>if</code> 또는 <code>unless</code> 구문 내부에 있는 경우, 구문 제어자가 반전되어 최종 결과를 단순화할 수 있습니다.</p>
+Reemplaza dentro de una expresión booleana:
+<table>
+  <tr>
+    <td> </td>
+    <td>
+      <code>a || b</code> con <code>!(!a && !b)</code> o
+    </td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td>
+      <code>a && b</code> con <code>!(!a || !b)</code>
+    </td>
+  </tr>
+</table>
 </body>
 </html>

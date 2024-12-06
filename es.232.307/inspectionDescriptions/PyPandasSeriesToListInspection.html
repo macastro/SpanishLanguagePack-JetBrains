@@ -1,12 +1,12 @@
 <html>
 <body>
-<p>pandas 및 polars 라이브러리의 <code>list(Series.values)</code> 구문 내에 있는 불필요한 <code>list</code>를 보고합니다.
-  이러한 <code>Series</code> 값의 추출은 <code>to_list()</code> 함수 호출로 대체될 수 있습니다.</p>
-<p><b>예:</b></p>
+<p>Se informa de una <code>list</code> redundante en el enunciado <code>list(Series.values)</code> para las bibliotecas de pandas y polars.
+  Tal extracción de valores de <code>Series</code> se puede reemplazar con la llamada a la función <code>to_list()</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre style="font-family: monospace">
 list(df['column'].values)
 </pre>
-<p>빠른 수정이 적용되면 코드는 다음과 같이 변경됩니다:</p>
+<p>Al aplicar la corrección rápida, el código cambia a:</p>
 <pre style="font-family: monospace">
 df['column'].to_list()
 </pre>

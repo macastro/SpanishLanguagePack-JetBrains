@@ -1,18 +1,15 @@
 <html>
 <body>
-'and' 및 'or' bool 연산자(<code>&</code> 및 <code>|</code>)의 비단락 양식을
-보고합니다.
+Informa de las formas de no cortocircuito de los operadores booleanos "and" y "or" (<code>&</code> y <code>|</code> ).
 <p>
-  비단락 버전은 때때로 유용하지만
-  이러한 버전은 종종 비단락 양식(<code>&&</code> 및 <code>||</code>)에서
-  오타가 발생한 결과이며 미묘한 버그를 발생시킬 수 있습니다.
+  Las versiones de no cortocircuito son a veces útiles, pero su presencia a menudo se debe a errores tipográficos de las formas de cortocircuito (<code>&&</code> y <code>||</code> ), y puede llevar a errores sutiles.
 </p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 if (a & b) {}
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
 if (a && b) {}
 </code></pre>

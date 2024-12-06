@@ -1,8 +1,8 @@
 <html>
 <body>
-<p><a href="https://docs.python.org/3/library/typing.html#typing.ClassVar">ClassVar</a> 어노테이션의 잘못된 사용을 보고합니다.</p>
-<p><b>예:</b></p>
-<pre style="font-family: monospace">
+<p> Informa usos inválidos de <a href="https://docs.python.org/3/library/typing.html#typing.ClassVar">anotaciones ClassVar</a> .</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
 from typing import ClassVar
 
 
@@ -16,7 +16,7 @@ class Cat:
 
 Cat.color = "black"  # OK
 my_cat = Cat(5)
-my_cat.color = "gray"  # Error, setting class variable on instance
-</pre>
+my_cat.color = "gray"  # Error, estableciendo la variable de clase en la instancia
+</code></pre>
 </body>
 </html>

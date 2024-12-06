@@ -1,7 +1,7 @@
 <html>
 <body>
-외부로 이동 가능한 소괄호 내 람다 식을 보고합니다.
-<p><b>예:</b></p>
+Reporta expresiones lambda en paréntesis que se pueden mover fuera de ellos.
+<p><b>Ejemplo:</b></p>
 <pre><code>
 fun square(a: Int, b: (Int) -&gt; Int) {
   b(a * a)
@@ -11,7 +11,7 @@ fun foo() {
   square(2, { it })
 }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el quick-fix:</p>
 <pre><code>
 fun foo() {
   square(2){ it }

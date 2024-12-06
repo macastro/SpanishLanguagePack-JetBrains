@@ -1,26 +1,26 @@
 <html>
 <body>
-취소 확인이 누락된 반복문, <code>forEach</code>와 유사한 메서드 및 <code>ContainerUtil.process()</code>를 보고합니다.
-<p><code>com.intellij.util.concurrency.annotations.RequiresReadLock</code> 어노테이션이 있는 메서드 내에서만 실행됩니다.</p>
-<p><b>예:</b></p>
+Reporta ciclos, métodos como <code>forEach</code> y <code>ContainerUtil.process()</code> que faltan verificación de cancelación.
+<p>Sólo se ejecuta dentro de métodos anotados con <code>com.intellij.util.concurrency.annotations.RequiresReadLock</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code lang="kotlin">
 @RequiresReadLock
 fun doSomething() {
   ...
   for (item in items) {
-        ProgressManager.checkCanceled() // 첫 번째 줄에 있어야 합니다
+        ProgressManager.checkCanceled() // Debe estar en la primera línea
     ...
   }
 
   items.forEach {
-    ProgressManager.checkCanceled() // 첫 번째 줄에 있어야 합니다
+    ProgressManager.checkCanceled() // Debe estar en la primera línea
     ...
   }
   ...
 }
 </code></pre>
 
-<p>사이에 아무것도 없는 중첩 루프의 경우:</p>
+<p>En caso de múltiples ciclos anidados sin nada en el medio:</p>
 <pre><code lang="kotlin">
 @RequiresReadLock
 fun doSomething() {
@@ -28,19 +28,19 @@ fun doSomething() {
   for (item in items) {
         // nothing in between
         for (inner in item.inners) {
-            ProgressManager.checkCanceled() // 내부 루프 안의 첫 번째 줄에만 있어야 합니다
-      ...
+            ProgressManager.checkCanceled() // Debe estar únicamente en la primera línea del ciclo interno
+        ...
     }
   }
   ...
 }
 </code></pre>
 <p>
-    블로킹 컨텍스트에서는 <code>com.intellij.openapi.progress.ProgressManager#checkCanceled</code>가 사용되어야 하며 일시 중지 컨텍스트에서는 <code>com.intellij.openapi.progress.CoroutinesKt#checkCancelled</code>가 사용되어야 합니다.
+    En un contexto de bloqueo se debe utilizar <code>com.intellij.openapi.progress.ProgressManager#checkCanceled</code> y en un contexto de suspensión se debe utilizar <code>com.intellij.openapi.progress.CoroutinesKt#checkCancelled</code>.
 </p>
 <p>
-    자세한 내용은 IntelliJ 플랫폼 플러그인 SDK 문서의 <a href="https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#background-processes-and-processcanceledexception">백그라운드 프로세스 및 ProcessCanceledException</a>을 참조하세요.
+    Para obtener más información, consulte <a href="https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#background-processes-and-processcanceledexception">Procesos en segundo plano y ProcessCanceledException</a> en la documentación del SDK del complemento de la plataforma IntelliJ.
 </p>
 </body>
-<p><small>2023.1의 새로운 기능</small>
+<p><small>Nuevo en 2023.1</small>
 </html>

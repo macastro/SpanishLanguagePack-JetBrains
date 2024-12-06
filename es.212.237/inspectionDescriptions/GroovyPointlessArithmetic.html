@@ -1,18 +1,15 @@
 <html>
 <body>
-무의미한 산술 표현식을 보고합니다.
+Inspecciones que no reportan expresiones aritméticas.
 <p>
-  그러한 표현식에는 0 더하기, 0 빼기, 0 또는 1로 곱하기, 1로 나누기 및 0으로
-  시프트 연산이 포함됩니다. 그러한 표현식은 코드 완성으로  완전히 연결되지 않는 자동화된
-  리팩터링의 결과일 수 있으며 개발자가 의도한 결과가 아닐
-  확률이 높습니다.
+  Tales expresiones incluyen sumar o restar cero, multiplicar por cero o uno, dividir por uno, y desplazar por cero. Estas expresiones pueden ser el resultado de refactorizaciones automáticas que no se completaron completamente, y en cualquier caso, es poco probable que el programador quisiera hacerlas.
 </p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   a + 0
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   a
 </code></pre>

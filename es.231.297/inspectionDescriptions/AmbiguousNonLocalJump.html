@@ -1,20 +1,20 @@
 <html>
 <body>
-루프 같은 함수의 람다 내에서 <code>break</code> 또는 <code>continue</code> 사용 위치를 보고합니다.
+Informa los usos de <code>break</code> o <code>continue</code> dentro de lambdas de funciones parecidas a bucles.
 <p>
-    <code>break</code> 및 <code>continue</code> 키워드는 항상 실제 루프(<code>for</code>,
-    <code>while</code>, <code>do-while</code>)에 적용됩니다. <code>break</code> 및 <code>continue</code>는 함수에 적용되지 않습니다. 예를 들어,
-    <code>break</code> 및 <code>continue</code>는 <code>forEach</code>, <code>filter</code>, <code>map</code>에 적용되지 않습니다.
+    Las palabras clave <code>break</code> y <code>continue</code> siempre se aplican a los bucles reales (<code>for</code>,
+    <code>while</code>, <code>do-while</code>). <code>break</code> y <code>continue</code> nunca se aplican a ninguna función; por ejemplo,
+    <code>break</code> y <code>continue</code> no se aplican a <code>forEach</code>, <code>filter</code>, <code>map</code>.
 </p>
 <p>
-    루프 같은 함수(예: <code>forEach</code>) 내에서 <code>break</code> 또는 <code>continue</code>를 사용하면 혼동될 수 있습니다.
-    이 검사는 레이블을 추가하여 어떤 구문에 <code>break</code> 또는 <code>continue</code>가 적용되는지 명확히 하도록 제안합니다.
+    El uso de <code>break</code> o <code>continue</code> dentro de una función similar a un bucle (por ejemplo, <code>forEach</code>) puede resultar confuso.
+    La inspección sugiere agregar una etiqueta para aclarar a qué declaración se aplican <code>break</code> o <code>continue</code>.
 </p>
 <p>
-    Kotlin에는 루프 같은 함수의 개념이 없으므로 이 검사는 경험적 지식을 사용합니다. <code>callsInPlace(EXACTLY_ONCE)</code> 또는
-    <code>callsInPlace(AT_LEAST_ONCE)</code> 컨트랙트 중 하나가 없는 함수는 루프 같은 함수라고 가정합니다.
+    Como Kotlin no tiene un concepto de funciones similares a bucles, la inspección utiliza la heurística. Asume que las funciones que no
+    tienen uno de los contratos <code>callsInPlace(EXACTLY_ONCE)</code> o <code>callsInPlace(AT_LEAST_ONCE)</code> son funciones similares a bucles.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
     for (file in files) {
         file.readLines().forEach { line ->
@@ -23,7 +23,7 @@
         }
     }
 </code></pre>
-<p>빠른 수정은 명확히 구분 짓는 레이블을 추가합니다.</p>
+<p>La solución rápida agrega etiquetas aclaratorias:</p>
 <pre><code>
     loop@ for (file in files) {
         file.readLines().forEach { line ->

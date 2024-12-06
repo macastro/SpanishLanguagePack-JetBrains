@@ -1,62 +1,62 @@
 <html>
 <body>
-프로퍼티 값에서 다음의 <code>MessageFormat</code> 문제를 보고합니다.
+Se presentan los siguientes problemas de <code>MessageFormat</code> que ocurren en los valores de propiedades:
 
-<p><b>알 수 없는 형식 타입</b>
+<p><b>Tipo de formato desconocido</b>
 <p>
-  <code>MessageFormat</code>은 다음의 형식 타입만 지원합니다.
+  <code>MessageFormat</code> sólo soporta los siguientes tipos de formato:
 <ul>
-  <li>숫자</li>
-  <li>날짜</li>
-  <li>시간</li>
-  <li>choice</li>
+  <li>Número</li>
+  <li>Fecha</li>
+  <li>Hora</li>
+  <li>Elección</li>
 </ul>
-  다른 형식 타입은 보고됩니다.
+  Se informará cualquier otro tipo de formato.
 
-<p><b>짝이 없는 따옴표</b>
+<p><b>Comillas no emparejadas</b>
 <pre><code>
   property.key=Shouldn't happen: {0}
 </code></pre>
 <p>
-  단일 따옴표는 프로퍼티의 마지막까지 이스케이프하는 것으로 해석되며 결과 문자열에는 표시되지 않습니다.
-  대부분의 경우 이는 의도된 것이 아닙니다.
-  단일 작은따옴표가 결과 문자열에 있는 경우 프로퍼티에 작은따옴표가 하나 더 필요합니다.
+  Las comillas simples se interpretan como escapes hasta el final de la propiedad y no aparecen en la cadena de caracteres resultante.
+  En la mayoría de los casos, esto no es lo que se pretende.
+  Si se requiere una comilla simple en la cadena de caracteres resultante, se deben duplicar dentro de la propiedad.
 
-<p><b>짝이 없는 중괄호</b>
+<p><b>Llaves no emparejadas</b>
 <p>
-  모든 자리표시자에는 닫는 중괄호가 있어야 합니다.
+  Cada marcador de posición debe tener una llave de cierre.
 
-<p><b>따옴표가 너무 많음</b>
+<p><b>Demasiadas comillas</b>
 <p>
-  일부 경우(예: <code>it's</code>)에는 결과 문자열에 따옴표가 하나만 있어야 합니다.
-  결과 문자열에 따옴표가 2개 이상 배치되는 경우가 보고됩니다.
+  En algunos casos (como <code>it's</code>), se espera una sola comilla en la cadena de caracteres resultante.
+  Se informan los casos en que dos o más comillas se encuentran consecutivamente en la cadena de caracteres resultante.
 
-<p><b>중첩된 <code>ChoiceFormat</code>의 하한이 올바르지 않습니다</b>
+<p><b>Límite inferior incorrecto del <code>ChoiceFormat</code> anidado</b>
 <p>
-  하한은 숫자여야 하며 오름차순으로 정렬됩니다.
+  Los límites inferiores deben ser numéricos y deben ordenarse en orden ascendente.
 
-<p><b>매개변수 주변의 따옴표 수가 잘못되었습니다</b>
+<p><b>Número incorrecto de comillas alrededor de los parámetros</b>
 <p>
-  <code>java.text.MessageFormat</code> 패턴에서 단일 따옴표는 이스케이프에 사용됩니다.
-  따옴표가 보이도록 하려면 따옴표가 하나 더 필요합니다.
-  예시로 <code>1</code>을 전달할 때:
+  En el patrón <code>java.text.MessageFormat</code>, las comillas simples se utilizan para escapar.
+  Para permitir que las comillas sean visibles, deben duplicarse.
+  Por ejemplo, al pasar <code>1</code>:
 <ul>
   <li><code>'{0}'</code> &rarr; <code>{0}</code></li>
   <li><code>''{0}''</code> &rarr; <code>'1'</code></li>
 </ul>
 <p>
-  choice 형식을 사용할 때 중첩 형식은 형식 문자열 자체로서 평가되며 따옴표가 두 번 복제되어야 합니다.
-  예시로 <code>1</code>을 전달할 때:
+  Al usar un formato de elección, el formato anidado se evalúa como la propia cadena de formato, por lo que las comillas deben duplicarse una segunda vez.
+  Por ejemplo, al pasar <code>1</code>:
 <ul>
-  <li><code>{0, choice, 0#no|#1''{0}'' files}</code> &rarr; <code>{0} files</code></li>
-  <li><code>{0, choice, 0#no|#1''''{0}'''' files}</code> &rarr; <code>'1' files</code></li>
+  <li><code>{0, choice, 0#ninguno|#1''{0}'' archivos}</code> &rarr; <code>{0} archivos</code></li>
+  <li><code>{0, choice, 0#ninguno|#1''''{0}'''' archivos}</code> &rarr; <code>'1' archivos</code></li>
 </ul>
 
-<p><b>참고</b>
+<p><b>Nota</b>
 <p>
-  프로퍼티 값은 리터럴 텍스트 <code>{0}</code>, <code>{0,</code>, <code>{1}</code> 또는 <code>{1,</code>를 포함할 때만 검증됩니다.
-  이를 통해 이러한 프로퍼티 값이 실제로 <code>MessageFormat</code> 패턴으로 사용될 수 있습니다.
+  Los valores de propiedad solo se validan cuando contienen texto literal <code>{0}</code>, <code>{0,</code>, <code>{1}</code> o <code>{1,</code>.
+  La validación se realiza para garantizar que estos valores de propiedad se utilicen de hecho como patrones <code>MessageFormat</code>.
 <!-- tooltip end -->
-<p><small>2023.2의 새로운 기능</small>
+<p><small>Nuevo en 2023.2</small>
 </body>
 </html>

@@ -1,15 +1,14 @@
 <html>
 <body>
-<p>The inspection is designed to identify potentially vulnerable sections of code where data
-  obtained from potentially unreliable sources may be used in operations that pose security risks.</p>
+<p>Esta inspección está diseñada para identificar fragmentos de código potencialmente vulnerables, en los que los datos obtenidos desde fuentes potencialmente no confiables puedan ser utilizados en operaciones que comporten un riesgo de seguridad.</p>
 
-<p>Data Flow Tracking:</p>
+<p>Seguimiento del flujo de datos:</p>
 
-<p>The inspection tracks the flow of data from the source to its usage in critical operations.
-  This includes analyzing the transfer of data through methods, objects, and variables.</p>
+<p>La inspección monitoriza el flujo de datos desde la fuente hasta su uso en operaciones críticas.
+  Esto incluye el análisis de la transferencia de datos a través de métodos, objetos y variables.</p>
 
-<p>Consider an example where user input is directly used in an SQL query without proper preprocessing.
-  The inspection would issue a warning about a potential SQL injection.</p>
+<p>Consideremos un ejemplo en el que la entrada del usuario se utiliza directamente en una consulta SQL, sin el procesamiento adecuado previo.
+  La inspección emitirá una advertencia sobre la posible inyección SQL.</p>
 <pre>
 String userInput = getUserInput();
 String sqlQuery = "SELECT * FROM users WHERE username = '" + userInput + "'";

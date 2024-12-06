@@ -1,24 +1,29 @@
 <html>
 <body>
-결과가 무시되는 메서드 호출을 보고합니다.
-<p>많은 메서드에서 결과를 무시하는 것은 완전히 정당하지만 일부는 거의 틀림없는 오류입니다. 결과 무시가 오류일 가능성이 있는 메서드의 예로는 실제로 읽은 바이트 개수를 반환하는 <code>java.io.inputStream.read()</code>, 및 <code>java.lang.String</code> 또는 <code>java.math.BigInteger</code>의 모든 메서드가 포함됩니다. 이러한 메서드는 부작용을 일으키지 않으므로 결과가 무시되어도 무의미합니다.
+Reporta llamadas a métodos cuyo resultado es ignorado.
+<p>Para muchos métodos, ignorar el resultado es perfectamente
+  legítimo, pero para algunos es casi seguro que es un error. Los ejemplos de métodos en los que ignorar
+  el resultado es probable que sea un error incluyen <code>java.io.inputStream.read()</code>, 
+  que devuelve el número de bytes realmente leídos, y cualquier método en
+  <code>java.lang.String</code> o <code>java.math.BigInteger</code>. Estos métodos no producen efectos secundarios y por lo tanto no tienen sentido
+  si su resultado es ignorado.
 </p>
-<p>다음 메서드 호출이 검사됩니다:</p>
+<p>Se inspeccionan las llamadas a los siguientes métodos:</p>
 <ul>
-  <li>단순한 getter(필드 반환 이외의 동작 없음)</li>
-  <li>이 검사의 설정에 지정된 메서드</li>
-  <li><code>org.jetbrains.annotations.Contract(pure=true)</code> 어노테이션이 추가된 메서드</li>
-  <li>.*.<code>CheckReturnValue</code> 어노테이션이 추가된 메서드</li>
-  <li><code>javax.annotation.CheckReturnValue</code> 어노테이션이 추가된 클래스 또는 패키지 내 메서드</li>
-  <li>모든 비 라이브러리 메서드(선택)</li>
+  <li>Getters simples (que no hacen nada excepto devolver un campo)</li>
+  <li>Métodos especificados en los ajustes de esta inspección</li>
+  <li>Métodos anotados con <code>org.jetbrains.annotations.Contract(pure=true)</code></li>
+  <li>Métodos anotados con .*.<code>CheckReturnValue</code></li>
+  <li>Métodos en una clase o paquete anotados con <code>javax.annotation.CheckReturnValue</code></li>
+  <li>Opcionalmente, todos los métodos no de biblioteca</li>
 </ul>
-<p>Error Prone 또는 AssertJ의 <code>@CanIgnoreReturnValue</code> 어노테이션이 추가된 메서드 호출은 보고되지 않습니다.
+<p>Las llamadas a métodos anotados con la anotación <code>@CanIgnoreReturnValue</code> de Error Prone o AssertJ no se reportan.
 
 <!-- tooltip end -->
 <p>
-  검사 설정을 사용하여 검사할 클래스를 지정하세요.
-  메서드는 Java 정규 표현식 구문을 사용한 이름 또는 이름 패턴으로 대조됩니다.
-  클래스의 경우 정규화된 이름을 사용하세요. 각 항목은 클래스 및 모든 상속자에 적용됩니다.
+  Utiliza las configuraciones de inspección para especificar las clases a revisar.
+  Los métodos coinciden por nombre o patrón de nombre utilizando la sintaxis de expresión regular de Java.
+  Para las clases, utiliza los nombres completos. Cada entrada se aplica tanto a la clase como a todos sus herederos.
 <p>
 
 </body>

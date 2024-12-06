@@ -1,11 +1,10 @@
 <html>
 <body>
-클래스명으로 한정된 static 구성원의 사용을 보고합니다.
+Informa el uso de miembros static calificados innecesariamente por el nombre de clase.
 <p>
-  이러한 한정은 불필요하며 안전하게 생략할 수 있습니다.
-</p>
-<p><b>예:</b></p>
-<pre>
+Cuando un miembro static puede ser utilizado en la clase circundante o en la superclase de la clase circundante, no es necesario calificarlo con la clase. Dicha calificación se puede eliminar de forma segura.
+<p><b>Ejemplo:</b></p>
+<pre><code>
   class Foo {
     static void foo() {}
     static int x;
@@ -17,9 +16,9 @@
 
     static void baz() { Foo.foo(); }
   }
-</pre>
-<p>빠른 수정 적용 후:</p>
-<pre>
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
   class Foo {
     static void foo() {}
     static int x;
@@ -31,21 +30,21 @@
 
     static void baz() { foo(); }
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
-  보고 대상을 전환하려면 검사 옵션을 사용하세요.
+  Utiliza las opciones de inspección para alternar qué denunciar:
 </p>
 <ul>
   <li>
-    <p>static 필드 접근:<br><code>void bar() { System.out.println(Foo.x); }</code></p>
- </li>
+    <p>Acceso a un campo static:<br><code>void bar() { System.out.println(Foo.x); }</code></p>
+  </li>
   <li>
-    <p>static 메서드 호출:<br><code>void bar() { Foo.foo(); }</code></p>
- </li>
+    <p>Llamada a un método static:<br><code>void bar() { Foo.foo(); }</code></p>
+  </li>
 </ul>
 <p>
-  또한 static 구문에서 구성원 사용을 보고하기 위해 검사를 구성할 수 있습니다. 이 경우 <code>static void baz() { Foo.foo(); }</code> 만 보고됩니다.
+  Además, puedes configurar la inspección para que solo informe el uso de miembros static en un contexto static. En ese caso, solo se informaría <code>static void baz() { Foo.foo(); }</code>.
 </p>
 
 </body>

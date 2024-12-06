@@ -1,20 +1,20 @@
 <html>
 <body>
-<p>최신 버전의 <a href="https://spring.io/projects/spring-integration">Spring Integration</a> XML 기반 애플리케이션 컨텍스트에서 지원이 중단된 XML 요소를 보고합니다.</p>
+<p>Informa elementos XML obsoletos en la versión actual del contexto de aplicación basado en XML de <a href="https://spring.io/projects/spring-integration">Spring Integration</a>.</p>
 
-<p>자세한 내용은 <a href="https://github.com/SpringSource/spring-integration/wiki/Spring-Integration-2.0-to-2.1-Migration-Guide">마이그레이션 가이드</a>를 참조하세요.</p>
+<p>Para obtener más información, consulta <a href="https://github.com/SpringSource/spring-integration/wiki/Spring-Integration-2.0-to-2.1-Migration-Guide">la Guía de migración</a>.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 &lt;beans ... &gt;
    &lt;int:channel id="failChannel"
-                dispatcher="<strong>failover</strong>"/&gt; &lt;!-- 이 속성은 지원 중단되었습니다. 디스패처의 하위 요소를 사용하세요 --&gt;
+                dispatcher="<strong>failover</strong>"/&gt; &lt;!-- Este atributo está obsoleto, utiliza el sub-elemento dispatcher en su lugar --&gt;
    &lt;int:poller default="true"&gt;
-     &lt;<strong>int:cron-trigger</strong>  expression="5"/&gt;  &lt;!-- 이 요소는 Spring Integration 2.1에서 제거되었습니다. 대신 'cron' 속성을 사용하세요 --&gt;
-     &lt;<strong>int:interval-trigger</strong> interval="3"/&gt; &lt;!--  이 요소는 Spring Integration 2.1에서 제거되었습니다. 대신 interval-trigger 속성을 사용하세요 --&gt;
+     &lt;<strong>int:cron-trigger</strong>  expression="5"/&gt;  &lt;!-- Este elemento se eliminó en Spring Integration 2.1, utiliza el atributo 'cron' en su lugar --&gt;
+     &lt;<strong>int:interval-trigger</strong> interval="3"/&gt; &lt;!--  Este elemento se eliminó en Spring Integration 2.1, utiliza los atributos del disparador de intervalos en su lugar --&gt;
   &lt;/int:poller&gt;
   &lt;ftp:inbound-channel-adapter session-factory="ftpSessionFactory"
-                               cache-sessions="<strong>false</strong>" &lt;!--  이 속성은 지원 중단되었습니다. 대신 CachingSessionFactory를 사용하세요 --&gt;
+                               cache-sessions="<strong>false</strong>" &lt;!--  Este atributo está obsoleto, utiliza CachingSessionFactory en su lugar --&gt;
                                channel="channel"/&gt;
 &lt;/beans&gt;
 </code></pre>

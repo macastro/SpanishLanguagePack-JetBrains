@@ -1,24 +1,23 @@
 <html>
 <body>
-동등한 <code>assertSame()</code> 호출로 바꿀 수 있는 JUnit <code>assertEquals()</code> 호출을 보고합니다.
-<code>Object.equals()</code> 메서드를 재정의하지 않고 객체 ID가 비교됨을 명시적으로 만드는 <code>final</code> 클래스의 인스턴스가 인수인 경우 이것이 가능합니다.
-<p><code>assertEquals()</code>를 <code>assertSame()</code>으로 바꿀 것을 제안합니다.</p>
-<p><b>예:</b></p>
-<pre><code>
+Reporta llamadas a JUnit <code>assertEquals()</code> que pueden ser reemplazadas con una llamada <code>assertSame()</code> equivalente.
+Esto es posible cuando los argumentos son instancias de una clase <code>final</code> que no sobreescribe el método `Object.equals()` y explicita que la identidad del objeto es comparada.
+<p>Sugiere reemplazar <code>assertEquals()</code> con <code>assertSame()</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
   @Test
-  <b>public void</b> testObjectType() {
+  public void testObjectType() {
     Object o = getObject();
-    Assert.assertEquals(String.<b>class</b>, o.getClass());
+    Assert.assertEquals(String.class, o.getClass());
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que se aplica el arreglo rápido:</p>
 <pre><code>
   @Test
-  <b>public void</b> testSort() {
+  public void testSort() {
     Object o = getObject();
-    Assert.assertSame(String.<b>class</b>, o.getClass());
+    Assert.assertSame(String.class, o.getClass());
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

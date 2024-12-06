@@ -1,18 +1,18 @@
 <html>
 <body>
-<p>8진수 정수 리터럴을 보고합니다. 일부 코딩 표준에서는 10진수 리터럴과 혼동될 수 있으므로 8진수 리터럴의 사용을 금지합니다.</p>
-<p>예:</p>
+Informa sobre literales enteros octales. Algunos estándares de codificación prohíben el uso de literales octales, ya que pueden confundirse fácilmente con literales decimales.
+<p>Ejemplo:</p>
 <pre><code>
   int i = 015;
   int j = 0_777;
 </code></pre>
-<p>이 검사는 두 가지 빠른 수정을 제공합니다.
-  <b>8진수 리터럴을 10진수 리터럴로 변환</b> 빠른 수정을 적용한 후 코드는 다음과 같이 변경됩니다.</p>
+<p>Esta inspección tiene dos soluciones rápidas diferentes.
+  Tras aplicar la solución rápida <b>Convertir el literal octal a literal decimal</b>, el código cambia a:</p>
 <pre><code>
   int i = 13;
   int j = 511;
 </code></pre>
-<p><b>선행 0을 제거하여 10진수 만들기</b> 빠른 수정을 적용한 후 코드는 다음과 같이 변경됩니다.</p>
+<p>Tras aplicar la solución rápida <b>Eliminar el cero inicial para convertir a decimal</b>, el código cambia a:</p>
 <pre><code>
   int i = 15;
   int j = 777;

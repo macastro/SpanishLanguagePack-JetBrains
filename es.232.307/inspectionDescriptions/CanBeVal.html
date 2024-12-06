@@ -1,21 +1,21 @@
 <html>
 <body>
-절대 수정되지 않으며 <code>var</code> 키워드로 선언된 지역 변수를 보고합니다.
-<p>Kotlin에서는 변숫값이 절대로 변하지 않도록 <code>val</code> 키워드를 사용해 실질적인 불변 변수를 선언하도록 권장됩니다.</p>
-<p><b>예:</b></p>
+Inspecciona variables locales declaradas con la palabra clave <code>var</code> que nunca son modificadas.
+<p>Kotlin fomenta la declaración de variables prácticamente inmutables usando la palabra clave <code>val</code>, asegurando que su valor nunca cambiará.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  fun example() {
-      var primeNumbers = listOf(1, 2, 3, 5, 7, 11, 13)
-      var fibonacciNumbers = listOf(1, 1, 2, 3, 5, 8, 13)
-      print("Same numbers: " + primeNumbers.intersect(fibonacciNumbers))
+  fun ejemplo() {
+      var numerosPrimos = listOf(1, 2, 3, 5, 7, 11, 13)
+      var numerosFibonacci = listOf(1, 1, 2, 3, 5, 8, 13)
+      print("Números iguales: " + numerosPrimos.intersect(numerosFibonacci))
   }
 </code></pre>
-<p>빠른 수정에서는 <code>var</code> 키워드를 <code>val</code>로 바꿉니다.</p>
+<p>La corrección rápida reemplaza la palabra clave <code>var</code> con <code>val</code>:</p>
 <pre><code>
-  fun example() {
-      val primeNumbers = listOf(1, 2, 3, 5, 7, 11, 13)
-      val fibonacciNumbers = listOf(1, 1, 2, 3, 5, 8, 13)
-      print("Same numbers: " + primeNumbers.intersect(fibonacciNumbers))
+  fun ejemplo() {
+      val numerosPrimos = listOf(1, 2, 3, 5, 7, 11, 13)
+      val numerosFibonacci = listOf(1, 1, 2, 3, 5, 8, 13)
+      print("Números iguales: " + numerosPrimos.intersect(numerosFibonacci))
   }
 </code></pre>
 <!-- tooltip end -->

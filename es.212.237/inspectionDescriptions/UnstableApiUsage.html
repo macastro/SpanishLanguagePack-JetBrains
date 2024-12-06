@@ -1,12 +1,10 @@
 <html>
 <body>
-어노테이션 중 하나가 불안정하다고 표시된 API의 사용 위치를 보고합니다. 그러한 API는 향후 버전에서 변경되거나 제거되어 이를 사용하는
-코드에서 오류를 발생시킵니다.
+Reporta los usos de una API marcada como inestable con una de las anotaciones. Esta API puede ser cambiada o eliminada en versiones futuras, rompiendo así el código que la utiliza.
 <!-- tooltip end -->
-<p>
-불안정한 API를 표시할 때 사용하는 어노테이션을 아래 표에 나열했습니다. 기본적으로 이 검사는 불안정한 API의 선언이 동일한 프로젝트의 소스에 있는 경우 그 사용 위치를 무시합니다. 이러한 경우 API를 변경할 때 사용 위치를 업데이트할 수 있기 때문입니다.
-하지만 프로젝트가 크다면 이는 불편할 수 있으므로 프로젝트 소스와 라이브러리에서 모두 ㄴ언된 불안정한 API의 사용 위치를
-보고하는 이 프로젝트에서 선언한 API 무시 옵션을 끌 수 있습니다.
+<p>Las anotaciones que se utilizan para marcar APIs inestables se muestran en la siguiente lista:</p>
+<p>De forma predeterminada, la inspección ignora los usos de APIs inestables si sus declaraciones están ubicadas en fuentes del mismo proyecto. En estos casos, será posible actualizar los usos cuando cambies las APIs.
+  Sin embargo, podría resultar inconveniente si el proyecto es grande, de forma que se puede desactivar la opción <b>Ignorar API declarada en este proyecto</b> para reportar los usos de APIs inestables declaradas tanto en las fuentes del proyecto como en las bibliotecas.
 </p>
 </body>
 </html>

@@ -1,17 +1,17 @@
 <html>
 <body>
-<p>잘못된 삽입점(CDI 사양을 위반하는, <code>@Inject</code> 어노테이션이 추가된 필드 메서드, 매개변수)을 보고합니다.</p>
+<p>Reporta puntos de inyección incorrectos: campos, métodos y parámetros anotados con <code>@Inject</code> que violan la especificación CDI.</p>
 
-<p>필드 요구 조건:</p>
+<p>Requisitos para campos:</p>
 <ul>
-  <li>static 또는 final일 수 없음</li>
-  <li><code>@Produces</code> 어노테이션이 추가될 수 없음</li>
+  <li>No pueden ser estáticos o finales</li>
+  <li>No pueden ser anotados con <code>@Produces</code></li>
 </ul>
 
-<p>삽입을 포함하는 메서드 요구 조건:</p>
+<p>Requisitos para métodos con inyección:</p>
 <ul>
-  <li>static 또는 abstract일 수 없음</li>
-  <li><code>@Disposes</code> 및 <code>@Observes</code> 어노테이션이 추가된 매개변수를 포함할 수 없음</li>
+  <li>No pueden ser estáticos o abstractos</li>
+  <li>No pueden tener parámetros con anotaciones <code>@Disposes</code> y <code>@Observes</code></li>
 </ul>
 </body>
 </html>

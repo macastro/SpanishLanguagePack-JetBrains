@@ -1,12 +1,12 @@
 <html>
 <body>
-<p><code>filter</code> 및 <code>size</code>(또는 <code>length</code>)의 사용을 보고하고 <code>count</code>로 바꿀 것을 제안합니다.</p>
-<p><b>예:</b></p>
+<p>Se informa del uso de <code>filter</code> y <code>size</code> (o <code>length</code>) y se sugiere reemplazarlos por <code>count</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   var x: Seq[Int]
   x.filter(p).size
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Tras la aplicación de la corrección rápida:</p>
 <pre><code>
   var x: Seq[Int]
   x.count(p)

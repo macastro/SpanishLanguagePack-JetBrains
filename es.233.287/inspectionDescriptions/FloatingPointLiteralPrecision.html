@@ -1,22 +1,26 @@
 <html>
 <body>
-<a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a>의 <code>Float</code> 및 <code>Double</code> 타입을 사용하여, 필요한 정밀도로 표현할 수 없는 부동 소수점 리터럴을 보고합니다.
+Reporta los literales de punto flotante que no se pueden representar con la precisión requerida
+usando los tipos <a href="https://es.wikipedia.org/wiki/IEEE_754">IEEE 754</a> <code>Float</code> y <code>Double</code>.
 
 <p>
-    예를 들어, <code>1.9999999999999999999</code>에는 유효 숫자가 너무 많으므로 <code>Double</code>로 표현하면 <code>2.0</code>으로 반올림됩니다.
-    계산 시 반올림된 값이 대신 사용된다는 사실은 숨겨지므로 숫자를 과하게 지정할 경우 오해의 소지가 있습니다.
+    Por ejemplo, <code>1.9999999999999999999</code> tiene demasiados dígitos significativos,
+    por lo que su representación como un <code>Double</code> se redondeará a <code>2.0</code>.
+    Especificar dígitos en exceso puede ser engañoso ya que oculta el hecho de que los cálculos
+    usan valores redondeados en su lugar.
 </p>
 
 <p>
-    빠른 수정에서는 해당 리터럴을 상수의 실제 표현과 일치하는 반올림된 값으로 대체합니다.
+    La corrección rápida reemplaza el literal con un valor redondeado que coincide con la representación real
+    de la constante.
 </p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   val x: Float = 3.14159265359f
 </code></pre>
 
-<p>빠른 수정 적용 후:</p>
+<p>Después de que se aplica la corrección rápida:</p>
 <pre><code>
   val x: Float = 3.1415927f
 </code></pre>

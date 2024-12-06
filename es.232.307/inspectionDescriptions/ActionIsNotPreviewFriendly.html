@@ -1,36 +1,35 @@
-<html>
+ <html>
 <body>
-인텐션 미리보기 액션이 제대로 작동하지 않도록 하는 <code>LocalQuickFix</code> 및 <code>IntentionAction</code> 구현의 필드를 보고합니다. 추가적으로, 타입이 안전한 것으로 알려진 필드에서 <code>@SafeFieldForPreview</code> 어노테이션이 과도하게 사용되면 보고됩니다.
+Se informa de los campos en las implementaciones de <code>LocalQuickFix</code> y <code>IntentionAction</code> que impiden que la vista previa de intención funcione correctamente. Además, se informa del uso excesivo de la anotación <code>@SafeFieldForPreview</code> en campos cuyo tipo se conoce como seguro.
 <p>
-  인텐션 미리보기는 빠른 수정 또는 인텐션 액션이 적용될 때 현재 파일이 어떻게 변경되는지 표시하는 IntelliJ 플랫폼 기능입니다. 빠른 수정에서는 이를 구현하기 위해, 현재 파일의 비물리적 사본을 가리키는 사용자 지정 <code>ProblemDescriptor</code>로 <code>LocalQuickFix.generatePreview()</code>가 호출됩니다. 인텐션 액션에서 <code>IntentionAction.generatePreview()</code>는 현재 파일 및 가상 에디터의 비물리적 사본으로 호출됩니다.
-  일반적으로 이 메서드는 <code>LocalQuickFix.applyFix()</code> 또는 <code>IntentionAction.invoke()</code>에만 적용됩니다.
-  하지만 일부 빠른 수정은 물리적 요소를 직간접적으로 참조할 수 있으며 쓰기에 이를 사용할 수 있습니다. 결과적으로 빠른 수정에서는 비물리적 PSI 대신 물리적 PSI의 업데이트를 시도하므로 미리보기가 작동하지 않습니다.
-  이 문제를 방지하기 위해 빠른 수정 또는 인텐션 액션 클래스의 모든 인스턴스 필드에 안전한 타입(예: 기본, 문자열 등)이 있을 때만 <code>generatePreview()</code>의 디폴트 구현을 위임합니다.
+  La vista previa de intención es una funcionalidad de la plataforma IntelliJ que muestra cómo cambiará el archivo actual cuando se aplique una corrección rápida o una acción de intención. Para implementar esta funcionalidad en una corrección rápida, se llama a <code>LocalQuickFix.generatePreview()</code> con un <code>ProblemDescriptor</code> personalizado que hace referencia a una copia no física del archivo actual. Para las acciones de intención, se llama a <code>IntentionAction.generatePreview()</code> con una copia no física del archivo actual y un editor virtual.
+  Normalmente, estos métodos sólo se delegan en <code>LocalQuickFix.applyFix()</code> o <code>IntentionAction.invoke()</code>.
+  Sin embargo, algunas correcciones rápidas pueden hacer referencia directa o indirectamente a elementos físicos y utilizarlos para escribir. Como tales correcciones intentan actualizar el PSI físico en lugar del PSI no físico, la vista previa no funciona.
+  Para evitar este problema, la implementación predeterminada de <code>generatePreview()</code> sólo delega si todos los campos de instancia de la clase de corrección rápida o de acción de intención tienen tipos seguros (como primitivos o cadenas).
 </p>
 <p>
-  다음과 같은 다양한 방식으로 이 문제를 수정할 수 있습니다.
+  Este problema se puede solucionar de varias maneras:
 </p>
 <ol>
   <li>
-    필드가 어떠한 PSI 참조도 실제로 저장하지 않거나 PSI가 읽기에만 사용되면, <code>@SafeFieldForPreview</code> 어노테이션을 필드에 추가할 수 있습니다. 작성 가능한 PSI 참조를 필드 타입이 저장하지 않는 경우에도 <code>@SafeTypeForPreview</code>를 사용할 수 있습니다.
+    Si el campo en realidad no contiene ninguna referencia PSI, o si ese PSI sólo se utiliza para lectura, se puede anotar el campo con <code>@SafeFieldForPreview</code>. También se puede utilizar <code>@SafeTypeForPreview</code> si el tipo de campo nunca puede contener ninguna referencia PSI que se pueda escribir.
   </li>
   <li>
-    <code>getFileModifierForPreview()</code> 메서드를 재정의하고 매개변수로 제공된 비물리적 파일 사본으로 이를 다시 바인드하는 빠른 수정의 사본을 생성할 수 있습니다. 제공된 비물리적 사본 내부의 해당 PSI 요소를 찾으려면 <code>PsiTreeUtil.findSameElementInCopy()</code>를 사용하세요.
+    Se puede anular el método <code>getFileModifierForPreview()</code> para crear una copia de la corrección rápida que se vuelve a enlazar a la copia no física del archivo proporcionada como parámetro. Para encontrar el elemento PSI correspondiente dentro de la copia no física proporcionada, utilizar <code>PsiTreeUtil.findSameElementInCopy()</code>.
   </li>
   <li>
-    PSI 참조를 필드에 저장하는 대신 <code>ProblemDescriptor.getPsiElement()</code>에서 필요한 모든 정보를 인텐션 액션의 빠른 수정 또는 제공된 파일/에디터에서 직접 추출합니다.
-    <code>LocalQuickFixAndIntentionActionOnPsiElement</code> 추상 클래스를 상속하고  <code>startElement</code> 및 <code>endElement</code> 매개변수가 있는 <code>invoke()</code> 및 <code>isAvailable()</code> 메서드를 구현할 수도 있습니다. 이러한 매개변수는 비물리적 파일 사본에 자동 매핑됩니다.
+    En lugar de almacenar referencias PSI en los campos, se intenta extraer toda la información necesaria de <code>ProblemDescriptor.getPsiElement()</code> en las correcciones rápidas o de los archivos/editores proporcionados en las acciones de intención. También se puede heredar la clase abstracta <code>LocalQuickFixAndIntentionActionOnPsiElement</code> e implementar los métodos <code>invoke()</code> e <code>isAvailable()</code> que tienen parámetros <code>startElement</code> y <code>endElement</code>. Estos parámetros se mapean automáticamente a la copia de archivo no física.
   </li>
   <li>
-    <code>generatePreview()</code> 메서드를 재정의하고 완전히 사용자 지정된 미리보기 동작을 제공할 수도 있습니다.
-    예를 들어 해당 액션이 현재 파일 수정 외의 작업을 수행하는 경우에는 실제 미리보기 대신 사용자 지정 HTML 문서를 표시할 수 있습니다.
+    Se puede anular el método <code>generatePreview()</code> para proporcionar un comportamiento de vista previa totalmente personalizado.
+    Por ejemplo, se puede mostrar un documento HTML personalizado en lugar de una vista previa real siempre que la acción realice acciones distintas a la modificación del archivo actual.
   </li>
 </ol>
 <p>
-  <code>getFileModifierForPreview()</code> 또는 <code>generatePreview()</code>의 사용자 지정 구현이 있으면 이 검사가 보고를 하지 않습니다. 하지만 이 상태가 구현이 올바르며 미리보기가 작동한다는 뜻은 아닙니다.
-  테스트를 해 주세요. 또한, 미리보기 결과는 백그라운드 스레드에서 계산되므로 미리보기 중에 쓰기 액션을 시작하거나 쓰기 액션이 필요한 작업을 수행할 수 없습니다. 마지막으로 <code>startInWriteAction()</code>이 <code>false</code>를 반환하면 미리보기가 자동으로 생성되지 않습니다. 이 경우에는 사용자 지정 <code>generatePreview()</code> 구현이 필요합니다.
+  Esta inspección no informa de implementaciones personalizadas de <code>getFileModifierForPreview()</code> o <code>generatePreview()</code>. Sin embargo, esto no significa que la implementación sea correcta y que la vista previa funcione.
+  Realizar pruebas. Además, los resultados de la vista previa se calculan en un hilo en segundo plano, por lo que no se puede iniciar una acción de escritura ni realizar ninguna operación que requiera una acción de escritura durante la vista previa. Por último, si <code>startInWriteAction()</code> devuelve <code>false</code>, no se generará automáticamente una vista previa. En este caso, se necesita una implementación personalizada de <code>generatePreview()</code>.
 </p>
 <!-- tooltip end -->
-<p><small>2022.1의 새로운 기능</small></p>
+<p><small>Nuevo en 2022.1</small></p>
 </body>
 </html>

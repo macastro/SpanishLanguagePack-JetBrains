@@ -1,23 +1,23 @@
 <html>
 <body>
-final이 아닌 변수에 액세스하는 <code>equals()</code> 구현을 보고합니다. 이러한 액세스를 사용하면 <code>equals()</code>이 객체 생명 주기의 각기 다른 시점에 다른 결과를 반환할 수 있어 표준 컬렉션 클래스 사용 시 문제가 발생할 수 있습니다.
-<p><b>예:</b></p>
+Reporta implementaciones del <code>equals()</code> que acceden a variables no <code>final</code>.  Tal acceso puede hacer que el <code>equals()</code> devuelva resultados diferentes en distintos momentos del ciclo de vida del objeto, lo que puede causar problemas al utilizar clases de colección estándar.
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  public class Person {
-    private String lastName;
+  public class Persona {
+    private String apellido;
 
     @Override
     public boolean equals(Object obj) {
-     ...
-      Person other = (Person) obj;
-      if (lastName == null) {
-        if (!lastName.equals(other.lastName)) {
+      ...
+      Persona other = (Persona) obj;
+      if (apellido == null) {
+        if (!apellido.equals(other.apellido)) {
         return false;
-     ...
+      ...
       }
     }
   }
- </code>
+</code>
 </pre>
 <!-- tooltip end -->
 

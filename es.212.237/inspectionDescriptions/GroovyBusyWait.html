@@ -1,9 +1,8 @@
 <html>
 <body>
-루프 내에서 발생하는 <code>java.lang.Thread.sleep()</code> 호출을 보고합니다.
+Informa sobre las llamadas a <code>java.lang.Thread.sleep()</code> que ocurren dentro de bucles.
 <p>
-  그러한 호출은 "대기 중이라 바쁨"을 나타냅니다. 바쁜 대기 중은 종종 비효율적이며, 예기치 않은 교착 상태를 일으킬 수 있습니다.
-  바쁜 대기 중 스레드는 잠긴 리소스를 해제하지 않기 때문입니다.
+  Estas llamadas son indicativas de "ocupado esperando". El ocupado esperando suele ser ineficiente y puede dar lugar a bloqueos inesperados, ya que los hilos ocupados esperando no liberan los recursos bloqueados.
 </p>
 </body>
 </html>

@@ -1,19 +1,19 @@
 <html>
 <body>
-<p>Kotlin 1.4부터 컴파일 오류를 일으킬 수 있는 불필요한 라벨을 보고합니다.</p>
-<p>Kotlin 1.0부터는 어떤 구문이라도 다음 라벨로 표시할 수 있습니다.</p>
+<p>A partir de Kotlin 1.4 informa de etiquetas redundantes que causan errores de compilación.</p>
+<p>Desde Kotlin 1.0, cualquier instrucción puede etiquetarse con una etiqueta:</p>
 <pre><code>
   fun foo() {
     L1@ val x = L2@bar()
   }
 </code></pre>
-단, 이러한 라벨은 다음과 같은 제한적인 방법으로만 참조할 수 있습니다.
+Pero dichas etiquetas solo pueden ser referenciadas de pocas formas específicas:
 <ul>
-    <li>루프의 break 또는 continue</li>
-    <li>인라인 람다 또는 인라인 익명 함수의 비 지역 반환</li>sssss
+    <li>Interrupción/continuación de un bucle</li>
+    <li>Retorno no local desde una lambda en línea o una función anónima en línea</li>sssss
 </ul>
-<p>그러한 라벨은 Kotlin 1.4부터 금지됩니다.</p>
+<p>Dichas etiquetas están prohibidas a partir de Kotlin 1.4.</p>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 Kotlin 언어 수준이 1.4 이상인 경우에만 보고합니다.</p>
+<p>Esta inspección solo informa si el nivel de lenguaje de Kotlin del proyecto o módulo es 1.4 o superior.</p>
 </body>
 </html>

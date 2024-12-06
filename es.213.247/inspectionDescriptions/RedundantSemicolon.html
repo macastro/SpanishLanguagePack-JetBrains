@@ -1,31 +1,31 @@
 <html>
 <body>
-    안전하게 제거할 수 있는 불필요한 세미콜론(<code>;</code>)을 보고합니다.
+    Reporta punto y coma (<code>;</code>) redundantes que pueden eliminarse de forma segura.
 <p>
-    Kotlin에서는 각 구문 또는 표현식 끝에 세미콜론을 붙일 필요가 없습니다.
-    빠른 수정에서는 불필요한 세미콜론을 제거할 것을 제안합니다.
+    Kotlin no requiere un punto y coma al final de cada sentencia o expresión.
+    Se sugiere una corrección rápida para eliminar los puntos y coma redundantes.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   val myMap = mapOf("one" to 1, "two" to 2);
   myMap.forEach { (key, value) ->  print("$key -> $value")};
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   val myMap = mapOf("one" to 1, "two" to 2)
   myMap.forEach { (key, value) ->  print("$key -> $value")}
 </code></pre>
 
-<p>하지만 다음 두 경우에는 세미콜론이 필요합니다.</p>
+<p>Sin embargo, hay dos casos en los que se requiere un punto y coma:</p>
 <ol>
     <li>
-        한 줄에 여러 구문이 포함된 경우 각 구문을 세미콜론으로 구분해야 합니다.
+        Varias sentencias colocadas en una sola línea deben separarse con puntos y coma:
 <pre><code>
   map.forEach { val (key, value) = it; println("$key -> $value") }
 </code></pre>
     </li>
     <li>
-        프로퍼티 또는 함수를 선언하는 <code>enum</code> 클래스에는 열거형 상수 목록 뒤에 세미콜론이 필요합니다.
+        Las clases <code>enum</code> que también declaran propiedades o funciones requieren un punto y coma después de la lista de constantes de la enumeración:
         <pre><code>
   enum class Mode {
       SILENT, VERBOSE;

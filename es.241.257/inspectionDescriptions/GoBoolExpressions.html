@@ -16,15 +16,15 @@
 
 <html>
 <body>
-항상 <code>true</code>이거나 항상 <code>false</code>, 또는 불필요한 bool 표현식의 일부를 보고합니다.
-  이러한 bool 표현식은 단순화하여 코드의 가독성을 높일 수 있습니다. 일부 경우에 이는 다른 이슈가 있음을 나타냅니다.
+Siempre informa <code>true</code>, siempre <code>false</code> o parte de una expresión bool innecesaria.
+ Estas expresiones booleanas se pueden simplificar para que el código sea más legible. En algunos casos, esto puede indicar otro problema.
 
 <p>예:</p>
 <pre><code>func isNonZero(x, y int) bool {
-  // 두 번째 비교는 항상 true 이거나
-  // 전혀 실행되지 않습니다
+  // La segunda comparación siempre es verdadera o
+  // no corre en absoluto
   return x > 0 && x > 0
 }</code></pre>
-<p><code>x > 0 && x > 0</code> 부분에 대해 <b>표현식 단순화</b> 빠른 수정을 적용할 수 있습니다. 빠른 수정 적용 후, 표현식은 다음과 같습니다: <code>x > 0</code>.</p>
+<p>Puede aplicar la solución rápida <b>Simplificar expresión</b> para la parte <code>x > 0 && x > 0</code>. Después de aplicar la solución rápida, la expresión queda: <code>x > 0</code>.</p>
 </body>
 </html>

@@ -1,18 +1,18 @@
 <html>
 <body>
-다음과 같은 Javadoc 주석 결함을 보고합니다.
+Ofrece los siguientes defectos en los comentarios Javadoc:
 <ul>
-  <li>Javadoc이 필요한 곳에 없음</li>
-  <li>필수 태그 누락</li>
-  <li>잘못되거나 불완전한 태그</li>
-  <li>누락되거나 불완전한 Javadoc 설명</li>
+  <li>No hay Javadoc donde se necesita</li>
+  <li>Faltan etiquetas requeridas</li>
+  <li>Las etiquetas son inválidas o incompletas</li>
+  <li>La descripción de Javadoc falta o está incompleta</li>
 </ul>
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   class Main {
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la reparación rápida:</p>
 <pre><code>
   /**
    *
@@ -20,13 +20,13 @@
   class Main {
   }
 </code></pre>
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   String id(String value) {
     return value;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la reparación rápida:</p>
 <pre><code>
   /**
    * @param value
@@ -37,6 +37,6 @@
   }
 </code></pre>
 <!-- tooltip end -->
-탭 및 해당하는 검사 옵션을 사용하여 Javadoc이 필요한 가시성 범위 및 클래스, 메서드, 필드 및 내부 클래스에 필요한 Javadoc 태그를 정의합니다.
+Utiliza pestañas y la opción de inspección correspondiente para definir el alcance de visibilidad necesario para Javadoc, así como las etiquetas Javadoc necesarias para clases, métodos, campos y clases internas.
 </body>
 </html>

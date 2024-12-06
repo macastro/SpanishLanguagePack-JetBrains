@@ -1,24 +1,24 @@
 <html>
 <body>
-배열 타입의 인수를 사용하는 JUnit <code>assertEquals()</code> 호출을 보고합니다.
-이러한 메서드는 배열의 내용 대신 배열의 ID를 비교합니다.
-배열 컨텐츠는 <code>assertArrayEquals()</code> 메서드를 사용하여 검사해야 합니다.
-<p><b>예:</b></p>
-<pre><code>
+Informa de las llamadas JUnit <code>assertEquals()</code> con argumentos de tipo array.
+Tales métodos comparan las identidades de las matrices en lugar de los contenidos de las matrices.
+El contenido de las matrices debe comprobarse con el método <code>assertArrayEquals()</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
   @Test
-  <b>public void</b> testSort() {
-    <b>int</b>[] actual = {248, 496, 0, 56};
+  public void testSort() {
+    int[] actual = {248, 496, 0, 56};
     Arrays.sort(actual);
-    Assert.assertEquals(<b>new int</b>[] {0, 56, 248, 496}, actual);
+    Assert.assertEquals(new int[] {0, 56, 248, 496}, actual);
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
-<pre><code>
+<p>Tras la aplicación de la corrección rápida:</p>
+<pre><code lang="java">
   @Test
-  <b>public void</b> testSort() {
-    <b>int</b>[] actual = {248, 496, 0, 56};
+  public void testSort() {
+    int[] actual = {248, 496, 0, 56};
     Arrays.sort(actual);
-    Assert.assertArrayEquals(<b>new int</b>[] {0, 56, 248, 496}, actual);
+    Assert.assertArrayEquals(new int[] {0, 56, 248, 496}, actual);
   }
 </code></pre>
 <!-- tooltip end -->

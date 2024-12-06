@@ -1,13 +1,13 @@
 <html>
 <body>
-묵시적으로 선언된 클래스를 보고하며 정규 클래스로 대체하도록 제안합니다.
-<p><b>예시(Sample.java 파일 내):</b></p>
+Inspecciona clases implícitamente declaradas y sugiere reemplazarlas por clases regulares.
+<p><b>Ejemplo (dentro del archivo Sample.java):</b></p>
 <pre><code>
   public static void main() {
       System.out.println("Hello, world!");
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
 public class Sample {
     public static void main() {
@@ -17,8 +17,8 @@ public class Sample {
 </code></pre>
 <!-- tooltip end -->
 <p>
-  이 검사는 이전 Java 버전과의 하위 호환성을 위해 다운그레이드하는 데 도움이 될 수 있습니다.
+  Esta inspección puede ser útil para degradar para garantizar la compatibilidad con versiones anteriores de Java.
 </p>
-<p><small>2024.1의 새로운 기능</small></p>
+<p><small>Peculiaridad de 2024.1</small></p>
 </body>
 </html>

@@ -1,20 +1,20 @@
 <html>
 <body>
-접근 제어자 없이 선언된 중첩 클래스(package-private이라고도 함)를 보고합니다.
-<p><b>예:</b></p>
+Informa de clases anidadas declaradas sin modificadores de acceso (también conocido como package-private).
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class Outer {
-    static class Nested {}  // 경고
-    class Inner {}          // 경고
-    enum Mode {}            // 설정에 따른 경고
-    interface I {}          // 설정에 따른 경고
+    static class Nested {}  // advertencia
+    class Inner {}          // advertencia
+    enum Mode {}            // advertencia dependiendo de la configuración
+    interface I {}          // advertencia dependiendo de la configuración
   }
 </code></pre>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configuración de la inspección:</p>
 <ul>
-  <li><b>package-visible 내의 열거형 무시</b> 옵션을 사용하여 package-private 내의 열거형을 무시합니다.</li>
-  <li><b>package-visible 내의 인터페이스 무시</b> 옵션을 사용하여 package-private 내의 인터페이스를 무시합니다.</li>
+  <li>Utilice la opción <b>Ignorar enumeraciones internas visibles en el paquete</b> para ignorar enumeraciones internas de package-private.</li>
+  <li>Utilice la opción <b>Ignorar interfaces internas visibles en el paquete</b> para ignorar interfaces internas de package-private.</li>
 </ul>
 </body>
 </html>

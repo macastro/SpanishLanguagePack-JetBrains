@@ -1,13 +1,13 @@
 <html>
 <body>
-elvis 연산자 대신 상등 검사가 사용되어야 하는 경우를 보고합니다.
-<p><b>예:</b></p>
+Informa de los casos en los que debería utilizarse una comprobación de igualdad en lugar del operador "elvis".
+<p><b>Ejemplo:</b></p>
 <pre><code>
 fun check(a: Boolean? == null) {
     if (a ?: false) throw IllegalStateException()
 }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la revisión rápida:</p>
 <pre><code>
 fun check(a: Boolean? == null) {
     if (a == true) throw IllegalStateException()

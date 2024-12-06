@@ -1,12 +1,14 @@
 <html>
 <body>
-<p><code>Subscriber</code> 인터페이스를 직접 구현하는 클래스를 보고합니다.</p>
-<p>다음과 같은 RxJava 또는 Reactor의 static 제너레이터를 사용해보세요.</p>
+<p>Informa las clases que implementan directamente la interfaz <code>Subscriber</code>.</p>
+<p>Considera utilizar generadores estáticos de RxJava, Reactor o Mutiny, por ejemplo:</p>
 <ul>
   <li><code>Flux.just()</code>, <code>Flux.create()</code>, <code>Flux.generate()</code>, <code>Flux.from()</code></li>
   <li><code>Mono.create()</code>, <code>Mono.from()</code>, <code>Mono.just()</code></li>
   <li><code>Flowable.just()</code>, <code>Flowable.from()</code></li>
   <li><code>Maybe.just()</code>, <code>Maybe.from()</code></li>
+  <li><code>Multi.createFrom()</code>, <code>Multi.createBy()</code></li>
+  <li><code>Uni.createFrom()</code></li>
 </ul>
 </body>
 </html>

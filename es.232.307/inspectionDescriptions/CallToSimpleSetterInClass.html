@@ -1,12 +1,11 @@
 <html>
 <body>
-프로퍼티의 클래스 내에서 간단한 프로퍼티 setter 호출을 보고합니다.
+Inspecciona llamadas a un setter de propiedad simple en la clase de la propiedad.
 <p>
-  간단한 프로퍼티인 setter는 단순히 매개변수의 값을 대입하는 프로퍼티로 정의되어 있으며,
-  다른 계산은 수행하지 않습니다. 이러한 간단한 setter 호출은 안전하게 인라인화할 수 있습니다.
-  또한 코드 명확성을 위해 일부 코딩 표준에서는 간단한 setter 사용이 권장되지 않습니다.
+  Un setter de propiedad simple está definido como aquel que simplemente asigna el valor de su parámetro a un campo y no realiza ningún otro cálculo. Tales llamadas simples a setter pueden ser interpoladas de forma segura.
+  Algunos estándares de codificación también sugieren no utilizar setters simples por razones de claridad de código.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
   private int index;
@@ -18,7 +17,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que la corrección rápida es aplicada:</p>
 <pre><code>
   class Foo {
     private int index;
@@ -31,10 +30,10 @@
   }
 </code></pre>
 <!-- tooltip end -->
-<p>다음 옵션을 사용해 검사를 구성하세요.</p>
+<p>Utiliza las siguientes opciones para configurar la inspección:</p>
 <ul>
-  <li>매개변수로 전달된 동일한 타입의 객체가 아닌 <code>this</code>에 대한 setter 호출만 보고할지 여부.</li>
-  <li>비 <code>private</code> setter를 무시할지 여부.</li>
+  <li>Si se debe informar solo de llamadas a setter en <code>this</code>, no en objetos del mismo tipo pasados como parámetro.</li>
+  <li>Si se deben ignorar los setter no <code>private</code>.</li>
 </ul>
 </body>
 </html>

@@ -1,12 +1,13 @@
 <html>
 <body>
-<code>nil</code> 대신 빈 리터럴 이니셜라이저가 사용된 slice 선언을 보고합니다.
-<p>빈 slice는 <code>nil</code> 또는 빈 slice 리터럴로 표현될 수 있습니다. 이들은 기능적으로 동등합니다. <code>len</code> 및 <code>cap</code>은 모두 0이지만, nil 슬라이스가 기본 스타일입니다.
-  빈 슬라이스에 대한 자세한 내용은 <a href="https://github.com/golang/go/wiki/CodeReviewComments#declaring-empty-slices">github.com/golang의 Declaring Empty Slices</a>를 참조하세요.</p>
-<p>예:</p>
+Informa las declaraciones de fragmentos con inicializadores literales vacíos utilizados en lugar de <code>nil</code>.
+<p>Un fragmento vacío se puede representar mediante un <code>nil</code> o un literal de fragmento vacío. Son funcionalmente equivalentes, los valores de su <code>len</code> y de su <code>cap</code> son cero; sin embargo, el fragmento nil representa el estilo preferido.
+  Para obtener más información acerca de los fragmentos vacíos, consulta el tema 
+  <a href="https://github.com/golang/go/wiki/CodeReviewComments#declaring-empty-slices">Declaración de fragmentos vacíos en github.com/golang</a>.</p>
+<p>Ejemplo:</p>
 <pre><code>s := []string{}</code></pre>
-<p>선언을 바꾸려면 <b>nil 슬라이스 선언으로 바꾸기(의미 변경)</b> 빠른 수정을 사용하세요.
-  빠른 수정 적용 후:</p>
+<p>Para cambiar la declaración, utiliza la corrección rápida <b>Reemplazar con declaración de fragmento nil (cambia semántica)</b>.
+  Después de aplicar la corrección rápida:</p>
 <pre><code>var s []string</code></pre>
 </body>
 </html>

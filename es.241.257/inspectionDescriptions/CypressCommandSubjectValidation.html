@@ -1,9 +1,9 @@
 <html>
 <body>
-체인화된 Cypress 명령어의 정확도를 해당 명령어의 필요 대상을 기반으로 검증합니다. 이 검사는 Cypress 명령어의 순서를 검사하고 명령어의 필요 대상과 실제 대상이 일치하지 않으면 플래그를 표시합니다. 예를 들어 이전 대상이 HTML 요소여야 하는 명령어가 요소가 아닌 'cy'로 잘못 체인화된 경우 경고가 표시됩니다.
+Las cadenas de comandos de Cypress se validan en función de los temas que esperan. La inspección comprueba el orden de los comandos de Cypress y marca las discrepancias entre el tema esperado de un comando y su tema real. Por ejemplo, si un comando que requiere que un tema anterior sea un elemento HTML se encadena incorrectamente a `cy` (que no es un elemento), se mostrará una advertencia.
 
 <p>
-  이 검사는 사용자가 Cypress에서 체인화를 정확하게 사용하는지 확인하기 때문에 복잡한 테스트에서 활용하면 여러 명령어를 연결할 수 있습니다. 이 검사를 사용하면 잘못 체인화된 Cypress 명령어를 조기에 탐지하여 Cypress 테스트에서 예기치 않은 동작을 막고 테스트 작성 절차를 더욱 빠르게 진행하고 테스트 스위트의 품질을 유지할 수 있습니다.
+  Esta inspección garantiza que puedas utilizar correctamente el encadenamiento en Cypress, una característica que te permite conectar varios comandos para escenarios de prueba más complejos. Al detectar el encadenamiento incorrecto de los comandos de Cypress en una etapa temprana, la inspección te ayuda a evitar un comportamiento inesperado en tus pruebas de Cypress, acelera el proceso de escritura de las pruebas y mantiene la calidad de tu conjunto de pruebas.
 </p>
 </body>
 </html>

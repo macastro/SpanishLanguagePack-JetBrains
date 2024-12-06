@@ -1,9 +1,9 @@
 <html>
 <body>
-<p>Bean 클래스 내에서 누락되거나 모호한 종속성이 있는 삽입점을 보고합니다.</p>
+<p>Reporta puntos de inyección en clases de bean que tienen dependencias faltantes o ambiguas.</p>
 <!-- tooltip end -->
-<p><b>예:</b></p>
-<pre><code>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
   interface Engine {}
 
   @Singleton
@@ -16,7 +16,7 @@
   class Car {
 
     @Inject
-    Engine <b>engine</b>; // Dependencia ambigua: varios beans coinciden con el punto de inserción
+    Engine <b>engine</b>; // Dependencia ambigua: hay múltiples beans que coinciden con el punto de inyección
   }
 </code></pre>
 </body>

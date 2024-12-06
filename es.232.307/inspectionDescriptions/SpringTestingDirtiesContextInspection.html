@@ -1,15 +1,17 @@
 <html>
 <body>
-<p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/annotation/DirtiesContext.html">@DirtiesContext</a> 어노테이션의 잘못된 'mode' 구성을 보고합니다.</p>
+<p>Informa de una configuración incorrecta del "modo" en la
+<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/annotation/DirtiesContext.html">@DirtiesContext</a>
+anotación.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   @ContextConfiguration
-  @DirtiesContext(methodMode = MethodMode.AFTER_METHOD, // 어노테이션이 추가된 테스트 클래스에서 메서드 모드를 설정하는 것은 무의미합니다. 클래스 수준으로 제어하려면 classMode를 대신 사용하세요.
-                  hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // 컨텍스트가 @ContextHierarchy를 통해 계층 구조의 일부로 구성된 경우, hierarchyMode를 사용해야 합니다
+  @DirtiesContext(methodMode = MethodMode.AFTER_METHOD, // Establecer el modo método en una clase de prueba anotada no tiene sentido. Para el control a nivel de clase, utilice en su lugar classMode.
+                  hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // hierarchyMode debe usarse cuando el contexto se configura como parte de una jerarquía a través de @ContextHierarchy
   public class MyTest {
-    @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS, // 어노테이션이 추가된 테스트 메서드에서 클래스 모드를 설정하는 것은 무의미합니다. 메서드 수준으로 제어하려면 methodMode를 대신 사용하세요.
-                     hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // 컨텍스트가 @ContextHierarchy를 통해 계층 구조의 일부로 구성된 경우, hierarchyMode를 사용해야 합니다
+    @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS, // Establecer el modo clase en un método de prueba anotado no tiene sentido. Para el control a nivel de método, utilice en su lugar methodMode.
+                     hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // hierarchyMode debe usarse cuando el contexto se configura como parte de una jerarquía a través de @ContextHierarchy
     public void testFoo() {...}
   }
 </code></pre>

@@ -1,6 +1,15 @@
 <html>
 <body>
-함수 유형(예: <code>def method: () -> untyped</code> 및 <code>^() -> untyped</code>) 내에서 불필요한 괄호를 보고합니다.
-<p>매개변수가 없는 함수에는 괄호가 필요하지 않으며 괄호를 안전하게 제거할 수 있습니다.</p>
+Informa paréntesis innecesarios dentro de los tipos de funciones. Las funciones sin parámetros no requieren paréntesis.
+<p>Hay una solución rápida disponible para eliminar los paréntesis innecesarios.</p>
+<p>Ejemplo:</p>
+<pre><code>class Example
+  # Paréntesis innecesarios en el tipo de función
+  def call: () -> untyped
+end</code></pre>
+<p>Después de la solución rápida:</p>
+<pre><code>class Example
+  def call: -> untyped
+end</code></pre>
 </body>
 </html>

@@ -1,14 +1,15 @@
 <html>
 <body>
-익명 클래스로 바꿀 수 있는 람다 표현식을 보고합니다.
+Reporta expresiones lambda que pueden ser reemplazadas con clases anónimas.
 <p>
-  익명 클래스 내에서 다른 메서드를 구현해야 하는 경우 람다 식을 익명 클래스로 확장하는 것이 유용할 수 있습니다.
+  Expandir expresiones lambda en clases anónimas puede ser útil si necesitas implementar otros
+  métodos dentro de una clase anónima.
 </p>
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   s -> System.out.println(s)
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>new Consumer&lt;String&gt;() {
   @Override
   public void accept(String s) {
@@ -16,9 +17,5 @@
   }
 }</code></pre>
 <!-- tooltip end -->
-<p>
-  <i>람다 식</i>이 Java 8에 표시되었습니다.
-  이 검사는 이전 Java 버전과의 하위 호환성을 위해 다운그레이드하는 데 도움이 될 수 있습니다.
-</p>
 </body>
 </html>

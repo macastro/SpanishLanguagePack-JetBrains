@@ -1,18 +1,18 @@
 <html>
 <body>
-<code>ActionManager.createActionToolbar()</code> 및 <code>ActionManager.createActionPopupMenu()</code>에 대한 지정되지 않은 <code>place</code> 매개변수를 전달하는 경우를 보고합니다.
+<code>ActionManager.createActionToolbar()</code> y <code>ActionManager.createActionPopupMenu()</code> les pasa un parámetro <code>place</code> no especificado.
 <p>
-  <code>AnActionEvent.getPlace()</code>를 통한 <code>update()/actionPerformed()</code>에서의 액션 사용 위치를 구분하려면적절한 <code>place</code>를 지정해야 합니다.
+  Debe especificar un <code>place</code> apropiado para poder diferenciar el uso de la acción por <code>AnActionEvent.getPlace()</code> en <code>update()/actionPerformed()</code>.
 </p>
 <p>
-예:
+Ejemplo:
 <pre><code lang="java">
-// 나쁨:
+// Mala forma:
 actionManager.createActionToolbar("", group, false);
 actionManager.createActionToolbar("unknown", group, false);
 actionManager.createActionPopupMenu(ActionPlaces.UNKNOWN, group);
 
-// 좋음:
+// Buena forma:
 actionManager.createActionToolbar("MyPlace", group, false);
 actionManager.createActionPopupMenu(ActionPlaces.EDITOR_TOOLBAR, group);
 </code></pre>

@@ -1,17 +1,33 @@
 <html>
+<head>
+</head>
 <body>
-해결되지 않은 플러그인 구성 요소 참조를 보고합니다.
+Informa sobre referencias no resueltas a componentes de plug-in.
+
+<h4>Extensiones</h4>
 <p>
-  알려지지 않은 <code>id</code>를 사용해 확장을 참조하면 런타임에서 오류가 발생할 수 있습니다.
+  Referenciar una extensión con un <code>id</code> desconocido puede provocar un error en tiempo de ejecución.
 </p>
 <p>
-  지원되는 확장 지점은 다음과 같습니다.
+  Se admiten los siguientes puntos de extensión:
 <ul>
-  <li>리소스 번들 <code>advanced.setting.*</code> 키의 <code>com.intellij.advancedSetting</code></li>
-  <li><code>Experiments.isFeatureEnabled()/setFeatureEnabled()</code>의 <code>com.intellij.experimentalFeature</code></li>
-  <li><code>Notification</code> 생성자 및 <code>NotificationGroupManager.getNotificationGroup()</code>의 <code>com.intellij.notificationGroup</code></li>
-  <li><code>Registry</code> 메서드 <code>key</code> 매개변수의 <code>com.intellij.registryKey</code></li>
-  <li>리소스 번들 <code>toolwindow.stripe.*</code> 키의 <code>com.intellij.toolWindow</code></li>
+  <li><code>com.intellij.advancedSetting</code> en la clave <code>advanced.setting.*</code> del paquete de recursos.</li>
+  <li><code>com.intellij.experimentalFeature</code> en <code>Experiments.isFeatureEnabled()/setFeatureEnabled()</code></li>
+  <li><code>com.intellij.notificationGroup</code> en el constructor <code>Notification</code> y <code>NotificationGroupManager.getNotificationGroup()</code>
+  </li>
+  <li><code>com.intellij.registryKey</code> en el parámetro <code>key</code> del método <code>Registry</code></li>
+  <li><code>com.intellij.toolWindow</code> en la clave <code>toolwindow.stripe.*</code> del paquete de recursos</li>
 </ul>
+
+<h4>Puntos de extensión</h4>
+<p>
+  El nombre del punto de extensión que hace referencia a la declaración <code>&lt;extensionPoint></code> correspondiente en <code>plugin.xml</code>.
+<ul>
+  <li>Constructor y <code>create()</code> de <code>com.intellij.openapi.extensions.ExtensionPointName</code></li>
+  <li>Constructor de <code>com.intellij.openapi.extensions.ProjectExtensionPointName</code></li>
+  <li>Constructor de <code>com.intellij.openapi.util.KeyedExtensionCollector</code> y herederos</li>
+</ul>
+</p>
+
 </body>
 </html>

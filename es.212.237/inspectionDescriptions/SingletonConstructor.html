@@ -1,7 +1,7 @@
 <html>
 <body>
-<b>@Singleton</b>에 의해 어노테이션된 비 엄격으로 선언되지 않은 클래스의 생성자를 보고합니다.
-<p><b>예:</b></p>
+<p>Se informan los constructores de clases anotadas por <code>@Singleton</code> a menos que se declare no estricta.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   @Singleton
   class Foo{
@@ -9,14 +9,14 @@
       }
   }
 </code></pre>
-가능한 빠른 수정은 두 개입니다. 하나는 생성자를 제거하는 것이고 다른 하나는 <b>@Singleton</b>을 비 엄격으로 선언하는 것입니다.
-<p>빠른 수정 적용 후:</p>
+<p>Hay dos posibles correcciones rápidas: eliminar el constructor o declarar que <code>@Singleton</code> no es estricta.</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   @Singleton
   class Foo{
   }
 </code></pre>
-<p>or:</p>
+<p>o:</p>
 <pre><code>
   @Singleton(<b>strict = false</b>)
   class Foo{

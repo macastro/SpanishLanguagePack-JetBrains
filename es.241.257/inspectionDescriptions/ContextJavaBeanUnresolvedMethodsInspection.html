@@ -1,9 +1,10 @@
 <html>
 <body>
-<p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Bean.html">@Bean</a> 어노테이션의 <code>initMethod</code> 및 <code>destroyMethod</code>에서 확인되지 않은 메서드 참조를 보고합니다.</p>
+<p>Inspecciona métodos no resueltos en los parámetros <code>initMethod</code> y <code>destroyMethod</code>
+ de la anotación <a >@Bean</a> .</p>
 
-<p><b>예:</b></p>
-MyBean 클래스에 'public void 'doInit'(){...}' 메서드가 포함되지 않을 경우, 'doInit' 표현식에서 "메서드를 해결할 수 없습니다"라고 보고됩니다.
+<p><b>Ejemplo:</b></p>
+Se reportara "No se puede resolver el método" en la expresión 'doInit' si la clase MyBean no contiene el método 'public void 'doInit'(){...}'
 <pre><code lang="java">
   public class MyBean {...}
 
@@ -14,6 +15,6 @@ MyBean 클래스에 'public void 'doInit'(){...}' 메서드가 포함되지 않�
   }
 </code></pre>
 
-<p>이 예시에서 <code>MyBean</code>이 <code>doInit()</code> 메서드를 정의하지 않을 경우, 검사는 해결되지 않은 메서드 참조를 보고합니다.</p>
+<p>En este ejemplo, la inspección reportara una referencia de método no resuelto si <code>MyBean</code> no define el método <code>doInit()</code>.</p>
 </body>
 </html>

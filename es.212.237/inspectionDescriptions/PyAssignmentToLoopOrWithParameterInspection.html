@@ -1,18 +1,19 @@
 <html>
 <body>
-내부 루프에서 루프 변수를 다시 작성하는 경우를 보고합니다:
-<pre style="font-family: monospace">
+Informa sobre los casos en que vuelve a escribir una variable de bucle con un bucle interno.
+<p><b>Ejemplo:</b></p>
+<pre><code>
     for i in range(5):
       for i in range(20, 25):
-          print("Inner", i)
-      print("Outer", i)
- </pre>
+          print("Interno", i)
+      print("Externo", i)
+  </code></pre>
 
-<code>with</code> 문에 선언된 변수가 구문 본문 내부에서 다시 선언되는 경우 또한 경고합니다.
-<pre style="font-family: monospace">
+También le advierte si una variable declarada en la declaración `with` se vuelve a declarar dentro del cuerpo de la declaración:
+<pre><code>
     with open("file") as f:
       f.read()
       with open("file") as f:
- </pre>
+  </code></pre>
 </body>
 </html>

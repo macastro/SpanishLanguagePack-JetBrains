@@ -1,21 +1,23 @@
 <html>
 <body>
-<p><code>None</code>과의 비교를 보고합니다. 그러한 타입의 비교는 항상 <code>is</code> 또는 <code>is not</code>을 사용하여 실행해야 하며 상등 연산자는 절대 사용할 수 없습니다.</p>
-<p><b>예:</b></p>
-<pre style="font-family: monospace">
+<p>Reporta comparaciones con <code>None</code>. Ese tipo de comparaciones
+  siempre deberían hacerse con <code>is</code> o <code>is not</code>, nunca
+  los operadores de igualdad.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
 a = 2
 
 
 if a == None:
     print("Success")
-</pre>
-<p>빠른 수정이 적용되면 코드는 다음과 같이 변경됩니다:</p>
-<pre style="font-family: monospace">
+</code></pre>
+<p>Una vez aplicado la corrección rápida, el código cambia a:</p>
+<pre><code>
 a = 2
 
 
 if a is None:
     print("Success")
-</pre>
+</code></pre>
 </body>
 </html>

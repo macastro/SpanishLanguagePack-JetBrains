@@ -1,15 +1,15 @@
 <html>
 <body>
-사용하지 않는 타입을 보고합니다.
+Reporta tipos no utilizados.
 
 <pre><code>type user struct {
- FirstName string    'json:"firstname"'
- LastName  string    'json:"lastname"'
+ FirstName string    `json:"firstname"`
+ LastName  string    `json:"lastname"`
 }
 
 func main() {
  
 }</code></pre>
-<p><code>user</code> 타입은 코드에서 사용하지 않으므로 회색 처리됩니다.</p>
+<p>El tipo <code>user</code> se mostrará en gris ya que no se utiliza en ninguna parte del código.</p>
 </body>
 </html>

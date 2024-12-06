@@ -1,11 +1,11 @@
 <html>
 <body>
-<code>iota</code> 식별자가 <code>const</code> 선언에 있을 때 <code>switch</code> 문 내에서 처리되지 않는 값을 보고합니다. 이러한 값을 처리하려면 <code>case</code> 또는 <code>default</code> 절을 활용해 보세요.
+ Informa de valores no manejados en las sentencias `switch` cuando el identificador `iota` está en la declaración `const`. Para manejar estos valores, se debe considerar el uso de cláusulas `case` o `default`.
 <p>
-  Go에서 <code>iota</code> 키워드는 <code>const</code> 블록 내에서 연속된 정수를 생성합니다. Go 컴파일러가 모든 <code>iota</code> 값을 처리하도록 요구하지는 않지만 일부 값의 처리가 누락된 경우 버그일 수 있습니다.
+  La palabra clave `iota` en Go crea una secuencia de enteros en un bloque `const`. Aunque el compilador de Go no requiere manejar todos los valores `iota`, la omisión de alguno de ellos podría indicar un error.
 </p>
-<p><code>iota</code>에 관한 자세한 내용은 <a href="https://go.dev/ref/spec#Iota">go.dev의 Iota</a>를 참조하세요.</p>
-<p>예:</p>
+<p>Para obtener más información sobre `iota`, consulta <a href="https://go.dev/ref/spec#Iota">Iota en go.dev</a>.</p>
+<p>Ejemplos:</p>
 <pre><code>const (
   a = iota
   b
@@ -24,10 +24,10 @@ func main() {
 </code></pre>
 <!-- tooltip end -->
 <p>
-  <code>c</code>가 <code>switch</code> 문에서 처리되지 않아 IDE가 검사를 트리거합니다. <code>c</code>가 <code>iota</code>를 사용하지 않더라도 같은 <code>const</code> 블록에 있다는 점에 유의하세요.
+  El IDE activa una inspección porque <code>c</code> no es manejado por la sentencia `switch`. Téngase en cuenta que <code>c</code> está en el mismo bloque <code>const</code> aunque no utilice <code>iota</code>.
 </p>
 
-<p>빠른 수정 옵션에는 <b>값의 'case' 절 생성</b> 및 <b>'default' 절 생성</b>이 있습니다. <b>Create 'default' clause</b>('default' 절 생성) 빠른 수정 적용 후:</p>
+<p>Las opciones de corrección rápida son <b>Crear cláusula 'case' para valores</b> y <b>Crear cláusula 'default'</b>. Después de aplicar la corrección rápida <b>Crear cláusula 'default'</b>:</p>
 <pre><code>const (
   a = iota
   b

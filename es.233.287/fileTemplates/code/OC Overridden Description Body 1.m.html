@@ -3,47 +3,50 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      예를 들어 <b>Code(코드) | Generate(생성) | -description</b> 액션을 호출할 때 생성되는 재정의된 <b><code>-description</code></b> 메서드의 본문을 생성합니다.<br>
-      이 템플릿은 편집할 수 있습니다. Objective-C 표현식 및 주석과 마찬가지로, 해당 값으로 확장되는 사전 정의된 변수를 사용할 수 있습니다.</font>
+      Crea el cuerpo de un método <b><code>-description</code></b> sobreescrito cuando se genera,
+      por ejemplo, al llamar la acción**Código | Generar | -description**.
+      <br>
+      La plantilla se puede editar. Junto con expresiones y comentarios de Objective-C, puede utilizar variables predefinidas que
+      se expanden después en sus valores correspondientes.
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">사전 정의된 변수는 다음 값을 사용합니다.</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas tomarán los valores siguientes:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1"><b>void</b> 메서드에 대한 super 메서드 호출 — 매개변수가 있거나 없는 <code>[<b>super</b> <i>methodName</i>]</code> 
-그 외 메서드에 대한 호출 - 매개변수가 있거나 없는 <code><b>return</b> [<b>super</b> <i>methodName</i>]</code>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">una llamada al supermétodo, para métodos **void** — <code>[<b>super</b> <i>nombreMétodo</i>]</code> con o sin parámetros;
+    para otros métodos — <code><b>return</b> [<b>super</b> <i>nombreMétodo</i>]</code> con o sin parámetros
     </font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">생성된 메서드의 반환 타입</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">el tipo de retorno del método creado</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">메서드에 의해 기본적으로 반환되는 값</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">el valor que devuelve el método por defecto</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CONTAINING_CLASS}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">메서드가 재정의된 클래스의 이름</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">el nombre de la clase en la que se sobreescribe el método</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CUSTOM_CODE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">생성된 메서드의 본문</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">el cuerpo del método generado</font></td>
   </tr>
   <tr>
-    <td colspan="3"><font face="verdana" size="-1"><b>C File Header</b> 템플릿(<b>Includes</b> 탭)의 모든 사전 정의된 변수도 사용 가능합니다
+    <td colspan="3"><font face="verdana" size="-1">Todas las variables predefinidas de la plantilla <b>Encabezado del archivo C</b> (la pestaña <b>Incluye</b>) también están disponibles
       (<font face="verdana" size="-2"><b>${USER}</b></font>,
-      <font face="verdana" size="-2"><b>${DATE}</b></font>
-      등)</font>
+      <font face="verdana" size="-2"><b>${DATE}</b></font>,
+      etc.)</font>
     </td>
   </tr>
 </table>

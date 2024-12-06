@@ -16,14 +16,14 @@
 
 <html>
 <body>
-곧 사용할 수 없게 될 요소의 사용 사례를 보고합니다.
-<p>예:</p>
-<pre><code>// 곧 사용할 수 없게 됩니다: io.SeekStart, io.SeekCurrent 및 io.SeekEnd를 사용하세요.
+Informa sobre el uso de elementos que quedarán en desuso.
+<p>Ejemplo:</p>
+<pre><code>// Quedará en desuso: utilizar en su lugar io.SeekStart, io.SeekCurrent y io.SeekEnd.
 const (
- SEEK_SET int = 0 // 파일의 맨 처음을 기준으로 이동
- SEEK_CUR int = 1 // 현재 오프셋을 기준으로 이동
- SEEK_END int = 2 // 파일의 끝을 기준으로 이동
+ SEEK_SET int = 0 // Busca en relación con el principio del archivo
+ SEEK_CUR int = 1 // Busca en relación con el desplazamiento actual
+ SEEK_END int = 2 // Busca en relación con el final
 )</code></pre>
-<p><a href="https://pkg.go.dev/os#pkg-constants">go.dev의 Constants</a>에 따르면 <code>SEEK_SET</code>, <code>SEEK_CUR</code> 및 <code>SEEK_END</code>가 지원 중단됩니다.</p>
+<p>De acuerdo con <a href="https://pkg.go.dev/os#pkg-constants">Constants</a> en go.dev, <code>SEEK_SET</code>, <code>SEEK_CUR</code> y <code>SEEK_END</code> quedarán en desuso.</p>
 </body>
 </html>

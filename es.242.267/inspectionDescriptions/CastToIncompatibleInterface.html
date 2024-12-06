@@ -1,10 +1,13 @@
 <html>
 <body>
-형 변환된 식에 형 변환된 클래스/인터페이스 타입을 확장/구현하는 클래스/인터페이스 타입이나 그러한 하위 클래스가 없는 타입 변환 식을 보고합니다.
+Reporta expresiones de conversión de tipo donde
+la expresión convertida tiene un tipo clase/interfaz que no 
+extiende/implementa el tipo clase/interfaz convertido, ni tiene subclases que lo hagan.
 <p>
-  이러한 구문은 오류가 발생하기 쉬우며 런타임 시 <code>java.lang.ClassCastException</code>을 던집니다.
+  Tal construcción es probablemente errónea, y
+  arrojará un <code>java.lang.ClassCastException</code> en tiempo de ejecución.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   interface A {}
   interface Z {}
@@ -12,7 +15,7 @@
 
   void x(C c) {
     if (c instanceof Z) {
-      A a = ((A)c); // 호환되지 않는 인터페이스 'A'로 형 변환
+      A a = ((A)c); // conversión a interfaz incompatible 'A'
     }
   }
 </code></pre>

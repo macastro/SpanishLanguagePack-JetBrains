@@ -1,15 +1,15 @@
 <html>
 <body>
-<b>박싱된</b> <code>Range.start</code> 및 <code>Range.endInclusive</code> 프로퍼티를 보고합니다.
-<p>이들 프로퍼티는 불필요한 호출을 피하기 위해 <b>unboxed</b> <code>first</code> 및 <code>last</code> 프로퍼티로 바꿀 수 있습니다.</p>
-<p>빠른 수정에서는 <code>start</code> 및 <code>endInclusive</code> 프로퍼티를 그에 대응하는 <code>first</code> 및 <code>last</code>로 바꿉니다.</p>
-<p><b>예:</b></p>
+Reporta las propiedades <code>Range.start</code> y <code>Range.endInclusive</code> **empaquetadas**.
+<p>Estas propiedades se pueden reemplazar por las propiedades <b>empaquetadas</b> <code>first</code> y <code>last</code> para evitar llamadas redundantes.</p>
+<p>El arreglo rápido reemplaza las propiedades <code>start</code> y <code>endInclusive</code> por las propiedades correspondientes <code>first</code> y <code>last</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun foo(range: CharRange) {
       val lastElement = range.endInclusive
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   fun foo(range: CharRange) {
       val lastElement = range.last

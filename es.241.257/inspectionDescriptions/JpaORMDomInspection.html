@@ -1,15 +1,15 @@
 <html>
 <body>
-'orm.xml' 구성 파일 내 모든 데이터베이스 객체로의 해결되지 않은 참조를 보고합니다:
+Reporta referencias no resueltas a cualquier objeto de base de datos dentro de los archivos de configuración `orm.xml`:
 <ul>
-  <li>테이블</li>
-  <li>열</li>
-  <li>스키마</li>
-  <li>카탈로그</li>
-  <li>시퀀스</li>
+  <li>Tablas</li>
+  <li>Columnas</li>
+  <li>Esquemas</li>
+  <li>Catálogos</li>
+  <li>Secuencias</li>
 </ul>
 
-<p><b>데이터베이스 테이블 예:</b></p><br/>
+<p><b>Ejemplo de tabla de base de datos:</b></p><br/>
 <pre><code lang="sql">
 CREATE TABLE DATA_TABLE (
   ID INTEGER,
@@ -17,18 +17,18 @@ CREATE TABLE DATA_TABLE (
 );
 </code></pre><br/>
 
-<p><b>orm.xml 파일 예:</b></p><br/>
+<p><b>Ejemplo de archivo orm.xml:</b></p><br/>
 <pre><code lang="xml">
 &lt;entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0"&gt;
-    &lt;package&gt;example&lt;/package&gt;
-    &lt;entity name="JavaEntity" class="JavaEntity"&gt;
+    &lt;package&gt;ejemplo&lt;/package&gt;
+    &lt;entity name="EntidadJava" class="EntidadJava"&gt;
         &lt;table name="DATA_TABLE"/&gt;
         &lt;attributes&gt;
           &lt;id name="id"&gt;
-            &lt;column name="UNKNOWN_ID" nullable="false" length="20"/&gt; // 오류: 해결되지 않은 열 이름
+            &lt;column name="ID_DESCONOCIDO" nullable="false" length="20"/&gt; // Error: nombre de columna no resuelto
           &lt;/id&gt;
-          &lt;basic name="data"&gt;
-            &lt;column name="DATA" length="12"/&gt; // 좋음
+          &lt;basic name="datos"&gt;
+            &lt;column name="DATOS" length="12"/&gt; // Correcto
           &lt;/basic&gt;
         &lt;/attributes&gt;
     &lt;/entity&gt;

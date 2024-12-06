@@ -1,42 +1,42 @@
 <html>
 <body>
-<code>@RunWith(Parameterized.class)</code> 으로 어노테이션이 추가되고 <code>@Parameterized.Parameters</code> 어노테이션이 추가된 데이터 제공자 메서드를 포함하지 않거나, 이 메서드에 정확한 시그니처가 없는 JUnit 4 <a href="https://github.com/junit-team/junit4/wiki/parameterized-tests">매개변수화 테스트</a>클래스를 보고합니다. 이 테스트 클래스는 실행할 수 없습니다.
-데이터 제공자 메서드는 <code>public</code> 과 <code>static</code>, 반환 타입 <code>Iterable</code> 또는 <code>Object[]</code> 를 포함해야 합니다.
-<p>빈 매개변수 제공자 메서드를 작성하는 것을 권장합니다.</p>
+Reporta clases de <a href="https://github.com/junit-team/junit4/wiki/parameterized-tests">prueba parametrizada</a> de JUnit 4 que están anotadas con <code>@RunWith(Parameterized.class)</code> pero que no incluyen un método proveedor de datos anotado con <code>@Parameterized.Parameters</code> o este método tiene una sintaxis incorrecta. Dichas clases de prueba no se pueden ejecutar.
+El método proveedor de datos debe ser <code>public</code> y <code>static</code> y debe tener un tipo de retorno de <code>Iterable</code> u <code>Object[]</code>.
+<p>Sugiere crear un método proveedor de parámetros vacío o cambiar la sintaxis del método proveedor de datos incorrecto.</p>
 
-<p><b>예:</b><p>
-<pre><code>
+<p><b>Ejemplo:</b><p>
+<pre><code lang="java">
   @RunWith(Parameterized.class)
-  <b>public class</b> ImportantTest {
-    <b>private int</b> input;
-    <b>private int</b> expected;
+  public class ImportantTest {
+    private int input;
+    private int expected;
 
-    ImportantTest(<b>int</b> input, <b>int</b> expected) {
-      <b>this</b>.input = input;
-      <b>this</b>.expected = expected;
+    ImportantTest(int input, int expected) {
+      this.input = input;
+      this.expected = expected;
     }
 
-    //... test cases
+    // ... test cases
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
-<pre><code>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="java">
   @RunWith(Parameterized.class)
-  <b>public class</b> ImportantTest {
-    <b>private int</b> input;
-    <b>private int</b> expected;
+  public class ImportantTest {
+    private int input;
+    private int expected;
 
-    ImportantTest(<b>int</b> input, <b>int</b> expected) {
-      <b>this</b>.input = input;
-      <b>this</b>.expected = expected;
+    ImportantTest(int input, int expected) {
+      this.input = input;
+      this.expected = expected;
     }
 
     @Parameters
-    <b>public static</b> Iterable&lt;Object[]> parameters() {
-      <b>return null</b>;
+    public static Iterable&lt;Object[]> parameters() {
+      return null;
     }
 
-    //... test cases
+    // ... test cases
   }
 </code></pre>
 <!-- tooltip end -->

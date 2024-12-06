@@ -1,8 +1,8 @@
 <html>
 <body>
-객체에서 기본 값의 래핑인 명시적 박싱을 보고합니다.
-<p>Java 5 이상 버전에서 명시적 수동 박싱은 불필요하며 안전하게 제거될 수 있습니다.</p>
-<p><b>예:</b></p>
+Informe del "boxing" explícito que envuelve valores primitivos de objetos.
+<p>A partir de Java 5 no es necesario el "boxing" manual explícito, y se puede eliminar de manera segura.</p>
+<p><b>Ejemplo:</b></p>
 <ul>
   <li><code>Integer i = new Integer(1);</code> &rarr; <code>Integer i = Integer.valueOf(1);</code></li>
   <li><code>int i = Integer.valueOf(1);</code> &rarr; <code>int i = 1;</code></li>
@@ -10,8 +10,8 @@
 
 <!-- tooltip end -->
 <p>
-<b>진정으로 불필요한 박싱된 표현식만 보고</b> 옵션을 사용하여 박싱된 값이 즉시 묵시적 또는 명시적으로 언박싱되는 진정으로 불필요한 박싱만을 보고합니다.
-이 경우 박싱-언박싱 단계 전체를 제거할 수 있습니다. 이 검사는 간단한 명시적 박싱을 보고하지 않습니다.
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 5 이상인 경우에만 보고합니다.</p>
+Utiliza la opción <b> Informar sólo expresiones "boxing" realmente innecesarias </b> para informar sólo de los "boxing" realmente innecesarios, en los que el valor "boxing" se "unboxing" inmediatamente, implícita o explícitamente.
+En estos casos, se puede eliminar todo el paso de "boxing" y "unboxing". Esta inspección no informa sobre lo explícito y simple "boxing".
+<p>Esta inspección sólo informa si el nivel de idioma del proyecto o módulo es 5 o superior.</p>
 </body>
 </html>

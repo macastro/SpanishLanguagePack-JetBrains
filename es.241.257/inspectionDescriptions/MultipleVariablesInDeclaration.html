@@ -1,30 +1,30 @@
 <html>
 <body>
-한 개의 선언에 선언된 여러 개의 변수를 보고하고 각 변수에 대한 별도의 선언을 생성할 것을 제안합니다.
-<p>일부 코딩 표준은 이러한 선언을 금지합니다.</p>
-<p>예:</p>
+Indica que se han declarado varias variables en una sola declaración y sugiere crear una declaración separada para cada variable.
+<p>Algunos estándares de codificación prohíben este tipo de declaraciones.</p>
+<p>Ejemplo:</p>
 <pre><code>
   int x = 1, y = 2;
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   int x = 1;
   int y = 2;
 </code></pre>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configuración de las inspecciones:</p>
 <ul>
-<li>'for' 루프 구문 초기화에 선언된 여러 개의 변수를 무시하려면 <b>'for' 루프 선언 무시</b> 옵션을 사용하세요. 예:
+<li>Para omitir varias variables declaradas en la inicialización de la sentencia de bucle 'for', como en el siguiente ejemplo, utiliza la opción <b>Omitir declaraciones de bucle 'for'</b>:
 <pre><code>
   <b>for</b> (int i = 0, max = list.size(); i &gt; max; i++) {}
 </code></pre>
 </li>
-<li>하나의 선언에서 서로 다른 배열 크기를 가진 변수들에 대해서만 경고를 표시하려면 <b>단일 선언에서 서로 다른 배열 크기에 대해서만 경고</b> 옵션을 사용하세요. 예:
+<li>Para mostrar una advertencia solo cuando se declaren variables con diferentes dimensiones de array en una sola declaración, como en el siguiente ejemplo, utiliza la opción <b>Solo avisar sobre diferentes dimensiones de arrays en una sola declaración</b>:
 <pre><code>
   String s = "", array[];
 </code></pre>
 </li>
 </ul>
-<p><small>2019.2의 새로운 기능</small></p>
+<p><small>Novedad de 2019.2</small></p>
 </body>
 </html>

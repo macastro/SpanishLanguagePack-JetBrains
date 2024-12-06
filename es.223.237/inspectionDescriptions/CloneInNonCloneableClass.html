@@ -1,11 +1,11 @@
 <html>
 <body>
-<code>clone()</code> 메서드를 재정의하지만 <code>Cloneable</code> 인터페이스를 구현하지 않는 클래스를 보고합니다.
-이러한 클래스는 보통 프로그래밍 오류를 나타냅니다.
+Se informa de clases que sobreescriben el método <code>clone()</code> pero que no implementan la interfaz <code>Cloneable</code>.
+Esto, a menudo, representa un error de programación.
 <!-- tooltip end -->
 <p>
-  <code>public</code>이 아닌 메서드를 무시하려면 <b>'public' 복제 메서드에 대해서만 경고</b> 옵션을 사용하세요.</p>
-<p>상속받도록 설계된 클래스의 경우 <code>Cloneable</code> 인터페이스를 구현하지 않고 <code>clone()</code>를 재정의하여 <code>protected</code>로 선언하도록 선택할 수 있으며 하위 클래스에 <code>Cloneable</code> 인터페이스를 구현할지 여부를 결정할 수 있습니다.
+  Se deben usar las opciones <b>Advertencia sólo para métodos clone 'públicos'</b> para ignorar métodos que no sean <code>public</code>.</p>
+<p>En el caso de clases que están diseñadas para ser heredadas, usted puede optar por no implementar la interfaz <code>Cloneable</code>, sino que sobreescribir <code>clone()</code> y declararla como <code>protected</code>, y decidir implementa <code>Cloneable</code> o no en subclases.
 </p>
 </body>
 </html>

@@ -1,13 +1,16 @@
 <html>
 <body>
-오류 문자열의 서식 지정 이슈를 보고합니다.
-<p>예:</p>
-<pre><code>err := fmt.Errorf("Cannot read the file!")
-log.Printf("Reading %s: %v", file, err)</code></pre>
-<p><a href="https://github.com/golang/go/wiki/CodeReviewComments#error-strings">github.com/golang의 Error Strings</a>에 따르면 오류 문자열은 다른 컨텍스트에 나타날 수도 있으므로 대문자를 사용하거나 문장 부호로 끝나서는 안 됩니다.
+Informa los problemas de formato en cadenas de error.
+<p>Ejemplo:</p>
+<pre><code>err := fmt.Errorf("¡No se puede leer el archivo!")
+log.Printf("Leyendo %s: %v", file, err)</code></pre>
+<p>De acuerdo con
+  <a href="https://github.com/golang/go/wiki/CodeReviewComments#error-strings">Error Strings en github.com/golang</a>,
+  las cadenas de error no deben escribirse con mayúsculas ni terminar con puntuación porque pueden aparecer en otro contexto.
 </p>
-<p>서실을 수정하려면 <b>Fix error string format(오류 문자열 서식 수정)</b> 빠른 수정을 적용할 수 있습니다. 빠른 수정이 적용된 후 오류 문자열은 다음과 같습니다.</p>
-<pre><code>err := fmt.Errorf("cannot read the file")
-log.Printf("Reading %s: %v", file, err)</code></pre>
+<p>Para corregir el formato, puedes aplicar la corrección rápida <b>Solucionar formato de cadena de error</b>. Una vez aplicada la corrección rápida,
+la cadena de error se verá así:</p>
+<pre><code>err := fmt.Errorf("no se puede leer el archivo")
+log.Printf("Leyendo %s: %v", file, err)</code></pre>
 </body>
 </html>

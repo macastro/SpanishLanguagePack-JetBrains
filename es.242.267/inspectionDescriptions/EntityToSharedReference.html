@@ -1,19 +1,19 @@
 <html>
 <body>
-<code>Entity</code>에서 <code>SharedEntity</code>으로의 유효하지 않은 참조를 보고합니다.
+<code>Entity</code> a <code>SharedEntity</code> referencia inválida.
 <p>
-  <code>Entity</code>를 <code>SharedEntity</code>에서 참조할 수 없습니다.
-  프로퍼티가 null 가능이거나 <code>@CascadeDeleteBy</code> 어노테이션이 있는 경우에만 <code>SharedEntity</code>를 <code>Entity</code>에서 참조할 수 있습니다.
-  그렇지 않은 경우 런타임 예외가 발생합니다.
+  No se puede referenciar <code>Entity</code> desde <code>SharedEntity</code>.
+  Solo se puede referenciar <code>SharedEntity</code> desde <code>Entity</code> si la propiedad admite valores nulos o tiene la anotación <code>@CascadeDeleteBy</code>.
+  De lo contrario, se producirá una excepción de tiempo de ejecución.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   interface A: Entity {
     var x: SharedEntity
     var y: SharedEntity
   }
 </code></pre>
-<p>빠른 수정에서는 어노테이션을 생성하거나 타입을 null 가능으로 만듭니다</p>
+<p>La corrección rápida genera la anotación o hace que el tipo admita valores nulos</p>
 <pre><code>
   interface A: Entity {
     var x: SharedEntity?

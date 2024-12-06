@@ -1,17 +1,17 @@
 <html>
 <body>
-<code>Optional.orElseThrow()</code> 호출에서 예외를 반환하지 않고 던지는 <code>Supplier</code> 람다를 보고합니다.
-<p><b>예:</b></p>
+Informa sobre las lambdas `Proveedor` en las llamadas a `Optional.orElseThrow()` que lanzan una excepción, en lugar de devolverla.
+<p><b>Ejemplo:</b></p>
 <pre><code>
-optional.orElseThrow(() -> {
+opcional.orElseThrow(() -> {
     throw new RuntimeException();
 });
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-optional.orElseThrow(() -> new RuntimeException());
+opcional.orElseThrow(() -> new RuntimeException());
 </code></pre>
 <!-- tooltip end -->
-<p><small>2023.1의 새로운 기능</small></p>
+<p><small>Nuevo en 2023.1</small></p>
 </body>
 </html>

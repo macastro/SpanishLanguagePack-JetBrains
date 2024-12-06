@@ -3,64 +3,64 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      PHP setter 메서드에 대한 기본 제공 템플릿. 예를 들어, "getter 및 setter 추가" 빠른 수정이 실행될 때 사용됩니다.
+      Plantilla integrada para un método setter de PHP. Se usa, por ejemplo, cuando se invoca la corrección rápida "Añadir getter y setter".
     </font>
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">사전 정의된 변수는 다음의 값을 사용합니다:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Variables predefinidas que reciben los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${STATIC}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">프로퍼티가 정적이면, 'static' 값을 사용하고, 그렇지 않으면 빈 문자열을 사용합니다.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Si la propiedad es estática, toma el valor 'static', de lo contrario, una cadena vacía.</font></td>
   </tr>
   <tr>    
     <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
     <td width="100%" valign="top"><font face="verdana" size="-1">
-      첫 번째 문자가 대문자이며 'set' 접두사가 없는 낙타 표기법(camelCase) 스타일의 메서드 이름입니다. 예를 들어, 프로퍼티 이름 '_my_property'는 'MyProperty'로 변환됩니다.
+      Nombre del método en estilo CamelCase sin el prefijo "set", con el primer carácter en mayúscula. Por ejemplo, el nombre de la propiedad '_my_property' se convierte en 'MyProperty'.
     </font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CLASS_NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">포함하는 클래스 이름.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Contiene el nombre de la clase.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${SCALAR_TYPE_HINT}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">언어 수준이 PHP 7.0 이상일 때 스칼라 타입 힌트를 포함합니다</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Contiene la pista de tipo escalar si el nivel de lenguaje es PHP 7.0 o superior.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${FIELD_NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">기존 프로퍼티 이름</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre original de la propiedad, sin modificaciones.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAM_NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">setter의 매개변수 이름. ${FIELD_NAME} 과 거의 같으나 첫 번째 밑줄이 있을 경우 제거됩니다. 예를 들어, 프로퍼티 이름 '_myProperty'는 'myProperty'로 변환됩니다.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del parámetro del setter. Casi idéntico a ${FIELD_NAME}, pero se elimina el primer guion bajo, si existe. Por ejemplo, el nombre de la propiedad '_myProperty' se convierte en 'myProperty'.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${TYPE_HINT}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">프로퍼티에 대한 타입 힌트. 지정되지 않은 경우, 빈 문자열.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Pista de tipo de la propiedad. Si no se especifica, es una cadena vacía.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${VOID_RETURN_TYPE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">프로젝트의 PHP 언어 수준에서 <i>void</i> 반환 타입이 사용 가능한지 나타냅니다.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Indica si el tipo de retorno <i>void</i> está disponible para el nivel de lenguaje PHP del proyecto.</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">달러 표시, '$' 기호로 표시됩니다.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Signo de dólar, se evalúa como el carácter '$'.</font></td>
   </tr>
 </table>
 </body>

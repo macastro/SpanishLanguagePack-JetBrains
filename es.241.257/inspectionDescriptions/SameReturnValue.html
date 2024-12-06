@@ -1,18 +1,25 @@
 <html>
 <body>
-항상 같은 상수를 반환하는 메서드와 메서드 계층 구조를 보고합니다.
+Reporta métodos y jerarquías de métodos que siempre devuelven la misma constante.
 <p>
-이 검사는 배치 모드(<b>코드 | 코드 검사</b> 또는 <b>코드 | 코드 분석 | 이름별로 검사 실행</b>)일 때와 에디터에서 즉시 사용할 때 다르게 동작합니다.
+La inspección funciona de manera diferente en modo batch
+  (desde <b>Código | Inspeccionar código</b> o <b>Código | Analizar código | Ejecutar inspección por nombre</b>)
+  y sobre la marcha en el editor:
 <ul>
-  <li>배치 모드에서는 검사가 항상 같은 상수를 반환하는 메서드와 메서드 계층 구조를 보고합니다.</li>
-  <li>에디터에서는 검사가 2개 이상의 <code>return</code> 문이 있으며, 상위 메서드가 없고 재정의가 되지 않는 메서드만 보고합니다. 메서드가 메서드를 재정의하거나 구현하는 경우, 해당 메서드가 특정 상수를 반환하도록 컨트랙트에서 요구할 수 있으며, 이때 여러 종료점을 두는 것이 좋습니다. 메서드가 재정의될 수 있는 경우 하위 클래스에서 다른 값이 반환될 수도 있습니다.
+  <li>En modo batch, la inspección reporta métodos y jerarquías de métodos que siempre
+    devuelven la misma constante.</li>
+  <li>En el editor, la inspección sólo reporta métodos que tienen más de una sentencia <code>return</code>
+    no tienen super métodos y no pueden ser sobreescritos. Si un método sobreescribe o
+    implementa un método, un contrato puede requerir que devuelva una constante específica, pero al
+    mismo tiempo, podemos querer tener varios puntos de salida. Si un método puede ser sobreescrito, es
+    posible que se devuelva un valor diferente en las subclases.
   </li>
 </ul>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class X {
-                // 배치 모드에서만 경고:
-    int xxx() { // 메서드 'xxx()' 및 해당하는 모든 재정의 메서드가 항상 '0'을 반환합니다
+                // Advierte sólo en modo batch:
+    int xxx() { // El método 'xxx()' y todos sus métodos de sobreescritura siempre devuelven '0'
       return 0;
     }
   }
@@ -23,13 +30,13 @@
         return 0;
     }
 
-                // 배치 모드에서만 경고:
-    int yyy() { // 메서드 'yyy()'가 항상 '0'을 반환합니다
+                // Advierte sólo en modo batch:
+    int yyy() { // El método 'yyy()' siempre devuelve '0'
         return 0;
     }
 
-                                  // 배치 모드 및 즉석 검사 모두 경고:
-    final int zzz(boolean flag) { // 메서드 'zzz()'가 항상 '0'을 반환합니다
+                                  // Advierte tanto en modo batch como sobre la marcha:
+    final int zzz(boolean flag) { // El método 'zzz()' siempre devuelve '0'
         if (Math.random() > 0.5) {
             return 0;
         }

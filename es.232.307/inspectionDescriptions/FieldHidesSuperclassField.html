@@ -1,29 +1,33 @@
 <html>
 <body>
-상위 클래스의 필드와 이름이 동일하게 지정된 파생 클래스의 필드를 보고합니다.
-Java 필드는 파생 클래스에서 재정의될 수 없으므로 파생 클래스의 필드가 상위 클래스에서 필드를 숨깁니다.
+Reporta los campos de una clase derivada que tienen el mismo nombre que un campo de una superclase.
+Los campos de Java no se pueden sobreescribir en clases derivadas,
+por lo que el campo de la clase derivada ocultará el campo de la superclase.
 <p>
-  이와 같이 이름이 지정될 경우, 기본 클래스의 필드를 사용하려다가 파생 클래스의 이름이 동일한 필드를 실수로 사용할 수 있습니다.
+  Como resultado de dicha denominación, se puede utilizar accidentalmente el campo de la clase derivada
+  cuando se pretende utilizar el campo con el mismo nombre de una clase base.
 </p>
-<p>빠른 수정에서는 파생 클래스의 필드 이름을 변경하도록 제안합니다.</p>
-<p><b>예:</b></p>
-<pre><code>class Parent {
-  Parent parent;
+<p>Se sugiere una corrección rápida para cambiar el nombre del campo en la clase derivada.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>class Padre {
+  Padre padre;
 }
-class Child extends Parent {
-  Child parent;
+class Hijo extiende Padre {
+  Hijo padre;
 }
 </code></pre>
 <!-- tooltip end -->
 <p>
-  이 검사에서 다음 옵션을 구성할 수 있습니다.
+  Se pueden configurar las siguientes opciones para esta inspección:
 </p>
 <ol>
   <li>
-    <strong>액세스할 수 없는 필드 무시</strong> - 이 검사가 모든 이름 충돌을 보고해야 하는지 혹은 하위 클래스에서 표시된 필드와 충돌만을 보고해야 하는지 지정합니다.
+    <strong>Ignorar los campos no accesibles</strong>: indica si esta inspección debe informar todas las coincidencias de nombres,
+    o sólo las coincidencias con campos que son visibles desde la subclase.
   </li>
   <li>
-    <strong>static 필드를 숨기는 static 필드 무시</strong> - 기본 클래스의 <code>static</code> 필드를 숨기는 <code>static</code> 필드를 무시합니다.
+    <strong>Ignorar los campos estáticos que ocultan campos estáticos</strong> - ignorar los campos <code>estáticos</code>
+    que ocultan los campos <code>estáticos</code> en las clases base.
   </li>
 </ol>
 

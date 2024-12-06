@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>중첩된 dplyr 호출을 보고하고 파이프로 대체하도록 제안합니다.</p>
-<p><b>예:</b></p>
+<p>Reporta llamadas dplyr anidadas y sugiere reemplazarlas por tuberías.</p>
+<p><b>Ejemplo:</b></p>
 <p>
   <code>
     summarise(filter(diamonds, depth > 62.0), mean = mean(carat))
   </code>
 </p>
-<p>빠른 수정을 적용하면 코드는 다음과 같이 변경됩니다.</p>
+<p>Cuando aplicas la corrección rápida, el código cambia a:</p>
 <p>
   <code>
     diamonds %>%

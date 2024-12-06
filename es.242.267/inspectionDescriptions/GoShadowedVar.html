@@ -1,13 +1,13 @@
 <html>
 <body>
-외부 스코프에 있는 선언과 겹치는 변수 선언을 보고합니다.
-<p>이 경우 변수의 의미는 스코프에 따라 달라지므로, 혼란을 줄 수 있으며 의도하지 않은 결과로 이어질 수 있습니다.</p>
-<p>예:</p>
+Reporta las declaraciones de las variables que se sobreponen con las declaraciones en el ámbito externo.
+<p>En este caso, como el significado de la variable depende del ámbito, puede crear confusión y dar lugar a consecuencias no deseadas.</p>
+<p>Ejemplo:</p>
 <pre><code>for i := 0; i &lt; len(nums); i++ {
     for i := 0; i &lt; len(nums); i++ {
     }
   }</code></pre>
-<p>내부 루프의 변수 <code>i</code>가 가려집니다. 이를 방지하기 위해 내부 루프의 변수 이름 변경을 고려하세요.</p>
+<p>La variable <code>i</code> en el bucle anidado está siendo sombreada. Para eliminar el sombreado, considera renombrar la variable en el bucle anidado.</p>
 <pre><code>for i := 0; i &lt; len(nums); i++ {
     for j := 0; j &lt; len(nums); j++ {
     }

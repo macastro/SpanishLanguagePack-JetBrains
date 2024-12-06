@@ -1,15 +1,13 @@
 <html>
 <body>
-명시적 타입에 대한 현재 코드 스타일과 일치하지 않는 타입 어노테이션을 보고합니다.
+Informa una anotación de tipo que no coincide con el estilo de código actual para tipos explícitos.
 <!-- tooltip end -->
 <p>
-  컨텍스트에서 추론되는 타입이 타입 어노테이션과 정확히 일치하지 않는 경우 타입 선언은 불필요합니다. 예:
+  Las declaraciones de tipo no son necesarias cuando el tipo que se infiere del contexto coincide exactamente con la anotación de tipo, por ejemplo:
 </p>
-<p>
-  <code>
+<pre><code>
     var pi: number = 3.14
-  </code>
-</p>
-<p>일부 경우에는 명시적 타입을 반드시 포함하는 것이 좋습니다. 명시적 타입은 우발적 타입 변경을 방지하고 코드를 더욱 명시적으로 만듭니다.</p>
+</code></pre>
+<p>En algunos casos es preferible tener siempre tipos explícitos - esto evita cambios accidentales de tipo y hace que el código sea más explícito.</p>
 </body>
 </html>

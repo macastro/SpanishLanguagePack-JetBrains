@@ -1,18 +1,17 @@
 <html>
 <body>
-도달할 수 없는 구문을 보고합니다. 이는 구문이 무한 루프, <code>return</code>, <code>break</code> 또는
- <code>continue</code> 구문 뒤에 해당 구문이 있을 때 발생합니다.
-<p><b>예:</b></p>
+<p>Informen sentencias que no son alcanzables. Esto puede ocurrir si la sentencia está después de un bucle infinito, sentencia <code>return</code>, <code>break</code> o <code>continue</code>.</p>
+<p><b>Ejemplo:</b>
 <pre><code>
   <b>void</b> foo (int n) {
       if (n < 1) {
           return
-          <b>print('This statement is unreachable')</b>
+          <b>print('Esta sentencia no es alcanzable')</b>
       }
-      while (true){
-          print ('Hello, world!')
+      mientras (verdadero){
+          print ('¡Hola, mundo!')
       }
-      <b>print('This statement is unreachable too')</b>
+      <b>print('Esta sentencia tampoco es alcanzable')</b>
   }
 </code></pre>
 </body>

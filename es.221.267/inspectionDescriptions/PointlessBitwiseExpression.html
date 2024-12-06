@@ -1,20 +1,20 @@
 <html>
 <body>
-무의미한 비트 표현식을 보고합니다.
+Reportan expresiones de bits sin sentido.
 <p>
-  그 예시로는 제공된 타입의 최댓값에 <code>&</code> 연산자를 적용하는 표현식, <code>or</code> 연산자를 0에 적용하는 표현식 및 0만큼 이동하는 표현식 등이 있습니다. 이러한 표현식은 코드 완성이 수반되지 않은 자동 리팩터링의 결과일 수 있으며 애초에 의도된 것이 아닐 가능성이 높습니다.</p>
-<p><b>예:</b></p>
+  Tales expresiones incluyen aplicar el operador <code>&amp;</code> al valor máximo para el tipo dado, aplicar el operador <code>or</code> a cero y desplazar por cero. Tales expresiones pueden ser el resultado de refactorizaciones automáticas no seguidas hasta su finalización y es poco probable que hayan sido originalmente intencionadas.</p>
+<p><b>Ejemplos:</b></p>
 <pre><code>
-  // 경고: 연산은 무의미하며 'flags'로 대체 가능합니다
-  // 0xFFFF_FFFF는 정수의 최댓값이며 두 리터럴 모두
-  // 32비트 정수 리터럴로 취급됩니다
+  // Advertencia: la operación no tiene sentido y puede ser reemplazada sólo con `flags`
+  // 0xFFFF_FFFF es el valor máximo para un entero, y ambos literales son tratados
+  // como literales enteros de 32 bits.
   int bits = flags & 0xFFFF_FFFF;
 
-  // 경고: 연산은 무의미하며 'bits'로 대체 가능합니다
-  // OR을 0에 적용하는 경우 항상 다른 피연산자가 출력됩니다
+  // Advertencia: la operación no tiene sentido y puede ser reemplazada sólo con `bits`
+  // OR con 0 siempre devuelve el otro operando.
   int or = bits | 0x0;
 
-  // 경고: 연산 결과는 항상 0이므로 연산이 무의미합니다
+  // Advertencia: la operación no tiene sentido, ya que siempre resulta en 0
   int xor = or ^ or;
 </code></pre>
 <!-- tooltip end -->

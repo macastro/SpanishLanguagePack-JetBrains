@@ -1,8 +1,8 @@
 <html>
 <body>
-<code>@RegisterExtension</code> 어노테이션이 추가된 필드 중 타입이 잘못되었거나 static으로 선언되어야 하지만 그렇지 않은 경우를 보고합니다.
-그러한 확장은 올바르게 등록되지 않으며 테스트 시작 시 문제를 일으킬 수 있습니다.
-<p><b>예:</b></p>
+Informa sobre campos con la anotación <code>@RegisterExtension</code> cuyos tipos son incorrectos o no se han declarado como static cuando es necesario.
+Las extensiones de este tipo no se podrán registrar correctamente y podrían generar una falla al iniciar la prueba.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class MyTest {
     @RegisterExtension

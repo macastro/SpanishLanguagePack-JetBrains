@@ -1,35 +1,35 @@
 <html>
 <body>
-<p>Spring 구성 요소에서 삽입 또는 오토와이어링된 필드를 보고합니다.</p>
+<p>Reporta los campos inyectados o auto-inyectados en los componentes de Spring.</p>
 
-<p>빠른 수정은 필수 필드의 bean 및 어설션에서 권장되는 생성자 기반의 종속 요소 삽입을 제안합니다.</p>
+<p>La corrección rápida sugiere la inyección de dependencia basada en el constructor recomendada en los beans y afirmaciones para los campos obligatorios.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-class MyComponent {
-  @Inject MyCollaborator collaborator; // 삽입된 필드
+clase MyComponent {
+  @Inject MyCollaborator collaborator; // campo inyectado
 
   public void myBusinessMethod() {
-    collaborator.doSomething(); // NullPointerException을 던집니다
+    collaborator.doSomething(); // arroja NullPointerException
   }
 }
 </code></pre>
 <br>
 
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-class MyComponent {
+clase MyComponent {
 
   private final MyCollaborator collaborator;
 
   @Inject
   public MyComponent(MyCollaborator collaborator) {
-    Assert.notNull(collaborator, "MyCollaborator must not be null!");
+    Assert.notNull(collaborator, "¡MyCollaborator no debe ser nulo!");
     this.collaborator = collaborator;
   }
 
   public void myBusinessMethod() {
-    collaborator.doSomething(); // 이제 이 호출은 안전합니다
+    collaborator.doSomething(); // ahora esta llamada es segura
   }
 }
 </code></pre>

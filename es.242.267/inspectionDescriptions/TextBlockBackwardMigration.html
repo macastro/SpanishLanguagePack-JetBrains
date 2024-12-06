@@ -1,8 +1,7 @@
 <html>
 <body>
-일반 문자열 리터럴로 대체 가능한 텍스트 블록을 보고합니다. 
-This may help to downgrade for backward compatibility with earlier Java versions.
-<p><b>예:</b></p>
+Informa bloques de texto que pueden ser reemplazados con literales de cadena normales.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   Object obj = engine.eval("""
                            function hello() {
@@ -12,7 +11,7 @@ This may help to downgrade for backward compatibility with earlier Java versions
                            hello();
                            """);
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar corrección rápida:</p>
 <pre><code>
   Object obj = engine.eval("function hello() {\n" +
                            "  print('\"Hello, world\"');\n" +
@@ -21,6 +20,6 @@ This may help to downgrade for backward compatibility with earlier Java versions
                            "hello();\n");
 </code></pre>
 <!-- tooltip end -->
-<p><small>2019.3의 새로운 기능</small></p>
+<p><small>Nuevo en 2019.3</small></p>
 </body>
 </html>

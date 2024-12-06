@@ -1,21 +1,21 @@
 <html>
 <body>
-이후 Java 버전에서 컴파일이 불가할 수 있는 Java 코드 구문을 보고합니다.
-<p>다음과 같은 문제가 보고됩니다.</p>
+Informa las construcciones de código Java que podrían fallar en compilaciones en futuras versiones de Java.
+<p>Se informan los siguientes problemas:</p>
 <ul>
-  <li>식별자로 <code>assert</code>, <code>enum</code> 또는 <code>_</code>이 사용된 경우</li>
-  <li>타입 이름으로 <code>var</code>, <code>yield</code> 또는 <code>record</code>가 제한된 식별자가 사용된 경우</li>
-  <li>정규화되지 않은 <code>yield</code> 메서드 호출</li>
-  <li><code>module-info.java</code> 내부의 <code>requires java.base</code> 문에 있는 제어자</li>
-  <li>import 문 내의 불필요한 세미콜론</li>
+  <li>Uso de <code>assert</code>, <code>enum</code> o <code>_</code> como identificador</li>
+  <li>Uso de identificadores restringidos <code>var</code>, <code>yield</code> o <code>record</code> como nombres de tipos</li>
+  <li>Llamadas al método <code>yield</code> sin calificadores</li>
+  <li>Modificadores en la declaración <code>requires java.base</code> dentro de <code>module-info.java</code></li>
+  <li>Punto y coma redundante entre declaraciones de importación</li>
 </ul>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  // 이 클래스는 이전에는 유효했지만 'yield' 식별자가 금지되면서,
-  // Java 14로 컴파일되지 않습니다.
+  // Esta clase solía ser válida, pero no compila para Java 14 ya que
+  // 'yield' se convirtió en un identificador restringido.
   public class yield {} 
 </code></pre>
-<p>해당 이슈를 제때 수정하면 향후 Java 버전으로의 마이그레이션이 간소화될 수 있습니다.</p>
+<p>Solucionar estos problemas oportunamente puede simplificar la migración a futuras versiones de Java.</p>
 <!-- tooltip end -->
 </body>
 </html>

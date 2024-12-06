@@ -1,13 +1,13 @@
 <html>
 <body>
-<code>java.util.Objects#equals</code> 호출로 대체 가능한 표현식을 보고합니다.
-<p><b>예:</b></p>
+Informa sobre expresiones que pueden reemplazarse mediante una llamada a <code>java.util.Objects#equals</code>.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void f(Object a, Object b) {
     boolean result = a != null && a.equals(b);
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   void f(Object a, Object b) {
     boolean result = Objects.equals(a, b);
@@ -15,8 +15,8 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  <code>a != null && a.equals(b)</code>와 같은 표현식을 <code>Objects.equals(a, b)</code>로 대체할 경우 의미가 약간 변경됩니다. 이 동작을 활성화 또는 비활성화하려면 <b>'a != null && a.equals(b)'와 같은 표현식을 강조 표시</b> 옵션을 사용합니다.
+  La sustitución de expresiones tales como <code>a != null && a.equals(b)</code> por <code>Objects.equals(a, b)</code> cambia ligeramente la semántica. Utiliza la opción <b>Resaltar expresiones similares a "a != null && a.equals(b)"</b> para habilitar o deshabilitar este comportamiento.
 </p>
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 7 이상인 경우에만 보고합니다.</p>
+<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 7 o superior.</p>
 </body>
 </html>

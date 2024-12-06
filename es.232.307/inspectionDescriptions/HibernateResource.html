@@ -1,26 +1,26 @@
 <html>
 <body>
-반환된 <code>org.hibernate.Session</code> 리소스가 안전하게 닫히지 않은 경우 <code>openSession()</code> 메서드 호출을 보고합니다.
+Reporta la invocación del método <code>openSession()</code> cuando el recurso <code>org.hibernate.Session</code> devuelto no se cierra de forma segura.
 <p>
-  이 검사는 기본적으로 리소스의 이름에 'close' 또는 'cleanup'이 붙는 모든 메서드에 의해 닫힐 수 있다고 가정합니다.
+  Por defecto, esta inspección asume que un recurso puede ser cerrado por cualquier método cuyo nombre contenga 'close' o 'cleanup'.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void doHibernateQuery(SessionFactory factory) {
-    Session session = factory.openSession(); // 경고
+    Session session = factory.openSession(); //Advertencia
     session.createQuery("...");
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-  다음 옵션을 사용해 검사를 구성하세요.
+  Esta inspección se puede configurar con las siguientes opciones:
 </p>
 <ul>
   <li>
-    <code>org.hibernate.Session</code> 리소스를 <code>try</code> 블록 내부에서 여는 것을 허용할지 여부를 설정합니다. 이 스타일은 <code>try</code> 블록 앞에서 리소스를 여는 것보다 장황하기 때문에 그다지 바람직하지 않습니다.
+    Si permitir abrir el recurso <code>org.hibernate.Session</code> dentro de un bloque <code>try</code>. Este estilo no es deseable ya que es más redundante que abrir el recurso antes del bloque <code>try</code>.
   </li>
   <li>
-    인수로서 전달된 리소스를 메서드 호출로 닫을 수 있는지 여부를 설정합니다.
+    Si el recurso puede ser cerrado por cualquier invocación de método que pase el recurso como argumento.
   </li>
 </ul>
 </body>

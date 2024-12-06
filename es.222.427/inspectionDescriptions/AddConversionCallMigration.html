@@ -1,25 +1,25 @@
 <html>
 <body>
-<p><code>Int</code> 유형의 식을 보고하여 Kotlin 1.9 이상에서 컴파일 오류를 발생시킵니다.</p>
+<p>Informa sobre expresiones que serán del tipo <code>Int</code>, provocando errores de compilación en Kotlin 1.9 y versiones posteriores.</p>
 
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   fun takeByte(x: Byte) {}
 
   fun foo() {
-      takeByte(1 + 1) // will be resolved to Int in 1.9
+      takeByte(1 + 1) // se resolverá a Int en 1.9
   }
 </code></pre>
 
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun takeByte(x: Byte) {}
 
   fun foo() {
-      takeByte((1 + 1).toByte()) // will be resolved to Int in 1.9
+      takeByte((1 + 1).toByte()) // se resolverá a Int en 1.9
   }
 </code></pre>
 
-<p>Kotlin 언어 레벨은 1.7부터 검사가 가능합니다.</p>
+<p>La inspección está disponible para el lenguaje Kotlin a partir del nivel 1.7.</p>
 </body>
 </html>

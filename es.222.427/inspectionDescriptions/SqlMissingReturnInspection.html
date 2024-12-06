@@ -1,8 +1,8 @@
 <html>
 <body>
-RETURN 문이 없는 함수를 보고합니다.
+Informa de las funciones que no tienen sentencias RETURN.
 
-<p>예(Oracle):</p>
+<p>Ejemplo (Oracle):</p>
 
 <pre>
 <code>CREATE FUNCTION foo RETURN int AS
@@ -10,7 +10,8 @@ BEGIN
 END;
 </code></pre>
 
-<p><code>foo</code> 함수는 정수 값을 반환해야 하지만 함수 본문은 아무 것도 반환하지 않습니다. 이 오류를 수정하려면 RETURN 문을 추가하세요(예: <code>return 1;</code>).</p>
+<p>La función <code>foo</code> debe retornar el valor entero pero el cuerpo de la función no retorna nada. Para arreglar el error,
+agrega una sentencia RETURN (por ejemplo, <code>return 1;</code>).</p>
 
 <pre><code>CREATE FUNCTION foo RETURN int AS
 BEGIN

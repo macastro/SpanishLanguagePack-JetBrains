@@ -1,34 +1,34 @@
 <html>
 <body>
-OpenAPI/Swagger 규격의 일부로 해석될 수 있는 YAML 파일을 감지합니다.
+Detecta archivos YAML que pueden interpretarse como parte de la especificación de OpenAPI/Swagger.
 <p>
-  이러한 파일은 명시적인 사양 속성은 포함하지 않으나 근처에 위치한 기본 사양 파일에서 참조됩니다.
+  Dichos archivos no contienen atributos de especificación explícitos, pero se hace referencia a ellos desde archivos de especificación primarios ubicados cerca.
 </p>
 <!-- tooltip end -->
 
 <p>
-  다음의 예시는 같은 디렉터리에 위치한 두 파일을 포함합니다. 첫 번째 파일은 일반적인 기본 사양 파일입니다.
-  두 번째 파일은 첫 번째 파일에서 참조되며 따라서 사양으로 간주될 수 있다고 제안됩니다.
+  El siguiente ejemplo contiene dos archivos localizados en el mismo directorio. El primero es un archivo de especificación primario simple.
+  El segundo se hace referencia desde el primero y, por lo tanto, se sugiere que también se considere una especificación.
 </p>
 
-<p><b>기본 사양 파일 `openapi.yaml`:</b></p>
+<p><b>Archivo de especificación primario <code>openapi.yaml</code>:</b></p>
 <pre><code>
 openapi: 3.1.0
 components:
   schemas:
     CustomSchema:
-      description: Custom schema object
+      description: Objeto de esquema personalizado
       properties:
         foo:
           $ref: 'common.components.yaml#/components/schemas/CommonSchema'
 </code></pre>
 
-<p><b>사양 파일 후보 `common.components.yaml`:</b></p>
+<p><b>Archivo candidato a especificación <code>common.components.yaml</code>:</b></p>
 <pre><code>
-components: # 'Mark file as OpenAPI specification' highlighting
+components: # Resaltado de 'Marcar el archivo como especificación de OpenAPI'
   schemas:
     CommonSchema:
-      description: Common schema object reused in several specifications
+      description: Objeto de esquema común reutilizado en varias especificaciones
 </code></pre>
 </body>
 </html>

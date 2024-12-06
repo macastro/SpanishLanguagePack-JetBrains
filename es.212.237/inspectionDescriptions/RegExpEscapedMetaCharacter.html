@@ -1,19 +1,17 @@
 <html>
 <body>
-이스케이프 처리된 메타 문자를 보고합니다.
-일부 RegExp 코드 스타일에서는 정규식 표현을 더 쉽게 이해할 수 있도록
-메타 문자를 문자 클래스 안에 넣도록 합니다.
-이 조사는 <code>[</code>, <code>]</code> 및 <code>^</code> 메타 문자에 대해 경고하지 않는데
-이는 이들 메타 문자는 문자 클래스 안에 추가적인 이스케이프 문자를 필요로 하기 때문입니다.
-<p><b>예:</b></p>
+Informa de los metacaracteres escapados.
+Algunos estilos de codificación de expresiones regulares especifican que los metacaracteres deben colocarse dentro de una clase de caracteres para que sea más fácil entender la expresión regular.
+Esta inspección no avisa sobre los metacaracteres <code>[</code>, <code>]</code> y <code>^</code> porque necesitarían un escape adicional dentro de una clase de caracteres.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   \d+\.\d+
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   \d+[.]\d+
 </code></pre>
 <!-- tooltip end -->
-<p><small>2017.1의 새로운 기능</small>
+<p><small>Novedad de 2017.1</small>
 </body>
 </html>

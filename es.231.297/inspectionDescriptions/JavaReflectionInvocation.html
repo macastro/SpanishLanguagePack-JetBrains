@@ -1,13 +1,13 @@
 <html>
 <body>
-<code>Method.invoke()</code> 및 <code>Constructor.newInstance()</code>에 제공된 인수가 <code>Class.getMethod()</code> 및 <code>Class.getConstructor()</code>에 지정된 시그니처와 일치하지 않는 경우를 보고합니다.
-<p>예:</p>
+Reporta casos en los que los argumentos proporcionados para <code>Method.invoke()</code> y <code>Constructor.newInstance()</code> no coinciden con la firma especificada en <code>Class.getMethod()</code> y <code>Class.getConstructor()</code>.
+<p>Ejemplo:</p>
 <pre><code>
   Method m = myObj.getClass().getMethod("myMethod", <b>int</b>.class);
-  <i>// 인수는 <b>int</b> 값이어야 합니다</i>
+  <i>// el argumento debe ser un valor <b>int</b></i>
   m.invoke(myObj, "<b>abc</b>");
 </code></pre>
 <!-- tooltip end -->
-<p><small>2017.2의 새로운 기능</small></p>
+<p><small>Nuevo en 2017.2</small></p>
 </body>
 </html>

@@ -1,15 +1,15 @@
 <html>
 <body>
 <p>
-  스키마에 없는 PySpark 데이터프레임 열에 액세스하려는 시도를 보고합니다.
+  Reporta intentos de acceder a columnas dataframe PySpark que no existen dentro del esquema.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code lang="Python">
-df = spark.createDataFrame(data=[(“John”, 10),
-                                 (“Anakin”, 20),
-                                 (“Luke”, 30)],
-                           schema=[“name”, “age”])
-df.select(“unknown_column”)
+df = spark.createDataFrame(data=[("John", 10),
+                                 ("Anakin", 20),
+                                 ("Luke", 30)],
+                           schema=["name", "age"])
+df.select("unknown_column")
 </code></pre>
 </body>
 </html>

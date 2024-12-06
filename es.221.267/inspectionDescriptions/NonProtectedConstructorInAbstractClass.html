@@ -1,19 +1,20 @@
 <html>
 <body>
-<code>abstract</code> 클래스의 <code>public</code> 생성자를 보고합니다.
+Informa de constructores <code>public</code> de clases <code>abstract</code>.
 <p>
-  <code>abstract</code> 클래스의 생성자는 하위 클래스의 생성자에서만 호출할 수 있으므로 생성자를 <code>public</code>으로 선언하면 혼란스러울 수 있습니다.
+  Los constructores de clases <code>abstract</code> solo se pueden llamar desde los constructores de
+  sus subclases, por lo que declararlos <code>public</code> puede resultar confuso.
 </p>
-<p>빠른 수정은 그러한 생성자를 protected로 만듭니다.</p>
-<p><b>예:</b></p>
+<p>La corrección rápida convierte dichos constructores en protegidos.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   <b>public abstract class</b> Foo {
-    <b>public</b> Foo () { // 경고: 'public' 제어자가 있습니다
+    <b>public</b> Foo () { // warning: has 'public' modifier
         /* ... */
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   <b>public abstract class</b> Foo {
     <b>protected</b> Foo () {
@@ -22,7 +23,7 @@
   }
 </code></pre>
 <!-- tooltip end -->
-<p>검사 구성:</p>
-<p>public이 아닌 클래스를 무시하려면 아래 옵션을 사용하세요.</p>
+<p>Configurar la inspección:</p>
+<p>Utiliza la opción <b>Ignorar para clases no públicas</b> siguiente para ignorar los constructores <code>public</code> en clases no públicas.</p>
 </body>
 </html>

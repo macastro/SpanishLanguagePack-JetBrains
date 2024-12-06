@@ -1,23 +1,23 @@
 <html>
 <body>
-<p><code>데이터 객체</code>로 변환할 수 있는 <code>객체</code>를 보고합니다.</p>
-<p><code>data object</code>는 <code>toString</code>, <code>equals</code> 및 <code>hashCode</code>를 자동으로 생성합니다.</p>
-<p>이 검사는 다음 3가지 경우에 <code>object</code>를 <code>data object</code>로 변환하도록 제안합니다.</p>
+<p>Informa los objetos que pueden convertirse a objetos de datos</p>
+<p>Los objetos de datos autogeneran <code>toString</code>, <code>equals</code> y <code>hashCode</code></p>
+<p>La inspección sugiere convertir objetos a objetos de datos en 2 casos:</p>
 <ul>
-    <li>사용자 지정 <code>toString</code>이 클래스의 이름을 반환하는 경우</li>
-    <li><code>object</code>가 sealed <code>class</code>/<code>interface</code>를 상속하는 경우</li>
+    <li>Cuando <code>toString</code> personalizado devuelve el nombre de la clase</li>
+    <li>Cuando el objeto hereda la clase/interfaz <code>sealed</code></li>
 </ul>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
     object Foo {
         override fun toString(): String = "Foo"
     }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
     data object Foo
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 Kotlin 언어 수준이 1.9 이상인 경우에만 보고합니다</p>
+<p>Esta inspección solo informa si el nivel de lenguaje Kotlin del proyecto o módulo es 1.9 o superior</p>
 </body>
 </html>

@@ -1,21 +1,20 @@
 <html>
 <body>
-단락 형태가 아닌 부울 'and' 및 'or'(<code>&amp;</code>
-및 <code>|</code>)의 사용 위치를 보고합니다.
-비단락 버전은 유효한 경우도 있으나 대부분의 경우에는 단락 형식(<code>&&</code> 및 <code>||</code>)이 의도되며 그러한 의도치 않은 사용은 탐지하기 어려운 버그를 초래합니다.
+Se encuentran usos de los operadores booleanos 'and' y 'or' no cortocircuitados (<code>&amp;</code>, <code>|</code>, <code>&amp;=</code>, <code>|=</code>).
+Si bien las versiones no cortocircuitadas pueden ser válidas en algunos casos, en la mayoría de los casos deben utilizarse las versiones cortocircuitadas (<code>&amp;&amp;</code> y <code>||</code>) ya que el uso no intencional de las versiones no cortocircuitadas puede generar errores difíciles de detectar.
 <p>
-  단락 버전을 사용하는 빠른 수정이 제안됩니다.
+  Se sugiere una corrección rápida para utilizar las versiones cortocircuitadas.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  void foo(boolean x, boolean y) {
-    if (x | y) { /**/ }
+  void foo(boolean x, boolean y, boolean z) {
+    if (x | y) { x |= z; }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   void foo(boolean x, boolean y) {
-    if (x || y) { /**/ }
+    if (x || y) { x = x || z; }
   }
 </code></pre>
 <!-- tooltip end -->

@@ -1,34 +1,37 @@
 <html>
 <body>
-<b>SLF4J</b> 및 <b>Log4j 2</b> 로깅 메서드에 대한 인수로 사용되는 문자열 템플릿을 보고합니다.
-<code>org.apache.logging.log4j.Logger.log()</code> 메서드 및 오버로드는 <b>모든 로그 수준</b> 옵션에만 지원됩니다.
-문자열 템플릿은 로깅 메시지가 기록되지 않는 경우에도 런타임에 평가됩니다. 이 과정은 성능에 부정적인 영향을 줍니다.
-대신에 매개변수화된 로그 메시지를 사용하는 것을 권장합니다. 이 메시지는 로깅이 비활성화되면 평가되지 않습니다.
-<p><b>예(Kotlin):</b></p>
+Informa sobre plantillas de cadena que se utilizan como argumentos de métodos de registro de <b>SLF4J</b> y <b>Log4j 2</b>.
+El método <code>org.apache.logging.log4j.Logger.log()</code> y sus sobrecargas solo son compatibles con la opción de <b>todos los niveles de registro</b>.
+Las plantillas de cadena se evalúan en tiempo de ejecución, incluso cuando el mensaje de registro no se registra; esto puede afectar negativamente al rendimiento.
+En su lugar, se recomienda utilizar un mensaje de registro parametrizado, que no se evaluará cuando el registro esté deshabilitado.
+<p><b>Ejemplo (para Kotlin):</b></p>
 <pre><code lang="kotlin">
       val variable1 = getVariable()
       logger.info("variable1: $variable1")
 </code></pre>
-<p><b>빠른 수정 적용 후(Kotlin):</b></p>
+<p><b>Después de aplicar la corrección rápida (para Kotlin):</b></p>
 <pre><code lang="kotlin">
       val variable1 = getVariable()
       logger.info("variable1: {}", variable1)
 </code></pre>
 <p>
-  제안된 대체 항목은 예를 들어 문자열 템플릿에 메서드 호출이나 대입식이 포함된 경우 원래의 코드와 동일하지 않을 수 있습니다.
+  Ten en cuenta que la sustitución sugerida puede no ser equivalente al código original, por ejemplo,
+  cuando las plantillas de cadena contienen llamadas a métodos o expresiones de asignación.
 </p>
 <!-- tooltip end -->
 <ul>
   <li>
-    <b>경고 대상</b> 목록을 사용하여 특정한 상위 로깅 수준을 무시합니다. 상위 로깅 수준은 항상 활성화할 수 있으며, 인수는 항상 평가됩니다.
+    Utiliza la lista <b>Avisar sobre</b> para ignorar determinados niveles de registro más altos. Los niveles de registro más altos pueden estar siempre habilitados y los argumentos siempre se evaluarán.
   </li>
   <li>
-    <b>기본 타입, 래퍼 또는 문자열이 있는 표현식만 포함된 경우 경고 안 함</b> 옵션을 사용하여 기본 타입, 래퍼 또는 문자열이 있는 표현식만 포함된 문자열 템플릿을 무시합니다.
-    이는 예를 들어, 컬렉션의 지연 로드를 방지하는 데 도움이 될 수 있습니다.
-    단, 기본 타입, 래퍼 또는 문자열이 있는 표현식만 포함하는 문자열을 런타임에 생성하더라도 성능에 부정적인 영향을 미칠 수 있습니다.
+    Utiliza la opción <b>No avisar cuando solo se incluyan expresiones con tipos primitivos, sus contenedores o una cadena</b> para ignorar
+    plantillas de cadena que solo contienen expresiones con tipos primitivos, sus contenedores o una cadena.
+    Por ejemplo, podría ser útil para evitar cargar colecciones de carga diferida.
+    Ten en cuenta que crear cadenas incluso solo con expresiones con tipos primitivos,
+    sus contenedores o una cadena en tiempo de ejecución puede afectar negativamente al rendimiento.
   </li>
 </ul>
 
-<p><small>2023.1의 새로운 기능</small></p>
+<p><small>Novedad de 2023.1</small></p>
 </body>
 </html>

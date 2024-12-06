@@ -1,20 +1,20 @@
 <html>
 <body>
-<p><a href="https://spring.io/projects/spring-security">Spring Security</a> 어노테이션에 참조된 Spring bean 중 확인되지 않은 bean을 보고합니다.</p>
+<p>Informa de los beans Spring no resueltos referenciados en las anotaciones de <a href="https://spring.io/projects/spring-security">Spring Security</a>.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplos:</b></p>
 <ul>
   <li>
     <pre><code>@WithUserDetails(value = "admin", userDetailsServiceBeanName = "unknownUserDetailsService")
-      // "Cannot resolve 'unknownUserDetailsService' bean" will be reported if 'unknownUserDetailsService' is not defined in the Spring model
-   </code></pre>
- </li>
+      // Si 'unknownUserDetailsService' no está definido en el modelo Spring, se informará de "No se puede resolver el bean 'unknownUserDetailsService'"
+    </code></pre>
+  </li>
   <li>
     <pre><code>@WithUserDetails(value = "admin", userDetailsServiceBeanName = "jpaUserDetailsService")
-      //"Bean must be of 'org.springframework.security.core.userdetails.UserDetailsService' type"
-      // will be reported if "jpaUserDetailsService"  bean is not of 'UserDetailsService' type
-   </code></pre>
- </li>
+      //"El bean debe ser de tipo 'org.springframework.security.core.userdetails.UserDetailsService'"
+      // Se informará si el bean "jpaUserDetailsService" no es de tipo 'UserDetailsService'
+    </code></pre>
+  </li>
 </ul>
 </body>
 </html>

@@ -1,18 +1,17 @@
 <html>
 <body>
-문자열 또는 문자 리터럴에서 정방향 슬래시(<code>/</code>) 또는 역슬래시(<code>\</code>)를 보고합니다. 이러한 문자는 파일 구분 기호로 흔히 사용되며, 하드 코딩된 경우 이식성에 문제가 발생할 수 있습니다.
+Reporta la barra diagonal (<code>/</code>) o la barra invertida (<code>\</code>) hacía adelante o hacía atrás en una cadena o en un literal de carácter. Comúnmente, estos caracteres se utilizan como separadores de archivos y la portabilidad podría verse afectada si se les codifica.
 <p>
-  이 검사는 이스케이프 시퀀스 내의 역슬래시와 '&lt;' 문자 바로 뒤 또는 '&gt;' 문자 바로 앞의 정방향 슬래시를 보고하지 않습니다. 슬래시는 종종 파일 이름이 아닌 XML 또는 HTML 태그를 나타내기 때문입니다.
-  <code>java.util.TimeZone</code> ID를 나타내는 문자열, 유효한 정규 표현식 또는 IANA 등록 MIME 미디어 유형과 동일한 문자열도 보고하지 않습니다.
+  La inspección no reportará barras invertidas dentro de secuencias de escape ni barras diagonales inmediatamente después del caracter '&lt;' o inmediatamente antes del caracter '&gt;', debido a que a menudo indican etiquetas XML o HTML en lugar de nombres de archivo. Las cadenas que representan un ID de <code>java.util.TimeZone</code>, cadenas que son expresiones regulares válidas o cadenas que igualan tipos de medios MIME registrados en IANA no serán reportadas tampoco.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   new File("C:\\Users\\Name");
 </code></pre>
 <!-- tooltip end -->
 <p>
-  이 옵션을 사용하여, 인식된 미디어 타입 집합에 <code>example/*</code>를 포함시킵니다.
-  일반적으로 example의 외부(예: <code>Content-Type</code> 헤더 내)에서 <code>example/*</code> MIME 미디어 타입을 사용하는 것은 오류입니다.
+  Utiliza la opción para incluir <code>example/*</code> en el conjunto de tipos de medios reconocidos.
+  Normalmente, el uso del tipo de medio MIME <code>example/*</code> fuera de un ejemplo (por ejemplo, en un encabezado <code>Content-Type</code>) es un error.
 </p>
 </body>
 </html>

@@ -1,23 +1,22 @@
 <html>
 <body>
-안전하지 않은 객체가 <code>@Untainted</code> 어노테이션으로 표시된 매개변수가 있는 메서드로 전달거나 어노테이션이 있는 메서드에서 반환되거나 어노테이션이 있는 필드, 매개변수 또는 지역 변수에 대입되는 경우를 보고합니다. 필드용 Kotlin <code>set</code> 및 <code>get</code> 메서드는 진입접으로 지원되지 않습니다.
+Informa de los casos en que un objeto no seguro se pasa a un método con un parámetro marcado con anotaciones <code>@Untainted</code>, devuelto por los métodos anotados o asignado a los campos, parámetros o variables locales anotados. Los métodos Kotlin `establecer` y `obtener` para los campos no se admiten como puntos de entrada.
 <p>
-  안전한 객체(같은 클래스 내)란 다음과 같습니다.
+  Un objeto seguro (en la misma clase) es:
 <ul>
-  <li>문자열 리터럴, 인터페이스 인스턴스 또는 열거형 객체</li>
-  <li><code>@Untainted</code>로 표시된 메서드를 호출한 결과</li>
-  <li>문자열 리터럴만 대입되고 안전한 이니셜라이저가 있는 private 필드</li>
-  <li>안전한 이니셜라이저가 있는 final 필드</li>
-  <li>local variable or parameter that are marked as <code>@Untainted</code> and are not assigned from non-safe objects.</li>
+  <li>un literal de cadena, instancia de interfaz u objeto de enumeración</li>
+  <li>un resultado de una llamada de un método que está marcado como <code>@Untainted</code></li>
+  <li>un campo privado, que se asigna solo con un literal de cadena y tiene un inicializador seguro</li>
+  <li>un campo final, que tiene un inicializador seguro</li>
+  <li>variable local o parámetro que está marcado como `@Untainted` y no se le asigna a partir de objetos no seguros.</li>
+  Este campo, variable local o parámetro no deben pasarse como argumentos a los métodos o usarse como calificador o deben ser primitivos, su contenedor o inmutables.
 </ul>
-<p>This field, local variable, or parameter must not be passed as arguments to methods or used as a qualifier or must be a primitive, its
-wrapper or immutable.</p>
-<p>Also, static final fields are considered as safe.</p>
+También los campos estáticos finales se consideran seguros.
 <p>
-  이 분석은 한 파일 내에서만 수행됩니다. 다른 클래스의 종속성을 처리하려면 옵션을 사용하세요.
-  이 분석은 private 또는 static 메서드까지 확장되며 심도 전달에 제한이 있습니다.
+  El análisis se realiza solo dentro de un archivo. Para procesar dependencias de otras clases, utilice las opciones.
+  El análisis se amplía a los métodos privados o estáticos y tiene un límite de propagación de profundidad.
 <p>
-  예:
+  Ejemplo:
 <pre>
 <code lang="java">
   void doSmth(boolean b) {
@@ -31,7 +30,7 @@ wrapper or immutable.</p>
 </code>
 </pre>
 <p>
-  여기에서는 <code>s</code>로 대입된 안전하지 않은 문자열이 없어 경고가 발생하지 않습니다. 반면:
+  Aquí no tenemos asignaciones de cadenas no seguras a <code>s</code>, por lo que no se produce una advertencia. Por otro lado:
 <pre>
 <code lang="java">
   void doSmth(boolean b) {
@@ -39,17 +38,17 @@ wrapper or immutable.</p>
     String s1 = "other";
     s1 = foo();
     if (b) s = s1;
-    sink(s);        // 여기서 경고
+    sink(s);        // aviso aquí
   }
-  
+
   String foo();
 
   String sink(@Untainted String s) {}
 </code>
 </pre>
 <p>
-  여기에서는 <code>foo</code> 호출 결과 대입 뒤에 있는 <code>s1</code>에 알 수 없는 상태가 있기 때문에 경고가 발생합니다.
+  Aquí tenemos una advertencia ya que <code>s1</code> tiene un estado desconocido después de la asignación del resultado de la llamada <code>foo</code>.
   <!-- tooltip end -->
-<p><small>2021.2의 새로운 기능</small></p>
+<p><small>Novedad en 2021.2</small></p>
 </body>
 </html>

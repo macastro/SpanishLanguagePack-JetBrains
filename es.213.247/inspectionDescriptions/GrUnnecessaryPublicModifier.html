@@ -1,14 +1,14 @@
 <html>
 <body>
-<p>Groovy 클래스 및 메서드는 기본적으로 <code>public</code>이므로 불필요한 <code>public</code> 제어자를 보고합니다.</p>
-<p><b>예:</b></p>
+<p>Reporta modificadores <code>public</code> innecesarios ya que las clases y métodos Groovy son <code>public</code> por defecto.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class Foo{
       public void bar(){
       }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class Foo{
       void bar(){

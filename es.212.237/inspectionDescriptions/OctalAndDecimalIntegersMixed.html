@@ -1,13 +1,13 @@
 <html>
 <body>
-단일한 배열 이니셜라이저에서 조합된 8진수 및 10진수 리터럴을 보고합니다.
-이 상황은 숫자 목록을 배열 이니셜라이저에 복사하는 경우에 발생할 수 있습니다.
-배열의 일부 숫자는 0으로 채울 수 있으며 컴파일러는 8진수로 해석합니다.
-<p><b>예:</b></p>
+Informa literales enteros octales y decimales mixtos en un solo inicializador de matriz.
+Esta situación puede ocurrir cuando copia una lista de números en un inicializador de matriz.
+Algunos números en la matriz pueden estar rellenados con cero y el compilador los interpretará como octales.
+<p><b>Ejemplo:</b></p>
 <pre><code>int[] elapsed = {1, 13, 052};</code></pre>
-<p>선행하는 0을 제거하는 빠른 수정을 적용합니다.</p>
+<p>Después de aplicar la corrección rápida que elimina un cero inicial:</p>
 <pre><code>int[] elapsed = {1, 13, 52};</code></pre>
-<p>8진수인 경우(예: 변수 인라인 뒤) 8진수를 10진수로 변환하는 다른 빠른 수정을 사용할 수 있습니다.</p>
+<p>Si es un número octal (por ejemplo, después de una variable en línea), puede utilizar otra corrección rápida que convierta octal en decimal:</p>
 <code>int[] elapsed = {1, 13, 42};</code>
 <!-- tooltip end -->
 <p>

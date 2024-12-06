@@ -1,32 +1,33 @@
 <html>
 <body>
-클래스, 메서드 또는 필드에 속하지 않는 Javadoc 주석을 보고합니다.
-<p>Javadoc 도구는 속한 곳이 없는 Javadoc 주석을 무시하며 생성된 HTML 문서에 포함하지 않습니다.</p>
-<p><b>예:</b></p>
+Informa sobre comentarios Javadoc que no pertenecen a ninguna clase, método o campo.
+La herramienta Javadoc ignora los comentarios Javadoc aislados y no los incluye en la documentación HTML que genera.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class A {
     /**
-     * Dangling comment
+     * Comentario aislado
      */
-     /**
-      * Method javadoc
-      */
-      public void m(){}
+    /**
+     * Javadoc del método
+     */
+     public void m(){}
   }
 </code></pre>
-<p>빠른 수정을 통해 해당 주석을 완전히 삭제하거나 블록 주석으로 변환할 수 있습니다. 빠른 수정 적용 후:</p>
+<p>Hay una corrección rápida disponible para eliminar por completo dichos comentarios o convertirlos en un comentario de bloque. Después de aplicar la corrección rápida:</p>
 <pre><code>
   class A {
-  /*
-    Dangling comment
-   */
-  /**
-   * Method javadoc
-   */
-  public void m(){}
-}
+    /*
+      Comentario aislado
+    */
+    /**
+     * Javadoc del método
+     */
+    public void m(){}
+  }
 </code></pre>
 <!-- tooltip end -->
-<p>
+<p>Use la opción <b>Ignorar comentario de encabezado de archivo en formato JavaDoc</b> para ignorar comentarios al principio de los archivos Java.
+Normalmente, estos son mensajes de derechos de autor.
 </body>
 </html>

@@ -1,18 +1,18 @@
 <html>
 <body>
-<code>isNaN()</code> 검사로 바꿔야 하는 <code>Float.NaN</code> 또는 <code>Double.NaN</code> 상등 검사를 보고합니다.
+Reporta una comprobación de igualdad con <code>Float.NaN</code> o <code>Double.NaN</code> que debería reemplazarse con una comprobación de <code>isNaN()</code>.
 <p>
-    IEEE 754에 따르면 NaN에 대한 상등 검사는 <code>NaN == NaN</code>일지라도 항상 <code>false</code>를 반환합니다.
-    따라서 그러한 검사는 실수일 가능성이 높습니다.
+    De acuerdo con IEEE 754, la comprobación de igualdad contra NaN siempre retorna <code>false</code>, incluso para <code>NaN == NaN</code>.
+    Por lo tanto, es probable que tal comprobación sea un error.
 </p>
-<p>빠른 수정에서는 비교를 다른 비교 기술을 사용하는 <code>isNaN()</code> 검사로 바꾸고 <code>NaN</code> 값을 올바르게 처리합니다.</p>
-<p><b>예:</b></p>
+<p>La corrección rápida reemplaza la comparación con la comprobación <code>isNaN()</code> que usa una técnica de comparación diferente y maneja correctamente los valores <code>NaN</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun check(value: Double): Boolean {
       return Double.NaN == value
   }
 </code></pre>
-<p>수정 적용 후:</p>
+<p>Después de aplicar la corrección:</p>
 <pre><code>
   fun check(value: Double): Boolean {
       return value.isNaN()

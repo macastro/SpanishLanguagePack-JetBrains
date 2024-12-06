@@ -1,14 +1,14 @@
 <html>
 <body>
-루프의 시작이나 끝에 위치한 조건에 따라 실행되는 break문을 보고하고 대신 코드를 간결하게 할 수 있도록 루프 조건을 사용하는 것을 제안합니다.
-<p>예:</p>
+Reporta saltos condicionales al inicio o al final de un bucle y sugiere añadir una condición de bucle en su lugar para acortar el código.
+<p>Ejemplo:</p>
 <pre><code>
   <b>while</b> (true) {
     <b>if</b> (i  == 23) <b>break</b>;
     i++;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   <b>while</b> (i != 23) {
     i++;

@@ -1,8 +1,8 @@
 <html>
 <body>
-정적 필드를 쓰는 EJB 클래스를 보고합니다.
+Inspecciona las clases EJB que escriben en campos estáticos.
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 @Stateless
 public class ExampleBean {
@@ -11,7 +11,7 @@ public class ExampleBean {
 
   public void setAnotherBean(AnotherBean anotherBean) {
     this.anotherBean = anotherBean;
-    counter++; // 오류: 여기서 static 필드를 쓸 수 없음
+    counter++; // Error: No se debe escribir en ningún campo estático aquí.
   }
 }
 </code></pre>

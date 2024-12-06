@@ -1,16 +1,18 @@
 <html>
 <body>
-포함하는 클래스 외의 클래스에서만 사용되는 <code>static</code> 메서드 및 필드를 보고합니다. 해당 멤버는 using 클래스로 이동할 수 있습니다.
-이 검사는 멤버의 클래스 내부의 익명 클래스에서 액세스한 factory 메서드 및 멤버를 무시합니다.
-동일 클래스에서 이름이 동일한 메서드를 호출하지만 매개변수 개수가 더 적은 편의 오버로드도 무시됩니다.
+Informa sobre los métodos <code>static</code> y campos que solo se usan desde una clase diferente a la clase que los contiene. Dichos miembros pueden moverse a la clase que los usa.
+Las inspecciones ignoran los métodos factory y los miembros a los que se accede desde una clase anónima dentro de la clase del miembro.
+Las sobrecargas de conveniencia, que llaman a un método con el mismo nombre en la misma clase pero tienen menos parámetros, también se ignoran.
 <!-- tooltip end -->
 <p>
-static 멤버가 테스트 클래스에서만 사용되는 경우 첫 번째 체크박스를 선택하여 이 검사를 억제합니다.
+Usa la primera casilla de verificación para suprimir esta inspección cuando el miembro static solo se usa desde una clase de prueba.
 <p>
-익명 클래스, 지역 클래스 또는 static이 아닌 내부 클래스 내부의 멤버 사용을 무시하려면 아래의 두 번째 체크박스를 사용합니다.
+Usa la segunda casilla de verificación a continuación para ignorar los usos de miembros desde clases internas anónimas, locales o no estáticas.
 <p>
-문제 없이 이동이 불가한 멤버에 대한 경고를 해제하려면 세 번째 체크박스를 사용합니다. 예를 들어, 시그니처가 동일한 메서드가 대상 클래스에 이미 있는 경우 혹은 메서드가 이동되면 메서드 내부에서 사용된 필드나 메서드에 액세스가 불가한 경우 등이 이에 해당됩니다.
+Usa la tercera casilla de verificación a continuación para no advertir sobre miembros que no se pueden mover sin problemas,
+por ejemplo, porque ya hay un método con una firma idéntica en la clase de destino,
+o porque no se podrá acceder a un campo o método usado dentro del método cuando se mueva este método.
 <p>
-유틸리티 클래스에 위치한 멤버를 무시하려면 네 번째 체크박스를 사용합니다.
+Usa la cuarta casilla de verificación para ignorar miembros ubicados en clases de utilidades.
 </body>
 </html>

@@ -1,23 +1,23 @@
 <html>
 <body>
-더 구체적이며 일반적으로 사용되는 클래스 또는 인터페이스의 구현 또는 확장으로 대체 가능한 클래스 또는 인터페이스를 보고합니다.
-<p>이 검사가 작동하려면 상위 클래스는 프로젝트 소스 파일에 있어야 하며 프로젝트는 IntelliJ IDEA 빌드 시스템을 사용해야 합니다.</p>
-<p><b>예:</b></p>
+Reporta clases o interfaces que pueden ser reemplazados con una implementación o extensión de una clase o interfaz más específica y comúnmente utilizada.
+<p>Para que esta inspección funcione, una superclase necesita estar en los archivos fuente del proyecto y el proyecto necesita usar el sistema de compilación de IntelliJ IDEA.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class MyInheritor implements A {} // A 참조에 제안된 B
+  clase MyInheritor implements A {} // Se sugiere B en la referencia A
 
-  interface A {}
+  interfaz A {}
 
-  abstract class B implements A {}
+  clase abstracta B implements A {}
 
-  abstract class C1 extends B {}
-  abstract class C2 extends B {}
-  abstract class C3 extends B {}
-  abstract class C4 extends B {}
-  abstract class C5 extends B {}
+  clase abstracta C1 extiende B {}
+  clase abstracta C2 extiende B {}
+  clase abstracta C3 extiende B {}
+  clase abstracta C4 extiende B {}
+  clase abstracta C5 extiende B {}
 </code></pre>
 <!-- tooltip end -->
-<p>기본적으로 이 검사는 에디터 내 이슈를 강조 표시하지 않으며, 빠른 수정만을 제공합니다.</p>
-<p><small>2017.2의 새로운 기능</small>
+<p>Por defecto, esta inspección no resalta problemas en el editor, pero sólo proporciona una solución rápida.</p>
+<p><small>Nuevo en 2017.2</small>
 </body>
 </html>

@@ -1,17 +1,18 @@
 <html>
 <body>
-<code>static</code> 내부 클래스로 안전하게 바꿀 수 있는 익명 클래스를 보고합니다.
-익명 클래스는 주변 메서드의 로컬 클래스 또는 둘러싸는 인스턴스를 명시적으로 참조하지 않는 경우 <code>static</code> 내부 클래스일 수 있습니다.
+Reporta clases anónimas que se pueden reemplazar de forma segura con clases internas <code>static</code>.
+Una clase anónima puede ser una clase interna <code>static</code> si no hace referencia explícitamente a su instancia envolvente o clases locales desde su método envolvente.
 <p>
-<code>static</code> 내부 클래스는 둘러싸는 인스턴스에 대한 묵시적 참조를 유지하지 않습니다.
-이를 통해 메모리 누수의 일반적 원인이 방지되며, 클래스 인스턴스당 메모리 사용량이 감소합니다.
+Una clase interna <code>static</code> no mantiene una referencia implícita a su instancia envolvente.
+Esto evita una causa común de fugas de memoria y utiliza menos memoria por instancia de clase.
 </p>
 <p>
-  Java 18부터 이 참조가 사용되지 않는 경우, 직렬화 가능한 익명 클래스만이 둘러싸는 인스턴스에 대한
-묵시적 참조를 유지합니다. 따라서 모듈 언어 수준이 Java 18 이상인 경우 이 검사는 직렬화 가능한 클래스만 보고합니다.
+Desde Java 18, únicamente las clases anónimas serializables mantienen una referencia implícita a su instancia envolvente,
+si no se utiliza esta referencia. Por lo tanto, si el nivel del lenguaje del módulo es Java 18 o superior,
+esta inspección reporta únicamente clases serializables.
 </p>
-<p>빠른 수정에서는 익명 클래스를 명명된 <code>static</code> 내부 클래스로 추출합니다.</p>
-<p><b>예:</b></p>
+<p>La solución rápida extrae la clase anónima en una clase interna <code>static</code> con nombre.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void sample() {
     Thread thread = new Thread(new Runnable() {
@@ -21,7 +22,7 @@
     });
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicar la solución rápida:</p>
 <pre><code>
   void sample() {
     Thread thread = new Thread(new Task());

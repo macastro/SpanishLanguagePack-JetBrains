@@ -1,18 +1,18 @@
 <html>
 <body>
-<code>java.lang.String.concat()</code> 호출을 보고합니다.
+Informa de las llamadas a <code>java.lang.String.concat()</code>.
 <p>
-  메서드가 상수 인수로 상수에서 호출된 경우 명확성과 성능 개선 가능성을 위해 해당 호출을 <code>+</code> 연산자로 바꿀 수 있습니다.</p>
-<p><b>예:</b></p>
+  Dichas llamadas se pueden sustituir por el operador <code>+</code> para más claridad y, posiblemente, para mayor rendimiento si el método se ha invocado sobre una constante con un argumento constante.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  String foo(String name) {
-    return name.concat("foo");
+  String foo(String nombre) {
+    return nombre.concat("foo");
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
-  String foo(String name) {
-    return name + "foo";
+  String foo(String nombre) {
+    return nombre + "foo";
   }
 </code></pre>
 <!-- tooltip end -->

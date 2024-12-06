@@ -1,14 +1,14 @@
 <html>
 <body>
-다음과 같은 EJB 사양 위반 사례를 보고합니다.
+Se encontraron las siguientes violaciones a la especificación EJB:
 <ul>
-  <li>EJB 인터페이스가 올바른 EJB 인터페이스를 확장하지 않는 경우</li>
-  <li>EJB 인터페이스가 public 또는 final이 아닌 경우</li>
+  <li>La interfaz EJB no extiende la interfaz EJB correcta</li>
+  <li>La interfaz EJB no es pública ni final</li>
 </ul>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-public interface EntityRemote extends Runnable {} // 오류: 클래스가 'javax.ejb.EJBObject'를 확장해야 합니다
+public interface EntityRemote extends Runnable {} // Error: La clase debe extenderse de `javax.ejb.EJBObject`
 </code></pre>
 </body>
 </html>

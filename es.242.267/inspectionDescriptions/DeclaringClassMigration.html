@@ -1,23 +1,23 @@
 <html>
 <body>
-1.9부터 컴파일링 오류를 일으키는 열거형에서의 'declaringClass' 프로퍼티 호출을 보고합니다.
-<p>'Enum.getDeclaringClass'는 일반적으로 해결을 통해서는 보이지 않는 '숨겨진' Java 함수입니다. 그러나 통합 프로퍼티를 통해 표시되며 이는 프런트엔드 버그입니다.</p>
-<p><b>세부 정보:</b> <a href="https://youtrack.jetbrains.com/issue/KT-49653">KT-49653 Enum.declaringClass 통합 프로퍼티의 지원 중단 및 제거</a></p>
-<p>빠른 수정에서는 호출을 'declaringJavaClass'로 바꿉니다.</p>
-<p><b>예:</b></p>
+Informa llamadas a la propiedad 'declaringClass' en tipos Enum, que producirán un error de compilación desde la versión 1.9.
+<p>'Enum.getDeclaringClass' se encuentra entra las funciones Java "ocultas", que no se ven normalmente al resolver. Sin embargo, es visible mediante una propiedad sintética, lo que es un fallo de interfaz.</p>
+<p><b>Más detalles:</b> <a href="https://youtrack.jetbrains.com/issue/KT-49653">KT-49653 Desuso y eliminación de la propiedad sintética Enum.declaringClass</a></p>
+<p>La corrección rápida reemplaza la llamada con 'declaringJavaClass'.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun &lt;E: Enum&lt;E&gt;&gt; foo(values: Array&lt;E&gt;) {
     EnumSet.noneOf(values.first().declaringClass)
   }
 </code></pre>
 
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun &lt;E: Enum&lt;E&gt;&gt; foo(values: Array&lt;E&gt;) {
     EnumSet.noneOf(values.first().declaringJavaClass)
   }
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 Kotlin 언어 수준이 1.7 이상인 경우에만 보고합니다.</p>
+<p>Esta inspección solo se informa si el nivel de lenguaje Kotlin del proyecto o módulo es 1.7 o superior.</p>
 </body>
 </html>

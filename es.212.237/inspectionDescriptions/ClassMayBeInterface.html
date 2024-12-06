@@ -1,44 +1,43 @@
 <html>
 <body>
-인터페이스로 변환할 수 있는 <code>abstract</code> 클래스를 보고합니다.
-<p>Java는 다중 클래스 상속을 지원하지 않지만, 클래스는 다중 인터페이스를 구현할 수 있으므로 클래스 대신 인터페이스를 사용하는 것이 좋습니다.</p>
-<p>클래스는 (Object 이외의) 상위 클래스가 없거나, <code>public static final</code> 필드, <code>public abstract</code> 메서드 및 <code>public</code> 내부 클래스만 가지는 경우 인터페이스로 변환될 수 있습니다.
+Informa de clases <code>abstract</code> que pueden convertirse en interfaces.
+<p>Es preferible utilizar interfaces en lugar de clases puesto que Java no soporta la herencia múltiple de clases, mientras que una clase puede implementar múltiples interfaces.</p>
+<p>Una clase puede convertirse en una interfaz si no tiene superclases (aparte de Object), sólo tiene campos <code>public static final</code>, métodos <code>public abstract</code> y clases internas <code>public</code>.
 <!-- tooltip end -->
 
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
-abstract class Example {
-    public static final int MY_CONST = 42;
+clase abstracta Ejemplo {
+    public static final int MI_CONSTANTE = 42;
     public abstract void foo();
 }
 
-class Inheritor extends Example {
+clase Heredera extends Ejemplo {
     @Override
     public void foo() {
-        System.out.println(MY_CONST);
+        System.out.println(MI_CONSTANTE);
     }
 }
 </code></pre>
 
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 
 <pre><code>
-interface Example {
-    int MY_CONST = 42;
+interfaz Ejemplo {
+    int MI_CONSTANTE = 42;
     void foo();
 }
 
-class Inheritor implements Example {
+clase Heredera implementa Ejemplo {
     @Override
     public void foo() {
-        System.out.println(MY_CONST);
+        System.out.println(MI_CONSTANTE);
     }
 }
 </code></pre>
-<p>검사 구성:</p>
+<p>Configurar la inspección:</p>
 <p>
-  <code>default</code> 메서드로 변환될 수 있는 <code>static</code> 메서드 및 추상이 아닌 메서드를 포함하는 클래스만 보고하려면
-<b>Java 8을 사용할 때 추상이 아닌 메서드가 포함된 클래스 보고</b> 옵션을 사용하세요 (언어 수준 8 이상에서만 적용 가능).
+  Usa la opción <b>Informar de clases que contienen métodos no abstractos al usar Java 8</b> para informar sólo sobre las clases con métodos <code>static</code> y métodos no abstractos que se pueden convertir en métodos <code>default</code> (sólo aplicable a nivel de lenguaje 8 o superior).
 <p>
 
 </body>

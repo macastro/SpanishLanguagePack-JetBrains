@@ -1,14 +1,14 @@
 <html>
 <body>
-테스트 버전 API, 즉 <code>@PreviewFeature</code> 어노테이션이 추가된 <code>java.*</code> 혹은 <code>javax.*</code> 네임스페이스 내의 모듈, 패키지, 클래스, 인터페이스, 메서드, 생성자, 필드 혹은 열거형 상수의 사용을 보고합니다.
+Informa de usos de API de funciones de vista previa, es decir, un módulo, paquete, clase, interfaz, método, constructor, campo o constante de enumeración en el espacio de nombres <code>java.*</code> o <code>javax.*</code> anotado con <code>@PreviewFeature</code>.
 <p>
-  미리보기 기능은 지정과 구현이 완료된 Java 언어, Java 가상머신, 또는 Java SE API의 새로운 기능이지만 아직 정식으로 도입되지 않았습니다. 미리보기 기능의 개념은 <a href="https://openjdk.org/jeps/12">JEP 12</a>에서 정의됩니다.
+  Una función de vista previa es una nueva función del lenguaje Java, la máquina virtual Java o la API Java SE que está completamente especificada, implementada por completo y aún es impermanente. La noción de una función de vista previa se define en <a href="https://openjdk.org/jeps/12">JEP 12</a>.
 </p>
 <p>
-  코드의 일부가 테스트 버전 API에 의존하는 경우 API의 기능이 변경되거나 제거되면 향후 JDK 버전에서 컴파일되지 않을 수 있습니다.
+  Si alguna parte del código depende de una API de vista previa, puede dejar de compilarse en versiones futuras de JDK si la función se cambia o elimina.
 </p>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 <b>테스트 버전</b> 이상인 경우에만 보고합니다.</p>
-<p><small>2021.1의 새로운 기능</small></p>
+<p>La inspección solo informa si el nivel de idioma del proyecto o módulo es <b>Vista previa</b>.</p>
+<p><small>Nuevo en 2021.1</small></p>
 </body>
 </html>

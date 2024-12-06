@@ -1,5 +1,25 @@
 <html>
 <body>
-subject 인수를 삽입하여 간소화할 수 있는 <b>when</b> 표현식을 보고합니다.
+Informa una expresión <code>when</code> que puede ser simplificada introduciendo un argumento de sujeto.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun test(obj: Any): String {
+      return when {
+          obj is String -> "string"
+          obj is Int -> "int"
+          else -> "unknown"
+      }
+  }
+</code></pre>
+<p>La solución rápida introduce un argumento de sujeto:</p>
+<pre><code>
+  fun test(obj: Any): String {
+      return when (obj) {
+          is String -> "string"
+          is Int -> "int"
+          else -> "unknown"
+      }
+  }
+</code></pre>
 </body>
 </html>

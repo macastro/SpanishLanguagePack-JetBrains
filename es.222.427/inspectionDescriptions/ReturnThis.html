@@ -1,11 +1,12 @@
 <html>
 <body>
-<code>this</code>를 반환하는 메서드를 보고합니다.
+Informa sobre los métodos que devuelven <code>this</code>.
 <p>
-  그러한 반환은 유효하지만 거의 필요하지 않으며, 보통 메서드가 유사한 메서드 호출 체인(예: <code>buffer.append("foo").append("bar").append("baz")</code>)의 일부로 사용되도록 의도했음을 나타냅니다.
-  이러한 체인은 다양한 코드 표준에서 인정되지 않습니다.
+  Si bien dicha devolución es válida, rara vez es necesaria y generalmente indica que el método está destinado a usarse
+  como parte de una cadena de llamadas a métodos similares (por ejemplo, <code>buffer.append("foo").append("bar").append("baz")</code>).
+  Muchas normas de codificación desaprueban dichas cadenas.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public Builder append(String str) {
     // [...]

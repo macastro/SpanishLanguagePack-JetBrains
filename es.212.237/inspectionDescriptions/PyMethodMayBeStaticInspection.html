@@ -1,27 +1,27 @@
 <html>
 <body>
-<p>클래스 인스턴스를 생성할 필요가 없어 static으로 만들 수 있는 모든 메서드를 보고합니다.</p>
-<p><b>예:</b></p>
-<pre style="font-family: monospace">
+<p>Informa sobre cualquier método que no requiere la creación de una instancia de clase y que se puede hacer estático.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
 class MyClass(object):
     def my_method(self, x):
         print(x)
-</pre>
-<p><b>메소드로부터 함수 생성</b> 빠른 수정이 적용되면 코드는 다음과 같이 변경됩니다:</p>
-<pre style="font-family: monospace">
+</code></pre>
+<p>Si se aplica una corrección rápida <b>Hacer función desde método</b>, el código cambia a:</p>
+<pre><code>
 def my_method(x):
     print(x)
 
 
 class MyClass(object):
     pass
-</pre>
-<p><b>메소드를 정적으로 만들기</b> 빠른 수정을 선택한 경우 <code>@staticmethod</code> 데코레이터가 추가됩니다:</p>
-<pre style="font-family: monospace">
+</code></pre>
+<p>Si selecciona la corrección rápida <b>Hacer método static</b>, se agrega el decorador <code>@staticmethod</code>:</p>
+<pre><code>
 class MyClass(object):
     @staticmethod
     def my_method(x):
         print(x)
-</pre>
+</code></pre>
 </body>
 </html>

@@ -1,18 +1,19 @@
 <html>
 <body>
-다음과 같은 경우 특정한 이름을 가진 메서드를 보고합니다:
+Informa sobre los métodos con determinados nombres en los siguientes casos:
 <ul>
-  <li>메서드의 이름이 표준 라이브러리의 몇몇 잘 알려진 인터페이스 메서드의 이름과 일치하는 경우</li>
-  <li>시그니처가 해당하는 인터페이스 메서드의 시그니처와 일치하지 않는 경우</li>
+  <li>el nombre del método coincide con el nombre de varios métodos de interfaz conocidos de la biblioteca estándar</li>
+  <li>la firma no coincide con la firma del método de interfaz correspondiente</li>
 </ul>
-<p>이러한 메서드는 리시버 타입이 표준 라이브러리의 인터페이스를 충족하도록 의도되었지만 메서드 시그니처에 실수로 인해 실패하였음을 나타냅니다.</p>
-<p>예:</p>
+<p>Dichos métodos podrían indicar que el tipo de receptor está diseñado para cumplir una interfaz de la biblioteca estándar,
+  pero falla al hacerlo debido a un error en la firma del método.</p>
+<p>Ejemplo:</p>
 <pre><code>type MyReader []byte
 
 func (r MyReader) ReadByte(data []byte) (byte, error) {
 }</code></pre>
-<p><code>io.ByteReader</code>를 구현하려는 시도였으나 시그니처가 잘못되어 의심스러운 사용 사례입니다.
-  더 올바른 버전은 다음과 같습니다:</p>
+<p>El uso es sospechoso porque parece un intento de implementar <code>io.ByteReader</code> pero la firma es incorrecta.
+  Una versión más correcta sería la siguiente:</p>
 <pre><code>type MyReader []byte
 
 func (r MyReader) ReadByte() (byte, error) {

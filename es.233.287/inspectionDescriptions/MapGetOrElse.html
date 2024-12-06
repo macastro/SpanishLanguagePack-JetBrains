@@ -1,12 +1,13 @@
 <html>
 <body>
-<p><code>Option</code>에서 호출한 <code>map</code> 및 <code>getOrElse</code>를 보고하고 <code>fold</code>로 바꿀 것을 제안합니다.</p>
-<p><b>예:</b></p>
+<p>Reporta y sugiere reemplazar <code>map</code> y <code>getOrElse</code> en <code>Option</code>
+  por <code>fold</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   def p(x: Int): Boolean = ???
   Option(0).map(p).getOrElse(false)
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   def p(x: Int): Boolean = ???
   Option(0).fold(false)(p)

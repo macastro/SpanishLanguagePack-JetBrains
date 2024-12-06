@@ -1,17 +1,20 @@
 <html>
 <body>
-곧 사용할 수 없게 되는 <code>expectException()</code> 사용 사례를 보고합니다.
+Reporta usos desaprobados de <code>expectException()</code>.
 <p>
+  El soporte para el uso del método <code>expectException()</code> con
   <code>\PHPUnit\Framework\Error\Deprecated</code>,
- <code>\PHPUnit\Framework\Error\Error</code>,
- <code>\PHPUnit\Framework\Error\Notice</code> 및 <code>\PHPUnit\Framework\Error\Warning</code>을 사용한 <code>expectException()</code> 메서드는 곧 사용할 수 없게 되며 PHPUnit 10에서 제거됩니다.
+  <code>\PHPUnit\Framework\Error\Error</code>,
+  <code>\PHPUnit\Framework\Error\Notice</code> y
+  <code>\PHPUnit\Framework\Error\Warning</code> está desaprobado y se eliminará en PHPUnit 10.
 </p>
 <p>
-  대신 <code>expectDeprecation()</code>, <code>expectError()</code>, <code>expectNotice()</code> 및 <code>expectWarning()</code> 메서드를 사용해야합니다.
+  En su lugar, se deben utilizar los métodos <code>expectDeprecation()</code>, <code>expectError()</code>, <code>expectNotice()</code> y
+  <code>expectWarning()</code>.
 </p>
 
 <p>
-  자세한 내용은 <a href="https://phpunit.readthedocs.io/en/9.0/writing-tests-for-phpunit.html#testing-php-errors-warnings-and-notices">Testing PHP Errors, Warnings, and Notices (phpunit.readthedocs.io)</a>(을)를 참고하세요.
+  Para más detalles, consulta <a href="https://phpunit.readthedocs.io/es/latest/writing-tests-for-phpunit.html#prueba-de-errores-advertencias-y-avisos-de-php">Testing PHP Errors, Warnings, and Notices (phpunit.readthedocs.io)</a>.
 </p>
 </body>
 </html>

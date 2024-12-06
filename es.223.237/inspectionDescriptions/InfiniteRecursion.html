@@ -1,11 +1,11 @@
 <html>
 <body>
-예외가 던져지지 않는 한 자신을 무한으로 호출하는 메서드를 보고합니다.
+Informa del método que se llama a sí mismo infinitamente a menos que se lance una excepción.
 <p>
-  이 검사에서 보고된 메서드는 정상적으로 반환할 수 없습니다.
-  그러한 동작은 의도된 것일 수 있으나 많은 경우에 실수입니다.
+  Los métodos informados por esta inspección no pueden devolver normalmente.
+  Si bien este comportamiento puede ser intencionado, en muchos casos es solo un descuido.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>  int baz() {
       return baz();
   }</code></pre>

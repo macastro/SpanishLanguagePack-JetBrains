@@ -1,7 +1,7 @@
 <html>
 <body>
-무한 스트림을 소비하는 비단락 회로 연산을 보고합니다. 예외를 던져 이러한 연산을 완료할 수 있습니다.
-<p>예:</p>
+Informa de operaciones que no sean de cortocircuito que consumen un flujo infinito. Estas operaciones solamente se pueden completar lanzando una excepción.
+<p>Ejemplo:</p>
 <pre><code>
   Stream.iterate(0, i -> i + 1).collect(Collectors.toList())
 </code></pre>

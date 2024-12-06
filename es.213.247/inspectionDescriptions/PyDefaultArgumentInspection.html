@@ -1,20 +1,18 @@
 <html>
 <body>
-<p>인수 기본 값에서 리스트 또는 딕셔너리로서의 가변 값이 탐지된 경우 문제를 보고합니다. <br/>
-  기본 인수 값은 함수 정의 시 한 번만 평가됩니다.
-  즉, 인수의 기본값을 변경하면 
-  그 함수의 모든 후속 호출에 영향을 미칩니다.</p>
-<p><b>예:</b></p>
-<pre style="font-family: monospace">
+<p><span>Informa de un problema cuando un valor mutable como una lista o un diccionario es detectado en un valor por defecto para un argumento.</span> <br/>
+Los valores por defecto de los argumentos sólo se evalúan una vez durante la definición de la función, lo que significa que la modificación del valor por defecto del argumento afectará a todas las llamadas posteriores a esa función.</p>
+<p><span>Ejemplo:</span></p>
+<pre><code>
 def func(s, cache={}):
     cache[s] = None
-</pre>
-<p>빠른 수정이 적용되면 코드는 다음과 같이 변경됩니다:</p>
-<pre style="font-family: monospace">
+</code></pre>
+<p>Cuando se aplica la solución rápida, el código cambia a:</p>
+<pre><code>
 def func(s, cache=None):
     if cache is None:
         cache = {}
     cache[s] = None
-</pre>
+</code></pre>
 </body>
 </html>

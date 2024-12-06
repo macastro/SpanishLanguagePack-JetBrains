@@ -1,16 +1,37 @@
 <html>
 <body>
-<code>StringBuffer.append()</code>,
-<code>StringBuilder.append()</code> 또는 <code>Appendable.append()</code>의 인수로 사용된 <code>String</code> 연결을 보고합니다.
+Informa de la concatenación de cadena <code>String</code> utilizada como argumento a <code>StringBuffer.append()</code>,
+<code>StringBuilder.append()</code> o <code>Appendable.append()</code>.
 <p>
-  해당 호출은 기존 <code>StringBuffer/Builder/Appendable</code>의 체인 append 호출로 유용하게 변환되어 <code>StringBuffer/Builder</code> 할당의 추가  비용을 줄일 수 있습니다.
-  이 검사는 컴파일 타임 평가된 <code>String</code> 연결을 무시합니다. 이러한 연결에서는 변환으로 인해 성능이 악화될 뿐입니다.
+  Tales llamadas pueden convirtirse ventajosamente en llamadas de anexión encadenadas en el <code>StringBuffer/Builder/Appendable</code> existente, lo que ahorra el coste de una asignación extra de <code>StringBuffer/Builder</code>.
+  Esta inspección ignora las concatenaciones de <code>String</code> evaluadas en tiempo de compilación, en cuyo caso la conversión solo empeoraría el rendimiento.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void bar(StringBuilder builder, String name) {
-    builder.append("Hello," + name);    //경고
-    builder.append("Hello," + "world"); //경고 없음
+    builder.append("Hola, " + name);    //advertencia
+    builder.append("Hola, " + "mundo"); //sin advertencia
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>
+
+<html>
+<body>
+Informa de la concatenación de <code>String</code> utilizada como argumento a <code>StringBuffer.append()</code>,
+<code>StringBuilder.append()</code> o <code>Appendable.append()</code>.
+<p>
+  Tales llamadas pueden convertirse ventajosamente en llamadas de anexión encadenadas en el <code>StringBuffer/Builder/Appendable</code> existente, ahorrando el coste de una asignación extra de <code>StringBuffer/Builder</code>.
+  Esta inspección ignora las concatenaciones de <code>String</code> evaluadas en tiempo de compilación, en cuyo caso la conversión solo empeoraría el rendimiento.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void bar(StringBuilder builder, String name) {
+    builder.append("Hola, " + name);    //advertencia
+    builder.append("Hola, " + "mundo"); //sin advertencia
   }
 </code></pre>
 <!-- tooltip end -->

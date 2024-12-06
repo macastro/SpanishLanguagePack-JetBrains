@@ -1,17 +1,17 @@
 <html>
 <body>
-<code>switch</code> 문을 대상으로 하는 <code>continue</code> 문을 보고합니다. PHP 7.3 이상에서는 이러한 사례는 대부분 프로그래밍 실수로 간주되어 곧 사용할 수 없게 되며 <code>E_WARNING</code>을 발생시킵니다.
+Notifica las sentencias <code>continue</code> que están dirigidas a sentencias <code>switch</code>. En PHP 7.3 y posteriores, tales usos están obsoletos y emitirán un <code>E_WARNING</code>, ya que es muy probable que sean el resultado de un error de programación.
 <!-- tooltip end -->
 <ul>
   <li>
-    PHP에서는 이러한 <code>continue</code> 문은 <code>break</code> 문과 동일합니다. 즉, 이러한 구문은 현재 <code>switch</code> 구조의 실행을 종료합니다.
- </li>
+    En PHP, tales sentencias <code>continue</code> son equivalentes a <code>break</code>, es decir, terminan la ejecución de la estructura <code>switch</code> actual.
+  </li>
   <li>
-    다른 언어에서 이러한 <code>continue</code> 문은 PHP에서 <code>continue 2</code>로 동작합니다. 이 구문은 실행을 더 높은 수준의 제어 구조로 가져갑니다 (예: 외부 루프의 다음 반복).
- </li>
+    En otros lenguajes, tales sentencias <code>continue</code> se comportan como <code>continue 2</code> en PHP, es decir, llevan la ejecución a una estructura de control de nivel superior (por ejemplo, la siguiente iteración de un bucle exterior).
+  </li>
 </ul>
 <p>
-  자세한 내용은 <a href="https://www.php.net/manual/en/control-structures.continue.php">continue (php.net)</a>, <a href="https://www.php.net/manual/en/control-structures.break.php">break (php.net)</a> 및 <a href="https://www.php.net/manual/en/control-structures.switch.php">switch (php.net)</a>(을)를 참고하세요.
+  Consulte <a href="https://www.php.net/manual/es/control-structures.continue.php">continue (php.net)</a>, <a href="https://www.php.net/manual/es/control-structures.break.php">break (php.net)</a> y <a href="https://www.php.net/manual/es/control-structures.switch.php">switch (php.net)</a> para obtener más información.
 </p>
 </body>
 </html>

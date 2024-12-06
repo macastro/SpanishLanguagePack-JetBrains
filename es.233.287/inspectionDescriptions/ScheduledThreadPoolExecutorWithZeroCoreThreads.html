@@ -1,15 +1,15 @@
 <html>
 <body>
-<code>setCorePoolSize</code> 메서드 또는 객체 생성자를 통해 <code>corePoolSize</code>가 0으로 설정된 <code>java.util.concurrent.ScheduledThreadPoolExecutor</code> 인스턴스를 보고합니다.
+Reporta cualquier instancia de <code>java.util.concurrent.ScheduledThreadPoolExecutor</code> en la que se estableció <code>corePoolSize</code> en cero mediante el método <code>setCorePoolSize</code> o el constructor del objeto.
 <p>
-  코어 스레드가 0인 <code>ScheduledThreadPoolExecutor</code>는 아무것도 실행하지 않습니다.
+  Un <code>ScheduledThreadPoolExecutor</code> con cero subprocesos centrales no ejecutará nada.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void foo(int corePoolSize) {
       if (corePoolSize != 0) return;
-      ThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(corePoolSize); // 경고
-      executor.setCorePoolSize(corePoolSize); // 경고
+      ThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(corePoolSize); // advertencia
+      executor.setCorePoolSize(corePoolSize); // advertencia
   }
 </code></pre>
 </body>

@@ -1,17 +1,17 @@
 <html>
 <body>
-<code>Object.finalize()</code> 메서드를 재정의하는 경우를 보고합니다.
-<p><code>Object.finalize()</code> 문서에 따르면 다음과 같습니다.</p>
+Informes anulando el método <code>Object.finalize()</code>.
+<p>De acuerdo con la documentación de <code>Object.finalize()</code>:</p>
 <blockquote>
   <p>
-    종료화 메커니즘은 본질적으로 문제가 있습니다. 종료화는 성능 이슈, 교착상태, 중단을 초래할 수 있습니다. 파이널라이저 내 오류는 리소스 유출을 초래할 수 있습니다. 종료화가 더는 필요하지 않은 경우에도 이를 취소할 방법은 없으며, 서로 다른 객체의 <code>finalize</code> 메서드가 호출될 때 순서가 지정되지 않습니다. 더욱이 종료자의 시점에 관해 보증할 수 없습니다. <code>finalize</code> 메서드는 무기한 지연 후에야 최종화 가능한 객체에서 호출될 수 있습니다.
+    El mecanismo de finalización es inherentemente problemático. La finalización puede ocasionar problemas de rendimiento, interbloqueos y bloqueos. Los errores en los finalizadores pueden ocasionar fugas de recursos; no hay forma de cancelar la finalización si ya no es necesaria; y no se especifica ningún orden entre las llamadas a los métodos <code>finalize</code> de diferentes objetos. Además, no hay garantías con respecto al momento de la finalización. El método <code>finalize</code> podría llamarse en un objeto finalizable solo después de una demora indefinida, si es que acaso.
   </p>
 </blockquote>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configurar la inspección:</p>
 <ul>
   <li>
-    <b>자명한 'finalize()' 구현 무시</b> 옵션을 사용하여 빈 메서드 본문 또는 <code>false</code>로 평가되고 컴파일 시간 상수인 조건이 있는 <code>if</code> 문만을 포함하는 본문의 <code>finalize()</code> 구현을 무시합니다. 성능상의 이유로 자명하지 않은 <code>finalize()</code>를 하위 클래스의 빈 구현으로 재정의하는 편이 더 유용할 수 있습니다. 또한 빈 final <code>finalize()</code> 구현은 하위 클래스의 재정의를 방지하는 데 사용될 수도 있습니다.
+    Utilice la opción <b>Ignorar implementaciones triviales 'finalize()'</b> para ignorar las implementaciones <code>finalize()</code> con un cuerpo de método vacío o un cuerpo que contiene solo declaraciones de <code>if</code> que tienen una condición que se evalúa en <code>false</code> y es una constante de tiempo de compilación. Por razones de rendimiento, puede ser beneficioso anular un <code>finalize()</code> no trivial con una implementación vacía en una subclase. Una implementación final vacía <code>finalize()</code> también se puede usar para evitar que las subclases anulen.
   </li>
 </ul>
 </body>

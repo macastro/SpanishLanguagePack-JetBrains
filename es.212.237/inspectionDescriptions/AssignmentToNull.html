@@ -1,20 +1,16 @@
 <html>
 <body>
-선언 외부에서 <code>null</code>에 대입된 변수를 보고합니다.
-<p>Java에서 <code>null</code>의 주요 목적은 초기화되지 않은 참조 변수를
-  나타내는 것입니다. 드문 경우이지만, 변수를 명시적으로 <code>null</code>에 대입하면
-  가비지 컬렉션에 도움이 될 수 있습니다. 그러나 누락, 미지정 또는 잘못된 값이나 미발견 요소를 나타내는 데 <code>null</code>을
-  사용하는 것은 좋지 않은 사례로 간주되며, 코드에서 <code>NullPointerExceptions</code>가 발생하기 쉽습니다.
-  대신, 의도된 의미를 가진 sentinel 객체를 정의하는 것을 고려하거나
-  <code>Optional</code> 같은 라이브러리 타입을 사용하여 값의 부재를 나타내세요.</p>
-<p><b>예:</b></p>
+Informa sobre las variables que se asignan a <code>null</code> fuera de una declaración.
+<p>El propósito principal de <code>null</code> en Java es denotar variables de referencia no inicializadas. En casos excepcionales, asignar una variable explícitamente a <code>null</code> es útil para ayudar a la recolección de basura. Sin embargo, utilizar <code>null</code> para denotar un valor ausente, no especificado o no válido o un elemento no encontrado se considera una mala práctica y puede hacer que su código sea más propenso a generar <code>NullPointerExceptions</code>.
+En su lugar, considere definir un objeto centinela con la semántica prevista o utilizar tipos de biblioteca como <code>Optional</code> para denotar la ausencia de un valor.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   Integer convert(String s) {
     Integer value;
     try {
       value = Integer.parseInt(s);
     } catch (NumberFormatException e) {
-      // 경고: null은 '잘못된 값'을 나타내는 데 사용됩니다
+      // Aviso: null se utiliza para denotar un 'valor no válido'
       value = null;
     }
     return value;
@@ -22,7 +18,7 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-<b>필드에 대한 대입 무시</b> 옵션을 사용하여 필드에 대한 대입을 무시합니다.
+Utilice la opción <b>Ignorar asignaciones a campos</b> para ignorar las asignaciones a campos.
 </p>
 
 </body>

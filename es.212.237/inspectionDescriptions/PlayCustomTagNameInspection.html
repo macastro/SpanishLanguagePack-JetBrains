@@ -6,10 +6,10 @@
   <code>app/views/tags</code> 디렉터리에 저장된 간단한 템플릿 파일을 사용하여 애플리케이션용 사용자 지정 태그를 생성할 수 있습니다.
   템플릿의 파일 이름이 태그 이름으로 사용됩니다.
   예를 들어, <code>hello</code> 태그를 생성하려면 <code>app/views/tags/hello.html</code> 파일을 생성하면 됩니다.
-  태그 직접 참조: <code>#{hello /}</code>.
+  <code>#{hello /}</code>와 같이 태그를 직접 참조할 수 있습니다.
 </p>
 
-<p>검사는 <code>app/views/tags/hello.html</code>가 존재하지 않을 경우 <code>#{hello /}</code> 참조를 보고합니다.</p>
+<p>이 검사에서는 <code>app/views/tags/hello.html</code>이 없을 경우 <code>#{hello /}</code> 참조를 보고합니다.</p>
 
 </body>
 </html>

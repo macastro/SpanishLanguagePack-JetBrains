@@ -1,10 +1,10 @@
 <html>
 <body>
-메서드 호출과 필드 참조에서 불필요한 <code>super</code> 한정자를 보고합니다.
+Inspecciona calificadores <code>super</code> innecesarios en referencias de campos y llamadas a métodos.
 <p>
-  호출 클래스에서 슈퍼클래스의 필드 또는 메서드가 표시 및 재정의되지 않는 경우 <code>super</code> 한정자는 필요하지 않습니다.
+  Un calificador <code>super</code> es innecesario cuando el campo o método de la superclase no está oculto/sobreescrito en la clase que lo llama.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
     void foo() {}
@@ -16,7 +16,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class Foo {
     void foo() {}
@@ -30,14 +30,14 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  검사 설정을 사용하여 외부 클래스 멤버와 이름이 동일한 상위 클래스 멤버의 액세스를 구분하는 한정자를 무시합니다.
+  Usa los ajustes de inspección para ignorar calificadores que ayudan a distinguir el acceso a miembros de la superclase de los miembros de la clase externa que tienen el mismo nombre.
 <p>
 <p>
-  다음의 검사도 참조하세요.
+  Consulta también las siguientes inspecciones:
 </p>
 <ul>
-  <li><i>Java | 가시성 | 상속된 필드에 대한 액세스가 주변 코드의 요소에 대한 액세스로 보임</i></li>
-  <li><i>Java | 가시성 | 상속된 메서드 호출이 지역 메서드 호출처럼 보임</i></li>
+  <li><i>Java | Visibilidad | El acceso a un campo heredado parece un acceso a un elemento del código circundante</i></li>
+  <li><i>Java | Visibilidad | La llamada a un método heredado parece una llamada a un método local</i></li>
 </ul>
 </body>
 </html>

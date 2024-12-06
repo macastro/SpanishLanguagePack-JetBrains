@@ -1,41 +1,53 @@
 <html>
 <body>
-데이터 플로우 분석에 기반하여 항상 null 값 가능성 컨트랙트를 위배하거나, 예외를 발생시키거나, 불필요한 코드 구문을 보고합니다.
-<p>예:</p>
+Informa los constructos de código que siempre violan los contratos de nulidad, pueden generar excepciones o son redundantes, según el análisis del flujo de datos.
+<p>Ejemplos:</p>
 <pre><code>if (array.length &lt; index) {
   System.out.println(array[index]);
-} // 배열 색인은 항상 범위를 벗어납니다
-if (str == null) System.out.println("str is null");
+} // El índice de la matriz siempre está fuera de los límites
+
+if (str == null) System.out.println("str es nulo");
 System.out.println(str.trim());
-// 마지막 구문이 NPE를 던질 수 있습니다
+// la última instrucción puede arrojar un NPE
 
 @NotNull
 Integer square(@Nullable Integer input) {
-    // 메서드 컨트랙트 위반입니다
+    // se infringe el contrato del método
     return input == null ? null : input * input;
 }</code></pre>
 <p>
-  <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">null 값 가능성을 표시하는</a> 어노테이션,
-  <code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code> 어노테이션, 
-  <code>@Range</code> 어노테이션 등 여러 어노테이션으로 검사 동작이 제어될 수 있습니다.
+  El comportamiento de la inspección puede estar controlado por una serie de anotaciones, como anotaciones de
+  <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">nulidad</a>,
+  anotación <code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code>,
+  anotación <code>@Range</code>, etc.
 </p>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configura la inspección:</p>
 <ul>
-  <li><b>null 가능 값이 사용되는 메서드/필드/매개변수에 대한 @Nullable 어노테이션 제안</b> 옵션을 사용하여 null 가능 값이 어노테이션이 없는 매개변수가 포함된 메서드에 인수로 전달되는 경우, 어노테이션이 없는 필드에 저장된 경우 혹은 어노테이션이 없는 메서드에서 반환되는 경우를 경고합니다. 이러한 경우 검사는 <code>@Nullable</code> 어노테이션 전달을 제안합니다. 또한 <b>어노테이션 구성</b> 버튼을 사용해 null 값 가능성을 표시하는 어노테이션을 구성할 수도 있습니다.</li>
-  <li><b>어노테이션이 없는 멤버 및 매개변수를 @Nullable로 취급</b> 옵션을 사용하여 어노테이션이 없는 멤버가 null일 가능성을 가정하므로 
-    이러한 멤버를 null이 아닌 컨텍스트에서 사용할 수 없습니다.</li>
-  <li><b>null 리터럴 인수가 사용되었으나 null이 아닌 필수 매개변수 보고</b> 옵션을 사용하여 null이 될 수 없으나(예: 메서드 본문에서 즉시 역참조된 경우), <code>null</code> 리터럴이 전달된 호출 사이트가 있는 메서드 매개변수를 보고합니다.</li>
-  <li><b>null이 아닌 값을 항상 반환하는 null 가능한 메서드 보고</b> 옵션을 사용하여 <code>@Nullable</code> 어노테이션이 추가되었으나 항상 null이 아닌 값을 반환하는 메서드를 보고합니다. 이 경우 어노테이션을 <code>@NotNull</code>로 변경하는 것이 좋습니다.</li>
-  <li><b>assert 문 무시</b> 옵션을 사용하여 검사에서 <code>assert</code> 문이 취급되는 방식을 제어합니다. 기본적으로 이 옵션은 비활성화되어 있습니다. 즉, 어설션이 실행되는 것으로 간주됩니다(-ea 모드). 이 옵션을 활성화하면 어설션이 완전히 무시됩니다(-da 모드).</li>
-  <li><b>일부 코드 경로에서만 발생하는 문제 보고</b> 옵션을 사용하여 일부 코드 경로에서만 발생할 수 있는 문제 보고 여부를 제어합니다. 이 옵션이 비활성화된 경우 <i>예외 가능</i> 등의 경고를 보고하지 않습니다. 검사는 <i>예외 반드시 발생</i>과 같은 경고만 보고합니다. 특히 코드에 null 값 가능성 및 컨트랙트 어노테이션으로 주석이 일관성 있게 추가되지 않은 경우 이 모드를 통해 거짓 양성 오류의 개수를 현저히 줄일 수 있습니다. 따라서 기존 코드 베이스에서 가장
-     중요한 문제를 찾는 데 유용할 수 있는 것입니다.
+  <li>Usa la opción <b>Sugerir la anotación @Nullable para métodos/campos/parámetros donde se utilizan valores que aceptan nulos</b> para advertir cuando un
+    valor nulo se pasa como argumento a un método con un parámetro no anotado,
+    se almacena en un campo no anotado o se devuelve desde un método no anotado. En este caso, la inspección sugerirá propagar
+    la anotación <code>@Nullable</code>. También puedes configurar las anotaciones de nulidad utilizando el botón <b>Configurar anotaciones</b>.</li>
+  <li>Usa la opción <b>Tratar los miembros y parámetros no anotados como @Nullable</b> para asumir que los miembros no anotados pueden ser nulos,
+    por lo que no deben utilizarse en un contexto no nulo.</li>
+  <li>Utiliza la opción <b>Reportar parámetros requeridos no nulos con usos de argumentos literales nulos</b> para informar sobre los parámetros del método que no pueden ser
+    nulos (por ejemplo, desreferenciados inmediatamente en el cuerpo del método), pero hay sitios de llamada donde se pasa un literal <code>nulo</code>.</li>
+  <li>Usa la opción <b>Reportar métodos que aceptan nulos que siempre devuelven un valor no nulo</b> para reportar métodos que están anotados como
+  <code>@Nullable</code>, pero siempre regresan un valor no nulo. En este caso, se sugiere que cambies la anotación a <code>@NotNull</code>.</li>
+  <li>Usa la opción <b>Ignorar declaraciones `assert`</b> para controlar cómo la inspección trata las declaraciones `assert`. De manera predeterminada, la opción
+    está deshabilitada, lo que significa que se supone que las aserciones se ejecutan (modo -ea). Si la opción está habilitada, las aserciones se ignorarán por completo
+    (modo -da).</li>
+  <li>Usa la opción <b>Reportar problemas que ocurren solo en algunas rutas de código</b> para controlar si se deben reportar problemas que pueden ocurrir solo
+    en algunas rutas del código. Si esta opción está deshabilitada, no se informarán advertencias como <i>es posible una excepción</i>. La inspección reportará
+    solo advertencias como <i>definitivamente ocurrirá una excepción</i>. Este modo puede reducir en gran medida el número de falsos positivos, especialmente si el código
+    no está anotado constantemente con anotaciones de nulidad y de contrato. Es por eso que puede ser útil para encontrar los problemas más
+    importantes en las bases de código heredadas.
   </li>
 </ul>
 <p>
-  IntelliJ IDEA 2022.3 이전에는 이 조사가 "상수 조건 및 예외" 검사의 일부였습니다.
-  이제는 두 가지 검사, 
-"상수값" 과 "Null 가능성 및 데이터 플로우 문제"로 나뉩니다.
+  Antes de IntelliJ IDEA 2022.3, esta inspección formaba parte de la inspección "Condiciones constantes y excepciones".
+  Ahora se divide en dos inspecciones:
+  "Valores constantes" y "Problemas de nulidad y flujo de datos".
 </p>
 </body>
 </html>

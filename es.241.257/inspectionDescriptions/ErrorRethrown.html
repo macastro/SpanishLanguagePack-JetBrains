@@ -1,14 +1,15 @@
 <html>
 <body>
-<code>java.lang.Error</code> 또는 해당 하위 클래스를 포착하고, 오류를 다시 던지지 않는 <code>try</code> 문을 보고합니다.
-<p><code>java.lang.ThreadDeath</code>를 포착하는 구문은
-  보고되지 않습니다.</p>
-<p><b>예:</b></p>
+Reporta declaraciones <code>try</code> que capturan
+<code>java.lang.Error</code> o cualquiera de sus subclases y no vuelven a lanzar el error.
+<p>Las declaraciones que capturan <code>java.lang.ThreadDeath</code> no son
+  reportadas.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   try {
     executeTests(request);
   }
-  catch (OutOfMemoryError ex) { // 경고: 'ex' 오류를 다시 던졌습니다
+  catch (OutOfMemoryError ex) { // advertencia: el error 'ex' no fue relanzado
     return false;
   }
 </code></pre>

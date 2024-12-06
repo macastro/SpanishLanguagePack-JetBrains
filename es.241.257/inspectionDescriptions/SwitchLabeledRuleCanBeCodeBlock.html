@@ -1,15 +1,15 @@
 <html>
 <body>
-표현식 본문을 포함하는 <code>switch</code> 식 또는 향상된 <code>switch</code> 문의 규칙을 보고합니다.
-이는 코드 블록으로 변환할 수 있습니다.
-<p>예:</p>
+Informa de reglas de expresiones <code>switch</code> o sentencias <code>switch</code> mejoradas con un cuerpo de expresión.
+Se pueden convertir en bloques de código.
+<p>Ejemplo:</p>
 <pre><code>
   String message = switch (errorCode) {
     case 404 -> "Not found!";
     ...
   };
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   String message = switch (errorCode) {
     case 404 -> {
@@ -19,6 +19,6 @@
   };
 </code></pre>
 <!-- tooltip end -->
-<p><small>2019.1의 새로운 기능</small></p>
+<p><small>Novedad en 2019.1</small></p>
 </body>
 </html>

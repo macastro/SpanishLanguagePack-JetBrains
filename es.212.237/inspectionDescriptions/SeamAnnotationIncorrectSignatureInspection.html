@@ -5,7 +5,7 @@
 <ul>
   <li>
     <p><code>@Name</code>은 인터페이스 또는 추상 클래스에서 유효하지 않습니다. 이 어노테이션이 추가된 클래스에 인수가 없는 생성자가 필요합니다.</p>
- </li>
+  </li>
   <li>
     <p><code>@In</code>은 필드 또는 <code>void setUser(User user)</code>와 같은 setter 메서드에 나타나야 합니다.</p>
     <ul>
@@ -13,55 +13,55 @@
       <li>한 개의 인수</li>
       <li>static이 아님</li>
       <li>이름이 <code>set</code>으로 시작해야 함</li>
-   </ul>
- </li>
+    </ul>
+  </li>
   <li>
-    <p><code>@Out</code>은 필드 또는 <code>void getUser()</code>와 같은 getter 메서드에 나타나야 합니다.</p>
+    <p><code>@Out</code>은 필드나 <code>User getUser()</code>와 같은 getter 메서드에 나타나야 합니다.</p>
     <ul>
       <li>void가 아닌 반환 타입</li>
       <li>인수 없음</li>
       <li>static이 아님</li>
-      <li>이름이 <code>get</code>으로 시작해야 함, 또는 반환 타입이 <code>boolean</code>일 경우 선택적으로 <code>is</code>로 시작할 수 있음</li>
-   </ul>
- </li>
+      <li>이름이 <code>get</code>으로 시작해야 함. 또는 반환 타입이 <code>boolean</code>일 경우 선택적으로 <code>is</code>로 시작할 수 있음</li>
+    </ul>
+  </li>
   <li>
     <p><strong>@DataModel</strong>은 필드 또는 getter 메서드에 나타나야 합니다(<code>@Out</code> 어노테이션과 같음).
-    필드 타입 또는 반환 타입은 다음 중 하나여야 합니다:</p>
+    필드 타입 또는 반환 타입은 다음 중 하나여야 합니다.</p>
     <ul>
       <li><code>java.util.List</code></li>
       <li><code>java.util.Set</code></li>
       <li><code>java.util.Map</code></li>
-   </ul>
- </li>
+    </ul>
+  </li>
   <li>
     <p><code>@DataModelSelection</code>은 setter 메서드에 나타나야 합니다.</p>
- </li>
+  </li>
   <li>
-    <p><code>@DataModelSelectionIndex</code>은 setter 메서드에 나타나야 합니다.</p>
- </li>
+    <p><code>@DataModelSelectionIndex</code>는 setter 메서드에 나타나야 합니다.</p>
+  </li>
   <li>
-    <p><code>@Factory</code> 및 <code>@Unwrap</code>은 다음 시그니처를 가진 메서드에 나타나야 합니다:</p>
+    <p><code>@Factory</code> 및 <code>@Unwrap</code>은 다음 시그니처를 가진 메서드에 나타나야 합니다.</p>
     <ul>
       <li>void가 아닌 반환 타입</li>
-      <li>매개변수가 없거나 하나의 <code>org.jboss.seam.Component</code> 매개변수(또는 그 상위 타입)을 포함함</li>
+      <li>매개변수가 없거나 하나의 <code>org.jboss.seam.Component</code> 매개변수(또는 그 상위 타입)를 포함함</li>
       <li>static이 아님</li>
-   </ul>
- </li>
+    </ul>
+  </li>
   <li>
-    <p><code>@Create</code>는 다음 시그니처를 가진 메서드에 나타나야 합니다:</p>
+    <p><code>@Create</code>는 다음 시그니처를 가진 메서드에 나타나야 합니다.</p>
     <ul>
-      <li>매개변수가 없거나 하나의 <code>org.jboss.seam.Component</code> 매개변수(또는 그 상위 타입)을 포함함</li>
+      <li>매개변수가 없거나 하나의 <code>org.jboss.seam.Component</code> 매개변수(또는 그 상위 타입)를 포함함</li>
       <li>static이 아님</li>
-   </ul>
- </li>
+    </ul>
+  </li>
   <li>
-    <p><code>@Destroy</code>는 다음 시그니처를 가진 메서드에 나타나야 합니다:</p>
+    <p><code>@Destroy</code>는 다음 시그니처를 가진 메서드에 나타나야 합니다.</p>
     <ul>
       <li>void 반환 타입</li>
       <li>매개변수 없음</li>
       <li>static이 아님</li>
-   </ul>
- </li>
+    </ul>
+  </li>
 </ul>
 </body>
 </html>

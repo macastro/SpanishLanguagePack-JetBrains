@@ -1,12 +1,12 @@
 <html>
 <body>
-<code>int</code> 타입으로 즉시 형 변환되는 <code>Math.random()</code> 호출을 보고합니다. 
-<p><code>0.0</code>(포함)과 <code>1.0</code>(제외) 사이의 <code>double</code>을 <code>int</code> 타입으로 변환하면 항상 0으로 버림 처리됩니다. 0(포함)과 곱셈 인수(제외) 사이의 값을 얻기 위해 <code>int</code>로 타입을 변환하기 전에 값을 임의의 인수와 곱해야 합니다.
-  다른 가능한 해결책은 <code>java.util.Random</code>의 <code>nextInt()</code> 메서드를 사용하는 것입니다.</p>
-<p><b>예:</b></p>
+Informa sobre las llamadas a <code>Math.random()</code> en las que se realiza una conversión inmediata a <code>int</code>. 
+<p>Convertir un <code>double</code> entre <code>0.0</code> (incluido) y <code>1.0</code> (excluido) a <code>int</code> siempre redondea hacia abajo a cero. El valor debe multiplicarse primero por algún factor antes de convertirlo a <code>int</code> para obtener un valor entre cero (incluido) y el factor de multiplicación (excluido).
+  Otra posible solución es utilizar el método <code>nextInt()</code> de <code>java.util.Random</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>  <b>int</b> r = (<b>int</b>)Math.random() * 10;
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>  <b>int</b> r = (<b>int</b>)(Math.random() * 10);
 </code></pre>
   <!-- tooltip end -->

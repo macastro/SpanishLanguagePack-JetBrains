@@ -1,17 +1,5 @@
 <html>
 <body>
-매개변수의 예상 타입과 일치하지 않는 추론된 타입을 포함하는 메서드 호출 인수를 보고합니다. 예상 매개변수 타입은 다음 중 하나에서 가져옵니다.
-<ul>
-  <li>RBS 타입 시그니처</li>
-  <li>YARD <code>@param</code> 태그</li>
-</ul>
-<p>예:</p>
-<pre>
-<code># @param [Integer] param
-def method(param) end
-
-method([1, 2])
-</code>
-</pre>
+Reporta las asignaciones del método y parámetro de bloque por defecto cuyos tipos inferidos no coinciden con el tipo esperado del parámetro. El tipo de parámetro esperado se toma de la firma del tipo RBS.
 </body>
 </html>

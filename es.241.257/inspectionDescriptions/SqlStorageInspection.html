@@ -1,15 +1,16 @@
 <html>
 <body>
-데이터베이스 객체의 소스 코드가 변경된 경우를 보고합니다.
-  <p>이 검사는 데이터베이스 또는 객체 내부 검사를 수행할 경우 촉발됩니다. 내부 검사는 객체의 소스 코드를 열거나 구문을 실행하거나 코드 리팩토링을 수행할 경우 실행됩니다.
-  객체를 오른쪽 클릭하고 <b>새로고침</b>을 선택하여 내부 검사를 실행할 수도 있습니다.</p>
+Informa sobre situaciones en que se ha modificado el código fuente de un objeto de base de datos.
+  <p>La inspección se activa cuando se realiza una introspección de la base de datos o del objeto. La introspección se ejecuta cuando se abre el código fuente de un objeto, se ejecutan sentencias y se realiza la refactorización del código.
+  También puede ejecutar la introspección haciendo clic con el botón derecho en un objeto y seleccionando <b>Actualizar</b>.</p>
 
-<p>이 검사는 다음 경우를 포함합니다:</p>
+<p>La inspección cubre las siguientes situaciones:</p>
 
 <ul>
-  <li>객체 소스 코드가 데이터베이스에서 변경되었으나 에디터 내 코드가 업데이트되지 않은 경우. PostgreSQL, Microsoft SQL Server, Oracle, Sybase ASE에서 작동합니다.</li>
-  <li>객체 소스 코드를 변경하고 데이터베이스를 내부 검사했으나 소스 코드가 이미 다른 사람에 의해 변경된 경우.</li>
-  <li>데이터베이스 내부 검사기가 IDE에서 업데이트되었으며 이전 내부 검사기 버전에서 누락된 새 객체 프로퍼티를 다운로드해야 하는 경우.</li>
+  <li>El código fuente del objeto se modificó en la base de datos pero el código en el editor no se actualizó. Funciona en PostgreSQL, Microsoft SQL Server,
+  Oracle y Sybase ASE.</li>
+  <li>Cambió el código fuente del objeto, realizó una introspección de la base de datos, pero el código fuente ya ha sido modificado por otra persona.</li>
+  <li>El inspector de la base de datos se actualizó en el IDE y debe descargar nuevas propiedades de objetos que faltaban en la versión anterior del inspector.</li>
 </ul>
 
 </body>

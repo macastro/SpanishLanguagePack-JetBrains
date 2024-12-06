@@ -1,11 +1,11 @@
 <html>
 <body>
-정수 범위와 같거나 이를 초과하는 시프트 표현식을 보고합니다.
-<p>왼쪽 피연산자의 모든 비트는 이러한 식에서 시프트 연산되면 상수 값이 됩니다. 상수 값은 시프트 연산 오프셋이 잘못되었거나 시프트 식이 불필요함을 나타냅니다.</p>
-<p>예:</p>
+Informa las expresiones de desplazamiento que coinciden o exceden el ancho del número entero.
+<p>Todos los bits del operando de la izquierda se desplazan con dicha expresión, lo que resulta en un valor constante. El valor constante indica que el desplazamiento de la posición está incorrecto o bien la expresión es redundante.</p>
+<p>Ejemplo:</p>
 <pre><code>
   func shift(i int8) {
-    fmt.Println(i &lt;&lt; 8) // 항상 0을 프린트합니다.
+    fmt.Println(i &lt;&lt; 8) // siempre imprime 0
   }
 </code></pre>
 </body>

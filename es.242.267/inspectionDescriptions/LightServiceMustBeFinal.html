@@ -1,34 +1,40 @@
 <html>
 <body>
-<code>@com.intellij.openapi.components.Service</code> 어노테이션이 있으나 final이 아닌 클래스를 보고합니다.
 <p>
-  클래스가 구체인 경우 해당 클래스를 final로 만들도록 제안합니다.</p>
-<p><b>예:</b></p>
+  Los servicios que no son finales pueden ser modificados y su estado puede no ser consistente.</p>
+<p>
+  Inspecciona el uso de clases con la anotación <code>@com.intellij.openapi.components.Service</code> que no son finales.</p>
+<p>
+  Si la clase es concreta, se sugiere hacerla final.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code lang="kotlin">
   // MyService.kt
   @Service(Service.Level.APP)
   open class MyService
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>
+  Después de aplicar la reparación rápida:</p>
 <pre><code lang="kotlin">
   // MyService.kt
   @Service(Service.Level.APP)
   class MyService
 </code></pre>
 <p>
-  추상 클래스 또는 인터페이스의 경우 <code>Service</code> 어노테이션을 제거하도록 제안합니다.
-</p>
-<p><b>예:</b></p>
+  Si es una clase abstracta o una interfaz, se sugiere quitar la anotación <code>@Service</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   // MyService.java
   @Service(Service.Level.APP)
   abstract class MyService {}
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>
+  Después de aplicar la reparación rápida:</p>
 <pre><code lang="java">
   // MyService.java
   abstract class MyService {}
 </code></pre>
-<p><small>2023.2의 새로운 기능</small>
+
+<!-- tooltip end -->
+<p><small>Novedades de 2023.2</small>
 </body>
 </html>

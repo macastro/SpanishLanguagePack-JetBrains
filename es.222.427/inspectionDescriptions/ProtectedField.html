@@ -1,12 +1,12 @@
 <html>
 <body>
-<code>protected</code> 필드를 보고합니다.
-<p>상수(<code>static</code> 또는 <code>final</code>로 표기된 변수)는 보고되지 않습니다.</p>
-<p><b>예:</b></p>
+Informa campos <code>protected</code>.
+<p>No se informan las constantes (es decir, variables marcadas como <code>static</code> o <code>final</code>).</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class A {
-    protected Object object;              // 경고
-    protected final static int MODE = 0;  // 상수는 경고하지 않음
+    protected Object object;              // advertencia
+    protected final static int MODE = 0;  // constante, sin advertencia
   }
 </code></pre>
 <!-- tooltip end -->

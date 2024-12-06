@@ -1,8 +1,8 @@
 <html>
 <body>
-<code>switch</code> 문으로 바꿀 수 있는 <code>if</code> 문을 보고합니다.
-<p>교체 결과는 일반적으로 더 짧고 명확해집니다.</p>
-<p><b>예:</b></p>
+Informa declaraciones <code>if</code> que se pueden reemplazar por declaraciones <code> switch </code>.
+<p>El resultado del reemplazo suele ser más corto y claro.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void test(String str) {
     if (str.equals("1")) {
@@ -16,7 +16,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   void test(String str) {
     switch (str) {
@@ -26,16 +26,16 @@
       default -&gt; System.out.println(4);
     }
   }
- </code></pre>
+  </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 7 이상인 경우에만 보고합니다.</p>
-<p><b>Minimum number of 'if' condition branches</b> 필드를 사용하여 보고할 필요가 있는 <code>if</code> 구문의 <code>if</code> 조건 브랜치의 최소 수를 특정합니다. 터미널의 <code>else</code> 브랜치(<code>if</code> 없음)는 카운트되지 않습니다.</p>
+<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 7 o superior.</p>
+<p>Utiliza el campo <b>Número mínimo de ramas de condición 'if' </b> para especificar el número mínimo de ramas de condición <code>if</code> para una declaración <code> if </code> que debe informarse. Ten en cuenta que la rama terminal <code> else </code> (sin <code> if </code>) no se cuenta.</p>
 <p>
-<b>Suggest switch on numbers</b> 옵션을 사용하여 원시 및 상자의 숫자와 문자에 대한 <code>switch</code> 구문의 제안을 활성화합니다.
+Utiliza la opción <b>Sugerir switch en números</b> para habilitar la sugerencia de declaraciones <code>switch</code> en números y caracteres primitivos y encapsulados.
 <p>
-<b>Suggest switch on enums</b> 옵션을 사용하여 <code>enum</code> 상수의 <code>switch</code> 구문의 제안을 활성화합니다.
+Utiliza la opción <b>Sugerir switch en enums</b> para habilitar la sugerencia de declaraciones <code> switch </code> en constantes de <code> enum </code>.
 <p>
-  <b>Only suggest on null-safe expressions</b> 옵션을 사용하여 <code>NullPointerException</code> 만을 적용할 수 없는 <code>switch</code> 구문을 제안합니다.
+Utiliza la opción <b>Sugerir solo en expresiones null-safe</b> para sugerir declaraciones <code> switch </code> que no pueden introducir un <code> NullPointerException </code> únicamente.
 </p>
 </body>
 </html>

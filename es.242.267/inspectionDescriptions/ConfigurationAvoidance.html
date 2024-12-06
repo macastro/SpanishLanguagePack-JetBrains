@@ -1,18 +1,18 @@
 <html>
 <body>
-<p>(Gradle 4.9+) 작업과 즉시 상호작용하는 API의 사용을 탐지합니다.</p>
-<p>작업과 즉시 상호작용하면 여러 문제가 발생할 수 있습니다.</p>
+<p>(Gradle 4.9+) Detecta el uso de API que interactúa con <em>tasks</em> de forma rápida (<em>eagerly</em>)</p>
+<p>La interacción rápida con <em>tasks</em> implica algunos inconvenientes:</p>
 <ul>
-  <li>작업 간 모든 종속성을 사용자가 수동으로 설정해야 합니다.</li>
-  <li><a href="https://docs.gradle.org/current/userguide/build_lifecycle.html#sec:build_phases">구성 단계</a>에서 즉시 작동하는 API로 액세스된 모든 작업은 추후에 실행되지 않더라도 구성된 상태가 됩니다.
-    이에 따라 성능 저하가 발생합니다.
+  <li>El usuario debe establecer manualmente todas las dependencias entre <em>tasks</em>;</li>
+  <li>En la <a href="https://docs.gradle.org/current/userguide/build_lifecycle.html#sec:build_phases">fase de configuración</a>,
+    todos los <em>tasks</em> a los que se accede a través de la API rápida se configuran, incluso si no se ejecutan después.
+    Esto deriva en una degradación del rendimiento.
   </li>
 </ul>
-<p>추후 즉시 작동하는 API는 지원 중단되고 지연되어 작동하는 API로 대체될 예정입니다.</p>
-<p>마이그레이션 가이드는
-  <a href="https://docs.gradle.org/current/userguide/task_configuration_avoidance.html">Gradle 문서</a>를 참조하세요.</p>
-<p><b>예:</b></p>
-<pre><code>task foo { // 'task'를 경고하고 'task.register'로 바꾸도록 제안합니다
+<p>Finalmente, la API rápida quedará obsoleta a favor de la lenta (<em>lazy</em>).</p>
+<p>Para una guía de migración, consulta la <a href="https://docs.gradle.org/current/userguide/task_configuration_avoidance.html">documentación de Gradle</a>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>task foo { // Informa de 'task', sugiere reemplazarlo con 'task.register'
   // ...
 }
 </code></pre>

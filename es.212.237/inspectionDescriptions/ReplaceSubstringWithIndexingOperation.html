@@ -1,15 +1,15 @@
 <html>
 <body>
-<code>"abc"[0]</code>로 바꿀 수 있는 <code>"abc".substring(0, 1)</code> 같은 호출을 보고합니다.
-<p>색인을 통해 요소를 얻으면 코드가 더 단순해집니다.</p>
-<p>빠른 수정이 <code>substring</code> 호출을 색인화 연산자로 바꿉니다.</p>
-<p><b>예:</b></p>
+Informa llamadas como <code>"abc".substring(0, 1)</code> que pueden remplazarse con <code>"abc"[0]</code>.
+<p>Obtener el elemento por índice hace tu código más simple.</p>
+<p>La corrección rápida reemplaza la llamada de <code>substring</code> con el operador de indexación.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun foo() {
       &quot;abc&quot;.substring(0, 1)
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun foo() {
       &quot;abc&quot;[0]

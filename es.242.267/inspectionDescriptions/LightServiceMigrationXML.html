@@ -1,27 +1,26 @@
 <html>
 <body>
-<code>plugin.xml</code>에 등록된 서비스 중 라이트 서비스로 변환될 수 있는 경우 보고합니다.
+<code>plugin.xml</code> reporta servicios registrados que podrían convertirse en un servicio ligero.
 <p>
-  재정의하도록 의도되지 않은 서비스는 <code>plugin.xml</code> 파일에 등록될 필요가 없습니다.
-  대신 서비스 클래스에 <code>@com.intellij.openapi.components.Service</code> 어노테이션을 추가하세요. 프로젝트 수준의 서비스에는 <code>@Service(Service.Level.PROJECT)</code>를 지정하세요.
+  Los servicios que no se pretende que se reescriban no necesitan registrarse en el archivo <code>plugin.xml</code>.
+  En su lugar, agrega la anotación <code>@com.intellij.openapi.components.Service</code> a la clase de servicio. Para los servicios a nivel del proyecto, especifica <code>@Service(Service.Level.PROJECT)</code>.
 <p>
-  요건:
+  Requisitos:
 <ul>
-  <li>IntelliJ Platform 2019.3 이상.</li>
-  <li>서비스 클래스는 <code>final</code>이어야 합니다.</li>
-  <li><code>serviceInterface</code>가 지정되지 않았습니다.</li>
-  <li>애플리케이션 수준 서비스가 <code>com.intellij.openapi.components.PersistentStateComponent</code>이면 로밍이 비활성화되어야 합니다(<code>roamingType = RoamingType.DISABLED</code>)
-  </li>
-  <li>다음의 속성 중 어느 것도 지정되지 않았습니다. <code>os</code>, <code>client</code>, <code>overrides</code>, <code>id</code>, <code>preload</code>, <code>configurationSchemaKey</code>.</li>
+  <li>IntelliJ Platform 2019.3 o superior.</li>
+  <li>La clase de servicio debe ser <code>final</code>.</li>
+  <li>No se especifica <code>serviceInterface</code>.</li>
+  <li>Si el servicio a nivel de aplicación es <code>com.intellij.openapi.components.PersistentStateComponent</code>, la itinerancia debe estar deshabilitada (<code>roamingType = RoamingType.DISABLED</code>).</li>
+  <li>No se especifica ninguno de los siguientes atributos: <code>os</code>, <code>client</code>, <code>overrides</code>, <code>id</code>, <code>preload</code>.</li>
 </ul>
-<p><code>plugin.xml</code>에 등록된 서비스 중 클래스에 이미 <code>@Service</code> 어노테이션이 추가된 경우도 보고합니다.
+<p>También informa los servicios registrados en <code>plugin.xml</code> que ya tienen la anotación <code>@Service</code> agregada a sus clases.
 <p>
-  자세한 내용은 IntelliJ 플랫폼 플러그인 SDK 문서의 <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html">서비스</a>를 참조하세요.
+  Para obtener más detalles, consulta <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html">Servicios</a> en los documentos del SDK del complemento de la plataforma IntelliJ.
 </p>
 <p>
-  <code>Plugin DevKit | 코드 | 라이트 서비스로 변환될 수 있는 서비스</code> 검사도 참조하세요.
+  Consulta también la inspección <code>Plugin DevKit | Código | Servicios que se pueden convertir en servicios ligeros</code>.
 </p>
 <!-- tooltip end -->
-<p><small>2023.2의 새로운 기능</small>
+<p><small>Novedad en 2023.2</small>
 </body>
 </html>

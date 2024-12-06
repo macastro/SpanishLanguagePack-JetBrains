@@ -1,15 +1,15 @@
 <html>
 <body>
-<code>clone()</code> 메서드를 재정의하지 않는 <code>Cloneable</code> 인터페이스를 구현하는 클래스를 보고합니다.
-<p>그러한 클래스는 <code>public</code>이 아니라 <code>protected</code>이며 클래스의 가변 상태를 복사하지 않는 <code>clone()</code>의 디폴트 구현을 사용합니다.</p>
-<p>기본 <code>clone()</code> 메서드를 생성하는 빠른 수정을 사용할 수 있습니다. 이 메서드는 <code>Cloneable</code> 클래스에 필요한 제대로 기능하는 <code>clone()</code> 메서드의 기초로서 사용될 수 있습니다.</p>
-<p><b>예:</b></p>
+Reporta clases que implementan la interfaz <code>Cloneable</code> pero que no sobrescriben el método <code>clone()</code>.
+<p>Estas clases usan la implementación por defecto de <code>clone()</code>, que no es <code>public</code> sino <code>protected</code>, y que no copia el estado mutable de la clase.</p>
+<p>Hay disponible una solución rápida para generar un método <code>clone()</code> básico, que puede usarse como base para un método <code>clone()</code> que funcione correctamente, como se espera de una clase <code>Cloneable</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   <b>public class</b> Data <b>implements</b> Cloneable {
     <b>private</b> String[] names;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   <b>public class</b> Data <b>implements</b> Cloneable {
     <b>private</b> String[] names;
@@ -18,7 +18,7 @@
     <b>public</b> Data clone() {
       <b>try</b> {
         Data clone = (Data) <b>super</b>.clone();
-        // TODO: 여기서 가변 상태를 복사하므로 clone이 원래 클래스의 내부를 변경하지 못합니다
+        // TODO: copia aquí el estado mutable, para que el clon no pueda cambiar los datos internos del original
         <b>return</b> clone;
       } <b>catch</b> (CloneNotSupportedException e) {
         <b>throw new</b> AssertionError();
@@ -32,7 +32,7 @@ community/plugins/InspectionGadgets/InspectionGadgetsAnalysis/resources/messages
 property key: cloneable.class.without.clone.todo.message
 -->
 <!-- tooltip end -->
-<p><code>Cloneable</code> 클래스를 상속받기 때문에 <code>Cloneable</code>인 클래스를 무시하려면 <b>상속으로 인해 복제 가능한 클래스 무시</b> 옵션을 사용하세요.</p>
-<p>상위 클래스에서 <code>clone()</code> 메서드를 호출하기 때문에 <code>Cloneable</code>을 구현할 것을 요구하는 클래스를 무시하려면 <b>상위 클래스의 clone() 메서드를 호출하는 데 Cloneable이 필요한 경우 무시</b> 옵션을 사용하세요.</p>
+<p>Usa la opción <b>Ignorar clases clonables debido a la herencia</b> para ignorar las clases que son <code>Cloneable</code> porque heredan de la clase <code>Cloneable</code>.</p>
+<p>Usa la opción <b>Ignorar cuando Cloneable es necesario para llamar al método clone() de la superclase</b> para ignorar las clases que requieren implementar <code>Cloneable</code> porque llaman al método <code>clone()</code> de una superclase.</p>
 </body>
 </html>

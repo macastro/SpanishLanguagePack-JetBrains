@@ -1,18 +1,18 @@
 <html>
 <body>
-묵시적으로 사용할 수 있는 빈 기본 생성자를 보고합니다.
+Informa de constructores primarios vacíos cuando están disponibles implícitamente de todos modos.
 <p>
-    어노테이션 또는 가시성 제어자가 없는 기본 생성자는 불필요하며 생략해도 안전합니다.
-    코드를 정리하려면 '빈 기본 생성자 제거' 빠른 수정을 사용하세요.
+    Un constructor primario es redundante y se puede omitir de forma segura cuando no tiene anotaciones ni modificadores de visibilidad.
+    Utilice la corrección rápida "Eliminar constructor primario vacío" para limpiar el código.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplos:</b></p>
 <pre><code>
-  class MyClassA constructor() //  불필요. 'class MyClassA'로 바꿀 수 있습니다
+  class MyClassA constructor() // redundante, se puede reemplazar con 'class MyClassA'
 
   annotation class MyAnnotation
-  class MyClassB @MyAnnotation constructor() //  어노테이션 때문에 필요합니다
+  class MyClassB @MyAnnotation constructor() // requerido debido a la anotación
 
-  class MyClassC private constructor() // 가시성 제어자 때문에 필요합니다
+  class MyClassC private constructor() // requerido debido al modificador de visibilidad
 </code></pre>
 </body>
 </html>

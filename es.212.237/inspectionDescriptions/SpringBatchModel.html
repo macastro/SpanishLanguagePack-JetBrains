@@ -1,26 +1,28 @@
-<html>
-<body>
-<a href="https://spring.io/projects/spring-batch">Spring Batch</a> XML 기반 애플리케이션 컨텍스트 이슈를 보고합니다.
+</body>
+</html>
+
+
+Se reportan problemas de contexto de la aplicación Spring Batch basada en XML:
 <ul>
-  <li>확인되지 않은 bean 참조</li>
-  <li>태그 및 속성 누락</li>
-  <li>잘못된 프로퍼티 타입</li>
-  <li>일관성 없는 <code>enum</code> 프로퍼티</li>
-  <li>참조된 bean의 잘못된 타입</li>
+  <li>Referencias de Bean no resueltas</li>
+  <li>Faltan etiquetas y atributos</li>
+  <li>Tipo de propiedad incorrecto</li>
+  <li>Propiedades de <code>enum</code> inconsistentes</li>
+  <li>Tipo de Bean referenciado incorrecto</li>
 </ul>
 
 <!-- tooltip end -->
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  &lt;beans... &gt;
-  &lt;batch:job id="" &lt;!-- Value must not be empty --&gt;
-    incrementer="dummyBean"  &lt;!-- Bean must be of 'org.springframework.batch.core.JobParametersIncrementer' type --&gt;
-    job-repository="transactionManager"  &lt;!-- Bean must be of 'org.springframework.batch.core.repository.JobRepository' type --&gt;
-    parent="INVALID_VALUE" &lt;!-- Cannot resolve job INVALID_VALUE --&gt;
-    restartable="INVALID_VALUE"> &lt;!-- Cannot resolve symbol INVALID_VALUE --&gt;
+  &lt;beans ... &gt;
+  &lt;batch:job id="" &lt;!-- El valor no debe estar vacío --&gt;
+    incrementer="dummyBean"  &lt;!-- El Bean debe ser de tipo 'org.springframework.batch.core.JobParametersIncrementer' --&gt;
+    job-repository="transactionManager"  &lt;!-- El Bean debe ser de tipo 'org.springframework.batch.core.repository.JobRepository' --&gt;
+    parent="INVALID_VALUE" &lt;!-- No se puede resolver el Job INVALID_VALUE --&gt;
+    restartable="INVALID_VALUE"> &lt;!-- No se puede resolver el símbolo INVALID_VALUE --&gt;
     &lt;batch:validator
-      ref="dataSource"&gt;  &lt;!-- Bean must be of 'org.springframework.batch.core.JobParametersValidator' type --&gt;
+      ref="dataSource"&gt;  &lt;!-- El Bean debe ser de tipo 'org.springframework.batch.core.JobParametersValidator' --&gt;
     &lt;/batch:validator&gt;
   &lt;/batch:job&gt;
   &lt;batch:job-repository/&gt;
@@ -33,7 +35,3 @@
 </code></pre>
 </body>
 </html>
-
-</body>
-</html>
-

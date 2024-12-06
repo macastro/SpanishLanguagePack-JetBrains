@@ -1,15 +1,15 @@
 <html>
 <body>
-elvis 연산자 및 반환(<code>?: return</code>)으로 바꿀 수 있는 비 null 어설션(<code>!!</code>) 호출을 보고합니다.
-<p>비 null 어설션은 예상하지 못한 NPE(NullPointerException)로 이어질 수 있습니다. 관례적으로 <code>!!</code>를 사용하지 않는 것이 좋습니다.</p>
-<p>빠른 수정에서는 비 null 어설션을 <code>return</code> 또는 <code>return null</code>로 바꿉니다.</p>
-<p><b>예:</b></p>
+Informa sobre las llamadas de aserción de no nulo (<code>!!</code>) que se pueden reemplazar con el operador elvis y return (<code>?: return</code>).
+<p>Una aserción de no nulo puede provocar un NPE (NullPointerException) que no se espera. Es una buena práctica evitar el uso de <code>!!</code>.</p>
+<p>El arreglo rápido reemplaza la aserción de no nulo con <code>return</code> o <code>return null</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun test(number: Int?) {
       val x = number!!
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   fun test(number: Int?) {
       val x = number ?: return

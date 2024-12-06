@@ -1,24 +1,22 @@
 <html>
 <body>
-Javadoc 주석 내 <code>&lt;code&gt;</code> 태그의 사용 위치를 보고합니다. JDK 1.5부터 이러한 구문은 <code>{@code...}</code> 구문으로 바꿀 수 있습니다. 이렇게 하면 HTML 문자 엔티티 대신 주석 내에 대괄호 <code>&lt;</code> 및 <code>&gt;</code> 사용이 허용됩니다.
-<p><b>예:</b></p>
-<pre>
-  <code>
+Reporta los usos de las etiquetas <code>&lt;code&gt;</code> en los comentarios Javadoc.
+Desde Java 5, estas etiquetas pueden ser remplazadas con construcciones <code>{@code ...}</code>.
+Esto permite usar los signos de menor que <code>&lt;</code> y mayor que <code>&gt;</code> dentro del comentario en lugar de entidades de carácter HTML.
+<p><b>Ejemplo:</b></p>
+<pre><code>
   /**
    * @return empty &lt;code&gt;ArrayList&amp;lt;Integer&amp;gt;&lt;/code&gt;
    */
-  List&lt;Integer&gt; getList(){... }
- </code>
-</pre>
-<p>빠른 수정 적용 후:</p>
-<pre>
-  <code>
+  List&lt;Integer&gt; getList(){ ... }
+</code></pre>
+<p>Después de que la corrección rápida es aplicada:</p>
+<pre><code>
   /**
    * @return empty {@code ArrayList&lt;Integer&gt;}
    */
-  List&lt;Integer&gt; getList(){... }
- </code>
-</pre>
+  List&lt;Integer&gt; getList(){ ... }
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

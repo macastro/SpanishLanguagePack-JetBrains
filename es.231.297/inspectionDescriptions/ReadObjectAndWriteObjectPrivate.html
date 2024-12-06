@@ -1,12 +1,11 @@
 <html>
 <body>
-<code>readObject</code>
-또는 <code>writeObject</code> 메서드가 private으로 선언되지 않은 상태인 <code>Serializable</code> 클래스를 보고합니다.
-이 메서드의 가시성은 <code>private</code>보다 높아야 할 이유가 없습니다.
+Inspecciona clases <code>Serializable</code> donde los métodos <code>readObject</code> o <code>writeObject</code> no están declarados como privados.
+No hay razones para que estos métodos tengan una visibilidad superior a <code>private</code>.
 <p>
-  해당 메서드를 <code>private</code>으로 만드는 빠른 수정이 제안됩니다.
+  Se sugiere una corrección rápida para hacer que el método correspondiente sea <code>private</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class Test implements Serializable {
     public void readObject(ObjectInputStream stream) {
@@ -14,7 +13,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   public class Test implements Serializable {
     private void readObject(ObjectInputStream stream) {

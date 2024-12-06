@@ -1,17 +1,16 @@
 <html>
 <body>
-<code>@Pattern</code> 어노테이션이 추가되지 않은 메서드가 <code>@Pattern</code> 어노테이션이 추가된 메서드를 재정의하는 경우 보고합니다.
-이렇게 해도 에디터 내부의 오류 강조 표시가 방지되지는 않지만 런타임에 재정의 메서드를 검사하지 않습니다.
+Informa cuando un método sin anotación <code>@Pattern</code> anula un método anotado como <code>@Pattern</code>.
+Esto no impide el resaltado de errores dentro del editor, sin embargo, el método de anulación no se comprobará en tiempo de ejecución.
 <p>
-슈퍼클래스 메서드의 어노테이션과 일치하는 <code>@Pattern</code> 어노테이션을 추가하기 위해 빠른 수정이 제공됩니다. 이렇게 하면
-런타임 검사 계측이 올바르게 작동합니다.
-<p><b>예:</b></p>
+Se proporciona una solución rápida para añadir una anotación <code>@Pattern</code> que coincida con la del método de la superclase. Esto asegura que la instrumentación de la comprobación en tiempo de ejecución funciona correctamente.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   abstract class Parent {
     abstract @Pattern("\\d\\d-\\d\\d\\d") String getId();
   }
   class Child extends Parent {
-    @Override String getId() { // 여기서 경고
+    @Override String getId() { // advertencia aquí
       return "12-345";
     }
   }

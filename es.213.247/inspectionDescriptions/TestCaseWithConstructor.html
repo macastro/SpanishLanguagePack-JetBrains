@@ -1,18 +1,19 @@
 <html>
 <body>
-생성자에 초기화 로직을 포함하는 JUnit 테스트 케이스를 보고합니다.
-생성자가 실패하면 <code>@After</code> 어노테이션이 추가된 메서드 또는 <code>tearDown()</code> 메서드가 호출되지 않습니다.
-그러면 테스트 환경이 부분적으로 초기화될 수 있으며 이는 다른 테스트에 부정적인 영향을 미칠 수 있습니다.
-대신 JUnit 테스트 케이스의 초기화는 <code>setUp()</code> 메서드 또는 <code>@Before</code> 어노테이션이 추가된 메서드에서 실행되어야 합니다.
-<p>나쁜 예:</p>
-<pre><code>
-  <b>public class</b> ImportantTest {
-    <b>private</b> File file;
-    <b>public</b> ImportantTest() <b>throws</b> IOException {
+Informa sobre los casos de prueba con lógica de inicialización en sus constructores.
+Si falla un constructor, no se llamará al método <code>@After</code> anotado o a <code>tearDown()</code>.
+Esto puede dejar el entorno de prueba parcialmente inicializado, lo que puede afectar negativamente a otras pruebas.
+En su lugar, la inicialización de los casos de prueba debe hacerse en un método <code>setUp()</code> o <code>@Before</code> anotado.
+<p>Mal ejemplo:</p>
+<pre><code lang="java">
+  public class ImportantTest {
+    private File file;
+
+    public ImportantTest() throws IOException {
       file = File.createTempFile("xyz", ".tmp");
     }
 
-    // ... 테스트가 여기에 도달합니다
+    // ... tests go here
   }
 </code></pre>
 <!-- tooltip end -->

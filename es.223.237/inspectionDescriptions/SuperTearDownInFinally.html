@@ -1,9 +1,9 @@
 <html>
 <body>
-<code>finally</code> 블록 내부에서 수행되지 않는 JUnit 3의 <code>super.tearDown()</code> 메서드 호출을 보고합니다.
-<code>super.tearDown()</code> 호출 전에 예외가 던져지면 비일관성 및 누수가 발생할 수 있습니다.
-<p><b>예:</b></p>
-<pre><code>
+Reporta las llamadas del método <code>super.tearDown()</code> de JUnit 3 que no se realizan dentro de un bloque <code>finally</code>.
+Si se produce una excepción antes de que se llame a <code>super.tearDown()</code>, podría provocar incoherencias y fugas.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
   public class AnotherTest extends CompanyTestCase {
     private Path path;
 
@@ -20,8 +20,8 @@
     }
   }
 </code></pre>
-<p>개선된 코드:</p>
-<pre><code>
+<p>Código mejorado:</p>
+<pre><code lang="java">
   public class AnotherTest extends CompanyTestCase {
     private Path path;
 

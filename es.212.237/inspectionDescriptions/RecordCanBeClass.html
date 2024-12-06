@@ -1,23 +1,23 @@
 <html>
 <body>
-레코드 클래스를 보고하고 이를 일반 클래스로 변환하도록 제안합니다.
-<p>이 검사는 이 레코드에 빠른 수정을 적용하여 Java 레코드를 이전 Java 버전을 사용하는 코드 베이스로 이동 가능하게 합니다.</p>
+Inspeccionar clases record y sugerir su conversión a clases normales.
+<p>Esta inspección permite aplicar un arreglo rápido a los registros de Java, lo que posibilita mover dichos registros a una base de código que utilice versiones anteriores de Java.</p>
 <p>
-  참고로, 결과로 얻어진 클래스는 기존 레코드와 완전히 똑같지는 않습니다.
+  Sin embargo, ten en cuenta que la clase resultante no será completamente equivalente al registro original.
 </p>
 <ul>
-  <li>결과로 얻어진 클래스는 더이상 <code>java.lang.Record</code>를 확장하지 않으므로,  <code>instanceof Record</code>는 <code>false</code>를 반환합니다.</li>
-  <li><code>Class.isRecord()</code> 및 <code>Class.getRecordComponents()</code>와 같은 리플렉션 메서드가 다른 결과를 생성합니다.</li>
-  <li>생성된 <code>hashCode()</code> 구현은 다른 결과를 생성할 수 있습니다. 왜냐하면 레코드의 <code>hashCode</code>를 계산하는 식이 의도적으로 지정되지 않았기 때문입니다.</li>
-  <li>일반 클래스와 레코드 직렬화 메커니즘이 다릅니다.
-    자세한 내용은 <i>Java Object Serialization Specification</i> 을 참고하세요.</li>
+  <li>La clase resultante ya no extenderá <code>java.lang.Record</code>, por lo que <code>instanceof Record</code> retornará <code>false</code>.</li>
+  <li>Los métodos de reflexión como <code>Class.isRecord()</code> y <code>Class.getRecordComponents()</code> arrojarán resultados diferentes.</li>
+  <li>La implementación generada de <code>hashCode()</code> puede arrojar resultados diferentes, ya que la fórmula para calcular el <code>hashCode</code> del registro no se especificó intencionalmente.</li>
+  <li>El mecanismo de serialización de registros difiere del de las clases normales.
+    Para más información, consulta la <i>Java Object Serialization Specification</i>.</li>
 </ul>
 <!-- tooltip end -->
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   record Point(int x, int y) {}
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   final class Point {
     private final int x;
@@ -54,7 +54,6 @@
     }
   }
 </code></pre>
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 15 테스트 버전 이상인 경우에만 보고합니다.</p>
-<p><small>2020.3의 새로운 기능</small></p>
+<p><small>Nueva característica en 2020.3</small></p>
 </body>
 </html>

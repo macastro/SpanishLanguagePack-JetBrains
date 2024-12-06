@@ -1,18 +1,18 @@
 <html>
 <body>
-다음을 포함해 객체를 구성하는 동안 <code>this</code>를 포함하는 안전하지 않은 연산을 보고합니다.
+Informa sobre operaciones no seguras con <code>this</code> en la construcción de objetos, incluidas:
 
 <ul>
-  <li>클래스를 초기화하는 동안 비 final 프로퍼티에 액세스: 생성자 또는 프로퍼티 초기화에서</li>
-  <li>클래스를 초기화하는 동안 비 final 함수 호출</li>
-  <li>비 final 클래스의 생성자에서 <code>this</code>를 함수 인수로 사용</li>
+  <li>Acceder a una propiedad no final durante la inicialización de la clase: desde un constructor o inicialización de propiedad</li>
+  <li>Llamar a una función no final durante la inicialización de la clase</li>
+  <li>Usar <code>this</code> como argumento de función en un constructor de una clase no final</li>
 </ul>
 
 <p>
-    다른 클래스가 주어진 클래스를 상속받는다면
-    안전하지 않은 연산이 수행되는 순간에 완전히 초기화되지 않을 수 있습니다.
+    Si otras clases heredan de la clase dada,
+    es posible que no estén completamente inicializadas en el momento en que se realiza una operación no segura.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   <b>abstract class</b> Base {
       <b>val</b> code = calculate()
@@ -24,7 +24,7 @@
   }
 
   <b>fun</b> testIt() {
-      println(Derived(42).code) <i>// 예상 값: 42, 실제 값: 0</i>
+      println(Derived(42).code) <i>// Esperado: 42, real: 0</i>
   }
 </code></pre>
 </body>

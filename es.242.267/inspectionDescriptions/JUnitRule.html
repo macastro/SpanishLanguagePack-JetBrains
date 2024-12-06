@@ -1,31 +1,31 @@
 <html>
 <body>
-형식이 잘못된 <code>@Rule</code> 또는 <code>@ClassRule</code> 어노테이션의 사용을 보고합니다.
-형식이 잘못된 <a href="https://github.com/junit-team/junit4/wiki/Rules">규칙</a>을 포함하는 테스트는 실행할 수 없습니다.
+Informa sobre el uso incorrecto de las anotaciones <code>@Rule</code> o <code>@ClassRule</code>.
+No se pueden ejecutar las pruebas que tienen una <a href="https://github.com/junit-team/junit4/wiki/Rules">regla</a> cuyo formato es incorrecto.
 <ul>
   <li>
-    <code>@Rule</code> 어노테이션이 추가된 멤버는 <code>public</code>이어야 하며 <code>org.junit.rules.TestRule</code> 또는 <code>org.junit.rules.MethodRule</code>의 하위 타입이어야 합니다.
+    Los miembros anotados con <code>@Rule</code> deben ser <code>public</code> y de tipo secundario de <code>org.junit.rules.TestRule</code> o <code>org.junit.rules.MethodRule</code>
   <li>
-    <code>@ClassRule</code> 어노테이션이 추가된 멤버는 <code>public</code> 및 <code>static</code>이어야 하며 <code>org.junit.rules.TestRule</code>의 하위 타입이어야 합니다.
+    Los miembros anotados con <code>@ClassRule</code> deben ser <code>public</code> y <code>static</code> y de tipo secundario de <code>org.junit.rules.TestRule</code>
 </ul>
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   <b>public class</b> MomentousTest {
     @Rule
     <b>private final</b> TemporaryFolder tempFolder =
       <b>new</b> TemporaryFolder();
 
-    // ... 테스트가 여기에 도달합니다
+    // ... Las pruebas pasan por aquí
   }
 </code></pre>
-<p>제어자를 수정하는 빠른 수정이 제공됩니다.</p>
+<p>El arreglo rápido corrige los modificadores:</p>
 <pre><code>
   <b>public class</b> MomentousTest {
     @Rule
     <b>public final</b> TemporaryFolder tempFolder =
       <b>new</b> TemporaryFolder();
 
-    // ... 테스트가 여기에 도달합니다
+    // ... Las pruebas pasan por aquí
   }
 </code></pre>
 <!-- tooltip end -->

@@ -1,21 +1,21 @@
 <html>
 <body>
-소괄호 스타일이 잘못된 메서드 정의를 보고합니다. 매개변수가 없는 메서드 정의와 반대로 매개변수가 있는 메서드 정의에는 소괄호가 필요합니다.
-<p>예:</p>
+Informa sobre las definiciones de método con el estilo incorrecto de paréntesis. Se esperan paréntesis en las definiciones de método con parámetros, lo opuesto a las definiciones de método sin parámetros.
+<p>Ejemplo:</p>
 <pre>
-<code># 나쁜 사례
+<code># Mala práctica
 def example_method(); end
 def example_method_with_parameters param1, param2; end</code>
 </pre>
 
-소괄호를 제거하거나 각각 추가하기 위해 빠른 수정을 사용할 수 있습니다. 빠른 수정이 적용된 후 결과는 다음과 같습니다:
+Hay soluciones rápidas disponibles para eliminar los paréntesis o agregarlos respectivamente. Después de aplicar las soluciones rápidas, el resultado se ve así:
 
 <pre>
-<code># 좋은 사례
+<code># Buena práctica
 def example_method; end
 def example_method_with_parameters(param1, param2); end</code>
 </pre>
-<p><span style="font-size: smaller;"><a href="https://github.com/rubocop-hq/ruby-style-guide#method-parens">'RuboCop'</a> 참고</span>
+<p><span style="font-size: smaller;">Inspirado en <a href="https://github.com/rubocop-hq/ruby-style-guide#method-parens">'RuboCop'</a></span>
 </p>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
 <body>
-반복적으로 추가되는 <code>java.lang.String</code> 으로 선언된 변수를 보고합니다. 이러한 변수는 <code>java.lang.StringBuffer</code> 또는 <code>java.lang.StringBuilder</code> 로 더욱 효율적으로 선언할 수 있습니다.
-<p><b>예:</b></p>
+Reporta variables declaradas como <code>java.lang.String</code> que se agregan repetidamente. Dichas variables podrían declararse de manera más eficiente como <code>java.lang.StringBuffer</code> o <code>java.lang.StringBuilder</code>.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   String s = "";
   for (int i = 0; i &lt; names.length; i++) {
@@ -9,7 +9,7 @@
     s = s + name;
   }
 </code></pre>
-<p>루프는 다음 항목으로 교체될 수 있습니다. -</p>
+<p>Tal bucle puede ser reemplazado con:</p>
 <pre><code>
   StringBuilder s = new StringBuilder();
   for (int i = 0; i &lt; names.length; i++) {
@@ -17,13 +17,13 @@
     s.append(name);
   }
 </code></pre>
-<p>또는 다음에서 치환할 수도 있습니다.</p>
+<p>O incluso con:</p>
 <pre><code>
   String s = String.join(" ", names);
 </code></pre>
 <!-- tooltip end -->
 <p>
-  옵션을 사용하여 이 검사를 통해 변수가 루프에서 추가될 때 보고할 수 있도록 합니다.
+  Utiliza la opción para hacer que esta inspección solo informe cuando la variable se agrega en un bucle.
 </p>
 </body>
 </html>

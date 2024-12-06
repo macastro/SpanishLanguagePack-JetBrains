@@ -1,8 +1,8 @@
 <html>
 <body>
-COALESCE 함수에서 NULL로 평가되지 않는 첫 번째 표현식을 제외한 모든 인수를 보고합니다.
-<p>예(MySQL):</p>
+Reporta todos los argumentos excepto la primera expresión que no se evalúa a NULL en funciones COALESCE.
+<p>Ejemplo (MySQL):</p>
 <pre><code>SELECT COALESCE(NULL, NULL, NULL, 42, NULL, 'string') as a;</code></pre>
-<p>첫 번째 NOT NULL 인수는 <code>42</code>이며 다른 인수는 회색으로 표시됩니다.</p>
+<p>El primer argumento NO NULO es <code>42</code>, todos los demás argumentos quedarán en gris.</p>
 </body>
 </html>

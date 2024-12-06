@@ -1,19 +1,17 @@
 <html>
 <body>
-<code>java.lang.Object</code>를 확장하도록 명시적으로 선언된 모든 타입 매개변수 및 와일드카드 타입 인수를 보고합니다.
-<p><code>java.lang.Object</code>는 모든 클래스의 상위 타입이므로 이러한 확장은 불필요합니다.</p>
-<p>예:</p>
-<pre><code>
-  class ClassA&lt;T extends Object&gt; {}
+Informan tipos de argumentos genéricos y comodines que se declaran explícitamente como que extienden `java.lang.Object`.
+<p>Esta cláusula `extends` es redundante porque `java.lang.Object` es el supertipo de todas las clases. </p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  class ClassA&lt;T extends Object&gt; {}
 </code></pre>
 <!-- tooltip end -->
-<p>검사 구성:</p>
 <p>
-  <code>java.lang.Object</code> 어노테이션이 사용된 경우, <b>java.lang.Object 어노테이션 무시</b> 옵션을 사용하여 검사를 비활성화하세요.
+  Deshabilite la opción <b>Ignorar cuando java.lang.Object está anotado</b> si necesita conservar la cláusula `extends Object` para las anotaciones.
+  Esto puede resultar útil, por ejemplo, cuando se utiliza el analizador de nulidad y la cláusula `extends Object` contiene anotaciones `@Nullable`/`@NotNull`.
 </p>
-<p>예:</p>
-<pre><code>
-  class ClassB&lt;T extends @A Object&gt; {}
+<p><b>Ejemplo:</b></p>
+<pre><code>  class MyClass&lt;T extends @NotNull Object&gt; {}
 </code></pre>
 
 </body>

@@ -1,37 +1,37 @@
 <html>
 <body>
-<p>확장 리시버가 null 가능이 아니라는 사실을 고려하지 않는 비 null 가능 확장 리시버를 포함하는 인라인 함수를 보고합니다.</p>
+<p>Informa funciones en línea con receptores de extensión no anulables que no utilizan el hecho de que el receptor de extensión no es anulable.</p>
 <p>
-    Kotlin 1.2 이전 버전에서는 유연한 null 가능 확장 리시버(알 수 없는 null 가능성이 있는 플랫폼 타입)를 포함하는 <code>inline fun</code> 호출이 바이트코드에서 null 값 가능성 검사를 포함하지 않았습니다. Kotlin 1.2 버전부터는 null 값 가능성 검사가 바이트코드에 포함됩니다(<a href="https://youtrack.jetbrains.com/issue/KT-12899">KT-12899</a> 참조).
+    Antes de Kotlin 1.2, las llamadas a la <code>función en línea</code> con un receptor de extensión flexible y anulable (un tipo de plataforma con una capacidad de anulación desconocida) no incluían comprobaciones de anulación en el código de bytes. Desde Kotlin 1.2, se incluyen en el código de bytes las comprobaciones de nulidad (consulte <a href="https://youtrack.jetbrains.com/issue/KT-12899">KT-12899</a>).
 </p>
 <p>
-    따라서 확장 리시버가 null 가능이 아니라는 사실을 사용하지 않는 함수는 Kotlin 1.2 이하 버전에서 사용하기 위험하며 그러한 함수가 null 가능 리시버를 가지도록 만드는 것이 좋습니다.
+    Por lo tanto, las funciones que no utilizan el hecho de que el receptor de extensión no es anulable son peligrosas en Kotlin hasta la 1.2 y se recomienda que dichas funciones tengan un receptor anulable.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   inline fun String.greet() {
       println("Hello, $this!")
   }
 
   fun main() {
-      // 'System.getProperty'는 표기 불가능한 'String!' 타입을 반환합니다
+      // `System.getProperty` devuelve un tipo `String!` no denotable
       val user = System.getProperty("user.name")
       user.greet()
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicada la corrección rápida:</p>
 <pre><code>
   inline fun String.greet() {
       println("Hello, $this!")
   }
 
   fun main() {
-      // 'System.getProperty'는 표기 불가능한 'String!' 타입을 반환합니다
+      // `System.getProperty` devuelve un tipo `String!` no denotable
       val user = System.getProperty("user.name")
       user.greet()
   }
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 Kotlin 언어 수준이 1.2보다 낮을 경우에만 보고합니다.</p>
+<p>Esta inspección solo informa si el nivel de lenguaje Kotlin del proyecto o módulo es inferior a 1.2.</p>
 </body>
 </html>

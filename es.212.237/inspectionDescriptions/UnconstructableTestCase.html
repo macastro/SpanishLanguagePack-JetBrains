@@ -1,12 +1,15 @@
 <html>
 <body>
-<p><code>abstract</code>가 아니며 public <code>no-arg</code> 생성자 또는 단일 문자열을 인수로 취하는 public 생성자를 노출하지 않는 JUnit 테스트 케이스를 보고합니다.</p>
-<p>해당 테스트 케이스는 대부분의 JUnit 테스트 러너를 통해 실행할 수 없습니다.</p>
+표준 JUnit 테스트 러너로 구성할 수 없는 JUnit 테스트 클래스를 보고합니다.
+<p>
+  JUnit 4 테스트 클래스는 <code>public</code>이어야 하며, <code>public</code> 비인수 생성자가 있거나 생성자가 전혀 없으면서(묵시적 디폴트 생성자) 다른 <code>public</code> 생성자도 없어야 합니다.
+  JUnit 3 테스트 클래스는 <code>public</code>이어야 하며, 일치하는 상위 생성자를 호출하는 <code>String</code> 타입의 단일 매개변수가 있는 <code>public</code> 생성자 또는 <code>public</code> 비인수 생성자가 필요합니다.
+  그렇지 않으면 표준 JUnit 테스트 러너로 테스트 클래스를 실행할 수 없습니다.
 <p><b>예:</b></p>
 <pre><code>
 public class MyTest {
 
-  private MyTest() {} // no-arg 생성자는 private입니다
+  private MyTest() {} // 인수 없는 생성자는 private입니다
 
   @Test
   public void testSomething() {

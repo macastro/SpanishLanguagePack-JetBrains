@@ -1,11 +1,11 @@
 <html>
 <body>
-<code>Thread.yield()</code> 호출을 보고합니다.
+Informa sobre las llamadas a <code>Thread.yield()</code>.
 <p>
-  <code>yield()</code>의 동작은 비결정적이고 플랫폼에 의존하기 때문에 이 메서드를 사용하는 것이 적절한 경우는 거의 없습니다.
-  이 메서드의 사용은 상세한 프로파일링 및 벤치마킹과 결합하여 실제로 바람직한 효과를 얻을 수 있도록 해야 합니다.
+  El comportamiento de <code>yield()</code> no es determinista y depende de la plataforma, por lo que rara vez es apropiado usar este método.
+  Su uso debe combinarse con un profiling y una evaluación comparativa detallados para garantizar que realmente tiene el efecto deseado.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public static void main(String[] args) {
     Runnable r = () -> {

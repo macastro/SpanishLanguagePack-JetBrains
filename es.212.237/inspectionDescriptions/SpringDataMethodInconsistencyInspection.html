@@ -1,25 +1,26 @@
+</body>
+</html>
 <html>
 <body>
 <p>
-  <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation">Spring Data Query</a> 빌더가 해당하는 쿼리를 생성할 수 없는 Spring Data CRUD 저장소 메서드를 보고합니다.
+  Reporta los métodos del repositorio CRUD de Spring Data para los cuales el
+  <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation">Spring Data Query</a>
+  builder no puede generar la consulta correspondiente.
 </p>
 
-<p><b>예:</b></p>
-<pre><code>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
 interface PersonRepository extends Repository&lt;Person, Long&gt; {
   List&lt;Person&gt; findByEmailAddressAndLastname(EmailAddress emailAddress, String lastname);
-  List&lt;Person&gt; findByEmail<strong>Unknown</strong>AndLastname(EmailAddress emailAddress, String lastname); // Cannot resolve property 'Unknown'
-  List&lt;Person&gt; <strong>findByAndLastname</strong>(EmailAddress emailAddress, String lastname); // Missing property name
+  List&lt;Person&gt; findByEmail<strong>Desconocido</strong>AndLastname(EmailAddress emailAddress, String lastname); // No se puede resolver la propiedad 'Desconocido'
+  List&lt;Person&gt; <strong>findByAndLastname</strong>(EmailAddress emailAddress, String lastname); // Falta el nombre de la propiedad
 
   List&lt;Person&gt; findDistinctPeopleByLastnameOrFirstname(String lastname, String firstname);
-  List&lt;Person&gt; findPeopleDistinctBy<strong>Unknown</strong>OrFirstname(String lastname, String firstname); // Cannot resolve property 'Unknown'
+  List&lt;Person&gt; findPeopleDistinctBy<strong>Desconocido</strong>OrFirstname(String lastname, String firstname); // No se puede resolver la propiedad 'Desconocido'
 
   List&lt;Person&gt; findByLastnameOrderByFirstnameAsc(String lastname);
-  List&lt;Person&gt; findByLastnameOrderBy<strong>Unknown</strong>Desc(String lastname);  // Cannot resolve property 'Unknown'
+  List&lt;Person&gt; findByLastnameOrderBy<strong>Desconocido</strong>Desc(String lastname);  // No se puede resolver la propiedad 'Desconocido'
 }
 </code></pre>
-</body>
-</html>
-
 </body>
 </html>

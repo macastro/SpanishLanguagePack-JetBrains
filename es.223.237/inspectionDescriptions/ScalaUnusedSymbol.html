@@ -1,21 +1,21 @@
 <html>
 <body>
-<p>사용되지 않는 선언을 보고합니다.</p>
+<p>Informa declaraciones que no se usan.</p>
 
-<p>빠른 수정에서는 사용되지 않는 선언을 제거합니다.</p>
+<p>La corrección rápida elimina la declaración sin uso.</p>
 
-<p>아래 <b>옵션</b>에서 검사가 공용 및/또는 로컬 선언에 대해 작동해야 하는지 여부를 제어할 수 있습니다.
-  로컬 선언의 경우 검사 활성화 및 비활성화 외에도 다음 세 가지 컴파일러 옵션 중 하나의 존재에
-  종속되게 만들 수도 있습니다: <code>-Wunused:locals</code>, <code>-Wunused:linted</code> 또는 <code>-Xlint:unused</code>.</p>
+<p>En las <b>Opciones</b> de abajo, puedes controlar si la inspección deberá funcionar para declaraciones públicas y/o locales.
+  En el caso de declaraciones locales, además de habilitar y deshabilitar la inspección, también puedes hacerla depender
+  de la existencia de una de tres opciones del compilador: <code>-Wunused:locals</code>, <code>-Wunused:linted</code> o <code>-Xlint:unused</code>.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   def test(): Int = {
     val unused = 3
     3
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   def test(): Int = {
     3

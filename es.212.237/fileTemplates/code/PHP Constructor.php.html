@@ -2,41 +2,41 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">PHP 클래스 생성자에 대한 기본 제공 템플릿.</font><br>
-   </td>
- </tr>
+    <td colspan="3"><font face="verdana" size="-1">Una plantilla incorporada para el constructor de clases PHP.</font><br>
+    </td>
+  </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">사전 정의된 변수는 다음의 값을 사용합니다:</font></td>
- </tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAM_LIST}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">선택된 프로퍼티에 대해 하나씩 쉼표로 구분된 생성자 매개변수 목록.</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Lista de parámetros del constructor separados por comas, uno para cada propiedad seleccionada.</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAM_DOC}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">매개변수의 PHPDoc 주석.<br>
-'* @param type name' 을 포함하는 여러 줄로 생성됩니다. 만약 매개변수가 없으면, 빈 콘텐츠로 간주됩니다.</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Comentarios PHPDoc del parámetro.<br>
+      Generados como varias líneas que contienen '* @param tipo nombre'. Se evalúa como una cadena vacía si no hay parámetros.</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${THROWS_DOC}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">예외의 PHPDoc 주석.<br>
-'* @throws type' 을 포함하는 여러 줄로 생성됩니다. 만약 예외가 없으면, 빈 콘텐츠로 간주됩니다.</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Comentarios PHPDoc de excepción.<br>
+      Generados como varias líneas que contienen '* @throws tipo'. Se evalúa como una cadena vacía si no se lanzan excepciones.</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CLASS_NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">클래스 이름.</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la clase.</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${BODY}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">'$this->property=$property;' 대입을 포함하는 생성자 본문.</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Cuerpo del constructor que contiene asignaciones '$this->property=$property'.</font></td>
+  </tr>
 </table>
 </body>
 </html>

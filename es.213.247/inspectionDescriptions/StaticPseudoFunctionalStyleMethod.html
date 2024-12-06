@@ -1,22 +1,17 @@
 <html>
 <body>
-<code>Java Stream API</code>를 이용할 수 있는 경우 의사 함수 코드가 사용된 위치를 보고합니다.
-<p><code>guava Iterable API</code>는 <code>Java Streams API</code>와 유사한 기능을 제공하지만 약간의 차이점이 있으며 일부 기능이 누락될 수 있습니다.
-  특히 <code>IntStream</code>과 같이 기본 타입에 특화된 스트림 항목은 제네릭 항목보다 성능 면에서 더욱 뛰어납니다.</p>
-<p><b>예:</b></p>
+<code>API de Java Stream</code> informa el uso de código con funciones simuladas de Guava cuando es posible usar 
+<p>La <code>API Iterable de Guava</code> ofrece funciones similares a la <code>API de Java Streams</code> pero con algunas diferencias, y es posible que falten funciones.
+  Especialmente, los elementos del flujo especializados en tipos primitivos como <code>IntStream</code> tienen un mejor rendimiento que los elementos genéricos.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-List&lt;String&gt; transformedIterable = Iterables.transform(someList, someTransformFunction);//경고: 의사 함수 스타일 코드
+List&lt;String&gt; transformedIterable = Iterables.transform(someList, someTransformFunction);//ADVERTENCIA: Código con estilo de función simulada
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>List&lt;String&gt; transformedIterable = someList.stream().map(someTransformFunction).collect(Collectors.toList());</code></pre>
 <p>
-  <b>참고:</b> 코드 의미가 변경될 수 있습니다. 예를 들어, guava의 <code>terable.transform</code>은 지연 평가된 이터러블을 생성하지만 대체 시 즉시 평가된 이터러블이 생성됩니다.
+  <b>Nota:</b> Es posible que el significado del código cambie. Por ejemplo, <code>Iterable.transform</code> de Guava genera una iteración con evaluación retrasada pero el código de reemplazo genera una iteración cuya evaluación es anticipada.
 </p>
 <!-- tooltip end -->
-<p>
-  <b>'Stream' API로 변환된 static 메서드 호출</b> 옵션을 사용하여 <code>stream</code> API로 변환되어야 하는 static 메서드를 구성합니다.
-</p>
-
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 8 이상인 경우에만 보고합니다.</p>
 </body>
 </html>

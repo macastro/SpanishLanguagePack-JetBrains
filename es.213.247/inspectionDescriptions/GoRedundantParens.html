@@ -16,8 +16,8 @@
 
 <html>
 <body>
-표현식과 타입에서 불필요한 소괄호를 보고합니다.
-<p>예:</p>
+Reporta paréntesis redundantes en expresiones y tipos.
+<p>Ejemplo:</p>
 <pre><code>func _(x (int), y ((string))) {
 }
 func _() {
@@ -25,7 +25,7 @@ func _() {
  _ = (((1 + 1)))
  _ = (((1 + 1))) + (((2 + 2)))
 }</code></pre>
-<p><b>소괄호 제거</b> 빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida <b>Desenvolver paréntesis</b>:</p>
 <pre><code>func _(x int, y string) {
 }
 func _() {

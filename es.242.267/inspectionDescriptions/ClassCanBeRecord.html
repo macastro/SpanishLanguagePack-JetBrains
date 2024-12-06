@@ -1,25 +1,26 @@
 <html>
 <body>
-레코드 클래스로 변환될 수 있는 클래스를 보고합니다.
-<p>레코드 클래스는 확장 가능한 동작보다는 불변 데이터를 모델링하는 데 주안점을 둡니다.
-<code>equals()</code> 및 접근자와 같이 데이터 기반 메서드의 묵시적 자동 구현은 보일러플레이트 코드를 줄이는 데 유용합니다.</p>
+Informa las clases que se pueden convertir en clases de registro.
+<p>Las clases de registro se centran en el modelado de datos inmutables en lugar de un comportamiento extensible.
+La implementación implícita automática de métodos basados en datos, como <code>equals()</code> y accesores, ayuda a reducir el código repetitivo.</p>
 <p>
-  모든 클래스가 레코드 클래스가 될 수 있는 것은 아닙니다. 다음 몇 가지 제한 사항입니다:
+  Tenga en cuenta que no todas las clases pueden ser clases de registro. Estas son algunas de las restricciones:
 </p>
 <ul>
-  <li>The class must have no subclasses.</li>
-  <li>클래스 내 모든 비 정적 필드는 final이여야합니다.</li>
-  <li>이니셜라이저, 제네릭 생성자 및 네이티브 메서드가 존재해서는 안됩니다.</li>
+  <li>La clase debe ser de nivel superior y no debe tener subclases.</li>
+  <li>Todos los campos no estáticos de la clase deben ser finales.</li>
+  <li>No deben existir inicializadores, constructores genéricos ni métodos nativos.</li>
 </ul>
-<p>레코드 클래스의 자세한 설명은 <a href="https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.10">Java 언어 사양</a>을 참조하세요.</p>
+<p>Para obtener una descripción completa de las clases de registro, consulte
+  <a href="https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.10">Especificación del lenguaje Java</a>.</p>
 <!-- tooltip end -->
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
-  class Point {
+  class Punto {
     private final double x;
     private final double y;
 
-    Point(double x, double y) {
+    Punto(double x, double y) {
       this.x = x;
       this.y = y;
     }
@@ -33,21 +34,21 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
-  record Point(int x, int y) {
+  registro Punto(int x, int y) {
   }
 </code></pre>
-<p><code>getX()</code>/<code>isX()</code> 접근자 이름을 <code>x()</code>로 자동 변경하게 하려면 <b>Suggest renaming accessors(접근자 이름 변경 제안)</b> 옵션을 활성화하세요.</p>
+<p>Habilite la opción <b>Sugerir renombrar métodos accesores</b> para renombrar los accesores <code>getX()</code>/<code>isX()</code> a <code>x()</code> automáticamente.</p>
 <p>
-  <b>If members become more accessible(멤버의 접근성이 개선되는 경우)</b> 옵션을 사용하여 변환 후 멤버의 접근성이 높아지는 경우의 동작을 지정할 수 있습니다.
+  Utilice la opción <b>Si los miembros se vuelven más accesibles</b> para especificar qué hacer cuando la conversión hará que los miembros sean más accesibles:
 <ul>
-  <li>접근성이 더 높아지는 경우 멤버를 변환하지 않도록 하려는 경우 <b>Do not suggest conversion(변환 제안하지 않음)</b>을 선택하세요.</li>
-  <li>영향을 받는 멤버를 표시하고 계속할지 물어보도록 하려는 경우 <b>Show conflicts view(충돌 뷰 표시)</b> 옵션을 선택하세요. 배치 모드에서는 변환이 제안되지 않습니다.</li>
-  <li>필요 시 접근성을 조용히 높이려는 경우 <b>Convert silently(조용히 변환)</b> 옵션을 선택하세요.</li>
+  <li>Elija la opción <b>No sugerir conversión</b> para no convertir cuando los miembros se vuelvan más accesibles.</li>
+  <li>Elija la opción <b>Mostrar vista de conflictos</b> para mostrar los miembros afectados y solicitar que continúe. En el modo batch, no se sugerirá la conversión.</li>
+  <li>Elija la opción <b>Convertir silenciosamente</b> para aumentar la accesibilidad de forma silenciosa cuando sea necesario.</li>
 </ul>
-<p>지정된 패턴과 일치하는 어노테이션이 추가된 경우, 변환에서 클래스를 제외하려면 <b>Suppress conversion if class is annotated by(클래스에 다음 어노테이션이 추가된 경우 변환 억제)</b> 목록을 사용하세요.
+<p>Utilice la lista <b>Suprimir conversión si la clase está anotada por</b> para excluir clases de la conversión cuando están anotadas por anotaciones que coinciden con los patrones especificados.
 </p>
-<p><small>2020.3의 새로운 기능</small></p>
+<p><small>Novedad de 2020.3</small></p>
 </body>
 </html>

@@ -1,25 +1,25 @@
 <html>
 <body>
-JUnit 4의 <code>@Ignore</code> 또는 JUnit 5의 <code>@Disabled</code> 어노테이션의 사용을 보고합니다.
-이러한 어노테이션이 장기간 특별한 이유 없이 추가된 테스트는 코드 스멜입니다.
-<p><b>예:</b></p>
-<pre><code>
+Informa sobre el uso de las anotaciones <code>@Ignore</code> de JUnit 4 o <code>@Disabled</code> de JUnit 5.
+Se considera un mal olor de código tener pruebas anotadas con estas anotaciones por mucho tiempo, especialmente cuando no se especifica ningún motivo.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
   @Ignore
-  <b>public class</b> UrgentTest {
+  <b>public class</b> PruebaUrgente {
 
     @Test
-    <b>public void</b> testIt() {
-      Assert.assertEquals("expected", "actual");
+    <b>public void</b> probarlo() {
+      Assert.assertEquals("esperado", "real");
     }
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-  검사 구성:
+  Configurar la inspección:
 </p>
 <ul>
   <li>
-    <b>이유 없이 사용된 어노테이션만 보고</b> 옵션을 사용하여 어노테이션의 <code>value</code> 속성으로 이유가 지정되지 않은 사례만 보고합니다.
+    Utiliza la opción <b>Solo informar anotaciones sin motivo</b> para informar solamente los casos en que no se especifica ningún motivo como el atributo <code>value</code> de la anotación.
   </li>
 </ul>
 </body>

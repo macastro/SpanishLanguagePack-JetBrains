@@ -1,6 +1,16 @@
 <html>
 <body>
-잘못된 메서드 오버로드를 보고합니다(<code>...</code>).
-<p>메서드 오버로드는 메서드에 대해 다른 오버로드되지 않은 정의가 정확히 하나 있는 경우에만 유효합니다.</p>
+Informa sobre sobrecargas de métodos no válidas (<code>...</code>). Una sobrecarga de métodos solo es válida si existe exactamente otra definición no sobrecargada
+para el método.
+<p>Hay disponible una corrección rápida para eliminar la sobrecarga de métodos no válida.</p>
+<p>Ejemplo:</p>
+<pre><code>class Example
+  # No se puede encontrar una declaración no sobrecargada para el método 'call' de la clase 'Example'
+  def call: -> untyped | ...
+end</code></pre>
+<p>Tras la corrección rápida:</p>
+<pre><code>class Example
+  def call: -> untyped
+end</code></pre>
 </body>
 </html>

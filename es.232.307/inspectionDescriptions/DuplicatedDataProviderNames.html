@@ -1,18 +1,18 @@
 <html>
 <body>
-<code>org.testng.TestNGException</code>가 발생한 경우 이름이 같은 <code>TestNG</code> 데이터 공급자를 보고합니다.
-<p>예:</p>
+Reporta los proveedores de datos <code>TestNG</code> con nombres iguales si ha ocurrido <code>org.testng.TestNGException</code>.
+<p>Ejemplo:</p>
 <pre><code>
   public class DuplicatedDataProviders {
     @DataProvider
-    public Object[][] intTestData() { // 중복 1
+    public Object[][] intTestData() { // duplicado 1
       return new Integer[][]{
         new Integer[]{1, 1},
       };
     }
 
     @DataProvider(name = "intTestData")
-    public Object[][] someTestData() { // 중복 2
+    public Object[][] someTestData() { // duplicado 2
       return new Integer[][]{
         new Integer[]{1, 1},
       };

@@ -1,24 +1,25 @@
 <html>
 <body>
-비교된 타입이 인터페이스이며 비교된 표현식이 비교된 인터페이스를 구현하지 않고 비교된 인터페이스를 구현하는 볼 수 있는 하위 클래스가 없는 클래스 타입을 포함하는 경우 <code>instanceof</code> 식을 보고합니다.
+Reporta expresiones `instanceof` donde la expresión que es verificada tiene un tipo de clase/interfaz que no extiende/implementa el tipo de clase/interfaz en el lado derecho de la expresión `instanceof`, ni tiene subclases que lo hagan.
 <p>
-  의도된 경우도 있으나 그러한 구문은 보통 오류일 가능성이 높으며 <code>instanceof</code> 식이 항상 <code>false</code>로 평가됩니다.
+  A pesar de que podría ser para código de biblioteca por ejemplo, tal construcción es probablemente errónea,
+  porque ninguna instancia de ninguna clase declarada en el proyecto podría pasar esta prueba `instanceof`.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  interface I1 {}
+  class Foo { }
 
-  interface I2 {}
-
-  interface I3 extends I1 {}
-
-  static class Sub1 implements I1 {}
-
-  static class Sub2 extends Sub1 implements I2 {
-    void test(Sub1 sub1) {
-      if (sub1 instanceof I3) { // 여기서 'I3'은 호환되지 않는 인터페이스입니다
+  interface Bar { }
+  
+  class Main {
+      void test(Foo f, Bar b) {
+          if (f instanceof Bar) { // problema
+              System.out.println("fail");
+          }
+          if (b instanceof Foo) { // problema
+              System.out.println("fail");
+          }
       }
-    }
   }
 </code></pre>
 <!-- tooltip end -->

@@ -1,11 +1,13 @@
 <html>
 <body>
-본문에 하나의 <code>synchronized</code> 문이 포함된 메서드를 보고합니다.
-이 <code>synchronized</code> 문의 잠금 표현식은 인스턴스 메서드의 <code>this</code> 또는 static 메서드의 <code>[ClassName].class</code>와 동등해야 합니다.
+Reporta métodos cuyo cuerpo contiene una sola expresión `synchronized`.
+La expresión de bloqueo para esta expresión `synchronized` debe ser igual a
+`this` para métodos de instancia o `[NombreClase].class` para métodos estáticos.
 <p>
-  해당 메서드의 가독성을 개선하려면 <code>synchronized</code> 래퍼를 제거하고 메서드를 <code>synchronized</code>로 표시해야 합니다.
+  Para mejorar la legibilidad de este tipo de métodos,
+  puedes eliminar el contenedor `synchronized` y marcar el método como `synchronized`.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public int generateInt(int x) {
     synchronized (this) {
@@ -13,7 +15,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la correción rápida:</p>
 <pre><code>
   public synchronized int generateInt(int x) {
     return 1;

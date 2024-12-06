@@ -1,19 +1,19 @@
 <html>
 <body>
 <p>
-  <code>do-while</code> 루프로 작성하면 더 효율적일 수 있는 <code>while</code> 루프를 보고합니다.
-  반복문 전의 코드와 반복문 본문의 코드가 동일한 <code>while</code> 반복문이 있습니다.
-  <code>do-while</code> 반복문으로 대체하면 중복 코드를 제거할 수 있습니다.
-  이러한 중복 코드가 없는 <code>while</code> 반복문을 작성하기 위한 빠른 수정이 강조 표시 없이 에디터에 제안됩니다.
+  Reporta ciclos <code>while</code> que podrían escribirse de manera más efectiva como ciclos <code>do-while</code>.
+  Hay ciclos <code>while</code> en los que el código justo antes del ciclo es idéntico al código en el cuerpo del ciclo.
+  El reemplazo con un ciclo <code>do-while</code> elimina el código duplicado.
+  Para ciclos <code>while</code> sin dicho código duplicado, la solución rápida también se ofrece en el editor, pero sin resaltar.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   foo();
   while (x) {
       foo();
   }
 </code></pre>
-<p>다음으로 대체 가능:</p>
+<p>Puede reemplazarse con:</p>
 <pre><code>
   do {
     foo();
@@ -21,7 +21,7 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  <small>2024.1의 새로운 기능</small>
+  <small>Nuevo en 2024.1</small>
 </p>
 </body>
 </html>

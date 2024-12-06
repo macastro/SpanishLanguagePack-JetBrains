@@ -1,17 +1,17 @@
 <html>
 <body>
-문자열 연결 내에서 빈 문자열 피연산자를 보고합니다.
-빈 문자열 연결을 사용하여 <code>String</code>이 아닌 객체나 기본 타입을 <code>String</code>으로 변환할 수 있으나 <code>String.valueOf()</code> 메서드 호출을 사용하는 것이 더 명확합니다.
+Informa operandos de cadena vacía en concatenaciones de cadenas.
+La concatenación con la cadena vacía puede usarse para convertir objetos o primitivas que no son <code>String</code> en <code>String</code>, pero puede ser más claro usar una llamada al método <code>String.valueOf()</code>.
 <p>
-  빠른 수정에서는 연결을 단순화하도록 제안합니다.
+  Se sugiere una solución rápida para simplificar la concatenación.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void foo(int x, int y) {
     String s = "" + x + " ; " + y;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   void foo(int x, int y) {
     String s = x + " ; " + y;
@@ -19,6 +19,6 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  빈 문자열을 제거하려면 다른 피연산자를 <code>String.valueOf()</code>로 변환해야 하는 경우를 무시하려면 <b>빈 문자열을 다른 변경 사항 없이 제거할 수 있을 때만 보고</b> 옵션을 사용하세요.
+  Usa la opción <b>Informar solo en caso de que se puedan eliminar cadenas vacías sin otros cambios</b> para ignorar los casos en los que eliminar la cadena vacía requerirá agregar una conversión <code>String.valueOf()</code> de otro operando.
 </body>
 </html>

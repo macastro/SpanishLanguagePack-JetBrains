@@ -1,20 +1,20 @@
 <html>
 <body>
-<code>plugin.xml</code>에서 확장 등록과 관련된 문제를 보고합니다.
+Se informan los problemas de registro de la extensión en <code>plugin.xml</code>.
 <p>
-  다음과 같은 문제가 보고됩니다.
+  Se informan los siguientes problemas:
 <ul>
-  <li><code>언어</code> 선언이 누락되었습니다.
-    확장이 특정 언어를 대상으로 하지 않는 경우, 빠른 수정을 사용하여 명시적으로 '모든 언어'에 대한 선언을 작성하세요.
+  <li>Falta la declaración de <code>language</code>.
+    Si la extensión no está dirigida a un idioma específico, use la corrección rápida para crear una declaración explícita de "any language".
   </li>
-  <li>검사: 누락된 속성</li>
-  <li>서비스: 불필요한 <code>serviceInterface</code> 선언</li>
-  <li><code>externalIdPrefix</code>가 없는 <code>com.intellij.stubElementTypeHolder</code>. <a
-    href='https://plugins.jetbrains.com/docs/intellij/stub-indexes.html?from=?from=DevkitPluginXmlInspectionDescription'>스텁 색인</a>을 참조하세요
+  <li>Inspección: atributos faltantes</li>
+  <li>Servicio: declaración de <code>serviceInterface</code> redundante</li>
+  <li><code>com.intellij.stubElementTypeHolder</code> sin <code>externalIdPrefix</code>. Consulte <a
+    href='https://plugins.jetbrains.com/docs/intellij/stub-indexes.html?from=?from=DevkitPluginXmlInspectionDescription'>índices de Stub</a>.
   </li>
-  <li><code>id</code>가 없는 <code>com.intellij.statusBarWidgetFactory</code></li>
+  <li><code>com.intellij.statusBarWidgetFactory</code> sin <code>id</code></li>
 </ul>
 </p>
-<p><small>2022.3의 새로운 기능</small>
+<p><small>Novedades de 2022.3</small>
 </body>
 </html>

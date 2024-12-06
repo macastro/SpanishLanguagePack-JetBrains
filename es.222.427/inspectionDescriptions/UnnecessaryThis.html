@@ -1,10 +1,12 @@
 <html>
 <body>
-불필요한 <code>this</code> 한정자를 보고합니다.
+Informa el innecesario calificador <code>this</code>
 <p>
-  코드 참조의 모호함을 없애기 위해 <code>this</code>를 사용하는 것은 다양한 코드 스타일에서 지양되며 자동 리팩터링 수행 시 불필요해지기 쉽습니다.
+  El uso de <code>this</code> para desambiguación de una referencia de código es desaconsejado por muchos estilos de codificación
+  y puede fácilmente volverse innecesario
+  mediante refactorizaciones automáticas.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
     int x;
@@ -13,7 +15,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   class Foo {
     int x;
@@ -24,8 +26,8 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  검사 설정을 사용하여 필드 대입을 무시합니다.
-  예를 들면 <code>this.x = 2;</code>는 보고되지 않지만 <code>int y = this.x;</code>는 보고됩니다.
+  Usa las configuraciones de inspección para ignorar asignaciones a campos.
+  Por ejemplo, <code>this.x = 2;</code> no será reportado, pero <code>int y = this.x;</code> sí lo será.
 <p>
 </body>
 </html>

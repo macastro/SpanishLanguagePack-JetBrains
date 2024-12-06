@@ -1,69 +1,72 @@
 <html>
 <body>
-JSP 페이지 내의 이스케이프되지 않은 EL 표현식의 안전하지 않은 데이터를 보고합니다. 이러한 경우는 <a href="https://en.wikipedia.org/wiki/Cross-site_scripting">크로스 사이트 스크립팅(XSS)</a> 취약점을 일으킬 수 있습니다.
+Informa sobre datos no seguros en expresiones EL no escapadas en páginas JSP. Dichos casos pueden dar lugar a <a href="https://es.wikipedia.org/wiki/Secuencia_de_comandos_en_sitios_cruzados">vulnerabilidades de secuencias de comandos en sitios cruzados (XSS)</a>.
 <p>
-  아래의 설명에서 <b>untainted</b> 데이터라는 용어는 안전하고 신뢰할 수 있는 데이터를 의미하며 <b>tainted</b>(안전하지 않고 신뢰할 수 없음)의 반의어입니다. 자세한 정보는 <a href="https://en.wikipedia.org/wiki/Taint_checking">taint 검사</a>를 참조하세요.
+  La siguiente descripción utiliza el término datos <b>no contaminados</b> para referirse a datos seguros y de confianza, como opuesto a <b>contaminados</b> (no seguros, no confiables). Consulte <a href="https://es.wikipedia.org/wiki/Comprobaci%C3%B3n_de_taint">Comprobación de taint</a> para obtener más información.
 </p>
 <p>
-  안전한(untainted) 객체:
-</p>
-<ul>
-  <li>기본 데이터 타입(<code>char</code> 제외)</li>
-  <li>untainted로 표시된 메서드가 호출된 결과</li>
-  <li>이스케이프하는 함수 호출의 결과</li>
-  <li>untainted로 표시된 필드</li>
-</ul>
-JSP 페이지는 제공된 데이터에 따라 다른 컨텍스트를 가질 수 있으며 한 컨텍스트에서 데이터가 안전하더라도 다른 컨텍스트에서는 안전하지 않을 수 있습니다.
-<a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding">크로스 사이트 스크립트 방지 족보</a>에서 예시를 살펴보세요. 이 검사는 <b>모든</b> 컨텍스트에서 untainted(안전함)로 표시된 데이터를 건너뜁니다.
-<p>
-  이 검사는 다음의 옵션을 사용하여 메서드와 필드를 안전한 것으로 표시합니다.
+  Un objeto seguro (no contaminado) es:
 </p>
 <ul>
-  <li>구성 가능한 untainted 어노테이션 목록에 있는 어노테이션을 사용</li>
-  <li>안전한 메서드와 필드의 목록을 구성</li>
+  <li>un tipo de datos primitivo (excepto <code>char</code>)</li>
+  <li>el resultado de una llamada a un método que está marcado como no contaminado</li>
+  <li>el resultado de una llamada a una función de escape</li>
+  <li>un campo que está marcado como no contaminado</li>
 </ul>
 <p>
-  이 검사는 안전하지 않은 데이터가 JSP 페이지 내의 안전한 태그에 도달하는 경우를 강조 표시하지 않습니다.
-  예를 들어 JSTL taglib의 <code>out</code> 태그는 기본적으로 주어진 값을 이스케이프하므로 안전합니다.
-  안전한 태그의 목록을 구성할 수 있습니다(전체 범위를 정의하려면 <code>tag</code> 또는 <code>attribute</code>를 생략하세요).
+La página JSP podría tener diferentes contextos para los datos proporcionados, y si los datos son seguros para un contexto, no significa necesariamente que sean seguros para todos.
+Consulte <a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding">Hoja de referencia sobre prevención de secuencias de comandos en sitios cruzados</a> para ver algunos ejemplos. Esta inspección omite los datos marcados como no contaminados (seguros) en <b>TODOS</b> los contextos.
 </p>
-<p>&quot;JSTL &lt;out&gt; 태그로 래핑&quot; 빠른 수정이 EL 식을 JSTL <code>&lt;out&gt;</code> 태그로 래핑합니다.</p>
-<p>이전:</p>
+<p>
+  Esta inspección admite las siguientes opciones para marcar métodos y campos como seguros:
+</p>
+<ul>
+  <li>mediante el uso de cualquier anotación de la lista configurable de anotaciones no contaminadas</li>
+  <li>mediante la configuración de la lista de métodos y campos seguros</li>
+  <li>todos los campos finales estáticos podrían marcarse como no contaminados eligiendo la opción "Considerar campos finales estáticos como no contaminados" en la pestaña "Métodos y campos no contaminados"</li>
+</ul>
+<p>
+  Esta inspección no resalta los lugares donde los datos no seguros llegan a las etiquetas seguras en las páginas JSP.
+  Por ejemplo, la etiqueta <code>out</code> de JSTL taglib es segura porque escapa el valor dado por defecto.
+  La lista de etiquetas seguras es configurable (omite el valor <code>tag</code> o <code>attribute</code> para definir un rango completo).
+</p>
+<p>El arreglo rápido "Envolver en etiqueta JSTL &lt;out&gt;" envuelve una expresión EL con la etiqueta JSTL <code>&lt;out&gt;</code>.</p>
+<p>Antes:</p>
 <pre>
   <code>
     ${foo}
   </code>
 </pre>
-<p>이후:</p>
+<p>Después:</p>
 <pre>
   <code>
   &lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
-&lt;c:out value=&quot;${foo}&quot;/&gt;
+  &lt;c:out value=&quot;${foo}&quot;/&gt;
   </code>
 </pre>
-<p>&quot;JSTL escapeXml() 함수로 래핑&quot;은 안전하지 않은 값을 <code>escapeXml</code> 이스케이프 함수로 래핑합니다.</p>
-<p>이전:</p>
+<p>El arreglo rápido "Envolver en función JSTL escapeXml()" envuelve un valor no seguro con la función de escape <code>escapeXml</code>.</p>
+<p>Antes:</p>
 <pre>
   <code>
   &lt;%@ taglib prefix=&quot;custom&quot; uri=&quot;WEB_INF/custom.tld&quot; %&gt;
   &lt;custom:tag value=&quot;${foo}&quot;/&gt;
   </code>
 </pre>
-<p>이후:</p>
+<p>Después:</p>
 <pre>
   <code>
-    &lt;%@ taglib prefix=&quot;custom&quot; uri=&quot;WEB_INF/custom.tld&quot; %&gt;
+    &lt;%@ taglib prefix=&quot;custom&quot; uri=&quot;WEB-INF/custom.tld&quot; %&gt;
     &lt;%@ taglib prefix=&quot;fn&quot; uri=&quot;http://java.sun.com/jsp/jstl/functions&quot; %&gt;
     &lt;custom:tag value=&quot;${fn:escapeXml(foo)}&quot;/&gt;
   </code>
 </pre>
-<p>이 외에도 선택된 태그를 안전한 태그에 추가하거나 관련 메서드 또는 필드에 untainted 어노테이션을 추가할 수 있는 빠른 수정이 더 있습니다.</p>
+<p>Existen más arreglos rápidos para agregar etiquetas seleccionadas a etiquetas seguras o anotar métodos (o campos) relacionados con anotaciones no contaminadas.</p>
 <p>
-  사용자 지정 이스케이프 함수를 추가할 수 있습니다('이스케이프 함수' 탭 참조).
-  이제 안전한 값을 반환하는 JSTL의 함수가 포함됩니다(예: 잘 알려진 <code>escapeXml</code> 함수).
-  네임스페이스 URI가 다른 JSTL 함수를 정의할 필요가 없습니다.
-  'http://java.sun.com/jsp/jstl/functions' 또는 'http://java.sun.com/jstl/functions'가 사용 중인 경우 나머지도 확인합니다. 이스케이프 함수를 이름으로 어디에서든 건너뛸 수 있습니다.
-  이를 위해서는 네임스페이스 URI 필드를 비워두세요.
+  Es posible agregar funciones de escape personalizadas (consulte la pestaña "Funciones de escape").
+  Ahora contiene funciones de JSTL que devuelven un valor seguro (por ejemplo, una función <code>escapeXml</code> conocida).
+  No requiere definir funciones JSTL dos veces con diferentes URI de espacio de nombres.
+  Si se utilizó uno de los "http://java.sun.com/jsp/jstl/functions" o "http://java.sun.com/jstl/functions", también se verificaría el otro. También es posible omitir una función de escape en todas partes por su nombre.
+  Para hacerlo, deje vacío el campo URI del espacio de nombres.
 </p>
 </body>
 </html>

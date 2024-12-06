@@ -1,16 +1,7 @@
 <html>
 <body>
-하드코딩된 <code>String</code> 리터럴의 모든 인스턴스를 보고합니다.
-<p>국제화된 환경에서 하드코딩된 <code>String</code> 리터럴은 오류일 가능성이 높습니다. 이 검사는 빈 문자열 및 공백으로만 구성된 문자열을 보고하지 않습니다. 빠른 수정을 사용하여 문자열 리터럴을 <code>java.util.ResourceBundle.getString()</code> 메서드 호출로 변환할 수 있습니다.</p>
+Informa toda instancia de literales <code>String</code> codificados.
+<p>Los literales <code>String</code> codificados probablemente son errores en un entorno internacionalizado. Esta inspección no informará cadenas vacías ni cadenas que solo consten de espacios en blanco. Hay una solución rápida disponible para transformar un literal de cadena en una llamada al método <code>java.util.ResourceBundle.getString()</code>.</p>
 <!-- tooltip end -->
-<p>검사가 다음에 포함된 문자열을 보고해야 할지 더 구체적으로 지정하는 검사 옵션을 사용합니다.</p>
-<ul>
-  <li>assert 문(예: <code>assert str.equals("message")</code>)</li>
-  <li>예외 생성자 호출(예: <code>new Exception("message")</code>)</li>
-  <li>JUnit assert 호출(예: <code>assertEquals(str, "message")</code>)</li>
-  <li>문자열을 반환하는 메서드의 유일한 인수(예: <code>getStringByKey("key")</code>)</li>
-  <li>기존의 정규 클래스 값이 포함된 리터럴(예: <code>Class.forName("java.lang.Object")</code>)</li>
-  <li>기존의 정규 프로퍼티 키 값이 포함된 리터럴(예: <code>bundle.getString("authentication.failed")</code>)</li>
-</ul>
 </body>
 </html>

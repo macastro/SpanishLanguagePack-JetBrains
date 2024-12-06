@@ -1,14 +1,14 @@
 <html>
 <body>
-더 장황하거나 덜 효율적인 구문 대신 <code>Integer.compare()</code> 메서드 호출이나 <code>Long</code>, <code>Short</code>, <code>Byte</code>, <code>Double</code> 혹은 <code>Float</code> 클래스의 비슷한 메서드 호출로 대체될 수 있는 표현식을 보고합니다.
-<p><code>x</code>와 <code>y</code>가 모두 박싱된 정수라면 <code>x.compareTo(y)</code>가 제안되며, 기본 타입인 경우 <code>Integer.compare(x, y)</code>가 제안됩니다.</p>
-<p><b>예:</b></p>
+Reporta expresiones que pueden ser reemplazadas por una llamada al método <code>Integer.compare()</code> o un método similar de las clases <code>Long</code>, <code>Short</code>, <code>Byte</code>, <code>Double</code> o <code>Float</code>, en lugar de construcciones más extensas o menos eficientes.
+<p>Si <code>x</code> e <code>y</code> son números enteros en caja, entonces se sugiere <code>x.compareTo(y)</code>, si son primitivos se sugiere <code>Integer.compare(x, y)</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public int compare(int x, int y) {
     return x > y ? 1 : x &lt; y ? -1 : 0;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   public int compare(int x, int y) {
     return Integer.compare(x, y);
@@ -16,9 +16,12 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  <code>Double.compare</code>와 <code>Float.compare</code>이 코드의 의미를 약간 변경시키는 것에 유의하세요. 특히 <code>-0.0</code>과 <code>0.0</code>을 구분합니다(<code>Double.compare(-0.0, 0.0)</code>의 값은 -1입니다).
-  또한, <code>NaN</code> 값을 일관적으로 처리합니다. 대부분의 경우 이 의미 변경은 실제로 코드를 향상합니다. 이러한 의미 변경이 본인의 경우에는 적절하지 않은 경우 부동소수점에 대한 이 검사를 체크박스에서 비활성화하세요.
+  Tenga en cuenta que <code>Double.compare</code> y <code>Float.compare</code> cambian ligeramente la semántica del código. En particular,
+  hacen que <code>-0.0</code> y <code>0.0</code> sean distinguibles (<code>Double.compare(-0.0, 0.0)</code> produce -1).
+  Además, procesan consistentemente el valor <code>NaN</code>. En la mayoría de los casos, este cambio de semántica en realidad mejora el
+  código. Utilice la casilla de verificación para deshabilitar esta inspección para números de punto flotante si el cambio de semántica es inaceptable
+  en su caso.
 </p>
-<p><small>2017.2의 새로운 기능</small></p>
+<p><small>Nuevo en 2017.2</small></p>
 </body>
 </html>

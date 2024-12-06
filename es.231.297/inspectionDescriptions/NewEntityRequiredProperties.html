@@ -1,34 +1,34 @@
 <html>
 <body>
-<code>ChangeScope</code>에서 <code>new</code> 혹은 <code>getOrCreate</code> 함수로 생성할 때 <code>Entity</code>의 대입되지 않은 프로퍼티를 보고합니다.
+<code>ChangeScope</code> informa propiedades no asignadas al crear una <code>Entity</code> con las funciones <code>new</code> u <code>getOrCreate</code>.
 <p>
-  <code>Entity</code>의 null이 될 수 없는 모든 프로퍼티를 대입하거나 <code>@Many</code> 어노테이션으로 표시해야 합니다.
-  그렇지 않은 경우 런타임 예외가 발생합니다.
+  Es obligatorio asignar todas las propiedades no nulas de la <code>Entity</code>, o bien etiquetarlas con la anotación <code>@Many</code>.
+  Si no, se producirá una excepción en tiempo de ejecución.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  interface A: Entity {
+  interfaz A: Entidad {
     var x: Int
     var y: Int?
-    @Many var z: Int
+    @Muchos var z: Int
     var p: Int
   }
 
   fun ChangeScope.foo() {
-    new(A::class) {
-      this.p = 0
+    nueva (A::class) {
+      esta.p = 0
     }
   }
 </code></pre>
-<p>빠른 수정에서는 누락된 필수 프로퍼티에 대한 대입을 생성합니다</p>
+<p>El arreglo rápido generará una asignación para la propiedad obligatoria faltante</p>
 <pre><code>
   fun ChangeScope.foo() {
-    new(A::class) {
-      this.x = x
-      this.p = 0
+    nueva (A::class) {
+      esta.x = x
+      esta.p = 0
     }
   }
 </code></pre>
-<!-- tooltip end -->
+<!-- final de la nota -->
 </body>
 </html>

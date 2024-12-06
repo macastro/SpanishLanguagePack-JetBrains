@@ -1,7 +1,7 @@
 <html>
 <body>
-생성자에서 초기화되지 않았으며 NotNull 어노테이션이 추가된 필드를 보고합니다.
-<p>예:</p>
+Reporta campos anotados como no-nulos que no están inicializados en el constructor.
+<p>Ejemplo:</p>
 <pre><code>public class MyClass {
   private @NotNull String value;
 
@@ -14,13 +14,8 @@
   }
 }</code></pre>
 <p>
-  이러한 필드는 not-null 제약에 위배될 수 있습니다. 상기 예시에서 <code>setValue</code> 매개변수에 NotNull 어노테이션이 추가되었지만, setter가 호출되지 않은 경우 <code>getValue</code>가 null을 반환할 수 있습니다.
+  Estos campos pueden violar la restricción no-nula. En el ejemplo anterior, el parámetro <code>setValue</code> está anotado como no-nulo, pero <code>getValue</code> puede devolver nulo si no se llamó al setter.
 </p>
 <!-- tooltip end -->
-<p>검사 구성:</p>
-<ul>
-  <li><b>묵시적으로 초기화될 수 있는 필드 무시</b> 옵션을 사용하여 필드가 묵시적으로 초기화될 경우(예: 종속성 삽입을 통해) 경고 표시 여부를 제어합니다.</li>
-  <li><b>setup() 메서드에서 초기화된 필드 무시</b> 옵션을 사용하여 테스트 케이스 <code>setUp()</code> 메서드에서 필드가 작성된 경우 경고 표시 여부를 제어합니다.</li>
-</ul>
 </body>
 </html>

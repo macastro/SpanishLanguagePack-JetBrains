@@ -1,13 +1,13 @@
 <html>
 <body>
-두 개의 <code>java.math.BigDecimal</code> 숫자를 비교하는 <code>equals()</code> 호출을 보고합니다.
-두 개의 <code>java.math.BigDecimal</code> 숫자는 값과 크기가 모두 동일한 경우에만 같기 때문에 이는 보통 실수입니다.
-<p><b>예:</b></p>
+Se está llamando a <code>.equals()</code> para comparar dos números <code>java.math.BigDecimal</code>.
+Por lo general, esto es un error, dado que para que dos números <code>java.math.BigDecimal</code> sean iguales, deben coincidir tanto el valor como la escala.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   if (new BigDecimal("2.0").equals(
     new BigDecimal("2.00"))) {} // false
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   if (new BigDecimal("2.0").compareTo(
     new BigDecimal("2.00")) == 0) {} // true

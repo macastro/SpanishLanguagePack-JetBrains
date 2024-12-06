@@ -1,10 +1,10 @@
 <html>
 <body>
-불필요한 재정의 선언을 보고합니다.
+Reporta declaraciones de anulación redundantes.
 <p>
-    재정의가 예를 들어 가시성을 변경하는 등 상속된 시그니처 의미를 변경하지 않는다면 재정의를 생략할 수 있습니다.
+    Se puede omitir una anulación si no modifica la semántica de la firma heredada, por ejemplo, cambiando la visibilidad.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   <b>open class</b> Foo {
       open fun singleExpression() {
@@ -16,7 +16,7 @@
   }
 </code></pre>
 
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class Bar : Foo() {
   }

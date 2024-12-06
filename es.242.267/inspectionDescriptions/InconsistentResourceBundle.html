@@ -1,81 +1,85 @@
 <html>
 <body>
-리소스 번들에 포함된 프로퍼티 파일의 문제를 보고합니다.
+Informa acerca de los problemas en los archivos de propiedades contenidos en el paquete de recursos.
 <ul>
-  <li><b>누락된 번역 보고</b> <br><br>
-  상위 프로퍼티 파일에 포함되어 있지만 상속에서 누락된 프로퍼티를 보고하려면 이 옵션을 사용하세요(파생 언어가 아닌 경우).
+  <li><b>Informar de traducciones que faltan</b> <br><br>
+  Utiliza esta opción para informar de las propiedades presentes en el archivo de propiedades padre pero que faltan en las heredadas (salvo que sea un dialecto idiomático).
 
-  <br><br> <p>예:</p>
+  <br><br> <p>Ejemplo:</p>
   <pre><code>
-    # messages.properties
+    # mensajes.properties
     abc=xxx
 
-    # messages_fr.properties
-    # Empty file
+    # mensajes_fr.properties
+    # Archivo vacío
   </code></pre>
 
-  비어 있음 프로퍼티 <code>abc</code>가 번역되지 않은 것으로 보고됩니다.
+  La propiedad <code>abc</code> se informará como no traducida.
   <br><br><br> </li>
 
-  <li><b>일관되지 않은 프로퍼티 보고</b> <br><br>
-  상속된 프로퍼티 파일에 포함되어 있지만 상위 항목(또는 상위 항목이 없는 경우 형제 항목)에서 누락된 프로퍼티를 보고하려면 이 옵션을 사용하세요.
+  <li><b>Informar de propiedades inconsistentes</b> <br><br>
+  Utiliza esta opción para informar de las propiedades presentes en el archivo de propiedades heredado pero que faltan en el archivo padre (o en los hermanos si no hay archivo padre).
 
-  <br><br> <p>예:</p>
+  <br><br> <p>Ejemplo:</p>
   <pre><code>
-    # messages.properties
-    # 빈 파일
+    # mensajes.properties
+    # Archivo vacío
 
-    # messages_fr.properties
+    # mensajes_fr.properties
     abc=xxx
   </code></pre>
 
-  여기에서 프로퍼티 <code>abc</code> 번역은 프랑스어 이외의 언어로는 제공되지 않습니다. 따라서 (디폴트) 프로퍼티 파일 <code>messages.properties</code>에서 누락된 것으로 보고됩니다.
+  La traducción de la propiedad <code>abc</code> no está disponible aquí para ningún idioma excepto el francés,
+  y, por tanto, se informará como perdida en el archivo de propiedades (predeterminado) <code>mensajes.properties</code>.
   <br><br><br> </li>
 
-  <li><b>같은 값으로 재정의된 프로퍼티 보고</b> <br><br>
-  몇몇 프로퍼티 파일에 그대로 복사하여 붙여 넣은 프로퍼티를 보고하려면 이 옵션을 사용하세요. <br>
+  <li><b>Informar de propiedades reemplazadas con el mismo valor</b> <br><br>
+  Utiliza esta opción para informar de las propiedades copiadas y pegadas en varios archivos de propiedades textualmente. <br>
 
-  <br><br> <p>예:</p>
+  <br><br> <p>Ejemplo:</p>
   <pre><code>
-    # messages.properties
+    # mensajes.properties
     abc=xxx
 
-    # messages_fr.properties
+    # mensajes_fr.properties
     abc=xxx
   </code></pre>
-  프로퍼티 <code>abc</code>는 파일 <code>messages_fr.properties</code>에서 불필요하게 상속된 것으로 보고됩니다.
+  La propiedad <code>abc</code> se informará como propiedad heredada innecesariamente en el archivo <code>mensajes_fr.properties</code> .
   <br><br><br> </li>
 
-  <li><b>서로 다른 자리표시자로 재정의된 프로퍼티 보고</b> <br><br>
-  재정의된 프로퍼티에서 자리표시자 일관성을 확인하려면 이 옵션을 사용하세요.
+  <li><b>Informar de propiedades reemplazadas con diferentes marcadores de posición</b> <br><br>
+  Utiliza esta opción para comprobar la consistencia del marcador de posición en las propiedades reemplazadas.
 
-  <br><br> <p>예:</p>
+  <br><br> <p>Ejemplo:</p>
   <pre><code>
-    # messages.properties
+    # mensajes.properties
     qwe={0}xxx{1}
     abc={0}yyy{1}
 
-    # messages_fr.properties
+    # mensajes_fr.properties
     qwe={0}xxx{0}xxx{1}
     abc={0}yyy
   </code></pre>
 
-  프로퍼티 <code>abc</code>는 <code>messages.properties</code>에 해당되지 않는 값이 있는 메시지 형식 자리표시자가 프로퍼티에 포함된 것으로 보고됩니다.
+  La propiedad <code>abc</code> se informará como una propiedad que contiene marcadores de posición de formato de mensaje
+  que no se corresponden con <code>mensajes.properties</code>.
   <br><br><br> </li>
 
-  <li><b>서로 다른 값의 끝부분으로 재정의된 프로퍼티 보고</b> <br><br>
-  재정의된 프로퍼티에서 끝부분의 일관성을 확인하려면 이 옵션을 사용하세요.
-  <br><br> <p>예:</p>
+  <li><b>Informar de propiedades reemplazadas con finales diferentes</b> <br><br>
+  Utiliza esta opción para comprobar la consistencia de los finales en las propiedades reemplazadas.
+  <br><br> <p>Ejemplo:</p>
 
   <pre><code>
-    # messages.properties
+    # mensajes.properties
     abc=xxxzzz
 
-    # messages_fr.properties
+    # mensajes_fr.properties
     abc=xxx;
   </code></pre>
 
-  프로퍼티 <code>abc</code>는 특수 기호(<code>!</code> / <code>?</code> / <code>.</code> / <code>:</code> / <code>;</code>)로 끝나는 것으로 보고되며 <code>messages.properties</code> 내의 상위 값은 그렇지 않습니다.
+  La propiedad <code>abc</code> se informará como propiedad finalizada con signos especiales
+  (<code>!</code> / <code>?</code> / <code>.</code> / <code>:</code> / <code>;</code>) mientras que
+  el valor del padre en <code>messages.properties</code> no finaliza con dichos signos.
   </li>
 </ul>
 </body>

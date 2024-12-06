@@ -1,12 +1,12 @@
 <html>
 <body>
-추론된 타입이 해당 매개변수의 필요한 타입과 일치하지 않는 인수를 포함한 메서드 및 yield 호출을 보고합니다. 필요한 매개변수 타입은 다음 중 하나에서 가져옵니다.
+Informa sobre llamadas a métodos y yield con argumentos cuyos tipos inferidos no coinciden con el tipo esperado del parámetro. El tipo de parámetro esperado se toma de cualquiera de los siguientes:
 <ul>
-  <li>RBS 타입 시그니처</li>
-  <li>Sorbet 타입 시그니처</li>
-  <li>YARD <code>@param</code> 태그</li>
+  <li>La signatura de tipo RBS</li>
+  <li>La signatura de tipo Sorbet</li>
+  <li>La etiqueta YARD <code>@param</code></li>
 </ul>
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre>
 <code># @param [Integer] param
 def method(param) end

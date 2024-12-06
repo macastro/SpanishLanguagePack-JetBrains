@@ -1,7 +1,7 @@
 <html>
 <body>
-메서드를 포함하는 클래스의 내부 클래스에서만 호출되는 <code>private</code> 메서드를 보고합니다. 이러한 메서드는 해당 내부 클래스로 안전하게 이동할 수 있습니다.
-<p>예:</p>
+Reporta métodos <code>private</code> que sólo se llaman desde una clase interna de la clase que contiene el método. Tales métodos pueden ser movidos a esa clase interna de forma segura.
+<p>Ejemplo:</p>
 <pre><code>
 public class Outer {
   public static void main(String[] args) {
@@ -10,8 +10,8 @@ public class Outer {
 
   static class Inner {
     void run(String arg) {
-      // isEmpty() 메서드는 내부 클래스에서만 사용됩니다
-      // 내부 클래스로 이동을 고려해보세요
+      // El método isEmpty() se usa desde la clase interna únicamente
+      // considera moverlo a la clase interna
       if (!isEmpty(arg)) {
         System.out.println("Argument is supplied");
       }
@@ -25,9 +25,9 @@ public class Outer {
 </code></pre>
 <!-- tooltip end -->
 <p>
-익명 또는 지역 클래스에서 호출되는 <code>private</code> 메서드를 무시하려면 아래 첫 번째 체크박스를 사용합니다.
+Usa el primer recuadro para ignorar métodos <code>private</code> que se llaman desde una clase anónima o local.
 <p>
-세 번째 체크박스는 <code>static</code> 메서드를 보고할 때만 사용합니다.
+Usa el tercer recuadro para sólo reportar métodos <code>static</code>.
 <p>
 
 </body>

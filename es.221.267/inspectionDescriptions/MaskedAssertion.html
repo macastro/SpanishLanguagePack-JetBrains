@@ -1,19 +1,19 @@
 <html>
 <body>
-catch 블록을 사용하여 억제되는 <code>assert</code> 문 및 테스트 프레임워크 어설션을 보고합니다.
-던져진 <code>AssertionError</code>가 포착되어 확인 없이 무시되므로 그러한 어설션은 실패하지 않습니다.
-<p><b>예시 1:</b></p>
+Reporta sentencias <code>assert</code> y aserciones del marco de pruebas que son suprimidas por un bloque de captura circundante.
+Dichas aserciones nunca fallarán, ya que el <code>AssertionError</code> arrojado será capturado e ignorado silenciosamente.
+<p><b>Ejemplo 1:</b></p>
 <pre><code>
   void javaAssertion() {
     try {
       ...
       assert 1 == 2;
     } catch (AssertionError e) {
-      // the assertion is silently ignored
+      // la aserción es ignorada silenciosamente
     }
   }
 </code></pre>
-<p><b>예시 2:</b></p>
+<p><b>Ejemplo 2:</b></p>
 <pre><code>
   @Test
   void testWithAssertJ() {
@@ -21,11 +21,11 @@ catch 블록을 사용하여 억제되는 <code>assert</code> 문 및 테스트 
       ...
       assertThat(1).as("test").isEqualTo(2);
     } catch (AssertionError e) {
-      // the assertion is silently ignored
+      // la aserción es ignorada silenciosamente
     }
   }
 </code></pre>
-<p><b>예시 3:</b></p>
+<p><b>Ejemplo 3:</b></p>
 <pre><code>
   @Test
   void testWithJunit() {
@@ -33,11 +33,11 @@ catch 블록을 사용하여 억제되는 <code>assert</code> 문 및 테스트 
       ...
       assertEquals(1, 2);
     } catch (AssertionError e) {
-      // the assertion is silently ignored
+      // la aserción es ignorada silenciosamente
     }
   }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2020.3의 새로운 기능</small></p>
+<p><small>Nuevo en 2020.3</small></p>
 </body>
 </html>

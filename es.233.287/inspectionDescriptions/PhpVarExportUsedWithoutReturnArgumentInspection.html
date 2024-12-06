@@ -1,6 +1,7 @@
 <html>
 <body>
-결과가 명시적으로 사용되지만 <code>return</code> 인수가 없는 <code>var_export()</code> 및 <code>print_r()</code> 호출을 보고합니다.
-<code>var_export</code>/<code>print_r</code>은 <code>인수</code>가 없으면 항상 <code>null</code>/<code>true</code>를 반환하기 때문에 이러한 호출은 실수일 수 있습니다.
+Reporta llamadas a <code>var_export()</code> y <code>print_r()</code> sin el argumento <code>return</code> cuando sus resultados son utilizados explícitamente.
+Tales llamadas probablemente son un error, porque <code>var_export</code>/<code>print_r</code> siempre regresan
+<code>null</code>/<code>true</code> si no se especifica ningún <code>argumento</code>.
 </body>
 </html>

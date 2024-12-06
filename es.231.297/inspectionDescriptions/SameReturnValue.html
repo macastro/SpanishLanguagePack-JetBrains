@@ -1,11 +1,46 @@
 <html>
 <body>
-항상 같은 상수를 반환하는 메서드와 메서드 계층 구조를 보고합니다.
-<p><b>예:</b></p>
+Reporta métodos y jerarquías de métodos que siempre devuelven la misma constante.
+<p>
+La inspección funciona de manera diferente en modo batch
+  (desde <b>Código | Inspeccionar código</b> o <b>Código | Analizar código | Ejecutar inspección por nombre</b>)
+  y sobre la marcha en el editor:
+<ul>
+  <li>En modo batch, la inspección reporta métodos y jerarquías de métodos que siempre
+    devuelven la misma constante.</li>
+  <li>En el editor, la inspección sólo reporta métodos que tienen más de una sentencia <code>return</code>
+    no tienen super métodos y no pueden ser sobreescritos. Si un método sobreescribe o
+    implementa un método, un contrato puede requerir que devuelva una constante específica, pero al
+    mismo tiempo, podemos querer tener varios puntos de salida. Si un método puede ser sobreescrito, es
+    posible que se devuelva un valor diferente en las subclases.
+  </li>
+</ul>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class X {
-    int xxx() {
+                // Advierte sólo en modo batch:
+    int xxx() { // El método 'xxx()' y todos sus métodos de sobreescritura siempre devuelven '0'
       return 0;
+    }
+  }
+
+  class Y extends X {
+    @Override
+    int xxx() {
+        return 0;
+    }
+
+                // Advierte sólo en modo batch:
+    int yyy() { // El método 'yyy()' siempre devuelve '0'
+        return 0;
+    }
+
+                                  // Advierte tanto en modo batch como sobre la marcha:
+    final int zzz(boolean flag) { // El método 'zzz()' siempre devuelve '0'
+        if (Math.random() > 0.5) {
+            return 0;
+        }
+        return 0;
     }
   }
 </code></pre>

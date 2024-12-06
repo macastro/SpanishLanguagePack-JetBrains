@@ -1,17 +1,15 @@
 <html>
 <body>
-<code>this</code> 또는 <code>this</code>의 인스턴스 필드에서 잠긴
-비 상수 정적 필드에 대한 액세스를 보고합니다.
+Informa sobre los accesos a un campo estático no constante que se bloquea en `this` o en un campo de instancia de `this`.
 <p>
-  인스턴스 데이터에 정적 필드를 잠그는 것은 필드가 다른 인스턴스에 의해 수정되는
-  것을 방지하지 못하므로 예기치 않은 경쟁 조건을 초래할 수 있습니다.
+  El bloqueo de un campo estático en datos de instancia no evita que el campo sea modificado por otras instancias, y por lo tanto puede dar lugar a condiciones de carrera sorprendentes.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   static String s;
   def foo() {
       synchronized (this) {
-          System.out.println(s); // 경고
+          System.out.println(s); // advertencia
       }
   }
 </code></pre>

@@ -1,9 +1,9 @@
 <html>
 <body>
-<code>main</code> 패키지 및 테스트에서 사용하지 않는 내보내기된 타입을 보고합니다. 내보내기된 식별자에 대한 더 자세한 내용은 <a href="https://golang.org/ref/spec#Exported_identifiers">golang.org의 Exported identifiers</a>(을)를 참고하세요.
+Informa los tipos exportados que no se utilizan en el paquete <code>main</code> y en las pruebas. Para más información acerca de los identificadores exportados, consulta <a href="https://go.dev/ref/spec#Exported_identifiers">Identificadores exportados en go.dev</a>.
 <pre><code>type User struct {}
 
 func main() {}</code></pre>
-<p><code>User</code> 구조체 타입이 선언되었으나 코드에서 전혀 사용되지 않습니다. 이 타입은 회색으로 표시됩니다.</p>
+<p>El tipo de estructura <code>User</code> está declarado pero nunca se utiliza en el código. Este tipo se mostrará en gris.</p>
 </body>
 </html>

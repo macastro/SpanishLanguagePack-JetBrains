@@ -1,26 +1,20 @@
 <html>
 <body>
-포착된 예외를  "줄 바꿈"하지 않는 <code>catch</code> 블록에서
-생성되고 던져진 예외를
-보고합니다.
-<p>예외에 대한 대응으로 예외가 던져지는 경우, 초기 예외를 줄 바꿈하면 스택 프레임과 줄 번호 등 유용한 컨텍스트 정보 손실을
-  방지할 수 있습니다.</p>
-<p><b>예:</b></p>
+Informa de excepciones que se lanzan desde dentro de bloques <code>catch</code> pero que no "envuelven" la excepción capturada.
+<p>Cuando se lanza una excepción en respuesta a una excepción, envolver la excepción inicial impide perder información valiosa del contexto, como marcos de pila y números de línea.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
- ...
+  ...
   catch (IOException e) {
     closeAllConnections();
-    throw new ConnectException("Connection problem."); // 경고: 'catch' 블록 내의 'throw'는 포착된 예외 'e'를 무시합니다
+    throw new ConnectException("Connection problem."); // advertencia: 'throw' dentro del bloque 'catch' ignora la excepción capturada 'e'
   }
 </code></pre>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configuración de la inspección:</p>
 <ul>
-  <li><b>예외 메서드 호출의 결과가 사용되는 경우 무시</b> 옵션을 사용하여 <code>getMessage()</code> 등 원래 예외에서 메서드 호출의 결과가
-    인수인 예외를 이 검사가 무시하는지
-    여부를 나타냅니다.</li>
-  <li><b>던져진 예외가 예외를 줄 바꿈할 수 없는 경우 무시</b> 옵션을 사용하여 <code>Throwable</code> cause를 수락하는 생성자가 없는 예외를 던지는
-    <code>throw</code> 구문을 무시합니다.</li>
+  <li>Utiliza la opción <b>Ignorar si se utiliza el resultado de la llamada al método de excepción</b> para indicar si la inspección debería ignorar las excepciones cuyo argumento es el resultado de una llamada al método en la excepción original, como <code>getMessage()</code>.</li>
+  <li>Utiliza la opción <b>Ignorar si la excepción lanzada no puede envolver una excepción</b> para ignorar las sentencias <code>throw</code> que lanzan excepciones sin un constructor que acepte una causa <code>Throwable</code>.</li>
 </ul>
 </body>
 </html>

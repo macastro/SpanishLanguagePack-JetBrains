@@ -1,12 +1,12 @@
 <html>
 <body>
-쿼리 내에서 FETCH나 LIMIT과 같은 행 수를 제한하는 불필요한 절을 보고합니다.
-<p>예(PostgreSQL):</p>
+Informa de cláusulas de limitación de filas redundantes como FETCH y LIMIT en consultas.
+<p>Ejemplo (PostgreSQL):</p>
 <pre><code>CREATE TABLE foo(a INT);
 
 SELECT * FROM foo WHERE EXISTS(SELECT * FROM foo LIMIT 2);
 SELECT * FROM foo WHERE EXISTS(SELECT * FROM foo FETCH FIRST 2 ROWS ONLY);</code></pre>
-<p>이 경고를 해결하려면 제한하는 절에 OFFSET을 추가할 수 있습니다. OFFSET이 없는 경우 LIMIT은 EXISTS의 연산 결과에 영향을 주지 않기 때문에 불필요합니다. OFFSET이 있는 경우 첫 번째 <code>N</code> 행을 건너뛰므로 출력에 영향을 미칩니다.</p>
+<p>Para corregir la advertencia, puede agregar OFFSET a las cláusulas de limitación. Si falta OFFSET, entonces LIMIT es redundante porque el uso de LIMIT no influye en el resultado de la operación de EXISTS. En el caso de OFFSET, omitimos las primeras <code>N</code> filas y esto influirá en la salida.</p>
 <pre><code>SELECT * FROM foo WHERE EXISTS(SELECT * FROM foo OFFSET 1 ROW LIMIT 2);
 SELECT * FROM foo WHERE EXISTS(SELECT * FROM foo OFFSET 1 ROW FETCH FIRST 2 ROWS ONLY);</code></pre>
 </body>

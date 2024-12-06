@@ -1,12 +1,12 @@
 <html>
 <body>
-현재 스코프에서 볼 수 있는 타입과 이름이 같은 타입 매개변수를 보고합니다. 그러한 매개변수 이름은 혼란을 일으킬 수 있습니다.
+Informa los parámetros de tipo que tienen los mismos nombres que los tipos visibles en el ámbito actual. Estos nombres de parámetros pueden ser confusos.
 <!-- tooltip end -->
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   abstract class MyList&lt;T&gt; extends AbstractList&lt;T&gt; {
     private List&lt;T&gt; elements;
-    // 타입 매개변수 'T'가 타입 매개변수 'T'를 숨김
+    // el parámetro de tipo 'T' oculta el parámetro de tipo 'T'
     public &lt;T&gt; T[] toArray(T[] array) {
         return elements.toArray(array);
     }

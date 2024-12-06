@@ -1,17 +1,17 @@
 <html>
 <body>
-클래스 또는 모듈 별칭의 순환 선언을 보고합니다.
+Reporta declaraciones cíclicas de clase o alias de módulos.
 
 <p>
-  순환 선언은 <code>CyclicClassAliasDefinitionError</code>를 야기합니다.
+  Las declaraciones cíclicas producen el error <code>CyclicClassAliasDefinitionError</code>.
 </p>
 <p>
-  예:
+  Ejemplo:
 </p>
 <pre><code>
-# 순환 클래스 선언
-class User = Customer
-class Customer = User
+# Declaración cíclica de alias de clase
+class Usuario = Cliente
+class Cliente = Usuario
 </code></pre>
 </body>
 </html>

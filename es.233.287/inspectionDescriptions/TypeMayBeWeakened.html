@@ -1,10 +1,10 @@
 <html>
 <body>
-더 추상적인(약한) 타입으로 변경 가능한 변수 및 메서드 반환 타입을 보고합니다.
-이를 통해 더 추상적이며 재사용이 한층 용이한 코드를 만들 수 있습니다.
-<p>예:</p>
+Reporta tipos de retorno de variables y métodos que se pueden cambiar a un tipo más abstracto (más débil).
+Esto permite hacer que el código sea más abstracto, por lo tanto, más reutilizable.
+<p>Ejemplo:</p>
 <pre><code>
-  // 매개변수 타입을 java.util.List로 약화할 수 있습니다
+  // Type of parameter can be weakened to java.util.List
   void processList(ArrayList&lt;String&gt; list) {
     if (list.isEmpty()) return;
     System.out.println("Processing");
@@ -15,13 +15,13 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  하단의 <b>인터페이스로 약화되는 경우만</b> 체크박스를 활성화하면 해당 타입이 인터페이스 타입으로 약화될 수 있는 경우에만 문제가 보고됩니다.
+  Habilita el checkbox <b>Sólo debilitar a una interfaz</b> debajo para sólo reportar un problema cuando el tipo puede ser debilitado a un tipo de interfaz.
 </p>
 <p>
-  하단의 <b>'var'로 선언된 변수 약화를 제안하지 않음</b> 체크박스를 활성화하면 'var' 키워드를 사용해 선언된 지역 변수가 보고되지 않습니다(Java 10 이상).
+  Habilita el checkbox <b>No sugerir debilitar variables declaradas como 'var'</b> debajo para prevenir reportar variables locales declaradas usando la palabra clave 'var' (Java 10+)
 </p>
 <p>
-<b>stop 클래스</b>는 가능한 경우 stop 클래스보다 낮은 클래스로 약화하지 않도록 방지합니다.
-일부 경우엔 이를 통해 가독성을 개선할 수 있습니다.
+Las <b>Clases de parada</b> pretenden prevenir debilitar a clases menores que las de parada, aún cuando sea posible.
+En algunos casos, esto puede mejorar la legibilidad.
 </body>
 </html>

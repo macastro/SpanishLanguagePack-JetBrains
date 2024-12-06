@@ -1,20 +1,19 @@
 <html>
 <body>
-예외가 항상 자신을 포함하는 <code>try</code> 구문에 의해 포착되는 <code>throw</code> 구문을 보고합니다.
-<p>제어의 로컬 플로를 변경하기 위해 <code>throw</code> 구문을 "goto" 로 사용하는 것은 혼란을 초래하며 성능이 저하됩니다.
-<p><b>예:</b></p>
+Informa sentencias <code>throw</code> cuyas excepciones siempre son atrapadas por las sentencias <code>try</code> que las contienen.
+<p>El uso de sentencias <code>throw</code> como "goto" para cambiar el flujo de control local genera confusión y da como resultado un mal rendimiento.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   try {
     if (!Files.isDirectory(PROJECTS)) {
-        throw new IllegalStateException("Directory not found."); // 경고: 'try' 구문에서 'throw' 확인
+        throw new IllegalStateException("Directory not found."); // advertencia: 'throw' capturado por la sentencia 'try' que lo contiene
     }
-   ...
-  }
-  catch (Exception e) {
+    ...
+  } catch (Exception e) {
       LOG.error("run failed");
   }
 </code></pre>
 <!-- tooltip end -->
-<p><b>다시 발생하는 예외 무시</b> 옵션을 사용하여 다시 발생하는 예외를 무시합니다.</p>
+<p>Utiliza la opción <b>Ignorar excepciones relanzadas</b> para ignorar las excepciones que se relanzan.</p>
 </body>
 </html>

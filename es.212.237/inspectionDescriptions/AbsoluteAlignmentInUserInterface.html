@@ -1,14 +1,18 @@
 <html>
 <body>
-AWT 및 Swing의 절대 정렬 상수를 사용한 경우를 보고합니다. 국제화된 애플리케이션은 로케일 구성 요소 방향 설정에 따르기 위해 상대적 정렬을 사용합니다.
-<p><b>예:</b></p>
-<pre>
-  <code>
+Informa los usos de constantes de alineación absolutas de AWT y Swing. Las aplicaciones internacionalizadas utilizan alineación relativa porque respeta las configuraciones de orientación de componentes locales.
+<p><b>Ejemplo:</b></p>
+<pre><code>
   JPanel panel = new JPanel(new BorderLayout(2, 2));
-  JLabel label = new JLabel("Hello World", SwingConstants.CENTER);
+  JLabel label = new JLabel("Hola Mundo");
   panel.add(label, BorderLayout.NORTH);
- </code>
-</pre>
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  JPanel panel = new JPanel(new BorderLayout(2, 2));
+  JLabel label = new JLabel("Hola Mundo");
+  panel.add(label, BorderLayout.PAGE_START);
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

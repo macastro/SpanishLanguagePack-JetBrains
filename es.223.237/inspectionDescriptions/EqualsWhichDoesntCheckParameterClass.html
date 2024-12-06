@@ -1,15 +1,16 @@
 <html>
 <body>
-이 매개변수의 타입을 검사하지 않는 <code>equals()</code> 메서드를 보고합니다.
-<p><code>equals()</code> 메서드 내 매개변수 타입 검사에 실패하면 객체가 타입이 지정되지 않은 객체에서 사용되는 경우 잠재적 오류가 발생할 수 있습니다.</p>
-<p><b>예:</b></p>
+Reporta los métodos <code>equals()</code> que no comprueban el tipo de su parámetro.
+<p>No poder comprobar el tipo del parámetro
+  en el método <code>equals()</code> puede tener como resultado errores latentes si el objeto se usa en una colección no tipada.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class MyClass {
     int x;
-    
+
     @Override
     public boolean equals(Object obj) {
-      // obj이 MyClass가 아닌 경우 equals 메서드는 false를 반환해야 합니다
+      // el método equals debe devolver false si obj no es MyClass
       return ((MyClass)obj).x == x;
     }
   }

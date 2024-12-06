@@ -1,17 +1,17 @@
 <html>
 <body>
-다음 경우에 잘못 정의된 Managed Bean 클래스를 보고합니다:
+Se informan clases Bean administradas definidas incorrectamente en los siguientes casos:
 <ul>
-  <li>클래스가 final가 아닌 경우</li>
-  <li>Blass가 abstract인 경우</li>
-  <li>Bean이 static이 아닌 내부 클래스인 경우</li>
+  <li>La clase no es final</li>
+  <li>La clase es abstracta</li>
+  <li>El Bean es una clase interna no estática</li>
 </ul>
 
-<p><b>예:</b></p><br/>
+<p><b>Ejemplo:</b></p><br/>
 <pre><code>
   @ManagedBean
-  public final class JavaManagedBean { // 오류: managed bean은 final일 수 없음
-   ...
+  public final class JavaManagedBean { // Error: El Bean administrado no debe ser final
+    ...
   }
 </code></pre>
 </body>

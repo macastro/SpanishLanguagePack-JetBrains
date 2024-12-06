@@ -1,7 +1,7 @@
 <html>
 <body>
-<code>switch</code> 내 하나의 <code>case</code> 절로 선언되어 있으나 같은 구문의 다른<code>case</code> 절에서 사용된 변수를 보고합니다.
-블록 스코프의 변수에 대해, 이는 <code>ReferenceError</code>를 발생시킵니다.
-<code>var</code> 변수에 대해 이는 잠재적 오류를 나타냅니다. <p>이 패턴이 의도적으로 사용된 경우, <code>var</code> 변수에 대한 검사를 비활성화하십시오.</p>
+Informa una variable que se declara en una cláusula <code>case</code> de una declaración <code>switch</code> pero se usa en otra cláusula <code>case</code> de la misma declaración.
+Para variables de ámbito de bloque, esto genera lanzar un <code>ReferenciaError</code>.
+Para variables <code>var</code>, indica un posible error. <p>Deshabilita la inspección para variables <code>var</code> si este patrón se usa intencionalmente.</p>
 </body>
 </html>

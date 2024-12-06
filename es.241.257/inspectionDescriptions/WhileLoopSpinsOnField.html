@@ -1,14 +1,14 @@
 <html>
 <body>
-<code>volatile</code>이 아닌 필드의 값에서 스핀하며 다른 스레드에 의해 변경되기를 기다리는<code>while</code> 루프를 보고합니다.
+Informa sobre bucles <code>while</code> que giran sobre un valor de campo no <code>volatile</code> y esperan a que otro hilo lo modifique.
 <p>
-그러한 루프는 루프 내에서 조금만 작업해도 CPU 사용량이 엄청나게 늘어나는 것 외에도 의도된 것과 다른 의미를 가질 가능성이 있습니다.
-Java 메모리 모델에서는 다른 스레드가 필드 값을 변경하는 경우에도 그러한 루프가 완료되지 않습니다.
+Estos bucles pueden consumir muchísima CPU, incluso si apenas realizan trabajo en su interior, y es posible que tengan una semántica distinta a la deseada.
+El modelo de memoria de Java permite que estos bucles nunca terminen, incluso si otro hilo cambia el valor del campo.
 </p>
 <p>
-또한 Java 9 이후에서 일부 하드웨어의 성능을 상당히 향상시킬 수 있도록 <code>volatile</code> 필드의 스핀 루프 내에서 <code>Thread.onSpinWait()</code>을 호출할 것을 권장합니다.
+Además, a partir de Java 9 se recomienda llamar a <code>Thread.onSpinWait()</code> dentro de los bucles de giro sobre campos <code>volatile</code>. Esto puede mejorar considerablemente el rendimiento en cierto hardware.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class SpinsOnField {
     boolean ready = false;
@@ -16,7 +16,7 @@ Java 메모리 모델에서는 다른 스레드가 필드 값을 변경하는 �
     void run() {
       while (!ready) {
       }
-      // do some work
+      // Realiza algo de trabajo
     }
 
     void markAsReady() {
@@ -24,7 +24,7 @@ Java 메모리 모델에서는 다른 스레드가 필드 값을 변경하는 �
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   class SpinsOnField {
     volatile boolean ready = false;
@@ -33,7 +33,7 @@ Java 메모리 모델에서는 다른 스레드가 필드 값을 변경하는 �
       while (!ready) {
         Thread.onSpinWait();
       }
-      // do some work
+      // Realiza algo de trabajo
     }
 
     void markAsReady() {
@@ -43,7 +43,7 @@ Java 메모리 모델에서는 다른 스레드가 필드 값을 변경하는 �
 </code></pre>
 <!-- tooltip end -->
 <p>
-빈 <code>while</code> 루프만 보고하려면 검사 옵션을 사용하세요.
+Usa las opciones de la inspección para informar solo sobre bucles <code>while</code> vacíos.
 <p>
 </body>
 </html>

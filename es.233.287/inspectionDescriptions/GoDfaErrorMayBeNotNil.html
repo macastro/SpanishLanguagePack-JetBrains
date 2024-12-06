@@ -1,14 +1,16 @@
 <html>
 <body>
-nil이 아닌지 확인되지 않는 해당 오류가 있는 변수의 사용 위치를 보고합니다. error는 <code>v, err := foo()</code>와 같이 구문 내에 변수와 함께 정의되거나 대입되는 경우 변수에 해당합니다.
-<p>예:</p>
+Informa de instancias en las que las variables pueden tener <code>nil</code> o un valor inesperado debido a que el error asociado no se comprueba para que no sea <code>nil</code>, como en <code>v, err := foo()</code>.
+<p>El arreglo rápido elimina la función del alcance de esta inspección.</p>
+<p>Ejemplo:</p>
 <pre><code>
 func _() {
- file, err := os.Open("file.txt")
- //'file'은 'nil' 또는 예기치 않는 값을 가질 수 있습니다
- //대응하는 오류 변수 'err'가 'nil'이 아닐 수 있기 때문입니다
- name := file.Name()
+    file, err := os.Open("file.txt")
+    // Aquí se omite la comprobación de errores
+    name := file.Name()
+    print(name, err)
 }
 </code></pre>
+<p>En el ejemplo proporcionado, <code>file</code> podría ser <code>nil</code> o tener un valor inesperado si <code>err</code> no es <code>nil</code>.</p>
 </body>
 </html>

@@ -1,21 +1,21 @@
 <html>
 <body>
-TLD 파일의 <code>method-signature</code> 제약과 일치하지 않는 EL의 메서드 호출을 보고합니다.
+Inspecciona las llamadas a métodos en EL que no coinciden con las restricciones de <code>method-signature</code> en los archivos TLD.
 
-<p><b>Java 클래스 예:</b></p><br/>
-<pre><code>
+<p><b>Clase Java de ejemplo:</b></p><br/>
+<pre><code lang="java">
 public class ExampleAction {
-  public void goodAction() {... }
-  public void badAction(String str) {... }
+  public void goodAction() { ... }
+  public void badAction(String str) { ... }
 }
 </code></pre>
 
-<p><b>JSP 파일 예:</b></p><br/>
-<pre><code>
+<p><b>Archivo JSP de ejemplo:</b></p><br/>
+<pre><code lang="jsp">
 &lt;jsp:useBean id="example" scope="request" type="org.example.ExampleAction"/&gt;
 &lt;f:view&gt;
-  &lt;h:commandButton action="#{example.goodAction}"/&gt; // 좋음: 메서드는 0개의 매개변수를 허용하고 `void`를 반환함
-  &lt;h:commandButton action="#{example.badAction}"/&gt; // 오류: 메서드 `void badAction(String)`은 `void`가 아닌 `java.lang.String` 타입을 반환함
+  &lt;h:commandButton action="#{example.goodAction}"/&gt; // Bueno: el método acepta cero argumentos y devuelve `void`
+  &lt;h:commandButton action="#{example.badAction}"/&gt; // Error: el método `void badAction(String)` devuelve el tipo `java.lang.String` en lugar de `void`
 &lt;/f:view&gt;
 </code></pre>
 </body>

@@ -1,20 +1,20 @@
 <html>
 <body>
-<code>java.nio.file.Files</code>를 사용하여 <code>String</code>을 바이트로 읽거나 쓰는 메서드 호출을 보고합니다.
-이러한 호출은 Java 11에 도입된 <code>Files.readString()</code> 및 <code>Files.writeString()</code> 메서드 호출로 대체할 수 있습니다.
-<p><b>예:</b></p>
+Informa sobre las llamadas a métodos que leen o escriben una <code>String</code> como bytes mediante <code>java.nio.file.Files</code>.
+Dichas llamadas pueden reemplazarse con una llamada a un método <code>Files.readString()</code> o <code>Files.writeString()</code> introducido en Java 11.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   String s = "example";
   Files.write(Paths.get("out.txt"), s.getBytes(StandardCharsets.UTF_8), StandardOpenOption.WRITE);
   s = new String(Files.readAllBytes(Paths.get("in.txt")), StandardCharsets.ISO_8859_1);
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   String s = "example";
   Files.writeString(Paths.get("out.txt"), s, StandardOpenOption.WRITE);
   s = Files.readString(Paths.get("in.txt"), StandardCharsets.ISO_8859_1);
 </code></pre>
 <!-- tooltip end -->
-<p><small>2018.3의 새로운 기능</small></p>
+<p><small>Nuevo en 2018.3</small></p>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <html>
 <body>
-Kotlin 함수와 대체할 수 있는 Java 메서드 호출(예: <code>System.out.println()</code>)을 보고합니다.
-<p>코드를 치환하여 Java 의존성을 제거하고, 관용적인 Kotlin 코드를 만듭니다.</p>
-<p>빠른 수정에서는 동일한 Kotlin 호출에 대한 Java 메서드 호출을 치환합니다.</p>
-<p><b>예:</b></p>
+Informa de una llamada al método Java que puede reemplazarse por una función Kotlin, por ejemplo, <code>System.out.println()</code>.
+<p>Reemplazar el código elimina la dependencia de Java y convierte el código en Kotlin idiomático.</p>
+<p>La corrección rápida reemplaza las llamadas al método Java por la misma llamada Kotlin.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   import java.util.Arrays
 
@@ -11,7 +11,7 @@ Kotlin 함수와 대체할 수 있는 Java 메서드 호출(예: <code>System.ou
       val a = Arrays.asList(1, 3, null)
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun main() {
       val a = listOf(1, 3, null)

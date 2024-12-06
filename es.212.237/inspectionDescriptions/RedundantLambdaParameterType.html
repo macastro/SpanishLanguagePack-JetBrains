@@ -1,14 +1,14 @@
 <html>
 <body>
-<p>컨텍스트에서 추론 가능하므로 불필요한 람다 형식 매개변수 타입을 보고합니다.</p>
-<p><b>예:</b></p>
+Informa sobre los tipos de parámetros formales lambda que son redundantes porque se pueden inferir desde el contexto.
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  Map&lt;String, Integer&gt; map =...
+  Map&lt;String, Integer&gt; map = ...
   map.forEach((String s, Integer i) -> log.info(s + "=" + i));
 </code></pre>
-<p>빠른 수정은 람다의 매개변수 타입을 제거합니다.</p>
+<p>El arreglo rápido elimina los tipos de parámetros de la lambda.</p>
 <pre><code>
-  Map&lt;String, Integer&gt; map =...
+  Map&lt;String, Integer&gt; map = ...
   map.forEach((s, i) -> log.info(s + "=" + i));
 </code></pre>
 </body>

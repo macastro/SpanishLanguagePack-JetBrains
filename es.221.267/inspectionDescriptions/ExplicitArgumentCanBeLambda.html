@@ -1,9 +1,9 @@
 <html>
 <body>
-자명하지 않은 표현식을 허용하고, 람다가 대신 허용되는 동등한 메서드 호출로 대체 가능한 메서드 호출을 보고합니다.
+Informa de llamadas a métodos que aceptan una expresión no trivial y que pueden ser sustituidas por una llamada a un método equivalente que acepte una lambda en su lugar.
 <p>
-표현식을 람다로 변환하면 메서드에서 해당 표현식이 사용되지 않을 경우 표현식을 평가하지 않습니다. 예를 들어 <code>optional.orElse(createDefaultValue())</code>를 <code>optional.orElseGet(this::createDefaultValue)</code>로 변환할 수 있습니다.
+Convertir una expresión a una lambda asegura que la expresión no será evaluada si no se usa dentro del método. Por ejemplo, <code>optional.orElse(createDefaultValue())</code> puede convertirse a <code>optional.orElseGet(this::createDefaultValue)</code>.
 <!-- tooltip end -->
-<p><small>2018.1의 새로운 기능</small></p>
+<p><small>Nuevo en 2018.1</small></p>
 </body>
 </html>

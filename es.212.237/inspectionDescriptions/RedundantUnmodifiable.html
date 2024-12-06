@@ -1,15 +1,22 @@
 <html>
 <body>
-<code>Collections</code> 클래스 내부의 수정 불가한 컬렉션 래퍼에 대한 불필요한 호출을 보고합니다.
-<p>수정 불가한 컬렉션 래퍼에 전달된 인수가 이미 불변 인수인 경우 해당 래핑은 불필요합니다.</p>
-<p>예:</p>
-<pre>
-  Collections.unmodifiableList(Collections.singletonList("abc"));
-</pre>
-<p>수정 불가한 컬렉션을 반환하는 메서드를 발견하기 위해 이 검사는 <code>org.jetbrains.annotations.Unmodifiable</code>
-및 <code>org.jetbrains.annotations.UnmodifiableView</code> 어노테이션을 사용합니다.
-해당 어노테이션을 사용하여 검사를 수정 불가한 자체 컬렉션 래퍼로 확장합니다.</p>
+Reporta las llamadas redundantes a las implementaciones de colecciones inmutables de la
+clase <code>Collections</code>.
+<p>Si el argumento que se pasa a una implementación de colección inmutable ya es inmutable, tal implementación se vuelve redundante.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  List&lt;String&gt; x = Collections.unmodifiableList(Collections.singletonList("abc"));
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  List&lt;String&gt; x = Collections.singletonList("abc");
+</code></pre>
+<p>Con el fin de detectar los métodos que devuelven colecciones inmutables, la
+inspección usa las anotaciones <code>org.jetbrains.annotations.Unmodifiable</code>
+y <code>org.jetbrains.annotations.UnmodifiableView</code>.
+Úsalas para extender la inspección a tus propias implementaciones de colecciones inmutables.
+</p>
 <!-- tooltip end -->
-<p><small>2020.3의 새로운 기능</small></p>
+<p><small>Novedad en 2020.3</small></p>
 </body>
 </html>

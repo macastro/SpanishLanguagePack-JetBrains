@@ -1,10 +1,11 @@
 <html>
 <body>
-배열 또는 가변 타입(<code>Collection</code>, <code>Date</code>, <code>Map</code> 및 <code>Calendar</code> 등)의 반환 또는 메서드 매개변수로부터 배열 또는 가변 타입으로의 대입을 보고합니다.
-<p>이러한 타입은 가변적이므로, 이 구문으로 인해
-  소유 클래스 외부에서 예기치 않은 객체 상태 수정이 발생할 수 있습니다. 이 구문은 성능면에서 유익할 수 있지만
-  본질적으로 버그가 발생하기 쉽습니다.</p>
-<p>다음과 같은 가변 타입이 보고됩니다:</p>
+Reporta el retorno o la asignación desde un parámetro de método a una matriz o a un tipo mutable como 
+<code>Collection</code>, <code>Date</code>, <code>Map</code>, <code>Calendar</code>, etc.
+<p>Debido a que tales tipos son mutables, esta construcción puede
+    resultar en modificaciones inesperadas del estado del objeto desde fuera de la clase propietaria. Aunque esta construcción puede ser útil por razones de
+    rendimiento, es inherentemente propensa a errores.</p>
+<p>Se informan los siguientes tipos mutables:</p>
 <ul>
   <li><code>java.util.Date</code></li>
   <li><code>java.util.Calendar</code></li>
@@ -13,31 +14,31 @@
   <li><code>com.google.common.collect.Multimap</code></li>
   <li><code>com.google.common.collect.Table</code></li>
 </ul>
-<p>빠른 수정은 필드의 <code>.clone()</code> 메서드 호출을 추가합니다.</p>
-<p><b>예:</b></p>
+<p>La solución rápida agrega una llamada al método <code>.clone()</code> del campo.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class Log {
-    String[] messages;
+  class Registro {
+    String[] mensajes;
     ...
 
-    String[] getMessages() {
-      return messages; // 경고: String[] 필드 'messages'를 반환합니다
+    String[] getMensajes() {
+      return mensajes; // advertencia: Retorno del campo String[] 'mensajes'
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
-  class Log {
-    String[] messages;
+  class Registro {
+    String[] mensajes;
     ...
 
-    String[] getMessages() {
-      return messages.clone();
+    String[] getMensajes() {
+      return mensajes.clone();
     }
   }
 </code></pre>
 <!-- tooltip end -->
-<p><b>private 메서드의 대입 및 반환 무시</b> 옵션을 사용하여 <code>private</code> 메서드의 대입과 반환을 무시합니다.
+<p>Utiliza la opción <b>Ignorar asignaciones y retornos en métodos privados</b> para ignorar las asignaciones y retornos en métodos <code>private</code>.
 
   <!--<p><small>New in 2017.3</small>-->
 </body>

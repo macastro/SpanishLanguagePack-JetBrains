@@ -1,35 +1,35 @@
 <html>
 <body>
 <p>
-  Spring Boot 애플리케이션 <code>.properties</code> 구성 파일에서 해결되지 않거나 지원이 중단된 구성 키 및 잘못된 값을 보고합니다. 이러한 요소는 런타임 오류로 이어질 수 있습니다.
+  Reporta claves de configuración sin resolver y obsoletas, y valores no válidos en archivos de configuración <code>.properties</code> de la aplicación Spring Boot, lo cual puede provocar errores de tiempo de ejecución.
 </p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-server.port=invalid # ' 'invalid'를 java.lang.Integer로 변환할 수 없습니다'라고 보고됩니다
+server.port=invalid # Informa 'No se puede convertir 'invalid' a java.lang.Integer'
 </code></pre>
 
-<p>지원이 중단된 구성 키에 대체 키가 있는 경우 '대체 키 사용'이라는 빠른 수정을 적용할 수 있습니다.</p>
+<p>Si una clave de configuración obsoleta tiene una clave de reemplazo, puedes aplicar el arreglo rápido 'Usar clave de reemplazo'.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-logging.path=${path} # '지원 중단된 구성 프로퍼티 'logging.path' '를 보고합니다
+logging.path=${path} # Informa 'Propiedad de configuración obsoleta 'logging.path''
 </code></pre>
 
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
 logging.file.path=${path}
 </code></pre>
 
 <p>
-  구성 키가 <code>spring-configuration-metadata.json</code>에 정의되지 않은 경우 '구성 키 정의'라는 빠른 수정을 적용하여 <code>META-INF/spring-additional-configuration-metadata.json</code> 파일을 생성하고 필요한 키를 정의할 수 있습니다.</p>
+  Si una clave de configuración no está definida en <code>spring-configuration-metadata.json</code>, puedes aplicar el arreglo rápido 'Definir clave de configuración' que crea el archivo <code>META-INF/spring-additional-configuration-metadata.json</code> y define la clave necesaria.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-new.key=value #'구성 프로퍼티 'new.key'를 해결할 수 없습니다'라고 보고됩니다
+new.key=value # Informa 'No se puede resolver la propiedad de configuración 'new.key''
 </code></pre>
 
-<p>빠른 수정 적용 후 <code>META-INF/spring-additional-configuration-metadata.json</code>에 다음 코드가 추가됩니다.</p>
+<p>Después de aplicar el arreglo rápido, lo siguiente se agrega a <code>META-INF/spring-additional-configuration-metadata.json</code>:</p>
 <pre><code>
 {
   "properties": [
@@ -41,21 +41,21 @@ new.key=value #'구성 프로퍼티 'new.key'를 해결할 수 없습니다'라�
 ] }
 </code></pre>
 
-<p>또한 이 검사는 목록 및 맵 구성 키의 색인 표기 오류를 강조 표시합니다.</p>
-<p><b>예:</b></p>
+<p>La inspección también resalta errores de notación de índice en las claves de configuración de listas y mapas.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-spring.datasource.schema[]=${schema} #'색인 값 누락'이라고 보고됩니다
+spring.datasource.schema[]=${schema} # Informa 'Valor de índice faltante'
 </code></pre>
 <!-- tooltip end -->
 
 <p>
-  <b>대체 토큰</b> 옵션을 사용하여 구성 파일의 값 자리표시자에 사용할 토큰을 정의합니다.
-  해당 토큰은 <code>beginToken*endToken</code> 형식으로 지정됩니다.
-  <code>*</code>가 없을 경우 시작 및 종료 토큰이 동일한 것으로 가정됩니다.
+  Usa la opción <b>Tokens de reemplazo</b> para definir tokens usados para marcadores de posición de valor en archivos de configuración.
+  Estos tokens se especifican en el formato <code>beginToken*endToken</code>.
+  Sin el <code>*</code>, se asume que el token es el mismo para el inicio y el final.
 </p>
 <p>
-  예를 들어, 시작 및 종료 토큰 모두에 대한 디폴트 값은 <code>@</code>이며, 이를 통해 <code>some.property=@another.property@</code>과 같은 자리표시자를 정의할 수 있습니다.
+  Por ejemplo, el valor predeterminado es <code>@</code> tanto para el token de inicio como para el de finalización,
+  lo que te permite definir marcadores de posición como <code>some.property=@another.property@</code>.
 </p>
-<p>대체 토큰(<code>@property.key@</code>) 내부의 값은 강조 표시되지 않습니다.</p>
+<p>Los valores dentro del token de reemplazo (<code>@property.key@</code>) no se resaltarán.</p>
 </body>
-</html>

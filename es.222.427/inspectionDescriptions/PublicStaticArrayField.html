@@ -1,9 +1,9 @@
 <html>
 <body>
-<code>public</code>을 보고합니다. <code>static</code> 배열 필드.
+Informa sobre <code>public</code> <code>static</code> campos de array.
 <p>
-  이 필드는 상수 값 배열을 저장하기 위해 사용하는 경우가 많습니다. 그러나 이 필드는 보안 위험을 나타내며 <code>final</code>로 선언하는 경우에도 데이터가 변경될 수 있습니다.</p>
-<p><b>예:</b></p>
+  Este tipo de campos se suele utilizar para almacenar arrays de valores constantes. Sin embargo, suponen un riesgo para la seguridad, ya que su contenido se puede modificar incluso cuando está declarado como <code>final</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public static String[] allowedPasswords = {"foo", "bar"};
 </code></pre>

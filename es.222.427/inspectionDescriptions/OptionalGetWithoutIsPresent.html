@@ -1,13 +1,13 @@
 <html>
 <body>
-<code>Optional</code>에 값이 있는지 확인하지 않고 <code>get()</code>을 호출하는 경우를 보고합니다.
-<p>빈 <code>Optional</code> 인스턴스에서 <code>Optional.get()</code>을 호출하면 예외가 발생합니다.</p>
-<p><b>예:</b></p>
+Reporta las llamadas a <code>get()</code> en un <code>Optional</code> sin verificar que tenga un valor.
+<p>Llamar a <code>Optional.get()</code> en una instancia de <code>Optional</code> vacía, lanzará una excepción.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   <b>void</b> x(List&lt;Integer> list) {
     <b>final</b> Optional&lt;Integer> optional =
       list.stream().filter(x -> x > 10).findFirst();
-    <b>final</b> Integer result = optional.get(); // 문제 발생
+    <b>final</b> Integer result = optional.get(); // problema aquí
   }
 </code></pre>
 <!-- tooltip end -->

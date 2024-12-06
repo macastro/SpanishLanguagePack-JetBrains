@@ -1,24 +1,25 @@
 <html>
 <body>
-<code>this</code> 또는 <code>class</code> 표현식의 동기화를 보고합니다.
-보고된 구문에는 <code>synchronized</code> 블록 및 <code>wait()</code>, <code>notify()</code> 또는 <code>notifyAll()</code> 호출이 포함됩니다.
-<p><code>this</code> 또는 <code>class</code> 표현식의 동기화가 부적절한 이유로는 다음과 같은 몇 가지가 있습니다.</p>
+Reporta sincronización sobre expresiones <code>this</code> o <code>class</code>.
+Las construcciones reportadas incluyen bloques <code>synchronized</code> y llamadas a métodos <code>wait()</code>, <code>notify()</code> o <code>notifyAll()</code>.
+<p>Existen varias razones por las que la sincronización sobre las expresiones <code>this</code> o <code>class</code> pueden ser contraproducentes:</p>
 <ol>
   <li>
-    동기화가 클래스의 외부 인터페이스의 일부가 되므로 향후 다른 잠금 메커니즘을 변경하기 어렵습니다
+    hace que la sincronización sea parte de la interfaz externa de la clase,
+    lo que dificulta un cambio futuro a un mecanismo de bloqueo diferente,
   </li>
   <li>
-    주어진 객체를 잠그는 대상을 추적하기 어렵습니다
+    se vuelve difícil rastrear quién está bloqueando un objeto determinado,
   </li>
   <li>
-    서비스 거부 공격(DoS)이 의도적으로 발생하거나 하위 클래스화 시 실수로 발생할 수 있습니다
+    hace posible un ataque de denegación de servicio, ya sea de forma intencional o puede suceder fácilmente por accidente cuando se realiza la subclasificación.
   </li>
 </ol>
-<p>그 대신 액세스를 완전히 제어할 수 있는 <code>private final</code> lock 객체에서 동기화를 고려할 수 있습니다.</p>
-<p><b>예:</b></p>
+<p>Como alternativa, considere la posibilidad de sincronizar sobre un objeto de bloqueo <code>private final</code>, cuyo acceso puede controlarse por completo.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public void print() {
-    synchronized(this) { // 경고: 'this' 클래스의 잠금 연산은 예기치 않은 부수 효과를 발생시킬 수 있습니다
+    synchronized(this) { // Advertencia: las operaciones de bloqueo sobre 'this' pueden tener efectos colaterales imprevistos
       System.out.println("synchronized");
     }
   }

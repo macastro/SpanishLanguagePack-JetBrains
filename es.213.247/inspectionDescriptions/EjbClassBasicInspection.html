@@ -1,19 +1,19 @@
 <html>
 <body>
-다음과 같은 EJB 사양 위반 사례를 보고합니다.
+Se informa de las siguientes infracciones de la especificación EJB:
 <ul>
-  <li>클래스가 필요한 인터페이스(EJBLocalObject, EJBObject 등)를 구현하지 않는 경우</li>
-  <li>클래스가 인수 없는 public 생성자를 정의하지 않는 경우</li>
-  <li>인터페이스 대신 클래스 또는 그 반대로 사용된 경우</li>
-  <li>EJB 메서드가 static인 경우</li>
-  <li>스테이트리스 Session Bean 클래스가 여러 'ejbCreate' 메서드를 정의하는 경우</li>
-  <li>Session Bean 클래스의 잘못된 메서드 반환 타입</li>
-  <li>EJB가 'finalize' 메서드를 정의하는 경우</li>
+  <li>La clase no implementa la interfaz requerida (p. ej., EJBLocalObject, EJBObject)</li>
+  <li>La clase no define un constructor público sin argumentos</li>
+  <li>Se usa una clase en lugar de una interfaz (o viceversa)</li>
+  <li>El método EJB es estático</li>
+  <li>La clase del bean de sesión sin estado define varios métodos `ejbCreate`</li>
+  <li>Tipo de retorno de método de clase de bean de sesión incorrecto</li>
+  <li>EJB define el método `finalize`</li>
 </ul>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-public class SessionEJB implements java.io.Serializable { // 오류: 클래스는 `SessionBean`을 확장해야 함
-  private SessionEJB() {} // 오류: 클래스가 인수 없는 public 생성자를 정의해야 합니다
+public class SessionEJB implements java.io.Serializable { // Error: La clase debe extender `SessionBean`
+  private SessionEJB() {} // Error: La clase debe definir un constructor público sin argumentos
 }
 </code></pre>
 </body>

@@ -1,6 +1,20 @@
 <html>
 <body>
-숫자 객체에서 <code>toString()</code>을 호출하는 경우를 보고합니다. 그러한 호출은 보통 국제화된 환경에서 올바르지 않습니다.
+Informa sobre las llamadas <code>toString()</code> a objetos de una clase que extiende <code>Number</code>.
+Estas llamadas suelen ser incorrectas en un entorno internacionalizado y debería usarse algún formato específico de la configuración regional en su lugar.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void print(Double d) {
+    System.out.println(d.toString());
+  }
+</code></pre>
+Una forma posible de solucionar este problema podría ser:
+<pre><code>
+  void print(Double d) {
+    System.out.printf("%f%n", d);
+  }
+</code></pre>
+Esto formatea el número usando la configuración regional predeterminada que se establece durante el inicio de JVM y se basa en el entorno del host.
 <!-- tooltip end -->
 </body>
 </html>

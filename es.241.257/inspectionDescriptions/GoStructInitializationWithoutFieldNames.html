@@ -1,43 +1,27 @@
-<!--
-  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~ http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
-
 <html>
 <body>
-필드 이름이 지정되지 않은 구조체 초기화를 보고합니다. 디폴트로, 이 검사는 다른 패키지에 정의된 타입을 사용할 때에만 활성화됩니다.
-<p>구조체를 초기화할 때 이러한 필드 또는 필드 이름의 순서가 바뀔 경우에도 올바르게 호출될 수 있도록  필드 이름을 명시적으로 표기하는 것이 좋습니다.</p>
-<p>예:</p>
+Informa sobre estructuras que se inicializan sin especificar sus nombres de campo. De forma predeterminada, la inspección sólo está disponible cuando utilizas el tipo que está definido en un paquete diferente.
+<p>Al inicializar una estructura, es mejor indicar explícitamente los nombres de los campos para garantizar que, en caso de cambios en el orden de estos campos o en los nombres de los campos, se seguirá accediendo a ellos correctamente.</p>
+<p>Ejemplo:</p>
 <pre><code>_ = io.LimitedReader{nil, 10}</code></pre>
-<p>구조체 필드의 명시적 이름이 누락되었으므로 <code>LimitedReader</code> 초기화가 강조 표시됩니다.
-  이 구조체 초기화에 <b>키 추가 및 제로 값 삭제</b> 빠른 수정을 적용할 수 있습니다. 빠른 수정이 적용된 후 코드는 다음과 같습니다:</p>
+<p>La inicialización de <code>LimitedReader</code> se resaltará porque faltan nombres explícitos para los campos de estructura.
+  Puedes aplicar la solución rápida <b>Añadir claves y eliminar valores cero</b> a la inicialización de la estructura. Después de aplicar la solución rápida, el código tendrá este aspecto:</p>
 <pre><code>_ = io.LimitedReader{N: 10}</code></pre>
-<p>이 검사에 다음의 옵션이 있습니다:</p>
+<p>La inspección tiene las siguientes opciones:</p>
 <ul>
-  <li><p><b>현재 패키지에 정의된 타입 보고</b>: 동일한 패키지 내에 구조체를 선언하고 초기화하는 경우를 보고합니다.
-    다음 예시를 고려하세요.</p>
+  <li><p><b>Informar sobre tipos definidos en el paquete actual</b>: informa sobre situaciones en las que declaras e inicializas la estructura en el mismo paquete.
+    Considera el siguiente ejemplo.</p>
     <pre><code>d := struct {
   c string
  }{ "dsd "}</code></pre>
   </li>
-  <li><p><b>타입이 없는 구조체 리터럴 보고</b>: 타입(구조체 또는 인터페이스)이 생략된 경우 이름이 없는 필드를 보고합니다.
-    타입이 생략된 다음 예시를 참고하세요.</p>
+  <li><p><b>Informar sobre literales de estructura sin tipos</b>: informa sobre campos sin nombres cuando se omite el tipo (estructura o interfaz).
+    Considera el siguiente ejemplo cuando se omite el tipo.</p>
     <pre><code>_ = []io.LimitedReader{
  {nil, 10},
  {nil, 20},
  }</code></pre>
-    <p>다음 예에서 타입은 표시되었지만 불필요합니다.</p>
+    <p>En el siguiente ejemplo, el tipo está presente pero es redundante.</p>
     <pre><code>_ = []io.LimitedReader{
  io.LimitedReader{nil, 10},
  io.LimitedReader{nil, 20},

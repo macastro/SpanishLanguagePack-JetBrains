@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>Spring에서 지원되지 않는 AspectJ 포인트컷 지정자를 보고합니다.</p>
+<p>Informa sobre los designadores de punto de corte AspectJ que no están soportados por Spring.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code lang="xml">
 &lt;beans&gt;
   &lt;aop:config &gt;
-      &lt;aop:pointcut expression="<strong>@this</strong>(Anno)  &lt;!-- '@this' 포인트컷 지정자는 Spring에서 지원되지 않습니다 --&gt;
-                  and <strong>adviceexecution</strong>()"/&gt; &lt;!--  'adviceexecution' 포인트컷 지정자는 Spring에서 지원되지 않습니다 --&gt;
+      &lt;aop:pointcut expression="<strong>@this</strong>(Anno)  &lt;!-- El designador de punto de corte '@this' no está soportado por Spring --&gt;
+                  and <strong>adviceexecution</strong>()"/&gt; &lt;!--  Spring no soporta el designador de punto de corte 'adviceexecution' --&gt;
       &lt;aop:pointcut expression="!@annotation(Anno)"/&gt;
     &lt;/aop:config&gt;
 &lt;/beans&gt;

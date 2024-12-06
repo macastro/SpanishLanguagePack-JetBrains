@@ -1,8 +1,8 @@
 <html>
 <body>
-<code>map(x -&gt; x)</code>, <code>filter(x -&gt; true)</code> 등의 불필요한 <code>Stream</code>이나 <code>Optional</code> 호출 또는 불필요한 <code>sorted()</code>나 <code>distinct()</code> 호출을 보고합니다.
+<code>map(x -&gt; x)</code> o <code>filter(x -&gt; true)</code> llamadas <code>Stream</code> u <code>Optional</code> redundantes, o <code>sorted</code> o <code>distinct</code> redundantes.
 <!-- tooltip end -->
-<p>단, <code>streamOfIntegers.map(Integer::valueOf)</code>와 같은 코드에서 매핑 작업은 <code>requireNonNull()</code> 검사로 작동합니다. 스트림은 <code>null</code>을 포함하는 경우 <code>NullPointerException</code>을 던지므로 완전히 불필요한 것은 아닙니다.
-  해당 사례가 보고되지 않도록 하려면 <b>Report redundant boxing in Stream.map()(Stream.map()에서 불필요한 박싱 보고)</b> 옵션을 비활성화하세요.</p>
+<p>Tenga en cuenta que las operaciones de asignación en código como <code>streamOfIntegers.map(Integer::valueOf)</code> actúan como verificaciones <code>requireNonNull()</code>: si la transmisión contiene <code>null</code>, se lanzará <code>NullPointerException</code>, por lo que no es completamente redundante.
+  Para evitar que se informen dichos casos, deshabilite la opción <b>Informar de encajonamientos redundantes en <code>Stream.map()</code></b>.</p>
 </body>
 </html>

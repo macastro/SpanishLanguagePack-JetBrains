@@ -1,12 +1,12 @@
 <html>
 <body>
-<code>this</code> 표현식이 검사되는 <code>instanceof</code> 또는 <code>getClass() == SomeClass.class</code>의 사용 위치를 보고합니다.
-<p>그러한 표현식은 객체 지향 디자인의 실패를 나타내며 다형성 생성으로 바꿔야 합니다.</p>
-<p>예:</p>
+Reporta usos de <code>instanceof</code> o <code>getClass() == SomeClass.class</code> en los que se comprueba una expresión <code>this</code>.
+<p>Estas expresiones indican que el diseño orientado a objetos es deficiente y deben reemplazarse por construcciones polimórficas.</p>
+<p>Ejemplo:</p>
 <pre><code>
 class Super {
   void process() {
-    if (this instanceof Sub) { // 경고
+    if (this instanceof Sub) { // warning
       doSomething();
     } else {
       doSomethingElse();
@@ -16,7 +16,7 @@ class Super {
   
 class Sub extends Super {}
 </code></pre>
-<p>문제를 수정하려면 재정의 메서드를 사용하세요:</p>
+<p>Para arreglar el problema, usa un método sobreescrito:</p>
 <pre><code>
 class Super {
   void process() {

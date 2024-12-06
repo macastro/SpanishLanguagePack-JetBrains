@@ -4,93 +4,95 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse; border-color:#111111">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      이 템플릿에서 <b><code>#parse</code></b> 지시문을 사용하여 파일 템플릿(<i>파일 탭</i>)에 포함할 코드 조각을 지정할 수 있습니다. 하나의 템플릿을 여러 개의 파일 템플릿에서 공유할 수 있습니다. RBS 구문, 표현식 및 주석과 마찬가지로, 매크로처럼 해당 값으로 확장되는 사전 정의된 변수를 사용할 수 있습니다.
-   </font>
-   </td>
- </tr>
+      En esta plantilla, puedes especificar un fragmento de código para incluir en las plantillas de archivo (<i>pestaña Archivos</i>)
+      con la ayuda de la directiva <b><code>#parse</code></b>. Una plantilla puede ser compartida por varias plantillas de archivo. Junto con las sentencias RBS, expresiones y comentarios,
+      también puedes utilizar variables predefinidas que luego se expandirán como macros en los valores correspondientes.
+    </font>
+    </td>
+  </tr>
 </table>
 
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse; border-color:#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">사전 정의된 변수는 다음의 값을 사용합니다:</font></td>
- </tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${FILE_NAME}</code></b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de archivo actual</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del archivo actual</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${USER}</code></b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 유저 시스템 로그인 이름</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de inicio de sesión del sistema del usuario actual</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${DATE}</code></b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시스템 날짜</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${TIME}</code></b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시스템 시간</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${YEAR}</code></b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 년도</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${MONTH}</code></b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 월</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${DAY}</code></b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 일</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Día actual del mes</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${HOUR}</code></b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${MINUTE}</code></b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 분</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${PRODUCT_NAME}</code></b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 IDE 이름</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del IDE actual</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${PROJECT_NAME}</code></b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 프로젝트 이름</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
+  </tr>
 </table>
 
 </body>

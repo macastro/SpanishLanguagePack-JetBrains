@@ -1,19 +1,158 @@
 <html>
 <body>
-여기에 설명을 적으세요.
-영문 설명은 3인칭 단수 동사(예: reports, detects, highlights)로 시작합니다.
-첫 문장에서는 검사가 무엇을 탐지하는 데 도움이 되는지 설명합니다.
-문장이 너무 길거나 복잡하지 않도록 하세요.
+Realiza informes sobre uniones innecesarias de cadenas.
 <p>
-  첫 문장은 반드시 다른 텍스트 부분과 구별된 별도의 문단이어야 합니다. 이렇게 하면 설명이 읽기 쉬워집니다.
-  설명이 검사 제목을 반복하는 데서 그치지 않도록 하세요.
+  Las uniones innecesarias de cadenas aparecen cuando un programa contiene una secuencia de uniones de cadenas que se puede convertir en una sola unión de cadena. Este informe detecta uniones innecesarias de cadenas y ofrece una solución rápida para reemplazarlas con una sola unión.
 </p>
 <p>
-  자세한 내용은 https://jetbrains.design/intellij/text/inspections/#descriptions를 참조하세요.
+  Para abrir las opciones relacionadas con esta inspección directamente desde aquí, consulte: settings://inspections.java/ConstantExpressionCondition
 </p>
-<!-- tooltip end -->
-<p>이 주석 이후의 텍스트는 검사 설정에서만 표시됩니다.</p>
-
-<p>설명에서 직접 관련 설정을 열려면 'settings://$'를 포함한 링크를 추가합니다. 선택적으로 그 링크 뒤에 '?$'를 포함하면 UI 요소를 사전 선택할 수 있습니다.</p>
+</body>
+</html>
+<html>
+<body>
+Detecta las posibles referencias nulas.
+<p>
+  Identifica las posibles referencias nulas y proporciona sugerencias de corrección rápida para agregar verificaciones de referencias nulas donde sea necesario. Esto ayuda a mejorar la confiabilidad del código y a evitar errores de tiempo de ejecución.
+</p>
+<p>
+  Para abrir las opciones relacionadas con esta inspección directamente desde aquí, consulte: settings://inspections.java/DereferenceOfNullable
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta la asignación potencialmente innecesaria de una variable con un valor de retorno.
+<p>
+  Identifica las asignaciones de variables que tienen como valor asignado el valor de retorno de un método. En algunos casos, estas asignaciones pueden ser innecesarias y potencialmente pueden llevar a errores.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta el uso de bucles for con un rango vacío.
+<p>
+  Identifica los bucles for que se declaran con un rango vacío y proporciona sugerencias para eliminarlos o reemplazarlos con una construcción diferente según el caso de uso. Los bucles con rangos vacíos pueden no tener el comportamiento esperado, por lo que esta inspección ayuda a mejorar la exactitud y el rendimiento del código.
+</p>
+</body>
+</html>
+<html>
+<body>
+Marca el uso de cláusulas 'else' redundantes.
+<p>
+  Detecta las cláusulas 'else' que siguen a una cláusula 'if' que siempre se evalúa como 'true' o 'false', lo que hace que la cláusula 'else' sea redundante. Esta inspección ayuda a eliminar el código innecesario y mejora la legibilidad.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta las condiciones que siempre son falsas o verdaderas.
+<p>
+  Identifica las condiciones que se evalúan de forma constante como 'verdadero' o 'falso' en el tiempo de compilación. Estas condiciones pueden indicar errores lógicos o código innecesario, y esta inspección ayuda a mejorar la exactitud y claridad del código.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta los operadores de comparación invertidos.
+<p>
+  Detecta los operadores de comparación invertidos, como '>' usado en lugar de '<', lo que puede indicar un error lógico. Esta inspección ayuda a identificar y corregir problemas potenciales, mejorando la exactitud del código.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta las condiciones complejas.
+<p>
+  Identifica las condiciones que tienen una complejidad ciclomática alta, lo que indica que pueden ser difíciles de entender y mantener. Esta inspección alienta la refactorización de condiciones complejas en formas más simples y fáciles de leer, mejorando la legibilidad y el mantenimiento del código.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta los bloques try-catch vacíos.
+<p>
+  Detecta los bloques try-catch vacíos que no contienen ningún código para manejar las excepciones. Estos bloques pueden ser innecesarios y pueden indicar un manejo incompleto de excepciones. Esta inspección ayuda a identificar y eliminar bloques vacíos, mejorando la exactitud y el manejo de excepciones del código.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta los métodos que se pueden hacer privados.
+<p>
+  Identifica los métodos que se declaran como protegidos o públicos pero que solo son llamados desde dentro de la misma clase. Estos métodos son candidatos para hacerse privados, lo que mejora la encapsulación y reduce el acoplamiento.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta los campos que se pueden hacer privados.
+<p>
+  Identifica los campos que se declaran como protegidos o públicos pero que solo se acceden desde dentro de la misma clase. Estos campos son candidatos para hacerse privados, lo que mejora la encapsulación y reduce el acoplamiento.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta los campos que se pueden hacer finales.
+<p>
+  Identifica los campos que nunca se reasignarn después de la inicialización. Estos campos son candidatos para hacerse finales, lo que mejora la inmutabilidad y la seguridad del tipo.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta los métodos que se pueden hacer finales.
+<p>
+  Identifica los métodos que nunca se sobrescriben en subclases. Estos métodos son candidatos para hacerse finales, lo que mejora el rendimiento y la corrección.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta los bloques switch redundantes.
+<p>
+  Identifica los bloques switch que tienen un único caso predeterminado y ningún otro caso. Estos bloques pueden reemplazarse con una instrucción if-else para mejorar la legibilidad y el rendimiento.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta las condiciones redundantes.
+<p>
+  Identifica las condiciones que se evalúan a un valor constante y luego se usa ese valor para una verificación adicional. Esta inspección ayuda a simplificar las condiciones y mejorar la legibilidad al eliminar las comprobaciones redundantes.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta las llamadas a `toString` innecesarias.
+<p>
+  Detecta los casos en los que se llama al método `toString` en un objeto y el resultado no se utiliza. Estas llamadas se pueden eliminar para mejorar el rendimiento y la legibilidad.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta las dependencias circulares.
+<p>
+  Identifica las dependencias circulares entre las clases. Estas dependencias pueden provocar problemas de carga de clases y dificultar el mantenimiento del código. Esta inspección ayuda a detectar y eliminar dependencias circulares, mejorando la estabilidad y la mantenibilidad del proyecto.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta las excepciones que nunca se lanzan.
+<p>
+  Identifica las clases de excepción que se declaran pero nunca se lanzan. Estas clases pueden ser innecesarias y pueden indicar una implementación incompleta de la gestión de excepciones. Esta inspección ayuda a identificar y eliminar excepciones no lanzadas, mejorando la exactitud y la corrección del código.
+</p>
+</body>
+</html>
+<html>
+<body>
+Resalta las variables y parámetros no utilizados.
+<p>
+  Identifica las variables y parámetros que se declaran pero nunca se utilizan. Estas declaraciones no utilizadas pueden ser indicativas de código innecesario o errores en la lógica del programa. Esta inspección ayuda a detectar y eliminar declaraciones no utilizadas, mejorando la concisión y el mantenimiento del código.
+</p>
 </body>
 </html>

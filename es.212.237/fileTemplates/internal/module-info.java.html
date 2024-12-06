@@ -2,83 +2,86 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td><font face="verdana" size="-1"><b>프로젝트</b> 도구 창에서 <b>새로 만들기 | module-info.java</b>를 호출하여 생성된
-      새 module-info.java 파일에 적용됩니다.<br><br>
+    <td><font face="verdana" size="-1">Se aplica a los nuevos archivos module-info.java que se crean
+      invocando <b>Nuevo | module-info.java</b> en la ventana de herramientas de <b>Proyecto</b> en el menú superior.<br><br>
 
-      이 기본 제공 템플릿은 편집할 수 있습니다. Java 표현식 및 주석과 마찬가지로, 
-      해당 값으로 확장되는 사전 정의된 변수(아래 나열됨)를 사용할 수 있습니다.<br><br>
+      Esta plantilla incorporada se puede editar. Junto con las expresiones de Java y los comentarios, también se pueden usar
+      las variables predefinidas (que se enumeran a continuación) que luego se expandirán en valores correspondientes.<br><br>
 
-      이 기본 제공 템플릿은 편집할 수 있습니다. 사용자 지정 변수는 다음 형식을 사용합니다: <i>${VARIABLE_NAME}</i>, 여기서 <i>VARIABLE_NAME</i>은 변수 이름입니다 (예: <i>${MY_CUSTOM_FUNCTION_NAME}</i>).
-      IDE가 사용자 지정 변수를 사용하는 새 파일을 생성하기 전, 템플릿의 사용자 지정 변수 값을 정의할 수 있는 대화상자가 표시됩니다.<br><br>
-<i>#parse</i> 지시문을 사용하여 <b>포함하기</b> 탭에서 템플릿을 포함할 수 있습니다. 템플릿을 포함하려면,
-      템플릿의 전체 이름을 따옴표로 묶인 매개변수로 지정하세요(예: <i>#parse("File Header.java")</i>.
-   </font></td>
- </tr>
+      También es posible especificar variables personalizadas. Las variables personalizadas utilizan el siguiente formato: <i>${NOMBRE_DE_LA_VARIABLE}</i>, donde
+      <i>NOMBRE_DE_LA_VARIABLE</i> es un nombre para su variable (por ejemplo, <i>${NOMBRE_DE_LA_FUNCION_PERSONALIZADA}</i>).
+      Antes de que el IDE cree un nuevo archivo con variables personalizadas, verá un cuadro de diálogo donde podrá definir valores para variables personalizadas en la
+      plantilla.<br><br>
+
+      Mediante la directiva <i>#parse</i>, se pueden incluir plantillas de la pestaña <b>Incluye</b>. Para incluir una plantilla,
+      especifique el nombre completo de la plantilla como un parámetro entre comillas (por ejemplo, <i>#parse("File Header.java")</i>.
+    </font></td>
+  </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">사전 정의된 변수는 다음의 값을 사용합니다:</font></td>
- </tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
+  </tr>
   <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MODULE_NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">새 module-info.java 파일이 생성되는 모듈 이름</font></td>
- </tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NOMBRE_DEL_MODULO}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del módulo en el que se crea un nuevo archivo module-info.java</font></td>
+  </tr>
   <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 사용자의 시스템 로그인 이름</font></td>
- </tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${USUARIO}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de inicio de sesión del sistema del usuario actual</font></td>
+  </tr>
   <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시스템 날짜</font></td>
- </tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${FECHA}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
+  </tr>
   <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시스템 시간</font></td>
- </tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${HORA}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
+  </tr>
   <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 년도</font></td>
- </tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${AÑO}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
+  </tr>
   <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 월</font></td>
- </tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MES}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
+  </tr>
   <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 월 이름의 첫 세 글자(Jan, Feb 등)</font></td>
- </tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NOMBRE_DEL_MES_CORTO}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Las primeras 3 letras del nombre del mes actual (ene, feb, etc.)</font></td>
+  </tr>
   <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 월 이름 전체(January, February 등)</font></td>
- </tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NOMBRE_DEL_MES_COMPLETO}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual (enero, febrero, etc.)</font></td>
+  </tr>
   <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 일</font></td>
- </tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DÍA}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Día actual del mes</font></td>
+  </tr>
   <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시</font></td>
- </tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${HORA}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
+  </tr>
   <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 분</font></td>
- </tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MINUTO}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
+  </tr>
   <tr>
-    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 프로젝트 이름</font></td>
- </tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NOMBRE_DEL_PROYECTO}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
+  </tr>
 </table>
 </body>
 </html>

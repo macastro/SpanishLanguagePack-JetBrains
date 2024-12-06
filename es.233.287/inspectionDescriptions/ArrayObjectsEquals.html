@@ -1,11 +1,11 @@
 <html>
 <body>
-배열 상등 관계 파악 또는 해시코드 계산을 위해 부적절한 메서드를 사용하는 것으로 보이는 표현식을 보고합니다.
-<p>다음과 같은 메서드 호출이 보고됩니다.</p>
+Inspecciona las expresiones que parecen usar un método inadecuado para determinar la igualdad del arreglo o para calcular su código hash.
+<p>Se informan las siguientes llamadas a métodos:</p>
 <ul>
-  <li>모든 배열: <code>Object.equals()</code></li>
-  <li>다차원 배열: <code>Arrays.equals()</code></li>
-  <li>다차원 배열: <code>Arrays.hashCode()</code></li>
+  <li><code>Object.equals()</code> para cualquier arreglo</li>
+  <li><code>Arrays.equals()</code> para arreglos multidimensionales</li>
+  <li><code>Arrays.hashCode()</code> para arreglos multidimensionales</li>
 </ul>
 <!-- tooltip end -->
 <p>

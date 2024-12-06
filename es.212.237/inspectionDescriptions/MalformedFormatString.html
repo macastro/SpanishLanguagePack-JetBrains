@@ -1,13 +1,23 @@
 <html>
 <body>
-표준 Java 구문을 준수하지 않는 서식 문자열을 보고합니다.
-<p>디폴트로 이 검사는 <code>java.util.Formatter</code>, <code>java.lang.String</code>, <code>java.io.PrintWriter</code> 또는<code>java.io.PrintStream</code>의 해당 메서드에 인수로 사용되는 경우 컴파일 타임 상수를 포맷 문자열로 간주합니다.
+Reporta cadenas de formato que no cumplen con la sintaxis estándar de Java.
+<p>Por defecto, la inspección considera una constante de tiempo de compilación una cadena de formato si se usa como argumento para los métodos correspondientes en
+<code>java.util.Formatter</code>, <code>java.lang.String</code>, <code>java.io.PrintWriter</code> o <code>java.io.PrintStream</code>.
 </p>
-<p><b>예:</b></p>
-<pre>
+<p><b>Ejemplo:</b></p>
+<pre><code>
   String.format("x = %d, y = %d", 42);
-</pre>
+</code></pre>
 <!-- tooltip end -->
-<p>검사 설정을 사용하여 문자열 서식과 관련된 추가 클래스 및 메서드를 표시하세요.</p>
+<p>Utilice los ajustes de inspección para marcar clases y métodos adicionales como relacionados con el formato de la cadena.</p>
+<p>Como alternativa, se puede utilizar la anotación <code>org.intellij.lang.annotations.PrintFormat</code>
+  para marcar el parámetro del método de la cadena de formato. En este caso,
+  el parámetro de argumentos de formato debe seguir inmediatamente a la cadena de formato y ser el último parámetro del método. Ejemplo:</p>
+<pre><code>
+  void myFormatMethod(int mode, @PrintFormat String formatString, Object... args) {...}
+</code></pre>
+<p>
+  Los métodos anotados de esta manera también serán reconocidos por esta inspección.
+</p>
 </body>
 </html>

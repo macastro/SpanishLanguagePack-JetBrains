@@ -1,24 +1,24 @@
 <html>
 <body>
-<code>val</code> 또는 <code>var</code>를 제거할 수 있는 기본 생성자 매개변수를 보고합니다.
+Reporta parámetros de constructores primarios que pueden remover <code>val</code> o <code>var</code>.
 <p>
-    생성자에 선언된 클래스 프로퍼티는 추가 메모리를 사용합니다.
-    매개변수 값이 생성자에서만 사용되는 경우 일반적으로 매개변수 값을 저장할 이유가 없습니다.
+    Las propiedades de clase declaradas en el constructor incrementan el consumo de memoria.
+    Si el valor de parámetro solo se usa en el constructor, puedes omitirlo.
 </p>
-<p>참조된 객체는 조기에 쓰레기 수집될 수 있습니다.</p>
-<p><b>예:</b></p>
+<p>Nota que el objeto referenciado puede ser recolectado como basura más temprano.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Task(val name: String) {
       init {
-          print("Task created: $name")
+          print("Tarea creada: $name")
       }
   }
 </code></pre>
-<p>빠른 수정을 위해 추가 <code>val</code> 또는 <code>var</code> 키워드를 제거하도록 제안합니다.</p>
+<p>La corrección rápida remueve las palabras claves <code>val</code> o <code>var</code>:</p>
 <pre><code>
   class Task(name: String) {
       init {
-          print("Task created: $name")
+          print("Tarea creada: $name")
       }
   }
 </code></pre>

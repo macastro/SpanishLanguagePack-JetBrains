@@ -1,16 +1,16 @@
 <html>
 <body>
 <p>
-    <code>await</code> 바로 다음에 오는 <code>async</code> 호출을 보고합니다.
-    그러한 호출은 블록 호출로 바꿀 수 있습니다.
+    Informa las llamadas `async` con `await` inmediatamente después.
+    Esas llamadas se pueden reemplazar por llamadas bloqueantes.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   suspend fun test(ctx: CoroutineContext, scope: CoroutineScope) {
       scope.async(ctx) { doSomeJob() }.await()
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la reparación rápida:</p>
 <pre><code>
   suspend fun test(ctx: CoroutineContext, scope: CoroutineScope) {
       withContext(scope.coroutineContext + ctx) { doSomeJob() }

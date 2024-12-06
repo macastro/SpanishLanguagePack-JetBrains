@@ -1,16 +1,16 @@
 <html>
 <body>
-<p><code>return</code>이 있는 <code>if</code>에서 불필요한 <code>else</code>를 보고합니다.</p>
-<p><b>예:</b></p>
+<p>Informa de <code>else</code> redundante en <code>if</code> con <code>return</code></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun foo(arg: Boolean): Int {
       if (arg) return 0
-      else { // 이 else는 불필요함, 브랜치에 있는 코드를 그냥 왼쪽으로 시프트할 수 있음
+      else { // Este else es redundante, el código entre llaves se puede desplazar hacia la izquierda
           someCode()
       }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun foo(arg: Boolean): Int {
       if (arg) return 0

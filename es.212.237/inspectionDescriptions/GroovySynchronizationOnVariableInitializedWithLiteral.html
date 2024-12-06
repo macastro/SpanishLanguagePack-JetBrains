@@ -1,11 +1,11 @@
 <html>
 <body>
-리터럴로 초기화되는 객체에 고정되는 동기화된 블록을 보고합니다.
+Inspecciona bloques sincronizados que se bloquean en un objeto inicializado con un literal.
 <p>
-  문자열 리터럴은 인턴되며 <code>Number</code> 리터럴은 캐시에서 할당될 수 있습니다. 이 때문에
-  같은 리터럴을 사용해 초기화된 객체를 사용하는 시스템의 일부 다른 부분에서
-  동일한 객체에 대한 참조를 실제로 홀딩할 수 있습니다. 사용자가 문자열이 비공개라고 생각하는 경우
-  이는 예상하지 못한 데이터 잠김 현상을 야기할 수 있습니다.
+  Los literales de cadena se internan y los literales de <code>Number</code> se pueden asignar desde una caché. Debido a
+  esto, es posible que alguna otra parte del sistema que utiliza un objeto inicializado con el mismo
+  literal, en realidad tenga una referencia al mismo objeto exacto. Esto puede crear situaciones inesperadas de punto muerto,
+  si se pensó que la cadena sería privada.
 </p>
 </body>
 </html>

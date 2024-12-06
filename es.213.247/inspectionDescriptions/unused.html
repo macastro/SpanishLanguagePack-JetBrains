@@ -1,32 +1,33 @@
 <html>
 <body>
-지정된 검사 범위의 클래스, 메서드 또는 필드 중 사용되지 않거나 진입점에서 도달 불가한 항목을 보고합니다.
-<p> 진입점은 지정된 범위 밖에서 언급된 메인 메서드, 테스트, 클래스 및 <code>module-info.java</code>에서 액세스 가능한 클래스 등일 수 있습니다. 또한 이름 패턴 또는 어노테이션을 사용하여 사용자 지정 진입점을 구성할 수도 있습니다.
-<p><b>예:</b></p>
+Reporta clases, métodos o campos que no se usan o que son inalcanzables desde los puntos de entrada.
+<p> Un punto de entrada puede ser un método principal, pruebas, clases externas al ámbito especificado, clases accesibles desde <code>module-info.java</code>, y demás. Es posible configurar puntos de entrada personalizados mediante el uso de patrones de nombre o anotaciones.
+</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class Department {
     private Organization myOrganization;
   }
 </code></pre>
-<p>이 예시에서 <code>Department</code>는 명시적으로 <code>Organization</code>을 참조하지만 <code>Department</code> 클래스 자체가 사용되지 않으면 검사는 두 클래스를 모두 보고합니다. </p>
+<p>En este ejemplo, <code>Department</code> explícitamente hace referencia a <code>Organization</code> pero si la clase <code>Department</code> en sí es inutilizada, entonces la inspección reportará ambas clases. </p>
 <p>
-  또한 이 검사는 해당 메서드 및 모든 메서드 구현/재정의에서 사용되지 않는 매개변수, 그리고 선언되었지만 사용되지 않는 지역 변수를 보고합니다.
+  La inspección también reporta parámetros que no son usados por sus métodos y todas las implementaciones y anulaciones de métodos, así como variables locales que son declaradas pero no usadas.
 </p>
 <p>
-  <b>참고:</b> 사용되지 않는 멤버 중 에디터 내 강조 표시로 보고되지 않는 멤버도 있습니다. 성능상의 이유로 private이 아닌 멤버는 프로젝트에서 이름이 거의 나오지 않는 경우에만 검사됩니다.
-  모든 결과를 확인하려면 메인 메뉴의 <b>코드 | 코드 검사</b> 또는 <b>코드 | 코드 분석 | 이름별로 검사 실행</b>을 선택하여 검사를 실행합니다.
+  <b>Nota:</b> Algunos miembros inutilizados pueden no ser reportados durante el resaltado de código en el editor. Por razones de rendimiento, solo se verifica un miembro no privado cuando rara vez aparece su nombre en el proyecto.
+  Para ver todos los resultados, ejecuta la inspección seleccionando <b>Código | Inspeccionar código</b> o <b>Código | Analizar código | Ejecutar inspección por nombre</b> en el menú principal.
 </p>
 
 <!-- tooltip end -->
-<p>하단의 가시성 설정을 사용하여 보고할 멤버를 구성합니다. 예를 들어, <code>private</code> 메서드만 보고하도록 구성하면 <code>private</code> 내부 클래스의 <code>public</code> 메서드는 보고되지만 최상위 클래스의 <code>protected</code> 메서드는 무시됩니다.</p>
+<p>Utiliza las siguientes configuraciones de visibilidad para configurar los miembros a ser reportados. Por ejemplo, configurar para reportar solo métodos <code>private</code> significa que los métodos <code>public</code> de la clase interna <code>private</code> serán reportados pero los métodos <code>protected</code> de la clase de nivel superior serán ignorados.</p>
 <p>
-  <b>entry points(진입점)</b> 탭을 사용하여 검사 실행 중에 검토할 진입점을 구성합니다.</p>
-<p> 검사 결과가 준비되면 진입점을 수동으로 추가할 수 있습니다.</p>
-<p> 코드에서 지원되지 않는 프레임워크를 사용한 경우 몇 가지 옵션이 있습니다.</p>
+  Usa la pestaña <b>puntos de entrada</b> para configurar los puntos de entrada a ser considerados durante la ejecución de la inspección.</p>
+<p> Puedes añadir puntos de entrada manualmente cuando los resultados de la inspección estén listos.</p>
+<p> Si tu código utiliza frameworks no soportados, hay varias opciones:</p>
 <ul>
-  <li>프레임워크에서 어노테이션이 필요한 경우 <b>어노테이션...</b> 버튼을 사용해 프레임워크의 어노테이션을 구성합니다.</li>
-  <li>프레임워크에서 어노테이션이 필요하지 않은 경우 프레임워크에서 필요한 클래스 이름 패턴을 구성합니다.</li>
+  <li>Si el framework se basa en anotaciones, usa el botón <b>Anotaciones...</b> para configurar las anotaciones del framework.</li>
+  <li>Si el framework no se basa en anotaciones, intenta configurar patrones de nombre de clase que el framework espere.</li>
 </ul>
-<p>이렇게 하면 프레임워크 내부에서 액세스 가능하며 어노테이션이 추가된 코드가 사용된 것으로 취급됩니다.</p>
+<p>De esta forma, el código anotado accesible por los componentes internos del framework será tratado como usado.</p>
 </body>
 </html>

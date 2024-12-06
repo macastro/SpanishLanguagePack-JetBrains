@@ -1,10 +1,11 @@
 <html>
 <body>
-<code>@ApiStatus.Obsolete</code> 어노테이션이 추가된 선언(클래스, 메서드, 필드)을 보고합니다.
+Reporta declaraciones (clases, métodos, campos) anotadas como <code>@ApiStatus.Obsolete</code>.
 <p>
-  제대로 작동하지 않거나 더 새롭거나 우수하거나 일반적인 API가 있지만, 현재 API를 삭제할 수 없는 경우가 있습니다.
-  이는 <code>@Deprecated</code> 어노테이션의 더 약한 변형입니다.
-  어노테이션이 있는 API는 새 코드에서 사용되지 않아야 하지만, 기존 코드의 마이그레이션을 연기하도록 허용되므로, 사용 위치는 경고로 간주되지 않습니다.
+  Algunas veces es imposible eliminar el API actual, aunque pudiera no funcionar correctamente, hay un API más nuevo, o mejor, o más genérico.
+  De esta forma, es una variante más débil de la anotación <code>@Deprecated</code>.
+  Se supone que el API anotado no debe ser usado en el código nuevo, pero se permite posponer la migración del código existente,
+  por lo tanto el uso no es considerado una advertencia.
 </p>
 </body>
 </html>

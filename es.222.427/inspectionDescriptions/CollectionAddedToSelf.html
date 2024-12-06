@@ -1,13 +1,14 @@
 <html>
 <body>
-<code>java.util.Collection</code> 또는 <code>java.util.Map</code>의 메서드 호출 인수가 컬렉션 또는 맵 자체인 경우를 보고합니다.
-해당 상황은 복사 및 붙여넣기의 결과로 원시 타입이 있는 코드에서 발생할 수 있습니다.
+Se informa de los casos en los que el argumento de una llamada a un método en un <code>java.util.Collection</code>
+o un <code>java.util.Map</code> es la propia colección o mapa.
+Estas situaciones pueden darse como resultado de una copia y pegado de código con tipos sin procesar.
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   ArrayList list = new ArrayList&lt;&gt;();
-  list.add(list); // 여기에서 경고 발생
-  return list.hashCode(); // StackOverflowError를 던집니다
+  list.add(list); // aquí se genera una advertencia
+  return list.hashCode(); // lanza StackOverflowError
 </code></pre>
 <!-- tooltip end -->
 </body>

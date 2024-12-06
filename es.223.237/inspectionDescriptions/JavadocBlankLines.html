@@ -1,35 +1,35 @@
 <html>
 <body>
-Javadoc 주석의 빈 줄을 보고합니다.
+Informa sobre líneas en blanco en comentarios de Javadoc.
 <p>
-  Javadoc의 빈 줄은 텍스트를 다른 단락으로 분할하려는 인텐션 신호일 수 있습니다. 하지만 Javadoc 도구 및 IntelliJ IDEA는 문서 주석을 렌더링할 때 이를 무시합니다.
+  Las líneas en blanco en Javadoc pueden indicar la intención de dividir el texto en distintos párrafos. Sin embargo, la herramienta Javadoc y IntelliJ IDEA las ignorarán al representar los comentarios de documentación.
 </p>
 <p>
-  빠른 수정에서는 빈 줄을 단락 태그(&lt;p&gt;)로 교체할 것을 제안합니다.
+  La corrección rápida sugiere reemplazar la línea en blanco con una etiqueta de párrafo (&lt;p&gt;).
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Main {
     /**
-     * 아무 작업도 하지 않습니다.
+     * No hace nada.
      *
-     * 아무 작업도 하지 않습니다
+     * No hace absolutamente nada
      */
     void foo() {}
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   class Main {
     /**
-     * 아무 작업도 하지 않습니다.
+     * No hace nada.
      * &lt;p&gt;
-     * 아무 작업도 하지 않습니다
+     * No hace absolutamente nada
      */
     void foo() {}
   }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2022.1의 새로운 기능</small></p>
+<p><small>Novedad en 2022.1</small></p>
 </body>
 </html>

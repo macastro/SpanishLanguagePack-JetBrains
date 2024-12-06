@@ -1,16 +1,17 @@
 <html>
 <body>
-의심스러운 <code>Collection.toArray()</code> 호출을 보고합니다.
-<p>다음 유형의 호출은 의심스러운 것으로 간주됩니다:</p>
+Reporta llamadas sospechosas a <code>Collection.toArray()</code>.
+<p>Los siguientes tipos de llamadas se consideran sospechosas:</p>
 <ul>
   <li>
-    배열 인수의 타입이 결과가 변환될 배열 타입과 같지 않은 경우
+    cuando el tipo del argumento de la matriz
+    no es el mismo que el tipo de matriz al que se lanza el resultado.
   </li>
   <li>
-    배열 인수의 타입이 컬렉션 선언 내 타입 매개변수와 일치하지 않는 경우
+    cuando el tipo del argumento de la matriz no coincide con el parámetro de tipo en la declaración de la colección.
   </li>
 </ul>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 void m1(List list) {
   Number[] ns = (Number[]) list.toArray(new String[0]);

@@ -1,11 +1,11 @@
 <html>
 <body>
-Hamcrest 선언 스타일의 <code>Assert.assertThat()</code> 호출로 마이그레이션할 수 있는 <code>Assert.assertEquals()</code>, <code>Assert.assertTrue()</code> 등의 메서드 호출을 보고합니다.
-<p>예:</p>
-<pre><code>
-  <b>public class</b> SubstantialTest {
+Informa sobre las llamadas a los métodos <code>Assert.assertEquals()</code>, <code>Assert.assertTrue()</code>, etc. que pueden migrarse a llamadas declarativas de <code>Assert.assertThat()</code> de estilo Hamcrest.
+<p>Por ejemplo:</p>
+<pre><code lang="java">
+  public class SubstantialTest {
     @Test
-    <b>public void</b> testContents(Collection&lt;String> c, String s) {
+    public void testContents(Collection&lt;String&gt; c, String s) {
       Assert.assertTrue(c.contains(s));
       Assert.assertEquals(c, s);
       Assert.assertNotNull(c);
@@ -14,11 +14,11 @@ Hamcrest 선언 스타일의 <code>Assert.assertThat()</code> 호출로 마이�
     }
   }
 </code></pre>
-<p>마이그레이션 수행을 위한 빠른 수정이 제공됩니다.</p>
-<pre><code>
-  <b>public class</b> SubstantialTest {
+<p>Se proporciona una corrección rápida para realizar la migración:</p>
+<pre><code lang="java">
+  public class SubstantialTest {
     @Test
-    <b>public void</b> testContents(Collection&lt;String> c, String s) {
+    public void testContents(Collection&lt;String&gt; c, String s) {
       assertThat(c, hasItem(o));
       assertThat(o, is(c));
       assertThat(c, notNullValue());
@@ -28,7 +28,7 @@ Hamcrest 선언 스타일의 <code>Assert.assertThat()</code> 호출로 마이�
   }
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사를 사용하려면 클래스 경로에 Hamcrest 라이브러리가 있어야 합니다.
-<p><b>매처 메서드를 정적으로 가져오기</b> 옵션을 사용하여 Hamcrest 매처 메서드를 정적으로 가져오는 데 빠른 수정을 사용할지 설정할 수 있습니다.
+<p>Esta inspección requiere que la biblioteca Hamcrest esté disponible en la ruta de clase.
+<p>Utiliza la opción <b>Importar estáticamente los métodos del emparejador</b> para especificar si deseas que la corrección rápida importe estáticamente los métodos de emparejamiento Hamcrest.
 </body>
 </html>

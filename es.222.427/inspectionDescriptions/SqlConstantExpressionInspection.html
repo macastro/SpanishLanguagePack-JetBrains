@@ -1,11 +1,11 @@
 <html>
 <body>
-항상 true, false 또는 null인 조건 및 표현식을 보고합니다.
-<p>예(MySQL):</p>
+Reporta las condiciones y expresiones que siempre son verdaderas, falsas o nulas.
+<p>Ejemplo (MySQL):</p>
 <pre><code>CREATE TABLE t1 (a TEXT, b INT, c BOOLEAN);
 SELECT a FROM t1 WHERE 'Cat' = 'Cat';
 SELECT a FROM t1 WHERE 'Cat' = null;</code></pre>
-<p><code>'Cat' = 'Cat'</code>은 항상 true이므로 보고됩니다.</p>
-<p><code>'Cat' = null</code>은 항상 null이므로 보고됩니다.</p>
+<p>El <code>'Cat' = 'Cat'</code> siempre es verdadero y será reportado.</p>
+<p>El <code>'Cat' = null</code> siempre es nulo y será reportado.</p>
 </body>
 </html>

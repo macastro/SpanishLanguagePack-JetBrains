@@ -1,15 +1,17 @@
 <html>
 <body>
-<em>plugin.xml</em>의 <code>&lt;idea-version></code><code>@since-build</code>에서 지정한 버전보다 <code>더 높은</code> 버전에서 사용하는 IntelliJ 플랫폼 API의 사용 위치를 보고합니다.
+Informa sobre el uso de las API de la plataforma IntelliJ que se introdujeron en una versión <em>superior</em> a la especificada en la versión actual. La versión se especifica en <code>&lt;idea-version></code> <code>@since-build</code> (en <code>plugin.xml</code>).
 <p>
-  그러한 API를 사용하면 이전 버전 IDE의 플러그인과 호환하지 않을 수 있습니다.
+  El uso de estas API puede provocar problemas de compatibilidad con las versiones anteriores del IDE y del plugin.
 </p>
 <p>
-  이전 버전 IDE에서 플러그인을 실행할 때 발생할 수 있는 문제를 피하려면 <code>since-build</code>를 적절하게 늘리거나
-  이 API의 사용 위치를 제거해야 합니다.
+  Para evitar posibles problemas al ejecutar el plugin en versiones anteriores del IDE, incrementa <code>since-build</code> en consecuencia o elimina el uso de esta API.
+</p>
+<p>
+  Para obtener más información, consulta los <a href="https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html">rangos de número de compilación</a> en la documentación del SDK del plugin para la plataforma IntelliJ.
 </p>
 <!-- tooltip end -->
-<p>검사 구성:</p>
-<code>&lt;idea-version></code><code>@since/until-build</code> 속성을 <code>plugin.xml</code>에서 지정하지 않았다면 <b>Since</b>/<b>Until</b>을 명시적으로 설정하세요.
+<p>Configuración de la inspección:</p>
+Si no se especifican los atributos <code>@since/until-build</code> de <code>&lt;idea-version></code> en <code>plugin.xml</code>, establece <b>Desde</b>/<b>Hasta</b> de forma explícita.
 </body>
 </html>

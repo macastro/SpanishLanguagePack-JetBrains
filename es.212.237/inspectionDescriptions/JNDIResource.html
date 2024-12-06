@@ -1,28 +1,28 @@
 <html>
 <body>
-안전하게 닫히지 않은 JNDI 리소스를 보고합니다. 이 검사에서 보고되는 JNDI 리소스에는 <code>javax.naming.InitialContext</code>, <code>javax.naming.NamingEnumeration</code>이 포함됩니다.
+Informa sobre recursos JNDI que no están cerrados de forma segura. Los recursos JNDI notificados por esta inspección incluyen <code>javax.naming.InitialContext</code> y <code>javax.naming.NamingEnumeration</code>.
 <p>
-  이 검사는 기본적으로 리소스가 이름에 'close' 또는 'cleanup'을 포함하는 모든 메서드에 의해 닫힐 수 있다고 가정합니다.
+  Por defecto, la inspección supone que los recursos pueden ser cerrados mediante cualquier método cuyo nombre tenga "close" o "cleanup".
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   Object findObject(Properties properties, String name) throws NamingException {
-    Context context = new InitialContext(properties); // 컨텍스트가 닫히지 않음
+    Context context = new InitialContext(properties); //el contexto no se cierra
     return context.lookup(name);
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-  다음 옵션을 사용해 검사를 구성하세요:
+  Utilice las siguientes opciones para configurar la inspección:
 </p>
 <ul>
   <li>
-    JNDI 리소스를 <code>try</code> 블록 내부에서 여는 것을 허용할지 여부를 설정합니다.
-    이 스타일은 <code>try</code> 블록 앞에서 리소스를 여는 것보다 장황하기 때문에 그다지 바람직하지 않습니다.
- </li>
+    Si un recurso JNDI puede abrirse dentro de un bloque <code>try</code>.
+    Este estilo es menos deseable porque es más detallado que abrir un recurso delante de un bloque <code>try</code>.
+  </li>
   <li>
-    리소스가 인수로 전달된 메서드 호출에 의해 리소스가 닫힐 수 있는지 여부를 설정합니다.
- </li>
+    Si el recurso puede ser cerrado mediante cualquier llamada a método con el recurso pasado como argumento.
+  </li>
 </ul>
 </body>
 </html>

@@ -1,14 +1,17 @@
 <html>
 <body>
-복제될 수 있는 클래스를 보고합니다.
+Informa clases que pueden ser clonadas.
 <p>
-  클래스가 <code>Cloneable</code> 인터페이스를 지원하고 해당 <code>clone()</code> 메서드가 즉시 오류를 던지도록 정의되지 않은 경우 이 클래스를 복제할 수 있습니다. Cloneable 클래스는 안전한 사용을 위한 코드에서 위험할 수 있습니다.
+  Una clase
+  puede ser clonada si soporta la interface <code>Cloneable</code>,
+  y su método <code>clone()</code> no está definido para lanzar un error inmediatamente. Las clases clonables pueden ser peligrosas en códigos diseñados para uso seguro.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <code>class SecureBean implements Cloneable {}</code>
-<p>빠른 수정 적용 후:</p><code>class SecureBean {}</code>
+<p>Después de aplicar la corrección rápida:</p><code>class SecureBean {}</code>
 <p>
-이 클래스가 기존의 cloneable 클래스를 확장하거나 cloneable 인터페이스를 구현하는 경우, 빠른 수정 적용 후 코드는 다음과 같습니다. 
+Cuando la clase extiende una clase clonable existente o implementa una interfaz clonable,
+  entonces después de aplicar la corrección rápida, el código puede verse así: 
 <pre><code>class SecureBean extends ParentBean {
     @Override
     protected SecureBean clone() throws CloneNotSupportedException {

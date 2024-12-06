@@ -1,7 +1,7 @@
 <html>
 <body>
-색인화된 테이블에서 열을 삭제하려고 하는 경우를 보고합니다. 이 검사는 Microsoft SQL Server 및 Sybase ASE에서 사용할 수 있습니다.
-<p>예(Microsoft SQL 서버):</p>
+Reporta casos cuando intentas eliminar columnas de tablas indexadas. Esta inspección está disponible en Microsoft SQL Server y Sybase ASE.
+<p>Ejemplo (Microsoft SQL Server):</p>
 <pre><code>CREATE TABLE test_index
 (
 col  INT NOT NULL,
@@ -14,6 +14,6 @@ CREATE UNIQUE INDEX aaaa ON test_index (col, col2);
 
 ALTER TABLE test_index
 DROP COLUMN col;</code></pre>
-<p><code>col</code> 열은 색인화된 테이블에 있기 때문에 삭제할 수 없습니다. 열을 삭제하려면 <code>aaaa</code> 색인을 먼저 삭제해야 합니다(예: DROP INDEX aaaa).</p>
+<p>No puedes eliminar la columna <code>col</code> porque está en la tabla indexada. Para eliminar la columna, necesitas eliminar el índice <code>aaaa</code> primero (por ejemplo, DROP INDEX aaaa).</p>
 </body>
 </html>

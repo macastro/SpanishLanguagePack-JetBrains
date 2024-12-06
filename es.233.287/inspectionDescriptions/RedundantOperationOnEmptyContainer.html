@@ -1,17 +1,18 @@
 <html>
 <body>
-빈 컬렉션, 맵, 배열에 사용된 불필요한 연산을 보고합니다.
+Informa sobre operaciones redundantes para colecciones, mapas o arreglos vacíos.
 <p>
-  빈 컬렉션에 대한 반복, 요소 제거, 정렬, 기타 연산은 효과가 없으며 제거할 수 있습니다. 이는 버그의 신호일 수도 있습니다.</p>
-<p><b>예:</b></p>
+  Iterar, eliminar elementos, ordenar
+  y algunas otras operaciones sobre colecciones vacías no tienen ningún efecto y pueden eliminarse. Además, pueden ser un indicio de un error.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   if (numbers.isEmpty()){
-    // 부정 연산자가 누락되어 오류 발생
+    //error debido a la negación que falta
     int max = numbers.stream().max(Comparator.naturalOrder()).get();
     ...
   }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2019.1의 새로운 기능</small></p>
+<p><small>Nuevo en 2019.1</small></p>
 </body>
 </html>

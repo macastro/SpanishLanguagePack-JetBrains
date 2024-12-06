@@ -1,19 +1,19 @@
 <html>
 <body>
-상태와 재정의된 <code>equals()</code>가 없는 <code>sealed</code> 클래스의 직접적인 상속자를 보고합니다.
-<p><code>equals()</code>를 재정의해 비교 안정성을 제공하거나 <code>클래스</code>를 <code>객체</code>로 변환해 같은 효과를 내도록 강력하게 권장합니다.</p>
-<p><b>예:</b></p>
+Informa sobre herederos directos de clases `sealed` que no tienen estado ni método `equals()` anulado.
+<p>Se recomienda encarecidamente anular `equals()` para proporcionar estabilidad de comparación, o bien convertir la `clase` en un `objeto` para alcanzar el mismo efecto.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  sealed class Receiver {
-      class Everyone : Receiver()
-      class User(val id: Int) : Receiver()
+  sealed class Receptor {
+      class Todos : Receptor()
+      class Usuario(val id: Int) : Receptor()
   }
 </code></pre>
-<p>빠른 수정을 위해 <code>클래스</code>를 <code>객체</code>로 변환하도록 제안합니다.</p>
+<p>La corrección rápida convierte una `clase` en un `objeto`:</p>
 <pre><code>
-  sealed class Receiver {
-      object Everyone : Receiver()
-      class User(val id: Int) : Receiver()
+  sealed class Receptor {
+      object Todos : Receptor()
+      class Usuario(val id: Int) : Receptor()
   }
 </code></pre>
 <!-- tooltip end -->

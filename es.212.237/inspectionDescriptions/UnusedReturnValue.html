@@ -1,46 +1,46 @@
 <html>
 <body>
-호출 시 반환 값이 사용되지 않는 메서드를 보고합니다.
-<p>해당 메서드의 반환 타입은 <code>void</code>일 수 있습니다.
-Error Prone 또는 AssertJ의 <code>@CanIgnoreReturnValue</code> 어노테이션이 추가된 메서드는 보고되지 않습니다.
-  빠른 수정은 해당 메서드 시그니처를 업데이트하고 메서드 내부에서 <code>return</code> 문을 제거합니다.</p>
-<p><b>예:</b></p>
-<pre>
-  // 가시성 설정이 Protected 또는 Public인 경우 보고됩니다
+Informa de los métodos cuyos valores devueltos nunca se usan cuando son llamados.
+El tipo de retorno de dichos métodos puede configurarse como <code>void</code>.
+<p>No se informará de los métodos anotados con la anotación <code>@CanIgnoreReturnValue</code> de Error Prone o AssertJ.
+  La corrección rápida actualiza la firma del método y elimina sentencias <code>return</code> del interior del método.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // informado si la configuración de visibilidad es Protected o Public
   protected String myToUpperCase(String s) {
     return s.toUpperCase();
   }
 
-  // 간단한 setter, 보고는 설정에 따라 다릅니다
+  // simple setter, reporting depends on setting
   public String setStr(String str) {
     myStr = str;
     return myStr;
   }
 
   void test() {
-    setStr("value");          // 리턴 값이 사용되지 않습니다
-    myToUpperCase("result");  // 리턴 값이 사용되지 않습니다
+    setStr("value");          // el valor devuelto no se usa
+    myToUpperCase("result");  // el valor devuelto no se usa
   }
-</pre>
-<p>빠른 수정이 두 메서드에 모두 적용된 후:</p>
-<pre>
+</code></pre>
+<p>Tras aplicar la corrección rápida a ambos métodos:</p>
+<pre><code>
     protected void myToUpperCase(String s) {
-      // 's.toUpperCase()'의 부수 효과가 없으므로
-      // 'return'이 완전히 제거됩니다
+      // 'return' eliminado por completo
+      // ya que 's.toUpperCase()' no tiene efectos secundarios
     }
 
     public void setStr(String str) {
       myStr = str;
-      // 'return'이 제거됩니다
+      // 'return' eliminado
     }
- ...
-</pre>
+  ...
+</code></pre>
 <p>
-  <b>참고:</b> 성능상의 이유로 일부 메서드는 에디터 내 강조 표시로 보고되지 않을 수 있습니다.
-  모든 결과를 확인하려면 <b>분석 | 코드 검사</b> 또는 <b>분석 | 이름별로 검사 실행</b>을 사용하여 검사를 실행합니다.
+  <b>NOTA:</b> Puede que algunos métodos no se informen durante el resaltado en el editor por motivos de rendimiento.
+  Para ver todos los resultados, ejecutar la inspección usando <b>Código | Inspeccionar código</b> o <b>Código | Analizar código | Ejecutar inspección por nombre</b>>
 </p>
 <!-- tooltip end -->
-<p><b>간단한 setter 무시</b> 옵션을 사용하여 간단한 setter 호출에서 사용되지 않은 반환 값을 무시합니다.</p>
-<p><b>보고된 메소드의 최대 가시성</b> 옵션을 사용하여 보고된 메소드의 최대 가시성을 제어합니다.</p>
+<p>Utiliza la opción <b>Ignorar métodos encadenables</b> para ignorar los valores devueltos no usados de llamadas encadenables.</p>
+<p>Utiliza la opción <b>Visibilidad máxima de método informada</b> para controlar la visibilidad máxima de los métodos a informar.</p>
 </body>
 </html>

@@ -1,11 +1,11 @@
 <html>
 <body>
-후속 조건에 의해 완전히 검사되므로 불필요한 조건을 보고합니다.
-<p>예를 들어, <code>value != -1 && value > 0</code> 조건에서 첫 번째 부분은 불필요합니다. 
-false인 경우 두 번째 부분도 false입니다.
-또는 <code>obj != null && obj instanceof String</code>과 같은 조건에서는
-  <code>instanceof</code> 연산자가 null이 아님을 의미하므로 null 검사는 불필요합니다.</p>
+Informa condiciones que se vuelven redundantes porque están completamente cubiertas por una condición posterior.
+<p>Por ejemplo, en la condición <code>value != -1 && value > 0</code> la primera parte es redundante:
+si es falsa, entonces la segunda parte también es falsa.
+O en una condición como <code>obj != null && obj instanceof String</code>,
+  la verificación nula es redundante ya que el operador <code>instanceof</code> implica no nulidad.</p>
 <!-- tooltip end -->
-<p><small>2018.3의 새로운 기능</small></p>
+<p><small>Nuevo en 2018.3</small></p>
 </body>
 </html>

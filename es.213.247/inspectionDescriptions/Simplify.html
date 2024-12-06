@@ -1,13 +1,12 @@
 <html>
 <body>
-상수 조건, 동일한 if 브랜치, 불필요한 bool 표현식 등 단순화할 수 있는 구문을 보고합니다.
-분석 옵션을 제어하려면 아래 체크박스를 사용하세요.
+Reporta declaraciones que pueden ser simplificadas, por ejemplo condiciones constantes, ramas if idénticas, expresiones booleanas redundantes, etc.
+Usa las siguientes casillas para controlar las opciones de análisis:
 <ul>
-<li><b>"if (true)", "while(false)" 단순화</b>: <code>if</code>/<code>while</code> 구문을 bool 리터럴로 바꾸기를 권장합니다.</li>
-<li><b>"condition == true" 단순화</b>: 상등 구문을 bool 리터럴로 바꾸기를 권장합니다.</li>
-<li><b>"condition1 ? 단순화 true : condition2;"</b>: 표현식 중 하나가 bool 리터럴인 삼항 연산자를 단순화하기를 권장합니다.</li>
-  <li><b>"if (condition1) return true; return condition2;" 단순화</b>: 조건이 true이고 다른 조건의 반환 값이 다르면 bool 리터럴이
-    반환되는 경우 <code>if</code>를 단순화하도록 권장합니다.</li>
+<li><b>Simplificar "if (true)", "while(false)"</b>: Sugiere reemplazar las sentencias <code>if</code>/<code>while</code> por un literal booleano.</li>
+<li><b>Simplificar "condition == true"</b>: Sugiere reemplazar las sentencias de comparación de igualdad por un literal booleano.</li>
+<li><b>Simplificar "condition1 ? true : condition2;"</b>: Sugiere simplificar los operadores ternarios en los que una de las expresiones es un booleano.</li>
+<li><b>Simplificar "if (condition1) return true; return condition2;"</b>: Sugiere simplificar los <code>if</code> que devuelven un literal booleano si la condición es verdadera y una condición diferente si es falsa.</li>
 </ul>
 </body>
 </html>

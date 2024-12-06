@@ -1,14 +1,16 @@
 <html>
 <body>
-<code>nil</code>을 포함할 수 있는 포인터의 역참조를 보고합니다.</body>
-
-<p>예:</p>
+Informa instancias donde punteros que pueden ser <code>nil</code> son desreferenciados.
+<p>Ejemplo:</p>
 <pre><code>
-func _(file *os.File) {
- //수신자 'file'이 호출 내에서 'nil'일 수 있음
- if file != nil || file.Name() != "" {
-  //code
- }
+type Person struct{ Name string }
+
+func _(person *Person) {
+	if person != nil || person.Name != "Peter" {
+	}
 }
 </code></pre>
+<p>En el ejemplo proveído, <code>person</code> es un puntero a una estructura <code>Person</code>, pero es <code>nil</code> ya que no se le ha asignado un valor.
+  Intentar desreferenciar a <code>person</code> para acceder a <code>Name</code> sin verificar si <code>person</code> es <code>nil</code> resultará en un error de ejecución.</p>
+</body>
 </html>

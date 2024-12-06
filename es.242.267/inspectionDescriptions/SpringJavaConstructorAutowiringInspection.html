@@ -1,22 +1,22 @@
 <html>
 <body>
-<p>Spring bean 생성자에서 <code>@Autowired</code>가 잘못 사용된 위치를 보고합니다(2개 이상의 <code>@Autowired</code> 생성자, 일치하지 않는 <code>@Autowired</code> 생성자 등).</p>
+<p>Informa sobre el uso incorrecto de <code>@Autowired</code> en constructores de Spring Bean: varios constructores <code>@Autowired</code>, ningún constructor <code>@Autowired</code> coincidente, etc.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 @Component
 public class MyComponent {
-	@Autowired
-	public MyComponent(BarBean bean) {...} // '단 하나의 @Autowired 생성자만 허용됩니다'라고 보고됩니다
+    @Autowired
+    public MyComponent(BarBean bean) {...} // informa 'Sólo se permite un constructor @Autowired'
 
-	@Autowired
-	public MyComponent(FooBean bean) {...} // reports 'Only one @Autowired constructor is allowed'
+    @Autowired
+    public MyComponent(FooBean bean) {...} // informa 'Sólo se permite un constructor @Autowired'
 }
 
 @Component
-public class MyFactory {  // '일치하는 @Autowired 생성자가 없습니다'라고 보고됩니다
-	public MyFactory(String str) {...}
-	public MyFactory(int count) {...}
+public class MyFactory {  // informa 'No se ha encontrado ningún constructor @Autowired coincidente'
+    public MyFactory(String str) {...}
+    public MyFactory(int count) {...}
 }
 </code></pre>
 </body>

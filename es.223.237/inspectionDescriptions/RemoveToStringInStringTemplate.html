@@ -1,14 +1,14 @@
 <html>
 <body>
-안전하게 제거할 수 있는 문자열 템플릿에서의 <code>toString()</code> 호출을 보고합니다.
-<p><b>예:</b></p>
+Informa las llamadas de <code>toString()</code> en plantillas de cadenas que se pueden eliminar de manera segura.
+<p><b>Ejemplo:</b></p>
 <pre><code>  fun foo(a: Int, b: Int) = a + b
 
   fun test(): String {
-      return "Foo: ${foo(0, 4).toString()}" // 'toString()'은 불필요합니다
+      return "Foo: ${foo(0, 4).toString()}" // 'toString()' es redundante
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>  fun foo(a: Int, b: Int) = a + b
 
   fun test(): String {

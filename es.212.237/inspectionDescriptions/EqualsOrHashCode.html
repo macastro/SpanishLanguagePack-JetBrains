@@ -1,7 +1,49 @@
 <html>
 <body>
-<b>equals()</b>를 재정의하지만 <b>hashCode()</b>는 재정의하지 않는 클래스 또는 그 반대의 클래스를 보고합니다.
-또한 <b>equals()</b> 또는 <b>hashCode()</b>를 재정의하는 객체 선언을 보고합니다.
-<p>이렇게 하면 클래스가 <b>Collection</b>에 추가될 때 바람직하지 않은 동작으로 이어질 수 있습니다.</p>
+Reporta clases con <code>equals()</code> sobreescrito pero sin <code>hashCode()</code> sobreescrito, o viceversa.
+También reporta declaraciones de objetos que sobreescriben <code>equals()</code> o <code>hashCode()</code>.
+<p>Esto puede llevar a un comportamiento no deseado cuando una clase es añadida a una <code>Collection</code></p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class C1 {
+      override fun equals(other: Any?) = true
+  }
+
+  class C2 {
+      override fun hashCode() = 0
+  }
+
+  object O1 {
+      override fun equals(other: Any?) = true
+  }
+
+  object O2 {
+      override fun hashCode() = 0
+  }
+</code></pre>
+<p>El arreglo rápido sobrescribe <code>equals()</code> o <code>hashCode()</code> para clases y borra estos métodos para objetos:</p>
+<pre><code>
+   class C1 {
+       override fun equals(other: Any?) = true
+       override fun hashCode(): Int {
+           return javaClass.hashCode()
+       }
+   }
+
+   class C2 {
+       override fun hashCode() = 0
+       override fun equals(other: Any?): Boolean {
+           if (this === other) return true
+           if (javaClass != other?.javaClass) return false
+           return true
+       }
+   }
+
+   object O1 {
+   }
+
+   object O2 {
+   }
+</code></pre>
 </body>
 </html>

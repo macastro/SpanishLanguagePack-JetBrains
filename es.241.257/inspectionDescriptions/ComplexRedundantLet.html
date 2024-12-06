@@ -1,21 +1,21 @@
 <html>
 <body>
-불필요한 인수를 기반으로 하는 <code>let</code> 호출을 보고합니다.
-<p>호출 표현식에서 람다 매개변수가 한정자로만 사용되는 경우 <code>let</code>은 불필요합니다.</p>
-<p>정규화하는 표현식에 이름을 붙여야 한다면 지역 변수를 선언하세요.</p>
-<p><b>예:</b></p>
+Informa una llamada <code>let</code> redundante basada en argumento.
+<p><code>let</code> es redundante cuando el parámetro lambda solo se utiliza como calificador en una expresión de llamada.</p>
+<p>Si necesita dar un nombre a la expresión calificadora, declare una variable local.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun splitNumbers() {
       "1,2,3".let { it.split(',') }
   }
 </code></pre>
-<p>빠른 수정에서는 여분의 <code>let()</code> 호출을 제거합니다.</p>
+<p>La solución rápida elimina la llamada <code>let()</code> adicional:</p>
 <pre><code>
   fun example() {
       "1,2,3".split(',')
   }
 </code></pre>
-<p>또는</p>
+<p>Alternativa:</p>
 <pre><code>
   fun splitNumbers() {
       val numbers = "1,2,3"

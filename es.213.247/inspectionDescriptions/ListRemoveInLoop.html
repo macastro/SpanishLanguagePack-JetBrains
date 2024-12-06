@@ -1,8 +1,9 @@
 <html>
 <body>
-<code>List.subList().clear()</code>로 대체 가능하며 루프에서 호출된 <code>List.remove(index)</code>를 보고합니다.
-<p>대부분 <code>List</code> 구현은 많은 요소가 삭제될 경우 대체하는 편이 한층 효율적입니다.</p>
-<p>예:</p>
+Informa sobre <code>List.remove(index)</code> llamadas en un bucle que se puede reemplazar con <code>List.subList().clear()</code>.
+<p>El reemplazo
+  es más eficiente para la mayoría de las implementaciones de <code>List</code> cuando se eliminan muchos elementos.</p>
+<p>Ejemplo:</p>
 <pre><code>
   void removeRange(List&lt;String&gt; list, int from, int to) {
     for (int i = from; i &lt; to; i++) {
@@ -10,7 +11,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   void removeRange(List&lt;String&gt; list, int from, int to) {
     if (to &gt; from) {
@@ -19,9 +20,39 @@
   }
 </code></pre>
 <p>
-  빠른 수정은 최솟값이 최댓값보다 클 경우 가능한 <code>IndexOutOfBoundsException</code>을 방지하기 위해 범위 검사를 자동으로 추가합니다. 코드에서 이러한 경우가 불가능하면 검사를 제거할 수 있습니다.
+  La solución rápida agrega automáticamente una verificación de rango para evitar una posible <code>IndexOutOfBoundsException</code> cuando el valor mínimo es mayor
+  que el valor máximo. Se puede eliminar si tal situación es imposible en su código.
 </p>
 <!-- tooltip end -->
-<p><small>2018.2의 새로운 기능</small></p>
+<p><small>Nuevo en 2018.2</small></p>
+</body>
+</html>
+<html>
+<body>
+Informa sobre <code>List.remove(index)</code> llamadas en un bucle que se puede reemplazar con <code>List.subList().clear()</code>.
+<p>El reemplazo
+  es más eficiente para la mayoría de las implementaciones de <code>List</code> cuando se eliminan muchos elementos.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  void removeRange(List&lt;String&gt; list, int from, int to) {
+    for (int i = from; i &lt; to; i++) {
+        list.remove(from);
+    }
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  void removeRange(List&lt;String&gt; list, int from, int to) {
+    if (to &gt; from) {
+      list.subList(from, to).clear();
+    }
+  }
+</code></pre>
+<p>
+  La solución rápida agrega automáticamente una verificación de rango para evitar una posible <code>IndexOutOfBoundsException</code> cuando el valor mínimo es mayor
+  que el valor máximo. Se puede eliminar si tal situación es imposible en su código.
+</p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2018.2</small></p>
 </body>
 </html>

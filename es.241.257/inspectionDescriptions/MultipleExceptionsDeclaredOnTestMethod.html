@@ -1,9 +1,9 @@
 <html>
 <body>
-하나 이상의 예외를 포함하는 JUnit 테스트 메서드 <code>throws</code> 절을 보고합니다.
-그러한 절은 불필요하게 장황합니다.
-테스트 메서드는 다른 프로젝트 코드에서 호출되지 않으므로 이러한 예외를 별도로 취급할 필요가 없습니다.
-<p>예:</p>
+Reporta cláusulas `throws` con más de una excepción en métodos de prueba JUnit.
+Dichas cláusulas son innecesariamente extensas.
+Los métodos de prueba no serán llamados desde otro código del proyecto, por lo que no es necesario manejar estas excepciones por separado.
+<p>Por ejemplo:</p>
 <pre><code lang="java">
   @Test
   public void testReflection() throws NoSuchMethodException,
@@ -13,7 +13,7 @@
     assertEquals("hello", result);
   }
 </code></pre>
-<p>여러 개의 예외 선언을 하나의 예외로 바꾸는 빠른 수정이 제공됩니다:</p>
+<p>Se proporciona una solución rápida para reemplazar las declaraciones de excepciones con una única excepción:</p>
 <pre><code lang="java">
   @Test
   public void testReflection() throws Exception {

@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>콜론(<code>:</code>)으로 생성된 안전하지 않은 시퀀스를 보고하고 안전한 호출로 바꾸도록 제안합니다.</p>
-<p><b>예:</b></p>
+<p>Informe secuencias inseguras generadas por colon (<code>:</code>) y sugiera reemplazarlas con llamadas seguras.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
     a &lt;- 1:length(c)
     b &lt;- 1:nrow(data.frame())
 </code></pre>
 <p>
-  빠른 수정을 적용하면 코드는 다음과 같이 변경됩니다.
+  Cuando apliques soluciones rápidas, el código cambiará a:
 </p>
 <pre><code>
     a &lt;- seq_along(c)

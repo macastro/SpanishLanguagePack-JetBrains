@@ -1,14 +1,14 @@
 <html>
 <body>
-매우 상세하거나 덜 효율적인 구문 대신 static <code>Integer.compare()</code> 메서드 또는 유사한 메서드가 사용될 수 있는 경우를 보고합니다.
-<p><code>x</code> 및 <code>y</code>가 이미 정수로 박싱된 경우 <code>x.compareTo(y)</code>가 제안됩니다.</p>
-<p><b>예:</b></p>
+Reporta expresiones que pueden ser reemplazadas por una llamada al método <code>Integer.compare()</code> o un método similar de las clases <code>Long</code>, <code>Short</code>, <code>Byte</code>, <code>Double</code> o <code>Float</code>, en lugar de construcciones más extensas o menos eficientes.
+<p>Si <code>x</code> e <code>y</code> son números enteros en caja, entonces se sugiere <code>x.compareTo(y)</code>, si son primitivos se sugiere <code>Integer.compare(x, y)</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public int compare(int x, int y) {
     return x > y ? 1 : x &lt; y ? -1 : 0;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   public int compare(int x, int y) {
     return Integer.compare(x, y);
@@ -16,8 +16,12 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  <code>Double.compare()</code> 및 <code>Float.compare()</code> 메서드는 Java 1.4에서 도입되었습니다. 다른 기본 타입의 메서드는 Java 1.7부터 지원됩니다.
+  Tenga en cuenta que <code>Double.compare</code> y <code>Float.compare</code> cambian ligeramente la semántica del código. En particular,
+  hacen que <code>-0.0</code> y <code>0.0</code> sean distinguibles (<code>Double.compare(-0.0, 0.0)</code> produce -1).
+  Además, procesan consistentemente el valor <code>NaN</code>. En la mayoría de los casos, este cambio de semántica en realidad mejora el
+  código. Utilice la casilla de verificación para deshabilitar esta inspección para números de punto flotante si el cambio de semántica es inaceptable
+  en su caso.
 </p>
-<p><small>2017.2의 새로운 기능</small></p>
+<p><small>Nuevo en 2017.2</small></p>
 </body>
 </html>

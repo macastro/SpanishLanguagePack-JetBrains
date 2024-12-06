@@ -1,20 +1,20 @@
 <html>
 <body>
-Java 8부터 DocLint에서 보고된 Javadoc 주석의 동일한 HTML 문제를 보고합니다.
-<p>이 검사는 다음과 같은 문제를 탐지합니다.</p>
+Reporta los mismos problemas HTML en los comentarios Javadoc que han sido reportados por DocLint desde Java 8.
+<p>La inspección detecta los siguientes problemas:</p>
 <ul>
-  <li>닫는 태그가 불필요한 태그, 닫히지 않은 태그, 알 수 없는 태그, 위치가 잘못된 태그 또는 빈 태그</li>
-  <li>알 수 없거나 잘못된 속성</li>
-  <li>잘못 배치된 텍스트</li>
+  <li>Etiqueta autocerrada, no cerrada, desconocida, fuera de lugar o vacía</li>
+  <li>Atributo desconocido o incorrecto</li>
+  <li>Texto fuera de lugar</li>
 </ul>
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
 /**
- * 알 수 없는 태그: List&lt;String&gt;
- * 닫히지 않은 태그: error&lt;/b&gt;
- * 잘못 배치된 텍스트 또는 태그: &lt;ul&gt;&lt;li&gt;one&lt;/li&gt;, &lt;li&gt;two&lt;/li&gt;&lt;/ul&gt;
- * 잘못된 속성 또는 빈 속성: &lt;a href=""&gt;&lt;/a&gt;
- * 닫는 태그가 불필요한 태그: &lt;br/&gt;
+ * Etiqueta desconocida: List&lt;String&gt;
+ * Etiqueta no cerrada: error&lt;/b&gt;
+ * Texto o etiqueta fuera de lugar: &lt;ul&gt;&lt;li&gt;uno&lt;/li&gt;, &lt;li&gt;dos&lt;/li&gt;&lt;/ul&gt;
+ * Atributo incorrecto o vacío: &lt;a href=""&gt;&lt;/a&gt;
+ * Etiqueta autocerrada: &lt;br/&gt;
  * ...
  */
 void sample(){ }

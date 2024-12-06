@@ -1,13 +1,16 @@
 <html>
 <body>
-항성 null이거나 항상 null이 아닌 인수가 전달되는 <code>Optional.ofNullable()</code>의 사용 위치를 보고합니다.
-이러한 경우에는 <code>Optional.ofNullable()</code>을 사용할 이유가 없습니다. <code>Optional.empty()</code> 혹은 <code>Optional.of()</code>을 사용하여 항상 비어 있거나 항싱 비어 있지는 않은 옵셔널을 생성하는 의도를 명시적으로 표시해야 합니다. 또한, <code>Optional.ofNullable()</code> 인수 내에 실수가 있을 수 있으므로 검사할 필요가 있습니다.
+Reporta el uso de <code>Optional.ofNullable()</code> donde un argumento siempre nulo o siempre no nulo es pasado.
+No tiene sentido utilizar <code>Optional.ofNullable()</code> en este caso: <code>Optional.empty()</code>
+o <code>Optional.of()</code> debe ser usado para indicar explícitamente la intención de crear un Optional siempre vacío
+o siempre no vacío respectivamente. También es posible que haya un error en el 
+argumento <code>Optional.ofNullable()</code>, por lo que se debe examinar.
 <p>
-  예:
+  Ejemplo:
 </p>
 <pre><code>
-Optional&lt;String&gt; empty = Optional.ofNullable(null); // Optional.empty()이어야 함;
-Optional&lt;String&gt; present = Optional.ofNullable("value"); // Optional.of("value")이어야 함; 
+Optional&lt;String&gt; empty = Optional.ofNullable(null); // debería ser Optional.empty();
+Optional&lt;String&gt; present = Optional.ofNullable("value"); // debería ser Optional.of("value"); 
 </code></pre>
 <!-- tooltip end -->
 </body>

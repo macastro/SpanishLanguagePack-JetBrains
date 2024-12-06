@@ -1,14 +1,14 @@
 <html>
 <body>
-리터럴에 포함된 기본 라틴 문자 외의 문자를 보고하고, 해당 문자를 유니코드 엔티티로 대체하도록 제안합니다.
-<p>예:</p>
+Reporta caracteres no básicos latinos en literales y sugiere reemplazarlos con entidades Unicode.
+<p>Ejemplo:</p>
 <pre><code>
   // © 2021
   char c = '©';
   String s = "Áî";
 </code>
 </pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   // &amp;copy; 2021
   char c = '\u00a9';

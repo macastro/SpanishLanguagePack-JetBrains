@@ -1,11 +1,11 @@
 <html>
 <body>
-SQL 루틴 내 잘못된 커서 상태를 보고합니다.
+Informa estados ilegales de cursor dentro de rutinas SQL.
 <ul>
-  <li>루틴에 CLOSE 또는 FETCH 구문이 있지만 커서가 닫혀 있을 수 있습니다.</li>
-  <li>루틴에 OPEN 구문이 있지만 커서가 열려 있을 수 있습니다.</li>
+  <li>Una rutina tiene sentencias CLOSE o FETCH pero un cursor podría estar cerrado.</li>
+  <li>Una rutina tiene la sentencia OPEN pero un cursor podría estar abierto.</li>
 </ul>
-<p>예(Microsoft SQL 서버):</p>
+<p>Ejemplo (Microsoft SQL Server):</p>
 <pre><code>CREATE TABLE t(col INT);
 
 CREATE PROCEDURE foo() AS
@@ -15,7 +15,9 @@ DECLARE a INT;
 FETCH my_cursor INTO a;
 CLOSE my_cursor;
 END;</code></pre>
-<p><a href="https://docs.microsoft.com/en-us/sql/t-sql/language-elements/close-transact-sql">docs.microsoft.com의 CLOSE(Transact-SQL)</a>에 따르면, CLOSE는 열린 커서에 발생되어야 하며, 선언되어 있기만 하거나 이미 닫혀 있는 커서에는 허용되지 않습니다. 그러므로 경고를 해결하려면 커서를 열어야 합니다.</p>
+<p>De acuerdo con <a href="https://docs.microsoft.com/es-es/sql/t-sql/language-elements/close-transact-sql">CLOSE (Transact-SQL) en
+  docs.microsoft.com</a>, CLOSE debe ser emitido en un cursor abierto, y CLOSE no está permitido en cursores que han sido
+  solamente declarados o que ya están cerrados. Entonces, necesitamos abrir el cursor para solucionar la advertencia.</p>
 <pre><code>CREATE PROCEDURE foo() AS
 BEGIN
 DECLARE my_cursor CURSOR FOR SELECT * FROM t;

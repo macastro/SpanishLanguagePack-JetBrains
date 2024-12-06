@@ -1,14 +1,14 @@
 <html>
 <body>
-일치하는 표현식의 가능한 모든 결과를 포함하지 않는 switch 식을 보고합니다.
-<p>Groovy에서는 switch 식이 완전하지 않아도 됩니다. 묵시적 <code>default -> null</code> 브랜치가 삽입된 것처럼 동작합니다.
-  개발자가 필요한 <code>case</code> 브랜치를 삽입하는 것을 잊어버린 경우 예기치 않은 null이 발생할 수 있습니다.
-<p><b>예:</b></p>
+Reporta expresiones switch que no cubren todos los resultados posibles de la expresión coincidente.
+<p>Groovy no requiere que la expresión switch sea exhaustiva. Actúa como si se insertara una rama implícita <code>default -> null</code>.
+  Puede causar nulos inesperados si un desarrollador olvida insertar ramas <code>case</code> necesarias.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   enum A { X, Y }
 
   def foo(A a) {
-    def x = switch (a) { // reports switch
+    def x = switch (a) { // reporta switch
       case A.X -> ...
     }
   }

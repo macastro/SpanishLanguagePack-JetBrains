@@ -1,8 +1,21 @@
 <html>
 <body>
-<code>clone()</code> 메서드 호출 및 구현과 <code>java.lang.Cloneable</code>의 사용을 보고합니다.
-<p>일부 코딩 표준에서는 <code>clone()</code>의 사용을 금지하며 대신 복사 생성자 또는<code>static</code> factory  메서드를 사용할 것을 권장합니다.</p>
-<p>배열을 복사하기 위한 정확하고 간략한 방법이기 때문에 이 검사는 배열에서의 <code>clone()</code> 호출을 무시합니다.</p>
-<!-- tooltip end -->
+Informa sobre las implementaciones y llamadas al método <code>clone()</code> y de los usos de la interfaz <code>java.lang.Cloneable</code>.
+<p>Algunos estándares de codificación prohíben el uso de <code>clone()</code>, y recomiendan el uso de un constructor de copia o un método fábrica <code>estático</code> en cambio.</p>
+<p>La inspección ignora a las llamadas a <code>clone()</code> en arreglos porque es una manera correcta y compacta de copiar un arreglo.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Copy implements Cloneable /*advertencia*/ {
+
+    public Copy clone() /*advertencia*/ {
+      try {
+        return (Copy) super.clone(); // advertencia
+      } catch (CloneNotSupportedException e) {
+        throw new AssertionError();
+      }
+    }
+  }
+</code></pre>
+<!-- fin del consejo -->
 </body>
 </html>

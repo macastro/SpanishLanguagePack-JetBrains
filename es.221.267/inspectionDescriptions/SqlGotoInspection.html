@@ -1,11 +1,11 @@
 <html>
 <body>
-역방향 GOTO 문 및 루프를 종료하기 위해 사용딘 GOTO 문의 사용 위치를 보고합니다.
-<p>GOTO 문의 광범위한 사용은 일반적으로 권장되지 않습니다. 자세한 내용은 <a href="https://www.ibm.com/docs/no/db2/11.5?topic=procedures-goto-statement-in-sql">ibm.com에서 SQL 프로시저의 GOTO 문</a>을 참고하세요.</p>
+Reporta usos de sentencias GOTO hacia atrás y sentencias GOTO utilizadas para salir de un ciclo.
+<p>El uso extensivo de sentencias GOTO generalmente no se recomienda. Para más información, consulte <a href="https://www.ibm.com/docs/no/db2/11.5?topic=procedures-goto-statement-in-sql">Sentencia GOTO en procedimientos SQL en ibm.com</a>.</p>
 
-<p>GOTO를 사용해 이전 구문으로 돌아가는 대신 루프를 사용해 보세요.</p>
-<p>GOTO를 사용하여 WHILE 루프를 종료하는 대신 다른 흐름 제어 구문(예:RETURN 또는 BREAK)을 사용해 보세요.</p>
-<p>예(Oracle):</p>
+<p>En lugar de retroceder a una sentencia previa usando GOTO, considere usar un ciclo.</p>
+<p>En lugar de salir del ciclo WHILE con GOTO, considere utilizar otras sentencias de control de flujo (por ejemplo, RETURN o BREAK).</p>
+<p>Ejemplo (Oracle):</p>
 <pre><code>CREATE PROCEDURE test(n INT) AS
 DECLARE
     x INT;

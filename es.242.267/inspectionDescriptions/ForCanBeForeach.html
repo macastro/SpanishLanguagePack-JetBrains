@@ -1,15 +1,15 @@
 <html>
 <body>
-컬렉션 또는 배열을 반복하며 개선된 <code>for</code> 루프(foreach 반복 구문)로 자동 대체 가능한 루프를 보고합니다.
+Reporta los bucles <code>for</code> que iteran sobre las colecciones o arreglos, y que pueden ser reemplazados automáticamente con un bucle <code>for</code> mejorado (sintaxis de iteración foreach).
 <!--  'foreach' still used in this description so that the inspection continues to be found using this keyword -->
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   for (Iterator&lt;String&gt; iterator = list.iterator(); iterator.hasNext(); ) {
     String item = iterator.next();
     System.out.println(item);
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   for (String item : list) {
     System.out.println(item);
@@ -17,12 +17,14 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  <b>색인 생성된 'java.util.List' 루프 보고</b> 옵션을 사용하여 <code>list.get(index)</code> 호출을 포함한 루프를 찾습니다.
-  프로세스의 기준이 되는 목록을 변경하지 않는 한(예: <code>list.remove(index)</code>를 호출하여 변경), 일반적으로 이 루프는 강화된 <code>for</code> 루프와 교체될 수 있습니다.
-  후자의 경우 강화된 <code>for</code> 루프는 <code>ConcurrentModificationException</code>을 던질 가능성이 있습니다.
-  또한 경우에 따라 <code>list.get(index)</code> 루프가 약간 빠르게 작동할 수 있습니다.</p>
+  Usa la opción <b>Reportar bucles 'java.util.List' indizados</b> para encontrar los bucles que involucran llamadas a <code>list.get(index)</code>.
+  Generalmente, estos bucles pueden ser reemplazados con bucles <code>for</code> mejorados,
+  a menos que modifiquen una lista subyacente en el proceso, por ejemplo, llamando a <code>list.remove(index)</code>.
+  Si este último es el caso, el bucle <code>for</code> mejorado puede lanzar <code>ConcurrentModificationException</code>.
+  También, en algunos casos, los bucles <code>list.get(index)</code> pueden funcionar un poco más rápido.</p>
 <p>
-  <b>타입이 지정되지 않은 컬렉션의 반복을 보고하지 않음</b> 옵션을 사용하여 타입 매개변수가 없는 컬렉션을 무시합니다.
-  이와 같은 방법으로 <code>java.lang.Object</code> 타입의 강화된 <code>for</code> 루프 변수의 생성과 이 루프 변수가 사용되는 형 변환의 삽입을 방지합니다.</p>
+  Usa la opción <b>No reportar iteraciones sobre colecciones sin tipo</b> para ignorar las colecciones sin parámetros de tipo.
+  Esto evita la creación de variables de bucle <code>for</code> mejoradas del tipo <code>java.lang.Object</code> y la inserción de conversiones explícitas
+  donde se use la variable del bucle.</p>
 </body>
 </html>

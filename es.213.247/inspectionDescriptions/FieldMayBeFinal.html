@@ -1,14 +1,45 @@
 <html>
 <body>
-안전하게 <code>final</code>으로 만들 수 있는 모든 필드를 보고합니다.
-<p><code>final</code> 변수 사용은 코드를 오류가 발생하기 더 쉽게 만듭니다. 프로그램 실행을 빠르게 하는 컴파일러 최적화에도 도움이 될 수 있습니다.</p>
-<p><code>private</code> 접근 제어자를 가지는 경우 (또는 지역 / 익명 클래스에 정의된 경우) 에만 필드를 안전하게 <code>final</code>로 만들 수 있습니다. 다음의 경우도 포함합니다:<p>
+Informa sobre los campos que se pueden establecer de forma segura como <code>final</code>.
+Todos los campos <code>final</code> tienen un valor que no cambia, por lo que es más fácil inferir el código.
+<p>Para evitar que el análisis sea demasiado costoso, esta inspección únicamente informa sobre si el campo tiene un modificador <code>private</code> o si se define en una clase local o anónima.
+  Un campo puede ser <code>final</code> si cumple las siguientes condiciones:
 <ul>
-  <li>필드가 <code>static</code> 이며 필드 선언 또는 하나의 static 클래스 이니셜라이저 내에서 초기화됩니다.</li>
-  <li>필드가 static이 아니며 필드 선언 또는 하나의 static이 아닌 클래스 이니셜라이저 또는 모든 생성자 내에서 초기화됩니다.</li>
+  <li>Es <code>static</code> y se inicializa solo una vez en su declaración o en un inicializador <code>static</code>.</li>
+  <li>No es <code>static</code> y se inicializa solo una vez en su declaración, en un inicializador de instancia o en todos los constructores.</li>
 </ul>
+También, no se modifica en ningún otro lugar el campo.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Person {
+    private String name; // Puede ser final
+
+    Person(String name) {
+      this.name = name;
+    }
+
+    public String getName() {
+      return name;
+    }
+  }
+</code></pre>
+<p>Después de aplicar una corrección rápida:</p>
+<pre><code>
+  public class Person {
+    private final String name;
+
+    Person(String name) {
+      this.name = name;
+    }
+
+    public String getName() {
+      return name;
+    }
+  }
+</code></pre>
 <!-- tooltip end -->
-
-
+<p>
+  Utiliza el botón "Anotaciones" para modificar la lista de anotaciones que pretende escritura de campos implícita.
+</p>
 </body>
 </html>

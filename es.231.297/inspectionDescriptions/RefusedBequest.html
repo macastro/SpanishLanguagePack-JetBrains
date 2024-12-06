@@ -1,46 +1,46 @@
 <html>
 <body>
-super 메서드를 호출하지 않고 super 메서드를 재정의하는 메서드를 보고합니다.
-이는 <i>상속 거부</i>라고도 합니다.
-이러한 메서드는 추상화 실패를 의미할 수 있으며, 이로 인해 추적이 어려운 버그가 발생할 수 있습니다.
+Reporta métodos que sobrescriben un super método sin llamarlo.
+Esto es también conocido como <i>legado rechazado</i>.
+Esos métodos pueden representar una falla de abstracción y causar bugs difícil de rastrear.
 <p>
-  이 검사는 <code>clone()</code>을 제외한 <code>java.lang.Object</code>에서 재정의된 메서드를 보고하지 않습니다.
-  <code>clone()</code> 메서드는 규칙에 따라 super 메서드를 호출해야 하며,
-  올바른 타입의 객체를 반환합니다.</p>
-<p><b>예시 1:</b></p>
+  La inspección no reporta métodos sobrescritos de <code>java.lang.Object</code>, a excepción de <code>clone()</code>.
+  El método <code>clone()</code> debería por convención llamar a su super método,
+  que devolverá un objeto del tipo correcto.</p>
+<p><b>Ejemplo 1:</b></p>
 <pre><code>
-  class A {
+  public class A {
     @Override
     public Object clone() {
-      // 'super.clone()'을 호출하지 않습니다
+      // no llama a 'super.clone()'
       return new A();
     }
   }
 </code></pre>
-<p><b>예시 2:</b></p>
+<p><b>Ejemplo 2:</b></p>
 <pre><code>
-  interface I {
+  public interface I {
     default void foo() {}
   }
 
-  class A implements I {
-    // 'Ignore 'default' super 메서드 무시'가
-    // 비활성화되면 메서드에 대해 경고합니다
+  public class A implements I {
+    // advertencia en el método cuándo
+    // está deshabilitado 'Ignorar métodos super 'default''
     @Override
     public void foo(){}
   }
 </code></pre>
-<!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configura la inspección:</p>
 <ul>
   <li>
-    <b>상위 메서드에 다음으로 어노테이션이 추가된 경우에만 보고</b> 옵션을 사용하여 제공된 목록의 어노테이션이 표시된  super 메서드를 무시합니다. 목록에 어노테이션을 수동으로 추가할 수 있습니다.
+    Usa la opción <b>Reportar solo cuándo el método super esté anotado por</b> para ignorar métodos super marcados con las anotaciones
+    de la lista provista. Puedes añadir anotaciones a la lista manualmente.
   </li>
   <li>
-    <b>빈 상위 메서드 무시</b> 옵션을 사용하여 비어 있거나 예외만을 던지는 super 메서드를 무시합니다.
+    Usa la opción <b>Ignorar métodos super vacíos</b> para ignorar métodos super que están vacíos o solo lanzan una excepción.
   </li>
   <li>
-    <b>'default' super 메서드 무시</b> 옵션을 사용하여 인터페이스에서 <code>default</code> super 메서드를 무시합니다.
+    Usa la opción <b>Ignorar métodos super 'default'</b> para ignorar métodos super <code>default</code> de interfaces.
   </li>
 </ul>
 </body>

@@ -1,17 +1,21 @@
 <html>
 <body>
-<p>사용되지 않는 지역 심볼을 보고합니다.</p>
+<p>Informa declaraciones que no se usan.</p>
 
-<p>빠른 수정에서는 사용되지 않는 심볼을 제거합니다.</p>
+<p>La corrección rápida elimina la declaración sin uso.</p>
 
-<p><b>예:</b></p>
+<p>En las <b>Opciones</b> de abajo, puedes controlar si la inspección deberá funcionar para declaraciones públicas y/o locales.
+  En el caso de declaraciones locales, además de habilitar y deshabilitar la inspección, también puedes hacerla depender
+  de la existencia de una de tres opciones del compilador: <code>-Wunused:locals</code>, <code>-Wunused:linted</code> o <code>-Xlint:unused</code>.</p>
+
+<p><b>Ejemplo:</b></p>
 <pre><code>
   def test(): Int = {
     val unused = 3
     3
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   def test(): Int = {
     3

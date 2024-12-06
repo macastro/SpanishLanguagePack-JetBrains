@@ -1,10 +1,10 @@
 <html>
 <body>
-호출 결과를 처리하지 않는 특정 함수 및 메서드를 보고합니다.
-<p>이러한 함수의 API는 부작용을 위해서가 아닌 반환 값을 얻고 이를 처리하기 위해 호출되어야 함을 의미합니다. 결과를 처리하지 않는 호출의 경우 API가 잘못 사용되었을 수 있습니다.</p>
-<p>예:</p>
-<pre><code>fmt.Errorf("error: %s", reason) // 생성된 error가 무시됨</code></pre>
-<p><b>지역 변수 삽입</b> 빠른 수정 적용 후:</p>
+Informa sobre las llamadas a ciertas funciones y métodos que no manejan el resultado de la llamada.
+<p>Una API de dichas funciones implica que los usuarios deberían llamarlas principalmente para obtener un valor de retorna y procesarlo, no para efectos secundarios. Las llamadas que no manejan el resultado podrían ser un indicio de un mal uso de la API.</p>
+<p>Ejemplo:</p>
+<pre><code>fmt.Errorf("error: %s", reason) // error construido es ignorado</code></pre>
+<p>Después de la aplicación de la corrección rápida <b>Introducir variable local</b>:</p>
 <pre><code>err := fmt.Errorf("error: %s", reason)</code></pre>
 </body>
 </html>

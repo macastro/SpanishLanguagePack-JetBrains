@@ -1,11 +1,12 @@
 <html>
 <body>
-<code>InputStream.read()</code> 메서드를 구현하는 메서드에서 반환된 <code>byte</code> 타입의 식을 보고합니다.
+Reporta expresiones del tipo <code>byte</code> devueltas desde un método que implementa el método <code>InputStream.read()</code>.
 <p>
-  byte 타입은 <code>-128</code>에서 <code>127</code>까지의 값을 포함하지만 <code>InputStream.read()</code>는 <code>0</code>에서 <code>255</code> 내의 값을 반환하기 때문에 이러한 식은 의심스럽습니다.
-  빠른 수정이 비트마스크 <code>0xFF</code>를 적용하여 식을 부호가 없는 <code>byte</code>로 변환합니다.
+  Esto es sospechoso porque <code>InputStream.read()</code> debería devolver un valor en el rango de <code>0</code> a <code>255</code>,
+  mientras que una expresión de tipo byte contiene un valor de <code>-128</code> a <code>127</code>.
+  El quick-fix convierte la expresión en un <code>byte</code> sin signo aplicando la máscara de bits <code>0xFF</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code lang="java">
 class MyInputStream extends InputStream {
   int pos = 0;
@@ -20,11 +21,11 @@ class MyInputStream extends InputStream {
     if (pos == data.length) {
       return -1;
     }
-    return data[pos++]; // 문제 발생
+    return data[pos++]; // problema
   }
 }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicar el quick-fix:</p>
 <pre><code>
 class MyInputStream extends InputStream {
   int pos = 0;
@@ -45,6 +46,6 @@ class MyInputStream extends InputStream {
 </code></pre>
 
 <!-- tooltip end -->
-<p><small>2023.2의 새로운 기능</small></p>
+<p><small>Nuevo en 2023.2</small></p>
 </body>
 </html>

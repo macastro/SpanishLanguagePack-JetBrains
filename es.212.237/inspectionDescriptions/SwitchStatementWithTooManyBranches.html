@@ -1,9 +1,9 @@
 <html>
 <body>
-<code>case</code> 라벨이 너무 많은 <code>switch</code> 구문 또는 표현식을 보고합니다.
-<p>그러한 긴 switch 문은 혼란을 일으킬 수 있으므로 리팩터링이 필요할 수 있습니다.
-  이는 문제가 아닌 경우도 있습니다(예: 도메인이 매우 복잡하며 많은 상수를 갖는 열거형을 포함하는 경우).</p>
-<p>예:</p>
+Informa sentencias o expresiones <code>switch</code> con demasiadas etiquetas de <code>case</code>.
+<p>Una sentencia <code>switch</code>tan larga puede resultar confusa y debería refactorizarse.
+  Algunas veces, no es un problema (por ejemplo, un dominio es muy complejo y tiene enums con muchas constantes).</p>
+<p>Ejemplo:</p>
 <pre><code>
     switch (x) {
         case 1 -> {}
@@ -21,7 +21,7 @@
     }
 </code></pre>
 <!-- tooltip end -->
-<p><b>최대 브랜치 수</b> 필드를 사용하여 기대되는 <code>case</code> 라벨의 최대 개수를 지정하세요.
+<p>Usa el campo <b>Número máximo de ramas</b> para especificar el número máximo de etiquetas de <code>case</code> esperadas.
 <p>
 </body>
 </html>

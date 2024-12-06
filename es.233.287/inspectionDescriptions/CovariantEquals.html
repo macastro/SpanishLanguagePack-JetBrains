@@ -1,18 +1,18 @@
 <html>
 <body>
-포함하는 클래스에 인수 타입으로 <code>java.lang.Object</code>를 취하는 <code>equals()</code>의 다른 오버로드가 없는 경우, <code>java.lang.Object</code> 이외의 인수 타입을 취하는 <code>equals()</code> 메서드를 보고합니다.
+Reporta métodos <code>equals()</code> que tomen un tipo de argumento distinto de <code>java.lang.Object</code> si la clase contenedora no tiene otras sobrecargas de <code>equals()</code> que tomen <code>java.lang.Object</code> como su tipo de argumento.
 <p>
-  공변성 버전의 <code>equals()</code>는 <code>Object.equals(Object)</code> 메서드를 재정의하지 않습니다. 이는 런타임 시 예기치 않은 동작을 초래할 수 있습니다. 예를 들어, 클래스가 <code>Object.equals(Object)</code> 메서드를 재정의해야 하는 표준 컬렉션 클래스를 생성하는 데 사용되는 경우를 말합니다.
+  Una versión covariante de <code>equals()</code> no sobrescribe el método <code>Object.equals(Object)</code>. Puede causar un comportamiento inesperado en tiempo de ejecución. Por ejemplo, si la clase se usa para construir una de las clases de colección estándar, que espera que el método <code>Object.equals(Object)</code> sea sobrescrito.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
-      public boolean equals(Foo foo) {  // 경고
+      public boolean equals(Foo foo) {  // advertencia
           return false;
       }
   }
   class Bar {
-      public boolean equals(Bar bar) {  // 경고 없음
+      public boolean equals(Bar bar) {  // no advertencia aquí
           return false;
       }
       @Override

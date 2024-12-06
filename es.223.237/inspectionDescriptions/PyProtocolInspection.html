@@ -1,8 +1,9 @@
 <html>
 <body>
-<p><a href="https://www.python.org/dev/peps/pep-0544/">PEP-544</a>에 소개된 프로토콜의 유효하지 않은 정의 및 사용 사례를 보고합니다.</p>
-<p><b>예:</b></p>
-<pre style="font-family: monospace">
+<p>Informa definiciones y usos no válidos de protocolos introducidos en
+  <a href="https://www.python.org/dev/peps/pep-0544/">PEP-544</a>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
 from typing import Protocol
 
 
@@ -12,13 +13,13 @@ class MyProtocol(Protocol):
 
 
 class MyClass(MyProtocol):
-    def method(self, p: str) -> int: # 'method'의 타입이 'MyProtocol'과 호환되지 않음
+    def method(self, p: str) -> int: # El tipo de 'method' no es compatible con 'MyProtocol'
         pass
 
 
-class MyAnotherProtocol(MyClass, Protocol): # 프로토콜의 모든 베이스는 프로토콜이어야 합니다
+class MyAnotherProtocol(MyClass, Protocol): # Todas las bases de un protocolo deben ser protocolos
     pass
 
-</pre>
+</code></pre>
 </body>
 </html>

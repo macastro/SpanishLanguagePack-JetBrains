@@ -1,25 +1,25 @@
 <html>
 <body>
-재귀 메서드 내 <code>VirtualFile.getChildren()</code>의 사용을 보고합니다.
+Informa sobre el uso de <code>VirtualFile.getChildren()</code> en métodos recursivos.
 <p>
-  이는 순환 심볼릭 링크를 반복 처리할 때 무한 루프를 야기할 수 있습니다.
-  대신 <code>VfsUtilCore.visitChildrenRecursively()</code>를 사용하세요.
+  Este uso puede causar un bucle infinito al iterar por enlaces simbólicos circulares.
+  Usa <code>VfsUtilCore.visitChildrenRecursively()</code> en su lugar.
 </p>
-<pre><code>
+<pre><code lang="java">
 void processDirectory(VirtualFile dir) {
-  for (VirtualFile file : dir.getChildren()) { // 나쁨
+  for (VirtualFile file : dir.getChildren()) { // Mal
     if (!file.isDirectory()) {
       processFile(file);
     } else {
-      processDirectory(file); // 재귀 호출
+      processDirectory(file); // Llamada recursiva
     }
   }
 }
 </code>
 </pre>
-<pre><code>
+<pre><code lang="java">
 void processDirectory(VirtualFile dir) {
-  VfsUtilCore.visitChildrenRecursively(dir, new VirtualFileVisitor&lt;Void>() { // 좋음
+  VfsUtilCore.visitChildrenRecursively(dir, new VirtualFileVisitor&lt;Void>() { // Bien
     @Override
     public boolean visitFile(@NotNull VirtualFile file) {
       if (!file.isDirectory()) {

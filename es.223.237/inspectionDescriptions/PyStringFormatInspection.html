@@ -1,18 +1,19 @@
 <html>
 <body>
-<p>문자열 서식 지정 작업 중 발생한 오류를 보고합니다.</p>
-<p><b>예시 1:</b></p>
-<pre style="font-family: monospace">
+<p>Reporta errores en operaciones de formateo de cadenas.</p>
+<p><b>Ejemplo 1:</b></p>
+<pre><code>
 "Hello {1}".format("people")
-</pre>
-<p><b>예시 2:</b></p>
-<pre style="font-family: monospace">
+</code></pre>
+<p><b>Ejemplo 2:</b></p>
+<pre><code>
 def bar():
     return 1
 
 
 "%s %s" % bar()
-</pre>
-<p>수정 방안으로 <a href="https://docs.python.org/3/library/string.html#format-string-syntax">구문 서식 지정</a>을 준수하도록 문자열 서식 지정 조각을 다시 작성해야 합니다.</p>
+</code></pre>
+<p>Para corregirlo, debes reescribir los fragmentos de formateo de cadenas para
+  que cumplan con la <a href="https://docs.python.org/3/library/string.html#format-string-syntax">sintaxis de formateo</a>.</p>
 </body>
 </html>

@@ -1,18 +1,18 @@
 <html>
 <body>
-람다로 바꿀 수 있는 단일 추상 메서드(SAM) 사용 위치를 보고합니다.
-<p><b>예:</b></p>
+Informa sobre los usos del constructor SAM (método abstracto único) que se pueden reemplazar con lambdas.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun main() {
-      foo(<b>Runnable</b> { println("Hi!") })
+      foo(<b>Runnable</b> { println("Hola!") })
   }
 
   fun foo(other: Runnable) {}
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun main() {
-      foo( { println("Hi!") })
+      foo( { println("Hola!") })
   }
 
   fun foo(other: Runnable) {}

@@ -1,21 +1,21 @@
 <html>
 <body>
-첫 번째 인수가 하나의 정규식 메타 문자 인수인 <code>String.replaceAll()</code> 또는 <code>String.split()</code> 호출을 보고합니다.
+Reporta llamadas a
+<code>String.replaceAll()</code> o <code>String.split()</code> donde el primer argumento es un único argumento metacarácter regex.
 <p>
-  정규식 메타 문자는 <code>.$|()[{^?*+\</code> 중 하나입니다. 이러한 문자는 정규 표현식에서 특별한 의미를 가집니다.
-  예를 들어, 점은 모든 문자에 일치하기 때문에 <code>"ab.cd".replaceAll(".", "-")</code>을 호출하면 <code>"-----"</code>이 생성됩니다.
-  대신 이스케이프된 배리언트 <code>\\."</code>가 의도되었을 가능성이 높습니다.
+  Los metacaracteres regex son uno de <code>.$|()[{^?*+\</code>. Tienen un significado especial en expresiones regulares.
+  Por ejemplo, llamar a <code>"ab.cd".replaceAll(".", "-")</code> produce <code>"-----"</code>, porque el punto coincide con cualquier carácter.
+  Lo más probable es que en su lugar se pretendiera la variante con escape <code>"\\."</code>.
 </p>
 <p>
-  <code>File.separator</code>를 정규식으로 사용한 사례도 보고되었습니다. <code>File.separator</code>에는 플랫폼별 값이 있습니다. Linux 및 Mac에서는
-  <code>/</code>와 같지만 Windows에서는 <code>\</code>와 같습니다. 이것은 유효한 정규 표현식이 아니므로 이러한 코드는 이식 가능하지 않습니다.
+  También se reporta el uso de <code>File.separator</code> como una expresión regular. <code>File.separator</code> tiene un valor específico de la plataforma. Equivale a <code>/</code> en Linux y Mac pero equivale a <code>\\</code> en Windows, que no es una expresión regular válida, por lo que dicho código no es portable.
 </p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   s.replaceAll(".", "-");
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el quick-fix:</p>
 <pre><code>
   s.replaceAll("\\.", "-");
 </code></pre>

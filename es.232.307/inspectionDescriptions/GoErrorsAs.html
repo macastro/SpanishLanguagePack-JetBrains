@@ -1,19 +1,19 @@
 <html>
 <body>
-<code>error.As</code> 함수의 두 번째 인수가 인터페이스에 대한 포인터나 오류를 구현하는 타입에 대한 포인터가 아닌 경우 해당 함수의 호출을 보고합니다.
-<p>이러한 호출은 런타임에서 panic을 발생시킵니다.</p>
-<p><code>As</code> 함수에 대한 자세한 내용은 <a href="https://pkg.go.dev/errors#As">go.dev의 func As</a>를 참조하세요.</p>
-<p>예:</p>
+Informa de llamadas a la función <code>errors.As</code> cuando el segundo argumento no es un puntero a una interfaz o a un tipo que implementa un error.
+<p>Estas llamadas provocan pánico en tiempo de ejecución.</p>
+<p>Para obtener más información sobre la función <code>As</code>, consulta <a href="https://pkg.go.dev/errors#As">func As en go.dev</a>.</p>
+<p>Ejemplo:</p>
 <pre><code>_, err := os.Open("non-existing")
 var pathError *fs.PathError
-if errors.As(err, pathError) { // *fs.PathError로의 포인터를 사용해야 함
+if errors.As(err, pathError) { // se requiere un puntero a *fs.PathError
 }</code></pre>
-<p><b>앞에 '&' 추가</b> 빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida <b>Añadir prefijo '&'</b>:</p>
 <pre><code>_, err := os.Open("non-existing")
 var pathError *fs.PathError
 if errors.As(err, &pathError) {
 }</code></pre>
 <!-- tooltip end -->
-<p>이 검사는 언어 수준이 1.13 이상인 경우에만 보고합니다.</p>
+<p>Esta inspección solo informa si la versión del lenguaje es 1.13 o superior.</p>
 </body>
 </html>

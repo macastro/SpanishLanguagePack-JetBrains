@@ -1,17 +1,17 @@
 <html>
 <body>
-<code>List.contains()</code> 메서드로 바꿀 수 있는 모든 <code>List.indexOf()</code> 표현을 보고합니다.
-<p>예:</p>
+Informa sobre cualquier expresión <code>List.indexOf()</code> que se pueda reemplazar con el método <code>List.contains()</code>.
+<p>Ejemplo:</p>
 <pre><code>
   boolean hasEmptyString(List&lt;String&gt; list) {
-    // 경고: 단순화될 수 있습니다
+    // Advertencia: se puede simplificar
     return list.indexOf("") &gt;= 0;
   }
 </code></pre>
-<p>제공된 빠른 수정은 <code> indexOf</code> 호출을 <code>contains</code> 호출로 바꿉니다:</p>
+<p>El quick-fix proporcionado reemplaza la llamada a <code>indexOf</code> con la llamada a <code>contains</code>:</p>
 <pre><code>
   boolean hasEmptyString(List&lt;String&gt; list) {
-    // 빠른 수정이 적용되었습니다
+    // Se aplica el quick-fix
     return list.contains("");
   }
 </code></pre>

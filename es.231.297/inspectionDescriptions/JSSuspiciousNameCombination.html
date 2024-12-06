@@ -1,19 +1,19 @@
 <!-- Copied from community/java/java-impl/src/inspectionDescriptions/SuspiciousNameCombination.html -->
 <html>
 <body>
-대상 변수 또는 함수 매개변수의 이름이 대입된 값의 이름과 일치하지 않는 대입 또는 함수 호출을 보고합니다.
-<p>예:</p>
+Informa una asignación o una llamada a función donde el nombre de la variable de destino o el parámetro de la función no coincide con el nombre del valor asignado a ella.
+<p>Ejemplo:</p>
 <pre><code>
   <b>var</b> x = 0;
   <b>var</b> y = x;
 </code></pre>
-또는
+o
 <pre><code>
   <b>var</b> x = 0, y = 0;
   <b>var</b> rc = <b>new</b> Rectangle(y, x, 20, 20);
 </code></pre>
-여기서 검사는 <code>x</code>와 <code>y</code>가 혼합되어 있다고 추측합니다.
+Aquí la inspección conjetura que <code>x</code> e <code>y</code> están mezcladas.
 <!-- tooltip end -->
-<p>함께 사용해서는 안 되는 이름을 지정합니다. 매개변수 이름 또는 대입 대상 이름에 한 그룹에 속한 단어가 포함되어 있으나 대입된 변수 또는 전달된 변수의 이름에는 다른 그룹의 단어가 포함되어 있는 경우에 오류를 보고합니다.</p>
+<p>Especifica los nombres que no deben usarse juntos. Se informa un error si un nombre de parámetro o un nombre de destino de asignación contiene palabras de un grupo mientras que el nombre de la variable asignada o pasada contiene palabras de otro grupo.</p>
 </body>
 </html>

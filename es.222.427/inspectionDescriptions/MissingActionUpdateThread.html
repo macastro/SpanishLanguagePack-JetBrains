@@ -1,18 +1,16 @@
 <html>
 <body>
-더는 사용되지 않으며 비용이 큰 <code>ActionUpdateThread.OLD_EDT</code> 모드를 선언하는
-동작, 동작 그룹 및 다른 <code>ActionUpdateThreadAware<code>를 보고합니다.
+Informa las acciones, grupos de acciones y otras clases <code>ActionUpdateThreadAware</code> que declaran de manera implícita el modo obsoleto y costoso <code>ActionUpdateThread.OLD_EDT</code>.
 
 <p>
-  동작이나 동작 그룹이 고유의 <code> update</code> 메서드를 정의할 때, IntelliJ Platform은 <code>update</code>와 <code>getChildren</code> 메서드를 UI 스레드에서 호출하고 <code>AnActionEvent.dataContext</code>의 모든 데이터를 입력하는 이전의 동기식 방식을 따라합니다.
-  이를 위해 필요하지 않더라도 백그라운드 스레드에서 미리 모든 가능한 데이터를 캐시에 저장합니다.
+Cuando una acción o grupo de acciones define su propio método <code>update()</code>, la plataforma IntelliJ imita la forma antigua de invocación sincrónica de métodos <code>update()</code> y <code>getChildren()</code> en el hilo de la interfaz de usuario, y proporciona todos los datos de <code>AnActionEvent.dataContext()</code>.
+Para ello, almacena previamente en caché todos los datos posibles en el hilo de fondo, incluso si no son necesarios.
 </p>
 <p>
-  <code>getActionUpdateThread</code> 메서드를 재정의하여 신규 모드인 <code>ActionUpdateThread.EDT</code> 혹은 <code>ActionUpdateThread.BGT</code> 모드 중 하나를 제공합니다.
+Anula el método <code>getActionUpdateThread()</code> para proporcionar uno de los dos nuevos modos: <code>ActionUpdateThread.EDT</code> o <code>ActionUpdateThread.BGT</code>.
 </p>
 <p>
-  자세한 정보는 <code>ActionUpdateThread</code> 문서를 참조하세요.
+Para obtener más información, consulta la documentación de <code>ActionUpdateThread</code>.
 </p>
-<!-- tooltip end -->
 </body>
 </html>

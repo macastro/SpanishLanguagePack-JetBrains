@@ -1,57 +1,57 @@
 <html>
 <body>
-<p><a href="https://spring.io/projects/spring-security">Spring Security</a> XML 기반의 컨텍스트 관련 이슈를 보고합니다.</p>
+<p>Informa problemas con el contexto de <a href="https://spring.io/projects/spring-security">Spring Security</a> basado en XML:</p>
 
 <ul>
-  <li>확인되지 않은 bean 참조</li>
-  <li>필요한 태그 및 속성 누락</li>
-  <li>잘못된 프로퍼티 타입</li>
-  <li>일관성 없는 <code>enum</code> 프로퍼티</li>
-  <li>참조된 bean의 잘못된 타입</li>
+  <li>Referencias de bean sin resolver</li>
+  <li>Etiquetas o atributos obligatorios faltantes</li>
+  <li>Tipos de propiedad incorrectos</li>
+  <li>Propiedades <code>enum</code> inconsistentes</li>
+  <li>Tipos incorrectos de beans referenciados</li>
 </ul>
 
-<p>또한 다음 이슈를 보고합니다.</p>
+<p>También informa los siguientes problemas:</p>
 
 <ul>
-  <li>&lt;https&gt; 구성 오류
+  <li>Errores de configuración &lt;https&gt;
     <ul>
-      <li>'/**' 패턴이 있는 &lt;http&gt;는 마지막이어야 합니다</li>
-      <li>'pattern'이 없는 다중 &lt;http&gt; 요소는 허용되지 않습니다</li>
-   </ul>
- </li>
-  <li>&lt;http&gt; 구성 오류
+      <li>&lt;http&gt; con el patrón '/**' debe ser el último</li>
+      <li>No se permiten varios elementos &lt;http&gt; sin 'patrón'</li>
+    </ul>
+  </li>
+  <li>Errores de configuración &lt;http&gt;
     <ul>
-      <li><code>security='none'</code>일 경우 빈 태그</li>
-   </ul>
- </li>
+      <li>Etiqueta vacía si <code>security='none'</code></li>
+    </ul>
+  </li>
   <li>&lt;user-service&gt;
     <ul>
-      <li>속성 'properties' 또는 &lt;user&gt; 요소 목록을 포함해야 합니다</li>
-   </ul>
- </li>
+      <li>Debe tener el atributo 'properties' o una lista de elementos &lt;user&gt;</li>
+    </ul>
+  </li>
   <li>&lt;ldap-server&gt;
     <ul>
-      <li>'manager-dn' 사용 시 'manager-password'가 필요합니다</li>
-      <li>'user-context-mapper-ref' 또는 'user-details-class'를 포함해야 합니다</li>
-   </ul>
- </li>
+      <li>'manager-password' es obligatorio cuando se utiliza 'manager-dn'</li>
+      <li>Debe tener 'user-context-mapper-ref' o 'user-details-class'</li>
+    </ul>
+  </li>
   <li> &lt;authentication-provider&gt;
     <ul>
-      <li>사용자 서비스의 한 종류만 허용됩니다</li>
-   </ul>
- </li>
+      <li>Solo se permite un tipo de user-service</li>
+    </ul>
+  </li>
   <li>&lt;global-method-security&gt;
     <ul>
-      <li>'pre-post-annotations'은 &lt;pre-post-annotation-handling&gt; 사용을 위해 값을 'enabled'해야 합니다</li>
-      <li>&lt;protect-pointcut&gt; 및 &lt;intercept-url&gt;에 대한 값이 'aspectj'인 'mode'를 사용할 수 없습니다</li>
-      <li>'requires-channel' 속성은 상위 &lt;http&gt;에만 허용됩니다</li>
-   </ul>
- </li>
+      <li>'pre-post-annotations' debe tener el valor 'enabled' para utilizar &lt;pre-post-annotation-handling&gt;'</li>
+      <li>No se puede utilizar 'mode' con valor 'aspectj' para &lt;protect-pointcut&gt; y &lt;intercept-url&gt;</li>
+      <li>El atributo 'requires-channel' solo está permitido para el &lt;http&gt; principal</li>
+    </ul>
+  </li>
   <li>&lt;protect&gt;
     <ul>
-      <li>&lt;protect&gt;와 &lt;global-method-security&gt;의 혼합은 권장되지 않습니다</li>
-   </ul>
- </li>
+      <li>No se recomienda mezclar &lt;protect&gt; con &lt;global-method-security&gt;</li>
+    </ul>
+  </li>
 </ul>
 </body>
 </html>

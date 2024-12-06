@@ -1,6 +1,6 @@
 <html>
 <body>
-@PreFilter 사용: 프록시 모드(디폴트)에서는 프록시를 통해 들어오는 외부 메서드 호출만 인터셉트됩니다.
-즉, 자기 호출(타깃 객체의 다른 메서드를 호출하는 타깃 객체 내의 메서드)은 호출된 메서드가 @PreFilter로 표시되어도 런타임 시 동작하지 않습니다.
+<b>Uso de @PreFilter:</b> En modo proxy (el modo por defecto), sólo las llamadas a métodos externos que entran a través del proxy se interceptan.
+Esto significa que las autollamadas (es decir, las llamadas de método dentro del objeto target a otro método del objeto target) no funcionarán en tiempo de ejecución, incluso si el método llamado está marcado con @PreFilter
 </body>
 </html>

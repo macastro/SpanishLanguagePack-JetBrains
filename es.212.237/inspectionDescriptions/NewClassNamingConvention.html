@@ -1,13 +1,13 @@
 <html>
 <body>
-이름이 너무 짧거나 너무 길거나 지정된 정규 표현식 패턴을 따르지 않는 클래스를 보고합니다.
-<p><b>예:</b> 검사가 테스트에서 활성화되어 있으며 클래스 이름의 최소 길이가 8(디폴트)로 지정되어 있는 경우, 이름 길이가 8보다 작은 6이므로(<code>public class MyTest{}</code>) 다음 테스트 클래스는 경고를 발생시킵니다.
-<p>그러한 클래스의 이름을 변경하는 빠른 수정은 에디터에서만 사용할 수 있습니다.</p>
+Informa de las clases con nombres demasiado cortos, demasiado largos o que no sigan el patrón de expresión regular especificado.
+<p><b>Ejemplo:</b> Si la inspección está habilitada para pruebas y la longitud mínima del nombre de la clase está establecida en 8 (valor predeterminado), se generará una advertencia para la siguiente clase de prueba porque la longitud del nombre de la clase es de 6, que es inferior a 8: <code>public class MyTest{}</code>.
+<p>Solo se puede usar una corrección rápida para cambiar el nombre de este tipo de clases en el editor.</p>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configuración de la inspección:</p>
 <p>
-  <b>옵션</b> 섹션의 목록을 사용하여 검사되어야 하는 클래스를 지정하세요. 검사를 건너뛰려는 클래스의 체크박스를 선택 해제하세요.</p>
-<p>각 클래스 타입에 대해 제공된 입력 필드를 사용하여 최소 길이, 최대 길이, 클래스 이름으로 기대되는 정규 표현식을 지정하세요. 대응하는 검사를 건너뛰려면 length 필드에 <b>0</b>을 지정하세요.</p>
-<p>정규 표현식은 표준 <code>java.util.regex</code> 서식으로 지정되어야 합니다.</p>
+  Usa la lista en la sección <b>Opciones</b> para especificar las clases que se deben inspeccionar. Desmarca las casillas correspondientes a las clases a las que quieras omitirles la inspección.</p>
+<p>Para cada tipo de clase, usa los campos de entrada proporcionados para especificar la longitud mínima, la longitud máxima y la expresión regular esperadas para el nombre de la clase. Especifica <b>0</b> para el campo de longitud para omitir la comprobación correspondiente.</p>
+<p>Las expresiones regulares se deben especificar en el formato estándar <code>java.util.regex</code>.</p>
 </body>
 </html>

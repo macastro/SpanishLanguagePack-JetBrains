@@ -1,28 +1,30 @@
 <html>
 <body>
-<p>보통 <code>self</code>라고 이름이 지정되는 첫 번째 파라미터가 없는 메서드를 보고합니다.</p>
-<p><b>예:</b></p>
-<pre style="font-family: monospace">
+<p>Informa métodos que no tienen primer parámetro generalmente
+  llamado <code>self</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
 class Movie:
 
    def show():
        pass
-</pre>
-<p>빠른 수정이 적용되면 코드는 다음과 같이 변경됩니다:</p>
-<pre style="font-family: monospace">
+</code></pre>
+<p>Al aplicar la corrección rápida, el código cambia a:</p>
+<pre><code>
 class Movie:
 
    def show(self):
        pass
-</pre>
-<p>이 검사는 클래스 메서드 내 이름 지정 이슈 또한 보고합니다.</p>
-<p><b>예:</b></p>
-<pre style="font-family: monospace">
+</code></pre>
+<p>La inspección también informa problemas de nombramiento en métodos de clase.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
 class Movie:
     @classmethod
     def show(abc):
         pass
-</pre>
-<p>클래스 메서드의 첫 번째 매개변수는 <code>cls</code>여야 하므로 IDE는 해당 매개변수 이름을 변경하는 빠른 수정을 제공합니다.</p>
+</code></pre>
+<p>Ya que el primer parámetro de un método de clase debería ser <code>cls</code>, el IDE proporciona una
+  corrección rápida para renombrarlo.</p>
 </body>
 </html>

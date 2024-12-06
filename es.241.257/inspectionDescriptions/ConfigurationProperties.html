@@ -1,18 +1,20 @@
 <html>
 <body>
-<p><code>@ConfigurationProperties</code> 어노테이션에 정의된 잘못된 접두사를 보고합니다.</p>
+<p>Informa sobre prefijos no válidos definidos en las anotaciones <code>@ConfigurationProperties</code>:</p>
 <ul>
-  <li>누락된 접두사</li>
-  <li>빈 접두사</li>
-  <li>중복 접두사</li>
-  <li>케밥 케이스 외의 표기법으로 작성된 접두사</li>
+  <li>Prefijo faltante</li>
+  <li>Prefijo vacío</li>
+  <li>Prefijo duplicado</li>
+  <li>Prefijo en una notación distinta de kebab-case</li>
 </ul>
 <p>
-  <code>@ConfigurationProperties</code> 어노테이션이 추가되었으나 <code>@EnableConfigurationProperties</code>로 등록되거나, Spring 구성 요소로 표시되거나, <code>@ConfigurationPropertiesScan</code>을 통해 스캔되지 않은 클래스에서 이 검사가 트리거됩니다.</p>
+  La inspección se activa en clases que están anotadas con <code>@ConfigurationProperties</code> y no se registran mediante <code>@EnableConfigurationProperties</code>,
+  marcadas como componente Spring o escaneadas mediante <code>@ConfigurationPropertiesScan</code>.</p>
 <!-- tooltip end -->
 <p>
-  프로젝트 또는 모듈의 Spring Boot 버전이 2.2.0 이상으로 설정된 경우, <code>@ConfigurationProperties</code> 어노테이션이 추가되었으나 <code>@ConfigurationPropertiesScan</code>을 통해 스캔되지 않은 클래스에서만 이 검사가 트리거됩니다.
+  Esta inspección solo se activa en clases anotadas con <code>@ConfigurationProperties</code> que no se escanean mediante <code>@ConfigurationPropertiesScan</code>
+  cuando la versión de Spring Boot para el proyecto o módulo está establecida en 2.2.0 o posterior.
 </p>
-<p><small>2018.3의 새로운 기능</small></p>
+<p><small>Novedad en 2018.3</small></p>
 </body>
 </html>

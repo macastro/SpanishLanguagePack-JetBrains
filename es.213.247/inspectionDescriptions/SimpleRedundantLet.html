@@ -1,12 +1,12 @@
 <html>
 <body>
-불필요한 리시버를 기반으로 하는 <code>let</code> 호출을 보고합니다.
-<p>빠른 수정에서는 불필요한 <code>let</code> 호출을 제거합니다.</p>
-<p><b>예:</b></p>
+Informa las llamadas <code>let</code> redundantes basadas en el receptor.
+<p>El arreglo rápido elimina la llamada <code>let</code> redundante.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun test(s: String?): Int? = s?.let { it.length }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   fun test(s: String?): Int? = s?.length
 </code></pre>

@@ -1,10 +1,11 @@
 <html>
 <body>
-SELECT 목록 내 중복된 열 별칭 이름을 보고합니다.
-<p>예(Sybase ASE):</p>
+Informa sobre nombres duplicados de alias de columna en listas SELECT.
+<p>Ejemplo (Sybase ASE):</p>
 <pre><code>CREATE TABLE t1 (a TEXT, b INT, c INT);
 
 SELECT a AS x, b AS x FROM t1;</code></pre>
-<p><code>x</code> 별칭 이름이 <code>a</code> 및 <code>b</code> 열에서 사용되었습니다. Sybase ASE에서는 여러 열에 대해 같은 별칭 이름을 사용할 수 없기 때문에 이러한 대입은 오류로 강조 표시됩니다.</p>
+<p>El nombre de alias <code>x</code> se usa para las columnas <code>a</code> y <code>b</code>. Estas asignaciones se resaltan como errores porque
+  no puedes usar nombres de alias idénticos para columnas en Sybase ASE.</p>
 </body>
 </html>

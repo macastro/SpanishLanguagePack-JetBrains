@@ -1,10 +1,15 @@
 <html>
 <body>
-구성된 언어 수준에서 지원되지 않는 API의 사용 위치를 보고합니다.
-<p>API 가용성은 문서의 <code>@since</code> 태그에 지정된 버전으로 정의됩니다. 이는 언어 수준이 프로젝트 SDK와 다를 수 있으며, 코드를 실행하는 데 사용되는 JDK에 해당 API가 없을 수 있으므로 유용합니다.</p>
+Inspecciona los usos de la API que no están disponibles en el nivel de idioma configurado.
+Esta inspección hace 3 cosas:
+<ul>
+  <li>Destaca el uso de clases genéricas cuando el nivel del idioma está por debajo de Java 7.</li>
+  <li>Destaca cuándo los métodos predeterminados no se anulan y el nivel del idioma está por debajo de Java 8.</li>
+  <li>Destaca el uso de la API cuando el nivel del idioma es menor que el marcado usando la etiqueta <code>@since</code> en la documentación.</li>
+</ul>
 <!-- tooltip end -->
 <p>
-  프로젝트 또는 사용자 지정 언어 수준과 관련한 API 사용을 금지하려면 <b>API 사용 금지</b> 옵션을 사용합니다.
+  Utiliza la opción <b>Prohibir el uso de la API</b> para prohibir el uso de la API con respecto al proyecto o nivel de idioma personalizado.
 </p>
 
 </body>

@@ -1,7 +1,9 @@
 <html>
 <body>
-JUnit 어노테이션이 추가된 메서드가 다른 JUnit 버전의 테스트 케이스에 사용되는 경우를 보고합니다. 테스트 케이스의 프레임워크 버전을 결정하기 위해 이 검사는 사용 가능한 경우 상위 클래스의 프레임워크 버전을 확인합니다. 상위 클래스를 사용할 수 없는 경우 테스트 케이스에서 가장 많이 사용되는 프레임워크를 사용합니다.
-<p>예(JUnit 3 테스트 케이스의 JUnit 4 어노테이션):</p>
+Reporta métodos anotados con JUnit cuando se usan en un caso de prueba desde una versión de JUnit distinta. Determina la versión del framework para un caso de prueba
+la inspección revisa la versión del framework de la super clase cuando está disponible. Cuando una super clase no está disponible usará el
+framework más utilizado en el caso de prueba.
+<p>Ejemplo (anotación JUnit 4 en caso de prueba JUnit 3):</p>
 <pre><code lang="java">
   public class MyTest extends TestCase {
       @Test
@@ -12,7 +14,7 @@ JUnit 어노테이션이 추가된 메서드가 다른 JUnit 버전의 테스트
       public void testBar() { }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code lang="java">
   public class MyTest extends TestCase {
       public void testFoo() {}
@@ -21,29 +23,29 @@ JUnit 어노테이션이 추가된 메서드가 다른 JUnit 버전의 테스트
   }
 </code></pre>
 
-<p>예(JUnit 4 테스트 케이스의 JUnit 5 어노테이션):</p>
+<p>Ejemplo (anotación JUnit 5 en caso de prueba JUnit 4):</p>
 <pre><code lang="java">
   public class MyTest {
-      @BeforeAll // JUnit 5 수명 주기 메서드
+      @BeforeAll // Método de ciclo de vida JUnit 5
       public void initialize() { }
 
-      @org.junit.Test  // JUnit 4 테스트 어노테이션
+      @org.junit.Test  // Anotación de prueba JUnit 4
       public void test() {}
 
-      @org.junit.Test  // JUnit 4 테스트 어노테이션
+      @org.junit.Test  // Anotación de prueba JUnit 4
       public void testWouldBeExecuted() {}
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code lang="java">
   public class MyTest {
-      @BeforeClass // JUnit 4 수명 주기 메서드
+      @BeforeClass // Método de ciclo de vida JUnit 4
       public void initialize() { }
 
-      @org.junit.Test  // JUnit 4 테스트 어노테이션
+      @org.junit.Test  // Anotación de prueba JUnit 4
       public void test() {}
 
-      @org.junit.Test  // JUnit 4 테스트 어노테이션
+      @org.junit.Test  // Anotación de prueba JUnit 4
       public void testWouldBeExecuted() {}
   }
 </code></pre>

@@ -1,25 +1,25 @@
 <html>
 <body>
-<code>&&</code>, <code>||</code>, <code>==</code>, <code>!=</code> 또는 <code>?:</code> 연산자를 사용하는 조건으로 바꿀 수 있는 <code>if</code> 문을 보고합니다.
-<p>얻어진 결과는 일반적으로 더 짧지만, 항상 더 명확하지는 않으므로, 모든 경우에 적용하는 것은 권장하지 않습니다.</p>
-<p>예:</p>
+Informa sobre sentencias <code>if</code> que pueden ser reemplazadas por condiciones que utilizan los operadores <code>&&</code>, <code>||</code>, <code>==</code>, <code>!=</code> o <code>?:</code>.
+<p>El resultado es generalmente más corto, aunque no siempre más claro, por lo que no es recomendable aplicar esta corrección rápida en todos los casos.</p>
+<p>Por ejemplo:</p>
 <pre><code>
-  if (condition) return true; else return foo;
+  if (condición) return true; else return foo;
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
-  return condition || foo;
+  return condición || foo;
 </code></pre>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configuración de la inspección:</p>
 <ul>
 <li>
-  <b>'?:' 연산자를 제안 안 함</b> 옵션을 사용하여 <code>?:</code> 연산자가 제안되는 경우 경고를 끄세요. 이 경우, <code>&&</code>, <code>||</code>, <code>==</code> 및 <code>!=</code> 제안만 강조 표시됩니다. 에디터에서 빠른 수정을 계속 사용할 수 있습니다.
+  Usa la opción <b>No sugerir el operador '?'</b> para deshabilitar las advertencias donde se sugiere el operador <code>?:</code>. En este caso, solo se resaltarán las sugerencias <code>&&</code>, <code>||</code>, <code>==</code> y <code>!=</code>. Las correcciones rápidas seguirán estando disponibles en el editor.
 </li>
 <li>
-  <b>체인 'if' 문 무시</b> 옵션을 사용하여 <code>if-else</code> 체인에 대한 경고를 끌 수 있습니다. 에디터에서 빠른 수정을 계속 사용할 수 있습니다.
+  Usa la opción <b>Ignorar las sentencias 'if' encadenadas</b> para deshabilitar las advertencias sobre cadenas <code>if-else</code>. Las correcciones rápidas seguirán estando disponibles en el editor.
 </li>
 </ul>
-<p><small>2018.2의 새로운 기능</small></p>
+<p><small>Novedad de 2018.2</small></p>
 </body>
 </html>

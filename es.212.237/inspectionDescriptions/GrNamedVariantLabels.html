@@ -1,13 +1,12 @@
 <html>
 <body>
-<code>@NamedVariant</code>/<code>@NamedParam</code>/<code>@NamedDelegate</code>에 의해
-어노테이션된 메서드 호출에서 해결되지 않은 인수 라벨을 보고합니다.
-<p><b>예:</b></p>
+Reporta etiquetas de argumentos sin resolver en llamadas de métodos anotados por <code>@NamedVariant</code>/<code>@NamedParam</code>/<code>@NamedDelegate</code>.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   @groovy.transform.NamedVariant
   def foo(a, b) {}
 
-  // 해결되지 않은 'c'  라벨
+  // Etiqueta sin resolver 'c'
   foo(a: 1, b: 2, c: 3)
 </code></pre>
 </body>

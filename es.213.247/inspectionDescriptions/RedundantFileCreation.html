@@ -1,16 +1,12 @@
-<html>
-<body>
-<code>String</code> 경로만 사용될 수 있으나 다음 생성자 중 하나가 사용된 불필요한 <code>File</code> 생성을 보고합니다. <code>FileInputStream</code>, <code>FileOutputStream</code>,
-<code>FileReader</code>, <code>FileWriter</code>, <code>PrintStream</code>, <code>PrintWriter</code>, <code>Formatter</code>
-<p>예:</p>
+<html><body>Informa de la creación redundante de <code>File</code> en uno de los siguientes constructores cuando solo se puede utilizar la ruta <code>String</code>: <code>FileInputStream</code>, <code>FileOutputStream</code>, <code>FileReader</code>, <code>FileWriter</code>, <code>PrintStream</code>, <code>PrintWriter</code>, <code>Formatter</code>.
+<p>Ejemplo:</p>
 <pre><code>
 InputStream is = new FileInputStream(new File("in.txt"));
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
 InputStream is = new FileInputStream("in.txt");
 </code></pre>
 <!-- tooltip end -->
-<p><small>2020.3의 새로운 기능</small></p>
-</body>
-</html>
+<p><small>Nuevo en 2020.3</small></p>
+</body></html>

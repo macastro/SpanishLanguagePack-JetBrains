@@ -1,19 +1,20 @@
 <html>
 <body>
-변수 타입이 형 변환 타입으로 좁혀진 경우 제거할 수 있는 형 변환을 보고합니다.
-<p>예:</p>
+Informa los tipos de conversiones que se pueden eliminar si el tipo de variable se reduce al tipo de conversión.
+<p>Ejemplo:</p>
 <pre><code>
   Object x = "  string  ";
   System.out.println(((String)x).trim());
 </code></pre>
 <p>
-여기서 <code>x</code> 타입을 <code>String</code>으로 변경하는 것은 불필요한 형 변환입니다. 제안된 빠른 수정을 통해 변수 타입을 업데이트하고 해당 변수에 대한 모든 불필요한 형 변환을 제거할 수 있습니다.
+Aquí, cambiar el tipo de <code>x</code> a <code>String</code> hace que la conversión sea redundante. La solución rápida sugerida actualiza el tipo de variable y
+elimina todas las conversiones redundantes en esa variable:
 </p>
 <pre><code>
   String x = "  string  ";
   System.out.println(x.trim());
 </code></pre>
 <!-- tooltip end -->
-<p><small>2018.2의 새로운 기능</small></p>
+<p><small>Novedad en 2018.2</small></p>
 </body>
 </html>

@@ -1,8 +1,44 @@
 <html>
 <body>
-지정된 검사 범위에서 발견된 모든 필드, 메서드 또는 클래스 중 선언에 <code>final</code> 제어자가 추가될 수 있는 항목을 보고합니다.
-<p>final 클래스는 확장될 수 없으며, final 메서드는 재정의될 수 없고, final 필드는 재할당될 수 없습니다.</p>
+Informa de campos, métodos o clases que pueden tener el modificador <code>final</code> añadido a sus declaraciones.
+<p>Las clases finales no se pueden extender, los métodos finales no pueden ser sobreescritos y los campos finales no se pueden reasignar.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Persona {
+    private String nombre;
+
+    Persona(String nombre) {
+      this.nombre = nombre;
+    }
+
+    public String getNombre() {
+      return nombre;
+    }
+
+    public String toString() {
+      return getNombre();
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  public final class Persona {
+    private final String nombre;
+
+    Persona(String nombre) {
+      this.nombre = nombre;
+    }
+
+    public final String getNombre() {
+      return nombre;
+    }
+
+    public final String toString() {
+      return getNombre();
+    }
+  }
+</code></pre>
 <!-- tooltip end -->
-<p><b>클래스 보고</b> 및 <b>메서드 보고</b> 옵션을 사용하여 보고할 선언을 정의합니다.</p>
+<p>Utiliza las opciones <b>Informar clases</b> e <b>Informar métodos</b> para definir qué declaraciones se van a informar.</p>
 </body>
 </html>

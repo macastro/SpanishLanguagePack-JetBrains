@@ -1,28 +1,25 @@
 <html>
 <body>
-<code>@deprecated</code> Javadoc 태그가 있지만 <code>@java.lang.Deprecated</code> 어노테이션은 없는
-모듈 선언, 클래스, 필드 또는 메서드를 보고합니다.
-<p>누락된 <code>@Deprecated</code> 어노테이션을 추가하는 것이 좋습니다.</p>
-<p><b>예:</b></p>
-<pre>
+<code>@deprecated</code> Reporta declaraciones de módulos, clases, campos o métodos que tienen una etiqueta Javadoc <code>@deprecated</code>, pero no una anotación <code>@java.lang.Deprecated</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
   /**
    * @deprecated use {@code example()} instead
    */
   void sample(){ }
-</pre>
-<p>빠른 수정 적용 후:</p>
-<pre>
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
   /**
    * @deprecated use {@code example()} instead
    */
   @Deprecated
   void sample(){ }
-</pre>
+</code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 5 이상인 경우에만 작동합니다.</p>
+<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 5 o superior.</p>
 <p>
-<code>@deprecated</code> 어노테이션이 있지만 <code>@Deprecated</code> Javadoc 태그에 설명이 없는 심볼에 대해
-  경고하려면 아래 체크박스를 사용하세요.
+Utiliza la siguiente casilla de verificación para informar a los miembros que tienen una anotación <code>@Deprecated</code>, pero sin una explicación en la etiqueta Javadoc <code>@deprecated</code>.
 
 </body>
 </html>

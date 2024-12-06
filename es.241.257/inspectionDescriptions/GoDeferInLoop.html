@@ -16,9 +16,9 @@
 
 <html>
 <body>
-루프 내부의 <code>defer</code> 구문을 보고합니다.
-<p>루프에 사용된 <code>defer</code> 문은 리소스 누수 또는 예측할 수 없는 구문 실행 순서로 이어질 수 있습니다.</p>
-<p>예:</p>
+Informa sobre las declaraciones <code>defer</code> dentro de los bucles.
+<p>El uso de <code>defer</code> en los bucles puede provocar pérdidas de recursos o un orden de ejecución de las declaraciones impredecible.</p>
+<p>Ejemplo:</p>
 <pre><code>func main() {
  for {
   field, err := db.Query("SELECT 1")
@@ -29,7 +29,7 @@
   // ...
  }
 }</code></pre>
-<p>루프 내부의 <code>defer row.Close()</code> 호출은 함수가 실행을 마치기 전까지 실행되지 않습니다.
-  <code>for</code> 루프의 각 단계의 마지막에서 실행되는 것이 아닙니다. 이러한 구현은 함수 스택 오버플로우 또는 다른 이슈로 이어질 수 있습니다.</p>
+<p>Las llamadas a <code>defer row.Close()</code> dentro del bucle no se ejecutan hasta que la función completa su ejecución.
+  No al final de cada paso del bucle <code>for</code>. Esta implementación puede provocar un desbordamiento de la pila de la función y otros problemas.</p>
 </body>
 </html>

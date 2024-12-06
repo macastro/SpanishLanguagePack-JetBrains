@@ -1,30 +1,30 @@
 <html>
 <body>
 <p>
-  <code>plugin.xml</code> 파일에 등록되고 해당하는 생성자 내에서 자신의 표시(텍스트, 설명 및/또는 아이콘)를 초기화하는 모든 액션을 보고합니다.
+  Inspecciona cualquier acción registrada en el archivo <code>plugin.xml</code> e inicializa su presentación (texto, descripción y/o icono) en su constructor.
 </p>
 <p>
-  이러한 방식은 텍스트, 설명 및/또는 아이콘이 로드되고 때로는 불필요할 수 있는 액션 표시가 강제로 생성되므로 권장되지 않습니다. 대신 <code>AnAction</code> 및 다른 기본 클래스의 인수 없는 생성자를 활용하고 텍스트, 설명 및 아이콘 설정 규칙을 따르는 것이 더 효율적입니다. 액션이 실제로 어딘가에 표시될 때만 IntelliJ 플랫폼이 텍스트, 설명 및 아이콘을 로드합니다.
+  Esta práctica es desaconsejable porque puede provocar la carga de texto, descripción y/o icono y forzar la creación de una presentación de acción que puede que no siempre sea necesaria. Un enfoque más eficiente es aprovechar los constructores sin argumentos de <code>AnAction</code> y otras clases base y seguir la convención de configuración de texto, descripción e icono. La plataforma IntelliJ solo cargará el texto, la descripción y el icono cuando la acción se muestre realmente en algún lugar.
 </p>
 <p>
-  텍스트, 설명 및 아이콘 설정 규칙은 다음과 같습니다.
+  La convención para configurar texto, descripción e icono es la siguiente:
 </p>
 <ul>
   <li>
-    <code>plugin.xml</code> 파일에서 액션의 <code>id</code> 속성을 설정합니다.
+    Configura la propiedad <code>id</code> para la acción en el archivo <code>plugin.xml</code>.
   </li>
   <li>
-    아이콘이 필요한 경우 <code>icon</code> 속성을 설정합니다.
+    Opcionalmente, configura la propiedad <code>icon</code> si se necesita un icono.
   </li>
   <li>
-    프로퍼티 파일에서 텍스트와 설명의 키를 설정할 때는 다음의 구조를 따릅니다.
+    Al configurar claves para texto y descripción en archivos de propiedades, sigue esta estructura:
     <ul>
-      <li><code>action.&lt;action-id&gt;.text=번역된 액션 텍스트</code></li>
-      <li><code>action.&lt;action-id&gt;.description=번역된 액션 설명</code></li>
+      <li><code>action.&lt;action-id&gt;.text=Texto de acción traducido</code></li>
+      <li><code>action.&lt;action-id&gt;.description=Descripción de acción traducida</code></li>
     </ul>
   </li>
 </ul>
-<p><b>나쁜 예:</b></p>
+<p><b>Ejemplo deficiente:</b></p>
 <pre><code lang="kotlin">
   // NewKotlinFileAction.kt
   internal class NewKotlinFileAction : AnAction(
@@ -39,7 +39,7 @@
     class="org.jetbrains.kotlin.idea.actions.NewKotlinFileAction"
   &lt;/action&gt;
 </code></pre>
-<p><b>좋은 예:</b></p>
+<p><b>Ejemplo correcto:</b></p>
 <pre><code lang="kotlin">
   // NewKotlinFileAction.kt
   internal class NewKotlinFileAction : AnAction()
@@ -54,9 +54,9 @@
 </code></pre>
 <pre><code lang="properties">
   // KotlinBundle.properties
-  action.Kotlin.NewFile.text=Kotlin 클래스/파일
-  action.Kotlin.NewFile.description=새 Kotlin 클래스 또는 파일을 생성
+  action.Kotlin.NewFile.text=Clase/archivo Kotlin
+  action.Kotlin.NewFile.description=Crea una nueva clase o archivo Kotlin
 </code></pre>
-<p><small>2023.2의 새로운 기능</small></p>
+<p><small>Novedad en 2023.2</small></p>
 </body>
 </html>

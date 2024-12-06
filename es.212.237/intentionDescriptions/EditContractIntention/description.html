@@ -1,7 +1,7 @@
 <html><body>
-이 인텐션은 라이브러리 메서드 컨트랙트를 변경합니다.
+Esta intención cambia un contrato del método de la biblioteca.
 
-메서드 컨트랙트에는 다음 구문이 포함됩니다:<br/>
+El contrato del método tiene la siguiente sintaxis:<br/>
  contract ::= (clause ';')* clause<br/>
  clause ::= args '->' effect<br/>
  args ::= ((arg ',')* arg )?<br/>
@@ -10,21 +10,21 @@
  effect ::= value-constraint | 'fail' | 'new' | 'this' | 'param' number<br/>
  number ::= [1-9] [0-9]*<p/>
 
-상수는 다음을 의미합니다.<br/>
+Las restricciones denotan lo siguiente:<br/>
 <ul>
-<li> _ - 모든 값
-<li> null - null 값
-<li> !null - null이 아닌 것으로 정적으로 입증된 값
-<li> true - true 부울 값
-<li> false - false 부울 값
-<li> fail - 인수가 인수의 제약 조건을 충족할 경우 메서드가 예외를 던짐
-<li> new - 메서드가 실행될 때마다 메서드 실행 전 힙의 다른 객체와 구별되는 null이 아닌 새 객체를 반환 새 객체는 메서드가 순수하면 필드나 배열에 저장되지 않으며, 메서드 반환 값을 사용하지 않을 경우 손실됨
-<li> this - 메서드가 null이 아닌 this 참조 반환
-<li> param1 (param2, param3, etc.) - 메서드가 첫 번째(두 번째, 세 번째 등) 인수를 반환
+<li> _ - qualquer valor<br/>
+<li> null - valor nulo
+<li> !null - un valor estáticamente probado que no es nulo
+<li> true - valor booleano verdadero
+<li> false - valor booleano falso
+<li> fail - el método lanza una excepción, si los argumentos satisfacen las restricciones de argumentos
+<li> new - cada vez que se ejecuta el método, devuelve un nuevo objeto no nulo que es distinto de otros objetos existentes en el montón antes de la ejecución del método. Si el método es puro, el nuevo objeto no se almacena en ningún campo o matriz y se perderá si no se utiliza el valor de retorno del método.
+<li> this - el método devuelve una referencia This no nula
+<li> param1 (param2, param3, etc.) - el método devuelve su primer (segundo, tercer, etc.) argumento
 </ul>
-예:<p/>
-<code>@Contract("_, null -> null")</code> - 두 번째 인수가 null인 경우 메서드가 null 반환<br/>
-<code>@Contract("_, null -> null; _, !null -> !null")</code> - 두 번째 인수가 null인 경우 메서드가 null 반환 그 외에는 null이 아닌 값 반환<br/>
-<code>@Contract("true -> fail")</code> - <code>true</code>가 전달되면 예외를 던지는 전형적인 assertFalse 메서드<br/>
+Ejemplos:<p/>
+<code>@Contract("_, null -> null")</code> - el método devuelve nulo si su segundo argumento es nulo<br/>
+<code>@Contract("_, null -> null; _, !null -> !null")</code> - el método devuelve nulo si su segundo argumento es nulo y no nulo de lo contrario<br/>
+<code>@Contract("true -> fail")</code> - un método assertFalse típico que lanza una excepción si <code>true</code> se le pasa a él<br/>
 
 </body></html>

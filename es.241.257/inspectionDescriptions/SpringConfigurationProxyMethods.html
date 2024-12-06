@@ -1,14 +1,16 @@
 <html>
 <body>
-부적절하게 사용된 프록시 메서드에 대한 경고를 보고합니다.
+Informa advertencias sobre métodos proxy utilizados de forma incorrecta.
 
-Spring Framework 5.2에는 @Configuration 클래스 처리 최적화가 도입되었으며, 이는 @Configuration(proxyBeanMethods = false) 속성을 통해 활성화할 수 있습니다.
+Spring Framework 5.2 ha introducido una optimización para el procesamiento de la clase @Configuration que se puede activar a través de un atributo
+ @Configuration(proxyBeanMethods = false).
 <p>
-<code>proxyBeanMethods</code>를 비활성화하면, 프록시 인스턴스가 더 이상 생성되지 않으며 메서드를 호출하면 해당 메서드가 다시 호출됩니다(매번 새 인스턴스 반환).
-그렇게 되면 컨텍스트에서 해당 Bean이 실제로 삽입되도록 보장할 수 없습니다.
+Si desactivas <code>proxyBeanMethods</code>,
+ya no se crean las instancias proxy y al llamar al método se vuelve a invocar (devolviendo una nueva instancia cada vez).
+Como resultado, no tienes garantía de que estás inyectando realmente el bean correspondiente en el contexto.
 </p>
 <!-- tooltip end -->
-<p>잘못된 Bean 메서드 호출 예시:</p>
+<p>Ejemplo de llamada incorrecta al método bean:</p>
 <pre><code lang="java">
 @Configuration(proxyBeanMethods = false)
 class TestConfiguration {
@@ -19,12 +21,12 @@ class TestConfiguration {
 
   @Bean
   public SecondBean secondBean() {
-    return new SecondBean(firstBean()); // -> 잘못된 호출
+    return new SecondBean(firstBean()); // -> llamada incorrecta
   }
 }
 </code></pre>
 
-<p><<code>proxyBeanMethods</code>를 true로 설정하거나 다음과 같이 코드를 다시 작성할 수 있습니다.</p>
+<p>Puedes establecer <code>proxyBeanMethods</code> a true o reescribir el código de la siguiente manera:</p>
 <pre><code lang="java">
 @Configuration(proxyBeanMethods = false)
 class TestConfiguration {
@@ -34,13 +36,13 @@ class TestConfiguration {
   }
 
   @Bean
-  public SecondBean secondBean(FirstBean someBean) { // -> 올바르게 삽입된 인스턴스
+  public SecondBean secondBean(FirstBean someBean) { // -> instancia inyectada correctamente
     return new SecondBean(someBean);
   }
 }
 </code></pre>
 
-<p>또한 이 검사는 <code>@Configuration</code> 스테레오 타입이 없는 클래스에서 실행되는 <code>@Bean</code> 메서드 호출을 검사합니다('Bean Lite Mode'에서).</p>
+<p>Además, la inspección comprueba las llamadas al método <code>@Bean</code> en una clase sin el estereotipo <code>@Configuration</code> (en "bean lite mode"):</p>
 <pre><code lang="java">
 @Component
 class TestComponent {
@@ -51,7 +53,7 @@ class TestComponent {
 
   @Bean
   public SecondBean secondBean() {
-    return new SecondBean(firstBean()); // -> 잘못된 호출
+    return new SecondBean(firstBean()); // -> llamada incorrecta
   }
 }
 </code></pre>

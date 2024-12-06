@@ -1,10 +1,10 @@
 <html>
 <body>
-<p>JUnit 5 <code>@RepeatedTest</code>와 관련된 다음 문제를 보고합니다.</p>
+<p>Se informa de los siguientes problemas con JUnit 5 <code>@RepeatedTest</code> :</p>
 <ul>
-  <li><code>@Test</code> 및 <code>@RepeatedTest</code>가 같은 메서드에 사용됩니다. 사용이 허용되더라도 함께 적용되는 추가 효과는 없습니다.</li>
-  <li><code>RepetitionInfo</code> 매개변수는 <code>@BeforeAll</code> 및 <code>@AfterAll</code> 메서드에 사용됩니다. 이러한 메서드에는 매개변수가 삽입되지 않습니다.</li>
-  <li><code>RepetitionInfo</code> 매개변수는 <code>@Test</code> 메서드가 있는 클래스의 <code>@BeforeEach</code> 및 <code>@AfterEach</code> 메서드에 사용됩니다. 이 경우 매개변수는 <code>@Test</code> 메서드에 삽입되지 않습니다.</li>
+  <li><code>@Test</code> y <code>@RepeatedTest</code> se utilizan en el mismo método. Aunque se les permite ser usados juntos, su uso combinado no tiene ningún efecto adicional.</li>
+  <li>El parámetro <code>RepetitionInfo</code> se utiliza en los métodos <code>@BeforeAll</code> y <code>@AfterAll</code> . El parámetro no se inyecta en estos métodos.</li>
+  <li>El parámetro <code>RepetitionInfo</code> se utiliza en los métodos <code>@BeforeEach</code> y <code>@AfterEach</code> de una clase que contiene métodos <code>@Test</code> . El parámetro no se inyectará en los métodos <code>@Test</code> en este caso.</li>
 </ul>
 <!-- tooltip end -->
 </body>

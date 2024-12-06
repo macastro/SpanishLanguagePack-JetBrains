@@ -1,23 +1,23 @@
 <html>
 <body>
-매개변수 수가 지정된 최댓값을 초과하는 생성자를 보고합니다.
-특히 일부 매개변수가 선택적인 경우 이러한 객체를 인스턴스화하기가 어렵습니다.
-너무 많은 매개변수를 가진 생성자는 리팩터링이 필요할 수 있습니다.
-예를 들면, Builder 패턴을 적용하는 것을 고려할 수 있습니다.
-<p><b>예:</b></p>
+Informa de los constructores cuyo número de parámetros excede el máximo especificado.
+Estos objetos son difíciles de instanciar, especialmente si algunos parámetros son opcionales.
+Los constructores con demasiados parámetros pueden indicar que es necesaria una refactorización.
+Por ejemplo, considera aplicar el patrón de constructor.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public BankAccount(long accountNumber,
                      String owner,
                      double balance,
                      double interestRate) {
-    // fields initialization
+    // inicialización de campos
   }
 </code></pre>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configurar la inspección:</p>
 <ul>
-  <li><b>매개변수 제한</b> 필드를 사용하여 생성자의 최대 허용 매개변수 개수를 지정합니다.</li>
-  <li><b>가시성을 가진 생성자 무시</b> 목록을 사용하여 이 검사를 통해 특정한 가시성을 가진 생성자의 무시 여부를 지정합니다.</li>
+  <li>Utiliza el campo <b>Límite de parámetros</b> para especificar el número máximo de parámetros permitidos en un constructor.</li>
+  <li>Utiliza la lista <b>Ignorar constructores con visibilidad</b> para especificar si la inspección debe ignorar constructores con visibilidad específica.</li>
 </ul>
 </body>
 </html>

@@ -1,17 +1,17 @@
 <html>
 <body>
-유틸리티 클래스를 확장하는 클래스를 보고합니다.
+Informa sobre las clases que extienden una clase de utilidad.
 <p>
-유틸리티 클래스는 모든 필드 및 메서드가 static인 비어 있지 않은 클래스입니다.
-  유틸리티 클래스를 확장하면 유틸리티 클래스의 의도치 않은 객체 인스턴스화가 발생할 수도 있습니다. 확장을 허용하기 위해 생성자를 private으로 만들 수 없기 때문입니다.
+Una clase de utilidad es una clase no vacía en la que todos los campos y métodos son estáticos.
+Extender una clase de utilidad también permite la instanciación inadvertida de objetos de la clase de utilidad, porque no se puede hacer que el constructor sea privado para permitir la extensión.
 </p>
 <!-- tooltip end -->
 <p>
-  검사 구성:
+Configurar la inspección:
 </p>
 <ul>
   <li>
-    유틸리티 클래스를 재정의하지만 자신이 유틸리티 클래스이기도 한 모든 클래스를 무시하려면 <b>재정의 클래스가 유틸리티 클래스인 경우 무시</b> 옵션을 사용하세요.
+    Utilice la opción <b>Ignorar si la clase de anulación es una clase de utilidad</b> para ignorar cualquier clase que anule una clase de utilidad pero que también sean clases de utilidad.
   </li>
 </ul>
 

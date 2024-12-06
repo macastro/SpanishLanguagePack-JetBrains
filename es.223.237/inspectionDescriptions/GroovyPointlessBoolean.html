@@ -1,17 +1,22 @@
 <html>
 <body>
-의미가 없거나 쓸데없이 복잡한 bool 표현식을 보고합니다.
+Informa de expresiones booleanas sin sentido o innecesariamente complicadas.
 <p>
-  이러한 표현식에는 true 연결 연산, false 분리 연산, 부울 리터럴을 이용한 상등 비교 또는 부울 리터럴의 부정이 포함됩니다. 그러한 표현식은 코드 완성이 수반되지 않은 자동화된 리팩터링의 결과일 수 있으며 개발자가 의도한 결과가 아닐 확률이 높습니다.
+  Estas expresiones incluyen conjunción con verdadero,
+  disyunción con falso,
+  comparación de igualdad con un literal booleano o negación de un literal booleano. Tales expresiones pueden ser
+  el resultado de refactorizaciones automáticas
+  no completamente seguidas hasta su finalización, y en cualquier caso es poco probable que sean lo que el desarrollador
+  pretendía hacer.
 </p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  if (someBool && true) {}
+  si (algunBool && verdadero) {}
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Una vez aplicada la solución rápida:</p>
 <pre><code>
-  if (someBool) {}
+  si (algunBool) {}
 </code></pre>
 </body>
 </html>

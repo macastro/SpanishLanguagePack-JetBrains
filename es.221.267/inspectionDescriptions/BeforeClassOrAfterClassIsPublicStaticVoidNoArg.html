@@ -1,21 +1,19 @@
 <html>
 <body>
-<code>public</code> 및 <code>static</code>으로 선언되지 않거나, <code>void</code>를 반환하거나 인수를 취하지 않는 JUnit 4.0 <code>@BeforeClass</code> 또는 <code>@AfterClass</code> 메서드를 보고합니다.
-해당 메서드는 실수로 생성되기 쉽지만 JUnit 테스트 러너를 통해 실행되지 않습니다.
+JUnit 4 <code>@BeforeClass</code> 및 <code>@AfterClass</code> 어노테이션이 추가된 메서드와 JUnit 5 <code>@BeforeAll</code> 및 <code>@AfterAll</code> 어노테이션이 추가된 메서드 중 public이 아니거나 static이 아니거나 또는 반환 타입이 void가 아니거나 매개변수 해결자를 선언하지 않으면서 인수를 취하는 메서드를 보고합니다.
+이러한 메서드는 실수로 생성되기 쉬우며, JUnit 테스트 러너를 통해 실행되지 않습니다.
 <p><b>예:</b></p>
 <pre><code>
   public class MainTest {
     @BeforeClass
-    String beforeClass(int i) {
-    }
+    String beforeClass(int i) { ... }
   }
 </code></pre>
-<p>빠른 수정이 적용된 후 메서드는 다음과 같이 변경됩니다.</p>
+<p>빠른 수정 적용 후:</p>
 <pre><code>
   class MainTest {
     @BeforeClass
-    public static void beforeClass() {
-    }
+    public static void beforeClass() { ... }
   }
 </code></pre>
 <!-- tooltip end -->

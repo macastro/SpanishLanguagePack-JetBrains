@@ -1,16 +1,16 @@
 <html>
 <body>
-JUnit 4 테스트 클래스로 변환 가능한 JUnit 3 테스트 클래스를 보고합니다.
-<p><b>예:</b></p>
-<pre><code>
+Informa las clases de prueba JUnit 3 que pueden convertirse a las clases de prueba JUnit 4.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
   public class MainTestCase extends junit.framework.TestCase {
     public void test() {
       Assert.assertTrue(true);
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
-<pre><code>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="java">
   public class MainTestCase {
     @org.junit.Test
     public void test() {
@@ -19,6 +19,6 @@ JUnit 4 테스트 클래스로 변환 가능한 JUnit 3 테스트 클래스를 �
   }
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 5 이상이며 클래스 경로에서 JUnit 4가 지원되는 경우 보고합니다.</p>
+<p>Esta inspección sólo informa si el nivel del lenguaje del proyecto o módulo es 5 o superior y JUnit 4 está disponible en la ruta de clase.</p>
 </body>
 </html>

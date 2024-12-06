@@ -1,6 +1,14 @@
 <html>
 <body>
-플랫폼 유형을 포함하는 함수와 프로퍼티를 보고합니다.
-<p>예상하지 못한 오류를 방지하려면 유형을 명시적으로 선언해야 합니다.</p>
+Informa funciones y propiedades que tienen un tipo de plataforma.
+<p>Para prevenir errores inesperados, el tipo debe ser declarado explícitamente.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo() = java.lang.String.valueOf(1)
+</code></pre>
+<p>La corrección rápida te permite especificar el tipo de retorno:</p>
+<pre><code>
+  fun foo(): String = java.lang.String.valueOf(1)
+</code></pre>
 </body>
 </html>

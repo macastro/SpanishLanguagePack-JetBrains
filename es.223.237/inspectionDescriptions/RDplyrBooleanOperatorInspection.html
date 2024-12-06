@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>dplyr 표현식에서 '&&' 및 '||' 연산의 사용을 보고합니다.</p>
-<p><b>예:</b></p>
+<p>Informa del uso de las operaciones `&&` y `||` en expresiones dplyr.</p>
+<p><b>Ejemplo:</b></p>
 <p>
   <code>
     filter(diamonds, carat > 0.7 && depth > 62.0)
   </code>
 </p>
-<p>빠른 수정을 적용하면 코드는 다음과 같이 변경됩니다.</p>
+<p>Al aplicar la corrección rápida, el código cambia a:</p>
 <p>
   <code>
     filter(diamonds, carat > 0.7 & depth > 62.0)

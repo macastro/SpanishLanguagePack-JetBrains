@@ -1,8 +1,7 @@
 <html>
 <body>
-<p>인수가 없는 public 생성자가 없는 <code>Externalizable</code> 클래스를 보고합니다.</p>
-<p><code>Externalizable</code> 객체가 재생성되면 인스턴스는 <code>readExternal</code> 메서드가 호출되기 전에 인수가 없는 public 생성자를 사용하여 생성됩니다. 인수가 없는 public 생성자를 사용할 수 없는 경우, 런타임 시 <code>java.io.InvalidClassException</code>가 던져집니다.
+Informa clases <code>Externalizable</code> sin un constructor público sin argumentos.
+<p>Cuando un objeto <code>Externalizable</code> es reconstruido, se crea una instancia usando el constructor público sin argumento antes de llamar al método <code>readExternal</code>. Si no hay disponible un constructor público sin argumentos, se lanzará una <code>java.io.InvalidClassException</code> en tiempo de ejecución.
   <!-- tooltip end -->
-<p>
 </body>
 </html>

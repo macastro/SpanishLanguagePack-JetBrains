@@ -1,20 +1,20 @@
 <html>
 <body>
-호출한 함수가 표현식 본문에서 람다를 반환할 경우 사용하지 않은 반환 값을 가지는 호출을 보고합니다.
+Reporta llamadas con un valor de retorno no utilizado cuando la función llamada devuelve una lambda de un cuerpo de expresión.
 <p>
-함수 헤더와 본문 블록 사이에 <code>=</code>가 있다면
-함수의 코드가 평가되지 않으며 이는 부정확한 동작으로 이어질 수 있습니다.
+Si hay <code>=</code> entre el encabezado de la función y el bloque del cuerpo,
+el código de la función no se evaluará, lo que puede provocar un comportamiento incorrecto.
 </p>
-<p><b>함수 선언에서 = 토큰 제거</b>를 사용해 코드를 자동으로 수정할 수 있습니다.</p>
-<p>예:</p>
+<p>Se puede utilizar <b>Eliminar token = de la declaración de función</b> para modificar el código automáticamente.</p>
+<p>Ejemplo:</p>
 <pre><code>
   fun printHello() = { println("Hello") }
 
   fun main() {
-      printHello() // 이 함수는 아무것도 인쇄하지 않음
+      printHello() // Esta función no imprime nada
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun printHello() { println("Hello") }
 

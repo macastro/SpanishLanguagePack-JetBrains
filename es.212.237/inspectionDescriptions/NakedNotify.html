@@ -1,17 +1,20 @@
 <html>
 <body>
-탐지 가능한 상태 변화가 일어나지 않고도 <code>Object.notify()</code> 또는 <code>Object.notifyAll()</code>이 호출되는 경우를 보고합니다.
+Informa de las llamadas a <code>Object.notify()</code> u <code>Object.notifyAll()</code> sin que se produzca ningún cambio de estado detectable.
 <p>
-  일반적으로 <code>Object.notify()</code> 및 <code>Object.notifyAll()</code>는 상태 변화가 일어났음을 다른 스레드에 알리는 데 사용됩니다. 이때 상태 변화는 <code>Object.notify()</code> 또는 <code>Object.notifyAll()</code> 호출을 포함하는 동기화된 컨텍스트에서 호출 이전에 일어나야 합니다. 그러한 상태 변화가 없는 것이 반드시 잘못된 것은 아니지만 검사해 볼 가치는 있습니다.
+  Normalmente, <code>Object.notify()</code> y <code>Object.notifyAll()</code> se utilizan para informar a otros subprocesos de que se ha
+  producido un cambio de estado. Ese cambio de estado debe producirse en un contexto sincronizado que contenga la llamada a <code>Object.notify()</code> o
+  <code>Object.notifyAll()</code>, y antes de la llamada. Aunque no tener un cambio de estado de este tipo no es necesariamente incorrecto,
+  ciertamente merece la pena examinarlo.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   synchronized (this) {
     notify();
   }
-  // no state change
+  // sin cambio de estado
   synchronized (this) {
-    notify(); // 이 notify는 불필요할 수 있음
+    notify(); // esta notificación podría ser redundante
   }
 </code></pre>
 <!-- tooltip end -->

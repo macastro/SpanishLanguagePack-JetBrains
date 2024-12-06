@@ -1,7 +1,17 @@
 <html>
 <body>
-null이 아닌 것이 확실한 값(예를 들어, 새로 생성된 객체)에 호출된 null 검사 메서드 (예를 들어, <code>Objects.requireNonNull</code> 또는 <code>Assert.assertNotNull</code>)를 보고합니다. 이러한 검사를 불필요하며 프로그래밍 오류일 수 있습니다.
+Reporta si un método de verificación de nulos (por ejemplo <code>Objects.requireNonNull</code> o <code>Assert.assertNotNull</code>)
+es llamado en un valor que es obviamente no nulo (por ejemplo, un objeto recién creado). Esta verificación es redundante y puede indicar
+un error de programación.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  final String greeting = Objects.requireNonNull("Hi!");
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  final String greeting = "Hi!";
+</code></pre>
 <!-- tooltip end -->
-<p>2017.2의 새로운 기능</p>
+<p>Nuevo en 2017.2</p>
 </body>
 </html>

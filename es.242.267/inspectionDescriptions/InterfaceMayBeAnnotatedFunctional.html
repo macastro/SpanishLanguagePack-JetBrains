@@ -1,19 +1,21 @@
 <html>
 <body>
-Reports interfaces that can be annotated with <code>@FunctionalInterface</code>.
-<p>인터페이스에 <code>@FunctionalInterface</code> 어노테이션을 추가하는 것은 인터페이스가 함수형이며 더 이상 <code>abstract</code> 메서드를 추가할 수 없음을 의미합니다.</p>
-<p><b>예:</b></p>
+Informa de interfaces que pueden anotarse con <code>@FunctionalInterface</code> (disponible desde JDK 1.8).
+<p>Anotar una interfaz con <code>@FunctionalInterface</code> indica que la interfaz es funcional y que no se pueden añadir métodos <code>abstract</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   interface FileProcessor {
     void execute(File file);
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   @FunctionalInterface
   interface FileProcessor {
     void execute(File file);
   }
 </code></pre>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 8 o superior.</p>
 </body>
 </html>

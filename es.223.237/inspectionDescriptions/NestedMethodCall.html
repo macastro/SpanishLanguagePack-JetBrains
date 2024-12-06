@@ -1,8 +1,8 @@
 <html>
 <body>
-다른 메서드 호출에 대한 매개변수로 사용되는 메서드 호출을 보고합니다.
-<p>빠른 수정에서는 변수를 삽입하여 코드를 단순화하고 디버그를 용이하게 합니다.</p>
-<p><b>예:</b></p>
+Reporta una llamada a un método que se utiliza como parámetro de otra llamada a un método.
+<p>Esta corrección rápida introduce una variable, simplificando el código y facilitando la depuración.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public int y() { return 1; }
   public int f(int x) { return 2 * x; }
@@ -11,7 +11,7 @@
       int x = f(y());
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   public int y() { return 1; }
   public int f(int x) { return 2 * x; }
@@ -23,12 +23,12 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-보고 대상을 전환하려면 검사 옵션을 사용하세요.
+Utiliza las opciones de inspección para cambiar los informes de:
 </p>
 <ul>
-  <li>필드 이니셜라이저의 메서드 호출</li>
-  <li>static 메서드 호출</li>
-  <li>간단한 getter 호출</li>
+  <li>Llamadas a métodos en inicializadores de campo.</li>
+  <li>Llamadas a métodos estáticos.</li>
+  <li>Llamadas a getters simples.</li>
 </ul>
 
 </body>

@@ -1,17 +1,15 @@
 <html>
 <body>
-증분 및 감소를 포함하여 인스턴스 메서드 내에서
-<code>static</code> 필드에 대한 대입을 보고합니다.
-<p>이러한 대입은 허용되더라도 안전하게 실행하기가
-  어렵고 실수로 필드를 <code>static</code>으로 설정하게 되는 경우가 종종 있습니다.</p>
-<p><b>예:</b></p>
+Informa sobre la asignación o modificación de campos <code>static</code> desde un método de instancia.
+<p>Aunque legítimas, esas asignaciones son difíciles de hacer de forma segura y a menudo son resultado de marcar campos como <code>static</code> inadvertidamente.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Counter {
     private static int count = 0;
 
     void increment() {
-      // 경고: 인스턴스 메서드에서
-      // static 필드를 업데이트 중입니다
+      // Advertencia: actualización de un campo static
+      // desde un método de instancia
       count++;
     }
   }

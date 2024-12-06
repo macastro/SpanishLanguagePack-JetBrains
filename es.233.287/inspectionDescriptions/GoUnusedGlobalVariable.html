@@ -16,15 +16,18 @@
 
 <html>
 <body>
-코드에 선언되었지만 전혀 사용하지 않는 전역 변수를 보고합니다.
-<p>사용하지 않는 변수가 있는 경우 코드는 컴파일되지 않습니다.
-  사용되지 않는 변수 및 import 문에 대한 자세한 내용은 <a href="https://go.dev/doc/effective_go#blank_unused">go.dev의 Unused imports and variables(사용되지 않는 import 문 및 변수)</a>을 참조하세요.
+Reporta variables globales que están definidas pero nunca son usadas en el código.
+<p>Si tienes variables no utilizadas, el código no se compilará.
+  Para más información sobre variables e importaciones no utilizadas, consulta <a href="https://go.dev/doc/effective_go#blank_unused">Importaciones y
+variables no utilizadas en go.dev</a>.
 </p>
 <pre><code>func main() {
  a := 422
 }</code></pre>
-<p>예시의 코드는 컴파일되지 않습니다. 따라서 오류로 강조 표시됩니다. 이러한 경우 <b>변수 삭제</b> 및 <b>_로 이름 변경</b>이라는 두 가지 빠른 수정을 적용할 수 있습니다. 첫 번째 빠른 수정은 변수를 삭제하며 두 번째 빠른 수정은 변수를 빈 식별자로 변환합니다.</p>
-<p><b>_로 이름 변경</b> 빠른 수정 적용 후:</p>
+<p>El código en el ejemplo no se compilará. Por lo tanto, se resalta como un error. Puedes aplicar dos soluciones rápidas para tales casos:
+  <b>Eliminar variable</b> y <b>Renombrar a _</b>. La primera solución rápida elimina la variable, la segunda convertirá la variable a un
+  identificador en blanco.</p>
+<p>Después de que se aplique la solución rápida <b>Renombrar a _</b>:</p>
 <pre><code>func main() {
  _ := 422
 }</code></pre>

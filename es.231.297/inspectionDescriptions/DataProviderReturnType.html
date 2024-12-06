@@ -1,18 +1,18 @@
 <html>
 <body>
-<code>Object[][]</code> 또는 <code>Iterator&lt;Object&gt;</code>를 반환하지 않는 <code>@DataProvider</code> 어노테이션으로 표시된 메서드를 보고합니다.
-다른 타입이 반환된 경우, TestNG가 예외를 던집니다.
-<p>예:</p>
+<p>Informa de los métodos marcados con la anotación <code>@DataProvider</code> que no devuelven <code>Object[][]</code> o <code>Iterator&lt;Object&gt;</code>.</p>
+<p>Si se devuelve otro tipo, TestNG lanza una excepción.</p>
+<p>Ejemplo:</p>
 <pre><code>
 public class TestNgTest {
-  @DataProvider(name = "Languages")
-  List&ltString&gt getData() {
+  @DataProvider(name = "Idiomas")
+  List&lt;String&gt; getData() {
     return List.of("Java", "Kotlin");
   }
 
-  @Test(dataProvider = "Languages")
-  public void testData(String language) {
-    System.out.println(language);
+  @Test(dataProvider = "Idiomas")
+  public void testData(String idioma) {
+    System.out.println(idioma);
   }
 }
 </code></pre>

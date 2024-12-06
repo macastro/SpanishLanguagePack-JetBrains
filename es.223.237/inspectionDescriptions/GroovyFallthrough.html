@@ -1,13 +1,13 @@
 <html>
 <body>
-switch 문의 <i>폴스루</i>를 보고합니다.  폴스루가 유용한 경우도 있으나 의도하지 않은 경우가 많으며 예상하지 못한 버그를 발생시킬 수 있습니다.
-<p><b>예:</b></p>
+Reporta los <i>fallthrough</i> en las sentencias switch.  Si bien a veces es útil, el fallthrough a menudo no es intencional y puede llevar a errores sorprendentes.
+<p><b>Ejemplo:</b></p>
 <pre>
 <code>
 switch(n) {
   case 1:
     print 1
-  case 2: // 'case 2'에 대한 'case 1' 폴스루 'case 2'의 구문은 'case 1' 뒤에 바로 실행됩니다.
+  case 2: // "case 1" fallthrough al "case 2". Las sentencias del "case 2" se ejecutan inmediatamente después del "case 1".
     print 2
     break
   default:

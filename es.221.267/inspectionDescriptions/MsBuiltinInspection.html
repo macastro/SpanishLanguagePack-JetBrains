@@ -1,23 +1,24 @@
 <html>
 <body>
-ISNULL 함수 내 문자열 인수 자르기를 보고합니다.
+Informa acerca de los truncamientos de los argumentos de cadenas de texto en funciones ISNULL.
 
-<p>ISNULL 구문은 <code>ISNULL(check_expression, replacement_value)</code>입니다.
+<p>La sintaxis de ISNULL es <code>ISNULL(check_expression, replacement_value)</code>.
 </p>
 
-<p><a href="https://docs.microsoft.com/en-us/sql/t-sql/functions/isnull-transact-sql" target="_blank">docs.microsoft.com의 ISNULL</a>에 따르면 <code>replacement_value</code>이 <code>check_expression</code>보다 긴 경우 <code>replacement_value</code>이 잘립니다.
+<p>Según <a href="https://docs.microsoft.com/en-us/sql/t-sql/functions/isnull-transact-sql" target="_blank">ISNULL en docs.microsoft.com</a>, <code>replacement_value</code> se truncará si es más largo que
+ <code>check_expression</code>.
 </p>
 
-<p>예(Microsoft SQL 서버):</p>
+<p>Ejemplo (Microsoft SQL Server):</p>
 
 <pre><code>DECLARE @name1 VARCHAR(2) = NULL;
 DECLARE @name2 VARCHAR(10) = 'Example';
 DECLARE @name3 VARCHAR(2) = 'Hi';
 
-  -- '@name2'은 VARCHAR(10)이므로 잘립니다
+  -- `@name2` es VARCHAR(10) y se truncará
 SELECT ISNULL(@name1, @name2);
 
-  -- '@name3'은 '@name1'와 같이 VARCHAR(2)이므로 잘리지 않습니다
+  -- `@name3` es VARCHAR(2) como `@name1` y no se truncará
 SELECT ISNULL(@name1, @name3);</code></pre>
 
 </body>

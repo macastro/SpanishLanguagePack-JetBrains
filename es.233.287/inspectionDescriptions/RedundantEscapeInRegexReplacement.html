@@ -1,16 +1,17 @@
 <html>
 <body>
-정규식 메서드의 대체 문자열에서 불필요한 이스케이프를 보고합니다.
-정규식 대체 문자열에서 어떤 문자든 이스케이프할 수 있지만 <code>$</code> 및 <code>\</code> 문자만 이스케이프가 필수적입니다.
-<p><b>예:</b></p>
+Informa sobre escapes redundantes en la cadena de reemplazo de los métodos regex.
+Se permite escapar cualquier carácter en una cadena de reemplazo de regex,
+pero solo es necesario escapar los caracteres <code>$</code> y <code>\</code>.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   string.replaceAll("a", "\\b");
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   string.replaceAll("a", "b");
 </code></pre>
 <!-- tooltip end -->
-<p><small>2022.3의 새로운 기능</small>
+<p><small>Novedad en 2022.3</small>
 </body>
 </html>

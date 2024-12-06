@@ -1,12 +1,12 @@
 <html>
 <body>
-로깅 구문을 포함하지 않는 모든 public 메서드를 보고합니다. 이 검사는 단순한 getter 및 setter를 보고하지 않습니다.
-<p>예:</p>
+Reporta cualquier método público que no contenga una sentencia de registro. Esta inspección no informa sobre getters y setters simples.
+<p>Por ejemplo:</p>
 <pre><code>
   <b>public class</b> Crucial {
-    <b>private static final</b>Logger LOG = LoggerFactory.getLogger(Crucial.class);
+    <b>private static final </b>Logger LOG = LoggerFactory.getLogger(Crucial.class);
     <b>public void</b> doImportantStuff() {
-      // 이 메서드에서 경고 발생
+      // advertencia para este método
     }
 
     <b>public void</b> doOtherStuff() {
@@ -16,7 +16,7 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-아래 테이블을 사용하여 Logger 클래스 이름을 지정하세요.
-이 검사는 특정한 클래스의 인스턴스 메서드를 사용하지 않는 public 메서드를 보고합니다.
+Use la tabla siguiente para especificar nombres de clase Logger.
+Esta inspección informará sobre métodos públicos que no utilizan métodos de instancia de las clases especificadas.
 </body>
 </html>

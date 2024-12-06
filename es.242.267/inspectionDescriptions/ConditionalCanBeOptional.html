@@ -1,17 +1,21 @@
 <html>
 <body>
-null 검사 조건을 보고하고 이를 <code>Optional</code> 체인으로 바꿀 것을 제안합니다.
-<p>예:</p>
+Notifica condiciones de comprobación de nulos y sugiere reemplazarlas con cadenas <code>Optional</code>.
+<p>Ejemplo:</p>
 <pre><code>
   return str == null ? "" : str.trim();
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   return Optional.ofNullable(str).map(String::trim).orElse("");
 </code></pre>
-<p>변경 후 코드가 항상 더 짧은 것은 아니지만 향후 리팩터링에 유용할 수 있습니다 (예를 들어, 메서드 반환 값을  <code>Optional</code>로 변경하는 경우).</p>
-<p>조건의 null이 아닌 분기가 null을 반환하는 경우, 해당 매핑 단계 실행은 의미를 바꿀 가능성이 있는 빈 <code>Optional</code>을 생성합니다. 의미 보존을 정적으로 증명할 수 없는 경우 빠른 수정 액션 이름에 '(의미가 변경될 수 있음)'이라는 알림이 포함되며 검사의 강조 표시가 비활성화됩니다.</p>
+<p>Aunque el reemplazo no siempre resulta más breve, podría ser útil para realizar refactorizaciones adicionales
+  (por ejemplo, para cambiar el valor de retorno del método a <code>Optional</code>).</p>
+<p>Tenga en cuenta que cuando una rama no nula de la condición devuelve null, el paso de asignación correspondiente
+  producirá un <code>Optional</code> vacío, lo cual posiblemente cambie la semántica. Si no puede comprobarse estáticamente
+  que se preservará la semántica, el nombre de la acción de corrección rápida contendrá el aviso "(puede cambiar la semántica)"
+  y se desactivará el resaltado de inspección.</p>
 <!-- tooltip end -->
-<p><small>2018.1의 새로운 기능</small></p>
+<p><small>Novedad en 2018.1</small></p>
 </body>
 </html>

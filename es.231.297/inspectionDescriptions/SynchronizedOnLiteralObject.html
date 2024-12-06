@@ -1,11 +1,11 @@
 <html>
 <body>
-리터럴로 초기화되는 객체를 잠그는 <code>synchronized</code> 블록을 보고합니다.
+Reporta bloques <code>synchronized</code> que se bloquean en objetos inicializados con un literal.
 <p>
-  문자열 리터럴은 억류(intern)되며 <code>Character</code>, <code>Boolean</code> 및 <code>Number</code> 리터럴은 캐시에서 할당될 수 있습니다.
-  이로 인해 동일한 리터럴로 초기화된 객체를 사용하는 시스템의 다른 부분이 실제로는 동일한 객체에 대한 참조를 보유할 수 있습니다. 이때 lock 객체가 private으로 간주될 경우 예기치 않은 교착 상태가 발생할 수 있습니다.
+  Los literales de cadena son internados y <code>Character</code>, <code>Boolean</code> y <code>Number</code> pueden ser asignados desde un caché.
+  Debido a esto, es posible que alguna otra parte del sistema, que usa un objeto inicializado con el mismo literal, esté sosteniendo una referencia al mismo objeto.  Esto puede crear situaciones de interbloqueo inesperadas, si el objeto de bloqueo fue considerado privado.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Main {
     final String mutex = "Mutex";
@@ -17,7 +17,8 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  <strong>가능한 모든 리터럴에 대해 경고</strong> 옵션을 사용하여 <code>String</code>, <code>Character</code>, <code>Boolean</code> 및 <code>Number</code> 객체의 동기화를 보고합니다.
+  Usa la opción <strong>Advertir sobre todos los posibles literales</strong> para reportar cualquier sincronización en
+  <code>String</code>, <code>Character</code>, <code>Boolean</code> y <code>Number</code> objetos.
 </p>
 </body>
 </html>

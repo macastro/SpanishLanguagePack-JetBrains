@@ -1,15 +1,15 @@
 <html>
 <body>
-한 클래스에서 <code>\w</code> 또는 <code>[:word:]</code>(<code>\D</code> 및 <code>\W</code>)와 함께 사용되는 불필요한 <code>\d</code> 및 <code>[:digit:]</code>을 보고합니다.
-<p><b>예:</b></p>
+Se reportan <code>\d</code> o <code>[:dígito:]</code> redundantes que se utilizan en una clase con <code>\w</code> o <code>[:palabra:]</code> (<code>\D</code> con <code>\W</code>) y que se pueden remover.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   [\w\d]
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   [\w]
 </code></pre>
 <!-- tooltip end -->
-<p><small>2022.2의 새로운 기능</small>
+<p><small>Novedad en 2022.2</small>
 </body>
 </html>

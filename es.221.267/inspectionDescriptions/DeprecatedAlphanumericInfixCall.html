@@ -1,15 +1,15 @@
 <html>
 <body>
-<p>'infix' 제어자를 infix 연산자로 포함하지 않는 영숫자 정의의 사용 위치를 보고합니다.</p>
+<p>Informa de los usos de las definiciones alfanuméricas sin el modificador `infix` como operador infijo.</p>
 
 <ul>
-<li>"백틱(')에 랩" 빠른 수정은 호출 주위로 <code>'</code> 기호를 추가합니다.</li>
-<li>"infix 표현식에서 변환" 빠른 수정은 infix 호출을 <code>.method(...)</code> 메서드 구문으로 변환합니다.</li>
-<li>"infix 표현식에서 변환" 빠른 수정은 infix 호출을  <code>Type[...]</code> 접두사 구문으로 변환합니다.</li>
-<li>"infix 패턴에서 변환" 빠른 수정은 infix 호출을 <code>pattern(...)</code> 접두사 구문으로 변환합니다.</li>
+<li>La corrección rápida "Encerrar entre comillas invertidas" agrega símbolos ``` alrededor de las llamadas.</li>
+<li>La corrección rápida "Convertir de expresión infija" convierte la llamada infija a la sintaxis del método `método(...)`.</li>
+<li>La corrección rápida "Convertir de tipo infijo" convierte el tipo infijo a la sintaxis del prefijo "`Tipo[...]]`.</li>
+<li>La corrección rápida "Convertir de patrón infijo" convierte el patrón infijo a la sintaxis del prefijo "patrón(...)".</li>
 </ul>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class C:
     def op(x: Int): Int = ???
@@ -24,7 +24,7 @@
   val _ Pair _ = p
 </code></pre>
 
-<p>"백틱에 랩" 빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida "Encerrar entre comillas invertidas":</p>
 <pre><code>
   class C:
     def op(x: Int): Int = ???
@@ -34,12 +34,12 @@
   val c = C()
   val p = Pair(1, 2)
 
-  c 'op' 2
-  val or: Int 'Or' String = ???
-  val _ 'Pair' _ = p
+  c `op` 2
+  val or: Int `Or` String = ???
+  val _ `Pair` _ = p
 </code></pre>
 
-<p>"infix 표현식으로부터 변환" 빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida "Convertir de expresión infija":</p>
 <pre><code>
   class C:
     def op(x: Int): Int = ???
@@ -54,7 +54,7 @@
   val _ Pair _ = p
 </code></pre>
 
-<p>"infix 유형으로부터 변환" 빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida "Convertir de tipo infijo":</p>
 <pre><code>
   class C:
     def op(x: Int): Int = ???
@@ -69,7 +69,7 @@
   val _ Pair _ = p
 </code></pre>
 
-<p>"infix 패턴으로부터 변환" 빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida "Convertir de patrón infijo":</p>
 <pre><code>
   class C:
     def op(x: Int): Int = ???

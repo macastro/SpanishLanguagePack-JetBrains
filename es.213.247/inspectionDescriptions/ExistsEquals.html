@@ -1,16 +1,17 @@
 <html>
 <body>
-<p>특정 요소를 검색하는 <code>exists</code> 또는 <code>forall</code>의 사용을 보고합니다.</p>
+<p>Informa sobre el uso de <code>exists</code> o <code>forall</code>
+  para localizar un elemento específico.</p>
 
 
-<p>빠른 수정에서는 대신 <code>contains</code>를 사용합니다.</p>
+<p>La corrección rápida utiliza <code>contains</code> en su lugar.</p>
 
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   set.exists(x => x == "a")
   set.forall(x => x != "a")
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   set.contains("a")
   !set.contains("a")

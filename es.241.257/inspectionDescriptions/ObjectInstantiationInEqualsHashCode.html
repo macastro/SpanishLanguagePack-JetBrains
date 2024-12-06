@@ -1,30 +1,29 @@
 <html>
 <body>
-<code>equals()</code>, <code>hashCode()</code>, <code>compareTo()</code>, <code>Comparator.compare()</code> 메서드 내의 (임시) 새로운 객체 생성을 보고합니다.
+Reporte de construcción de nuevos objetos (temporales) dentro de métodos <code>equals()</code>, <code>hashCode()</code>, <code>compareTo()</code> y <code>Comparator.compare()</code>.
 <p>
-  생성자 호출 외에, 새로운 객체는 <code>foreach</code> 문 내의 자동 박싱 또는 이터레이터 생성으로 새로운 객체를 만들 수 있습니다.
-  이 경우 성능 문제가 발생할 수 있습니다. 예를 들면 메서드를 자주 호출하는 <code>Set</code> 또는 <code>Map</code>에 객체를 추가하는 경우 그렇습니다.
+  Además de invocaciones de constructores, también se pueden crear nuevos objetos mediante autoboxing o creación de iteradores dentro de una declaración <code>foreach</code>.  Esto puede causar problemas de rendimiento, por ejemplo, cuando se añaden objetos a una <code>Set</code> o <code>Map</code>, donde estos métodos se llamarán a menudo.
 </p>
 <p>
-  이 검사는 객체가 <code>throw</code> 또는 <code>assert</code> 문에서 생성되는 경우를 보고하지 않습니다.
+  La inspección no reportará cuando los objetos son creados en una declaración <code>throw</code> o <code>assert</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class Person {
-    private String name;
-    private int age;
+  class Persona {
+    private String nombre;
+    private int edad;
 
     public boolean equals(Object o) {
-      return Arrays.equals(new Object[] {name, age}, new Object[] {((Foo)o).name, ((Foo)o).age});
+      return Arrays.equals(new Object[] {nombre, edad}, new Object[] {((Foo)o).nombre, ((Foo)o).edad});
     }
 
     public int hashCode() {
-      return (name + age).hashCode();
+      return (nombre + edad).hashCode();
     }
   }
 </code></pre>
 <p>
-  이 예시에서 추가적인 2개의 배열은 <code>equals()</code> 내에서 생성되고 <code>age</code> 필드의 사용 위치에는 박싱이 필요하며 <code>name + age</code>가 새로운 문자열을 묵시적으로 생성합니다.
+  En este ejemplo, se crean dos arrays adicionales dentro de <code>equals()</code>, los usos del campo <code>edad</code> requieren boxing, y <code>nombre + edad</code> implícitamente crea una nueva cadena.
 </p>
 <!-- tooltip end -->
 </body>

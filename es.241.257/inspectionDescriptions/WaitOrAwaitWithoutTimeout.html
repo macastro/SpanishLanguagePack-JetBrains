@@ -1,10 +1,12 @@
 <html>
 <body>
-시간 제한을 지정하지 않은 <code>Object.wait()</code> 또는 <code>Condition.await()</code> 호출을 보고합니다.
+Reporta llamadas a <code>Object.wait()</code> o <code>Condition.await()</code> sin especificar un tiempo de espera.
 <p>
-  <code>notify()</code>/<code>notifyAll()</code> 또는 <code>signal()</code>/<code>signalAll()</code>가 호출되지 않는 경우, 하나의 구성 요소에서 장애가 발생하면 대기 중인 구성 요소가 차단될 수 있으므로 그러한 호출은 고가용성 프로그램에서 위험할 수 있습니다.
+  Tales llamadas pueden ser peligrosas en programas de alta disponibilidad, ya que fallas en un componente pueden resultar en bloqueos del componente en espera
+  si nunca se llaman <code>notify()</code>/<code>notifyAll()</code>
+  o <code>signal()</code>/<code>signalAll()</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void foo(Object bar) throws InterruptedException {
     bar.wait();

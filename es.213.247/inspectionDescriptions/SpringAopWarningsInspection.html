@@ -1,14 +1,14 @@
 <html>
 <body>
-<p>잘못된 어스펙트 및 포인트컷을 보고합니다.
-일부 AOP 어드바이스가 어스펙트 Bean과 일치하는 경우 런타임 오류가 발생할 수 있습니다.</p>
+<p>Informa sobre aspectos y puntos de corte incorrectos.
+Cuando algún consejo de AOP coincide con un bean de aspecto, puede provocar errores en tiempo de ejecución.</p>
 
-<p><b>예:</b>
+<p><b>Ejemplo:</b>
 <pre><code>
-&lt;beans &gt;
+&lt;beans&gt;
   &lt;aop:config&gt;
-    &lt;aop:pointcut expression="args()"/&gt; &lt;!--  포인트컷에 id가 있어야 합니다 --&gt;
-    &lt;aop:aspect/&gt; &lt;!-- 'ref' 속성이 정의되어야 합니다 --&gt;
+    &lt;aop:pointcut expression="args()"/&gt; &lt;!--  El punto de corte debe tener id --&gt;
+    &lt;aop:aspect/&gt; &lt;!--  Se debe definir el atributo 'ref' --&gt;
   &lt;/aop:config&gt;
 &lt;/beans&gt;
 
@@ -16,7 +16,7 @@
   &lt;bean id="aspect1" class="Aspect1"/&gt;
   &lt;bean id="aspect2" class="Aspect2"/&gt;
   &lt;aop:config&gt;
-    &lt;aop:aspect ref="aspect1"&gt; &lt;!-- 일부 어드바이스가 이 bean과 일치합니다 --&gt;
+    &lt;aop:aspect ref="aspect1"&gt; &lt;!--  Algunos avisos coinciden con este bean --&gt;
     &lt;aop:before method="xxx" pointcut="execution(* foo())"/&gt;
     &lt;/aop:aspect&gt;
     &lt;aop:aspect ref="aspect2"&gt;

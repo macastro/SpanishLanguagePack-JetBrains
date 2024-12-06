@@ -1,22 +1,22 @@
 <html>
 <body>
-어노테이션 항목에서 불필요한 빈 괄호를 보고합니다.
-<p>코드를 정리하려면 '불필요한 괄호 제거' 빠른 수정을 사용하세요.</p>
-<p><b>예:</b></p>
+Informa sobre paréntesis vacíos redundantes en entradas de anotación.
+<p>Usa la corrección rápida "Eliminar paréntesis innecesarios" para limpiar el código.</p>
+<p><b>Ejemplos:</b></p>
 <pre><code>
   annotation class MyAnnotationA
   annotation class MyAnnotationB(val x: Int)
-  annotation class MyAnnotationC(val x: Int = 10) // 기본값이 존재함
+  annotation class MyAnnotationC(val x: Int = 10) // valor predeterminado presente
 
-  @MyAnnotationA() // &lt;== 괄호는 불필요
+  @MyAnnotationA() // &lt;== los paréntesis son redundantes
   fun testA() {
   }
 
-  @MyAnnotationB() // &lt;== 인수 누락, 괄호가 필요함
+  @MyAnnotationB() // &lt;== argumento faltante, los paréntesis son necesarios
   fun testB() {
   }
 
-  @MyAnnotationC() // &lt;== 괄호가 불필요함
+  @MyAnnotationC() // &lt;== los paréntesis son redundantes
   fun testC() {
   }
 </code></pre>

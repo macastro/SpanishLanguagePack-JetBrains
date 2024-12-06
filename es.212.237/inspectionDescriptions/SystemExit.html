@@ -1,13 +1,12 @@
 <html>
 <body>
-<code>System.exit()</code>, <code>Runtime.exit()</code>, 및 <code>Runtime.halt()</code> 호출을 보고합니다.
+Informa sobre llamadas a <code>System.exit () </code>, <code>Runtime.exit () </code> y <code>Runtime.halt () </code>.
 <p>
-  <code>System.exit()</code> 또는 <code>Runtime.exit()</code> 을 호출하면 셧다운 훅을 호출하고 현재 실행 중인 Java 가상 머신을 종료합니다. <code>Runtime.halt()</code> 를 강제적으로 호출하면 셧다운 훅을 시작하지 않고 JVM을 종료합니다.
-  각 메서드는 매우 유의하여 사용해야 합니다. 이 메서드 호출은 호출 코드를 대부분의 애플리케이션 서버에 이동할 수 없게 합니다.
+  Al invocar <code>System.exit () </code> o <code>Runtime.exit () </code> se llaman los ganchos de cierre y se termina la máquina virtual Java en ejecución. Al invocar <code>Runtime.halt () </code> se termina a la fuerza la JVM sin hacer que se inicien los ganchos de cierre. Cada uno de estos métodos debe usarse con extrema precaución. Las llamadas a estos métodos hacen que el código llamante no se pueda portar a la mayoría de los servidores de aplicaciones.
 </p>
 <!-- tooltip end -->
 <p>
-  옵션을 사용하여 main 메서드에서 호출을 무시합니다.
+  Usa la opción para ignorar llamadas en métodos principales.
 <p>
 </body>
 </html>

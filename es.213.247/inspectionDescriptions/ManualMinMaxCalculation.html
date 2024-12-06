@@ -1,13 +1,13 @@
 <html>
 <body>
-두 숫자의 최댓값 또는 최솟값을 수동으로 계산하는 대신 <code>Math.max()</code> 또는 <code>Math.min()</code> 호출을 사용하여 계산할 수 있는 경우를 보고합니다.
-<p>예:</p>
+Reporta casos en los que se puede calcular el mínimo o el máximo de dos números usando una llamada <code>Math.max()</code> o <code>Math.min()</code>, en lugar de hacerlo manualmente.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public int min(int a, int b) {
     return b &lt; a ? b : a;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   public int min(int a, int b) {
     return Math.min(a, b);
@@ -15,9 +15,9 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  <b>float 및 double에 대해 비활성화</b> 옵션을 사용하여 <code>double</code> 및 <code>float</code>에 대한 검사를 비활성화합니다.
-  이 옵션은 <code>NaN</code>을 처리할 때 빠른 수정이 <code>float</code>/<code>double</code>의 의미를 약간 변경할 수 있으므로 유용합니다. 빠른 수정은 대부분의 경우 사용자가 <code>NaN</code>을 신경 쓰지 않을 때 사소한 버그를 수정합니다.
+  Usa la opción <b>Deshabilitar para float y double</b> para deshabilitar esta inspección para tipos <code>double</code> y <code>float</code>.
+  Esto es útil porque la corrección rápida puede cambiar ligeramente la semántica para los tipos <code>float</code> y <code>double</code> al manejar el <code>NaN</code>. Sin embargo, en la mayoría de los casos, esto realmente solucionará un error sutil en el que no se tiene en cuenta <code>NaN</code>.
 </p>
-<p><small>2019.2의 새로운 기능</small></p>
+<p><small>Nuevo en 2019.2</small></p>
 </body>
 </html>

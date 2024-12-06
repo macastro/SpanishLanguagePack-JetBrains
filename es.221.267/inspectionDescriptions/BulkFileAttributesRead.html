@@ -1,30 +1,31 @@
 <html>
 <body>
-다음과 같은 복수의 <code>java.io.File</code> 연속 속성 확인을 보고합니다.
+Informa de múltiples verificaciones secuenciales de atributos de <code>java.io.File</code>, tales como:
 <ul>
-  <li><code>isDirectory</code></li>
-  <li><code>isFile</code></li>
-  <li><code>lastModified</code></li>
-  <li><code>길이</code></li>
+  <li><code>isDirectory()</code></li>
+  <li><code>isFile()</code></li>
+  <li><code>lastModified()</code></li>
+  <li><code>length()</code></li>
 </ul>
-이러한 호출은 일괄 <code>Files.readAttributes</code> 호출로 바꿀 수 있습니다. 
-일반적으로 일괄 메서드는 복수 속성 확인보다 성능이 좋습니다.
-<p>예:</p>
+Dichas llamadas se pueden reemplazar con una llamada masiva a <code>Files.readAttributes()</code>.
+Esto normalmente es más eficaz que múltiples verificaciones independientes de atributos.
+<p>Ejemplo:</p>
 <pre><code>
-boolean isNewFile(File file, long lastModified) throws IOException {
-  return file.isFile() && file.lastModified() > lastModified;
-}
+  boolean isNewFile(File file, long lastModified) throws IOException {
+    return file.isFile() && file.lastModified() > lastModified;
+  }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-boolean isNewFile(File file, long lastModified) throws IOException {
-  BasicFileAttributes fileAttributes = Files.readAttributes(file.toPath(), BasicFileAttributes.class);
-  return fileAttributes.isRegularFile() && fileAttributes.lastModifiedTime().toMillis() > lastModified;
-}
+  boolean isNewFile(File file, long lastModified) throws IOException {
+    var fileAttributes = Files.readAttributes(file.toPath(), BasicFileAttributes.class);
+    return fileAttributes.isRegularFile() && fileAttributes.lastModifiedTime().toMillis() > lastModified;
+  }
 </code></pre>
 <!-- tooltip end -->
-<p><code>IOException</code>이 현재 컨텍스트에서 처리되지 않지만 빠른 수정이 여전히 사용 가능하면 이 검사에 경고가 표시되지 않습니다.</p>
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 7 이상인 경우에만 보고합니다.</p>
-<p><small>2022.1의 새로운 기능</small></p>
+<p>Esta inspección no muestra una advertencia si <code>IOException</code> no se gestiona en el contexto actual, pero la corrección rápida sigue estando disponible.</p>
+<p>Tenga en cuenta que las sustituciones normalmente no son completamente equivalentes y deben aplicarse con cuidado. En particular, el comportamiento podría diferir si el archivo no existe en absoluto.</p>
+<p>Esta inspección solo informa si el nivel de idioma del proyecto o módulo es 7 o superior.</p>
+<p><small>Nuevo en 2022.1</small></p>
 </body>
 </html>

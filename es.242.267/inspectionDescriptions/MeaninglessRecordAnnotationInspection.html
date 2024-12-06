@@ -1,23 +1,23 @@
 <html>
 <body>
-의미 없이 레코드 구성 요소에 사용된 어노테이션을 보고합니다.
-<p>이는 두 가지 경우에 발생할 수 있습니다.</p>
+Informa sobre anotaciones utilizadas en componentes de registros que no tienen efecto.
+<p>Esto puede suceder en dos casos:</p>
 <ul>
-  <li>보고된 어노테이션에 METHOD 대상이 있지만 대응하는 접근자가 명시적으로 정의된 경우</li>
-  <li>보고된 어노테이션에 PARAMETER 대상이 있지만 표준 생성자가 명시적으로 정의된 경우</li>
+  <li>La anotación informada tiene el objetivo METHOD, pero el accesor correspondiente está definido explícitamente.</li>
+  <li>La anotación informada tiene el objetivo PARAMETER, pero el constructor canónico está definido explícitamente.</li>
 </ul>
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
 @Target(ElementType.METHOD)
 @interface A { }
-  
-// 어노테이션은 바이트코드로 표시되지 않습니다
-// 해당 어노테이션은 접근자로 전달되어야 하지만 접근자가 명시적으로 정의되었기 때문입니다
+
+// La anotación no aparecerá en el bytecode en absoluto,
+// ya que debería propagarse al accesor pero el accesor está definido explícitamente
 record R(@A int x) {
   public int x() { return x; }
 }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2021.1의 새로운 기능</small></p>
+<p><small>Novedad en 2021.1</small></p>
 </body>
 </html>

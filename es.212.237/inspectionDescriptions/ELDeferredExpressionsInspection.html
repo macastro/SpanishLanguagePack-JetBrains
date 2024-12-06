@@ -1,13 +1,13 @@
 <html>
 <body>
-지연 표현이 기대되는 곳에서의 동적 표현 또는 동적 표현이 기대되는 곳에서의 지연 표현을 보고합니다.
+Informa expresiones dinámicas donde se esperan expresiones diferidas y viceversa.
 
-<p><b>예:</b></p><br/>
+<p><b>Ejemplo:</b></p><br/>
 <pre><code>
 &lt;jsp:useBean id="exampleBean" scope="request" type="java.util.Date"/&gt;
 
-&lt;h:outputText id="${exampleBean.day}" value="#{exampleBean.day}" /&gt; // 좋음
-&lt;h:outputText id="#{exampleBean.day}" value="${exampleBean.day}" /&gt; // 오류: `id` 속성에는 동적 표현이 필요함, `value` - 지연됨 
+&lt;h:outputText id="${exampleBean.day}" value="#{exampleBean.day}" /&gt; // Bien
+&lt;h:outputText id="#{exampleBean.day}" value="${exampleBean.day}" /&gt; // Error: el atributo `id` requiere una expresión dinámica, `value` - diferida 
 </code></pre>
 </body>
 </html>

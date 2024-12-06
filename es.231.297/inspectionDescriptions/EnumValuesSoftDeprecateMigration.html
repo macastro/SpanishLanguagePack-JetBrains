@@ -1,6 +1,6 @@
 <html>
 <body>
-<code>entries</code> 프로퍼티 읽기로 바꿀 수 있는 Kotlin에서 열거형 클래스의 <code>values()</code> 메서드에 대한 호출을 보고합니다.
+<code>entries</code> 프로퍼티 읽기로 바꿀 수 있는 Kotlin의 열거형 클래스 내 <code>values()</code> 메서드에 대한 호출을 보고합니다.
 <p>
     <code>Enum.entries</code>를 사용하면 코드 성능이 향상될 수 있습니다.
 </p>
@@ -8,14 +8,12 @@
     빠른 수정은 <code>values()</code>를 <code>entries</code>로 바꿉니다.
 </p>
 <p>
-    <b>추가 세부 정보:</b> <a href="https://youtrack.jetbrains.com/issue/KT-48872">
-    KT-48872 Provide modern and performant replacement for Enum.values()(KT-48872 Enum.values()에 대한 최신 고성능 교체 제공)</a>
+    <b>세부 정보:</b> <a href="https://youtrack.jetbrains.com/issue/KT-48872">
+    KT-48872 Enum.values()에 대한 최신 고성능 대체 항목을 제공</a>
 </p>
 <p>
-    <b>참고:</b> <code>entries</code> 프로퍼티 타입은 <code>values()</code> 메서드의 반환 타입과 다릅니다.
-    (<code>EnumEntries&lt;T&gt;</code>는 <code>Array&lt;T&gt;</code> 대신 <code>List&lt;T&gt;</code>에서 상속됨).
-    따라서 경우에 따라 빠른 수정은 코드를 손상시키지 않도록 추가적인 <code>.toTypedArray()</code> 변환을 삽입하지만,
-    대부분의 일반적인 경우에는 변환 없이 대체가 수행됩니다(예: <code>for</code> 루프).
+    <b>참고:</b> <code>entries</code> 프로퍼티 타입은 <code>values()</code> 메서드의 반환 타입과 다릅니다(<code>Array&lt;T&gt;</code> 대신 <code>List&lt;T&gt;</code>에서 상속되는 <code>EnumEntries&lt;T&gt;</code>).
+    이로 인해 빠른 수정에서는 코드 손상을 방지하기 위해 추가적인 <code>.toTypedArray()</code> 변환을 삽입할 때도 있지만, 대부분의 일반적인 경우에는 변환 없이 대체가 수행됩니다(예: <code>for</code> 루프).
 </p>
 <p><b>예:</b></p>
 <pre><code>

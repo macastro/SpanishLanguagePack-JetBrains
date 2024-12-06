@@ -1,10 +1,10 @@
 <html>
 <body>
-클래스의 모든 필드를 복사하지 않는 복사 생성자를 보고합니다.
+Informa sobre constructores de copias que no copian todos los campos de la clase.
 <p>
-  이니셜라이저가 있는 <code>final</code> 필드 및 <code>transient</code> 필드는 복사할 필요가 없는 것으로 간주됩니다.
+  Los campos <code>final</code> con inicializadores y los campos <code>transient</code> se consideran innecesarios de copiar.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Point {
 
@@ -17,11 +17,11 @@
     }
 
     Point(Point other) {
-      // 필드 x 및 y가 초기화되지 않음
+      // Los campos x e y no están inicializados
     }
   }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2018.1의 새로운 기능</small>
+<p><small>Novedad en 2018.1</small>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
 <body>
-Oracle 내 서브프로그램의 유효하지 않은 오버로드를 보고합니다.
-<p>예(Oracle):</p>
+Informa de casos no válidos de sobrecarga de subprogramas en Oracle.
+<p>Ejemplo (Oracle):</p>
 <pre><code>DECLARE
     SUBTYPE fff IS BINARY_INTEGER;
     SUBTYPE ggg IS NATURAL;
@@ -10,6 +10,8 @@ Oracle 내 서브프로그램의 유효하지 않은 오버로드를 보고합�
 BEGIN
     NULL;
 END;</code></pre>
-<p>매개변수의 서브타입만 다른 서브프로그램은 오버로드할 수 없습니다. 예를 들어, 하나는 BINARY INTEGER 매개변수를 수락하고 다른 하나는 NATURAL 매개변수를 수락하는 두 프로시저를 오버로드할 수 없습니다. 프로시저 오버로드 제약에 관한 더 자세한 내용은 <a href="https://docs.oracle.com/cd/B19306_01/appdev.102/b14261/subprograms.htm">docs.oracle.com에서 오버로드 제약</a>을 참고하세요.</p>
+<p>No se pueden sobrecargar subprogramas cuyos parámetros difieren solo en subtipos. Por ejemplo, no puede sobrecargar procedimientos en los que uno acepta un parámetro
+  BINARY INTEGER y el otro acepta un parámetro NATURAL. Para obtener más información sobre las restricciones en la sobrecarga de procedimientos,
+consulte <a href="https://docs.oracle.com/cd/B19306_01/appdev.102/b14261/subprograms.htm">Restricciones de sobrecarga en docs.oracle.com</a>.</p>
 </body>
 </html>

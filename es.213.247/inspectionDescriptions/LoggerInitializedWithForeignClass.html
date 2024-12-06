@@ -1,31 +1,31 @@
 <html>
 <body>
-<code>Logger</code>가 포함되어 있는 클래스와 다른 클래스의 <code>class</code> 리터럴로 초기화된 <code>Logger</code> 인스턴스를 보고합니다. 이는 다른 클래스의 일부 코드를 복사하여 붙여넣을 때 쉽게 발생할 수 있으며, 이벤트가 예기치 않은 카테고리에 기록되고 필터가 잘못 적용될 수 있습니다.
-<p>외부 클래스 리터럴을 주변 클래스 리터럴 중 하나로 대체하는 빠른 수정이 제공됩니다.</p>
-<p><b>예:</b></p>
+Informa acerca de instancias <code>Logger</code> que se inicializan con un literal de <code>class</code> de una clase distinta de aquella en la que se contiene <code>Logger</code>. Esto puede ocurrir fácilmente cuando se copia y pega algún código de otra clase y puede resultar en el registro de eventos bajo una categoría inesperada y provocar que los filtros se apliquen incorrectamente.
+<p>Se proporciona una solución rápida para reemplazar el literal de clase externo por uno de la clase circundante.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   <b>public class</b> Paramount {
     <b>protected static final</b> Logger LOG = Logger.getLogger(Critical.class);
 
-    // ... 기타 필드 및 메서드
+    // ... otros campos y métodos
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   <b>public class</b> Paramount {
     <b>protected static final</b> Logger LOG = Logger.getLogger(Paramount.class);
 
-    // ... 기타 필드 및 메서드
+    // ... otros campos y métodos
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-  검사 구성:
+  Configurar la inspección:
 </p>
 <ul>
-  <li>이 테이블을 사용하여 이 검사에 의해 인식되는 로거 factory 클래스 및 로거 factory 메서드를 지정합니다.</li>
-  <li>로거를 포함하는 클래스의 상위 클래스로 초기화된 로거를 무시하려면 <b>상위 클래스로 초기화된 로거 무시</b> 옵션을 사용하세요.</li>
-  <li><code>public</code> 클래스 내 로거에 대해서만 경고하려면 <b>public이 아닌 클래스 내 로거 무시</b>를 사용하세요.</li>
+  <li>Utiliza la tabla para especificar las clases y métodos de fábrica de registradores reconocidos por esta inspección.</li>
+  <li>Utiliza la opción <b>Ignorar registradores inicializados con una superclase</b> para ignorar los registradores que se inicializan con una superclase de la clase que contiene el registrador.</li>
+  <li>Utiliza <b>Ignorar registradores en clases no públicas</b> para advertir solo sobre los registradores en clases <code>public</code>.</li>
 </ul>
 </body>
 </html>

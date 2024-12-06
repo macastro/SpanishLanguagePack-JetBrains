@@ -1,10 +1,10 @@
 <html>
 <body>
-<code>equals(..., ignoreCase = true)</code>로 바꿀 수 있는 대/소문자를 구별하지 않는 비교를 보고합니다.
-<p><code>equals()</code>를 사용하면 문자열을 비교할 때 <code>toLowerCase()</code> 또는 <code>toUpperCase()</code>를 사용해 여분의 문자열을 대입할 필요가 없습니다.</p>
-<p>빠른 수정이 대/소문자를 구분하지 않으며 <code>toLowerCase()</code> 또는 <code>toUpperCase()</code>를 사용하는 비교를 <code>equals(..., ignoreCase = true)</code>로 바꿉니다.</p>
-<p><b>참고:</b> 일부 로케일에서는 의미가 바뀔 수 있습니다.</p>
-<p><b>예:</b></p>
+ Informa de comparaciones que no distinguen mayúsculas o minúsculas que se pueden reemplazar con <code>equals(..., ignoreCase = true)</code>.
+<p>Al usar <code>equals()</code>, no tienes que asignar cadenas adicionales con <code>toLowerCase()</code> o <code>toUpperCase()</code> para comparar cadenas.</p>
+<p>La corrección rápida reemplaza la comparación que no distingue entre mayúsculas y minúsculas que utiliza <code>toLowerCase()</code> o <code>toUpperCase()</code> con <code>equals(..., ignoreCase = true)</code>.</p>
+<p><b>Nota:</b> Puede cambiar la semántica de algunos lugares.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun main() {
       val a = &quot;KoTliN&quot;
@@ -12,7 +12,7 @@
       println(a.toLowerCase() == b.toLowerCase())
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que se aplica la corrección rápida:</p>
 <pre><code>
   fun main() {
       val a = &quot;KoTliN&quot;

@@ -1,13 +1,18 @@
 <html>
 <body>
-<code>if</code> 문의 조건 또는 조건식에서 null 값 가능성이 검사되었으나 <code>if</code> 문 내부에서 사용되지 않은 변수에 대한 참조를 보고합니다.
+Reporta referencias a variables que son comprobadas por nulidad
+en la condición de una declaración <code>if</code> o
+expresión condicional pero no usadas dentro de esa
+declaración <code>if</code>.
 <p>
-  이는 보통 검사가 불필요하거나 변수가 실수로 <code>if</code> 문 내부에서 참조되지 않았음을 의미합니다.
+  Normalmente esto significa que
+  la comprobación es innecesaria o que la variable no es referenciada dentro de la
+  declaración <code>if</code> por error.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void test(Integer i) {
-    if (i != null) { // 여기서 'i'가 'if' 문 내부에서 사용되지 않습니다
+    if (i != null) { // aquí 'i' no se usa dentro de la declaración 'if'
       System.out.println();
     }
   }

@@ -1,16 +1,16 @@
 <html>
 <body>
-일반적인 루프로 자동 변환할 수 있는 Stream API 체인, <code>Iterable.forEach()</code> 및 <code>Map.forEach()</code> 호출을 보고합니다.
-<p><b>예:</b></p>
+Este informe muestra las llamadas de `Iterable.forEach()` y `Map.forEach()` de la cadena de API de secuencias que se puede convertir en un ciclo tradicional.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   String joinNonEmpty(List&lt;String&gt; list) {
-    return list.stream() // 스트림을 루프로 변환할 수 있습니다
+    return list.stream() // Las secuencias se pueden convertir en ciclos
       .filter(s -> !s.isEmpty())
       .map(String::trim)
       .collect(Collectors.joining(", "));
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   String joinNonEmpty(List&lt;String&gt; list) {
     StringJoiner joiner = new StringJoiner(", ");
@@ -24,21 +24,17 @@
   }
 </code></pre>
 <p>
-  때때로 이 검사로 인해 약간의 의미 변경이 있을 수 있습니다.
-  스트림이 쇼트 서킷될 때 실제로 얼마나 많은 요소를 읽을 지 지정되지 않았으므로 쇼트 서킷과 관련하여 특별한 주의를 기울여야 합니다.
+  Tenga en cuenta que esta inspección a veces puede provocar un ligero cambio de semántica.
+  Se debe prestar especial atención a los cortocircuitos, ya que no se especifica la cantidad real de elementos que se leerán cuando la secuencia se cortocircuita.
 </p>
 <!-- tooltip end -->
-<p>
-  <i>스트림 API</i>가 Java 8에 표시되었습니다.
-  이 검사는 이전 Java 버전과의 하위 호환성을 위해 다운그레이드하는 데 도움이 될 수 있습니다.
-</p>
-<p>검사 구성:</p>
-<p>인식되지 않은 소스를 사용하는 스트림에 대한 변환을 제안하려면 <b>Stream.iterator()를 통해 알 수 없는 Stream 소스 반복</b> 옵션을 사용하세요.
-  이 경우 반복자는 스트림으로부터 생성됩니다.
-  예를 들어, 체크박스가 선택되면, 제안된 변환이 여기에 표시됩니다:</p>
+<p>Configuración de la inspección:</p>
+<p>Utilice la opción **Iterar por una fuente de secuencia desconocida a través de Stream.iterator()** para sugerir conversiones para secuencias que usan un origen que no se puede reconocer.
+  En este caso, se creará un iterador a partir de la secuencia.
+  Por ejemplo, aquí es donde se sugeriría una conversión si se selecciona la casilla de verificación:</p>
 <pre><code>
   List&lt;ProcessHandle&gt; handles = ProcessHandle.allProcesses().collect(Collectors.toList());</code></pre>
-<p>이 경우 결과는 다음과 같습니다:</p>
+<p>En este caso, el resultado sería el siguiente:</p>
 <pre><code>
   List&lt;ProcessHandle&gt; handles = new ArrayList&lt;&gt;();
   for (Iterator&lt;ProcessHandle&gt; it = ProcessHandle.allProcesses().iterator(); it.hasNext(); ) {
@@ -46,6 +42,6 @@
     handles.add(allProcess);
   }
 </code></pre>
-<p><small>2017.1의 새로운 기능</small></p>
+<p><small>Novedad en la versión 2017.1</small></p>
 </body>
 </html>

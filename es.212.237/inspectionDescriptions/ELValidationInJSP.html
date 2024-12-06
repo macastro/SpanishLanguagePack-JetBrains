@@ -1,13 +1,13 @@
 <html>
 <body>
-해결되지 않은 참조 및 유효하지 않은 EL 위치 등 가능한 EL 문제를 보고합니다.
+Informa posibles problemas EL, como referencias no resueltas y ubicaciones EL no válidas.
 
-<p><b>예:</b></p><br/>
-현재 네임스페이스에 정의된 함수 `exampleFun(String)`를 포함하는 방안을 고려하세요.
+<p><b>Ejemplo:</b></p><br/>
+Considere tener la función `exampleFun(String)` definida en el espacio de nombres actual.
 <pre><code>
 &lt;jsp:root xmlns:example="urn:jsptld:exampleNamespace.tld"&gt;
-  ${ example:exampleFun("1") + example:unknownFun("2") } // 오류: 함수 'unknownFun'을 해결할 수 없음
-  ${ example:exampleFun("1", "2") } // 오류: 형식 매개변수와 실제 매개변수의 개수가 다름
+  ${ example:exampleFun("1") + example:unknownFun("2") } // Error: no se puede resolver la función 'unknownFun'
+  ${ example:exampleFun("1", "2") } // Error: diferente número de parámetros formales y reales
 &lt;/jsp:root&gt;
 </code></pre>
 </body>

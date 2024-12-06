@@ -1,32 +1,36 @@
 <html>
 <body>
-true, false, null 혹은 0과 같이 결과가 항상 같은 표현식과 조건을 보고합니다.
-이러한 표현식은 상응하는 상수 값으로 대체될 수 있습니다. 이런 경우는 코드 내에 버그가 있다는 것을 의미할 확률이 매우 높습니다.
-<p>예:</p>
-<pre><code>  // 항상 true
-  // 원인: ||가  && 대신 사용됨
+Informa de expresiones y condiciones que siempre producen el mismo resultado, como true, false, null o cero.
+Dichas expresiones podrían reemplazarse por el valor constante correspondiente. Sin embargo, muy a menudo indican un error
+en el código.
+<p>Ejemplos:</p>
+<pre><code>  // siempre true
+  // causa raíz: se utiliza || en lugar de &&
   if (x &gt; 0 || x &lt; 10) {}
 
   System.out.println(str.trim());
-  // 항상 false
-  // 원인: null 체크 전에 변수가 역참조됨
+  // siempre false
+  // causa raíz: se desreferenció la variable antes de la comprobación de nulidad
   if (str == null) {}
 </code></pre>
 <p>
-  <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">null 값 가능성을 표시하는</a> 어노테이션,
-  <code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code> 어노테이션, 
-  <code>@Range</code> 어노테이션 등 여러 어노테이션으로 검사 동작이 제어될 수 있습니다.
+  El comportamiento de la inspección puede controlarse mediante varias anotaciones, como las anotaciones de 
+  <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">nulabilidad</a>,
+  la anotación <code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code>, 
+  la anotación <code>@Range</code>, etc.
 </p>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configurar la inspección:</p>
 <ul>
-  <li><b>항상 true임이 정적으로 입증된 조건이 포함된 어설션을 보고하지 않음</b> 옵션을 사용하여 항상 true임이 정적으로 입증된 어설션을 보고하지 않습니다. <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code>와 같은 조건도 이에 포함됩니다.</li>
-  <li><b>assert 문 무시</b> 옵션을 사용하여 검사에서 <code>assert</code> 문이 취급되는 방식을 제어합니다. 기본적으로 이 옵션은 비활성화되어 있습니다. 즉, 어설션이 실행되는 것으로 간주됩니다(-ea 모드). 이 옵션을 활성화하면 어설션이 완전히 무시됩니다(-da 모드).</li>
-  <li><b>상수가 변수에 저장되면 경고</b> 옵션을 사용하여 값이 상수로 알려진 변수가 사용되면 경고를 표시하세요.</li>
+  <li>Usa la opción <b>No informes de aserciones con una condición que se ha demostrado estáticamente que siempre es verdadera</b> para evitar informar de aserciones que se ha demostrado estáticamente que siempre son verdaderas. Esto también incluye condiciones como <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code>.</li>
+  <li>Usa la opción <b>Ignorar declaraciones assert</b> para controlar cómo trata la inspección las declaraciones <code>assert</code>. Por defecto, la opción
+    está deshabilitada, lo que significa que se asume que las aserciones se ejecutan (modo -ea). Si la opción está habilitada, las aserciones se ignorarán por completo
+    (modo -da).</li>
+  <li>Usa la opción <b>Advertencia cuando una constante se almacena en una variable</b> para mostrar advertencias cuando se usa una variable cuyo valor se sabe que es una constante.</li>
 </ul>
 <p>
-  IntelliJ IDEA 2022.3 이전에는 이 조사가 "상수 조건 및 예외" 검사의 일부였습니다. 이제는 두 가지 검사, 
-"상수값" 과 "Null 가능성 및 데이터 플로우 문제"로 나뉩니다.
+  Antes de IntelliJ IDEA 2022.3, esta inspección formaba parte de la inspección "Condiciones constantes y excepciones". Ahora, se divide en dos inspecciones:
+  "Valores constantes" y "Problemas de flujo de datos y nulidad".
 </p>
 </body>
 </html>

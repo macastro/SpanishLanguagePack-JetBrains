@@ -1,25 +1,25 @@
 <html>
 <body>
-대응하는 <code>Condition.signal()</code> 또는 <code> Condition.signalAll()</code> 로의 호출을 찾을 수 없는 경우 <code>Condition.await()</code> 호출을 보고합니다.
+Reporta las llamadas a <code>Condition.await()</code>, para las cuales no se puede encontrar una llamada correspondiente a <code>Condition.signal()</code> o <code>Condition.signalAll()</code>.
 <p>
-  대응하는 <code>Condition.signal()</code>이 없이 스레드에서 <code>Condition.await()</code>를 호출하면 스레드는 중단되거나 "비정상적으로 깨어나기" 전까지 비활성화될 수 있습니다.
+  Llamar a <code>Condition.await()</code> en un hilo sin un <code>Condition.signal()</code> correspondiente puede causar que el hilo se deshabilite hasta que se interrumpa u ocurra un "despertar espurio".
 </p>
-<p>현재 클래스의 필드를 대상으로 하는 호출만 이 검사에서 보고됩니다.</p>
-<p><b>예:</b></p>
+<p>Esta inspección sólo informa de las llamadas que apuntan a campos de la clase actual.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Queue {
-    private final Condition isEmpty =...;
+    private final Condition isEmpty = ...;
 
     void add(Object elem) {
-      //...
+      // ...
       // isEmpty.signal();
-      //...
+      // ...
     }
 
     void remove(Object elem) throws InterruptedException {
-      //...
-      isEmpty.await(); // 'await()'가 대응하는 'signal()'/'signalAll()' 호출을 포함하지 않음
-      //...
+      // ...
+      isEmpty.await(); // 'await()' no contiene la llamada correspondiente 'signal()'/'signalAll()'
+      // ...
     }
   }
 </code></pre>

@@ -1,6 +1,6 @@
 <html>
 <body>
-사용하지 않는 타입 매개변수를 보고합니다.
+Se informa de los parámetros de tipo sin usar.
 <pre><code>func main() {
  printAll(
   42,
@@ -15,8 +15,8 @@ func printAll[I int, S string](
  fmt.Println(i)
  fmt.Println(s)
 }</code></pre>
-<p><b>printAll</b> 함수에는 두 개의 타입 매개변수 <code>I</code> 및 <code>S</code>가 있지만, 첫 번째 타입 매개변수만 사용됩니다.
-  따라서 <code>S string</code>은 회색 처리됩니다.
+<p>La función <b>printAll</b> tiene dos parámetros de tipo <code>I</code> y <code>S</code> pero solo usa el primero de ellos.
+  Por lo tanto, <code>S string</code> aparece atenuado.
 </p>
 </body>
 </html>

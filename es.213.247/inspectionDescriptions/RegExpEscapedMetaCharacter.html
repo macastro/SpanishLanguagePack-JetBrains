@@ -1,19 +1,17 @@
 <html>
 <body>
-Reports escaped meta characters.
-Some RegExp coding styles specify that meta characters should be placed inside a character class,
-to make the regular expression easier to understand.
-This inspection does not warn about the meta character <code>[</code>, <code>]</code> and <code>^</code>,
-because those would need additional escaping inside a character class.
-<p><b>Example:</b></p>
+Informa de los metacaracteres escapados.
+Algunos estilos de codificación de expresiones regulares especifican que los metacaracteres deben colocarse dentro de una clase de caracteres para que sea más fácil entender la expresión regular.
+Esta inspección no avisa sobre los metacaracteres <code>[</code>, <code>]</code> y <code>^</code> porque necesitarían un escape adicional dentro de una clase de caracteres.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   \d+\.\d+
 </code></pre>
-<p>After the quick-fix is applied:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   \d+[.]\d+
 </code></pre>
 <!-- tooltip end -->
-<p><small>New in 2017.1</small>
+<p><small>Novedad de 2017.1</small>
 </body>
 </html>

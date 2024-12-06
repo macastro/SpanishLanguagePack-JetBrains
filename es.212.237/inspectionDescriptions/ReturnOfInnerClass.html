@@ -1,16 +1,16 @@
 <html>
 <body>
-익명, 로컬, 또는 내부 클래스의 인스턴스를 반환하는 <code>return</code> 구문을 보고합니다.
-관련 인스턴스는 외부 인스턴스에 대한 묵시적 참조를 유지하여 외부 인스턴스가 가비지 수집을 하지 않도록 방지할 수 있습니다.
-인스턴스를 반환하는 메서드의 호출은 반환된 인스턴스를 지속적으로 유지하여 메모리 누수의 원인이 될 수 있습니다.
+Reporta instrucciones <code>return</code> que devuelven una instancia de una clase anónima, local o interna.
+Tales instancias mantienen una referencia implícita a la instancia externa, la cual puede evitar que la instancia externa sea recolectada por la basura.
+Cualquier invocador de un método que devuelva tal instancia podría causar una fuga de memoria manteniendo una referencia a la instancia devuelta.
 <!-- tooltip end -->
 <p>
-  검사 구성:
+  Configurar la inspección:
 </p>
 <ul>
-  <li><b>비 public 메서드의 반환 무시</b> 옵션을 사용하여 <code>protected</code> 또는 package-private 메서드의 반환을 무시합니다.
-    <code>private</code> 메서드의 반환은 항상 무시됩니다.
- </li>
+  <li>Usa la opción <b>Ignorar devoluciones de métodos no públicos</b> para ignorar devoluciones de métodos <code>protected</code> o privados de paquete.
+    Las devoluciones de métodos <code>private</code> siempre son ignoradas.
+  </li>
 </ul>
 </body>
 </html>

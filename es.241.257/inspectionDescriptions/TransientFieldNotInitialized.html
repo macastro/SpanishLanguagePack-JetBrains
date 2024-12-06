@@ -1,17 +1,17 @@
 <html>
 <body>
-클래스에 <code>readObject</code> 메서드가 없으나 일반 객체 생성 도중 초기화되는 <code>transient</code> 필드를 보고합니다.
+Reporta campos <code>transient</code> que son inicializados durante la construcción normal de un objeto pero cuya clase no tiene un método <code>readObject</code>.
 <p>
-  <code>transient</code> 필드는 직렬화되지 않으므로 역직렬화 도중 <code>readObject()</code> 메서드에서 별도로 초기화되어야 합니다.
+  Como los campos <code>transient</code> no son serializados, deben inicializarse separadamente en un método <code>readObject()</code> durante la deserialización.
 </p>
 <p>
-  일반 객체 생성 도중 초기화되지 않는 모든 <code>transient</code> 필드는 기본 초기화를 사용하는 것으로 간주되며 이 검사에서 보고되지 않습니다.
+  Cualquier campo <code>transient</code> que no se inicialice durante la construcción normal del objeto se considera que utiliza la inicialización predeterminada y este control no lo reportará.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class Person implements Serializable {
-    transient String name = "Default"; // 경고: 역직렬화 후 실제로 null이 될 수 있습니다
-    transient String surname; // null이 디폴트 값으로 간주되며 보고되지 않습니다
+  class Persona implements Serializable {
+    transient String nombre = "Defecto"; //advertencia, realmente puede ser nulo tras la deserialización
+    transient String apellido; //nulo se considera el valor predeterminado y no se reporta
   }
 </code></pre>
 <!-- tooltip end -->

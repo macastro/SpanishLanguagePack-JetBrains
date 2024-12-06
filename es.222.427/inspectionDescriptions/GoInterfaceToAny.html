@@ -1,12 +1,13 @@
 <html>
 <body>
-빈 인터페이스의 사용 위치를 유형 또는 유형 제약 조건으로 보고합니다.
+Reporta usos de una interfaz vacía como un tipo o una restricción de tipo.
 <p>
-  빈 인터페이스는 모든 유형의 집합을 나타냅니다.
-  Go 1.18은 <code>interface{}</code> 에 대한 보다 명시적인 별칭 <code>any</code>을 도입했으며 모든 면에서 <code>interface{}</code>와 같습니다.
+  La interfaz vacía denota el conjunto de todos los tipos.
+  Go 1.18 introdujo el alias más explícito <code>any</code> para <code>interface{}</code>,
+  que es equivalente a <code>interface{}</code> en todos los aspectos.
 </p>
-<p>빈 인터페이스의 모든 사용 위치를 유형 또는 유형 제약 조건으로 사용하는 경우 검사가 트리거됩니다.
-  다른 빈 인터페이스를 배타적으로 포함하는 빈 인터페이스 및 인터페이스의 별칭은 검사를 트리거하지 않습니다.</p>
-<p>대신 더 명시적인 별칭 <code>any</code>를 사용하는 것을 고려하세요.</p>
+<p>La inspección se activa para cualquier uso de una interfaz vacía como un tipo o restricción de tipo.
+  Los alias de la interfaz vacía y las interfaces que embeben exclusivamente otras interfaces vacías no activan la inspección.</p>
+<p>Considera usar el alias más explícito <code>any</code> en su lugar.</p>
 </body>
 </html>

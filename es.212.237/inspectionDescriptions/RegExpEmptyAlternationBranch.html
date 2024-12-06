@@ -1,17 +1,17 @@
 <html>
 <body>
-RegExp 대체 항목에 있는 빈 브랜치를 보고합니다.
-빈 브랜치는 빈 문자열과만 일치하며 대부분의 경우 이는 바람직한 결과가 아닙니다.
-이 조사는 대체 항목의 앞 또는 뒤에 붙은 단일 빈 브랜치는 보고하지 않습니다.
-<p><b>예:</b></p>
+Inspecciona ramas vacías en una alternancia RegExp.
+Una rama vacía sólo coincidirá con la cadena vacía, y en la mayoría de los casos eso no es lo deseado.
+Esta inspección no reportará una rama vacía simple al principio o al final de una alternancia.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   (alpha||bravo)
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   (alpha|bravo)
 </code></pre>
 <!-- tooltip end -->
-<p><small>2017.2의 새로운 기능</small>
+<p><small>Nuevo en 2017.2</small>
 </body>
 </html>

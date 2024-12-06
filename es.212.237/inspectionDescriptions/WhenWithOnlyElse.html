@@ -1,11 +1,11 @@
 <html>
 <body>
-단순화할 수 있는 <code>else</code> 브랜치만 포함하는 <code>when</code> 표현식을 보고합니다.
-<p><b>표현식 단순화</b> 빠른 수정을 사용해 코드를 자동으로 수정할 수 있습니다.</p>
-<p>예:</p>
+Reporta expresiones `when` sólo con una rama `else` que pueden simplificarse.
+<p>La corrección rápida "<b>Simplificar expresión</b>" puede usarse para corregir el código automáticamente.</p>
+<p>Ejemplo:</p>
 <pre><code>
-  fun redundant() {
-      val x = when { // &lt;== 불필요, 빠른 수정이 when 표현식을 "val x = 1"로 단순화
+  fun redundante() {
+      val x = when { // &lt;== redundante, la corrección rápida simplifica la expresión when a "val x = 1"
           else -> 1
       }
   }

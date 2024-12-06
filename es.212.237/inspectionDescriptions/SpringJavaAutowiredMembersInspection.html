@@ -1,12 +1,12 @@
 <html>
 <body>
-<p>Spring bean에서 유효하지 않은 클래스에 주입되거나 자동 주입된 필드/메서드를 보고합니다(예: <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html">@Component</a>,
-<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html">@Service</a> 등)</p>
+<p>올바른 Spring bean(예: <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html">@Component</a>,
+<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html">@Service</a> 등)이 아닌 클래스에 삽입되거나 오토와이어링된 필드/메서드를 보고합니다</p>
 
 <p><b>예:</b></p>
 <pre><code>
 public class FooBeanClass {
-  @Autowired   // reports 'Autowired members must be defined in valid Spring beans: @Component, @Service, and so on'
+  @Autowired   // '올바른 Spring bean(@Component, @Service 등)에서 오토와이어링된 멤버를 정의해야 합니다'라고 보고됩니다
   ServiceBean bean;
   }
 </code></pre>

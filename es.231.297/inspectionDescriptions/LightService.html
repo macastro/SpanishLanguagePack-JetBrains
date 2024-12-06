@@ -1,8 +1,18 @@
 <html>
 <body>
-Reports light service problems.
+다음의 라이트 서비스 문제를 보고합니다.
+<ul>
+  <li><code>@com.intellij.openapi.components.Service</code> 어노테이션이 있는 클래스가 final이 아닙니다.
+  </li>
+  <li><code>com.intellij.openapi.project.Project</code> 매개변수를 취하는 생성자를 가진 서비스가 프로젝트 수준의 서비스로 어노테이션이 추가되지 않았습니다.
+  </li>
+  <li>애플리케이션 수준의 서비스로 어노테이션이 추가된 서비스가 인수가 없는 생성자나 <code>kotlinx.coroutines.CoroutineScope</code>를 취하는 생성자를 갖고 있지 않습니다.
+  </li>
+  <li>서비스를 가져오는 중 불일치가 발생했습니다. 프로젝트 수준의 서비스를 애플리케이션 수준의 서비스로 가져왔거나 반대의 경우입니다.
+  </li>
+</ul>
 <p>
-  Please see <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html#light-services">Light Services</a> for further reference.
+  추가 정보는 <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html#light-services">라이트 서비스</a>를 참조하세요.
 </p>
 <p><small>2023.1의 새로운 기능</small>
 </body>

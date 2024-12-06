@@ -1,19 +1,16 @@
 <html>
 <body>
-<code>getOptionsPane()</code>으로 자동 변환할 수 있는 검사 구현의 <code>createOptionsPanel()</code>
-메서드를 보고합니다.
+Inspecciona los métodos `createOptionsPanel()` en implementaciones de inspección para informar aquellos que se pueden convertir automáticamente a `getOptionsPane()`.
 <p>
-  선언형 제어 설명 <code>getOptionsPane()</code>을 위해, <code>createOptionsPanel()</code>을 통한
-  검사 옵션 제어 생성은 더 이상 사용되지 않습니다.
-  이 검사는 <code>createOptionsPanel()</code> 구현을 확인하고 이 구현이 
-  InspectionOptionsPanel 또는 해당 하위 항목을 사용하고 충분히 단순한 경우에는
-  새 API로 자동 변환을 제안합니다.
+  Se recomienda describir controles de forma declarativa en `getOptionsPane()`, y está en desuso crear controles de opciones de inspección mediante `createOptionsPanel()`.
+  Esta inspección revisa implementaciones de `createOptionsPanel()`, y cuando la implementación utiliza `InspectionOptionsPanel` o sus descendientes y es suficientemente simple, sugiere convertirla automáticamente a la nueva API.
 </p>
 <p>
-  이 검사는 Java 및 Kotlin만 현재 지원합니다.
-  <code>apply</code> 또는 <code>also</code> 같은 Kotlin 메서드를 사용하는 코드는 변환할 수 없습니다. 해당 항목 인라인화를 시도해 보세요.
+  Esta inspección actualmente solo admite Java y Kotlin.
+  No se puede convertir código que utilice métodos Kotlin como `apply` o `also`.
+  Intenta incrustarlo.
 </p>
 <!-- tooltip end -->
-<p><small>2023.1의 새로운 기능</small></p>
+<p><small>Novedad en 2023.1</small></p>
 </body>
 </html>

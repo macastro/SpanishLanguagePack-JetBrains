@@ -1,20 +1,20 @@
 <html>
 <body>
-<p>Bean 클래스 내 모호한 종속성을 지니는 삽입점을 보고합니다.</p>
+<p>Informa sobre puntos de inyección ambiguos en clases de beans que tienen dependencias ambiguas.</p>
 <!-- tooltip end -->
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code lang="java">
-  interface Engine {}
+  interface Motor {}
 
   @Singleton
-  class GasEngine implements Engine {}
+  class MotorGasolina implements Motor {}
 
   @Singleton
-  class ElectricEngine implements Engine {}
+  class MotorElectrico implements Motor {}
 
   @Singleton
-  class Car {
-    @Inject Engine <b>engine</b>; // Dependencia ambigua: varios beans coinciden con el punto de inserción
+  class Coche {
+    @Inject Motor <b>motor</b>; // Dependencia ambigua: hay varios beans que coinciden con el punto de inyección
   }
 </code></pre>
 </body>

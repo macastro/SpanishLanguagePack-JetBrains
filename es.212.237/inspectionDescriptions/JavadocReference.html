@@ -1,11 +1,11 @@
 <html>
 <body>
-Javadoc 주석 내에서 해결되지 않은 참조를 보고합니다.
-<p>다음 예시에서 <code>someParam</code> 매개변수가 누락되었으므로 강조 표시됩니다.</p>
+Informa sobre referencias no resueltas en comentarios de Javadoc.
+<p>En el siguiente ejemplo, falta el parámetro <code>someParam</code>, por lo que se resaltará:</p>
 <pre><code>
 class A {
     /**
-     * @param someParam description
+     * @param someParam descripción
      **/
     void foo() {
     }
@@ -13,7 +13,8 @@ class A {
 </code></pre>
 <!-- tooltip end -->
 <p>
-  <b>액세스할 수 없는 심볼 보고</b> 옵션을 비활성화하여 누락된 메서드 매개변수, 클래스, 필드 및 메서드를 참조하는 태그를 무시합니다.</p>
+  Deshabilita la opción <b>Informar símbolos inaccesibles</b> para ignorar las etiquetas que hacen referencia a parámetros de métodos,
+  clases, campos y métodos no encontrados.</p>
 
 </body>
 </html>

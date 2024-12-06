@@ -1,25 +1,14 @@
 <html>
 <body>
-코드와 <code>plugin.xml</code> 설명자에 모두 포함된 플러그인 구성 요소(구성 요소 및 액션)가 부정확하게 등록된 경우를 보고합니다.
+Informa de registros incorrectos de componentes de complemento (acciones y componentes).
 <p>
-  다음과 같은 문제가 보고됩니다.
+  Informa de los siguientes problemas:
 </p>
 <ul>
-  <li>해결되지 않은 구성 요소/액션 구현 클래스(<code>plugin.xml</code>)</li>
-  <li>해결되지 않은 구성 요소 인터페이스 클래스(<code>plugin.xml</code>)</li>
-  <li>구성 요소 구현 클래스를 해당 인터페이스 클래스(<code>plugin.xml</code>)에 대입할 수 없습니다</li>
-  <li>부정확한 구성 요소 등록(예: <code>ProjectComponent</code>)이 애플리케이션 구성 요소로 등록되었거나 클래스가 어떠한 구성 요소 인터페이스도 구현하지 않습니다(<code>plugin.xml</code> 및 Java 코드)
+  <li>La clase de implementación de acción/componente es abstracta.</li>
+  <li>La clase está registrada como acción en plugin.xml pero no extiende la clase <code>AnAction</code>.</li>
+  <li>La clase de acción no tiene un constructor público sin argumentos.
   </li>
-  <li>잘못된 클래스 제어자: 액션 클래스는 <code>public</code>이어야 하며 인수 없는 public 생성자를 포함해야 합니다. 또한 액션 및 구성 요소 구현 클래스는 추상 클래스일 수 없습니다(<code>plugin.xml</code> 및 Java 코드)
-  </li>
-  <li>중복 인터페이스 클래스: 클래스는 인터페이스 클래스로서 한 번만 사용할 수 있습니다(<code>plugin.xml</code>)</li>
-</ul>
-<!-- tooltip end -->
-<p>검사 구성:</p>
-<ul>
-  <li><code>plugin.xml</code> 설명자에서 검사 기능을 비활성화하려면 <b>Check Plugin Descriptor (plugin.xml)(플러그인 설명자 검사(plugin.xml))</b> 옵션을 사용하세요.</li>
-  <li>액션 코드에서 검사 기능을 비활성화하려면 <b>Check Java Actions(Java 액션 검사)</b> 옵션을 사용하세요.</li>
-  <li>코드에서 모든 검사 기능을 비활성화하려면 <b>Check Java Code(Java 코드 검사)</b> 옵션을 사용하세요.</li>
 </ul>
 </body>
 </html>

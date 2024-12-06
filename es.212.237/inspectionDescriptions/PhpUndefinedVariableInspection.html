@@ -1,33 +1,33 @@
 <html>
 <body>
-  두 가지 타입의 경고를 생성합니다:
+  Produce dos tipos de advertencias:
   <ul>
     <li>
-      <i>정의되지 않은 변수</i>: 변수의 정의를 경로에 설정된 프로젝트 파일 또는 PHP 사전 정의된 변수에서 찾을 수 없습니다.
-   </li>
+      <i>Variable no definida</i>: la definición de la variable no se encuentra en los archivos del proyecto, las rutas de inclusión configuradas o entre las variables predefinidas de PHP.
+    </li>
     <li>
-      <i>변수가 정의되지 않았을 수 있음</i>: 변수에 대한 정의없이 변수가 사용된 줄에 도달할 수 있는 경로가 한 개 이상 존재합니다.
-   </li>
- </ul>
+      <i>La variable podría no haber sido definida</i>: hay una o más rutas para alcanzar la línea con el uso de la variable sin definirla.
+    </li>
+  </ul>
   <p>
-    검사를 사용자 지정하려면 다음 옵션을 사용하세요:
- </p>
+    Usa las siguientes opciones para personalizar la inspección:
+  </p>
 
   <ul>
     <li>
-      <b>변수가 정의되지 않았을 가능성 보고</b>: 체크박스를 취소하여 <i>변수가 정의되지 않았을 수 있음</i> 경고를 끄세요.
-   </li>
+      <b>Informar de que la variable probablemente no esté definida</b>: desmarca la casilla de verificación para deshabilitar las advertencias de <i>La variable podría no haber sido definida</i>.
+    </li>
     <li>
-      <b>전역 공간에서 검사 활성화</b>: 디폴트로 이 검사는 전역 공간에 대해 켜져 있습니다. 체크박스를 취소하면 함수의 지역 스코프에서 정의되지 않은 변수만 보고합니다.
-   </li>
+      <b>Habilitar la inspección en el espacio global</b>: de forma predeterminada, la inspección está habilitada para el espacio global. Desmarca la casilla de verificación para informar solo de las variables no definidas del ámbito local de las funciones.
+    </li>
     <li>
       <p>
-        <b>현재 파일 외부에 있는 변수 정의 검색</b>: 이 옵션이 선택된 경우 IDE는 현재 파일에서 <code>include</code> 또는 <code>require</code> 구문이 없거나 변수의 정의를 프로젝트에서 찾을 수 없는 경우에만 전역 변수를 정의되지 않음으로 보고합니다.
-     </p>
+        <b>Buscar la definición de la variable fuera del archivo actual</b>: si se selecciona, el IDE informa de una variable global como no definida solo en caso de que no haya declaraciones <code>include</code> o <code>require</code> en el archivo actual y no se pueda encontrar la definición de la variable en el proyecto. Ten en cuenta que el IDE no examina el contenido real de los archivos incluidos, sino que solo comprueba la presencia de declaraciones <code>include</code> o <code>require</code>.
+      </p>
       <p>
-        선택되지 않은 경우 IDE는 현재 파일에서만 변수의 정의를 검색하고 <code>include</code> 및 <code>require</code> 구문이 나오면 무시합니다.
-     </p>
-   </li>
- </ul>
+        De lo contrario, si no se selecciona, el IDE busca la definición de la variable solo en el archivo actual e ignora las declaraciones <code>include</code> o <code>require</code> si las hay.
+      </p>
+    </li>
+  </ul>
 </body>
 </html>

@@ -1,19 +1,19 @@
 <html>
 <body>
-<code>MethodHandle</code>의 시그니처나 <code>VarHandle</code>의 타입이 실제 메서드 또는 필드와 일치하지 않는 경우를 보고합니다.
-<p>또한 <code>MethodHandle.invoke()</code>, <code>VarHandle.set()</code> 등에 제공된 인수가 메서드 메서드 시그니처 또는 필드 타입과 일치하는지 검사합니다. 그렇지 않을 경우 예외가 발생합니다.
+Reporta llamadas a métodos de fábrica `MethodHandle` y `VarHandle` que no coinciden con ningún método o campo.
+<p>También reporta argumentos para `MethodHandle.invoke()` y métodos similares, que no coinciden con la firma `MethodHandle` y argumentos para `VarHandle.set()` que no coinciden con el tipo `VarHandle`.
   <!-- tooltip end -->
 
-<p>예:</p>
+<p>Ejemplos:</p>
 <pre>
   MethodHandle mh = MethodHandles.lookup().findVirtual(
       MyClass.class, "foo", MethodType.methodType(void.class, int.class));
-  <i>// 인수는 <b>int</b> 값이어야 합니다</i>
+  <i>// el argumento debe ser un valor <b>int</b></i>
   mh.invoke(myObj, "<b>abc</b>");
 </pre>
 <br>
 <pre>
-  <i>// 인수는 <b>String</b>.class여야 합니다</i>
+  <i>// el argumento debe ser <b>String</b>.class</i>
   VarHandle vh = MethodHandles.lookup().findVarHandle(
       MyClass.class, "text", <b>int</b>.class);
 </pre>
@@ -21,11 +21,11 @@
 <pre>
   VarHandle vh = MethodHandles.lookup().findVarHandle(
       MyClass.class, "text", String.class);
-  <i>//인수는 <b>String</b> 값이어야 합니다</i>
+  <i>// el argumento debe ser un valor <b>String</b></i>
   vh.set(myObj, <b>42</b>);
 </pre>
 <p>
-  <small>2017.2의 새로운 기능</small>
+  <small>Nuevo en 2017.2</small>
 </p>
 </body>
 </html>

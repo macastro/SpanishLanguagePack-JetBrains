@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>람다 식 외부에 있는 불필요한 반환 라벨을 보고합니다.</p>
-<p><b>예:</b></p>
+<p>Reporta etiquetas de retorno redundantes fuera de las expresiones lambda.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun test() {
       return@test
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun test() {
       return

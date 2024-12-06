@@ -1,17 +1,17 @@
 <html>
 <body>
-JPA 속성의 프로퍼티 타입 불일치를 보고합니다.
+Reporta que el tipo de propiedad no coincide con los atributos JPA.
 
-<p><b>예:</b></p><br/>
-<pre><code>
+<p><b>Ejemplo:</b></p><br/>
+<pre><code lang="java">
   @Entity
   public class JavaEntity {
 
     @OneToOne
-    Map<Integer, AnotherEntity> incorrectRelationship; // 오류: 'One To One' 속성 타입은 map이 아니라 entity여야 함
+    Map&lt;Integer, AnotherEntity&gt; incorrectRelationship; // Error: el tipo de atributo 'One To One' debe ser una entidad, no un mapa
 
     @ManyToMany
-    Map<Integer, AnotherEntity> correctRelationship;
+    Map&lt;Integer, AnotherEntity&gt; correctRelationship;
   }
 </code></pre>
 </body>

@@ -1,19 +1,18 @@
 <html>
 <body>
-이미 정의된 동일 Java 9 모듈에서 내보내거나 연 패키지를 보고합니다.
-빠른 수정은 <code>module-info.java</code>에서 해당 지시문을 제거합니다.
-<p>예:</p>
+Reporta los paquetes que son exportados o abiertos en el mismo módulo Java 9 en el que fueron definidos.
+El arreglo rápido elimina tales directivas de <code>module-info.java</code>.
+<p>Ejemplo:</p>
 <pre><code>
   module com.mycomp {
     exports com.mycomp.main to com.mycomp;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   module main {
   }
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 9 이상인 경우에만 보고합니다.</p>
 </body>
 </html>

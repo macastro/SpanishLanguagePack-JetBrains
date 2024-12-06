@@ -1,21 +1,23 @@
 <html>
 <body>
-호출이 선언하는 클래스 자체에 의해서가 아니라 하위 클래스에 의해 한정된 정적 메서드 호출을 보고합니다.
+Reporta llamados a métodos estáticos donde el llamado es calificado
+por una subclase de la clase declarada, en lugar de por la propia clase declarada.
 <p>
-  Java는 그러한 클래스 정규화를 허용하지만 그러한 호출은 상속과 재정의가 미묘하게 혼동되고 있음을 나타낼 수 있습니다.
+  Java permite tal calificación para clases, pero tales llamadas
+  pueden indicar una sutil confusión de herencia y anulación.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class Parent {
+  class Padre {
     public static void print(String str) {}
   }
-  class Child extends Parent {}
+  class Hijo extends Padre {}
 
-  Child.print("Hello, world!");
+  Hijo.print("Hello, world!");
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
-  Parent.print("Hello, world!");
+  Padre.print("Hello, world!");
 </code></pre>
 <!-- tooltip end -->
 

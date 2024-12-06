@@ -1,13 +1,13 @@
 <html>
 <body>
-코드 조각을 별도의 메서드로 추출하여 코드를 더 명확하게 만들도록 제안합니다. 
-이 검사에는 다음을 포함하여 추출에 사용할 좋은 후보를 선택할 때 도움이 되는 경험적 지식이 다수 포함되어 있습니다.
+Propone extraer un fragmento de código a un método diferente para hacer el código más legible. 
+Esta inspección cuenta con numerosos heurísticos para seleccionar buenos candidatos para la extracción, incluidos:
 <ul>
-  <li>추출된 조각에 비 로컬 제어 흐름이 없습니다</li>
-  <li>추출된 조각에 출력 변수가 하나뿐입니다</li>
-  <li>추출된 조각 내외부에서 출력 변수가 비슷하게 사용된 경우가 없습니다</li>
-  <li>추출된 조각에 입력 매개변수가 많지 않습니다(기본 3개 이하. 검사 옵션에서 구성 가능)</li>
-  <li>추출된 조각이 구성된 길이보다 짧지 않으나(기본 500자) 포함하는 메서드의 본문의 60%보다 길지 않습니다</li>
+  <li>El fragmento extraído no tiene flujo de control no local</li>
+  <li>El fragmento extraído tiene exactamente una variable de salida</li>
+  <li>No hay usos similares de la variable de salida dentro y fuera del fragmento extraído</li>
+  <li>El fragmento extraído solo tiene unos pocos parámetros de entrada (3 o menos de manera predeterminada; configurable en opciones de inspección)</li>
+  <li>La longitud del fragmento extraído no es menor que la longitud configurada (500 caracteres de manera predeterminada), pero no es más del 60% de lo que contiene el cuerpo del método</li>
 </ul>
 </body>
 </html>

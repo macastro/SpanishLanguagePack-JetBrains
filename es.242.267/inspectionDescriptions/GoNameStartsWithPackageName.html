@@ -1,30 +1,19 @@
-<!--
-  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~ http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
+**Inspección de nombres exportados que inician con un nombre de paquete**
 
-<html>
-<body>
-패키지 이름으로 시작하는 내보내기된 이름을 보고합니다. 이 검사는 <code>main</code> 패키지의 이러한 이름은 보고하지 않습니다.
-<p>예:</p>
-<pre><code>package myPackage
+Inspecciona los nombres exportados que inician con un nombre de paquete. Esta inspección no reporta dichos nombres dentro del paquete `principal`.
 
-func MyPackageGetIP() {
+**Ejemplo:**
 
-}</code></pre>
-<p><code>MyPackageGetIP</code> 이름은 패키지 이름으로 시작하므로 강조 표시됩니다.</p>
-<p><a href="https://github.com/golang/go/wiki/CodeReviewComments#package-names">github.com/golang의 Package Names</a>에 따르면, 패키지 내 이름에 대한 모든 참조는 패키지 이름을 사용하여 이루어지므로 식별자에서 해당 이름을 생략할 수 있습니다.
-  예를 들어, <code>foo</code> 패키지 내에 있는 경우 <code>FooFile</code> 타입이 필요하지 않으며 이를 클라이언트가 <code>foo.FooFile</code>로 작성할 것입니다. 대신 타입을 <code>File</code>로 명명하면 이를 클라이언트는 <code>foo.File</code>로 작성할 것입니다.</p>
-</body>
-</html>
+```go
+package miPaquete
+
+func MiPaqueteObtenerIP() {
+
+}
+```
+
+El nombre 'MiPaqueteObtenerIP' se remarcará porque empieza con el nombre del paquete.
+
+De acuerdo a <a href="https://github.com/golang/go/wiki/CodeReviewComments#package-names">Nombres de paquete en github.com/golang</a>, todas las referencias a nombres dentro de un paquete se harán usando el nombre del paquete, entonces se puede omitir ese nombre de los identificadores.
+
+Por ejemplo, si te encuentras en un paquete `foo`, no necesitas un tipo `FooArchivo`, el cual los clientes escribirían como `foo.FooArchivo`. En su lugar, se nombra el tipo `Archivo`, el cual los clientes escribirían como `foo.Archivo`.

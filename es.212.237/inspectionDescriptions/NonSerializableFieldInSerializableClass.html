@@ -1,38 +1,38 @@
 <html>
 <body>
-<code>java.io.Serializable</code>을 구현하는 클래스 내 직렬화할 수 없는 필드를 보고합니다. 그러한 필드는 객체가 직렬화되는 경우 런타임 예외를 발생시킵니다.
+Inspecciona los campos no serializables en las clases que implementan <code>java.io.Serializable</code>. Estos campos generarán una excepción de tiempo de ejecución si se serializa el objeto.
 <p>
-  <code>transient</code> 또는 <code>static</code>으로 선언된 필드 또는 <code>writeObject</code> 메서드가 정의된 클래스의 필드는 보고되지 않습니다.
+  Los campos declarados como <code>transient</code> o <code>static</code> no se muestran. Tampoco se muestran los campos de las clases que tienen definido un método <code>writeObject</code>.
 </p>
 <p>
-  이 검사는 선언된 타입이 <code>Serializable</code> 이외의 객체가 아닌 이상 <code>java.util.Collection</code> 및
-  <code>java.util.Map</code> 타입의 필드는 <code>Serializable</code>이라고 가정합니다.
+  Esta inspección asume que los campos de los tipos <code>java.util.Collection</code> y <code>java.util.Map</code> son <code>Serializable</code>, a menos que los tipos 
+ en los que se declaren sean no <code>Serializable</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class NonSerializableClass {}
 
   public class SerializableClass implements Serializable {
-      NonSerializableClass clazz; // 경고: Serializable 클래스 내 직렬화할 수 없는 필드
-      static NonSerializableClass staticClazz; // 경고 안 함
+      NonSerializableClass clazz; // advertencia: Campo no serializable 'clazz' en una clase serializable
+      static NonSerializableClass staticClazz; // sin advertencias
   }
- </code>
+  </code>
 </pre>
 <!-- tooltip end -->
 <p>
-  다음 옵션을 사용해 검사를 구성하세요:
+  Utiliza las siguientes opciones para configurar la inspección:
 </p>
 <ul>
   <li>
-    상속자가 이 검사에서 보고되어서는 안 되는 클래스를 나열합니다.
-    상위 클래스에서 <code>Serializable</code>를 상속받지만 직렬화를 의도하지 않은 클래스를 말합니다.
- </li>
+    Lista las clases cuyos herederos no se deben mostrar con esta inspección. Esto está hecho para clases que heredan
+    <code>Serializable</code> de una superclase pero no están destinadas a la serialización.
+  </li>
   <li>
-    검사에서 어노테이션이 추가된 필드가 무시되도록 만들 어노테이션을 나열합니다.
- </li>
+    Lista las anotaciones que harán que la inspección ignore los campos anotados.
+  </li>
   <li>
-    익명 클래스로 초기화된 필드를 무시할지 여부를 설정합니다.
- </li>
+    Si se deben ignorar los campos inicializados con una clase anónima.
+  </li>
 </ul>
 
 </body>

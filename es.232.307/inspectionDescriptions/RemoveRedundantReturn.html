@@ -1,15 +1,15 @@
 <html>
 <body>
-<p>불필요한 <code>return</code>을 보고합니다.</p>
-<p>메서드 내 마지막 구문은 자동으로 반환되며, 이 경우 <code>return</code> 키워드 사용은 불필요합니다.</p>
+<p>Informa sobre el <code>return</code> redundante.</p>
+<p>La última declaración de un método se devuelve automáticamente y, en este caso, el uso de la palabra clave <code>return</code> es redundante.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   def test: Int = {
     return 3
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   def test: Int = {
     3

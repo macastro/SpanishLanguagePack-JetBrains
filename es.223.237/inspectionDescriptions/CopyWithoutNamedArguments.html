@@ -1,24 +1,24 @@
 <html>
 <body>
-명명된 인수가 없는 데이터 클래스의 <code>copy()</code> 메서드를 보고합니다.
+Informa de las llamadas al método de una clase de datos <code>copy()</code> sin argumentos nombrados.
 <p>
-    <code>copy()</code> 함수의 모든 인수는 옵션이므로 어떤 프로퍼티가 수정되었는지 이해하기가 어렵습니다.
-    매개변수 이름을 명시적으로 제공하면 <code>data class</code> 선언을 탐색할 필요 없이 코드를 쉽게 이해할 수 있습니다.
+    Como todos los argumentos de la función <code>copy()</code> son opcionales, puede ser difícil entender qué propiedades se modifican.
+    Proporcionar nombres de parámetros explícitamente hace que el código sea fácil de entender sin navegar a la declaración de la <code>data class</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  data class User(val name: String, val age: Int)
+  data class Usuario(val name: String, val age: Int)
 
-  fun copyUser(user: User): User {
-      return user.copy("John")
+  fun copyUser(usuario: Usuario): Usuario {
+      return usuario.copy("John")
   }
 </code></pre>
-<p>빠른 수정에서는 모든 <code>copy()</code> 인수에 매개변수 이름을 제공합니다.</p>
+<p>La corrección rápida proporciona nombres de parámetros a todos los argumentos <code>copy()</code>:</p>
 <pre><code>
-  data class User(val name: String, val age: Int)
+  data class Usuario(val name: String, val age: Int)
 
-  fun copyUser(user: User): User {
-      return user.copy(name = "John")
+  fun copyUser(usuario: Usuario): Usuario {
+      return usuario.copy(name = "John")
   }
 </code></pre>
 <!-- tooltip end -->

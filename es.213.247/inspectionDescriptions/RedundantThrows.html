@@ -1,26 +1,26 @@
 <html>
 <body>
-메서드의 시그니처에 선언되었지만 메서드 자체 또는 메서드의 구현 및 파생에서 던지지 않은 예외를 보고합니다.
-<p>이 검사는 직렬화와 관련된 메서드를 무시합니다(예: <code>readObject()</code> 또는 <code>writeObject()</code> 메서드).</p>
-<p><b>예:</b></p>
+Reporta excepciones que están declaradas en la signatura del método pero que nunca se lanzan por el propio método o por su implementación y métodos anulados.
+<p>Esta inspección ignora métodos relacionados con la serialización, como los métodos <code>readObject()</code> y <code>writeObject()</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void method() throws InterruptedException {
     System.out.println();
   }
 </code></pre>
-<p>빠른 수정에서는 선언에서 불필요한 예외를 제거하며 불필요한 <code>try</code>-<code>catch</code> 문을 정규화합니다.</p>
+<p>La corrección rápida eliminará la excepción innecesaria de la declaración y normalizará las declaraciones <code>try</code>-<code>catch</code> redundantes.</p>
 <pre><code>
   void method() {
     System.out.println();
   }
 </code></pre>
 <p>
-  <b>참고:</b> 일부 예외는 에디터 내 강조 표시로 보고되지 않을 수 있습니다.
-  성능상의 이유로 private이 아닌 메서드는 프로젝트에서 이름이 거의 나오지 않는 경우에만 검사됩니다.
-  모든 결과를 확인하려면 메인 메뉴의 <b>코드 | 코드 검사</b> 또는 <b>코드 | 코드 분석 | 이름별로 검사 실행</b>을 선택하여 검사를 실행합니다.
+  <b>Nota:</b> Es posible que no se informen algunas excepciones mientras se resaltan en el editor debido a razones de rendimiento.
+  Para ver todos los resultados, ejecuta la inspección seleccionando <b>Código | Inspeccionar código</b> o <b>Código | Analizar código | Ejecutar inspección por nombre</b> en el menú principal.
 </p>
 <!-- tooltip end -->
-<p><b>진입점 메서드에서 던진 예외 무시</b> 옵션을 사용하여 진입점 메서드에서 던진 예외를 무시합니다.
-  진입점 메서드는 다음 검사, <b>Editor(에디터) | Inspections(검사) | Java | Declaration redundancy(불필요한 선언) | Unused declaration(사용되지 않는 선언)</b>에서 구성됩니다.</p>
+<p>Por ejemplo, utiliza la opción <b>Ignorar excepciones lanzadas por métodos de punto de entrada</b> para no informar las excepciones lanzadas por métodos como <code>main()</code>.
+  Los métodos de punto de entrada se pueden configurar en la configuración de la inspección <a href="settings://Errors?Unused%20Declaration%20entry%20point">Java | Redundancia de declaración | Declaraciones no utilizadas</a>.
+  <br><br></p>
 </body>
 </html>

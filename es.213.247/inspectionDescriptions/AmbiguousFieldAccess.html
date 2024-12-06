@@ -1,35 +1,38 @@
 <html>
 <body>
-클래스 주변 코드에서 이름이 동일한 지역 변수, 매개변수 또는 필드가 사용될 수 있는 익명, 내부 또는 지역 클래스의 상위 필드에 대한 액세스를 보고합니다.
-실제로는 상위 클래스의 필드에 액세스한 경우에도, 주변 코드의 요소에 액세스한 것처럼 보일 수 있습니다.
+Informa sobre el acceso a un campo de superclase desde una clase interna anónima o local,
+si hay disponible una variable local, parámetro o campo con el mismo nombre en el código que rodea a la clase.
+En este caso, puede parecer que se accede a un elemento del código circundante,
+cuando en realidad se trata de un acceso a un campo de la superclase.
 <p>
-  코드의 의도를 명확히 하려면 명시적 <code>super</code> 한정자를 필드 액세스에 추가하는 것이 좋습니다.
+  Para aclarar la intención del código, se recomienda agregar un
+  calificador explícito <code>super</code> al acceso de campo.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-    class First {
-      protected String ambiguous;
+    class Primero {
+      protected String ambiguo;
     }
-    class Second {
-      void foo(String ambiguous) {
-        new First() {
+    class Segundo {
+      void foo(String ambiguo) {
+        new Primero() {
           {
-            System.out.println(ambiguous); // 매개변수가 아닌 필드에 액세스했습니다
+            System.out.println(ambiguo); // se accede al campo, no al parámetro
           }
         };
       }
     }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-    class First {
-      protected String ambiguous;
+    class Primero {
+      protected String ambiguo;
     }
-    class Second {
-      void foo(String ambiguous) {
-        new First() {
+    class Segundo {
+      void foo(String ambiguo) {
+        new Primero() {
           {
-            System.out.println(super.ambiguous);
+            System.out.println(super.ambiguo);
           }
         };
       }

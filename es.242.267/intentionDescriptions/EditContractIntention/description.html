@@ -1,33 +1,30 @@
 <html><body>
-이 인텐션은 라이브러리 메서드 컨트랙트를 변경합니다.
+Esta intención cambia un contrato del método de la biblioteca.
 
-A method contract has the following syntax:
-<pre><code>
- contract ::= (clause ';')* clause
- clause ::= args '->' effect
- args ::= ((arg ',')* arg )?
- arg ::= value-constraint
- value-constraint ::= '_' | 'null' | '!null' | 'false' | 'true'
- effect ::= value-constraint | 'fail' | 'new' | 'this' | 'param' number
- number ::= [1-9] [0-9]*
-</code></pre>
+El contrato del método tiene la siguiente sintaxis:<br/>
+ contract ::= (clause ';')* clause<br/>
+ clause ::= args '->' effect<br/>
+ args ::= ((arg ',')* arg )?<br/>
+ arg ::= value-constraint<br/>
+ value-constraint ::= '_' | 'null' | '!null' | 'false' | 'true'<br/>
+ effect ::= value-constraint | 'fail' | 'new' | 'this' | 'param' number<br/>
+ number ::= [1-9] [0-9]*<p/>
 
-제약은 다음을 의미합니다.<br/>
+Las restricciones denotan lo siguiente:<br/>
 <ul>
-  <li> <code>_</code>: 모든 값
-  <li> <code>null</code>: null value
-  <li> <code>null!</code>: a value statically proved to be not-null
-  <li> <code>true</code>: true boolean value
-  <li> <code>false</code>: false boolean value
-  <li> <code>fail</code>: the method throws exception if the arguments satisfy argument constraints
-  <li> <code>new</code>: every time the method is executed, it returns a non-null new object that is distinct from other objects existing in the heap prior to method execution. 새 객체는 메서드가 순수하면 필드나 배열에 저장되지 않으며, 메서드 반환 값을 사용하지 않을 경우 손실됨
-  <li> <code>this</code>: the method returns non-null this reference
-  <li> <code>param1 (param2, param3, etc.)</code>: the method returns its first (second, third, etc.) argument
+<li> _ - qualquer valor<br/>
+<li> null - valor nulo
+<li> !null - un valor estáticamente probado que no es nulo
+<li> true - valor booleano verdadero
+<li> false - valor booleano falso
+<li> fail - el método lanza una excepción, si los argumentos satisfacen las restricciones de argumentos
+<li> new - cada vez que se ejecuta el método, devuelve un nuevo objeto no nulo que es distinto de otros objetos existentes en el montón antes de la ejecución del método. Si el método es puro, el nuevo objeto no se almacena en ningún campo o matriz y se perderá si no se utiliza el valor de retorno del método.
+<li> this - el método devuelve una referencia This no nula
+<li> param1 (param2, param3, etc.) - el método devuelve su primer (segundo, tercer, etc.) argumento
 </ul>
-예:<br/>
-<ul>
-  <li> <code>@Contract("_, null -> null")</code>: method returns null if its second argument is null.
-  <li> <code>@Contract("_, null -> null; _, !null -> !null")</code>: method returns null if its second argument is null and not-null otherwise.
-  <li> <code>@Contract("true -> fail")</code>: a typical <code>assertFalse</code> method which throws an exception if <code>true</code> is passed to it.
-</ul>
+Ejemplos:<p/>
+<code>@Contract("_, null -> null")</code> - el método devuelve nulo si su segundo argumento es nulo<br/>
+<code>@Contract("_, null -> null; _, !null -> !null")</code> - el método devuelve nulo si su segundo argumento es nulo y no nulo de lo contrario<br/>
+<code>@Contract("true -> fail")</code> - un método assertFalse típico que lanza una excepción si <code>true</code> se le pasa a él<br/>
+
 </body></html>

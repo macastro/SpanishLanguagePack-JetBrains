@@ -1,21 +1,21 @@
 <html>
 <body>
-의심스러운 <code>System.arraycopy()</code> 호출을 보고합니다.
-<p>이 검사는 다음과 같은 경우를 보고합니다:</p>
+Informa de llamadas sospechosas a <code>System.arraycopy()</code>.
+<p>Estas llamadas son sospechosas cuando:</p>
 <ul>
-<li>배열 타입이 아닌 소스 또는 대상
-<li>타입이 다른 소스 및 대상
-<li>복사된 청크 길이가 <code>src.length - srcPos</code>보다 항상 큰 경우
-<li>복사된 청크 길이가 <code>dest.length - destPos</code>보다 항상 큰 경우
-<li>소스와 대상이 같은 배열일 때 범위가 항상 교차하는 경우
+<li>el origen o destino no es de un tipo de arreglo
+<li>el origen y destino son de diferentes tipos
+<li>la longitud del fragmento copiado es mayor que <code>src.length - srcPos</code>
+<li>la longitud del fragmento copiado es mayor que <code>dest.length - destPos</code>
+<li>los rangos siempre se intersectan cuando el origen y el destino son el mismo arreglo
 </ul>
-<p><b>예:</b></p>
-<pre>
+<p><b>Ejemplo:</b></p>
+<pre><code>
   void foo() {
     int[] src = new int[] { 1, 2, 3, 4 };
-    System.arraycopy(src, 0, src, 1, 2); // 경고: 범위가 교차하는 같은 배열로 복사
+    System.arraycopy(src, 0, src, 1, 2); // advertencia: Copiando al mismo arreglo con rangos intersecados
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
 

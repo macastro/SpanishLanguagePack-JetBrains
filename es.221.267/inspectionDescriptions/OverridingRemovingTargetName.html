@@ -1,12 +1,12 @@
 <html>
 <body>
-<p><code>@targetName</code> 어노테이션이 없는 정의 중 <code>@targetName</code>을 가진 정의를 재정의하는 정의를 보고합니다.</p>
+<p>Informa las definiciones sin una anotación <code>@targetName</code> las cuales sobrescriben definiciones con anotación <code>@targetName</code>.</p>
 
-<p><a href="https://docs.scala-lang.org/scala3/reference/other-new-features/targetName.html">@targetName 어노테이션</a>을 참조하세요.</p>
+<p>Ver <a href="https://docs.scala-lang.org/scala3/reference/other-new-features/targetName.html">La anotación @targetName</a>.</p>
 
-<p>빠른 수정에서는 재정의된 정의의 외부 이름을 가진 <code>@targetName</code> 어노테이션을 추가합니다.</p>
+<p>La corrección rápida agrega una anotación <code>@targetName</code> con el nombre externo de la definición sobreescrita.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   trait A:
     @targetName("multiply")
@@ -15,7 +15,7 @@
   class B extends A:
     override def *(i: Int): A = ???
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   trait A:
     @targetName("multiply")

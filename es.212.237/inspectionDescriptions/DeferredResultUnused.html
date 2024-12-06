@@ -1,8 +1,8 @@
 <html>
 <body>
-반환 값을 사용하지 않는 경우 <code>Deferred</code> 결과 타입을 포함하는 호출을 보고합니다.
-<p>반환 값이 사용되는 경우 함수가 완료될 때까지 기다리는 것은 없습니다.</p>
-<p><b>예:</b></p>
+Reporta llamadas a funciones con tipo de resultado <code>Deferred</code> si no se usa el valor de retorno.
+<p>Si no se usa el valor de retorno <code>Deferred</code>, el sitio de llamada no esperará a completar esta función.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun calcEverythingAsync() = CompletableDeferred(42)
 
@@ -10,7 +10,7 @@
       calcEverythingAsync()
   }
 </code></pre>
-<p>빠른 수정을 위해 <code>Deferred</code> 이니셜라이저를 사용하여 변수를 삽입하도록 제안합니다.</p>
+<p>La corrección rápida proporciona una variable con el inicializador <code>Deferred</code>:</p>
 <pre><code>
   fun calcEverythingAsync() = CompletableDeferred(42)
 

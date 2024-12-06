@@ -1,5 +1,21 @@
 <html>
 <body>
-요소의 기본 모달리티와 일치하는 모달리티 제어자를 보고합니다(대부분 요소의 경우 <code>final</code>, <code>override</code>가 있는 멤버의 경우 <code>open</code>).
+Informa sobre los modificadores de modalidad que coinciden con la modalidad por defecto de un elemento (<code>final</code> para la mayoría de los elementos, <code>open</code> para miembros con un <code>override</code>).
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>final</b> class Foo
+
+  open class Bar : Comparable&lt;Bar&gt; {
+      <b>open</b> override fun compareTo(other: Bar): Int = 0
+  }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  class Foo
+
+  open class Bar : Comparable&lt;Bar&gt; {
+      override fun compareTo(other: Bar): Int = 0
+  }
+</code></pre>
 </body>
 </html>

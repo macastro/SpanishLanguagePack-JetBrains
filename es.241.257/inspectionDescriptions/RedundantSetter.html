@@ -1,31 +1,31 @@
 <html>
 <body>
-불필요한 프로퍼티 setter를 보고합니다.
+Informa de setters de propiedades redundantes.
 <p>
-다음 경우에 setter는 불필요하다고 간주됩니다.
+Un setter se considera redundante cuando se da alguna de las siguientes condiciones:
 </p>
 <ol>
     <li>
-        setter에 본문이 없습니다. 접근자 가시성이 변경되지 않았고, 선언이 <code>external</code>이 아니며 어노테이션을 포함하지 않습니다.
+        El setter no tiene cuerpo. La visibilidad del accesor no se modifica, la declaración no es <code>external</code> y no tiene anotaciones.
         <pre><code>
   var myPropWithRedundantSetter: Int = 0
-      set // 불필요
+      set // redundante
 
   var myPropA: Int = 0
-      private set // 문제 없음 - 프로퍼티 가시성이 private으로 변경됩니다
+      private set // OK - la visibilidad de la propiedad se cambia a privada
 
   var myPropB: Int = 0
-      external set // 문제 없음 - Kotlin에서 구현되지 않습니다(external)
+      external set // OK - no implementado en Kotlin (externo)
 
   var myPropC: Int = 0
-      @Inject set // 문제 없음 - 접근자에 어노테이션이 추가되었습니다
+      @Inject set // OK - el accesor está anotado
         </code></pre>
     </li>
     <li>
-        setter 본문은 매개변수를 백킹 필드에 대입하는 하나의 구문을 포함하는 블록입니다.
+        El cuerpo del setter es un bloque con una sola sentencia que asigna el parámetro al campo de respaldo.
         <pre><code>
   var prop: Int = 0
-      set(value) { // 불필요
+      set(value) { // redundante
           field = value
       }
        </code></pre>

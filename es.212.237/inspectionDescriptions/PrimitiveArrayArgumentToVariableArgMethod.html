@@ -1,19 +1,15 @@
 <html>
 <body>
-가변 인자 매개변수 위치에서 호출이 기본 배열을 갖는 가변 인자 메서드 호출을 보고합니다(예: <code>System.out.printf("%s", new int[]{1, 2, 3})</code>).
-이와 같은 기본 배열 인수는 기대되는 바와 같이 각각의 개별 요소가 박싱되지 않고, 단일 요소 배열로 래핑되므로 혼란을 야기할 수 있습니다.
+Reporta cualquier invocación de un método de aridad variable, en la que la invocación tiene un array primitivo en la posición del parámetro de aridad variable (por ejemplo, <code>System.out.printf("%s", new int[]{1, 2, 3})</code>).
+Este tipo de argumentos de array primitivo puede llevar a confusión, ya que se envolverá como un array de un solo elemento, en lugar de boxear cada elemento individual como se esperaría.
 <!-- tooltip end -->
-<p><b>예:</b></p>
-<pre>
-  <code>
+<p><b>Ejemplo:</b></p>
+<pre><code>
   String.format("%s", new int[]{1, 2, 3});
- </code>
-</pre>
-<p>빠른 수정 적용 후:</p>
-<pre>
-  <code>
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
   String.format("%s", (Object) new int[]{1, 2, 3});
- </code>
-</pre>
+</code></pre>
 </body>
 </html>

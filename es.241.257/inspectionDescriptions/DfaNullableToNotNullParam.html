@@ -1,15 +1,17 @@
 <html>
 <body>
-<p>이 검사는 잠재적으로 <code>null</code>일 수 있는 인수가 <code>@NotNull</code>로 어노테이션된 매개변수로 전달되는 메서드 호출을 식별합니다. 잠재적인 <code>NullPointerExceptions</code>이 런타임 시에 발생하기 전에 감지하는 데 유용합니다.</p>
-<p><b>예:</b></p>
+<p>Esta inspección identifica llamadas de método donde un argumento que potencialmente podría ser <code>null</code>
+    se pasa a un parámetro que está anotado con <code>@NotNull</code>,
+    ayudando a detectar <code>NullPointerExceptions</code> potenciales antes de que ocurran en tiempo de ejecución.</p>
+<p><b>Ejemplo:</b></p>
 <pre>
 <code>
-def test(@Nullable greeting: String): Unit = {
-  sayHello(greeting)
+def test(@Nullable saludo: String): Unit = {
+  decirHola(saludo)
 }
 
-def sayHello(@NotNull greeting: String): Unit = {
-  println(greeting.toLowerCase)
+def decirHola(@NotNull saludo: String): Unit = {
+  println(saludo.toLowerCase)
 }
 </code>
 </pre>

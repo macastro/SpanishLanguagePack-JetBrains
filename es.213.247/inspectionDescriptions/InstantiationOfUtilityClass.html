@@ -1,10 +1,10 @@
 <html>
 <body>
-<code>new</code> 키워드를 사용한 유틸리티 클래스의 인스턴스화를 보고합니다.
+Reporta instanciación de clases de utilidades utilizando la palabra clave <code>new</code>.
 <p>
-  유틸리티 클래스에서는 모든 필드 및 메서드가 <code>static</code>입니다.
-  그러한 클래스의 인스턴스화는 불필요할 가능성이 높으며 실수를 나타냅니다.</p>
-<p><b>예:</b></p>
+  En clases de utilidades, todos los campos y métodos son <code>static</code>.
+  La instanciación de tales clases probablemente sea innecesaria e indica un error.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class MyUtils {
     public static double cube(double x) {
@@ -13,13 +13,14 @@
   }
   class Main {
     public static void main(String[] args) {
-      // 유틸리티 클래스의 인스턴스화
+      // Instanciación de clase de utilidades
       MyUtils utils = new MyUtils();
     }
   }
 </code></pre>
 <p>
-  유틸리티 클래스가 인스턴스화되는 것을 방지하려면 <code>private</code> 생성자를 사용하는 것이 좋습니다.
+  Para evitar que las clases de utilidades sean instanciadas,
+  se recomienda usar un constructor <code>private</code>.
 </p>
 <!-- tooltip end -->
 </body>

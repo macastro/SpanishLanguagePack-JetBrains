@@ -1,30 +1,30 @@
 <html>
 <body>
-안전하게 닫히지 않은 JDBC 리소스를 보고합니다. 이 검사에서 보고되는 JDBC 리소스에는 <code>java.sql.Connection</code>,
+Informa de recursos JDBC que no están cerrados correctamente. Los recursos JDBC informados por esta inspección incluyen <code>java.sql.Connection</code>,
 <code>java.sql.Statement</code>, <code>java.sql.PreparedStatement</code>,
-<code>java.sql.CallableStatement</code>, <code>java.sql.ResultSet</code>이 포함됩니다.
+<code>java.sql.CallableStatement</code> y <code>java.sql.ResultSet</code>.
 <p>
-  이 검사는 기본적으로 리소스가 이름에 'close' 또는 'cleanup'을 포함하는 모든 메서드에 의해 닫힐 수 있다고 가정합니다.
+De manera predeterminada, la inspección asume que los recursos se pueden cerrar mediante cualquier método con 'close' o 'cleanup' en su nombre.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   ResultSet findAllElements(Connection connection) throws SQLException {
-    PreparedStatement statement = connection.prepareStatement("SELECT * FROM TABLE"); // 구문이 닫히지 않음
+    PreparedStatement statement = connection.prepareStatement("SELECT * FROM TABLE"); // La declaración no está cerrada
     statement.execute();
     return statement.getResultSet();
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-  다음 옵션을 사용해 검사를 구성하세요:
+Utiliza las siguientes opciones para configurar la inspección:
 </p>
 <ul>
   <li>
-    JDBC 리소스를 <code>try</code> 블록 내부에서 여는 것을 허용할지 여부를 설정합니다. 이 스타일은 <code>try</code> 블록 앞에서 리소스를 여는 것보다 장황하기 때문에 그다지 바람직하지 않습니다.
- </li>
+    Si se permite abrir un recurso JDBC dentro de un bloque <code>try</code>. Este estilo es menos deseable porque es más detallado que abrir un recurso delante de un bloque <code>try</code>.
+  </li>
   <li>
-    리소스가 인수로 전달된 메서드 호출에 의해 리소스가 닫힐 수 있는지 여부를 설정합니다.
- </li>
+    Si el recurso se puede cerrar mediante cualquier llamada a un método con el recurso pasado como argumento.
+  </li>
 </ul>
 </body>
 </html>

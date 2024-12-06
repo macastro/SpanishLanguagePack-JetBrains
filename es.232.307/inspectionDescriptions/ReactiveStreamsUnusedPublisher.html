@@ -1,26 +1,29 @@
 <html>
 <body>
-<p>사용되지 않는 <code>Publisher</code> 인스턴스를 보고합니다.</p>
+<p>Informa de instancias de <code>Publisher</code> no utilizadas.</p>
 <p>
-  새 <code>Publisher</code> 인스턴스를 생성하는 연산자(Mono/Flux/Flowable을 반환하는 Mono/Flux/Flowable 객체의 메서드)를 사용하려면 <code>subscribe()</code>를 통해 생성된 <code>Publisher</code>를 구독해야 합니다.
+  Para utilizar un operador (un método del objeto Mono/Flux/Flowable que devuelve un Mono/Flux/Flowable) que produce una nueva instancia de <code>Publisher</code>,
+  debe suscribirse al <code>Publisher</code> creado a través de <code>subscribe()</code>.
 </p>
 <p>
-  반환된 <code>Publisher</code>를 구독하지 않고 팩토리(예: <code>Mono.just()</code>)를 사용할 경우, 사용되지 않으며 불필요한 메모리 할당으로 취급되는 객체가 생성됩니다.
+  Si utiliza una factoría (por ejemplo, <code>Mono.just()</code>) sin suscribirse al <code>Publisher</code> devuelto,
+  se crea un objeto que nunca se utiliza y se trata como una asignación de memoria innecesaria.
 </p>
 <p>
-  예를 들어, 이 <code>Publisher</code>를 구독하지 않는 경우나 연산자를 적용하여 새 <code>Publisher</code>를 생성한 후 구독하지 않는 경우, <code>Mono.just(1, 2, 3).map(i -> i + 3)</code>은 실행되지 않습니다.
+  Por ejemplo, <code>Mono.just(1, 2, 3).map(i -> i + 3)</code> no se ejecutará a menos que se suscriba a este <code>Publisher</code>,
+  o a menos que cree un nuevo <code>Publisher</code> aplicando operadores y suscribiéndose a él.
 </p>
-<p><b>예:</b></p>
-<p>사용되지 않는 <code>Flux</code> 인스턴스:</p>
+<p><b>Ejemplo:</b></p>
+<p>Instancia de <code>Flux</code> no utilizada:</p>
 <pre><code lang="java">
 Flux.just(1, 2, 3);
 </code></pre>
-<p>컨슈머가 사용하는 <code>Flux</code> 인스턴스:</p>
+<p>Instancia de <code>Flux</code> utilizada por un consumidor:</p>
 <pre><code lang="java">
 Flux.just(1, 2, 3).subscribe(System.out::println);
 </code></pre>
-<p>Error Prone 또는 AssertJ의 <code>@CanIgnoreReturnValue</code> 어노테이션이 추가된 메서드 호출은 보고되지 않습니다.
+<p>No se informa de llamadas a métodos anotados con la anotación <code>@CanIgnoreReturnValue</code> de Error Prone o AssertJ.
 <!-- tooltip end -->
-<p><small>2019.3의 새로운 기능</small></p>
+<p><small>Novedad en 2019.3</small></p>
 </body>
 </html>

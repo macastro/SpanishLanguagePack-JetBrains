@@ -1,15 +1,18 @@
 <html>
 <body>
-조건이 항상 <code>true</code> 또는 <code>false</code>이면 보고합니다</body>.
-<p>예:</p>
-<pre><code>
+Informa sobre condiciones en el código que siempre evalúan a <code>true</code> o <code>false</code>.
+  <p>Ejemplo:</p>
+  <pre><code>
 func _(file *os.File) {
- if file == nil {
-	return
- }
- // 조건이 항상 false입니다
- if file == nil {
- }
+    if file == nil {
+        return
+    }
+    if file == nil {
+    }
 }
-</code></pre>
+  </code></pre>
+<p>
+  En el ejemplo dado, la segunda condición <code>if file == nil</code> es redundante. Siempre evaluará a <code>false</code> ya que repite una verificación ya realizada en el código.
+</p>
+</body>
 </html>

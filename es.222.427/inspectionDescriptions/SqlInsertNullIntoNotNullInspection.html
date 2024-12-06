@@ -1,7 +1,7 @@
 <html>
 <body>
-NOT NULL 값 이외에는 받지 않는 열에 NULL 값을 삽입하는 경우를 보고합니다.
-<p>예(Microsoft SQL 서버):</p>
+Informa los casos cuando se insertan valores NULL en columnas que aceptan sólo valores NOT NULL.
+<p>Ejemplo (Microsoft SQL Server):</p>
 <pre><code>CREATE TABLE br2 (
 id INT NOT NULL,
 col1 NVARCHAR (20) NOT NULL,
@@ -10,7 +10,7 @@ col2 NVARCHAR (20) NOT NULL,
 --
 INSERT INTO br2 (id, col1, col2)
 VALUES (1, NULL, NULL);</code></pre>
-<p><code>col1</code> 및 <code>col2</code>는 NOT NULL로 정의되어 있기 때문에 이 열에는 NULL 값을 삽입할 수 없습니다. 스크립트를 그대로 실행하면 오류가 발생합니다. 이 코드를 수정하려면 VALUES 부분의 NULL을 어떤 값으로 바꾸세요(예: <code>42</code> 및 <code>'bird'</code>).</p>
+<p>No se pueden insertar valores NULL en <code>col1</code> y <code>col2</code> porque están definidas como NOT NULL. Si se ejecuta el script tal cual está, se recibirá un error. Para corregir este código, se debe reemplazar NULL en la parte de VALUES con algunos valores (por ejemplo, <code>42</code> y <code>'bird'</code>).</p>
 <pre>INSERT INTO br2 (id, col1, col2)
 VALUES (1, 42, 'bird');</pre>
 </body>

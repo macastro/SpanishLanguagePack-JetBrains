@@ -1,5 +1,25 @@
 <html>
 <body>
-람다 식이 있는 호출로 변환 가능한 하나의 추상 메서드를 포함하는 Java 인터페이스를 구현하는 익명 객체 리터럴을 보고합니다.
+Reporta literales de objeto anónimos que implementan una interfaz Java con un solo método abstracto que puede ser convertido en una llamada con una expresión lambda.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class SomeService {
+  val threadPool = Executors.newCachedThreadPool()
+    
+  fun foo() {
+    threadPool.submit(object : Runnable {
+      override fun run() {
+        println("hola")
+      }
+    })
+  }
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun foo() {
+    threadPool.submit { println("hola") }
+  }
+</code></pre>
 </body>
 </html>

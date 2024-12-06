@@ -1,9 +1,9 @@
 <html>
 <body>
-<p>필터링된 컬렉션에 대한 빈 값 검사를 보고합니다.</p>
+<p>Devolver errores de colecciones filtradas vacías.</p>
 
-<p>빠른 수정에서는 빈 값을 검사하기 위해 <code>exists</code> 또는 <code>forall</code>을 사용합니다.</p>
-<p><b>예:</b></p>
+<p>Los arreglos rápidos usan <code>exists</code> o <code>forall</code> para revisar si están vacíos.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   var x: Seq[Int]
   x.filter(p).size == 0
@@ -11,7 +11,7 @@
   x.filterNot(p).isEmpty
   x.filterNot(p).nonEmpty
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   var x: Seq[Int]
   !x.exists(p)

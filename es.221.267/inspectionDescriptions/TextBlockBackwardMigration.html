@@ -1,8 +1,7 @@
 <html>
 <body>
-일반 문자열 리터럴로 대체 가능한 텍스트 블록을 보고합니다.
-<p>Java 15 이전의 Java 버전으로 코드를 마이그레이션하면 이러한 텍스트 블록의 찾은 항목이 표시될 수 있습니다.</p>
-<p><b>예:</b></p>
+Informa bloques de texto que pueden ser reemplazados con literales de cadena normales.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   Object obj = engine.eval("""
                            function hello() {
@@ -12,7 +11,7 @@
                            hello();
                            """);
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar corrección rápida:</p>
 <pre><code>
   Object obj = engine.eval("function hello() {\n" +
                            "  print('\"Hello, world\"');\n" +
@@ -21,7 +20,6 @@
                            "hello();\n");
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 15 이상인 경우에만 보고합니다.</p>
-<p><small>2019.3의 새로운 기능</small></p>
+<p><small>Nuevo en 2019.3</small></p>
 </body>
 </html>

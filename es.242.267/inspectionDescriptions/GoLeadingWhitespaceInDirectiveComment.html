@@ -1,14 +1,15 @@
 <html>
 <body>
-주석의 Go 지시문 앞에 있는 선행 공백을 보고합니다.
-<p><code>//</code>와 Go 지시문 사이에 공백이 있으면 Go 지시문이 인식되지 않습니다.</p>
-<p>빠른 수정은 Go 지시문 앞의 선행 공백을 제거합니다.</p>
-<p><b>예:</b></p>
+Informa sobre espacios en blancos líderes antes de las directivas Go en comentarios.
+<p>Las directivas Go no se reconocen si hay un espacio en blanco entre <code>//</code> y
+la directiva Go.</p>
+<p>La corrección rápida elimina el espacio en blanco inicial antes de la directiva Go.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 //  go:embed file.txt
 var File string
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
 //go:embed file.txt
 var File string

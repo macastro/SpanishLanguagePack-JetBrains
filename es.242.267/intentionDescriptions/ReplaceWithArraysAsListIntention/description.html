@@ -1,15 +1,18 @@
 <html>
 <body>
-<code>Collections.emptyList()</code> 또는 <code>Collections.singletonList()</code> 호출을 <code>Arrays.asList()</code> 호출로 대체합니다.
-<p>When the project or module uses language level 9:</p>
+Reemplaza una llamada a <code>Collections.emptyList()</code> o <code>Collections.singletonList()</code> por una llamada a <code>Arrays.asList()</code>.
+<p>Cuando el proyecto o módulo usa el nivel de lenguaje 9:</p>
 <ul>
-  <li>인텐션이 <code>Collections.emptyList()</code> 또는 <code>Collections.singletonList()</code>를 <code>java.util.List.of()</code> 호출로 대체합니다.</li>
-  <li><code>Collections.emptySet()</code> 또는 <code>Collections.singleton()</code> 호출을
-    <code>java.util.Set.of()</code>로 대체합니다.</li>
-  <li><code>Collections.emptyMap()</code> 또는 <code>Collections.singletonMap()</code> 호출을
-    <code>java.util.Map.of()</code>로 대체합니다.</li>
+  <li>La intención reemplaza <code>Collections.emptyList()</code> o <code>Collections.singletonList()</code>
+    por una llamada a <code>java.util.List.of()</code>.</li>
+  <li>Reemplaza una llamada a <code>Collections.emptySet()</code> o <code>Collections.singleton()</code> por
+    <code>java.util.Set.of()</code>.</li>
+  <li>Reemplaza una llamada a <code>Collections.emptyMap()</code> o <code>Collections.singletonMap()</code> por
+    <code>java.util.Map.of()</code>.</li>
 </ul>
-<p>프로젝트 또는 모듈에서 Guava 라이브러리를 사용하며 언어 수준이 9이하인 경우, 인텐션은 <code>Collections.emptyList()</code> 또는 <code>Collections.singletonList()</code> 호출을 각각 <code>com.google.common.collect.ImmutableList</code>, <code>com.google.common.collect.ImmutableSet</code> 또는
-<code>com.google.common.collect.ImmutableMap</code>으로 대체합니다.</p>
+<p>Cuando el proyecto o módulo utiliza la biblioteca Guava y el nivel de lenguaje es 9 o inferior, la intención reemplaza una
+  llamada a <code>Collections.emptyList()</code> o <code>Collections.singletonList()</code> por
+<code>com.google.common.collect.ImmutableList</code>, <code>com.google.common.collect.ImmutableSet</code> o
+<code>com.google.common.collect.ImmutableMap</code> respectivamente.</p>
 </body>
 </html>

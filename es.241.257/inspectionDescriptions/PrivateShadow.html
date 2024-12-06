@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>클래스 매개변수 shadows 상위 클래스 var</title>
+    <title>El parámetro de la clase sombrea la variable de superclase</title>
 </head>
+
 <body>
-<p>상위 클래스 <code>var</code>를 숨기는 클래스 매개변수를 보고합니다.</p>
-<p><b>예:</b></p>
-<pre>
+    <p>Informa de los parámetros de clase que sombrean una <code>var</code> de superclase.</p>
+    <p><b>Ejemplo:</b></p>
+    <pre>
 class Animal {
   var name: String = ""
 }
 
 class Cat(name: String = "") extends Animal {
-  // `name`을 private[this] val로 만들고, 해당 var을 가립니다
+  // Convierte `name` en un val private[this] que sombrea la var
   def usage = name
 }
 </pre>
-<p>클래스를 비 <code>private</code> <code>var</code>로  확장할 때 사용자의 의도는 하위 클래스의 클래스 매개변수가 상위 클래스에서 <code>var</code>를 재정의하는 것이겠지만 실제 결과는 숨기는 것입니다. 이로 인해 사소하지 않은 오류가 발생할 수 있습니다.</p>
-<p>강조 표시는 실제로 값을 사용하는 경우에만 표시됩니다.</p>
-<!-- tooltip end -->
+    <p>Al extender una clase con una <code>var</code> no <code>private</code>, el usuario podría esperar que un parámetro de clase de la subclase anulara la <code>var</code> de la superclase, pero de hecho solo la sombreará. Esto a veces puede provocar errores no triviales.</p>
+    <p>Tenga en cuenta que el resaltado aparecerá solo si el valor se utiliza realmente.</p>
+    <!-- tooltip end -->
 </body>
+
 </html>

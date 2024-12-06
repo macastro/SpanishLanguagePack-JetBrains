@@ -1,15 +1,15 @@
 <html>
 <body>
-다음과 같은 EJB 사양 위반 사례를 보고합니다:
+Se informan las siguientes violaciones a la especificación EJB:
 <ul>
-  <li><code>create()</code>이 올바르게 정의되어 있지 않은 경우</li>
-  <li><code>finder()</code>는 허용되지 않는 경우</li>
+  <li><code>create()</code> no está definido correctamente</li>
+  <li><code>finder()</code> no está permitido</li>
 </ul>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 public interface SessionHome extends javax.ejb.EJBHome {
-  Session create() throws java.rmi.RemoteException; // 오류: `javax.ejb.CreateException`도 던져야 함
+  Session create() throws java.rmi.RemoteException; // Error: También debería lanzar `javax.ejb.CreateException`
 }
 </code></pre>
 </body>

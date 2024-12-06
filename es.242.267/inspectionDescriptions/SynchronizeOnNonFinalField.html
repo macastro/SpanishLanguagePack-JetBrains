@@ -1,13 +1,15 @@
 <html>
 <body>
-<code>final</code>이 아닌 필드 참조로 구성된 <code>synchronized</code> 문 잠금 표현식을 보고합니다.
-동일 객체에서 연산이 수행되어도 다양한 스레드가 각기 다른 잠금을 획득할 수 있으므로 해당 구문이 유의미할 가능성은 낮습니다.
+Reporta expresiones de bloqueo de sentencias <code>synchronized</code>
+que consisten en una referencia de campo no <code>final</code>.
+Es poco probable que tales sentencias tengan una semántica útil, ya que diferentes
+subprocesos pueden adquirir bloqueos diferentes incluso cuando operan sobre el mismo objeto.
 <!-- tooltip end -->
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   private Object o;
   public void foo() {
-    synchronized (o) // final이 아닌 필드에서의 동기화
+    synchronized (o) // sincronización en un campo no final
     { }
   }
 </code></pre>

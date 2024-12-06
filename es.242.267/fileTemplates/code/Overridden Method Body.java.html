@@ -3,61 +3,59 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-    프로그램에 의해 생성될 때마다 재정의된 메서드의 본문을 채웁니다.
-    예: <i>코드 | 메서드 재정의</i> 함수가 호출된 경우.<br>
-    이 기본 제공 템플릿은 편집할 수 있습니다. Java 표현식 및 주석과 마찬가지로, 해당 값으로 확장되는 
-      사전 정의된 변수를 사용할 수 있습니다.</font>
+    Rellena el cuerpo del método cada vez que el programa genera un método anulado (por ejemplo, al invocar la función <i>Código | Anular Métodos…</i>).<br>
+         Esta plantilla integrada es editable. Además de expresiones y comentarios Java, puede usar variables predefinidas que se expandirán a sus valores correspondientes.</font>
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">사전 정의된 변수는 다음의 값을 사용합니다:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas reciben los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1"><b>void</b> 메서드에 대한 super 메서드 호출 - 
-매개변수가 있거나 없는 <code><b>super</b>.<i>method_name</i>();</code>.
-    그 외 메서드에 대한 호출 - 매개변수가 있거나 없는 <code><b>return</b> <b>super</b>.<i>method_name</i>();</code>.
+    <td width="100%" valign="top"><font face="verdana" size="-1">Llamada al método super, para métodos <b>void</b> - <code><b>super</b>.<i>nombre_método</i>();</code>, con o sin parámetros;
+      para otros métodos - <code><b>return</b> <b>super</b>.<i>nombre_método</i>();</code>, con o sin parámetros
     </font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PLAIN_CALL_SUPER}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">super 메서드 호출, 매개변수가 있거나 없는 <code><b>super</b>. <i>method_name</i>();</code>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Llamada al método super, <code><b>super</b>.<i>nombre_método</i>();</code>, con o sin parámetros
     </font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">생성된 메서드의 반환 타입</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Tipo de retorno del método creado</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">메서드에서 기본으로 반환되는 값</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Valor de retorno predeterminado del método</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${METHOD_NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">재정의된 메서드의 이름</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del método anulado</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CLASS_NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">메서드가 재정의된 클래스의 정규화된 이름</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo de la clase donde se anula el método</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${SIMPLE_CLASS_NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">메서드가 구현된 클래스의 정규화되지 않은 이름</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre simple de la clase que implementa el método</font></td>
   </tr>
   <tr>
-    <td colspan="3"><font face="verdana" size="-1"><i>파일 헤더</i> 템플릿 (<i>포함</i> 탭)의 모든 사전 정의된 변수도 사용 가능합니다. (예:
+    <td colspan="3"><font face="verdana" size="-1">Todas las variables predefinidas de la plantilla <i>Encabezado de archivo</i> (pestaña <i>Incluir</i>) también están disponibles.
+      (Por ejemplo:
       <font face="verdana" size="-2"><b>${USER}</b></font>,
-      <font face="verdana" size="-2"><b>${DATE}</b></font>,
-      등.)</font>
+      <font face="verdana" size="-2"><b>${DATE}</b></font>
+      etc.)</font>
     </td>
   </tr>
 </table>

@@ -1,13 +1,13 @@
 <html>
 <body>
-메서드 참조로 대체할 수 있는 익명 타입을 보고합니다.
+Informa clases anónimas que se pueden reemplazar con referencias a métodos.
 <p>
-  익명 클래스가 바인딩되지 않은 메서드 참조로 변환되는 경우, 
-후속 호출 중 Java 런타임에서 동일 메서드 참조 객체를 다시 사용할 수 있습니다. 반면 익명 클래스를 사용하면
-  매번 별도의 객체가 생성됩니다. 따라서 빠른 수정 적용 시 드물게 의미가 변경될 수 있습니다.
-예: 익명 클래스 인스턴스가 <code>HashMap</code> 키로 사용되는 경우.
+  Tenga en cuenta que si una clase anónima se convierte en una referencia a un método sin vincular, el mismo objeto de referencia a un método 
+  puede ser reutilizado por el tiempo de ejecución de Java durante invocaciones posteriores. Por otro lado, cuando se utiliza una clase anónima,
+  se crean objetos separados cada vez. Por lo tanto, la aplicación de la solución rápida puede provocar un cambio de semántica en casos excepcionales, 
+  por ejemplo, cuando las instancias de clases anónimas se utilizan como claves <code>HashMap</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   Runnable r = new Runnable() {
     @Override
@@ -16,11 +16,12 @@
     }
   };
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   Runnable r = System.out::println;
 </code></pre>
 <!-- tooltip end -->
-<p><b>인터페이스에 @FunctionalInterface로 어노테이션이 추가되지 않은 경우 보고</b> 옵션을 사용하여 <code>@FunctionalInterface</code>로 어노테이션이 추가되지 않은 인터페이스에 대한 검사를 활성화합니다.</p>
+<p>Utilice la opción <b>Informar cuando la interfaz no está anotada con @FunctionalInterface</b> para habilitar esta inspección para
+  interfaces que no están anotadas con <code>@FunctionalInterface</code>.</p>
 </body>
 </html>

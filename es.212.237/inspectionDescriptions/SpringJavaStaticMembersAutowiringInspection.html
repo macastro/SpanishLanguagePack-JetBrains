@@ -1,14 +1,14 @@
 <html>
 <body>
-<p>Spring 구성 요소에서 자동 주입되거나 주입된 static 메서드/필드를 보고합니다.</p>
+<p>Informa métodos/campos estáticos inyectados y auto-conectados de componentes Spring.</p>
 
-<p><b>예:</b></p>
-<pre>
+<p><b>Ejemplo:</b></p>
+<pre><code>
 @Component
 public class MyComponent {
 	@Autowired
-	static FooInterface foo;  // reports "Don't autowire static members"
+	static FooInterface foo;  // informa "No auto-conectar miembros estáticos"
 }
-</pre>
+</code></pre>
 </body>
 </html>

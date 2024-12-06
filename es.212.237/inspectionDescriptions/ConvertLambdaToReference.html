@@ -1,23 +1,23 @@
 <html>
 <body>
-함수 참조로 바꿀 수 있는 함수 리터럴 표현식을 보고합니다.
-<p>람다를 함수 참조로 바꾸면 코드가 더 간결해지고 이해하기 쉬워지는 경우가 종종 있습니다.</p>
-<p><b>예:</b></p>
+Informa de las expresiones literales de función que se pueden sustituir por referencias de función.
+<p>Sustituir las lambdas por referencias de función suele hacer que el código parezca más conciso y comprensible.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  fun Int.isEven() = this % 2 == 0
+  fun Int.esPar() = this % 2 == 0
 
   fun example() {
       val numbers = listOf(1, 2, 4, 7, 9, 10)
-      val evenNumbers = numbers.filter { it.isEven() }
+      val evenNumbers = numbers.filter { it.esPar() }
   }
 </code></pre>
-<p>수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  fun Int.isEven() = this % 2 == 0
+  fun Int.esPar() = this % 2 == 0
 
   fun example() {
       val numbers = listOf(1, 2, 4, 7, 9, 10)
-      val evenNumbers = numbers.filter(Int::isEven)
+      val evenNumbers = numbers.filter(Int::esPar)
   }
 </code></pre>
 <!-- tooltip end -->

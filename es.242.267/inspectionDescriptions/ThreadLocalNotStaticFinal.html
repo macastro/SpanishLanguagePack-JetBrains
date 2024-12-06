@@ -1,15 +1,15 @@
 <html>
 <body>
-<code>static final</code>로 선언되지 않은 <code>java.lang.ThreadLocal</code> 타입의 필드를 보고합니다.
+Reporta campos de tipo <code>java.lang.ThreadLocal</code> que no están declarados como <code>static final</code>.
 <p>
-  대부분의 경우 <code>java.lang.ThreadLocal</code> 인스턴스는 상태를 스레드에 연결합니다. 
-  static final이 아닌 <code>java.lang.ThreadLocal</code> 필드는 상태를 인스턴스-스레드 결합에 연결합니다.
-  일반적으로 이는 불필요하며 메모리 누수와 잘못된 동작을 초래하는 버그인 경우가 많습니다.
+  En el caso más común, una instancia de <code>java.lang.ThreadLocal</code> asocia un estado a un subproceso.
+  Un campo de <code>java.lang.ThreadLocal</code> que no sea estático ni final asocia un estado a una combinación de instancia-subproceso.
+  Esto usualmente es innecesario y a menudo es un error que puede causar pérdidas de memoria y comportamiento incorrecto.
 </p>
 <p>
-  빠른 수정은 필드를 <code>static final</code>로 만들도록 제안합니다.
+  Se sugiere una corrección rápida para que el campo sea <code>static final</code>.
 <p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   private ThreadLocal tl = ThreadLocal.withInitial(() -> Boolean.TRUE);
 </code></pre>

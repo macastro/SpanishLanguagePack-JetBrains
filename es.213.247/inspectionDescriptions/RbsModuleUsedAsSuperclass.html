@@ -1,6 +1,13 @@
 <html>
 <body>
-상위 클래스 절에 사용된 모듈을 보고합니다.
-<p>상위 클래스 절은 클래스를 참조하는 데만 허용됩니다.</p>
+Informa los módulos usados en cláusulas de superclase. Las cláusulas de superclase sólo están permitidas para referenciar clases.
+<p>Hay una solución rápida disponible para eliminar la cláusula de superclase inválida.</p>
+<p>Ejemplo:</p>
+<pre><code># Módulo 'Kernel' usado como una superclase
+class Example &lt; Kernel
+end</code></pre>
+<p>Después de la solución rápida:</p>
+<pre><code>class Example
+end</code></pre>
 </body>
 </html>

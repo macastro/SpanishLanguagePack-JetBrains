@@ -1,17 +1,17 @@
 <html>
 <body>
-OpenAPI/Swagger 사양의 일부로 해석될 수 있는 YAML/JSON 파일을 탐지합니다.
+Se detectan archivos YAML/JSON que son susceptibles de ser interpretados como parte de una especificación OpenAPI/Swagger.
 <p>
-  이러한 파일은 명시적인 사양 속성은 포함하지 않으나 인접한 기본 사양 파일에서 참조됩니다.
+  Este tipo de archivos no contiene características de especificación explícitas, pero se refieren desde el archivo de especificación principal cercano.
 </p>
 <!-- tooltip end -->
 
 <p>
-  다음의 예시는 같은 디렉터리에 있는 두 파일을 포함합니다. 첫 번째 파일은 일반적인 기본 사양 파일입니다.
-  두 번째 파일은 첫 번째 파일에서 참조되며 따라서 사양으로 간주될 수 있다고 제안됩니다.
+  El siguiente ejemplo contiene dos archivos ubicados en el mismo directorio. El primero es un archivo de especificación principal genérico.
+  El segundo es referenciado por el primero, por lo que se propone considerarlo una especificación.
 </p>
 
-<p><b>기본 사양 파일 'openapi.yaml':</b></p>
+<p><b>Archivo de especificación principal `openapi.yaml`:</b></p>
 <pre><code>
 openapi: 3.1.0
 components:
@@ -23,7 +23,7 @@ components:
           $ref: 'common.components.yaml#/components/schemas/CommonSchema'
 </code></pre>
 
-<p><b>사양 파일 후보 `common.components.yaml`:</b></p>
+<p><b>Candidato a archivo de especificación `common.components.yaml`:</b></p>
 <pre><code>
 components: # 'Mark file as OpenAPI specification' highlighting
   schemas:

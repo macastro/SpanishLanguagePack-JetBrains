@@ -1,13 +1,12 @@
 <html>
 <body>
-<code>getClass()</code> 호출의 동기화를 보고합니다.
+Sincronización de informes en una llamada a <code>getClass()</code>.
 <p>
-  동기화를 포함하는 클래스가 하위 클래스화될 경우 해당 하위 클래스는 다른 클래스 객체에서 동기화됩니다. 일반적으로 <code>getClass()</code> 호출을 클래스 리터럴 표현식(예: <code>String.class</code>)으로 대체할 수 있습니다. 더 좋은 솔루션은 액세스가 완전히 제어될 수 있는 <code>private static final</code> lock 객체에서 동기화를 수행하는 것입니다.
+  Si la clase que contiene la sincronización es subclasificada, la subclase se sincronizará con un objeto de clase diferente. Normalmente, la llamada a <code>getClass()</code> se puede reemplazar por una expresión literal de clase, por ejemplo, <code>String.class</code>. Una solución incluso mejor es sincronizar un objeto de bloqueo <code>private static final</code>, a cuyo acceso se puede controlar completamente.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code> synchronized(getClass()) {}
 </code></pre>
 <!-- tooltip end -->
-<p><small>2016.2의 새로운 기능</small></p>
 </body>
 </html>

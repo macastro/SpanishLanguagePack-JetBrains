@@ -16,15 +16,17 @@
 
 <html>
 <body>
-정렬되지 않은 가져오기를 보고합니다.
-<p>모든 Go 프로그램은 같은 서식을 따라야하며 서식에 대한 규칙은 <a href="https://pkg.go.dev/cmd/gofmt">gofmt</a> 도구가 지정합니다. 이러한 규칙은 가져오기를 정렬해야 합니다.</p>
-<p>잘못된 정렬의 예:</p>
+Reporta importaciones no ordenadas.
+<p>Todos los programas en Go deben ser formateados de la misma manera, las reglas de formato son fijas por la
+  herramienta <a href="https://pkg.go.dev/cmd/gofmt">gofmt</a>. Esas reglas requieren que las importaciones estén ordenadas.</p>
+<p>Ejemplo de un orden incorrecto:</p>
 <pre><code>import (
  "net"
  "errors"
  "fmt"
 )</code></pre>
-<p><b>가져오기 정렬</b> 빠른 수정을 적용하여 정렬을 바로잡을 수 있습니다. 빠른 수정이 적용된 후 정렬은 다음과 같습니다:</p>
+<p>Puedes aplicar la solución rápida <b>Ordenar importaciones</b> para arreglar el orden. Después de que se aplica la solución rápida, el orden
+ luce como sigue:</p>
 <pre><code>import (
  "errors"
  "fmt"

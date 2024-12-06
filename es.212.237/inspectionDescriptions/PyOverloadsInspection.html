@@ -1,23 +1,23 @@
 <html>
 <body>
-<p>일반 Python 파일에서 overload가 구현 뒤에 위치하거나 overload 시그니처가 구현과 호환되지 않는 경우를 보고합니다.</p>
-<p><b>예:</b></p>
-<pre style="font-family: monospace">
+<p>Informa sobre los casos en que se colocan sobrecargas en archivos Python regulares después de la implementación o cuando sus firmas no son compatibles con la implementación.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
 from typing import overload
 
 
 @overload
-def foo(p1, p2): # 오버로드 시그니처가 구현과 호환되지 않음
+def foo(p1, p2): # La firma de sobrecarga no es compatible con la implementación
     pass
 
 
 @overload
-def foo(p1): # 오버로드 시그니처가 구현과 호환되지 않음
+def foo(p1): # La firma de sobrecarga no es compatible con la implementación
     pass
 
 
 def foo(p1, p2, p3):
     print(p1, p2, p3)
-</pre>
+</code></pre>
 </body>
 </html>

@@ -1,17 +1,18 @@
 <html>
 <body>
-배열의 상등 관계를 테스트하기 위해 사용된 연산자 <code>==</code> 및 <code>!=</code>을 보고합니다.
-대부분의 경우 배열 내용의 상등 관계를 테스트하려는 의도로 사용됩니다. <code> java.util.Arrays.equals()</code> 메서드를 사용하여 이를 실행할 수 있습니다.
+Reporta los operadores <code>==</code> y <code>!=</code> usados para probar la igualdad de arreglos.
+En la mayoría de los casos, probar la igualdad del contenido del arreglo es lo deseado,
+lo cual puede hacerse con el método <code>java.util.Arrays.equals()</code>.
 <p>
-  빠른 수정은 <code>==</code>를 <code>java.util.Arrays.equals()</code>로 바꿀 것을 제안합니다.
+  Se sugiere una reparación rápida para reemplazar <code>==</code> con <code>java.util.Arrays.equals()</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void foo(Object[] x, Object[] y) {
     boolean comparison = x == y;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la reparación rápida:</p>
 <pre><code>
   void foo(Object[] x, Object[] y) {
     boolean comparison = Arrays.equals(x, y);

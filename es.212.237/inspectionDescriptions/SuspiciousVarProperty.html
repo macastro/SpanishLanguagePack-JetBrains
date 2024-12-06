@@ -1,13 +1,13 @@
 <html>
 <body>
-백킹 필드를 참조하지 않는 기본 setter 및 getter를 포함하는 <code>var</code> 프로퍼티를 보고합니다.
+Informa sobre propiedades <code>var</code> con un setter y getter predeterminados que no hacen referencia al campo de respaldo.
 <p>
-그러한 프로퍼티는 setter를 호출하는데 영향을 주지 않으므로 <code>val</code>로 변경하고 이니셜라이저를 삭제하면 더 깔끔합니다.
+Estas propiedades no afectan a la llamada de su setter; por lo tanto, será más claro cambiar dicha propiedad a <code>val</code> y eliminar el inicializador.
 </p>
-<p><b>val로 변경하고 이니셜라이저 삭제</b> 빠른 수정을 사용해 코드를 자동으로 수정할 수 있습니다.</p>
-<p>예:</p>
+<p>Se puede utilizar la corrección rápida <b>Cambiar a val y eliminar el inicializador</b> para modificar el código automáticamente.</p>
+<p>Ejemplo:</p>
 <pre><code>
-  // 이 프로퍼티는 항상 '1'을 반환하며 프로터피 유형이 'var'인지는 중요하지 않음
+  // Esta propiedad siempre devuelve '1' y no importa que la propiedad sea 'var'
   var foo: Int = 0
       get() = 1
 </code></pre>

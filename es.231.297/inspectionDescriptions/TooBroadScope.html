@@ -1,32 +1,36 @@
 <html>
 <body>
-더 작은 범위로 이동할 수 있는 모든 변수 선언을 보고합니다.
-<p>이 검사는 주로 메서드 시작 부분의 <i>Pascal 형식</i> 선언에 유용합니다. 또한 너무 광범위한 범위를 가진 변수도 리팩터링 후에 남는 경우가 많습니다.</p>
-<p><b>예:</b></p>
+Reporta cualquier declaración de variable que pueda ser movida a un alcance menor.
+<p>Esta inspección es especialmente
+útil para declaraciones al estilo <i>Pascal</i> al inicio de un método. Las variables con un alcance demasiado amplio
+a menudo suelen quedar después de las refactorizaciones.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   StringBuilder sb = new StringBuilder();
   System.out.println();
   sb.append(1);
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   System.out.println();
   StringBuilder sb = new StringBuilder();
   sb.append(1);
 </code></pre>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configura la inspección:</p>
 <ul>
-  <li><b>내부 블록으로 이동할 수 있는 변수만 보고</b> 옵션을 사용하여 더 깊은 코드 블록을 이동할 수 있는 변수만을 보고합니다.
-    예를 들어, 옵션이 활성화되면 위의 <code>sb</code> 변수에 대한 이동이 제안되지 않습니다.
-    그러나 다음의 코드에 대해서는 제안됩니다.
+  <li>Usa la opción <b>Solo reportar variables que puedan ser movidas a bloques internos</b> para reportar solo aquellas variables que puedan ser movidas dentro de bloques de código más profundos.
+    Por ejemplo, cuando la opción está habilitada, no se sugiere el movimiento para la variable <code>sb</code> anterior.
+    Sin embargo, se sugerirá para el siguiente código:
 <pre><code>
   StringBuilder sb = new StringBuilder(a);
   if (flag) {
     sb.append(1);
   }
 </code></pre></li>
-  <li><b>new 식을 이니설라이저로 가진 변수 보고(잠재적으로 안전하지 않음)</b> 옵션을 사용하여 new 식으로 초기화되는 변수를 보고합니다. 이 경우 생성자에 비 로컬 측의 부수 효과가 있을 때 검사가 잠재적으로 안전하지 않게 됩니다. 예를 들어, 옵션이 활성화되면 <code>foo</code> 변수에 대한 이동이 제안됩니다.
+  <li>Usa la opción <b>Reportar variables con una nueva expresión como inicializador
+    (potencialmente inseguro)</b> para reportar variables que son inicializadas con una nueva expresión. Esto hace que la inspección sea potencialmente
+    insegura cuando el constructor tiene efectos secundarios no locales. Por ejemplo, cuando la opción está habilitada, se sugiere el movimiento para la variable <code>foo</code>:
 <pre><code>
   class Foo {
     static List&lt;Foo&gt; fooList = new ArrayList&lt;&gt;();
@@ -38,7 +42,7 @@
     }
 
     public static void main(String[] args) {
-      // 안전하지 않은 경우에도 이동 가능
+      // el movimiento es posible aunque no sea seguro
       Foo foo = new Foo("bar");
       System.out.println(fooList.size());
       System.out.println(foo.bar);

@@ -1,15 +1,17 @@
 <html>
 <body>
-<p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/annotation/DirtiesContext.html">@DirtiesContext</a> 어노테이션의 잘못된 'mode' 구성을 보고합니다.</p>
+<p>Informa de una configuración incorrecta del "modo" en la
+<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/annotation/DirtiesContext.html">@DirtiesContext</a>
+anotación.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   @ContextConfiguration
-  @DirtiesContext(methodMode = MethodMode.AFTER_METHOD, // Setting the method mode on an annotated test class has no meaning. For class-level control, use classMode instead.
-                  hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // hierarchyMode should be used when the context is configured as part of a hierarchy via @ContextHierarchy
+  @DirtiesContext(methodMode = MethodMode.AFTER_METHOD, // Establecer el modo método en una clase de prueba anotada no tiene sentido. Para el control a nivel de clase, utilice en su lugar classMode.
+                  hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // hierarchyMode debe usarse cuando el contexto se configura como parte de una jerarquía a través de @ContextHierarchy
   public class MyTest {
-    @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS, // Setting the class mode on an annotated test method has no meaning. For method-level control use methodMode instead..
-                     hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // hierarchyMode should be used when the context is configured as part of a hierarchy via @ContextHierarchy
+    @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS, // Establecer el modo clase en un método de prueba anotado no tiene sentido. Para el control a nivel de método, utilice en su lugar methodMode.
+                     hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // hierarchyMode debe usarse cuando el contexto se configura como parte de una jerarquía a través de @ContextHierarchy
     public void testFoo() {...}
   }
 </code></pre>

@@ -1,5 +1,13 @@
 <html>
 <body>
-Android 프로젝트에서 Android 런타임에 허용되지 않는 식별자(예: 공백을 포함하는 메서드 이름)를 보고합니다.
+Reporta identificadores de proyectos Android que no son aceptados por el tiempo de ejecución de Android.
+Por ejemplo, nombres de método con espacios en blanco.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Test {
+      var `a b c` = 3
+  }
+</code></pre>
+<p>Para solucionar el problema, cambia el nombre del identificador para que coincida con los requisitos del tiempo de ejecución de Android.</p>
 </body>
 </html>

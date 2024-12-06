@@ -1,5 +1,21 @@
 <html>
 <body>
-외부로 이동 가능한 소괄호의 람다 식을 보고합니다.
+Reporta expresiones lambda en paréntesis que se pueden mover fuera de ellos.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+fun square(a: Int, b: (Int) -&gt; Int) {
+  b(a * a)
+}
+
+fun foo() {
+  square(2, { it })
+}
+</code></pre>
+<p>Después de aplicar el quick-fix:</p>
+<pre><code>
+fun foo() {
+  square(2){ it }
+}
+</code></pre>
 </body>
 </html>

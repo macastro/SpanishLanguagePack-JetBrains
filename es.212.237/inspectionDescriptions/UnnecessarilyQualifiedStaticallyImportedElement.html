@@ -1,9 +1,11 @@
 <html>
 <body>
-포함된 클래스 이름으로 한정된 static import 문의 사용을 보고합니다.
-<p>static import 문은 구성원명이 직접 접근할 수 있기 때문에 이 한정자는 필요하지 않으며 삭제할 수 있습니다.</p>
-<p><b>예:</b></p>
-<pre>
+Reporta el uso de miembros importados estáticamente calificados
+con su nombre de clase contenedor.
+<p>Tal calificación es innecesaria y puede ser eliminada
+ya que los miembros importados estáticamente pueden ser accedidos directamente por nombre de miembro.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
   import static foo.Test.WIDTH;
 
   class Bar {
@@ -11,9 +13,9 @@
       System.out.println(Test.WIDTH);
     }
   }
-</pre>
-<p>빠른 수정 적용 후:</p>
-<pre>
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
   import static foo.Test.WIDTH;
 
   class Bar {
@@ -21,7 +23,7 @@
       System.out.println(WIDTH);
     }
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

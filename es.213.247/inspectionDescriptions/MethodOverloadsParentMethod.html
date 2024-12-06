@@ -1,23 +1,25 @@
 <html>
 <body>
-상위 클래스의 메서드와 이름 및 매개변수 개수가 동일하지만 매개변수 중 하나 이상이 다르고 호환 불가능한 타입인 인스턴스 메서드를 보고합니다.
+**Inspección de métodos de instancia con el mismo nombre y la misma cantidad de parámetros que un método en una superclase,**
+pero donde al menos uno de los parámetros es de un tipo incompatible diferente.
 <p>
-  이 경우 하위 클래스의 메서드는 해당 메서드를 오버로드하는 대신 상위 클래스의 메서드를 오버로드합니다. 의도되지 않은 경우 잠재적 버그를 초래할 수 있습니다.
+  En este caso, el método en una subclase estará sobrecargando el método de la superclase
+  en lugar de sobrescribirlo. Si no es intencional, puede dar lugar a errores latentes.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class Foo {
     void foo(int x) {}
   }
 
   public class Bar extends Foo {
-    void foo(Number x) {} // 재정의가 의도된 경우
-                          // 'foo()' 메서드가 상위 클래스의 호환되는 메서드를 오버로드합니다
+    void foo(Number x) {} // El método 'foo()' sobrecarga un método compatible de una superclase,
+                          // cuando se podría haber intentado sobrescribirlo
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-  이 옵션을 사용하여 검사에서 매개변수 타입이 호환되지 않는 경우도 보고해야 하는지 선택합니다.
+  Use la opción para elegir si la inspección también debe informar casos donde los tipos de parámetros no son compatibles.
 <p>
 </body>
 </html>

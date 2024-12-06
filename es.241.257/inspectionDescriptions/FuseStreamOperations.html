@@ -1,20 +1,20 @@
 <html>
 <body>
-Stream API 체인에 통합할 수 있는 Stream API 체인 외부의 변환을 감지합니다.
-<p>예:</p>
+Detecta transformaciones fuera de una cadena Stream API que podrían incorporarse a ella.
+<p>Ejemplo:</p>
 <pre><code>
   List&lt;String&gt; list = stream.collect(Collectors.toList());
   list.sort(null);
   return list.toArray(new String[list.size()]);
 </code></pre>
-<p>변환 후:</p>
+<p>Después de la conversión:</p>
 <pre><code>
   return stream.sorted().toArray(String[]::new);
 </code></pre>
 <p>
-  변환된 스트림 체인이 명시적 <code>ArrayList</code>를 <code>Collectors.toList()</code>로 대체하거나 명시적 <code>HashSet</code>을 <code>Collectors.toSet()</code>으로 대체하는 경우가 때때로 있습니다. 현재 라이브러리 구현은 이러한 컬렉션을 내부적으로 사용합니다. 그러나 이 방법은 그다지 신뢰할 수 없으며 코드의 의미가 향후에 변경될 수 있습니다.</p>
+  Tenga en cuenta que a veces la cadena de stream convertida puede reemplazar <code>ArrayList</code> explícito con <code>Collectors.toList()</code> o <code>HashSet</code> explícito con <code>Collectors.toSet()</code>. La implementación actual de la biblioteca utiliza estas colecciones internamente. Sin embargo, este enfoque no es muy confiable y podría cambiar en el futuro alterando la semántica de su código.</p>
 
 <!-- tooltip end -->
-<p>이에 대해 염려가 되는 경우 <b>'toList()' 또는 'toSet()' 컬렉터를 제안하지 않음</b> 옵션을 사용하여 <code>toList</code> 및 <code>toSet</code> 컬렉터 대신 <code>Collectors.toCollection()</code>을 제안하세요.
+<p>Si le preocupa, use la opción <b>No sugerir recopiladores 'toList()' o 'toSet()'</b> para sugerir <code>Collectors.toCollection()</code> en lugar de los recopiladores <code>toList</code> y <code>toSet</code>.
 </body>
 </html>

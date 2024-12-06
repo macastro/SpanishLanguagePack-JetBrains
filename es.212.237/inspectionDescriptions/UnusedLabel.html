@@ -1,15 +1,15 @@
 <html>
 <body>
-<p><code>break</code> 또는 <code>continue</code> 문의 대상이 아닌 라벨을 보고합니다.</p>
-<p><b>예:</b></p>
+Informa de etiquetas que no son objetivos de sentencias <code>break</code> o <code>continue</code>.
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  label: <b>for</b> (int i = 0; i &lt; 10; i++) {
+  etiqueta: <b>for</b> (int i = 0; i &lt; 10; i++) {
     <b>if</b> (i == 3) {
       <b>break</b>;
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후 라벨이 제거됩니다.</p>
+<p>Después de aplicar la corrección rápida, se elimina la etiqueta:</p>
 <pre><code>
   <b>for</b> (int i = 0; i &lt; 10; i++) {
     <b>if</b> (i == 3) {

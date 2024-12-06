@@ -1,11 +1,13 @@
 <html>
 <body>
-<p><a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/jdbc/Sql.html>@Sql</a> 어노테이션의 <code>scripts</code> 속성 및 <code>@Sql</code> 메타 어노테이션에 해당하는 별칭 속성의 확인되지 않은 파일 참조를 보고합니다.</p>
+<p>Informa de referencias a archivos no resueltas en los atributos <code>scripts</code> de la
+<a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/jdbc/Sql.html>@Sql</a>
+anotación y en los atributos alias correspondientes de las metaanotaciones <code>@Sql</code>.</p>
 
-<p><b>예:</b></p>
-<pre><code>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
   @SqlGroup({
-     @Sql("not-found"), // reports "Cannot resolve file 'not-found"
+     @Sql("not-found"), // informa de "No se puede resolver el archivo 'not-found"
      @Sql("found.sql")
   })
   public class MyTestWithSqlData {...}

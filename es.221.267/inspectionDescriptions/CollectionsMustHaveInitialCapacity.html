@@ -1,19 +1,19 @@
 <html>
 <body>
-초기 용량을 지정하지 않고 새로운 <code>Collection</code> 객체를 인스턴스화하는 시도를 보고합니다.
-<p>
-  초기 용량을 지정하지 않으면 디폴트 용량이 사용되지만, 이것이 최적인 경우는 거의 없습니다. 컬렉션의 초기 용량을 지정하지 못하면 초기 용량을 초과하는 시점에 공간을 재할당하고 메모리를 복사해야 하는 경우 성능 문제가 발생할 수 있습니다.
-  이 검사는 검사의 설정에 나열된 클래스 할당을 확인합니다.
+Informa los intentos por instanciar un nuevo objeto `Collection` sin especificar una capacidad inicial. 
+<p> 
+  Si no se especifica la capacidad inicial, se utiliza la capacidad predeterminada, lo cual rara vez es óptimo. Al no especificar una capacidad inicial para la colección, pueden surgir problemas de rendimiento si es necesario volver a asignar espacio y copiar memoria cuando la capacidad inicial se excede. 
+  Esta inspección verifica las asignaciones de las clases que se enumeran en la configuración de la inspección. 
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   new HashMap&lt;String, String&gt;();
 </code></pre>
 <!-- tooltip end -->
-<p>다음 옵션을 사용해 검사를 구성하세요.</p>
+<p>Puede configurar esta inspección con las siguientes opciones:</p>
 <ul>
-  <li>확인해야 하는 컬렉션 클래스를 나열합니다.</li>
-  <li>필드 이니셜라이저를 무시할지 여부.</li>
+  <li>Lista las clases de colección que deben verificarse.</li>
+  <li>Descarta los inicializadores de campo.</li>
 </ul>
 </body>
 </html>

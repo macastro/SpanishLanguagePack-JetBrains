@@ -1,15 +1,16 @@
 <html>
 <body>
-상위 클래스의 <code>static</code> 메서드와 시그니처가 동일한 <code>static</code> 메서드를 보고합니다.
-Java의 <code>static</code> 메서드가 재정의될 수 없으므로 이와 같은 메서드가 실제로는 상위 클래스의 메서드를 숨긴 것이지만, 재정의처럼 보일 수 있습니다.
-<p><b>예:</b></p>
+Avisos de métodos <code>static</code> con una firma idéntica a un método <code>static</code> de una superclase.
+Este método puede verse como un sobrescrito cuando en realidad oculta el método de la superclase porque
+los métodos <code>static</code> en Java no pueden sobrescribirse.
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class Parent {
-    static void method(){}
+  class Padre {
+    static void método(){}
   }
 
-  class Example extends Parent {
-    static void method(){} //경고
+  class Ejemplo extends Padre {
+    static void método(){} //advertencia
   }
 </code></pre>
 <!-- tooltip end -->

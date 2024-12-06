@@ -1,36 +1,35 @@
 <html>
 <body>
-<p>더 간단한 동등한 호출로 바꿀 수 있는 모든 <code>assert</code> 호출을 보고합니다.
+Reporta cualquier llamada `assert` que pueda ser reemplazada por una llamada equivalente más simple.
 <table>
-  <tr><th>예</th><th>&rarr;</th><th>대체</th></tr>
+  <tr><th>Ejemplo</th><th>&rarr;</th><th>Reemplazo</th></tr>
 
   <tr>
     <td><code>assertEquals(<b>true</b>, x());</code></td>
     <td></td>
     <td><code>assertTrue(x());</code></td>
- </tr>
+  </tr>
   <tr>
     <td><code>assertTrue(y() != null);</code></td>
     <td></td>
     <td><code>assertNotNull(y());</code></td>
- </tr>
+  </tr>
   <tr>
     <td><code>assertTrue(z == z());</code></td>
     <td></td>
     <td><code>assertSame(z, z());</code></td>
- </tr>
+  </tr>
   <tr>
     <td><code>assertTrue(a.equals(a()));</code></td>
     <td></td>
     <td><code>assertEquals(a, a());</code></td>
- </tr>
+  </tr>
   <tr>
     <td><code>assertTrue(<b>false</b>);</code></td>
     <td></td>
     <td><code>fail();</code></td>
- </tr>
+  </tr>
 </table>
 <!-- tooltip end -->
-<p>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <html>
 <body>
-생성자 또는 소멸자에서의 가상 구성원 함수 호출을 보고합니다.
-생성은 기본 클래스로 시작하며 파생된 클래스로 이동하므로 파생된 클래스의 리소스가 아직 초기화되지 않았습니다.
-소멸은 역순서로 수행되므로 가상 함수를 호출하면 이미 소멸된 리소스에 액세스하는 것으로 이어질 수 있습니다.
-<p><b>예:</b></p>
+Reporta llamadas a funciones miembro virtuales desde constructores o destructores.
+Como la construcción comienza con la clase base y se mueve a las clases derivadas, los recursos de la clase derivada aún no se han inicializado.
+La destrucción se realiza en orden inverso, por lo que llamar a una función virtual puede provocar el acceso a los recursos que ya han sido destruidos.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Test {
   public:
@@ -15,6 +15,5 @@
   };
 </code></pre>
 <!-- tooltip end -->
-<p><small>2019.3의 새로운 기능</small></p>
 </body>
 </html>

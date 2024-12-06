@@ -1,9 +1,9 @@
 <html>
 <body>
-Reports logging calls that are not surrounded by a guard condition.
-The evaluation of a call's arguments can be expensive.
-로깅 구문이 사용하는 수준에 대해 로깅이 비활성화된 경우 guard 절을 사용하여 로깅 호출을 둘러싸면 이 비용을 피할 수 있습니다. 이는 가장 덜 심각한 수준(trace, debug, finest)의 로깅 호출에 특히 유용합니다. 이러한 호출은 프로덕션 환경에서 매우 자주 비활성화되기 때문입니다.
-<p><b>예:</b></p>
+El informe no envuelve llamadas de registro con condiciones de protección.
+Evaluar los parámetros actuales de la llamada puede ser muy costoso.
+Usar cláusulas críticas para envolver la llamada de registro evita este costo cuando el nivel usado por la instrucción de registro desactiva el registro. Esto es especialmente útil para los niveles de llamada de registro menos serios (rastreo, depuración, más detallado) ya que estas llamadas se desactivan más a menudo en entornos de producción.
+<p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   public class TestObject {
     void test(Object object) {
@@ -11,7 +11,7 @@ The evaluation of a call's arguments can be expensive.
     }
   }
 </code></pre>
-<p>After a quick-fix is applied:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code lang="java">
   public class TestObject {
     void test(Object object) {
@@ -21,8 +21,8 @@ The evaluation of a call's arguments can be expensive.
     }
   }
 </code></pre>
-<p>This inspection supports <em>Log4j2</em> and the <em>SLF4J</em> logging frameworks (except builders).
+<p>Esta inspección soporta los marcos de registro <em>Log4j2</em> and <em>SLF4J</em> (excepto builder).
 <!-- tooltip end -->
-<p><small>2024.2에서 추가</small></p>
+<p><small>Novedades en 2024.2</small></p>
 </body>
 </html>

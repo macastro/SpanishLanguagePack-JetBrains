@@ -1,29 +1,29 @@
 <html>
 <body>
-안전하게 닫히지 않은 소켓 리소스를 보고합니다. 이 검사에서 보고되는 소켓 리소스에는 <code>java.net.Socket</code>,
-<code>java.net.DatagramSocket</code>, <code>java.net.ServerSocket</code>이 포함됩니다.
+Informa sobre recursos de socket que no se cierran de forma segura. Los recursos de socket informados por esta inspección incluyen <code>java.net.Socket</code>,
+<code>java.net.DatagramSocket</code>, y <code>java.net.ServerSocket</code>.
 <p>
-  이 검사는 기본적으로 리소스가 이름에 'close' 또는 'cleanup'을 포함하는 모든 메서드에 의해 닫힐 수 있다고 가정합니다.
+  De manera predeterminada, la inspección asume que los recursos pueden ser cerrados por cualquier método con 'close' o 'cleanup' en su nombre.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   byte[] getMessage(ServerSocket socket) throws IOException {
-    Socket client = socket.accept(); // 소켓이 닫히지 않음 
+    Socket client = socket.accept(); //socket no está cerrado
     return client.getInputStream().readAllBytes();
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-  다음 옵션을 사용해 검사를 구성하세요:
+  Utiliza las siguientes opciones para configurar la inspección:
 </p>
 <ul>
   <li>
-    <code>try</code> 블록 내에서 소켓 열기 허용 여부.
-    이 스타일은 <code>try</code> 블록 앞에서 리소스를 여는 것보다 장황하기 때문에 그다지 바람직하지 않습니다.
- </li>
+    Si se permite que se abra un socket dentro de un bloque <code>try</code>.
+    Este estilo es menos deseable porque es más prolijo que abrir un recurso frente a un bloque <code>try</code>.
+  </li>
   <li>
-    리소스가 인수로 전달된 메서드 호출에 의해 리소스가 닫힐 수 있는지 여부를 설정합니다.
- </li>
+    Si el recurso puede ser cerrado por cualquier llamada a método con el recurso pasado como argumento.
+  </li>
 </ul>
 </body>
 </html>

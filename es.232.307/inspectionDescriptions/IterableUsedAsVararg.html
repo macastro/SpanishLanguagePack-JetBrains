@@ -1,18 +1,18 @@
 <html>
 <body>
-vararg 메서드 호출에서 <code>Collection</code> 또는 <code>Iterable</code>이 의심스럽게 사용된 위치를 보고합니다.
-<p>예를 들어, 다음 메서드의 경우에 보고됩니다.</p>
+Informa sobre usos sospechosos de <code>Collection</code> o <code>Iterable</code> en llamadas a métodos vararg.
+<p>Por ejemplo, en el siguiente método:</p>
 <pre><code>
   &lt;T&gt; boolean contains(T needle, T... haystack) {...}
 </code></pre>
-<p>다음과 같은 호출은</p>
+<p>una llamada como</p>
 <pre><code>
   if(contains("item", listOfStrings)) {...}
 </code></pre>
-<p>목록이 단일 요소 배열로 래핑되므로 의심스럽게 보입니다.
-  이 코드의 컴파일이 완료되어 예외 없이 실행될 수 있지만
-  실수로 사용되었을 가능성이 있습니다.</p>
+<p>parece sospechosa ya que la lista se envolverá en una única matriz de elementos.
+  Este código puede compilarse correctamente y probablemente se ejecutará sin
+  excepciones, pero probablemente se use por error.</p>
 <!-- tooltip end -->
-<p><small>2019.2의 새로운 기능</small></p>
+<p><small>Novedad en 2019.2</small></p>
 </body>
 </html>

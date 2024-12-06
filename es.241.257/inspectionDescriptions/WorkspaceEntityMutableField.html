@@ -1,9 +1,9 @@
 <html>
 <body>
-<code>WorkspaceEntity</code> 인터페이스의 상속자 내에서 지원되지 않는 <code>var</code> 필드를 탐지합니다
+<code>WorkspaceEntity</code> detecta campos <code>var</code> no compatibles en los herederos de la interfaz
 <p>
-  <code>WorkspaceEntity</code>를 구현하는 인터페이스는 불변이므로 <code>val</code> 필드만 가져야 합니다.
-  변이를 위해 <code>WorkspaceEntity.Builder</code>의 구현이 생성됩니다
+  Las interfaces que implementan <code>WorkspaceEntity</code> no deberían tener campos <code>var</code>, ya que son inmutables.
+  Se generará una implementación de <code>WorkspaceEntity.Builder</code> para hacer la mutación
 </p>
 </body>
 </html>

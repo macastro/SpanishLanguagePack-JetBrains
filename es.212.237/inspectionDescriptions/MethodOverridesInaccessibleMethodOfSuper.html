@@ -1,12 +1,15 @@
 <html>
 <body>
-상위 클래스의 액세스할 수 없는 메서드(예: 다른 패키지에 포함된 상위 클래스의 package-private 메서드)와 시그니처가 동일한 메서드를 보고합니다.
+Informa de métodos con la misma firma que un método inaccesible de una superclase,
+por ejemplo, un método privado o un método package-private de una superclase en otro paquete.
 <p>
-  이와 같은 메서드 이름은 하위 클래스의 메서드가 실제로는 상위 클래스의 액세스할 수 없는 메서드를 숨긴 것이나 재정의처럼 보일 수 있어 혼란을 야기할 수 있습니다.
-  또한 추후 상위 클래스의 메서드 가시성이 변경될 경우 하위 클래스의 의미가 확인 없이 변경되거나 컴파일 오류가 발생할 수 있습니다.
+  Estos nombres de método pueden ser confusos porque el método en la subclase puede parecer una invalidación cuando de hecho
+  oculta el método inaccesible de la superclase.
+  Además, si la visibilidad del método en la superclase cambia más adelante,
+  puede cambiar silenciosamente la semántica de la subclase o causar un error de compilación.
 </p>
-<p>빠른 수정은 메서드 이름을 변경하도록 제안합니다.</p>
-<p><b>예:</b></p>
+<p>Se sugiere una corrección rápida para cambiar el nombre del método.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class Super {
     private void test() {
@@ -14,8 +17,8 @@
   }
 
   public class Sub extends Super {
-    void test() { // 'Super.test()'를 public으로 설정하면 컴파일 오류가 발생합니다
-                  // 'Super.test()'를 package-private으로 설정하면 'Sub.test()'는 재정의가 됩니다
+    void test() { // convertir 'Super.test()' en public provoca un error de compilación
+                  // convertir 'Super.test()' en package-private convierte 'Sub.test()' en una invalidación
     }
   }</code></pre>
 <!-- tooltip end -->

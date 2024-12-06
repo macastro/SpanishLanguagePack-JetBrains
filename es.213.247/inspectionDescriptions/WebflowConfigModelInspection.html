@@ -1,35 +1,35 @@
 <html>
 <body>
-<p><a href="https://spring.io/projects/spring-webflow">Spring Webflow</a> XML 기반의 컨텍스트 관련 문제를 보고합니다.</p>
+<p>Informe problemas con el contexto basado en XML de <a href="https://spring.io/projects/spring-webflow">Spring Webflow</a>:</p>
 
 <ul>
-  <li>해결되지 않은 bean 참조</li>
-  <li>필요한 태그 및 속성 누락</li>
-  <li>잘못된 프로퍼티 타입</li>
-  <li>일관성 없는 <code>enum</code> 프로퍼티</li>
-  <li>참조된 bean의 잘못된 타입</li>
+  <li>Referencia de Bean no resuelta</li>
+  <li>Falta etiqueta o atributo requerido</li>
+  <li>Tipo de propiedad incorrecto</li>
+  <li>Propiedad <code>enum</code> inconsistente</li>
+  <li>Tipo incorrecto de Bean referenciado</li>
 </ul>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   &lt;beans ...
     xmlns:webflow="http://www.springframework.org/schema/webflow-config ..."&gt;
     
-    &lt;webflow:flow-executor id="flowExecutorWithoutFlowRegistryRef"/&gt; &lt;!-- "디폴트 id 'flowRegistry'를 가진 &lt;flow-registry&gt;를 찾을 수 없습니다 --&gt;
+    &lt;webflow:flow-executor id="flowExecutorWithoutFlowRegistryRef"/&gt; &lt;!-- No se puede encontrar &lt;flow-registry&gt; con ID predeterminado 'flowRegistry' --&gt;
     &lt;webflow:flow-executor
-      id=""  &lt;!--값이 비어 있으면 안 됩니다--&gt;
-      flow-registry="INVALID_VALUE"  &lt;!-- bean INVALID_VALUE를 해결할 수 없습니다 --&gt;
+      id=""  &lt;!--Value must not be empty--&gt;
+      flow-registry="INVALID_VALUE"  &lt;!-- No se puede resolver el Bean INVALID_VALUE --&gt;
            &lt;webflow:flow-execution-repository
-                   conversation-manager="dummyBean" &lt;!-- Bean은 'org.springframework.webflow.conversation.ConversationManager' 타입이어야 합니다 --&gt;
-                    max-executions="INVALID_VALUE" &lt;!-- 값이 정수여야 합니다 --&gt;
-                    max-execution-snapshots="INVALID_VALUE"/&gt;  &lt;!-- 값이 정수여야 합니다 --&gt;
+                   conversation-manager="dummyBean" &lt;!-- Bean must be of 'org.springframework.webflow.conversation.ConversationManager' type"--&gt;
+                    max-executions="INVALID_VALUE" &lt;!-- El valor debe ser un entero --&gt;
+                    max-execution-snapshots="INVALID_VALUE"/&gt;  &lt;!-- El valor debe ser un entero --&gt;
            &lt;webflow:flow-execution-listeners&gt;
 			&lt;webflow:listener criteria="*"
-                           ref="dummyBean" /&gt; &lt;!-- Bean은 'org.springframework.webflow.execution.FlowExecutionListener' 타입이어야 합니다 --&gt;
+                           ref="dummyBean" /&gt; &lt;!-- Bean debe ser de tipo 'org.springframework.webflow.execution.FlowExecutionListener' --&gt;
            &lt;/webflow:flow-execution-listeners&gt;
     &lt;/webflow:flow-executor&gt;
     &lt;webflow:flow-executor id="dummy"
-      flow-registry="dummyBean"/&gt; &lt;!-- Bean은 'org.springframework.webflow.definition.registry.FlowDefinitionRegistry' 타입이어야 합니다 --&gt;
+      flow-registry="dummyBean"/&gt; &lt;!-- Bean debe ser de tipo 'org.springframework.webflow.definition.registry.FlowDefinitionRegistry' --&gt;
 
     &lt;bean id="dummyBean" class="java.lang.String"/&gt;
   &lt;/beans&gt;

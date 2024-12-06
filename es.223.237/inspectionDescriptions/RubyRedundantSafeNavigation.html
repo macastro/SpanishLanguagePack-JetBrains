@@ -1,8 +1,8 @@
 <html>
 <body>
-생략할 수 있는 nil이 아닌 리시버를 포함하는 안전 탐색 연산자(<code>&amp;.</code>) 사용을 보고합니다.
-<p><i>무시된 리시버</i> 목록을 이용해 무시되어야 하는 리시버로 사용되는 메서드 호출을 지정합니다(예: <code>Foo#call</code> 혹은 <code>Foo::call</code>을 각각 인스턴스 혹은 싱글턴 메서드로 사용).</p>
-<p>예:</p>
+Informa del uso del operador de navegación segura (<code>&amp;.</code>) con un receptor no nulo, que puede omitirse.
+<p>Use la lista <i>Receptores ignorados</i> para especificar las llamadas de método utilizadas como receptores que deben ignorarse (por ejemplo, <code>Foo#call</code> o <code>Foo::call</code> para un método de instancia o singleton respectivamente).</p>
+<p>Ejemplo:</p>
 <pre>
 <code>value = 1
 if value&amp;.even?

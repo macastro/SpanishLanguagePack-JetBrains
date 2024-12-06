@@ -1,14 +1,14 @@
 <html>
 <body>
-값을 원래 용도와 관련 없는 새 값으로 덮어쓰면서 '재사용되는' 지역 변수를 보고합니다.
-<p>지역 변수의 의도된 의미는 사용 위치에 따라 다를 수 있으므로 이러한 지역 변수를 재사용하면 혼동될 수 있습니다. 코드 변경으로 인해 덮어쓰인 것으로 간주된 값이 실제로 활성 상태인 것으로 보이는 경우 값이 버그에 취약할 수 있습니다. 변수의 수명을 가능한 한 짧게 유지하고 코드 간결성을 위해 지역 변수를 재사용하지 않는 것이 좋습니다.</p>
+Informa sobre las variables locales que se "reutilizan" sobrescribiendo sus valores con nuevos valores no relacionados con su uso original.
+<p>Tal reutilización de variables locales puede ser confusa, ya que la semántica prevista de la variable local puede variar con cada uso. También puede ser susceptible a errores si, debido a los cambios en el código, los valores que se han considerado sobrescritos en realidad parecen estar activos. Es una buena práctica mantener el ciclo de vida de las variables lo más corto posible y no reutilizar variables locales por el bien de la brevedad.</p>
 <!-- tooltip end -->
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
     void x() {
-        String s = "one";
+        String s = "uno";
         System.out.println("s = " + s);
-        s = "two"; // 지역 변수 's' 재사용
+        s = "dos"; //reutilización de la variable local 's'
         System.out.println("s = " + s);
     }
 </code></pre>

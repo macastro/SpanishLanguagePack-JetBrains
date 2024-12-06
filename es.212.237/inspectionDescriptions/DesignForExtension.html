@@ -1,21 +1,24 @@
 <html>
 <body>
-<code>static</code>, <code>private</code>, <code>final</code> 또는 <code>abstract</code>가 아니고, 그 본문이 비어 있지 않은 메서드를 보고합니다.
+Informa sobre métodos que no son <code>static</code>, <code>private</code>, <code>final</code> o <code>abstract</code> y cuyo cuerpo no está vacío.
 <p>
-  이러한 메서드를 피하는 스타일로 코딩하면 클래스의 컨트랙트가 하위 클래스에 의해 손상되는 것을 방지할 수 있습니다. 이 스타일의 장점은 상위 메서드를 호출하는 것을 잊어서 하위 클래스가 상위 클래스의 상태를 손상시킬 수 없다는 것입니다. 그 대가로 하위 클래스의 유연성이 제한됩니다. 특히 상위 클래스에서 코드 실행을 방지할 수 없습니다. 빠른 수정을 사용하여, 누락된 제어자를 추가합니다.</p>
-<p><b>예:</b></p>
-<pre>
+  Escribir código en un estilo que evite dichos métodos protege los contratos de las clases frente a infracciones por parte de sus subclases. La ventaja de este estilo es que las subclases no pueden corromper el estado de la superclase olvidando llamar al supermétodo. El coste es que
+  las subclases están limitadas en su flexibilidad, en particular no pueden evitar la ejecución de código en la superclase. Utiliza la corrección rápida para
+  añadir
+  los modificadores que faltan.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
   class Foo {
     public boolean equals(Object o) { return true; }
   }
-</pre>
-<p>빠른 수정 적용 후:</p>
-<pre>
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
   class Foo {
     public final boolean equals(Object o) { return true; }
   }
-</pre>
-이 검사는 보안 환경에서 사용될 코드를 위한 것이며, 덜 제한적인 환경에는 적합하지 않을 수 있습니다.
+</code></pre>
+Esta inspección está pensada para código que va a usarse en entornos seguros y probablemente no sea adecuada para entornos menos restrictivos.
 <!-- tooltip end -->
 </body>
 </html>

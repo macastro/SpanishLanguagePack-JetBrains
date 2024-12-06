@@ -1,20 +1,20 @@
 <html>
 <body>
-Reports usages of the following elements that can be safely removed because the inspection they affect is no longer applicable in this context:
+Informa de los usos de los siguientes elementos que pueden eliminarse de forma segura porque ya no se aplica en este contexto la inspección a la que afectan:
 <ul>
-  <li><code>@SuppressWarning</code> annotation, or</li>
-  <li><code>// noinspection</code> line comment, or</li>
-  <li><code>/** noinspection */</code> JavaDoc comment</li>
+  <li>anotación <code>@SuppressWarning</code>, o</li>
+  <li>comentario de línea <code>// noinspection</code>, o</li>
+  <li>comentario de JavaDoc <code>/** noinspection */</code></li>
 </ul>
-<p>Example:</p>
-<pre><code>
-<b><font color="#000080">public class</font></b> C {
- // symbol is already private,
- // but annotation is still around
+<p>Ejemplo:</p>
+<pre><code lang="java">
+public class C {
+ // el símbolo ya es privado,
+ // pero la anotación sigue existiendo
   @SuppressWarnings({"WeakerAccess"})
- <b><font color="#000080">private boolean</font></b> CONST = <b><font color="#000080">true</font></b>;
- <b><font color="#000080">void</font></b> f() {
-    CONST = <b><font color="#000080">false</font></b>;
+ private boolean CONST = true;
+ void f() {
+    CONST = false;
   }
 }
 </code></pre>

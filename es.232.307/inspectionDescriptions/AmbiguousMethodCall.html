@@ -1,36 +1,39 @@
 <html>
 <body>
-클래스 주변 코드에 동일한 시그니처를 가진 메서드가 있는 경우, 익명, 내부 또는 지역 클래스의 상위 메서드에 대한 호출을 보고합니다.
-실제로는 상위 클래스의 메서드에 대한 호출인 경우에도, 주변 코드의 메서드가 호출된 것처럼 보일 수 있습니다.
+Informa las llamadas a un método de superclase desde una clase anónima, interna o local,
+si existe un método con la misma firma en el código circundante a la clase.
+En este caso, puede parecer que se llama a un método del código circundante,
+cuando en realidad es una llamada a un método de la superclase.
 <p>
-  코드의 의도를 명확히 하려면 명시적 <code>super</code> 한정자를 메서드 호출에 추가하는 것이 좋습니다.
+  Para aclarar la intención del código, se recomienda añadir un calificador explícito
+  <code>super</code> a la llamada del método.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class Parent {
+  clase Parent {
     void ambiguous(){}
   }
 
-  class Example {
+  clase Example {
     void ambiguous(){}
 
-    class Inner extends Parent {
+    clase Inner extiende Parent {
       void example(){
-        ambiguous(); //warning
+        ambiguous(); //advertencia
       }
     }
   }
   </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
-  class Parent {
+  clase Parent {
     void ambiguous(){}
   }
 
-  class Example {
+  clase Example {
     void ambiguous(){}
 
-    class Inner extends Parent {
+    clase Inner extiende Parent {
       void example(){
         super.ambiguous();
       }

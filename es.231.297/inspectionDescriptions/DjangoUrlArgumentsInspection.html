@@ -1,15 +1,14 @@
 <html>
 <body>
-<p><code>url()</code> 함수의 URL 경로에 매개변수를 포함하는 
-템플릿 파일 내 누락된 매개변수를 보고합니다.</p>
-<p><b>예:</b></p>
-<p><code>url.py</code> 파일 내</p>
-<pre style="font-family: monospace">
+<p>Informa parámetros faltantes en el archivo de plantilla cuando hay parámetros en la ruta URL de la función <code>url()</code>.</p>
+<p><b>Ejemplo:</b></p>
+<p>Dentro del archivo <code>url.py</code></p>
+<pre><code lang="Python">
 url(r'^(?P&lt;question_id&gt;[0-9]+)/', views.detail, name='detail')
-</pre>
-<p>템플릿 파일 내</p>
-<pre style="font-family: monospace">
+</code></pre>
+<p>Dentro del archivo de plantilla</p>
+<pre><code lang="DjangoTemplate">
 {% url 'polls:detail' %}
-</pre>
+</code></pre>
 </body>
 </html>

@@ -1,15 +1,17 @@
 <html>
 <body>
-<code>java.io.ObjectOutputStream.write()</code>의 인수로 사용된 비 <code>Serializable</code> 객체를 보고합니다. 그러한 호출은 런타임 예외를 발생시킵니다.
+Reporta objetos no <code>Serializable</code> utilizados como argumentos para <code>java.io.ObjectOutputStream.write()</code>. Estas llamadas resultarán en excepciones en tiempo de ejecución.
 <p>
-  이 검사는 선언된 타입이 비 <code>Serializable</code> 객체가 아닌 이상 <code>java.util.Collection</code> 및 <code>java.util.Map</code> 타입의 객체는 <code>Serializable</code>이라고 가정합니다.
+  Esta inspección asume que los objetos de los tipos <code>java.util.Collection</code> y
+  <code>java.util.Map</code> son <code>Serializable</code>, a menos que los tipos
+  en los que se declaran no sean <code>Serializable</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class IWantToSerializeThis {
     public static void main(String[] args) throws IOException {
       try(var stream = new ObjectOutputStream(Files.newOutputStream(Paths.get("output")))) {
-        // 경고 -- NotSerializableException이 발생하며 실패합니다
+        // Advertencia: fallará con NotSerializableException
         stream.writeObject(new IWantToSerializeThis());
       }
     }

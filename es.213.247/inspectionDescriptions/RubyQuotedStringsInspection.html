@@ -1,23 +1,23 @@
 <html>
 <body>
-작은 따옴표로 변환할 수 있는 큰 따옴표가 붙은 문자열을 보고합니다. 모든 대체 표현식 또는 특정 심볼을 포함하지 않는 문자열은 변환될 수 있습니다.
-<p>예:</p>
+Informa de cadenas entre dobles comillas que se pueden convertir a comillas simples. Cualquier cadena que no contenga sustituciones de expresiones o símbolos especiales puede convertirse.
+<p>Ejemplo:</p>
 <pre>
-<code># 나쁜 사례
+<code># Mala práctica
 &quot;Hello world&quot;
 &quot;Hello \&quot;John Doe\&quot;&quot;</code>
 </pre>
 
-큰따옴표로 감싼 문자열을 변환하는 빠른 수정을 사용할 수 있습니다. 빠른 수정이 적용된 후 결과는 다음과 같습니다:
+Hay disponible una corrección rápida para convertir una cadena entre comillas dobles. Después de aplicar la corrección rápida, el resultado es el siguiente:
 
 <pre>
-<code># 좋은 사례
+<code># Buena práctica
 'Hello world'
 'Hello &quot;John Doe&quot;'
 &quot;Hello 'John Doe'&quot;</code>
 </pre>
-<p><i>작은 따옴표를 포함하는 문자열 무시</i> 체크박스를 사용해 이스케이프가 필요한 문자열을 무시하십시오.</p>
-<p><span style="font-size: smaller;"><a href="https://github.com/rubocop-hq/ruby-style-guide#consistent-string-literals">'RuboCop'</a> 참고</span>
+<p>Utiliza la casilla de verificación <i>Ignorar cadenas que contengan comillas simples</i> para ignorar las cadenas que requieren escape.</p>
+<p><span style="font-size: smaller;">Inspirado en <a href="https://github.com/rubocop-hq/ruby-style-guide#consistent-string-literals">'RuboCop'</a></span>
 </p>
 </body>
 </html>

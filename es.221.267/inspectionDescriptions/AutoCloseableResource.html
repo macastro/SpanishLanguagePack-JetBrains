@@ -1,11 +1,12 @@
 <html>
 <body>
-try-with-resources 문에서 사용되지 않은 <code>AutoCloseable</code> 인스턴스(<i>자동 리소스 관리</i>라고도 불림)를 보고합니다.
+Reporta instancias de <code>AutoCloseable</code> que no son utilizadas en una declaración de try-with-resources, también conocidas como
+<i>Administración automática de recursos</i>.
 <p>
-  try-with-resources가 사용되기 이전에 사용되던 '<code>try</code> 앞/내에서 리소스를 열고, <code>finally</code> 내에서 닫기' 스타일 또한 보고됩니다.
-  이 검사는 Java 7 이후 버전에서 개발 시 <i>열렸으나 안전하게 닫히지 않은</i> 모든 검사를 바꾸는 것을 목적으로 합니다.
+  Esto significa que el estilo "abrir recurso antes/en <code>try</code>, cerrar en <code>finally</code>" que se había utilizado antes de que try-with-resources estuviera disponible, también se reporta.
+  Esta inspección está destinada a reemplazar a todas las inspecciones de <i>abierto pero no cerrado de forma segura</i> al desarrollar en Java 7 y superior.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   private static void foo() throws IOException {
     InputStream profile = Thread.currentThread().getContextClassLoader().getResourceAsStream("/someFile");
@@ -14,33 +15,36 @@ try-with-resources 문에서 사용되지 않은 <code>AutoCloseable</code> 인�
 </code></pre>
 <!-- tooltip end -->
 <p>
-  다음 옵션을 사용해 검사를 구성하세요.
+  Utiliza las siguientes opciones para configurar la inspección:
 </p>
 <ul>
   <li>
-    닫을 필요가 없으며 이 검사에서 무시되어야 하는 <code>AutoCloseable</code>의 하위 클래스를 나열합니다.
+    Lista las subclases de <code>AutoCloseable</code> que no necesitan ser cerradas y que deben ser ignoradas por esta inspección.
     <br/>
-    <b>참고</b>: 이 검사는 <code>java.util.stream.Stream</code>이 무시되어야 할 목록에 포함된 경우에도<code>java.nio.file.Files</code> 메서드인 <code>lines()</code>, <code>walk()</code>, <code>list()</code>, <code>find()</code>에서 반환된 스트림을 보고합니다.
-    이러한 스트림은 닫을 필요가 없는 관련 I/O 리소스를 포함합니다.
+    <b>Nota</b>: la inspección seguirá reportando transmisiones devueltas por los métodos <code>java.nio.file.Files</code> <code>lines()</code>,
+    <code>walk()</code>, <code>list()</code> y <code>find()</code>,
+    incluso cuando <code>java.util.stream.Stream</code> está en la lista para ser ignorado.
+    Estas transmisiones contienen un recurso de E/S asociado que necesita ser cerrado.
   </li>
   <li>
-    호출 시 무시되어야 하는 <code>AutoCloseable</code>를 반환하는 메서드를 나열합니다.
+    Enumera los métodos que devuelven <code>AutoCloseable</code> que deben ignorarse cuando se invocan.
   </li>
   <li>
-    메서드 호출의 결과인 경우 <code>AutoCloseable</code>을 무시할지 여부를 설정합니다.
-    이 옵션을 활성화하면 factory 메서드의 결과 또한 무시됩니다.
+    Determina si se debe ignorar un <code>AutoCloseable</code> si es el resultado de una llamada a un método.
+    Cuando esta opción está habilitada, los resultados de los métodos de fábrica también se ignorarán.
   </li>
   <li>
-    <code>AutoCloseable</code> 인스턴스가 메서드 호출 인수로 전달된 경우 검사에서 보고되어야 하는지 여부를 설정합니다.
-    이 옵션을 활성화하면 검사는 리소스가 호출된 메서드에서 닫힌 것으로 가정합니다.
-    이름에 'close'를 포함하며 <code> AutoCloseable </code> 인수를 사용하는 <code> finally</code> 블록 내부의 메서드 호출은 무시되지 않습니다.
+    Indica si la inspección debe reportar si una instancia de <code>AutoCloseable</code> se pasa como argumento de llamada al método.
+    Si esta opción está habilitada, la inspección asume que el recurso se cierra en el método llamado.
+    Las llamadas a métodos dentro de un bloque <code>finalmente</code> con "cerrar" en el nombre y un argumento <code>AutoCloseable</code> no se ignorarán.
   </li>
   <li>
-    리소스 클래스의 생성자에 대한 메서드 참조를 무시할지 여부를 설정합니다.
+    Determina si se deben ignorar las referencias de método a los constructores de clases de recursos.
   </li>
   <li>
-    리소스를 반환하며 이름이 'get'으로 시작하는 메서드를 무시할지 여부를 설정합니다.
-    대부분의 getter가 리소스의 소유권을 전달하지 않으며 호출 지점에서 리소스를 닫아야 할 책임이 없으므로 이렇게 하면 거짓 양성을 줄일 수 있습니다.
+    Indica si se deben ignorar los métodos que devuelven un recurso y cuyo nombre comienza con "get".
+    Esto puede reducir los falsos positivos porque la mayoría de los getters no transfieren la propiedad del recurso,
+    y sus sitios de llamada no son responsables de cerrar el recurso.
   </li>
 </ul>
 </body>

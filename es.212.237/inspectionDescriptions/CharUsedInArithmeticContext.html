@@ -1,15 +1,15 @@
 <html>
 <body>
-더하기 또는 빼기 표현식에 사용된 <code>char</code> 타입의 표현식을 보고합니다.
-<p>이러한 코드가 반드시 이슈인 것은 아니지만 버그가 발생할 수 있습니다(예:
-  문자열이 필요한 경우).</p>
-<p><b>예:</b><code>int a = 'a' + 42;</code></p>
-<p>빠른 수정 적용 후: <code>int a = (int) 'a' + 42;</code></p>
-<p><code>String</code> 컨텍스트의 경우:
+Informa de expresiones del tipo <code>char</code> usadas en expresiones de suma o resta.
+<p>Este código no es necesariamente un problema, pero puede provocar errores (por ejemplo,
+  si se espera una cadena).</p>
+<p><b>Ejemplo:</b> <code>int a = 'a' + 42;</code></p>
+<p>Después de aplicar la corrección rápida: <code>int a = (int) 'a' + 42;</code></p>
+<p>Para el contexto <code>String</code>:
 <pre><code>int i1 = 1;
 int i2 = 2;
 System.out.println(i2 + '-' + i1 + &quot; = &quot; + (i2 - i1));</code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <code>System.out.println(i2 + &quot;-&quot; + i1 + &quot; = &quot; + (i2 - i1));</code>
 <!-- tooltip end -->
 </body>

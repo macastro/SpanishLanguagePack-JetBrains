@@ -1,6 +1,10 @@
 <html>
 <body>
-<p>해당하는 producer 메서드가 없는 disposer 메서드를 보고합니다.</p>
-<p>각 disposer 메서드는 대응하는 producer 메서드 또는 producer 필드의 반환 타입과 같은 정확히 하나의 폐기된 매개변수를 포함할 수 있습니다. producer 메서드 또는 producer 필드에 대한 disposer 메서드를 검색할 때 컨테이너는 폐기된 매개변수의 타입 및 한정자를 고려합니다. 폐기된 매개변수가 같은 Bean 클래스에서 선언된 producer 메서드 또는 producer 필드로 해결되는 경우, 컨테이너는 해당 producer 메서드 또는 producer 필드에서 반환된 모든 인스턴스를 제거할 때 이 메서드를 호출해야 합니다.</p>
+<p>Informa de métodos disposer sin el método producer correspondiente.</p>
+<p>Cada método disposer debe tener exactamente un parámetro disposed del mismo tipo que el método producer correspondiente o
+  el tipo de retorno del campo producer. Al buscar los métodos disposer para un método producer o campo producer, el contenedor
+  considera el tipo y los calificadores del parámetro disposed. Si el parámetro disposed se resuelve a un método producer o
+  campo producer declarado por la misma clase de bean, el contenedor debe llamar a este método al destruir cualquier instancia devuelta por
+  ese método producer o campo producer.</p>
 </body>
 </html>

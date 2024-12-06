@@ -4,52 +4,54 @@
   <tr>
     <td colspan="3">
       <font face="verdana" size="-1">
-        기본 제공 템플릿은 예를 들어, <code>사용 위치에서 메서드 생성</code> 인텐션 동작<br>과 같이, 메서드가 생성될 때마다 메서드의 본문 작성에 사용됩니다.
-템플릿은 편집할 수 있습니다. JavaScript 표현식 및 주석과 함께, 사전 정의된 변수를 사용할 수도 있습니다.
-        이러한 변수는 템플릿이 적용될 때 해당 값으로 바뀝니다.
+        Esta plantilla incorporada se utiliza para rellenar el cuerpo de un método cada vez que se genera, por ejemplo,
+        a través de la acción de intención <code>Crear método desde uso</code>.<br>
+        La plantilla se puede editar. Junto con las expresiones JavaScript y los comentarios, también puedes utilizar variables predefinidas.
+        Estas variables se sustituirán por los valores correspondientes cuando se aplique la plantilla.
       </font>
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">사전 정의된 변수는 다음의 값을 사용합니다:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas tomarán los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${IS_ASSIGNMENT_TARGET}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">생성된 메서드가 대입 대상일 때 ‘true’를 반환합니다</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">devuelve "true" si el método creado es un objetivo de asignación</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${IS_NEW_CALL}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">생성된 메서드가 ‘new’ 호출에 있을 때 ‘true’를 반환합니다</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">devuelve "true" si el método creado está en la llamada "new"</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${HAS_EXPECTED_TYPE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">생성된 메서드가 예상된 타입을 가지고 있으면, 'true'를 반환합니다.</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">devuelve "true" si el método creado está en la ubicación con el tipo esperado</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">생성된 메서드의 예상 타입의 기본값 (예상 타입이 없으면 'undefined')</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">valor predeterminado del tipo esperado para el método creado ("indefinido" si no hay tipo esperado)</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${METHOD_NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">생성된 메서드 이름</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">nombre del método creado</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${SEMICOLON}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">코드 스타일 옵션에 따라 세미콜론 또는 비어 있음</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">punto y coma o vacío, según las opciones de estilo de código</font></td>
   </tr>
   <tr>
-    <td colspan="3"><font face="verdana" size="-1"><i>파일 헤더</i> 템플릿 (<i>포함</i> 탭)의 모든 사전 정의된 변수도 사용 가능합니다. (예:
+    <td colspan="3"><font face="verdana" size="-1">Todas las variables predefinidas de la plantilla <i>Encabezado de archivo</i> (pestaña <i>Incluye</i>) también están disponibles.
+      (p. ej.
       <font face="verdana" size="-2"><b>${USER}</b></font>,
       <font face="verdana" size="-2"><b>${DATE}</b></font>,
-      등.)</font>
+      etc.)</font>
     </td>
   </tr>
 </table>

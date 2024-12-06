@@ -1,19 +1,18 @@
 <html>
 <body>
-테스트 메서드를 포함하지 않는 비 <code>abstract</code> 테스트 사례를 보고합니다. 일반적으로 테스트 케이스는 완성되지 않은 코드를 나타내거나 제거해야 하는 리팩터링 잔류물이 될 수 있습니다.
-<p>예:</p>
+Inspecciona los casos de prueba que no son <code>abstract</code> sin métodos de prueba. Dichos casos de prueba suelen indicar código sin terminar o podrían ser un resto de refactorización que debería eliminarse.
+<p>Ejemplo:</p>
 <pre><code>
-  <b>public class</b> CrucialTest {
+  public class CrucialTest {
     @Before
-    <b>public void</b> setUp() {
+    public void setUp() {
       System.out.println("setting up");
     }
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-아래 체크박스를 사용하여 이 검사에서 테스트 메서드가 포함된 상위 클래스가 있는 테스트 사례를 무시하도록 지정합니다.
+  Utiliza la opción <b>Ignorar casos de prueba que tengan superclases con métodos de prueba</b> para ignorar casos de prueba que tengan superclases con métodos de prueba.
 <p>
-
 </body>
 </html>

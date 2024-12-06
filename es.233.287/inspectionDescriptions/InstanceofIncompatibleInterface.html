@@ -1,10 +1,11 @@
 <html>
 <body>
-검사된 식에 <code>instanceof</code> 식의 오른쪽에 있는 클래스/인터페이스 타입을 확장/구현하지 않고 하위 클래스가 없는 클래스/인터페이스 타입이 있는 <code>instanceof</code> 식을 보고합니다.
+Reporta expresiones `instanceof` donde la expresión que es verificada tiene un tipo de clase/interfaz que no extiende/implementa el tipo de clase/interfaz en el lado derecho de la expresión `instanceof`, ni tiene subclases que lo hagan.
 <p>
-  라이브러리 코드로 의도되긴 하였으나 프로젝트에서 선언된 클래스의 어떠한 인스턴스도 <code>instanceof</code> 테스트를 통과할 수 없기 때문에 이러한 구조는 오류를 일으키기 쉽습니다.
+  A pesar de que podría ser para código de biblioteca por ejemplo, tal construcción es probablemente errónea,
+  porque ninguna instancia de ninguna clase declarada en el proyecto podría pasar esta prueba `instanceof`.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo { }
 
@@ -12,10 +13,10 @@
   
   class Main {
       void test(Foo f, Bar b) {
-          if (f instanceof Bar) { // 문제
+          if (f instanceof Bar) { // problema
               System.out.println("fail");
           }
-          if (b instanceof Foo) { // 문제
+          if (b instanceof Foo) { // problema
               System.out.println("fail");
           }
       }

@@ -1,9 +1,36 @@
 <html>
 <body>
-열거형 타입에 사용된, 누락된 것이 있는 <code>switch</code> 문을 보고합니다.
+Informa declaraciones <code>switch</code> sobre tipos enumerados que no son exhaustivos.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>enum</b> AlphaBetaGamma {
+    A, B, C;
+
+    <b>void</b> x(AlphaBetaGamma e) {
+      <b>switch</b> (e) {
+
+      }
+    }
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  <b>enum</b> AlphaBetaGamma {
+    A, B, C;
+
+    <b>void</b> x(AlphaBetaGamma e) {
+      <b>switch</b> (e) {
+        <b>case</b> A -> {}
+        <b>case</b> B -> {}
+        <b>case</b> C -> {}
+      }
+    }
+  }
+</code></pre>
 <!-- tooltip end -->
 <p>
-<code>default</code> 분기가 있는 <code>switch</code> 문을 무시하려면 <b>default 분기가 있는 switch 문 무시</b> 옵션을 사용하세요.
+Use la opción **Ignorar sentencias switch con una rama predeterminada** para ignorar <code>switch</code>
+sentencias que tienen una rama <code>default</code> .
 <p>
 
 </body>

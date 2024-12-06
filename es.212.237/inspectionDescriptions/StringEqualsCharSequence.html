@@ -1,23 +1,22 @@
 <html>
 <body>
-<code>CharSequence</code>가 인수로 사용된 <code>String.equals()</code> 호출을 보고합니다.
+<code>CharSequence</code> informa de la llamada a <code>String.equals()</code> que incluye un argumento.
 <p>
-  <code>String.equals()</code>는 <code>String</code> 인수에 대해서만<code>true</code>를 반환할 수 있습니다.
-  <code>String</code>을 내용을 <code>String</code>이 아닌 <code>CharSequence</code> 인수와 비교하려면 <code>contentEquals()</code> 메서드를 사용하세요.</p>
-<p><b>예:</b></p>
-<pre>
+  <code>String.equals()</code> únicamente puede devolver <code>true</code> para un argumento de <code>String</code>. Para comparar el contenido de <code>String</code> con un argumento que no sea <code>String</code> de <code>CharSequence</code>, utilice el método <code>contentEquals()</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
   boolean equals(String s, CharSequence ch) {
     return s.equals(ch);
   }
-</pre>
-<p>빠른 수정 적용 후:</p>
-<pre>
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
   boolean equals(String s, CharSequence ch) {
     return s.contentEquals(ch);
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
-<small>2017.3의 새로운 기능</small>
+<small>Novedad en 2017.3</small>
 </body>
 </html>

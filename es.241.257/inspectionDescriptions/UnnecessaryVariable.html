@@ -1,24 +1,24 @@
 <html>
 <body>
-바로 다음 <code>return</code> 문 또는 다른 변수와 똑같은 복사본에서만 사용하는 지역 변수를 보고합니다.
-<p>그러한 변수는 안전하게 인라인화하여 코드를 더 명확하게 만들 수 있습니다.</p>
+Inspecciona variables locales que se usan únicamente en la siguiente sentencia <code>return</code> o que son copias exactas de otras variables.
+<p>Estas variables se pueden insertar en línea de forma segura para que el código sea más claro.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun sum(a: Int, b: Int): Int {
       val c = a + b
       return c
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun sum(a: Int, b: Int): Int {
       return a + b
   }
 </code></pre>
 <!-- tooltip end -->
-<p>검사 구성:</p>
-<p><b>즉시 반환되거나 던져지는 변수 보고</b> 옵션을 사용하면 즉시 반환되는 변수를 보고합니다.
-    변수의 이름을 명시적으로 지정하면 코드 가시성이 개선되는 경우가 있기 때문에 이 옵션은 기본적으로 비활성화되어 있습니다.</p>
+<p>Configurar la inspección:</p>
+<p>Usa la opción <b>Informar sobre variables devueltas inmediatamente</b> para informar sobre variables devueltas inmediatamente.
+    Cuando se les da nombres descriptivos, dichas variables pueden mejorar la legibilidad del código en algunos casos, por eso esta opción está deshabilitada de forma predeterminada.</p>
 </body>
 </html>

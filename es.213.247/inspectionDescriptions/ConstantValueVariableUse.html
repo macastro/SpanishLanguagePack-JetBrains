@@ -1,9 +1,9 @@
 <html>
 <body>
-상수로 알려진 변수의 모든 사용 위치를 보고합니다.
-<p>이는 변수의 사용(읽기) 위치를 변수를 상수와 비교하는 <code>==</code> 조건을 포함하는 <code>if</code>, <code>while</code> 또는 <code>for</code> 문으로 둘러싸는 경우를 말합니다.
-  이 경우 상수로 알려진 변수의 사용 위치는 실제 상수로 바꿀 수 있습니다.</p>
-<p>예:</p>
+Reporta todos los usos de variables conocidas como constantes.
+<p>Esto se aplica cuando las ubicaciones donde se usa (lee) la variable están encerradas en instrucciones <code>if</code>, <code>while</code> o <code>for</code> que contienen una condición <code>==</code> que compara la variable con una constante.
+  En este caso, los usos de la variable conocida como constante se pueden reemplazar por la constante real.</p>
+<p>Ejemplo:</p>
 <pre><code>
     private static void foo(double number) {
         if (number == 1.0) {
@@ -12,7 +12,7 @@
     }
     private static void f(double number) {}
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
     private static void foo(double number) {
         if (number == 1.0) {

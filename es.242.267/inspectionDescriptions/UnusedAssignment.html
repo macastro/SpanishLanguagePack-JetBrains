@@ -1,27 +1,28 @@
 <html>
 <body>
-대입 후 사용되지 않은 대입 값을 보고합니다.
-대입 값이 사용되지 않을 경우 대입을 제거하여 코드 길이를 줄이고 불필요한 대입을 피하는 것이 좋습니다.
-<p>다음과 같은 경우가 보고됩니다:</p>
+Informa los valores de la asignación que no se utilizan después de la asignación.
+Si el valor de asignación no se utiliza, es mejor eliminar la asignación para acortar el código y evitar asignaciones redundantes.
+<p>Se informan los siguientes casos:</p>
 <ul>
-  <li>변수가 대입된 후 한 번도 읽히지 않는 경우</li>
-  <li>변수가 읽히기 전에 항상 새 값으로 덮어쓰이는 경우</li>
-  <li>(위의 두 가지 이유 중 하나로) 변수 이니셜라이저가 불필요한 경우</li>
+  <li>variables que nunca se leen después de la asignación</li>
+  <li>variables que siempre se sobrescriben con un nuevo valor antes de leerse</li>
+  <li>inicializadores de variables que son redundantes (por una de las dos razones anteriores)</li>
 </ul>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configurar la inspección:</p>
 <p>
-<b>Report redundant initializers(불필요한 이니셜라이저 보고)</b> 옵션을 사용하여 불필요한 이니셜라이저를 보고합니다.
+Utiliza la opción <b>Informar inicializadores redundantes</b> para informar inicializadores redundantes:
 </p>
 <pre><code>
   int getI() {
-    int i = 0; // 불필요한 이니셜라이저
+    int i = 0; // inicialización redundante
     i = 2;
     return i;
   }
 </code></pre>
 <p>
-<b>이항식으로 대체될 수 있는 접두사 식을 보고</b> 옵션을 사용하면 <code>++i</code>가 <code>i + 1</code>로 대체될 수 있는 경우를 보고합니다.
+Utiliza la opción <b>Informar expresiones de prefijo que pueden reemplazarse con expresiones binarias</b> para informar casos
+donde una expresión <code>++i</code> puede reemplazarse con <code>i + 1</code>:
 </p>
 <pre><code>
   int preInc(int value) {
@@ -30,7 +31,8 @@
   }
 </code></pre>
 <p>
-<b>변경된 값이 사용되지 않는 접미사 식을 보고</b> 옵션을 사용하면 <code>i</code>의 값이 추후에 사용되지 않는 <code>i++</code> 경우를 보고합니다.
+Utiliza la opción <b>Informar expresiones de sufijo donde el valor cambiado no se utiliza</b> para informar casos <code>i++</code>
+donde el valor de <code>i</code> no se utiliza más adelante:
 </p>
 <pre><code>
   int postInc(int value) {
@@ -39,20 +41,22 @@
   }
 </code></pre>
 <p>
-<b>값이 사용되지 않는 패턴 변수 보고</b> 옵션을 사용하면 패턴 변수의 값이 사용되기 전에 재정의되는 경우를 보고합니다.
+Utiliza la opción <b>Informar variables de patrón cuyos valores nunca se utilizan</b> para informar casos donde el valor de una variable de patrón
+se sobrescribe antes de leerse:
 </p>
 <pre><code>
   if (object instanceof String s) {
-      s = "hello";
+      s = "hola";
       System.out.println(s);
   }
 </code></pre>
 <p>
-<b>값이 사용되지 않는 반복 매개변수를 보고</b> 옵션을 사용하면 강화된 <code>for</code> 구문 내에서 반복 매개변수의 값이 사용되기 전에 재정의되는 경우를 보고합니다.
+Utiliza la opción <b>Informar parámetros de iteración cuyos valores nunca se utilizan</b> para informar casos donde el valor de un parámetro de iteración
+de declaraciones <code>for</code> mejoradas se sobrescribe antes de leerse:
 </p>
 <pre><code>
   for (String arg : args) {
-      arg = "test";
+      arg = "prueba";
       System.out.println(arg);
   }
 </code></pre>

@@ -1,8 +1,8 @@
 <html>
 <body>
-Kotlin 통합 프로퍼티로 바꿀 수 있는 Java <code>get</code> 및 <code>set</code> 메서드를 보고합니다.
-<p><b>프로퍼티 액세스 구문 사용</b> 빠른 수정을 사용해 코드를 자동으로 수정할 수 있습니다.</p>
-<p>예:</p>
+Reporta las llamadas a los métodos `get` y `set` de Java que se pueden reemplazar con las propiedades sintéticas de Kotlin.
+<p>Se puede usar la corrección rápida "<b>Usar sintaxis de acceso a propiedad</b>" para modificar el código automáticamente.</p>
+<p>Ejemplo:</p>
 <pre><code>
   // Java:
   public class JavaClassWithGetter {
@@ -19,7 +19,7 @@ Kotlin 통합 프로퍼티로 바꿀 수 있는 Java <code>get</code> 및 <code>
   // Kotlin:
   fun test(j: JavaClassWithGetter) {
       // ...
-      j.getExpr() // &lt;== 빠른 수정에서는 표현식을 'j.expr'로 단순화합니다
+      j.getExpr() // &lt;== La corrección rápida simplifica la expresión a 'j.expr'
   }
 </code></pre>
 </body>

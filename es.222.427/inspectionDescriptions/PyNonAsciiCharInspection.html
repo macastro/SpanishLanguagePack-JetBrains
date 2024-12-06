@@ -1,20 +1,20 @@
 <html>
 <body>
-<p>Python 2에서 파일에 ASCII가 아닌 문자를 포함되어 있으나 맨 위에 인코딩 선언이 없는 경우를 보고합니다.</p>
-<p><b>예:</b></p>
-<pre style="font-family: monospace">
+<p>Informa cuando un archivo contiene caracteres no ASCII y no tiene una declaración de codificación en la parte superior en Python 2.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
 class A(object):
 # &#8470;5
     def __init__(self):
         pass
-</pre>
-<p>이 예시에서 IDE는 주석에 ASCII가 아닌 심볼이 사용되었으나 인코딩 선언이 없는 경우를 보고합니다. 제안된 빠른 수정을 적용하여 누락된 인코딩 선언을 추가하십시오:</p>
-<pre style="font-family: monospace">
+</code></pre>
+<p>En este ejemplo, el IDE informa un símbolo no ASCII en un comentario y una falta de declaración de codificación. Aplica la corrección rápida propuesta para añadir una declaración de codificación faltante:</p>
+<pre><code>
 # coding=utf-8
 class A(object)
 # &#8470;5
     def __init__(self):
         pass
-</pre>
+</code></pre>
 </body>
 </html>

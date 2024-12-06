@@ -3,34 +3,34 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      JUnit 4 테스트 클래스에서 Ktor 1.x.x용 HTTP 테스트 메서드를 생성하기 위해 사용하는 템플릿입니다.</font>
+      Esta es una plantilla utilizada para crear un método de prueba HTTP para Ktor 1.x.x en una clase de prueba JUnit 4.</font>
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">사전 정의된 변수는 다음의 값을 사용합니다:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas tomarán los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">생성된 메서드 이름</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del método creado</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${HTTP_METHOD}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">HTTP 메서드가 사용되는 중(GET, POST 등).</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Método HTTP que se está utilizando (GET, POST, etc.)</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${ROUTE}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">테스트가 필요한 현재 서비스와 상대적인 루트</font>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Ruta, relativa al servicio actual, que necesita ser probada</font>
     </td>
   </tr>
   <tr>
@@ -38,7 +38,8 @@
       <nobr><font face="verdana" size="-2"><b>${CONFIGURE_SERVER}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">테스트가 필요한 서버 부분의 라우팅 트리를 구성하는 루트 확장 메서드</font>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Un método de extensión de ruta que configura un árbol de enrutamiento para la parte del servidor
+      que necesita ser probada</font>
     </td>
   </tr>
   <tr>
@@ -46,7 +47,7 @@
       <nobr><font face="verdana" size="-2"><b>${BODY}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">생성된 메서드 본문</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Cuerpo del método generado</font></td>
   </tr>
 </table>
 </body>

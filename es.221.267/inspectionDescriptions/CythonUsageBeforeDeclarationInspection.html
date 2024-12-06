@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>선언 전에 참조된 Cython 변수를 보고합니다.</p>
-<p><b>예:</b></p>
-<pre style="font-family: monospace">
+<p>Reporta variables Cython que son referenciadas antes de su declaración.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
 cdef int c_x
 
-print(c_x, c_y)  # Variable 'c_y'가 선언 전에 사용됨
+print(c_x, c_y)  # La variable 'c_y' se utiliza antes de su declaración
 
 cdef int c_y = 0
-</pre>
+</code></pre>
 </body>
 </html>

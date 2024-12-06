@@ -1,13 +1,13 @@
 <html>
 <body>
-<em>기능에 대한 욕심</em> 코드 스멜을 보고합니다. 메서드가 다른 클래스의 메서드를 세 번 이상 호출하면 경고가 발생합니다 라이브러리 클래스, 상위 클래스, 포함된 클래스 또는 포함하는 클래스에 대한 호출은 이 검사에서 계산되지 않습니다. 기능에 대한 욕심은 보통 해당 기능이 잘못된 클래스에 있다는 사실을 알려줍니다.
-<p>예:</p>
+Informa sobre el código con olor a <em>Envidia de Características</em>. Se lanza la advertencia cuando un método llama a métodos de otra clase tres o más veces. Las llamadas a clases de biblioteca, clases principales, clases incluidas o contenedoras no se cuentan en esta inspección. La envidia de características suele ser una indicación de que esta funcionalidad se encuentra en una clase errónea.
+<p>Ejemplo:</p>
 <pre><code>
   class JobManager {
-    // 경고: 이 메서드는 Job 클래스의
-    // 메서드 3개를 호출합니다
-    // 이 호출 체인을
-    // Job 클래스로 옮기는 것이 좋습니다
+    // Advertencia: este método llama a tres métodos
+    // de la clase Job
+    // Sería mejor mover esta cadena de
+    // llamadas a la propia clase Job.
     void performJob(Job job) {
       job.beforeStart();
       job.process();

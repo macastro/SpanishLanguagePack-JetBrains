@@ -1,24 +1,24 @@
 <html>
 <body>
-<p>Kotlin 1.4부터 상위 클래스에 있는 의미 없는 어노테이션 대상을 보고합니다.</p>
-<p><code>@get:</code> 같은 어노테이션 대상은 상위 클래스에서 무의미하므로 금지됩니다.</p>
-<p><b>예:</b></p>
+<p>Informa sobre objetivos de anotación sin significado en superclases desde Kotlin 1.4.</p>
+<p>Objetivos de anotación como <code>@get:</code> no tienen significado en superclases y están prohibidos.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  interface Foo
+  interfaz Foo
 
-  annotation class Ann
+  clase de anotación Ann
 
-  class E : @field:Ann @get:Ann @set:Ann @setparam:Ann Foo
+  clase E : @field:Ann @get:Ann @set:Ann @setparam:Ann Foo
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
-  interface Foo
+  interfaz Foo
 
-  annotation class Ann
+  clase de anotación Ann
 
-  class E : Foo
+  clase E : Foo
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 Kotlin 언어 수준이 1.4 이상인 경우에만 보고합니다.</p>
+<p>Esta inspección solo informa si el nivel de lenguaje Kotlin del proyecto o módulo es 1.4 o superior.</p>
 </body>
 </html>

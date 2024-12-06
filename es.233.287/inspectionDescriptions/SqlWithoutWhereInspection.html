@@ -1,8 +1,8 @@
 <html>
 <body>
-WHERE 절이 없는 DELETE 또는 UPDATE 구문을 보고합니다.
-  <p>WHERE 절이 없으면 DELETE는 테이블의 모든 데이터를 삭제하며 UPDATE는 모든 테이블 행의 값을 덮어씁니다.</p>
-<p>예(MySQL):</p>
+Informa sobre el uso de las sentencias DELETE o UPDATE sin cláusulas WHERE.
+  <p>Sin cláusulas WHERE, DELETE elimina todos los datos de la tabla y UPDATE sobrescribe valores para todas las filas de la tabla.</p>
+<p>Ejemplo (MySQL):</p>
 <pre><code>CREATE TABLE t1 (a TEXT, b INT, c BOOLEAN);
 update t1 set  a = 'Smith';
 delete from t1;</code></pre>

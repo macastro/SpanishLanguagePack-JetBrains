@@ -1,13 +1,13 @@
 <html>
 <body>
-함수 타입 내에서 불필요한 소괄호를 보고합니다. 매개변수가 없는 함수에는 소괄호가 필요하지 않습니다.
-<p>불필요한 소괄호를 제거하기 위해 빠른 수정을 사용할 수 있습니다.</p>
-<p>예:</p>
+Informa paréntesis innecesarios dentro de los tipos de funciones. Las funciones sin parámetros no requieren paréntesis.
+<p>Hay una solución rápida disponible para eliminar los paréntesis innecesarios.</p>
+<p>Ejemplo:</p>
 <pre><code>class Example
-  # 함수 타입 내 불필요한 소괄호
+  # Paréntesis innecesarios en el tipo de función
   def call: () -> untyped
 end</code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de la solución rápida:</p>
 <pre><code>class Example
   def call: -> untyped
 end</code></pre>

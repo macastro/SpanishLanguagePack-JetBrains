@@ -1,8 +1,8 @@
 <html>
 <body>
-<p><code>@StreamListener</code>, <code>@SendTo</code>, <code>@Output</code> 및 <code>@Input</code> 어노테이션의 해결되지 않은 채널 속성을 보고합니다.</p>
-<p>잘못된 바인딩 이름을 사용하면 런타임에서 'Bean을 찾을 수 없습니다'라는 오류가 발생합니다.</p>
-<p><b>예:</b></p>
+<p>Informa de los atributos de canal no resueltos en anotaciones <code>@StreamListener</code>, <code>@SendTo</code>, <code>@Output</code> y <code>@Input</code>.</p>
+<p>Usar un nombre de enlace no válido causa un error del tipo "no se ha encontrado el bean" en tiempo de ejecución.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   @EnableBinding(Sink.class)
   public class LogSource {
@@ -10,7 +10,7 @@
 	  public void log1() {
     }
 
-    @StreamListener("invalid")  // '채널을 찾을 수 없습니다'라고 보고됩니다
+    @StreamListener("invalid")  // Informa de 'No se encuentra el canal'
 	  public void log2() {
     }
   }

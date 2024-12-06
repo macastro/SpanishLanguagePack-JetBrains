@@ -1,12 +1,12 @@
 <html>
 <body>
-루프를 사용하여 배열의 내용을 컬렉션으로 복사하는 코드를 보고합니다.
+Informa del código que usa un bucle para copiar el contenido de un array a una colección.
 <p>
-  이 작업을 더 간편하고 빠르게(컬렉션 구현에 따라 다름) 수행하려면 <code>Collection.addAll(Arrays.asList())</code> 또는 <code>Collections.addAll()</code>을 사용하면 됩니다.
+  Una forma más corta y, potencialmente, más rápida (dependiendo de la implementación de la colección) de hacerlo es usar <code>Collection.addAll(Arrays.asList())</code> o <code>Collections.addAll()</code>.
 </p>
 <p>
-<p>내부에 추가 구문이 없는 루프만 보고됩니다.</p>
-<p><b>예:</b></p>
+<p>Solo los bucles sin declaraciones adicionales en su interior son informados.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void addAll(List&lt;String&gt; list, String[] arr) {
     for (int i = 0; i &lt; arr.length; i++) {
@@ -15,7 +15,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   void addAll(List&lt;String&gt; list, String[] arr) {
     Collections.addAll(list, arr);

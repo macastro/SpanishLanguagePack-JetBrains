@@ -1,7 +1,7 @@
 <html>
 <body>
-단일 <code>Collection.removeIf</code> 호출로 축소 가능한 루프를 보고합니다.
-<p>예:</p>
+Informa de bucles que se pueden reducir a una sola llamada a <code>Collection.removeIf</code>.
+<p>Ejemplo:</p>
 <pre><code>
   for (Iterator&lt;String&gt; it = collection.iterator(); it.hasNext(); ) {
     String aValue = it.next();
@@ -10,7 +10,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicarse el arreglo rápido:</p>
 <pre><code>
   collection.removeIf(aValue -> shouldBeRemoved(aValue));
 </code></pre>

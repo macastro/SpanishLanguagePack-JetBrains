@@ -1,18 +1,18 @@
 <html>
 <body>
-포함하는 메서드 또는 람다 식의 매개변수나 지역 변수와 이름이 동일하게 지정된 익명 클래스의 필드를 보고합니다.
+Informa sobre campos en una clase anónima que tienen el mismo nombre que variables locales o parámetros del método contenedor o expresión lambda.
 <p>
-  이와 같이 이름이 지정될 경우, 포함하는 메서드의 변수 및 매개변수를 사용하려다가 익명 클래스의 이름이 동일한 필드를 실수로 사용할 수 있습니다.
+  Como resultado de dicha denominación, es posible que uses accidentalmente el campo de clase anónimo donde se propone la variable o parámetro con el mismo nombre del método contenedor.
 </p>
-<p>빠른 수정에서는 필드 이름을 변경하도록 제안합니다.</p>
-<p><b>예:</b></p>
+<p>Se sugiere una corrección rápida para cambiar el nombre del campo.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Test {
     public Test(String value) {
       Object foo = new Object() {
         private String value = "TEST";
         public void foo() {
-          System.out.println(value); //매개변수가 아닌 필드에 액세스했습니다
+          System.out.println(value); //se accede al campo y no al parámetro
         }
       };
     }

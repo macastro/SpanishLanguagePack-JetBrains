@@ -1,25 +1,25 @@
 <html>
 <body>
-선언된 메서드 반환 범위를 준수하지 않는 메서드에서 반환된 숫자 값을 보고합니다.
-몇 가지 어노테이션을 사용하여 메서드 반환 범위를 선언할 수 있습니다:
+Informa sobre los valores numéricos devueltos por métodos que no se ajustan al rango de devolución del método declarado.
+Puedes declarar el rango de devolución del método utilizando varias anotaciones:
 <ul>
-  <li>JetBrains 어노테이션 패키지의 <code>org.jetbrains.annotations.Range</code>('from' 및 'to' 지정)</li>
-  <li>Checker Framework 어노테이션 패키지의 <code>org.checkerframework.common.value.qual.IntRange</code>('from' 및 'to' 지정)</li>
-  <li>Checker Framework 어노테이션 패키지의 <code>org.checkerframework.checker.index.qual.GTENegativeOne</code>(범위: '>= -1')</li>
-  <li>Checker Framework 어노테이션 패키지의 <code>org.checkerframework.checker.index.qual.NonNegative</code>(범위: '>= 0')</li>
-  <li>Checker Framework 어노테이션 패키지의 <code>org.checkerframework.checker.index.qual.Positive</code>(범위: '> 0')</li>
-  <li>JSR 305 어노테이션 패키지의 <code>javax.annotation.Nonnegative</code>(범위: '>= 0')</li>
-  <li><code>javax.validation.constraints.Min</code>(최솟값 지정)</li>
-  <li><code>javax.validation.constraints.Max</code>(최댓값 지정)</li>
+  <li><code>org.jetbrains.annotations.Range</code> del paquete de anotaciones JetBrains (especifica 'desde' y 'hasta')</li>
+  <li><code>org.checkerframework.common.value.qual.IntRange</code> del paquete de anotaciones Checker Framework (especifica 'desde' y 'hasta')</li>
+  <li><code>org.checkerframework.checker.index.qual.GTENegativeOne</code> del paquete de anotaciones Checker Framework (el rango es '>= -1')</li>
+  <li><code>org.checkerframework.checker.index.qual.NonNegative</code> del paquete de anotaciones Checker Framework (el rango es '>= 0')</li>
+  <li><code>org.checkerframework.checker.index.qual.Positive</code> del paquete de anotaciones Checker Framework (el rango es '> 0')</li>
+  <li><code>javax.annotation.Nonnegative</code> del paquete de anotaciones JSR 305 (el rango es '>= 0')</li>
+  <li><code>javax.validation.constraints.Min</code> (especifica el valor mínimo)</li>
+  <li><code>javax.validation.constraints.Max</code> (especifica el valor máximo)</li>
 </ul>
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   @Range(from = 0, to = Integer.MAX_VALUE) int getValue() {
-    // 경고: -1은 선언된 범위에서 벗어납니다
+    // Aviso: -1 está fuera del rango declarado
     return -1;
   }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2021.2의 새로운 기능</small></p>
+<p><small>Novedad en 2021.2</small></p>
 </body>
 </html>

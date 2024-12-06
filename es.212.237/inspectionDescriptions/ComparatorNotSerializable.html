@@ -1,27 +1,27 @@
 <html>
 <body>
-<code>java.lang.Comparator</code>를 구현하지만 <code>java.io.Serializable</code>를 구현하지 않는 클래스를 보고합니다.
+Reporta clases que implementan <code>java.lang.Comparator</code>, pero que no implementan <code>java.io.Serializable</code>.
 <p>
-  <code>java.util.TreeMap</code> 또는 <code>java.util.TreeSet</code>과 같은 순서가 있는 컬렉션을 생성하기 위해 직렬화할 수 없는 비교자가 사용되는 경우 컬렉션 또한 직렬화할 수 없습니다. 이는 예기치 않은 진단하기 어려운 버그를 초래할 수 있습니다.
+  Si un comparador no serializable es usado para construir una colección ordenada como un <code>java.util.TreeMap</code> o un <code>java.util.TreeSet</code>, la colección también será no serializable. Esto puede resultar en errores inesperados y difíciles de diagnosticar.
 </p>
 <p>
-  <code>java.lang.Comparator</code>의 하위 클래스는 보통 상태가 없으므로 간단히 직렬화 가능한 것으로 표시하는 것만으로 그러한 이슈를 피할 수 있습니다.
+  Dado que las subclases de <code>java.lang.Comparator</code> a menudo no tienen estado, simplemente marcarlas como serializables es un pequeño costo para evitar tales problemas.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class Foo implements Comparator { // 경고
+  class Foo implementa Comparator { // advertencia
       @Override
       public int compare(Object o1, Object o2) {
-          /*... */
+          /* ... */
       }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que el arreglo rápido es aplicado:</p>
 <pre><code>
-  class Foo implements Comparator, Serializable { // 경고 없음
+  class Foo implementa Comparator, Serializable { // no hay advertencia aquí
       @Override
       public int compare(Object o1, Object o2) {
-          /*... */
+          /* ... */
       }
   }
 </code></pre>

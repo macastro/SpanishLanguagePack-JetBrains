@@ -1,18 +1,19 @@
 <html>
 <body>
-<code>kotlin.deprecated</code> 어노테이션에 <code>kotlin.ReplaceWith</code> 인수가 없으며 지원 중단된 함수 및 프로퍼티를 보고하고, 해당 항목의 본문을 기반으로 인수를 추가하도록 제안합니다.
+Informa sobre funciones y propiedades obsoletas que no tienen el argumento <code>kotlin.ReplaceWith</code> en su
+anotación <code>kotlin.deprecated</code> y sugiere añadir uno basado en su cuerpo.
 <p>
-    Kotlin에서는 <code>ReplaceWith</code> 인수를 제공하여 지원 중단된 선언을 자동으로 바꿉니다.
-    코드에서 지원 중단 관련 이슈를 해결하려면 이 인수를 사용하는 것이 좋습니다.
+    Kotlin proporciona el argumento <code>ReplaceWith</code> para reemplazar declaraciones obsoletas automáticamente.
+    Se recomienda utilizar el argumento para corregir problemas de obsolescencia en el código.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   @Deprecated("Use refined() instead.")
   fun deprecated() = refined()
 
   fun refined() = 42
 </code></pre>
-<p>빠른 수정에서는 <code>ReplaceWith()</code> 인수를 추가합니다.</p>
+<p>La solución rápida añade el argumento <code>ReplaceWith()</code>:</p>
 <pre><code>
   @Deprecated("Use refined() instead.", ReplaceWith("refined()"))
   fun deprecated() = refined()

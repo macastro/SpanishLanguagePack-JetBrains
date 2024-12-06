@@ -2,104 +2,103 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">PHP 특성 PHPDoc 주석에 대한 기본 제공 템플릿. <b>#parse</b> 지시문<br>  을 이용하여 파일 템플릿 (<b>템플릿</b> 탭) 에 포함될 수 있는 코드 조각을 포함합니다. 템플릿은 편집할 수 있습니다. 정적 텍스트, 코드 및 주석과 마찬가지로, 매크로처럼 해당 값으로 확장되는 사전 정의된 변수를 사용할 수 있습니다.</font><br>
-   </td>
- </tr>
+    <td colspan="3"><font face="verdana" size="-1">Plantilla integrada para comentarios PHPDoc para utilizar en traits PHP. Incluye fragmentos de código que se pueden incluir en la plantilla de archivo (pestaña <b>Plantillas</b>) usando la directiva <b>#parse</b>. <br>La plantilla es editable. Además de texto estático, código y comentarios, puedes usar variables predefinidas, que se expandirán a sus valores correspondientes como las macros.</font><br>
+    </td>
+  </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      사전 정의된 변수는 다음의 값을 사용합니다:</font></td>
- </tr>
+      Las variables predefinidas adquieren los siguientes valores:</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">특성 이름.</font></td>
- </tr>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del trait.</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAMESPACE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">앞에 슬래시가 없는 특성 클래스의 정규화된 이름.</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de clase del trait completamente calificado sin la barra inicial.</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">달러 표시, '$' 기호로 표시됩니다.</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El símbolo del dólar se evalúa como el carácter '$' normal.</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시스템 날짜</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시스템 시간</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 년도</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 월</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 월 이름 첫 세글자. 예: Jan, Feb 등등.</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Los tres primeros caracteres del nombre del mes actual. Por ejemplo, Ene, Feb, etc.</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 월의 이름 전체. 예: January, February 등등.</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual. Por ejemplo, Enero, Febrero, etc.</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 일</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Día del mes actual</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 분</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${SECOND}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 초</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Segundo actual</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 프로젝트 이름</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
+  </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 사용자</font></td>
- </tr>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Usuario actual</font></td>
+  </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${CARET}</b></font></nobr>
-   </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">주석이 추가된 후 캐럿이 이동해야하는 위치를 표시합니다.</font></td>
- </tr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Almacena la ubicación a la que debe moverse el cursor después de añadir el comentario.</font></td>
+  </tr>
 </table>
 </body>
 </html>

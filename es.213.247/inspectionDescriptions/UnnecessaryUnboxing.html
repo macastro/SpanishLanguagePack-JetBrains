@@ -1,17 +1,18 @@
 <html>
 <body>
-래핑된 기본 값의 명시적 언래핑인 언박싱을 보고합니다.
-<p>Java 5 이상 버전에서 언박싱은 불필요하며 안전하게 제거될 수 있습니다.</p>
-<p><b>예:</b></p>
+Reporta el desempaquetado, que es el desenvuelto explícito de valores primitivos envueltos.
+<p>El desempaquetado es innecesario a partir de Java 5 en adelante y puede eliminarse de forma segura.</p>
+<p><b>Ejemplos:</b></p>
 <ul>
   <li><code>Integer i = Integer.valueOf(42).intValue();</code> &rarr; <code>Integer i = Integer.valueOf(42);</code></li>
   <li><code>int k = Integer.valueOf(42).intValue();</code> &rarr; <code>int k = Integer.valueOf(42);</code>
-    <p>(<b>정말 불필요하게 언박싱된 표현식만 보고</b> 옵션이 검사되지 않은 경우에만 보고합니다)</p></li>
+    <p>(informa solo cuando la opción <b>Informar solo expresiones realmente desempaquetadas superfluamente</b> no está marcada)</p></li>
 </ul>
-<!-- tooltip end -->
+<!-- fin de la información sobre herramientas -->
 <p>
-  <b>정말 불필요하게 언박싱된 표현식만 보고</b> 옵션을 사용하여 언박싱된 값이 즉시 묵시적 또는 명시적으로 박싱되는 정말 불필요한 언박싱만을 보고합니다.
-  이 경우 언박싱-박싱 단계 전체를 제거할 수 있습니다. 이 검사는 간단한 명시적 언박싱을 보고하지 않습니다.</p>
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 5 이상인 경우에만 보고합니다.</p>
+  Use la opción <b>Informar solo expresiones realmente desempaquetadas superfluamente</b> para informar solo el desempaquetado realmente superfluo,
+  donde un valor desempaquetado se empaqueta inmediatamente de forma implícita o explícita.
+  En este caso, se puede eliminar todo el paso desempaquetar-empaquetar. La inspección no informa desempaquetado explícito simple.</p>
+<p>Esta inspección solo informa si el nivel de idioma del proyecto o módulo es 5 o superior.</p>
 </body>
 </html>

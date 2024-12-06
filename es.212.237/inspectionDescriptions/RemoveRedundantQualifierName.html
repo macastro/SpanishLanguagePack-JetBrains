@@ -1,12 +1,11 @@
 <html>
 <body>
-클래스 이름, 함수 또는 프로퍼티에서 불필요한 한정자(또는 그 일부)를 보고합니다.
+Informa sobre calificadores redundantes (o sus partes) en nombres de clase, funciones y propiedades.
 <p>
-    완전히 정규화된 이름은 호출이 어떠한 객체, 함수 또는 프로퍼티를 참조하는지 지정하는 명확한 식별자입니다.
-    이름을 단순화할 수 있는 컨텍스트에서 검사는 이름을 단순화할 수 있는 기회와 이와 연관되어 코드를 수정할 수 있는 '불필요한 한정자 이름 제거'
-    빠른 수정을 알려줍니다.
+    Un nombre completamente calificado es un identificador inequívoco que especifica a qué objeto, función o propiedad hace referencia una llamada.
+    En los contextos donde el nombre puede acortarse, la inspección informa sobre la oportunidad y la solución rápida asociada 'Quitar nombre de calificador redundante' permite modificar el código.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplos:</b></p>
 <pre><code>
   package my.simple.name
   import kotlin.Int.Companion.MAX_VALUE
@@ -14,12 +13,12 @@
   class Foo
 
   fun main() {
-      val a = my.simple.name.Foo()    // 'Foo'가 선언된 'my.simple.name' 패키지 안에 있으므로 한정자 불필요
-      val b = kotlin.Int.MAX_VALUE    // 'MAX_VALUE'를 가져왔으므로 이로 바꿀 수 있음
-      val c = kotlin.Double.MAX_VALUE // 기본 유형을 자동으로 가져왔으므로 'Double.MAX_VALUE'로 바꿀 수 있음
+      val a = my.simple.name.Foo()    // 'Foo' reside en el paquete declarado 'my.simple.name', el calificador es redundante
+      val b = kotlin.Int.MAX_VALUE    // Puede reemplazarse con 'MAX_VALUE' ya que está importado
+      val c = kotlin.Double.MAX_VALUE // Puede reemplazarse con 'Double.MAX_VALUE' ya que los tipos incorporados se importan automáticamente
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que se aplique la corrección rápida:</p>
 <pre><code>
   package my.simple.name
   import kotlin.Int.Companion.MAX_VALUE

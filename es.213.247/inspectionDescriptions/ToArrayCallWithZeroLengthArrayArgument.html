@@ -1,14 +1,14 @@
 <html>
 <body>
-선호 스타일이 아닌 <code>Collection.toArray()</code> 호출을 보고하고 선호 스타일을 적용할 것을 제안합니다.
-<p>컬렉션을 배열로 변환하는 두 가지 스타일이 있습니다:</p>
-<list>
-  <li>크기가 사전 설정된 배열. 예: <code>c.toArray(new String[c.size()])</code></li>
-  <li>빈 배열. 예: <code>c.toArray(new String[0])</code></li>
-</list>
-<p>이전 Java 버전에서는 적절한 크기의 배열을 생성하는 데 필요한 리플렉션 호출의 속도가 느렸으므로 크기가 설정된 배열이 권장되었습니다.</p>
-<p>하지만 이러한 호출은 OpenJDK 6의 최신 업데이트 이후 내장되어 빈 배열 버전의 성능을 크기가 사전 설정된 버전과 동등하거나 때때로 더 낫게 만듭니다. 또한 크기가 사전 설정된 배열을 전달하면 <code>size</code> 및 <code>toArray</code>호출 간에 데이터 레이스가 발생할 수 있으므로 동시성 또는 동시화된 컬렉션에서 위험합니다. 이 때문에 컬렉션이 동작 도중 동시에 축소된 경우 배열 끝에 추가적인 null이 발생합니다.</p>
+Se informa la llamada no preferida de <code>Collection.toArray()</code>, y se sugiere aplicar el estilo preferente.
+<p>Existen dos estilos para convertir de una colección a un arreglo:</p>
+<ul>
+  <li>Arreglo de tamaño predeterminado, p. ej., <code>c.toArray(new String[c.size()])</code></li>
+  <li>Arreglo vacío, p. ej., <code>c.toArray(new String[0])</code></li>
+</ul>
+<p>En versiones anteriores de Java, se recomendaba utilizar arreglos de tamaño predeterminado porque las llamadas de reflexión necesarias para crear un arreglo del tamaño adecuado eran muy lentas.</p>
+<p>Sin embargo, desde la actualización más reciente de OpenJDK 6, esta llamada se incorporó, por lo que el rendimiento de la versión de arreglo vacío es similar o, en ocasiones, superior al de la versión de arreglo de tamaño predeterminado. Además, pasar un arreglo de tamaño predeterminado es peligroso para colecciones simultáneas o sincronizadas, ya que puede ocurrir una condición de carrera de datos entre las llamadas a <code>size</code> y <code>toArray</code>. Esto puede provocar nulos adicionales al final del arreglo si la colección se reduce simultáneamente durante la operación.</p>
 <!-- tooltip end -->
-<p>검사 옵션을 사용하여 선호하는 스타일을 선택하세요.</p>
+<p>Utilice las opciones de inspección para seleccionar el estilo preferido.</p>
 </body>
 </html>

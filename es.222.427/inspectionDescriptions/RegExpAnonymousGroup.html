@@ -1,18 +1,19 @@
 <html>
 <body>
-정규식 내 익명 캡처 그룹과 숫자 역참조를 보고합니다.
-이들은 정규식 파생 언어가 이름이 지정된 그룹 및 그룹 참조를 지원하는 경우에만 보고됩니다.
-이름이 지정된 그룹 및 역참조는 코드 가독성을 높여주므로 이를 대신 사용하는 것이 좋습니다.
-캡처가 필요하지 않은 경우 비 캡처 그룹을 사용해(예: <code>(xxx)</code> 대신 <code>(?:xxx)</code>) 일치 작업의 성능을 높이고 메모리 사용량을 줄일 수 있습니다.
-<p><b>예:</b></p>
+Informa sobre grupos de captura anónimos y referencias inversas numéricas en un RegExp.
+Solo se informa cuando el dialecto de RegExp admite grupos con nombre y referencias de grupos con nombre.
+Los grupos con nombre y las referencias inversas con nombre mejoran la legibilidad del código y se recomienda usarlos en su lugar.
+Cuando no se necesita una captura, la coincidencia puede tener un mejor rendimiento y utilizar menos memoria mediante el uso de un grupo sin captura,
+es decir, <code>(?:xxx)</code> en lugar de <code>(xxx)</code>.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   (\d\d\d\d)\1
 </code></pre>
-<p>더 나은 정규식 패턴은 다음과 같습니다.</p>
+<p>Un mejor patrón de expresión regular podría verse así:</p>
 <pre><code>
   (?&lt;quad>\d\d\d\d)\k&lt;quad>
 </code></pre>
 <!-- tooltip end -->
-<p><small>2017.2의 새로운 기능</small>
+<p><small>Nuevo en 2017.2</small>
 </body>
 </html>

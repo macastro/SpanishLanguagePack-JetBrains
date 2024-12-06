@@ -1,12 +1,12 @@
 <html>
 <body>
-단일 표현식의 같은 변수에서 사용하는 <code>==</code> 및 <code>===</code> 비교를 보고합니다.
-<p><code>==</code>와 <code>===</code>의 유사성 때문에 모르는 사이에 섞일 수 있으며
-    대신 <code>==</code>이 사용되었는지 확인하려면 세심한 주의를 기울여야 합니다. <code>===</code></p>
-<p>예:</p>
+Informa comparaciones <code>==</code> y <code>===</code> usadas en la misma variable dentro de una sola expresión.
+<p>Debido a similitudes <code>==</code> y <code>===</code> podrían mezclarse sin aviso, y
+    es necesario revisar cuidadosamente que <code>==</code> se use en lugar de <code>===</code></p>
+<p>Ejemplo:</p>
 <pre><code>
-  if (type === FIELD || type == METHOD || type == ANNOTATION_METHOD || // "=="이 부정확하게 사용된 것에 주목
-      type === LAMBDA_EXPRESSION) return
+  if (tipo === CAMPO || tipo == METODO || tipo == METODO_ANOTACION || // Nótese que "==" se usa incorrectamente
+      tipo === EXPRESION_LAMBDA) return
 </code></pre>
 </body>
 </html>

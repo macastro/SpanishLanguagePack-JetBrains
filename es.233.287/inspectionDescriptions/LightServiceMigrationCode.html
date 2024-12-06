@@ -1,26 +1,21 @@
-<html>
-<body>
-<code>plugin.xml</code>에서 서비스로 등록되는 대신 <code>@com.intellij.openapi.components.Service</code> 어노테이션을 사용하는 라이트 서비스로 표시될 수 있는 클래스를 보고합니다
-<p>
-  재정의하도록 의도되지 않은 서비스는 <code>plugin.xml</code> 파일에 등록될 필요가 없습니다.
-  대신 서비스 클래스에 <code>@Service</code> 어노테이션을 추가하세요. 프로젝트 수준의 서비스에는 <code>@Service(Service.Level.PROJECT)</code>를 지정하세요.
-<p>
-  요건:
-<ul>
-  <li>IntelliJ Platform 2019.3 이상.</li>
-  <li>서비스 클래스는 <code>final</code>이어야 합니다.</li>
-  <li><code>serviceInterface</code>가 지정되지 않았습니다.</li>
-  <li>애플리케이션 수준 서비스가 <code>com.intellij.openapi.components.PersistentStateComponent</code>이면 로밍이 비활성화되어야 합니다(<code>roamingType = RoamingType.DISABLED</code>)
-  </li>
-  <li>다음의 속성 중 어느 것도 지정되지 않았습니다. <code>os</code>, <code>client</code>, <code>overrides</code>, <code>id</code>, <code>preload</code>.</li>
-</ul>
-<p>
-  자세한 내용은 IntelliJ 플랫폼 플러그인 SDK 문서의 <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html">서비스</a>를 참조하세요.
-</p>
-<p>
-  <code>Plugin DevKit | 플러그인 설명자 | 라이트 서비스로 변환될 수 있는 서비스</code> 검사도 참조하세요.
-</p>
-<!-- tooltip end -->
-<p><small>2023.2의 새로운 기능</small>
-</body>
-</html>
+**Versión corta**
+Se informa de las clases que se pueden marcar como servicios ligeros mediante la anotación `@com.intellij.openapi.components.Service` en lugar de registrarse como servicios en `plugin.xml`.
+
+**Versión larga**
+Los servicios que no están destinados a ser anulados no deben registrarse en el archivo `plugin.xml`. En su lugar, añada la anotación `@Service` a la clase de servicio. Para los servicios a nivel de proyecto, especifique `@Service(Service.Level.PROJECT)`.
+
+**Requisitos:**
+
+* IntelliJ Platform 2019.3 o posterior.
+* La clase de servicio debe ser `final`.
+* `serviceInterface` no está especificado.
+* Si el servicio a nivel de aplicación es `com.intellij.openapi.components.PersistentStateComponent`, la itinerancia debe estar deshabilitada (`roamingType = RoamingType.DISABLED`).
+* No se especifica ninguno de los siguientes atributos: `os`, `client`, `overrides`, `id`, `preload`.
+
+Consulte [Servicios](https://plugins.jetbrains.com/docs/intellij/plugin-services.html) en la documentación del SDK del complemento de la plataforma IntelliJ para obtener más detalles.
+
+**Inspección relacionada:**
+
+* `Plugin DevKit | Descriptor de complemento | Servicios convertibles a servicios ligeros`
+
+**Nota:** Esta inspección es nueva en 2023.2.

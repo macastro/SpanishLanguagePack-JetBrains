@@ -1,10 +1,12 @@
 <html>
 <body>
-<code>Object.finalize()</code> 호출을 보고합니다.
-<p><code>Object.finalize()</code>를 명시적으로 호출할 경우 객체의 일관성이 깨질 수 있습니다.
-  가비지 컬렉터는 해당 객체에 대한 참조가 없음을 확인하면 이 메서드를 자동으로 호출합니다.</p>
-<p><code>finalize()</code> 구현의 <code>super.finalize()</code> 호출이 정상이므로 이 검사는 해당 호출을 보고하지 않습니다.</p>
-<p><b>예:</b></p>
+Informa sobre las llamadas a <code>Object.finalize()</code>.
+<p>La llamada explícita a <code>Object.finalize()</code> puede provocar que los objetos se coloquen en un
+estado inconsistente.
+  El recolector de basura llama automáticamente a este método en un objeto cuando determina que no hay referencias a este objeto.</p>
+<p>La inspección no informa sobre las llamadas a <code>super.finalize()</code> desde dentro de las implementaciones de <code>finalize()</code> como
+  son benignas.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   MyObject m = new MyObject();
   m.finalize();

@@ -1,8 +1,19 @@
 <html>
 <body>
-<code>final</code>로 선언된 클래스를 보고합니다.
-이러한 클래스는 상속 불가능하며, 객체 지향 설계가 제대로 되지 않았음을 의미할 수 있습니다.
-  일부 코딩 표준에서는 <code>final</code> 클래스를 권장하지 않습니다.
+Informa sobre las clases declaradas como <code>final</code>.
+No se informa sobre las clases finales que extienden una clase o interfaz <code>sealed</code>.
+Estas clases no pueden heredarse y pueden indicar una falta de diseño orientado a objetos.
+Algunos estándares de codificación desaconsejan las clases <code>final</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>public final class</b> Main {
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  <b>public class</b> Main {
+  }
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

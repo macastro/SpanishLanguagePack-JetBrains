@@ -1,10 +1,10 @@
 <html>
 <body>
 <p>
-  <code>org.springframework.data.mongodb.repository.Query</code> 어노테이션 내에 지정된 미해결 문서 필드를 보고합니다.
+  Informa campos de documentos no resueltos especificados dentro de la anotación de <code>org.springframework.data.mongodb.repository.Query</code>.
 </p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code lang="java">
 @Document
 class User {
@@ -13,7 +13,7 @@ class User {
 }
 
 interface UserRepository extends Repository&lt;User, Long&gt; {
-  @Query("{ age: { $gt: ?0 } }") // 'age'가 미해결로 강조 표시됩니다
+  @Query("{ age: { $gt: ?0 } }") // 'age' está resaltado como no resuelto
   List&lt;User&gt; findUsersOlderThan(Integer age);
 }
 </code></pre>

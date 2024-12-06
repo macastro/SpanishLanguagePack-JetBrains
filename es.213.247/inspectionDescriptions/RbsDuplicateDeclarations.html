@@ -1,11 +1,19 @@
 <html>
 <body>
-클래스, 모듈, 인터페이스, 상수, 글로벌 변수, 타입 별칭 및 메서드의 중복 선언을 보고합니다.
-
+Informa sobre declaraciones duplicadas de clases, módulos, interfaces, constantes, variables globales, alias de tipo y métodos.
 <ul>
-  <li>중복된 선언은 <code>DuplicatedDeclarationError</code>를 발생시킵니다.</li>
-  <li>중복된 메서드 정의는 <code>DuplicatedMethodDefinitionError</code>를 발생시킵니다.</li>
-  <li>중복된 인터페이스 메서드 정의는 <code>DuplicatedInterfaceMethodDefinitionError</code>를 발생시킵니다.</li>
+  <li>Las declaraciones duplicadas producen <code>DuplicatedDeclarationError</code>.</li>
+  <li>Las definiciones de métodos duplicados producen <code>DuplicatedMethodDefinitionError</code>.</li>
+  <li>Las definiciones de métodos de interfaz duplicados producen <code>DuplicatedInterfaceMethodDefinitionError</code>.</li>
 </ul>
+<p>Hay una solución rápida disponible para navegar hasta la declaración duplicada.</p>
+<p>Ejemplo:</p>
+<pre><code># Declaración de interfaz duplicada
+interface _Example
+end
+
+# Declaración de interfaz duplicada
+interface _Example
+end</code></pre>
 </body>
 </html>

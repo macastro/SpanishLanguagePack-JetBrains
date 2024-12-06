@@ -1,12 +1,12 @@
 <html>
 <body>
-<p>클래스 수준에서 전방 참조의 사용을 보고합니다. 이러한 참조는 클래스 초기화 도중 예기치 않은 동작을 초래할 수 있습니다.</p>
-<p><b>예:</b></p>
+<p>Reporta usos de referencias a futuro a nivel de clase, lo cual puede resultar en un comportamiento inesperado durante la inicialización de la clase.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Test {
-    val first: Int  = second + 5 // 여기에서 second는 0입니다
+    val first: Int  = second + 5 // aquí second es 0
     val second: Int = 5
-    // first는 10이 아닌 5가 됩니다
+    // first será 5 y no 10
   }
 </code></pre>
 <!-- tooltip end -->

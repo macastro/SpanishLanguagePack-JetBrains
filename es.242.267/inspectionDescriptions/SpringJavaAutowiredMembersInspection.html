@@ -1,12 +1,12 @@
 <html>
 <body>
-<p>올바른 Spring bean(예: <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html">@Component</a>,
-<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html">@Service</a> 등)이 아닌 클래스에 삽입되거나 오토와이어링된 필드/메서드를 보고합니다</p>
+<p>Inspección de campos/métodos inyectados o por autocableado en clases que no son Spring Bean válidos:
+<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html">@Component</a>, <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html">@Service</a>, etc.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 public class FooBeanClass {
-  @Autowired   // '올바른 Spring bean(@Component, @Service 등)에서 오토와이어링된 멤버를 정의해야 합니다'라고 보고됩니다
+  @Autowired   // Informe 'Los miembros autocableados deben definirse en un Spring Bean válido: @Component, @Service, etc.'
   ServiceBean bean;
   }
 </code></pre>

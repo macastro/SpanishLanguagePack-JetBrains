@@ -1,14 +1,14 @@
 <html>
 <body>
-일련의 <code>if</code>문으로 바꿀 수 있는 <code>Optional</code> 호출 체인을 보고합니다.
-<p>예:</p>
+Informa sobre las llamadas a cadenas de llamadas <code>Optional</code> que pueden ser reemplazadas por secuencias de instrucciones <code>if</code>.
+<p>Ejemplo:</p>
 <pre><code>
   return Optional.ofNullable(name)
     .map(this::extractInitials)
     .map(initials -> initials.toUpperCase(Locale.ENGLISH))
     .orElseGet(this::getDefault);
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Una vez aplicada la corrección rápida:</p>
 <pre><code>
   if (name != null) {
     String initials = extractInitials(name);
@@ -17,7 +17,9 @@
   return getDefault();
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 8 이상인 경우에만 보고합니다.</p>
-<p><small>2020.2의 새로운 기능</small></p>
+<p>
+  Esta inspección puede resultar útil para hacer un downgrade para mantener la compatibilidad con versiones anteriores de Java.
+</p>
+<p><small>Novedad en la versión 2020.2</small></p>
 </body>
 </html>

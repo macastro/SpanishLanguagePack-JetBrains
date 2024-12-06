@@ -1,5 +1,23 @@
 <html>
 <body>
-Kotlin stdlib로 대체 가능한 Java <b>Collections</b> 정적 메서드(예: <b>Collections.sort(list)</b>)를 보고합니다.
+Informa de una llamada al método estático <code>Collections</code> de Java que puede ser reemplazado por Kotlin stdlib.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import java.util.Collections
+
+  fun test() {
+      val mutableList = mutableListOf(1, 2)
+      Collections.fill(mutableList, 3)
+  }
+</code></pre>
+<p>La corrección rápida reemplaza la llamada al método estático <code>Collections</code> de Java por la llamada al método stdlib de Kotlin correspondiente:</p>
+<pre><code>
+  import java.util.Collections
+
+  fun test() {
+      val mutableList = mutableListOf(1, 2)
+      mutableList.fill(3)
+  }
+</code></pre>
 </body>
 </html>

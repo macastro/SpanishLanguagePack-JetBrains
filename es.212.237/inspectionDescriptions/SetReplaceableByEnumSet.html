@@ -1,18 +1,20 @@
 <html>
 <body>
-콘텐츠 타입이 열거형 클래스인 <code>java.util.Set</code> 객체의 인스턴스화를 보고합니다. <code>Set</code> 객체는 <code>java.util.EnumSet</code> 객체로 치환될 수 있습니다.
+Informa las instanciaciones de objetos <code>java.util.Set</code> cuyos tipos de contenido son clases enumeradas. Dichos objetos <code>Set</code> pueden remplazarse con objetos <code>java.util.EnumSet</code>.
 <p>
-  <code>EnumSet</code> 구현은 기본 데이터 구조가 비트 벡터이므로 다른 조합과 비교 시 더욱 효과적일 수 있습니다. 빠른 수정을 사용하여 이니셜라이저를 <code>EnumSet.noneOf()</code> 호출과 치환합니다. 이 빠른 수정은 변수 타입이 <code>Set</code> 의 하위 클래스인 경우에는 사용할 수 없습니다.
+  Las implementaciones de <code>EnumSet</code> pueden ser mucho más eficientes en comparación con
+  otros conjuntos, ya que la estructura de datos subyacente es un bit de vector. Utiliza la solución rápida para reemplazar el inicializador con una llamada a
+  <code>EnumSet.noneOf()</code>. Esta solución rápida no está disponible cuando el tipo de variable es una subclase de <code>Set</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  enum MyEnum { FOO, BAR; }
+  public enum MyEnum { FOO, BAR; }
 
   Set&lt;MyEnum&gt; enums = new HashSet&lt;MyEnum&gt;();
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
-  enum MyEnum { FOO, BAR; }
+  public enum MyEnum { FOO, BAR; }
 
   Set&lt;MyEnum&gt; enums = EnumSet.noneOf(MyEnum.class);
 </code></pre>

@@ -1,10 +1,12 @@
 <html>
 <body>
-<p>엔드포인트 메서드 어노테이션의 잘못된 채널 속성을 보고합니다(<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/Gateway.html">@Gateway</a>,
+<p>Informa de atributos de canal incorrectos en anotaciones de método de punto final:
+<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/Gateway.html">@Gateway</a>,
 <a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/ServiceActivator.html">@ServiceActivator,</a>
-<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/Filter.html">@Filter</a> 등).</p>
+<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/Filter.html">@Filter</a>, etc.</p>
 
-<p><b>예:</b></p>
+
+<p><b>Ejemplo:</b></p>
 
 <pre><code>
   @Component
@@ -13,14 +15,14 @@
      public void gateway() {...}
 
      @Gateway(
-        requestChannel ="<strong>simpleBean</strong>",   // Bean must be one of these types: org.springframework.integration.MessageChannel,org.springframework.messaging.MessageChannel
-        replyChannel = "<strong>unknownChannel</strong>")   // Cannot find channel
+        requestChannel ="<strong>simpleBean</strong>",   // Bean debe ser de uno de estos tipos: org.springframework.integration.MessageChannel,org.springframework.messaging.MessageChannel
+        replyChannel = "<strong>unknownChannel</strong>")   // No se puede encontrar el canal
      public void errors() {...}
 
      @Bean
      public MyBean simpleBean() {...}
   }
 </code></pre>
+
 </body>
 </html>
-

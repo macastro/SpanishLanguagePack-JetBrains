@@ -1,8 +1,8 @@
 <html>
 <body>
-클래스에서 <code>@Immutable</code> 어노테이션이 추가된 비 final 필드를 보고합니다.
-이는 <code>@Immutable</code> 어노테이션 컨트랙트에 위배됩니다.
-<p>예:</p>
+Inspecciona cualquier campo no final en una clase con la anotación <code>@Immutable</code>.
+Esto viola el contrato de la anotación <code>@Immutable</code>.
+<p>Ejemplo:</p>
 <pre><code>
   import javax.annotation.concurrent.Immutable;
   @Immutable
@@ -11,7 +11,7 @@
   }
 </code></pre>
 <!-- tooltip end -->
-<p>지원되는 <code>@GuardedBy</code> 어노테이션:</p>
+<p>Las anotaciones <code>@GuardedBy</code> compatibles son:</p>
 <ul>
   <li><code>net.jcip.annotations.GuardedBy</code></li>
   <li><code>javax.annotation.concurrent.GuardedBy</code></li>

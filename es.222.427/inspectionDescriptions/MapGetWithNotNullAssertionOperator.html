@@ -1,11 +1,11 @@
 <html>
 <body>
-<code>map.getValue()</code>, <code>map.getOrElse()</code> 등으로 대체 가능한 <code>map.get()!!</code>을 보고합니다.
-<p><b>예:</b></p>
+Reporta <code>map.get()!!</code> que puede reemplazarse por <code>map.getValue()</code>, <code>map.getOrElse()</code>, etc.
+<p><b>Ejemplo:</b></p>
 <pre><code>
 fun test(map: Map&lt;Int, String&gt;): String = map.get(0)!!
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que se aplica la corrección rápida:</p>
 <pre><code>
 fun test(map: Map&lt;Int, String&gt;): String = map.getValue(0)
 </code></pre>

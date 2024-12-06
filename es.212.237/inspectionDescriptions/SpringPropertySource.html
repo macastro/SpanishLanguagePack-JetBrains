@@ -1,12 +1,12 @@
 <html>
 <body>
-<p><a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/PropertySource.html>@PropertySource</a>
-및 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/TestPropertySource.html">@TestPropertySource</a> 어노테이션에서 확인되지 않은 파일 또는 디렉터리를 보고합니다.</p>
+<p>Informa archivos o directorios no resueltos en las anotaciones <a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/PropertySource.html>@PropertySource</a> y <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/TestPropertySource.html">@TestPropertySource</a>.
+</p>
 
-<p><b>예:</b></p>
-<pre><code>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
   @Configuration
-  @PropertySource("classpath:/com/mycompany/unknown.properties") // reports "Cannot resolve file unknown.properties"
+  @PropertySource("classpath:/com/mycompany/unknown.properties") // informa "No se puede resolver el archivo 'unknown.properties'"
   public class AppConfig {...}
 </code></pre>
 </body>

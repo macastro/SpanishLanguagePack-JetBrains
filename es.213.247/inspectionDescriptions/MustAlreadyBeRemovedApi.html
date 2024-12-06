@@ -1,19 +1,18 @@
 <html>
 <body>
-선언하는 라이브러리의 현재 버전에서 제거되었어야 하는 <code>@ApiStatus.ScheduledForRemoval</code>로
-표시된 선언을 보고합니다.
+Informa las declaraciones marcadas como <code>@ApiStatus.ScheduledForRemoval</code> que deberían haberse eliminado en la versión actual de la biblioteca que declara.
 <!-- tooltip end -->
-<p>지정한 예약된 제거 버전을 사용자가 아래에서 설정한 버전과 비교합니다.</p>
+<p>Compara la versión especificada prevista para su eliminación con la versión establecida por el usuario a continuación.</p>
 <p>
-  마침표로 분리되고 선택적으로 <code>alpha</code>, <code>beta</code>, <code>snapshot</code> 또는 <code>eap</code>
-  접미사로 분리된 문자열로 버전을 지정합니다.
+  Especifica la versión como una cadena delimitada por puntos y opcionalmente con el sufijo
+  <code>alpha</code>, <code>beta</code>, <code>snapshot</code> o <code>eap</code>.
 </p>
-<p>유효한 버전의 예: <code>1.0</code>, <code>2.3.1</code>, <code>2018.1</code>, <code>7.5-snapshot</code>, <code>3.0-eap</code>
-</p>
+<p>Ejemplos de versiones válidas: <code>1.0</code>, <code>2.3.1</code>, <code>2018.1</code>, <code>7.5-snapshot</code>, <code>3.0-eap</code>.</p>
 <p>
-  버전 비교는 직관적임: <code>1.0 &lt; 2.0</code>, <code>1.0-eap &lt; 1.0</code>, <code>2.3-snapshot &lt; 2.3</code> 등등
-  자세한 비교 로직은 <a
-  href="https://github.com/JetBrains/intellij-community/blob/master/platform/util-rt/src/com/intellij/util/text/VersionComparatorUtil.java">VersionComparatorUtil</a>의 구현을 참조하세요.
+  La comparación de versiones es intuitiva: <code>1.0 &lt; 2.0</code>, <code>1.0-eap &lt; 1.0</code>, <code>2.3-snapshot &lt; 2.3</code>, etc.
+  Para obtener más información sobre la lógica de comparación, consulta la implementación de
+  <a
+  href="https://github.com/JetBrains/intellij-community/blob/master/platform/util-rt/src/com/intellij/util/text/VersionComparatorUtil.java">VersionComparatorUtil</a>.
 </p>
 </body>
 </html>

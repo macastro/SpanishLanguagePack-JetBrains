@@ -1,14 +1,14 @@
 <html>
 <body>
-JSP 파일 내 디폴트 패키지에서 클래스로의 모든 참조를 보고합니다.
+Informa de cualquier referencia a clase del paquete por defecto en los archivos JSP.
 
-<p><b>예:</b></p>
-<pre><code>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="jsp">
   &lt;%!
   Integer countSomeUsefulStuff() {
-   ...
-    new ClassFromDefaultPackage(...); // 오류
-    new com.example.GoodClass(...); // 좋음
+    ...
+    new ClassFromDefaultPackage(...); // Error
+    new com.example.GoodClass(...); //Correcto
   }
   %&gt;
   &lt;html&gt;
@@ -19,8 +19,9 @@ JSP 파일 내 디폴트 패키지에서 클래스로의 모든 참조를 보고
 </code></pre><br/>
 <!-- tooltip end -->
 <p>
-  <b>참고:</b> JSP의 컴파일된 클래스는 보통 디폴트가 아닌 패키지(예: Tomcat 사용 시 "org.apache.jsp", WebSphere 사용 시 "com.ibm._jsp")에 위치하지만 
-디폴트 패키지에서 가져오기는 Java에서 허용되지 않기 때문에 그러한 참조는 JSP 컴파일 도중에 해결되지 않습니다.
+  <b>NOTA:</b> Dichas referencias no se resolverán durante la compilación del JSP ya que una clase compilada para el JSP normalmente se colocará en un paquete no por defecto
+  (por ejemplo, "org.apache.jsp" en caso de Tomcat, "com.ibm._jsp" en caso de WebSphere),
+  pero la importación del paquete por defecto no está permitido en Java.
 </p>
 </body>
 </html>

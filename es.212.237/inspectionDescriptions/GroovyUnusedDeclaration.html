@@ -1,20 +1,19 @@
 <html>
 <body>
-사용되지 않는 클래스, 메서드 및 필드를 보고합니다.
-<p><b>예:</b></p>
+<p>Informa sobre clases, métodos y campos no utilizados.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class Department {
       private Organization myOrganization;
   }
 </code></pre>
-<p>여기서 <code>Department</code>는 명시적으로 <code>Organization</code>을 참조하지만 <code>Department</code> 클래스 자체가 사용되지 않으면
-검사에서 두 클래스를 모두 보고합니다. 
+<p>Aquí <code>Department</code> hace referencia explícitamente a <code>Organization</code>, pero si la clase <code>Department</code> no se utiliza,
+entonces la inspección informará de ambas clases. 
 
 <p>
-검사는 또한 메서드 및 모든 메서드 구현/재정의에서 사용되지 않는 매개변수는 물론 선언되었지만
-사용되지 않는 지역 변수를 보고합니다.
+La inspección también informa de los parámetros que no son utilizados por sus métodos y todas las implementaciones/sobreescrituras de métodos, así como las variables locales que están declaradas pero no son utilizadas.
 </p>
 <!-- tooltip end -->
-<p>자세한 내용은 Java에서 동일한 검사 부분을 참조하세요.</p>
+<p>Para más información, consulta la misma inspección en Java.</p>
 </body>
 </html>

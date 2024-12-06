@@ -1,9 +1,9 @@
 <html>
 <body>
-<p>메서드 시그니처 재정의 시 일관성 없음을 보고합니다.</p>
+<p>Reporta inconsistencias al anular firmas de métodos.</p>
 
-<p><b>예:</b></p>
-<pre style="font-family: monospace">
+<p><b>Ejemplo:</b></p>
+<pre><code>
 class Book:
     def add_title(self):
         pass
@@ -12,8 +12,8 @@ class Book:
 class Novel(Book):
     def add_title(self, text):
         pass
-</pre>
+</code></pre>
 
-<p><code>Novel</code> 클래스 내 <code>add_title</code> 메서드의 매개변수는 <code>Book</code> 클래스에 지정된 메서드 시그니처와 일치하지 않습니다. 수정 방안으로 IDE는 시그니처 리팩터링 변경을 적용할 것을 제의합니다.</p>
+<p>Los parámetros del método <code>add_title</code> en la clase <code>Novel</code> no coinciden con la firma del método especificada en la clase <code>Book</code>. Como solución, el IDE ofrece aplicar la refactorización Cambiar firma.</p>
 </body>
 </html>

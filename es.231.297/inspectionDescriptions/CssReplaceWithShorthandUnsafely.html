@@ -1,15 +1,17 @@
 <html>
 <body>
-긴 CSS 프로퍼티 집합을 보고하고 불완전한 긴 CSS 프로퍼티 집합을 짧은 형식으로 바꿀 것을 제안합니다(단, 두 형식은 100% 동등하지 않음).
+Reporta un conjunto de propiedades CSS explícitas y sugiere remplazar un conjunto incompleto de propiedades CSS explícitas con una forma abreviada,
+aunque no es 100% equivalente en este caso.
 <p>
-  예를 들어, 2개의 프로퍼티 <code>outline-color</code> 및 <code>outline-style</code>을 하나의 <code>outline</code>으로 바꿀 수 있습니다.
-  단축 양식은 모든 누락된 하위 값을 초기 상태로 재설정하므로 그러한 교체는 100% 동등하지 않습니다.
-  이 예시에서 <code>outline</code>이라는 짧은 형식으로 바꾸면 <code>outline-width</code> 역시 초기 값인 <code>medium</code>으로 재설정됩니다.
+  Por ejemplo, dos propiedades: <code>outline-color</code> y <code>outline-style</code> pueden ser remplazados con un único <code>outline</code>.
+  Tal reemplazo no es 100% equivalente porque los atajos restablecen todos los subvalores omitidos a sus estados iniciales.
+  En este ejemplo, cambiar al atajo <code>outline</code> significa que <code>outline-width</code> también se establece en su valor inicial,
+  que es <code>medium</code>.
 </p>
 <!-- tooltip end -->
 <p>
-  이 검사는 긴 프로퍼티의 전체 집합을 다루지 않습니다(짧은 형식으로 바꾸면 100% 안전할 경우).
-  그러한 경우, '프로퍼티를 안전하게 단축 속성으로 바꿀수 있습니다' 검사를 고려하십시오.
+  Esta inspección no maneja conjuntos completos de propiedades explícitas (cuando cambiar a atajo es 100% seguro).
+  Para tales casos, vea la inspección "Las propiedades pueden ser reemplazadas de forma segura con un atajo".
 </p>
 </body>
 </html>

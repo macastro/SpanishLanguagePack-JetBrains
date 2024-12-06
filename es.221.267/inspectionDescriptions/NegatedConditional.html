@@ -1,16 +1,20 @@
 <html>
 <body>
-조건이 부정된 조건식을 보고합니다.
-<p>조건식 브랜치의 순서를 반전시키면 보통 그러한 구문의 명확도가 높아집니다.</p>
+Informa expresiones condicionales cuyas condiciones son negadas.
+<p>Invertir el orden de las ramas de la expresión condicional usualmente incrementa la claridad de tales sentencias.</p>
 <!-- tooltip end -->
 <p>
-  <code>obj != null</code> 또는 <code>num != 0</code> 형식의 비교를 무시하려면 <b>'!=null' 비교 무시</b> 및 <b>'!= 0' 비교 무시</b> 옵션을 사용하세요.
-  <code>obj != null</code>은 실질적으로 '객체가 있음'을 의미하므로 전체 표현식의 의미는 부정을 포함하지 않아 이해하기 쉽습니다.
+  Usa las opciones <b>Ignorar comparaciones '!= null' </b> e <b>Ignorar comparaciones '!= 0' </b> para ignorar comparaciones de la forma
+  <code>obj != null</code> o <code>num != 0</code>.
+  Dado que <code>obj != null</code> significa efectivamente "obj existe",
+  el significado de toda la expresión no implica ninguna negación
+  y es por lo tanto fácil de entender.
 <p>
-  특히 비트 마스크 사용 시 같은 이유가 <code>num != 0</code> 표현식에 적용됩니다.
+  El mismo razonamiento aplica a expresiones <code>num != 0</code>, especialmente cuando se usan máscaras de bits.
 <p>
-  이러한 형태에는 흥미로운 case를 먼저 언급하는 추가적인 이점이 있습니다.
-  대부부의 경우에 다음 예시에서와 마찬가지로 <code>== null</code> 브랜치의 값은 <code>null</code> 자신입니다.
+  Estas formas tienen el beneficio agregado de mencionar el caso interesante primero.
+  En la mayoría de los casos, el valor para la rama <code>== null</code> es <code>null</code> en sí,
+  como en los siguientes ejemplos:
 
 <pre><code>
     static String getName(Person p) {
@@ -18,7 +22,7 @@
     }
 
     static String getExecutableString(int fileMode) {
-        return (fileMode & 0b001001001) != 0 ? "executable" : "non-executable";
+        return (fileMode & 0b001001001) != 0 ? "ejecutable" : "no ejecutable";
     }
 </code></pre>
 

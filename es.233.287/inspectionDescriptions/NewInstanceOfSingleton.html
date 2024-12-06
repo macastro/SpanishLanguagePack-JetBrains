@@ -1,8 +1,8 @@
 <html>
 <body>
-<p><code>@groovy.lang.Singleton</code> 어노테이션이 추가된 클래스의 새 인스턴스 생성을 보고합니다.
-  그러한 구문은 <b>싱글턴을 초기화할 수 없습니다</b>라는 런타임 예외를 발생시킬 수 있습니다.</p>
-<p><b>예:</b></p>
+<p>Reporta creación de nuevas instancias de clases anotadas con <code>@groovy.lang.Singleton</code>.
+  Tales construcciones pueden conducir a excepciones en tiempo de ejecución <b>No se puede instanciar singleton</b>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   @Singleton
   class Foo{
@@ -10,7 +10,7 @@
   
   Foo foo = <b>new Foo()</b>
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   @Singleton
   class Foo{

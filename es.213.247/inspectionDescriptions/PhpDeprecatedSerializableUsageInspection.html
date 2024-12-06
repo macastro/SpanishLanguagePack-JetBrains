@@ -1,12 +1,13 @@
 <html>
 <body>
-더 이상 사용되지 않는 <code>Serializable</code> 인터페이스의 사용을 보고합니다.
+Informa sobre el uso de la interfaz <code>Serializable</code> obsoleta.
 <!-- tooltip end -->
 <p>
-  PHP 8.1부터 추상이 아닌 클래스에서 <code>Serializable</code>를 구현하고 <code>__serialize()</code>  및 <code>__unserialize()</code>를 구현하지 않으면 사용 중단 경고가 발생합니다.
+  A partir de PHP 8.1, las clases que no son abstractas, implementan <code>Serializable</code> y no implementan <code>__serialize()</code>
+  y <code>__unserialize()</code> lanzarán una advertencia de obsolescencia.
 </p>
 <p>
-  자세한 내용은 <a href="https://wiki.php.net/rfc/custom_object_serialization">Serializable(php.net)의 단계적 사용 중단</a>을 참조하세요.
+  Consulte <a href="https://wiki.php.net/rfc/custom_object_serialization">Eliminación gradual de Serializable (php.net)</a> para obtener más detalles.
 </p>
 </body>
 </html>

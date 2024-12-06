@@ -1,8 +1,8 @@
 <html>
 <body>
-<code>public</code> 또는 <code>static</code>이 아닌 <code>@DataPoint</code> 어노테이션이 추가된 필드 또는 메서드를 보고합니다.
-형식이 잘못된 <code>@DataPoint</code> 멤버를 포함하는 <a href="https://github.com/junit-team/junit4/wiki/Theories">Theories</a> 테스트 클래스는 실행할 수 없습니다.
-<p>예:</p>
+Informa los campos o métodos que no son `public` y `/o no estáticos` y que usan la anotación `@DataPoint`.
+Las clases de prueba de <a href="https://github.com/junit-team/junit4/wiki/Theories">Teorías</a> con miembros `@DataPoint` mal formados no se pueden ejecutar.
+<p>Ejemplo:</p>
 <pre><code>
   @RunWith(Theories.class)
   <b>public class</b> SeriousTest {
@@ -20,7 +20,7 @@
     }
   }
 </code></pre>
-<p>제어자를 수정하는 빠른 수정이 제공됩니다.</p>
+<p>Hay una corrección rápida para modificar los modificadores:</p>
 <pre><code>
   @RunWith(Theories.class)
   <b>public class</b> SeriousTest {

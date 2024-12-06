@@ -1,7 +1,8 @@
 <html>
 <body>
-비동기가 의도되었을 가능성이 있으나 실제로 <code>async</code> 제어자가 누락되어 있는 함수 내 <code>await</code>의 사용 위치을 보고합니다.
-<!-- 툴팁 끝 -->
-<code>await</code>를 식별자로 사용할 수는 있지만 연산자로 사용되기를 의도했을 수 있기 때문에 그것을 포함한 함수를 <code>async</code>로 만들 필요가 있습니다.
+Informa un uso de <code>await</code> en una función que posiblemente fue pensada para ser asíncrona, pero en realidad le falta el modificador <code>async</code>.
+<!-- tooltip end -->
+Aunque <code>await</code> se puede usar como un identificador, es probable que quisiera usarse como un operador,
+por lo que la función que lo contiene debería hacerse <code>async</code>.
 </body>
 </html>

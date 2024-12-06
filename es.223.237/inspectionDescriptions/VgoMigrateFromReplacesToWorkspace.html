@@ -1,21 +1,18 @@
 <html>
 <body>
-'replace' 지시문을 사용하여 'go.work' 파일을 생성합니다.
-
+Genera archivos 'go.work' con directivas 'replace'.
 <p>
-  Go 작업공간은 Go 1.18에서 도입된 기능으로 여러 모듈에서 동시에 작업할 수 있습니다.<br>
-  작업공간은 로컬 디렉터리를 가리키는 'replace' 지시문에 대한 최신 대안입니다.<br>
-  작업공간의 모든 모듈에는 동일한 세트의 종속성이 있으므로 구성이 더 간단하고 보다 강력하며,
-  프로젝트 구조를 스캔하는 데 'go list' 호출이 더 적게 필요합니다.<br>
-  이 검사에 대한 수정은 새로운 'go.work' 파일을 생성하며 기존 파일은 변경하지 않습니다.
+  Los espacios de trabajo Go son una característica introducida en Go 1.18 que permiten trabajar simultáneamente en varios módulos.<br>
+  Los espacios de trabajo son una alternativa moderna a las directivas 'replace' que apuntan a directorios locales.<br>
+  Todos los módulos de un espacio de trabajo tienen el mismo conjunto de dependencias; lo cual simplifica la configuración, la hace más robusta y requiere menos llamadas 'go list' para escanear la estructura del proyecto.<br>
+  La solución para esta inspección genera un nuevo archivo 'go.work' y no cambia los archivos existentes.
 </p>
 <p>
-  기본적으로 경고 심각도가 사용됩니다. 생성된 작업공간에 원래 'go.mod'에서 대체되지 않은 Go 모듈이 포함된 경우
-  마이그레이션으로 인한 부수 효과가 있을 수 있으므로 경고가 표시되지 않지만, 수정은 여전히 수동으로 실행할 수 있습니다.
+  De manera predeterminada, se utiliza la severidad de 'warning'. Si un espacio de trabajo generado incluye módulos Go que no fueron reemplazados en 'go.mod' original, no se muestra ninguna advertencia debido a los posibles efectos secundarios provocados por la migración. Pero aún puedes ejecutar la solución manualmente.
 </p>
 <p>
-  작업공간에 대한 자세한 내용은 <a href="https://go.dev/ref/mod#workspaces">Go 모듈 참조</a>를 확인하세요.<br>
-  Go 작업공간 소개는 <a href="https://go.dev/doc/tutorial/workspaces">튜토리얼: 다중 모듈 작업공간 시작하기</a>를 참조하세요.
+  Para más información sobre los espacios de trabajo, consulta <a href="https://go.dev/ref/mod#workspaces">Referencia de módulos Go</a>.<br>
+  Para conocer la introducción a los espacios de trabajo Go, consulta <a href="https://go.dev/doc/tutorial/workspaces">Tutorial: Primeros pasos con espacios de trabajo multimódulos</a>.
 </p>
 </body>
 </html>

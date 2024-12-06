@@ -1,27 +1,31 @@
 <html>
 <body>
-파일 또는 소켓 리소스에서 <code>getChannel()</code>를 호출하여 생성된 모든 인스턴스를 포함하여 안전하게 닫히지 않은 <code>Channel</code> 리소스를 보고합니다.
+Reporta recursos <code>Channel</code> que no se cierran de forma segura, incluyendo cualquier instancia creada llamando
+<code>getChannel()</code> en un archivo o recurso de socket.
 <p>
-  이 검사는 기본적으로 리소스가 이름에 'close' 또는 'cleanup'을 포함하는 모든 메서드에 의해 닫힐 수 있다고 가정합니다.
+  Por defecto, la inspección asume que los recursos pueden cerrarse por cualquier método con
+  'close' o 'cleanup' en su nombre.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void send(Socket socket) throws IOException {
-    SocketChannel channel = socket.getChannel(); // 경고
+    SocketChannel channel = socket.getChannel(); //advertencia
     channel.write(ByteBuffer.wrap("message".getBytes()));
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-  다음 옵션을 사용해 검사를 구성하세요:
+  Usa las siguientes opciones para configurar la inspección:
 </p>
 <ul>
   <li>
-    <code></code> 리소스를 <code>Channel</code> 블록 내부에서 여는 것을 허용할지 여부를 설정합니다. 이 스타일은 <code>try</code> 블록 앞에서 <code>Channel</code>을 여는 것보다 장황하기 때문에 그다지 바람직하지 않습니다.
- </li>
+    Si se permite que un recurso <code>Channel</code> se abra dentro de un bloque <code>try</code>
+    Este estilo es menos deseable porque es más verboso que abrir un <code>Channel</code>
+    en frente de un bloque <code>try</code>.
+  </li>
   <li>
-    리소스가 인수로 전달된 메서드 호출에 의해 리소스가 닫힐 수 있는지 여부를 설정합니다.
- </li>
+    Si el recurso puede cerrarse por cualquier llamada de método con el recurso pasado como argumento.
+  </li>
 </ul>
 </body>
 </html>

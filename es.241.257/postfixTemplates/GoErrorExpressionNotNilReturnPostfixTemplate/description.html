@@ -1,21 +1,21 @@
 <html>
 <body>
-관용적 오류 처리를 위한 보일러플레이트 코드를 생성합니다.
+Genera código cliché para manejo de errores.
 <p>
-  <code>error</code> 타입의 변수 및 표현식에 호출될 수 있습니다.
+Se puede invocar en variables y expresiones del tipo <code>error</code>.
 </p>
 <ul>
-  <li><p><code>err</code> 변수를 다음 구문으로 바꿉니다:</p>
+  <li><p>Sustituye la variable <code>err</code> por la siguiente sintaxis:</p>
   <pre><code>if err != nil {
     return value1, value2, ...
   }</code></pre></li>
-  <li><p><code>expr</code> 표현식을 다음 구문으로 바꿉니다:</p>
+  <li><p>Sustituye la expresión <code>expr</code> por la siguiente sintaxis:</p>
   <pre><code>if err := expr; err != nil {
     return value1, value2, ...
   }</code></pre></li>
 </ul>
 <p>
-  각 <code>값</code>은 <code>err</code> 변수이거나 둘러싸는 함수의 해당 반환 타입의 디폴트 값입니다. 여러 개의 값을 사용하는 표현식에 이 템플릿을 호출할 수 있습니다.
+  Cada <code>valor</code> es la variable <code>err</code> o el valor predeterminado del tipo del valor de retorno correspondiente de la función envolvente. Esta plantilla se puede invocar en una expresión con múltiples valores.
 </p>
 </body>
 </html>

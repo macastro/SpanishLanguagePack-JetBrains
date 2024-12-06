@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>번들 프로퍼티 키로 사용된 문자열이 아닌 리터럴을 보고합니다.</p>
-<p>이러한 리터럴은 유지 관리하기 힘듭니다. 이미 해결된 자연어 문자열을 다시 사용하는 것이 좋습니다.</p>
-<p><b>예:</b></p>
+<p>Reporta aquellos literales no cadena que están siendo utilizados como clave de propiedad de paquete.</p>
+<p>Esto es difícil de mantener. Es mejor pasar alrededor las cadenas de lenguajes naturales ya resueltas.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   val key =
     if (???) "property.key.1"
@@ -10,7 +10,7 @@
 
   Bundle.message(key)
 </code></pre>
-<p>대신 다음을 사용하세요.</p>
+<p>Usa en su lugar:</p>
 <pre><code>
   val string =
     if (???) Bundle.message("property.key.1")

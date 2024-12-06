@@ -1,20 +1,19 @@
 <html>
 <body>
-Reports invalid reference from <code>Entity</code> to <code>SharedEntity</code>.
+<code>Entity</code> a <code>SharedEntity</code> referencia inválida.
 <p>
-  You cannot refer <code>Entity</code> from <code>SharedEntity</code>.
-  You can refer <code>SharedEntity</code> from <code>Entity</code> only
-  if property is nullable or has <code>@CascadeDeleteBy</code> annotation.
-  Otherwise, it's cause runtime exception.
+  No se puede referenciar <code>Entity</code> desde <code>SharedEntity</code>.
+  Solo se puede referenciar <code>SharedEntity</code> desde <code>Entity</code> si la propiedad admite valores nulos o tiene la anotación <code>@CascadeDeleteBy</code>.
+  De lo contrario, se producirá una excepción de tiempo de ejecución.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   interface A: Entity {
     var x: SharedEntity
     var y: SharedEntity
   }
 </code></pre>
-<p>A quick-fix generates annotation or make your type nullable</p>
+<p>La corrección rápida genera la anotación o hace que el tipo admita valores nulos</p>
 <pre><code>
   interface A: Entity {
     var x: SharedEntity?

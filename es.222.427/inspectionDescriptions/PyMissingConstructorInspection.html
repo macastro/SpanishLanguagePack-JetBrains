@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>클래스 내 <code>super</code> 생성자 호출이 누락된 경우를 보고합니다.</p>
-<p><b>예:</b></p>
-<pre style="font-family: monospace">
+<p>Informa casos de falta de llamada al constructor <code>super</code> en una clase.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
 class Fruit:
     def __init__(self):
         pass
@@ -11,10 +11,10 @@ class Fruit:
 class Pear(Fruit):
     def __init__(self):
         pass
-</pre>
-<p><code>Pear</code> 클래스는 <code>__init__</code> 메서드 안에 <code>super</code> 호출을 포함해야 합니다.</p>
-<p>빠른 수정이 적용되면 코드는 다음과 같이 변경됩니다:</p>
-<pre style="font-family: monospace">
+</code></pre>
+<p>La clase <code>Pear</code> debe tener una llamada <code>super</code> en el método <code>__init__</code>.</p>
+<p>Al aplicar la corrección rápida, el código cambia a:</p>
+<pre><code>
 class Fruit:
     def __init__(self):
         pass
@@ -23,6 +23,6 @@ class Fruit:
 class Pear(Fruit):
     def __init__(self):
         super().__init__()
-</pre>
+</code></pre>
 </body>
 </html>

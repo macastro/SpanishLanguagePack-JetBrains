@@ -1,9 +1,9 @@
 <html>
 <body>
-<p>Go SDK 버전이 1.18보다 이전일 때 퍼즈 테스트가 있는지 보고합니다.</p>
+<p>Informa la presencia de pruebas fuzz cuando la versión del SDK de Go es menor a 1.18</p>
 
-<p>퍼즈 테스트는 프로그램이 충돌하거나 잘못된 동작을 노출하게 할 수 있는 입력 데이터를 직접 검색하는 자동 테스트 메서드입니다. Go는 Go 1.18부터 퍼즈 테스트를 지원합니다.</p>
-<p>Fuzz 테스트의 예:</p>
+<p>Las pruebas fuzz son un método de pruebas automatizadas que implican una búsqueda dirigida de datos de entrada que puedan causar un bloqueo del programa o exponer un comportamiento no válido. Go admite las pruebas fuzz a partir de Go 1.18.</p>
+<p>Ejemplo de una prueba fuzz:</p>
 <pre><code>
 func Div(a, b int) int {
 	return a / b
@@ -11,12 +11,12 @@ func Div(a, b int) int {
 
 func FuzzDiv(f *testing.F) {
 	f.Fuzz(func(t *testing.T, a, b int) {
-		Div(a, b) // 런타임 오류를 보고합니다. 정수 나누기 0
+		Div(a, b) // informa un error de tiempo de ejecución: división entera entre cero
 	})
 }
 </code></pre>
 <p>
-  자세한 정보는 <a href="https://go.dev/doc/fuzz/">Go Fuzzing</a>을 참조하세요.
+  Consulta <a href="https://go.dev/doc/fuzz/">Go Fuzzing</a> para obtener más información.
 </p>
 </body>
 </html>

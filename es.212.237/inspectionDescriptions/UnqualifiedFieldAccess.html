@@ -1,11 +1,11 @@
 <html>
 <body>
-<code>this</code> 또는 다른 한정자로 수식하지 않는 필드 액세스 연산을 보고합니다.
+Inspecciona las operaciones de acceso a los campos que no están calificadas con <code>this</code> u otro calificador.
 <p>
-  일부 코드 스타일은 지역 변수 또는 매개변수 액세스와 혼동을 방지하기 위해 모든 필드 액세스 연산에 한정자를 추가하는 것을 요구합니다.
+  Algunos de los estilos de programación requieren que todas las operaciones de acceso a campos estén calificadas para evitar la confusión con el acceso a variables o parámetros locales.
 </p>
-<p><b>예:</b></p>
-<pre>
+<p><b>Ejemplo:</b></p>
+<pre><code>
   class Foo {
     int foo;
 
@@ -13,9 +13,9 @@
       foo += 1;
     }
   }
-</pre>
-<p>빠른 수정 적용 후:</p>
-<pre>
+</code></pre>
+<p>Después de que se aplique la corrección rápida:</p>
+<pre><code>
   class Foo {
     int foo;
 
@@ -23,7 +23,7 @@
       this.foo += 1;
     }
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

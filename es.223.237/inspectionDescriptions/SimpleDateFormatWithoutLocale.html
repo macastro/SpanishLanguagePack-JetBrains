@@ -1,9 +1,9 @@
 <html>
 <body>
-<code>java.util.Locale</code>을 지정하지 않는 <code>java.util.SimpleDateFormat</code> 또는 <code>java.time.format.DateTimeFormatter</code>의 인스턴스화를 보고합니다.
-이러한 호출은 OS 설정에 따라 달라지는 플랫폼 디폴트 로케일을 사용합니다.
-이로 인해 코드가 다른 플랫폼에서 실행되거나 OS 설정이 변경될 때 예기치 못한 동작이 발생할 수 있습니다.
-<p><code>예:</code></p>
+Inspecciona instanciaciones de <code>java.util.SimpleDateFormat</code> o <code>java.time.format.DateTimeFormatter</code> que no especifican un <code>java.util.Locale</code>.
+Estas llamadas utilizarán el locale por defecto de la plataforma, que depende de la configuración del sistema operativo.
+Esto puede dar lugar a un comportamiento sorprendente cuando el código se ejecuta en una plataforma diferente o cuando cambian la configuración del sistema operativo.
+<p><code>Ejemplo:</code></p>
 <pre><code>
   new SimpleDateFormat("yyyy");
   DateTimeFormatter.ofPattern("d/M/y");

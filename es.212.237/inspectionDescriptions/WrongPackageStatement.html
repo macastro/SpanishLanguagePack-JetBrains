@@ -1,7 +1,8 @@
 <html>
 <body>
-프로젝트 디렉터리 구조를 준수하지 않는 <code>package</code> 문을 탐지합니다.
-또한 클래스가 소스 루트 디렉터리에 직접 위치하지 않는 경우 <code>package</code> 문이 없는 클래스를 보고합니다.
-<p>Java 언어에 의해 엄격하게 의무화되어 있지는 않지만, 소스 루트 아래의 <code>com/example/myapp</code> 디렉토리 내의 패키지 <code>com.example.myapp</code>의 클래스를 유지하는 것이 좋습니다. 그렇게 하지 않하면 코드를 읽는 데 혼란이 발생하며 일부 도구가 잘못 작동할 수 있습니다.</p>
+Detecta sentencias <code>package</code> que no concuerdan con la estructura de directorios del proyecto.
+También, informa de clases sin sentencias <code>package</code> si la clase no está localizada directamente en el
+directorio raíz de la fuente.
+<p>Si bien no está estrictamente ordenado dentro del lenguaje Java, es una buena práctica mantener las clases del paquete <code>com.example.myapp</code> dentro de un directorio <code>com/example/myapp</code> directamente bajo la raíz de la fuente. No respetar esta regla podría confundir a los lectores del código y hacer que algunas herramientas funcionen incorrectamente.</p>
 </body>
 </html>

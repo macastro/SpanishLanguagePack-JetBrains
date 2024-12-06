@@ -1,15 +1,15 @@
 <html>
 <body>
-간소화할 수 있는 Stream API 호출 체인을 보고합니다.
-단순화하면 컬렉션 순회 도중 임시 객체의 생성이 방지되는 경우가 많습니다.
+Inspecciona las cadenas de llamadas a la API de Streams que se pueden simplificar.
+La simplificación evitará a menudo la creación de algunos objetos temporales durante el recorrido de la colección.
 <p>
-  이 검사는 다음의 호출 체인을 대체합니다.
+  La inspección reemplaza las siguientes cadenas de llamadas:
 </p>
 <ul>
   <li><code>collection.stream().forEach()</code> &rarr; <code>collection.forEach()</code></li>
   <li><code>collection.stream().collect(toList/toSet/toCollection())</code> &rarr; <code>new CollectionType&lt;&gt;(collection)</code></li>
   <li><code>collection.stream().toArray()</code> &rarr; <code>collection.toArray()</code></li>
-  <li><code>Arrays.asList().stream()</code> &rarr; <code>Arrays.stream()</code> 또는 <code>Stream.of()</code></li>
+  <li><code>Arrays.asList().stream()</code> &rarr; <code>Arrays.stream()</code> o <code>Stream.of()</code></li>
   <li><code>IntStream.range(0, array.length).mapToObj(idx -> array[idx])</code> &rarr; <code>Arrays.stream(array)</code></li>
   <li><code>IntStream.range(0, list.size()).mapToObj(idx -> list.get(idx))</code> &rarr; <code>list.stream()</code></li>
   <li><code>Collections.singleton().stream()</code> &rarr; <code>Stream.of()</code></li>
@@ -31,8 +31,63 @@
   <li><code>optional.orElseGet(() -> { throw new ...; })</code> &rarr; <code>optional.orElseThrow()</code></li>
 </ul>
 <p>
-  일부 경우에는 대체의 의미가 조금 다를 수 있습니다. 예를 들어, <code>Collections.synchronizedList(...).stream().forEach()</code>는 동기화되지 않으나 <code>Collections.synchronizedList(...).forEach()</code>는 동기화됩니다.
-  또한 결과 요소가 <code>null</code>인 경우 <code>collect(Collectors.maxBy())</code>는 빈 <code>Optional</code>을 반환하나 이러한 경우 <code>Stream.max()</code>는 <code>NullPointerException</code>을 던집니다.
+  Ten en cuenta que la semántica del reemplazo puede tener pequeñas diferencias en algunos casos. Por ejemplo,
+  <code>Collections.synchronizedList(...).stream().forEach()</code> no está sincronizado mientras que
+  <code>Collections.synchronizedList(...).forEach()</code> sí está sincronizado.
+  Además, <code>collect(Collectors.maxBy())</code> devuelve un <code>Optional</code> vacío si el elemento resultante es
+  <code>null</code> mientras que <code>Stream.max()</code> lanza una <code>NullPointerException</code> en este caso.
 </p>
 </body>
 </html>
+<html>
+<body>
+Se گزارش می کند که می تواند زنجیره تماس API de Stream ساده شود.
+آسان سازی اغلب از ایجاد بعضی از اشیاء موقت در هنگام پیمایش مجموعه جلوگیری می کند.
+<p>
+  این بازرسی زنجیره تماس های زیر را جایگزین می کند:
+</p>
+<ul>
+  <li><code>collection.stream().forEach()</code> &rarr; <code>collection.forEach()</code></li>
+  <li><code>collection.stream().collect(toList/toSet/toCollection())</code> &rarr; <code>new CollectionType&lt;&gt;(collection)</code></li>
+  <li><code>collection.stream().toArray()</code> &rarr; <code>collection.toArray()</code></li>
+  <li><code>Arrays.asList().stream()</code> &rarr; <code>Arrays.stream()</code> یا <code>Stream.of()</code></li>
+  <li><code>IntStream.range(0, array.length).mapToObj(idx -> array[idx])</code> &rarr; <code>Arrays.stream(array)</code></li>
+  <li><code>IntStream.range(0, list.size()).mapToObj(idx -> list.get(idx))</code> &rarr; <code>list.stream()</code></li>
+  <li><code>Collections.singleton().stream()</code> &rarr; <code>Stream.of()</code></li>
+  <li><code>Collections.emptyList().stream()</code> &rarr; <code>Stream.empty()</code></li>
+  <li><code>stream.filter().findFirst().isPresent()</code> &rarr; <code>stream.anyMatch()</code></li>
+  <li><code>stream.collect(counting())</code> &rarr; <code>stream.count()</code></li>
+  <li><code>stream.collect(maxBy())</code> &rarr; <code>stream.max()</code></li>
+  <li><code>stream.collect(mapping())</code> &rarr; <code>stream.map().collect()</code></li>
+  <li><code>stream.collect(reducing())</code> &rarr; <code>stream.reduce()</code></li>
+  <li><code>stream.collect(summingInt())</code> &rarr; <code>stream.mapToInt().sum()</code></li>
+  <li><code>stream.mapToObj(x -> x)</code> &rarr; <code>stream.boxed()</code></li>
+  <li><code>stream.map(x -> {...; return x;})</code> &rarr; <code>stream.peek(x -> ...)</code></li>
+  <li><code>!stream.anyMatch()</code> &rarr; <code>stream.noneMatch()</code></li>
+  <li><code>!stream.anyMatch(x -> !(...))</code> &rarr; <code>stream.allMatch()</code></li>
+  <li><code>stream.map().anyMatch(Boolean::booleanValue)</code> &rarr; <code>stream.anyMatch()</code></li>
+  <li><code>IntStream.range(expr1, expr2).mapToObj(x -> array[x])</code> &rarr; <code>Arrays.stream(array, expr1, expr2)</code></li>
+  <li><code>Collection.nCopies(count, ...)</code> &rarr; <code>Stream.generate().limit(count)</code></li>
+  <li><code>stream.sorted(comparator).findFirst()</code> &rarr; <code>Stream.min(comparator)</code></li>
+  <li><code>optional.orElseGet(() -> { throw new ...; })</code> &rarr; <code>optional.orElseThrow()</code></li>
+</ul>
+<p>
+  توجه داشته باشید که ممکن است معنای جایگزینی در بعضی موارد کمی متفاوت باشند. به عنوان مثال،
+  <code>Collections.synchronizedList(...).stream().forEach()</code> همگام سازی نشده است در حالی که
+  <code>Collections.synchronizedList(...).forEach()</code> همگام سازی شده است.
+  همچنین، <code>collect(Collectors.maxBy())</code> یک <code>Optional</code> خالی را بر می گرداند در صورتی که عنصر حاصل
+  <code>null</code> باشد در حالی که <code>Stream.max()</code> در این مورد یک <code>NullPointerException</code> را پرتاب می کند.
+</p>
+</body>
+</html>
+<html>
+<body>
+간소화할 수 있는 Stream API 호출 체인을 보고합니다.
+단순화하면 컬렉션 순회 도중 임시 객체의 생성이 방지되는 경우가 많습니다.
+<p>
+  이 검사는 다음의 호출 체인을 대체합니다.
+</p>
+<ul>
+  <li><code>collection.stream().forEach()</code> &rarr; <code>collection.forEach()</code></li>
+  <li><code>collection.stream().collect(toList/toSet/toCollection())</code> &rarr; <code>new CollectionType&lt;&gt;(collection)</code></li>
+  <li><code>collection.stream().toArray()</code> &rarr

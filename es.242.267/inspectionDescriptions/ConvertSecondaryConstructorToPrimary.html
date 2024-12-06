@@ -1,19 +1,19 @@
 <html>
 <body>
-더 간결한 기본 생성자로 바꿀 수 있는 보조 생산자를 보고합니다.
-<p><b>예:</b></p>
+Informa sobre un constructor secundario que puede sustituirse por un constructor principal más conciso.
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class User {
-      val name: String
+  clase Usuario {
+      val nombre: String
 
-      constructor(name: String) {
-          this.name = name
+      constructor(nombre: String) {
+          this.nombre = nombre
       }
   }
 </code></pre>
-<p>빠른 수정에서는 코드를 자동으로 변환합니다.</p>
+<p>La corrección rápida convierte el código automáticamente:</p>
 <pre><code>
-  class User(val name: String) {
+  clase Usuario(val nombre: String) {
   }
 </code></pre>
 <!-- tooltip end -->

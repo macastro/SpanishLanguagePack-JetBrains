@@ -1,18 +1,18 @@
 <html>
 <body>
-<code>try</code> 블록 전에 열거나 대응하는 <code>finally</code> 블록에서 닫지 않은 Java ME <code>javax.microedition.rms.RecordStore</code> 리소스를 보고합니다.
-<p>리소스를 닫기 전에 예외가 발생할 경우 의도치 않게 리소스의 누수가 발생할 수 있습니다.</p>
+Reporta los recursos <code>javax.microedition.rms.RecordStore</code> de Java ME que no están abiertos frente a un bloque <code>try</code> y cerrados en el bloque <code>finally</code> correspondiente.
+<p>Dichos recursos pueden perderse sin darse cuenta si se lanza una excepción antes de cerrar el recurso.</p>
 <p>
-  이 검사는 Java ME 및 리소스가 많이 제한된 기타 환경을 위한 것입니다.
-  이 검사 결과를 고려하지 않고 적용하면 코드 명확도와 설계에 부정적인 영향을 미칠 수 있습니다.
+  Esta inspección está pensada para Java ME y otros entornos con recursos muy limitados.
+  Aplicar los resultados de esta inspección sin consideración puede tener efectos negativos en la claridad y el diseño del código.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void foo1() throws RecordStoreException {
-      RecordStore rs = RecordStore.openRecordStore("bar", true); // 경고
+      RecordStore rs = RecordStore.openRecordStore("bar", true); // advertencia
   }
   void foo2() throws RecordStoreException {
-      RecordStore rs = RecordStore.openRecordStore("bar", true); // 경고 없음
+      RecordStore rs = RecordStore.openRecordStore("bar", true); // no advertencia
       try {
           /* ... */
       } finally {

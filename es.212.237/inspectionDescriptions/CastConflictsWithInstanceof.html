@@ -1,27 +1,25 @@
 <html>
 <body>
-다른 타입에 대한 <code>instanceof</code> 검사 뒤에 오는 타입 변환 표현식을 보고합니다.
+Reporta expresiones de conversión de tipo que están antecedidas por una verificación de <code>instanceof</code> para un tipo diferente.
 <p>
-  의도된 경우도 있으나 그러한 구문은 오류일 가능성이 높으며 런타임 시 <code>java.lang.ClassCastException</code>를 발생시킵니다.
+  Aunque esto podría ser intencional, tal construcción es muy probable que sea un error y dará como resultado una <code>java.lang.ClassCastException</code> en tiempo de ejecución.
 </p>
-<p><b>예:</b></p>
-<pre>
-  <code>
-    class Main {
-      int whenCharSequenceCastToNumber(Object o){
-        if (o instanceof CharSequence) {
-          return ((Number) o).intValue();
-        }
-        return 0;
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main {
+    int whenCharSequenceCastToNumber(Object o){
+      if (o instanceof CharSequence) {
+        return ((Number) o).intValue();
       }
-
-      int earlyReturnWhenNotCharSequence(Object o){
-        if (!(o instanceof CharSequence)) return 0;
-        return ((Number)o).intValue();
-      }
+      return 0;
     }
- </code>
-</pre>
+
+    int earlyReturnWhenNotCharSequence(Object o){
+      if (!(o instanceof CharSequence)) return 0;
+      return ((Number)o).intValue();
+    }
+  }
+</code></pre>
 <!-- tooltip end -->
 
 </body>

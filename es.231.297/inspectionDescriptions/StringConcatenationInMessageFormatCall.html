@@ -1,21 +1,21 @@
 <html>
 <body>
-<code>MessageFormat.format()</code>을 호출하기 위한 인수로 사용된 상수가 아닌 문자열 연결을 보고합니다.
+Reporta concatenaciones de cadenas no constantes usadas como argumento para una llamada a <code>MessageFormat.format()</code>.
 <p>
-  의도된 경우도 있으나 보통 서식 지정 메서드를 잘못 사용한 것이며 연결된 문자열에서 사용된 변수가 <code> {</code>와 같은 특수문자를 포함할 경우 예기치 않은 예외가 발생할 수 있습니다.
+  Aunque a veces es intencional, usualmente se trata de un mal uso del método de formateo e incluso puede causar excepciones inesperadas si las variables usadas en la cadena concatenada contienen caracteres especiales como <code>{</code>.
 </p>
 <p>
-  또한 이는 종종 <code>,</code>가 필요한 곳에 <code>+</code>를 입력하여 문자열 포맷 인수를 실수로 연결한 결과일 수 있습니다.
+  Además, algunas veces esto puede ser el resultado de concatenar por error un argumento de formato de cadena al escribir un <code>+</code> cuando se pretendía una <code>,</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   String formatGreeting(String userName, int balance) {
-    return MessageFormat.format("Hello, " + userName + "! Your balance is {0}.", balance);
+    return MessageFormat.format("Hola, " + userName + "! Su saldo es {0}.", balance);
   }
 </code></pre>
 <p>
-  여기서 <code>userName</code>은 서식 문자열의 일부로 해석되며 이 때문에 <code>IllegalArgumentException</code>(예: <code>userName</code>이 <code>"{"</code>인 경우)이 발생할 수 있습니다.
-  이 호출은 <code>MessageFormat.format("Hello, {0}! Your balance is {1}.", userName, balance)</code>로 바꿔야 합니다.   
+  Aquí, <code>userName</code> será interpretado como parte de la cadena de formato, lo que puede resultar en una <code>IllegalArgumentException</code> (por ejemplo, si <code>userName</code> es <code>"{"</code>).
+  Esta llamada probablemente debería reemplazarse con <code>MessageFormat.format("Hola, {0}! Su saldo es {1}.", userName, balance)</code>.
 </p>
 <!-- tooltip end -->
 

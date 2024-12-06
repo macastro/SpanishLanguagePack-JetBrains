@@ -1,23 +1,22 @@
 <html>
 <body>
-동적 생성 문자열을 라이브러리 이름으로 간주하는 <code>java.lang.System.loadLibrary()</code>, <code>java.lang.System.load()</code>, <code>java.lang.Runtime.loadLibrary()</code>
-및 <code>java.lang.Runtime.load()</code> 호출을 보고합니다.
+Reporta llamadas a <code>java.lang.System.loadLibrary()</code>, <code>java.lang.System.load()</code>, <code>java.lang.Runtime.loadLibrary()</code> y <code>java.lang.Runtime.load()</code> que toman una cadena construida dinámicamente como nombre de la biblioteca.
 <p>
-  생성된 라이브러리 이름 문자열은 보안 위반의 일반적인 원인입니다.
-  기본적으로 이 검사는 컴파일 타임 상수를 무시합니다.</p>
-<p><b>예:</b></p>
-<pre>
+Las cadenas de nombre de biblioteca construidas son una fuente común de brechas de seguridad.
+Por defecto, esta inspección ignora las constantes de tiempo de compilación.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
   void test(int i) {
     System.loadLibrary("foo" + i);
   }
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
-검사 설정을 사용하여 모든 <code>static final</code> 필드를 상수로 간주합니다.
-이 옵션이 활성화되면 다음과 같은 문자열은 무시되므로 주의하세요.
+Usa la configuración de inspección para considerar cualquier campo <code>static final</code> como constante.
+Ten cuidado, porque las cadenas como las siguientes serán ignoradas cuando la opción esté habilitada:
 </p>
-<pre>
+<pre><code>
   private static final String LIBRARY = getUserInput();
-</pre>
+</code></pre>
 </body>
 </html>

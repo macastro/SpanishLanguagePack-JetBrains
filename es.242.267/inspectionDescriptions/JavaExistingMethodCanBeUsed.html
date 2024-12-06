@@ -1,8 +1,8 @@
 <html>
 <body>
-기존 static 메서드와 동일한 Java 코드 조각을 보고하고 기존의 static 메서드를 재사용하도록 제안합니다. 기존 메서드를 재사용하면 코드가 짧아지고 읽기 쉬워집니다.
+Informa sobre fragmentos de código Java que son idénticos a los métodos static existentes, sugiriendo reutilizar dichos métodos static. La reutilización de los métodos existentes acorta el código y lo hace más legible.
 <!-- tooltip end -->
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code lang="java">
   static List&lt;String&gt; readFileAndTrim(Path path) throws IOException {
     List&lt;String&gt; lines = Files.readAllLines(path);
@@ -15,8 +15,8 @@
     return lines.stream().map(String::trim).toList();
   }
 </code></pre>
-여기서 두 번째 메서드는 첫 번째 메서드와 상당히 유사하며, 첫 번째 메서드는 구현 시에 재사용될 수 있습니다.
-빠른 수정이 적용된 후 결과는 다음과 같습니다:
+Aquí, el segundo método es bastante parecido al primero, y el primero puede reutilizarse en su implementación.
+Después de aplicar la corrección rápida, el resultado será el siguiente:
 <pre><code lang="java">
   static List&lt;String&gt; readFileAndTrim(Path path) throws IOException {
     List&lt;String&gt; lines = Files.readAllLines(path);
@@ -28,6 +28,6 @@
     return readFileAndTrim(p);
   }
 </code></pre>
-<p><small>2024.1의 새로운 기능</small></p>
+<p><small>Nuevo en 2024.1</small></p>
 </body>
 </html>

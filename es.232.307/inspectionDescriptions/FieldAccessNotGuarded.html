@@ -1,18 +1,18 @@
 <html>
 <body>
-적절한 동기화 구조로 보호되지 않으며 <code>@GuardedBy</code>로 선언되는 필드 액세스를 보고합니다.
-<p>예:</p>
+Informa sobre accesos a campos declarados como <code>@GuardedBy</code> que no están protegidos por una estructura de sincronización adecuada.
+<p>Ejemplo:</p>
 <pre><code>
     @GuardedBy("this")
     void x() {
         notify();
     }
     void y() {
-        x(); // unguarded method call
+        x(); // llamada a método sin protección
     }
 </code></pre>
 <!-- tooltip end -->
-<p>지원되는 <code>@GuardedBy</code> 어노테이션:</p>
+<p>Anotaciones <code>@GuardedBy</code> compatibles:</p>
 <ul>
   <li><code>net.jcip.annotations.GuardedBy</code></li>
   <li><code>javax.annotation.concurrent.GuardedBy</code></li>

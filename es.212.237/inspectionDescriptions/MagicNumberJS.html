@@ -1,8 +1,17 @@
 <!-- Copied from community/plugins/InspectionGadgets/src/inspectionDescriptions/MagicNumber.html -->
 <html>
 <body>
-상수 선언에서 이름이 지정되지 않고 사용되고 있는 숫자 리터럴의 '매직 넘버'를 보고합니다.
-매직넘버에 의해 인텐션이 불명확한 코드가 생성되기 때문에 매직넘버가 한 코드 위치에서 변경되어도 다른 곳에서 변경되지 않은 상태로 있을 경우 오류가 발생할 수 있습니다. 숫자 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 1000,
-0.0, 1.0은 무시됩니다.
+Reporta un "número mágico", que es un literal numérico usado sin ser nombrado por una declaración de constante.
+Los números mágicos pueden resultar en código cuya intención no es clara, y pueden resultar en errores si un número mágico es cambiado en una ubicación del código pero permanece sin cambios en otra. Los números 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 1000,
+0.0 y 1.0 son ignorados.
+</body>
+</html>
+
+<!-- Copied from community/plugins/InspectionGadgets/src/inspectionDescriptions/MagicNumber.html -->
+<html>
+<body>
+Reporta un "número mágico" el cual es un literal numérico que se usa sin nombrarlo a través de una declaración constante.
+Los números mágicos pueden resultar en un código cuya intención es poco clara, y pueden resultar en errores si un número mágico es cambiado en una localización del código pero no es cambiado en otra. Los números 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 1000,
+0.0 y 1.0 son ignorados.
 </body>
 </html>

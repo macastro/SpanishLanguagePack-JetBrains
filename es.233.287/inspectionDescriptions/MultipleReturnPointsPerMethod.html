@@ -1,10 +1,9 @@
 <html>
 <body>
-<code>return</code> 지점 수가 지정된 최댓값을 초과하는 메서드를 보고합니다.
-<code>return</code> 지점이 너무 많은 메서드는 혼란을 주고 리팩터링하기 어려울 수 있습니다.
-<p><code>return</code> 지점은 <code>return</code> 문이거나 <code>void</code> 메서드 또는 생성자의 하단에 도달하는 것을 나타냅니다.</p>
-<p><b>예:</b></p>
-<p>두 개의 <code>return</code> 문만 허용되는 경우 아래 메서드가 보고됩니다.</p>
+Informa de métodos cuyo número de puntos de <code>return</code> supera el máximo especificado. Los métodos con demasiados puntos de <code>return</code> pueden ser confusos y difíciles de refactorizar.
+<p>Un punto de <code>return</code> es una sentencia de <code>return</code> o una caída a través del fondo de un método o constructor <code>void</code>.</p>
+<p><b>Ejemplo:</b></p>
+<p>El siguiente método se notifica si solo se permiten dos sentencias de <code>return</code>:</p>
 <pre><code>
   void doSmth(User[] users) {
     for (User user : users) {
@@ -20,7 +19,7 @@
     }
   }
 </code></pre>
-<p>이해하기 더 쉽도록 이 메서드를 다시 작성하는 것을 고려하세요.</p>
+<p>Considera reescribir el método para que sea más fácil de entender:</p>
 <pre><code>
   void doSmth(User[] users) {
     for (User user : users) {
@@ -32,12 +31,12 @@
   }
 </code></pre>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configurar la inspección:</p>
 <ul>
-  <li><b>반환점 제한</b> 필드를 사용하여 메서드에 대한 <code>return</code> 지점의 최대 허용 개수를 지정합니다.</li>
-  <li><b>guard 절 무시</b> 옵션을 사용하여 guard 절을 무시합니다.
-    guard 절은 <code>return</code> 문만 포함된 <code>if</code> 문입니다.</li>
-  <li><b>'equals()' 메서드 무시</b> 옵션을 사용하여 <code>equals()</code> 메서드 내의 <code>return</code> 지점을 무시합니다.</li>
+  <li>Usa el campo <b>Límite de puntos de retorno</b> para especificar el número máximo permitido de puntos de <code>return</code> para un método.</li>
+  <li>Usa la opción <b>Ignorar cláusulas de protección</b> para ignorar las cláusulas de protección.
+    Una cláusula de protección es una sentencia <code>if</code> que solo contiene una sentencia <code>return</code></li>
+  <li>Usa la opción <b>Ignorar métodos 'equals()'</b> para ignorar los puntos de <code>return</code> dentro de los métodos <code>equals()</code>.</li>
 </ul>
 </body>
 </html>

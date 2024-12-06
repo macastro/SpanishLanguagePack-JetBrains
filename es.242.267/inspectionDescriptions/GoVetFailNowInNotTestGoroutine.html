@@ -1,16 +1,16 @@
 <html>
 <body>
-테스트 파일의 고루틴에 위치한 <code>testing.T.FailNow</code> 및 유사한 메서드에 대한 호출을 보고합니다.
-<p><code>FailNow</code>와 같은 메서드는 <code>runtime.Goexit</code>를 호출하여 테스트가 아닌, 고루틴 호출을 중지합니다.
-  그러므로 이 메서드는 테스트나 벤치마크를 실행하는 고루틴에서만 호출되어야 합니다.</p>
-<p><code>FailNow</code>에 대한 자세한 내용은 <a href="https://pkg.go.dev/testing#T.FailNow">go.dev의 func (*T) FailNow</a>를 참조하세요.</p>
-<p>예:</p>
+Informa las llamadas a <code>testing.T.FailNow</code> y métodos similares ubicados en goroutines en archivos de prueba.
+<p>Los métodos como <code>FailNow</code> llaman a <code>runtime.Goexit</code> y detienen la goroutine que llama, no la prueba.
+  Por lo tanto, solo deben llamarse desde la goroutine que ejecuta la prueba o el benchmark.</p>
+<p>Para obtener más información sobre <code>FailNow</code>, consulte <a href="https://pkg.go.dev/testing#T.FailNow">func (*T) FailNow en go.dev</a>.</p>
+<p>Ejemplo:</p>
 <pre><code>func TestFoo(t *testing.T) {
   go func() {
-    t.Fatal("oops") //TestFoo가 아닌, 고루틴을 빠져나감
+    t.Fatal("oops") //sale de la goroutine, no de TestFoo
   }()
 }</code></pre>
-<p><b>'Error' 및 'return'으로 바꾸기</b> 빠른 수정이 적용된 후:</p>
+<p>Después de aplicar la corrección rápida <b>Reemplazar con 'Error' y 'return'</b>:</p>
 <pre><code>func TestFoo(t *testing.T) {
   go func() {
     t.Error("oops")

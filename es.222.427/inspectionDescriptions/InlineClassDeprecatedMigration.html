@@ -1,21 +1,21 @@
 <html>
 <body>
 <p>
-    Kotlin 1.5 이상에서 더 이상 사용되지 않으며 컴파일 경고를 발생시키는 인라인 클래스를 보고합니다.
-    <a href="https://kotlinlang.org/docs/whatsnew15.html#inline-classes">Kotlin 1.5.0의 새로운 기능</a> 참조
+    Reporta clases en línea que están obsoletas y provocan advertencias de compilación en Kotlin 1.5 y posteriores.
+    Ver <a href="https://kotlinlang.org/docs/whatsnew15.html#inline-classes">Novedades en Kotlin 1.5.0</a>
 </p>
 
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
-  inline class Password(val s: String)
+  clase en línea Contraseña(val s: Cadena)
 </code></pre>
 
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
-  @JvmInline
-  value class Password(val s: String)
+  @ClaseEnLíneaDeJVM
+  clase de valor Contraseña(val s: Cadena)
 </code></pre>
 
-<p>Kotlin 언어 레벨은 1.5부터 검사가 가능합니다.</p>
+<p>La inspección está disponible para el nivel de idioma Kotlin a partir de 1.5.</p>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
 <body>
-위치 인수가 명명된 인수 뒤에 오는 호출을 보고합니다. PostgreSQL, Oracle, Db2에서 작동합니다.
-<p>예(PostgreSQL 내):</p>
+Reporta llamadas en las que los argumentos posicionales van después de los nombrados. Funciona en PostgreSQL, Oracle y Db2.
+<p>Ejemplo (En PostgreSQL):</p>
 <pre><code>CREATE FUNCTION foo(a int, b int, c int) RETURNS int
     LANGUAGE plpgsql AS
 $$
@@ -10,9 +10,9 @@ BEGIN
 END
 $$;
 SELECT foo(a => 1, b => 2, c => 3);
-  -- '3'이 명명된 인수 뒤에 옴
+  -- `3` va después del argumento nombrado
 SELECT foo(1, b => 2, 3);
-  -- '1' 및 '3'이 명명된 인수 뒤에 옴 
+  -- `1` y `3` van después del argumento nombrado
 SELECT foo(b => 2, 1, 3);</code></pre>
 </body>
 </html>

@@ -1,10 +1,8 @@
 <html>
 <body>
-잠금 표현식이 <code>final</code> 필드가 아닌 <code>synchronized</code> 
-구문을 보고합니다.
+Informa sobre sentencias <code>synchronized</code> donde la expresión de bloqueo es un campo no <code>final</code>.
 <p>
-  같은 객체에서 작동할 때라도 다른 스레드가 다른 객체에서 잠길
-  가능성이 있으므로 그러한 구문이 유용한 의미를 가질 가능성이 낮습니다.
+  Es poco probable que dichas sentencias tengan una semántica útil, ya que diferentes subprocesos pueden estar bloqueando en diferentes objetos incluso cuando operan en el mismo objeto.
 </p>
 </body>
 </html>

@@ -1,15 +1,15 @@
 <html>
 <body>
-대응하는 <code>Condition.await()</code> 호출을 찾을 수 없는 경우 <code>Condition.signal()</code> 또는 <code>Condition.signalAll()</code> 호출을 보고합니다.
-<p>현재 클래스의 필드를 대상으로 하는 호출만 이 검사에서 보고됩니다.</p>
-<p><b>예:</b></p>
+Informa las llamadas a <code>Condition.signal()</code> o <code>Condition.signalAll()</code> para las que no se puede encontrar una llamada a <code>Condition.await()</code> correspondiente.
+<p>Esta inspección solo informa las llamadas que apuntan a campos de la clase actual.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Queue {
     private final Condition isEmpty = ...;
 
     void add(Object elem) {
       // ...
-      isEmpty.signal(); // 경고: 대응하는 'await()'가 없는 'signal()' 호출
+      isEmpty.signal(); // advertencia: Llamada a 'signal()' sin 'await()' correspondiente
       // ...
     }
 

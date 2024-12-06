@@ -1,9 +1,10 @@
 <html>
 <body>
-<p>추상 멤버를 재정의하지만 재정의 제어자가 없는 함수를 보고합니다.</p>
-<p>Scala는 개발자가 추상 멤버를 구현하는 메서드에 대해 <code>override</code>를 사용하도록 요구하지 않습니다.
-    하지만 재정의 관계가 손상되는 경우(예: 후속 리팩터링에 의해) 컴파일러가 알릴 수 있도록 그러한 메서드를 <code>override</code>로 표시하면 좋습니다.</p>
-<p><b>예:</b></p>
+<p>Informa sobre las funciones que anulan a miembros abstractos pero que no cuentan con un modificador de anulación.</p>
+<p>Scala no requiere que un desarrollador utilice <code>override</code> en métodos que implementan miembros abstractos.
+    Sin embargo, es una buena idea marcar tales métodos con <code>override</code> para ser notificado
+    por el compilador cuando la relación de anulación se rompe (por ejemplo, por una refactorización posterior).</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   trait Base {
     def fun(): Int
@@ -13,7 +14,7 @@
     def fun(): Int = 42
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   trait Base {
     def fun(): Int

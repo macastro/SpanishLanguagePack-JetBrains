@@ -1,10 +1,10 @@
 <html>
 <body>
-동기화된 컨텍스트에서 액세스할 수 있으며 <code>final</code> 또는 <code>private</code>이 아닌 필드를 보고합니다.
+Informa sobre campos no <code>final</code> ni <code>private</code> a los que se accede en un contexto sincronizado.
 <p>
-  <code>private</code>이 아닌 필드에 항상 동기화된 방식으로 액세스할 수 있는 것은 아니며, 그렇게 '부분적으로 동기화된' 액세스는 예기치 않은 데이터 구조의 일관성 문제를 야기할 수 있습니다.
+  No se puede garantizar que a un campo no <code>private</code> se acceda siempre de forma sincronizada, y dicho acceso "parcialmente sincronizado" puede dar lugar a estructuras de datos inesperadamente inconsistentes.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Bar {
     public String field1;

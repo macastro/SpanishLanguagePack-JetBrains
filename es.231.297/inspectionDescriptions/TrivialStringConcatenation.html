@@ -1,24 +1,24 @@
 <html>
 <body>
-인수 중 하나가 빈 문자열인 문자열 연결을 보고합니다.
-이러한 연결은 필요하지 않습니다. 때때로 비 <code>String</code> 객체 또는 기본 타입을 
-<code>String</code>으로 변환하는 관용구로 사용되지만,
-이 경우, <code>String.valueOf</code> 같은 메서드를 사용하는 것이 더 명확합니다.
+Informa operandos de cadena vacía en concatenaciones de cadenas.
+La concatenación con la cadena vacía puede usarse para convertir objetos o primitivas que no son <code>String</code> en <code>String</code>, pero puede ser más claro usar una llamada al método <code>String.valueOf()</code>.
 <p>
-  빠른 수정에서는 연결을 단순화하도록 제안합니다.
+  Se sugiere una solución rápida para simplificar la concatenación.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void foo(int x, int y) {
     String s = "" + x + " ; " + y;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   void foo(int x, int y) {
     String s = x + " ; " + y;
   }
 </code></pre>
 <!-- tooltip end -->
+<p>
+  Usa la opción <b>Informar solo en caso de que se puedan eliminar cadenas vacías sin otros cambios</b> para ignorar los casos en los que eliminar la cadena vacía requerirá agregar una conversión <code>String.valueOf()</code> de otro operando.
 </body>
 </html>

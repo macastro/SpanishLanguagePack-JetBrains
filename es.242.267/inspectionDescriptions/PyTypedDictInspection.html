@@ -1,7 +1,8 @@
 <html>
 <body>
-<p><a href="https://www.python.org/dev/peps/pep-0589/">TypedDict</a>의 유효하지 않은 정의 및 사용 사례를 보고합니다.</p>
-<p><b>예:</b></p>
+<p>Se informa sobre definiciones y usos no válidos de
+  <a href="https://www.python.org/dev/peps/pep-0589/">TypedDict</a>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 from typing import TypedDict
 
@@ -9,16 +10,16 @@ from typing import TypedDict
 class Movie(TypedDict):
     name: str
     year: int
-    rate: int = 10  # 오른쪽 값은 지원되지 않습니다
+    rate: int = 10  # No se admiten valores del lado derecho
 
-    def method(self): # TypedDict에 잘못된 구문이 있습니다
+    def method(self): # Sentencia no válida en TypedDict
         pass
 
 
 m = Movie(name="name", year=1000, rate=9)
-print(m["director"])  # 'Movie'에 'director' 키가 없습니다
-del m["name"]  # 'name' 키를 삭제할 수 없습니다
-m["year"] = "1001"  # 'int'가 필요하나 'str'을 얻습니다
+print(m["director"])  # No existe la clave 'director' en 'Movie'
+del m["name"]  # No se puede eliminar la clave 'name'
+m["year"] = "1001"  # Se esperaba 'int', pero se obtuvo 'str'
 </code></pre>
 </body>
 </html>

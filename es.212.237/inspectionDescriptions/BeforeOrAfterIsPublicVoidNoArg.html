@@ -1,14 +1,14 @@
 <html>
 <body>
-<p><code>public</code>으로 선언되지 않거나 <code>void</code>를 반환하거나 인수를 취하지 않는 JUnit 4 <code>@Before</code> 또는 <code>@After</code>  메서드를 보고합니다. 해당 메서드는 실수로 생성되기 쉽지만 JUnit 테스트 러너를 통해 실행되지 않습니다.</p>
-<p>이 검사는 메서드 시그니처 수정을 제공합니다.</p>
+JUnit 4 <code>@Before</code> 및 <code>@After</code> 어노테이션이 추가된 메서드와 JUnit 5 <code>@BeforeEach</code> 및 <code>@AfterEach</code> 어노테이션이 추가된 메서드 중 public이 아니며 반환 타입이 void가 아니거나 인수를 취하는 메서드를 보고합니다.
+이러한 메서드는 실수로 생성되기 쉬우며, JUnit 테스트 러너를 통해 실행되지 않습니다.
 <p><b>예:</b></p>
 <pre><code>
-  @Before private int foo(int arg) {... }
+  @Before private int foo(int arg) { ... }
 </code></pre>
 <p>빠른 수정 적용 후:</p>
 <pre><code>
-  @Before public void foo() {... }
+  @Before public void foo() { ... }
 </code></pre>
 </body>
 </html>

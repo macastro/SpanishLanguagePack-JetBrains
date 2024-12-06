@@ -1,14 +1,15 @@
 <html>
 <body>
-long 컨텍스트에서 음수인 int 16진수 상수를 보고합니다. 이러한 상수는 묵시적으로 long으로 확장되어, 상위 비트가 0이 아닌 1이 됩니다(예: 0xFFFF_FFFF는 0xFFFF_FFFF_FFFF_FFFFL이 됩니다).
-이는 의도되었을 가능성이 낮으며, 의도되었다 하더라도 명시적 long 상수를 사용하는 것이 더 명확합니다.
-<p><b>예:</b></p>
+Informa constantes hexadecimales int negativas en contexto long. Dichas constantes se amplían implícitamente a
+long, lo que significa que sus bits superiores se volverán 1 en lugar de 0 (por ejemplo, 0xFFFF_FFFF se convertirá en 0xFFFF_FFFF_FFFF_FFFF).
+Es poco probable que esto sea intencionado, e incluso si lo es, usar una constante long explícita sería menos confuso.
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  // 경고: 이는 int 상수 -1이며 long으로 확장되어
-  // 0xFFFF_FFFF_FFFF_FFFFL이 됩니다.
+  // Advertencia: esta es una constante int -1 que se amplía a long
+  // convirtiéndose en 0xFFFF_FFFF_FFFF_FFFF.
   long mask = 0xFFFF_FFFF;
 </code></pre>
 <!-- tooltip end -->
-<p><small>2022.3의 새로운 기능</small></p>
+<p><small>Nuevo en 2022.3</small></p>
 </body>
 </html>

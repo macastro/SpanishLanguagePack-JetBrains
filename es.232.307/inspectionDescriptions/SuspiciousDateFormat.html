@@ -1,21 +1,21 @@
 <html>
 <body>
-실수로 사용되었을 가능성이 있는 날짜 형식 패턴을 보고합니다.
-<p>다음과 같은 패턴이 보고됩니다.</p>
+Reporta patrones de formato de fecha que probablemente se usan por error.
+<p>Se informan los siguientes patrones:</p>
 <ul>
-  <li>'w'가 근처에 없는 대문자 'Y'를 보고합니다. 이는 일반 'Year'(소문자 'y' 패턴)와 마찬가지로 거의 항상 'Week year'를 의미하지만 12월의 끝에 다음 년도를 가리킬 수 있습니다.</li>
-  <li>'H', 'K', 'h', 'k'(시간)에 가까운 대문자 'M'(월)을 보고합니다. 이는 소문자 'm'(분)을 의도한 것일 수 있습니다.</li>
-  <li>'y'(연도) 또는 'd'(월의 일)와 가까운 소문자 'm'(분)을 보고합니다. 대문자 'M'(월)을 의도한 것일 수 있습니다.</li>
-  <li>'M' 또는 'L'(월)과 가까운 대문자 'D'(년의 일)를 보고합니다. 이는 소문자 'd'(월의 일)를 의도한 것일 수 있습니다.</li>
-  <li>'m'(분)과 가까운 대문자 'S'(밀리초)를 보고합니다. 이는 소문자 's'(초)를 의도한 것일 수 있습니다.</li>
+  <li>Una "Y" mayúscula, a menos que aparezca "w" cerca. Representa el "año de la semana" que casi siempre es igual al "año" normal (patrón de "y" minúscula), pero puede apuntar al año siguiente a fines de diciembre.</li>
+  <li>Una "M" mayúscula (mes) cerca de "H", "K", "h" o "k" (hora). Es probable que se haya intentado usar una "m" minúscula (minuto).</li>
+  <li>Una "m" minúscula (minuto) cerca de "y" (año) o "d" (día del mes). Es probable que se haya intentado usar una "M" mayúscula (mes).</li>
+  <li>Una "D" mayúscula (día del año) cerca de "M" o "L" (mes). Es probable que se haya intentado usar una "d" minúscula (día del mes).</li>
+  <li>Una "S" mayúscula (milisegundos) cerca de "m" (minutos). Es probable que se haya intentado usar una "s" minúscula (segundos).</li>
 </ul>
 <p>
-  예:<br>
-  <code>new SimpleDateFormat("YYYY-MM-dd")</code>: <code>"yyyy-MM-dd"</code>를 의도한 것일 수 있습니다.<br>
-  <code>new SimpleDateFormat("yyyy-MM-DD")</code>: <code>"yyyy-MM-dd"</code>를 의도한 것일 수 있습니다.<br>
-  <code>new SimpleDateFormat("HH:MM")</code>: <code>"HH:mm"</code>을 의도한 것일 수 있습니다.
+  Ejemplos:<br>
+  <code>new SimpleDateFormat("YYYY-MM-dd")</code>: probablemente se haya intentado usar <code>"yyyy-MM-dd"</code>.<br>
+  <code>new SimpleDateFormat("yyyy-MM-DD")</code>: probablemente se haya intentado usar <code>"yyyy-MM-dd"</code>.<br>
+  <code>new SimpleDateFormat("HH:MM")</code>: probablemente se haya intentado usar <code>"HH:mm"</code>.
 </p>
 <!-- tooltip end -->
-<p><small>2020.1의 새로운 기능</small></p>
+<p><small>Nuevo en 2020.1</small></p>
 </body>
 </html>

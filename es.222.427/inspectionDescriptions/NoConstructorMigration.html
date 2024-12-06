@@ -1,25 +1,25 @@
 <html>
 <body>
-1.9 이후 컴파일 오류를 유발하는 함수 상위 타입에 대한 생성사 호출을 보고합니다.
-<p>동기 유형:</p>
+Informa sobre llamadas a constructores en supertipos funcionales que darán lugar a un error de compilación a partir de la versión 1.9.
+<p>Tipos de motivaciones:</p>
 <ul>
     <li>
-        구현이 게시된 사양 또는 문서를 준수하지 않습니다.
+        La implementación no cumple con una especificación o documentación publicada
     </li>
 </ul>
 
-<p><b>자세한 정보:</b> <a href="https://youtrack.jetbrains.com/issue/KT-46344">KT-46344: 상위 타입 목록의 함수 인터페이스에서 상위 클래스 생성자 호출에 대한 오류가 없습니다.</a></p>
-<p>빠른 수정으로 생성자 호출을 제거합니다.</p>
-<p><b>예:</b></p>
+<p><b>Más detalles:</b> <a href="https://youtrack.jetbrains.com/issue/KT-46344">KT-46344: No se produce error en una llamada al constructor de una superclase en una interfaz de función en la lista de supertipos</a></p>
+<p>La corrección rápida elimina una llamada al constructor.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  추상 클래스 A : () -> Int()
+  abstract class A : () -> Int()
 </code></pre>
 
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
-  추상 클래스 A : () -> Int
+  abstract class A : () -> Int
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 Kotlin 언어 수준이 1.7 이상인 경우에만 보고합니다.</p>
+<p>Esta inspección solo informa si el nivel del lenguaje Kotlin del proyecto o módulo es 1.7 o superior.</p>
 </body>
 </html>

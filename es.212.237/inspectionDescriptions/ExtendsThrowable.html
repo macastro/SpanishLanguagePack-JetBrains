@@ -1,14 +1,12 @@
 <html>
 <body>
-<code>java.lang.Throwable</code>를 직접 확장하는 클래스를 보고합니다.
-<p><code>java.lang.Throwable</code>을 직접 확장하는 것은 좋지 않은 사례로 일반적으로 간주됩니다.
-  일반적으로 <code>java.lang.RuntimeException</code>, <code>java.lang.Exception</code> 또는 - 특별한 케이스에서 - <code>java.lang.Error</code>를 확장하는 것으로
-   충분합니다.</p>
-<p><b>예:</b></p>
+Reporta clases que extienden directamente <code>java.lang.Throwable</code>.
+<p>Extender directamente <code>java.lang.Throwable</code> es generalmente considerado una mala práctica.
+  Suele ser suficiente con extender <code>java.lang.RuntimeException</code>, <code>java.lang.Exception</code> o, en casos especiales, <code>java.lang.Error</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class EnigmaThrowable extends Throwable {} // 경고: 클래스 'EnigmaThrowable' 은 'java.lang.Throwable'을 직접 확장합니다.
+  class EnigmaThrowable extends Throwable {} // warning: La clase 'EnigmaThrowable' extiende directamente 'java.lang.Throwable'
 </code></pre>
 <!-- tooltip end -->
-<!--<p><small>New in 15</small><p>-->
 </body>
 </html>

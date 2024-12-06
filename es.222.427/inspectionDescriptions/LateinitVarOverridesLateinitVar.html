@@ -1,8 +1,8 @@
 <html>
 <body>
-다른 <code>lateinit var</code> 프로퍼티를 재정의하는 <code>lateinit var</code> 프로퍼티를 보고합니다.
-<p>하위 클래스 인스턴스가 하나의 프로퍼티에 대해 필드를 2개 갖게 되어, 사실상 상위 클래스의 필드는 사용되지 않은 채로 남게 됩니다.</p>
-<p><b>예:</b></p>
+Reporta las propiedades <code>lateinit var</code> que sobrescriben otras propiedades <code>lateinit var</code>.
+<p>Una instancia de subclase tendrá dos campos para una única propiedad, y el de la superclase se mantendrá sin usar.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
     open class BaseClass {
       open lateinit var name: String

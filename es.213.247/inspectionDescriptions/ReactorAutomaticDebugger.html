@@ -1,11 +1,10 @@
 <html>
 <body>
-<p>불필요한 <code>ReactorDebugAgent.init()</code> 호출을 보고합니다.</p>
+<p>Reporta llamadas redundantes a <code>ReactorDebugAgent.init()</code>.</p>
 <p>
-  IDE에서 Reactor 디버그 모드를 자동으로 초기화할 수 있으므로 사용자가 <code>ReactorDebugAgent.init()</code> 또는 <code>Hooks.onOperatorDebug()</code>를 명시적으로 호출할 필요가 없습니다.
+El IDE puede inicializar automáticamente el modo de depuración de Reactor, por lo que los usuarios no necesitan llamar a <code>ReactorDebugAgent.init()</code> o <code>Hooks.onOperatorDebug()</code> explícitamente.
   </p>
 
-  <p>또한 <code>ReactorDebugAgent.init()</code> 및 <code>Hooks.onOperatorDebug()</code>를 모두 호출할 경우 Reactor에서 생성된 디버그 스택 프레임이 두 배로 증가합니다.
-  </p>
+  <p>Además, llamar tanto a <code>ReactorDebugAgent.init()</code> como <code>Hooks.onOperatorDebug()</code> provoca que Reactor genere el doble de tramas de pila de depuración.</p>
 </body>
 </html>

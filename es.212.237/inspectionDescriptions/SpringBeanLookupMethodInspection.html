@@ -1,9 +1,9 @@
 <html>
 <body>
-<p>XML 애플리케이션 컨텍스트의 Bean에 대한 잘못된 <strong>&lt;lookup-method&gt;</strong>를 보고합니다.</p>
+<p>Informa sobre <strong>&lt;lookup-method&gt;</strong> incorrecto para un bean en contextos de aplicación XML.</p>
 
-<p><b>예:</b></p>
-<pre><code>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
   public abstract class FooLookupBean {
     protected abstract FooBean createCommand();
     private FooBean createCommand() {...}
@@ -11,20 +11,21 @@
     protected abstract FooBean createWithArgs(String foo);
     protected abstract OtherBean createOtherBean();
   }
-
+  </code></pre>
+<pre><code lang="xml">
   &lt;beans&gt;
     &lt;bean class="FooLookupBean" id="lookupTest"&gt;
       &lt;lookup-method bean="fooBean" name="createCommand"/&gt;
-      &lt;!-- private --&gt;
-      &lt;lookup-method bean="fooBean" name="createCommand"/&gt;// "Method must be public or protected"
-      &lt;!-- static --&gt;
-      &lt;lookup-method bean="fooBean" name="createCommandStatic"/&gt; // Static method not allowed here
-      &lt;!-- with arguments --&gt;
-      &lt;lookup-method bean="fooBean" name="createWithArgs"/&gt;// Method must have no parameters
-      &lt;!-- not exist --&gt;
-      &lt;lookup-method bean="fooBean" name="unknown"/&gt;  // unknown method
-      &lt;!-- mismatch --&gt;
-      &lt;lookup-method bean="fooBean" name="createOtherBean"/&gt; // Lookup method return type does not match the 'FooBean' bean class
+      &lt;!-- privado --&gt;
+      &lt;lookup-method bean="fooBean" name="createCommand"/&gt; &lt;!-- "El método debe ser public o protected" --&gt;
+      &lt;!-- estático --&gt;
+      &lt;lookup-method bean="fooBean" name="createCommandStatic"/&gt; &lt;!-- El método static no está permitido aquí --&gt;
+      &lt;!-- con argumentos --&gt;
+      &lt;lookup-method bean="fooBean" name="createWithArgs"/&gt; &lt;!-- El método no debe tener parámetros --&gt;
+      &lt;!-- no existe --&gt;
+      &lt;lookup-method bean="fooBean" name="unknown"/&gt; &lt;!-- método desconocido --&gt;
+      &lt;!-- desajuste --&gt;
+      &lt;lookup-method bean="fooBean" name="createOtherBean"/&gt; &lt;!-- El tipo de retorno del método de búsqueda no coincide con la clase bean 'FooBean' --&gt;
     &lt;/bean&gt;
 
     &lt;bean class="FooBean" id="fooBean"/&gt;

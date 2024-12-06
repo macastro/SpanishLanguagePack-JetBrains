@@ -1,18 +1,20 @@
 <html>
 <body>
-분산이 허용하지 않는 위치에서 타입 변수가 인수로 사용되는 경우 <code>unchecked</code>로 표시되어 있지 않는 한 보고합니다. 타입 변수는 공변성(<code>out</code>)이거나, 반공변성(<code>in</code>)이거나, 무공변성(<code>out</code>도 <code>in</code>도 아님)일 수 있습니다.
-<p>다음의 규칙이 사용되어 속성과 메서드 선언에 사용된 타입 인수를 확인합니다.</p>
+Reporta variables de tipo que son utilizadas como argumentos en ubicaciones que su varianza no permite, siempre y cuando no estén marcadas como
+<code>unchecked</code>. Una variable de tipo puede tener una varianza de covariante (<code>out</code>), contravariante (<code>in</code>), o
+invariante (ni <code>out</code> ni <code>in</code>).
+<p>Las siguientes reglas son utilizadas para revisar los argumentos de tipo utilizados en atributos y declaraciones de métodos:</p>
 <ul>
-  <li><code>unchecked</code>로 표시된 타입 인수는 무시됩니다.</li>
-  <li>공변적 타입 인수는 값을 생성하는 위치에서만 사용될 수 있습니다(예: 반환 타입 혹은 블록 매개변수).</li>
-  <li>반공변적 타입 인수는 인수를 소비하는 위치에서만 사용될 수 있습니다(예: 매개변수와 블록 반환 타입).
+  <li>Argumentos de tipo <code>unchecked</code> son ignorados.</li>
+  <li>Argumentos de tipo covariantes solo pueden ser utilizados en ubicaciones que produzcan valores (por ejemplo, tipos de retorno y parámetros de bloque).</li>
+  <li>Argumentos de tipo contravariantes solo pueden ser utilizados en ubicaciones que consuman argumentos (por ejemplo, parámetros y tipos de retorno de bloque).
   </li>
-  <li>무공변적 타입 인수는 값을 생성하는 위치와 인수를 취하는 위치 모두에서 사용될 수 있습니다.</li>
+  <li>Argumentos de tipo invariantes pueden ser utilizados en ambas ubicaciones que producen valores y consumen argumentos.</li>
 </ul>
-<p>예:</p>
-<pre><code>class Example[in A, out B]
-  # 클래스 'Example'의 공변성 타입 변수 'B'가 비공변성 위치에 사용됩니다 ...
-  def call: (B) -> A
+<p>Ejemplo:</p>
+<pre><code>class Ejemplo[in A, out B]
+  # Variable de tipo covariante 'B' de clase 'Ejemplo' utilizada en una posición contravariante, ...
+  def llamar: (B) -> A
 end</code></pre>
 </body>
 </html>

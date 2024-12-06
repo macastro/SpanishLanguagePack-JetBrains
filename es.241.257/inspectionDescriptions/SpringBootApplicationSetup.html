@@ -1,19 +1,19 @@
 <html>
 <body>
-<p>디폴트 패키지의 <code>@SpringBootApplication</code> 및 불필요한 <code>@EnableAutoConfiguration</code> 또는 <code>@ComponentScan</code> 어노테이션을 보고합니다.</p>
-<p>빠른 수정에서는 불필요한 어노테이션을 제거합니다.</p>
+<p>Informa de <code>@SpringBootApplication</code> en el paquete predeterminado y de anotaciones redundantes <code>@EnableAutoConfiguration</code> o <code>@ComponentScan</code>.</p>
+<p>La corrección rápida elimina las anotaciones redundantes.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code lang="java">
 @SpringBootApplication
-@ComponentScan // '불필요한 선언: @SpringBootApplication에 @ComponentScan이 이미 포함되어 있습니다'라고 보고됩니다
+@ComponentScan // Se informa de 'Declaración redundante: @SpringBootApplication ya implica @ComponentScan'
 public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
 }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code lang="java">
   @SpringBootApplication
   public class DemoApplication {
@@ -23,6 +23,6 @@ public class DemoApplication {
   }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2018.2의 새로운 기능</small></p>
+<p><small>Nuevo en 2018.2</small></p>
 </body>
 </html>

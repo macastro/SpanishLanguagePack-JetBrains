@@ -1,22 +1,22 @@
 <html>
 <body>
-<p>하나의 검사로 단일화 될 수 있는 <code>null</code> 및 비어 있는지 확인하는 점검의 조합을 보고합니다.</p>
-<p>빠른 수정이 강조 표시된 점검을 <code>isNullOrEmpty()</code>과 같은 통합된 점검 호출로 대체합니다.</p>
-<p><b>예:</b></p>
+<p>Informa sobre combinaciones de verificaciones de <code>null</code> y de vacío que pueden simplificarse en una sola verificación.</p>
+<p>La corrección rápida reemplaza las comprobaciones resaltadas con una llamada a una comprobación combinada, como <code>isNullOrEmpty()</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun test(list: List&lt;Int>?) {
       if (list == null || list.isEmpty()) {
-          println("List is empty!")
+          println("La lista está vacía.")
       } else {
           println(list.joinToString())
       }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun test(list: List&lt;Int>?) {
       if (list.isNullOrEmpty()) {
-          println("List is empty!")
+          println("La lista está vacía.")
       } else {
           println(list.joinToString())
       }

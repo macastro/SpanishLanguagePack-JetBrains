@@ -1,15 +1,15 @@
 <html>
 <body>
-<code>@TestOnly</code> 및 <code>@VisibleForTesting</code> 어노테이션이 추가된 메서드 및 클래스가 프로덕션 코드에서 사용된 경우를 보고합니다. 또한 <code>@TestOnly</code> 및 <code>@VisibleForTesting</code>를 동일한 요소에 적용하는 경우도 보고합니다.
+Inspecciona métodos y clases anotados con <code>@TestOnly</code> y <code>@VisibleForTesting</code> que se utilizan en código de producción. También informa del uso de la aplicación de <code>@TestOnly</code> <code>@VisibleForTesting</code> al mismo elemento.
 
-<p>그러한 메서드 또는 클래스가 다음에서 참조되는 경우에는 문제가 보고되지 않습니다.</p>
+<p>Los problemas no se informan si se hace referencia a dicho método o clase desde:</p>
 <ul>
-  <li><b>Test Sources</b> 폴더에 있는 코드
-  <li>테스트 클래스(JUnit/TestNG)
-  <li><code>@TestOnly</code> 어노테이션이 추가된 다른 메서드
+  <li>Código bajo la carpeta <b>Fuentes de prueba</b>.
+  <li>Una clase de prueba (JUnit/TestNG)
+  <li>Otro método anotado con <code>@TestOnly</code>
 </ul>
-<p><b>예(프로덕션 코드):</b></p>
-<pre><code>
+<p><b>Ejemplo (en código de producción):</b></p>
+<pre><code lang="kotlin">
   @TestOnly
   fun foo() { ... }
 

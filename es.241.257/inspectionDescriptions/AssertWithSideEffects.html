@@ -1,9 +1,11 @@
   <html>
 <body>
-부수효과를 초래하는 <code>assert</code> 문을 보고합니다.
+Informa sobre las sentencias <code>assert</code> que causan efectos colaterales.
 <p>
-  어설션은 해제될 수 있기 때문에 이러한 부수효과가 항상 발생하지는 않으며 이는 미묘한 버그를 일으킬 수 있습니다. 이 검사에서 흔히 탐지되는 바람직하지 않은 부수 효과는 변수 및 필드의 변경입니다. 메서드 호출이 포함된 경우 1단계 깊이 분석됩니다.</p>
-<p><b>예:</b></p>
+  Como las aseveraciones se pueden desactivar,
+  estos efectos colaterales no están garantizados, lo que puede provocar fallos sutiles. Los efectos colaterales no deseados habituales detectados por esta inspección son
+  modificaciones de variables y campos. Cuando se involucran llamadas a métodos, se analizan un nivel de profundidad.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   assert i++ &lt; 10;
 </code></pre>

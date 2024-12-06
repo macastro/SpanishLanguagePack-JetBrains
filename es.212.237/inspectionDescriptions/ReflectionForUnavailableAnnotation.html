@@ -1,16 +1,16 @@
 <html>
 <body>
-런타임 이외의 어노테이션의 존재를 반영적으로 검사하려는 시도를 보고합니다.
-<p>리텐션 정책이 <code>SOURCE</code> 또는 <code>CLASS</code>(디폴트)으로 설정된 어노테이션을  테스트하기 위해 <code>Class.isAnnotationPresent()</code>를 사용하면 항상 부정적인 결과가 발생합니다. 이러한 실수는 간과하기 쉽습니다.</p>
-<p><b>예:</b></p>
-<pre>
-  { 
-    getClass().isAnnotationPresent(SourceAnnotation.class); //항상 false
+Se están reportando intentos de verificar reflexivamente la presencia de anotaciones que no están en tiempo de ejecución.
+<p>Usar <code>Class.isAnnotationPresent()</code> para probar anotaciones que tienen su política de retención establecida como <code>SOURCE</code> o <code>CLASS</code> (valor predeterminado) siempre resultará en un resultado negativo. Este error es fácil de pasar por alto.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  {
+    getClass().isAnnotationPresent(SourceAnnotation.class); //Siempre devuelve falso
   }
-  
+
   @Retention(RetentionPolicy.SOURCE)
   @interface SourceAnnotation {}
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
 

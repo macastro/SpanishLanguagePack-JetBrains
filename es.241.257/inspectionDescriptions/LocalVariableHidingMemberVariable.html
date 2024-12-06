@@ -1,9 +1,8 @@
 <html>
 <body>
-주변 클래스와 이름이 동일하게 지정된 지역 변수를 보고합니다.
-이와 같이 이름이 지정될 경우, 필드를 사용하려다가 동일한 이름의 변수를 실수로 사용할 수 있습니다.
-<p>빠른 수정은 변수 이름을 변경하도록 제안합니다.</p>
-<p><b>예:</b></p>
+Informa las variables locales que tienen el mismo nombre exacto que los campos de la clase externa. Tales nombres pueden hacer que se use por error la variable cuando se pretende usar el campo con el mismo nombre.
+<p>Se sugiere un arreglo rápido para cambiar el nombre de la variable.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class Foo {
     public Object foo;
@@ -11,7 +10,7 @@
     void bar() {
       Object o = new Object() {
         void baz() {
-          Object foo; // 지역 변수 'foo'는 클래스의 필드 'Foo'를 숨깁니다
+          Object foo; // La variable local 'foo' oculta el campo 'Foo' de la clase
         }
       };
     }
@@ -19,12 +18,11 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  이 검사에서 다음 옵션을 구성할 수 있습니다.
+  Puede configurar las siguientes opciones para esta inspección:
 </p>
 <ol>
-  <li><strong>액세스할 수 없는 필드 무시</strong> - 표시되지 않는 상위 클래스 필드(예: private 필드)와 이름이 동일한 지역 변수를 무시합니다</li>
-  <li><strong>비 static 필드를 숨기는 static 컨텍스트의 지역 변수 무시</strong> - 
-예를 들어 지역 변수가 static 메서드 내부에 있거나 static 내부 클래스의 메서드 내부에 있을 경우 무시합니다.
+  <li><strong>Ignorar campos inaccesibles</strong> - Ignorar variables locales con el mismo nombre exacto de un campo de superclase que no sea visible (por ejemplo, porque el campo es privado).</li>
+  <li><strong>Ignorar variables locales en contextos estáticos que ocultan campos no estáticos</strong> - Ignorar, por ejemplo, cuando la variable local está dentro de un método estático o dentro de un método de una clase interna estática.
   </li>
 </ol>
 </body>

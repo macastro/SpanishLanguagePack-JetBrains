@@ -1,11 +1,11 @@
 <html>
 <body>
-javac 컴파일러에서 확인되지 않은 경고가 발생하는 코드를 보고합니다.
-모든 확인되지 않은 경고는 런타임 시 잠재적으로 <code>ClassCastException</code> 을 발생시킬 수 있습니다.
-<p>예:</p>
+Informa código en el que el compilador javac emitirá una advertencia sin verificar.
+Cada advertencia sin verificar puede potencialmente desencadenar <code>ClassCastException</code> en tiempo de ejecución.
+<p>Ejemplo:</p>
 <pre><code>
   List items = Arrays.asList("string", "string");
-  List&lt;Integer&gt; numbers = Collections.unmodifiableList(items); // 확인되지 않은 대입
+  List&lt;Integer&gt; numbers = Collections.unmodifiableList(items); // asignación sin verificar
 </code></pre>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <html>
 <body>
-단순화할 수 있는 <b>Optional</b> 호출 체인을 보고합니다. 가능한 단순화의 몇 가지 예는 다음과 같습니다:
+Informa sobre cadenas de llamadas de <b>Optional</b> que pueden simplificarse. Aquí hay algunos ejemplos de simplificación:
 <ul>
   <li><code>optional.map(x -> true).orElse(false)</code> &rarr; <code>optional.isPresent()</code></li>
   <li><code>optional.map(x -> Optional.of(x.trim())).orElseGet(Optional::empty)</code> &rarr; <code>optional.map(String::trim)</code></li>
@@ -10,6 +10,6 @@
   <li><code>val = optional.orElse(null); if(val != null) expr(val) </code> &rarr; <code>optional.ifPresent(val -> expr(val))</code></li>
 </ul>
 <!-- tooltip end -->
-<p><small>2017.2의 새로운 기능</small></p>
+<p><small>Nuevo en 2017.2</small></p>
 </body>
 </html>

@@ -1,13 +1,13 @@
 <html>
 <body>
-명명된 쿼리와 네이티브 쿼리 및 관련 API 메서드 내 해결되지 않은 심볼을 보고합니다.
+Informa de símbolos no resueltos en consultas nativas y con nombre y métodos API relacionados:
 <ul>
-  <li>알 수 없는 명명된 쿼리</li>
-  <li>알 수 없는 쿼리 매개변수</li>
+  <li>Consulta con nombre desconocida</li>
+  <li>Parámetro de consulta desconocido</li>
 </ul>
 
-<p><b>예:</b></p>
-<pre><code>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
   @Entity
   @NamedQuery(name = "SelectByConditionQuery", query = "...")
   public class JavaEntity { ... }
@@ -16,7 +16,7 @@
     public static void executeQuery() {
       Persistence.createEntityManagerFactory("")
         .createEntityManager()
-        .createNamedQuery("SelectAllQuery") // 오류: 알 수 없는 쿼리 이름
+        .createNamedQuery("SelectAllQuery") // Error: nombre de consulta desconocido
         ...
     }
   }

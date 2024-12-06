@@ -1,17 +1,18 @@
 <html>
 <body>
-<p>XML 애플리케이션 컨텍스트에서 정의된 사용자 지정 스키마 Bean 삽입의 잘못된 타입을 보고합니다.</p>
+<p>Informa sobre tipos incorrectos de inyección de beans de esquemas personalizados definidos en el contexto de la aplicación XML.</p>
 
-<p><b>예:</b></p>
-<pre><code>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
   public class SimpleBean{}
-
+</code></pre>
+<pre><code lang="xml">
   &lt;beans ...>
     &lt;bean class="SimpleBean" id="simpleBean"/&gt;
        &lt;mvc:annotation-driven
-         conversion-service="simpleBean"      &lt;!-- "Bean은 'org.springframework.core.convert.ConversionService' 타입이어야 합니다"라고 보고됩니다 --&gt;
-         message-codes-resolver="simpleBean"  &lt;!-- reports 'Bean must be of org.springframework.validation.MessageCodesResolver' type" --&gt;
-         validator="simpleBean"               &lt;!-- "Bean은 'org.springframework.validation.Validator' 타입이어야 합니다"라고 보고됩니다 --&gt;
+         conversion-service="simpleBean"      &lt;!-- informa de "El bean debe ser de tipo 'org.springframework.core.convert.ConversionService'" --&gt;
+         message-codes-resolver="simpleBean"  &lt;!-- informa de "El bean debe ser de tipo org.springframework.validation.MessageCodesResolver" --&gt;
+         validator="simpleBean"               &lt;!-- informa de "El bean debe ser de tipo 'org.springframework.validation.Validator'" --&gt;
     /&gt;
   &lt;/beans&gt;
 </code></pre>

@@ -1,23 +1,23 @@
 <html>
 <body>
-<code>kotlinx.coroutines.Deferred</code> 반환 타입을 포함하는 함수를 보고합니다.
+Inspecciona las funciones que tienen un tipo de retorno `kotlinx.coroutines.Deferred`.
 <p>
-    <code>Deferred</code>를 반환 타입으로 사용하는 함수는 <code>Async</code> 접미사를 포함하는 이름을 가지고 있어야 합니다.
-    그렇지 않으면 함수를 <code>suspend</code>로 표시하고 내부에 있는 <code>Deferred</code>를 언래핑하는 것을 추천합니다.
+    Las funciones que usan `Deferred` como tipo de retorno, deberían tener un sufijo `Async` en su nombre.
+    De lo contrario, se recomienda marcar la función como `suspend` y desenvolver el `Deferred` en ella.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun calcEverything(): Deferred&lt;Int&gt; {
       return CompletableDeferred(42)
   }
 </code></pre>
-<p><code>Async</code> 접미사를 추가하는 빠른 수정을 적용한 후:</p>
+<p>Después de aplicar el arreglo rápido para agregar el sufijo `Async`:</p>
 <pre><code>
   fun calcEverythingAsync(): Deferred&lt;Int&gt; {
       return CompletableDeferred(42)
   }
 </code></pre>
-<p>함수를 <code>suspend</code> 함수로 변환하는 빠른 수정을 적용한 후:</p>
+<p>Después de aplicar el arreglo rápido para convertir la función a `suspend`:</p>
 <pre><code>
   suspend fun calcEverything(): Int {
       return CompletableDeferred(42).await()

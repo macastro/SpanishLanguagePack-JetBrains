@@ -1,15 +1,15 @@
 <html>
 <body>
-반드시 <code>true</code> 또는 <code>false</code>로 평가되는 
-비트 마스크 식을 보고합니다.
+Reporta expresiones de máscara de bits que están garantizadas para
+evaluarse como <code>true</code> o <code>false</code>.
 <p>
-  이 검사는 <code>constant1</code> 및 <code>constant2</code>가 호환되지 않는 
-비트 마스크 상수인 <code>(var & constant1) == constant2</code> 
-또는 <code>(var | constant1) == constant2</code> 형식의 표현식을 검사합니다.</p>
-<p><b>예:</b></p>
-<pre><code>  // 호환되지 않는 마스크: 마스크가 00으로 끝나므로,
-  // 결과가 0x1200는 될 수 있으나 0x1234는 될 수 없습니다
-  if ((mask & 0xFF00) == 0x1234) {...}
+  La inspección verifica las expresiones de la forma <code>(var & constant1) == constant2</code> o
+  <code>(var | constant1) == constant2</code>, donde <code>constant1</code>
+  y <code>constant2</code> son constantes de máscara de bits incompatibles.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  // Máscara incompatible: como la máscara termina en 00,
+  // el resultado podría ser 0x1200 pero no 0x1234
+  if ((máscara & 0xFF00) == 0x1234) {...}
 </code></pre>
 <!-- tooltip end -->
 </body>

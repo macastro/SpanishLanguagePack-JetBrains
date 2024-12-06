@@ -1,9 +1,9 @@
 <html>
 <body>
-<code>public</code> 생성자를 보고합니다.
-<p>일부 코딩 표준에서는 <code>public</code> 생성자의 사용을 지양하고 <code>static</code> factory 메서드를 사용하도록 권장합니다.
-이 방식을 사용하면 호출 사이트에 영향을 미치지 않고도 구현을 교체할 수 있습니다.
-<p><b>예:</b></p>
+Informa sobre constructores <code>public</code>.
+<p>Algunos estándares de programación desaconsejan el uso de constructores <code>public</code> y recomiendan en su lugar métodos factoría <code>static</code>.
+De esta forma se puede intercambiar la implementación sin afectar a los sitios de llamada.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Test {
     private String name;
@@ -21,7 +21,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class Test {
     private String name;

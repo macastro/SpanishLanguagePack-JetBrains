@@ -1,8 +1,8 @@
 <html>
 <body>
-동기화된 컨텍스트에서 액세스할 수 있는 비 <code>final</code>, 비 <code>private</code> 필드를 보고합니다.
+Informa los campos no <code>final</code>, no <code>private</code> que son accedidos en un contexto sincronizado.
 <p>
-  private이 아닌 필드에 항상 동기화된 방식으로 액세스할 수 있는 것은 아니며, 그렇게 '부분적으로 동기화된' 액세스는 예기치 않은 데이터 구조의 일관성 문제를 야기할 수 있습니다. 이 검사에서는 그 목적에 따라 생성자와 이니셜라이저에서의 액세스가 무시됩니다.
+  No se puede garantizar que un campo no privado siempre sea accedido de manera sincronizada, y dicho acceso "parcialmente sincronizado" puede resultar en estructuras de datos inesperadamente inconsistentes. Los accesos en constructores e inicializadores son ignorados para los propósitos de esta inspección.
 </p>
 </body>
 </html>

@@ -1,17 +1,17 @@
 <html>
 <body>
-요소 타입이 <code>Comparable</code> 인터페이스를 구현하지 않으며 자연스러운 순서에 의존하는 <code>TreeSet</code>등의 정렬된 컬렉션의 생성을 보고합니다.
-<p>그러한 컬렉션은 올바르게 작동하지 않을 가능성이 높습니다.</p>
+Reporta la construcción de colecciones ordenadas, como <code>TreeSet</code>, que dependen de un ordenamiento natural, cuyo tipo de elemento no implementa la interfaz <code>Comparable</code>.
+<p>Es poco probable que tal colección funcione correctamente.</p>
 <p>
-  컬렉션 요소 타입이 비교 불가능한 슈퍼타입인 경우 거짓 양성이 발생할 수 있지만 컬렉션은 비교 가능한 서브타입만을 가지도록 의도되어 있습니다. 이러한 경우라 하더라도 앞서 언급한 접근 방식은 오류를 일으키기 쉬우므로 컬렉션 요소 타입의 범위를 좁히거나 슈퍼타입을 <code>Comparable</code>로 선언하는 것이 더 낫습니다.
+ Puede haber un falso positivo si el tipo de elemento de la colección es un supertipo no comparable, pero la colección está pensada para contener únicamente subtipos comparables. Incluso si éste es el caso, es mejor acotar el tipo de elemento de la colección o declarar el supertipo como <code>Comparable</code>, ya que el enfoque mencionado es propenso a errores.
 </p>
 <!-- tooltip end -->
 <p>
-  이 검사는 컬렉션 요소가 <code>extends Comparable</code>로 선언되지 않은 타입 매개변수인 경우 또한 보고합니다.
-  제공된 옵션을 사용하여 타입 매개변수의 경고를 억제할 수 있습니다(예: API 호환성을 유지하기 위해).
+  La inspección también reporta casos cuando el elemento de la colección es un parámetro de tipo que no está declarado como <code>extends Comparable</code>.
+  Puedes suprimir las advertencias sobre los parámetros de tipo utilizando la opción provista (por ejemplo, para mantener la compatibilidad con la API).
 </p>
 <p>
-  <small>2018.3의 새로운 기능</small>
+  <small>Nuevo en 2018.3</small>
 </p>
 </body>
 </html>

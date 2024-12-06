@@ -1,17 +1,30 @@
 <html>
 <body>
-로거 메시지의 <code>{}</code> 자리표시자 숫자가 로깅 호출에 대한 다른 인수의 숫자와 일치하지 않는 <code>logger.info("{}: {}", key)</code>와 같은 SLF4J, Log4j2 및 akka.event.LoggingAdapter 로깅 호출을 보고합니다.
+Reporta llamadas de registro de SLF4J, Log4j2 y akka.event.LoggingAdapter, como `logger.info("{}: {}", key)` donde el número de marcadores de posición de `{ }` en el mensaje de registro no coincide con el número de otros argumentos en la llamada de registro.
 <!-- tooltip end -->
 <p>
-검사 옵션을 사용하여 SLF4J가 사용하는 구현을 지정합니다.
-<strong>자동 확인</strong>을 선택하면 클래스 경로에서 <code>org.apache.logging.slf4j.Log4jLogger</code>가 검색됩니다.
-이 파일을 찾거나 <strong>예</strong>를 선택하였고, 예외 타입이 있는 마지막 매개변수에 자리표시자가 있는 경우, SLFJ4 API가 보고되지 않습니다.
-예:
+Utilice la opción de inspección para especificar qué implementación utiliza SLF4J.
+Si se selecciona **Verificar automáticamente**, entonces `org.apache.logging.slf4j.Log4jLogger` se busca en la ruta de clase.
+Si este archivo es encontrado o se selecciona **Sí**, entonces los casos, cuando el último parámetro con un tipo de excepción tiene un marcador de posición, no se reportará para SLFJ4 API.<br/>
+Por ejemplo:
 <pre><code lang="java">
-// 보고되지 않음
-log.error("For id {}: {}", id, new RuntimeException());
+//este caso no será reportado con la opción "Sí"
+log.error("For id {}: {}", "1", new RuntimeException());
 </code></pre>
-이 옵션은 SLF4J에서만 작동합니다.
+En este caso 'new RuntimeException()' se imprimirá utilizando 'toString()', (su rastro de pila no se imprimirá):
+<pre><code lang="text">
+For id 1: java.lang.RuntimeException
+</code></pre>
+
+De lo contrario, se resaltará porque el último marcador de posición no se utiliza:
+<pre><code lang="text">
+For id 1: {}
+java.lang.RuntimeException: null
+</code></pre>
+
+La opción **No** se puede utilizar para resaltar siempre tales casos cuando se utiliza un marcador de posición para una excepción incluso si `org.apache.logging.slf4j.Log4jLogger` se utiliza como un backend.<br/>
+
+Esta opción solo funciona para SLF4J.
 <p>
 </body>
 </html>

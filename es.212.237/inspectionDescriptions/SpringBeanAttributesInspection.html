@@ -1,26 +1,24 @@
 <html>
 <body>
-<p><code>&lt;bean&gt;</code> 속성의 구성 충돌을 보고합니다.</p>
+<p>Informa conflictos de configuración en atributos de <code>&lt;bean&gt;</code>.</p>
 
-<p><b>예:</b></p>
-<pre><code>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="xml">
   &lt;beans&gt;
     &lt;bean class="java.lang.String" factory-bean="factoryBean"/&gt;
-    &lt;!-- Exactly one of 'class' or 'factory-bean' is required --&gt;
-    &lt;bean factory-bean="factoryBean" id="missingFactoryMethod"/&gt; //When factory-bean exists, factory-method is required
+    &lt;!-- Se requiere exactamente uno de 'class' o 'factory-bean' --&gt;
+    &lt;bean factory-bean="factoryBean" id="missingFactoryMethod"/&gt; &lt;!-- Cuando factory-bean existe, se requiere factory-method --&gt;
 
+    &lt;!-- El atributo abstract con valor predeterminado 'false' es superfluo --&gt;
     &lt;bean abstract="false" id="superfluousDefaultAttributeAbstract"/&gt;
 
-    &lt;!-- Attribute abstract with default value 'false' is superfluous --&gt;/
+    &lt;!-- El atributo scope con valor predeterminado 'singleton' es superfluo --&gt;
     &lt;bean id="superfluousDefaultAttributeScope" scope="singleton"/&gt;
 
-    &lt;!-- Attribute scope with default value 'singleton' is superfluous --&gt;/
     &lt;bean class="java.lang.StringBuilder"&gt;
       &lt;property name="length"&gt;
-         &lt;bean id="beanId" // Attribute id is superfluous
-              name="beanName"   // Attribute name is superfluous
-              scope="prototype" // Attribute scope is superfluous
-         />
+        &lt;!-- Los atributos id, name y scope son superfluos --&gt;
+        &lt;bean id="beanId" name="beanName" scope="prototype"/&gt;
       &lt;/property&gt;
     &lt;/bean&gt;
   &lt;/beans&gt;

@@ -1,23 +1,23 @@
 <html>
 <body>
-<p>클래스와 이름이 동일하게 지정된 메서드를 보고합니다.</p>
-<p>Java 언어에서 이와 같은 이름 지정이 허용되긴 하지만, 대개는 생성자를 생성하려는 의도였으나 실수한 경우에 해당합니다. 
-이러한 이름 지정은 나쁜 사례입니다.</p>
-<p><b>예:</b></p>
+Reporta métodos cuyos nombres son idénticos a su clase.
+Si bien dicho nombre es permitido por el lenguaje Java, por convención se reserva para definir constructores.
+Usarlo para métodos probablemente es un error o una mala práctica.
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class MyClass {
+  clase MyClass {
     int val;
 
-    // 포함하는 클래스와 이름이 동일하게 지정된 MyClass 메서드
-    // 'void'도 실수로 추가되었을 수 있습니다
+    // El método MyClass tiene el mismo nombre que la clase contenedora.
+    // Es probable que 'void' se haya agregado por error.
     void MyClass(int val) {
       this.val = val;
     }
   }
 </code></pre>
-<p>적절한 경우 빠른 수정은 메서드를 생성자로 변환합니다.</p>
+<p>Cuando es pertinente, un arreglo rápido convierte el método en un constructor:</p>
 <pre><code>
-  class MyClass {
+  clase MyClass {
     int val;
 
     MyClass(int val) {
@@ -25,7 +25,7 @@
     }
   }
 </code></pre>
-<p>메서드 이름을 변경하는 다른 빠른 수정도 있습니다.</p>
+<p>Otro arreglo rápido vuelve a nombrar el método.</p>
 <!-- tooltip end -->
 </body>
 </html>

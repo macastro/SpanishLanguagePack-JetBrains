@@ -1,25 +1,25 @@
 <html>
 <body>
-<p>어노테이션이 추가된 Seam 클래스의 구성 문제를 보고합니다.</p>
+<p>Informes de problemas de configuración de las clases de Seam anotadas</p>
 <!-- tooltip end -->
-<p><strong>예:</strong></p>
+<p><strong>Ejemplo:</strong></p>
 <pre><code>
-@Name("authenticator")
-class SeanComponent {
-  <strong>@Create</strong> // static 메서드는 허용되지 않습니다
-  private static void create() {...}
+@Nombre ("authenticator")
+clase SeanComponent {
+  <strong>@Crear</strong> // No se permite el uso de métodos estáticos
+  estático privado anular crear() {...}
 
-   <strong>@Destroy</strong> // static 메서드는 허용되지 않습니다
-   private static void destroy() {...}
+   <strong>@Destruir</strong> // No se permite el uso de métodos estáticos
+   estático privado anular destruir() {...}
 
-   <strong>@DataModel</strong> // getter가 아닙니다
-   private Map method() {...}
+   <strong>@ModeloDatos</strong> // No es getter
+   mapa método privado() {...}
 
-   <strong>@Factory</strong> // public이어야 합니다
-   private Map getUniverse2() {...}
+   <strong>@Fábrica</strong> // Debe ser público
+   mapa privado obtenerUniverso2() {...}
 
-   <strong>@Unwrap</strong> // 매개변수가 없어야 합니다
-   private static Map createUniverse(int days) { ... }
+   <strong>@Desenvolver</strong> // No debe tener parámetros de forma
+   mapa estático privado crearUniverso (int días) { ... }
 }</code></pre>
 </body>
 </html>

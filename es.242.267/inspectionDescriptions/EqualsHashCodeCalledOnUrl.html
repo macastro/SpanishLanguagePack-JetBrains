@@ -1,14 +1,14 @@
 <html>
 <body>
-<code>java.net.URL</code> 객체에서 호출되는 <code>hashCode()</code> 및 <code>equals()</code>를 보고합니다.
+Reporta las llamadas a <code>hashCode()</code> y <code>equals()</code> en el objeto <code>java.net.URL</code>.
 <p>
-  <code>URL</code>의 <code>equals()</code> 및 <code>hashCode()</code> 메서드는 호스트 이름을 해결하기 위해 DNS 조회를 수행할 수 있습니다.
-  이는 네트워크 및 DNS 서버의 가용성 및 속도에 따라 심각한 지연을 일으킬 수 있습니다.
-  <code>java.net.URL</code> 대신 <code>java.net.URI</code>를 사용하면 DNS 조회를 피할 수 있습니다.
+Los métodos <code>equals()</code> y <code>hashCode()</code> de <code>URL</code> pueden realizar búsquedas de DNS para resolver el nombre de host.
+Esto puede ocasionar retrasos significativos dependiendo de la disponibilidad y velocidad de la red y de los servidores DNS.
+Usar <code>java.net.URI</code> en lugar de <code>java.net.URL</code> evitará las búsquedas de DNS.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  int equalsHashCode(URL url1, URL url2) {
+  int hashCodeEquals(URL url1, URL url2) {
     return url1.hashCode() == url2.hashCode();
   }
 </code></pre>

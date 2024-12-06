@@ -1,14 +1,14 @@
 <html>
 <body>
-배열과 비 배열 브랜치가 혼합된 3항 연산자를 사용하는 vararg 메서드 호출을 보고합니다.
+Informa las llamadas al método `vararg` que usan un operador condicional ternario con ramas de arreglos y sin arreglos mezcladas.
 <p>
-완료 시 두 개의 브랜치가 배열에 래핑됩니다. 그 결과 배열 브랜치는 2차원 배열로 전환되며 문제가 발생할 가능성이 있습니다.
+Cuando se compila, ambas ramas se convierten en arreglos. Como resultado, la rama del arreglo se convierte en un arreglo bidimensional, lo que puede indicar un problema.
 </p>
 <p>
-빠른 수정은 비 배열 브랜치를 배열에 래핑하여, 컴파일러가 변환하지 못하도록 방지합니다.
+La corrección rápida convierte la rama sin arreglo en un arreglo para evitar que el compilador realice la conversión.
 </p>
 <!-- tooltip end -->
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
     static void bar(boolean flag) {
         Object[] a = {1, 2};
@@ -19,7 +19,7 @@
     }
 </code></pre>
 
-<p>빠른 수정 후: </p>
+<p>Después de la corrección rápida: </p>
 <pre><code>
     static void bar(boolean flag) {
         Object[] a = {1, 2};
@@ -30,6 +30,6 @@
     }
 </code></pre>
 
-<p><small>2020.3의 새로운 기능</small></p>
+<p><small>Nuevo en 2020.3</small></p>
 </body>
 </html>

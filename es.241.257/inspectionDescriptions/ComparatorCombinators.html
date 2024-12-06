@@ -1,8 +1,9 @@
 <html>
 <body>
-<code>Comparator.comparing()</code> 호출을 사용하여 표현할 수 있는 람다 식으로 정의된 <code>Comparator</code> 인스턴스를 보고합니다.
-<code>Comparator.thenComparing()</code> 식으로 바꿀 수 있는 체인 비교 또한 보고됩니다.
-<p>예:</p>
+Informa sobre instancias de <code>Comparator</code> definidas como expresiones lambda que podrían expresarse usando llamadas a
+ <code>Comparator.comparing()</code>.
+También se informa sobre comparaciones encadenadas que pueden reemplazarse por la expresión <code>Comparator.thenComparing()</code>.
+<p>Ejemplo:</p>
 <pre><code>
   myList.sort((person1, person2) -> person1.getName().compareTo(person2.getName()));
 
@@ -13,7 +14,7 @@
       return res;
   });
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar las correcciones rápidas:</p>
 <pre><code>
   myList.sort(Comparator.comparing(Person::getName));
 

@@ -1,8 +1,8 @@
 <html>
 <body>
-<code>public</code> 및 <code>static</code>으로 선언되지 않거나, <code>void</code>를 반환하거나 인수를 취하지 않는 JUnit 4.0 <code>@BeforeClass</code> 또는 <code>@AfterClass</code> 메서드를 보고합니다.
-해당 메서드는 실수로 생성되기 쉽지만 JUnit 테스트 러너를 통해 실행되지 않습니다.
-<p><b>예:</b></p>
+Métodos JUnit 4.0 <code>@BeforeClass</code> o <code>@AfterClass</code> que no se declaran como <code>public</code> y <code>static</code>, no devuelven <code>void</code> o aceptan argumentos reales.
+Este tipo de métodos se pueden crear fácilmente por error, pero el ejecutor de pruebas JUnit no los ejecutará.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public class MainTest {
     @BeforeClass
@@ -10,7 +10,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정이 적용된 후 메서드는 다음과 같이 변경됩니다.</p>
+<p>Después de aplicar la corrección rápida, el método se convierte en:</p>
 <pre><code>
   class MainTest {
     @BeforeClass

@@ -1,17 +1,17 @@
 <html>
 <body>
-관련 매핑이 없는 서블릿을 보고합니다.
+Informa de los servlets que no tienen una asignación asociada.
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   &lt;web-app&gt;
     &lt;servlet&gt;
-      &lt;servlet-name&gt;foo&lt;/servlet-name&gt; // 오류: 서블릿에 매핑이 있어야 합니다
+      &lt;servlet-name&gt;foo&lt;/servlet-name&gt; // Error: el servlet debe tener una asignación
       &lt;servlet-class&gt;javax.servlet.Servlet&lt;/servlet-class&gt;
     &lt;/servlet&gt;
   
     &lt;filter&gt;
-      &lt;filter-name&gt;bar&lt;/filter-name&gt; // 오류: 필터에 매핑이 있어야 합니다
+      &lt;filter-name&gt;bar&lt;/filter-name&gt; // Error: el filtro debe tener una asignación
       &lt;filter-class&gt;java.lang.String&lt;/filter-class&gt;
     &lt;/filter&gt;
   &lt;/web-app&gt;

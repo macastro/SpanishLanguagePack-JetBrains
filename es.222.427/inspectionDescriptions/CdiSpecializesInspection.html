@@ -1,13 +1,13 @@
 <html>
 <body>
-<p><code>@Specializes</code> 어노테이션의 잘못된 사용을 보고합니다.</p>
+<p>Informa sobre usos incorrectos de la anotación <code>@Specializes</code>.</p>
 
 <ul>
-  <li>특수화 Bean은 다른 Bean을 확장해야 합니다</li>
-  <li>특수화하는 메서드는 직속 상위 클래스의 <code>@Produces</code> 메서드를 재정의해야 함</li>
-  <li>특수화하는 클래스 및 특수화된 클래스에서 <code>@Named</code> 어노테이션을 사용할 수 없음</li>
-  <li>두 개 이상의 클래스는 동일한 상위 클래스를 특수화할 수 없음</li>
-  <li>특수화 메서드는 static일 수 없음</li>
+  <li>El bean especializado debe extender otro bean</li>
+  <li>El método especializado debe anular un método <code>@Produces</code> de su superclase directa</li>
+  <li>La anotación <code>@Named</code> no se puede usar en la clase especializada y en la clase especializante</li>
+  <li>Dos o más clases no pueden especializar la misma superclase</li>
+  <li>El método especializado no puede ser estático</li>
 </ul>
 </body>
 </html>

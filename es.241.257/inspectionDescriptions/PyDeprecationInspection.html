@@ -1,14 +1,14 @@
 <html>
 <body>
-<p>사용이 중지된 것으로 표시되어 있으며 <code>DeprecationWarning</code> 또는 <code>PendingDeprecationWarning</code> 경고를 일으키는 Python 함수 또는 메서드의 사용 사례를 보고합니다.</p>
-<p>이 검사는 <code>abc.abstractstaticmethod</code>, <code>abc.abstractproperty</code>, 및 <code>abc.abstractclassmethod</code> 데코레이터의 사용 사례를 강조 표시합니다.</p>
-<p><b>예:</b></p>
+<p>Informa sobre el uso de funciones o métodos de Python marcados como obsoletos y que generan la advertencia <code>DeprecationWarning</code> o <code>PendingDeprecationWarning</code>.</p>
+<p>También este análisis destaca los usos de los decoradores <code>abc.abstractstaticmethod</code>, <code>abc.abstractproperty</code> y <code>abc.abstractclassmethod</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 class Foo:
     @property
     def bar(self):
         import warnings
-        warnings.warn("this is deprecated", DeprecationWarning, 2)
+        warnings.warn("esto ha quedado obsoleto", DeprecationWarning, 2)
         return 5
 
 

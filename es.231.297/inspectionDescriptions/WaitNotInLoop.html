@@ -1,12 +1,12 @@
 <html>
 <body>
-루프 내부에서 이루어지지 않는 <code>wait()</code> 호출을 보고합니다.
+Se informa sobre llamadas de `wait()` que no se realizan dentro de un bucle.
 <p>
-  <code>wait()</code>는 보통 어떤 조건이 true가 될 때까지 스레드를 중지하기 위해 사용됩니다.
-  스레드가 다른 이유로 깨어났을 수 있으므로 <code>wait()</code> 호출이 반환된 후 조건을 검사해야 합니다.
-  루프는 이를 위한 간단한 방법입니다.
+  <code>wait()</code> se utiliza normalmente para pausar un hilo hasta que se cumpla una condición.
+  Como un hilo puede despertarse por otras razones, la condición debe comprobarse tras el regreso de la llamada a <code>wait()</code>.
+  Una forma sencilla de implementarlo es mediante un bucle.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class BoundedCounter {
     private int count;
@@ -16,7 +16,7 @@
     }
   }
 </code></pre>
-<p>좋은 코드는 다음과 같을 것입니다.</p>
+<p>El código adecuado sería:</p>
 <pre><code>
   class BoundedCounter {
     private int count;

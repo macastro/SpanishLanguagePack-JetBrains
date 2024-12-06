@@ -1,15 +1,15 @@
 <html>
 <body>
-static 및 final로 선언되지 않은 클래스의 로거 필드를 보고합니다.
-각 클래스 로거가 사실상 상수이고 해당 클래스에 바운딩되도록 하면 애플리케이션에 대한 통합 로깅 구현을 제공하는 작업을 단순화할 수 있습니다. 이 검사는 인터페이스, 열거형, 어노테이션 및 내부 클래스를 보고하지 않습니다.
-<p>로거 제어자를 <code>static final</code>로 변경하기 위한 빠른 수정이 제공됩니다.</p>
-<p><b>예:</b></p>
+Informa de campos de registro que no se declaran <code>static</code> o <code>final</code>.
+Asegurarse de que cada registrador de clase es efectivamente constante y está vinculado a dicha clase simplifica la tarea de proporcionar una implementación de registro unificada para una aplicación.
+<p>Se proporciona una corrección rápida para cambiar los modificadores de registro a <code>static final</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   <b>public class</b> Significant {
     <b>private</b> Logger LOG = Logger.getLogger(Critical.class);
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   <b>public class</b> Significant {
     <b>private static final</b> Logger LOG = Logger.getLogger(Critical.class);
@@ -17,11 +17,11 @@ static 및 final로 선언되지 않은 클래스의 로거 필드를 보고합�
 </code></pre>
 <!-- tooltip end -->
 <p>
-  검사 구성:
+  Configurar la inspección:
 </p>
 <ul>
-  <li><b>로거 클래스 이름</b> 필드를 사용하여, 로거 클래스 이름을 지정합니다. 이 검사는 <code>static</code> 및 <code>final</code>이 아니고, 지정된 클래스 이름 중 하나와 같은 타입인 필드를 보고합니다.
- </li>
+  <li>Usa la tabla <b>Nombre de clase de registro</b> para especificar los nombres de clase de registro. La inspección informará sobre los campos que no son <code>static</code> y <code>final</code> y que son de un tipo igual a uno de los nombres de clase especificados.
+  </li>
 </ul>
 </body>
 </html>

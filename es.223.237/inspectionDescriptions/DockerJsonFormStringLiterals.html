@@ -1,20 +1,20 @@
 <html>
 <body>
 <p>
-  JSON 배열 양식에서 홑따옴표로 둘러싸인 스트링을 보고합니다.
+  Informa de una cadena con comillas simples en un formato de arreglo JSON.
 </p>
 <p>
-  JSON 배열 양식은 반드시 홑따옴표(')가 아닌쌍따옴표(")로 단어를 둘러싸야 합니다. 그렇지 않으면 Docker 빌드는 실패합니다.
+  El formato de arreglo JSON debe usar comillas dobles (") alrededor de las palabras, no comillas simples ('). De lo contrario, la compilación de Docker fallará.
 </p>
 <!-- tooltip end -->
-<p><b>예:</b></p>
+<p><b>Ejemplos:</b></p>
 <pre><code>
-  # 아래 명령어 모두 실패함
+  # todos los siguientes comandos fallarán.
   RUN ['/bin/bash', '-c', 'echo hello']
   ADD ['binaryA.jar', 'binary2.jar', 'destination/']
   COPY ['binaryA.jar', 'binary2.jar', 'destination/']
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   RUN ["/bin/bash", "-c", "echo hello"]
   ADD ["binaryA.jar", "binary2.jar", "destination/"]

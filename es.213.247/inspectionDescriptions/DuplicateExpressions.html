@@ -1,19 +1,26 @@
 <html>
 <body>
-표현식의 결과를 다시 사용할 수 있는 경우 메서드(또는 생성자, 클래스 이니셜라이저) 내에서 찾은 동일 표현식의 여러 위치를 보고합니다.
+Inspecciona en un método (o constructor, o inicializador de clase) múltiples ocurrencias equivalentes de la misma expresión, si el resultado de la expresión se puede reutilizar.
 <p>
-  표현식에 부수 효과가 없으며 <code>Object.equals()</code>에서 결과가 항상 동일한 경우 해당 표현식이 보고됩니다.
-  이러한 표현식의 예시는 <code>a + b</code>, <code>Math.max(a, b)</code>, <code>a.equals(b)</code>,
-  <code>s.substring(a,b)</code>입니다. 결과가 항상 동일한지 확인하기 위해, 표현식에 사용된 변수가 표현식의 찾은 항목 간의 값을 변경하지 않는지 검증됩니다.</p>
+  La expresión está informada si esta libre de efectos secundarios y su resultado es siempre el mismo (en términos de <code>Object.equals()</code>).
+  Ejemplos de tales expresiones son <code>a + b</code>, <code>Math.max(a, b)</code>, <code>a.equals(b)</code>,
+  <code>s.substring(a,b)</code>. Para asegurarse de que el resultado es siempre el mismo, se verifica que las variables usadas en la expresión no
+  cambian sus valores entre las ocurrencias de la expresión.</p>
 <p>
-  이러한 표현식에는 <code>String</code>, <code>BigDecimal</code>과 같은 불변 클래스의 메서드 및  <code>Objects</code>, <code>Math</code>(<code>random()</code> 제외) 등의 유틸리티 클래스가 포함될 수 있습니다.
-  <code>Object.equals()</code>, <code>Object.hashCode()</code>, <code>Object.toString()</code>,
-  <code>Comparable.compareTo()</code> 및 <code>Comparator.compare()</code>처럼 잘 알려진 메서드 역시 일반적으로 눈에 띄는 부수 효과가 없으므로 적합합니다.
+  Tales expresiones puede contener métodos de clases inmutables como <code>String</code>, <code>BigDecimal</code>, y así,
+  y de clases de utilidades como <code>Objects</code>, <code>Math</code> (excepto <code>random()</code>).
+  También están bien los métodos bien conocidos como <code>Object.equals()</code>, <code>Object.hashCode()</code>, <code>Object.toString()</code>,
+  <code>Comparable.compareTo()</code>, y <code>Comparator.compare()</code> porque normalmente no presentan
+  efectos secundarios observables.
 </p>
 <!-- tooltip end -->
 <p>
-  <b>표현식 복잡성 임계값</b> 옵션을 사용하여 표현식 복잡성의 최소 임계값을 지정합니다. 숫자를 더 크게 지정하면 짧은 표현식에 대한 보고가 제거됩니다.
+  Usa la opción <b>Umbral de complejidad de la expresión</b> para especificar el umbral de complejidad de expresión mínima. Especificar números más grandes eliminará informes de expresiones cortas.
 </p>
-<p><small>2018.3의 새로운 기능</small></p>
+<p>
+  Las llamadas <code>Path.of</code> y <code>Paths.get</code> se tratan como llamadas equivalentes si tienen los mismos argumentos. Estas llamadas
+  siempre se informan sin importante lo complejas que sean sus argumentos. Este comportamiento se puede ajustar usando un umbral de complejidad diferente.
+</p>
+<p><small>Nuevo en 2018.3</small></p>
 </body>
 </html>

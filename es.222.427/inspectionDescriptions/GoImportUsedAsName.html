@@ -16,9 +16,9 @@
 
 <html>
 <body>
-사용된 가져오기와 겹치는 변수, 인수 또는 함수 선언을 보고합니다.
-<p>이러한 선언은 허용되긴 하지만 이러한 선언은 패키지에서 내보낸 식별자를 선언한 다음 또는 생성한 다음에 사용하는 것을 불가능하게 하여 코드를 읽을 때 혼란을 야기합니다.</p>
-<p>예:</p>
+Informa declaraciones de variables, argumentos o funciones que se sobreponen con la importación utilizada.
+<p>Aunque es legal, tales declaraciones harán imposible el uso de los identificadores exportados del paquete después de la declaración o crearán confusión al leer el código.</p>
+<p>Ejemplo:</p>
 <pre><code>import "fmt"
 import _ "fmt"
 import iio "io"
@@ -41,6 +41,6 @@ func _() {
  a, _ := demo()
  _ = a
 }</code></pre>
-<p>변수 이름 <code>fmt</code> 및 <code>iio</code>가 가져오기된 패키지의 이름과 충돌합니다. 추후 코드에서 혼동되지 않도록 이러한 변수의 이름을 변경하는 것이 좋습니다.</p>
+<p>Los nombres de las variables <code>fmt</code> e <code>iio</code> entran en conflicto con los nombres de los paquetes de importación. Para no confundirlos más adelante en el código, es mejor renombrar estas variables.</p>
 </body>
 </html>

@@ -1,11 +1,11 @@
 <html>
 <body>
-<p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html">@DependsOn</a> 어노테이션의 <code>value</code> 매개변수에서 잘못된 bean 참조를 보고합니다.</p>
+<p>Informa de referencias de bean incorrectas en el parámetro de <code>value</code> de la anotación <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/DependsOn.html">@DependsOn</a>.</p>
 
-<p><b>예:</b></p>
-<pre><code>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
   @Component
-  @DependsOn("unknown")  // "'unknown' bean을 해결할 수 없음"을 보고함
+  @DependsOn("unknown")  // informa "No se puede resolver el bean 'unknown'"
   public class MyComponent {
   }
 </code></pre>

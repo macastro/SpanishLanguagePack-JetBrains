@@ -1,12 +1,12 @@
 <html>
 <body>
-레코드의 컴팩트 생성자 내의 메서드가 필드에 액세스하는 경우 해당 메서드의 호출을 보고합니다.
-<p>레코드 필드가 호출 시 초기화되지 않을 수 있으므로 의심스러운 호출입니다.</p>
-<p><b>예:</b></p>
+Se notifica cuando en un constructor compacto de un registro, las llamadas a los métodos acceden a los campos.
+<p>Estas invocaciones parecen sospechosas porque los campos del registro pueden no estar inicializados en el momento de estas invocaciones.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 public record MyRecord(String name, int id) {
     public MyRecord {
-        validateMyFields(); // 의심스럽습니다
+        validateMyFields(); // Parece sospechoso
     }
 
     private void validateMyFields() {
@@ -17,6 +17,6 @@ public record MyRecord(String name, int id) {
 }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2024.1의 새로운 기능</small></p>
+<p><small>Nuevo en 2024.1</small></p>
 </body>
 </html>

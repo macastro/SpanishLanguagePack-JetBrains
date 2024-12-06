@@ -1,12 +1,12 @@
 <html>
 <body>
-잘못된 분산이 있는 상속 구문(상위 클래스 절, 셀프 타입 또는 포함 호출)에 사용되는 유형 인수를 보고합니다. 상속 구문에 전달된 유형 인수는 선언 유형 변수의 분산에서 일치해야 합니다.
-<p>예:</p>
+Reporta los argumentos de tipo utilizados en una declaración de herencia (una cláusula de superclase, auto-tipo, o una llamada de inclusión) que tienen varianzas incorrectas. Los argumentos de tipo pasados a una declaración de herencia deben coincidir en varianza con la variable de tipo declarante.
+<p>Ejemplo:</p>
 <pre><code>module Enumerable[unchecked out A]
 end
 
 class Example[in A]
-  # 클래스 'Example'의 반공변성 타입 변수 'A'가 공변성 인수로 사용됩니다
+  # Variable de tipo contravariante 'A' de la clase 'Example' usada como un argumento covariante
   include Enumerable[A]
 end</code></pre>
 </body>

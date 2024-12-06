@@ -1,16 +1,16 @@
 <html>
 <body>
-타입 매개변수 대신 <b>&lt;&gt;</b> 심볼 (다이아몬드) 이 사용된 제네릭 클래스의 인스턴스화를 보고합니다.
+Informa la instanciación de clases genéricas en las cuales se utiliza el símbolo <b>&lt;&gt;</b> (rombo) en lugar de los parámetros de tipo.
 
-<p>빠른 수정은 <b>&lt;&gt;</b> (다이아몬드) 를 명시적 타입 매개변수로 바꿉니다.</p>
-<p>예:</p>
+<p>La corrección rápida remplaza <b>&lt;&gt;</b> (rombo) con parámetros de tipo explícitos.</p>
+<p>Ejemplo:</p>
 <pre><code>List &lt;String&gt; list = new ArrayList&lt;&gt;()</code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>List &lt;String&gt; list = new ArrayList&lt;String&gt;()</code></pre>
 <!-- tooltip end -->
 <p>
-  <i>Diamond operation</i>은 Java 7에 등장했습니다.
-  이 검사는 이전 Java 버전과의 하위 호환성을 위해 다운그레이드하는 데 도움이 될 수 있습니다.
+  La <i>operación de rombo</i> apareció en Java 7.
+  Esta inspección puede ayudarte a degradar a una versión anterior de Java para compatibilidad hacia atrás.
 </p>
 </body>
 </html>

@@ -1,22 +1,24 @@
 <html>
 <body>
-<code>void</code>를 반환하는 생성자 및 메서드 끝에 위치한 <code>return</code> 문을 보고합니다. 이러한 구문은 불필요하며 안전하게 제거할 수 있습니다.
-<p>이 검사는 JSP 파일에서 보고하지 않습니다.
-<p>예:</p>
+Informa sobre las sentencias <code>return</code> al final de los constructores y métodos que devuelven
+<code>void</code>. Estas sentencias son redundantes y pueden eliminarse de forma segura.
+<p>Esta inspección no informa en archivos JSP.
+<p>Ejemplo:</p>
 <pre><code>
   <b>void</b> message() {
-    System.out.println("Hello World");
+    System.out.println("Hola Mundo");
     <b>return</b>;
   }
 </code></pre>
-<p>빠른 수정 적용 후:
+<p>Después de aplicar la corrección rápida:
 <pre><code>
   <b>void</b> message() {
-    System.out.println("Hello World");
+    System.out.println("Hola Mundo");
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-<code>else</code> 브랜치도 포함하는 <code>if</code> 문의 then 브랜치 내 <code>return</code> 문을 무시하려면 <b>'else' 브랜치가 있는 'if' 문의 then 브랜치에서 무시</b> 옵션을 사용하세요.
+Utilice la opción <b>Ignorar en el bloque then de la sentencia 'if' con un bloque 'else'</b> para ignorar las sentencias <code>return</code> en el bloque then de las sentencias <code>if</code>
+que también tienen un bloque <code>else</code>.
 </body>
 </html>

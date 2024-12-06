@@ -1,11 +1,11 @@
 <html>
 <body>
-무한으로 재귀하거나 예외를 던지는 메서드를 보고합니다.
-이 검사에서 보고되는 메서드는 올바로 완료되지 않습니다.
-<p><b>예:</b></p>
+Informa sobre métodos que deben recurrir infinitamente o lanzar una excepción.
+Los métodos informados por esta inspección no pudieron finalizar correctamente.
+<p><b>Ejemplo:</b></p>
 <pre>
 <code>
-// 이 함수는 항상 더 깊이 들어갑니다
+// esta función siempre se sumerge más profundamente
 def fibonacci(int n) {
   return fibonacci(n-1) + fibonacci(n-2)
 }

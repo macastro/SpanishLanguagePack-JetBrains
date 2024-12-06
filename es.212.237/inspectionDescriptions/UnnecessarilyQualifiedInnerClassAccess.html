@@ -1,15 +1,16 @@
 <html>
 <body>
-외부 클래스의 이름으로 불필요하게 한정되지 않는 내부 클래스의 참조를 보고합니다.
-<p>이 한정은 안전하게 제거할 수 있으며, 때로는 내부 클래스를 위한 import문을 추가합니다.</p>
-<p>예:</p>
+<strong>Inspecciona Clases Internas Calificadas Innecesariamente</strong>
+<p>Reporta toda referencia a clases internas que están calificadas innecesariamente con el nombre de la clase contenedora.</p>
+<p>Tal calificación se puede eliminar de forma segura, que a veces añade una importación para la clase interna.</p>
+<p>Ejemplo:</p>
 <pre><code>
   class X {
      X.Y foo;
      class Y{}
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class X {
      Y foo;
@@ -17,7 +18,7 @@
   }
 </code></pre>
 <!-- tooltip end -->
-<p><b>import 문이 필요한 참조 무시</b> 옵션을 사용하여 한정을 제거하여 import 문을 추가하는 내부 클래스 참조를 무시합니다.
+<p>Usa la opción <b>Ignorar referencias para las que se necesita una importación</b> para ignorar referencias a clases internas, donde eliminar la calificación añade una importación.
 <p>
 </body>
 </html>

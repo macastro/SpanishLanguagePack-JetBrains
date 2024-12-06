@@ -1,11 +1,11 @@
 <html>
 <body>
-호출 가능한 참조가 1개인 람다 식을 보고합니다.
-<p>중괄호를 소괄호로 바꾸지 않고 람다 식을 호출 가능한 참조로 대체하는 것은 일반적인 오류입니다.</p>
-<p><b>예:</b></p>
+Informa expresiones lambda con una referencia invocable.
+<p>Es un error común reemplazar una lambda con una referencia invocable sin cambiar las llaves por paréntesis.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>  listOf(1,2,3).map { it::toString }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>  listOf(1,2,3).map(Int::toString)
 </code></pre>
 </body>

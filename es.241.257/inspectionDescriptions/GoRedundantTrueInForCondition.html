@@ -1,14 +1,14 @@
 <html>
 <body>
-<code>for</code> 루프 조건에서 불필요한 <code>true</code> 리터럴을 보고합니다.
+Reporta el literal <code>true</code> redundante en la condición de bucle <code>for</code>.
 
-<p>Go에서 <code>for</code> 루프는 묵시적 조건이 있는 형식입니다.
-  <code>for { }</code>를 작성하여 무한 루프를 생성할 수도 있습니다.
-  따라서 <code>true</code> 조건(<code>for true { }</code>)이 있는 경우, <code>true</code>가 불필요한 것으로 간주되며 생략될 수 있습니다.</p>
+<p>En Go, el bucle <code>for</code> tiene una forma con una condición implícita.
+  Esto significa que puedes crear un bucle infinito escribiendo <code>for { }</code>.
+  Por lo tanto, en casos con la condición <code>true</code> (<code>for true { }</code>), <code>true</code> es considerado redundante y se puede omitir.</p>
 
-<p>Go의 <code>for</code> 루프에 관한 자세한 내용은 <a href="https://go.dev/doc/effective_go#for">go.dev의 For</a>를 참조하세요.
+<p>Para más información sobre el bucle <code>for</code> en Go, consulta <a href="https://go.dev/doc/effective_go#for">For en go.dev</a>.
 </p>
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>for true {
   println("ping")
 }</code></pre>

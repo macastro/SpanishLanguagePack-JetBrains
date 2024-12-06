@@ -1,10 +1,10 @@
 <html>
 <body>
-<p>Reports transform operations that called on <code>Mono with Void value</code> inside a Reactive Stream chain.</p>
+<p>Reactive Stream 체인에서 <code>Void 값이 있는 Mono</code>에 호출된 변환 연산자를 보고합니다.</p>
 
 <p>
-  Reactive Streams chain calls on Mono with Void value will not have any effect.
-  The quick-fix suggests replacing <code>map(), flatMap()</code> with <code>then()</code>, which returns other Mono.
+  Void 값이 있는 Mono에 대한 Reactive Streams 체인 호출은 효과가 없습니다.
+  빠른 수정에서는 <code>map(), flatMap()</code>을 다른 Mono를 반환하는 <code>then()</code>으로 바꾸도록 제안합니다.
 </p>
 
 <p><b>예:</b></p>

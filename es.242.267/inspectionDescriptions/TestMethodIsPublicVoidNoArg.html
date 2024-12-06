@@ -1,15 +1,15 @@
 <html>
 <body>
-<code>static</code>으로 선언되거나 <code>public</code>으로 선언되지 않거나 <code>void</code>를 반환하지 않거나 매개변수가 있는 JUnit 테스트 메서드를 보고합니다.
-그러한 테스트 메서드는 실수로 생성되기 쉬우며, JUnit 테스트 러너로 실행되지 않습니다.
-<p><b>예:</b></p>
+Informar de cualquier método de prueba de JUnit declarado como <code>static</code>, no declarado como <code>public</code>, que no devuelva <code>void</code> o que tenga parámetros formales.
+Estos métodos de prueba pueden crearse fácilmente por error, pero el ejecutor de pruebas de JUnit no los ejecutará.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   @Test
   void test() {
     assertEquals(1, 1);
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   @Test
   public void test() {
@@ -18,8 +18,8 @@
 </code></pre>
 <!-- tooltip end -->
 
-<p>검사 옵션을 사용하여 어노테이션을 지정합니다.
-  해당 어노테이션 중 하나가 추가된 매개변수는 보고되지 않습니다.
+Puede especificar anotaciones mediante las opciones de la inspección.
+No se informará de parámetros formales que tengan anotaciones con una de estas anotaciones.
 <p>
 </body>
 </html>

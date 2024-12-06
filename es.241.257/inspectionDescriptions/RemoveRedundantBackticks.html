@@ -1,21 +1,23 @@
 <html>
 <body>
-참조에서 불필요한 백틱을 보고합니다.
+Informa sobre las comillas simples redundantes en las referencias.
 <p>
-    예를 들어 <code>in</code>, <code>object</code>, <code>is</code> 같은 일부 Kotlin 키워드는 Java에서 유효한 식별자입니다.
-    Java 라이브러리에서 Kotlin 키워드를 메서드에 사용하더라도 예를 들어 <code>foo.'is'(bar)</code> 같은 백틱 문자(<code>'</code>)를 사용해 이스케이프하여 메서드를 호출할 수 있습니다.
-    이러한 이스케이프는 불필요할 때가 많으며 안전하게 생략할 수 있습니다. 검사는 그러한 경우를 발견하고 보고하며 강조 표시한 코드를 수정할 수 있는 '불필요한 백틱 제거' 빠른 수정이 함께 제공됩니다.
+    Algunas de las palabras clave de Kotlin son identificadores válidos en Java, por ejemplo: <code>in</code>, <code>object</code>, <code>is</code>.
+    Si una biblioteca de Java utiliza una palabra clave de Kotlin para un método, puedes seguir llamando al método escapándolo
+    con la comilla simple (<code>`</code>), por ejemplo, <code>foo.`is`(bar)</code>.
+    A veces, este escape es redundante y puede omitirse de forma segura. La inspección descubre e informa de estos casos y está
+    emparejada con la solución rápida "Eliminar comillas simples redundantes", que te permite modificar el código resaltado.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplos:</b></p>
 <pre><code>
-  fun 'is'(x: String) {}
+  fun `is`(x: String) {}
   fun foo() {
-      'is'("bar") // 'is'가 키워드이므로 백틱이 필요함
+      `is`("bar") // 'is' es una palabra clave, se requieren comillas simples
   }
 
-  fun 'test that smth works as designed'() {} // 문제 없음. 가독성을 개선할 수 있는 복잡한 식별자
+  fun `test that smth works as designed`() {} // OK, identificador complejo para mejorar la legibilidad
 
-  val 'a' = 1  // 백틱이 필요 없음
+  val `a` = 1  // no es necesario usar comillas simples
 </code></pre>
 </body>
 </html>

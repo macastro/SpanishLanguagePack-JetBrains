@@ -1,10 +1,10 @@
 <html>
 <body>
-중첩 삼항 연산자를 보고합니다. 중첩 상항 연산자는 읽기 어려울 수 있으며 대신 최소 하나의 <code>if</code> 문을 사용하는 것이 보통 더 좋습니다.
-<p>예:</p>
+Reporta operadores ternarios anidados. Los operadores ternarios anidados pueden ser difíciles de leer, y a menudo es preferible utilizar al menos una declaración <code>if</code> en su lugar.
+<p>Ejemplo:</p>
 <p><code>min = x &lt; y ? (x &lt; z ? x : z) : (y &lt; z ? y : z)</code></p>
 
-빠른 수정이 적용된 후 결과는 다음과 같습니다:
+Después de aplicar la corrección rápida, el resultado se verá así:
 
 <pre>
 <code>min = if x &lt; y
@@ -13,7 +13,7 @@ else
   y &lt; z ? y : z
 end</code>
 </pre>
-<p><span style="font-size: smaller;"><a href="https://github.com/rubocop-hq/ruby-style-guide#no-nested-ternary">'Ruby 스타일 가이드'</a> 참고</span>
+<p><span style="font-size: smaller;">Inspirado en <a href="https://github.com/rubocop-hq/ruby-style-guide#no-nested-ternary">'Ruby Style Guide'</a></span>
 </p>
 </body>
 </html>

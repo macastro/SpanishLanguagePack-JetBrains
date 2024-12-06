@@ -1,12 +1,12 @@
 <html>
 <body>
-동일한 <code>then</code> 브랜치와 <code>else</code> 브랜치를 가진 조건식을 보고합니다.
-<p>이러한 표현식은 거의 확실히 버그를 나타냅니다. 이 검사는 조건식을 접는 수정을 제공합니다.</p>
-<p>예:</p>
+Informa sobre expresiones condicionales con ramas <code>then</code> y <code>else</code> idénticas.
+<p>Estas expresiones indican casi con toda seguridad errores. La inspección ofrece una corrección que colapsa expresiones condicionales.</p>
+<p>Ejemplo:</p>
 <pre><code>
   int y = x == 10 ? 4 : 4;
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   int y = 4;
 </code></pre>

@@ -1,15 +1,13 @@
 <html>
 <body>
-vararg 매개변수 위치에 호출이 <code>null</code> 또는 vararg 매개변수의 하위 타입 배열인 하나의 인수를 가지는 vararg 메서드 호출을 보고합니다.
-이러한 인수는 vararg 호출 또는 vararg가 아닌 호출 중 어느 것이 기대되는지 명확하지 않아 혼란을 야기할 수 있습니다.
-<p><b>예:</b></p>
-<pre>
-  <code>
+Reporta llamadas a métodos de aridad variable que tienen un solo argumento (ya sea <code>null</code> o un arreglo de un subtipo del parámetro de aridad variable) en la posición del parámetro de aridad variable.
+Tales argumentos pueden resultar confusos, ya que no está claro si se pretende realizar una llamada de argumento variable o no variable.
+<p><b>Ejemplo:</b></p>
+<pre><code>
   String[] ss = new String[]{"foo", "bar"};
   System.out.printf("%s", ss);
- </code>
-</pre>
-<p>이 예시에서 첫 번째 배열 요소만 출력됩니다.</p>
+</code></pre>
+<p>En este ejemplo, solo se imprimirá el primer elemento del arreglo, no todo el arreglo.</p>
 <!-- tooltip end -->
 
 </body>

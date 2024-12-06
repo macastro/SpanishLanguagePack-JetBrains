@@ -1,20 +1,20 @@
 <html>
 <body>
-오른쪽 피연산자의 타입이 변수 타입과 호환되지 않아 대입할 수 없는 복합 대입을 보고합니다.
+Reporta asignaciones compuestas si el tipo del operando de la derecha no es compatible con el tipo de la variable.
 <p>
-이러한 복합 대입 중에는 묵시적인 형 변환이 발생하여 손실 변환이 일어날 수 있습니다.
+Durante dichas asignaciones compuestas, ocurre un casteo implícito, lo que puede resultar en conversiones con pérdida de datos.
 
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   long c = 1;
   c += 1.2;
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   long c = 1;
   c += (long) 1.2;
 </code></pre>
 <!-- tooltip end -->
-<p><small>2023.2의 새로운 기능</small></p>
+<p><small>Nuevo en 2023.2</small></p>
 </body>
 </html>

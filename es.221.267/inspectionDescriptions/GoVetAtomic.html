@@ -1,8 +1,11 @@
 <html>
 <body>
-<code>x = atomic.AddUint64(&x, 1)</code> 형식의 대입 구문을 보고합니다.
-<p>이러한 동작은 atomic이 아니며 이는 <code>sync/atomic</code> API의 일반적인 잘못된 사용 사례입니다. 이를 atomic으로 만들기 위해서는 직접 호출을 사용할 수 있도록 대입을 제거해야 합니다: <code>atomic.AddUint64(&x, 1)</code> 이 경우 <code>x</code>의 값은 주소에 의해 atomic하게 업데이트됩니다.</p>
-<p>예:</p>
+Reporta sentencias de asignación con el formato <code>x = atomic.AddUint64(&x, 1)</code>.
+<p>Este tipo de operaciones no son atómicas,
+y es un error común de la API <code>sync/atomic</code>. Para hacerlas atómicas, hay que quitar la asignación
+para utilizar una llamada directa: <code>atomic.AddUint64(&x, 1)</code>. En ese caso, el valor de <code>x</code> será actualizado
+atómicamente por dirección.</p>
+<p>Ejemplo:</p>
 <pre><code>import (
  "sync/atomic"
 )
@@ -11,9 +14,9 @@ type Counter uint64
 
 func AtomicTests() {
  x := uint64(1)
- x = atomic.AddUint64(&x, 1)         // ERROR "atomic 값에 대한 직접 대입"
- _, x = 10, atomic.AddUint64(&x, 1)  // ERROR "atomic 값에 대한 직접 대입"
- x, _ = atomic.AddUint64(&x, 1), 10  // ERROR "atomic 값에 대한 직접 대입"
+ x = atomic.AddUint64(&x, 1)         // ERROR "asignación a valor atómico"
+ _, x = 10, atomic.AddUint64(&x, 1)  // ERROR "asignación directa a valor atómico"
+ x, _ = atomic.AddUint64(&x, 1), 10  // ERROR "asignación directa a valor atómico"
 }</code></pre>
 </body>
 </html>

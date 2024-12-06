@@ -1,31 +1,35 @@
 <html>
 <body>
-조건이 모두 <code>instanceof</code> 표현식 또는 클래스 상등 표현식인 <code>if</code>-<code>else</code> 문의 체인을 보고합니다(예: <code>String.class</code>와 비교).
-일반적으로 해당 구문은 타입 테스트의 명시적 체인보다는 다형적 메서드 호출을 통해 타입 기반 디스패치가 수행되도록 지시하는 객체 지향 설계의 실패를 의미합니다.
-<p>예:</p>
+Se informa cualquier cadena de sentencias <code>if</code>-<code>else</code> cuyas condiciones sean todas expresiones <code>instanceof</code>
+o expresiones de igualdad de clases (por ejemplo, comparación con <code>String.class</code>).
+Estas construcciones usualmente indican un error en el diseño orientado a objetos que
+dicta que este despacho o direccionamiento basado en el tipo debe realizarse a través de llamadas polimórficas a métodos más que cadenas explícitas
+de pruebas de tipo.
+<p>Ejemplo:</p>
 <pre><code>
   double getArea(Shape shape) {
-    // 경고: 추상화에 실패했습니다.
-    // shape 인터페이스에서 getArea()
-    // 추상 메서드를 선언하고
-    // 모든 상속자에 구현하는 것이 좋습니다.
-    if (shape instanceof Point) {
+    // Advertencia: error de abstracción.
+    // Sería mejor declarar un método
+    // abstracto getArea() en la interfaz de
+    // de forma y implementarlo en cada clase
+    // heredada.
+    if (forma instanceof Point) {
       return 0;
     }
-    if (shape instanceof Circle) {
+    if (forma instanceof Circle) {
       return Math.PI *
-        Math.pow(((Circle) shape).radius(), 2);
+        Math.pow(((Circle) forma).radius(), 2);
     }
-    if (shape instanceof Rectangle) {
-      return ((Rectangle) shape).width() *
-        ((Rectangle) shape).height();
+    if (forma instanceof Rectangle) {
+      return ((Rectangle) forma).width() *
+        ((Rectangle) forma).height();
     }
     throw new IllegalArgumentException();
   }
 </code></pre>
 <!-- tooltip end -->
 <p>
-  하단의 체크박스를 사용하여 라이브러리 클래스의 <code>instanceof</code> 표현식을 무시할 수 있습니다.
+  Usa la casilla de verificación a continuación para ignorar expresiones <code>instanceof</code> en clases de biblioteca.
 <p>
 
 </body>

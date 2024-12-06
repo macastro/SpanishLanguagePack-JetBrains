@@ -1,10 +1,10 @@
 <html>
 <body>
-개선된 <code>switch</code> 문 또는 식으로 자동 대체 가능한 <code>switch</code> 문을 보고합니다.
-<p><b>예:</b></p>
+Informa las sentencias <code>switch</code> que se pueden reemplazar automáticamente con sentencias o expresiones <code>switch</code> mejoradas.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   double getPrice(String fruit) {
-    // Switch 문을 개선된 'switch'로 대체 가능합니다
+    // La sentencia switch se puede reemplazar con 'switch' mejorada
     switch (fruit) {
       case "Apple":
         return 1.0;
@@ -17,7 +17,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la revisión rápida:</p>
 <pre><code>
   double getPrice(String fruit) {
     return switch (fruit) {
@@ -32,12 +32,13 @@
 <p>
 <ul>
   <li>
-    <code>switch</code> 문으로 변환될 때 경고를 표시하지 않으려는 경우 <b>표현식으로 변환할 수 있을 때만 경고 표시</b> 옵션을 사용하세요.
+    Usa la opción <b>Mostrar advertencia solo si la conversión a expresión es posible</b> para no advertir sobre la conversión a sentencia <code>switch</code>.
   </li>
   <li>
-    표현식으로 변환 시에 각 브랜치의 구문 수가 설정된 수보다 적을 때만 경고를 표시하려는 경우 <b>한 브랜치 내에서 switch 식으로 변환할 최대 구문 수</b> 옵션을 사용하세요.
+    Usa la opción <b>Número máximo de sentencias en una rama para convertir a expresión switch</b> para advertir sobre la conversión a expresión solo
+    si cada rama tiene menos del número dado de sentencias.
   </li>
 </ul>
-<p><small>2019.1의 새로운 기능</small></p>
+<p><small>Nuevo en 2019.1</small></p>
 </body>
 </html>

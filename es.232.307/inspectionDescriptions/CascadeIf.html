@@ -1,22 +1,22 @@
 <html>
 <body>
-<code>when</code> 식으로 바꿀 수 있는 세 개 이상의 브랜치를 포함하는 <code>if</code> 문을 보고합니다.
-<p><b>예:</b></p>
+Informa si hay sentencias <code>if</code> con tres o más ramas que se pueden reemplazar por la expresión <code>when</code>.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun checkIdentifier(id: String) {
       fun Char.isIdentifierStart() = this in 'A'..'z'
       fun Char.isIdentifierPart() = isIdentifierStart() || this in '0'..'9'
 
       if (id.isEmpty()) {
-          print("Identifier is empty")
+          print("El identificador está vacío")
       } else if (!id.first().isIdentifierStart()) {
-          print("Identifier should start with a letter")
+          print("El identificador debe comenzar con una letra")
       } else if (!id.subSequence(1, id.length).all(Char::isIdentifierPart)) {
-          print("Identifier should contain only letters and numbers")
+          print("El identificador solo debe contener letras y números")
       }
   }
 </code></pre>
-<p>빠른 수정에서는 <code>if</code> 식을 <code>when</code> 식으로 변환합니다.</p>
+<p>La corrección rápida convierte la expresión <code>if</code> a <code>when</code>:</p>
 <pre><code>
   fun checkIdentifier(id: String) {
       fun Char.isIdentifierStart() = this in 'A'..'z'
@@ -24,13 +24,13 @@
 
       when {
           id.isEmpty() -> {
-              print("Identifier is empty")
+              print("El identificador está vacío")
           }
           !id.first().isIdentifierStart() -> {
-              print("Identifier should start with a letter")
+              print("El identificador debe comenzar con una letra")
           }
           !id.subSequence(1, id.length).all(Char::isIdentifierPart) -> {
-              print("Identifier should contain only letters and numbers")
+              print("El identificador solo debe contener letras y números")
           }
       }
   }

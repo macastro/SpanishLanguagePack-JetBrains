@@ -1,8 +1,8 @@
 <html>
 <body>
-쿼리 내 UNION의 유효하지 않은 사용 위치를 보고합니다.
-<p>이 검사는 MySQL 8.0 이전 버전에서 작동합니다.</p>
-<p>예(MySQL):</p>
+Reporta usos inválidos de UNION en consultas.
+<p>La inspección funciona en versiones de MySQL anteriores a la 8.0.</p>
+<p>Ejemplo (MySQL):</p>
 <pre><code lang="mysql">
 SELECT * FROM (SELECT 1 UNION (SELECT 1 UNION SELECT 2)) a;
 </code></pre>

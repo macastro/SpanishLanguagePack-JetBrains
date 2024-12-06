@@ -1,10 +1,10 @@
 <html>
 <body>
-호출이 선언하는 클래스 자신이 아니라 하위 클래스에 의해 정규화된 내부 클래스 및 중첩 클래스로의 액세스를 보고합니다.
+Informa sobre accesos a clases internas y anidadas en las que la llamada se califica mediante una subclase de la clase declarativa, en lugar de la propia clase declarativa.
 <p>
-  Java는 그러한 정규화를 허용하지만 그러한 액세스는 상속과 재정의가 미묘하게 혼동되고 있음을 나타낼 수 있습니다.
+  Java permite dicha calificación, pero dichos accesos pueden indicar una sutil confusión de herencia y anulación.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Super {
     static class Inner {}
@@ -12,11 +12,11 @@
 
   class Sub extends Super {
     void test() {
-      Sub.Inner s = new Sub.Inner(); // 'Inner' 클래스가 'Super' 클래스에서 선언되었으나 'Sub' 클래스를 통해 참조됩니다
+      Sub.Inner s = new Sub.Inner(); // La clase 'Inner' se declara en la clase 'Super', pero se referencia a través de la clase 'Sub'
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la revisión rápida:</p>
 <pre><code>
   class Super {
     static class Inner {}

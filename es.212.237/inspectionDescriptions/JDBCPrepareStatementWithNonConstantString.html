@@ -1,20 +1,20 @@
 <html>
 <body>
-동적 생성 문자열을 준비 쿼리로 간주하는 <code>java.sql.Connection.prepareStatement()</code>, <code>java.sql.Connection.prepareCall()</code> 또는 해당 변종 호출을 보고합니다.
+El inspector reporta llamadas a <code>java.sql.Connection.prepareStatement()</code>, <code>java.sql.Connection.prepareCall()</code> o sus diferentes variantes que reciben cadenas de caracteres construidas dinámicamente como la consulta a preparar.
 <p>
-  생성된 SQL 구문은 보안 위반의 일반적인 원인입니다. 기본적으로 이 검사는 컴파일 타임 상수를 무시합니다.
+  Las sentencias SQL construidas dinámicamente son una fuente común de vulnerabilidades de seguridad. Por defecto esta inspección ignora las constantes en tiempo de compilación.
 </p>
-<p><b>예:</b></p>
-<pre>
+<p><b>Ejemplo:</b></p>
+<pre><code>
   String bar() { return "bar"; }
 
   Connection connection = DriverManager.getConnection("", "", "");
   connection.("SELECT * FROM user WHERE name='" + bar() + "'");
-</pre>
+</code></pre>
 <!-- tooltip end -->
-검사 설정을 사용하여 모든 <code>static</code><code>final</code> 필드를 상수로 간주합니다. 이 옵션이 활성화되면 다음과 같은 문자열은 무시되므로 주의하세요.
-<pre>
+Usa las configuraciones de inspección para que se consideren como constantes todos los campos <code>static</code> <code>final</code>. Ten cuidado que al habilitar esta opción, se ignorarán cadenas de caracteres como la siguiente:
+<pre><code>
   static final String SQL = "SELECT * FROM user WHERE name='" + getUserInput() + "'";
-</pre>
+</code></pre>
 </body>
 </html>

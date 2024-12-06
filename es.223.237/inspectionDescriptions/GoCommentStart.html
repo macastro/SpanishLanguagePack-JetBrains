@@ -16,16 +16,16 @@
 
 <html>
 <body>
-내보내기된 요소의 이름으로 시작하지 않는 주석을 보고합니다.
-<p><a href="https://golang.org/wiki/CodeReviewComments#comment-sentences">golang.org의 Comment Sentences</a>에 따르면 이는 내보내기된 요소의 이름으로 주석을 시작하도록 협의된 규칙입니다.</p>
-<p>예:</p>
-<pre><code>// 명령 실행 요청을 나타냅니다.
+Reporta comentarios que no comienzan con el nombre del elemento exportado.
+<p>De acuerdo con <a href="https://github.com/golang/go/wiki/CodeReviewComments#comment-sentences">Comment Sentences en github.com/golang</a>, esta es una convención para empezar un comentario con el nombre del elemento exportado.</p>
+<p>Ejemplo:</p>
+<pre><code>// representa una solicitud para ejecutar un comando.
 type Request struct {}</code></pre>
 
-<p>주석이 구조체 이름이 아닌 구조체에 대한 설명으로 시작합니다. 협의된 규칙을 따르려면, <b>주석에 접두사 추가</b> 빠른 수정을 적용하세요. 빠른 수정이 적용된 후 주석은 다음과 같습니다:</p>
+<p>El comentario comienza con la descripción de la estructura, no con el nombre de la estructura. Para cumplir con las reglas de la convención, puedes aplicar el quick-fix <b>Añadir prefijo al comentario</b>. Después de aplicar el quick-fix, el comentario se ve como sigue:</p>
 <pre>
-// Request는 명령 실행 요청을 나타냅니다.
-type Request struct {} // 개선됨
+// Request representa una solicitud para ejecutar un comando.
+type Request struct {} // mejor
 </pre>
 </body>
 </html>

@@ -1,24 +1,25 @@
 <html>
 <body>
-메모리 누수가 발생하는 참조를 캡처하는 <code>Cleaner.register()</code>에 전달된 <code>Runnable</code>을 보고합니다.
-<p>이 문제의 가능한 원인은 다음과 같습니다.</p>
+<p>Se reportan los <code>Runnable</code> pasados a un <code>Cleaner.register()</code> que capturan la referencia que se está registrando.
+Si se captura la referencia, nunca será accesible fantasma y nunca se invocará la acción de limpieza.
+<p>Posibles fuentes de este problema:</p>
 <ul>
-  <li>static이 아닌 메서드, 필드 또는 <code>this</code> 자체를 사용하는 람다</li>
-  <li>static이 아닌 내부 클래스(익명 여부 무관)가 항상 this 참조를 캡처하는 경우</li>
-  <li>인스턴스 메서드 참조</li>
-  <li>static이 아닌 내부 클래스에서 외부 클래스의 static이 아닌 멤버로 액세스하는 경우</li>
+  <li>Lambdas que usan métodos no estáticos, campos o <code>this</code> mismos</li>
+  <li>Clase interna no estática (anónima o no) que siempre captura esta referencia en Java hasta la versión 18</li>
+  <li>Referencia de método de instancia</li>
+  <li>Acceso a miembros no estáticos de la clase externa desde la clase interna no estática</li>
 </ul>
 <!-- tooltip end -->
-<p>보고되는 코드 샘플: </p>
+<p>Ejemplo de código que se reportará: </p>
 <pre><code>
   int fileDescriptor;
   Cleaner.Cleanable cleanable = Cleaner.create().register(this, () -> {
     System.out.println("adsad");
-    //<i>this</i>는 <i>fileDescriptor</i>를 통해 캡처됩니다
+    //<i>this</i> se captura a través de <i>fileDescriptor</i>
     fileDescriptor = 0;
   });
 </code></pre>
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 9 이상인 경우에만 보고합니다.</p>
-<p><small>2018.1의 새로운 기능</small></p>
+<p>Esta inspección solo se reporta si el nivel de lenguaje del proyecto o módulo es 9 o superior.</p>
+<p><small>Nuevo en 2018.1</small></p>
 </body>
 </html>

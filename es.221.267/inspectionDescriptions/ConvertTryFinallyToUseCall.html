@@ -1,10 +1,10 @@
 <html>
 <body>
-<code>resource.use()</code> 호출로 변환할 수 있는 <code>finally</code> 내의 <code>resource.close()</code>를 포함하는 <code>try-finally</code> 블록을 보고합니다.
-<p><code>use()</code>는 명시적인 <code>close()</code> 호출이 필요하지 않으므로 가독성이 더 높고 오류가 발생할 확률도 더 낮습니다.</p>
-<p><b>예:</b></p>
+Informa de un bloque <code>try-finally</code> con <code>resource.close()</code> en <code>finally</code> que puede convertirse en una llamada a <code>resource.use()</code>.
+<p><code>use()</code> es más fácil de leer y menos propenso a errores, ya que no es necesario realizar una llamada explícita a <code>close()</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  fun example() {
+  fun ejemplo() {
       val reader = File("file.txt").bufferedReader()
       try {
           reader.lineSequence().forEach(::print)
@@ -13,9 +13,9 @@
       }
   }
 </code></pre>
-<p>빠른 수정이 적용된 후:</p>
+<p>Tras la aplicación de la corrección rápida:</p>
 <pre><code>
-  fun example() {
+  fun ejemplo() {
       File("file.txt").bufferedReader().use { reader ->
           reader.lineSequence().forEach(::print)
       }

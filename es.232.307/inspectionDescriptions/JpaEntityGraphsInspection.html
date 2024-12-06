@@ -1,13 +1,13 @@
 <html>
 <body>
-EntityGraph 관련 어노테이션 내부의 다음과 같은 해결되지 않은 속성을 보고합니다:<br/>
+Informa de los siguientes atributos no resueltos en las anotaciones relacionadas con EntityGraph:<br/>
 <ul>
-  <li> <code>@NamedAttributeNode</code> 내 value</li>
-  <li> <code>@NamedAttributeNode</code> 내 명명된 하위 그래프</li>
-  <li> <code>@NamedEntityGraph</code> 내 name</li>
+  <li> Valor en <code>@NamedAttributeNode</code></li>
+  <li> Subgrafo de nombre en <code>@NamedAttributeNode</code></li>
+  <li> Nombre en <code>@NamedEntityGraph</code></li>
 </ul><br/>
 
-<p><b>예:</b></p><br/>
+<p><b>Ejemplo:</b></p><br/>
 <pre><code lang="java">
   @Entity
   @NamedEntityGraph(name = "entity-graph", ...)
@@ -15,7 +15,7 @@ EntityGraph 관련 어노테이션 내부의 다음과 같은 해결되지 않�
     public void foo() {
       Persistence.createEntityManagerFactory("")
         .createEntityManager()
-        .getEntityGraph("unknown-entity-graph"); // 해결되지 않은 참조
+        .getEntityGraph("unknown-entity-graph"); // referencia no resuelta
     }
   }
 </code></pre>

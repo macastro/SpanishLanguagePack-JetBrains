@@ -1,21 +1,22 @@
 <html>
 <body>
-문자열 비교를 위해 <b>==</b> 또는 <b>!=</b>를 사용하는 코드를 보고합니다.
+Inspecciona el código que usa <b>==</b> o <b>!=</b> para comparar cadenas.
 <p>
-  이 연산자는 내용을 비교하지 않고 참조 상등 관계를 판단합니다.
-  대부분의 경우 문자열은 <code>equals()</code>를 사용하여 비교해야 합니다. 이 연산자는 문자열이 각기 다른 객체인 경우 각 문자별 비교를 수행합니다.</p>
-<p><b>예:</b></p>
-<pre>
+  Estos operadores determinan igualdad referencial en lugar de comparar contenido.
+  En la mayoría de los casos, las cadenas deberían compararse usando <code>equals()</code>,
+  lo que realiza una comparación carácter a carácter cuando las cadenas son objetos diferentes.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
   void foo(String s, String t) {
     final boolean b = t == s;
   }
-</pre>
-<p><code>t</code>가 null이 아닌 것으로 알려진 경우 "안전하지 않은" 빠른 수정을 적용하여 다음과 비슷한 결과를 얻는 것이 안전합니다.</p>
-<pre>
+</code></pre>
+<p>Si se sabe que <code>t</code> no es null, entonces es seguro aplicar la revisión rápida "insegura" y obtener un resultado similar al siguiente:</p>
+<pre><code>
   void foo(String s, String t) {
     final boolean b = t.equals(s);
   }
-</pre>
+</code></pre>
 
 <!-- tooltip end -->
 <p>

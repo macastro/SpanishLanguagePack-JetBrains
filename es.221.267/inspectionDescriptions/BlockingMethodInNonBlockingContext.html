@@ -1,36 +1,36 @@
 <html>
 <body>
-스레드가 차단되어서는 안 되는 코드 조각에서 스레드를 차단하는 메서드 호출을 보고합니다.
+Informa de las llamadas de métodos que bloquean subprocesos en fragmentos de código donde no deberían bloquearse subprocesos.
 
-<p><b>예(프로젝트 Reactor):</b></p>
-<pre><code>
+<p><b>Ejemplo (Project Reactor): </b></p>
+<pre><code lang="java">
 Flux.just("1").flatMap(f -&gt; {
     Flux&lt;String&gt; just = loadUsersFromDatabase();
-    just.toIterable(); // 오류: 비 블로킹 범위에서의 블로킹 연산자 호출
+    just.toIterable(); // Error: llamada a operador de bloqueo en ámbito no bloqueante
     return just;
   }
 );
 </code></pre>
 
-<p><code>Schedulers.boundedElastic()</code>과 같은 <a href="https://projectreactor.io/docs/core/release/reference/#faq.wrap-blocking">적절한 스케줄러</a>로 블로킹 코드를 실행하거나 다른 비 블로킹 API를 찾아보세요.</p>
+<p>Considera ejecutar código de bloqueo <a href="https://projectreactor.io/docs/core/release/reference/#faq.wrap-blocking">con un planificador adecuado</a>, por ejemplo <code>Schedulers.boundedElastic()</code>, o intenta encontrar una API no bloqueante alternativa.</p>
 
 <br/>
 
-<p><b>예(Kotlin 코루틴):</b></p>
-<pre><code>
+<p><b>Ejemplo (Kotlin Coroutines):</b></p>
+<pre><code lang="kotlin">
 suspend fun exampleFun() {
-    Thread.sleep(100); // 오류: suspend 함수 내 블로킹 메서드 호출
+    Thread.sleep(100); // Error: llamada a método de bloqueo dentro de función suspendida
 }
 </code></pre>
 
-<p><code>Dispatchers.IO</code>과 같은 <a href="https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html">특별한 디스패처</a>로 블로킹 코드를 실행하거나 다른 비 블로킹 API를 찾아보세요.</p>
+<p>Considera ejecutar código de bloqueo <a href="https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html">con un despachador especial</a>, por ejemplo <code>Dispatchers.IO</code>, o intenta encontrar una API no bloqueante alternativa.</p>
 
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configura la inspección:</p>
 <ul>
-  <li><b>Blocking Annotations(차단 어노테이션)</b> 목록에서 스레드를 차단하는 메서드를 표시하는 어노테이션을 지정하세요.</li>
-  <li><b>Non-Blocking Annotations(비 Blocking 어노테이션)</b> 목록에서 비 blocking 메서드를 표시하는 어노테이션을 지정하세요.</li>
+  <li>En la lista <b>Anotaciones de bloqueo</b>, especifica anotaciones que marcan métodos de bloqueo de subprocesos.</li>
+  <li>En la lista <b>Anotaciones no bloqueantes</b>, especifica anotaciones que marcan métodos no bloqueantes.</li>
 </ul>
-<p>지정한 어노테이션은 <a href="https://www.jetbrains.com/help/idea/external-annotations.html">외부 어노테이션</a>으로 사용할 수 있습니다</p>
+<p>Las anotaciones especificadas pueden usarse como <a href="https://www.jetbrains.com/help/idea/external-annotations.html">anotaciones externas</a></p>
 </body>
 </html>

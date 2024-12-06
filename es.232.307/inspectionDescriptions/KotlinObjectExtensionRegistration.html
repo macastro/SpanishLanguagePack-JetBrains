@@ -1,29 +1,29 @@
 <html>
 <body>
-IntelliJ 플랫폼으로 인스턴스화되었지만 Kotlin 객체로 선언된 확장을 보고합니다.
+Se informa sobre las extensiones que se instancian mediante la plataforma IntelliJ pero que se declaran como objetos Kotlin.
 <p>
-  확장 수명 주기는 IntelliJ 플랫폼이 관리합니다.
-  확장 등록에 Kotlin 객체를 사용하면 불필요한 확장 인스턴스가 생성될 수 있으며 플러그인을 언로드하지 못하게 될 수도 있습니다.
+  El ciclo de vida de la extensión es administrado por la plataforma IntelliJ.
+  El uso de objetos Kotlin para el registro de extensión puede crear instancias de extensión innecesarias y puede impedir la descarga del complemento.
 </p>
-<h2>예</h2>
-<p>확장 등록:</p>
+<h2>Ejemplo</h2>
+<p>Registro de extensión:</p>
 <pre><code lang="xml">
 &lt;annotator language="myLang" implementationClass="com.example.MyAnnotator"/&gt;
 </code></pre>
 
-<p>확장 구현:</p>
+<p>Implementación de la extensión:</p>
 <pre><code lang="kotlin">
-// 나쁨:
+// No apropiado:
 object MyAnnotator : Annotator {
   ...
 }
 
-// 좋음:
+// Apropiado:
 class MyAnnotator : Annotator {
   ...
 }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2023.1의 새로운 기능</small>
+<p><small>Novedad en 2023.1</small>
 </body>
 </html>

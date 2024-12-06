@@ -1,45 +1,54 @@
-<html><body>
-안전하지 않은 문자열이 <code>org.checkerframework.checker.tainting.qual.Untainted</code> 어노테이션으로 표시된 매개변수를 가진 메서드로 전달되는 케이스를 보고합니다.
+<html>
+<body>
+Informa de los casos en que un objeto no seguro se pasa a un método con un parámetro marcado con anotaciones <code>@Untainted</code>, devuelto por los métodos anotados o asignado a los campos, parámetros o variables locales anotados. Los métodos Kotlin `establecer` y `obtener` para los campos no se admiten como puntos de entrada.
 <p>
-  안전한 문자열:
+  Un objeto seguro (en la misma clase) es:
 <ul>
-  <li><code>@Untainted</code>로 표시된 메서드 호출</li>
-  <li>안전하지 않은 메서드를 호출하지 않는 지역 변수 또는 메서드 매개변수</li>
-  <li><code>@Untainted</code>로 표시되며 안전하지 않은 메서드 호출이 할당되지 않은 필드, 지역 변수 또는 매개변수</li>
+  <li>un literal de cadena, instancia de interfaz u objeto de enumeración</li>
+  <li>un resultado de una llamada de un método que está marcado como <code>@Untainted</code></li>
+  <li>un campo privado, que se asigna solo con un literal de cadena y tiene un inicializador seguro</li>
+  <li>un campo final, que tiene un inicializador seguro</li>
+  <li>variable local o parámetro que está marcado como `@Untainted` y no se le asigna a partir de objetos no seguros.</li>
+  Este campo, variable local o parámetro no deben pasarse como argumentos a los métodos o usarse como calificador o deben ser primitivos, su contenedor o inmutables.
 </ul>
+También los campos estáticos finales se consideran seguros.
 <p>
-예:
+  El análisis se realiza solo dentro de un archivo. Para procesar dependencias de otras clases, utilice las opciones.
+  El análisis se amplía a los métodos privados o estáticos y tiene un límite de propagación de profundidad.
+<p>
+  Ejemplo:
 <pre>
-<code>
+<code lang="java">
   void doSmth(boolean b) {
     String s = safe();
     String s1 = "other";
     if (b) s1 = s;
     sink(s);
   }
-  
+
   String sink(@Untainted String s) {}
 </code>
 </pre>
 <p>
-여기에는 <code>s</code>로 할당된 안전하지 않은 문자열이 없어 경고가 생성되지 않았습니다. 반면:
+  Aquí no tenemos asignaciones de cadenas no seguras a <code>s</code>, por lo que no se produce una advertencia. Por otro lado:
 <pre>
-<code>
+<code lang="java">
   void doSmth(boolean b) {
     String s = safe();
     String s1 = "other";
     s1 = foo();
-    if (b) s1 = s;
-    sink(s);        // 여기서 경고
+    if (b) s = s1;
+    sink(s);        // aviso aquí
   }
-  
+
   String foo();
 
   String sink(@Untainted String s) {}
 </code>
 </pre>
 <p>
-여기서는 <code>foo</code> 호출 결과 할당 뒤에 있는 <code>s1</code>에 알 수 없는 상태가 있기 때문에 경고가 있습니다.
-<!-- tooltip end -->
-<p><small>2021.2의 새로운 기능</small></p>
-</body></html>
+  Aquí tenemos una advertencia ya que <code>s1</code> tiene un estado desconocido después de la asignación del resultado de la llamada <code>foo</code>.
+  <!-- tooltip end -->
+<p><small>Novedad en 2021.2</small></p>
+</body>
+</html>

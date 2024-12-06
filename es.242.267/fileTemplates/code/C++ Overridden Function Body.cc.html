@@ -3,8 +3,8 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      예를 들어 <b>Code(코드) | Override Methods(메서드 재정의)</b> 액션을 사용할 때 생성되는 재정의된 함수의 본문을 생성합니다.<br>
-      템플릿을 편집할 때 C++ 표현식, 주석 및 사전 정의된 다음 변수를 사용할 수 있습니다.</font>
+      Crea el cuerpo de una función sobrescrita cuando se genera, por ejemplo, usando la acción <b>Código | Sobrescribir Métodos</b>.<br>
+      Al editar la plantilla, puede usar expresiones de C++, comentarios y las siguientes variables predefinidas:</font>
     </td>
   </tr>
 </table>
@@ -12,24 +12,24 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1"><code>void</code> 함수에 대한 기본 함수 호출 — 매개변수가 있거나 없는 <code><b>BaseClass</b>::<i>functionName</i>()</code>
-    그 외 함수 - 매개변수가 있거나 없는 <code><b>return</b> <b>BaseClass</b>::<i>functionName</i>()</code>
+    <td width="100%" valign="top"><font face="verdana" size="-1">la llamada a la función base, para funciones <code>void</code> — <code><b>BaseClass</b>::<i>functionName</i>()</code> con o sin parámetros;
+    para otras funciones - <code><b>return</b> <b>BaseClass</b>::<i>functionName</i>()</code> con o sin parámetros.
     </font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">함수의 반환 타입입니다.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">el tipo de retorno de la función.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">함수의 디폴트 반환 값입니다.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">el valor de retorno por defecto de la función.</font></td>
   </tr>
   <tr>
-    <td colspan="3"><font face="verdana" size="-1"><b>C File Header</b> 템플릿(<b>Includes</b> 탭)의 모든 사전 정의된 변수도 사용 가능합니다
-      (예: <font face="verdana" size="-2"><b>${USER}</b></font> 및
-      <font face="verdana" size="-2"><b>${DATE}</b></font>)</font>
+    <td colspan="3"><font face="verdana" size="-1">Todas las variables predefinidas de la plantilla <b>Encabezado de archivo C</b> (la pestaña <b>Incluye</b>), como
+      <font face="verdana" size="-2"><b>${USER}</b></font> y
+      <font face="verdana" size="-2"><b>${DATE}</b></font>, también están disponibles.</font>
     </td>
   </tr>
 </table>

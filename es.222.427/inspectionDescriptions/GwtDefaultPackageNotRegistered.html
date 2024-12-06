@@ -1,9 +1,9 @@
 <html>
 <body>
-디폴트 <i>client</i> 또는 <i>public</i> 폴더를 등록하지 않으나 사용자 지정 소스 또는 public 폴더를 등록하는 GWT 모듈 설명자를 보고합니다.
-<p>GWT는 gwt.xml 파일에<code>source</code> 및 <code>super-source</code> 태그가 없는 경우에만 <i>client</i> 폴더를 묵시적으로 클라이언트 측의 소스 경로로 취급합니다.
-  따라서 <i>client</i> 폴더가 존재하지만 gwt.xml 파일에 등록되어 있지 않으며 gwt.xml이 사용자 지정 <code>source</code> 또는 <code>super-source</code> 태그를 선언하는 경우, 이는 거의 실수를 나타냅니다.</p>
-<p>비슷하게 gwt.xml가 사용자 지정 <i>public</i> 폴더를 선언하지만 디폴트 이름을 가진 기존 폴더를 등록하지 않는 경우, 이 역시 실수를 나타냅니다.</p>
-<p>빠른 수정은 gwt.xml 파일에 디폴트 폴더에 대한 명시적 등록을 추가합니다.</p>
+Reporta un descriptor de módulo GWT que no registra el directorio predeterminado <i>client</i> o <i>public</i>, pero sí registra un directorio fuente o público personalizado.
+<p>GWT solo trata implícitamente a la carpeta <i>client</i> como una ruta de origen del lado del cliente si el archivo gwt.xml no tiene las etiquetas <code>source</code> o <code>super-source</code>.
+  Por lo tanto, es probable que sea un error si el directorio <i>client</i> existe pero no está registrado en el archivo gwt.xml y ese archivo gwt.xml declara una etiqueta <code>source</code> o <code>super-source</code> personalizada.</p>
+<p>De manera similar, también puede ser un error si el archivo gwt.xml declara un directorio <i>public</i> personalizado, pero no registra una carpeta existente con el nombre predeterminado.</p>
+<p>Arreglo rápido agrega un registro explícito para la carpeta predeterminada en el archivo gwt.xml.</p>
 </body>
 </html>

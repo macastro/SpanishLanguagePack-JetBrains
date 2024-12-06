@@ -1,19 +1,21 @@
 <html>
 <body>
-<code>Boolean</code> 객체의 생성을 보고합니다.
+Informa la creación de objetos <code>Boolean</code>.
 <p>
-  <code>Boolean</code> 객체를 새롭게 생성하는 것은 거의 불필요하며,
-빈번히 생성할 경우 성능 문제가 발생할 수 있습니다. 또한 Java 9부터 <code>Boolean</code> 생성자가 사용되지 않으므로 이후 Java 버전에서는 제거되거나 액세스가 불가능할 수 있습니다.</p>
-<p><b>예:</b></p>
-<pre>
+  Rara vez es necesario construir nuevos objetos <code>Boolean</code>,
+  y puede ocasionar problemas de desempeño si se hace lo suficiente seguido. Además, los constructores de <code>Boolean</code>
+  están obsoletos desde Java 9 y podrían eliminarse o volverse
+  inaccecibles en futuras versiones de Java.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
   Boolean b1 = new Boolean(true);
   Boolean b2 = new Boolean(str);
-</pre>
-<p>빠른 수정 적용 후:</p>
-<pre>
+</code></pre>
+<p>Después de aplicar la reparación rápida:</p>
+<pre><code>
   Boolean b1 = Boolean.TRUE;
   Boolean b2 = Boolean.valueOf(str);
-</pre>
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

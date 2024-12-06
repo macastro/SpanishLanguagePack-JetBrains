@@ -1,20 +1,22 @@
 <html>
 <body>
-불필요한 생성자를 보고합니다.
+Informar de constructores innecesarios.
 <p>
-  클래스의 유일한 생성자인 경우 생성자는 필요하지 않으며 매개변수가 없고, 포함된 클래스와 동일한 접근 제어자를 가지며, 명시적 또는 암시적으로 슈퍼클래스 생성자를 호출하는 것을 제외하고 인수 없이 어떠한 초기화도 수행하지 않습니다.
-  생성자는 지정되지 않은 경우에도 컴파일러가 생성하므로 안전하게 제거할 수 있습니다.</p>
-<p><b>예:</b></p>
-<pre>
-  public class Foo { public Foo() {} }
-</pre>
-<p>빠른 수정 적용 후:</p>
-<pre>
+  Si el constructor es el único constructor de la clase, no tiene parámetros, tiene el mismo modificador de acceso que su clase contenedora y no realiza ninguna inicialización excepto invocar explícita o implícitamente al constructor de la superclase sin argumentos, entonces es innecesario.
+  Tales constructores pueden eliminarse de forma segura, ya que serán generados por el compilador incluso si no se especifican.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Foo {
+    public Foo() {}
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
   public class Foo {}
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
-검사 설정을 사용하여 어노테이션이 포함된 불필요한 생성자를 무시합니다.
+Utilice la configuración de la inspección para ignorar los constructores innecesarios anotados.
 <p>
 
 </body>

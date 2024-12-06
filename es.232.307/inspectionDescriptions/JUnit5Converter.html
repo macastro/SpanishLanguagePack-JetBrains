@@ -1,8 +1,8 @@
 <html>
 <body>
-JUnit 5로 자동으로 마이그레이션될 수 있는 JUnit 4 테스트를 보고합니다.
-디폴트 러너는 자동으로 변환되지만, 사용자 지정 러너, 메서드 규칙 및 필드 규칙은 자동으로 변환되지 않으므로 수동으로 변경해야 합니다.
-<p><b>예:</b></p>
+Informa de las pruebas JUnit 4 que se pueden migrar automáticamente a JUnit 5.
+Aunque los ejecutores predeterminados se pueden convertir automáticamente, los ejecutores personalizados, las reglas de método y campo no lo son y requieren cambios manuales.
+<p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   import org.junit.Assert;
   import org.junit.Test;
@@ -14,7 +14,7 @@ JUnit 5로 자동으로 마이그레이션될 수 있는 JUnit 4 테스트를 �
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code lang="java">
   import org.junit.jupiter.api.Assertions;
   import org.junit.jupiter.api.Test;
@@ -27,6 +27,6 @@ JUnit 5로 자동으로 마이그레이션될 수 있는 JUnit 4 테스트를 �
   }
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사를 수행하려면 클래스 경로에서 JUnit 5 라이브러리를 사용할 수 있고 프로젝트에 대해 JDK 1.8 이상이 구성되어 있어야 합니다.</p>
+<p>Esta inspección requiere que la biblioteca JUnit 5 esté disponible en la ruta de clase y que JDK 1.8 o posterior esté configurado para el proyecto.</p>
 </body>
 </html>

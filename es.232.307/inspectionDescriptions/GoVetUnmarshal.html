@@ -1,12 +1,14 @@
 <html>
 <body>
-결과를 저장하기 위해 전달된 인수가 포인터나 인터페이스가 아닌 경우 <code>json.Unmarshal</code> 및 유사한 함수 호출을 보고합니다.
-<p>이러한 호출은 실패하며 오류를 반환합니다.</p>
-<p><code>Unmarshal</code>에 대한 자세한 내용은 <a href="https://pkg.go.dev/encoding/json#Unmarshal">go.dev의 func Unmarshal</a>을 참조하세요.</p>
-<p>예:</p>
+Se informan las llamadas a <code>json.Unmarshal</code> y funciones similares si el argumento que se pasa
+  para almacenar el resultado no es un puntero o una interfaz.
+<p>Estas llamadas fallarán y devolverán un error.</p>
+<p>Para más información sobre <code>Unmarshal</code>, consulte <a href="https://pkg.go.dev/encoding/json#Unmarshal">func Unmarshal en
+  go.dev</a>.</p>
+<p>Ejemplo:</p>
 <pre><code>var animals []Animal
-err := json.Unmarshal(jsonData, animals) // 항상 오류를 반환</code></pre>
-<p><b>앞에 '&' 추가</b> 빠른 수정 적용 후:</p>
+err := json.Unmarshal(jsonData, animals) // siempre devuelve un error</code></pre>
+<p>Después de aplicar la corrección rápida <b>Añadir '&amp;' al principio</b>:</p>
 <pre><code>var animals []Animal
 err := json.Unmarshal(jsonData, &animals)</code>
 </pre>

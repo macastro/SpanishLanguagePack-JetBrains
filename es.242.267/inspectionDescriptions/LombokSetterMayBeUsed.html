@@ -1,45 +1,45 @@
 <html>
 <body>
-lombok <code>@Setter</code> 어노테이션으로 대체될 수 있는 표준 setter 메서드를 보고합니다.
-<p>예:</p>
+Informa del método setter estándar que puede ser reemplazado por la anotación lombok <code>@Setter</code>.
+<p>Ejemplo:</p>
 <pre><code>
-  import java.util.Date;
+import java.util.Date;
 
-  public class MyClass {
+public class MyClass {
     /**
-     * 처리 날짜.
+     * La fecha del proceso.
      */
     private Date processDate;
 
     /**
-     * 날짜 설정.
+     * Establece la fecha.
      *
-     * @param 날짜
+     * @param La fecha
      */
     public void setProcessDate(Date param) {
       processDate = param;
     }
   }
 </code></pre>
-<p>빠른 수정/정리 적용 후:</p>
+<p>Tras aplicar el arreglo/limpieza rápidos:</p>
 <pre><code>
-  import lombok.Setter;
-  import java.util.Date;
+import lombok.Setter;
+import java.util.Date;
 
-  @Setter
-  public class MyClass {
+@Setter
+public class MyClass {
     /**
-     * 처리 날짜.
+     * La fecha del proceso.
      * -- SETTER --
-     * 날짜 설정.
+     * Establece la fecha.
      *
-     * @param 날짜
+     * @param La fecha
      */
     private Date processDate;
   }
 </code></pre>
-<p>lombok 라이브러리가 구성된 경우에만 보고합니다. lombok을 해제하려는 경우 lombok 사이트를 참조하세요.</p>
+<p>Sólo informa cuando la biblioteca lombok está configurada. Para eliminar el lombok, consulte el sitio de lombok.</p>
 <!-- tooltip end -->
-<p><small>2023.2의 새로운 기능</small></p>
+<p><small>Nuevo en 2023.2</small></p>
 </body>
 </html>

@@ -1,12 +1,12 @@
 <html>
 <body>
-명시적 유형 선언과 함께 사용할 때 불필요한 <b>def</b> 제어자를 보고합니다.
-<p><b>예:</b></p>
+<p>Informa modificadores de <code>def</code> innecesarios cuando se usan con una declaración de tipo explícita.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  <b>def</b> boolean foo() {} // 제어가 불필요
-  <b>def</b> Object bar // 제어자 불필요
+  <b>def</b> boolean foo() {} // el modificador es innecesario
+  <b>def</b> Object bar // el modificador es innecesario
 
-  // 제어자가 필요하므로 강조 표시하지 않음
+  // el modificador es requerido y por lo tanto no está resaltado
   <b>def</b> (int a, String b) = []
 </code></pre>
 </body>

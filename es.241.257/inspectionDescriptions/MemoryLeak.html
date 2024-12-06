@@ -1,7 +1,7 @@
 <html>
 <body>
-메모리 액세스가 불가능해지기 전에 릴리스되지 않는 메모리 할당(<code>new</code> 연산자 또는 <code>malloc()</code> 함수)을 보고합니다.
-<p><b>예:</b></p>
+Informa asignaciones de memoria (operador `new` o función `malloc()`) que no fueron liberadas antes de que la memoria se volviera inaccesible.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class MyClass {
       int* leakedField = new int;

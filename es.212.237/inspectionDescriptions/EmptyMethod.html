@@ -1,14 +1,14 @@
 <html>
 <body>
-제거 가능한 빈 메서드를 보고합니다.
-<p>메서드 자체가 비어 있거나, 메서드가 재정의되거나, 빈 메서드로만 구현된 경우 빈 상태로 간주됩니다. 주석 및 자체 매개변수가 있는 <code>super()</code>만이 포함된 메서드도 빈 메서드로 간주됩니다.</p>
-<p>검사는 특수 어노테이션이 있는 메서드는 무시합니다(예: <code>javax.ejb.Init</code> 및 <code>javax.ejb.Remove</code> EJB 어노테이션).</p>
-<p>빠른 수정으로 불필요한 메서드를 안전하게 제거할 수 있습니다.</p>
+Reporta métodos vacíos que se pueden eliminar.
+<p>Los métodos se consideran vacíos si están vacíos por sí mismos y si están anulados o implementados solo por métodos vacíos. Tenga en cuenta que los métodos que solo contienen comentarios y la llamada <code>super()</code> con sus propios parámetros también se consideran vacíos.</p>
+<p>La inspección ignora los métodos con anotaciones especiales, por ejemplo, las anotaciones EJB <code>javax.ejb.Init</code> y <code>javax.ejb.Remove</code>.</p>
+<p>La corrección rápida elimina de forma segura los métodos innecesarios.</p>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configure la inspección:</p>
 <ul>
-  <li><b>주석 및 javadoc을 콘텐츠로 간주</b> 옵션을 사용하여 주석이 포함된 메서드를 비어 있지 않은 메서드로 취급할지 선택합니다.</li>
-  <li><b>추가 특수 어노테이션</b> 옵션을 사용하여 이 검사를 통해 무시할 추가 어노테이션을 구성합니다.</li>
+  <li>Utilice la opción<b>Los comentarios y javadoc cuentan como contenido</b> para seleccionar si los métodos con comentarios deben tratarse como no vacíos.</li>
+  <li>Utilice la opción <b>Anotaciones especiales adicionales</b> para configurar anotaciones adicionales que esta inspección debe ignorar.</li>
 </ul>
 </body>
 </html>

@@ -1,22 +1,26 @@
+**Versión en español**
+
 <html>
 <body>
-Java 및 Kotlin 언어에서 안전하지 않은 문자열이 SQL 쿼리로 메서드에 전달되는 경우를 보고합니다.
-이는 SQL 삽입의 원인이 될 수 있습니다.
-메서드의 목록의 출처는 <b>설정</b> -  <code>SQL</code>, <code>JPA QL</code>, <code>Hibernate QL</code> 및 <code>PostgreSQL</code>의 <b>언어 인젝션</b>입니다
+Informes de casos para los lenguajes Java y Kotlin cuando se pasa una cadena no segura a un método como una consulta SQL.
+Puede ser causa de inyecciones SQL.
+La lista de métodos se toma de <b>Configuración</b> - <b>Inyecciones de lenguaje</b> para
+<code>SQL</code>, <code>JPA QL</code>, <code>Hibernate QL</code> y <code>PostgreSQL</code>
 <p>
-  안전한 객체:
+  Un objeto seguro es:
 <ul>
-  <li>문자열 리터럴, 인터페이스 인스턴스, 열거형 객체, int 및 래퍼, 부울 및 래퍼, 클래스 객체</li>
-  <li>리시버와 인수가 안전한 메서드 호출의 결과</li>
-  <li>문자열 리터럴만 대입되고 안전한 이니셜라이저가 있는 같은 파일 내의 private 필드</li>
-  <li>안전한 이니셜라이저가 있는 같은 파일 내의 final 필드</li>
-  <li>안전한 객체에서 대입된 지역 변수</li>
+  <li>un literal de cadena, instancia de interfaz u objeto de enumeración, int y su envoltura, booleano y su envoltura, objeto de clase</li>
+  <li>un resultado de una llamada de un método, cuyo receptor y argumentos son seguros</li>
+  <li>un campo privado en el mismo archivo, que solo se asigna con un literal de cadena y tiene un inicializador seguro</li>
+  <li>un campo final en el mismo archivo, que tiene un inicializador seguro</li>
+  <li>una variable local que se asigna a partir de objetos seguros</li>
+  Este campo, variable local o parámetro no debe pasarse como argumento a los métodos ni usarse como calificador o debe ser un objeto primitivo, su
+  envoltura o inmutable.
 </ul>
-<p>이 필드, 지역 변수 또는 매개변수는 메서드 인수로 전달되거나 한정자로 사용되어서는 안되며, 기본형, 래퍼 또는 불변이어야 합니다.</p>
-<p>static final 필드는 안전한 것으로 간주됩니다.</p>
+Los campos finales estáticos se consideran seguros.
 <p>
-  이 분석은 한 파일 내에서만 수행됩니다.
-  예:
+  El análisis solo se realiza dentro de un archivo.
+  Ejemplo:
 <pre>
 <code lang="java">
     public void save(String sql) {
@@ -27,6 +31,6 @@ Java 및 Kotlin 언어에서 안전하지 않은 문자열이 SQL 쿼리로 메�
 </pre>
 
 <!-- tooltip end -->
-<p><small>2023.2의 새로운 기능</small></p>
+<p><small>Nuevo en 2023.2</small></p>
 </body>
 </html>

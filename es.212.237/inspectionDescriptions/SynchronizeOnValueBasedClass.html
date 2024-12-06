@@ -1,14 +1,14 @@
 <html>
 <body>
-값 기반 클래스의 인스턴스에서 동기화하려고 하면 컴파일 시간 경고가 발생하고 Java 16부터 런타임 예외가 발생합니다.
+Informa de intentos de sincronización en una instancia de una clase basada en valores que producen advertencias en tiempo de compilación y lanzan excepciones en tiempo de ejecución a partir de Java 16.
 <p>
-  예를 들면 java.lang.Double 은 <code>jdk.internal.ValueBased</code> 으로 주석이 부여되며 다음 코드는 컴파일 타임 경고를 추가합니다.
+  Por ejemplo, <code>java.lang.Double</code> está anotado con <code>jdk.internal.ValueBased</code>, por lo que el siguiente código producirá una advertencia en tiempo de compilación:
 </p>
-<pre>
+<pre><code>
 Double d = 20.0;
-synchronized (d) {... } // javac 경고
-</pre>
+synchronized (d) { ... } // advertencia de javac
+</code></pre>
 <!-- tooltip end -->
-<p>2021.1부터 적용</p>
+<p><small>Novedad en 2021.1</small></p>
 </body>
 </html>

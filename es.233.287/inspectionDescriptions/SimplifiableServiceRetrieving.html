@@ -1,7 +1,7 @@
 <html>
 <body>
-기존의 static <code>getInstance()</code> 또는 <code>getInstance(Project)</code> 메서드에 대한 호출로 대체될 수 있는 호출을 받은 서비스를 보고합니다.
-<p>예(Java):</p>
+Inspección para reportar llamadas para obtener servicios que pueden reemplazarse por llamadas a los métodos estáticos <code>getInstance()</code> o <code>getInstance(Project)</code> existentes.
+<p>Ejemplo (Java):</p>
 <pre><code lang="java">
 @Service
 public class MyAppService {
@@ -18,15 +18,15 @@ public class MyProjectService {
 }
 </code></pre>
 <pre><code lang="java">
-// 나쁨:
+// Mal ejemplo:
 MyAppService applicationService = ApplicationManager.getApplication().getService(MyAppService.class);
 MyProjectService projectService = project.getService(MyProjectService.class);
 </code></pre>
 <pre><code lang="java">
-// 좋음:
+// Buen ejemplo:
 MyAppService applicationService = MyAppService.getInstance();
 MyProjectService projectService = MyProjectService.getInstance(project);
 </code></pre>
-<p><small>2023.2의 새로운 기능</small>
+<p><small>Nueva función de la versión 2023.2</small>
 </body>
 </html>

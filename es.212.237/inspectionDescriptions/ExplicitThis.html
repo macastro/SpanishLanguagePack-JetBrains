@@ -1,5 +1,19 @@
 <html>
 <body>
-명시적 <b>this</b>가 생략 가능한 경우 그 사용 위치를 보고합니다.
+Reporta un <code>this</code> explícito cuando se puede omitir.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class C {
+      private val i = 1
+      fun f() = this.i
+  }
+</code></pre>
+<p>La corrección rápida elimina el <code>this</code> redundante:</p>
+<pre><code>
+  class C {
+      private val i = 1
+      fun f() = i
+  }
+</code></pre>
 </body>
 </html>

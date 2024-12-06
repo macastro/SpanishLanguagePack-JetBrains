@@ -1,14 +1,8 @@
-<html>
-<body>
-이름이 너무 짧거나 너무 길거나 지정된 정규 표현식 패턴을 따르지 않는 필드를 보고합니다.
-<p><b>예:</b> 이 검사가 상수에 대해서 활성화되어 있으며 필드 이름의 최소 길이가 5(디폴트)로 지정되어 있는 경우, 다음 상수는 이름의 길이가 5보다 작은 3이므로 경고가 발생합니다. <code>public static int max(int a, int b)</code></p>
-<p>그러한 필드의 이름을 변경하는 빠른 수정은 에디터에서만 사용할 수 있습니다.</p>
+<html><body>Reporta campos cuyos nombres son demasiado cortos, demasiado largos o no siguen el patrón de expresión regular especificado.<p><b>Ejemplo:</b> Si la inspección está habilitada para constantes y la longitud mínima especificada para un nombre de campo es 5 (valor predeterminado), la siguiente constante produce una advertencia porque la longitud de su nombre es de 3, que es menor que 5: <code>public static final int MAX = 42;</code>.<br>Un arreglo rápido que cambia el nombre de dichos campos solo está disponible en el editor.</p>
 <!-- tooltip end -->
-<p>검사 구성:</p>
-<p><b>옵션</b> 섹션의 목록을 사용하여 검사되어야 하는 필드를 지정하세요. 검사를 건너뛰려는 필드의 체크박스를 선택 해제하세요.</p>
-<p>각 필드 타입에 대해 제공된 입력 필드를 사용하여 최소 길이, 최대 길이를 비롯해 필드 이름에 필요한 정규 표현식을 지정하세요.
-  대응하는 검사를 건너뛰려면 길이 필드에 <b>0</b>을 지정하세요.</p>
-<p>정규 표현식은 표준 <code>java.util.regex</code> 형식으로 지정되어야 합니다.</p>
+<p>Configurar la inspección:</p>
+<p>Para especificar los tipos de campos que deben verificarse, utilizá la lista en la sección <b>Opciones</b>. Deseleccioná las casillas de verificación de los campos que querés obviar en la verificación.</p>
+<p>Para cada tipo de campo, especificá la longitud mínima, la longitud máxima y la expresión regular esperada para los nombres de campo utilizando los campos de entrada provistos. Para obviar las verificaciones correspondientes, especificá <b>0</b> en los campos de longitud.</p>
+<p>Las expresiones regulares deben especificarse en el formato estándar <code>java.util.regex</code></p>
 
-</body>
-</html>
+</body></html>

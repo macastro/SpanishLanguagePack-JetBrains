@@ -1,19 +1,19 @@
 <html>
 <body>
-<code>Arrays.setAll()</code> 또는 <code>Arrays.fill()</code> 호출로 대체 가능한 루프를 보고합니다.
-<p>이 검사는 프로젝트나 모듈의 언어 수준이 8 이상인 경우 루프를 <code>Arrays.setAll()</code>로 대체하도록 제안합니다.
-  모든 언어 수준에서 <code>Arrays.setAll()</code>로 루프를 대체할 수 있습니다.</p>
-<p>예:</p>
+Informa los ciclos que se pueden reemplazar con llamadas a <code>Arrays.setAll()</code> o <code>Arrays.fill()</code>.
+<p>Esta inspección sugiere reemplazar los ciclos con <code>Arrays.setAll()</code> si el nivel de idioma del proyecto o módulo es 8 o superior.
+  Es posible reemplazar los ciclos con <code>Arrays.fill()</code> con cualquier nivel de idioma.</p>
+<p>Ejemplo:</p>
 <pre><code>
   for (int i=0; i&lt;array.length; i++) {
      array[i] = calc(i);
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   Arrays.setAll(array, this::calc);
 </code></pre>
 <!-- tooltip end -->
-<p><small>2017.1의 새로운 기능</small></p>
+<p><small>Nuevo en 2017.1</small></p>
 </body>
 </html>

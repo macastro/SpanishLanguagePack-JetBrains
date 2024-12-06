@@ -1,22 +1,27 @@
 <html>
 <body>
-<code>Object</code> 상등 관계를 테스트 하기 위해 <code>equals()</code> 대신 <code>==</code> 또는 <code>!=</code>를 사용하는 코드를 보고합니다.
-<p><code>==</code> 또는 <code>!=</code>를 사용하여 객체를 비교하는 것은 상등 대신 ID로 객체를 비교하기 때문에 보통 버그입니다.
-  <code>null</code>과의 비교는 지원되지 않습니다.
-  배열, <code>String</code> 및 <code>Number</code> 비교는 별도의 검사에서 보고됩니다.
+<p>
+  Reporta código que usa <code>==</code> o <code>!=</code> en lugar de <code>equals()</code> para probar la igualdad entre objetos.
 </p>
-<p><b>예:</b></p>
+<p>
+  Comparar objetos usando <code>==</code> o <code>!=</code> suele ser un error,
+  ya que compara objetos por identidad en vez de igualdad.
+  No se reportan comparaciones con <code>null</code>.
+</p>
+<p>
+  Comparaciones de arreglos, <code>String</code> y <code>Number</code> son reportadas por inspecciones separadas.
+</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>  <b>if</b> (list1 == list2) {
     <b>return</b>;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
-<pre><code>  <b>if</b> (Object.equals(list1, list2)) {
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>  <b>if</b> (Objects.equals(list1, list2)) {
     <b>return</b>;
   }
 </code></pre>
 <!-- tooltip end -->
-<p>
-<p>검사 설정을 사용하여 이 검사에 대한 예외를 구성하세요.</p>
+<p>Usa las configuraciones de inspección para configurar excepciones para esta inspección.</p>
 </body>
 </html>

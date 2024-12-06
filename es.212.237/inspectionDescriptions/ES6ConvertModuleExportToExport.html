@@ -1,7 +1,7 @@
 <html>
 <body>
-<code>module.export</code> 문을 보고합니다.  <code>export</code> 또는 <code>export default</code> 문으로 바꿀 것을 제안합니다.
+Reporta una sentencia <code>module.export</code>. Sugiere su reemplazo con una sentencia <code>export</code> o <code>export default</code>.
 <br/><br/>
-<code>export</code> 문은 모듈의 최상위에만 위치할 수 있기 때문에 <code>module.export</code>를 <code>export</code>로 변환하기 위한 빠른 수정은 함수 또는 구문 내부의 <code>module.export</code>에 대해 사용할 수 없습니다.
+Tenga en cuenta que la solución rápida para convertir <code>module.export</code> en <code>export</code> no está disponible para <code>module.export</code> dentro de funciones o sentencias, ya que las sentencias <code>export</code> sólo pueden estar en el nivel superior de un módulo.
 </body>
 </html>

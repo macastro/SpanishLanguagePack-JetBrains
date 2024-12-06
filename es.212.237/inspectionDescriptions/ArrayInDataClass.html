@@ -1,15 +1,15 @@
 <html>
 <body>
-<code>equals()</code> 또는 <code>hashCode()</code>가 재정의되지 않은 <code>data</code> 클래스의 <code>Array</code> 유형이 있는 프로퍼티를 보고합니다.
+Informa propiedades con un tipo <code>Array</code> en una clase <code>data</code> sin <code>equals()</code> o <code>hashCode()</code> reemplazados.
 <p>
-    배열 매개변수는 예상하지 못한 동작일 수 있는 참조 상등과 비교됩니다.
-    그러한 경우 <code>equals()</code> 및 <code>hashCode()</code>를 재정의할 것을 강력히 권장합니다.
+    Los parámetros de matriz se comparan por igualdad de referencia, lo que probablemente sea un comportamiento inesperado.
+    Se recomienda encarecidamente reemplazar <code>equals()</code> y <code>hashCode()</code> en tales casos.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   data class Text(val lines: Array&lt;String&gt;)
 </code></pre>
-<p>빠른 수정을 위해 누락된 <code>equals()</code> 및 <code>hashCode()</code> 구현을 생성하도록 제안합니다.</p>
+<p>La solución rápida genera implementaciones faltantes de <code>equals()</code> y <code>hashCode()</code>:</p>
 <pre><code>
   data class Text(val lines: Array&lt;String&gt;) {
       override fun equals(other: Any?): Boolean {

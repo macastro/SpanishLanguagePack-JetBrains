@@ -1,24 +1,24 @@
 <html>
 <body>
-값 범위를 검사하여 1회 검사로 간소화할 수 있는 조건 체인을 보고합니다.
-<p>빠른 수정은 조건 체인을 간소화된 표현식으로 대체합니다.</p>
-<p>예:</p>
+Informa las cadenas de condiciones en las que se verifica un rango de valores y estas cadenas de condiciones pueden simplificarse a una sola verificación.
+<p>El arreglo rápido reemplaza una cadena de condición con una expresión simplificada:</p>
+<p>Ejemplo:</p>
 <pre><code>
   x > 2 && x &lt; 4
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que se aplica el arreglo rápido:</p>
 <pre><code>
   x == 3
 </code></pre>
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   arr.length == 0 || arr.length > 1
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que se aplica el arreglo rápido:</p>
 <pre><code>
   arr.length != 1
 </code></pre>
 <!-- tooltip end -->
-<p><small>2019.1의 새로운 기능</small></p>
+<p><small>Nuevo en 2019.1</small></p>
 </body>
 </html>

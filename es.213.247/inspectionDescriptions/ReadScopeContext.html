@@ -1,17 +1,17 @@
 <html>
 <body>
-중지 혹은 액션 컨텍스트에서 유효하지 않은 <code>ReadScope</code>를 보고합니다.
+Advertir llamadas inválidas de <code>ReadScope</code> desde contextos detenidos o de acción.
 <p>
-  코루틴 혹은 액션에서 <code>ReadScope</code> 함수를 호출할 수 없습니다.
-  그러지 않은 경우 런타임 예외가 발생합니다.
+  No se pueden llamar funciones <code>ReadScope</code> desde una corrutina o una acción.
+  Si se hace, pueden ocurrir excepciones en tiempo de ejecución.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   fun ReadScope.kernel(/*...*/) { /*...*/ }
 
   fun ReadScope.foo() {
       readEditorAction { ac ->
-          kernel() // it's incorrect
+          kernel() // Incorrecto
       }
   }
 </code></pre>

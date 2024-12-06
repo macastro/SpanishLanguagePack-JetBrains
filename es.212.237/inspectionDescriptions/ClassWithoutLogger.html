@@ -1,8 +1,8 @@
 <html>
 <body>
-선언된 로거가 없는 클래스를 보고합니다.
-모든 클래스에 하나의 전용 로거를 포함시키는 것은 통합 애플리케이션에 로깅 구현을 제공하는 데 중요한 단계입니다. 이 검사는 인터페이스, 열거형, 어노테이션, 내부 클래스 및 추상 클래스를 보고하지 않습니다.
-<p>예:</p>
+Informa clases que no tienen un registrador declarado.
+<p>Asegurarse de que cada clase tiene un registrador dedicado es un paso importante para proveer una implementación de registro unificada para una aplicación. Las interfaces, enumeraciones, anotaciones, clases internas y clases abstractas no son informadas por esta inspección.</p>
+<p>Por ejemplo:</p>
 <pre><code>
   <b>public class</b> NoLoggerDeclared {
 
@@ -14,8 +14,8 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-아래 테이블을 사용하여 logger 클래스 이름을 지정하세요.
-지정된 클래스 중 하나의 타입을 가진 필드를 선언하지 않는 클래스는 이 검사에서 보고됩니다.
+  Usa la tabla en la sección <b>Opciones</b> para especificar nombres de clases de registrador.
+Las clases que no declaren un campo con el tipo de una de las clases especificadas serán informadas por esta inspección.
 
 </body>
 </html>

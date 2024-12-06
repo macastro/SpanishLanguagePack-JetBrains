@@ -1,30 +1,24 @@
 <html>
 <body>
-<p>Reactive Stream 체인에서 <code>null</code>을 반환할 수 있는 변환 연산자를 보고합니다.</p>
-<p>Reactive Stream은 그러한 코드가 실패하는 원인을 제공하는 <code>null</code> 값을 지원하지 않습니다.</p>
-<p><b>예:</b></p>
-<pre><code>repository.findWithTailableCursorBy()
-    .map(e -> (Person)null)
-    .doOnNext(System.out::println)
-</code></pre>
-<!-- tooltip end -->
+<p>Informa de transformaciones de operadores que pueden devolver <code>null</code> dentro de una cadena Reactive Stream.</p>
+
 <p>
-  Reactive Stream 체인 코드 안에서 null 가능 값을 사용하지 않는 것이 좋지만 필요하다면 Reactor의 <code>mapNotNull</code>과
-  같은 특수 처리를 사용하세요.
+  Reactive Stream no admite valores nulos, lo que hace que dicho código falle.
+  La solución rápida sugiere reemplazar <code>map()</code> con <code>mapNotNull</code>, que omite excepciones.
 </p>
-<p><code>map</code>을 <code>mapNotNull</code>로 교체하는 빠른 수정이 있습니다. <code>mapNotNull</code>이
-  <code>null</code> 값을 허용하므로 예외를 생략합니다.
-</p>
-<p>빠른 수정 전:</p>
-<pre><code>repository.findWithTailableCursorBy()
+
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">repository.findWithTailableCursorBy()
     .map(e -> (Person)null)
     .doOnNext(System.out::println)
 </code></pre>
-<p>빠른 수정 적용 후:</p>
-<pre><code>repository.findWithTailableCursorBy()
+
+<p>Después de que se aplique la solución rápida:</p>
+<pre><code lang="java">repository.findWithTailableCursorBy()
     .mapNotNull(e -> (Person)null)
     .doOnNext(System.out::println)
 </code></pre>
-<p><small>2019.3의 새로운 기능</small></p>
+
+<p><small>Nuevo en 2019.3</small></p>
 </body>
 </html>

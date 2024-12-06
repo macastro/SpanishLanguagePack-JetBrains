@@ -1,12 +1,14 @@
 <html>
 <body>
-객체 생성 도중 <code>java.lang.Thread</code> 또는 하위 클래스에서 <code>start()</code>를 호출하는 경우를 보고합니다.
+Informa de llamadas a <code>start()</code> en <code>java.lang.Thread</code>
+o cualquiera de sus subclases durante la construcción del objeto.
 <p>
-  그러한 구문은 때때로 유용하지만 상속 문제가 발생할 수 있으므로 피해야 합니다.
-  객체 생성 도중 스레드를 시작하는 클래스의 하위 클래스는 스레드가 시작되기 전에 자신의 초기화 로직을 완료하지 못합니다.
+  Aunque a veces útiles, estas construcciones deben evitarse debido a problemas de herencia.
+  Las subclases de una clase que lanza un hilo durante la construcción del objeto no habrán terminado
+  ninguna lógica de inicialización propia antes de que el hilo se haya lanzado.
 </p>
-<p>이 검사는 스레드를 시작하는 클래스가 <code>final</code>로 선언된 경우에는 보고하지 않습니다.</p>
-<p><b>예:</b></p>
+<p>Esta inspección no informa si la clase que inicia un hilo está declarada <code>final</code>.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class MyThread extends Thread {
     MyThread() {

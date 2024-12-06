@@ -1,12 +1,11 @@
 <html>
 <body>
-콜론(<code>:</code>)을 포함하는 문자열과 <code>name()</code> 함수 간 비교를 보고합니다.  이러한 사용은 주로 비교에서 네임스페이스 접두사가 하드코딩되었음을 나타냅니다. 이렇게 하면 같은 네임스페이스에 대해 다른 접두사를 사용하는 XML을 실행할 경우 코드가 중단됩니다.
+Reportes comparaciones de la función <code>name()</code> con una cadena que contiene dos puntos (<code>:</code>).  Tales usos generalmente indican un prefijo de espacio de nombres codificado en la comparación. Como resultado, el código se interrumpirá cuando se ejecute contra XML que use otro prefijo para el mismo espacio de nombres.
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   &lt;xsl:if test="name() = 'xlink:href'">...&lt;xsl:if>
 </code></pre>
 
-<p><small>XPathView + XSLT-Support에 의해 지원됩니다.</small></p>
 </body>
 </html>

@@ -1,20 +1,19 @@
 <html>
 <body>
-Java API로 대체할 수 있는 Guava의 함수 프리미티브 타입의 사용 위치를 보고합니다.
-<p>예를 들어, <code>FluentIterable</code>, <code>Optional</code>, <code>Function</code>,
-  <code>Predicate</code> 또는 <code>Supplier</code> 등의 클래스 및 인터페이스 사용 위치가 검사를 통해 보고됩니다.</p>
-<p>예:</p>
-<pre>
+Reporta usos de primitivas funcionales de Guava que pueden migrarse a llamadas de API de Java estándar.
+<p>Por ejemplo, la inspección reporta usos de clases e interfaces como <code>FluentIterable</code>, <code>Optional</code>, <code>Function</code>,
+  <code>Predicate</code> o <code>Supplier</code>.</p>
+<p>Ejemplo:</p>
+<pre><code>
   ImmutableList&lt;String&gt; results = FluentIterable.from(List.of(1, 2, 3)).transform(Object::toString).toList();
-</pre>
-<p>빠른 수정 적용 후:</p>
-<pre>
+</code></pre>
+<p>Después de aplicar corrección rápida:</p>
+<pre><code>
   List&lt;String&gt; results = List.of(1, 2, 3).stream().map(Object::toString).collect(Collectors.toList());
-</pre>
+</code></pre>
 <p>
-빠른 수정으로 의미가 달라질 수 있습니다. 지연 평가된 이터러블이 즉시 평가 대상으로 변환될 수 있습니다.
+La corrección rápida podría cambiar las semánticas. Algunos iterables de Guava evaluados perezosamente pueden transformarse en evaluados con entusiasmo.
 </p>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 8 이상인 경우에만 보고합니다.</p>
 </body>
 </html>

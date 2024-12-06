@@ -1,24 +1,24 @@
 <html>
 <body>
-<code>static final</code>이 아닌 다음 타입의 필드를 보고합니다:
+Informa los campos de tipos:
 <ul>
   <li><code>java.util.concurrent.atomic.AtomicLongFieldUpdater</code></li>
   <li><code>java.util.concurrent.atomic.AtomicIntegerFieldUpdater</code></li>
   <li><code>java.util.concurrent.atomic.AtomicReferenceFieldUpdater</code></li>
 </ul>
- 
-클래스의 모든 인스턴스에서 <code>volatile</code> 필드를 업데이트하는 데 필요한 atomic 필드 업데이터는 하나뿐이므로 거의 항상 <code>static</code>일 수 있습니다.
+que no son <code>static final</code>.
+Como solo se necesita un actualizador de campo atómico para actualizar un campo <code>volatile</code> en todas las instancias de una clase, casi siempre puede ser <code>static</code>.
 
-<p>업데이터를 <code>final</code>로 만들면 JVM이 성능 향상을 위해 액세스를 최적화할 수 있습니다.</p>
+<p>Hacer el actualizador <code>final</code> permite a la JVM optimizar el acceso para mejorar el rendimiento.</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Main {
     private volatile int id;
     private AtomicIntegerFieldUpdater&lt;Main&gt; idFieldUpdater = AtomicIntegerFieldUpdater.newUpdater(Main.class, "id");
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class Main {
     private volatile int id;

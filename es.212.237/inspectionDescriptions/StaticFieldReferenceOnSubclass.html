@@ -1,31 +1,31 @@
 <html>
 <body>
-호출이 선언하는 클래스 자신이 아니라 하위 클래스에 의해 정규화된 정적 필드로의 액세스를 보고합니다.
+Reporta accesos a campos estáticos donde la llamada es calificada por una subclase de la clase que declara, en lugar de por la clase que declara en sí.
 <p>
-  Java는 그러한 정규화를 허용하지만 그러한 액세스는 상속과 재정의에 대한 미묘한 혼동을 나타낼 수 있습니다.
+  Java permite tal calificación, pero tales accesos pueden indicar una sutil confusión de herencia y sobrescritura.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class Parent {
+  class Padre {
     static int foo = 0;
   }
 
-  class Child extends Parent { }
+  class Hijo extiende Padre { }
 
-  void bar() {
-    System.out.println(Child.foo);
+  void barra() {
+    System.out.println(Hijo.foo);
   }
 </code></pre>
-<p>빠른 수정이 적용된 후 결과는 다음과 같습니다:</p>
+<p>Después de que se aplica la solución rápida, el resultado se ve así:</p>
 <pre><code>
-  class Parent {
+  class Padre {
     static int foo = 0;
   }
 
-  class Child extends Parent { }
+  class Hijo extiende Padre { }
 
-  void bar() {
-    System.out.println(Parent.foo);
+  void barra() {
+    System.out.println(Padre.foo);
   }
 </code></pre>
 <!-- tooltip end -->

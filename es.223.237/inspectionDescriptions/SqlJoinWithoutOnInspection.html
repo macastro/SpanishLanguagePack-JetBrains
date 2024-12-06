@@ -1,9 +1,8 @@
 <html>
 <body>
-데이터베이스 전체를 변경할 수 있는 구문에 대한 누락된 조건 검사를 보고합니다.
-<p>예를 들어, DELETE 구문 내에서 ON 또는 WHERE이 없이 JOIN 절이 사용된 경우를 말합니다. JOIN 조건 검사가 없으면 
-DELETE는 전체 테이블의 내용을 삭제합니다.</p>
-<p>예(MySQL):</p>
+Informa acerca de comprobaciones condicionales ausentes para sentencias que pueden modificar toda la base de datos.
+<p>Por ejemplo, el uso de cláusulas JOIN dentro de sentencias DELETE sin ON o WHERE. Sin comprobaciones condicionales en JOIN, DELETE elimina elcontenido de la tabla completa.</p>
+<p>Ejemplo (MySQL):</p>
 <pre><code>CREATE TABLE foo (a INT,b INT,c INT);
 CREATE TABLE bar (a INT,b INT,c INT);
 

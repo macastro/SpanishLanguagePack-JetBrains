@@ -1,28 +1,33 @@
 <html>
 <body>
-루프의 String 연결을 보고합니다.
+Informa de la concatenación de String en bucles.
 <p>
-  모든 String 연결은 전체 문자열을 복사하므로 <code>StringBuilder.append()</code> 또는 <code>StringBuffer.append()</code>에 대한 명시적 호출로 대체하는 편이 일반적으로 선호됩니다.
+  Como cada concatenación de String copia toda la
+  cadena, normalmente es preferible reemplazarla con llamadas explícitas a <code>StringBuilder.append()</code> o
+  <code>StringBuffer.append()</code>.
 </p>
-<p><b>예:</b></p>
-<pre>
+<p><b>Ejemplo:</b></p>
+<pre><code>
   String str = "";
   for(int i=0; i&lt;10; i++) {
     str += i;
   }
-</pre>
-<p>빠른 수정 적용 후:</p>
-<pre>
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
   String str = "";
   StringBuilder strBuilder = new StringBuilder(str);
   for(int i = 0; i&lt;10; i++) {
     strBuilder.append(i);
   }
   str = strBuilder.toString();
-</pre>
+</code></pre>
 <!-- tooltip end -->
 <p>
-  빠른 수정을 통해 <code>String</code> 변수를 <code>StringBuilder</code>로 변환하거나 새로운 <code>StringBuilder</code>를 삽입할 수 있는 경우도 있습니다. 대체 시 의미 변경이 발생할 수 있으므로 기존 코드가 <code>null</code> 값을 특별히 취급하는 경우 주의해야 합니다. <code>null</code> 값이 가능한 경우 필수 null 검사를 생성하는 null 세이프한 수정이 제안됩니다. 또한 자동 대체의 성능이 항상 더 뛰어난 것은 아닙니다.
+  En ocasiones, la corrección rápida permite convertir una variable <code>String</code> en una <code>StringBuilder</code> o
+  introducir una nueva <code>StringBuilder</code>. Tened cuidado si en el código original se maneja especialmente el valor <code>nulo</code>, ya que
+  el reemplazo podría cambiar su semántica. Si <code>nulo</code> es posible, se sugieren correcciones seguras que no admiten valores nulos y que generan
+  las comprobaciones necesarias de valores nulos. Además, no está garantizado que el reemplazo automático mejore siempre el rendimiento.
 </p>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <html>
 <body>
-<p>XML 애플리케이션 컨텍스트에서 구성된 Spring bean의 잘못된 자동 주입을 보고합니다.</p>
+<p>Informa cableado automático incorrecto de Spring beans configurados en contextos de aplicaciones XML.</p>
 
-<p><b>예:</b></p>
-<pre>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
 public interface FooInterface {...}
 @Component public class FooBean implements FooInterface {...}
 @Component public class OtherBean implements FooInterface {...}
@@ -12,16 +12,15 @@ public interface FooInterface {...}
 public class MyComponent {
 	 public void setFooInterface(FooInterface foo) {...}
 }
-
-<hr/>
-
+</code></pre>
+<pre><code lang="xml">
 &lt;beans&gt;
 	&lt;bean class="beans.OtherBean" id="otherBean"/&gt;
 	&lt;bean class="beans.FooBean" id="fooBean"/&gt;
 
-	&lt;bean autowire="byType" class="beans.MyComponent" id="foo"/&gt; // reports "Could not autowire. There is more than one bean of 'FooInterface' type.
-                                                               //          Beans: otherBean,fooBean. Properties: 'fooInterface' "
+	&lt;bean autowire="byType" class="beans.MyComponent" id="foo"/&gt; &lt;!-- informa "No se pudo cablear automáticamente. Hay más de un bean del tipo 'FooInterface'. --&gt;
+                                                                   &lt;!--          Beans: otherBean,fooBean. Propiedades: 'fooInterface' " --&gt;
 &lt;/beans&gt;
-</pre>
+</code></pre>
 </body>
 </html>

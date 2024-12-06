@@ -1,7 +1,8 @@
 <html>
 <body>
-<code>for(Entry&lt;?,?&gt; entry : map.entrySet()) {...}</code> 또는 <code>map.entrySet().forEach(entry -&gt;...)</code>를 <code>map.forEach((key, value) ->...)</code>로 대체하도록 제안합니다.
-<p>예</p>
+Sugiere reemplazar <code>for(Entry&lt;?,?&gt; entrada : map.entrySet()) {...}</code> o
+<code>map.entrySet().forEach(entrada -&gt; ...)</code> por <code>map.forEach((key, value) -> ...)</code>.
+<p>Ejemplo</p>
 <pre><code>
   void print(Map&lt;String, Integer&gt; map) {
     map.entrySet().forEach(entry -> {
@@ -10,7 +11,7 @@
     });
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   void print(Map&lt;String, Integer&gt; map) {
     map.forEach((str, value) -> System.out.println(str + ":" + value));
@@ -18,10 +19,9 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-  <b>루프를 보고하지 않음</b> 옵션이 활성화된 경우 <code>entrySet().forEach()</code> 사례가 보고됩니다.
-  <code>for</code> 루프에도 빠른 수정 액션이 지원됩니다.
+  Cuando la opción <b>No informar bucles</b> esté habilitada, se informará sólo de los casos <code>entrySet().forEach()</code>.
+  Sin embargo, la acción de corrección rápida también estará disponible para los bucles <code>for</code>.
 </p>
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 8 이상인 경우에만 보고합니다.</p>
-<p><small>2017.1의 새로운 기능</small></p>
+<p><small>Novedad en 2017.1</small></p>
 </body>
 </html>

@@ -1,8 +1,8 @@
 <html>
 <body>
-람다 식을 사용해 스트림 API로 대체 가능한 루프를 보고합니다.
-<p>이렇게 대체하면 코드 스타일이 명령형에서 함수형으로 변경되며, 코드도 더욱 간결해집니다.</p>
-<p>예:</p>
+Informa sobre bucles que pueden reemplazarse por llamadas a la API de transmisión que usan expresiones lambda.
+<p>Este tipo de reemplazo cambia el estilo imperativo por uno funcional, y el código se vuelve más compacto.</p>
+<p>Ejemplo:</p>
 <pre><code>
   <b>boolean</b> check(List&lt;String> data) {
     <b>for</b> (String e : data) {
@@ -14,13 +14,12 @@
     return true;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   <b>boolean</b> check(List&lt;String> data) {
     <b>return</b> data.stream().map(String::trim).allMatch(trimmed -> trimmed.startsWith("xyz"));
   }
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 8 이상인 경우에만 보고합니다.
 </body>
 </html>

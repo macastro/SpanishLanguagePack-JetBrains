@@ -1,5 +1,22 @@
 <html>
 <body>
-JSDoc 주석 안의 매개변수 이름 및 개수와 실제 함수 매개변수 사이의 불일치를 보고합니다.
+Informa de la falta de coincidencia entre los nombres y el número de parámetros en un comentario JSDoc y los parámetros reales de una función.
+Sugiere actualizar los parámetros en el comentario JSDoc.
+<!-- tooltip end -->
+<p><b>Ejemplo:</b></p>
+<pre><code>
+/**
+ * @param height Altura en píxeles
+ */
+function sq(altura, width) {} // width no está documentado
+</code></pre>
+<p>Tras aplicar la solución rápida:</p>
+<pre><code>
+/**
+ * @param height Altura en píxeles
+ * @param width
+ */
+function sq(altura, width) {}
+</code></pre>
 </body>
 </html>

@@ -1,18 +1,22 @@
 <html>
 <body>
-중첩 클래스에서 외부 클래스의 비상수 <code>private</code> 구성원으로의 참조를 보고합니다.
-이 참조와 관련하여 javac 는 package-private 합성 접근자 메서드를 생성하며, 보안성이 손상될 수 있습니다. 왜냐하면 private으로 보이는 구성원이 실제로는 전체 패키지에서 접근할 수 있기 때문입니다.
+Reporta referencias de una clase anidada a miembros <code>private</code> no constantes de una clase externa.
+Para estas referencias, javac generará métodos de acceso sintético privados de paquete,
+lo que puede comprometer la seguridad porque los miembros que parecen ser privados serán de hecho accesibles desde todo el paquete.
 <p>
-  중첩 클래스와 외부 클래스는 개별 클래스 파일로 컴파일됩니다. Java 가상 머신은 일반적으로 클래스로부터 private 필드 및 다른 클래스의 메서드로의 접근을 금지합니다. 중첩 클래스로부터 외부 클래서의 private 구성원으로의 접근을 활성화하려면 javac 는 package-private 합성 접근자 메서드를 생성해야 합니다.
+  Una clase anidada y su clase externa se compilan en archivos de clase independientes. La máquina virtual Java normalmente prohíbe el acceso desde una clase a campos y métodos privados
+  de otra clase. Para permitir el acceso desde una clase anidada a miembros privados de una clase externa, javac crea un método de acceso sintético privado de paquete.
 </p>
 <p>
-  대신에 <code>private</code> 구성원을 package-private 으로 만들어 실제 접근성을 명확하게 합니다.
-  또한 약간의 메모리를 보존하여 리소스 제한 환경의 성능을 향상할 수 있습니다.
+  Al hacer que el miembro <code>private</code> sea privado de paquete en su lugar, se hace explícita la accesibilidad real.
+  Esto también ahorra un poco de memoria, lo que puede mejorar el rendimiento en entornos con recursos limitados.
 </p>
 <p>
-  이 검사는 언어 수준이 Java 11 이상인 경우 보고하지 않습니다. 왜냐하면 중첩 접근 제어(JEP 181) 덕분에 접근자 메서드는 더 이상 생성되지 않습니다.
+  Esta inspección solo se informa si el nivel de idioma del proyecto o módulo es 10 o inferior.
+  Según Java 11 y superior, los métodos de acceso ya no se generan,
+  debido al control de acceso basado en nidos (<a href="https://openjdk.org/jeps/181">JEP 181</a>).
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Outer {
     private void x() {}
@@ -24,7 +28,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Una vez aplicada la corrección rápida:</p>
 <pre><code>
   class Outer {
     void x() {}

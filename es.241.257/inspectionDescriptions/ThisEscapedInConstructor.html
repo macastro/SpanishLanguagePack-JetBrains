@@ -1,7 +1,7 @@
 <html>
 <body>
-객체 초기화 도중 발생 가능한 <code>this</code>의 이스케이프를 보고합니다. 이 이스케이프는 <code>this</code>가 생성자나 이니셜라이저에서 메서드 인수 또는 대입의 객체로 사용될 때 발생합니다. 초기화가 보장되지 않은 컨텍스트에서 객체를 사용할 수 있게 되므로 그러한 이스케이프는 탐지하기 어려운 버그를 초래할 수 있습니다.
-<p><b>예:</b></p>
+Informa sobre posibles escapadas de <code>this</code> durante la inicialización del objeto. Las escapadas ocurren cuando <code>this</code> se utiliza como argumento de método o como objeto de asignación en un constructor o inicializador. Tales escapadas pueden dar lugar a fallos sutiles, ya que el objeto está ahora disponible en el contexto en el que no está garantizado que se inicialice.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
     {

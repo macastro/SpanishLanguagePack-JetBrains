@@ -1,23 +1,23 @@
 <html>
 <body>
-연속된 복수의 <code>java.nio.file.Path</code> 구문인 <code>java.nio.file.Paths.get</code> 또는 <code>java.nio.file.Path.of</code>를 단일 <code>java.nio.file.Path</code> 변수로 교체할 수 있을 경우 보고합니다.
-<p>예:</p>
+Se informa cuando múltiples instancias consecutivas de <code>java.nio.file.Path</code> se pueden construir con <code>java.nio.file.Paths.get</code> o <code>java.nio.file.Path.of</code>, y reemplazarlas con una única variable <code>java.nio.file.Path</code>.
+<p>Ejemplo:</p>
 <pre><code>
 if (Files.isRegularFile(Path.of(fileName))) {
   try(InputStream is = Files.newInputStream(Path.of(fileName))) {
-    // 일부 코드
+    // Algo de código
   }
   catch (IOException e) {
     throw new UncheckedIOException(e);
   }
 }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
 Path path = Path.of(fileName);
 if (Files.isRegularFile(path)) {
   try(InputStream is = Files.newInputStream(path)) {
-    // 일부 코드
+    // Algo de código
   }
   catch (IOException e) {
     throw new UncheckedIOException(e);
@@ -25,7 +25,7 @@ if (Files.isRegularFile(path)) {
 }
 </code></pre>
 <!-- tooltip end -->
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 7 이상인 경우에만 보고합니다.</p>
-<p><small>2022.1의 새로운 기능</small></p>
+<p>Esta inspección sólo se reporta cuando el nivel de lenguaje del proyecto o módulo es 7 o superior.</p>
+<p><small>Novedades de 2022.1</small></p>
 </body>
 </html>

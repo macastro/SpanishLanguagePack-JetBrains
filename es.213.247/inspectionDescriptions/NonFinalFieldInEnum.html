@@ -1,7 +1,8 @@
 <html>
 <body>
-열거형 타입의 비 final 필드를 보고합니다. 이러한 필드는 거의 불필요하며 전역 가변 상태를 제공하기 때문입니다.
-<p><b>예:</b></p>
+Informa de los campos no finales en tipos de enumeraciones.
+Los campos no finales introducen un estado mutable global, lo que generalmente no se considera deseable.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   enum Enum {
     FIRST("first"),
@@ -14,7 +15,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   enum Enum {
     FIRST("first"),
@@ -28,6 +29,6 @@
   }
 </code></pre>
 <!-- tooltip end -->
-빠른 수정에서 final로 만들 수 있는 필드만 강조 표시하려면 '빠른 수정을 사용할 수 없는 경우 필드 무시' 체크박스를 구성합니다.
+Usa la opción "Ignorar campos que no se pueden hacer 'final'" para advertir solo sobre los campos que se pueden hacer finales mediante la corrección rápida.
 </body>
 </html>

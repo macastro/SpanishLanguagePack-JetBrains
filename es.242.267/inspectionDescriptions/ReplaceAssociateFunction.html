@@ -1,23 +1,23 @@
 <html>
 <body>
-<code>associateBy()</code> 또는 <code>associateWith()</code>로 바꿀 수 있는 <code>associate()</code> 및 <code>associateTo()</code> 호출을 보고합니다.
+Se informa de llamadas a <code>associate()</code> y <code>associateTo()</code> que se pueden sustituir por <code>associateBy()</code> o <code>associateWith()</code>.
 <p>
-    이 두 함수는 주어진 시퀀스 또는 컬렉션(리시버로)의 요소에 적용되는 변환 함수를 받아들입니다.
-    이 쌍은 결과 <code>Map</code>을 빌드하는 데 사용됩니다.
+    Ambas funciones aceptan una función de conversión que se aplica a los elementos de una secuencia o colección determinada (como receptor).
+     Luego, dicho par de funciones se usa para construir el resultado de <code>Map</code>.
 </p>
 <p>
-    변환자가 <code>it</code>을 참조한다는 것을 고려할 때 <code>associate[To]()</code> 호출은 성능 기준에 더 부합하는 <code>associateBy()</code> 또는 <code>associateWith()</code>로 바꿀 수 있습니다.
+    Teniendo en cuenta que el convertidor hace referencia a <code>it</code>, se puede reemplazar la llamada a <code>associate[To]()</code> por <code>associateBy()</code> o <code>associateWith()</code>, que ofrecen un mayor rendimiento.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>  fun getKey(i: Int) = 1L
   fun getValue(i: Int) = 1L
 
   fun test() {
-      arrayOf(1).associate { getKey(it) to it }  // 바꿀 수 있는 'associate()'
-      listOf(1).associate { it to getValue(it) } // 바꿀 수 있는 'associate()'
+      arrayOf(1).associate { getKey(it) to it }  // 'associate()' reemplazable
+      listOf(1).associate { it to getValue(it) } // 'associate()' reemplazable
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>  fun getKey(i: Int) = 1L
   fun getValue(i: Int) = 1L
 

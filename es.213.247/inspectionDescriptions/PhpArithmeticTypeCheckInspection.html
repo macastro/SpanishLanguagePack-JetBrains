@@ -1,14 +1,16 @@
 <html>
 <body>
 
-지원되지 않는 피연산자가 사용된 산술 및 비트 연산식을 보고합니다.
+Reporta expresiones aritméticas y bit a bit con operandos no admitidos.
 
 <p>
-  PHP 8.0부터 산술 및 비트 연산자 <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>**</code>, <code>%</code>, <code>&lt;&lt;</code>, <code>>></code>, <code>&</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>++</code>, <code>--</code> 를 사용하는 경우 피연산자 중 하나가 배열, 리소스 또는 오버로드되지 않은 객체일 때 <code>TypeError</code> 가 발생합니다. 한 가지 예외는 <code>array + array</code> 병합 연산이며 이는 계속 지원됩니다.
+  A partir de PHP 8.0, el uso de los operadores aritméticos y bit a bit <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>**</code>, <code>%</code>, <code>&lt;&lt;</code>, <code>>></code>, <code>&</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>++</code>, <code>--</code>
+  cuando uno de los operandos es un arreglo, recurso u objeto no sobrecargado, resultará en un <code>TypeError</code>. La única excepción es la
+  operación de fusión <code>array + array</code>, que sigue estando admitida.
 </p>
 
 <p>
-  전체 연산 목록은 <a href="https://github.com/php/php-src/blob/master/Zend/tests/operator_unsupported_types.phpt">PHP's internal test source</a>를 참고하세요.
+  Ve <a href="https://github.com/php/php-src/blob/master/Zend/tests/operator_unsupported_types.phpt">el código de prueba interno de PHP</a> para la lista completa de operaciones.
 </p>
 </body>
 </html>

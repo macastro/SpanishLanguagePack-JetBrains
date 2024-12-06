@@ -1,10 +1,13 @@
 <html>
 <body>
-안전하게 <code>static</code>으로 만들 수 있는 인스턴스 변수를 보고합니다. 필드가 <code>final</code>로 선언되고 상수로 초기화되면 이 필드는 static이 될 수 있습니다.
-<p><b>예:</b></p>
+Informa de las variables de instancia que se pueden convertir en <code>static</code> de forma segura. Un campo puede ser estático si se declara <code>final</code> y se inicializa con una constante.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   public final String str = "sample";
 </code></pre>
 <!-- tooltip end -->
+<p>
+  La inspección no informa de los campos finales que se pueden escribir implícitamente. Utiliza el botón "Anotaciones" para modificar la lista de anotaciones que suponen la escritura implícita en el campo.
+</p>
 </body>
 </html>

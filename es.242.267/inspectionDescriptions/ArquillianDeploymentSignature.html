@@ -1,38 +1,38 @@
 <html>
 <body>
-<p><code>@Deployment</code> 어노테이션이 추가된 메서드의 잘못된 시그니처를 보고합니다.</p>
+<p>Inspecciona las firmas incorrectas de los métodos que usan la anotación de <code>@Deployment</code>.</p>
 <p>
-  <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/en-US/html/gettingstarted.html#d0e451">Arquillian 문서</a>에 따르면 Arquillian 테스트 클래스는 <code>@Deployment</code> 어노테이션이 추가된 특정 시그니처를 가진 public static 메서드를 사용해 배포 아카이브를 정의해야 합니다.
+  Según la <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/es-ES/html/gettingstarted.html#d0e451">documentación de Arquillian</a>, las clases de prueba de Arquillian deben definir un archivo de implementación mediante un método static public con una firma específica y anotado con <code>@Deployment</code>.
 </p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  // 이 테스트 케이스는 Arquillian에 의해 시작될 수 없습니다. Deployment 메서드가 static이 아닙니다
+  //Este caso de prueba no podrá arrancarse por Arquillian, el método de implementación no es static
   @RunWith(Arquillian.class)
   public class SomeTest {
     @Deployment
-    public JavaArchive createDeployment() {
-      throw new UnsupportedOperationException("Implement me");
+    public JavaArchive crearImplementación() {
+      throw new UnsupportedOperationException("Implementarme");
     }
 
     @Test
-    public void testSomething() {
-      Assert.fail("To be implemented");
+    public void probarAlgo() {
+      Assert.fail("Implementar");
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   @RunWith(Arquillian.class)
   public class SomeTest {
     @Deployment
-    public static JavaArchive createDeployment() {
-      throw new UnsupportedOperationException("Implement me");
+    public static JavaArchive crearImplementación() {
+      throw new UnsupportedOperationException("Implementarme");
     }
 
     @Test
-    public void testSomething() {
-      Assert.fail("To be implemented");
+    public void probarAlgo() {
+      Assert.fail("Implementar");
     }
   }
 </code></pre>

@@ -1,14 +1,13 @@
 <html>
 <body>
-향상된 <code>for</code> 문을 보고합니다.
-이러한 <code>for</code> 문은 Java 1.4 이전 버전에서 지원되지 않습니다.
-<p>예:</p>
+Admite declaraciones en <code>for</code> aumentadas.
+<p>Ejemplo:</p>
 <pre><code>
   for (int x: Arrays.asList(1, 2, 3)) {
     System.out.println(x);
   }
 </code></pre>
-<p>빠른 수정 적용 후: </p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   for (Iterator&lt;Integer&gt; iterator = Arrays.asList(1, 2, 3).iterator(); iterator.hasNext(); ) {
     final int x = iterator.next();
@@ -17,6 +16,9 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
+  La declaración en <code>for</code> <i>aumentada</i> apareció en Java 5.
+  Esta inspección puede ayudar a degradar para garantizar la compatibilidad con versiones anteriores de Java.
+</p>
 
 </body>
 </html>

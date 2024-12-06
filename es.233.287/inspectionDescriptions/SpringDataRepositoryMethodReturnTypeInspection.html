@@ -1,22 +1,22 @@
 <html>
 <body>
-<p>반환 타입이 잘못된 Spring Data CRUD 저장소 메서드를 보고합니다.</p>
-<p>지원되는 반환 타입은 다음과 같습니다.</p>
+<p>Informa sobre los métodos del repositorio CRUD de Spring Data con tipos de retorno incorrectos.</p>
+<p>Se admiten los siguientes tipos de retorno:</p>
 <list>
   <li><code>void</code></li>
-  <li>기본 타입</li>
-  <li>래퍼 타입</li>
-  <li><code>T</code>: 쿼리 메서드가 최대 1개의 결과만을 반환해야 할 경우. 결과가 없는 경우 <code>null</code>을 반환하고 결과가 2개 이상인 경우<code>IncorrectResultSizeDataAccessException</code>을 던집니다.
+  <li>Tipos primitivos</li>
+  <li>Tipos envolventes</li>
+  <li><code>T</code> cuando se espera que el método de consulta devuelva un resultado como máximo. Devuelve <code>null</code> si no hay resultados y lanza <code>IncorrectResultSizeDataAccessException</code> si hay más de un resultado.
   </li>
-  <li><code>java.util.List</code> 또는 일반적인 <code>Iterable</code> 타입</li>
+  <li><code>java.util.List</code> o cualquier tipo <code>Iterable</code> común</li>
   <li><code>java.util.stream.Stream</code></li>
-  <li><code>java.util.Optional</code> 또는 <code>scala.Option</code>: 쿼리 메서드가 최대 1개의 결과만을 반환해야 할 경우. 결과가 없는 경우 <code>Optional.empty()</code> 또는 <code>Optional.absent()</code>를 반환하고 결과가 2개 이상인 경우<code>IncorrectResultSizeDataAccessException</code>을 던집니다.
+  <li><code>java.util.Optional</code> o <code>scala.Option</code> cuando se espera que el método de consulta devuelva un resultado como máximo. Devuelve <code>Optional.empty()</code> o <code>Optional.absent()</code> si no hay resultados y lanza <code>IncorrectResultSizeDataAccessException</code> si hay más de un resultado.
   </li>
   <li><code>io.micronaut.data.model.Page</code></li>
   <li><code>io.micronaut.data.model.Slice</code></li>
-  <li><code>java.util.concurrent.Future</code>, <code>java.util.concurrent.CompletableFuture</code> 또는 <code>ListenableFuture</code>: 메서드에 <code>@Async</code> 어노테이션이 추가되었으며 Spring 비동기 메서드 실행이 활성화된 경우
+  <li><code>java.util.concurrent.Future</code>, <code>java.util.concurrent.CompletableFuture</code>, o <code>ListenableFuture</code> si el método está anotado con <code>@Async</code> y la ejecución asincrónica del método Spring está habilitada
   </li>
-  <li><code>GeoResults&lt;T&gt;</code>, <code>GeoResult&lt;T&gt;</code> 또는 <code>GeoPage&lt;T&gt;</code></li>
+  <li><code>GeoResults&lt;T&gt;</code>, <code>GeoResult&lt;T&gt;</code>, o <code>GeoPage&lt;T&gt;</code></li>
 </list>
 </body>
 </html>

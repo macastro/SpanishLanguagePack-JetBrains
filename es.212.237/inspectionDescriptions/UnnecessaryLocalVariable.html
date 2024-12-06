@@ -1,31 +1,30 @@
 <html>
 <body>
-메서드의 이해 가능성에 아무 것도 추가하지 않는 불필요한 지역 변수를 보고하며 다음을 포함합니다.
+Se informan las siguientes variables locales innecesarias que no contribuyen a la comprensión del método:
 <ul>
-  <li>즉시 반환되는 지역 변수.</li>
-  <li>다른 변수로 즉시 할당되어 더는 사용되지 않는 지역 변수.</li>
-  <li>다른 지역 변수 또는 매개변수와 항상 같은 값을 가지는 지역 변수.</li>
+  <li>Variables locales que se devuelven inmediatamente y.</li>
+  <li>Variables locales que se asignan inmediatamente a otra variable y que después no se usan.</li>
+  <li>Variables locales que siempre tienen el mismo valor que otra variable local o parámetro.</li>
 </ul>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   boolean yes() {
     boolean b = true;
     return b;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   boolean yes() {
     return true;
   }
- </code></pre>
+  </code></pre>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configuración de la inspección:</p>
 <ul>
-  <li><b>즉시 반환되거나 발생하는 변수 무시</b> 옵션을 사용하여 즉시 반환되거나 발생하는 변수를 무시합니다.
-    일부 코드 스타일은 명확도와 디버그 용이성을 위해 
-그러한 변수를 사용할 것을 제안합니다.</li>
-  <li><b>어노테이션을 가진 변수 무시</b> 옵션을 사용하여 주석이 추가된 변수를 무시합니다.</li>
+  <li>Utiliza la opción "<b>Ignorar variables que se devuelven o se procesan inmediatamente</b>" para ignorar las variables que se devuelven o se procesan inmediatamente.
+    Algunos estilos de código recomiendan utilizar este tipo de variables para mayor claridad y facilidad de depuración.</li>
+  <li>Utiliza la opción "<b>Ignorar variables con anotaciones</b>" para ignorar las variables que tienen anotaciones.</li>
 </ul>
 </body>
 </html>

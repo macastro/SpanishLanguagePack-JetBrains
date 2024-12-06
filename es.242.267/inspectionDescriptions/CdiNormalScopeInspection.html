@@ -1,11 +1,13 @@
 <html>
 <body>
-<p>디폴트 <code>@Dependent</code> 범위 안에 있지 않은 public 인스턴스 필드를 포함하는 매니지드 Bean을 보고합니다.
-  CDI 사양에 따르면, 컨텍스트 범위(<code>@RequestScoped</code>, <code>@ApplicationScoped</code>, <code>@SessionScoped</code>, <code>ConversationScoped</code>)는 public 인스턴스 필드를 포함하는 매니지드 Bean에 허용되지 않습니다.
+<p>Informa sobre beans manejados con campos de instancia públicos que no están en el ámbito <code>@Dependent</code> predeterminado.
+  Según la especificación de CDI, los ámbitos contextuales
+  (<code>@RequestScoped</code>, <code>@ApplicationScoped</code>, <code>@SessionScoped</code> y <code>ConversationScoped</code>)
+  no están permitidos para beans manejados con campos de instancia públicos.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code lang="java">
-  @ApplicationScoped // 경고: 디폴트가 아닌 범위를 가진 Bean은 public 필드를 포함할 수 없습니다
+  @ApplicationScoped // Advertencia: El bean con ámbito no predeterminado no debe tener campos públicos
   class Car {
     public String engine;
   }

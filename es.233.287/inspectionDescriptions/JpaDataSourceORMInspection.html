@@ -1,18 +1,18 @@
 <html>
 <body>
-다음 Persistence ORM 어노테이션 내부의 참조가 구성된 데이터 소스 안에서 해결될 수 없는 경우를 보고합니다.<br/>
+Reporta referencias dentro de las siguientes anotaciones de ORM de persistencia si no pueden resolverse en el origen de datos configurado:<br/>
 <ul>
-  <li> Table</li>
-  <li> Column</li>
+  <li> Tabla</li>
+  <li> Columna</li>
   <li> [Any]To[Any]</li>
   <li> JoinColumn / JoinTable</li>
   <li> NamedQuery / NativeQuery</li>
-  <li> Embeddable</li>
+  <li> Empotrable</li>
 </ul><br/>
 
-데이터 소스를 새로고침하거나 다른 데이터 소스를 할당할 것을 제안합니다.<br/>
+Sugiere actualizar el origen de datos o asignar uno diferente.<br/>
 
-<p><b>데이터베이스 테이블 예:</b></p>
+<p><b>Ejemplo de tabla de base de datos:</b></p>
 <pre><code lang="sql">
   CREATE TABLE DATA_TABLE (
     ID INTEGER,
@@ -20,19 +20,19 @@
 );
 </code></pre><br/>
 
-<p><b>JPA 엔티티 클래스 예:</b></p>
+<p><b>Ejemplo de clase de entidad JPA:</b></p>
 <pre><code lang="java">
   @Entity
-  @Table(name = "UNKNOWN_TABLE") // 해결되지 않은 참조
+  @Table(name = "UNKNOWN_TABLE") // referencia no resuelta
   public class JavaEntity {
-    @Column(name = "ID") // 정의되지 않은 테이블 내 열을 해결할 수 없음
+    @Column(name = "ID") // no se pueden resolver las columnas en una tabla que no está definida
     Integer id;
   }
 </code></pre><br/>
 
 <!-- tooltip end -->
 <p>
-  <b>참고:</b> '데이터 소스 할당' 액션 또는 엔티티 클래스에 해당하는 여백 아이콘을 통해 데이터 소스를 구성할 수 있습니다
+  <b>NOTA:</b> El origen de datos se puede configurar mediante la acción `Asignar origen de datos` o el icono de canal correspondiente para la clase de entidad
 </p>
 </body>
 </html>

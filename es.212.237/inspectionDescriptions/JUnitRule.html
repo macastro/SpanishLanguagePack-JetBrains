@@ -1,7 +1,7 @@
 <html>
 <body>
-형식이 잘못된 <code>@Rule</code> 또는 <code>@ClassRule</code> 어노테이션 사용 위치를 보고합니다.
-형식이 잘못된 <a href="https://github.com/junit-team/junit4/wiki/Rules">규칙</a>을 포함하는 테스트를 실행할 수 없습니다.
+형식이 잘못된 <code>@Rule</code> 또는 <code>@ClassRule</code> 어노테이션의 사용을 보고합니다.
+형식이 잘못된 <a href="https://github.com/junit-team/junit4/wiki/Rules">규칙</a>을 포함하는 테스트는 실행할 수 없습니다.
 <ul>
   <li>
     <code>@Rule</code> 어노테이션이 추가된 멤버는 <code>public</code>이어야 하며 <code>org.junit.rules.TestRule</code> 또는 <code>org.junit.rules.MethodRule</code>의 하위 타입이어야 합니다.
@@ -15,17 +15,17 @@
     <b>private final</b> TemporaryFolder tempFolder =
       <b>new</b> TemporaryFolder();
 
-    //... 테스트 수행
+    // ... 테스트가 여기에 도달합니다
   }
 </code></pre>
-<p>제어자를 수정하는 빠른 수정이 제공됩니다:</p>
+<p>제어자를 수정하는 빠른 수정이 제공됩니다.</p>
 <pre><code>
   <b>public class</b> MomentousTest {
     @Rule
     <b>public final</b> TemporaryFolder tempFolder =
       <b>new</b> TemporaryFolder();
 
-    //... 테스트 수행
+    // ... 테스트가 여기에 도달합니다
   }
 </code></pre>
 <!-- tooltip end -->

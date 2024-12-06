@@ -1,19 +1,19 @@
 <html>
 <body>
-각각 <code>Files.newInputStream()</code> 및 <code>Files.newOutputStream()</code> 호출로 대체될 수 있는 <code>new FileInputStream()</code> 혹은 <code>new FileOutputStream()</code> 표현식을 보고합니다.
+Informa las expresiones <code>new FileInputStream()</code> o <code>new FileOutputStream()</code> que se pueden reemplazar con llamadas <code>Files.newInputStream()</code> o <code>Files.newOutputStream()</code>, respectivamente.
 <br>
-<code>Files</code> 메서드를 사용하여 생성된 스트림은 스트림 생성자로 생성한 것보다 보통 더 효율적입니다.
-<p>예:</p>
+Las transmisiones creadas usando métodos <code>Files</code> usualmente son más eficientes que aquellas creadas por los constructores de transmisión.
+<p>Ejemplo:</p>
 <pre><code>
   InputStream is = new BufferedInputStream(new FileInputStream(file));
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que se aplica el arreglo rápido:</p>
 <pre><code>
   InputStream is = new BufferedInputStream(Files.newInputStream(file.toPath()));
 </code></pre>
 <!-- tooltip end -->
-<p>언어 수준이 10 이상이지만 빠른 수정이 여전히 사용 가능하면 이 검사에 경고가 표시되지 않습니다.</p>
-<p>이 검사는 프로젝트 또는 모듈의 언어 수준이 7 이상인 경우에만 보고합니다.</p>
-<p><small>2022.1의 새로운 기능</small></p>
+<p>Esta inspección no muestra advertencia si el nivel de lenguaje es 10 o más alto, pero el arreglo rápido aún está disponible.</p>
+<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 7 o más alto.</p>
+<p><small>Nuevo en 2022.1</small></p>
 </body>
 </html>

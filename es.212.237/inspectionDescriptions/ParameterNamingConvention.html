@@ -1,12 +1,13 @@
 <html>
 <body>
-이름이 너무 짧거나 너무 길거나 지정된 정규 표현식 패턴을 따르지 않는 메서드 매개변수를 보고합니다.
-<p><b>예:</b><code>void fooBar(int X)</code> 는 이 검사에서 매개변수 이름이 소문자로 시작되어야 한다는 기본값 설정의 활성화 여부를 보고합니다.</p>
+Informa los parámetros del método cuyos nombres son demasiado cortos, demasiado largos o que no siguen el patrón de expresión regular especificado.
+<p><b>Ejemplo:</b> <code>void fooBar(int X)</code>
+se debe informar si la inspección está habilitada con la configuración predeterminada en la cual un nombre de parámetro debe comenzar con una letra minúscula.</p>
 
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configure la inspección:</p>
 <p>
-  <b>Options</b> 섹션의 필드를 사용하여 최소 길이, 최대 길이 및 메서드 매개변수 이름에 필요한 정규 표현식을 지정합니다. 이름의 길이를 검사하지 않으려면 <b>0</b>을 지정하세요.</p>
-<p>정규 표현식은 표준 <code>java.util.regex</code> 서식으로 지정되어야 합니다.</p>
+Utilice los campos en la sección <b>Opciones</b> para especificar la longitud mínima, longitud máxima y una expresión regular esperada para los nombres de parámetros del método. Especifique <b>0</b> para no verificar la longitud de nombres.</p>
+<p>Las expresiones regulares se deben especificar en el formato estándar <code>java.util.regex</code>.</p>
 </body>
 </html>

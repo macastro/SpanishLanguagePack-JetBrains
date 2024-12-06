@@ -1,10 +1,11 @@
 <html>
 <body>
-잘못된 형식의 테스트, 벤치마크 및 예시를 보고합니다.
-<p><a href="https://golang.org/pkg/testing/">golang.org의 Package testing</a>에 따르면 go 도구가 올바르게 이를 처리하기 위해서는 이름이 특별히 협의된 규칙을 따라야합니다.</p>
-<p>예:</p>
-<pre><code>func Testfoo(*testing.T) {} // 'go' 도구가 이 테스트를 실행하지 않음</code></pre>
-<p><b>다음으로 이름 변경</b> 빠른 수정 적용 후:</p>
+Informa de nombres mal formados para pruebas, evaluaciones comparativas y ejemplos.
+<p>Según <a href="https://pkg.go.dev/testing">Package testing en go.dev</a>, los nombres deben seguir una convención especial
+para que la herramienta de Go los procese correctamente.</p>
+<p>Ejemplo:</p>
+<pre><code>func Testfoo(*testing.T) {} // la herramienta "go" no ejecutará esta prueba</code></pre>
+<p>Después de aplicar la solución rápida <b>Cambiar nombre a</b>:</p>
 <pre><code>func TestFoo(*testing.T) {}</code></pre>
 </body>
 </html>

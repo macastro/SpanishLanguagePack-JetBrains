@@ -1,28 +1,26 @@
 <html>
 <body>
-<code>Serializable</code>을 구현하며 <code>Serializable</code>를 구현하지 않는 클래스 내부에 선언되어 있는 static이 아닌 내부 클래스를 보고합니다.
+Reporta clases internas no estáticas que implementan el tipo <code>Serializable</code> y se declaran dentro de una clase que no implementa <code>Serializable</code>.
 <p>
-  그러한 클래스는 외부 클래스에 대한 암묵적 참조로 인해 올바르게 직렬화할 가능성이 낮습니다.
+  Es poco probable que dichas clases se serialicen correctamente debido a referencias implícitas a la clase externa.
 </p>
-<p><b>예:</b></p>
-<pre>
-  <code>
-    class A {
-      class Main implements Serializable {
-      }
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class A {
+    class Main implements Serializable {
     }
- </code>
-</pre>
+  }
+</code></pre>
 <!-- tooltip end -->
-<p>다음 옵션을 사용해 검사를 구성하세요:</p>
+<p>Usa las siguientes opciones para configurar la inspección:</p>
 <ul>
   <li>
-    상속자가 이 검사에서 보고되어서는 안 되는 클래스를 나열합니다.
-    상위 클래스에서 <code>Serializable</code>를 상속받지만 직렬화를 의도하지 않은 클래스를 말합니다.
- </li>
+    Lista las clases cuyos herederos no deben ser reportados por esta inspección.
+    Esto es para clases que heredan <code>Serializable</code> de una superclase pero no están pensadas para serialización.
+  </li>
   <li>
-    <code>Serializable</code> 익명 클래스를 무시할지 여부를 설정합니다.
- </li>
+    Si ignorar o no clases anónimas <code>Serializable</code>.
+  </li>
 </ul>
 </body>
 </html>

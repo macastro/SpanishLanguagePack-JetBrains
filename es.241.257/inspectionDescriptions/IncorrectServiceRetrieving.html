@@ -1,11 +1,11 @@
 <html>
 <body>
-서비스를 가져올 때 다음의 문제를 보고합니다.
+Se informan los siguientes problemas al recuperar servicios:
 <ul>
-  <li>등록되지 않은 서비스를 가져오려는 시도.</li>
-  <li>서비스를 가져오는 중 불일치가 발생했습니다. 프로젝트 수준의 서비스를 애플리케이션 수준의 서비스로 가져왔거나 반대의 경우입니다.</li>
+  <li>Intento de recuperar un servicio no registrado.</li>
+  <li>Se produjo una discrepancia al recuperar el servicio: se intentó recuperar un servicio de nivel de proyecto como servicio de nivel de aplicación, o viceversa.</li>
 </ul>
-<p>예시 (Kotlin):</p>
+<p>Ejemplo (Kotlin):</p>
 <pre><code lang="kotlin">
 @Service
 class MyAppService
@@ -14,15 +14,15 @@ class MyAppService
 class MyProjectService(private val project: Project)
 </code></pre>
 <pre><code lang="kotlin">
-// 나쁨:
-val projectService = service&lt;MyProjectService&gt;()         // The project-level service is retrieved as an application-level service
-val applicationService = project.service&lt;MyAppService&gt;() // The application-level service is retrieved as a project-level service
+// Malo:
+val projectService = service&lt;MyProjectService&gt;()         // El servicio de nivel de proyecto se recupera como un servicio de nivel de aplicación
+val applicationService = project.service&lt;MyAppService&gt;() // El servicio de nivel de aplicación se recupera como un servicio de nivel de proyecto
 </code></pre>
 <pre><code lang="kotlin">
-// 좋음:
+// Bueno:
 val projectService = project.service&lt;MyProjectService&gt;()
 val applicationService = service&lt;MyAppService&gt;();
 </code></pre>
-<p><small>2023.2의 새로운 기능</small>
+<p><small>Novedad de 2023.2</small>
 </body>
 </html>

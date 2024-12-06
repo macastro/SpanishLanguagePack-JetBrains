@@ -1,24 +1,24 @@
 <html>
 <body>
-<code>&amp;&amp;</code> 및 <code>||</code> 표현식과 <code>if</code> 문 브랜치 내 중복된 조건을 보고합니다.
-이러한 중복 조건은 의도된 것일 때도 있지만, 대부분의 경우 실수입니다.
-<p>예:</p>
+<code>&amp;&amp;</code> y <code>||</code> expresiones y condiciones duplicadas en las ramas de sentencia <code>if</code>.
+Estas condiciones duplicadas pueden ser intencionales, pero la mayoría de las veces se deben a descuidos.
+<p>Ejemplo:</p>
 <pre><code>
   boolean result = digit1 != digit2 || digit1 != digit2;
 </code></pre>
 <!-- tooltip end -->
 <p>
-  부작용을 생성할 수 있는 조건을 무시하려면, <b>부작용이 있는 조건 무시</b> 옵션을 사용하세요.
-이 옵션을 비활성화하면 예를 들어 같은 메서드가 후속 호출에 따라 다른 값을 반환하는 경우와 같이 거짓 양성으로 이어질 수 있습니다.
+  Para ignorar condiciones que pueden generar efectos secundarios, use la opción "<b>Ignorar condiciones con efectos secundarios</b>".
+Deshabilitar esta opción puede producir falsos positivos, por ejemplo, cuando el mismo método devuelve valores diferentes en llamadas posteriores.
 </p>
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
   native boolean unknownMethod();
   
   ...
   
   if (unknownMethod() || unknownMethod()) {
-    System.out.println("Got it");
+    System.out.println("Lo conseguí");
   }
 </code></pre>
 <p>Due to possible side effects of <code>unknownMethod()</code> (on the example), the warning will only be

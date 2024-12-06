@@ -1,13 +1,13 @@
 <html>
 <body>
-EJB 및 Interceptor 클래스로 동시에 정의된 클래스를 보고합니다.
+Informa sobre las clases definidas al mismo tiempo como clases EJB e interceptadoras.
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 @Stateless
 public class ExampleBean {
 
-  @Interceptors(ExampleBean.class) // 오류: 클래스가 EJB 및 Interceptor로 동시에 정의됩니다
+  @Interceptors(ExampleBean.class) // Error: La clase está definida al mismo tiempo como EJB e interceptor
   public void getAnotherBean() {
     ...
   }

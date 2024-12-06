@@ -1,12 +1,13 @@
 <html>
 <body>
-하드코딩된 Struts 액션 URL.
-Struts 액션 URL이 '수동'으로 만들어졌으며 Struts &lt;url&gt;-tag 사용을 제안하는 패턴을 보고합니다.<br/>
-<p>예:</p>
+URL de acción Struts codificada de forma rígida.
+Informa del patrón en el que la URL de acción Struts está creada "manualmente", y sugiere convertirla usando la etiqueta &lt;url&gt; de Struts.
+<br/>
+<p>Ejemplo:</p>
 <pre><code>
 &lt;a href="namespace/foo!bar.action?param1=value1&amp;param2=value2"/&gt;
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
 &lt;a href="&lt;s:url namespace="namespace" action="foo" method="bar"/&gt;
   &lt;s:param name="param1"&gt;value1&lt;/s:param&gt;

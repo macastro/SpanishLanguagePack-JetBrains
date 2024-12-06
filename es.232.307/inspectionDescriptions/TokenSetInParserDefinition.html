@@ -1,26 +1,26 @@
 <html>
 <body>
-<code>ParserDefinition</code> 클래스에서 비 플랫폼 요소 타입을 참조하는 <code>TokenSet</code> 필드 선언을 보고합니다.
+Informa del campo `TokenSet` de declaración que hace referencia un tipo de elemento no de plataforma en la clase `ParserDefinition`.
 <p>
-  모든 언어의 <code>ParserDefinition</code>은 애플리케이션이 시작될 때 생성됩니다.
-  비 플랫폼 언어 요소 타입을 참조하는 <code>TokenSet</code>을 선언하는 경우 프로젝트에 해당 언어의 파일이 전혀 포함되지 않더라도 참조된 타입의 홀더 클래스에 모든 언어 요소 타입이 생성되고 등록될 수 있습니다.
+  La `ParserDefinition` de todos los lenguajes se crea durante el inicio de la aplicación.
+  Definir un `TokenSet` que refiere el tipo de elemento de los lenguajes no de plataforma puede ocasionar que se creen y registren todoslos tipos de elementos de ese lenguaje en la clase contenedor del tipo referido, incluso si el proyecto no contiene ningún archivo de este lenguaje.
 </p>
 
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code lang="java">
-// 요소 타입 홀더:
+// Holder de tipo de elemento
 public interface MyLangTokenTypes {
   IElementType COMMENT = new MyLangTokenType("COMMENT");
   IElementType TYPE1 = new MyLangTokenType("TYPE1");
   IElementType TYPE2 = new MyLangTokenType("TYPE2");
-  // 기타 타입...
+  // Otros tipos...
 }
 
 
-// 나쁨:
+// Incorrecto:
 
 public class MyLangParserDefinition implements ParserDefinition {
-  // 이 필드로 인해 MyLangTokenTypes의 모든 타입이 초기화 및 등록됩니다
+  // Este campo inicializa y registra todos los tipos en MyLangTokenTypes:
   private static final TokenSet COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
 
   @NotNull
@@ -32,7 +32,7 @@ public class MyLangParserDefinition implements ParserDefinition {
 }
 
 
-// 좋음:
+// Correcto:
 
 public final class MyLangTokenSets {
   public static final TokenSet COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
@@ -42,15 +42,15 @@ public class MyLangParserDefinition implements ParserDefinition {
   @NotNull
   @Override
   public TokenSet getCommentTokens() {
-    // 이 메서드가 호출될 때만 타입이 참조 및 등록됩니다
+    // El tipo solo se referencia y se registra cuando se llama a este método:
     return MyLangTokenSets.COMMENTS;
   }
   ...
 }
 
-// 좋음 (Kotlin):
+// Correcto (Kotlin):
 
-// getCommentTokens() 메서드가 호출될 때까지 최상위 수준의 선언이 로드되지 않습니다
+// Las declaraciones de nivel superior no se cargan hasta que se llama al método getCommentTokens():
 private val COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
 
 class MyLangParserDefinition : ParserDefinition {
@@ -60,12 +60,12 @@ class MyLangParserDefinition : ParserDefinition {
   ...
 }
 
-// 좋음:
+// Correcto:
 
 public class MyLangParserDefinition implements ParserDefinition {
-  // 플랫폼 TokenSet이 허용됩니다
+  // Se permite un TokenSet de plataforma:
   private static final TokenSet COMMENTS1 = TokenSet.EMPTY;
-  // 플랫폼 TokenType이 허용됩니다
+  // Se permite un TokenType de plataforma:
   private static final TokenSet COMMENTS2 = TokenSet.create(TokenType.WHITE_SPACE);
 
   @NotNull
@@ -79,6 +79,6 @@ public class MyLangParserDefinition implements ParserDefinition {
 </code></pre>
 
 <!-- tooltip end -->
-<p><small>2023.2의 새로운 기능</small>
+<p><small>Nuevo en 2023.2</small>
 </body>
 </html>

@@ -1,24 +1,24 @@
 <html>
 <body>
-루프 내의 객체 또는 배열 할당을 보고합니다. 반드시 문제가 되는 것은 아니지만, 루프 내의 객체 할당은 메모리 누수 및 성능 문제를 찾기에 좋은 위치입니다.
+Inspecciona las asignaciones de objetos o conjuntos dentro de los bucles. Si bien no es necesariamente un problema, una asignación de objetos dentro de un bucle es un excelente lugar para buscar fugas de memoria y problemas de rendimiento.
 <p>
-  이 검사는 다음과 같은 구문을 보고합니다.
+  La inspección informa las siguientes construcciones:
 </p>
 <ul>
-  <li><code>new</code> 연산자를 통한 명시적 할당</li>
-  <li>새로운 객체를 반환하는 것으로 알려진 메서드</li>
-  <li>인스턴스 바운드된 메서드 참조</li>
-  <li>변수 또는 <code>this</code> 참조를 캡처하는 람다</li>
+  <li>Asignaciones explícitas mediante el operador <code>new</code></li>
+  <li>Métodos que se sabe que devuelven un nuevo objeto</li>
+  <li>Referencias de método vinculadas a la instancia</li>
+  <li>Lambdas que capturan variables o <code>this</code></li>
 </ul>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  // 명시적 할당
+  // Asignación explícita
   for (Status status : Status.values()) {
     declarationsMap.put(status, new ArrayList&lt;&gt;());
   }
 
-  // 람다가 변수를 캡처합니다
-  String message = "Engine running.";
+  // Lambda captura una variable
+  String message = "Motor en marcha.";
   for (Engine engine : engines) {
       if (!isRunning(engine)) {
           logger.warn(() -> {
@@ -27,7 +27,7 @@
       }
   }
 
-  // 인스턴스 바운드된 메서드 참조
+  // Referencia de método vinculada a la instancia
   for(Node node : nodes) {
     descriptor = node.getDescription();
     descriptor.ifPresent(dynamicTestExecutor::execute);

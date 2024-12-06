@@ -1,7 +1,7 @@
 <html>
 <body>
-더 간결한 메서드로 대체 가능하거나 중간 단계를 제거할 수 있는 <code>forEach()</code> 호출을 보고합니다.
-<p><b>예:</b></p>
+Inspecciona las llamadas a <code>forEach()</code> que se pueden reemplazar por un método más conciso, o de las que se pueden extraer pasos intermedios.
+<p><b>Ejemplo:</b></p>
 <pre><code>
   List&lt;String&gt; findNStrings(List&lt;String&gt; list, int n) {
     List&lt;String&gt; other = new ArrayList&lt;>();
@@ -11,7 +11,7 @@
     return other;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   List&lt;String&gt; findNStrings(List&lt;String&gt; list, int n) {
     List&lt;String&gt; other = list.stream()
@@ -21,6 +21,6 @@
   }
 </code></pre>
 <!-- tooltip end -->
-<p><small>2017.3의 새로운 기능</small></p>
+<p><small>Nuevo en 2017.3</small></p>
 </body>
 </html>

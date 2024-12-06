@@ -1,16 +1,16 @@
 <html>
 <body>
-기본 생성자 매개변수에 명시적으로 대입되는 프로퍼티를 보고합니다.
-<p>기본 생성자에서 직접 프로퍼티를 선언하면 코드의 양을 줄이고 코드 가독성을 높여줍니다.</p>
-<p><b>예:</b></p>
+Informa de propiedades que están asignadas explícitamente a los parámetros primarios del constructor.
+<p>Las propiedades pueden ser declaradas directamente en el constructor primario, reduciendo la cantidad de código y mejorando la legibilidad del mismo.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class User(name: String) {
-      val name = name
+  class User(nombre: String) {
+      val nombre = nombre
   }
 </code></pre>
-<p>빠른 수정을 위해 매개변수와 프로퍼티 선언을 기본 생성자 매개변수로 결합하도록 제안합니다.</p>
+<p>La corrección rápida une la declaración del parámetro y la propiedad en un parámetro del constructor primario:</p>
 <pre><code>
-  class User(val name: String) {
+  class User(val nombre: String) {
   }
 </code></pre>
 <!-- tooltip end -->

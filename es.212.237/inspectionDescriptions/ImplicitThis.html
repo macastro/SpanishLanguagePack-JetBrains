@@ -1,5 +1,25 @@
 <html>
 <body>
-묵시적 <b>this</b> 사용을 보고합니다.
+Reporta usos implícitos de <b>this</b>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+      fun s() = ""
+
+      fun test() {
+          s()
+      }
+  }
+</code></pre>
+<p>La solución rápida especifica <b>this</b> explícitamente:</p>
+<pre><code>
+  class Foo {
+      fun s() = ""
+
+      fun test() {
+          this.s()
+      }
+  }
+</code></pre>
 </body>
 </html>

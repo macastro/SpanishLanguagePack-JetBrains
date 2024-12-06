@@ -1,41 +1,42 @@
 <html>
 <body>
-빈 클래스와 빈 Java 파일을 보고합니다.
-<p>클래스에 필드, 메서드, 생성자 또는 이니셜라이저가 포함되지 않은 경우 빈 클래스입니다. 주요 변경 사항 또는 리팩터링 이후 빈 클래스가 남는 경우가 종종 있습니다.</p>
-<p><b>예:</b></p>
+Reporta clases vacías y archivos Java vacíos.
+<p>Una clase está vacía si no contiene algún campo, método, constructor o inicializador. Las clases vacías a veces son dejadas desatendidas después de cambios significativos o refactorizaciones.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class Example {
-    List&lt;String&gt; getList() {
+  clase Ejemplo {
+    Lista&lt;String&gt; obtenerLista() {
        return new ArrayList&lt;&gt;() {
 
        };
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de que la reparación rápida es aplicada:</p>
 <pre><code>
-  class Example {
-    List&lt;String&gt; getList() {
+  clase Ejemplo {
+    Lista&lt;String&gt; obtenerLista() {
        return new ArrayList&lt;&gt;();
     }
   }
 </code></pre>
 <!-- tooltip end -->
-<p>검사 구성:</p>
+<p>Configurar el examen:</p>
 <ul>
   <li>
-    특수 어노테이션을 지정하려면 <b>다음으로 어노테이션이 추가된 경우 무시</b> 옵션을 사용합니다. 이 검사는 해당 주석으로 표시된 클래스를 무시합니다.
+    Usa la opción <b>Ignorar si está anotada por</b> para especificar anotaciones especiales. El examen ignorará las clases marcadas con estas
+    anotaciones.
   </li>
   <li><p>
-    <b>클래스가 상위 타입의 매개변수화인 경우 무시</b> 옵션을 사용하여 상위 클래스를 매개변수화하는 클래스를 무시합니다. 예:
+    Usa la opción <b>Ignorar clase si es una parametrización de un supertipo</b> para ignorar las clases que parametrizan una superclase. Por ejemplo:
   </p>
-    <pre><code>class MyList extends ArrayList&lt;String&gt; {}</code></pre>
+    <pre><code>clase MiLista extiende ArrayList&lt;String&gt; {}</code></pre>
   </li>
   <li>
-    <b>java.lang.Throwable의 하위 클래스 무시</b> 옵션을 사용하여 <code>java.lang.Throwable</code>을 확장하는 클래스를 무시합니다.
+    Usa la opción <b>Ignorar subclases de java.lang.Throwable</b> para ignorar las clases que extienden <code>java.lang.Throwable</code>.
   </li>
   <li>
-    <b>주석을 내용으로 간주</b> 옵션을 사용하여 주석이 포함된 클래스를 무시합니다.
+    Usa la opción <b>Los comentarios cuentan como contenido</b> para ignorar clases que contienen comentarios.
   </li>
 </ul>
 </body>

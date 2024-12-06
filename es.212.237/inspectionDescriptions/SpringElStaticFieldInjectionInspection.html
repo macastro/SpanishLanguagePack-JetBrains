@@ -1,12 +1,12 @@
 <html>
 <body>
-<p>Spring Expression Language(SpEL)를 static 필드에 삽입하려는 시도 보고('null' 값이 삽입된 경우).</p>
+<p>Informa sobre los intentos de inyección de Spring Expression Language (SpEL) en los campos estáticos (se inyecta un valor 'nulo').</p>
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 @Controller
 public class MyController {
-    <strong>@Value</strong>("#{systemProperties['some.key']}")  //  Injection to static fields is not allowed
+    <strong>@Value</strong>("#{systemProperties['some.key']}")  //  No está permitida la inyección en campos estáticos
     static String spelWithDefaultValue;
 }
 </code></pre>

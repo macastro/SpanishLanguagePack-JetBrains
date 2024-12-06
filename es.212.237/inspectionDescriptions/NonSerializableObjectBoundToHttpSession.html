@@ -1,16 +1,17 @@
 <html>
 <body>
-Reports objects not implementing <code>java.io.Serializable</code> used as arguments to
-<code>javax.servlet.http.HttpSession.setAttribute()</code> or
+Informa sobre objetos de clases que no implementan <code>java.io.Serializable</code> usados como argumentos de
+<code>javax.servlet.http.HttpSession.setAttribute()</code> o
 <code>javax.servlet.http.HttpSession.putValue()</code>.
 <p>
-  'HttpSession'이 패시베이팅되거나 마이그레이션되지 않은 경우 그러한 객체는 직렬화되지 않으며 진단하기 어려운 버그를 초래할 수 있습니다.
+  Dichos objetos no se serializarán si <code>HttpSession</code> se pasiva o migra, y podrían provocar errores difíciles de diagnosticar.
 </p>
 <p>
-  이 검사는 타입 매개변수가 <code>Serializable</code> 이외의 객체가 아닌 이상 <code>java.util.Collection</code> 및
-  <code>java.util.Map</code> 타입의 객체는 <code>Serializable</code>이라고 가정합니다.
+  Esta inspección asume que los objetos de los tipos <code>java.util.Collection</code> y
+<code>java.util.Map</code> son <code>Serializable</code>,
+a menos que los parámetros de tipo no sean <code>Serializable</code>.
 </p>
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   void foo(HttpSession session) {
       session.setAttribute("foo", new NonSerializable());

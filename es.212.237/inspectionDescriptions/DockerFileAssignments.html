@@ -1,24 +1,25 @@
 <html>
 <body>
-<p><code>ARG</code>, <code>ENV</code>, <code>LABEL</code> 명령어의 키-값 쌍에 사용된 잘못된 공백을 보고합니다.</p>
+<p>Informa sobre el espaciado incorrecto para pares clave-valor en los comandos <code>ARG</code>, <code>ENV</code> y <code>LABEL</code>.</p>
 <p>
-  <a href="https://docs.docker.com/engine/reference/builder/#arg">Dockerfile 사양</a>에 명시적으로 지정되어 있지 않지만 키-값 쌍의 몇 가지 공백 조합은 허용되지 않습니다.
-  문제 명령에 도달한 후에 Docker 빌드가 실패합니다.
+  Si bien no se especifica explícitamente en la <a href="https://docs.docker.com/engine/reference/builder/#arg">especificación de Dockerfile</a>,
+  no se permiten algunas combinaciones de espaciado para pares clave-valor.
+  La compilación de Docker fallará después de alcanzar la instrucción del problema.
 </p>
 <!-- tooltip end -->
-<p><b>예:</b></p>
+<p><b>Ejemplos:</b></p>
 <ul>
-  <li><code>ARG</code> 명령어는 '=' 주위에 어떠한 공백도 허용하지 않습니다</li>
-  <li><code>ENV</code> 및 <code>LABEL</code>는 '=' 뒤에 공백을 허용하지 않습니다</li>
+  <li>El comando <code>ARG</code> no permite espacios alrededor de '='</li>
+  <li><code>ENV</code> y <code>LABEL</code> no permiten espacios después de '='</li>
 </ul>
 <pre><code>
-  # 아래의 모든 명령어는 실패합니다
+  # todos los comandos siguientes fallarán
   ARG answer = 42
   ARG version= "1.0.0"
   LABEL "maintained.by"= someone@gmail.com
   ENV JAVA_HOME= "/docker-java-home"
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   ARG answer=2
   ARG version="1.0.0"

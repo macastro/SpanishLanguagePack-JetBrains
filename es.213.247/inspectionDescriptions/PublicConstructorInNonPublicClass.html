@@ -1,9 +1,24 @@
 <html>
 <body>
-<code>public</code>이 아닌 클래스의 모든 <code>public</code> 생성자를 보고합니다.
-<p>보통 낮은 액세스 수준을 가진 클래스에서 <code>public</code> 생성자를 생성할 이유가 없습니다.
-  단, 이 검사를 실행하면 일부 리플렉션 호출의 동작이 바뀔 수 있으니 유의하세요. 특히 <code>Class.getConstructor()</code>는 업데이트된 생성자 찾을 수 없습니다(대신 <code>Class.getDeclaredConstructor()</code>를 사용해야 함). 본인의 코드 또는 사용하는 프레임워크의 코드가 <code>getConstructor()</code>를 통해서 생성자 접근성에 의존하는 경우 이 검사를 사용하면 안 됩니다.
+Reporta constructores <code>públicos</code> en clases no <code>públicas</code>.
+<p>Usualmente, no hay razón para crear un constructor <code>público</code> en una clase con un menor nivel de acceso.
+  Sírvanse notar, sin embargo, que esta inspección cambia el comportamiento de algunas llamadas de reflexión. En particular,
+  <code>Class.getConstructor()</code> no podrá encontrar el constructor actualizado
+  (se debería usar <code>Class.getDeclaredConstructor()</code> en su lugar). No use la inspección si su código
+  o el código de algunos frameworks usados se basa en la accesibilidad del constructor vía <code>getConstructor()</code>.
 </p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class House {
+    public House() {}
+  }
+</code></pre>
+<p>Después de que se aplica la solución rápida:</p>
+<pre><code>
+  class House {
+    House() {}
+  }
+</code></pre>
 <!-- tooltip end -->
 </body>
 </html>

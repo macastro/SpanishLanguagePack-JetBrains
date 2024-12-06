@@ -1,16 +1,45 @@
 <html>
 <body>
-중괄호가 없는 <code>if</code>, <code>while</code>, <code>for</code> 구문을 보고합니다.
-<p>중괄호는 코드의 가독성을 좋게 하며 오류를 방지하는 데 도움이 됩니다.</p>
-<p>예:</p>
+Esta inspección notifica sentencias <code>if</code>, <code>while</code>, <code>do</code> o <code>for</code> sin llaves.
+Algunos estilos de código, como la <a href="https://google.github.io/styleguide/javaguide.html">Guía de estilo de Java de Google</a>, requieren llaves para todas las sentencias de control.
+<p>
+  Es importante recordar añadir llaves al añadir más sentencias a una sentencia de control sin llaves.
+  También es importante tener más cuidado al comentar una línea de código sin usar llaves para no crear inadvertidamente la siguiente parte de una sentencia de control de flujo.
+  El uso constante de llaves hace que sea más seguro insertar o comentar una línea de código.
+<p>
+  Es probable que la <a href="https://www.imperialviolet.org/2014/02/22/applebug.html">vulnerabilidad goto fail</a> no ocurra si utilizas un estilo de código que siempre utiliza llaves.
+  Las sentencias de control con llaves hacen que el flujo de control sea más fácil de ver y eliminan la necesidad de una sangría que podría ser incorrecta.</p>
+<p>Ejemplo:</p>
 <pre><code>
-  if (x &gt; 0) System.out.println("x is positive");
-</code></pre>
-<p>빠른 수정은 구문 본문을 중괄호로 둘러쌉니다.</p>
-<pre><code>
-  if (x &gt; 0) {
-    System.out.println("x is positive");
+class Strange {
+  void x(boolean one, boolean two) {
+    if(one)
+      if(two)
+        foo();
+    else
+      bar();
   }
+
+  void foo() {}
+  void bar() {}
+}
+</code></pre>
+<p>La corrección rápida envolverá el cuerpo de la sentencia con llaves.</p>
+<pre><code>
+class Strange {
+  void x(boolean one, boolean two) {
+    if(one) {
+      if(two) {
+        foo();
+      } else {
+        bar();
+      }
+    }
+  }
+
+  void foo() {}
+  void bar() {}
+}
 </code></pre>
 </body>
 </html>

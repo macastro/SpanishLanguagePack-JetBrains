@@ -2,88 +2,120 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td><font face="verdana" size="-1"><b>프로젝트</b> 도구 창에서 <b>새로 만들기 | Java 클래스 | 열거형</b>을 호출하여 생성된
-      새 Java 열거형에 적용됩니다.<br><br>
+    <td><font face="verdana" size="-1">Se aplica a las nuevas enumeraciones de Java que se crean invocando
+      <b>Nuevo | Clase Java | Enumeración</b> en la ventana de herramientas <b>Proyecto</b>.<br><br>
 
-      이 기본 제공 템플릿은 편집할 수 있습니다. Java 표현식 및 주석과 마찬가지로, 
-      해당 값으로 확장되는 사전 정의된 변수(아래 나열됨)를 사용할 수 있습니다.<br><br>
+      Esta plantilla integrada es editable. Junto con las expresiones y comentarios de Java, también puedes utilizar las variables predefinidas
+      (que se enumeran a continuación) que luego se ampliarán como macros en los valores correspondientes.<br><br>
 
-      이 기본 제공 템플릿은 편집할 수 있습니다. 사용자 지정 변수는 다음 형식을 사용합니다: <i>${VARIABLE_NAME}</i>, 여기서 <i>VARIABLE_NAME</i>은 변수 이름입니다 (예: <i>${MY_CUSTOM_FUNCTION_NAME}</i>).
-      IDE가 사용자 지정 변수를 사용하는 새 파일을 생성하기 전, 템플릿의 사용자 지정 변수 값을 정의할 수 있는 대화상자가 표시됩니다.<br><br>
-<i>#parse</i> 지시문을 사용하여 <b>포함하기</b> 탭에서 템플릿을 포함할 수 있습니다. 템플릿을 포함하려면,
-      템플릿의 전체 이름을 따옴표로 묶인 매개변수로 지정하세요(예: <i>#parse("File Header.java")</i>.
+      También es posible especificar variables personalizadas. Las variables personalizadas utilizan el siguiente formato: <i>${NOMBRE_VARIABLE}</i>, donde
+      <i>NOMBRE_VARIABLE</i> es un nombre para tu variable (por ejemplo, <i>${NOMBRE_MI_FUNCION_PERSONALIZADA}</i>).
+      Antes de que el IDE cree un nuevo archivo con variables personalizadas, ves un cuadro de diálogo donde puedes definir valores para variables personalizadas en la
+      plantilla.<br><br>
+
+      Mediante la directiva <i>#parse</i> puedes incluir plantillas de la pestaña <b>Incluye</b>. Para incluir una plantilla,
+      especifica el nombre completo de la plantilla como un parámetro entre comillas (por ejemplo, <i>#parse("Encabezado de archivo.java")</i>.
     </font></td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">사전 정의된 변수는 다음의 값을 사용합니다:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PACKAGE_NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">새 열거형이 생성되는 패키지 이름</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del paquete en el que se crea una nueva enumeración</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1"><b>새 클래스 생성</b> 대화상자에서 지정한 새 열거형 이름</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la nueva enumeración que especificaste en el diálogo <b>Crear nueva clase</b></font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 사용자의 시스템 로그인 이름</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de inicio de sesión del sistema del usuario actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시스템 날짜</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시스템 시간</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 년도</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Año en curso</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 월</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 월 이름의 첫 세 글자(Jan, Feb 등)</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del mes actual (Ene, Feb, etc.)</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 월 이름 전체(January, February 등)</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual (enero, febrero, etc.)</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 일</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Día actual del mes</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 시</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 분</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">현재 프로젝트 이름</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
   </tr>
 </table>
 </body>
 </html>
+
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td><font face="verdana" size="-1">適用於通過在<b>專案</b>工具視窗中呼叫<b>新建 | Java 類別 | 列舉</b>所建立的新 Java 列舉。<br>
+
+      此內建範本可編輯。除了 Java 表達式和註解外，您還可以利用預先定義的變數（如下所列），然後這些變數將會擴充為相應的值，就像巨集一樣。<br><br>
+
+      您也可以指定自訂變數。自訂變數採用下列格式：<i>${VARIABLE_NAME}</i>，其中 <i>VARIABLE_NAME</i> 是變數的名稱（例如，<i>${MY_CUSTOM_FUNCTION_NAME}</i>） 。
+      在 IDE 建立包含自訂變數的新檔案之前，您將會看到一個對話方塊，您可以在其中定義範本中自訂變數的值。<br><br>
+
+       透過使用 <i>#parse</i> 指令，您可以包含 <b>包含</b> 標籤中的範本。若要包含範本，請在引號中將範本的全名指定為參數（例如，<i>#parse("File Header.java")</i>）。
+    </font></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">預先定義的變數採用下列值：</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PACKAGE_NAME}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">建立新列舉的套件名稱</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100

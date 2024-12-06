@@ -1,10 +1,10 @@
 <html>
 <body>
-불필요한 세미콜론 및 클래스 멤버 사이, 블록 구문 내부, 또는 클래스 정의 다음에 사용된 세미콜론을 보고합니다.
-<p>이러한 세미콜론은 Java에서 유효하지만, 불필요하며 제거될 수 있습니다.</p>
-<p>예:</p>
+Informa cualquier punto y coma innecesario, incluyendo los puntos y comas utilizados entre miembros de una clase, dentro de instrucciones de bloque o después de definiciones de clase.
+<p>Incluso si estos puntos y comas son válidos en Java, son redundantes y pueden eliminarse.</p>
+<p>Ejemplo:</p>
 <pre><code>
-  class C {
+  clase C {
     ;
     void m() throws Exception {
         try (AutoCloseable r1 = createAutoCloseable();) {
@@ -14,9 +14,9 @@
     ;
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
-  class C {
+  clase C {
     void m() throws Exception {
       try (AutoCloseable r1 = createAutoCloseable()) {
       }

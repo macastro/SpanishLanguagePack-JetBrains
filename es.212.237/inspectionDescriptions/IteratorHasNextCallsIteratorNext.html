@@ -1,13 +1,13 @@
 <html>
 <body>
-반복자 인스턴스에서 <code>Iterator.next()</code> 또는 <code>ListIterator.previous()</code>를 호출하는 <code>Iterator.hasNext()</code> 또는 <code>ListIterator.hasPrevious()</code> 구현을 보고합니다. <code>hasNext()</code>와 같은 메서드는 반복자 상태를 수정하면 안 되는 반면 <code>next()</code>는 수정해야 하므로 그러한 호출은 오류입니다.
-<p><b>예:</b></p>
-<pre>
+Informa sobre implementaciones de <code>Iterator.hasNext()</code> o <code>ListIterator.hasPrevious()</code> que llaman a <code>Iterator.next()</code> o <code>ListIterator.previous()</code> en la instancia del iterador. Esas llamadas son casi con toda seguridad un error, ya que los métodos como <code>hasNext()</code> no deberían modificar el estado de los iteradores, mientras que <code>next()</code> sí debería hacerlo.
+<p><b>Ejemplo:</b></p>
+<pre><code>
   class MyIterator implements Iterator&lt;Integer&gt; {
     public boolean hasNext() {
       return next() != null;
     }
   }
-</pre>
+</code></pre>
 </body>
 </html>

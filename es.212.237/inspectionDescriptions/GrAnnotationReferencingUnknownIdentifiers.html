@@ -1,10 +1,9 @@
 <html>
 <body>
-<code>@TupleConstructor</code> 및 <code>@MapConstructor</code>에서 해결되지 않은 식별자를 보고합니다
-<code>includes</code> 및 <code>excludes</code> 어노테이션 속성 값입니다.
-<p><b>예:</b></p>
+Reporta identificadores no resueltos en los valores de atributos de la anotación incluye y excluye de <code>@TupleConstructor</code> y <code>@MapConstructor</code>.
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  // 해결되지 않은 'c'
+  // 'c' no resuelto
   @TupleConstructor(includes = ['a', 'b', 'c'])
   class X {
       def a

@@ -1,17 +1,17 @@
 <html>
 <body>
-잘못된 <a href="https://spring.io/projects/spring-integration">Spring Integration</a> 엔드포인트 메서드 선언을 보고합니다.
+Informa declaraciones incorrectas de métodos de punto final de <a href="https://spring.io/projects/spring-integration">Spring Integration</a>.
 
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
 class MyEndpoints {
   @InboundChannelAdapter("channel")
-  public void <strong>cannotBeVoid</strong>() {...} // A method annotated with @InboundChannelAdapter must have a return type
+  public void <strong>cannotBeVoid</strong>() {...} // Un método anotado con @InboundChannelAdapter debe tener un tipo de retorno
 
   @InboundChannelAdapter("channel")
-  public String <strong>cannotHaveParams</strong>(String s) {..} // A method annotated with @InboundChannelAdapter can't have arguments
+  public String <strong>cannotHaveParams</strong>(String s) {..} // Un método anotado con @InboundChannelAdapter no puede tener argumentos
 
-  @<strong>Filter</strong>(inputChannel = "channel", // Endpoint can have only one poller
+  @<strong>Filter</strong>(inputChannel = "channel", // Un punto final solo puede tener un sondeo
     outputChannel = "channel2",
     poller = {@Poller(fixedDelay = "100"), @Poller(fixedRate = "100")})
   public void testMultiplePollers() {
@@ -25,7 +25,7 @@ class MyEndpoints {
 
   @Filter(inputChannel = "channel",
     outputChannel = "channel2",
-    poller = @<strong>Poller</strong>(trigger = "trigger", cron = "0 */10 * * * *")) // 'trigger' attribute is mutually exclusive with other attributes
+    poller = @<strong>Poller</strong>(trigger = "trigger", cron = "0 */10 * * * *")) // el atributo 'trigger' es mutuamente exclusivo con otros atributos
   public void testTrigger() {
   }
 }

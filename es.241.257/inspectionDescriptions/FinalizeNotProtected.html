@@ -1,14 +1,14 @@
 <html>
 <body>
-<code>public</code>으로 선언된 <code>Object.finalize()</code> 메서드의 모든 구현을 보고합니다.
+Informa cualquier implementación del método <code>Object.finalize()</code> que esté declarado como <code>public</code>.
 <p>
-  <code>Object.finalize()</code>의 컨트랙트에 따라 가비지 컬렉터만 이 메서드를 호출합니다. 이 메서드를 public으로 만드는 것은 메서드가 다른 코드에서 사용될 수 있음을 의미하므로 혼동을 줄 수 있습니다.
+  De acuerdo con el contrato del <code>Object.finalize()</code>, sólo el recolector de basura llama a este método. Hacer público este método puede generar confusión, porque significa que el método puede ser usado desde otro código.
 </p>
 <p>
-  다른 클래스에서 호출되는 것을 막기 위해 해당 메서드를 <code>protected</code>로 만드는 빠른 수정이 제공됩니다.
+  Se proporciona una corrección rápida para hacer <code>protected</code> al método, para evitar que sea invocado desde otras clases.
 </p>
 <!-- tooltip end -->
-<p><b>예:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   <b>class</b> X {
     <b>public void</b> finalize() {
@@ -16,7 +16,7 @@
     }
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   <b>class</b> X {
     <b>protected void</b> finalize() {

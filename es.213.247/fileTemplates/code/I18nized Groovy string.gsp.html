@@ -4,46 +4,46 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-    <b>GSP</b>에서 텍스트를 바꿀 때 사용하는 기본 제공 탬플릿입니다.
-      예:
+    Esta es una plantilla incorporada que se usa para reemplazar el texto dentro del <b>GSP</b>.
+    Por ejemplo:
       <br>
-      &nbsp;&nbsp;&nbsp;&nbsp;
+      
         &lt;<span style="font-weight:bold;">html</span>&gt;
         &lt;<span style="font-weight:bold;">body</span>&gt;
-      <font face="verdana">Hello!</font>
+      <font face="verdana">¡Hola!</font>
       &lt;<span style="font-weight:bold;">/body</span>&gt;
       &lt;<span style="font-weight:bold;">/html</span>&gt;
       <br>
-    국제화된 GSP 사용자 지정 태그를 사용하는 경우
-      예:
+    Cuando se utiliza sintaxis de etiqueta personalizada de GSP internacionalizado,
+    Por ejemplo:
       <br>
-      &nbsp;&nbsp;&nbsp;&nbsp;
+      
       &lt;<span style="font-weight:bold;">html</span>&gt;
       &lt;<span style="font-weight:bold;">body</span>&gt;
       <font face="verdana">&lt;g:message code="HelloKey"/&gt;</font>
     &lt;<span style="font-weight:bold;">/body</span>&gt;
     &lt;<span style="font-weight:bold;">/html</span>&gt;
-    .
+   
     <p>
-    템플릿을 편집할 수 있습니다. GSP 컨텍스트에서 허용되는 표현식과 마찬가지로, 해당 값으로 확장되는 사전 정의된 변수를 사용할 수 있습니다.</font>
+    La plantilla es editable. Además de las expresiones permitidas en el contexto GSP, puede usar variables predefinidas que se expandirán al valor correspondiente.</font>
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">사전 정의된 변수는 다음의 값을 사용합니다:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas asumen los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_KEY}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">해당 프로퍼티 파일에 지정된 프로퍼티 키 이름입니다.
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre de la clave de la propiedad especificada en el archivo de propiedades correspondiente.
     </font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_VALUE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">해당 프로퍼티 파일에 지정된 프로퍼티 값입니다.
-      원본 GSP 텍스트 선택 값입니다.
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El valor de la propiedad especificada en el archivo de propiedades correspondiente.
+      Este es el valor del texto GSP original seleccionado.
     </font></td>
   </tr>
 

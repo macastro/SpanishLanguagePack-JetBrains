@@ -1,11 +1,11 @@
 <html>
 <body>
-실행문 대비 switch 라벨의 비율이 너무 낮은 <code>switch</code> 구문 또는 표현식을 보고합니다.
-<p>그러한 <code>switch</code> 문은 혼란을 일으킬 수 있으므로 리팩터링되어야 할 수 있습니다.</p>
+Informa de las sentencias u expresiones de <code>switch</code> con una proporción demasiado baja de etiquetas de <code>switch</code> a sentencias ejecutables.
+<p>Estas sentencias de <code>switch</code> pueden resultar confusas y probablemente deban refactorizarse.</p>
 
-<p>예:</p>
+<p>Ejemplo:</p>
 <pre><code>
-    switch (i) { // 하나의 case와 5개의 실행문 -> 20% 밀도
+    switch (i) { // un caso y 5 sentencias ejecutables -> densidad del 20%
         case 1:
             System.out.println("1");
             System.out.println("2");
@@ -17,6 +17,6 @@
 </code></pre>
 <!-- tooltip end -->
 <p>
-<p><b>최소 브랜치 밀도</b> 필드를 사용하여 허용되는 실행문 대비 switch 필드 비율을 지정하세요.</p>
+<p>Usa el campo <b>Densidad mínima de ramas</b> para especificar la proporción permitida de etiquetas de <code>switch</code> a sentencias ejecutables.</p>
 </body>
 </html>

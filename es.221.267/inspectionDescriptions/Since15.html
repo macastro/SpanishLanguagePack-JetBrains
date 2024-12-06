@@ -1,15 +1,15 @@
 <html>
 <body>
-구성된 언어 수준에서 지원되지 않는 API의 사용 위치를 보고합니다.
-이 검사는 다음 3가지를 수행합니다.
+Inspecciona los usos de la API que no están disponibles en el nivel de idioma configurado.
+Esta inspección hace 3 cosas:
 <ul>
-  <li>언어 수준이 Java 7 미만일 때 일반화된 클래스의 사용 위치를 강조 표시합니다.</li>
-  <li>디폴트 메서드가 재정의되지 않고 언어 수준이 Java 8 미만일 때 강조 표시합니다.</li>
-  <li>언어 수준이 문서에 <code>@since</code> 태그를 사용하여 표시된 것보다 낮을 때 API 사용 위치를 강조 표시합니다.</li>
+  <li>Destaca el uso de clases genéricas cuando el nivel del idioma está por debajo de Java 7.</li>
+  <li>Destaca cuándo los métodos predeterminados no se anulan y el nivel del idioma está por debajo de Java 8.</li>
+  <li>Destaca el uso de la API cuando el nivel del idioma es menor que el marcado usando la etiqueta <code>@since</code> en la documentación.</li>
 </ul>
 <!-- tooltip end -->
 <p>
-  프로젝트 또는 사용자 지정 언어 수준과 관련한 API 사용을 금지하려면 <b>API 사용 금지</b> 옵션을 사용합니다.
+  Utiliza la opción <b>Prohibir el uso de la API</b> para prohibir el uso de la API con respecto al proyecto o nivel de idioma personalizado.
 </p>
 
 </body>

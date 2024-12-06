@@ -1,13 +1,13 @@
 <html>
 <body>
-수동으로 증분된 색인 변수를 포함하는 <code>for</code> 루프를 보고합니다.
-<p>수동으로 증분된 색인 변수를 포함하는 <code>for</code> 루프는 <code>withIndex()</code> 함수로 단순화될 수 있습니다.</p>
-<p><b>수동 색인 증분 대신 withIndex() 사용</b> 빠른 수정을 사용해 코드를 자동으로 수정할 수 있습니다.</p>
-<p>예:</p>
+Reporta ciclos <code>for</code> con una variable de índice incrementada manualmente.
+<p>Los ciclos <code>for</code> con una variable de índice incrementada manualmente pueden simplificarse con la función <code>withIndex()</code>.</p>
+<p>El arreglo rápido "<b>Usar withIndex() en lugar del incremento manual del índice</b>" puede utilizarse para enmendar el código automáticamente.</p>
+<p>Ejemplo:</p>
 <pre><code>
   fun foo(list: List&lt;String&gt;): Int? {
       var index = 0
-      for (s in list) { &lt;== can be simplified
+      for (s in list) { &lt;== puede simplificarse
           val x = s.length * index
           index++
           if (x > 0) return x
@@ -15,7 +15,7 @@
       return null
   }
 </code></pre>
-<p>빠른 수정 적용 후:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   fun foo(list: List&lt;String&gt;): Int? {
       for ((index, s) in list.withIndex()) {
