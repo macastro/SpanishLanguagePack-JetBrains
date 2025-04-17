@@ -1,8 +1,7 @@
 <html>
 <body>
-Reporta las llamadas redundantes a las implementaciones de colecciones inmutables de la
-clase <code>Collections</code>.
-<p>Si el argumento que se pasa a una implementación de colección inmutable ya es inmutable, tal implementación se vuelve redundante.</p>
+Informa sobre llamadas redundantes a wrappers de colecciones no modificables de la clase <code>Collections</code>.
+<p>El wrapper se vuelve redundante cuando el argumento pasado al wrapper de colección no modificable ya es inmutable.</p>
 <p>Ejemplo:</p>
 <pre><code>
   List&lt;String&gt; x = Collections.unmodifiableList(Collections.singletonList("abc"));
@@ -11,12 +10,9 @@ clase <code>Collections</code>.
 <pre><code>
   List&lt;String&gt; x = Collections.singletonList("abc");
 </code></pre>
-<p>Con el fin de detectar los métodos que devuelven colecciones inmutables, la
-inspección usa las anotaciones <code>org.jetbrains.annotations.Unmodifiable</code>
+<p>Para detectar métodos que devuelven colecciones no modificables, esta inspección utiliza las anotaciones <code>org.jetbrains.annotations.Unmodifiable</code>
 y <code>org.jetbrains.annotations.UnmodifiableView</code>.
-Úsalas para extender la inspección a tus propias implementaciones de colecciones inmutables.
-</p>
-<!-- tooltip end -->
-<p><small>Novedad en 2020.3</small></p>
+Úselas para extender la inspección a sus propios wrappers de colecciones no modificables.</p>
+<p><small>Cambios en 2020.3</small></p>
 </body>
 </html>

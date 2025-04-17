@@ -1,34 +1,30 @@
 <html>
 <body>
-Informa sobre accesos a clases internas y anidadas en las que la llamada se califica mediante una subclase de la clase declarativa, en lugar de la propia clase declarativa.
+Informa sobre accesos a clases internas y anidadas donde la llamada está calificada por una subclase de la clase declarante en lugar de la propia clase declarante.
 <p>
-  Java permite dicha calificación, pero dichos accesos pueden indicar una sutil confusión de herencia y anulación.
+  Java permite tales calificaciones, pero este tipo de acceso puede indicar una confusión sutil entre herencia y sobrescritura.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Super {
     static class Inner {}
   }
-
   class Sub extends Super {
     void test() {
-      Sub.Inner s = new Sub.Inner(); // La clase 'Inner' se declara en la clase 'Super', pero se referencia a través de la clase 'Sub'
+      Sub.Inner s = new Sub.Inner(); // La clase 'Inner' está declarada en 'Super' pero se referencia a través de 'Sub'
     }
   }
 </code></pre>
-<p>Después de aplicar la revisión rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class Super {
     static class Inner {}
   }
-
   class Sub extends Super {
     void test() {
       Super.Inner s = new Super.Inner();
     }
   }
 </code></pre>
-<!-- tooltip end -->
-
 </body>
 </html>

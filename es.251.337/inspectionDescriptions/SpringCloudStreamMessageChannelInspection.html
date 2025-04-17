@@ -1,7 +1,7 @@
 <html>
 <body>
-<p>Informa de los atributos de canal no resueltos en anotaciones <code>@StreamListener</code>, <code>@SendTo</code>, <code>@Output</code> y <code>@Input</code>.</p>
-<p>Usar un nombre de enlace no válido causa un error del tipo "no se ha encontrado el bean" en tiempo de ejecución.</p>
+<p>Reporta canales no resueltos en las anotaciones <code>@StreamListener</code>, <code>@SendTo</code>, <code>@Output</code> y <code>@Input</code>.</p>
+<p>El uso de nombres de vinculación inválidos resulta en errores 'Bean not found' en tiempo de ejecución.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   @EnableBinding(Sink.class)
@@ -9,12 +9,10 @@
     @StreamListener(Sink.class)
 	  public void log1() {
     }
-
-    @StreamListener("invalid")  // Informa de 'No se encuentra el canal'
+    @StreamListener("invalid")  // Reporta 'canal no encontrado'
 	  public void log2() {
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

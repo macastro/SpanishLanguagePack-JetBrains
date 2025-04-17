@@ -1,39 +1,30 @@
 <html>
 <body>
-Reporta métodos <code>public</code> en clases
-que no son expuestos en una interfaz.
-<p>Exponer todos los métodos <code>public</code> a través de una interfaz es importante para
-mantener un acoplamiento débil, y podría ser necesario para ciertos estilos de programación basada en componentes.</p>
+Informa sobre métodos <code>public</code> en clases que no están expuestos en interfaces.
+<p>Exponer todos los métodos <code>public</code> a través de interfaces es importante para mantener un acoplamiento débil y puede ser necesario para ciertos estilos de programación basados en componentes.</p>
 <p>Ejemplo:</p>
 <pre><code>
-interface Persona {
-  String getNombre();
+interface Person {
+  String getName();
 }
-
-class PersonaImplementacion implements Persona {
-  private String nombre;
-
-  // ok: el método está expuesto en la interfaz
+class PersonImpl implements Person {
+  private String name;
+  // Normal: método expuesto en la interfaz
   @Override
-  public String getNombre() {
-    return nombre;
+  public String getName() {
+    return name;
   }
-
-  // advertencia: el método es public
+  // Advertencia: método es public
   // pero no está expuesto en la interfaz
-  public void setNombre() {
-    this.nombre = nombre;
+  public void setName() {
+    this.name = name;
   }
 }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Usa la lista <b>Ignorar si está anotada con</b> para especificar anotaciones especiales. Los métodos anotados con una de
-estas anotaciones serán ignorados por esta inspección.
+  Use la lista <b>Ignorar si está anotado con</b> para especificar anotaciones especiales. La inspección ignorará los métodos anotados con cualquiera de estas anotaciones.
 <p>
-  Usa la opción <b>Ignorar si la clase contenedora no implementa una interfaz que no sea de biblioteca</b> para ignorar métodos de clases que no
-implementan ninguna interfaz del proyecto.
+  Use la opción <b>Ignorar si la clase contenedora no implementa interfaces no bibliotecarias</b> para ignorar métodos en clases que no implementan ninguna interfaz del proyecto.
 <p>
-
 </body>
 </html>

@@ -1,38 +1,34 @@
 <html>
 <body>
-Informa declaraciones de variable local y accesores para componentes de registro que pueden reemplazarse con variables de patrón en sentencias `for` mejoradas, las cuales son usualmente más compactas.
+Informa sobre declaraciones de variables locales y accesores que pueden ser reemplazados por variables de patrón en declaraciones 'for' mejoradas (que suelen ser más concisas).
 <p><b>Ejemplo:</b></p>
 <pre><code>
-registro Registro(Entero x, Cadena y) {
+record Record(Integer x, String y) {
 }
-
-público estático vacío probar(Lista&lt;Registro&gt; registros) {
-    para (Registro registro : registros) {
-        Sistema.imprimir(registro.y());
-        Entero x = registro.x;
-        Sistema.imprimir(x);
+public static void test(List&lt;Record&gt; records) {
+    for (Record record : records) {
+        System.out.println(record.y());
+        Integer x = record.x;
+        System.out.println(x);
     }
 }
 </code></pre>
-<p>Puede remplazarse con:</p>
+<p>Puede ser reemplazado por:</p>
 <pre><code>
-registro Registro(Entero x, Cadena y) {
+record Record(Integer x, String y) {
 }
-
-público estático vacío probar(Lista&lt;Registro&gt; registros) {
-    para (Registro(Entero x, Cadena y) : registros) {
-        Sistema.imprimir(y);
-        Sistema.imprimir(x);
+public static void test(List&lt;Record&gt; records) {
+    for (Record(Integer x, String y) : records) {
+        System.out.println(y);
+        System.out.println(x);
     }
 }
 </code></pre>
-<!-- tooltip end -->
 <ul>
-  <li>Utiliza la opción <b>Límite de profundidad de anidamiento</b> para especificar el máximo número de patrones de deconstrucción anidados a informar</li>
-  <li>Utiliza la opción <b>Número máximo de componentes de registro para deconstruir</b> para especificar el número máximo de componentes que un registro puede contener para ser usado en patrones de deconstrucción</li>
-  <li>Utiliza la opción <b>Número máximo de componentes de registro no utilizados</b> para especificar el número máximo de componentes que no se utilizan en una sentencia `for`</li>
+  <li>Utilice la opción <b>Límite de profundidad de anidamiento</b> para especificar el número máximo de patrones de desestructuración anidados a informar</li>
+  <li>Utilice la opción <b>Número máximo de componentes a desestructurar</b> para especificar el número máximo de componentes que puede contener un registro para ser utilizado en un patrón de desestructuración</li>
+  <li>Utilice la opción <b>Número máximo de componentes no utilizados</b> para especificar el número máximo de componentes no utilizados en la declaración <code>for</code></li>
 </ul>
-
-<p><small>Nuevo en 2023.1</small></p>
+<p><small>Novedades de 2023.1</small></p>
 </body>
 </html>

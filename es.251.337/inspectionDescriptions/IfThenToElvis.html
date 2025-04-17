@@ -1,19 +1,17 @@
 <html>
 <body>
-<b>Inspección:</b> Reporta las expresiones `if-then` que pueden ser convertidas a expresiones Elvis (`?:`)
+El informe se puede contraer a una expresión <code>if-then</code> dentro de una expresión elvis (<code>?:</code>).
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  fun puedeSerFoo(): String? = "foo"
-
-  var foo = puedeSerFoo()
-  val bar = if (foo == null) "hola" else foo
+  fun maybeFoo(): String? = "foo"
+  var foo = maybeFoo()
+  val bar = if (foo == null) "hello" else foo
 </code></pre>
-<p>La corrección rápida convierte la expresión `if-then` a una expresión Elvis (`?:`):</p>
+<p>Esta corrección rápida convertirá la expresión <code>if-then</code> en una expresión elvis (<code>?:</code>):</p>
 <pre><code>
-  fun puedeSerFoo(): String? = "foo"
-
-  var foo = puedeSerFoo()
-  val bar = foo ?: "hola"
+  fun maybeFoo(): String? = "foo"
+  var foo = maybeFoo()
+  val bar = foo ?: "hello"
 </code></pre>
 </body>
 </html>

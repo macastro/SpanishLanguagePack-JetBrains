@@ -1,27 +1,26 @@
 <html>
 <body>
-Informa sobre comentarios Javadoc y etiquetas ausentes.
+Informa sobre comentarios y etiquetas Javadoc faltantes.
 <p>Ejemplo:</p>
 <pre><code>
   /**
-   * El "@param" ausente se informa (si se configura).
+   * Informa sobre "@param" faltante (si está configurado).
    */
   public void sample(int param){
   }
 </code></pre>
-<p>Las correcciones rápidas agregan la etiqueta o el comentario Javadoc ausente:</p>
+<p>La corrección rápida añadirá las etiquetas faltantes o los comentarios Javadoc faltantes:</p>
 <pre><code>
   /**
-   * El "@param" ausente se informa (si se configura).
+   * Informa sobre "@param" faltante (si está configurado).
    * @param param
    */
   public void sample(int param){
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
 La inspección se puede configurar para ignorar elementos obsoletos o métodos de acceso simples como <code>getField()</code> o <code>setField()</code>.
 </p>
-También puede utilizar las siguientes opciones para configurar las etiquetas requeridas y la visibilidad mínima requerida para los elementos de código específicos, como método, campo, clase, paquete, módulo.
+También puede configurar las etiquetas requeridas y la visibilidad mínima requerida para elementos de código específicos como métodos, campos, clases, paquetes, módulos, etc.
 </body>
 </html>

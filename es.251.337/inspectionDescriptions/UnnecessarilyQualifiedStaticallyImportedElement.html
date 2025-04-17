@@ -1,13 +1,10 @@
 <html>
 <body>
-Reporta el uso de miembros importados estáticamente calificados
-con su nombre de clase contenedor.
-<p>Tal calificación es innecesaria y puede ser eliminada
-ya que los miembros importados estáticamente pueden ser accedidos directamente por nombre de miembro.</p>
+Informa sobre el uso de miembros importados estáticamente con nombres de clase calificados.
+<p>Esta calificación es innecesaria y puede eliminarse, ya que los miembros importados estáticamente son accesibles directamente por su nombre.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   import static foo.Test.WIDTH;
-
   class Bar {
     void bar() {
       System.out.println(Test.WIDTH);
@@ -17,13 +14,11 @@ ya que los miembros importados estáticamente pueden ser accedidos directamente 
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   import static foo.Test.WIDTH;
-
   class Bar {
     void bar() {
       System.out.println(WIDTH);
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

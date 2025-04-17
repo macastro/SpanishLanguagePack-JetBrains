@@ -1,15 +1,13 @@
 <html>
 <body>
-Reporta llamadas con un valor de retorno no utilizado cuando la función llamada devuelve una lambda de un cuerpo de expresión.
+Informa sobre llamadas a funciones donde el valor devuelto no se utiliza cuando la función llamada devuelve una lambda con cuerpo de expresión.
 <p>
-Si hay <code>=</code> entre el encabezado de la función y el bloque del cuerpo,
-el código de la función no se evaluará, lo que puede provocar un comportamiento incorrecto.
+Si existe un <code>=</code> entre el encabezado de la función y el bloque del cuerpo, el código dentro de la función no se evaluará, lo que puede resultar en un comportamiento incorrecto.
 </p>
-<p>Se puede utilizar <b>Eliminar token = de la declaración de función</b> para modificar el código automáticamente.</p>
+<p><b>Eliminar el token = de la declaración de la función</b> está disponible como corrección rápida.</p>
 <p>Ejemplo:</p>
 <pre><code>
   fun printHello() = { println("Hello") }
-
   fun main() {
       printHello() // Esta función no imprime nada
   }
@@ -17,7 +15,6 @@ el código de la función no se evaluará, lo que puede provocar un comportamien
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun printHello() { println("Hello") }
-
   fun main() {
       printHello()
   }

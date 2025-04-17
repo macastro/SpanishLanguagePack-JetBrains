@@ -1,11 +1,11 @@
 <html>
 <body>
-Informa sobre las implementaciones de <code>InvocationHandler</code> que no delegan los métodos estándar de <code>Object</code> como <code>hashCode()</code>, <code>equals()</code> y <code>toString()</code>.
-<p>Si no se gestionan estos métodos, al invocarlos en una instancia de proxy puede producirse problemas inesperados.</p>
+Informa sobre implementaciones de <code>InvocationHandler</code> que no delegan los métodos estándar de <code>Object</code> como <code>hashCode()</code>, <code>equals()</code> y <code>toString()</code>.
+<p>No manejar estos métodos puede causar problemas inesperados cuando se invocan en instancias proxy.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   InvocationHandler myHandler = (proxy, method, params) -&gt; {
-    System.out.println("¡Hola Mundo!");
+    System.out.println("Hello World!");
     <b>return</b> null;
   };
   Runnable myProxy = (Runnable) Proxy.newProxyInstance(
@@ -14,11 +14,10 @@ Informa sobre las implementaciones de <code>InvocationHandler</code> que no dele
   );
 </code></pre>
 <p>
-  Este fragmento de código está diseñado para delegar solo el método <code>Runnable.run()</code>.
-  Sin embargo, también se delegan las llamadas a cualquier método de <code>Object</code>, como <code>hashCode()</code>.
-  Esto puede generar problemas como una <code>NullPointerException</code>, por ejemplo, al añadir <code>myProxy</code> a un <code>HashSet</code>.
+  Este fragmento de código está destinado a delegar solo el método <code>Runnable.run()</code>.
+  Sin embargo, también delegará cualquier llamada a métodos de <code>Object</code> como <code>hashCode()</code>.
+  Esto puede causar problemas como <code>NullPointerException</code>, por ejemplo, al agregar <code>myProxy</code> a un <code>HashSet</code>.
 </p>
-<!-- tooltip end -->
-<p><small>Novedad en 2020.2</small>
+<p><small>Cambios en la versión 2020.2</small>
 </body>
 </html>

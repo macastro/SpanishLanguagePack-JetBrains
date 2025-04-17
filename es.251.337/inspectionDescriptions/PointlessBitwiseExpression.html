@@ -1,22 +1,19 @@
 <html>
 <body>
-Reportan expresiones de bits sin sentido.
+Informa sobre expresiones bit a bit sin sentido.
 <p>
-  Tales expresiones incluyen aplicar el operador <code>&amp;</code> al valor máximo para el tipo dado, aplicar el operador <code>or</code> a cero y desplazar por cero. Tales expresiones pueden ser el resultado de refactorizaciones automáticas no seguidas hasta su finalización y es poco probable que hayan sido originalmente intencionadas.</p>
-<p><b>Ejemplos:</b></p>
+  Estas expresiones incluyen la aplicación del operador <code>&</code> al valor máximo de un tipo dado, el operador <code>or</code> aplicado a cero y desplazamientos de cero. Tales expresiones pueden aparecer como resultado de refactorizaciones automáticas incompletas y es poco probable que representen la intención original.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  // Advertencia: la operación no tiene sentido y puede ser reemplazada sólo con `flags`
-  // 0xFFFF_FFFF es el valor máximo para un entero, y ambos literales son tratados
-  // como literales enteros de 32 bits.
+  // Advertencia: operación sin sentido, puede reemplazarse por `flags`
+  // 0xFFFF_FFFF es el valor máximo de un entero y ambos literales
+  // son tratados como literales enteros de 32 bits.
   int bits = flags & 0xFFFF_FFFF;
-
-  // Advertencia: la operación no tiene sentido y puede ser reemplazada sólo con `bits`
-  // OR con 0 siempre devuelve el otro operando.
+  // Advertencia: operación sin sentido, puede reemplazarse por `bits`
+  // Una operación OR con 0 siempre produce el otro operando.
   int or = bits | 0x0;
-
-  // Advertencia: la operación no tiene sentido, ya que siempre resulta en 0
+  // Advertencia: operación sin sentido, el resultado siempre es 0
   int xor = or ^ or;
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

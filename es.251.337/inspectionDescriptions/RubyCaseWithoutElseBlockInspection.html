@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sentencias <code>case</code> sin bloques <code>else</code>. Un bloque <code>else</code> siempre debe estar presente para especificar el
-resultado por defecto si no se encuentra ninguna coincidencia.
+Informa sobre declaraciones <code>case</code> que no contienen un bloque <code>else</code>. El bloque <code>else</code> siempre debe estar presente para especificar
+el resultado por defecto cuando no se encuentra ninguna coincidencia.
 <p>Ejemplo:</p>
 <pre>
 <code># Mala práctica
@@ -10,18 +10,16 @@ when :active
   perform_action
 end</code>
 </pre>
-
-Hay una corrección rápida disponible para insertar un bloque <code>else</code>. Después de aplicar la corrección rápida, el resultado se verá así:
-
+Se puede insertar un bloque <code>else</code> mediante una corrección rápida. Después de aplicar la corrección rápida, el resultado se muestra así:
 <pre>
 <code># Buena práctica
 case status
 when :active
   perform_action
 else
-  # escribe código aquí
+  # Escriba el código aquí
 end</code>
 </pre>
-<p><span style="font-size: smaller;">Inspirado en <a href="https://github.com/martinjandrews/roodi">'Roodi'</a></span></p>
+<p><span style="font-size: smaller;">Inspirado por <a href="https://github.com/martinjandrews/roodi">'Roodi'</a></span></p>
 </body>
 </html>

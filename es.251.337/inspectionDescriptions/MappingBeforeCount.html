@@ -1,15 +1,14 @@
 <html>
 <body>
-<code>count()</code> llama a <code>map()</code> o <code>boxed()</code> justo antes, reportando esto como un llamado redundante de la API de <code>Stream</code>.
+Informa sobre llamadas redundantes a la API de <code>Stream</code>, como <code>map()</code> o <code>boxed()</code> antes de una llamada a <code>count()</code>.
 <p>
-  Este tipo de llamados se pueden eliminar porque no modifican el conteo final. Es posible que el código dependa de los efectos secundarios de algún lambda dentro de este tipo de llamadas de <code>map</code>. Sin embargo, depender de los efectos secundarios de una cadena de <code>stream</code> es una muy mala práctica. No hay garantía de que este llamado no sea optimizado en versiones futuras de Java.
+  Estas llamadas no alteran el conteo final y por lo tanto pueden eliminarse. El código podría depender de efectos secundarios en los lambda de estas llamadas map. Sin embargo, depender de efectos secundarios dentro de una cadena Stream es una práctica muy desaconsejable. No hay garantía de que estas llamadas no sean optimizadas en futuras versiones de Java.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  // El llamado a `map()` es redundante
+  // Llamada map() redundante
   long count = list.stream().filter(s -> !s.isEmpty()).map(s -> s.trim()).count();
 </code></pre>
-<!-- tooltip end -->
-<p><small>Nuevo en 2024.1</small></p>
+<p><small>Novedades en 2024.1</small></p>
 </body>
 </html>

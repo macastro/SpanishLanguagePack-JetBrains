@@ -1,11 +1,8 @@
 <html>
 <body>
-Reporta constructores <code>públicos</code> en clases no <code>públicas</code>.
-<p>Usualmente, no hay razón para crear un constructor <code>público</code> en una clase con un menor nivel de acceso.
-  Sírvanse notar, sin embargo, que esta inspección cambia el comportamiento de algunas llamadas de reflexión. En particular,
-  <code>Class.getConstructor()</code> no podrá encontrar el constructor actualizado
-  (se debería usar <code>Class.getDeclaredConstructor()</code> en su lugar). No use la inspección si su código
-  o el código de algunos frameworks usados se basa en la accesibilidad del constructor vía <code>getConstructor()</code>.
+Informa sobre todos los constructores <code>public</code> en clases que no son <code>public</code>.
+<p>Normalmente no hay razón para crear constructores <code>public</code> en clases con un nivel de acceso más bajo.
+  Sin embargo, tenga en cuenta que esta inspección puede cambiar el comportamiento de ciertas llamadas de reflexión. En particular, <code>Class.getConstructor()</code> no podrá encontrar el constructor actualizado (se debe usar <code>Class.getDeclaredConstructor()</code> en su lugar). No utilice esta inspección si su código o el código de algún framework que utilice depende de la accesibilidad del constructor a través de <code>getConstructor()</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -13,12 +10,11 @@ Reporta constructores <code>públicos</code> en clases no <code>públicas</code>
     public House() {}
   }
 </code></pre>
-<p>Después de que se aplica la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class House {
     House() {}
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

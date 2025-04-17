@@ -1,23 +1,21 @@
 <html>
 <body>
-Informa de llamadas sospechosas a <code>System.arraycopy()</code>.
-<p>Estas llamadas son sospechosas cuando:</p>
+Reporta llamadas sospechosas a <code>System.arraycopy()</code>.
+<p>Este tipo de llamadas son sospechosas en los siguientes casos:</p>
 <ul>
-<li>el origen o destino no es de un tipo de arreglo
-<li>el origen y destino son de diferentes tipos
-<li>la longitud del fragmento copiado es mayor que <code>src.length - srcPos</code>
-<li>la longitud del fragmento copiado es mayor que <code>dest.length - destPos</code>
-<li>los rangos siempre se intersectan cuando el origen y el destino son el mismo arreglo
+<li>El origen o destino no son de tipo array
+<li>Los tipos de origen y destino son diferentes
+<li>La longitud del bloque copiado es mayor que <code>src.length - srcPos</code>
+<li>La longitud del bloque copiado es mayor que <code>dest.length - destPos</code>
+<li>Cuando el origen y destino son el mismo array, los rangos siempre se superponen
 </ul>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void foo() {
     int[] src = new int[] { 1, 2, 3, 4 };
-    System.arraycopy(src, 0, src, 1, 2); // advertencia: Copiando al mismo arreglo con rangos intersecados
+    System.arraycopy(src, 0, src, 1, 2); // Advertencia: copia al mismo array con rangos superpuestos
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-
 </body>
 </html>

@@ -1,8 +1,7 @@
 <html>
 <body>
-Informa sobre bloques <code>catch</code> que vuelven a emitir inmediatamente la excepción detectada sin realizar ninguna acción sobre ella.
-Estos bloques <code>catch</code> son innecesarios y no manejan errores.
-<!-- tooltip end -->
+Un bloque <code>catch</code> que no realiza ninguna operación y simplemente vuelve a lanzar la excepción capturada.
+Este tipo de bloque <code>catch</code> es innecesario y no maneja el error.
 <p><b>Ejemplo:</b></p>
 <pre><code>
         try {
@@ -11,6 +10,5 @@ Estos bloques <code>catch</code> son innecesarios y no manejan errores.
             throw e;
         }
 </code></pre>
-
 </body>
 </html>

@@ -1,29 +1,24 @@
 <html>
 <body>
-Informa los tags Javadoc <code>@see</code>,
-<code>{@link}</code> y <code>{@linkplain}</code>
-que hagan referencia al método al que corresponde el comentario, al supermétodo del método correspondiente al comentario o a la clase que contiene el comentario.
-<p>Tales enlaces son innecesarios y pueden ser eliminados con seguridad mediante la acción rápida de esta inspección. La acción rápida eliminará el comentario Javadoc completo si el tag es su único contenido.</p>
+Reporta referencias Javadoc con etiquetas <code>@see</code>, <code>{@link}</code> y <code>{@linkplain}</code> que apuntan a métodos con comentarios, métodos super con comentarios o clases que contienen comentarios.
+<p>Estos enlaces son innecesarios y pueden eliminarse de forma segura mediante la corrección rápida de esta inspección. Si la etiqueta es el único contenido, la corrección rápida eliminará todo el comentario Javadoc.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Ejemplo {
+  class Example {
     /**
-     * @see Ejemplo#método
+     * @see Example#method
      */
-    public void método() { }
+    public void method() { }
   }
 </code></pre>
-<p>Luego de aplicar la acción rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-class Ejemplo {
-  public void método() { }
+class Example {
+  public void method() { }
 }
 </code></pre>
-<!-- tooltip end -->
 <p>
-Utilice el casillero de abajo para ignorar los enlaces en línea (<code>{@link}</code> y <code>{@linkplain}</code>)
-a los supermétodos. Si bien el enlace a todos los supermétodos es añadido automáticamente por la herramienta
-Javadoc, un enlace en línea al supermétodo puede requerirse a veces en los textos de los comentarios Javadoc.
-
+Utilice la casilla de verificación a continuación para ignorar los enlaces en línea (<code>{@link}</code> y <code>{@linkplain}</code>) que apuntan a métodos super. Aunque la herramienta Javadoc agrega automáticamente enlaces a todos los métodos super, a veces puede ser necesario tener enlaces en línea a métodos super dentro del texto de un comentario Javadoc.
+</p>
 </body>
 </html>

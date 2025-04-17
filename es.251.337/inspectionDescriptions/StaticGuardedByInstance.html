@@ -1,17 +1,15 @@
 <html>
 <body>
-Informa las anotaciones <code>@GuardedBy</code> en campos o métodos <code>static</code> donde la protección es un campo no estático o <code>this</code>.
-<p>Proteger un elemento estático con un elemento no estático puede resultar en una concurrencia excesiva, donde múltiples hilos puedan acceder al campo protegido simultáneamente mediante bloqueo en diferentes contextos de objeto.</p>
+Reporta anotaciones <code>@GuardedBy</code> en campos o métodos <code>static</code> donde el lock especificado es un campo no static o <code>this</code>.
+<p>Proteger elementos static con elementos no static puede llevar a una concurrencia excesiva, ya que múltiples hilos pueden bloquear en diferentes contextos de objeto para acceder simultáneamente al campo protegido.</p>
 <p>Ejemplo:</p>
 <pre><code>
     private ReadWriteLock lock = new ReentrantReadWriteLock();
-
     @GuardedBy("lock")
     public static void bar() {
         // ...
     }
 </code></pre>
-<!-- tooltip end -->
 <p>Las anotaciones <code>@GuardedBy</code> soportadas son:</p>
 <ul>
   <li><code>net.jcip.annotations.GuardedBy</code></li>

@@ -1,7 +1,6 @@
-<!-- Copied from community/java/java-impl/src/inspectionDescriptions/SuspiciousNameCombination.html -->
 <html>
 <body>
-Informa una asignación o una llamada a función donde el nombre de la variable de destino o el parámetro de la función no coincide con el nombre del valor asignado a ella.
+Informa sobre asignaciones o llamadas a funciones donde el nombre de la variable de destino o parámetro de función no coincide con el nombre del valor que se le asigna.
 <p>Ejemplo:</p>
 <pre><code>
   <b>var</b> x = 0;
@@ -12,8 +11,7 @@ o
   <b>var</b> x = 0, y = 0;
   <b>var</b> rc = <b>new</b> Rectangle(y, x, 20, 20);
 </code></pre>
-Aquí la inspección conjetura que <code>x</code> e <code>y</code> están mezcladas.
-<!-- tooltip end -->
-<p>Especifica los nombres que no deben usarse juntos. Se informa un error si un nombre de parámetro o un nombre de destino de asignación contiene palabras de un grupo mientras que el nombre de la variable asignada o pasada contiene palabras de otro grupo.</p>
+Aquí, la inspección sospecha que <code>x</code> y <code>y</code> están confundidos.
+<p>Especifica nombres que no deberían usarse juntos. Se informa un error si el nombre del parámetro o el nombre del objetivo de asignación contiene una palabra de un grupo, mientras que el nombre de la variable asignada o pasada contiene una palabra de otro grupo.</p>
 </body>
 </html>

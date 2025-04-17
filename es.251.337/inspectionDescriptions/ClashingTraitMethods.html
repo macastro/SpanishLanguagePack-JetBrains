@@ -1,21 +1,18 @@
 <html>
 <body>
-Informa de clases que implementan dos o más rasgos que contienen métodos con las mismas firmas.
-<p>Llamar a estos métodos puede tener resultados inesperados.</p>
-<p>La corrección rápida agrega un método de anulación explícita.</p>
+Informa sobre clases que implementan dos o más traits (que contienen métodos con la misma firma).
+<p>La invocación de dichos métodos puede producir resultados inesperados.</p>
+<p>Esta corrección rápida añade una sobrescritura explícita del método.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   trait T1 {
       def foo() {}
   }
-
   trait T2 {
       def foo() {}
   }
-
   class X implements T1, T2 {}
-
-  // Se llamará a T2.foo()
+  // Llamará a T2.foo()
   new X().foo()
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>

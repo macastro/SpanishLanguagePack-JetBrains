@@ -1,25 +1,19 @@
 <html>
 <body>
-<p>Se informa sobre definiciones y usos no válidos de
-  <a href="https://www.python.org/dev/peps/pep-0589/">TypedDict</a>.</p>
+<p>Reporta definiciones y usos inválidos de <a href="https://www.python.org/dev/peps/pep-0589/">TypedDict</a>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 from typing import TypedDict
-
-
 class Movie(TypedDict):
     name: str
     year: int
-    rate: int = 10  # No se admiten valores del lado derecho
-
-    def method(self): # Sentencia no válida en TypedDict
+    rate: int = 10  # El valor del lado derecho no está soportado
+    def method(self): # Las declaraciones en TypedDict no son válidas
         pass
-
-
 m = Movie(name="name", year=1000, rate=9)
-print(m["director"])  # No existe la clave 'director' en 'Movie'
+print(m["director"])  # La clave 'director' no existe en 'Movie'
 del m["name"]  # No se puede eliminar la clave 'name'
-m["year"] = "1001"  # Se esperaba 'int', pero se obtuvo 'str'
+m["year"] = "1001"  # Debería ser 'int', se recibió 'str'
 </code></pre>
 </body>
 </html>

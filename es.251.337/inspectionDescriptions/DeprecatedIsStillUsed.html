@@ -1,19 +1,17 @@
 <html>
 <body>
-Reporta clases, métodos y campos obsoletos que igualmente se utilizan en tu código.
+Informa sobre clases, métodos y campos obsoletos que se utilizan en el código.
 <p>Ejemplo:</p>
-
 <pre><code>
   class MyCode {
-    @Deprecated
-    void oldMethod() {}// advertencia: "Todavía se utiliza un miembro obsoleto"
-
-    void newMethod() {
-      oldMethod(); // uso olvidado
-    }
+  @Deprecated
+  void oldMethod() {}// Advertencia: "Miembro obsoleto todavía en uso"
+  void newMethod() {
+    oldMethod(); // Uso obsoleto
+  }
   }
 </code></pre>
-<p>Se ignoran los usos dentro de los elementos obsoletos.</p>
-<p><b>NOTA:</b> Debido a razones de rendimiento, se revisa a un miembro no privado solo cuando su nombre casi nunca aparece en el proyecto.</p>
+<p>Se ignorarán los usos dentro de elementos obsoletos.</p>
+<p><b>Nota</b>: Por razones de rendimiento, los miembros no privados solo se verifican cuando sus nombres aparecen con poca frecuencia en el proyecto.</p>
 </body>
 </html>

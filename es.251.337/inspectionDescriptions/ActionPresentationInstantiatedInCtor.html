@@ -1,26 +1,26 @@
 <html>
 <body>
 <p>
-  Inspecciona cualquier acción registrada en el archivo <code>plugin.xml</code> que instancie un objeto <code>com.intellij.openapi.actionSystem.Presentation</code> en su constructor.
+  Reporta cualquier acción registrada en el archivo <code>plugin.xml</code> e instancia un objeto <code>com.intellij.openapi.actionSystem.Presentation</code> en su constructor.
 </p>
 <p>
-  Cualquier constructor de <code>AnAction</code> que tenga parámetros instanciará un objeto <code>Presentation</code>. Sin embargo, al instanciar un objeto <code>Presentation</code> en el constructor, se puede producir una asignación de recursos potencialmente innecesaria. Es más eficiente aprovechar los constructores sin argumentos de <code>AnAction</code> y otras clases base, en lugar de crear una instancia de <code>Presentation</code> que almacene texto, descripción o íconos, y seguir las convenciones en <code>plugin.xml</code> para establecer texto, descripción e íconos. El IDE solo cargará el texto, descripción e íconos cuando la acción se muestre realmente en la interfaz de usuario.
+  Cualquier constructor de <code>AnAction</code> con parámetros instanciará un objeto <code>Presentation</code>. Sin embargo, instanciar un objeto <code>Presentation</code> en el constructor resulta en una asignación de recursos que podría no ser necesaria. En lugar de crear instancias de <code>Presentation</code> que almacenen texto, descripción o íconos, es más eficiente utilizar el constructor sin argumentos de <code>AnAction</code> y otras clases base, y seguir la convención de configurar texto, descripción e íconos en <code>plugin.xml</code>. El IDE solo cargará el texto, la descripción y los íconos cuando la acción se muestre realmente en la interfaz de usuario.
 </p>
 <p>
-  Las convenciones para establecer texto, descripción e íconos son las siguientes:
+  Las convenciones para configurar texto, descripción e íconos son las siguientes:
 </p>
 <ul>
   <li>
-    Establece el atributo <code>id</code> de la acción en el archivo <code>plugin.xml</code>.
+    Establecer el atributo <code>id</code> para la acción en el archivo <code>plugin.xml</code>.
   </li>
   <li>
-    Establece el atributo <code>icon</code> si se necesita un ícono.
+    Si se necesita un ícono, también establecer el atributo <code>icon</code>.
   </li>
   <li>
-    Establece el texto y la descripción en el paquete de mensajes asociado (que puede ser anulado por <code>&lt;actions&gt;</code>):
+    Configurar el texto y la descripción en el paquete de mensajes asociado (puede ser sobrescrito en <code>&lt;actions&gt;</code>):
     <ul>
-      <li><code>action.&lt;action-id&gt;.text=Texto de la acción traducida</code></li>
-      <li><code>action.&lt;action-id&gt;.description=Descripción de la acción traducida</code></li>
+      <li><code>action.&lt;action-id&gt;.text=Texto de acción traducido</code></li>
+      <li><code>action.&lt;action-id&gt;.description=Descripción de acción traducida</code></li>
     </ul>
   </li>
 </ul>
@@ -34,7 +34,6 @@
   )
 </code></pre>
 <pre><code lang="xml">
-  <!-- plugin.xml -->
   &lt;action
     class="org.jetbrains.kotlin.idea.actions.NewKotlinFileAction"
   &lt;/action&gt;
@@ -45,7 +44,6 @@
   internal class NewKotlinFileAction : AnAction()
 </code></pre>
 <pre><code lang="xml">
-  <!-- plugin.xml -->
   &lt;action
     id="Kotlin.NewFile"
     class="org.jetbrains.kotlin.idea.actions.NewKotlinFileAction"
@@ -55,8 +53,8 @@
 <pre><code lang="properties">
   # KotlinBundle.properties
   action.Kotlin.NewFile.text=Clase/archivo Kotlin
-  action.Kotlin.NewFile.description=Crea una nueva clase o archivo Kotlin
+  action.Kotlin.NewFile.description=Crear nueva clase o archivo Kotlin
 </code></pre>
-<p><small>Novedad en 2023.2</small></p>
+<p><small>Cambios en 2023.2</small></p>
 </body>
 </html>

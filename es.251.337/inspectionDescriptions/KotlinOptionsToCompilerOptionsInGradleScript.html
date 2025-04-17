@@ -1,0 +1,58 @@
+<html>
+<body>
+Reporta el uso obsoleto del DSL <code>kotlinOptions</code> en scripts de construcción Gradle <code>.kts</code>.
+<p>
+    El DSL <code>kotlinOptions</code> está obsoleto en Kotlin 2.0.
+    Esta inspección ayuda a migrar de <code>kotlinOptions</code> a <code>compilerOptions</code>.
+    También modifica varias <a href="https://kotl.in/types-for-kgp-compiler-options">opciones que utilizan nuevos tipos</a> en lugar del tipo <code>String</code>.
+</p>
+<p>
+    Ejemplo para tareas <code>KotlinCompile</code>:
+</p>
+<pre><code>
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions {
+    jvmTarget = "1.8"
+    freeCompilerArgs = listOf("-module-name", "my_module_name")
+    apiVersion = "1.9"
+}
+</code></pre>
+<p>La inspección también añade importaciones para las opciones con tipos modificados:</p>
+<pre><code>
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
+...
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.compilerOptions {
+    jvmTarget.set(JvmTarget.JVM_1_8)
+    freeCompilerArgs.set(listOf("-module-name", "my_module_name"))
+    apiVersion.set(KotlinVersion.KOTLIN_1_9)
+}
+</code></pre>
+<p>
+    Ejemplo para tareas <code>Kotlin2JsCompile</code>:
+</p>
+<pre><code>
+val compileKotlin: Kotlin2JsCompile by tasks
+compileKotlin.kotlinOptions {
+    moduleKind = "commonjs"
+    sourceMapEmbedSources = "inlining"
+    sourceMapNamesPolicy = "fully-qualified-names"
+    main = "noCall"
+}
+</code></pre>
+<p>Después de aplicar la inspección:</p>
+<pre><code>
+import org.jetbrains.kotlin.gradle.dsl.JsMainFunctionExecutionMode
+import org.jetbrains.kotlin.gradle.dsl.JsModuleKind
+import org.jetbrains.kotlin.gradle.dsl.JsSourceMapEmbedMode
+import org.jetbrains.kotlin.gradle.dsl.JsSourceMapNamesPolicy
+...
+val compileKotlin: Kotlin2JsCompile by tasks
+compileKotlin.compilerOptions {
+    moduleKind.set(JsModuleKind.MODULE_COMMONJS)
+    sourceMapEmbedSources.set(JsSourceMapEmbedMode.SOURCE_MAP_SOURCE_CONTENT_INLINING)
+    sourceMapNamesPolicy.set(JsSourceMapNamesPolicy.SOURCE_MAP_NAMES_POLICY_FQ_NAMES)
+    main.set(JsMainFunctionExecutionMode.NO_CALL)
+}
+</code></pre>

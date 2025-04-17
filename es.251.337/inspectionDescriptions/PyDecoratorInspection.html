@@ -1,29 +1,23 @@
 <html>
 <body>
-<p>Informa sobre el uso de decoradores <code>@classmethod</code> o <code>@staticmethod</code> en métodos fuera de una clase.</p>
+<p>Informa sobre el uso de los decoradores <code>@classmethod</code> o <code>@staticmethod</code> en métodos externos a la clase.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class State(object):
-
     @classmethod
     def my_state(cls, name):
         cls.name = name
-
-
 @classmethod
 def change_state(self):
     pass
 </code></pre>
-<p>El método <code>change_state</code> no debe usar el decorador <code>@classmethod</code> o debe ser movido a la declaración de la clase <code>State</code>. </p>
-<p>Si se aplica la acción <code>Eliminar decorador</code>, el código cambia a:</p>
+<p>El método <code>change_state</code> no debería usar el decorador <code>@classmethod</code>, o debería moverse dentro de la declaración de la clase <code>state</code>.</p>
+<p>Si se aplica la operación <code>eliminar decorador</code>, el código se convierte en:</p>
 <pre><code>
 class State(object):
-
     @classmethod
     def my_state(cls, name):
         cls.name = name
-
-
 def change_state(self):
     pass
 </code></pre>

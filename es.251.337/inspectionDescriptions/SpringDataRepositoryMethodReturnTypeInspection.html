@@ -1,22 +1,22 @@
 <html>
 <body>
-<p>Informa sobre los métodos del repositorio CRUD de Spring Data con tipos de retorno incorrectos.</p>
+<p>Informa sobre métodos de repositorio CRUD de Spring Data con tipos de retorno incorrectos.</p>
 <p>Se admiten los siguientes tipos de retorno:</p>
 <list>
   <li><code>void</code></li>
   <li>Tipos primitivos</li>
-  <li>Tipos envolventes</li>
-  <li><code>T</code> cuando se espera que el método de consulta devuelva un resultado como máximo. Devuelve <code>null</code> si no hay resultados y lanza <code>IncorrectResultSizeDataAccessException</code> si hay más de un resultado.
+  <li>Tipos wrapper</li>
+  <li><code>T</code> (cuando el método de consulta debe devolver como máximo un resultado). Devuelve <code>null</code> si no hay resultados, o lanza <code>IncorrectResultSizeDataAccessException</code> si hay múltiples resultados.
   </li>
-  <li><code>java.util.List</code> o cualquier tipo <code>Iterable</code> común</li>
+  <li><code>java.util.List</code> o cualquier tipo común de <code>Iterable</code></li>
   <li><code>java.util.stream.Stream</code></li>
-  <li><code>java.util.Optional</code> o <code>scala.Option</code> cuando se espera que el método de consulta devuelva un resultado como máximo. Devuelve <code>Optional.empty()</code> o <code>Optional.absent()</code> si no hay resultados y lanza <code>IncorrectResultSizeDataAccessException</code> si hay más de un resultado.
+  <li><code>java.util.Optional</code> o <code>scala.Option</code> (cuando el método de consulta debe devolver como máximo un resultado). Devuelve <code>Optional.empty()</code> o <code>Optional.absent()</code> si no hay resultados, o lanza <code>IncorrectResultSizeDataAccessException</code> si hay múltiples resultados.
   </li>
   <li><code>io.micronaut.data.model.Page</code></li>
   <li><code>io.micronaut.data.model.Slice</code></li>
-  <li><code>java.util.concurrent.Future</code>, <code>java.util.concurrent.CompletableFuture</code>, o <code>ListenableFuture</code> si el método está anotado con <code>@Async</code> y la ejecución asincrónica del método Spring está habilitada
+  <li><code>java.util.concurrent.Future</code>, <code>java.util.concurrent.CompletableFuture</code> o <code>ListenableFuture</code> (si el método está anotado con <code>@Async</code> y la ejecución de métodos asíncronos de Spring está habilitada)
   </li>
-  <li><code>GeoResults&lt;T&gt;</code>, <code>GeoResult&lt;T&gt;</code>, o <code>GeoPage&lt;T&gt;</code></li>
+  <li><code>GeoResults&lt;T&gt;</code>, <code>GeoResult&lt;T&gt;</code> o <code>GeoPage&lt;T&gt;</code></li>
 </list>
 </body>
 </html>

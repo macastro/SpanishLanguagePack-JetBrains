@@ -1,30 +1,24 @@
 <html>
 <body>
-Reporta los usos de clases en una firma de campo o método donde la clase tiene menos visibilidad que el miembro que la usa.
-Aunque es Java legal, dichos miembros no se pueden usar fuera del alcance de visibilidad del tipo de clase al que hacen referencia.
+Informa sobre el uso de clases cuya visibilidad es menor que la visibilidad del miembro que las utiliza en firmas de campos o métodos.
+Aunque estos miembros son Java válido, no pueden utilizarse fuera del ámbito de visibilidad de los tipos de clase a los que hacen referencia.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  public class Padre {
-    public Hijo obtenerHijo() {
-      return new Hijo();
+  public class Parent {
+    public Child getChild() {
+      return new Child();
     }
-
-    private class Hijo {}
+    private class Child {}
   }
 </code></pre>
 <p>
-Además, en Java 9 y superior, un módulo puede ocultar algunas de sus clases a otros módulos al no exportar sus paquetes.
-Sin embargo, si un miembro que es parte de la API exportada hace referencia a una clase no exportada en su firma,
-ese miembro no se puede utilizar fuera del módulo.
-<!-- tooltip end -->
-<p>Configurar la inspección:</p>
+Además, en Java 9 y versiones posteriores, los módulos pueden ocultar algunas de sus clases a otros módulos al no exportar sus paquetes.
+Sin embargo, si los miembros que forman parte de la API exportada hacen referencia a clases no exportadas en sus firmas, dichos miembros no pueden utilizarse fuera del módulo.
+<p>Configuración de la inspección:</p>
 <ul>
-  <li>Use la opción <b>Reportar clases no exportadas expuestas en la API del módulo (Java 9+)</b> para informar a los miembros de la API del módulo
-    que exponen clases no exportadas.<br>Tenga en cuenta que el nivel de lenguaje del proyecto o módulo debe ser 9 o superior para esta opción.</li>
-  <li>Utilice la opción <b>Reportar clases inaccesibles expuestas en la API pública</b> para informar sobre miembros públicos
-    que exponen clases con un alcance de visibilidad menor.</li>
-  <li>Utilice la opción <b>Reportar clases privadas expuestas en la API de paquete local</b> para informar sobre miembros locales del paquete
-    que exponen clases <code>private</code>.</li>
+  <li>Utilice la opción <b>Informar clases no exportadas expuestas en API de módulo (Java 9+)</b> para informar sobre miembros de API de módulo que exponen clases no exportadas.<br>Tenga en cuenta que para esta opción, el nivel de lenguaje del proyecto o módulo debe ser 9 o superior.</li>
+  <li>Utilice la opción <b>Informar clases inaccesibles expuestas en API pública</b> para informar sobre miembros públicos que exponen clases con menor visibilidad.</li>
+  <li>Utilice la opción <b>Informar clases privadas expuestas en API package-local</b> para informar sobre miembros package-local que exponen clases <code>private</code>.</li>
 </ul>
 </body>
 </html>

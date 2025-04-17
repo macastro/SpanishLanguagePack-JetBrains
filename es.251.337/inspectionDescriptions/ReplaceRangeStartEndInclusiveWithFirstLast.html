@@ -1,20 +1,19 @@
 <html>
 <body>
-Reporta las propiedades <code>Range.start</code> y <code>Range.endInclusive</code> **empaquetadas**.
-<p>Estas propiedades se pueden reemplazar por las propiedades <b>empaquetadas</b> <code>first</code> y <code>last</code> para evitar llamadas redundantes.</p>
-<p>El arreglo rápido reemplaza las propiedades <code>start</code> y <code>endInclusive</code> por las propiedades correspondientes <code>first</code> y <code>last</code>.</p>
+Reporta las propiedades <b>empaquetadas</b> <code>Range.start</code> y <code>Range.endInclusive</code>.
+<p>Estas propiedades pueden ser reemplazadas por las propiedades <b>no empaquetadas</b> <code>first</code> y <code>last</code> para evitar llamadas redundantes.</p>
+<p>Esta corrección rápida reemplazará las propiedades <code>start</code> y <code>endInclusive</code> por sus equivalentes <code>first</code> y <code>last</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun foo(range: CharRange) {
       val lastElement = range.endInclusive
   }
 </code></pre>
-<p>Después de aplicar el arreglo rápido:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun foo(range: CharRange) {
       val lastElement = range.last
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

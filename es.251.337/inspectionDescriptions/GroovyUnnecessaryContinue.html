@@ -1,21 +1,20 @@
 <html>
 <body>
-<p>Informa las sentencias <code>continue</code> si son las últimas sentencias alcanzables en el bucle.
-Estas sentencias <code>continue</code> son innecesarias y se pueden eliminar de forma segura.</p>
+<p>Informa sobre las declaraciones <code>continue</code> que son alcanzables al final de un bucle.
+Estas declaraciones <code>continue</code> son innecesarias y pueden eliminarse de forma segura.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  para(int i in arreglo) {
-      imprime(i)
-      <b>continúa</b>
+  for(int i in array) {
+      println(i)
+      <b>continue</b>
   }
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  para(int i in arreglo) {
-      imprime(i)
+  for(int i in array) {
+      println(i)
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Para más información, mira la misma inspección en Java.</p>
+<p>Para más detalles, consulte la misma inspección en Java.</p>
 </body>
 </html>

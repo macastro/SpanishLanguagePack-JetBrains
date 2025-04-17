@@ -1,9 +1,8 @@
 <html>
 <body>
-Informa expresiones aritméticas sin sentido. Estas expresiones incluyen sumar o restar cero,
-multiplicar por cero o uno, y dividir por uno.
-<p>Estas expresiones pueden ser el resultado de refactorizaciones automáticas y es poco probable que el desarrollador haya querido hacer esto.</p>
-<p>La solución rápida simplifica estas expresiones.</p>
+Informa sobre expresiones aritméticas sin sentido. Estas expresiones incluyen sumar 0, restar 0, multiplicar por 0 o 1, y dividir por 1.
+<p>Estas expresiones pueden ser el resultado de refactorizaciones automáticas y es poco probable que sean la intención del desarrollador.</p>
+<p>La corrección rápida simplifica estas expresiones.</p>
 <p><b>Ejemplo:</b>
 <pre><code>
   void f(int a) {
@@ -12,7 +11,7 @@ multiplicar por cero o uno, y dividir por uno.
     int res = x / x;
   }
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   void f(int a) {
     int x = 0;
@@ -20,12 +19,10 @@ multiplicar por cero o uno, y dividir por uno.
     int res = 1;
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Tenga en cuenta que en casos excepcionales, el reemplazo sugerido podría no ser completamente equivalente al código original
-  para todas las posibles entradas. Por ejemplo, la inspección sugiere reemplazar <code>x / x</code> con <code>1</code>.
-  Sin embargo, si <code>x</code> es cero, el código original lanza <code>ArithmeticException</code> o da como resultado <code>NaN</code>.
-  Además, si <code>x</code> es <code>NaN</code>, el resultado también es <code>NaN</code>. Es muy poco probable que este comportamiento sea intencional.
+  Tenga en cuenta que, en casos muy raros, la sustitución sugerida puede no ser completamente equivalente al código original para todas las entradas posibles. Por ejemplo, la inspección sugiere reemplazar <code>x / x</code> por <code>1</code>.
+  Sin embargo, si <code>x</code> es cero, el código original lanzará una <code>ArithmeticException</code> o resultará en <code>NaN</code>.
+  Además, si <code>x</code> es <code>NaN</code>, el resultado también será <code>NaN</code>. Es poco probable que estos comportamientos sean intencionales.
 </p>
 </body>
 </html>

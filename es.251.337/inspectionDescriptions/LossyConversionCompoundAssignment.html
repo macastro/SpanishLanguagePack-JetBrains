@@ -1,9 +1,8 @@
 <html>
 <body>
-Reporta asignaciones compuestas si el tipo del operando de la derecha no es compatible con el tipo de la variable.
+Se informa una asignación compuesta cuando el tipo del operando derecho es incompatible con el tipo de la variable.
 <p>
-Durante dichas asignaciones compuestas, ocurre un casteo implícito, lo que puede resultar en conversiones con pérdida de datos.
-
+Durante este tipo de asignación compuesta, ocurre una conversión implícita que puede resultar en una conversión con pérdida de datos.
 <p>Ejemplo:</p>
 <pre><code>
   long c = 1;
@@ -14,7 +13,6 @@ Durante dichas asignaciones compuestas, ocurre un casteo implícito, lo que pued
   long c = 1;
   c += (long) 1.2;
 </code></pre>
-<!-- tooltip end -->
-<p><small>Nuevo en 2023.2</small></p>
+<p><small>Novedades en 2023.2</small></p>
 </body>
 </html>

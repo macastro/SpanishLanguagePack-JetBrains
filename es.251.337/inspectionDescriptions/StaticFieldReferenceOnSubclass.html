@@ -1,33 +1,28 @@
 <html>
 <body>
-Reporta accesos a campos estáticos donde la llamada es calificada por una subclase de la clase que declara, en lugar de por la clase que declara en sí.
+Informa sobre accesos a campos static que están calificados por una subclase de la clase declarante en lugar de por la propia clase declarante.
 <p>
-  Java permite tal calificación, pero tales accesos pueden indicar una sutil confusión de herencia y sobrescritura.
+  Java permite tal calificación, pero este tipo de acceso puede indicar una confusión sutil entre herencia y sobrescritura.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Padre {
+  class Parent {
     static int foo = 0;
   }
-
-  class Hijo extiende Padre { }
-
-  void barra() {
-    System.out.println(Hijo.foo);
+  class Child extends Parent { }
+  void bar() {
+    System.out.println(Child.foo);
   }
 </code></pre>
-<p>Después de que se aplica la solución rápida, el resultado se ve así:</p>
+<p>Después de aplicar la corrección rápida, el resultado se muestra así:</p>
 <pre><code>
-  class Padre {
+  class Parent {
     static int foo = 0;
   }
-
-  class Hijo extiende Padre { }
-
-  void barra() {
-    System.out.println(Padre.foo);
+  class Child extends Parent { }
+  void bar() {
+    System.out.println(Parent.foo);
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

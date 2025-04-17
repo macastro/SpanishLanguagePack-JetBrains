@@ -1,26 +1,22 @@
 <html>
 <body>
-Informes de referencias a variables de bucle desde dentro de literales `func` en sentencias `defer` y `go`. 
-  Tales variables pueden tener valores inesperados porque no se copian a literales `func`, 
-  y los literales `func` en `defer` y `go` no se ejecutan inmediatamente.
-
-<p>Para obtener más información sobre cierres y goroutines, consulte <a href="https://go.dev/doc/faq#closures_and_goroutines">What happens
-  with closures running as goroutines? en go.dev</a>.</p>
+Reporta referencias a variables de bucle dentro de literales <code>func</code> en declaraciones <code>defer</code> y <code>go</code>.
+  Estas variables pueden tener valores inesperados ya que no se copian dentro del literal <code>func</code>, y los literales <code>func</code> en <code>defer</code> y <code>go</code> no se ejecutan inmediatamente.
+<p>Para más información sobre closures y goroutines, consulta <a href="https://go.dev/doc/faq#closures_and_goroutines">What happens with closures running as goroutines? en go.dev</a>.</p>
 <p>Ejemplo:</p>
 <pre><code>for _, v := range []string{"a", "b", "c"} {
   go func() {
-    fmt.Println(v) // probablemente el resultado sea `c c c` no `a b c`
+    fmt.Println(v) // La salida podría ser `c c c` en lugar de `a b c`.
   }()
 }</code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>for _, v := range []string{"a", "b", "c"} {
-  v := v // `v` se ha copiado ahora
+  v := v // `v` ahora está copiada
   go func() {
     fmt.Println(v)
   }()
 }</code></pre>
-<!-- tooltip end -->
-<p>Tenga en cuenta que el analizador solo verifica las sentencias `defer` y `go` cuando son la última sentencia en el cuerpo del bucle. 
-  De lo contrario, el análisis puede producir detecciones falsas.</p>
+<p>Ten en cuenta que el analizador solo verifica las declaraciones <code>defer</code> y <code>go</code> cuando son la última declaración en el cuerpo del bucle.
+  De lo contrario, el análisis podría producir detecciones incorrectas.</p>
 </body>
 </html>

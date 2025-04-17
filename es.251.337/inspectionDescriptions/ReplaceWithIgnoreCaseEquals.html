@@ -1,9 +1,9 @@
 <html>
 <body>
- Informa de comparaciones que no distinguen mayúsculas o minúsculas que se pueden reemplazar con <code>equals(..., ignoreCase = true)</code>.
-<p>Al usar <code>equals()</code>, no tienes que asignar cadenas adicionales con <code>toLowerCase()</code> o <code>toUpperCase()</code> para comparar cadenas.</p>
-<p>La corrección rápida reemplaza la comparación que no distingue entre mayúsculas y minúsculas que utiliza <code>toLowerCase()</code> o <code>toUpperCase()</code> con <code>equals(..., ignoreCase = true)</code>.</p>
-<p><b>Nota:</b> Puede cambiar la semántica de algunos lugares.</p>
+El informe puede reemplazarse con una comparación sin distinción entre mayúsculas y minúsculas usando <code>equals(..., ignoreCase = true)</code>.
+<p>Con <code>equals()</code>, las cadenas se pueden comparar sin necesidad de asignar cadenas adicionales con <code>toLowerCase()</code> o <code>toUpperCase()</code>.</p>
+<p>Esta corrección rápida reemplazará las comparaciones sin distinción entre mayúsculas y minúsculas que usan <code>toLowerCase()</code> o <code>toUpperCase()</code> por <code>equals(..., ignoreCase = true)</code>.</p>
+<p><b>Nota</b>: La semántica puede cambiar para algunas configuraciones regionales.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun main() {
@@ -12,7 +12,7 @@
       println(a.toLowerCase() == b.toLowerCase())
   }
 </code></pre>
-<p>Después de que se aplica la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun main() {
       val a = &quot;KoTliN&quot;
@@ -20,6 +20,5 @@
       println(a.equals(b, ignoreCase = true))
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

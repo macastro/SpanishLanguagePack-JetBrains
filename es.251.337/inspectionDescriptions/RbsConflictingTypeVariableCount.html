@@ -1,20 +1,18 @@
 <html>
 <body>
-Se informa un conflicto en la declaración de un contenedor parcial debido a una discrepancia en el número de variables de tipo. Declarar un contenedor parcial con un número diferente de variables de tipo es un error.
-<p>Hay correcciones rápidas disponibles para corregir el número de variables de tipo declaradas o navegar a la declaración en conflicto.</p>
+Informa sobre conflictos en declaraciones de contenedores parciales debido a un número incompatible de variables de tipo. Se produce un error cuando se declaran contenedores parciales con diferentes cantidades de variables de tipo.
+<p>Es posible corregir el número de variables de tipo en la declaración o navegar a las declaraciones en conflicto mediante una corrección rápida.</p>
 <p>Ejemplo:</p>
-<pre><code># La clase 'Ejemplo' tiene 1 variable de tipo que entra en conflicto con otras declaraciones
-class Ejemplo[A]
+<pre><code># La clase 'Example' tiene 1 variable de tipo, lo que entra en conflicto con otras declaraciones
+class Example[A]
 end
-
-# La clase 'Ejemplo' tiene 2 variables de tipo que entran en conflicto con otras declaraciones
-class Ejemplo[Y, Z]
+# La clase 'Example' tiene 2 variables de tipo, lo que entra en conflicto con otras declaraciones
+class Example[Y, Z]
 end</code></pre>
-<p>Después de la corrección rápida:</p>
-<pre><code>class Ejemplo[A, B]
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>class Example[A, B]
 end
-
-class Ejemplo[Y, Z]
+class Example[Y, Z]
 end</code></pre>
 </body>
 </html>

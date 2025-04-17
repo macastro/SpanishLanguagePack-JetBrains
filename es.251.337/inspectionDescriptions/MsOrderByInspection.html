@@ -1,22 +1,19 @@
 <html>
 <body>
-Informa usos cuando la cláusula <code>ORDER BY</code> se utiliza sin <code>TOP</code>, <code>OFFSET</code> o <code>FOR XML</code> en vistas,
-funciones en línea, tablas derivadas, subconsultas y expresiones de tabla comunes.
-<p>Para más información sobre usos de <code>ORDER BY</code>, ver <a
-    href="https://docs.microsoft.com/es-es/sql/t-sql/queries/select-order-by-clause-transact-sql">SELECT - Cláusula ORDER BY (Transact-SQL) en
-  docs.microsoft.com</a>.</p>
+Informa sobre el uso de la cláusula <code>ORDER BY</code> en vistas, funciones inline, tablas derivadas, subconsultas y expresiones de tabla comunes sin el uso de <code>TOP</code>, <code>OFFSET</code> o <code>FOR XML</code>.
+<p>Para obtener información detallada sobre el uso de <code>ORDER BY</code>, consulte <a
+    href="https://docs.microsoft.com/en-us/sql/t-sql/queries/select-order-by-clause-transact-sql">SELECT - Cláusula ORDER BY (Transact-SQL) en docs.microsoft.com</a>.</p>
 <p>Ejemplo (Microsoft SQL Server):</p>
 <pre><code>CREATE TABLE foo (a INT NOT NULL, b  INT NOT NULL);
-
 SELECT *
 FROM (SELECT a, b
 FROM foo A
 WHERE a &lt; 89
 ORDER BY b) ALIAS;
 </code></pre>
-<p>En una subconsulta, ORDER BY se resaltará como un error. Se puede añadir TOP, OFFSET o FOR XML a una subconsulta.
-  Alternativamente, utilice la corrección rápida <b>Eliminar elemento</b> para eliminar la sección ORDER BY.</p>
-<p>Tras aplicar la corrección rápida:</p>
+<p>ORDER BY se resaltará como un error en la subconsulta. Puede agregar TOP, OFFSET o FOR XML a la subconsulta.
+  Alternativamente, use la corrección rápida <b>Eliminar elemento</b> para eliminar la parte ORDER BY.</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>SELECT *
 FROM (SELECT a, b
 FROM foo A

@@ -1,7 +1,7 @@
 <html>
 <body>
-Reporta el uso de operadores condicionales ternarios y sugiere reemplazarlos con sentencias <code>if</code>/<code>else</code>.
-<p>Algunos estándares de codificación prohíben el uso de operadores condicionales.</p>
+Informa sobre el uso del operador ternario condicional y sugiere convertirlos en declaraciones <code>if</code>/<code>else</code>.
+<p>Algunos estándares de código prohíben el uso del operador condicional.</p>
 <p>Ejemplo:</p>
 <pre><code>
   Object result = (condition) ? foo() : bar();
@@ -16,14 +16,13 @@ Reporta el uso de operadores condicionales ternarios y sugiere reemplazarlos con
     comp = bar();
   }
 </code></pre>
-<!-- tooltip end -->
 <p>Configuración de la inspección:</p>
-<p>Para ignorar asignaciones simples y devoluciones, y permitir la siguiente sintaxis, usa la opción de "<b>Ignorar asignaciones simples y devoluciones</b>".</p>
+<p>Utilice la opción <b>Ignorar asignaciones y retornos simples</b> para ignorar asignaciones y retornos simples y permitir estructuras como:</p>
 <pre><code>
   String s = (foo == null) ? "" : foo.toString();
 </code></pre>
 <p>
-  Para ignorar expresiones condicionales en el contexto donde la sentencia <code>if</code> es imposible (por ejemplo, cuando se usa la expresión condicional como un argumento de llamada de constructor de <code>super()</code>), usa la opción de "<b>Ignorar ubicaciones donde la sentencia if es imposible</b>".
+  Use la opción <b>Ignorar ubicaciones donde no se puede usar if</b> para ignorar expresiones condicionales en contextos donde no es posible reemplazar automáticamente con una declaración if (por ejemplo, cuando la expresión condicional se usa como llamada al constructor <code>super()</code>).
 </p>
 </body>
 </html>

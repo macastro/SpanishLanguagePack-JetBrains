@@ -1,18 +1,19 @@
 <html>
 <body>
-Informa de problemas en las implementaciones de <code>Comparator.compare()</code> y <code>Comparable.compareTo()</code>.
-<p>Se informa de los siguientes casos:</p>
+Informa sobre problemas en las implementaciones de <code>Comparator.compare()</code> y <code>Comparable.compareTo()</code>.
+<p>Se informará de los siguientes casos:</p>
 <ul>
   <li>
-    No se utiliza un parámetro. Lo más probable es que sea un error tipográfico y el otro parámetro se compare consigo mismo, o que el método no se haya implementado correctamente.
+    Parámetros no utilizados. Probablemente esto sea un error tipográfico, una comparación de un parámetro consigo mismo, o una implementación incorrecta del método.
   </li>
   <li>
-    Es evidente que el método no devuelve <code>0</code> para los mismos elementos. Este método de comparación viola el contrato y puede producir resultados impredecibles cuando se encuentran elementos iguales. En particular, la ordenación puede fallar con una excepción en algunos datos.</li>
+    El método evidentemente no devuelve <code>0</code> para elementos iguales. Este método de comparación viola el contrato y puede producir resultados impredecibles cuando se encuentran elementos iguales. En particular, algunos datos pueden causar excepciones y fallos en la ordenación.</li>
   <li>
-    El método de comparación nunca devuelve un valor positivo o negativo. Para cumplir el contrato, si el método de comparación devuelve valores positivos, también debe devolver valores negativos si los argumentos se suministran en orden inverso.
+    El método de comparación nunca devuelve valores positivos o negativos. Para cumplir con el contrato, si el método de comparación devuelve un valor positivo, también debería devolver un valor negativo cuando los argumentos se proporcionan en orden inverso.
   </li>
   <li>
-    El método de comparación devuelve <code>Integer.MIN_VALUE</code>. Aunque el contrato lo permite, puede ser propenso a errores, ya que algunos sitios de llamada pueden intentar invertir incorrectamente el valor devuelto del método de comparación utilizando el operador unario de menos. El valor negado de <code>Integer.MIN_VALUE</code> es <code>Integer.MIN_VALUE</code>.
+    El método de comparación devuelve <code>Integer.MIN_VALUE</code>. Aunque está permitido por el contrato, puede ser propenso a errores, ya que algunos puntos de llamada podrían usar incorrectamente el operador de negación unaria para invertir el valor devuelto por el método de comparación.
+    El valor negativo de <code>Integer.MIN_VALUE</code> es <code>Integer.MIN_VALUE</code>.
   </li>
 </ul>
 <p><b>Ejemplo:</b></p>
@@ -22,6 +23,5 @@ Informa de problemas en las implementaciones de <code>Comparator.compare()</code
               ? 0
               : Math.random() &gt; 0.5 ? -1 : 1;
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

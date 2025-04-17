@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa campos <code>protected</code>.
-<p>No se informan las constantes (es decir, variables marcadas como <code>static</code> o <code>final</code>).</p>
+Reportar campos <code>protected</code>.
+<p>No reportar constantes (es decir, variables marcadas como <code>static</code> o <code>final</code>).</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   public class A {
@@ -9,6 +9,5 @@ Informa campos <code>protected</code>.
     protected final static int MODE = 0;  // constante, sin advertencia
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

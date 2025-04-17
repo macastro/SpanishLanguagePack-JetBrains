@@ -1,21 +1,17 @@
 <html>
 <body>
-Reporta argumentos que se utilizan sin nombres en llamadas de rutinas. Por defecto, esta inspección está desactivada.
-<p>Para más información sobre la diferencia entre parámetros nombrados y no nombrados, consulte <a
-    href="https://docs.microsoft.com/es-es/sql/odbc/reference/develop-app/binding-parameters-by-name-named-parameters">
-    Enlace de parámetros por nombre (named parameters) en docs.microsoft.com
-  </a>.</p>
+Informa sobre argumentos utilizados sin nombres en llamadas a rutinas. Por defecto, esta inspección está desactivada.
+<p>Para obtener más información sobre las diferencias entre parámetros nombrados y sin nombre, consulte <a
+    href="https://docs.microsoft.com/en-us/sql/odbc/reference/develop-app/binding-parameters-by-name-named-parameters">Binding Parameters by Name (Named Parameters) en docs.microsoft.com</a>.</p>
 <p>Ejemplo (Microsoft SQL Server):</p>
 <pre><code>CREATE FUNCTION foo(n INT, m INT) RETURNS INT AS
 BEGIN
     RETURN n + m;
 END;
-
 CREATE PROCEDURE test AS
 BEGIN
     foo n = 1, m = 2;
-
---- La siguiente llamada omite los nombres de los parámetros y se resaltará
+--- La siguiente llamada carece de nombres de parámetros y será resaltada
     foo 1, 2;
 END;</code></pre>
 <p>Los parámetros <code>1, 2</code> en la llamada <code>foo 1, 2;</code> están resaltados porque carecen de nombres.</p>

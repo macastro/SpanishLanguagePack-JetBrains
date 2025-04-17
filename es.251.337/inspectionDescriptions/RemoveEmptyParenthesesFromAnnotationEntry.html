@@ -1,22 +1,19 @@
 <html>
 <body>
-Informa sobre paréntesis vacíos redundantes en entradas de anotación.
-<p>Usa la corrección rápida "Eliminar paréntesis innecesarios" para limpiar el código.</p>
-<p><b>Ejemplos:</b></p>
+Reporta paréntesis redondos redundantes en las entradas de anotaciones.
+<p>Use la corrección rápida "Eliminar paréntesis innecesarios" para limpiar el código.</p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   annotation class MyAnnotationA
   annotation class MyAnnotationB(val x: Int)
-  annotation class MyAnnotationC(val x: Int = 10) // valor predeterminado presente
-
-  @MyAnnotationA() // &lt;== los paréntesis son redundantes
+  annotation class MyAnnotationC(val x: Int = 10) // tiene valor predeterminado
+  @MyAnnotationA() // &lt;== paréntesis redundantes
   fun testA() {
   }
-
-  @MyAnnotationB() // &lt;== argumento faltante, los paréntesis son necesarios
+  @MyAnnotationB() // &lt;== faltan argumentos, paréntesis obligatorios
   fun testB() {
   }
-
-  @MyAnnotationC() // &lt;== los paréntesis son redundantes
+  @MyAnnotationC() // &lt;== paréntesis redundantes
   fun testC() {
   }
 </code></pre>

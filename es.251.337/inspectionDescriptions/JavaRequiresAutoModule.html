@@ -1,20 +1,19 @@
 <html>
 <body>
-Reporta usos de módulos automáticos en una directiva <code>requires</code> .
-<p>Un módulo automático no es confiable ya que puede depender de los tipos en la ruta de clase y su nombre y paquetes exportados pueden cambiar si se convierte en un módulo explícito.</p>
-<p>Corresponde a las opciones <code>-Xlint:requires-automatic</code> y <code>-Xlint:requires-transitive-automatic</code> de Javac.
-La primera opción aumenta la conciencia sobre cuándo se utilizan módulos automáticos.
-La segunda advierte a los autores de un módulo que están poniendo en riesgo a los usuarios de ese módulo al establecer una legibilidad implícita para un módulo automático.
+Informa sobre el uso de módulos automáticos en la directiva <code>requires</code>.
+<p>Los módulos automáticos no son fiables ya que pueden depender de tipos en el classpath, y su nombre y paquetes exportados pueden cambiar cuando se convierten en módulos explícitos.</p>
+<p>Corresponde a las opciones de Javac <code>-Xlint:requires-automatic</code> y <code>-Xlint:requires-transitive-automatic</code>.
+La primera opción proporciona información sobre cuándo se utilizan módulos automáticos.
+La segunda opción advierte a los autores de módulos que establecer legibilidad implícita sobre módulos automáticos expondrá a los usuarios del módulo a riesgos.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   //module-info.java
   module org.printer {
-    requires transitive drivers.corp.org; // reportado en caso de que 'drivers.corp.org' sea un módulo automático
+    requires transitive drivers.corp.org; // Informa cuando 'drivers.corp.org' es un módulo automático
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Utiliza la opción <b>Resalta solo dependencias transitivas</b> para advertir solo sobre dependencias transitivas.
+  Use la opción <b>Resaltar solo dependencias transitivas</b> para emitir advertencias únicamente sobre dependencias transitivas.
 </p>
 </body>
 </html>

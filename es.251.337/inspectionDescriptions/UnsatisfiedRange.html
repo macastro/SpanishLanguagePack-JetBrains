@@ -1,25 +1,24 @@
 <html>
 <body>
-Informa sobre los valores numéricos devueltos por métodos que no se ajustan al rango de devolución del método declarado.
-Puedes declarar el rango de devolución del método utilizando varias anotaciones:
+Informa sobre valores devueltos por métodos que no cumplen con el rango de retorno declarado.
+Puedes declarar el rango de retorno de un método usando varias anotaciones:
 <ul>
-  <li><code>org.jetbrains.annotations.Range</code> del paquete de anotaciones JetBrains (especifica 'desde' y 'hasta')</li>
-  <li><code>org.checkerframework.common.value.qual.IntRange</code> del paquete de anotaciones Checker Framework (especifica 'desde' y 'hasta')</li>
-  <li><code>org.checkerframework.checker.index.qual.GTENegativeOne</code> del paquete de anotaciones Checker Framework (el rango es '>= -1')</li>
-  <li><code>org.checkerframework.checker.index.qual.NonNegative</code> del paquete de anotaciones Checker Framework (el rango es '>= 0')</li>
-  <li><code>org.checkerframework.checker.index.qual.Positive</code> del paquete de anotaciones Checker Framework (el rango es '> 0')</li>
-  <li><code>javax.annotation.Nonnegative</code> del paquete de anotaciones JSR 305 (el rango es '>= 0')</li>
+  <li><code>org.jetbrains.annotations.Range</code> del paquete de anotaciones de JetBrains (especifica 'from' y 'to')</li>
+  <li><code>org.checkerframework.common.value.qual.IntRange</code> del paquete de anotaciones de Checker Framework (especifica 'from' y 'to')</li>
+  <li><code>org.checkerframework.checker.index.qual.GTENegativeOne</code> del paquete de anotaciones de Checker Framework (rango '>= -1')</li>
+  <li><code>org.checkerframework.checker.index.qual.NonNegative</code> del paquete de anotaciones de Checker Framework (rango '>= 0')</li>
+  <li><code>org.checkerframework.checker.index.qual.Positive</code> del paquete de anotaciones de Checker Framework (rango '> 0')</li>
+  <li><code>javax.annotation.Nonnegative</code> del paquete de anotaciones JSR 305 (rango '>= 0')</li>
   <li><code>javax.validation.constraints.Min</code> (especifica el valor mínimo)</li>
   <li><code>javax.validation.constraints.Max</code> (especifica el valor máximo)</li>
 </ul>
 <p>Ejemplo:</p>
 <pre><code>
   @Range(from = 0, to = Integer.MAX_VALUE) int getValue() {
-    // Aviso: -1 está fuera del rango declarado
+    // Advertencia: -1 está fuera del rango declarado
     return -1;
   }
 </code></pre>
-<!-- tooltip end -->
-<p><small>Novedad en 2021.2</small></p>
+<p><small>Novedades en 2021.2</small></p>
 </body>
 </html>

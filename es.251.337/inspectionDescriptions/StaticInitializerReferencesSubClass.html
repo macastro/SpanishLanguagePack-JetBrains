@@ -1,13 +1,13 @@
 <html>
 <body>
-Informa de clases que hacen referencia a sus subclases en inicializadores estáticos o campos estáticos.
-<p>Estas referencias pueden potencialmente causar bloqueos de nivel JVM cuando un hilo en un entorno multihilo intenta cargar la superclase mientras otro hilo intenta cargar la subclase simultáneamente.</p>
+Informa sobre clases que hacen referencia a sus subclases en inicializadores static o campos static.
+<p>Este tipo de referencias pueden causar un deadlock a nivel de JVM en entornos multihilo (es decir, cuando un hilo intenta cargar la superclase mientras otro hilo intenta cargar la subclase simultáneamente).</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Padre {
-    static final Niño campo = new Niño();
+  class Parent {
+    static final Child field = new Child();
   }
-  class Niño se extiende Padre { }
+  class Child extends Parent { }
 </code></pre>
 </body>
 </html>

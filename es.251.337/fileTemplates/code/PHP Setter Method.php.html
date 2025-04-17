@@ -3,26 +3,26 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      Plantilla integrada para un método setter de PHP. Se usa, por ejemplo, cuando se invoca la corrección rápida "Añadir getter y setter".
+      Una plantilla incorporada para un método setter de PHP. Se utiliza, por ejemplo, cuando se invoca la corrección rápida "Agregar getter y setter".
     </font>
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Variables predefinidas que reciben los siguientes valores:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas aceptan los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${STATIC}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Si la propiedad es estática, toma el valor 'static', de lo contrario, una cadena vacía.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Toma el valor 'static' si la propiedad es estática, o una cadena vacía en caso contrario.</font></td>
   </tr>
   <tr>    
     <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
     <td width="100%" valign="top"><font face="verdana" size="-1">
-      Nombre del método en estilo CamelCase sin el prefijo "set", con el primer carácter en mayúscula. Por ejemplo, el nombre de la propiedad '_my_property' se convierte en 'MyProperty'.
+      El nombre del método en estilo camelCase, sin el prefijo "set" y con la primera letra en mayúscula. Por ejemplo, el nombre de propiedad '_my_property' se convierte en 'MyProperty'.
     </font></td>
   </tr>
   <tr>
@@ -33,34 +33,34 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${SCALAR_TYPE_HINT}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Contiene la pista de tipo escalar si el nivel de lenguaje es PHP 7.0 o superior.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Incluye el type hint escalar si el nivel de lenguaje es PHP 7.0 o superior</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${FIELD_NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre original de la propiedad, sin modificaciones.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre original de la propiedad sin modificaciones.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAM_NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del parámetro del setter. Casi idéntico a ${FIELD_NAME}, pero se elimina el primer guion bajo, si existe. Por ejemplo, el nombre de la propiedad '_myProperty' se convierte en 'myProperty'.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre del parámetro para el setter. Es casi idéntico a ${FIELD_NAME}, pero se elimina el primer guion bajo si existe. Por ejemplo, el nombre de propiedad '_myProperty' se convierte en 'myProperty'.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${TYPE_HINT}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Pista de tipo de la propiedad. Si no se especifica, es una cadena vacía.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El type hint de la propiedad, o una cadena vacía si no está especificado.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${VOID_RETURN_TYPE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Indica si el tipo de retorno <i>void</i> está disponible para el nivel de lenguaje PHP del proyecto.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Indica si el tipo de retorno <i>void</i> está disponible para el nivel de lenguaje PHP en el proyecto.</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Signo de dólar, se evalúa como el carácter '$'.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El símbolo del dólar, evaluado como el carácter "$" simple.</font></td>
   </tr>
 </table>
 </body>

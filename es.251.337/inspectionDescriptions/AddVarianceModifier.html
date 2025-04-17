@@ -1,31 +1,26 @@
 <html>
 <body>
-Informa parámetros de tipos que pueden tener varianza <code>in</code> o <code>out</code>.
-<p>Usar varianza <code>in</code> y <code>out</code> proporciona inferencia de tipos más precisa en Kotlin y semántica de código más clara.</p>
+Los reportes pueden tener parámetros de tipo con varianza <code>in</code> o <code>out</code>.
+<p>El uso de varianza <code>in</code> y <code>out</code> permite una inferencia de tipos más precisa y una semántica de código más clara en Kotlin.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Box&lt;T&gt;(val obj: T)
-
   fun consumeString(box: Box&lt;String&gt;) {}
   fun consumeCharSequence(box: Box&lt;CharSequence&gt;) {}
-
   fun usage(box: Box&lt;String&gt;) {
       consumeString(box)
       consumeCharSequence(box) // Error de compilación
   }
 </code></pre>
-<p>La corrección rápida añade el modificador de varianza correspondiente:</p>
+<p>La corrección rápida añadirá el modificador de varianza correspondiente:</p>
 <pre><code>
   class Box&lt;out T&gt;(val obj: T)
-
   fun consumeString(box: Box&lt;String&gt;) {}
   fun consumeCharSequence(box: Box&lt;CharSequence&gt;) {}
-
   fun usage(box: Box&lt;String&gt;) ++{
       consumeString(box)
-      consumeCharSequence(box) // OK
+      consumeCharSequence(box) // Permitido
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

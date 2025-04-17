@@ -1,13 +1,12 @@
 <html>
 <body>
-<p>Informa métodos/campos estáticos inyectados y auto-conectados de componentes Spring.</p>
-
+<p>Informa sobre métodos/campos static con autowiring e inyección automática de componentes Spring.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 @Component
 public class MyComponent {
 	@Autowired
-	static FooInterface foo;  // informa "No auto-conectar miembros estáticos"
+	static FooInterface foo;  // Informa "no se permite autowiring en miembros static"
 }
 </code></pre>
 </body>

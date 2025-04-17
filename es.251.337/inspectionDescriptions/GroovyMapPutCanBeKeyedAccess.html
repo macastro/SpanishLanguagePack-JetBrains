@@ -1,11 +1,11 @@
 <html>
 <body>
-Informa las llamadas a los métodos <code>java.util.Map.put()</code>. Esas llamadas pueden remplazarse por la forma de acceso con clave, más corta y clara.
+Informa sobre las llamadas al método <code>java.util.Map.put()</code>. Estas llamadas pueden ser reemplazadas por una forma de acceso con clave más corta y explícita.
 <p><b>Ejemplo:</b></p>
 <pre>
 <code>
 def map = ["foo": "bar"]
-map.put("foo", "baz") // map.put("foo", "baz") podría reemplazarse con map["foo"] = "baz"
+map.put("foo", "baz") // map.put("foo", "baz") puede reemplazarse por map["foo"] = "baz"
 </code>
 </pre>
 <p>Después de aplicar la corrección rápida:</p>

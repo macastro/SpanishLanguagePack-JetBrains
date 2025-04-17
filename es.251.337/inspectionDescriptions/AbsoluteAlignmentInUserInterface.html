@@ -1,18 +1,17 @@
 <html>
 <body>
-Informa los usos de constantes de alineación absolutas de AWT y Swing. Las aplicaciones internacionalizadas utilizan alineación relativa porque respeta las configuraciones de orientación de componentes locales.
+Informa sobre el uso de constantes de alineación absoluta en AWT y Swing. Las aplicaciones internacionalizadas deben usar alineación relativa, ya que esta sigue la configuración de dirección del componente según la configuración regional.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   JPanel panel = new JPanel(new BorderLayout(2, 2));
-  JLabel label = new JLabel("Hola Mundo");
+  JLabel label = new JLabel("Hello World");
   panel.add(label, BorderLayout.NORTH);
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   JPanel panel = new JPanel(new BorderLayout(2, 2));
-  JLabel label = new JLabel("Hola Mundo");
+  JLabel label = new JLabel("Hello World");
   panel.add(label, BorderLayout.PAGE_START);
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

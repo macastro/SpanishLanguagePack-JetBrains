@@ -1,26 +1,22 @@
 <html>
 <body>
-Informa casos en los que se accede a propiedades de forma inadecuada:
+Informa sobre accesos inadecuados a propiedades:
 <ul>
-  <li>Se establecen propiedades de solo lectura</li>
-  <li>Se leen propiedades de solo escritura</li>
-  <li>Se eliminan propiedades no eliminables</li>
+  <li>Establecer propiedades de solo lectura</li>
+  <li>Leer propiedades de solo escritura</li>
+  <li>Eliminar propiedades no eliminables</li>
 </ul>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class MyClass:
     @property
     def read_only(self): return None
-
     def __write_only_setter(self, value): pass
-
     write_only = property(None, __write_only_setter)
-
-
 a = MyClass()
-a.read_only = 10 # no se puede establecer propiedad
-del a.read_only # no se puede eliminar propiedad
-print(a.write_only) # no se puede leer propiedad
+a.read_only = 10 # no se puede establecer la propiedad
+del a.read_only # no se puede eliminar la propiedad
+print(a.write_only) # no se puede leer la propiedad
 </code></pre>
 </body>
 </html>

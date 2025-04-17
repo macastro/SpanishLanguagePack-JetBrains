@@ -1,11 +1,8 @@
 <html>
 <body>
-Inspecciona bloques sincronizados que se bloquean en un objeto inicializado con un literal.
+Informa sobre bloques synchronized que se bloquean en objetos inicializados con literales.
 <p>
-  Los literales de cadena se internan y los literales de <code>Number</code> se pueden asignar desde una caché. Debido a
-  esto, es posible que alguna otra parte del sistema que utiliza un objeto inicializado con el mismo
-  literal, en realidad tenga una referencia al mismo objeto exacto. Esto puede crear situaciones inesperadas de punto muerto,
-  si se pensó que la cadena sería privada.
+  Los literales de cadena se almacenan en el pool de strings y los literales de <code>Number</code> pueden asignarse desde el caché. Por esta razón, es posible que otras partes del sistema (que usan objetos inicializados con el mismo literal) contengan referencias al mismo objeto. Esto puede provocar situaciones inesperadas de interbloqueo si la cadena se considera un objeto privado.
 </p>
 </body>
 </html>

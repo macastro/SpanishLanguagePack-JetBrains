@@ -1,21 +1,15 @@
 <html>
 <body>
-<p>Reporta comparaciones con <code>None</code>. Ese tipo de comparaciones
-  siempre deberían hacerse con <code>is</code> o <code>is not</code>, nunca
-  los operadores de igualdad.</p>
+<p>Informa sobre comparaciones con <code>None</code>. Este tipo de comparaciones siempre deben realizarse usando <code>is</code> o <code>is not</code>, y no con operadores de igualdad.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 a = 2
-
-
 if a == None:
     print("Success")
 </code></pre>
-<p>Una vez aplicado la corrección rápida, el código cambia a:</p>
+<p>Después de aplicar la corrección rápida, el código queda así:</p>
 <pre><code>
 a = 2
-
-
 if a is None:
     print("Success")
 </code></pre>

@@ -1,20 +1,18 @@
 <html>
 <body>
-Informa sobre los usos del constructor SAM (método abstracto único) que se pueden reemplazar con lambdas.
+El uso del constructor SAM (Single Abstract Method) puede ser reemplazado por una expresión lambda.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun main() {
-      foo(<b>Runnable</b> { println("Hola!") })
+      foo(<b>Runnable</b> { println("Hi!") })
   }
-
   fun foo(other: Runnable) {}
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun main() {
-      foo( { println("Hola!") })
+      foo( { println("Hi!") })
   }
-
   fun foo(other: Runnable) {}
 </code></pre>
 </body>

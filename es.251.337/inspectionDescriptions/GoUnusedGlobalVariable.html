@@ -1,33 +1,14 @@
-<!--
-  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~ http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
-
 <html>
 <body>
-Reporta variables globales que están definidas pero nunca son usadas en el código.
-<p>Si tienes variables no utilizadas, el código no se compilará.
-  Para más información sobre variables e importaciones no utilizadas, consulta <a href="https://go.dev/doc/effective_go#blank_unused">Importaciones y
-variables no utilizadas en go.dev</a>.
+Informa sobre variables globales que están definidas pero nunca se utilizan en el código.
+<p>Si tiene variables sin usar, el código no compilará.
+  Para obtener más información sobre variables e importaciones sin usar, consulte <a href="https://go.dev/doc/effective_go#blank_unused">Unused imports and variables en go.dev</a>.
 </p>
 <pre><code>func main() {
  a := 422
 }</code></pre>
-<p>El código en el ejemplo no se compilará. Por lo tanto, se resalta como un error. Puedes aplicar dos soluciones rápidas para tales casos:
-  <b>Eliminar variable</b> y <b>Renombrar a _</b>. La primera solución rápida elimina la variable, la segunda convertirá la variable a un
-  identificador en blanco.</p>
-<p>Después de que se aplique la solución rápida <b>Renombrar a _</b>:</p>
+<p>El código del ejemplo no compilará. Por lo tanto, se resaltará como un error. Para estos casos, puede aplicar dos correcciones rápidas: <b>eliminar variable</b> y <b>renombrar a _</b>. La primera corrección elimina la variable, la segunda convierte la variable en un identificador en blanco.</p>
+<p>Después de aplicar la corrección rápida <b>renombrar a _</b>:</p>
 <pre><code>func main() {
  _ := 422
 }</code></pre>

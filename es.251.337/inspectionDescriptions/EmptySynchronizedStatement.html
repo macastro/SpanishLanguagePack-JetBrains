@@ -1,24 +1,22 @@
 <html>
 <body>
-Informa sobre sentencias <code>synchronized</code> con cuerpos vacíos.
+Informa sobre declaraciones <code>synchronized</code> con cuerpo vacío.
 <p>
-  Las sentencias <code>synchronized</code> vacías a veces se utilizan para esperar a que otros hilos liberen un recurso determinado. Sin embargo, no hay garantía de que el mismo recurso no se adquiera de nuevo justo tras finalizar la sentencia <code>synchronized</code> vacía.
-  Para una sincronización adecuada, el recurso debe utilizarse dentro del bloque <code>synchronized</code>.
+  Las declaraciones <code>synchronized</code> vacías a veces se utilizan para esperar a que otros hilos liberen un recurso específico. Sin embargo, no hay garantía de que el mismo recurso no se vuelva a adquirir después de que se complete la declaración <code>synchronized</code> vacía.
+  Para una sincronización correcta, el recurso debe utilizarse dentro del bloque <code>synchronized</code>.
 </p>
 <p>
-  Además, puede aparecer un bloque <code>synchronized</code> vacío tras una refactorización cuando se eliminó código redundante. En este caso, el propio bloque <code>synchronized</code> será redundante y deberá eliminarse también.
+  Además, los bloques <code>synchronized</code> vacíos pueden aparecer después de una refactorización cuando se elimina código redundante. En este caso, el propio bloque <code>synchronized</code> es redundante y también debe eliminarse.
 </p>
 <p>Ejemplo:</p>
 <pre><code>
   synchronized(lock) {}
 </code></pre>
 <p>
-  Se sugiere una solución rápida para eliminar la sentencia synchronized vacía.
+  Se recomienda eliminar las declaraciones synchronized vacías mediante la corrección rápida.
 </p>
-<!-- tooltip end -->
 <p>
-  Esta inspección está desactivada en los archivos JSP.
+  Esta inspección está desactivada para archivos JSP.
 <p>
-
 </body>
 </html>

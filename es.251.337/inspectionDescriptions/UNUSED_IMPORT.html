@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre las instrucciones redundantes de <code>import</code>.
-<p>Las instrucciones regulares de <code>import</code> no son necesarias cuando no se usan clases y paquetes importados en el archivo fuente.
-Lo mismo se aplica a los campos y métodos <code>static</code> importados que no se usan en el archivo fuente.</p>
+Reporta declaraciones <code>import</code> redundantes.
+<p>Las declaraciones regulares de <code>import</code> no son necesarias si las clases y paquetes importados no se utilizan en el archivo fuente.
+Esto también se aplica a los campos y métodos <code>static</code> que están importados pero no se utilizan en el archivo fuente.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   import java.util.ArrayList;

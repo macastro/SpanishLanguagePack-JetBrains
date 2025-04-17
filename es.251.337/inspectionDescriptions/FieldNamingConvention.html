@@ -1,8 +1,12 @@
-<html><body>Reporta campos cuyos nombres son demasiado cortos, demasiado largos o no siguen el patrón de expresión regular especificado.<p><b>Ejemplo:</b> Si la inspección está habilitada para constantes y la longitud mínima especificada para un nombre de campo es 5 (valor predeterminado), la siguiente constante produce una advertencia porque la longitud de su nombre es de 3, que es menor que 5: <code>public static final int MAX = 42;</code>.<br>Un arreglo rápido que cambia el nombre de dichos campos solo está disponible en el editor.</p>
-<!-- tooltip end -->
-<p>Configurar la inspección:</p>
-<p>Para especificar los tipos de campos que deben verificarse, utilizá la lista en la sección <b>Opciones</b>. Deseleccioná las casillas de verificación de los campos que querés obviar en la verificación.</p>
-<p>Para cada tipo de campo, especificá la longitud mínima, la longitud máxima y la expresión regular esperada para los nombres de campo utilizando los campos de entrada provistos. Para obviar las verificaciones correspondientes, especificá <b>0</b> en los campos de longitud.</p>
-<p>Las expresiones regulares deben especificarse en el formato estándar <code>java.util.regex</code></p>
-
-</body></html>
+<html>
+<body>
+Reporta campos cuyos nombres son demasiado cortos, demasiado largos o no siguen el patrón de expresión regular especificado.
+<p><b>Ejemplo</b>: Si la inspección está habilitada para constantes y la longitud mínima especificada para nombres de campos es 5 (valor predeterminado), se generará una advertencia para la siguiente constante porque su nombre tiene una longitud de 3, que es menor que 5: <code>public static final int MAX = 42;</code>.</p>
+<p>La corrección rápida para renombrar dichos campos solo está disponible en el editor.</p>
+<p>Configuración de la inspección:</p>
+<p>Utilice la lista en la sección <b>Opciones</b> para especificar qué campos deben ser inspeccionados. Desmarque las casillas correspondientes a los campos que desea excluir de la inspección.</p>
+<p>Para cada tipo de campo, utilice los campos de entrada proporcionados para especificar la longitud mínima, máxima y la expresión regular para los nombres de campo.
+  Especifique <b>0</b> en los campos de longitud para omitir la verificación correspondiente.</p>
+<p>Las expresiones regulares deben especificarse en el formato estándar de <code>java.util.regex</code>.</p>
+</body>
+</html>

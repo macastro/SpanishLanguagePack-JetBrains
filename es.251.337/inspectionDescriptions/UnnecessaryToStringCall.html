@@ -1,13 +1,14 @@
 <html>
 <body>
-Inspección de llamadas a <code>toString()</code> que se utilizan en los siguientes casos:
+Informa sobre las llamadas a <code>toString()</code> utilizadas en los siguientes casos:
 <ul>
-  <li>En concatenaciones de cadena</li>
+  <li>En concatenación de cadenas</li>
   <li>En los métodos <code>java.lang.StringBuilder#append()</code> o <code>java.lang.StringBuffer#append()</code></li>
   <li>En los métodos de <code>java.io.PrintWriter</code> o <code>java.io.PrintStream</code></li>
-  <li>en los métodos <code>org.slf4j.Logger</code></li>
+  <li>En los métodos de <code>org.slf4j.Logger</code></li>
 </ul>
-<p>En estos casos, las bibliotecas subyacentes se encargarán de la conversión a cadena y no es necesaria la llamada explícita a <code>toString()</code>.</p>
+<p>En estos casos, la conversión a cadena será manejada por los métodos de la biblioteca subyacente, sin necesidad de llamar explícitamente a <code>toString()</code>.
+  Eliminar las llamadas redundantes a <code>toString()</code> incluso puede mejorar el rendimiento y reducir la asignación de objetos.</p>
 <p>Ejemplo:</p>
 <pre><code>
   System.out.println(this.toString())
@@ -16,10 +17,10 @@ Inspección de llamadas a <code>toString()</code> que se utilizan en los siguien
 <pre><code>
   System.out.println(this)
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Tenga en cuenta que, sin la llamada a <code>toString()</code>, la semántica del código puede ser diferente: si la expresión es nula, se utilizará la cadena <code>null</code> en lugar de lanzar una <code>NullPointerException</code>.</p>
-  <p>Utilice la opción <b>Informar solo cuando se sabe que el calificador no es nulo</b> para evitar advertencias sobre los valores que podrían ser nulos.
+  Ten en cuenta que sin la llamada a <code>toString()</code>, la semántica del código puede ser diferente: si la expresión es null, se utilizará la cadena <code>null</code> en lugar de lanzar una <code>NullPointerException</code>.</p>
+  <p>Utiliza la opción <b>Informar solo cuando se sabe que el calificador no es null</b> para evitar advertencias sobre valores que podrían ser null.
+  Eliminar el <code>toString()</code> explícito en estos casos cambiaría la semántica en tiempo de ejecución, pasando de lanzar una <code>NullPointException</code> a aceptar silenciosamente el valor cuando es <code>null</code>.
 </p>
 </body>
 </html>

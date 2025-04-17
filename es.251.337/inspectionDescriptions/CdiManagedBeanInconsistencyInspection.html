@@ -1,12 +1,13 @@
 <html>
 <body>
-<p>Informa las reglas de definición de Bean incorrectas.</p>
-<p>La clase Java de nivel superior puede ser un Bean simple si:</p>
+<p>Informa sobre reglas incorrectas de definición de Beans.</p>
+<p>Una clase Java de nivel superior puede ser un Bean simple si:</p>
 <ul>
   <li>No es un tipo parametrizado.</li>
   <li>No es una clase interna no estática.</li>
   <li>Es una clase concreta o está anotada con <code>@Decorator</code>.</li>
-  <li>Tiene un constructor apropiado: la clase tiene un constructor sin parámetros o declara un constructor anotado con <code>@Initializer</code>.</li>
+  <li>Tiene un constructor apropiado: la clase tiene un constructor sin parámetros o declara un constructor anotado con <code>@Initializer</code>.
+  </li>
   <li>No implementa ninguna de las siguientes interfaces:
     <code>javax.servlet.Servlet</code>,
     <code>javax.servlet.Filter</code>,

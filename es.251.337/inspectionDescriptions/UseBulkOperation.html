@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa de operaciones únicas dentro de los bucles que podrían sustituirse con un método masivo.
+Informa sobre operaciones individuales dentro de un bucle que pueden ser reemplazadas por métodos por lotes.
 <p>
-  Los métodos masivos no sólo son más cortos sino que también pueden mejorar el rendimiento en algunos casos.
+  Los métodos por lotes no solo son más concisos, sino que a veces también tienen mejor rendimiento.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>  void test(Collection&lt;Integer&gt; numbers) {
@@ -19,11 +19,10 @@ Informa de operaciones únicas dentro de los bucles que podrían sustituirse con
     result.addAll(numbers);
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  La opción de <b>Utilizar Arrays.asList() para encapsular arrays</b> permite informar de los arrays, incluso si el método masivo requiere una colección.
-  En este caso, la corrección rápida encapsulará automáticamente el array en una llamada a <code>Arrays.asList()</code>.
+  Aunque los métodos por lotes requieren colecciones, la opción <b>envolver arrays con Arrays.asList()</b> permite informar sobre arrays.
+  En este caso, la corrección rápida envolverá automáticamente el array en una llamada a <code>Arrays.asList()</code>.
 </p>
-<p><small>Novedad de 2017.1</small></p>
+<p><small>Novedades de la versión 2017.1</small></p>
 </body>
 </html>

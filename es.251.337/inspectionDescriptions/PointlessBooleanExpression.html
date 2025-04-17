@@ -1,26 +1,23 @@
 <html>
 <body>
-Informa de expresiones booleanas innecesarias o demasiado complicadas.
-<p>Estas expresiones incluyen <code>&&</code> con <code>true</code>,
-<code>||</code> con <code>false</code>,
-comparación de igualdad con un literal booleano o negación de un literal booleano. Estas expresiones se pueden simplificar.</p>
+Informa sobre expresiones booleanas innecesarias o excesivamente complejas.
+<p>Esto incluye combinaciones de: <code>&&</code> con <code>true</code>, 
+<code>||</code> con <code>false</code>, comparaciones de igualdad con literales booleanos o negación de literales booleanos. Estas expresiones se pueden simplificar.</p>
 <p>Ejemplo:
 <pre><code>
   <b>boolean</b> a = !(x && <b>false</b>);
   <b>boolean</b> b = <b>false</b> || x;
   <b>boolean</b> c = x != <b>true</b>;
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   <b>boolean</b> a = <b>true</b>;
   <b>boolean</b> b = x;
   <b>boolean</b> c = !x;
 </code></pre>
-<!-- tooltip end -->
 <p>
-<p>Configura la inspección:</p>
-Utiliza la opción <b>Ignorar constantes con nombre para determinar expresiones sin sentido</b> para ignorar constantes con nombre al determinar si una expresión no tiene sentido.
+<p>Configuración de la inspección:</p>
+Utilice la opción <b>Ignorar constantes con nombre al determinar expresiones sin sentido</b> para ignorar las constantes con nombre al determinar si una expresión carece de sentido.
 <p>
-
 </body>
 </html>

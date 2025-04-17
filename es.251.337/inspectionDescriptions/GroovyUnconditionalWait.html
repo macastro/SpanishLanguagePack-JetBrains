@@ -1,9 +1,6 @@
 <html>
 <body>
-<p>Informa sobre <b>wait()</b>
-que se llama sin condición en un contexto sincronizado.
-Normalmente, <b>wait()</b> es
-utilizado para bloquear un hilo hasta que alguna condición es verdadera. Si <b>wait()</b>
-se llama sin condición, eso a menudo indica que la condición fue revisada antes de que se adquiriera una cerradura. En ese caso, puede ocurrir una carrera de datos, con la condición volviéndose verdadera entre el momento en que se revisó y el momento en que se adquirió la cerradura. Aunque las construcciones encontradas por esta inspección no son necesariamente incorrectas, indudablemente vale la pena examinarlas.</p>
+<p>Informa sobre llamadas incondicionales a <b>wait()</b> en un contexto sincronizado.
+Normalmente, <b>wait()</b> se utiliza para bloquear un hilo hasta que se cumpla una condición. Si se llama a <b>wait()</b> de forma incondicional, esto suele indicar que la condición se verificó antes de obtener el bloqueo. En este caso, puede producirse una condición de carrera si la condición se vuelve verdadera entre el momento de la verificación y la obtención del bloqueo. Aunque esta estructura detectada no es necesariamente incorrecta, definitivamente merece ser revisada.</p>
 </body>
 </html>

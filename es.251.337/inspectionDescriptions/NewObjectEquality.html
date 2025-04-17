@@ -1,11 +1,8 @@
 <html>
 <body>
-Informa el código que aplica <code>==</code> o <code>!=</code> a un objeto recién asignado
-en lugar de llamar a <code>equals()</code>.
+Reporta código que aplica <code>==</code> o <code>!=</code> a objetos recién asignados en lugar de llamar a <code>equals()</code>.
 <p>
-  Las referencias a objetos recién asignados no pueden apuntar a objetos existentes,
-  por lo que la comparación siempre se evaluará como <code>false</code>. La inspección también puede informar objetos nuevos
-  creados retornados desde métodos simples.
+  Una referencia a un objeto recién asignado no puede apuntar a un objeto existente, por lo que la comparación siempre será <code>false</code>. La inspección también puede reportar objetos recién creados que se devuelven desde métodos simples.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -13,15 +10,14 @@ en lugar de llamar a <code>equals()</code>.
     if (new Object() == obj) {...}
   }
 </code></pre>
-<p>Después de que se aplica la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   void test(Object obj) {
     if (new Object().equals(obj)) {...}
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  <small>Nuevo en 2018.3</small>
+  <small>Novedades en 2018.3</small>
 </p>
 </body>
 </html>

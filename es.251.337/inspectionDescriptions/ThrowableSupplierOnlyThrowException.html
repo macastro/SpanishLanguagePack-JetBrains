@@ -1,17 +1,16 @@
 <html>
 <body>
-Informa sobre las lambdas `Proveedor` en las llamadas a `Optional.orElseThrow()` que lanzan una excepción, en lugar de devolverla.
+Reporta el uso de un lambda <code>Supplier</code> en <code>Optional.orElseThrow()</code> que lanza una excepción en lugar de devolverla.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-opcional.orElseThrow(() -> {
+optional.orElseThrow(() -> {
     throw new RuntimeException();
 });
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-opcional.orElseThrow(() -> new RuntimeException());
+optional.orElseThrow(() -> new RuntimeException());
 </code></pre>
-<!-- tooltip end -->
-<p><small>Nuevo en 2023.1</small></p>
+<p><small>Novedades en 2023.1</small></p>
 </body>
 </html>

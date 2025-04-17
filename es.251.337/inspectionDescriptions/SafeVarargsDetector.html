@@ -1,12 +1,11 @@
 <html>
 <body>
-Reportea métodos con aridad variable, los cuales pueden ser anotados como <code>@SafeVarargs</code>.
-La anotación <code>@SafeVarargs</code> suprime advertencias desmarcadas sobre la creación de arreglos parametrizados en los sitios de llamadas.
+Informa sobre todos los métodos con aridad variable que pueden ser anotados con <code>@SafeVarargs</code>.
+La anotación <code>@SafeVarargs</code> suprime las advertencias no verificadas sobre la creación de arrays parametrizados en el punto de invocación.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   public class Foo&lt;T&gt; {
     private List&lt;T&gt; list = new ArrayList&lt;&gt;();
-
     public final void safeVarargs(T... elements) {
       Collections.addAll(list, elements);
     }
@@ -16,7 +15,6 @@ La anotación <code>@SafeVarargs</code> suprime advertencias desmarcadas sobre l
 <pre><code>
   public class Foo&lt;T&gt; {
     private List&lt;T&gt; list = new ArrayList&lt;&gt;();
-
     @SafeVarargs
     public final void safeVarargs(T... elements) {
       Collections.addAll(list, elements);
@@ -24,8 +22,7 @@ La anotación <code>@SafeVarargs</code> suprime advertencias desmarcadas sobre l
   }
 </code></pre>
 <p>
-  Esta anotación no es soportada en Java 1.6 o JVM más viejas.
+  Esta anotación no es compatible con JVM versión 1.6 o anteriores.
 </p>
-<!-- tooltip end -->
 </body>
 </html>

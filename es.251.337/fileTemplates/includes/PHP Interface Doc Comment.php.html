@@ -2,15 +2,15 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Plantilla incorporada para comentarios PHPDoc de una interfaz PHP. Contiene un fragmento de código que se puede incluir en las plantillas de archivo (pestaña <b>Plantillas</b>) con la ayuda de la directiva <b>#parse</b>.<br>
-      La plantilla es editable. Además de texto estático, código y comentarios, puede utilizar variables predefinidas que se expandirán a sus valores correspondientes como macros.</font><br>
+    <td colspan="3"><font face="verdana" size="-1">Una plantilla incorporada para comentarios PHPDoc de una interfaz PHP. Contiene un fragmento de código que puede incluirse en plantillas de archivo (pestaña <b>Templates</b>) con ayuda de la directiva <b>#parse</b>.<br>
+      La plantilla es editable. Además del texto estático, código y comentarios, puede usar variables predefinidas que se expandirán como macros a sus valores correspondientes.</font><br>
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      Las variables predefinidas reciben los siguientes valores:</font></td>
+      Las variables predefinidas aceptan los siguientes valores:</font></td>
   </tr>
     <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
@@ -21,85 +21,85 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAMESPACE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del espacio de nombres de la interfaz, sin barra diagonal inicial.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completamente calificado del espacio de nombres de la interfaz, sin barra diagonal inicial.</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Signo de dólar, se evalúa como el carácter '$' normal.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Símbolo del dólar, evaluado como el carácter "$" normal.</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Año actual.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Las 3 primeras letras del nombre del mes actual. Ej.: Ene, Feb, etc.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del mes actual. Por ejemplo: Jan, Feb, etc.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual. Ej.: Enero, Febrero, etc.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual. Por ejemplo: January, February, etc.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Día del mes actual.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Día del mes actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${SECOND}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Segundo actual.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Segundo actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Usuario actual.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Usuario actual</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${CARET}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Marca la posición a la que se debe mover el cursor de texto después de añadir el comentario.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Marca la posición donde debe moverse el cursor después de añadir el comentario.</font></td>
   </tr>
 </table>
 </body>

@@ -1,7 +1,7 @@
 <html>
 <body>
-Reporte de llamadas de registro rodeadas de condiciones de guarda.
-Esta inspección puede usarse para ajustar estilos de código personalizados.
+Informa sobre las llamadas de registro que están rodeadas por condiciones de protección.
+Esta inspección se puede utilizar para ajustar el estilo de código personalizado.
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   public class TestObject {
@@ -12,7 +12,7 @@ Esta inspección puede usarse para ajustar estilos de código personalizados.
     }
   }
 </code></pre>
-<p>Después de aplicar una corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code lang="java">
   public class TestObject {
     void test(Object object) {
@@ -20,8 +20,7 @@ Esta inspección puede usarse para ajustar estilos de código personalizados.
     }
   }
 </code></pre>
-<p>Esta inspección soporta los frameworks de registro <em>Log4j2</em> y <em>SLF4J</em> (excepto los constructores).
-<!-- tooltip end -->
-<p><small>Nuevo en 2024.2</small></p>
+<p>Esta inspección es compatible con los frameworks de registro <em>Log4j2</em> y <em>SLF4J</em> (excepto builders).
+<p><small>Novedades en 2024.2</small></p>
 </body>
 </html>

@@ -1,22 +1,19 @@
 <html>
 <body>
-<p>Informa métodos que no tienen primer parámetro generalmente
-  llamado <code>self</code>.</p>
+<p>Informa sobre métodos que carecen del primer parámetro normalmente denominado <code>self</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class Movie:
-
    def show():
        pass
 </code></pre>
-<p>Al aplicar la corrección rápida, el código cambia a:</p>
+<p>Después de aplicar la corrección rápida, el código se convierte en:</p>
 <pre><code>
 class Movie:
-
    def show(self):
        pass
 </code></pre>
-<p>La inspección también informa problemas de nombramiento en métodos de clase.</p>
+<p>La inspección también informa sobre problemas de nomenclatura en los métodos de clase.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class Movie:
@@ -24,7 +21,6 @@ class Movie:
     def show(abc):
         pass
 </code></pre>
-<p>Ya que el primer parámetro de un método de clase debería ser <code>cls</code>, el IDE proporciona una
-  corrección rápida para renombrarlo.</p>
+<p>Dado que el primer parámetro de un método de clase debe ser <code>cls</code>, el IDE proporciona una corrección rápida para renombrarlo.</p>
 </body>
 </html>

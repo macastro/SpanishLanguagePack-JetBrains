@@ -1,25 +1,17 @@
 <html>
 <body>
-Informa acerca de los truncamientos de los argumentos de cadenas de texto en funciones ISNULL.
-
+Informa sobre el truncamiento de argumentos de cadena en la función ISNULL.
 <p>La sintaxis de ISNULL es <code>ISNULL(check_expression, replacement_value)</code>.
 </p>
-
-<p>Según <a href="https://docs.microsoft.com/en-us/sql/t-sql/functions/isnull-transact-sql" target="_blank">ISNULL en docs.microsoft.com</a>, <code>replacement_value</code> se truncará si es más largo que
- <code>check_expression</code>.
+<p>Según <a href="https://docs.microsoft.com/en-us/sql/t-sql/functions/isnull-transact-sql" target="_blank">ISNULL en docs.microsoft.com</a>, si <code>replacement_value</code> es más largo que <code>check_expression</code>, <code>replacement_value</code> será truncado.
 </p>
-
 <p>Ejemplo (Microsoft SQL Server):</p>
-
 <pre><code>DECLARE @name1 VARCHAR(2) = NULL;
 DECLARE @name2 VARCHAR(10) = 'Example';
 DECLARE @name3 VARCHAR(2) = 'Hi';
-
-  -- `@name2` es VARCHAR(10) y se truncará
+  -- `@name2` es VARCHAR(10) y será truncado
 SELECT ISNULL(@name1, @name2);
-
-  -- `@name3` es VARCHAR(2) como `@name1` y no se truncará
+  -- `@name3` es VARCHAR(2) (como `@name1`) y no será truncado
 SELECT ISNULL(@name1, @name3);</code></pre>
-
 </body>
 </html>

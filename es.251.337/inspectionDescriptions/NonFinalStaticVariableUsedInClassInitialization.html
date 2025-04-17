@@ -1,17 +1,15 @@
 <html>
 <body>
-Informa sobre el uso de variables <code>static</code> no <code>final</code> durante la inicialización de clases.
-<p>En tales casos, la semántica del código puede depender del orden de creación de la clase. También puede provocar el uso de variables no inicializadas, lo que a menudo provoca errores difíciles de detectar y confusos.</p>
+Informa sobre el uso de variables <code>final</code> <code>static</code> durante la inicialización de clases.
+<p>En estos casos, la semántica del código puede depender del orden de creación de las clases. Además, estas situaciones pueden llevar al uso de variables antes de su inicialización y generalmente resultan en errores difíciles y confusos.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  clase Foo {
+  class Foo {
     public static int bar = 0;
-
     static {
       System.out.println(bar);
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

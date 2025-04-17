@@ -1,18 +1,14 @@
 <html>
 <body>
-Reporta etiquetas de compilación mal formadas y etiquetas de compilación en la ubicación incorrecta. La herramienta <code>go</code> espera que las etiquetas de compilación estén ubicadas en lugares particulares y que sigan una sintaxis especial. Si no se siguen estos requisitos, las etiquetas de compilación podrían ignorarse o los archivos podrían excluirse incorrectamente de la compilación.
-<p>Consulta <a href="https://pkg.go.dev/go/build#hdr-Build_Constraints">Restricciones de compilación en go.dev</a>.</p>
+Informa sobre etiquetas de construcción (build tags) mal formateadas y mal ubicadas. La herramienta <code>go</code> requiere que las etiquetas de construcción se coloquen en ubicaciones específicas y sigan una sintaxis especial. Si no se cumplen estos requisitos, las etiquetas de construcción pueden ser ignoradas o los archivos pueden ser excluidos incorrectamente de la construcción.
+<p>Consulte <a href="https://pkg.go.dev/go/build#hdr-Build_Constraints">Build Constraints en go.dev</a>.</p>
 <p>Ejemplo:</p>
 <pre><code>package main
-
 // +build ignore
-
 func main() {}</code></pre>
-<p>La parte <code>// +build ignore</code> debe estar antes de la declaración del paquete. Para corregir eso, puedes aplicar el asistente rápido <b>Colocar etiqueta de compilación antes del paquete</b>. Después de aplicar el asistente rápido:</p>
+<p>La sección <code>// +build ignore</code> debe estar ubicada antes de la declaración del paquete. Para corregir este problema, puede aplicar la corrección rápida <b>colocar etiqueta de construcción antes del paquete</b>. Después de aplicar la corrección rápida:</p>
 <pre><code>// +build ignore
-
 package main
-
 import "fmt"</code></pre>
 </body>
 </html>

@@ -1,19 +1,18 @@
 <html>
 <body>
-Informa de los casos en los que se utiliza una expresión <code>instanceof</code> para probar el tipo de un parámetro en un bloque <code>catch</code>.
-<p>Normalmente, es mejor probar el tipo de parámetros <code>catch</code> con bloques <code>catch</code> separados en lugar de utilizar <code>instanceof</code>.</p>
+Informa sobre el uso de la expresión <code>instanceof</code> para comprobar el tipo del parámetro en un bloque <code>catch</code>.
+<p>Es mejor usar bloques <code>catch</code> separados en lugar de usar <code>instanceof</code> para comprobar el tipo del parámetro <code>catch</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void foo(Runnable runnable) {
     try {
         runnable.run();
     } catch (Throwable throwable) {
-        if (throwable instanceof NoClassDefFoundError) { // advertencia: 'instanceof' en el parámetro 'throwable' de 'catch'
-            System.out.println("¡Clase no encontrada!");
+        if (throwable instanceof NoClassDefFoundError) { // Advertencia: 'instanceof' en el parámetro 'throwable' del 'catch'
+            System.out.println("Class not found!");
         }
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

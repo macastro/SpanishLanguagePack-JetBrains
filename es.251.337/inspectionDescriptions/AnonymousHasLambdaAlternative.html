@@ -1,10 +1,10 @@
 <html>
 <body>
-Reporta clases anónimas que podrían ser transformadas a un constructor o una llamada a método de fábrica con un argumento de expresión lambda.
-<p>Las siguientes clases son reportadas por esta inspección:
+El informe puede convertir clases anónimas en llamadas a constructores o métodos de fábrica con expresiones lambda como argumentos.
+<p>Esta inspección reporta las siguientes categorías:
 <ul>
-  <li>Clases anónimas extendiendo <code>ThreadLocal</code> que tienen un método <code>initialValue()</code> (pueden reemplazarse con <code>ThreadLocal.withInitial</code>)</li>
-  <li>Clases anónimas extendiendo <code>Thread</code> que tienen un método <code>run()</code> (pueden reemplazarse con <code>new Thread(Runnable)</code></li>
+  <li>Clases anónimas que extienden <code>ThreadLocal</code> con el método <code>initialValue()</code> (pueden reemplazarse con <code>ThreadLocal.withInitial</code>)</li>
+  <li>Clases anónimas que extienden <code>Thread</code> con el método <code>run()</code> (pueden reemplazarse con <code>new Thread(Runnable)</code>)</li>
 </ul>
 <p>Ejemplo:</p>
 <pre><code>
@@ -21,6 +21,5 @@ Reporta clases anónimas que podrían ser transformadas a un constructor o una l
     System.out.println("Hello from thread!");
   }).start();
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

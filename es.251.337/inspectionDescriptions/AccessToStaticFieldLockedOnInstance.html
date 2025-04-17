@@ -1,25 +1,24 @@
 <html>
 <body>
-<code>this</code> o el acceso a un campo estático no constante bloqueado en el campo de instancia <code>this</code>.
+Informa sobre accesos a campos static no constantes que están sincronizados sobre <code>this</code> o sobre campos de instancia de <code>this</code>.
 <p>
-  El bloqueo del campo estático en datos de instancia no impide que el campo sea modificado por otras instancias, por lo que pueden ocurrir condiciones de carrera inesperadas.
+  Sincronizar campos static sobre datos de instancia no evita que otras instancias modifiquen el campo, lo que puede llevar a condiciones de carrera inesperadas.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   static String test;
   public void foo() {
       synchronized (this) {
-          System.out.println(test); // warning
+          System.out.println(test); // advertencia
       }
   }
 </code></pre>
 <p>
-  Existe una solución rápida para omitir campos estáticos de tipos específicos.
-  Los tipos omitidos se pueden administrar en las opciones de la inspección.
+  Los campos static de tipos específicos pueden ser ignorados mediante una corrección rápida.
+  Los tipos ignorados pueden gestionarse en las opciones de inspección.
 </p>
-<!-- tooltip end -->
 <p>
-  Utilice las opciones de la inspección para especificar clases que se deben omitir para el campo estático.
+  Las clases que deben ignorarse para campos static pueden especificarse usando las opciones de inspección.
 <p>
 </body>
 </html>

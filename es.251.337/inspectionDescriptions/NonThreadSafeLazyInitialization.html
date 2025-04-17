@@ -1,16 +1,13 @@
 <html>
 <body>
-Realiza un informe de las variables <code>static</code> que han sido inicializadas de forma diferida de una manera no segura para subprocesos.
-<p>La inicialización diferida de las variables <code>static</code> debe realizarse con una construcción de sincronización apropiada
-  para evitar que diferentes subprocesos realicen una inicialización en conflicto.</p>
-<p>Cuando corresponda, se sugiere una solución rápida que introduce
-<a href="https://en.wikipedia.org/wiki/Initialization_on_demand_holder_idiom">el idioma de la clase de contenedor de inicialización diferida</a>.
-  Este idioma aprovecha el hecho de que la JVM garantiza que una clase no se inicializará hasta que se utilice.
+Informa sobre variables <code>static</code> inicializadas de manera diferida que no son seguras para hilos.
+<p>La inicialización diferida de variables <code>static</code> debe realizarse utilizando construcciones de sincronización apropiadas para evitar inicializaciones conflictivas desde diferentes hilos.</p>
+<p>Cuando sea aplicable, se recomienda utilizar la corrección rápida que introduce el <a href="https://en.wikipedia.org/wiki/Initialization_on_demand_holder_idiom">patrón Initialization-on-demand holder</a>.
+  Este patrón aprovecha el hecho de que la JVM garantiza que una clase no será inicializada hasta que sea utilizada.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class X {
     private static List&lt;String&gt; list;
-
     public List&lt;String&gt; getList() {
       if (list == null) {
         list = List.of("one", "two", "tree");
@@ -19,18 +16,16 @@ Realiza un informe de las variables <code>static</code> que han sido inicializad
     }
   }
 </code></pre>
-<p>Después de que se aplica la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class X {
     private static final class ListHolder {
       static final List&lt;String&gt; list = List.of("one", "two", "tree");
     }
-
     public List&lt;String&gt; getList() {
       return ListHolder.list;
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

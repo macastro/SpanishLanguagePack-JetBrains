@@ -1,12 +1,11 @@
 <html>
 <body>
-Informa de los siguientes atributos no resueltos en las anotaciones relacionadas con EntityGraph:<br/>
+Reporta las siguientes características no resueltas en las anotaciones relacionadas con EntityGraph:<br/>
 <ul>
-  <li> Valor en <code>@NamedAttributeNode</code></li>
-  <li> Subgrafo de nombre en <code>@NamedAttributeNode</code></li>
-  <li> Nombre en <code>@NamedEntityGraph</code></li>
+  <li>Valores en <code>@NamedAttributeNode</code></li>
+  <li>Subgráficos nombrados en <code>@NamedAttributeNode</code></li>
+  <li>Nombres en <code>@NamedEntityGraph</code></li>
 </ul><br/>
-
 <p><b>Ejemplo:</b></p><br/>
 <pre><code lang="java">
   @Entity
@@ -15,7 +14,7 @@ Informa de los siguientes atributos no resueltos en las anotaciones relacionadas
     public void foo() {
       Persistence.createEntityManagerFactory("")
         .createEntityManager()
-        .getEntityGraph("unknown-entity-graph"); // referencia no resuelta
+        .getEntityGraph("unknown-entity-graph"); // Referencia no resuelta
     }
   }
 </code></pre>

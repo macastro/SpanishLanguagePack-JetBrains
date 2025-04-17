@@ -1,22 +1,20 @@
 <html>
 <body>
-<p>Informa sobre cualquier método que no requiere la creación de una instancia de clase y que se puede hacer estático.</p>
+<p>Informa sobre cualquier método que no requiera crear una instancia de clase y que pueda establecerse como static.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class MyClass(object):
     def my_method(self, x):
         print(x)
 </code></pre>
-<p>Si se aplica una corrección rápida <b>Hacer función desde método</b>, el código cambia a:</p>
+<p>Si se aplica la corrección rápida <b>Convertir método a función</b>, el código se convertirá en:</p>
 <pre><code>
 def my_method(x):
     print(x)
-
-
 class MyClass(object):
     pass
 </code></pre>
-<p>Si selecciona la corrección rápida <b>Hacer método static</b>, se agrega el decorador <code>@staticmethod</code>:</p>
+<p>Si se elige la corrección rápida <b>Convertir método a static</b>, se añadirá el decorador <code>@staticmethod</code>:</p>
 <pre><code>
 class MyClass(object):
     @staticmethod

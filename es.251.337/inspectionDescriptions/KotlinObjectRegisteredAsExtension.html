@@ -1,30 +1,26 @@
 <html>
 <body>
-Inspecciona los objetos Kotlin registrados como extensiones de plugins.
+Reporta objetos Kotlin registrados como extensiones de plugins.
 <p>
-  El ciclo de vida de la extensión lo administra la plataforma IntelliJ.
-  Utilizar objetos Kotlin para el registro de extensiones puede dar lugar a la creación de instancias de extensión innecesarias y a que el plugin no pueda desinstalarse.
+  El ciclo de vida de las extensiones es gestionado por la plataforma IntelliJ.
+  El uso de objetos Kotlin para el registro de extensiones puede resultar en la creación de instancias innecesarias de extensiones y hacer que el plugin no se pueda desinstalar.
 </p>
 <h2>Ejemplo</h2>
 <p>Registro de extensión:</p>
 <pre><code lang="xml">
 &lt;annotator language="myLang" implementationClass="com.example.MyAnnotator"/&gt;
 </code></pre>
-
 <p>Implementación de extensión:</p>
 <pre><code lang="kotlin">
 // Incorrecto:
 object MyAnnotator : Annotator {
   ...
 }
-
 // Correcto:
 class MyAnnotator : Annotator {
   ...
 }
 </code></pre>
-
-<!-- tooltip end -->
-<p><small>Novedad en 2023.1</small>
+<p><small>Cambios en 2023.1</small>
 </body>
 </html>

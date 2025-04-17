@@ -1,6 +1,6 @@
 <html>
 <body>
-Reporta variables declaradas como <code>java.lang.String</code> que se agregan repetidamente. Dichas variables podrían declararse de manera más eficiente como <code>java.lang.StringBuffer</code> o <code>java.lang.StringBuilder</code>.
+Informa sobre variables declaradas como <code>java.lang.String</code> que se concatenan repetidamente. Estas variables pueden declararse de manera más eficiente como <code>java.lang.StringBuffer</code> o <code>java.lang.StringBuilder</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   String s = "";
@@ -9,7 +9,7 @@ Reporta variables declaradas como <code>java.lang.String</code> que se agregan r
     s = s + name;
   }
 </code></pre>
-<p>Tal bucle puede ser reemplazado con:</p>
+<p>Este tipo de bucle puede reemplazarse por:</p>
 <pre><code>
   StringBuilder s = new StringBuilder();
   for (int i = 0; i &lt; names.length; i++) {
@@ -17,13 +17,12 @@ Reporta variables declaradas como <code>java.lang.String</code> que se agregan r
     s.append(name);
   }
 </code></pre>
-<p>O incluso con:</p>
+<p>O incluso puede reemplazarse por:</p>
 <pre><code>
   String s = String.join(" ", names);
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Utiliza la opción para hacer que esta inspección solo informe cuando la variable se agrega en un bucle.
+  Utilice esta opción para que la inspección solo informe cuando la variable se concatene dentro de un bucle.
 </p>
 </body>
 </html>

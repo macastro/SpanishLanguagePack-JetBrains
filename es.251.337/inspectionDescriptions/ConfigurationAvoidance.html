@@ -1,18 +1,17 @@
 <html>
 <body>
-<p>(Gradle 4.9+) Detecta el uso de API que interactúa con <em>tasks</em> de forma rápida (<em>eagerly</em>)</p>
-<p>La interacción rápida con <em>tasks</em> implica algunos inconvenientes:</p>
+<p>(Gradle 4.9+) Detecta el uso de APIs para la interacción anticipada con tareas.</p>
+<p>La interacción anticipada con tareas implica varios problemas:</p>
 <ul>
-  <li>El usuario debe establecer manualmente todas las dependencias entre <em>tasks</em>;</li>
-  <li>En la <a href="https://docs.gradle.org/current/userguide/build_lifecycle.html#sec:build_phases">fase de configuración</a>,
-    todos los <em>tasks</em> a los que se accede a través de la API rápida se configuran, incluso si no se ejecutan después.
-    Esto deriva en una degradación del rendimiento.
+  <li>Los usuarios deben configurar manualmente todas las dependencias entre tareas;</li>
+  <li>Durante la <a href="https://docs.gradle.org/current/userguide/build_lifecycle.html#sec:build_phases">fase de configuración</a>, todas las tareas accedidas mediante APIs anticipadas son configuradas, incluso si no se ejecutan posteriormente.
+    Esto resulta en una degradación del rendimiento.
   </li>
 </ul>
-<p>Finalmente, la API rápida quedará obsoleta a favor de la lenta (<em>lazy</em>).</p>
-<p>Para una guía de migración, consulta la <a href="https://docs.gradle.org/current/userguide/task_configuration_avoidance.html">documentación de Gradle</a>.</p>
+<p>Finalmente, las APIs anticipadas serán deprecadas en favor de las APIs diferidas.</p>
+<p>Para consultar la guía de migración, consulte la <a href="https://docs.gradle.org/current/userguide/task_configuration_avoidance.html">documentación de Gradle</a>.</p>
 <p><b>Ejemplo:</b></p>
-<pre><code>task foo { // Informa de 'task', sugiere reemplazarlo con 'task.register'
+<pre><code>task foo { // reporta 'task', sugiere reemplazarlo por 'task.register'
   // ...
 }
 </code></pre>

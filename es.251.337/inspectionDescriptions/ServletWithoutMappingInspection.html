@@ -1,17 +1,15 @@
 <html>
 <body>
-Informa de los servlets que no tienen una asignación asociada.
-
+Informa sobre servlets sin mapeos asociados.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   &lt;web-app&gt;
     &lt;servlet&gt;
-      &lt;servlet-name&gt;foo&lt;/servlet-name&gt; // Error: el servlet debe tener una asignación
+      &lt;servlet-name&gt;foo&lt;/servlet-name&gt; // Error: el servlet debe tener un mapeo
       &lt;servlet-class&gt;javax.servlet.Servlet&lt;/servlet-class&gt;
     &lt;/servlet&gt;
-  
     &lt;filter&gt;
-      &lt;filter-name&gt;bar&lt;/filter-name&gt; // Error: el filtro debe tener una asignación
+      &lt;filter-name&gt;bar&lt;/filter-name&gt; // Error: el filtro debe tener un mapeo
       &lt;filter-class&gt;java.lang.String&lt;/filter-class&gt;
     &lt;/filter&gt;
   &lt;/web-app&gt;

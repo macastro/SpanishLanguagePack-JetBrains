@@ -1,7 +1,25 @@
 <html>
 <body>
-Informa sobre los usos de <code>System.out</code> o <code>System.err</code>.
-<p>Este tipo de sentencias se suelen utilizar para depurar de manera temporal y se deben eliminar del código de producción o bien reemplazar por un mecanismo de registro más robusto.</p>
-<!-- tooltip end -->
+Reporta el uso de <code>System.out</code> o <code>System.err</code>.
+<p>Estas declaraciones se utilizan típicamente para depuración temporal y deberían eliminarse del código de producción o reemplazarse por herramientas de registro más robustas.</p>
+<p>La corrección rápida proporcionada es compatible con <b>SLF4J</b> y <b>Log4j 2</b>.
+ Reemplaza las llamadas a <code>System.out</code> y <code>System.err</code> por llamadas de registro</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public static void test(Object o) {
+    System.out.println("Test: "+ o);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  private static final Logger log = LoggerFactory.getLogger(Test.class);
+  public static void test(Object o) {
+      log.info("Test: {}", o);;
+  }
+</code></pre>
+<p>
+  La opción <b>Método de registro para 'System.err'</b> permite especificar el método utilizado para registrar mensajes para llamadas a 'System.err'.
+  La opción <b>Método de registro para 'System.out'</b> permite especificar el método utilizado para registrar mensajes para llamadas a 'System.out'.
+</p>
 </body>
 </html>

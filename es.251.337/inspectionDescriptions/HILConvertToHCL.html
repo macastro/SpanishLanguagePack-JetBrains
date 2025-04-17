@@ -1,44 +1,33 @@
 <html>
 <body>
-<p>Se informa de una expresión HCL de estilo antiguo y se sugiere la conversión a una expresión de tipo HCL2.</p>
-
-
+<p>Informa sobre expresiones HCL heredadas y sugiere convertirlas a expresiones HCL2.</p>
 <p><b>Ejemplo:</b></p>
-
-
 <pre><code>
-  # Configuración de Terraform 0.11. Se han omitido algunas secciones para mayor claridad.
+  # Terraform 0.11 配置。 为清楚起见，省略了某些部分。
 resource "azurerm_app_service" "example" {
  count               = "${length(local.app_services)}"
  name                = "${lower(lookup(local.app_services[count.index], "kind"))}-appservice"
  location            = "${azurerm_resource_group.example.location}"
  resource_group_name = "${azurerm_resource_group.example.name}"
  app_service_plan_id = "${element(azurerm_app_service_plan.example.*.id, count.index)}"
-
  site_config {
-   # Omitido para mayor claridad.
+   # omitted for clarity
  }
 }
 </code></pre>
-
-
-<p>Después de aplicar la reparación rápida:</p>
-
-
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  # Configuración de Terraform 0.12. Se han omitido algunas secciones para mayor claridad.
+  # Terraform 0.12 配置。 为清楚起见，省略了某些部分。
 resource "azurerm_app_service" "example" {
  count               = length(local.app_services)
  name                = "${lower(local.app_services[count.index].kind)}-appservice"
  location            = azurerm_resource_group.example.location
  resource_group_name = azurerm_resource_group.example.name
  app_service_plan_id = azurerm_app_service_plan.example[count.index].id
-
  site_config {
-    # Omitido para mayor claridad.
+    # omitted for clarity
  }
 }
 </code></pre>
-
 </body>
 </html>

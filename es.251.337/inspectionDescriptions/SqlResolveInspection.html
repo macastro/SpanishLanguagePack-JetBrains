@@ -1,11 +1,10 @@
 <html>
 <body>
-Reporta referencias de SQL no resueltas.
+Reportar referencias SQL sin resolver.
 <p>Ejemplo (MySQL):</p>
 <pre><code>CREATE TABLE users(id INT, name VARCHAR(40));
 CREATE TABLE admins(id INT, col1 INT);
-
 SELECT users.id, admins.id FROM admins WHERE admins.id > 1;</code></pre>
-<p>La columna <code>users.id</code> no está resuelta porque la tabla <code>users</code> no está en la cláusula FROM.</p>
+<p>La columna <code>users.id</code> no se resuelve porque falta la tabla <code>users</code> en la cláusula FROM.</p>
 </body>
 </html>

@@ -1,18 +1,18 @@
 <html>
 <body>
-Reporta llamadas a <code>readLine()</code> que pueden remplazarse con <code>readln()</code> o <code>readlnOrNull()</code>.
+Informa sobre las llamadas a <code>readLine()</code> que pueden ser reemplazadas por <code>readln()</code> o <code>readlnOrNull()</code>.
 <p>
-    Usar las funciones correspondientes hace que tu código sea más simple.
+    El uso de las funciones correspondientes puede simplificar el código.
 </p>
 <p>
-    El arreglo rápido reemplaza <code>readLine()!!</code> con <code>readln()</code> y <code>readLine()</code> con <code>readlnOrNull()</code>.
+    Esta corrección rápida reemplaza <code>readLine()!!</code> por <code>readln()</code> y <code>readLine()</code> por <code>readlnOrNull()</code>.
 </p>
-<p><b>Ejemplos:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
     val x = readLine()!!
     val y = readLine()?.length
 </code></pre>
-<p>Después de aplicar el arreglo rápido:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
     val x = readln()
     val y = readlnOrNull()?.length

@@ -1,12 +1,12 @@
 <html>
 <body>
-Reporta declaraciones que pueden ser simplificadas, por ejemplo condiciones constantes, ramas if idénticas, expresiones booleanas redundantes, etc.
-Usa las siguientes casillas para controlar las opciones de análisis:
+Informa sobre declaraciones que pueden simplificarse, como condiciones constantes, ramas if idénticas, expresiones booleanas redundantes, etc.
+Utilice las siguientes casillas de verificación para controlar las opciones de análisis:
 <ul>
-<li><b>Simplificar "if (true)", "while(false)"</b>: Sugiere reemplazar las sentencias <code>if</code>/<code>while</code> por un literal booleano.</li>
-<li><b>Simplificar "condition == true"</b>: Sugiere reemplazar las sentencias de comparación de igualdad por un literal booleano.</li>
-<li><b>Simplificar "condition1 ? true : condition2;"</b>: Sugiere simplificar los operadores ternarios en los que una de las expresiones es un booleano.</li>
-<li><b>Simplificar "if (condition1) return true; return condition2;"</b>: Sugiere simplificar los <code>if</code> que devuelven un literal booleano si la condición es verdadera y una condición diferente si es falsa.</li>
+<li><b>Simplificar "if (true)", "while(false)"</b>: sugiere reemplazar declaraciones <code>if</code>/<code>while</code> con literales booleanos.</li>
+<li><b>Simplificar "condition == true"</b>: sugiere reemplazar declaraciones de igualdad con literales booleanos.</li>
+<li><b>Simplificar "condition1 ? true : condition2;"</b>: sugiere simplificar operadores ternarios donde una de las expresiones es un literal booleano.</li>
+<li><b>Simplificar "if (condition1) return true; return condition2;"</b>: sugiere simplificar declaraciones <code>if</code> que devuelven un literal booleano si la condición es verdadera, o devuelven otra condición en caso contrario.</li>
 </ul>
 </body>
 </html>

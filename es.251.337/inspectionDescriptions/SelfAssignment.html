@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa las asignaciones de una variable a sí misma.
-<p>La solución rápida elimina la asignación redundante.</p>
+Informa sobre variables que se asignan a sí mismas.
+<p>Esta corrección rápida elimina la asignación redundante.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun test() {
@@ -9,12 +9,11 @@ Informa las asignaciones de una variable a sí misma.
       bar = bar
   }
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun test() {
       var bar = 1
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

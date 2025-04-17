@@ -1,18 +1,17 @@
 <html>
 <body>
-Reporta secuencias de escape de <code>\s</code> en cualquier lugar excepto al final de línea de bloque de texto o dentro de una serie de varios espacios escapados.
-Estos usos pueden ser confusos o un error, especialmente si la cadena se interpreta como una expresión regular.
-La secuencia de escape <code>\s</code> está destinada a codificar un espacio al final de las líneas de bloque de texto donde los espacios normales se recortan.
-En otras ubicaciones, así como en cadenas regulares o literales de caracteres, <code>\s</code> es idéntico a un carácter de espacio ordinario (<code>""</code>).
+Informa sobre secuencias de escape <code>\s</code> que aparecen en cualquier posición que no sea al final de una línea de bloque de texto o dentro de una serie de múltiples espacios escapados.
+Estos usos pueden causar confusión o errores, especialmente cuando la cadena se interpreta como una expresión regular.
+La secuencia de escape <code>\s</code> se utiliza para codificar un espacio al final de una línea de bloque de texto, donde los espacios normales serían recortados.
+En otras posiciones, así como en cadenas regulares o literales de caracteres, <code>\s</code> es equivalente a un carácter de espacio normal (<code>"&nbsp;"</code>).
 <p><b>Ejemplo:</b></p>
 <pre><code>
   if (str.matches("\s+")) {...}
 </code></pre>
-Aquí es probable que se haya pretendido <code>"\\s+"</code> (para que coincida con cualquier carácter de espacio en blanco). Si no es así, el uso de <code>str.matches("+")</code> sería menos confuso.
+Aquí, <code>"\\s+"</code> podría ser intencional (para coincidir con cualquier carácter de espacio en blanco). Si no lo es, usar <code>str.matches("&nbsp;+")</code> sería menos confuso.
 <p>
-  Se proporciona una solución rápida que reemplaza las secuencias de escape <code>\s</code> con caracteres de espacio.
+  La corrección rápida proporcionada reemplaza el escape <code>\s</code> con un carácter de espacio.
 </p>
-<!-- tooltip end -->
-<p><small>Nuevo en 2022.3</small></p>
+<p><small>Cambios en 2022.3</small></p>
 </body>
 </html>

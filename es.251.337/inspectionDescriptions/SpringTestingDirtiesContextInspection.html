@@ -1,17 +1,14 @@
 <html>
 <body>
-<p>Informa de una configuración incorrecta del "modo" en la
-<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/annotation/DirtiesContext.html">@DirtiesContext</a>
-anotación.</p>
-
+<p>Configuración incorrecta del modo 'mode' en la anotación <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/annotation/DirtiesContext.html">@DirtiesContext</a>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   @ContextConfiguration
-  @DirtiesContext(methodMode = MethodMode.AFTER_METHOD, // Establecer el modo método en una clase de prueba anotada no tiene sentido. Para el control a nivel de clase, utilice en su lugar classMode.
-                  hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // hierarchyMode debe usarse cuando el contexto se configura como parte de una jerarquía a través de @ContextHierarchy
+  @DirtiesContext(methodMode = MethodMode.AFTER_METHOD, // No tiene sentido establecer el methodMode en una clase de prueba anotada. Para control a nivel de clase, use classMode en su lugar.
+                  hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // hierarchyMode debe usarse cuando el contexto está configurado como parte de una jerarquía mediante @ContextHierarchy
   public class MyTest {
-    @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS, // Establecer el modo clase en un método de prueba anotado no tiene sentido. Para el control a nivel de método, utilice en su lugar methodMode.
-                     hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // hierarchyMode debe usarse cuando el contexto se configura como parte de una jerarquía a través de @ContextHierarchy
+    @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS, // No tiene sentido establecer el classMode en un método de prueba anotado. Para control a nivel de método, use methodMode en su lugar.
+                     hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // hierarchyMode debe usarse cuando el contexto está configurado como parte de una jerarquía mediante @ContextHierarchy
     public void testFoo() {...}
   }
 </code></pre>

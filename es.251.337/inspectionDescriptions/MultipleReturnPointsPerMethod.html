@@ -1,9 +1,10 @@
 <html>
 <body>
-Informa de métodos cuyo número de puntos de <code>return</code> supera el máximo especificado. Los métodos con demasiados puntos de <code>return</code> pueden ser confusos y difíciles de refactorizar.
-<p>Un punto de <code>return</code> es una sentencia de <code>return</code> o una caída a través del fondo de un método o constructor <code>void</code>.</p>
+Informa sobre métodos que exceden el número máximo especificado de puntos de <code>return</code>.
+Los métodos con demasiados puntos de <code>return</code> pueden ser confusos y difíciles de refactorizar.
+<p>Un punto de <code>return</code> puede ser una declaración <code>return</code> o una caída directa desde el final de un método <code>void</code> o constructor.</p>
 <p><b>Ejemplo:</b></p>
-<p>El siguiente método se notifica si solo se permiten dos sentencias de <code>return</code>:</p>
+<p>El siguiente método se informará si solo se permiten dos declaraciones <code>return</code>:</p>
 <pre><code>
   void doSmth(User[] users) {
     for (User user : users) {
@@ -19,7 +20,7 @@ Informa de métodos cuyo número de puntos de <code>return</code> supera el máx
     }
   }
 </code></pre>
-<p>Considera reescribir el método para que sea más fácil de entender:</p>
+<p>Considere reescribir el método para hacerlo más comprensible:</p>
 <pre><code>
   void doSmth(User[] users) {
     for (User user : users) {
@@ -30,13 +31,12 @@ Informa de métodos cuyo número de puntos de <code>return</code> supera el máx
     }
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Configurar la inspección:</p>
+<p>Configuración de la inspección:</p>
 <ul>
-  <li>Usa el campo <b>Límite de puntos de retorno</b> para especificar el número máximo permitido de puntos de <code>return</code> para un método.</li>
-  <li>Usa la opción <b>Ignorar cláusulas de protección</b> para ignorar las cláusulas de protección.
-    Una cláusula de protección es una sentencia <code>if</code> que solo contiene una sentencia <code>return</code></li>
-  <li>Usa la opción <b>Ignorar métodos 'equals()'</b> para ignorar los puntos de <code>return</code> dentro de los métodos <code>equals()</code>.</li>
+  <li>Use el campo <b>Límite de puntos return</b> para especificar el número máximo permitido de puntos <code>return</code> en un método.</li>
+  <li>Use la opción <b>Ignorar cláusulas críticas</b> para ignorar las cláusulas críticas.
+    Una cláusula crítica es una declaración <code>if</code> que solo contiene una declaración <code>return</code></li>
+  <li>Use la opción <b>Ignorar para método 'equals()'</b> para ignorar los puntos de <code>return</code> en el método <code>equals()</code>.</li>
 </ul>
 </body>
 </html>

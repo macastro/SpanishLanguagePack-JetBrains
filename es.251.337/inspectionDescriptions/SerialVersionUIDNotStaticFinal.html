@@ -1,18 +1,14 @@
 <html>
 <body>
-Reporta clases <code>Serializable</code> cuyo campo <code>serialVersionUID</code>
-no está declarado <code>private static final long</code>.
+Informa sobre clases <code>Serializable</code> donde el campo <code>serialVersionUID</code> no está declarado como <code>private static final long</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class SampleClass implements Serializable {
-    private long serialVersionUID = 1; // el campo de una clase Serializable no está declarado 'private static final long'
-
+    private long serialVersionUID = 1; // El campo de la clase Serializable no está declarado como 'private static final long'
     public SampleClass() {
         System.out.println(serialVersionUID);
     }
   }
 </code></pre>
-<!-- tooltip end -->
-
 </body>
 </html>

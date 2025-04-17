@@ -1,15 +1,14 @@
 <html>
 <body>
-Informa de constructores <code>public</code> de clases <code>abstract</code>.
+Reporta constructores <code>public</code> en clases <code>abstract</code>.
 <p>
-  Los constructores de clases <code>abstract</code> solo se pueden llamar desde los constructores de
-  sus subclases, por lo que declararlos <code>public</code> puede resultar confuso.
+  Los constructores de clases <code>abstract</code> solo pueden ser llamados desde constructores de sus subclases, por lo que declararlos como <code>public</code> puede resultar confuso.
 </p>
-<p>La corrección rápida convierte dichos constructores en protegidos.</p>
+<p>Esta corrección rápida cambiará estos constructores a protected.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   <b>public abstract class</b> Foo {
-    <b>public</b> Foo () { // warning: has 'public' modifier
+    <b>public</b> Foo () { // advertencia: tiene modificador 'public'
         /* ... */
     }
   }
@@ -22,8 +21,7 @@ Informa de constructores <code>public</code> de clases <code>abstract</code>.
     }
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Configurar la inspección:</p>
-<p>Utiliza la opción <b>Ignorar para clases no públicas</b> siguiente para ignorar los constructores <code>public</code> en clases no públicas.</p>
+<p>Configuración de la inspección:</p>
+<p>Use la opción <b>Ignorar clases no públicas</b> siguiente para ignorar constructores <code>public</code> en clases no públicas.</p>
 </body>
 </html>

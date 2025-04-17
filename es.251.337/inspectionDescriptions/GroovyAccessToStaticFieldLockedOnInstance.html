@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre los accesos a un campo estático no constante que se bloquea en `this` o en un campo de instancia de `this`.
+Informa sobre accesos a campos static no constantes que están sincronizados sobre <code>this</code> o sobre campos de instancia de <code>this</code>.
 <p>
-  El bloqueo de un campo estático en datos de instancia no evita que el campo sea modificado por otras instancias, y por lo tanto puede dar lugar a condiciones de carrera sorprendentes.
+  Sincronizar campos static sobre datos de instancia no evita que otras instancias modifiquen el campo, lo que puede provocar condiciones de carrera inesperadas.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>

@@ -1,19 +1,17 @@
 <html>
 <body>
-Informa las siguientes clases de objetos persistentes definidas incorrectamente:
-
+Reporta errores en las definiciones de clases de objetos persistentes en los siguientes casos:
 <ul>
-  <li>La clase no es de nivel superior</li>
+  <li>La clase no es una clase de nivel superior</li>
   <li>La clase es final</li>
-  <li>La clase está anotada varias veces</li>
-  <li>La clase se define tanto como una entidad persistente como un escuchador de entidad</li>
+  <li>La clase está anotada múltiples veces</li>
+  <li>La clase está definida como entidad persistente y como listener de entidad</li>
 </ul>
-
 <p><b>Ejemplo:</b></p><br/>
 <pre><code lang="java">
   @Entity
-  @EntityListeners(value = JavaEntity.class) // Error: ambas anotaciones, @Entity y @EntityListener, apuntan a la misma clase
-  public final class JavaEntity { // Error: la entidad persistente no debe ser final
+  @EntityListeners(value = JavaEntity.class) // Error: las anotaciones @Entity y @EntityListener apuntan a la misma clase
+  public final class JavaEntity { // Error: una entidad persistente no debe ser final
     ...
   }
 </code></pre>

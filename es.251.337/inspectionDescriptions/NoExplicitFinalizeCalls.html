@@ -1,17 +1,14 @@
 <html>
 <body>
 Informa sobre las llamadas a <code>Object.finalize()</code>.
-<p>La llamada explícita a <code>Object.finalize()</code> puede provocar que los objetos se coloquen en un
-estado inconsistente.
-  El recolector de basura llama automáticamente a este método en un objeto cuando determina que no hay referencias a este objeto.</p>
-<p>La inspección no informa sobre las llamadas a <code>super.finalize()</code> desde dentro de las implementaciones de <code>finalize()</code> como
-  son benignas.</p>
+<p>La llamada explícita a <code>Object.finalize()</code> puede dejar al objeto en un estado inconsistente.
+  El recolector de basura llama automáticamente a este método cuando determina que no hay referencias al objeto.</p>
+<p>Esta inspección no informa sobre las llamadas a <code>super.finalize()</code> dentro de las implementaciones de <code>finalize()</code>, ya que estas son benignas.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   MyObject m = new MyObject();
   m.finalize();
   System.gc()
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

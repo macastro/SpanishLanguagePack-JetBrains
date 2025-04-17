@@ -1,16 +1,14 @@
 <html>
 <body>
-Reporta métodos varargs con el mismo nombre que otros métodos en la clase o en una superclase.
-Los métodos sobrecargados que reciben un número variable de argumentos pueden ser muy confusos
-debido a que con frecuencia no está claro qué sobrecarga se invoca.
+Informa sobre métodos vararg que tienen el mismo nombre que otros métodos en la clase o superclase.
+Los métodos sobrecargados que aceptan un número variable de argumentos pueden ser muy confusos, ya que generalmente no está claro qué sobrecarga se está llamando.
 <p><b>Ejemplo:</b></p>
 <pre><code>
     public void execute(Runnable... r) {} // advertencia
     public void execute(Runnable r1, Runnable r2) {}
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Utilice la opción para ignorar aquellos métodos sobrecargados cuyos tipos de parámetro son definitivamente incompatibles.
+  Esta opción permite ignorar las sobrecargas de métodos donde los tipos de parámetros son absolutamente incompatibles.
 </p>
 </body>
 </html>

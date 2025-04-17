@@ -1,40 +1,35 @@
 <html>
 <body>
-Reporta expresiones del tipo <code>byte</code> devueltas desde un método que implementa el método <code>InputStream.read()</code>.
+Informa sobre expresiones de tipo <code>byte</code> devueltas por métodos que implementan <code>InputStream.read()</code>.
 <p>
-  Esto es sospechoso porque <code>InputStream.read()</code> debería devolver un valor en el rango de <code>0</code> a <code>255</code>,
-  mientras que una expresión de tipo byte contiene un valor de <code>-128</code> a <code>127</code>.
-  El quick-fix convierte la expresión en un <code>byte</code> sin signo aplicando la máscara de bits <code>0xFF</code>.
+  Esto es sospechoso porque <code>InputStream.read()</code> debe devolver valores en el rango de <code>0</code> a <code>255</code>, mientras que las expresiones de tipo byte contienen valores de <code>-128</code> a <code>127</code>.
+  La corrección rápida convierte la expresión a un <code>byte</code> sin signo aplicando la máscara de bits <code>0xFF</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
 class MyInputStream extends InputStream {
   int pos = 0;
   byte[] data;
-
   MyInputStream(byte[] input) {
     data = input;
   }
-
   @Override
   public int read() {
     if (pos == data.length) {
       return -1;
     }
-    return data[pos++]; // problema
+    return data[pos++]; // Problema
   }
 }
 </code></pre>
-<p>Tras aplicar el quick-fix:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
 class MyInputStream extends InputStream {
   int pos = 0;
   byte[] data;
-
   MyInputStream(byte[] input) {
     data = input;
   }
-
   @Override
   public int read() {
     if (pos == data.length) {
@@ -44,8 +39,6 @@ class MyInputStream extends InputStream {
   }
 }
 </code></pre>
-
-<!-- tooltip end -->
-<p><small>Nuevo en 2023.2</small></p>
+<p><small>Novedades de la versión 2023.2</small></p>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
 <body>
-Sugiere reemplazar <code>for(Entry&lt;?,?&gt; entrada : map.entrySet()) {...}</code> o
-<code>map.entrySet().forEach(entrada -&gt; ...)</code> por <code>map.forEach((key, value) -> ...)</code>.
+Se sugiere reemplazar <code>for(Entry&lt;?,?&gt; entry : map.entrySet()) {...}</code> o 
+<code>map.entrySet().forEach(entry -&gt; ...)</code> por <code>map.forEach((key, value) -> ...)</code>.
 <p>Ejemplo</p>
 <pre><code>
   void print(Map&lt;String, Integer&gt; map) {
@@ -17,11 +17,10 @@ Sugiere reemplazar <code>for(Entry&lt;?,?&gt; entrada : map.entrySet()) {...}</c
     map.forEach((str, value) -> System.out.println(str + ":" + value));
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Cuando la opción <b>No informar bucles</b> esté habilitada, se informará sólo de los casos <code>entrySet().forEach()</code>.
-  Sin embargo, la acción de corrección rápida también estará disponible para los bucles <code>for</code>.
+  Con la opción <b>No informar bucles</b> habilitada, solo se informarán los casos de <code>entrySet().forEach()</code>.
+  Sin embargo, la corrección rápida también está disponible para bucles <code>for</code>.
 </p>
-<p><small>Novedad en 2017.1</small></p>
+<p><small>Novedades de la versión 2017.1</small></p>
 </body>
 </html>

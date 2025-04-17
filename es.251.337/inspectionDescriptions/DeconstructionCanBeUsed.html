@@ -1,29 +1,28 @@
 <html>
 <body>
-Reporta patrones que pueden ser reemplazados por patrones de registro.
+El patrón de informe puede ser reemplazado por un patrón de registro.
 <p>Ejemplo:</p>
 <pre><code>
-  record Point(int x, int y) {}
-
-  static void printSum(Object obj) {
-    if (obj instanceof Point p) {
-      int x = p.x();
-      int y = p.y();
-      System.out.println(x + y);
+  record Point(int x, int y) {
+    static void printSum(Object obj) {
+      if (obj instanceof Point p) {
+        int x = p.x();
+        int y = p.y();
+        System.out.println(x + y);
+      }
     }
   }
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  record Point(int x, int y) {}
-
-  static void printSum(Object obj) {
-    if (obj instanceof Point(int x, int y)) {
-      System.out.println(x + y);
+  record Point(int x, int y) {
+    static void printSum(Object obj) {
+      if (obj instanceof Point(int x, int y)) {
+        System.out.println(x + y);
+      }
     }
   }
 </code></pre>
-<!-- tooltip end -->
-<p><small>Novedad en 2023.1</small></p>
+<p><small>Novedades en 2023.1</small></p>
 </body>
 </html>

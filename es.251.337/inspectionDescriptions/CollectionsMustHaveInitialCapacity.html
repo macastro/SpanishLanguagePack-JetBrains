@@ -1,19 +1,18 @@
 <html>
 <body>
-Informa los intentos por instanciar un nuevo objeto `Collection` sin especificar una capacidad inicial. 
-<p> 
-  Si no se especifica la capacidad inicial, se utiliza la capacidad predeterminada, lo cual rara vez es óptimo. Al no especificar una capacidad inicial para la colección, pueden surgir problemas de rendimiento si es necesario volver a asignar espacio y copiar memoria cuando la capacidad inicial se excede. 
-  Esta inspección verifica las asignaciones de las clases que se enumeran en la configuración de la inspección. 
+Informa sobre intentos de instanciar nuevos objetos <code>Collection</code> sin especificar una capacidad inicial.
+<p>
+  Cuando no se especifica una capacidad inicial, se utiliza la capacidad predeterminada, lo cual raramente es la mejor opción. No especificar una capacidad inicial puede causar problemas de rendimiento cuando se requiere reasignar espacio y copiar memoria al exceder la capacidad inicial.
+  Esta inspección verifica las asignaciones de las clases listadas en la configuración de la inspección.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   new HashMap&lt;String, String&gt;();
 </code></pre>
-<!-- tooltip end -->
-<p>Puede configurar esta inspección con las siguientes opciones:</p>
+<p>La inspección se puede configurar con las siguientes opciones:</p>
 <ul>
-  <li>Lista las clases de colección que deben verificarse.</li>
-  <li>Descarta los inicializadores de campo.</li>
+  <li>Lista de clases de colecciones a inspeccionar.</li>
+  <li>Si se deben ignorar los inicializadores de campos.</li>
 </ul>
 </body>
 </html>

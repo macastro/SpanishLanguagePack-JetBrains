@@ -1,40 +1,37 @@
 <html>
 <body>
-Informa si hay sentencias <code>if</code> con tres o más ramas que se pueden reemplazar por la expresión <code>when</code>.
+Reporta declaraciones <code>if</code> que tienen más de tres ramas y pueden ser reemplazadas por una expresión <code>when</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun checkIdentifier(id: String) {
       fun Char.isIdentifierStart() = this in 'A'..'z'
       fun Char.isIdentifierPart() = isIdentifierStart() || this in '0'..'9'
-
       if (id.isEmpty()) {
-          print("El identificador está vacío")
+          print("Identifier is empty")
       } else if (!id.first().isIdentifierStart()) {
-          print("El identificador debe comenzar con una letra")
+          print("Identifier should start with a letter")
       } else if (!id.subSequence(1, id.length).all(Char::isIdentifierPart)) {
-          print("El identificador solo debe contener letras y números")
+          print("Identifier should contain only letters and numbers")
       }
   }
 </code></pre>
-<p>La corrección rápida convierte la expresión <code>if</code> a <code>when</code>:</p>
+<p>Esta corrección rápida convertirá la expresión <code>if</code> en una expresión <code>when</code>:</p>
 <pre><code>
   fun checkIdentifier(id: String) {
       fun Char.isIdentifierStart() = this in 'A'..'z'
       fun Char.isIdentifierPart() = isIdentifierStart() || this in '0'..'9'
-
       when {
           id.isEmpty() -> {
-              print("El identificador está vacío")
+              print("Identifier is empty")
           }
           !id.first().isIdentifierStart() -> {
-              print("El identificador debe comenzar con una letra")
+              print("Identifier should start with a letter")
           }
           !id.subSequence(1, id.length).all(Char::isIdentifierPart) -> {
-              print("El identificador solo debe contener letras y números")
+              print("Identifier should contain only letters and numbers")
           }
       }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

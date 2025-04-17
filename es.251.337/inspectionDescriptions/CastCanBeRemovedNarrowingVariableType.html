@@ -1,20 +1,18 @@
 <html>
 <body>
-Informa los tipos de conversiones que se pueden eliminar si el tipo de variable se reduce al tipo de conversión.
+Se informa sobre conversiones de tipo que pueden eliminarse si se reduce el alcance del tipo de variable al tipo de conversión.
 <p>Ejemplo:</p>
 <pre><code>
   Object x = "  string  ";
   System.out.println(((String)x).trim());
 </code></pre>
 <p>
-Aquí, cambiar el tipo de <code>x</code> a <code>String</code> hace que la conversión sea redundante. La solución rápida sugerida actualiza el tipo de variable y
-elimina todas las conversiones redundantes en esa variable:
+En este caso, cambiar el tipo de <code>x</code> a <code>String</code> hace que la conversión sea redundante. La corrección rápida sugerida actualizará el tipo de variable y eliminará todas las conversiones redundantes en esa variable:
 </p>
 <pre><code>
   String x = "  string  ";
   System.out.println(x.trim());
 </code></pre>
-<!-- tooltip end -->
-<p><small>Novedad en 2018.2</small></p>
+<p><small>Novedades de 2018.2</small></p>
 </body>
 </html>

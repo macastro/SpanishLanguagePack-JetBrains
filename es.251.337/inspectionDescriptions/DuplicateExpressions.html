@@ -1,26 +1,20 @@
 <html>
 <body>
-Inspecciona en un método (o constructor, o inicializador de clase) múltiples ocurrencias equivalentes de la misma expresión, si el resultado de la expresión se puede reutilizar.
+Informa sobre múltiples ocurrencias equivalentes de la misma expresión dentro de un método (o constructor, o inicializador de clase) cuando el resultado de la expresión puede ser reutilizado.
 <p>
-  La expresión está informada si esta libre de efectos secundarios y su resultado es siempre el mismo (en términos de <code>Object.equals()</code>).
-  Ejemplos de tales expresiones son <code>a + b</code>, <code>Math.max(a, b)</code>, <code>a.equals(b)</code>,
-  <code>s.substring(a,b)</code>. Para asegurarse de que el resultado es siempre el mismo, se verifica que las variables usadas en la expresión no
-  cambian sus valores entre las ocurrencias de la expresión.</p>
+  Se informa una expresión si no tiene efectos secundarios y su resultado es siempre el mismo (en términos de <code>Object.equals()</code>).
+  Ejemplos de tales expresiones son <code>a + b</code>, <code>Math.max(a, b)</code>, <code>a.equals(b)</code>, <code>s.substring(a,b)</code>. Para garantizar que el resultado sea siempre el mismo, se verifica que las variables utilizadas en la expresión no cambien sus valores entre las ocurrencias de la expresión.</p>
 <p>
-  Tales expresiones puede contener métodos de clases inmutables como <code>String</code>, <code>BigDecimal</code>, y así,
-  y de clases de utilidades como <code>Objects</code>, <code>Math</code> (excepto <code>random()</code>).
-  También están bien los métodos bien conocidos como <code>Object.equals()</code>, <code>Object.hashCode()</code>, <code>Object.toString()</code>,
-  <code>Comparable.compareTo()</code>, y <code>Comparator.compare()</code> porque normalmente no presentan
-  efectos secundarios observables.
-</p>
-<!-- tooltip end -->
-<p>
-  Usa la opción <b>Umbral de complejidad de la expresión</b> para especificar el umbral de complejidad de expresión mínima. Especificar números más grandes eliminará informes de expresiones cortas.
+  Tales expresiones pueden contener métodos de clases inmutables (como <code>String</code>, <code>BigDecimal</code>, etc.) y clases de utilidad (como <code>Objects</code>, <code>Math</code>, excepto <code>random()</code>).
+  Los métodos comunes como <code>Object.equals()</code>, <code>Object.hashCode()</code>, <code>Object.toString()</code>,
+   <code>Comparable.compareTo()</code> y <code>Comparator.compare()</code> también pueden usarse ya que no tienen efectos secundarios visibles.
 </p>
 <p>
-  Las llamadas <code>Path.of</code> y <code>Paths.get</code> se tratan como llamadas equivalentes si tienen los mismos argumentos. Estas llamadas
-  siempre se informan sin importante lo complejas que sean sus argumentos. Este comportamiento se puede ajustar usando un umbral de complejidad diferente.
+  Use la opción <b>Umbral de complejidad de expresión</b> para especificar el umbral mínimo de complejidad de expresión. Especificar un número mayor eliminará los informes sobre expresiones cortas.
 </p>
-<p><small>Nuevo en 2018.3</small></p>
+<p>
+  Las llamadas a <code>Path.of</code> y <code>Paths.get</code> se consideran equivalentes si tienen los mismos argumentos. Estas llamadas siempre se informan independientemente de la complejidad de sus argumentos. Este comportamiento puede ajustarse usando diferentes umbrales de complejidad.
+</p>
+<p><small>Cambios más recientes en 2018.3</small></p>
 </body>
 </html>

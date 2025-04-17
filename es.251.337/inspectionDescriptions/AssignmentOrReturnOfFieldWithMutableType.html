@@ -1,10 +1,7 @@
 <html>
 <body>
-Reporta el retorno o la asignación desde un parámetro de método a una matriz o a un tipo mutable como 
-<code>Collection</code>, <code>Date</code>, <code>Map</code>, <code>Calendar</code>, etc.
-<p>Debido a que tales tipos son mutables, esta construcción puede
-    resultar en modificaciones inesperadas del estado del objeto desde fuera de la clase propietaria. Aunque esta construcción puede ser útil por razones de
-    rendimiento, es inherentemente propensa a errores.</p>
+Informa sobre retornos o asignaciones desde parámetros de método a arrays o tipos mutables (como <code>Collection</code>, <code>Date</code>, <code>Map</code>, <code>Calendar</code>, etc.)
+<p>Debido a que estos tipos son mutables, esta estructura puede llevar a modificaciones inesperadas del estado del objeto desde fuera de su clase. Aunque esta estructura puede ser útil por razones de rendimiento, es inherentemente propensa a errores.</p>
 <p>Se informan los siguientes tipos mutables:</p>
 <ul>
   <li><code>java.util.Date</code></li>
@@ -14,32 +11,27 @@ Reporta el retorno o la asignación desde un parámetro de método a una matriz 
   <li><code>com.google.common.collect.Multimap</code></li>
   <li><code>com.google.common.collect.Table</code></li>
 </ul>
-<p>La solución rápida agrega una llamada al método <code>.clone()</code> del campo.</p>
+<p>La corrección rápida añade una llamada al método <code>.clone()</code> del campo.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Registro {
-    String[] mensajes;
+  class Log {
+    String[] messages;
     ...
-
-    String[] getMensajes() {
-      return mensajes; // advertencia: Retorno del campo String[] 'mensajes'
+    String[] getMessages() {
+      return messages; // Advertencia: devolviendo campo String[] 'messages'
     }
   }
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  class Registro {
-    String[] mensajes;
+  class Log {
+    String[] messages;
     ...
-
-    String[] getMensajes() {
-      return mensajes.clone();
+    String[] getMessages() {
+      return messages.clone();
     }
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Utiliza la opción <b>Ignorar asignaciones y retornos en métodos privados</b> para ignorar las asignaciones y retornos en métodos <code>private</code>.
-
-  <!--<p><small>New in 2017.3</small>-->
+<p>Use la opción <b>Ignorar asignaciones y retornos en métodos private</b> para ignorar las asignaciones y retornos en métodos <code>private</code>.
 </body>
 </html>

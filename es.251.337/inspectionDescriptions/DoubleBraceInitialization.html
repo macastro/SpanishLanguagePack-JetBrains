@@ -1,10 +1,11 @@
 <html>
 <body>
-Informa <a href="https://www.c2.com/cgi/wiki?DoubleBraceInitialization">Inicialización de llaves dobles</a>.
-<p>La inicialización de llaves dobles puede ocasionar una fuga de memoria si se utiliza en un contexto estático, ya que crea una clase anónima que hará referencia al objeto envolvente.</p>
-<p>La inicialización de llaves dobles presenta un peor rendimiento en comparación con la inicialización normal, ya que requiere cargar una clase adicional.</p>
-<p>Además, si el método <code>equals()</code> no acepta una subclase como parámetro, es posible que falle la comparación <code>equals()</code>.</p>
-<p>Asimismo, en las versiones anteriores a Java 9, la inicialización de llaves dobles no podía combinarse con el operador de diamante, ya que era incompatible con las clases anónimas.</p>
+Informe sobre la <a href="https://www.c2.com/cgi/wiki?DoubleBraceInitialization">inicialización con dobles llaves</a>.
+<p>La inicialización con dobles llaves tiene un rendimiento inferior comparado con la inicialización regular, ya que requiere cargar una clase adicional.</p>
+<p>Si el método <code>equals()</code> no acepta subclases como parámetros, también puede causar que la comparación <code>equals()</code> falle.</p>
+<p>El uso de la inicialización con dobles llaves en un contexto no static puede causar fugas de memoria. Esto se debe a que define una clase anónima que referenciará al objeto circundante cuando se compile con versiones de javac anteriores a Java 18.</p>
+<p>Además, en versiones anteriores a Java 9, la inicialización con dobles llaves no puede combinarse con el operador Diamond, ya que no es compatible con clases anónimas.
+</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   List&lt;Integer&gt; list = new ArrayList&lt;&gt;() {{
@@ -18,6 +19,5 @@ Informa <a href="https://www.c2.com/cgi/wiki?DoubleBraceInitialization">Iniciali
   list.add(1);
   list.add(2);
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
 <body>
-<p>Informa de los parámetros <code>@PathVariable</code> declarados en la firma de un método y ausentes en la ruta de URL o viceversa.
-  La solución rápida añade el parámetro ausente.</p>
+<p>Informa sobre parámetros <code>@PathVariable</code> que están declarados en la firma del método pero faltan en la ruta URL, o están declarados en la ruta URL pero faltan en la firma del método.
+  Esta corrección rápida añadirá los parámetros faltantes.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   @Get("/path/{myVariable}/")
@@ -9,7 +9,7 @@
     return "...";
   }
 </code></pre>
-<p>Después de aplicar la solución rápida, el resultado es similar a:</p>
+<p>Después de aplicar la corrección rápida, el resultado se verá así:</p>
 <pre><code lang="java">
   @Get("/path/{myVariable}/")
   public String handler(@PathVariable String myVariable) {

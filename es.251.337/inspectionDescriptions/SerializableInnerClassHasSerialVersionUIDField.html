@@ -1,11 +1,11 @@
 <html>
 <body>
-Informa sobre clases internas no estáticas que implementan <code>java.io.Serializable</code>, pero no definen un campo <code>serialVersionUID</code>.
+Reporta clases internas no estáticas que implementan <code>java.io.Serializable</code> pero no definen el campo <code>serialVersionUID</code>.
 <p>
-  Sin un campo <code>serialVersionUID</code>, cualquier cambio en la clase hará que las versiones serializadas anteriormente sean ilegibles. Se recomienda encarecidamente que las clases internas no estáticas <code>Serializable</code> tengan un campo <code>serialVersionUID</code>; de lo contrario, el algoritmo de serialización predeterminado puede provocar que las versiones serializadas sean incompatibles entre compiladores debido a diferencias en los métodos de acceso sintéticos.
+  Sin un campo <code>serialVersionUID</code>, cualquier cambio en la clase hará que las versiones previamente serializadas sean ilegibles. Se recomienda encarecidamente que las clases internas no estáticas <code>Serializable</code> incluyan un campo <code>serialVersionUID</code>, de lo contrario, el algoritmo de serialización predeterminado puede causar incompatibilidades de versiones serializadas entre compiladores debido a diferencias en los métodos de acceso sintéticos.
 </p>
 <p>
-  Se sugiere una solución rápida para agregar el campo <code>serialVersionUID</code> faltante.
+  Se recomienda agregar el campo <code>serialVersionUID</code> faltante mediante una corrección rápida.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -13,7 +13,7 @@ Informa sobre clases internas no estáticas que implementan <code>java.io.Serial
       class Inner implements Serializable {}
   }
 </code></pre>
-<p>Después de que se aplica la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class Outer {
       class Inner implements Serializable {
@@ -21,15 +21,14 @@ Informa sobre clases internas no estáticas que implementan <code>java.io.Serial
       }
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Utiliza las siguientes opciones para configurar la inspección:</p>
+<p>Configure la inspección con las siguientes opciones:</p>
 <ul>
   <li>
-    Lista las clases cuyos herederos no deben ser reportados por esta inspección.
-    Esto es para clases que heredan <code>Serializable</code> de una superclase pero que no están destinadas a serialización.
+    Lista de clases cuyos herederos no deberían ser reportados por esta inspección.
+    Esto aplica a clases que heredan <code>Serializable</code> de una superclase pero no se utilizan para serialización.
   </li>
   <li>
-    Si ignorar las clases anónimas <code>Serializable</code>.
+    Si se deben ignorar las clases anónimas <code>Serializable</code>.
   </li>
 </ul>
 </body>

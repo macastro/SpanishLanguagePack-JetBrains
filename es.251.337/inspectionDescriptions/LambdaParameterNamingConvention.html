@@ -1,12 +1,11 @@
 <html>
 <body>
-Informa los parámetros lambda cuyos nombres son demasiado cortos, demasiado largos o que no cumplen con el patrón de expresión regular especificado.
-<p><b>Ejemplo:</b> <code>Function&lt;String, String&gt; id = X -&gt; X;</code> debería ser informado si la inspección está habilitada con las configuración predeterminada en la que el nombre del parámetro debería comenzar con una letra minúscula.</p>
-<!-- tooltip end -->
-<p>Configura la inspección:</p>
+Informa sobre parámetros lambda con nombres demasiado cortos, demasiado largos o que no siguen el patrón de expresión regular especificado.
+<p><b>Ejemplo</b>: Con la configuración predeterminada (donde los nombres de parámetros deben comenzar con una letra minúscula), se informará sobre <code>Function&lt;String, String&gt; id = X -&gt; X;</code>.</p>
+<p>Configuración de la inspección:</p>
 <p>
-Usa los campos en la sección de <b>Opciones</b> para especificar la longitud mínima, la longitud máxima y una expresión regular esperada para los nombres de los parámetros lambda.
-  Especificar <b>0</b> con el fin de no revisar la longitud del nombre.</p>
-<p>Las expresiones regulares deberían estar especificadas en el formato estándar <code>java.util.regex</code>.</p>
+Utilice los campos en la sección de <b>Opciones</b> para especificar la longitud mínima, la longitud máxima y la expresión regular esperada para los nombres de parámetros lambda.
+Especifique <b>0</b> para no comprobar la longitud del nombre.</p>
+<p>La expresión regular debe especificarse en el formato estándar de <code>java.util.regex</code>.</p>
 </body>
 </html>

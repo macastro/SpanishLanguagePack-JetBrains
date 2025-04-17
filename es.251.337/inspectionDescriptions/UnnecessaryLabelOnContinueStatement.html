@@ -1,17 +1,15 @@
 <html>
 <body>
-Informa de sentencias <code>continue</code> con etiquetas innecesarias.
+Informa sobre declaraciones <code>continue</code> con etiquetas innecesarias.
 <p>Ejemplo:</p>
 <pre><code>
-  ETIQUETA:
+  LABEL:
   while (a &gt; b) {
     System.out.println("Hello");
-    //el código siguiente es la última sentencia en un bucle,
-    //por lo que se puede eliminar la etiqueta innecesaria y el continue
-    continue ETIQUETA;
+    //Esta es la última declaración en el bucle,
+    //por lo tanto, la etiqueta y el continue son innecesarios
+    continue LABEL;
   }
 </code></pre>
-<!-- tooltip end -->
-
 </body>
 </html>

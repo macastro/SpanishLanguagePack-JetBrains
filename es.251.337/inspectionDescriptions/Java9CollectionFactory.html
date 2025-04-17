@@ -1,15 +1,14 @@
 <html>
 <body>
-Informa a las llamadas de colección inalterable <code>java.util.Collections</code> que se pueden convertir a los métodos más nuevos de la colección de fábrica.
-Estos se pueden reemplazar con, por ejemplo, <code>List.of()</code> o <code>Set.of()</code> introducidos en Java 9 o <code>List.copyOf()</code> introducido en Java 10.
-
-<p>Tenga en cuenta que, en contraste con los métodos de <code>java.util.Collections</code>, los métodos de fábrica de colecciones Java 9:
+Informa sobre llamadas a colecciones inmutables de <code>java.util.Collections</code> que pueden convertirse a métodos de fábrica de colecciones más modernos.
+Por ejemplo, estas pueden reemplazarse por <code>List.of()</code> o <code>Set.of()</code> introducidos en Java 9, o <code>List.copyOf()</code> introducido en Java 10.
+<p>Tenga en cuenta que los métodos de fábrica de colecciones de Java 9, en comparación con los métodos de <code>java.util.Collections</code>:
 <ul>
-  <li>No aceptan valores <code>null</code>.
-  <li>Requieren elementos de conjunto únicos y claves de mapa.
-  <li>No aceptan argumentos <code>null</code> para consultar métodos como <code>List.contains()</code> o <code>Map.get()</code> de las colecciones devueltas.
+  <li>no aceptan valores <code>null</code>.
+  <li>requieren elementos de colección y claves de mapeo únicos.
+  <li>no aceptan argumentos <code>null</code> para métodos que consultan la colección resultante como <code>List.contains()</code> o <code>Map.get()</code>.
 </ul>
-<p>Cuando se violan estos casos, se lanzan excepciones.
+<p>Cuando se violan estas condiciones, se lanzan excepciones.
   Esto puede cambiar la semántica del código después de la migración.</p>
 <p>Ejemplo:
 <pre><code>
@@ -18,18 +17,16 @@ Estos se pueden reemplazar con, por ejemplo, <code>List.of()</code> o <code>Set.
   List&lt;Integer> evenCopy = Collections.unmodifiableList(
     new ArrayList&lt;>(list1));
 </code></pre>
-<p>Después de que se aplique la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   List&lt;Integer> even = List.of(2, 4, 6, 8, 10, 2);
   List&lt;Integer> evenCopy = List.copyOf(list);
 </code></pre>
-
-<!-- tooltip end -->
 <p>
-Utilice la opción <b>No advertir cuando el contenido no es constante</b> para informar solo en los casos en que los argumentos proporcionados sean constantes de tiempo de compilación.
-Esto reduce las posibilidades de que el comportamiento cambie, ya que no siempre es posible verificar estáticamente si los elementos originales son únicos y no <code>null</code>.
+La opción <b>No informar cuando el contenido no es constante</b> reporta solo cuando los argumentos proporcionados son constantes en tiempo de compilación.
+Esto reduce las posibilidades de cambios de comportamiento, ya que no siempre es posible verificar estáticamente si los elementos originales son únicos y no <code>null</code>.
 <p>
-  Utilice la opción <b>Sugerir 'Map.ofEntries'</b> para sugerir reemplazar mapas inalterables con más de 10 entradas con <code>Map.ofEntries()</code>.
-<p><small>Novedad en 2017.2</small></p>
+  La opción <b>Sugerir 'Map.ofEntries'</b> sugiere usar <code>Map.ofEntries()</code> para reemplazar mapas inmutables con más de 10 entradas.
+<p><small>Novedades de 2017.2</small></p>
 </body>
 </html>

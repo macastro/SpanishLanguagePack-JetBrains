@@ -1,13 +1,13 @@
 <html>
 <body>
-<p>Informa del uso de las operaciones `&&` y `||` en expresiones dplyr.</p>
+<p>Reporta el uso de operadores `&&` y `||` en expresiones dplyr.</p>
 <p><b>Ejemplo:</b></p>
 <p>
   <code>
     filter(diamonds, carat > 0.7 && depth > 62.0)
   </code>
 </p>
-<p>Al aplicar la corrección rápida, el código cambia a:</p>
+<p>Cuando apliques esta corrección rápida, el código se convertirá en:</p>
 <p>
   <code>
     filter(diamonds, carat > 0.7 & depth > 62.0)

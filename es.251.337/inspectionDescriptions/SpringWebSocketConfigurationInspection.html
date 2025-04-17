@@ -1,27 +1,23 @@
 <html>
 <body>
-<p>Se informan los siguientes problemas con el contexto de la aplicación Spring Websocket basada en XML:</p>
-
+<p>Problemas con el contexto de aplicación basado en XML de Spring Websocket:</p>
 <ul>
-  <li>Referencias de Bean no resueltas</li>
-  <li>Faltan etiquetas o atributos necesarios</li>
+  <li>Referencias de Bean sin resolver</li>
+  <li>Etiquetas o atributos requeridos faltantes</li>
   <li>Tipo de propiedad incorrecto</li>
   <li>Propiedad <code>enum</code> inconsistente</li>
   <li>Tipo incorrecto de Bean referenciado</li>
 </ul>
-
 <p><b>Ejemplo:</b></p>
 <pre><code>
   &lt;beans ... &gt;
-  
     &lt;bean id="dummyBean" class="java.lang.String"/&gt;
-  
-    &lt;<strong>websocket:message-broker </strong>application-destination-prefix="/app"&gt; &lt;!-- Se requiere uno de &lt;simple-broker&gt; o &lt;stomp-broker-relay&gt; --&gt;
+    &lt;<strong>websocket:message-broker </strong>application-destination-prefix="/app"&gt; &lt;!-- Se requiere solo &lt;simple-broker&gt; o &lt;stomp-broker-relay&gt; --&gt;
         &lt;websocket:stomp-endpoint path="/hello" &gt;
             &lt;websocket:sockjs&gt;
                 &lt;websocket:transport-handlers&gt;
-                    &lt;ref bean="<strong>dummyBean</strong>"/&gt; &lt;!-- El Bean debe ser del tipo 'org.springframework.web.socket.sockjs.transport.TransportHandler' --&gt;
-                    &lt;bean class=<strong>"java.lang.String"</strong>/&gt; &lt;!-- 'java.lang.String' no se asigna a 'org.springframework.web.socket.sockjs.transport.TransportHandler --&gt;
+                    &lt;ref bean="<strong>dummyBean</strong>"/&gt; &lt;!-- El Bean debe ser de tipo 'org.springframework.web.socket.sockjs.transport.TransportHandler' --&gt;
+                    &lt;bean class=<strong>"java.lang.String"</strong>/&gt; &lt;!-- 'java.lang.String' no está asignado a 'org.springframework.web.socket.sockjs.transport.TransportHandler' --&gt;
                 &lt;/websocket:transport-handlers&gt;
             &lt;/websocket:sockjs&gt;
         &lt;/websocket:stomp-endpoint&gt;
@@ -30,8 +26,8 @@
         &lt;websocket:broker-channel&gt;
             &lt;websocket:executor keep-alive-seconds="10"/&gt;
             &lt;websocket:interceptors&gt;
-              &lt;ref bean="<strong>dummyBean</strong>"/&gt;  &lt;!-- El Bean debe ser del tipo 'org.springframework.messaging.support.ChannelInterceptor' --&gt;
-              &lt;bean class="<strong>java.lang.String</strong>"/&gt; &lt;!-- 'java.lang.String' no se asigna a 'org.springframework.messaging.support.ChannelInterceptor' --&gt;
+              &lt;ref bean="<strong>dummyBean</strong>"/&gt;  &lt;!-- El Bean debe ser de tipo 'org.springframework.messaging.support.ChannelInterceptor' --&gt;
+              &lt;bean class="<strong>java.lang.String</strong>"/&gt; &lt;!-- 'java.lang.String' no está asignado a 'org.springframework.messaging.support.ChannelInterceptor' --&gt;
             &lt;/websocket:interceptors&gt;
         &lt;/websocket:broker-channel&gt;
   &lt;/websocket:message-broker&gt;

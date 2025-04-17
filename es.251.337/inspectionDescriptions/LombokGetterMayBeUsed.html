@@ -1,45 +1,41 @@
 <html>
 <body>
-Informa de métodos getter estándares que pueden remplazarse por la anotación de Lombok <code>@Getter</code>.
+Informa sobre métodos getter estándar que pueden ser reemplazados por la anotación lombok <code>@Getter</code>.
 <p>Ejemplo:</p>
 <pre><code>
   import java.util.Date;
-
   public class MyClass {
     /**
-     * La fecha del proceso.
+     * Fecha de procesamiento.
      */
     private Date processDate;
-
     /**
      * Devuelve la fecha.
      *
-     * @return La fecha
+     * @return The date
      */
     public Date getProcessDate() {
       return processDate;
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección/limpieza rápida:</p>
+<p>Después de aplicar la corrección rápida/limpieza:</p>
 <pre><code>
   import lombok.Getter;
   import java.util.Date;
-
   @Getter
   public class MyClass {
     /**
-     * La fecha del proceso.
+     * Fecha de procesamiento.
      * -- GETTER --
      * Devuelve la fecha.
      *
-     * @return La fecha
+     * @return The date
      */
     private Date processDate;
   }
 </code></pre>
-<p>Solo informa cuando la biblioteca Lombok está configurada. Para desconfigurar Lombok, consulta el sitio web de Lombok.</p>
-<!-- tooltip end -->
-<p><small>Nuevo en 2023.2</small></p>
+<p>Solo se informa cuando la biblioteca lombok está configurada. Para eliminar lombok, consulte el sitio web de lombok.</p>
+<p><small>Novedades en 2023.2</small></p>
 </body>
 </html>

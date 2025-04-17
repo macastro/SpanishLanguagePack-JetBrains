@@ -1,15 +1,13 @@
 <html>
 <body>
-Informa de la declaración de una excepción no comprobada (<code>java.lang.RuntimeException</code> o una de sus subclases) en la cláusula <code>throws</code> de un método.
-<p>No se requieren declaraciones de excepciones no comprobadas y se pueden eliminar o mover a una etiqueta Javadoc <code>@throws</code>.</p>
+Informa sobre la declaración de excepciones no verificadas (<code>java.lang.RuntimeException</code> o una de sus subclases) en la cláusula <code>throws</code> del método.
+<p>La declaración de excepciones no verificadas no es necesaria y puede eliminarse o moverse a la etiqueta Javadoc <code>@throws</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   public class InvalidDataException extends RuntimeException {}
-
   class TextEditor {
-    void readSettings() throws InvalidDataException {} // advertencia: excepción no comprobada 'InvalidDataException' declarada en la cláusula 'throws'
+    void readSettings() throws InvalidDataException {} // Advertencia: Excepción no verificada 'InvalidDataException' declarada en la cláusula 'throws'
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

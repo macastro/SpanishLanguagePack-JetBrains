@@ -1,18 +1,16 @@
 <html>
 <body>
-Reporta el desempaquetado, que es el desenvuelto explícito de valores primitivos envueltos.
-<p>El desempaquetado es innecesario a partir de Java 5 en adelante y puede eliminarse de forma segura.</p>
-<p><b>Ejemplos:</b></p>
+Informa sobre el desempaquetado (unboxing) innecesario, es decir, el desenvolvimiento explícito de valores primitivos que ya están envueltos.
+<p>Para Java 5 y versiones posteriores, el desempaquetado es innecesario y puede eliminarse de forma segura.</p>
+<p><b>Ejemplo:</b></p>
 <ul>
   <li><code>Integer i = Integer.valueOf(42).intValue();</code> &rarr; <code>Integer i = Integer.valueOf(42);</code></li>
   <li><code>int k = Integer.valueOf(42).intValue();</code> &rarr; <code>int k = Integer.valueOf(42);</code>
-    <p>(informa solo cuando la opción <b>Informar solo expresiones realmente desempaquetadas superfluamente</b> no está marcada)</p></li>
+    <p>(Solo se informa cuando la opción <b>Informar solo sobre expresiones de desempaquetado verdaderamente redundantes</b> no está seleccionada)</p></li>
 </ul>
-<!-- fin de la información sobre herramientas -->
 <p>
-  Use la opción <b>Informar solo expresiones realmente desempaquetadas superfluamente</b> para informar solo el desempaquetado realmente superfluo,
-  donde un valor desempaquetado se empaqueta inmediatamente de forma implícita o explícita.
-  En este caso, se puede eliminar todo el paso desempaquetar-empaquetar. La inspección no informa desempaquetado explícito simple.</p>
-<p>Esta inspección solo informa si el nivel de idioma del proyecto o módulo es 5 o superior.</p>
+  Con la opción <b>Informar solo sobre expresiones de desempaquetado verdaderamente redundantes</b>, solo se informan los casos de desempaquetado verdaderamente redundantes donde el valor desempaquetado se empaqueta inmediatamente de forma implícita o explícita.
+  En este caso, se puede eliminar todo el paso de desempaquetado-empaquetado. La inspección no informa sobre casos simples de desempaquetado explícito.</p>
+<p>Esta inspección solo informa cuando el nivel de lenguaje del proyecto o módulo es 5 o superior.</p>
 </body>
 </html>

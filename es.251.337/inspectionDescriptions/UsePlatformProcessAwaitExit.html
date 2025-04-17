@@ -1,24 +1,19 @@
 <html>
 <body>
-Reporta el uso de <code>Process.waitFor()</code> y <code>Process.onExit()</code> dentro de un contexto de corrutina.
-El uso de estos métodos está prohibido dentro de un contexto de corrutina.
-
-<p>Usa <code>com.intellij.util.io.awaitExit()</code> en su lugar.</p>
-
+Informa sobre el uso de <code>Process.waitFor()</code> y <code>Process.onExit()</code> en contextos de corrutinas.
+El uso de estos métodos está prohibido en contextos de corrutinas.
+<p>Use <code>com.intellij.util.io.awaitExit()</code> en su lugar.</p>
 <p>Ejemplo:</p>
 <pre><code lang="kotlin">
 suspend fun doSomething(process: Process) {
   val exitCode = process.waitFor() // Incorrecto
   // ...
 }
-
 suspend fun doSomething(process: Process) {
   val exitCode = process.awaitExit() // Correcto
   // ...
 }
 </code></pre>
-
-<!-- tooltip end -->
-<p><small>Novedades de 2023.3</small>
+<p><small>Cambios en 2023.3</small>
 </body>
 </html>

@@ -1,13 +1,12 @@
 <html>
 <body>
-Informa acerca de inicializadores no <code>estáticos</code> en clases.
+Inicializadores no <code>static</code> en la clase de informe.
 <p>Algunos estándares de codificación prohíben los inicializadores de instancia y recomiendan usar constructores o inicializadores de campo para la inicialización.
-  Además, eliminar la palabra clave <code>estática</code> puede crear accidentalmente inicializadores no <code>estáticos</code> y generar errores oscuros.
+  Además, eliminar la palabra clave <code>static</code> puede resultar en la creación accidental de inicializadores no <code>static</code>, causando errores confusos.
 </p>
-<p>Esta inspección no informa sobre inicializadores de instancia en clases anónimas.
-  <!-- tooltip end -->
+<p>Esta inspección no reporta los inicializadores de instancia en clases anónimas.
 <p>
-  Utiliza la opción <b>Solo avisar cuando la clase tenga uno o más constructores</b> para ignorar los inicializadores de instancia en clases que no tienen constructores.
+  Use la opción <b>Advertir solo cuando la clase tiene uno o más constructores</b> para ignorar los inicializadores de instancia en clases sin constructores.
 </p>
 </body>
 </html>

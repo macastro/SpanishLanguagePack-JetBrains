@@ -1,0 +1,22 @@
+<html>
+<body>
+El informe muestra situaciones que pueden beneficiarse de la conversión de cadenas a versiones con prefijos de interpolación de múltiples símbolos de dólar.
+<p>
+Los prefijos de interpolación pueden hacer que las cadenas sean más fáciles de entender, ya que las cadenas con prefijo pueden usar símbolos de dólar literales sin necesidad de escape adicional.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+val jsonSchema: String = """
+{
+  "${'$'}id": "https://example.com/product.schema.json",
+}"""
+</code></pre>
+La corrección rápida convertirá todos los caracteres de dólar escapados que se puedan reemplazar de forma segura en caracteres de dólar regulares:
+<pre><code>
+val jsonSchema: String = $$"""
+{
+  "$id": "https://example.com/product.schema.json",
+}"""
+</code></pre>
+</body>
+</html>

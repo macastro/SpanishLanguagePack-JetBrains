@@ -1,23 +1,22 @@
 <html>
 <body>
-Informa de los constructores cuyo número de parámetros excede el máximo especificado.
-Estos objetos son difíciles de instanciar, especialmente si algunos parámetros son opcionales.
-Los constructores con demasiados parámetros pueden indicar que es necesaria una refactorización.
-Por ejemplo, considera aplicar el patrón de constructor.
+Informa sobre constructores que tienen más parámetros formales que el máximo especificado.
+Estos objetos son difíciles de instanciar, especialmente cuando algunos parámetros son opcionales.
+Un número excesivo de parámetros en el constructor puede indicar la necesidad de una refactorización.
+Por ejemplo, considere aplicar el patrón Builder.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   public BankAccount(long accountNumber,
                      String owner,
                      double balance,
                      double interestRate) {
-    // inicialización de campos
+    // fields initialization
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Configurar la inspección:</p>
+<p>Configuración de la inspección:</p>
 <ul>
-  <li>Utiliza el campo <b>Límite de parámetros</b> para especificar el número máximo de parámetros permitidos en un constructor.</li>
-  <li>Utiliza la lista <b>Ignorar constructores con visibilidad</b> para especificar si la inspección debe ignorar constructores con visibilidad específica.</li>
+  <li>Use el campo <b>Límite de parámetros</b> para especificar el número máximo de parámetros permitidos en un constructor.</li>
+  <li>Use la lista <b>Ignorar constructores con la siguiente visibilidad</b> para especificar qué constructores con visibilidad específica deben ser ignorados en la inspección.</li>
 </ul>
 </body>
 </html>

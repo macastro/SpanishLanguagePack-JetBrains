@@ -1,9 +1,8 @@
 <html>
 <body>
-Informa sobre llamadas a <code>equals()</code> en constantes de enumeración.
-<p>Dichas llamadas pueden reemplazarse por una comparación de identidad (<code>==</code>) porque dos
-  constantes de enumeración son iguales sólo cuando tienen la misma identidad.</p>
-<p>Hay disponible una corrección rápida para cambiar la llamada a una comparación.</p>
+Informa sobre llamadas a <code>equals()</code> en constantes enum.
+<p>Estas llamadas pueden reemplazarse por comparaciones de identidad (<code>==</code>), ya que dos constantes enum son iguales solo cuando tienen la misma identidad.</p>
+<p>La llamada puede cambiarse a una comparación mediante una corrección rápida.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   boolean foo(MyEnum value) {
@@ -16,6 +15,5 @@ Informa sobre llamadas a <code>equals()</code> en constantes de enumeración.
     return value == MyEnum.FOO;
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

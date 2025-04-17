@@ -1,29 +1,26 @@
 <html>
 <body>
-Se informa sobre las extensiones que se instancian mediante la plataforma IntelliJ pero que se declaran como objetos Kotlin.
+Informe sobre extensiones que son instanciadas por la plataforma IntelliJ pero están declaradas como objetos Kotlin.
 <p>
-  El ciclo de vida de la extensión es administrado por la plataforma IntelliJ.
-  El uso de objetos Kotlin para el registro de extensión puede crear instancias de extensión innecesarias y puede impedir la descarga del complemento.
+  El ciclo de vida de las extensiones es gestionado por la plataforma IntelliJ.
+  El uso de objetos Kotlin para el registro de extensiones puede resultar en la creación de instancias innecesarias de extensiones y hacer que el plugin no se pueda desinstalar.
 </p>
 <h2>Ejemplo</h2>
 <p>Registro de extensión:</p>
 <pre><code lang="xml">
 &lt;annotator language="myLang" implementationClass="com.example.MyAnnotator"/&gt;
 </code></pre>
-
-<p>Implementación de la extensión:</p>
+<p>Implementación de extensión:</p>
 <pre><code lang="kotlin">
-// No apropiado:
+// Incorrecto:
 object MyAnnotator : Annotator {
   ...
 }
-
-// Apropiado:
+// Correcto:
 class MyAnnotator : Annotator {
   ...
 }
 </code></pre>
-<!-- tooltip end -->
-<p><small>Novedad en 2023.1</small>
+<p><small>Cambios en 2023.1</small>
 </body>
 </html>

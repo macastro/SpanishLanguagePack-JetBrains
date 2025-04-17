@@ -1,23 +1,17 @@
 <html>
 <body>
-Informa un uso de operadores de igualdad que pueden causar conversiones inesperadas de tipo.
-Sugiere reemplazar los operadores de igualdad <code>==</code> o <code>!=</code> con operadores seguros <code>===</code> o <code>!==</code>.
-
-<p>Dependiendo de la opción seleccionada, se informará uno de los siguientes casos:</p>
-
+Informa sobre usos del operador de igualdad que pueden causar conversiones de tipo inesperadas.
+Se recomienda reemplazar los operadores de igualdad <code>==</code> o <code>!=</code> por los operadores seguros de tipo <code>===</code> o <code>!==</code>.
+<p>Según las opciones seleccionadas, se informará de uno de los siguientes casos:</p>
 <ul>
   <li>
     Todos los usos de los operadores <code>==</code> y <code>!=</code>.
   </li>
   <li>
-    Todos los usos excepto la comparación con nulo. Algunos estilos de código permiten usar <code>x == null</code> como reemplazo de
-    <code>x === null || x === undefined</code>.
+    Todos los usos excepto las comparaciones con null. Algunos estilos de código permiten usar <code>x == null</code> en lugar de <code>x === null || x === undefined</code>.
   </li>
   <li>
-    Sólo expresiones sospechosas, tales como: comparaciones <code>==</code> o <code>!=</code>
-    con <code>0</code>, <code>''</code>,
-    <code>null</code>, <code>true</code>,
-    <code>false</code>, o <code>undefined</code>.
+    Solo expresiones sospechosas, por ejemplo: comparaciones con <code>==</code> o <code>!=</code> contra <code>0</code>, <code>''</code>, <code>null</code>, <code>true</code>, <code>false</code> o <code>undefined</code>.
   </li>
 </ul>
 </body>

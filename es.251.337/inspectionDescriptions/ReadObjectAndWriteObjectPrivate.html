@@ -1,9 +1,9 @@
 <html>
 <body>
-Inspecciona clases <code>Serializable</code> donde los métodos <code>readObject</code> o <code>writeObject</code> no están declarados como privados.
-No hay razones para que estos métodos tengan una visibilidad superior a <code>private</code>.
+Informa sobre clases <code>Serializable</code> que tienen métodos <code>readObject</code> o <code>writeObject</code> no declarados como private.
+No hay razón para que estos métodos tengan una visibilidad mayor que <code>private</code>.
 <p>
-  Se sugiere una corrección rápida para hacer que el método correspondiente sea <code>private</code>.
+  Se recomienda establecer los métodos correspondientes como <code>private</code> mediante la corrección rápida.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -21,6 +21,5 @@ No hay razones para que estos métodos tengan una visibilidad superior a <code>p
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

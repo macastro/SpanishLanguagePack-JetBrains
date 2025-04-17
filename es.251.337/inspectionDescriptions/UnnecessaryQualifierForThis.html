@@ -1,33 +1,29 @@
 <html>
 <body>
-Reporta calificaciones innecesarias de <code>this</code> o <code>super</code>.
+Informa sobre calificadores innecesarios de <code>this</code> o <code>super</code>.
 <p>
-  El uso de un calificador en <code>this</code> o <code>super</code> para
-  desambiguar una referencia de código puede fácilmente volverse innecesario a través de refactorizaciones automáticas y debería eliminarse para mayor claridad.</p>
+  Los calificadores en <code>this</code> o <code>super</code> utilizados para desambiguar referencias en el código pueden volverse innecesarios mediante refactorización automática y deberían eliminarse para mayor claridad.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
     void foo() {}
   }
-
   class Bar extends Foo {
     void bar() {
       Bar.super.foo();
     }
   }
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class Foo {
     void foo() {}
   }
-
   class Bar extends Foo {
     void bar() {
       super.foo();
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

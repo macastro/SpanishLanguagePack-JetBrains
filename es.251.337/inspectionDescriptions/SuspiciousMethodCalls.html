@@ -1,14 +1,13 @@
 <html>
 <body>
- Informa las llamadas a métodos de colecciones parametrizadas donde el tipo del argumento real no coincide con el tipo del elemento de la colección.
+Informa sobre llamadas a métodos de colecciones parametrizadas donde el tipo real del argumento no coincide con el tipo de elemento de la colección.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   List&lt;Integer&gt; list = getListOfElements();
-  list.remove(""); // remove se resalta
+  list.remove(""); //remove será resaltado
 </code></pre>
-<!-- tooltip end -->
 <p>
-  En la configuración de la inspección, puede desactivar las advertencias para el código que puede ser correcto, como el siguiente:
+  En la configuración de la inspección, se puede deshabilitar las advertencias para código potencialmente correcto, como se muestra a continuación:
 </p>
 <pre><code>
   public boolean accept(Map&lt;Integer, String&gt; map, Object key) {

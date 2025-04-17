@@ -1,15 +1,14 @@
 <html>
 <body>
-Inspecciona calificadores <code>super</code> innecesarios en referencias de campos y llamadas a métodos.
+Informa sobre calificadores <code>super</code> innecesarios en llamadas a métodos y referencias a campos.
 <p>
-  Un calificador <code>super</code> es innecesario cuando el campo o método de la superclase no está oculto/sobreescrito en la clase que lo llama.
+  El calificador <code>super</code> no es necesario cuando el campo o método de la superclase no está oculto/sobrescrito en la clase que realiza la llamada.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
     void foo() {}
   }
-
   class Bar extends Foo {
     void bar() {
       super.foo();
@@ -21,23 +20,21 @@ Inspecciona calificadores <code>super</code> innecesarios en referencias de camp
   class Foo {
     void foo() {}
   }
-
   class Bar extends Foo {
     void bar() {
       foo();
     }
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Usa los ajustes de inspección para ignorar calificadores que ayudan a distinguir el acceso a miembros de la superclase de los miembros de la clase externa que tienen el mismo nombre.
+  La configuración de la inspección permite ignorar los calificadores que ayudan a distinguir el acceso a miembros de la superclase de miembros con el mismo nombre en la clase externa.
 <p>
 <p>
-  Consulta también las siguientes inspecciones:
+  Consulte también las siguientes inspecciones:
 </p>
 <ul>
-  <li><i>Java | Visibilidad | El acceso a un campo heredado parece un acceso a un elemento del código circundante</i></li>
-  <li><i>Java | Visibilidad | La llamada a un método heredado parece una llamada a un método local</i></li>
+  <li><i>Java | Visibilidad | El acceso a campos heredados es similar al acceso a elementos en el código circundante</i></li>
+  <li><i>Java | Visibilidad | Las llamadas a métodos heredados son similares a las llamadas a métodos locales</i></li>
 </ul>
 </body>
 </html>

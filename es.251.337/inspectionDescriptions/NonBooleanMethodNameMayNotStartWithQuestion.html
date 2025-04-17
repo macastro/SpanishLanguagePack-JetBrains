@@ -1,26 +1,19 @@
 <html>
 <body>
-Informa sobre métodos no booleanos cuyos nombres empiezan con una palabra
-interrogativa. Dichos nombres de método pueden resultar confusos.
-<p>Este control ignora los métodos no booleanos que sobrescriben los métodos de
-la biblioteca.</p>
+Reporta métodos no booleanos que comienzan con palabras interrogativas. Estos nombres de métodos pueden resultar confusos.
+<p>Esta inspección ignorará los métodos no booleanos que sobrescriben métodos de biblioteca.</p>
 <p><b>Ejemplo:</b>
 <pre><code>
   public void hasName(String name) {
     assert names.contains(name);
   }
 </code></pre>
-<p>Solo en el editor está disponible una solución rápida que cambia el nombre de
-dichos métodos.</p>
-<!-- tooltip end -->
-<p>Configurar la inspección:</p>
+<p>La corrección rápida para renombrar estos métodos solo está disponible en el editor.</p>
+<p>Configuración de la inspección:</p>
 <ul>
-  <li>Usa la lista <b>Prefijos de los nombres de método booleano</b> para especificar
-      las palabras interrogativas que deben usarse solo para los métodos booleanos.</li>
-  <li>Usa la opción <b>Ignorar métodos con tipo de retorno 'java.lang.Boolean'</b>
-      para ignorar los métodos con tipo de retorno <code>java.lang.Boolean</code>.</li>
-  <li>Usa la opción <b>Ignorar métodos que sobrescriben/implementan un método
-      super</b> para ignorar los métodos que tienen supermétodos. </li>
+  <li>Utilice la lista de <b>prefijos para nombres de métodos booleanos</b> para especificar palabras interrogativas que deberían usarse solo para métodos booleanos.</li>
+  <li>Utilice la opción <b>ignorar métodos con tipo de retorno 'java.lang.Boolean'</b> para ignorar métodos que devuelven <code>java.lang.Boolean</code>.</li>
+  <li>Utilice la opción <b>ignorar métodos que sobrescriben/implementan métodos superiores</b> para ignorar métodos que tienen métodos superiores.</li>
 </ul>
 </body>
 </html>

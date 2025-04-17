@@ -1,16 +1,13 @@
-**Español:**
-
 <html>
 <body>
-Informa de partes de las expresiones booleanas que siempre son <code>true</code>, siempre son <code>false</code> o redundantes.
-  Este tipo de expresiones booleanas se pueden simplificar para que sea más fácil leer tu código. En algunos casos, también indica que hay otros problemas.
-
+Informa sobre partes de expresiones booleanas que son siempre <code>true</code>, siempre <code>false</code> o redundantes.
+  Estas expresiones booleanas pueden simplificarse para mejorar la legibilidad del código. En algunos casos, esto también puede indicar otros problemas.
 <p>Ejemplo:</p>
 <pre><code>func isNonZero(x, y int) bool {
-  // La segunda comparación o bien es siempre verdadera,
-  // o bien no se ejecuta nunca
+  // La segunda comparación es siempre true,
+  // o nunca se ejecuta
   return x > 0 && x > 0
 }</code></pre>
-<p>Puedes aplicar la corrección rápida <b>Simplificar expresión</b> a la parte <code>x > 0 && x > 0</code>. Después de aplicar la corrección rápida, la expresión será: <code>x > 0</code>.</p>
+<p>Puede aplicar la corrección rápida <b>Simplificar expresión</b> a la parte <code>x > 0 && x > 0</code>. Después de aplicar la corrección rápida, la expresión se verá así: <code>x > 0</code>.</p>
 </body>
 </html>

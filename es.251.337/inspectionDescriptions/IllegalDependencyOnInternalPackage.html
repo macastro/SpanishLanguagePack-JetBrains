@@ -1,7 +1,7 @@
 <html>
 <body>
-Reporta las referencias dentro de un módulo que no se exportan desde un módulo nombrado y que no contiene <code>module-info.java</code> en el paquete. 
-<p>Esta configuración puede ocurrir cuando algunos módulos en el proyecto ya se han migrado a módulos Java, pero otros aún no están modularizados.
-Como en el JDK, dicho código no modularizado no debe acceder a código en un módulo nombrado que no se haya exportado explícitamente.</p>
+Informa sobre referencias a módulos que no contienen <code>module-info.java</code> en el paquete y que no están exportados desde módulos con nombre.
+<p>Esta configuración puede ocurrir cuando algunos módulos en el proyecto han migrado a módulos Java mientras que otros permanecen sin modularizar.
+Similar al JDK, este código no modularizado no debe acceder a código que no esté explícitamente exportado desde módulos con nombre.</p>
 </body>
 </html>

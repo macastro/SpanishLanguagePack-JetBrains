@@ -1,22 +1,17 @@
 <html>
 <body>
-Reporta sentencias de asignación con el formato <code>x = atomic.AddUint64(&x, 1)</code>.
-<p>Este tipo de operaciones no son atómicas,
-y es un error común de la API <code>sync/atomic</code>. Para hacerlas atómicas, hay que quitar la asignación
-para utilizar una llamada directa: <code>atomic.AddUint64(&x, 1)</code>. En ese caso, el valor de <code>x</code> será actualizado
-atómicamente por dirección.</p>
+Reporta declaraciones de asignación en la forma <code>x = atomic.AddUint64(&x, 1)</code>.
+<p>Esta operación no es atómica, lo cual es un uso incorrecto común de la API <code>sync/atomic</code>. Para hacerla atómica, elimine la asignación y use la llamada directa: <code>atomic.AddUint64(&x, 1)</code>. En este caso, el valor de <code>x</code> se actualizará atómicamente por referencia.</p>
 <p>Ejemplo:</p>
 <pre><code>import (
  "sync/atomic"
 )
-
 type Counter uint64
-
 func AtomicTests() {
  x := uint64(1)
- x = atomic.AddUint64(&x, 1)         // ERROR "asignación a valor atómico"
- _, x = 10, atomic.AddUint64(&x, 1)  // ERROR "asignación directa a valor atómico"
- x, _ = atomic.AddUint64(&x, 1), 10  // ERROR "asignación directa a valor atómico"
+ x = atomic.AddUint64(&x, 1)         // Error "asignación directa a valor atómico"
+ _, x = 10, atomic.AddUint64(&x, 1)  // Error "asignación directa a valor atómico"
+ x, _ = atomic.AddUint64(&x, 1), 10  // Error "asignación directa a valor atómico"
 }</code></pre>
 </body>
 </html>

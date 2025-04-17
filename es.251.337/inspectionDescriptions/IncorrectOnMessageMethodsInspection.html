@@ -1,50 +1,48 @@
 <html>
 <body>
-<p>Se informa de un método WebSocket incorrecto con la notación <code>@OnMessage</code>.</p>
-
+<p>Reporta métodos WebSocket incorrectos que utilizan la anotación <code>@OnMessage</code>.</p>
 <p>
-  Esta notación marca métodos que procesan mensajes entrantes de WebSocket. Cada punto final de WebSocket solo puede tener un método que procese mensajes para cada formato (texto, binario, pong) de mensaje de WebSocket. Los métodos con la notación <code>@OnMessage</code> pueden tener la siguiente serie de parámetros en cualquier orden:
+  Esta anotación marca los métodos que manejan mensajes WebSocket entrantes. Cada endpoint WebSocket solo puede contener un método de manejo de mensajes para todos los formatos de mensajes WebSocket (texto, binario, pong). Los métodos anotados con <code>@OnMessage</code> pueden tener los siguientes parámetros en cualquier orden:
 </p>
-
 <ul>
   <li>
-    Uno de los siguientes conjuntos de parámetros:
+    Puede contener uno de los siguientes conjuntos de parámetros:
     <ul>
       <li>
         Si el método está procesando mensajes de texto:
         <ul>
-          <li>Una <code>String</code> para recibir el mensaje completo.</li>
-          <li>Una primitiva Java o una clase equivalente para recibir el mensaje completo que se convierte a ese tipo.</li>
-          <li>Un par de <code>String</code> y boolean para recibir el mensaje dividido.</li>
-          <li>Un <code>Reader</code> para recibir el mensaje completo como una secuencia de bloqueo.</li>
-          <li>Cualquier parámetro de objeto que tenga el punto final con un codificador de texto (<code>Decoder.Text</code> o <code>Decoder.TextStream</code>).
+          <li><code>String</code>, para recibir el mensaje completo</li>
+          <li>Tipo primitivo de Java o su equivalente en clase, para recibir el mensaje completo convertido a ese tipo</li>
+          <li>Par de <code>String</code> y booleano, para recibir el mensaje por partes</li>
+          <li><code>Reader</code>, para recibir el mensaje completo como un flujo bloqueante</li>
+          <li>Cualquier parámetro objeto para el que el endpoint tenga un decodificador de texto (<code>Decoder.Text</code> o <code>Decoder.TextStream</code>)
           </li>
         </ul>
       </li>
       <li>
         Si el método está procesando mensajes binarios:
         <ul>
-          <li>Un <code>byte[]</code> o un <code>ByteBuffer</code> para recibir el mensaje completo.</li>
-          <li>Un par de <code>byte[]</code> y boolean, o un par de <code>ByteBuffer</code> y boolean para recibir el mensaje dividido.</li>
-          <li>Un <code>InputStream</code> para recibir el mensaje completo como una secuencia de bloqueo.</li>
-          <li>Cualquier parámetro de objeto que tenga el punto final con un codificador binario (<code>Decoder.Binary</code> o <code>Decoder.BinaryStream</code>).
+          <li><code>byte[]</code> o <code>ByteBuffer</code>, para recibir el mensaje completo</li>
+          <li>Par de <code>byte[]</code> y booleano, o par de <code>ByteBuffer</code> y booleano, para recibir el mensaje por partes</li>
+          <li><code>InputStream</code>, para recibir el mensaje completo como un flujo bloqueante</li>
+          <li>Cualquier parámetro objeto para el que el endpoint tenga un decodificador binario (<code>Decoder.Binary</code> o <code>Decoder.BinaryStream</code>)
           </li>
         </ul>
       </li>
       <li>
         Si el método está procesando mensajes pong:
         <ul>
-          <li>Un <code>PongMessage</code> para procesar el mensaje pong.</li>
+          <li><code>PongMessage</code>, para manejar mensajes pong</li>
         </ul>
       </li>
     </ul>
   </li>
-  <li>Cualquier número de parámetros <code>String</code> o primitivos de Java con la notación <code>@PathParam</code> para puntos finales del servidor.</li>
-  <li>Un parámetro <code>Session</code> opcional.</li>
+  <li>Cualquier número de parámetros <code>String</code> o primitivos Java del endpoint del servidor anotados con <code>@PathParam</code></li>
+  <li>Un parámetro opcional <code>Session</code></li>
 </ul>
-
 <p>
-  Si un método devuelve un valor, el tiempo de ejecución de WebSocket lo interpreta como un mensaje que debe devolverse al peer. Los tipos de valor devuelto aceptables son <code>String</code>, <code>ByteBuffer</code>, <code>byte[]</code>, cualquier primitiva o equivalente de clase Java o cualquier tipo para el que exista un codificador dedicado. Si el método devuelve un valor primitivo de Java, la implementación debe construir un mensaje de texto para enviar que utilice la representación estándar de la cadena de caracteres Java de la primitiva Java a menos que el desarrollador haya proporcionado un codificador para el tipo configurado para este punto final, en cuyo caso se debe utilizar dicho codificador. Si el método devuelve una clase equivalente a una primitiva Java, la implementación debe construir un mensaje de texto de la primitiva Java equivalente como se explicó anteriormente.
+  Si el método devuelve un valor, el tiempo de ejecución WebSocket lo interpreta como un mensaje para devolver al par.
+  Los tipos de retorno permitidos son <code>String</code>, <code>ByteBuffer</code>, <code>byte[]</code>, cualquier primitivo Java o su equivalente en clase, y cualquier tipo con un codificador. Si el método devuelve un valor primitivo Java, la implementación debe construir el mensaje de texto a enviar utilizando la representación estándar Java String del primitivo, a menos que el desarrollador haya configurado un codificador para ese tipo en el endpoint, en cuyo caso se debe usar ese codificador. Si el método devuelve un equivalente de clase de un primitivo Java, la implementación debe construir el mensaje de texto a partir del equivalente del primitivo Java como se describió anteriormente.
 </p>
 </body>
 </html>

@@ -1,30 +1,26 @@
 <html>
 <body>
-Reporta llamadas de registro de SLF4J, Log4j2 y akka.event.LoggingAdapter, como `logger.info("{}: {}", key)` donde el número de marcadores de posición de `{ }` en el mensaje de registro no coincide con el número de otros argumentos en la llamada de registro.
-<!-- tooltip end -->
+Informa sobre llamadas de registro SLF4J, Log4j2 y akka.event.LoggingAdapter, como <code>logger.info("{}: {}", key)</code>, donde el número de marcadores de posición <code>{}</code> en el mensaje del logger no coincide con el número de argumentos adicionales en la llamada de registro.
 <p>
-Utilice la opción de inspección para especificar qué implementación utiliza SLF4J.
-Si se selecciona **Verificar automáticamente**, entonces `org.apache.logging.slf4j.Log4jLogger` se busca en la ruta de clase.
-Si este archivo es encontrado o se selecciona **Sí**, entonces los casos, cuando el último parámetro con un tipo de excepción tiene un marcador de posición, no se reportará para SLFJ4 API.<br/>
+  Esta opción de inspección permite especificar qué implementación usa SLF4J.
+  Si se selecciona <strong>Detectar automáticamente</strong>, se busca <code>org.apache.logging.slf4j.Log4jLogger</code> en el classpath.
+  Si se encuentra este archivo o se selecciona <strong>Sí</strong>, no se informarán los casos con marcadores de posición para el último parámetro con tipo de excepción para la API de SLF4J.<br/>
 Por ejemplo:
 <pre><code lang="java">
-//este caso no será reportado con la opción "Sí"
+//Este caso no se informará si la opción "Sí" está seleccionada
 log.error("For id {}: {}", "1", new RuntimeException());
 </code></pre>
-En este caso 'new RuntimeException()' se imprimirá utilizando 'toString()', (su rastro de pila no se imprimirá):
+En este caso, 'new RuntimeException()' se imprimirá usando 'toString()' (sin imprimir su traza de pila):
 <pre><code lang="text">
 For id 1: java.lang.RuntimeException
 </code></pre>
-
 De lo contrario, se resaltará porque el último marcador de posición no se utiliza:
 <pre><code lang="text">
 For id 1: {}
 java.lang.RuntimeException: null
 </code></pre>
-
-La opción **No** se puede utilizar para resaltar siempre tales casos cuando se utiliza un marcador de posición para una excepción incluso si `org.apache.logging.slf4j.Log4jLogger` se utiliza como un backend.<br/>
-
-Esta opción solo funciona para SLF4J.
+La opción <strong>No</strong> se puede usar para resaltar siempre estos casos cuando se usa un marcador de posición para una excepción, incluso cuando <code>org.apache.logging.slf4j.Log4jLogger</code> se usa como backend.<br/>
+Esta opción solo se aplica a SLF4J.
 <p>
 </body>
 </html>

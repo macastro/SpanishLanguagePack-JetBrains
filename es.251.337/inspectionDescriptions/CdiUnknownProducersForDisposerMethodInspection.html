@@ -1,10 +1,6 @@
 <html>
 <body>
-<p>Informa de métodos disposer sin el método producer correspondiente.</p>
-<p>Cada método disposer debe tener exactamente un parámetro disposed del mismo tipo que el método producer correspondiente o
-  el tipo de retorno del campo producer. Al buscar los métodos disposer para un método producer o campo producer, el contenedor
-  considera el tipo y los calificadores del parámetro disposed. Si el parámetro disposed se resuelve a un método producer o
-  campo producer declarado por la misma clase de bean, el contenedor debe llamar a este método al destruir cualquier instancia devuelta por
-  ese método producer o campo producer.</p>
+<p>Se informa un método disposer sin el método productor correspondiente.</p>
+<p>Cada método disposer debe tener exactamente un parámetro disposed del mismo tipo que el tipo de retorno del método productor o campo productor correspondiente. Al buscar un método disposer para un método productor o campo productor, el contenedor considera el tipo y los calificadores del parámetro disposed. Si el parámetro disposed se resuelve a un método productor o campo productor declarado en la misma clase Bean, el contenedor debe invocar este método cuando destruya cualquier instancia retornada por ese método productor o campo productor.</p>
 </body>
 </html>

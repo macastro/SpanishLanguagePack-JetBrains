@@ -1,10 +1,9 @@
 <html>
 <body>
-Informa de declaraciones que se pueden desestructurar.
+Informa sobre declaraciones que pueden ser desestructuradas.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   data class My(val first: String, val second: Int, val third: Boolean)
-
   fun foo(list: List&lt;My>) {
       list.forEach { my ->
           println(my.second)
@@ -12,10 +11,9 @@ Informa de declaraciones que se pueden desestructurar.
       }
   }
 </code></pre>
-<p>La corrección rápida desestructura la declaración e introduce nuevas variables con nombres de la clase correspondiente:</p>
+<p>Esta corrección rápida desestructura la declaración e introduce nuevas variables con nombres de la clase correspondiente:</p>
 <pre><code>
   data class My(val first: String, val second: Int, val third: Boolean)
-
   fun foo(list: List&lt;My>) {
       list.forEach { (_, second, third) ->
           println(second)

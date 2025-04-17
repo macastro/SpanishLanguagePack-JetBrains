@@ -1,11 +1,11 @@
 <html>
 <body>
-Informa sobre referencias a las clases <code>NilClass</code>, <code>TrueClass</code> y <code>FalseClass</code> en las signaturas de tipo. El uso de estas clases es innecesariamente verborrágico.
-<p>Hay una corrección rápida disponible para reemplazar el uso de <code>NilClass</code>, <code>TrueClass</code> o <code>FalseClass</code> por su literal respectivo.</p>
+Informa sobre referencias a las clases <code>NilClass</code>, <code>TrueClass</code> y <code>FalseClass</code> en firmas de tipos. El uso de estas clases es innecesariamente detallado.
+<p>El uso de <code>NilClass</code>, <code>TrueClass</code> o <code>FalseClass</code> puede ser reemplazado por sus literales respectivos mediante una corrección rápida.</p>
 <p>Ejemplo:</p>
-<pre><code># Se hace referencia a 'NilClass' en lugar de 'nil', ...
-escribe ejemplo = NilClass | TrueClass | FalseClass</code></pre>
-<p>Después de la corrección rápida:</p>
+<pre><code># Referencia a 'NilClass' en lugar de 'nil', ...
+type example = NilClass | TrueClass | FalseClass</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>type example = nil | true | false</code></pre>
 </body>
 </html>

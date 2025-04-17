@@ -1,14 +1,11 @@
 <html>
 <body>
-Informa variables locales cuyos nombres son demasiado cortos, demasiado largos o no siguen el patrón especificado de expresión regular.
-<p><b>Ejemplo:</b> <code>int X = 42;</code>
-ese indicaría que se debe informar si la inspección se habilita con los ajustes predeterminados en los que un nombre de variable debe comenzar con una letra minúscula.</p>
-
-<!-- tooltip end -->
-<p>Configurar la inspección:</p>
+Reporta variables locales cuyo nombre es demasiado corto, demasiado largo o no sigue el patrón de expresión regular especificado.
+<p><b>Ejemplo</b>: Si esta inspección está habilitada con la configuración predeterminada, donde los nombres de variables deben comenzar con una letra minúscula, se reportará <code>int X = 42;</code>.</p>
+<p>Configuración de la inspección:</p>
 <p>
-Utiliza los campos en la sección de <b>Opciones</b> para especificar la longitud mínima, la longitud máxima y una expresión regular que se espera para los nombres de variables locales.
-Especifica <b>0</b> para que no se verifique la longitud de los nombres. Las expresiones regulares deben especificarse en el formato estándar de <b>java.util.regex.</b>
-<p>Utiliza las casillas de verificación para ignorar los parámetros de secciones de <code>for</code>-loop y <code>catch</code>.</p>
+Utilice los campos en la sección de <b>Opciones</b> para especificar la longitud mínima, la longitud máxima y la expresión regular esperada para los nombres de variables locales.
+Especifique <b>0</b> para no verificar la longitud del nombre. La expresión regular debe especificarse en el formato estándar de <b>java.util.regex</b>.
+<p>Use la casilla de verificación para ignorar los parámetros en bucles <code>for</code> y secciones <code>catch</code>.</p>
 </body>
 </html>

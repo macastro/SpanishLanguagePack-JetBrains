@@ -1,27 +1,24 @@
 <html>
 <body>
-Reporta clases con <code>equals()</code> sobreescrito pero sin <code>hashCode()</code> sobreescrito, o viceversa.
-También reporta declaraciones de objetos que sobreescriben <code>equals()</code> o <code>hashCode()</code>.
-<p>Esto puede llevar a un comportamiento no deseado cuando una clase es añadida a una <code>Collection</code></p>
+Informa sobre clases que sobrescriben <code>equals()</code> sin sobrescribir <code>hashCode()</code> (o viceversa).
+También informa sobre declaraciones de objetos que sobrescriben <code>equals()</code> o <code>hashCode()</code>.
+<p>Esto puede causar comportamientos incorrectos cuando se agregan clases a una <code>Collection</code></p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class C1 {
       override fun equals(other: Any?) = true
   }
-
   class C2 {
       override fun hashCode() = 0
   }
-
   object O1 {
       override fun equals(other: Any?) = true
   }
-
   object O2 {
       override fun hashCode() = 0
   }
 </code></pre>
-<p>El arreglo rápido sobrescribe <code>equals()</code> o <code>hashCode()</code> para clases y borra estos métodos para objetos:</p>
+<p>La corrección rápida sobrescribirá los métodos <code>equals()</code> o <code>hashCode()</code> para las clases y eliminará estos métodos para los objetos:</p>
 <pre><code>
    class C1 {
        override fun equals(other: Any?) = true
@@ -29,7 +26,6 @@ También reporta declaraciones de objetos que sobreescriben <code>equals()</code
            return javaClass.hashCode()
        }
    }
-
    class C2 {
        override fun hashCode() = 0
        override fun equals(other: Any?): Boolean {
@@ -38,10 +34,8 @@ También reporta declaraciones de objetos que sobreescriben <code>equals()</code
            return true
        }
    }
-
    object O1 {
    }
-
    object O2 {
    }
 </code></pre>

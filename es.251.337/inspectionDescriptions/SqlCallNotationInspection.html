@@ -1,7 +1,7 @@
 <html>
 <body>
-Reporta llamadas en las que los argumentos posicionales van después de los nombrados. Funciona en PostgreSQL, Oracle y Db2.
-<p>Ejemplo (En PostgreSQL):</p>
+Llamada con argumentos posicionales después de argumentos nombrados. Aplicable para PostgreSQL, Oracle y Db2.
+<p>Ejemplo (en PostgreSQL):</p>
 <pre><code>CREATE FUNCTION foo(a int, b int, c int) RETURNS int
     LANGUAGE plpgsql AS
 $$
@@ -10,9 +10,9 @@ BEGIN
 END
 $$;
 SELECT foo(a => 1, b => 2, c => 3);
-  -- `3` va después del argumento nombrado
+  -- `3` después de argumentos nombrados
 SELECT foo(1, b => 2, 3);
-  -- `1` y `3` van después del argumento nombrado
+  -- `1` y `3` después de argumentos nombrados
 SELECT foo(b => 2, 1, 3);</code></pre>
 </body>
 </html>

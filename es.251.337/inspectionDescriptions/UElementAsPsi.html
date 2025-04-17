@@ -1,17 +1,15 @@
 <html>
 <body>
-Reporta el uso de <code>UElement</code> del UAST como un <code>PsiElement</code>.
-
+Reporta el uso de UAST <code>UElement</code> como <code>PsiElement</code>.
 <p>
-Los <code>PsiElement</code> obtenidos de esta manera son ambiguos.
+  El <code>PsiElement</code> obtenido de esta manera es ambiguo.
 </p>
-
 <p>
-Para obtener un <code>PsiElement</code> "físico", utiliza <code>UElementKt.getSourcePsiElement()</code>. Para los <code>PsiElement</code> que "emulen" el comportamiento de elementos Java (<code>PsiClass</code>, <code>PsiMethod</code>, etc.), utiliza <code>UElementKt.getAsJavaPsiElement()</code>.
+  Para obtener el <code>PsiElement</code> "físico", utilice <code>UElementKt.getSourcePsiElement()</code>, y para el <code>PsiElement</code> que emula el comportamiento de elementos Java "simulados" (<code>PsiClass</code>, <code>PsiMethod</code>, etc.),
+  utilice <code>UElementKt.getAsJavaPsiElement()</code>.
 </p>
-
 <p>
-Para más información, consulta <a href="https://plugins.jetbrains.com/docs/intellij/uast.html">UAST - Árbol de sintaxis abstracto unificado</a> en la documentación del SDK.
+  Consulte <a href="https://plugins.jetbrains.com/docs/intellij/uast.html">UAST - Árbol de Sintaxis Abstracta Unificado</a> en la documentación del SDK.
 </p>
 </body>
 </html>

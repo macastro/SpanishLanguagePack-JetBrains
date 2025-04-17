@@ -1,21 +1,18 @@
 <html>
 <body>
-Informa de llamadas encadenadas que pueden simplificarse con el operador de navegación segura (<code>&amp;.</code>). Un grupo de llamadas encadenadas es un patrón común para comprobar si hay <code>nil</code> en cada componente de llamada.
+El informe sugiere simplificar las llamadas en cadena utilizando el operador de navegación segura (<code>&amp;.</code>). Una secuencia de llamadas en cadena es un patrón común
+para verificar <code>nil</code> en cada componente de la llamada.
 <p>Ejemplo:</p>
 <pre>
-<code># Mala práctica
+<code># 不良做法
 if user &amp;&amp; user.profile &amp;&amp; user.profile.thumbnails
-end
+end</code>
 </pre>
-</code>
-
-Hay disponible una corrección rápida para simplificar la expresión con <code>&amp;.</code>. Después de aplicar la corrección rápida, el resultado es el siguiente:
-
+Se puede utilizar la corrección rápida para simplificar la expresión usando <code>&amp;.</code>. Después de aplicar la corrección rápida, el resultado se verá así:
 <pre>
-<code># Buena práctica
+<code># 优良做法
 if user&amp;.profile&amp;.thumbnails
-end
+end</code>
 </pre>
-</code>
 </body>
 </html>

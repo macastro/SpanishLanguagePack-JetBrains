@@ -1,22 +1,20 @@
 <html>
 <body>
-Reporta declaraciones <code>import</code> no ordenadas de acuerdo al estilo de código actual (ver Ajustes | Editor | Estilo de Código).
+Informa sobre declaraciones de <code>import</code> que no están ordenadas según el estilo de código actual (consulte "Configuración|Editor|Estilo de código").
 <p><b>Ejemplo:</b></p>
 <pre><code>
   import java.util.List;
   import java.util.ArrayList;
-
-  public class Ejemplo {
-    List lista = new ArrayList();
+  public class Example {
+    List list = new ArrayList();
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida "Optimizar Imports":
+<p>Después de aplicar la corrección rápida "Optimizar imports":
 <pre><code>
   import java.util.ArrayList;
   import java.util.List;
-
-  public class Ejemplo {
-    List lista = new ArrayList();
+  public class Example {
+    List list = new ArrayList();
   }
 </code></pre>
 </body>

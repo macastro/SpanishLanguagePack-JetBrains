@@ -1,44 +1,38 @@
 <html>
 <body>
-Informa de los parámetros o variables locales declarados innecesariamente como <code>final</code>.
-<p>Hay estándares de codificación que desaconsejan utilizar <code>final</code> para declarar variables por motivos de concisión.</p>
+Informa sobre variables locales o parámetros declarados innecesariamente como <code>final</code>.
+<p>Por razones de concisión, algunos estándares de codificación desaconsejan las variables declaradas como <code>final</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
     Foo(Object o) {}
-
     void bar(final Object o) {
       new Foo(o);
     }
   }
 </code></pre>
-<p>Tras aplicar la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class Foo {
     Foo(Object o) {}
-
     void bar(Object o) {
       new Foo(o);
     }
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Usa las opciones de inspección para alternar los informes de:
+  Las opciones de inspección permiten alternar los informes para:
 </p>
 <ul>
   <li>
-    variables locales
+    Variables locales
   </li>
   <li>
-    parámetros (incluidos los
-    parámetros de los bloques <code>catch</code> y las sentencias <code>for</code> mejoradas)
+    Parámetros (incluyendo parámetros en bloques <code>catch</code> y sentencias <code>for</code> mejoradas)
   </li>
 </ul>
 <p>
-  También puedes configurar la inspección para que solo informe de los parámetros <code>final</code> de los métodos <code>abstract</code> o de interfaz, que pueden considerarse innecesariamente adicionales ya que tales marcas no
-  afectan a la implementación de estos métodos.
+  Además, puede configurar la inspección para que solo informe sobre parámetros <code>final</code> en métodos <code>abstract</code> o de interfaz, que pueden considerarse redundantes ya que tales marcadores no afectan la implementación de estos métodos.
 </p>
-
 </body>
 </html>

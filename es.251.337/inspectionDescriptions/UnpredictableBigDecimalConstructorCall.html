@@ -1,13 +1,10 @@
 <html>
 <body>
-Informa de llamadas a constructores de <code>BigDecimal</code> que aceptan un valor <code>double</code>.
-Estos constructores producen <code>BigDecimal</code> que es exactamente igual que el valor <code>double</code> suministrado.
-Sin embargo, como los dobles se codifican mediante el formato de punto flotante binario de doble precisión de 64 bits IEEE 754, el valor exacto puede ser inesperado.
-<p>Por ejemplo, <code>new BigDecimal(0.1)</code> genera un objeto <code>BigDecimal</code>. Su valor es
-  <small><code>0.1000000000000000055511151231257827021181583404541015625</code></small>
-  que es el número más cercano a 0,1 que puede representarse como un doble.
-  Para obtener <code>BigDecimal</code> que almacena el mismo valor que está escrito en el código fuente,
-  use <code>new BigDecimal("0.1")</code> o <code>BigDecimal.valueOf(0.1)</code>.</p>
+Informa sobre llamadas al constructor de <code>BigDecimal</code> que acepta valores <code>double</code>.
+Estos constructores generan un <code>BigDecimal</code> que es exactamente igual al valor <code>double</code> proporcionado.
+Sin embargo, debido a que double está codificado en formato binario de punto flotante IEEE 754 de 64 bits de doble precisión, el valor exacto puede ser inesperado.
+<p>Por ejemplo, <code>new BigDecimal(0.1)</code> genera un objeto <code>BigDecimal</code>. Su valor es <small><code>0.1000000000000000055511151231257827021181583404541015625</code></small>, que es el número más cercano a 0.1 que se puede representar como double.
+  Para obtener un <code>BigDecimal</code> donde el valor almacenado sea igual al valor escrito en el código fuente, use <code>new BigDecimal("0.1")</code> o <code>BigDecimal.valueOf(0.1)</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Constructor {
@@ -24,6 +21,5 @@ Sin embargo, como los dobles se codifican mediante el formato de punto flotante 
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

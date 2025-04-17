@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre los constructores con un parámetro de autorreferencia no nulo.
-<p>Dichos constructores nunca instancian una clase.</p>
-<p>La corrección rápida convierte el tipo de parámetro en nullable.</p>
+Informa sobre constructores con parámetros autorreferenciados no nulos.
+<p>Estos constructores nunca pueden instanciar la clase.</p>
+<p>La corrección rápida convertirá el tipo del parámetro en nullable.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class SelfRef(val ref: SelfRef)
@@ -11,6 +11,5 @@ Informa sobre los constructores con un parámetro de autorreferencia no nulo.
 <pre><code>
   class SelfRef(val ref: SelfRef?)
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

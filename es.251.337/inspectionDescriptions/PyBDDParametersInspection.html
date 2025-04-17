@@ -1,15 +1,13 @@
 <html>
 <body>
-<p>Informa argumentos incorrectos en funciones de definición de pasos.</p>
+<p>Informa sobre argumentos incorrectos en la definición de pasos de funciones.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 from behave import *
-
-
 @given("I'm ready")
 def step_impl(context,a):
     raise NotImplementedError(u'STEP: Given I\'m ready')
 </code></pre>
-<p>El argumento <code>a</code> se considera impropio y se resalta. Un arreglo rápido lo elimina.</p>
+<p>Resalta el argumento incorrecto <code>a</code>. La corrección rápida lo eliminará.</p>
 </body>
 </html>

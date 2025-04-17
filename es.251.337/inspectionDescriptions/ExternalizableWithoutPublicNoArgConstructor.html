@@ -1,7 +1,6 @@
 <html>
 <body>
-Informa clases <code>Externalizable</code> sin un constructor público sin argumentos.
-<p>Cuando un objeto <code>Externalizable</code> es reconstruido, se crea una instancia usando el constructor público sin argumento antes de llamar al método <code>readExternal</code>. Si no hay disponible un constructor público sin argumentos, se lanzará una <code>java.io.InvalidClassException</code> en tiempo de ejecución.
-  <!-- tooltip end -->
+Informa sobre clases <code>Externalizable</code> que no tienen un constructor público sin parámetros.
+<p>Durante la reconstrucción de un objeto <code>Externalizable</code>, se crea una instancia utilizando el constructor público sin parámetros antes de llamar al método <code>readExternal</code>. Si el constructor público sin parámetros no está disponible, se lanzará una <code>java.io.InvalidClassException</code> en tiempo de ejecución.
 </body>
 </html>

@@ -1,13 +1,13 @@
 <html>
 <body>
-Informa sobre el código con olor a <em>Envidia de Características</em>. Se lanza la advertencia cuando un método llama a métodos de otra clase tres o más veces. Las llamadas a clases de biblioteca, clases principales, clases incluidas o contenedoras no se cuentan en esta inspección. La envidia de características suele ser una indicación de que esta funcionalidad se encuentra en una clase errónea.
+Informa sobre el code smell de <em>Feature Envy</em>. Se emitirá una advertencia cuando un método llame a métodos de otra clase tres o más veces. Las llamadas a clases de biblioteca, clases padre y clases contenedoras están excluidas de esta comprobación. Feature Envy generalmente indica que la funcionalidad está en la clase incorrecta.
 <p>Ejemplo:</p>
 <pre><code>
   class JobManager {
-    // Advertencia: este método llama a tres métodos
-    // de la clase Job
-    // Sería mejor mover esta cadena de
-    // llamadas a la propia clase Job.
+    // Advertencia: este método llama a
+    // tres métodos de la clase Job
+    // Es mejor mover esta cadena de llamadas
+    // a la propia clase Job.
     void performJob(Job job) {
       job.beforeStart();
       job.process();
@@ -15,6 +15,5 @@ Informa sobre el código con olor a <em>Envidia de Características</em>. Se lan
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

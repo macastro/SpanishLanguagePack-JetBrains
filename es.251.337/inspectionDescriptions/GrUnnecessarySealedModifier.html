@@ -1,13 +1,12 @@
 <html>
 <body>
-<p>Informa sobre modificadores <code>sealed</code> innecesarios que se utilizan en métodos, campos o variables.</p>
-<p>Este modificador sólo tiene efecto en clases, interfaces y rasgos.</p>
+<p>Informa sobre el uso innecesario del modificador <code>sealed</code> en métodos, campos o variables.</p>
+<p>Este modificador solo es válido para clases, interfaces y traits.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  <b>sealed</b> boolean foo() {} // el modificador es innecesario
-  <b>sealed</b> Object bar // el modificador es innecesario
-
-  // el modificador es necesario y por tanto no está resaltado
+  <b>sealed</b> boolean foo() {} // Modificador innecesario
+  <b>sealed</b> Object bar // Modificador innecesario
+  // Modificador requerido, por lo tanto no está resaltado
   <b>sealed</b> class A {}
 </code></pre>
 </body>

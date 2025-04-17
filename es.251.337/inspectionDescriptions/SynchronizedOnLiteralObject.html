@@ -1,9 +1,9 @@
 <html>
 <body>
-Reporta bloques <code>synchronized</code> que se bloquean en objetos inicializados con un literal.
+Informa sobre bloques <code>synchronized</code> que se bloquean en objetos inicializados con literales.
 <p>
-  Los literales de cadena son internados y <code>Character</code>, <code>Boolean</code> y <code>Number</code> pueden ser asignados desde un caché.
-  Debido a esto, es posible que alguna otra parte del sistema, que usa un objeto inicializado con el mismo literal, esté sosteniendo una referencia al mismo objeto.  Esto puede crear situaciones de interbloqueo inesperadas, si el objeto de bloqueo fue considerado privado.
+  Los literales de cadena se almacenan en el pool de strings, y los literales de <code>Character</code>, <code>Boolean</code> y <code>Number</code> pueden asignarse desde el caché.
+  Por lo tanto, es posible que otras partes del sistema (que utilizan objetos inicializados con el mismo literal) contengan referencias al mismo objeto. Esto puede provocar situaciones inesperadas de interbloqueo si se considera que el objeto bloqueado es privado.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -15,10 +15,8 @@ Reporta bloques <code>synchronized</code> que se bloquean en objetos inicializad
     }
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Usa la opción <strong>Advertir sobre todos los posibles literales</strong> para reportar cualquier sincronización en
-  <code>String</code>, <code>Character</code>, <code>Boolean</code> y <code>Number</code> objetos.
+  La opción <strong>advertir sobre todos los literales posibles</strong> informa sobre cualquier sincronización de objetos <code>String</code>, <code>Character</code>, <code>Boolean</code> y <code>Number</code>.
 </p>
 </body>
 </html>

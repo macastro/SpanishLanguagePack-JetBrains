@@ -1,10 +1,10 @@
 <html>
 <body>
-<p>Informar referencias de archivos sin resolver en literales de cadena de las etiquetas <code>extends</code> e <code>include</code> de Django.</p>
+<p>Reporta referencias de archivos no resueltas en literales de cadena para las etiquetas Django <code>extends</code> y <code>include</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="DjangoTemplate">
 {% extends "../DjangoApp/templatetags/base.html"%}
 </code></pre>
-<p>En este ejemplo, la etiqueta <code>base.html</code> se resaltará si no se puede encontrar en la ubicación especificada.</p>
+<p>En este ejemplo, se resalta <code>base.html</code> porque no existe en la ubicación especificada.</p>
 </body>
 </html>

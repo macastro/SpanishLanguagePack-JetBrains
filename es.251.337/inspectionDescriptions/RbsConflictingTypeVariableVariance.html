@@ -1,13 +1,12 @@
 <html>
 <body>
-Informa sobre variables de tipo cuya varianza (<code>in</code>, <code>out</code>, o <code>unchecked</code>) entra en conflicto con otra declaración.
-Las variables de tipo deben coincidir en varianza entre declaraciones parciales de la misma clase o módulo, incluso si las variables de tipo tienen nombres distintos.
+Reporta las variables de tipo cuya varianza (<code>in</code>, <code>out</code> o <code>unchecked</code>) está en conflicto con otra declaración.
+Las variables de tipo deben coincidir en varianza entre declaraciones parciales de la misma clase o módulo, incluso si tienen nombres diferentes.
 <p>Ejemplo:</p>
-<pre><code># La variable de tipo 'B' de la clase 'Example' tiene una varianza que entra en conflicto con otras declaraciones, ...
+<pre><code># La variable de tipo 'B' de la clase 'Example' tiene una varianza que está en conflicto con otras declaraciones...
 class Example[A, in B, out C]
 end
-
-# La variable de tipo 'Y' de la clase 'Example' tiene una varianza que entra en conflicto con otras declaraciones, ...
+# La variable de tipo 'Y' de la clase 'Example' tiene una varianza que está en conflicto con otras declaraciones...
 class Example[X, Y, Z]
 end
 </code></pre>

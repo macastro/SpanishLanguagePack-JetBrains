@@ -1,14 +1,13 @@
 <html>
 <body>
-Genera el código de Boilerplate para el manejo idiomático de los errores.
+Genera código repetitivo para el manejo idiomático de errores.
 <p>
-  La plantilla puede ser llamada en cualquier expresión de llamada o tipo <code>error</code> que devuelva <code>error</code>.
-  La plantilla introduce nuevas variables, les asigna el valor de la expresion, y luego usa el siguiente código para verificar si el error es <code>nil</code>.
+  Puede invocar la plantilla en cualquier llamada que devuelva un <code>error</code> o en cualquier expresión de tipo <code>error</code>.
+  La plantilla introduce nuevas variables, les asigna la expresión y verifica si el error no es <code>nil</code> con el siguiente código:
 </p>
 <pre><code>if err != nil {
-  regresar value1, value2, ...
+  return value1, value2, ...
 }</code></pre>
-<p>Cada <code>valor</code> es una variable <code>err</code> o el valor por defecto del tipo de retorno correspondiente en la funcion que se esta encapsulando.</p>
-<!-- tooltip end -->
+<p>Cada <code>value</code> es ya sea la variable <code>err</code> o el valor predeterminado del tipo de retorno correspondiente de la función contenedora.</p>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <html>
 <body>
-Notifica condiciones de comprobación de nulos y sugiere reemplazarlas con cadenas <code>Optional</code>.
+Informa sobre las condiciones de comprobación null y sugiere reemplazarlas con cadenas de <code>Optional</code>.
 <p>Ejemplo:</p>
 <pre><code>
   return str == null ? "" : str.trim();
@@ -9,13 +9,8 @@ Notifica condiciones de comprobación de nulos y sugiere reemplazarlas con caden
 <pre><code>
   return Optional.ofNullable(str).map(String::trim).orElse("");
 </code></pre>
-<p>Aunque el reemplazo no siempre resulta más breve, podría ser útil para realizar refactorizaciones adicionales
-  (por ejemplo, para cambiar el valor de retorno del método a <code>Optional</code>).</p>
-<p>Tenga en cuenta que cuando una rama no nula de la condición devuelve null, el paso de asignación correspondiente
-  producirá un <code>Optional</code> vacío, lo cual posiblemente cambie la semántica. Si no puede comprobarse estáticamente
-  que se preservará la semántica, el nombre de la acción de corrección rápida contendrá el aviso "(puede cambiar la semántica)"
-  y se desactivará el resaltado de inspección.</p>
-<!-- tooltip end -->
-<p><small>Novedad en 2018.1</small></p>
+<p>Aunque el reemplazo no siempre es más corto, puede facilitar refactorizaciones posteriores (por ejemplo, cambiar el valor de retorno del método a <code>Optional</code>).</p>
+<p>Tenga en cuenta que cuando la rama no nula de la condición devuelve un valor null, el paso de mapeo correspondiente producirá un <code>Optional</code> vacío, lo que podría cambiar la semántica. Si no se puede demostrar estáticamente que se preserva la semántica, el nombre de la corrección rápida incluirá la notificación "(posible cambio de semántica)" y se desactivará el resaltado de la inspección.</p>
+<p><small>Novedades de 2018.1</small></p>
 </body>
 </html>

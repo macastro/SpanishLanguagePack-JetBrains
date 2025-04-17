@@ -1,13 +1,14 @@
 <html>
 <body>
- Inspecciona las asignaciones utilizadas como condición en <code>if</code>, <code>while</code>, <code>for</code>, <code>do</code> o expresiones condicionales.
-<p>Si bien a veces es intencional, este uso puede resultar confuso y podría indicar un error tipográfico (por ejemplo, <code>=</code> en lugar de <code>==</code>).</p>
-<p>Esta corrección rápida reemplaza <code>=</code> por <code>==</code>.</p>
+Informe sobre el uso de asignaciones como condiciones en sentencias <code>if</code>, <code>while</code>, <code>for</code> o
+<code>do</code> o en expresiones condicionales.
+<p>Aunque a veces es intencional, este uso puede resultar confuso y podría indicar un error tipográfico (por ejemplo, usar <code>=</code> en lugar de <code>==</code>).</p>
+<p>Esta corrección rápida reemplazará <code>=</code> por <code>==</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void update(String str, boolean empty) {
-    // Advertencia: 'empty' se está reasignando,
-    // no se compara con str.isEmpty()
+    // Advertencia: 'empty' está siendo reasignado,
+    // no comparado con str.isEmpty()
     if (empty = str.isEmpty()) {
       ...
     }
@@ -21,6 +22,5 @@
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

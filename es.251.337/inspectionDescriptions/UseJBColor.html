@@ -1,21 +1,18 @@
 <html>
 <body>
+Reporta el uso de <code>java.awt.Color</code>.
 <p>
-  Se informan los usos de <code>java.awt.Color</code>.
+  Esto podría no detectar temas "oscuros" (por ejemplo, el tema integrado "Darcula"), lo que podría resultar en una experiencia de UI deficiente.
 </p>
 <p>
-  Esto puede no detectar temas 'oscuros' (por ejemplo, el 'Darcula' incluido), lo que puede resultar en una IU de apariencia deficiente.
-</p>
-<p>
-  La corrección rápida reemplazará estos usos con <code>JBColor</code>, que puede definir variantes de color 'oscuras'.
+  La corrección rápida reemplazará el uso por <code>JBColor</code>, que permite definir variantes de color para temas oscuros.
 </p>
 <p>Ejemplos:</p>
 <pre><code lang="java">
-// Malo:
+// Incorrecto:
 Color darkGreen = new Color(12, 58, 27);
 Color blue = Color.BLUE;
-
-// Bueno:
+// Correcto:
 Color darkGreen = new JBColor(12, 58, 27);
 Color blue = JBColor.BLUE;
 Color green = new JBColor(new Color(12, 58, 27), new Color(27, 112, 39));

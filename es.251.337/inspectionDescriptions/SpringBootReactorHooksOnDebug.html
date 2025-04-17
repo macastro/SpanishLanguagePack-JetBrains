@@ -2,25 +2,22 @@
 <body>
 <p>Reporta el uso de <code>Hooks.onOperatorDebug()</code> cuando se llama a <code>ReactorDebugAgent.init()</code>.</p>
 <p>
-  Si <code>ReactorDebugAgent</code> está en el classpath, y <code>spring.reactor.debug-agent.enabled</code>
-  es <code>true</code> (valor por defecto), <code>ReactorDebugAgent.init()</code> se llama automáticamente en el arranque.
-  Usando tanto <code>Hooks.onOperatorDebug()</code> como <code>ReactorDebugAgent.init()</code> causa dobles frames de stack de depuración generados por Reactor.
-  Además, <code>Hooks.onOperatorDebug()</code> puede causar gastos de performance.
+  Si <code>ReactorDebugAgent</code> está en el classpath y <code>spring.reactor.debug-agent.enabled</code> es <code>true</code> (valor por defecto), <code>ReactorDebugAgent.init()</code> se llama automáticamente al inicio.
+  Usar <code>Hooks.onOperatorDebug()</code> y <code>ReactorDebugAgent.init()</code> simultáneamente hace que Reactor genere el doble de frames de pila de depuración.
+  Además, <code>Hooks.onOperatorDebug()</code> causa sobrecarga de rendimiento.
 </p>
-
-<p>El quick-fix remueve la invocación de <code>Hooks.onOperatorDebug()</code>.</p>
+<p>Esta corrección rápida elimina la llamada a <code>Hooks.onOperatorDebug()</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   public void hook() {
-    Hooks.onOperatorDebug(); // Reporta 'Llama a Hooks.onOperatorDebug() mientras ReactorDebugAgent está inicializado'
+    Hooks.onOperatorDebug(); // Reporta 'Llamada a Hooks.onOperatorDebug() durante la inicialización de ReactorDebugAgent'
   }
 </code></pre>
-<p>Después de aplicar el quick-fix:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code lang="java">
   public void hook() {
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Esta inspección solo se dispara cuando la versión de Spring Boot para el proyecto o módulo es 2.2.0 o mayor.</p>
+<p>Esta inspección solo se activa cuando la versión de Spring Boot del proyecto o módulo es 2.2.0 o superior.</p>
 </body>
 </html>

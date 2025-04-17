@@ -1,11 +1,11 @@
 <html>
 <body>
-<p>Informa los objetos que pueden convertirse a objetos de datos</p>
-<p>Los objetos de datos autogeneran <code>toString</code>, <code>equals</code> y <code>hashCode</code></p>
-<p>La inspección sugiere convertir objetos a objetos de datos en 2 casos:</p>
+<p>Informa sobre <code>object</code> que se pueden convertir a <code>data object</code></p>
+<p>Los <code>data object</code> generan automáticamente <code>toString</code>, <code>equals</code> y <code>hashCode</code></p>
+<p>Esta inspección sugiere convertir un <code>object</code> a <code>data object</code> en los siguientes 2 casos:</p>
 <ul>
-    <li>Cuando <code>toString</code> personalizado devuelve el nombre de la clase</li>
-    <li>Cuando el objeto hereda la clase/interfaz <code>sealed</code></li>
+    <li>Cuando un <code>toString</code> personalizado devuelve el nombre de la clase</li>
+    <li>Cuando el <code>object</code> hereda de una sealed <code>class</code>/<code>interface</code></li>
 </ul>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -13,11 +13,10 @@
         override fun toString(): String = "Foo"
     }
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
     data object Foo
 </code></pre>
-<!-- tooltip end -->
-<p>Esta inspección solo informa si el nivel de lenguaje Kotlin del proyecto o módulo es 1.9 o superior</p>
+<p>Esta inspección solo se activa cuando el nivel del lenguaje Kotlin del proyecto o módulo es 1.9 o superior</p>
 </body>
 </html>

@@ -1,38 +1,27 @@
 <html>
 <body>
-<p>Informa los casos cuando no todas las propiedades o métodos abstractos se definen en una subclase.</p>
+<p>Informa sobre casos donde no todos los métodos o propiedades abstractos están definidos en las clases hijas.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 from abc import abstractmethod, ABC
-
-
 class Figure(ABC):
-
     @abstractmethod
     def do_figure(self):
         pass
-
-
 class Triangle(Figure):
     def do_triangle(self):
         pass
 </code></pre>
-<p>Cuando se aplica la corrección rápida, el IDE implementa un método abstracto para la clase <code>Triangle</code>:</p>
+<p>Después de aplicar la corrección rápida, el IDE implementa el método abstracto para la clase <code>Triangle</code>:</p>
 <pre><code>
 from abc import abstractmethod, ABC
-
-
 class Figure(ABC):
-
     @abstractmethod
     def do_figure(self):
         pass
-
-
 class Triangle(Figure):
     def do_figure(self):
         pass
-
     def do_triangle(self):
         pass
 </code></pre>

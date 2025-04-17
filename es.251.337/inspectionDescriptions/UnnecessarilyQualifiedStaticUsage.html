@@ -1,51 +1,45 @@
 <html>
 <body>
-Informa el uso de miembros static calificados innecesariamente por el nombre de clase.
+Informa sobre el uso innecesario de miembros static calificados con nombres de clase.
 <p>
-Cuando un miembro static puede ser utilizado en la clase circundante o en la superclase de la clase circundante, no es necesario calificarlo con la clase. Dicha calificación se puede eliminar de forma segura.
+No es necesario calificar la clase cuando los miembros static están disponibles en la clase circundante o en sus superclases. Esta calificación se puede eliminar de forma segura.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
     static void foo() {}
     static int x;
-
     void bar() {
       Foo.foo();
       System.out.println(Foo.x);
     }
-
     static void baz() { Foo.foo(); }
   }
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class Foo {
     static void foo() {}
     static int x;
-
     void bar() {
       foo();
       System.out.println(x);
     }
-
     static void baz() { foo(); }
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Utiliza las opciones de inspección para alternar qué denunciar:
+  Las opciones de inspección permiten alternar los informes para:
 </p>
 <ul>
   <li>
-    <p>Acceso a un campo static:<br><code>void bar() { System.out.println(Foo.x); }</code></p>
+    <p>Acceso a campos static:<br><code>void bar() { System.out.println(Foo.x); }</code></p>
   </li>
   <li>
-    <p>Llamada a un método static:<br><code>void bar() { Foo.foo(); }</code></p>
+    <p>Llamadas a métodos static:<br><code>void bar() { Foo.foo(); }</code></p>
   </li>
 </ul>
 <p>
-  Además, puedes configurar la inspección para que solo informe el uso de miembros static en un contexto static. En ese caso, solo se informaría <code>static void baz() { Foo.foo(); }</code>.
+  Además, puede configurar la inspección para que solo informe sobre el uso de miembros static en contextos static. En este caso, solo se informará sobre <code>static void baz() { Foo.foo(); }</code>.
 </p>
-
 </body>
 </html>

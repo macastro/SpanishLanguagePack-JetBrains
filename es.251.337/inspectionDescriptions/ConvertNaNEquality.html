@@ -1,11 +1,11 @@
 <html>
 <body>
-Reporta una comprobación de igualdad con <code>Float.NaN</code> o <code>Double.NaN</code> que debería reemplazarse con una comprobación de <code>isNaN()</code>.
+Reporta comprobaciones de igualdad usando <code>Float.NaN</code> o <code>Double.NaN</code> (deberían reemplazarse por comprobaciones <code>isNaN()</code>).
 <p>
-    De acuerdo con IEEE 754, la comprobación de igualdad contra NaN siempre retorna <code>false</code>, incluso para <code>NaN == NaN</code>.
-    Por lo tanto, es probable que tal comprobación sea un error.
+    Según IEEE 754, las comprobaciones de igualdad contra NaN siempre devuelven <code>false</code>, incluso para <code>NaN == NaN</code>.
+    Por lo tanto, es probable que estas comprobaciones sean erróneas.
 </p>
-<p>La corrección rápida reemplaza la comparación con la comprobación <code>isNaN()</code> que usa una técnica de comparación diferente y maneja correctamente los valores <code>NaN</code>.</p>
+<p>Esta corrección rápida reemplaza la comparación por una comprobación <code>isNaN()</code> que utiliza una técnica de comparación diferente y maneja correctamente los valores <code>NaN</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun check(value: Double): Boolean {
@@ -18,6 +18,5 @@ Reporta una comprobación de igualdad con <code>Float.NaN</code> o <code>Double.
       return value.isNaN()
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

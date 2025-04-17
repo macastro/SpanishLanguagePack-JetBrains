@@ -1,29 +1,26 @@
 <html>
 <body>
-Esta herramienta informa de métodos que se pueden convertir en <code>static</code> de forma segura.
-Convertir métodos a <code>static</code> siempre que sea posible reduce el consumo de memoria y mejora la calidad del código.
+Informa sobre métodos que pueden establecerse de forma segura como <code>static</code>.
+Establecer métodos como static cuando sea posible reduce el consumo de memoria y mejora la calidad del código.
 <p>Un método puede ser <code>static</code> si:</p>
 <ul>
   <li>
     No es <code>synchronized</code>, <code>native</code> o <code>abstract</code>,
   </li>
   <li>
-    No hace referencia a métodos ni campos no <code>static</code> de la clase contenedora,
+    No hace referencia a ningún método o campo no static en la clase contenedora,
   </li>
   <li>
-    No es un método <i>override</i> y no ha sido sobreescrito en una subclase.
+    No es una sobrescritura ni será sobrescrito en subclases.
   </li>
 </ul>
-<!-- tooltip end -->
-<p>Utilice las siguientes opciones para configurar la inspección:</p>
+<p>Configure la inspección con las siguientes opciones:</p>
 <ul>
-  <li>Solo informar de métodos <code>private</code> y <code>final</code>, lo que mejora el rendimiento de la inspección.</li>
-  <li>Ignorar métodos vacíos.</li>
-  <li>Ignorar métodos predeterminados en interfaces cuando se utiliza Java 8 o superior.</li>
+  <li>Si solo se deben informar métodos <code>private</code> y <code>final</code>, mejorando así el rendimiento de esta inspección.</li>
+  <li>Si se deben ignorar los métodos vacíos.</li>
+  <li>Si se deben ignorar los métodos por defecto en interfaces cuando se usa Java 8 o superior.</li>
   <li>
-    Dejar que la corrección rápida sustituya los calificadores de instancia por referencias de clase
-    en llamadas a métodos que se establecen como <code>static</code>,
-    es decir, la llamada <code>myClass.m()</code> se sustituirá por <code>MyClass.m()</code>.
+    Si la corrección rápida debe reemplazar los calificadores de instancia con referencias de clase al llamar a métodos convertidos a <code>static</code>, es decir, la llamada <code>myClass.m()</code> se reemplazará por <code>MyClass.m()</code>.
   </li>
 </ul>
 </body>

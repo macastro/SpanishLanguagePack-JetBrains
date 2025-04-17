@@ -1,17 +1,15 @@
 <html>
 <body>
-Informa sobre escapes redundantes en la cadena de reemplazo de los métodos regex.
-Se permite escapar cualquier carácter en una cadena de reemplazo de regex,
-pero solo es necesario escapar los caracteres <code>$</code> y <code>\</code>.
+Informa sobre escapes redundantes en la cadena de reemplazo de expresiones regulares.
+Permite escapar cualquier carácter en la cadena de reemplazo de expresiones regulares, pero solo los caracteres <code>$</code> y <code>\</code> requieren escape.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   string.replaceAll("a", "\\b");
 </code></pre>
-<p>Tras aplicar la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   string.replaceAll("a", "b");
 </code></pre>
-<!-- tooltip end -->
-<p><small>Novedad en 2022.3</small>
+<p><small>Novedades 2022.3</small>
 </body>
 </html>

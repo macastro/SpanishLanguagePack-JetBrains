@@ -1,17 +1,15 @@
 <html>
 <body>
-Informa de constructores primarios vacíos cuando están disponibles implícitamente de todos modos.
+Informa sobre constructores primarios vacíos cuando el constructor primario está implícitamente disponible.
 <p>
-    Un constructor primario es redundante y se puede omitir de forma segura cuando no tiene anotaciones ni modificadores de visibilidad.
-    Utilice la corrección rápida "Eliminar constructor primario vacío" para limpiar el código.
+    El constructor primario es redundante y se puede omitir de forma segura cuando no tiene anotaciones ni modificadores de visibilidad.
+    Utiliza la corrección rápida "Eliminar constructor primario vacío" para limpiar el código.
 </p>
-<p><b>Ejemplos:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
-  class MyClassA constructor() // redundante, se puede reemplazar con 'class MyClassA'
-
+  class MyClassA constructor() //  redundante, puede reemplazarse por 'class MyClassA'
   annotation class MyAnnotation
-  class MyClassB @MyAnnotation constructor() // requerido debido a la anotación
-
+  class MyClassB @MyAnnotation constructor() //  requerido debido a la anotación
   class MyClassC private constructor() // requerido debido al modificador de visibilidad
 </code></pre>
 </body>

@@ -1,20 +1,16 @@
 <html>
 <body>
-<p>Inspecciona métodos no resueltos en los parámetros <code>initMethod</code> y <code>destroyMethod</code>
- de la anotación <a >@Bean</a> .</p>
-
+<p>Reporta referencias a métodos no resueltos en los parámetros <code>initMethod</code> y <code>destroyMethod</code> de la anotación <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Bean.html">@Bean</a>.</p>
 <p><b>Ejemplo:</b></p>
-Se reportara "No se puede resolver el método" en la expresión 'doInit' si la clase MyBean no contiene el método 'public void 'doInit'(){...}'
+Si la clase MyBean no contiene el método 'public void doInit(){...}', se reportará "Método no resuelto" en la expresión 'doInit'
 <pre><code lang="java">
   public class MyBean {...}
-
   @Component
   public class MyComponent {
      @Bean(initMethod="doInit" )
      public MyBean myBean() {...}
   }
 </code></pre>
-
-<p>En este ejemplo, la inspección reportara una referencia de método no resuelto si <code>MyBean</code> no define el método <code>doInit()</code>.</p>
+<p>En este ejemplo, si <code>MyBean</code> no define el método <code>doInit()</code>, esta inspección reportará una referencia a método no resuelta.</p>
 </body>
 </html>

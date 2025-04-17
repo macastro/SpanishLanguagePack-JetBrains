@@ -1,11 +1,8 @@
 <html>
 <body>
-<p>Informe los <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/cache/annotation/CachePut.html">@CachePut</a>
-y <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/cache/annotation/Cacheable.html">@Cacheable</a>
-anotados declarados sobre el mismo método.</p>
-
-Mientras que <code>@Cacheable</code> hace que el método omita la ejecución usando el caché, <code>@CachePut</code> fuerza la ejecución para actualizar el caché.
-Esto lleva a un comportamiento inesperado y debería evitarse, excepto en casos muy específicos cuando las condiciones en las anotaciones las excluyen entre sí.
-Note también que tales condiciones no deberían depender del objeto resultado (la variable <code>#result</code>) ya que estas se validan de antemano para confirmar la exclusión.
+<p>Informa sobre las anotaciones <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/cache/annotation/CachePut.html">@CachePut</a> y <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/cache/annotation/Cacheable.html">@Cacheable</a> declaradas en el mismo método.</p>
+<code>@Cacheable</code> hace que el método omita la ejecución usando la caché, mientras que <code>@CachePut</code> fuerza la ejecución para actualizar la caché.
+Esto puede llevar a comportamientos inesperados y debe evitarse, a menos que en casos muy específicos las condiciones en las anotaciones las excluyan mutuamente.
+Ten en cuenta que estas condiciones no deberían depender del objeto resultado (variable <code>#result</code>), ya que estas condiciones se validan previamente para confirmar la exclusión.
 </body>
 </html>

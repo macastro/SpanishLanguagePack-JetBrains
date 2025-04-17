@@ -1,24 +1,19 @@
 <html>
 <body>
-<p>Informa sobre objetivos de anotación sin significado en superclases desde Kotlin 1.4.</p>
-<p>Objetivos de anotación como <code>@get:</code> no tienen significado en superclases y están prohibidos.</p>
+<p>A partir de Kotlin 1.4, se reportan los objetivos de anotación sin sentido en las superclases.</p>
+<p>Los objetivos de anotación como <code>@get:</code> no tienen sentido en las superclases y están prohibidos.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  interfaz Foo
-
-  clase de anotación Ann
-
-  clase E : @field:Ann @get:Ann @set:Ann @setparam:Ann Foo
+  interface Foo
+  annotation class Ann
+  class E : @field:Ann @get:Ann @set:Ann @setparam:Ann Foo
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  interfaz Foo
-
-  clase de anotación Ann
-
-  clase E : Foo
+  interface Foo
+  annotation class Ann
+  class E : Foo
 </code></pre>
-<!-- tooltip end -->
-<p>Esta inspección solo informa si el nivel de lenguaje Kotlin del proyecto o módulo es 1.4 o superior.</p>
+<p>Esta inspección solo reporta cuando el nivel del lenguaje Kotlin del proyecto o módulo es 1.4 o superior.</p>
 </body>
 </html>

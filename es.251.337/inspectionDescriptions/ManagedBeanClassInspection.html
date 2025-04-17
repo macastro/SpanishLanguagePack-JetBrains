@@ -1,16 +1,15 @@
 <html>
 <body>
-Se informan clases Bean administradas definidas incorrectamente en los siguientes casos:
+Reportar errores en la definición de clases Bean administradas en los siguientes casos:
 <ul>
   <li>La clase no es final</li>
-  <li>La clase es abstracta</li>
-  <li>El Bean es una clase interna no estática</li>
+  <li>La clase es abstract</li>
+  <li>El Bean es una clase interna no static</li>
 </ul>
-
 <p><b>Ejemplo:</b></p><br/>
 <pre><code>
   @ManagedBean
-  public final class JavaManagedBean { // Error: El Bean administrado no debe ser final
+  public final class JavaManagedBean { // Error: el Bean administrado no debe ser final
     ...
   }
 </code></pre>

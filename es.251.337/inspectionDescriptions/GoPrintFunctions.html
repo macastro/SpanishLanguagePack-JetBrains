@@ -1,14 +1,15 @@
-**Detecta el uso incorrecto de `fmt.Printf`, `fmt.Println` y funciones similares de formateo e impresión.**
-
-<p>En sus cadenas de formato, las funciones de formato utilizan verbos de formato, como `%s`, `%d`, `%v`, entre otros.
-Si los verbos de formato se utilizan incorrectamente, el resultado de una función de formato contendrá un error.
-Para obtener más información sobre los verbos de formato, consulta <a href="https://pkg.go.dev/fmt">Package fmt en go.dev</a>.</p>
-
+<html>
+<body>
+Informa sobre usos incorrectos de <code>fmt.Printf</code>, <code>fmt.Println</code> y funciones similares de formato e impresión.
+<p>En las cadenas de formato, las funciones de formato utilizan verbos de formato como <code>%s</code>, <code>%d</code>, <code>%v</code>, etc.
+  Si los verbos de formato se utilizan incorrectamente, el resultado de la función de formato contendrá errores.
+  Para obtener información detallada sobre los verbos de formato, consulte el <a href="https://pkg.go.dev/fmt">Package fmt en go.dev</a>.
+</p>
 <p>Ejemplo:</p>
-
 <pre><code>fmt.Printf("id: %s", 42)</code></pre>
-
-<p>La salida de esta función es `id: %!s(int=42)`. Puede que no sea lo que realmente quieres.
-La siguiente función utiliza el verbo de formato `%d`.
-La salida con el verbo de formato `%d` será `id: 42`.</p>
+<p>La salida de esta función es <code>id: %!s(int=42)</code>. Esto puede no ser lo que esperabas.
+  La siguiente función utiliza el verbo de formato <code>%d</code>.
+  La salida con el verbo de formato <code>%d</code> será <code>id: 42</code>.</p>
 <pre><code>fmt.Printf("id: %d", 42)</code></pre>
+</body>
+</html>

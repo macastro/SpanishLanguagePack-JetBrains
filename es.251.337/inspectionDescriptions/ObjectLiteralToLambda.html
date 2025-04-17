@@ -1,15 +1,14 @@
 <html>
 <body>
-Reporta literales de objeto anónimos que implementan una interfaz Java con un solo método abstracto que puede ser convertido en una llamada con una expresión lambda.
+Informa sobre objetos anónimos literales que implementan una interfaz Java con un único método abstract, que puede convertirse en una expresión lambda.
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class SomeService {
   val threadPool = Executors.newCachedThreadPool()
-    
   fun foo() {
     threadPool.submit(object : Runnable {
       override fun run() {
-        println("hola")
+        println("hello")
       }
     })
   }
@@ -18,7 +17,7 @@ class SomeService {
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun foo() {
-    threadPool.submit { println("hola") }
+    threadPool.submit { println("hello") }
   }
 </code></pre>
 </body>

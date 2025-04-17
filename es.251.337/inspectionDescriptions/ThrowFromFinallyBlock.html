@@ -1,9 +1,21 @@
 <html>
 <body>
-<code>finally</code> Reporta sentencias <code>throw</code> dentro de los bloques.
-<p>Este tipo de sentencias <code>throw</code>, aunque a veces son intencionales, pueden ocultar excepciones lanzadas desde <code>try</code>-<code>catch</code>, lo que puede complicar enormemente la depuración.</p>
-<!-- tooltip end -->
-<p>
-
+Reporta las declaraciones <code>throw</code> dentro de bloques <code>finally</code>. 
+Aunque a veces es intencional, tales declaraciones <code>throw</code> pueden ocultar excepciones lanzadas desde bloques <code>try</code> y <code>catch</code>, complicando el proceso de depuración.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Fascinating {
+    void doTask(Task t) {
+      try {
+        t.activity();
+      } finally {
+        if (!t.finish()) {
+          throw new IllegalStateException();
+        }
+      }
+    }
+  }
+</code></pre>
+<p>Utiliza la opción <b>Advertir en cada lugar donde se pueda lanzar una excepción declarada</b> para recibir advertencias también cuando se llaman métodos que declaran excepciones.</p>
 </body>
 </html>

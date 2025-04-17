@@ -1,7 +1,6 @@
 <html>
 <body>
-Informa de referencias a métodos o expresiones lambda que apuntan a un método de su propio tipo de interfaz funcional y, por lo tanto, pueden reemplazarse por sus calificadores, eliminando así la asignación de objetos innecesarios.
-
+Informa sobre referencias a métodos o expresiones lambda que apuntan a métodos con su propio tipo de interfaz funcional, permitiéndole eliminar asignaciones de objetos innecesarias reemplazándolas por sus calificadores.
 <p>Ejemplo:</p>
 <pre><code>
   SwingUtilities.invokeLater(r::run);
@@ -12,7 +11,6 @@ Informa de referencias a métodos o expresiones lambda que apuntan a un método 
   SwingUtilities.invokeLater(r);
   SwingUtilities.invokeAndWait(r);
 </code></pre>
-<!-- tooltip end -->
-<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 8 o superior.</p>
+<p>Esta inspección solo informa cuando el nivel de lenguaje del proyecto o módulo es 8 o superior.</p>
 </body>
 </html>

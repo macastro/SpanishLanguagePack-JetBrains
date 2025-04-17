@@ -1,16 +1,14 @@
 <html>
 <body>
-Informa literales enteros octales y decimales mixtos en un solo inicializador de matriz.
-Esta situación puede ocurrir cuando copia una lista de números en un inicializador de matriz.
-Algunos números en la matriz pueden estar rellenados con cero y el compilador los interpretará como octales.
+Informa sobre literales enteros octales y decimales mezclados en un único inicializador de array.
+Esto puede ocurrir cuando se copian listas de números en inicializadores de arrays.
+Algunos números en el array pueden estar rellenados con ceros, lo que el compilador interpreta como octales.
 <p><b>Ejemplo:</b></p>
 <pre><code>int[] elapsed = {1, 13, 052};</code></pre>
-<p>Después de aplicar la corrección rápida que elimina un cero inicial:</p>
+<p>Después de aplicar la corrección rápida para eliminar los ceros iniciales:</p>
 <pre><code>int[] elapsed = {1, 13, 52};</code></pre>
-<p>Si es un número octal (por ejemplo, después de una variable en línea), puede utilizar otra corrección rápida que convierta octal en decimal:</p>
+<p>Si se trata de un número octal (por ejemplo, después de una variable en línea), puede usar otra corrección rápida para convertir el octal a decimal:</p>
 <code>int[] elapsed = {1, 13, 42};</code>
-<!-- tooltip end -->
 <p>
-
 </body>
 </html>

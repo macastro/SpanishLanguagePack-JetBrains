@@ -1,17 +1,17 @@
 <html>
 <body>
-Reporta la barra diagonal (<code>/</code>) o la barra invertida (<code>\</code>) hacía adelante o hacía atrás en una cadena o en un literal de carácter. Comúnmente, estos caracteres se utilizan como separadores de archivos y la portabilidad podría verse afectada si se les codifica.
+Reporta las barras diagonales (<code>/</code>) o barras invertidas (<code>\</code>) en cadenas de texto o literales de caracteres. Estos caracteres se utilizan comúnmente como separadores de archivos y, si están codificados de forma rígida, pueden afectar la portabilidad.
 <p>
-  La inspección no reportará barras invertidas dentro de secuencias de escape ni barras diagonales inmediatamente después del caracter '&lt;' o inmediatamente antes del caracter '&gt;', debido a que a menudo indican etiquetas XML o HTML en lugar de nombres de archivo. Las cadenas que representan un ID de <code>java.util.TimeZone</code>, cadenas que son expresiones regulares válidas o cadenas que igualan tipos de medios MIME registrados en IANA no serán reportadas tampoco.
+  La inspección no reporta las barras invertidas en secuencias de escape ni las barras diagonales que siguen inmediatamente al carácter '&lt;' o preceden al carácter '&gt;', ya que generalmente representan etiquetas XML o HTML en lugar de nombres de archivo.
+  Tampoco se reportan las cadenas que representan IDs de <code>java.util.TimeZone</code>, las cadenas que son expresiones regulares válidas o las cadenas equivalentes a tipos MIME registrados por IANA.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   new File("C:\\Users\\Name");
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Utiliza la opción para incluir <code>example/*</code> en el conjunto de tipos de medios reconocidos.
-  Normalmente, el uso del tipo de medio MIME <code>example/*</code> fuera de un ejemplo (por ejemplo, en un encabezado <code>Content-Type</code>) es un error.
+  Utilice esta opción para incluir <code>example/*</code> en el conjunto de tipos de medios reconocidos.
+  Por lo general, es incorrecto usar el tipo de medio MIME <code>example/*</code> fuera de ejemplos (por ejemplo, en un encabezado <code>Content-Type</code>).
 </p>
 </body>
 </html>

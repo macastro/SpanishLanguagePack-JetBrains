@@ -1,19 +1,17 @@
 <html>
 <body>
-Reporta campos estáticos de un tipo <code>Collection</code>. Si bien esto no es necesariamente un problema, las colecciones estáticas a menudo provocan fugas de memoria y, por lo tanto, algunos estándares de codificación las prohíben.
+Reporta campos static de tipo <code>Collection</code>. Aunque no siempre es un problema, las colecciones estáticas suelen provocar fugas de memoria y, por lo tanto, están prohibidas por algunos estándares de codificación.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   public class Example {
     static List&lt;String&gt; list = new ArrayList&lt;&gt;();
-
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Configurar la inspección:
+  Configuración de la inspección:
 </p>
 <ul>
-  <li>Usa la opción <b>Ignorar colecciones o mapas débiles estáticos</b> para ignorar los campos del tipo <code>java.util.WeakHashMap</code>.</li>
+  <li>Use la opción <b>Ignorar colecciones o mapas estáticos débiles</b> para ignorar campos de tipo <code>java.util.WeakHashMap</code>.</li>
 </ul>
 </body>
 </html>

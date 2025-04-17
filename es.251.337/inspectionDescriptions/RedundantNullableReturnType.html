@@ -1,13 +1,13 @@
 <html>
 <body>
-Informa funciones y variables con tipo de retorno anulable que jamás retorna o se convierte en <code>null</code>.
+Informa sobre funciones y variables con tipos de retorno que admiten valores nulos, pero que nunca devuelven ni se convierten en <code>null</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  fun greeting(user: String): String? = "Hola, $user!"
+  fun greeting(user: String): String? = "Hello, $user!"
 </code></pre>
-<p>Después de la aplicación de la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  fun greeting(user: String): String = "Hola, $user!"
+  fun greeting(user: String): String = "Hello, $user!"
 </code></pre>
 </body>
 </html>

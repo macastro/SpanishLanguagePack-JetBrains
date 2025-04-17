@@ -1,15 +1,14 @@
 <html>
 <body>
-Reporta propiedades de Kotlin que no son <code>const</code>, además son utilizadas como argumentos de annotationes Java.
+Propiedad de Kotlin que no es <code>const</code> y se usa como argumento de anotación Java.
 <p>
-Por ejemplo, una propiedad con la annotation <code>@JvmField</code> tiene un inicializador que puede ser evaluado en tiempo de compilación y que tiene un tipo primitivo o <code>String</code>.
+Por ejemplo, una propiedad con la anotación <code>@JvmField</code> que tiene un inicializador evaluable en tiempo de compilación de tipo primitivo o <code>String</code>.
 </p>
-
 <p>
-Tales propiedades tienen un atributo <code>ConstantValue</code> en el bytecode en Kotlin 1.1-1.2.
-Este atributo permite al javac plegar los usos del campo correspondiente y utilizar ese campo en las annotationes.
-Esto puede llevar a un comportamiento incorrecto en el caso de una compilación separada o incremental en código mixto Java/Kotlin.
-Este comportamiento está sujeto a cambio en Kotlin 1.3 (ya no habrá atributo <code>ConstantValue</code>).
+Tales propiedades tenían el atributo <code>ConstantValue</code> en el bytecode en Kotlin 1.1-1.2.
+Este atributo permitía a javac realizar la inlining de los usos del campo correspondiente y utilizarlo en anotaciones.
+Esto podría llevar a un comportamiento incorrecto en casos de compilación aislada o incremental en código mixto Java/Kotlin.
+Este comportamiento puede cambiar en Kotlin 1.3 (sin el atributo <code>ConstantValue</code>).
 </p>
 <p><b>Ejemplo:</b></p>
 <p>Código Kotlin en el archivo foo.kt:</p>
@@ -25,6 +24,6 @@ Este comportamiento está sujeto a cambio en Kotlin 1.3 (ya no habrá atributo <
       public void foo() {}
   }
 </code></pre>
-<p>Para solucionar el problema, reemplaza la annotation <code>@JvmField</code> con el modificador <code>const</code> en una propiedad de Kotlin relevante o ponla inline.</p>
+<p>Para corregir esto, reemplace la anotación <code>@JvmField</code> con el modificador <code>const</code> en la propiedad Kotlin correspondiente o realice la inlining de la misma.</p>
 </body>
 </html>

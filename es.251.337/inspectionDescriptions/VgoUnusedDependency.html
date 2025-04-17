@@ -1,17 +1,15 @@
 <html>
 <body>
-<p>Informa sobre las dependencias no utilizadas.</p>
-<p>Para cada dependencia en el archivo go.mod actual, esta inspección busca cualquier declaración de importación que comience con el
-  nombre de la dependencia en
-  todos los archivos GO.
-  Si no se encuentran tales importaciones, entonces la dependencia se considera no utilizada.
-  Esta inspección es equivalente al <a href="https://go.dev/ref/mod#go-mod-why">comando <code>go mod why</code></a>.</p>
-<p>La inspección procesa las directivas <code>require</code> y <code>replace</code>.
-  También se procesan las directivas <code>require</code> con comentarios <code>// indirect</code>.</p>
-<p>La inspección podría no determinar con precisión que una dependencia reemplazada o indirectamente requerida no se utiliza en los siguientes casos:</p>
+<p>Reportar dependencias no utilizadas.</p>
+<p>Para cada dependencia en el archivo <i>go.mod</i> actual, esta verificación busca cualquier declaración de importación que comience con el nombre de la dependencia en todos los archivos Go.
+  Si no se encuentra dicha importación, la dependencia se considera no utilizada.
+  Esta verificación es equivalente al <a href="https://go.dev/ref/mod#go-mod-why">comando <code>go mod why</code></a>.</p>
+<p>La verificación procesa las directivas <code>require</code> y <code>replace</code>.
+  Las directivas <code>require</code> con comentarios <code>// indirect</code> también son procesadas.</p>
+<p>La verificación puede no determinar con precisión si una dependencia reemplazada o requerida indirectamente no está siendo utilizada en los siguientes casos:</p>
 <ul>
-  <li>El modo de venta está habilitado</li>
-  <li>No se descargan algunas dependencias</li>
+  <li>El modo vendoring está activado</li>
+  <li>Algunas dependencias no están descargadas</li>
 </ul>
 </body>
 </html>

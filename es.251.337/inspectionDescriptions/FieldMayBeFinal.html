@@ -1,45 +1,40 @@
 <html>
 <body>
-Informa sobre los campos que se pueden establecer de forma segura como <code>final</code>.
-Todos los campos <code>final</code> tienen un valor que no cambia, por lo que es más fácil inferir el código.
-<p>Para evitar que el análisis sea demasiado costoso, esta inspección únicamente informa sobre si el campo tiene un modificador <code>private</code> o si se define en una clase local o anónima.
-  Un campo puede ser <code>final</code> si cumple las siguientes condiciones:
+Informa sobre campos que pueden declararse como <code>final</code> de manera segura.
+Todos los campos <code>final</code> deberían tener un valor que no cambie, lo que hace que el código sea más fácil de razonar.
+<p>Para evitar una sobrecarga excesiva en el análisis, esta inspección solo informa sobre campos si tienen el modificador <code>private</code> o si están definidos en una clase local o anónima.
+  Un campo puede ser <code>final</code> si:
 <ul>
-  <li>Es <code>static</code> y se inicializa solo una vez en su declaración o en un inicializador <code>static</code>.</li>
-  <li>No es <code>static</code> y se inicializa solo una vez en su declaración, en un inicializador de instancia o en todos los constructores.</li>
+  <li>El campo es <code>static</code> y se inicializa una vez en su declaración o en un inicializador <code>static</code>.</li>
+  <li>El campo es no <code>static</code> y se inicializa una vez en su declaración, en un inicializador de instancia o en cada constructor</li>
 </ul>
-También, no se modifica en ningún otro lugar el campo.
+y el campo no se modifica en ningún otro lugar.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   public class Person {
-    private String name; // Puede ser final
-
+    private String name; // puede ser final
     Person(String name) {
       this.name = name;
     }
-
     public String getName() {
       return name;
     }
   }
 </code></pre>
-<p>Después de aplicar una corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   public class Person {
     private final String name;
-
     Person(String name) {
       this.name = name;
     }
-
     public String getName() {
       return name;
     }
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Utiliza el botón "Anotaciones" para modificar la lista de anotaciones que pretende escritura de campos implícita.
+  Utilice el botón "Anotaciones" para modificar la lista de anotaciones que asumen escrituras implícitas de campos.
 </p>
 </body>
 </html>

@@ -1,33 +1,29 @@
 <html>
 <body>
-Informa sobre métodos de prueba que no contienen ninguna aserción. Tales métodos pueden indicar que los casos de prueba están incompletos o son débiles.
+Informa sobre métodos de prueba que no contienen ninguna aserción. Tales métodos pueden indicar casos de prueba incompletos o débiles.
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   <b>public class</b> ExtensiveTest {
-
     @Test
     <b>public void</b> testAlive() {
       System.out.println("nothing");
     }
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Configura la inspección:
+  Configuración de la inspección:
 </p>
 <ul>
   <li>
-      Usa la tabla para especificar las combinaciones de nombre de clase completamente calificado y expresión regular de nombre de método
-      que deberían calificar como aserciones. Los nombres de clase también coinciden con subclases.
+      Use la tabla para especificar combinaciones de nombres de clase completamente calificados y expresiones regulares de nombres de métodos que deben considerarse como aserciones. Los nombres de clase también coinciden con las subclases.
   </li>
   <li>
-      Usa la opción <b>La palabra clave 'assert' se considera una aserción</b> para especificar si las declaraciones <code>assert</code> de Java que usan la palabra clave <code>assert</code> deberían considerarse una aserción.
+      Use la opción <b>considerar la palabra clave 'assert' como aserción</b> para especificar si las declaraciones Java <code>assert</code> que utilizan la palabra clave <code>assert</code> deben considerarse como aserciones.
   </li>
   <li>
-      Usa la opción <b>Ignorar métodos de prueba que declaran excepciones</b> para ignorar métodos de prueba que declaran excepciones.
-      Esto puede resultar útil cuando tienes pruebas que arrojarán una excepción al producirse un error y, por lo tanto, no necesitan aserciones.
+      Use la opción <b>ignorar métodos de prueba que declaran excepciones</b> para ignorar los métodos de prueba que declaran excepciones.
+      Esto es útil cuando sus pruebas lanzan excepciones al fallar y por lo tanto no necesitan ninguna aserción.
   </li>
 </ul>
-
 </body>
 </html>

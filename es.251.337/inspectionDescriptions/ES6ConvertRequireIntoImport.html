@@ -1,15 +1,15 @@
 <html>
 <body>
-Reporta una sentencia <code>require()</code>. Sugiere convertirla a una llamada <code>require()</code> con una sentencia <code>import</code>.
+Reporta las declaraciones <code>require()</code>. Se sugiere convertirlas a declaraciones <code>import</code> que llamen a <code>require()</code>.
 <br/><br/>
-Habilita 'Convertir require() dentro de alcances internos con acción Corregir todo'
-para convertir todas las llamadas <code>require()</code> dentro de las funciones y sentencias anidadas al usar la acción 'Corregir todo'.
+Habilita "Convertir require() en ámbitos internos usando 'Corregir todo'",
+para convertir todas las llamadas <code>require()</code> dentro de funciones anidadas y declaraciones cuando se use la acción "Corregir todo".
 <br/><br/>
-Ten en cuenta que convertir las sentencias <code>require()</code> dentro de alcances internos a sentencias <code>import</code> 
-puede causar cambios en la semántica del código.
-Las sentencias Import son dependencias de módulo estáticas que se elevan,
-lo que significa que se mueven a la parte superior del módulo actual. Las llamadas <code>require()</code> cargan módulos dinámicamente.
-Se pueden ejecutar condicionalmente y su alcance está definido por la expresión en la que se utilizan.
-<br/>Desmarca la casilla de verificación 'Convertir require() dentro de alcances internos con acción Corregir todo' para evitar cambios en estos casos complejos al utilizar la acción 'Corregir todo'.
+Ten en cuenta que convertir declaraciones <code>require()</code> en ámbitos internos a declaraciones <code>import</code>
+puede cambiar la semántica del código.
+Las declaraciones Import son dependencias de módulos estáticas que se elevan,
+lo que significa que se mueven al principio del módulo actual. Las llamadas <code>require()</code> cargan módulos de forma dinámica.
+Pueden ejecutarse condicionalmente y su ámbito está definido por la expresión que las utiliza.
+<br/>Desmarca la casilla "Convertir require() en ámbitos internos usando 'Corregir todo'" para evitar cualquier cambio en estos casos complejos cuando se use la acción "Corregir todo".
 </body>
 </html>

@@ -1,14 +1,13 @@
 <html>
 <body>
-Reporta llamadas al método de manipulación de arreglos no genérico, como <code>Arrays.fill ()</code>, donde el tipo de argumento no coincide.
-Tales llamadas no realizan ningún trabajo útil y es probable que sean errores.
+Informa sobre llamadas a métodos de operaciones de arrays no genéricos con tipos de argumentos incompatibles, como <code>Arrays.fill()</code>.
+Estas llamadas no realizan ningún trabajo útil y probablemente sean erróneas.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   int foo(String[] strings) {
     return Arrays.binarySearch(strings, 1);
   }
 </code></pre>
-<!-- tooltip end -->
-<p><small>Nuevo en 2017.2</small></p>
+<p><small>Novedades de la versión 2017.2</small></p>
 </body>
 </html>

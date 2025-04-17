@@ -1,18 +1,16 @@
 <html>
 <body>
-Informa sobre las rutas absolutas en los archivos JSP.
-<p>Las rutas absolutas están prohibidas en JSP, ya que no se resolverán si el contexto de su aplicación no está vacío.</p>
-<p>La corrección rápida agrega un prefijo dinámico a su ruta.</p>
+Reportar rutas absolutas en archivos JSP.
+<p>No se resolverán si el contexto de la aplicación no está vacío, por lo que las rutas absolutas están prohibidas en JSP.</p>
+<p>Esta corrección rápida añadirá un prefijo dinámico a la ruta.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   &lt;%@page contentType=&quot;text/html; ISO-8859-1&quot; %&gt;
-
   &lt;a href=&quot;/hey.jsp&quot;&gt;hey&lt;/a&gt;
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   &lt;%@page contentType=&quot;text/html; ISO-8859-1&quot; %&gt;
-
   &lt;a href=&quot;${pageContext.request.contextPath}/hey.jsp&quot;&gt;hey&lt;/a&gt;
 </code></pre>
 </body>

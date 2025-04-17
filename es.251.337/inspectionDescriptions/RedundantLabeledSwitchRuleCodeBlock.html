@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa sobre reglas con etiqueta sobre declaraciones `switch` o expresiones `switch` que tienen un bloque de código redundante.
+Regla de inspección que detecta declaraciones o expresiones <code>switch</code> con bloques de código redundantes.
 <p>Ejemplo:</p>
 <pre><code>
   String s = switch (n) {
@@ -8,14 +8,13 @@ Informa sobre reglas con etiqueta sobre declaraciones `switch` o expresiones `sw
     default -> "default";
   };
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   String s = switch (n) {
     case 1 -> Integer.toString(n);
     default -> "default";
   };
 </code></pre>
-<!-- tooltip end -->
-<p><small>Nuevo en 2019.1</small></p>
+<p><small>Novedades en 2019.1</small></p>
 </body>
 </html>

@@ -1,22 +1,18 @@
 <html>
 <body>
-Informa de las llamadas a <code>java.lang.Thread.sleep()</code> que se producen dentro de los bucles.
-<p>Dichas llamadas
-son indicativas de "espera activa". La espera activa suele ser ineficiente y puede dar lugar a interbloqueos inesperados
-ya que los subprocesos en espera activa no liberan los recursos bloqueados.</p>
+Informa sobre llamadas a <code>java.lang.Thread.sleep()</code> que ocurren dentro de bucles.
+<p>Tales llamadas indican una "espera activa". La espera activa suele ser ineficiente y puede provocar deadlocks inesperados, ya que el hilo en espera activa no libera los recursos bloqueados.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class X {
      volatile int x;
      public void waitX() throws Exception {
       while (x &gt; 0) {
-        Thread.sleep(10);// advertencia: llamada a 'Thread.sleep()' en un bucle, probablemente espera activa
+        Thread.sleep(10);// Advertencia: llamada a 'Thread.sleep()' en un bucle, posible espera activa
       }
     }
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-
 </body>
 </html>

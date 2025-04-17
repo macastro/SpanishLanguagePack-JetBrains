@@ -1,37 +1,32 @@
-</body>
-</html>
-
-
-Se reportan problemas de contexto de la aplicación Spring Batch basada en XML:
+<html>
+<body>
+Reportar problemas en el contexto de aplicación basado en XML de <a href="https://spring.io/projects/spring-batch">Spring Batch</a>:
 <ul>
-  <li>Referencias de Bean no resueltas</li>
-  <li>Faltan etiquetas y atributos</li>
-  <li>Tipo de propiedad incorrecto</li>
+  <li>Referencias de Bean sin resolver</li>
+  <li>Etiquetas y características faltantes</li>
+  <li>Tipos de propiedades incorrectos</li>
   <li>Propiedades de <code>enum</code> inconsistentes</li>
-  <li>Tipo de Bean referenciado incorrecto</li>
+  <li>Tipo incorrecto de Bean referenciado</li>
 </ul>
-
-<!-- tooltip end -->
-
 <p><b>Ejemplo:</b></p>
 <pre><code>
   &lt;beans ... &gt;
-  &lt;batch:job id="" &lt;!-- El valor no debe estar vacío --&gt;
+  &lt;batch:job id="" &lt;!-- Value must not be empty --&gt;
     incrementer="dummyBean"  &lt;!-- El Bean debe ser de tipo 'org.springframework.batch.core.JobParametersIncrementer' --&gt;
     job-repository="transactionManager"  &lt;!-- El Bean debe ser de tipo 'org.springframework.batch.core.repository.JobRepository' --&gt;
-    parent="INVALID_VALUE" &lt;!-- No se puede resolver el Job INVALID_VALUE --&gt;
+    parent="INVALID_VALUE" &lt;!-- No se puede resolver el trabajo INVALID_VALUE --&gt;
     restartable="INVALID_VALUE"> &lt;!-- No se puede resolver el símbolo INVALID_VALUE --&gt;
     &lt;batch:validator
       ref="dataSource"&gt;  &lt;!-- El Bean debe ser de tipo 'org.springframework.batch.core.JobParametersValidator' --&gt;
     &lt;/batch:validator&gt;
   &lt;/batch:job&gt;
   &lt;batch:job-repository/&gt;
-
   &lt;bean id="dataSource" class="org.springframework.jdbc.datasource.DelegatingDataSource"/&gt;
   &lt;bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"/&gt;
-
   &lt;bean id="dummyBean" class="java.lang.String"/&gt;
 &lt;/beans&gt;
 </code></pre>
+</body>
+</html>
 </body>
 </html>

@@ -1,50 +1,43 @@
 <html>
 <body>
-Reporta llamadas de miembros <code>super</code> con calificación de supertipo redundante.
+Informa sobre llamadas redundantes a miembros <code>super</code> con tipo padre calificado.
 <p>
-    El código en una clase derivada puede llamar a sus funciones de superclase y a las implementaciones de accessores de propiedades usando la palabra clave <code>super</code>.
-    Para especificar el supertipo del cual se toma la implementación heredada, <code>super</code> puede ser calificado por el nombre de supertipo en corchetes angulares,
-    por ejemplo: <code>super&lt;Base&gt;</code>. Algunas veces esta calificación es redundante y puede omitirse.
-    Usa la acción rápida "Eliminar calificación de supertipo explícita" para limpiar el código.
+    El código en una clase derivada puede llamar a las implementaciones de funciones y propiedades de su clase padre usando la palabra clave <code>super</code>.
+    Para especificar el tipo padre del cual se hereda la implementación, se puede calificar <code>super</code> con el nombre del tipo padre entre corchetes angulares, por ejemplo <code>super&lt;Base&gt;</code>. A veces esta calificación es redundante y se puede omitir.
+    El código se puede limpiar usando la corrección rápida "Eliminar calificación explícita del tipo padre".
 </p>
-<p><b>Ejemplos:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   open class B {
       open fun foo(){}
   }
-
   class A : B() {
       override fun foo() {
-         super&lt;B&gt;.foo() // &lt;== redundante porque 'B' es el único supertipo
+         super&lt;B&gt;.foo() // &lt;== Redundante, ya que 'B' es el único tipo padre
       }
   }
-
   interface I {
       fun foo() {}
   }
-
   class C : B(), I {
       override fun foo() {
-          super&lt;B&gt;.foo() // &lt;== aquí el calificador &lt;B&gt; es necesario para distinguir 'B.foo()' de 'I.foo()'
+          super&lt;B&gt;.foo() // &lt;== Aquí, el calificador &lt;B&gt; es necesario para distinguir entre 'B.foo()' y 'I.foo()'
       }
   }
 </code></pre>
-<p>Después de que se aplique la acción rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   open class B {
       open fun foo(){}
   }
-
   class A : B() {
       override fun foo() {
          super.foo() // &lt;== Actualizado
       }
   }
-
   interface I {
       fun foo() {}
   }
-
   class C : B(), I {
       override fun foo() {
           super&lt;B&gt;.foo()

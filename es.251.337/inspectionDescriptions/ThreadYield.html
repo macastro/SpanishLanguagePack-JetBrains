@@ -2,8 +2,8 @@
 <body>
 Informa sobre las llamadas a <code>Thread.yield()</code>.
 <p>
-  El comportamiento de <code>yield()</code> no es determinista y depende de la plataforma, por lo que rara vez es apropiado usar este método.
-  Su uso debe combinarse con un profiling y una evaluación comparativa detallados para garantizar que realmente tiene el efecto deseado.
+  El comportamiento de <code>yield()</code> es indeterminado y depende de la plataforma, por lo que rara vez es apropiado usar este método.
+  Su uso debe combinarse con análisis detallados y pruebas de rendimiento para asegurar que realmente se logre el efecto deseado.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -18,6 +18,5 @@ Informa sobre las llamadas a <code>Thread.yield()</code>.
     new Thread(r).start();
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

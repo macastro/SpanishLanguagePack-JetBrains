@@ -1,31 +1,26 @@
 <html>
 <body>
-Informa declaraciones incorrectas de métodos de punto final de <a href="https://spring.io/projects/spring-integration">Spring Integration</a>.
-
+Reporta declaraciones incorrectas de métodos de endpoints en <a href="https://spring.io/projects/spring-integration">Spring Integration</a>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class MyEndpoints {
   @InboundChannelAdapter("channel")
-  public void <strong>cannotBeVoid</strong>() {...} // Un método anotado con @InboundChannelAdapter debe tener un tipo de retorno
-
+  public void <strong>cannotBeVoid</strong>() {...} // El método anotado con @InboundChannelAdapter debe tener un tipo de retorno
   @InboundChannelAdapter("channel")
-  public String <strong>cannotHaveParams</strong>(String s) {..} // Un método anotado con @InboundChannelAdapter no puede tener argumentos
-
-  @<strong>Filter</strong>(inputChannel = "channel", // Un punto final solo puede tener un sondeo
+  public String <strong>cannotHaveParams</strong>(String s) {..} // El método anotado con @InboundChannelAdapter no puede tener parámetros
+  @<strong>Filter</strong>(inputChannel = "channel", // El endpoint solo puede tener un poller
     outputChannel = "channel2",
     poller = {@Poller(fixedDelay = "100"), @Poller(fixedRate = "100")})
   public void testMultiplePollers() {
   }
-
   @Filter(inputChannel = "channel",
   outputChannel = "channel2",
   poller = @<strong>Poller</strong>(value = "poller", maxMessagesPerPoll = "100"))
   public void testValue() {
   }
-
   @Filter(inputChannel = "channel",
     outputChannel = "channel2",
-    poller = @<strong>Poller</strong>(trigger = "trigger", cron = "0 */10 * * * *")) // el atributo 'trigger' es mutuamente exclusivo con otros atributos
+    poller = @<strong>Poller</strong>(trigger = "trigger", cron = "0 */10 * * * *")) // El atributo 'trigger' es mutuamente exclusivo con otros atributos
   public void testTrigger() {
   }
 }

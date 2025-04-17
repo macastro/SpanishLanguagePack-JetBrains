@@ -1,31 +1,29 @@
 <html>
 <body>
-Informa de las clases que implementan <code>Serializable</code> y no declaran un campo <code>serialVersionUID</code>.
+Informa sobre clases que implementan <code>Serializable</code> y no declaran un campo <code>serialVersionUID</code>.
 <p>
-  Sin un campo <code>serialVersionUID</code>, cualquier cambio en la clase hará que las versiones serializadas anteriormente sean ilegibles.
+  Sin un campo <code>serialVersionUID</code>, cualquier cambio realizado en la clase provocará que las versiones previamente serializadas sean ilegibles.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   class Main implements Serializable {
   }
 </code></pre>
-<p>Tras aplicar la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code lang="java">
   class Main implements Serializable {
-    private static final long serialVersionUID = -1446398935944895849L;
+      private static final long serialVersionUID = -1446398935944895849L;
   }
 </code></pre>
-Al usar un nivel de lenguaje de JDK 14 o superior, la corrección rápida también agregará la anotación <code>java.io.Serial</code>.
-<!-- tooltip end -->
-<p>Utilice las siguientes opciones para configurar la inspección:</p>
+Cuando se usa un nivel de lenguaje de JDK 14 o superior, la corrección rápida también agregará la anotación <code>java.io.Serial</code>.
+<p>Configure la inspección con las siguientes opciones:</p>
 <ul>
   <li>
-    Enumerar las clases cuyos herederos no deben ser informados por esta inspección.
-    Esto está pensado para clases que heredan
-    <code>Serializable</code> de una superclase pero no están pensadas para la serialización.
+    Lista de clases cuyos herederos no deberían ser reportados por esta inspección.
+    Esto es aplicable a clases que heredan <code>Serializable</code> de una superclase pero no se utilizan para serialización.
   </li>
   <li>
-    Si ignorar las clases anónimas <code>Serializable</code>.
+    Si se deben ignorar las clases anónimas <code>Serializable</code>.
   </li>
 </ul>
 </body>

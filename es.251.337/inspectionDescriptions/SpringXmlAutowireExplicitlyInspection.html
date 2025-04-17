@@ -1,7 +1,6 @@
 <html>
 <body>
-<p>Informa de atributos <code>autowire</code> en elementos <code>&lt;bean&gt;</code> y sugiere inyectar propiedades del bean explícitamente si es posible.</p>
-
+<p>Reporta el atributo <code>autowire</code> en el elemento <code>&lt;bean&gt;</code> y sugiere la inyección explícita de propiedades Bean cuando sea posible.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   public class MyComponent {
@@ -12,13 +11,11 @@
   &lt;beans&gt;
     &lt;bean class="beans.OtherBean" id="bar"/&gt;
     &lt;bean autowire="byType" class="beans.MyComponent"/&gt;
-    &lt;!-- "Dependencia autocableada innecesaria" --&gt;
-    &lt;!-- sugiere "Hacer dependencia autocableada explícita" --&gt;
+    &lt;!-- "Dependencia autowired innecesaria" --&gt;
+    &lt;!-- Sugerencia: "Hacer explícita la dependencia autowired" --&gt;
   &lt;/beans&gt;
 </code></pre>
-
 <p>Después de aplicar la corrección rápida:</p>
-
 <pre><code lang="xml">
   &lt;beans&gt;
     &lt;bean class="beans.OtherBean" id="bar"/&gt;

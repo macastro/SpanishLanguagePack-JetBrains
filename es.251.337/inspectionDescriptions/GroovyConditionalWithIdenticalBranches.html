@@ -1,12 +1,12 @@
 <html>
 <body>
-Reporta expresiones ternarias con ramas idénticas "then" y "else". Dichas expresiones son casi con seguridad un error del programador.
-<p>La solución rápida reemplaza la expresión con su rama "then".</p>
+Informa sobre expresiones ternarias que tienen las mismas ramas "then" y "else". Tales expresiones casi siempre indican un error del programador.
+<p>Esta corrección rápida reemplaza la expresión con su rama "then".</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  condición ? a.foo() : a.foo()
+  condition ? a.foo() : a.foo()
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   a.foo()
 </code></pre>

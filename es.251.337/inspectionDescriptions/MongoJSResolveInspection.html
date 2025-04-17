@@ -1,10 +1,10 @@
 <html>
 <body>
-Reporta las referencias sin resolver en el código de MongoDB y JavaScript.
+Informa sobre referencias no resueltas en código MongoDB y JavaScript.
 <p>Ejemplo:</p>
 <pre><code>db
 use foo
-  -- una referencia a una colección no existente
+  -- a reference to a non-existing collection
 db.non_existing_collection
 db['non_existing_collection']
 db['non_existing_collection'].find().hasNext()</code></pre>

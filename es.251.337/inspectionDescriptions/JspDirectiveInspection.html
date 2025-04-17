@@ -1,12 +1,11 @@
 <html>
 <body>
-Reporta directivas de importación JSP sin los atributos URI o tagdir.
-
+Informa sobre directivas de importación JSP que no tienen atributos URI o tagdir.
 <p><b>Ejemplo:</b></p>
 <pre><code>
 &lt;html&gt;
   &lt;body&gt;
-    &lt;%@ taglib prefix="html"%&gt; // Error: se debe especificar el atributo `uri` o `tagdir`
+    &lt;%@ taglib prefix="html"%&gt; // Error: debe especificar el atributo `uri` o `tagdir`
     ...
   &lt;/body&gt;
 &lt;/html&gt;

@@ -1,27 +1,24 @@
 <html>
 <body>
-Informa sobre métodos que aceptan un número arbitrario de parámetros (también conocidos como métodos varargs).
+Reporta métodos que aceptan un número variable de parámetros (también conocidos como métodos vararg).
 <p><b>Ejemplo:</b></p>
 <pre><code>
   enum EnumConstants {
   A(null), B, C;
-
   EnumConstants(String... ss) {}
 }
 </code></pre>
-<p>Hay una corrección rápida disponible para reemplazar un parámetro de argumento variable con un parámetro de matriz equivalente. Los argumentos relevantes en las llamadas al método están envueltos en una expresión de inicializador de matriz.
+<p>El parámetro vararg puede ser reemplazado por un parámetro de array equivalente mediante una corrección rápida. Los argumentos correspondientes en las llamadas al método se envuelven en expresiones inicializadoras de array.
   Después de aplicar la corrección rápida:</p>
 <pre><code>
   enum EnumConstants {
   A(null), B(new String[]{}), C(new String[]{});
-
   EnumConstants(String[] ss) {}
 }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  El <i>método varargs</i> apareció en Java 5.
-  Esta inspección puede ayudar a degradar para la compatibilidad con versiones anteriores con versiones anteriores de Java.
+  <i>Los métodos varargs</i> fueron introducidos en Java 5.
+  Esta inspección ayuda a la degradación para mantener compatibilidad con versiones anteriores de Java.
 </p>
 </body>
 </html>

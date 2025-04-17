@@ -1,10 +1,8 @@
 <html>
 <body>
-Informa sobre llamadas a los métodos de expresión regular (como <code>matches()</code> o <code>split()</code>)
-de <code>java.lang.String</code> utilizando argumentos constantes.
+Informa sobre llamadas a métodos de expresiones regulares de <code>java.lang.String</code> (como <code>matches()</code> o <code>split()</code>) que utilizan argumentos constantes.
 <p>
-  Tales llamadas pueden reemplazarse favorablemente por un campo <code>private static final Pattern</code>
-  de modo que no se deba compilar la expresión regular cada vez que se utiliza.
+  Estas llamadas pueden ser reemplazadas ventajosamente por un campo <code>private static final Pattern</code>, evitando así la necesidad de compilar la expresión regular cada vez que se utiliza.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -15,6 +13,5 @@ de <code>java.lang.String</code> utilizando argumentos constantes.
   private static final Pattern ABC = Pattern.compile("abc", Pattern.LITERAL);
   ABC.matcher(text).replaceAll(Matcher.quoteReplacement(replacement));
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

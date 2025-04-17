@@ -1,6 +1,6 @@
 <html>
 <body>
-Reporta declaraciones de variables locales que se pueden reemplazar con variables de patrón, que usualmente son más compactas.
+El informe indica que las declaraciones de variables locales pueden reemplazarse por variables de patrón, que suelen ser más concisas.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   if (obj instanceof String) {
@@ -8,13 +8,12 @@ Reporta declaraciones de variables locales que se pueden reemplazar con variable
     System.out.println(str);
   }
 </code></pre>
-<p>Se puede reemplazar con:</p>
+<p>Puede reemplazarse por:</p>
 <pre><code>
   if (obj instanceof String str) {
     System.out.println(str);
   }
 </code></pre>
-<!-- tooltip end -->
-<p><small>Nuevo en 2020.1</small></p>
+<p><small>Cambios en 2020.1</small></p>
 </body>
 </html>

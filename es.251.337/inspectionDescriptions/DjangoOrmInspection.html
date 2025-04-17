@@ -1,14 +1,12 @@
 <html>
 <body>
-<p>Informa sobre algunos métodos que podrían no ser llamados por algunas razones ORM.</p>
+<p>Informa sobre métodos que posiblemente no se pueden llamar debido a ciertas restricciones del ORM.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="Python">
 class Choice:
     question = ForeignKey(Question, null=False)
-
-
 choice_set = Question.objects.get(id=1).choice_set.remove()
 </code></pre>
-<p>No se puede llamar a la función <code>remove</code> si la clave externa tiene <code>null=False</code>.</p>
+<p>Si la clave foránea tiene <code>null=False</code>, no es posible llamar a la función <code>remove</code>.</p>
 </body>
 </html>

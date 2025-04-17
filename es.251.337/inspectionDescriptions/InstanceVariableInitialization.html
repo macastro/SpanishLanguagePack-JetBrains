@@ -1,17 +1,14 @@
 <html>
 <body>
-Reporta variables de instancia que podrían no estar inicializadas con la inicialización del objeto.
+Informa sobre variables de instancia que posiblemente no estén inicializadas durante la inicialización del objeto.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
     public int bar;
-
     static { }
   }
 </code></pre>
-<p>Nota que esta inspección usa un algoritmo de flujo de datos muy conservador y podría reportar incorrectamente variables de instancia como no inicializadas. Las variables
-  reportadas como inicializadas siempre estarán inicializadas.</p>
-<!-- tooltip end -->
-<p>Use la opción <b>Ignorar campos primitivos</b> para ignorar campos primitivos no inicializados.</p>
+<p>Tenga en cuenta que esta inspección utiliza un algoritmo de flujo de datos muy conservador y podría reportar incorrectamente variables de instancia como no inicializadas. Las variables reportadas como inicializadas siempre estarán inicializadas.</p>
+<p>Use la opción <b>Ignorar campos primitivos</b> para ignorar los campos primitivos no inicializados.</p>
 </body>
 </html>

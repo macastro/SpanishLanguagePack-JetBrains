@@ -1,14 +1,14 @@
 <html>
 <body>
-Inspecciona innecesariamente caracteres escapados en literales <code>String</code> y, opcionalmente, en <code>char</code>.
-<p>Los caracteres de tabulación escapados <code>\t</code> no se inspeccionan, porque son invisibles.</p>
-<p>Ejemplos:</p>
+Informa sobre caracteres de escape innecesarios en literales de <code>String</code> y <code>char</code> (opcional).
+<p>No se informará sobre el carácter de escape de tabulación <code>\t</code>, ya que el carácter de tabulación no es visible.</p>
+<p>Ejemplo:</p>
 <pre><code>
   String s = "\'Scare\' quotes";
   String t = """
     All you need is\n\tLove\n""";
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   String s = "'Scare' quotes";
   String t = """
@@ -16,7 +16,6 @@ Inspecciona innecesariamente caracteres escapados en literales <code>String</cod
     \tLove
   """;
 </code></pre>
-<!-- tooltip end -->
-<p><small>Nuevo en la versión 2019.3</small>
+<p><small>Cambios en la versión 2019.3</small>
 </body>
 </html>

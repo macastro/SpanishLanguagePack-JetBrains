@@ -1,21 +1,18 @@
 <html>
 <body>
 <p>
-    Reporta clases en línea que están obsoletas y provocan advertencias de compilación en Kotlin 1.5 y posteriores.
-    Ver <a href="https://kotlinlang.org/docs/whatsnew15.html#inline-classes">Novedades en Kotlin 1.5.0</a>
+    Informa sobre clases inline que están obsoletas y generan advertencias de compilación en Kotlin 1.5 y versiones posteriores.
+    Consulta <a href="https://kotlinlang.org/docs/whatsnew15.html#inline-classes">Novedades de Kotlin 1.5.0</a>
 </p>
-
 <p>Ejemplo:</p>
 <pre><code>
-  clase en línea Contraseña(val s: Cadena)
+  inline class Password(val s: String)
 </code></pre>
-
-<p>Tras aplicar la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  @ClaseEnLíneaDeJVM
-  clase de valor Contraseña(val s: Cadena)
+  @JvmInline
+  value class Password(val s: String)
 </code></pre>
-
-<p>La inspección está disponible para el nivel de idioma Kotlin a partir de 1.5.</p>
+<p>La comprobación está disponible para el nivel de lenguaje Kotlin desde la versión 1.5.</p>
 </body>
 </html>

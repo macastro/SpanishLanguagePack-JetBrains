@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>Informa de parámetros desparejados en un docstring. Por ejemplo, se resalta <code>b</code>, porque no hay un parámetro así en la función <code>add</code>.</p>
+<p>Informa sobre parámetros no coincidentes en el docstring. Por ejemplo, <code>b</code> está resaltado porque no existe tal parámetro en la función <code>add</code>.</p>
 <pre><code>
     def add(a, c):
     """
@@ -10,7 +10,7 @@
     """
     pass
 </code></pre>
-<p>La inspección no le advierte de parámetros que faltan si ninguno de ellos se menciona en un docstring:</p>
+<p>Si no se menciona ninguno de los parámetros en el docstring, la inspección no te advertirá sobre los parámetros faltantes:</p>
 <pre><code>
 def mult(a, c):
     """

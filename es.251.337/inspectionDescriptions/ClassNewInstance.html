@@ -1,27 +1,19 @@
 <html>
 <body>
-Informa sobre las llamadas a <code>java.lang.Class.newInstance()</code>.
+Reporta llamadas a <code>java.lang.Class.newInstance()</code>.
 <p>
-  Este método propaga las excepciones lanzadas por el
-  constructor sin argumentos, incluidas las excepciones marcadas. Los usos de este método
-  evitan la verificación de excepciones de tiempo de compilación que, de lo contrario,
-  realizaría el compilador.
+  Este método propaga las excepciones lanzadas por el constructor sin argumentos, incluyendo las excepciones verificadas. El uso de este método permite eludir efectivamente la verificación de excepciones en tiempo de compilación que normalmente realiza el compilador.
 </p>
 <p>
-  Se sugiere una solución rápida para reemplazar la llamada con una llamada al método
-  <code>java.lang.reflect.Constructor.newInstance()</code>, que
-  evita este problema al encapsular cualquier excepción lanzada por el constructor en un
-  <code>java.lang.reflect.InvocationTargetException</code> (comprobado).
+  Se recomienda reemplazar esta llamada mediante la corrección rápida por una llamada al método <code>java.lang.reflect.Constructor.newInstance()</code>, que envuelve cualquier excepción lanzada por el constructor en una (verificada) <code>java.lang.reflect.InvocationTargetException</code>, evitando así este problema.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   clazz.newInstance()
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   clazz.getConstructor().newInstance();
 </code></pre>
-<!-- tooltip end -->
-
 </body>
 </html>

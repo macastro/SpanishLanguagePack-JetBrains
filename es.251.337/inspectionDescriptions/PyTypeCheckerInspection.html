@@ -1,22 +1,18 @@
 <html>
 <body>
-<p>Reporta errores de tipo en expresiones de llamada de función, objetivos y valores de retorno. En un lenguaje de tipado dinámico, esto es posible en un número limitado de casos. </p>
-<p>Los tipos de parámetros de función se pueden especificar en docstrings o en anotaciones de funciones de Python 3.</p>
+<p>Informa sobre errores de tipo en expresiones de llamada a funciones, objetivos y valores de retorno. En lenguajes de tipado dinámico, esto puede ocurrir en algunos casos.</p>
+<p>Los tipos de parámetros de función se pueden especificar en docstrings o anotaciones de funciones de Python 3.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 def foo() -> int:
-    return "abc" # Se esperaba un int, se obtuvo un str
-
-
+    return "abc" # Debería ser int, pero se obtiene str
 a: str
-a = foo() # Se esperaba un str, se obtuvo un int
+a = foo() # Debería ser str, pero se obtiene int
 </code></pre>
-<p>Con la corrección rápida, puedes modificar los tipos problemáticos:</p>
+<p>La corrección rápida puede modificar el tipo problemático:</p>
 <pre><code>
 def foo() -> str:
     return "abc"
-
-
 a: str
 a = foo()
 </code></pre>

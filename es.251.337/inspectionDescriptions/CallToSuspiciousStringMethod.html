@@ -1,19 +1,18 @@
 <html>
 <body>
-Inspecciona llamadas de:
+Informa sobre las llamadas a:
 <ul>
   <li><code>equals()</code></li>
   <li><code>equalsIgnoreCase()</code></li>
   <li><code>compareTo()</code></li>
-  <li><code>compareToIgnoreCase()</code> and</li>
+  <li><code>compareToIgnoreCase()</code> y</li>
   <li><code>trim()</code></li>
 </ul>
 <p>
-  sobre objetos <code>String</code>.
-  La comparación de cadenas internacionalizadas probablemente debería utilizar <code>java.text.Collator</code> en su lugar.
-  <code>String.trim()</code> sólo elimina caracteres de control entre 0x00 y 0x20.
-  El método <code>String.strip()</code> introducido en Java 11 es más compatible con Unicode y puede usarse como reemplazo.
+  (realizadas en objetos <code>String</code>).
+  Para la comparación de cadenas internacionalizadas, se debería considerar usar <code>java.text.Collator</code>.
+  <code>String.trim()</code> solo elimina caracteres de control entre 0x00 y 0x20.
+  El método <code>String.strip()</code>, introducido en Java 11, tiene mejor compatibilidad con Unicode y puede usarse como alternativa.
 </p>
-<!-- tooltip end -->
 </body>
 </html>

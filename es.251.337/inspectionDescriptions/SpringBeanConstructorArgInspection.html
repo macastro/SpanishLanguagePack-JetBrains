@@ -1,26 +1,23 @@
 <html>
 <body>
-<p>Informa sobre los Spring <code>&lt;bean&gt;</code> que utilizan la inyección de dependencias basada en constructores.</p>
-
-<p>La inspección se activa cuando no puede encontrar el constructor o método de fábrica apropiados para <code>&lt;bean&gt;</code> con las etiquetas <code>&lt;constructor-arg&gt;</code> configuradas y la política de <code>autowire</code> definida.</p>
-
+<p>Reporta el uso de inyección de dependencias basada en constructores de Spring <code>&lt;bean&gt;</code>.</p>
+<p>La inspección se activa cuando no se puede encontrar un constructor o método de fábrica adecuado para el <code>&lt;bean&gt;</code> utilizando las etiquetas <code>&lt;constructor-arg&gt;</code> configuradas y la estrategia de <code>autowire</code> definida.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
     public class MyComponent {
-    // constructor
+    // 构造函数
     public MyComponent(MyBean bean) {}
-    // método de fábrica
+    // 工厂方法
     public static MyComponent getInstance(String name, int port) {
     }
 </code></pre>
 <pre><code lang="xml">
     &lt;beans&gt;
-      &lt;bean class="beans.MyComponent" id="foo"&gt; &lt;!-- informa "No se encontró un constructor coincidente en la clase 'MyComponent" --&gt;
-         &lt;constructor-arg ref="myBean"/&gt;
+      &lt;bean class="beans.MyComponent" id="foo"&gt; &lt;!-- Reporta "No se encuentra un constructor coincidente en la clase 'MyComponent'" --&gt;
+          &lt;constructor-arg ref="myBean"/&gt;
          &lt;constructor-arg value="123"/&gt;
       &lt;/bean&gt;
-
-      &lt;bean class="beans.MyComponent" factory-method="getInstance"&gt; &lt;!-- informa "No se encontró un método de fábrica coincidente en la clase" --&gt;
+      &lt;bean class="beans.MyComponent" factory-method="getInstance"&gt; &lt;!-- Reporta "No se encuentra un método de fábrica coincidente en la clase" --&gt;
          &lt;constructor-arg value="123"/&gt;
       &lt;/bean&gt;
     &lt;/beans&gt;

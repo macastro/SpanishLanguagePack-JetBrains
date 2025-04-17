@@ -1,22 +1,16 @@
 <html>
 <body>
-Reporta referencias a variables que son comprobadas por nulidad
-en la condición de una declaración <code>if</code> o
-expresión condicional pero no usadas dentro de esa
-declaración <code>if</code>.
+Informa sobre referencias a variables que se comprueban por nulidad en condiciones de declaraciones <code>if</code> o expresiones condicionales, pero que no se utilizan dentro de dicha declaración <code>if</code>.
 <p>
-  Normalmente esto significa que
-  la comprobación es innecesaria o que la variable no es referenciada dentro de la
-  declaración <code>if</code> por error.
+  Esto generalmente indica que la comprobación es innecesaria o que hay una referencia incorrecta a la variable dentro de la declaración <code>if</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void test(Integer i) {
-    if (i != null) { // aquí 'i' no se usa dentro de la declaración 'if'
+    if (i != null) { // Aquí 'i' no se utiliza dentro de la declaración 'if'
       System.out.println();
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

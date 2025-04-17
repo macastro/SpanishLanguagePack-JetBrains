@@ -1,13 +1,11 @@
 <html>
 <body>
-Informa sobre columnas en la cláusula USING que no existen en ambas tablas.
+Informa sobre columnas en la cláusula USING que no existen en ninguna de las dos tablas.
 <p>Ejemplo (MySQL):</p>
 <pre><code>CREATE TABLE t1 (i INT, j INT);
 CREATE TABLE t2 (k INT, l INT);
 SELECT * FROM t1 JOIN t2 USING (j);</code></pre>
-<p>En las cláusulas USING, el nombre de una columna debe estar presente en ambas tablas, y la consulta SELECT unirá automáticamente
-  esas tablas utilizando el nombre de columna proporcionado. Como no tenemos la columna <code>j</code> en <code>t2</code>, podemos
-  reescribir la consulta utilizando ON. La cláusula ON puede unir tablas en las que los nombres de columna no coinciden en ambas tablas.</p>
+<p>En la cláusula USING, los nombres de las columnas deben existir en ambas tablas, ya que la consulta SELECT unirá automáticamente las tablas usando el nombre de columna proporcionado. Como no tenemos una columna <code>j</code> en <code>t2</code>, podemos reescribir la consulta usando ON. La cláusula ON permite unir tablas donde los nombres de las columnas no coinciden.</p>
 <pre><code>SELECT * FROM t1 JOIN t2 ON t1.j = t2.l;</code></pre>
 </body>
 </html>

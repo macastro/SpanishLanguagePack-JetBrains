@@ -1,13 +1,13 @@
 <html>
 <body>
-Reporta las declaraciones de las variables que se sobreponen con las declaraciones en el ámbito externo.
-<p>En este caso, como el significado de la variable depende del ámbito, puede crear confusión y dar lugar a consecuencias no deseadas.</p>
+Informa sobre declaraciones de variables que se superponen con declaraciones en un ámbito externo.
+<p>Esta situación puede causar confusión y consecuencias inesperadas, ya que el significado de las variables depende del ámbito.</p>
 <p>Ejemplo:</p>
 <pre><code>for i := 0; i &lt; len(nums); i++ {
     for i := 0; i &lt; len(nums); i++ {
     }
   }</code></pre>
-<p>La variable <code>i</code> en el bucle anidado está siendo sombreada. Para eliminar el sombreado, considera renombrar la variable en el bucle anidado.</p>
+<p>La variable <code>i</code> en el bucle anidado está oculta. Para eliminar el ocultamiento, considere renombrar la variable en el bucle anidado.</p>
 <pre><code>for i := 0; i &lt; len(nums); i++ {
     for j := 0; j &lt; len(nums); j++ {
     }

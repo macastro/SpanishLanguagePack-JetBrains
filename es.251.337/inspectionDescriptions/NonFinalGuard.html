@@ -1,19 +1,17 @@
 <html>
 <body>
-Informa la anotación <code>@GuardedBy</code> donde  el campo protegido no es <code>final</code>.
- <p>El hecho de proteger un campo no <code>final</code> puede provocar condiciones de carrera inesperadas, ya que el valor del campo se bloquea (y puede cambiar), en lugar del campo en sí.</p>
+Informa sobre anotaciones <code>@GuardedBy</code> donde el campo protegido no es <code>final</code>.
+<p>La protección en campos no finales puede llevar a condiciones de carrera inesperadas, ya que se bloquea el valor del campo (que puede cambiar) en lugar de bloquear el campo en sí.</p>
 <p>Ejemplo:</p>
 <pre><code>
-    private ReadWriteLock lock = new ReentrantReadWriteLock(); // campo no final protegido
+    private ReadWriteLock lock = new ReentrantReadWriteLock(); //campo protegido no final
     private Object state;
-
     @GuardedBy("lock")
     public void bar() {
         state = new Object();
     }
 </code></pre>
-<!-- tooltip end -->
-<p>Las anotaciones <code>@GuardedBy</code> admitidas son:</p>
+<p>Las anotaciones <code>@GuardedBy</code> soportadas son:</p>
 <ul>
   <li><code>net.jcip.annotations.GuardedBy</code></li>
   <li><code>javax.annotation.concurrent.GuardedBy</code></li>

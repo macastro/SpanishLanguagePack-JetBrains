@@ -1,16 +1,15 @@
 <html>
 <body>
-Reporta las listas, arreglos y cadenas donde exactamente un elemento es consultado justo después de su creación.
-Tales expresiones pueden aparecer luego de la refactorización y usualmente pueden reemplazarse con un elemento accedido.
+Informa sobre listas, arrays y cadenas que tienen exactamente un elemento consultado durante su creación.
+Estas expresiones suelen aparecer después de una refactorización y generalmente pueden reemplazarse por el elemento accedido.
 <p>Ejemplo:</p>
 <pre><code>
   System.out.println(new int[] {1,2,3,4,5}[2]);
 </code></pre>
-<p>Luego que el arreglo rápido es aplicado:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   System.out.println(3);
 </code></pre>
-<!-- tooltip end -->
-<p><small>Nuevo en 2022.3</small></p>
+<p><small>Novedades en 2022.3</small></p>
 </body>
 </html>

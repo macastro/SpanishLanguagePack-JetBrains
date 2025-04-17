@@ -1,7 +1,6 @@
 <html>
 <body>
-<p>Informa sobre <strong>&lt;lookup-method&gt;</strong> incorrecto para un bean en contextos de aplicación XML.</p>
-
+<p>Reporta <strong>&lt;lookup-method&gt;</strong> incorrectos en Beans dentro del contexto de aplicación XML.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   public abstract class FooLookupBean {
@@ -16,18 +15,17 @@
   &lt;beans&gt;
     &lt;bean class="FooLookupBean" id="lookupTest"&gt;
       &lt;lookup-method bean="fooBean" name="createCommand"/&gt;
-      &lt;!-- privado --&gt;
+      &lt;!-- private --&gt;
       &lt;lookup-method bean="fooBean" name="createCommand"/&gt; &lt;!-- "El método debe ser public o protected" --&gt;
-      &lt;!-- estático --&gt;
-      &lt;lookup-method bean="fooBean" name="createCommandStatic"/&gt; &lt;!-- El método static no está permitido aquí --&gt;
-      &lt;!-- con argumentos --&gt;
+      &lt;!-- static --&gt;
+      &lt;lookup-method bean="fooBean" name="createCommandStatic"/&gt; &lt;!-- No se permite un método static aquí --&gt;
+      &lt;!-- with arguments --&gt;
       &lt;lookup-method bean="fooBean" name="createWithArgs"/&gt; &lt;!-- El método no debe tener parámetros --&gt;
-      &lt;!-- no existe --&gt;
-      &lt;lookup-method bean="fooBean" name="unknown"/&gt; &lt;!-- método desconocido --&gt;
-      &lt;!-- desajuste --&gt;
-      &lt;lookup-method bean="fooBean" name="createOtherBean"/&gt; &lt;!-- El tipo de retorno del método de búsqueda no coincide con la clase bean 'FooBean' --&gt;
+      &lt;!-- not exist --&gt;
+      &lt;lookup-method bean="fooBean" name="unknown"/&gt; &lt;!-- Método desconocido --&gt;
+      &lt;!-- mismatch --&gt;
+      &lt;lookup-method bean="fooBean" name="createOtherBean"/&gt; &lt;!-- El tipo de retorno del método lookup no coincide con el tipo del Bean 'FooBean' --&gt;
     &lt;/bean&gt;
-
     &lt;bean class="FooBean" id="fooBean"/&gt;
     &lt;bean class="OtherBean" id="otherBean"/&gt;
   &lt;/beans&gt;

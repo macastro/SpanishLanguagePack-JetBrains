@@ -1,13 +1,14 @@
-<html><body>Informa expresiones afectadas por conversión de desempaquetado (desempaquetado automático de objetos en valores primitivos).
-Intenta no utilizar objetos en lugar de primitivos. Podría afectar significativamente al rendimiento.
+<html>
+<body>
+Informa sobre expresiones afectadas por la conversión de unboxing (conversión automática de objetos a valores primitivos).
+Es preferible usar primitivos en lugar de objetos. Esto puede tener un impacto significativo en el rendimiento.
 <p><b>Ejemplo:</b></p>
 <pre><code>int x = new Integer(42);</code></pre>
-<p>La solución rápida explicita la conversión:</p>
+<p>La corrección rápida hará la conversión explícita:</p>
 <pre><code>int x = new Integer(42).intValue();</code></pre>
-<!-- tooltip end -->
 <p>
-  <i>Desempaquetado automático</i> apareció en Java 5.
-  Esta inspección puede ayudar a realizar una degradación para compatibilidad inversa con versiones anteriores de Java.
+  El <i>auto-unboxing</i> fue introducido en Java 5.
+  Esta inspección ayuda con la compatibilidad hacia atrás con versiones anteriores de Java.
 </p>
-
-</body></html>
+</body>
+</html>

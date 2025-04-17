@@ -1,16 +1,14 @@
 <html>
 <body>
-Reporta hashes con strings como claves. Es preferible utilizar símbolos en vez de strings como claves de hash.
+Reporta hashes que usan cadenas de texto como claves. Es mejor usar símbolos en lugar de cadenas como claves de hash.
 <p>Ejemplo:</p>
 <pre>
-<code># Mala Práctica
+<code># 不良做法
 { 'foo' => 1, 'bar' => 2 }</code>
 </pre>
-
-Se encuentra disponible una corrección rápida para convertir todas las claves de string a símbolos. Después de aplicar la corrección rápida, el resultado se verá así:
-
+Todas las claves de cadena pueden convertirse a símbolos mediante una corrección rápida. Después de aplicar la corrección rápida, el resultado se verá así:
 <pre>
-<code># Buena Práctica
+<code># 优良做法
 { foo: 1, bar: 2 }</code>
 </pre>
 <p><span style="font-size: smaller;">Inspirado por <a

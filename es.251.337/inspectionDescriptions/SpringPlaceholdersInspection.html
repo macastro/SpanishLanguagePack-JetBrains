@@ -1,15 +1,13 @@
 <html>
 <body>
-<p>Reporta los placeholders no resueltos configurados en los contextos XML de Spring.</p>
-
+<p>Informa sobre marcadores de posición no resueltos en el contexto XML de Spring.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   &lt;beans&gt;
     &lt;ctx:property-placeholder location="application.properties"/&gt;
-
     &lt;bean class="beans.ServerComponent"&gt;
       &lt;property name="serverName" value="${server.name}}"/&gt;
-      &lt;property name="port" value="${unknown.property}}"/&gt; &lt;!-- reporta "No se puede resolver la clave de la propiedad" --&gt;
+      &lt;property name="port" value="${unknown.property}}"/&gt; &lt;!-- Informa "clave de propiedad no resuelta" --&gt;
     &lt;/bean&gt;
   &lt;/beans&gt;
 </code></pre>

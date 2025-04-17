@@ -1,16 +1,13 @@
 <html>
 <body>
-Reporta las concatenaciones de cadenas con espacios en blanco faltantes, es decir, cuando el lado izquierdo
-termina con una letra o dígito Unicode y el lado derecho comienza con una letra o dígito Unicode.
+Informa sobre concatenaciones de cadenas sin espacios, donde el lado izquierdo termina con una letra o número Unicode y el lado derecho comienza con una letra o número Unicode.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  String sql = "SELECT columna" +
-               "DE tabla";
+  String sql = "SELECT column" +
+               "FROM table";
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Utiliza la opción <b>Ignorar concatenaciones con cadenas variables</b> para reportar solo
-  cuando tanto el lado izquierdo como el derecho de la concatenación son literales.
+  Utiliza la opción <b>ignorar concatenaciones con cadenas variables</b> para informar solo cuando ambos lados de la concatenación son literales.
 </p>
 </body>
 </html>

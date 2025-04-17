@@ -1,11 +1,8 @@
 <html>
 <body>
-Informa clases anónimas que se pueden reemplazar con referencias a métodos.
+Se informa que la clase anónima puede reemplazarse con una referencia a método.
 <p>
-  Tenga en cuenta que si una clase anónima se convierte en una referencia a un método sin vincular, el mismo objeto de referencia a un método 
-  puede ser reutilizado por el tiempo de ejecución de Java durante invocaciones posteriores. Por otro lado, cuando se utiliza una clase anónima,
-  se crean objetos separados cada vez. Por lo tanto, la aplicación de la solución rápida puede provocar un cambio de semántica en casos excepcionales, 
-  por ejemplo, cuando las instancias de clases anónimas se utilizan como claves <code>HashMap</code>.
+  Tenga en cuenta que si una clase anónima se convierte en una referencia a método no vinculada, el tiempo de ejecución de Java puede reutilizar el mismo objeto de referencia a método durante las llamadas posteriores. Por otro lado, cuando se usa una clase anónima, se crea un objeto separado cada vez. Por lo tanto, en casos muy raros, la aplicación de esta corrección rápida puede resultar en un cambio semántico, por ejemplo, cuando una instancia de clase anónima se usa como clave en un <code>HashMap</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -16,12 +13,10 @@ Informa clases anónimas que se pueden reemplazar con referencias a métodos.
     }
   };
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   Runnable r = System.out::println;
 </code></pre>
-<!-- tooltip end -->
-<p>Utilice la opción <b>Informar cuando la interfaz no está anotada con @FunctionalInterface</b> para habilitar esta inspección para
-  interfaces que no están anotadas con <code>@FunctionalInterface</code>.</p>
+<p>Use la opción <b>Informar cuando la interfaz no está anotada con @FunctionalInterface</b> para habilitar esta inspección en interfaces que no utilizan la anotación <code>@FunctionalInterface</code>.</p>
 </body>
 </html>

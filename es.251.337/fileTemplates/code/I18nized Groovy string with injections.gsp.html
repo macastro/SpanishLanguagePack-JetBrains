@@ -1,6 +1,5 @@
 <html>
 <body>
-
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
@@ -10,39 +9,40 @@
       &nbsp;&nbsp;&nbsp;&nbsp;
         &lt;<span style="font-weight:bold;">html</span>&gt;
         &lt;<span style="font-weight:bold;">body</span>&gt;
-      <font face="verdana">Hola ${'mundo'}!</font>
+      <font face="verdana">Hello ${'world'}!</font>
       &lt;<span style="font-weight:bold;">/body</span>&gt;
       &lt;<span style="font-weight:bold;">/html</span>&gt;
       <br>
-    con el uso de etiquetas personalizadas de GSP internacionalizadas,
+    con el uso de etiquetas personalizadas GSP internacionalizadas,
       por ejemplo:
       <br>
       &nbsp;&nbsp;&nbsp;&nbsp;
       &lt;<span style="font-weight:bold;">html</span>&gt;
       &lt;<span style="font-weight:bold;">body</span>&gt;
-      <font face="verdana">&lt;g:message code="HelloKey" args="['mundo']"/&gt;</font>
+      <font face="verdana">&lt;g:message code="HelloKey" args="['world']"/&gt;</font>
     &lt;<span style="font-weight:bold;">/body</span>&gt;
-    &lt;<span style="font-weight:bold;">/html</span>&gt;.
+    &lt;<span style="font-weight:bold;">/html</span>&gt;
+    .
     <p>
-    La plantilla es editable. Además de las expresiones permitidas en el contexto GSP, puede usar variables predefinidas que luego se expandirán a sus valores correspondientes.</font>
+    Esta plantilla es editable. Además de las expresiones permitidas en el contexto GSP, puede usar variables predefinidas que luego se expandirán a sus valores correspondientes.</font>
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas aceptarán los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_KEY}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre de la clave de propiedad como se especifica en el archivo de propiedades correspondiente.
+    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre de la clave de propiedad especificada en el archivo de propiedades correspondiente.
     </font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_VALUE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">El valor de la propiedad como se especifica en el archivo de propiedades correspondiente.
-      Este es el valor de la selección de texto GSP original.
+    <td width="100%" valign="top"><font face="verdana" size="-1">El valor de la propiedad especificada en el archivo de propiedades correspondiente.
+      Este es un valor de selección de texto GSP original.
     </font></td>
   </tr>
   <tr>
@@ -50,7 +50,6 @@
     <td width="10">&nbsp;</td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Argumentos</font></td>
   </tr>
-
 </table>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>
-  Reporta ocurrencias de sentencias <code>return</code> con un valor de retorno dentro de los métodos <code>__init__</code> de clases.
+  Informa sobre las declaraciones <code>return</code> que devuelven valores en el método <code>__init__</code> de una clase.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -12,7 +12,7 @@ class Sum:
         self.sum = a + b
         return self.sum
 </code></pre>
-<p>Un constructor no debe regresar ningún valor. El método <code>__init__</code> sólo debe inicializar los valores de los miembros de instancia para objetos nuevos.</p>
-<p>Como solución rápida, el IDE se ofrece a eliminar la sentencia <code>return</code>.</p>
+<p>El constructor no debe devolver ningún valor. El método <code>__init__</code> solo debe inicializar los valores de los miembros de la nueva instancia del objeto.</p>
+<p>La corrección rápida propuesta por el IDE es eliminar la declaración <code>return</code>.</p>
 </body>
 </html>

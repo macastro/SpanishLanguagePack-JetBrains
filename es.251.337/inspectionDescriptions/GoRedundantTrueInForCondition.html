@@ -1,12 +1,10 @@
 <html>
 <body>
-Reporta el literal <code>true</code> redundante en la condición de bucle <code>for</code>.
-
+Reporta el uso redundante del literal <code>true</code> en la condición del bucle <code>for</code>.
 <p>En Go, el bucle <code>for</code> tiene una forma con una condición implícita.
   Esto significa que puedes crear un bucle infinito escribiendo <code>for { }</code>.
-  Por lo tanto, en casos con la condición <code>true</code> (<code>for true { }</code>), <code>true</code> es considerado redundante y se puede omitir.</p>
-
-<p>Para más información sobre el bucle <code>for</code> en Go, consulta <a href="https://go.dev/doc/effective_go#for">For en go.dev</a>.
+  Por lo tanto, en casos con una condición <code>true</code> (<code>for true { }</code>), el <code>true</code> se considera redundante y puede omitirse.</p>
+<p>Para más información sobre los bucles <code>for</code> en Go, consulta <a href="https://go.dev/doc/effective_go#for">For en go.dev</a>.
 </p>
 <p>Ejemplo:</p>
 <pre><code>for true {

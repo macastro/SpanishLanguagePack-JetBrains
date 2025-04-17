@@ -1,10 +1,9 @@
 <html>
 <body>
-INspecciona las llamadas hacia <code>Thread.stop()</code>, <code>Thread.suspend()</code> y <code>Thread.resume()</code>.
+Informa sobre las llamadas a <code>Thread.stop()</code>, <code>Thread.suspend()</code> y <code>Thread.resume()</code>.
 <p>
-  Se recomienda enfáticamente NO utilizar estas llamadas, ya que son propensas a provocar daños en los datos y bloqueos.
-  Se sugiere utilizar la cancelación cooperativa en lugar de <code>stop</code>, y usar interrupciones en lugar de llamar directamente a <code>suspend</code> y <code>resume</code>.
+  Estas llamadas son inherentemente propensas a la corrupción de datos y bloqueos mutuos, por lo que se recomienda encarecidamente no utilizarlas.
+  Es mejor usar la cancelación cooperativa en lugar de <code>stop</code>, y el uso de interrupciones en lugar de llamadas directas a <code>suspend</code> y <code>resume</code>.
 </p>
-<!-- tooltip end -->
 </body>
 </html>

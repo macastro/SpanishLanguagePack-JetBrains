@@ -1,13 +1,12 @@
 <html>
 <body>
-Inspecciona las expresiones que parecen usar un método inadecuado para determinar la igualdad del arreglo o para calcular su código hash.
-<p>Se informan las siguientes llamadas a métodos:</p>
+Reporta expresiones que parecen usar métodos incorrectos para determinar la igualdad de arrays o calcular sus códigos hash.
+<p>Los métodos reportados son:</p>
 <ul>
-  <li><code>Object.equals()</code> para cualquier arreglo</li>
-  <li><code>Arrays.equals()</code> para arreglos multidimensionales</li>
-  <li><code>Arrays.hashCode()</code> para arreglos multidimensionales</li>
+  <li>Para cualquier array, reporta <code>Object.equals()</code></li>
+  <li>Para arrays multidimensionales, reporta <code>Arrays.equals()</code></li>
+  <li>Para arrays multidimensionales, reporta <code>Arrays.hashCode()</code></li>
 </ul>
-<!-- tooltip end -->
 <p>
 </body>
 </html>

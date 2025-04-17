@@ -1,12 +1,11 @@
 <html>
 <body>
 <p>
-  Reporta los usos de <code>self</code> como calificador donde no es requerido por un cierre de escape.
+  Reporta el uso de <code>self</code> como calificador cuando no es necesario en el closure de escape.
 </p>
 <p>
-  Sugiere eliminar <code>self</code> redundante.
+  Se sugiere eliminar el <code>self</code> redundante.
 </p>
-<!-- tooltip end -->
 <p>
   <b>Ejemplo:</b>
 </p>
@@ -14,7 +13,6 @@
   struct URL {
       func loadAsync() {
           print(self.path)
-
           DispatchQueue.global().async {
               self.loadSync()
           }
@@ -22,13 +20,12 @@
   }
 </code></pre>
 <p>
-  Después de que la corrección rápida sea aplicada:
+  Después de aplicar la corrección rápida:
 </p>
 <pre><code>
   struct URL {
       func loadAsync() {
           print(path)
-
           DispatchQueue.global().async {
               loadSync()
           }

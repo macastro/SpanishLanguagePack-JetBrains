@@ -1,23 +1,23 @@
 <html>
 <body>
-<p>Informa los parámetros <b>catch</b> que no se utilizan en sus bloques correspondientes. Esta inspección no informará ningún parámetro <b>catch</b> denominado "ignore" o "ignored".</p>
+<p>Informa sobre parámetros <b>catch</b> que no se utilizan en su bloque correspondiente. Esta inspección no informa sobre parámetros <b>catch</b> nombrados como "ignore" o "ignored".</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   try {
       def arr = new int[3]
       arr[5] = 5
   } catch(Exception <b>ex</b>) {
-      println('Captura de excepción')
+      println('Catching the exception')
   }
 </code></pre>
-<p>Aquí el parámetro <b>ex</b> nunca se usa en el bloque <b>catch</b>.
-<p>Después de aplicar la solución rápida:</p>
+<p>El parámetro <b>ex</b> nunca se utiliza en el bloque <b>catch</b>.
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   try {
       def arr = new int[3]
       arr[5] = 5
   } catch(Exception <b>ignored</b>) {
-      println('Captura de excepción')
+      println('Catching the exception')
   }
 </code></pre>
 </body>

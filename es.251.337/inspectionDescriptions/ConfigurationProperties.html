@@ -1,20 +1,17 @@
 <html>
 <body>
-<p>Informa sobre prefijos no válidos definidos en las anotaciones <code>@ConfigurationProperties</code>:</p>
+<p>Reporta prefijos inválidos definidos en la anotación <code>@ConfigurationProperties</code>:</p>
 <ul>
   <li>Prefijo faltante</li>
   <li>Prefijo vacío</li>
   <li>Prefijo duplicado</li>
-  <li>Prefijo en una notación distinta de kebab-case</li>
+  <li>Prefijo en notación diferente al formato kebab-case</li>
 </ul>
 <p>
-  La inspección se activa en clases que están anotadas con <code>@ConfigurationProperties</code> y no se registran mediante <code>@EnableConfigurationProperties</code>,
-  marcadas como componente Spring o escaneadas mediante <code>@ConfigurationPropertiesScan</code>.</p>
-<!-- tooltip end -->
+  La inspección se activa en clases anotadas con <code>@ConfigurationProperties</code> que no están registradas a través de <code>@EnableConfigurationProperties</code>, no están marcadas como componentes de Spring o no están escaneadas mediante <code>@ConfigurationPropertiesScan</code>.</p>
 <p>
-  Esta inspección solo se activa en clases anotadas con <code>@ConfigurationProperties</code> que no se escanean mediante <code>@ConfigurationPropertiesScan</code>
-  cuando la versión de Spring Boot para el proyecto o módulo está establecida en 2.2.0 o posterior.
+  Cuando la versión de Spring Boot del proyecto o módulo está configurada a 2.2.0 o superior, esta inspección solo se activa en clases anotadas con <code>@ConfigurationProperties</code> que no están escaneadas mediante <code>@ConfigurationPropertiesScan</code>.
 </p>
-<p><small>Novedad en 2018.3</small></p>
+<p><small>Últimos cambios en 2018.3</small></p>
 </body>
 </html>

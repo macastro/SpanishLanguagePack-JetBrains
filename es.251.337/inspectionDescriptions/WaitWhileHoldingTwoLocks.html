@@ -1,23 +1,20 @@
 <html>
 <body>
-Informa de llamadas a los métodos <code>wait()</code> que pueden darse mientras el hilo actual sujeta dos bloqueos.
+Informa sobre posibles llamadas al método <code>wait()</code> cuando el hilo actual mantiene dos bloqueos.
 <p>
-  Dado que invocar <code>wait()</code> sólo libera un bloqueo en su objetivo,
-  esperar con dos bloqueos sujetos puede llevar fácilmente a un punto muerto.
+  La llamada a <code>wait()</code> solo libera un bloqueo en el objeto objetivo, por lo que esperar mientras se mantienen dos bloqueos puede conducir fácilmente a un interbloqueo.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   synchronized (lockA) {
     synchronized (lockB) {
       lockB.wait(); //advertencia
-      //el hilo A está atascado aquí sujetando lockA
+      //El hilo A se bloquea aquí, manteniendo lockA
     }
   }
-
-  synchronized (lockA) { //el hilo B no puede entrar en el bloque y liberar al hilo A
+  synchronized (lockA) { //El hilo B no puede entrar en este bloque y liberar el hilo A
     lockB.notify();
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

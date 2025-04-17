@@ -1,13 +1,13 @@
 <html>
 <body>
-Inspecciona clases implícitamente declaradas y sugiere reemplazarlas por clases regulares.
-<p><b>Ejemplo (dentro del archivo Sample.java):</b></p>
+Informa sobre clases declaradas implícitamente y sugiere reemplazarlas por clases regulares.
+<p><b>Ejemplo (en el archivo Sample.java):</b></p>
 <pre><code>
   public static void main() {
       System.out.println("Hello, world!");
   }
 </code></pre>
-<p>Después de aplicar el arreglo rápido:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
 public class Sample {
     public static void main() {
@@ -15,10 +15,9 @@ public class Sample {
     }
 }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Esta inspección puede ser útil para degradar para garantizar la compatibilidad con versiones anteriores de Java.
+  Esta inspección ayuda con la compatibilidad hacia atrás con versiones anteriores de Java.
 </p>
-<p><small>Peculiaridad de 2024.1</small></p>
+<p><small>Novedades en 2024.1</small></p>
 </body>
 </html>

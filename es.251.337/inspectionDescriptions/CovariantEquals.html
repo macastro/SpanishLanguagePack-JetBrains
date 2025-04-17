@@ -1,8 +1,8 @@
 <html>
 <body>
-Reporta métodos <code>equals()</code> que tomen un tipo de argumento distinto de <code>java.lang.Object</code> si la clase contenedora no tiene otras sobrecargas de <code>equals()</code> que tomen <code>java.lang.Object</code> como su tipo de argumento.
+Informa sobre métodos <code>equals()</code> que tienen un tipo de parámetro diferente a <code>java.lang.Object</code> si la clase contenedora no tiene otras sobrecargas de <code>equals()</code> que usen <code>java.lang.Object</code> como tipo de parámetro.
 <p>
-  Una versión covariante de <code>equals()</code> no sobrescribe el método <code>Object.equals(Object)</code>. Puede causar un comportamiento inesperado en tiempo de ejecución. Por ejemplo, si la clase se usa para construir una de las clases de colección estándar, que espera que el método <code>Object.equals(Object)</code> sea sobrescrito.
+  Las versiones covariantes de <code>equals()</code> no sobrescriben el método <code>Object.equals(Object)</code>. Esto puede llevar a comportamientos inesperados en tiempo de ejecución. Por ejemplo, cuando la clase se utiliza para construir una clase de colección estándar que espera que se sobrescriba el método <code>Object.equals(Object)</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -12,7 +12,7 @@ Reporta métodos <code>equals()</code> que tomen un tipo de argumento distinto d
       }
   }
   class Bar {
-      public boolean equals(Bar bar) {  // no advertencia aquí
+      public boolean equals(Bar bar) {  // sin advertencia aquí
           return false;
       }
       @Override
@@ -21,7 +21,5 @@ Reporta métodos <code>equals()</code> que tomen un tipo de argumento distinto d
       }
   }
 </code></pre>
-<!-- tooltip end -->
-
 </body>
 </html>

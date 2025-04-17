@@ -1,13 +1,10 @@
 <html>
 <body>
-<p>Informa de referencias a archivos no resueltas en los atributos <code>scripts</code> de la
-<a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/jdbc/Sql.html>@Sql</a>
-anotación y en los atributos alias correspondientes de las metaanotaciones <code>@Sql</code>.</p>
-
+<p>Informa sobre referencias a archivos no resueltas en la propiedad <code>scripts</code> de la anotación <a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/jdbc/Sql.html>@Sql</a> y en la propiedad alias correspondiente de la meta-anotación <code>@Sql</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   @SqlGroup({
-     @Sql("not-found"), // informa de "No se puede resolver el archivo 'not-found"
+     @Sql("not-found"), // Informa "No se puede resolver el archivo 'not-found'"
      @Sql("found.sql")
   })
   public class MyTestWithSqlData {...}

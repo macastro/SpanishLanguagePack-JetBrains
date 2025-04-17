@@ -1,6 +1,7 @@
 <html>
 <body>
-Inspección para reportar llamadas para obtener servicios que pueden reemplazarse por llamadas a los métodos estáticos <code>getInstance()</code> o <code>getInstance(Project)</code> existentes.
+Las llamadas al servicio pueden ser reemplazadas por llamadas a los métodos estáticos existentes <code>getInstance()</code>
+o <code>getInstance(Project)</code>.
 <p>Ejemplo (Java):</p>
 <pre><code lang="java">
 @Service
@@ -9,7 +10,6 @@ public class MyAppService {
     return ApplicationManager.getApplication().getService(MyAppService.class);
   }
 }
-
 @Service(Service.Level.PROJECT)
 public class MyProjectService {
   public static MyProjectService getInstance(Project project) {
@@ -18,15 +18,15 @@ public class MyProjectService {
 }
 </code></pre>
 <pre><code lang="java">
-// Mal ejemplo:
+// Incorrecto:
 MyAppService applicationService = ApplicationManager.getApplication().getService(MyAppService.class);
 MyProjectService projectService = project.getService(MyProjectService.class);
 </code></pre>
 <pre><code lang="java">
-// Buen ejemplo:
+// Correcto:
 MyAppService applicationService = MyAppService.getInstance();
 MyProjectService projectService = MyProjectService.getInstance(project);
 </code></pre>
-<p><small>Nueva función de la versión 2023.2</small>
+<p><small>Cambios en 2023.2</small>
 </body>
 </html>

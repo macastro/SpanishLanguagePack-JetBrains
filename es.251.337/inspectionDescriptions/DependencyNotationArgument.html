@@ -1,23 +1,22 @@
 <html>
 <body>
 <p>Detecta notaciones incorrectas de dependencias. </p>
-  Los siguientes tipos/formatos son soportados por Gradle:
+  Gradle admite los siguientes tipos/formatos:
   <ul>
   <li> Instancias de <code>Dependency</code>; </li>
-  <li> Valores <code>String</code> o <code>CharSequence</code>, por ejemplo <code>'org.gradle:gradle-core:1.0'</code>; </li>
-  <li> Mapas, por ejemplo <code>[group: 'org.gradle', name: 'gradle-core', version: '1.0']</code>; </li>
-  <li> FileCollections, por ejemplo <code>files('some.jar', 'someOther.jar')</code>; </li>
+  <li> Valores de tipo <code>String</code> o <code>CharSequence</code>, por ejemplo <code>'org.gradle:gradle-core:1.0'</code>; </li>
+  <li> Mapeos, por ejemplo <code>[group: 'org.gradle', name: 'gradle-core', version: '1.0']</code>; </li>
+  <li> FileCollection, por ejemplo <code>files('some.jar', 'someOther.jar')</code>; </li>
   <li> Proyectos, por ejemplo <code>project(':some:project:path')</code>; </li>
   <li> <code>ClassPathNotation</code>, por ejemplo <code>gradleApi()</code>; </li>
   <li> Listas de notaciones de dependencias, por ejemplo <code>['org.gradle:gradle-core:1.0']</code>; </li>
-  <li> (Gradle 7.0+) <a href="https://docs.gradle.org/current/userguide/platforms.html">Accesores a catálogos de versiones</a>, por ejemplo <code>libs.groovy.core</code>. </li>
+  <li> (Gradle 7.0+) <a href="https://docs.gradle.org/current/userguide/platforms.html">Accesores de catálogo de versiones</a>, por ejemplo <code>libs.groovy.core</code>. </li>
 </ul>
-  <a href="https://docs.gradle.org/current/userguide/declaring_dependencies.html#sec:dependency-types">Ver documentación de Gradle</a>
-
+  <a href="https://docs.gradle.org/current/userguide/declaring_dependencies.html#sec:dependency-types">Consulte la documentación de Gradle</a>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 dependencies {
-  implementation(1) // reporta '1'
+  implementation(1) // reports '1'
 }
 </code></pre>
 </body>

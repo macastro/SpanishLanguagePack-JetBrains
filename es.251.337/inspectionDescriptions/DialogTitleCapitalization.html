@@ -1,12 +1,12 @@
 <html><body>
-Reporta cadenas en los parámetros de métodos y valores de retorno anotados con <code>@Nls</code> y que tienen el parámetro de capitalización para ajustarse a las reglas de capitalización que existen en la mayoría de las guías de interfaz de usuario de la plataforma.
+Informa sobre los parámetros de tipo String en los métodos y los valores de retorno anotados con <code>@Nls</code>, y capitaliza los parámetros para cumplir con las reglas de mayúsculas en las guías de UI de la mayoría de las plataformas.
 <p><b>Ejemplo:</b></p>
-<pre><code>
+<pre><code lang="java">
   void setTitle(@NlsContexts.DialogTitle String title) {}
-  setTitle("Esto es capitalización de oración pero debería ser título"); 
+  setTitle("This is sentence capitalization but should be title"); 
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
-<pre><code>
-  setTitle("Esto es capitalización de oración pero debería ser título"); 
+<pre><code lang="java">
+  setTitle("This Is Sentence Capitalization but Should Be Title"); 
 </code></pre>
 </body></html>

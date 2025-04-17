@@ -1,35 +1,28 @@
 <html>
 <body>
-Informa de las llamadas de métodos que bloquean subprocesos en fragmentos de código donde no deberían bloquearse subprocesos.
-
-<p><b>Ejemplo (Project Reactor): </b></p>
+Reporta llamadas a métodos de bloqueo de hilos en segmentos de código que no deberían bloquear hilos.
+<p><b>Ejemplo (Proyecto Reactor):</b></p>
 <pre><code lang="java">
 Flux.just("1").flatMap(f -&gt; {
     Flux&lt;String&gt; just = loadUsersFromDatabase();
-    just.toIterable(); // Error: llamada a operador de bloqueo en ámbito no bloqueante
+    just.toIterable(); // Error: llamada a operador de bloqueo en contexto no bloqueante
     return just;
   }
 );
 </code></pre>
-
-<p>Considera ejecutar código de bloqueo <a href="https://projectreactor.io/docs/core/release/reference/#faq.wrap-blocking">con un planificador adecuado</a>, por ejemplo <code>Schedulers.boundedElastic()</code>, o intenta encontrar una API no bloqueante alternativa.</p>
-
+<p>Considere usar un <a href="https://projectreactor.io/docs/core/release/reference/#faq.wrap-blocking">planificador apropiado</a> (por ejemplo, <code>Schedulers.boundedElastic()</code>) para ejecutar código bloqueante, o busque una API no bloqueante alternativa.</p>
 <br/>
-
-<p><b>Ejemplo (Kotlin Coroutines):</b></p>
+<p><b>Ejemplo (Corrutinas Kotlin):</b></p>
 <pre><code lang="kotlin">
 suspend fun exampleFun() {
-    Thread.sleep(100); // Error: llamada a método de bloqueo dentro de función suspendida
+    Thread.sleep(100); // Error: llamada a método bloqueante en función suspendida
 }
 </code></pre>
-
-<p>Considera ejecutar código de bloqueo <a href="https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html">con un despachador especial</a>, por ejemplo <code>Dispatchers.IO</code>, o intenta encontrar una API no bloqueante alternativa.</p>
-
-<!-- tooltip end -->
-<p>Configura la inspección:</p>
+<p>Considere <a href="https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html">usar un dispatcher especial</a> (por ejemplo, <code>Dispatchers.IO</code>) para ejecutar código bloqueante, o busque una API no bloqueante alternativa.</p>
+<p>Configuración de la inspección:</p>
 <ul>
-  <li>En la lista <b>Anotaciones de bloqueo</b>, especifica anotaciones que marcan métodos de bloqueo de subprocesos.</li>
-  <li>En la lista <b>Anotaciones no bloqueantes</b>, especifica anotaciones que marcan métodos no bloqueantes.</li>
+  <li>En la lista de <b>anotaciones bloqueantes</b>, especifique las anotaciones que marcan métodos que bloquean hilos.</li>
+  <li>En la lista de <b>anotaciones no bloqueantes</b>, especifique las anotaciones que marcan métodos no bloqueantes.</li>
 </ul>
 <p>Las anotaciones especificadas pueden usarse como <a href="https://www.jetbrains.com/help/idea/external-annotations.html">anotaciones externas</a></p>
 </body>

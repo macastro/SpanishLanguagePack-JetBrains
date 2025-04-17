@@ -1,9 +1,9 @@
 <html>
 <body>
-Informa operandos de cadena vacía en concatenaciones de cadenas.
-La concatenación con la cadena vacía puede usarse para convertir objetos o primitivas que no son <code>String</code> en <code>String</code>, pero puede ser más claro usar una llamada al método <code>String.valueOf()</code>.
+Informa sobre operandos de cadenas vacías en la concatenación de cadenas.
+La concatenación con cadenas vacías se puede usar para convertir objetos no <code>String</code> o tipos primitivos a <code>String</code>, pero sería más claro usar el método <code>String.valueOf()</code>.
 <p>
-  Se sugiere una solución rápida para simplificar la concatenación.
+  Se sugiere simplificar la concatenación mediante la corrección rápida.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -11,14 +11,14 @@ La concatenación con la cadena vacía puede usarse para convertir objetos o pri
     String s = "" + x + " ; " + y;
   }
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   void foo(int x, int y) {
     String s = x + " ; " + y;
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Usa la opción <b>Informar solo en caso de que se puedan eliminar cadenas vacías sin otros cambios</b> para ignorar los casos en los que eliminar la cadena vacía requerirá agregar una conversión <code>String.valueOf()</code> de otro operando.
+  La opción <b>Informar solo casos donde la cadena vacía puede eliminarse sin cambios adicionales</b> ignora los casos donde eliminar la cadena vacía requeriría agregar una conversión <code>String.valueOf()</code> de otro operando.
+</p>
 </body>
 </html>

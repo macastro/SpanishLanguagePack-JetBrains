@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>Se reportan los casos cuando alguna llamada a <code>super(A, B)</code> no cumple los siguientes requisitos:</p>
+<p>Informa sobre cualquier llamada a <code>super(A, B)</code> que no cumpla con los siguientes requisitos:</p>
 <ul>
   <li><code>B</code> es una instancia de <code>A</code></li>
   <li><code>B</code> es una subclase de <code>A</code></li>
@@ -10,17 +10,13 @@
 class Figure:
     def color(self):
         pass
-
-
 class Rectangle(Figure):
     def color(self):
         pass
-
-
 class Square(Figure):
     def color(self):
-        return super(Rectangle, self).color() # Square no es una instancia o subclase de Rectangle
+        return super(Rectangle, self).color() # Square no es una subclase de Rectangle
 </code></pre>
-<p>Como solución, puedes hacer que <code>Square</code> sea una instancia de la clase <code>Rectangle</code>.</p>
+<p>Como solución, puede hacer que <code>Square</code> sea una instancia de la clase <code>Rectangle</code>.</p>
 </body>
 </html>

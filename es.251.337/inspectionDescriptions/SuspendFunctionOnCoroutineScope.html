@@ -1,9 +1,9 @@
 <html>
 <body>
-Reporta llamadas y accesos a extensiones o miembros de <code>CoroutineScope</code> dentro de funciones de suspensión con receptor de <code>CoroutineScope</code>.
-<p>Cuando una función es <code>suspend</code> y tiene receptor <code>CoroutineScope</code>,
-    su acceso a <code>CoroutineContext</code> a través de <code>kotlin.coroutines.coroutineContext</code> y <code>CoroutineScope.coroutineContext</code> es ambiguo,
-    y en general estos dos contextos son diferentes.</p>
-<p>Para mejorar esta situación, se puede envolver la llamada sospechosa dentro de <code>coroutineScope { ... }</code> o eliminar el receptor de la función <code>CoroutineScope</code>.</p>
+Reporta llamadas y accesos a extensiones o miembros de <code>CoroutineScope</code> dentro de funciones suspend que tienen un receptor <code>CoroutineScope</code>.
+<p>Cuando una función es <code>suspend</code> y tiene un receptor <code>CoroutineScope</code>, el acceso al <code>CoroutineContext</code> a través de <code>kotlin.coroutines.coroutineContext</code> y <code>CoroutineScope.coroutineContext</code> es ambiguo, y estos dos contextos suelen ser diferentes.</p>
+<p>
+Para mejorar esta situación, se pueden envolver las llamadas sospechosas en un <code>coroutineScope { ... }</code>, o eliminar el receptor <code>CoroutineScope</code> de la función.
+</p>
 </body>
 </html>

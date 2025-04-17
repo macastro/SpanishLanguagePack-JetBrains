@@ -1,12 +1,11 @@
 <html>
 <body>
-<p>Inspecciona los errores de instanciación de las declaraciones de <strong>&lt;bean&gt;</strong> de interfaz/clase abstracta.</p>
-
+<p>Informa errores de instanciación de interfaces/clases abstractas declaradas como <strong>&lt;bean&gt;</strong>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   &lt;beans&gt;
     &lt;bean class="java.util.List"/&gt;
-    &lt;!-- Informa 'Interfaz no permitida para beans no abstractos' --&gt;
+    &lt;!-- Reporta 'No se permite una interfaz para un bean no abstracto' --&gt;
   &lt;/beans&gt;
 </code></pre>
 </body>

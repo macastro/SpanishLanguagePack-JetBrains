@@ -1,16 +1,14 @@
 <html>
 <body>
-Informa de comparaciones con llamadas a <code>String.indexOf()</code> que pueden ser reemplazadas con una llamada al método <code>String.contains()</code>..
+Informa sobre comparaciones con llamadas a <code>String.indexOf()</code> que pueden ser reemplazadas por llamadas al método <code>String.contains()</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   <b>boolean</b> b = "abcd".indexOf('e') >= 0;
 </code></pre>
-<p>Tras aplicar la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   <b>boolean</b> b = "abcd".contains('e');
 </code></pre>
-<!-- tooltip end -->
-<p>Esta inspección sólo informa si el nivel de idioma del proyecto o módulo es 5 o superior.</p>
-
+<p>Esta inspección solo se informa cuando el nivel de lenguaje del proyecto o módulo es 5 o superior.</p>
 </body>
 </html>

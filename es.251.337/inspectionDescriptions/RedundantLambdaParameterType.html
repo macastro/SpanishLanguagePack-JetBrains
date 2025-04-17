@@ -1,12 +1,12 @@
 <html>
 <body>
-Informa sobre los tipos de parámetros formales lambda que son redundantes porque se pueden inferir desde el contexto.
+Informa sobre tipos de parámetros lambda redundantes que pueden ser inferidos del contexto.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   Map&lt;String, Integer&gt; map = ...
   map.forEach((String s, Integer i) -> log.info(s + "=" + i));
 </code></pre>
-<p>El arreglo rápido elimina los tipos de parámetros de la lambda.</p>
+<p>Esta corrección rápida eliminará estos tipos de parámetros del lambda.</p>
 <pre><code>
   Map&lt;String, Integer&gt; map = ...
   map.forEach((s, i) -> log.info(s + "=" + i));

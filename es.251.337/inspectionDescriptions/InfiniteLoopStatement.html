@@ -1,15 +1,14 @@
 <html>
 <body>
-Reporta declaraciones <code>for</code>, <code>while</code> o <code>do</code> que solo pueden terminar al lanzar una excepción. Si bien estas declaraciones pueden ser correctas, a menudo ocurren debido a errores de codificación.
+Informa sobre sentencias <code>for</code>, <code>while</code> o <code>do</code> que solo pueden salir mediante una excepción. Aunque estas sentencias pueden ser correctas, frecuentemente son el resultado de errores de programación.
 <p>Ejemplo:</p>
 <pre><code>
   for (;;) {
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-Utilice la opción <b>Ignorar cuando se coloca en Thread.run</b> para ignorar las declaraciones de bucle infinito dentro de <code>Thread.run</code>.
-Puede resultar útil para los subprocesos de demonio.
+Utiliza la opción <b>Ignorar cuando está en Thread.run</b> para ignorar bucles infinitos en <code>Thread.run</code>.
+Esto puede ser útil para hilos daemon.
 <p>Ejemplo:</p>
 <pre><code>
   new Thread(() -&gt; {

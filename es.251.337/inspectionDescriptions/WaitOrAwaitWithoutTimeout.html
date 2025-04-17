@@ -1,10 +1,8 @@
 <html>
 <body>
-Reporta llamadas a <code>Object.wait()</code> o <code>Condition.await()</code> sin especificar un tiempo de espera.
+Informa sobre llamadas a <code>Object.wait()</code> o <code>Condition.await()</code> sin un tiempo de espera especificado.
 <p>
-  Tales llamadas pueden ser peligrosas en programas de alta disponibilidad, ya que fallas en un componente pueden resultar en bloqueos del componente en espera
-  si nunca se llaman <code>notify()</code>/<code>notifyAll()</code>
-  o <code>signal()</code>/<code>signalAll()</code>.
+  Tales llamadas pueden ser peligrosas en programas de alta disponibilidad, ya que si nunca se llama a <code>notify()</code>/<code>notifyAll()</code> o <code>signal()</code>/<code>signalAll()</code>, un fallo en un componente puede causar que los componentes en espera se bloqueen.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -12,6 +10,5 @@ Reporta llamadas a <code>Object.wait()</code> o <code>Condition.await()</code> s
     bar.wait();
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
 <body>
-Recopiladores de informes que se pueden simplificar.
-<p>En particular, algunos recopiladores <code>groupingBy()</code> en cascada se pueden expresar utilizando un recopilador <code>toMap()</code> más simple, que también es probable que tenga un mejor rendimiento.</p>
+Informa sobre colectores que pueden simplificarse.
+<p>Específicamente, algunos colectores <code>groupingBy()</code> en cascada pueden expresarse usando colectores <code>toMap()</code> más simples, lo que también podría mejorar el rendimiento.</p>
 <p>Ejemplo:</p>
 <pre><code>
   Collectors.groupingByConcurrent(String::length, Collectors.collectingAndThen(Collectors.maxBy(String::compareTo), Optional::get));
@@ -10,7 +10,6 @@ Recopiladores de informes que se pueden simplificar.
 <pre><code>
   Collectors.toConcurrentMap(String::length, Function.identity(), BinaryOperator.maxBy(String::compareTo));
 </code></pre>
-<!-- tooltip end -->
-<p><small>Novedad en 2017.1</small></p>
+<p><small>Novedades de la versión 2017.1</small></p>
 </body>
 </html>

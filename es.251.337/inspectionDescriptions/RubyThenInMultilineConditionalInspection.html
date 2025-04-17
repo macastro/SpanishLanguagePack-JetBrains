@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa de palabras clave <code>then</code> redundantes en bloques <code>if/unless</code> compuestos por varias líneas.
+Reporta palabras clave <code>then</code> redundantes en bloques <code>if/unless</code> multilínea.
 <p>Ejemplo:</p>
 <pre>
 <code># Mala práctica
@@ -8,9 +8,7 @@ if x > y then
   x = y
 end</code>
 </pre>
-
-Está disponible una corrección rápida para eliminar la palabra clave <code>then</code>.
-
+La palabra clave <code>then</code> puede eliminarse mediante una corrección rápida.
 <pre>
 <code># Buena práctica
 if x > y

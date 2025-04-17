@@ -1,9 +1,8 @@
 <html>
 <body>
-Informa de llamadas a métodos que aceptan una expresión no trivial y que pueden ser sustituidas por una llamada a un método equivalente que acepte una lambda en su lugar.
+Informa sobre llamadas a métodos que no aceptan expresiones regulares y que pueden ser reemplazadas por llamadas a métodos equivalentes que aceptan lambdas.
 <p>
-Convertir una expresión a una lambda asegura que la expresión no será evaluada si no se usa dentro del método. Por ejemplo, <code>optional.orElse(createDefaultValue())</code> puede convertirse a <code>optional.orElseGet(this::createDefaultValue)</code>.
-<!-- tooltip end -->
-<p><small>Nuevo en 2018.1</small></p>
+La conversión de expresiones a lambdas garantiza que las expresiones no utilizadas en el método no sean evaluadas. Por ejemplo, <code>optional.orElse(createDefaultValue())</code> puede convertirse a <code>optional.orElseGet(this::createDefaultValue)</code>.
+<p><small>Novedades de la versión 2018.1</small></p>
 </body>
 </html>

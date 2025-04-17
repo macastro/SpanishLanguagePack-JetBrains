@@ -1,28 +1,27 @@
 <html>
 <body>
-Se informan los siguientes problemas al recuperar servicios:
+Se han detectado los siguientes problemas al recuperar el servicio:
 <ul>
   <li>Intento de recuperar un servicio no registrado.</li>
-  <li>Se produjo una discrepancia al recuperar el servicio: se intentó recuperar un servicio de nivel de proyecto como servicio de nivel de aplicación, o viceversa.</li>
+  <li>Discrepancia al recuperar el servicio: intento de obtener un servicio a nivel de proyecto como servicio a nivel de aplicación, o viceversa.</li>
 </ul>
 <p>Ejemplo (Kotlin):</p>
 <pre><code lang="kotlin">
 @Service
 class MyAppService
-
 @Service(Service.Level.PROJECT)
 class MyProjectService(private val project: Project)
 </code></pre>
 <pre><code lang="kotlin">
-// Malo:
-val projectService = service&lt;MyProjectService&gt;()         // El servicio de nivel de proyecto se recupera como un servicio de nivel de aplicación
-val applicationService = project.service&lt;MyAppService&gt;() // El servicio de nivel de aplicación se recupera como un servicio de nivel de proyecto
+// Error:
+val projectService = service&lt;MyProjectService&gt;()         // Servicio a nivel de proyecto recuperado como servicio a nivel de aplicación
+val applicationService = project.service&lt;MyAppService&gt;() // Servicio a nivel de aplicación recuperado como servicio a nivel de proyecto
 </code></pre>
 <pre><code lang="kotlin">
-// Bueno:
+// Correcto:
 val projectService = project.service&lt;MyProjectService&gt;()
 val applicationService = service&lt;MyAppService&gt;();
 </code></pre>
-<p><small>Novedad de 2023.2</small>
+<p><small>Cambios en 2023.2</small>
 </body>
 </html>

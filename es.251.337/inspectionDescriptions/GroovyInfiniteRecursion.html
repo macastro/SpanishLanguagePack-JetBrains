@@ -1,11 +1,11 @@
 <html>
 <body>
-Informa sobre métodos que deben recurrir infinitamente o lanzar una excepción.
-Los métodos informados por esta inspección no pudieron finalizar correctamente.
+Informa sobre métodos que definitivamente causarán una recursión infinita o lanzarán una excepción.
+Esta inspección reporta métodos que no pueden terminar correctamente.
 <p><b>Ejemplo:</b></p>
 <pre>
 <code>
-// esta función siempre se sumerge más profundamente
+// Esta función causará un bucle cada vez más profundo
 def fibonacci(int n) {
   return fibonacci(n-1) + fibonacci(n-2)
 }

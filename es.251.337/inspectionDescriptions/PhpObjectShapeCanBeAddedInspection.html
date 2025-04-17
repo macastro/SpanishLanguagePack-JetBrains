@@ -1,18 +1,18 @@
 <html>
 <body>
-Informa las propiedades públicas de un objeto con tipos específicos. Sugiere especificar la forma del objeto devuelto a través del atributo <code>#[ObjectShape]</code> o una forma de objeto en el comentario PHPDoc.
+Informa sobre las propiedades públicas de objetos del tipo especificado. Se recomienda especificar la forma del objeto devuelto mediante el atributo <code>#[ObjectShape]</code> o mediante la forma del objeto en los comentarios PHPDoc.
 </body>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   $a = new stdClass();
-  $a->nombre = "nombre";
-  $a->edad = 2;
+  $a->name = "name";
+  $a->age = 2;
 </code></pre>
-<p>Después de aplicar el arreglo rápido:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  /** @var $a object{nombre: string, edad: int} */
+  /** @var $a object{name: string, age: int} */
   $a = new stdClass();
-  $a->nombre = "nombre";
-  $a->edad = 2;
+  $a->name = "name";
+  $a->age = 2;
 </code></pre>
 </html>

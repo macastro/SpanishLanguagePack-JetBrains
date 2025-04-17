@@ -1,29 +1,22 @@
 <html>
 <body>
-Informa de las llamadas a <code>equals()</code>, <code>compareTo()</code> o similares que comparan un objeto para igualdad
-con él mismo.
-Los contratos de método de estos métodos especifican que tales llamadas siempre devolverán
-<code>true</code> para <code>equals()</code> o <code>0</code> para <code>compareTo()</code>.
-La inspección también comprueba
-las llamadas a <code>Objects.equals()</code>, <code>Objects.deepEquals()</code>,
-<code>Arrays.equals()</code>, <code>Comparator.compare()</code>, métodos <code>assertEquals()</code> de
-marcos de prueba (JUnit, TestNG, AssertJ), <code>Integer.compare()</code>, <code>Integer.compareUnsigned()</code> y métodos similares.
+Informa sobre llamadas a <code>equals()</code>, <code>compareTo()</code> o métodos similares que comparan un objeto consigo mismo.
+Las convenciones de estos métodos especifican que tales llamadas siempre devolverán <code>true</code> para <code>equals()</code> o <code>0</code> para <code>compareTo()</code>.
+La inspección también verifica llamadas a <code>Objects.equals()</code>, <code>Objects.deepEquals()</code>, <code>Arrays.equals()</code>, <code>Comparator.compare()</code>, métodos <code>assertEquals()</code> de frameworks de prueba (JUnit, TestNG, AssertJ), <code>Integer.compare()</code>, <code>Integer.compareUnsigned()</code> y métodos similares.
+<p>
+  Tenga en cuenta que, en casos muy raros, la inspección podría informar sobre llamadas a <code>equals()</code> que devuelven false, ya que aunque las expresiones en ambos lados son idénticas, generan objetos separados y la comparación se realiza por referencia en lugar de por contenido.
+  El ejemplo más simple es <code>new Object().equals(new Object())</code>. En cualquier caso, tales llamadas son sospechosas y podrían tener otras intenciones.
+</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
     boolean foo(Object o) {
         return o.equals(o); // advertencia
     }
-
     boolean bar(String[] ss) {
         return Arrays.equals(ss, ss); // advertencia
     }
 }
 </code></pre>
-<!-- tooltip end -->
-<p>
-  Utilice la opción para informar de aserciones de prueba solo en clases de biblioteca no extensibles (como <code>String</code>) y tipos primitivos.
-  Esta opción puede ser útil al probar métodos <code>equals()</code>.
-</p>
 </body>
 </html>

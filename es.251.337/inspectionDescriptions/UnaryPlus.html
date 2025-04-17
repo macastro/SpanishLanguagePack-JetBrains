@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa sobre usos del operador unitario <code>+</code>. El signo más unitario suele ser una operación nula y su presencia puede ser muestra de un error de codificación. Por ejemplo, en una combinación con el operador de incremento (como en <code>+++</code>) o con el operador de igual (como en <code>=+</code>).
+Informa sobre el uso del operador unario <code>+</code>. El operador unario más generalmente es una operación nula y su presencia puede indicar un error de codificación. Por ejemplo, cuando se combina con operadores de incremento (como en <code>+++</code>) u operadores de igualdad (como en <code>=+</code>).
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void unaryPlus(int i) {
@@ -9,14 +9,14 @@ Informa sobre usos del operador unitario <code>+</code>. El signo más unitario 
 </code></pre>
 <p>Se sugieren las siguientes correcciones rápidas:</p>
 <ul>
-  <li><p>Eliminar los operadores <code>+</code> antes de la variable <code>i</code>:</p>
+  <li><p>Eliminar el operador <code>+</code> antes de la variable <code>i</code>:</p>
 <pre><code>
   void unaryPlus(int i) {
     int x = i;
   }
 </code></pre>
   </li>
-  <li><p>Sustituir los operadores <code>+</code> por el operador de incremento de prefijo:</p>
+  <li><p>Reemplazar el operador <code>+</code> con el operador de incremento prefijo:</p>
 <pre><code>
   void unaryPlus(int i) {
     int x = ++i;
@@ -24,10 +24,9 @@ Informa sobre usos del operador unitario <code>+</code>. El signo más unitario 
 </code></pre>
   </li>
 </ul>
-<!-- tooltip end -->
 <p>
-Utiliza la siguiente casilla de verificación para informar sobre los signos más unitarios que se utilizan junto con una expresión binaria o unitaria.
-Esto significa que la inspección no informará de situaciones en las que se utilice una expresión de signo más unitario en expresiones de inicialización de matriz o como argumento de un método.
+Utilice la casilla de verificación a continuación para informar sobre el operador unario más cuando se usa junto con expresiones binarias u otras expresiones unarias.
+Esto significa que la inspección no informará casos donde la expresión del operador unario más se use para inicializadores de arrays o como argumentos de método.
 </p>
 </body>
 </html>

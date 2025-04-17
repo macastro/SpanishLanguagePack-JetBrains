@@ -1,29 +1,11 @@
-<!--
-  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~ http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  -->
-
 <html>
 <body>
-Inspecciona alias de paquetes importados que podrían ser omitidos.
-<p>Generalmente, tales alias son iguales a los nombres de los paquetes importados,
-por lo que los alias no tienen efecto y se pueden utilizar los nombres de los paquetes directamente.</p>
+Informa sobre alias de paquetes importados que pueden omitirse.
+<p>Normalmente, estos alias son iguales al nombre del paquete importado, por lo que el alias no tiene ninguna función y se puede usar directamente el nombre del paquete.</p>
 <p>Ejemplo:</p>
 <pre><code>import fmt "fmt"</code></pre>
-<p>El alias <code>fmt</code> duplica el nombre del paquete al que también se le asigna el nombre <code>"fmt"</code>. Para borrar el alias,
-usa la corrección rápida <b>Eliminar alias de importación</b>.</p>
-<p>Luego de aplicada la corrección rápida:</p>
+<p>El alias <code>fmt</code> es redundante con el nombre del paquete <code>"fmt"</code>. Para eliminar el alias, utilice la corrección rápida <b>Eliminar alias de import</b>.</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>import "fmt"</code></pre>
 </body>
 </html>

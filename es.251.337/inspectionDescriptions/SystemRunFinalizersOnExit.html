@@ -1,10 +1,10 @@
 <html>
 <body>
-Informa de las llamadas a <code>System.runFinalizersOnExit()</code>.
+Informa sobre las llamadas a <code>System.runFinalizersOnExit()</code>.
 <p>
-  Esta llamada es una de las más peligrosas en el lenguaje Java. Es inherentemente insegura para subprocesos, puede provocar la corrupción de datos, un interbloqueo y puede afectar a partes del programa muy alejadas de su punto de llamada. Está desaprobada y se eliminó en JDK 11, y se desaconseja encarecidamente su uso.
+  Esta llamada es una de las más peligrosas en el lenguaje Java. Es intrínsecamente no segura para hilos y puede provocar corrupción de datos, interbloqueos y afectar a partes del programa alejadas del punto de llamada.
+  Ha sido declarada obsoleta y eliminada en JDK 11, y se recomienda encarecidamente no utilizarla.
 </p>
-<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 10 o inferior.</p>
-<!-- tooltip end -->
+<p>Esta inspección solo informa cuando el nivel de lenguaje del proyecto o módulo es 10 o inferior.</p>
 </body>
 </html>

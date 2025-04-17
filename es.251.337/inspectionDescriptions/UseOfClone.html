@@ -1,12 +1,11 @@
 <html>
 <body>
-Informa sobre las implementaciones y llamadas al método <code>clone()</code> y de los usos de la interfaz <code>java.lang.Cloneable</code>.
-<p>Algunos estándares de codificación prohíben el uso de <code>clone()</code>, y recomiendan el uso de un constructor de copia o un método fábrica <code>estático</code> en cambio.</p>
-<p>La inspección ignora a las llamadas a <code>clone()</code> en arreglos porque es una manera correcta y compacta de copiar un arreglo.</p>
+Reporta implementaciones del método <code>clone()</code>, sus invocaciones y el uso de la interfaz <code>java.lang.Cloneable</code>.
+<p>Algunos estándares de codificación prohíben el uso de <code>clone()</code> y sugieren usar constructores de copia o métodos de fábrica <code>static</code> en su lugar.</p>
+<p>Esta inspección ignora las llamadas a <code>clone()</code> en arrays, ya que es una forma correcta y concisa de copiar arrays.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Copy implements Cloneable /*advertencia*/ {
-
     public Copy clone() /*advertencia*/ {
       try {
         return (Copy) super.clone(); // advertencia
@@ -16,6 +15,5 @@ Informa sobre las implementaciones y llamadas al método <code>clone()</code> y 
     }
   }
 </code></pre>
-<!-- fin del consejo -->
 </body>
 </html>

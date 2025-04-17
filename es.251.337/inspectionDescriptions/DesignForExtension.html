@@ -1,11 +1,8 @@
 <html>
 <body>
-Informa sobre métodos que no son <code>static</code>, <code>private</code>, <code>final</code> o <code>abstract</code> y cuyo cuerpo no está vacío.
+Informa sobre métodos que no son <code>static</code>, <code>private</code>, <code>final</code> o <code>abstract</code>, y que tienen un cuerpo de declaraciones no vacío.
 <p>
-  Escribir código en un estilo que evite dichos métodos protege los contratos de las clases frente a infracciones por parte de sus subclases. La ventaja de este estilo es que las subclases no pueden corromper el estado de la superclase olvidando llamar al supermétodo. El coste es que
-  las subclases están limitadas en su flexibilidad, en particular no pueden evitar la ejecución de código en la superclase. Utiliza la corrección rápida para
-  añadir
-  los modificadores que faltan.</p>
+  Programar con un estilo que evite este tipo de métodos puede proteger los contratos de clase para que no sean violados por sus subclases. La ventaja de este estilo es que las subclases no pueden romper el estado de la superclase al olvidar llamar al método super. El costo es que la flexibilidad de las subclases está limitada, especialmente porque no pueden impedir la ejecución del código en la superclase. La corrección rápida puede utilizarse para agregar los modificadores faltantes.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
@@ -18,7 +15,6 @@ Informa sobre métodos que no son <code>static</code>, <code>private</code>, <co
     public final boolean equals(Object o) { return true; }
   }
 </code></pre>
-Esta inspección está pensada para código que va a usarse en entornos seguros y probablemente no sea adecuada para entornos menos restrictivos.
-<!-- tooltip end -->
+Esta inspección es apropiada para código que se utilizará en entornos seguros y puede no ser adecuada para entornos con menos restricciones.
 </body>
 </html>

@@ -1,12 +1,11 @@
 <html>
 <body>
-Reporta llamadas a <code>BigDecimal.divide()</code> o <code>BigDecimal.setScale()</code> que usan constantes enteras para especificar el modo de redondeo.
-Desde el JDK 1.5, considera utilizar métodos que tomen el parámetro <code>enum</code> <code>RoundingMode</code> en su lugar.
+Informa sobre llamadas a <code>BigDecimal.divide()</code> o <code>BigDecimal.setScale()</code> que utilizan constantes enteras para especificar el modo de redondeo.
+Desde JDK 1.5, se recomienda usar métodos que acepten el <code>enum</code> <code>RoundingMode</code> como parámetro.
 <p><b>Ejemplo:</b></p>
 <pre><code>new BigDecimal("42").setScale(2, BigDecimal.ROUND_FLOOR);</code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>new BigDecimal("42").setScale(2, RoundingMode.FLOOR);</code></pre>
-<!-- tooltip end -->
 <p>
 </body>
 </html>

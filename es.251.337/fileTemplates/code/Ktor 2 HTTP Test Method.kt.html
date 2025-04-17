@@ -3,13 +3,13 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      Esta es una plantilla utilizada para crear un método de prueba HTTP para Ktor 2.x.x en una clase de prueba JUnit 4.</font>
+      Esta es una plantilla para crear métodos de prueba HTTP para Ktor 2.x.x en clases de prueba JUnit 4.</font>
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas tomarán los siguientes valores:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas aceptarán los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top">
@@ -23,14 +23,14 @@
       <nobr><font face="verdana" size="-2"><b>${HTTP_METHOD}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Método HTTP que se está utilizando (GET, POST, etc.)</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Método HTTP utilizado (GET, POST, etc.)</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${ROUTE}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Ruta, relativa al servicio actual, que necesita ser probada</font>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Ruta relativa al servicio actual que se va a probar</font>
     </td>
   </tr>
   <tr>
@@ -38,8 +38,7 @@
       <nobr><font face="verdana" size="-2"><b>${CONFIGURE_SERVER}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Un método de extensión de ruta que configura un árbol de enrutamiento para la parte del servidor
-      que necesita ser probada</font>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Método de extensión de ruta para configurar el árbol de rutas para la parte del servidor que se va a probar</font>
     </td>
   </tr>
   <tr>

@@ -1,22 +1,18 @@
 <html>
 <body>
-Informa el uso de miembros static que no están cualificados
-con el nombre de clase.
+Informa sobre el uso de miembros static no calificados con el nombre de la clase.
 <p>
-Esto es legal si el miembro static está en
-la misma clase, pero puede resultar confuso.
+El uso de miembros static dentro de la misma clase es legal pero puede resultar confuso.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
     static void foo() {}
     static int x;
-
     void bar() {
       foo();
       System.out.println(x);
     }
-
     static void baz() { foo(); }
   }
 </code></pre>
@@ -25,35 +21,32 @@ la misma clase, pero puede resultar confuso.
   class Foo {
     static void foo() {}
     static int x;
-
     void bar() {
       Foo.foo();
       System.out.println(Foo.x);
     }
-
     static void baz() { Foo.foo(); }
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Usa la configuración de inspección para alternar el informe de los siguientes elementos:</p>
+<p>La configuración de la inspección permite alternar los informes para:</p>
 <ul>
   <li>
     <p>
-      acceso a campos static<br>
+      Acceso a campos static<br>
       <code>void bar() { System.out.println(x); }</code>
     </p>
   </li>
   <li>
     <p>
-      llamadas a métodos static<br>
+      Llamadas a métodos static<br>
       <code>void bar() { foo(); }</code><br>
       <code>static void baz() { foo(); }</code>
     </p>
   </li>
 </ul>
 <p>
-  También puedes configurar la inspección para que solo informe el uso de miembros static desde un contexto no estático.
-  En el ejemplo anterior, no se informará <code>static void baz() { foo(); }</code>.
+  También puede configurar la inspección para que solo informe sobre el uso de miembros static desde contextos no static.
+  En el ejemplo anterior, no se informaría sobre <code>static void baz() { foo(); }</code>.
 </p>
 </body>
 </html>

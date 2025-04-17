@@ -1,15 +1,14 @@
 <html>
 <body>
-Reporta expresiones de asignación que están anidadas dentro de otras expresiones.
-<p>Dichas expresiones pueden ser confusas y violan el principio de diseño general, que establece que cualquier construcción debe hacer una sola cosa.</p>
+Informa sobre expresiones de asignación anidadas dentro de otras expresiones.
+<p>Estas expresiones pueden resultar confusas y violan el principio general de diseño de que cada construcción debe tener un solo propósito.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   String userName;
-  // Advertencia: el resultado de la asignación a 'userName' se usa
+  // Advertencia: se utiliza el resultado de la asignación a 'userName'
   String message = "Hello " + (userName = "Alice") + "!"
   System.out.println(message);
   System.out.println("Goodbye " + userName);
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

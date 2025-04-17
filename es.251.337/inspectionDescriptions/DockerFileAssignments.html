@@ -1,19 +1,17 @@
 <html>
 <body>
-<p>Informa sobre el espaciado incorrecto para pares clave-valor en los comandos <code>ARG</code>, <code>ENV</code> y <code>LABEL</code>.</p>
+<p>Reporta espaciado incorrecto en pares clave-valor en los comandos <code>ARG</code>, <code>ENV</code> y <code>LABEL</code>.</p>
 <p>
-  Si bien no se especifica explícitamente en la <a href="https://docs.docker.com/engine/reference/builder/#arg">especificación de Dockerfile</a>,
-  no se permiten algunas combinaciones de espaciado para pares clave-valor.
-  La compilación de Docker fallará después de alcanzar la instrucción del problema.
+  Aunque no está explícitamente especificado en la <a href="https://docs.docker.com/engine/reference/builder/#arg">especificación de Dockerfile</a>, ciertas combinaciones de espaciado en pares clave-valor no están permitidas.
+  La construcción de Docker fallará al llegar a la instrucción problemática.
 </p>
-<!-- tooltip end -->
 <p><b>Ejemplos:</b></p>
 <ul>
-  <li>El comando <code>ARG</code> no permite espacios alrededor de '='</li>
-  <li><code>ENV</code> y <code>LABEL</code> no permiten espacios después de '='</li>
+  <li>El comando <code>ARG</code> no permite ningún espacio alrededor del '='</li>
+  <li><code>ENV</code> y <code>LABEL</code> no permiten espacios después del '='</li>
 </ul>
 <pre><code>
-  # todos los comandos siguientes fallarán
+  # Todos los siguientes comandos fallarán
   ARG answer = 42
   ARG version= "1.0.0"
   LABEL "maintained.by"= someone@gmail.com

@@ -1,11 +1,10 @@
 <html>
 <body>
-Reporta parámetros de palabras clave duplicados en métodos, bloques y tipos de procedimiento. Solamente se reconoce la primera declaración de cada parámetro de palabra clave;
-todas las demás declaraciones se ignoran.
+Informa sobre parámetros de palabras clave duplicados en métodos, bloques y tipos proc. Solo se reconoce la primera declaración de cada parámetro de palabra clave; todas las demás declaraciones serán ignoradas.
 <p>Ejemplo:</p>
-<pre><code>clase Ejemplo
-  # Parámetro de palabra clave duplicado
-  def llamar: (palabra_clave: sin_tipo, palabra_clave: sin_tipo) -> sin_tipo
+<pre><code>class Example
+  # 重复的关键字形参
+  def call: (keyword: untyped, keyword: untyped) -> untyped
 end</code></pre>
 </body>
 </html>

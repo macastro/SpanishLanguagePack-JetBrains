@@ -1,17 +1,17 @@
 <html>
 <body>
-Reporta verificaciones de longitud de arreglo innecesarias seguidas de una iteración de arreglo. Cuando la longitud del arreglo es cero, la iteración se saltará de todos modos, por lo que no es necesario verificar la longitud explícitamente.
+Informa sobre comprobaciones innecesarias de longitud de array después de una iteración. Cuando un array tiene longitud cero, la iteración se omite, por lo que no es necesario verificar explícitamente la longitud.
 <p>Ejemplo:</p>
 <pre><code>
   void f(String[] array) {
-    if (array.length != 0) { // verificación innecesaria
+    if (array.length != 0) { // Comprobación innecesaria
       for (String str : array) {
         System.out.println(str);
       }
     }
   }
 </code></pre>
-<p>Se sugiere una corrección rápida para desenvolver o eliminar la verificación de longitud:</p>
+<p>Utilice la corrección rápida para desenvolver o eliminar la comprobación de longitud:</p>
 <pre><code>
   void f(String[] array) {
     for (String str : array) {
@@ -19,8 +19,6 @@ Reporta verificaciones de longitud de arreglo innecesarias seguidas de una itera
     }
   }
 </code></pre>
-
-<!-- tooltip end -->
-<p><small>Nuevo en 2022.3</small></p>
+<p><small>Novedades en 2022.3</small></p>
 </body>
 </html>

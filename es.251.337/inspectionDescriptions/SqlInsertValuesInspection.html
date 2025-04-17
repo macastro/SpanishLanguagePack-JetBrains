@@ -1,10 +1,9 @@
 <html>
 <body>
-Informa de situaciones en las que el número de parámetros en VALUES no coincide con el número de columnas en una tabla de destino.
+Informa sobre casos donde el número de parámetros en VALUES no coincide con el número de columnas en la tabla de destino.
 <p>Ejemplo (MySQL):</p>
 <pre><code>CREATE TABLE foo(a INT, b INT, c INT);
-
 INSERT INTO foo VALUES (1,2,3,4)</code></pre>
-<p>La tabla <code>foo</code> tiene tres columnas, pero en la sentencia INSERT INTO pasamos cuatro.</p>
+<p>La tabla <code>foo</code> tiene tres columnas, pero estamos pasando cuatro valores en la sentencia INSERT INTO.</p>
 </body>
 </html>

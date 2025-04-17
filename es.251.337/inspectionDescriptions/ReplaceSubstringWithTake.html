@@ -1,20 +1,19 @@
 <html>
 <body>
-Informa de llamadas como <code>s.substring(0, x)</code> que se pueden reemplazar por <code>s.take(x)</code>.
-<p>Usar <code>take()</code> simplifica tu código.</p>
-<p>La corrección rápida reemplaza la llamada a <code>substring</code> por <code>take()</code>.</p>
+El informe sugiere reemplazar llamadas como <code>s.substring(0, x)</code> por <code>s.take(x)</code>.
+<p>Usar <code>take()</code> hace que el código sea más simple.</p>
+<p>Esta corrección rápida reemplazará la llamada a <code>substring</code> por <code>take()</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun foo(s: String) {
       s.substring(0, 10)
   }
 </code></pre>
-<p>Tras aplicar la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun foo(s: String) {
       s.take(10)
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

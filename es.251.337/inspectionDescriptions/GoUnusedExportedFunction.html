@@ -1,18 +1,10 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <title>Reportes de funciones exportadas sin utilizarse</title>
-</head>
 <body>
-  <p>
-    En Go, una función se exporta si comienza con una letra mayúscula. Los nombres de las funciones exportadas que fueron definidas pero nunca utilizadas se muestran en gris.
-  </p>
-  <pre><code>// Función exportada, pero nunca utilizada
+Informa sobre funciones exportadas no utilizadas.
+<p>En Go, una función se exporta si comienza con una letra mayúscula. Los nombres de las funciones exportadas que están definidas pero nunca se utilizan se mostrarán en gris.</p>
+<pre><code>// 未使用的导出函数
 func ExportedUnusedFunc()  {
-
 }
-
 func main() {
  fmt.Println("Hello")
 }</code></pre>

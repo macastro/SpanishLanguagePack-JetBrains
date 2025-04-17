@@ -1,15 +1,14 @@
 <html>
 <body>
-Informa las llamadas <code>let</code> redundantes basadas en el receptor.
-<p>El arreglo rápido elimina la llamada <code>let</code> redundante.</p>
+Informa sobre llamadas redundantes a <code>let</code> basadas en el receptor.
+<p>Esta corrección rápida elimina las llamadas redundantes a <code>let</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun test(s: String?): Int? = s?.let { it.length }
 </code></pre>
-<p>Después de aplicar el arreglo rápido:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun test(s: String?): Int? = s?.length
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

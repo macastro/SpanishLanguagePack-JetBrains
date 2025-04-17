@@ -1,25 +1,24 @@
 <html>
 <body>
-Inspecciona las conversiones implícitas entre tipos numéricos.
-<p>La conversión numérica implícita no es un problema en sí mismo, pero si no se espera, puede ocasionar dificultades al rastrear errores.</p>
+Informa sobre conversiones implícitas entre tipos numéricos.
+<p>Las conversiones numéricas implícitas no son un problema en sí mismas, pero pueden dificultar el seguimiento de errores si son accidentales.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   double m(int i) {
     return i * 10;
   }
 </code></pre>
-<p>Luego de la aplicación de la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   double m(int i) {
     return (double) (i * 10);
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Configurar la inspección:</p>
+<p>Configuración de la inspección:</p>
 <ul>
-  <li>Usa la opción <b>Ignorar conversiones de ampliación</b> para ignorar la conversión implícita que no puede resultar en pérdida de datos (por ejemplo, <code>int</code>-&gt;<code>long</code>).</li>
-  <li>Usa la opción <b>Ignorar conversiones desde y hacia 'char'</b> para ignorar la conversión desde y hacia <code>char</code>. La inspección seguirá informando la conversión desde y hacia números de punto flotante.</li>
-  <li>Usa la opción <b>Ignorar conversión desde constantes y literales</b> para hacer que la inspección ignore la conversión desde literales y constantes de tiempo de compilación.</li>
+  <li>Use la opción <b>Ignorar conversiones de ampliación</b> para ignorar las conversiones implícitas que no resultan en pérdida de datos (por ejemplo, <code>int</code>-&gt;<code>long</code>).</li>
+  <li>Use la opción <b>Ignorar conversiones entre 'char' y otros tipos</b> para ignorar las conversiones entre <code>char</code> y otros tipos. La inspección seguirá informando sobre conversiones entre números de punto flotante y otros tipos.</li>
+  <li>Use <b>Ignorar conversiones desde constantes y literales</b> para que la inspección ignore las conversiones desde literales y constantes en tiempo de compilación.</li>
 </ul>
 </body>
 </html>

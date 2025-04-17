@@ -1,8 +1,7 @@
 <html>
 <body>
-Informa sobre <code>List.remove(index)</code> llamadas en un bucle que se puede reemplazar con <code>List.subList().clear()</code>.
-<p>El reemplazo
-  es más eficiente para la mayoría de las implementaciones de <code>List</code> cuando se eliminan muchos elementos.</p>
+Informa sobre llamadas a <code>List.remove(index)</code> en bucles que pueden ser reemplazadas por <code>List.subList().clear()</code>.
+<p>Esta sustitución es más eficiente para la mayoría de implementaciones de <code>List</code> cuando se eliminan múltiples elementos.</p>
 <p>Ejemplo:</p>
 <pre><code>
   void removeRange(List&lt;String&gt; list, int from, int to) {
@@ -11,7 +10,7 @@ Informa sobre <code>List.remove(index)</code> llamadas en un bucle que se puede 
     }
   }
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   void removeRange(List&lt;String&gt; list, int from, int to) {
     if (to &gt; from) {
@@ -20,39 +19,8 @@ Informa sobre <code>List.remove(index)</code> llamadas en un bucle que se puede 
   }
 </code></pre>
 <p>
-  La solución rápida agrega automáticamente una verificación de rango para evitar una posible <code>IndexOutOfBoundsException</code> cuando el valor mínimo es mayor
-  que el valor máximo. Se puede eliminar si tal situación es imposible en su código.
+  La corrección rápida añade automáticamente una comprobación de rango para prevenir posibles <code>IndexOutOfBoundsException</code> cuando el valor mínimo es mayor que el máximo. Si este caso no es posible en el código, esta comprobación puede eliminarse.
 </p>
-<!-- tooltip end -->
-<p><small>Nuevo en 2018.2</small></p>
-</body>
-</html>
-<html>
-<body>
-Informa sobre <code>List.remove(index)</code> llamadas en un bucle que se puede reemplazar con <code>List.subList().clear()</code>.
-<p>El reemplazo
-  es más eficiente para la mayoría de las implementaciones de <code>List</code> cuando se eliminan muchos elementos.</p>
-<p>Ejemplo:</p>
-<pre><code>
-  void removeRange(List&lt;String&gt; list, int from, int to) {
-    for (int i = from; i &lt; to; i++) {
-        list.remove(from);
-    }
-  }
-</code></pre>
-<p>Después de aplicar la solución rápida:</p>
-<pre><code>
-  void removeRange(List&lt;String&gt; list, int from, int to) {
-    if (to &gt; from) {
-      list.subList(from, to).clear();
-    }
-  }
-</code></pre>
-<p>
-  La solución rápida agrega automáticamente una verificación de rango para evitar una posible <code>IndexOutOfBoundsException</code> cuando el valor mínimo es mayor
-  que el valor máximo. Se puede eliminar si tal situación es imposible en su código.
-</p>
-<!-- tooltip end -->
-<p><small>Nuevo en 2018.2</small></p>
+<p><small>Novedades de la versión 2018.2</small></p>
 </body>
 </html>

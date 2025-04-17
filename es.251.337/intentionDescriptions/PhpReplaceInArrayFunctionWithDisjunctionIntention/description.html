@@ -1,12 +1,10 @@
 <html>
 <body>
-<code>in_array($needle, $haystack, $strict)</code> la llamada se desenvuelve en una disyunción correspondiente.
-
+Descompone la llamada <code>in_array($needle, $haystack, $strict)</code> en su disyunción correspondiente.
 <p>
-  La disyunción resultante se envuelve en paréntesis si es parte de una expresión lógica.
-  Si <code>$haystack</code> contiene un elemento con efectos secundarios, se incluye en la primera expresión de igualdad.
-  No se sugiere esta intención si <code>$haystack</code> contiene múltiples elementos con efectos secundarios.
+  Si la disyunción generada es parte de una expresión lógica, se encerrará entre paréntesis.
+  Si <code>$haystack</code> contiene un elemento con efectos secundarios, este elemento se colocará en la primera expresión de igualdad.
+  Si <code>$haystack</code> contiene múltiples elementos con efectos secundarios, no se recomienda usar esta intención.
 </p>
-
 </body>
 </html>

@@ -1,14 +1,13 @@
 <html>
 <body>
-<p>Reporta llamadas <code>subscribe()</code> en métodos "reactivos".</p>
-<p>Los métodos que devuelven un publicador (incluyendo <code>Uni</code> y <code>Multi</code>) no deberían llamar al método <code>subscribe()</code> directamente porque puede romper la cadena de llamada reactiva.</p>
-<p>En lugar de usar <code>subscribe()</code>, considera usar operadores de composición como <code>flatMap()</code>,
-  <code>merge()</code>, y así sucesivamente.</p>
+<p>Reporta llamadas a <code>subscribe()</code> en métodos "reactive".</p>
+<p>Los métodos que devuelven Publisher (incluyendo <code>Uni</code> y <code>Multi</code>) no deberían llamar directamente al método <code>subscribe()</code>, ya que podría romper la cadena de llamadas reactivas.</p>
+<p>En lugar de usar <code>subscribe()</code>, considera utilizar operadores de composición como <code>flatMap()</code>, <code>merge()</code>, etc.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   Multi&lt;String&gt; stringMulti(){
     Multi&lt;String&gt; multi = Multi.createFrom().item("abc");
-    multi.subscribe(); // &lt;- llamada de 'subscribe' bloqueante en contexto no bloqueante
+    multi.subscribe(); // &lt;- Llamada bloqueante a 'subscribe' en un contexto no bloqueante
     return multi;
   }
 </code></pre>

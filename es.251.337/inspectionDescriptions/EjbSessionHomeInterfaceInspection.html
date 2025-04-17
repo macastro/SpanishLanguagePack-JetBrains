@@ -1,15 +1,14 @@
 <html>
 <body>
-Se informan las siguientes violaciones a la especificación EJB:
+Reporta las siguientes violaciones de la especificación EJB:
 <ul>
   <li><code>create()</code> no está definido correctamente</li>
   <li><code>finder()</code> no está permitido</li>
 </ul>
-
 <p><b>Ejemplo:</b></p>
 <pre><code>
 public interface SessionHome extends javax.ejb.EJBHome {
-  Session create() throws java.rmi.RemoteException; // Error: También debería lanzar `javax.ejb.CreateException`
+  Session create() throws java.rmi.RemoteException; // Error: también debería lanzar `javax.ejb.CreateException`
 }
 </code></pre>
 </body>

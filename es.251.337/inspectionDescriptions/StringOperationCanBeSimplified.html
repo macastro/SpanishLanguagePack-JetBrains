@@ -1,29 +1,34 @@
 <html>
 <body>
-Reporta llamadas redundantes a constructores y métodos de <code>String</code> como <code>toString()</code> o <code>substring()</code>
-que pueden ser reemplazadas por una expresión más simple.
-<p>Por ejemplo, las llamadas a estos métodos pueden ser removidas de forma segura en código
-como <code>"string".substring(0)</code>, <code>"string".toString()</code>, o
-<code>new StringBuilder().toString().substring(1,3)</code>.</p>
+Informa sobre llamadas redundantes a constructores y métodos de <code>String</code> que pueden ser reemplazados por expresiones más simples, como <code>toString()</code> o <code>substring()</code>.
+<p>Por ejemplo, en casos como <code>"string".substring(0)</code>, <code>"string".toString()</code> o
+<code>new StringBuilder().toString().substring(1,3)</code>, las llamadas a estos métodos pueden eliminarse de forma segura.</p>
 <p>Ejemplo:</p>
 <pre><code>
-  System.out.println(new String("mensaje"));
+  System.out.println(new String("message"));
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  System.out.println("mensaje");
+  System.out.println("message");
 </code></pre>
 <p>
-  Tenga en cuenta que la corrección rápida elimina la llamada redundante al constructor, y esto puede afectar la igualdad referencial de <code>String</code>.
-  Si necesita preservarla, aunque se considera una mala práctica, suprima la advertencia o use la configuración de inspección para ignorar
-  las llamadas redundantes al constructor de <code>String</code>.
+  Tenga en cuenta que esta corrección rápida elimina las llamadas redundantes al constructor, lo que puede afectar a la igualdad de referencias de <code>String</code>.
+  Si necesita mantenerlas, aunque se considere una mala práctica, deshabilite la advertencia o use la configuración de inspección para ignorar las llamadas redundantes al constructor de <code>String</code>.
 </p>
-<!-- tooltip end -->
 <p>
-  Utilice la opción <b>No reportar llamadas al constructor de String</b> a continuación para no reportar código como el ejemplo anterior.
-  Esto evitará cambiar el resultado de las comparaciones de cadenas con <code>==</code> o <code>!=</code> después de aplicar
-  la corrección rápida en código que usa llamadas a <code>new String()</code> para garantizar una identidad de objeto diferente.
+  Use la opción <b>No informar sobre llamadas al constructor String</b> para evitar informes sobre código como el mostrado arriba.
+  Esto evitará que los resultados de las comparaciones de cadenas con <code>==</code> o <code>!=</code> cambien después de aplicar la corrección rápida en código que usa llamadas a <code>new String()</code> para garantizar la desigualdad de objetos.
 </p>
-<p><small>Nuevo en la versión 2018.1</small></p>
+<p>
+  Use la opción <b>No informar sobre llamadas substring() con un argumento</b> para evitar informes sobre código como el siguiente.
+</p>
+<pre><code>
+  stringBuilder.append(string.substring(5));
+</code></pre>
+<p>Puede reemplazarse por:</p>
+<pre><code>
+  stringBuilder.append(string, 5, string.length());
+</code></pre>
+<p><small>Novedades de 2018.1</small></p>
 </body>
 </html>

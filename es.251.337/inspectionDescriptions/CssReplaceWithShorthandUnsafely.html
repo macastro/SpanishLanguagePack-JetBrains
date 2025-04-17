@@ -1,17 +1,14 @@
 <html>
 <body>
-Reporta un conjunto de propiedades CSS explícitas y sugiere remplazar un conjunto incompleto de propiedades CSS explícitas con una forma abreviada,
-aunque no es 100% equivalente en este caso.
+Informa sobre un grupo de propiedades CSS regulares y sugiere reemplazar un conjunto incompleto de propiedades CSS regulares con su forma abreviada, aunque en este caso la forma abreviada no es 100% equivalente.
 <p>
-  Por ejemplo, dos propiedades: <code>outline-color</code> y <code>outline-style</code> pueden ser remplazados con un único <code>outline</code>.
-  Tal reemplazo no es 100% equivalente porque los atajos restablecen todos los subvalores omitidos a sus estados iniciales.
-  En este ejemplo, cambiar al atajo <code>outline</code> significa que <code>outline-width</code> también se establece en su valor inicial,
-  que es <code>medium</code>.
+  Por ejemplo, las 2 propiedades <code>outline-color</code> y <code>outline-style</code> pueden reemplazarse con un único <code>outline</code>.
+  Este tipo de reemplazo no es 100% equivalente, ya que la forma abreviada restablece todos los subvalores omitidos a su estado inicial.
+  En este caso, cambiar a la forma abreviada <code>outling</code> significa que <code>outling-width</code> también se establecerá en su valor inicial, que es <code>medium</code>.
 </p>
-<!-- tooltip end -->
 <p>
-  Esta inspección no maneja conjuntos completos de propiedades explícitas (cuando cambiar a atajo es 100% seguro).
-  Para tales casos, vea la inspección "Las propiedades pueden ser reemplazadas de forma segura con un atajo".
+  Esta inspección no maneja grupos completos de propiedades regulares (cuando el cambio a la forma abreviada es 100% seguro).
+  Para esos casos, consulte la inspección "Las propiedades pueden reemplazarse de forma segura por su forma abreviada".
 </p>
 </body>
 </html>

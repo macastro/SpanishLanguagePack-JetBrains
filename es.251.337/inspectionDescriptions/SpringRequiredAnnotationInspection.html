@@ -1,18 +1,17 @@
 <html>
 <body>
-<p>Reporta propiedades de bean setter <code>@Required</code> que no se inyectan ni autowirean.</p>
-
+<p>Informa sobre propiedades setter Bean con <code>@Required</code> que no han sido inyectadas o autowired.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="xml">
 &lt;beans&gt;
   &lt;bean class="beans.MyComponent" id="foo"/&gt;
-  &lt;!-- reporta "Faltan propiedades requeridas: 'port'" --&gt;
+  &lt;!-- Informa "Falta la propiedad requerida: 'port'" --&gt;
 &lt;/beans&gt;
 </code></pre>
 <pre><code lang="java">
 public class MyComponent {
    @Required
-   public void setPort(int port) // reporta "La propiedad requerida 'port' no está inyectada"
+   public void setPort(int port) // Informa "Propiedad requerida 'port' no inyectada"
    {...}
 }
 </code></pre>

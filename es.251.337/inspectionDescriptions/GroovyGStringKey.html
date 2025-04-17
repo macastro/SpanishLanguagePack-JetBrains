@@ -1,18 +1,17 @@
 <html>
 <body>
-Informa sobre las declaraciones que utilizan un objeto <code>groovy.lang.GString</code> como clave para el mapa.
-En general, los objetos <code>GString</code> son mutables y probablemente no deberían utilizarse como claves.
-Además, no se puede acceder a una entrada de <code>GString</code> con un objeto <code>java.lang.String</code> con el mismo valor.
+Informa sobre declaraciones que utilizan objetos <code>groovy.lang.GString</code> como claves de mapa.
+Normalmente, los objetos <code>GString</code> son mutables y no deberían usarse como claves.
+Además, no se puede acceder a las entradas <code>GString</code> usando objetos <code>java.lang.String</code> con el mismo valor.
 <p><b>Ejemplo:</b></p>
 <pre>
 <code>
-def mapa = [:]
-def clave = 'foo'
-mapa &lt&lt ["${clave}": 'bar']
-assert mapa[clave] == null // resultado 'true' confuso de la comparación
+def map = [:]
+def key = 'foo'
+map &lt&lt ["${key}": 'bar']
+assert map[key] == null // resultado de comparación confuso 'true'
 </code>
 </pre>
-<!-- tooltip end -->
-<p><small>Nuevo en 2017.1</small></p>
+<p><small>Cambios más recientes en 2017.1</small></p>
 </body>
 </html>

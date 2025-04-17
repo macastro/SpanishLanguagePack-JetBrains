@@ -1,11 +1,11 @@
 <html>
 <body>
-Reporta las condiciones y expresiones que siempre son verdaderas, falsas o nulas.
+Informa sobre condiciones y expresiones que siempre devuelven true, false o null.
 <p>Ejemplo (MySQL):</p>
 <pre><code>CREATE TABLE t1 (a TEXT, b INT, c BOOLEAN);
 SELECT a FROM t1 WHERE 'Cat' = 'Cat';
 SELECT a FROM t1 WHERE 'Cat' = null;</code></pre>
-<p>El <code>'Cat' = 'Cat'</code> siempre es verdadero y será reportado.</p>
-<p>El <code>'Cat' = null</code> siempre es nulo y será reportado.</p>
+<p><code>'Cat' = 'Cat'</code> siempre devuelve true, será reportado.</p>
+<p><code>'Cat' = null</code> siempre devuelve null, será reportado.</p>
 </body>
 </html>

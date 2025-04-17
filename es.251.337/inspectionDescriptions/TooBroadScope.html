@@ -1,9 +1,7 @@
 <html>
 <body>
-Reporta cualquier declaración de variable que pueda ser movida a un alcance menor.
-<p>Esta inspección es especialmente
-útil para declaraciones al estilo <i>Pascal</i> al inicio de un método. Las variables con un alcance demasiado amplio
-a menudo suelen quedar después de las refactorizaciones.</p>
+Informa sobre cualquier declaración de variable que pueda moverse a un ámbito más reducido.
+<p>Esta inspección es especialmente útil para las declaraciones de estilo <i>Pascal</i> al inicio de los métodos. Además, las variables con un ámbito demasiado amplio suelen quedarse después de las refactorizaciones.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   StringBuilder sb = new StringBuilder();
@@ -16,33 +14,28 @@ a menudo suelen quedar después de las refactorizaciones.</p>
   StringBuilder sb = new StringBuilder();
   sb.append(1);
 </code></pre>
-<!-- tooltip end -->
-<p>Configura la inspección:</p>
+<p>Configuración de la inspección:</p>
 <ul>
-  <li>Usa la opción <b>Solo reportar variables que puedan ser movidas a bloques internos</b> para reportar solo aquellas variables que puedan ser movidas dentro de bloques de código más profundos.
-    Por ejemplo, cuando la opción está habilitada, no se sugiere el movimiento para la variable <code>sb</code> anterior.
-    Sin embargo, se sugerirá para el siguiente código:
+  <li>Use la opción <b>Informar solo variables que pueden moverse a bloques internos</b> para reportar únicamente las variables que pueden moverse a bloques de código más profundos.
+    Por ejemplo, cuando esta opción está activada, no se sugerirá mover la variable <code>sb</code> del ejemplo anterior.
+    Sin embargo, sí se sugerirá para el siguiente código:
 <pre><code>
   StringBuilder sb = new StringBuilder(a);
   if (flag) {
     sb.append(1);
   }
 </code></pre></li>
-  <li>Usa la opción <b>Reportar variables con una nueva expresión como inicializador
-    (potencialmente inseguro)</b> para reportar variables que son inicializadas con una nueva expresión. Esto hace que la inspección sea potencialmente
-    insegura cuando el constructor tiene efectos secundarios no locales. Por ejemplo, cuando la opción está habilitada, se sugiere el movimiento para la variable <code>foo</code>:
+  <li>Use la opción <b>Informar variables inicializadas con expresiones new (potencialmente inseguro)</b> para reportar variables inicializadas con expresiones new. Esto puede hacer que la inspección sea insegura cuando el constructor tiene efectos secundarios no locales. Por ejemplo, cuando esta opción está activada, se sugerirá mover la variable <code>foo</code>:
 <pre><code>
   class Foo {
     static List&lt;Foo&gt; fooList = new ArrayList&lt;&gt;();
     String bar;
-
     Foo(String bar) {
         this.bar = bar;
         fooList.add(this);
     }
-
     public static void main(String[] args) {
-      // el movimiento es posible aunque no sea seguro
+      // Movible pero inseguro
       Foo foo = new Foo("bar");
       System.out.println(fooList.size());
       System.out.println(foo.bar);

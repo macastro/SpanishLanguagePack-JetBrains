@@ -1,13 +1,12 @@
 <html>
 <body>
-Informa posibles problemas EL, como referencias no resueltas y ubicaciones EL no válidas.
-
+Informa sobre posibles problemas de EL, como referencias no resueltas y ubicaciones EL inválidas.
 <p><b>Ejemplo:</b></p><br/>
-Considere tener la función `exampleFun(String)` definida en el espacio de nombres actual.
+Considera la función `exampleFun(String)` definida en el espacio de nombres actual.
 <pre><code>
 &lt;jsp:root xmlns:example="urn:jsptld:exampleNamespace.tld"&gt;
   ${ example:exampleFun("1") + example:unknownFun("2") } // Error: no se puede resolver la función 'unknownFun'
-  ${ example:exampleFun("1", "2") } // Error: diferente número de parámetros formales y reales
+  ${ example:exampleFun("1", "2") } // Error: el número de parámetros formales y reales no coincide
 &lt;/jsp:root&gt;
 </code></pre>
 </body>

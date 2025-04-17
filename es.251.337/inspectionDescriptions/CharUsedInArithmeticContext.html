@@ -1,16 +1,14 @@
 <html>
 <body>
-Informa de expresiones del tipo <code>char</code> usadas en expresiones de suma o resta.
-<p>Este código no es necesariamente un problema, pero puede provocar errores (por ejemplo,
-  si se espera una cadena).</p>
-<p><b>Ejemplo:</b> <code>int a = 'a' + 42;</code></p>
+Informa sobre expresiones de tipo <code>char</code> utilizadas en expresiones de suma o resta.
+<p>Este código no es necesariamente un problema, pero puede conducir a errores (por ejemplo, cuando se requiere una cadena de texto).</p>
+<p><b>Ejemplo</b>: <code>int a = 'a' + 42;</code></p>
 <p>Después de aplicar la corrección rápida: <code>int a = (int) 'a' + 42;</code></p>
-<p>Para el contexto <code>String</code>:
+<p>Para el contexto de <code>String</code>:
 <pre><code>int i1 = 1;
 int i2 = 2;
 System.out.println(i2 + '-' + i1 + &quot; = &quot; + (i2 - i1));</code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <code>System.out.println(i2 + &quot;-&quot; + i1 + &quot; = &quot; + (i2 - i1));</code>
-<!-- tooltip end -->
 </body>
 </html>

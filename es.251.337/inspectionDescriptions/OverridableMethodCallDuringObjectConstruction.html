@@ -1,36 +1,32 @@
 <html>
 <body>
-Informa de llamadas a métodos que se pueden anular de la clase actual durante la construcción del objeto.
-<p>Se llama a un método durante la construcción del objeto si se encuentra dentro de:
+Informa sobre llamadas a métodos sobrescribibles de la clase actual durante la construcción del objeto.
+<p>Se considera que un método es llamado durante la construcción del objeto si se encuentra en:
 <ul>
-  <li>Constructor</li>
-  <li>Inicializador de instancias no estático</li>
-  <li>Inicializador de campo no estático</li>
-  <li>Método <code>clone()</code></li>
-  <li>Método <code>readObject()</code></li>
-  <li>Método <code>readObjectNoData()</code></li>
-</ul>
-<p>Los métodos se pueden anular si no se declaran como <code>final</code>, <code>static</code> o <code>private</code>.
-  Los métodos locales de paquetes se consideran seguros, aunque se puedan anular. Estas llamadas pueden provocar errores sutiles,
-  ya que la inicialización del objeto puede producirse antes de la llamada al método.</p>
+  <li>Un constructor</li>
+  <li>Un inicializador de instancia no static</li>
+  <li>Un inicializador de campo no static</li>
+  <li>El método <code>clone()</code></li>
+  <li>El método <code>readObject()</code></li>
+  <li>El método <code>readObjectNoData()</code></li>
+<p>Un método es sobrescribible si no está declarado como <code>final</code>, <code>static</code> o <code>private</code>.
+  Los métodos package-local se consideran seguros incluso si son sobrescribibles. Tales llamadas pueden provocar errores difíciles de detectar, ya que la inicialización del objeto puede ocurrir después de la llamada al método.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Padre {
+  class Parent {
     void someMethod() { }
   }
-
-  class Hijo extends Padre {
-    Hijo() {
+  class Child extends Parent {
+    Child() {
       someMethod();
     }
   }
 </code></pre>
-<!-- tooltip end -->
-  <p>Esta inspección comparte la funcionalidad con las siguientes inspecciones:</p>
+  <p>Esta inspección comparte funcionalidad con las siguientes inspecciones:</p>
 <ul>
-  <li>Método abstracto llamado durante la construcción del objeto</li>
-  <li>Método anulado llamado durante la construcción del objeto</li>
+  <li>Método abstract llamado durante la construcción del objeto</li>
+  <li>Método sobrescrito llamado durante la construcción del objeto</li>
 </ul>
-  <p>Sólo debe habilitarse una inspección a la vez para evitar la duplicación de advertencias.</p>
+  <p>Solo se puede habilitar una inspección a la vez para evitar advertencias duplicadas.</p>
 </body>
 </html>

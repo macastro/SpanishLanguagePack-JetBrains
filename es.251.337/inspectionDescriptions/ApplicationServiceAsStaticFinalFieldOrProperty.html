@@ -1,25 +1,25 @@
 <html>
 <body>
-Informa cuando se asigna un servicio de aplicación a campos static final/propiedades inmutables.
-<h4>Campos static final (Java) o propiedades inmutables static con campo de respaldo (Kotlin)</h4>
+Informa sobre casos donde los servicios de aplicación se asignan a campos static final/propiedades inmutables.
+<h4>Campos static final (Java) o propiedades inmutables static con campos de respaldo (Kotlin)</h4>
 <p>
-  <b>Importante:</b> En el contexto, static en Kotlin se refiere a miembros de objetos no anónimos o de declaraciones de nivel superior.
+  <b>Nota</b>: En lo siguiente, static en Kotlin se refiere a miembros de objetos no anónimos o declaraciones de nivel superior.
 </p>
 <p>
-  Este tipo de asignación de servicio afecta al estado global y provoca que en las pruebas no se pueda eliminar una aplicación y configurar otra, por lo que las pruebas repetidas en el mismo proceso pueden fallar.
-  La única excepción es una llamada explícita al constructor para crear una instancia predeterminada o ficticia.
+  Tales asignaciones de servicios resultan en un estado global que hace imposible descartar una aplicación y configurar otra durante las pruebas, por lo que las pruebas repetidas en el mismo proceso pueden fallar.
+  La única excepción son las llamadas explícitas al constructor para almacenar instancias simuladas/predeterminadas.
 </p>
 <p>
-  Para evitar asignar el servicio, lo recomendable es obtener el servicio de forma local.
-  También puedes envolverlo en <code>java.util.function.Supplier</code> (Java, Kotlin) o convertir la propiedad en una función (Kotlin).
+  La forma recomendada de evitar el almacenamiento de servicios es recuperarlos localmente.
+  Alternativamente, pueden envolverse en un <code>java.util.function.Supplier</code> (Java, Kotlin) o convertir la propiedad en una función (Kotlin).
 </p>
 <p>Ejemplo (Java):</p>
 <pre><code lang="java">
-// No recomendado:
+// Incorrecto:
 private static final ManagingFS ourInstance = ApplicationManager.getApplication().getService(ManagingFS.class);
 </code></pre>
 <pre><code lang="java">
-// Recomendado:
+// Correcto:
 private static final Supplier&lt;ManagingFS&gt; ourInstance = CachedSingletonsRegistry.lazy(() -> {
   return ApplicationManager.getApplication().getService(ManagingFS.class);
 });
@@ -28,25 +28,25 @@ private static final Supplier&lt;ManagingFS&gt; ourInstance = CachedSingletonsRe
 // Excepción:
 private static final UniqueVFilePathBuilder DUMMY_BUILDER = new UniqueVFilePathBuilder()
 </code></pre>
-<h4>Obtención de instancias del servicio a través de propiedades estáticas inmutables (Kotlin)</h4>
+<h4>Recuperación de instancias de servicio mediante propiedades inmutables static (Kotlin)</h4>
 <p>
-  El problema anterior no se produce cuando el servicio se asigna a propiedades sin campo de respaldo, pero para obtener el servicio es recomendable usar el método explícito <code>getInstance()</code> en lugar de usar la propiedad.
+  Aunque asignar servicios a propiedades sin campos de respaldo no causa los problemas mencionados anteriormente, es preferible recuperar servicios usando métodos <code>getInstance()</code> explícitos en lugar de propiedades:
 </p>
 <ul>
-  <li>Aclara en el sitio de llamada que cargar el servicio puede ser una operación costosa.</li>
-  <li>Cargar el servicio puede producir excepciones y es más probable prever las excepciones producidas por llamadas a métodos que las excepciones generadas por accesos a propiedades.</li>
-  <li>El uso (excesivo) de propiedades puede provocar errores, ya que la propiedad puede modificarse por error para que tenga un inicializador en lugar de una propiedad correcta (pero más detallada) con un getter, y este tipo de cambios pueden pasar desapercibidos fácilmente.</li>
-  <li>Usar métodos en lugar de propiedades aporta coherencia al usar las llamadas a <code>MyApplicationService.getInstance()</code> tanto en Kotlin como en Java.</li>
-  <li>Usar métodos aporta coherencia a <code>MyApplicationService.getInstance()</code> y <code>MyProjectService.getInstance(project)</code> tanto en declaraciones como en sitios de llamada.</li>
+  <li>Hace más claro en el punto de llamada que puede implicar la carga de un servicio, lo cual puede no ser trivial.</li>
+  <li>La carga de servicios puede lanzar excepciones, y las excepciones de llamadas a métodos son menos sorprendentes que las de acceso a propiedades.</li>
+  <li>El uso (excesivo) de propiedades puede ser propenso a errores, ya que puede cambiarse accidentalmente a una propiedad con inicializador en lugar de una propiedad correcta (pero más verbosa) con getter, y tal cambio puede pasar desapercibido fácilmente.</li>
+  <li>El uso de métodos en lugar de propiedades mantiene la consistencia de las llamadas <code>MyApplicationService.getInstance()</code> tanto en Kotlin como en Java.</li>
+  <li>El uso del método mantiene la consistencia entre <code>MyApplicationService.getInstance()</code> y <code>MyProjectService.getInstance(project)</code> tanto en la declaración como en el punto de llamada.</li>
 </ul>
-<p>Para mejorar el rendimiento de la herramienta, siempre se recomienda mantener el tipo de valor devuelto del método explícito.</p>
+<p>Para un mejor rendimiento de las herramientas, se recomienda mantener siempre tipos de retorno explícitos en los métodos.</p>
 <p>Ejemplo:</p>
 <pre><code lang="kotlin">
 @Service
 class MyApplicationService {
   companion object {
     @JvmStatic
-    val instance: MyApplicationService // No recomendado
+    val instance: MyApplicationService // Incorrecto
        get() = service()
   }
 }
@@ -56,10 +56,10 @@ class MyApplicationService {
 class MyApplicationService {
   companion object {
     @JvmStatic
-    fun getInstance(): MyApplicationService = service() // Recomendado
+    fun getInstance(): MyApplicationService = service() // Correcto
   }
 }
 </code></pre>
-<p><small>Novedad de 2023.3</small>
+<p><small>Novedades en 2023.3</small>
 </body>
 </html>

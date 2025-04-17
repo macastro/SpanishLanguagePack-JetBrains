@@ -1,9 +1,9 @@
 <html>
 <body>
-Inspecciona llamadas a un setter de propiedad simple en la clase de la propiedad.
+Informa sobre llamadas a setters simples de propiedades desde dentro de la clase que posee la propiedad.
 <p>
-  Un setter de propiedad simple está definido como aquel que simplemente asigna el valor de su parámetro a un campo y no realiza ningún otro cálculo. Tales llamadas simples a setter pueden ser interpoladas de forma segura.
-  Algunos estándares de codificación también sugieren no utilizar setters simples por razones de claridad de código.
+  Un setter simple de propiedad se define como aquel que solo asigna el valor de su parámetro a un campo, sin realizar otros cálculos. Este tipo de llamadas a setters simples pueden ser inlineadas de manera segura.
+  Algunos estándares de codificación también recomiendan evitar el uso de setters simples para mantener el código más claro.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -17,7 +17,7 @@ Inspecciona llamadas a un setter de propiedad simple en la clase de la propiedad
     }
   }
 </code></pre>
-<p>Después de que la corrección rápida es aplicada:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class Foo {
     private int index;
@@ -29,11 +29,10 @@ Inspecciona llamadas a un setter de propiedad simple en la clase de la propiedad
     }
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Utiliza las siguientes opciones para configurar la inspección:</p>
+<p>La inspección puede configurarse con las siguientes opciones:</p>
 <ul>
-  <li>Si se debe informar solo de llamadas a setter en <code>this</code>, no en objetos del mismo tipo pasados como parámetro.</li>
-  <li>Si se deben ignorar los setter no <code>private</code>.</li>
+  <li>Si se debe informar solo sobre llamadas a setters en <code>this</code> y no en objetos del mismo tipo pasados como parámetros.</li>
+  <li>Si se deben ignorar los setters no <code>private</code>.</li>
 </ul>
 </body>
 </html>

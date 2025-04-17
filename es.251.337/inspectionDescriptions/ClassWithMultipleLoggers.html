@@ -1,20 +1,17 @@
 <html>
 <body>
-Reporta clases que tienen varios registradores declarados.
-
-Asegurar que cada clase tiene un solo registrador dedicado es un paso importante para proporcionar una implementación de registro unificada para una aplicación.
+La clase declara múltiples registradores (loggers).
+Un paso importante para proporcionar una implementación de registro unificada para la aplicación es asegurar que cada clase tenga su propio registrador dedicado.
 <p>Por ejemplo:</p>
 <pre><code>
   <b>public class</b> Critical {
     <b>protected static final</b> Logger LOG = Logger.getLogger(Critical.class);
-
     <b>protected static final</b> Logger myLogger = Logger.getLogger(getClass());
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Utiliza la siguiente tabla para especificar los nombres de las clases Logger.
-
-Las clases que declaren varios campos que tienen el tipo de una de las clases especificadas serán reportadas por esta inspección.
+<p>
+Utilice la tabla siguiente para especificar los nombres de las clases registradoras.
+Esta verificación informará sobre las clases que declaran múltiples campos con uno de los tipos de clase especificados.
 <p>
 </body>
 </html>

@@ -1,13 +1,12 @@
 <html>
 <body>
-Informa de las clases con nombres demasiado cortos, demasiado largos o que no sigan el patrón de expresión regular especificado.
-<p><b>Ejemplo:</b> Si la inspección está habilitada para pruebas y la longitud mínima del nombre de la clase está establecida en 8 (valor predeterminado), se generará una advertencia para la siguiente clase de prueba porque la longitud del nombre de la clase es de 6, que es inferior a 8: <code>public class MyTest{}</code>.
-<p>Solo se puede usar una corrección rápida para cambiar el nombre de este tipo de clases en el editor.</p>
-<!-- tooltip end -->
+Clases con nombres demasiado cortos, demasiado largos o que no siguen el patrón de expresión regular especificado.
+<p><b>Ejemplo</b>: Si la inspección está habilitada para pruebas y la longitud mínima especificada del nombre de clase es 8 (valor predeterminado), se generará una advertencia para la siguiente clase de prueba porque su nombre tiene una longitud de 6, que es menor que 8: <code>public class MyTest{}</code>.
+<p>Estas clases solo se pueden renombrar mediante la corrección rápida en el editor.</p>
 <p>Configuración de la inspección:</p>
 <p>
-  Usa la lista en la sección <b>Opciones</b> para especificar las clases que se deben inspeccionar. Desmarca las casillas correspondientes a las clases a las que quieras omitirles la inspección.</p>
-<p>Para cada tipo de clase, usa los campos de entrada proporcionados para especificar la longitud mínima, la longitud máxima y la expresión regular esperadas para el nombre de la clase. Especifica <b>0</b> para el campo de longitud para omitir la comprobación correspondiente.</p>
-<p>Las expresiones regulares se deben especificar en el formato estándar <code>java.util.regex</code>.</p>
+  Utilice la lista en la sección <b>Opciones</b> para especificar qué clases deben ser inspeccionadas. Desmarque las casillas correspondientes a las clases que desea excluir de la inspección.</p>
+<p>Para cada tipo de clase, utilice los campos de entrada proporcionados para especificar la longitud mínima, la longitud máxima y la expresión regular que debe tener el nombre de la clase. Especifique <b>0</b> en los campos de longitud para omitir la verificación correspondiente.</p>
+<p>Las expresiones regulares deben especificarse en el formato estándar de <code>java.util.regex</code>.</p>
 </body>
 </html>

@@ -1,9 +1,7 @@
 <html>
 <body>
-Inspecciona el uso de retorno etiquetado en la última expresión en lambdas.
-
-<p>Dicho retorno es redundante y puede eliminarse de forma segura.</p>
-
+Informa sobre el uso de return etiquetado en la última expresión de una lambda.
+<p>Este tipo de return es redundante y puede eliminarse de forma segura.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 fun foo() {
@@ -12,8 +10,7 @@ fun foo() {
   }
 }
 </code></pre>
-
-<p>Después de aplicar la reparación rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
 fun foo() {
   listOf(1,2,3).find {
@@ -21,6 +18,5 @@ fun foo() {
   }
 }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

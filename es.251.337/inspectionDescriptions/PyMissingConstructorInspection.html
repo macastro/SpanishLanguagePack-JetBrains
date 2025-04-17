@@ -1,25 +1,21 @@
 <html>
 <body>
-<p>Informa casos de falta de llamada al constructor <code>super</code> en una clase.</p>
+<p>Falta la llamada al constructor <code>super</code> en la clase derivada.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class Fruit:
     def __init__(self):
         pass
-
-
 class Pear(Fruit):
     def __init__(self):
         pass
 </code></pre>
-<p>La clase <code>Pear</code> debe tener una llamada <code>super</code> en el método <code>__init__</code>.</p>
-<p>Al aplicar la corrección rápida, el código cambia a:</p>
+<p>La clase <code>Pear</code> debería tener una llamada a <code>super</code> en el método <code>__init__</code>.</p>
+<p>Después de aplicar la corrección rápida, el código queda así:</p>
 <pre><code>
 class Fruit:
     def __init__(self):
         pass
-
-
 class Pear(Fruit):
     def __init__(self):
         super().__init__()

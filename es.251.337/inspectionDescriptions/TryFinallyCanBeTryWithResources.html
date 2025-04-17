@@ -1,7 +1,7 @@
 <html>
 <body>
-Reporta instrucciones `try`-`finally` donde se podría estar usando Automatic Resource Management (Manejo Automático de Recursos) de Java 7, que es menos propenso a errores.
-<p>Se puede utilizar el Quick Fix para transformar la instrucción `try`-`finally` en una instrucción `try`-with-resources.</p>
+Informa sobre sentencias <code>try</code>-<code>finally</code> que podrían utilizar la Gestión Automática de Recursos de Java 7 (lo cual es menos propenso a errores).
+<p>La sentencia <code>try</code>-<code>finally</code> puede convertirse en una sentencia <code>try</code>-with-resources mediante una corrección rápida.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   PrintStream printStream = new PrintStream(fileName);
@@ -11,12 +11,11 @@ Reporta instrucciones `try`-`finally` donde se podría estar usando Automatic Re
     printStream.close();
   }
 </code></pre>
-<p>Se provee un Quick Fix para pasar argumentos al constructor:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   try (PrintStream printStream = new PrintStream(fileName)) {
     printStream.print(true);
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

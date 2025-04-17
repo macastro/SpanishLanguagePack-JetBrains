@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa sobre las llamadas a cadenas de llamadas <code>Optional</code> que pueden ser reemplazadas por secuencias de instrucciones <code>if</code>.
+Informa sobre cadenas de llamadas <code>Optional</code> que pueden ser reemplazadas por una secuencia de declaraciones <code>if</code>.
 <p>Ejemplo:</p>
 <pre><code>
   return Optional.ofNullable(name)
@@ -8,7 +8,7 @@ Informa sobre las llamadas a cadenas de llamadas <code>Optional</code> que puede
     .map(initials -> initials.toUpperCase(Locale.ENGLISH))
     .orElseGet(this::getDefault);
 </code></pre>
-<p>Una vez aplicada la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   if (name != null) {
     String initials = extractInitials(name);
@@ -16,10 +16,9 @@ Informa sobre las llamadas a cadenas de llamadas <code>Optional</code> que puede
   }
   return getDefault();
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Esta inspección puede resultar útil para hacer un downgrade para mantener la compatibilidad con versiones anteriores de Java.
+  Esta inspección ayuda con la degradación para mantener la compatibilidad con versiones anteriores de Java.
 </p>
-<p><small>Novedad en la versión 2020.2</small></p>
+<p><small>Novedades de 2020.2</small></p>
 </body>
 </html>

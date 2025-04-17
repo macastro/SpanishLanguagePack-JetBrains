@@ -1,36 +1,30 @@
 <html>
 <body>
-Se informa cualquier cadena de sentencias <code>if</code>-<code>else</code> cuyas condiciones sean todas expresiones <code>instanceof</code>
-o expresiones de igualdad de clases (por ejemplo, comparación con <code>String.class</code>).
-Estas construcciones usualmente indican un error en el diseño orientado a objetos que
-dicta que este despacho o direccionamiento basado en el tipo debe realizarse a través de llamadas polimórficas a métodos más que cadenas explícitas
-de pruebas de tipo.
+Reporta cualquier cadena de declaraciones <code>if</code>-<code>else</code> donde todas las condiciones son expresiones <code>instanceof</code> o expresiones de igualdad de clase (por ejemplo, comparaciones con <code>String.class</code>).
+Tales estructuras generalmente indican un fallo en el diseño orientado a objetos, que requiere que este tipo de distribución basada en tipos se realice a través de llamadas a métodos polimórficos en lugar de cadenas explícitas de comprobaciones de tipo.
 <p>Ejemplo:</p>
 <pre><code>
   double getArea(Shape shape) {
-    // Advertencia: error de abstracción.
-    // Sería mejor declarar un método
-    // abstracto getArea() en la interfaz de
-    // de forma y implementarlo en cada clase
-    // heredada.
-    if (forma instanceof Point) {
+    // Advertencia: Fallo de abstracción.
+    // Es mejor declarar getArea() como método abstracto
+    // en la interfaz shape e implementarlo
+    // en cada clase heredada.
+    if (shape instanceof Point) {
       return 0;
     }
-    if (forma instanceof Circle) {
+    if (shape instanceof Circle) {
       return Math.PI *
-        Math.pow(((Circle) forma).radius(), 2);
+        Math.pow(((Circle) shape).radius(), 2);
     }
-    if (forma instanceof Rectangle) {
-      return ((Rectangle) forma).width() *
-        ((Rectangle) forma).height();
+    if (shape instanceof Rectangle) {
+      return ((Rectangle) shape).width() *
+        ((Rectangle) shape).height();
     }
     throw new IllegalArgumentException();
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Usa la casilla de verificación a continuación para ignorar expresiones <code>instanceof</code> en clases de biblioteca.
+  Utilice la casilla de verificación siguiente para ignorar las expresiones <code>instanceof</code> en las clases de biblioteca.
 <p>
-
 </body>
 </html>

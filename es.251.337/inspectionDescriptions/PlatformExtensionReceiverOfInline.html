@@ -1,33 +1,34 @@
 <html>
 <body>
-<p>Informa de llamadas potencialmente inseguras de funciones en línea con receptores de extensión flexibles que admiten valores null (tipo de plataforma con posibilidad desconocida de valor nulo).</p>
-<p>Antes de Kotlin 1.2, las llamadas a <code>inline fun</code> con receptor de extensión flexible que admite valores null (un tipo de plataforma con posibilidad desconocida de valor nulo) no incluían comprobaciones de posibilidad de valor nulo en el bytecode. Desde Kotlin 1.2, las comprobaciones de posibilidad de valor nulo se incluyen en el bytecode (véase <a href="https://youtrack.jetbrains.com/issue/KT-12899">KT-12899</a>).</p>
-<p>Se recomienda añadir un <code>!!</code> explícito si se quiere que se lance una excepción o considerar la posibilidad de cambiar el tipo de receptor de la función a aquel que admite valores null, si es que debe funcionar sin excepciones.</p>
+<p>Informa sobre posibles llamadas inseguras a funciones inline con receptores de extensión flexiblemente nulos (tipos de plataforma con nulabilidad desconocida).</p>
+<p>
+    Antes de Kotlin 1.2, las llamadas a <code>inline fun</code> con receptores de extensión flexiblemente nulos (tipos de plataforma con nulabilidad desconocida) no incluían comprobaciones de nulabilidad en el bytecode. Desde Kotlin 1.2, las comprobaciones de nulabilidad están incluidas en el bytecode (ver <a href="https://youtrack.jetbrains.com/issue/KT-12899">KT-12899</a>).
+</p>
+<p>
+    Se recomienda agregar un <code>!!</code> explícito para lanzar una excepción, o considerar cambiar el tipo del receptor de la función a nullable (si puede ejecutarse sin excepciones).
+</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  inline fun String.removePrefix(prefijo: String): String {
-      return this.substring(prefijo.length)
+  inline fun String.removePrefix(prefix: String): String {
+      return this.substring(prefix.length)
   }
-
   fun main() {
-      // `System.getProperty` devuelve un tipo `String!` no denotable
+      // `System.getProperty` devuelve un tipo no representable `String!`
       val property = System.getProperty("user.dir")
       println(property.removePrefix("/home"))
   }
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  inline fun String.removePrefix(prefijo: String): String {
-      return this.substring(prefijo.length)
+  inline fun String.removePrefix(prefix: String): String {
+      return this.substring(prefix.length)
   }
-
   fun main() {
-      // `System.getProperty` devuelve un tipo `String!` no denotable
+      // `System.getProperty` devuelve un tipo no representable `String!`
       val property = System.getProperty("user.dir")
       println(property!!.removePrefix("/home"))
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Esta inspección solo informa si el nivel de lenguaje Kotlin del proyecto o módulo es inferior a 1.2.</p>
+<p>Esta inspección solo se informa cuando el nivel del lenguaje Kotlin del proyecto o módulo es inferior a 1.2.</p>
 </body>
 </html>

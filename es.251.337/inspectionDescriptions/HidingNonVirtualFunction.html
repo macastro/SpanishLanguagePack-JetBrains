@@ -1,13 +1,12 @@
 <html>
 <body>
-Informar de funciones que tienen la misma firma que las declaradas en la clase base y sombrean las funciones no virtuales.
+Informa sobre funciones que tienen la misma firma que las funciones no virtuales declaradas en la clase base y las ocultan.
 <p>Ejemplo:</p>
 <pre>
 class Base {
   public:
     void operate() {}
 };
-
 class Derived : public Base {
   public:
     void operate() {}

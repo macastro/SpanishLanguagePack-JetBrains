@@ -1,19 +1,6 @@
 <html>
 <body>
-Reemplaza dentro de una expresión booleana:
-<table>
-  <tr>
-    <td> </td>
-    <td>
-      <code>a || b</code> con <code>!(!a && !b)</code> o
-    </td>
-  </tr>
-  <tr>
-    <td> </td>
-    <td>
-      <code>a && b</code> con <code>!(!a || !b)</code>
-    </td>
-  </tr>
-</table>
+Siguiendo la ley de De Morgan, se reemplazarán las operaciones de conjunción o disyunción por sus operaciones negadas correspondientes.
+<p>Si la operación booleana está dentro de una sentencia <code>if</code> o <code>unless</code>, se puede invertir el modificador de la sentencia para simplificar el resultado final.</p>
 </body>
 </html>

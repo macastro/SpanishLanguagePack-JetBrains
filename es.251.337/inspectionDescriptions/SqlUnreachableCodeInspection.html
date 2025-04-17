@@ -1,12 +1,12 @@
 <html>
 <body>
-Reporta instrucciones inalcanzables dentro de rutinas SQL.
+Informa sobre sentencias inalcanzables en rutinas SQL.
 <p>Ejemplo (Microsoft SQL Server):</p>
 <pre><code>CREATE FUNCTION foo() RETURNS INT AS
 BEGIN
     THROW;
     RETURN 1;
 END;</code></pre>
-<p>En Microsoft SQL Server, la instrucción <code>THROW</code> lanza una excepción y transfiere la ejecución al bloque CATCH de la construcción TRY...CATCH. Por lo tanto, la parte <code>RETURN 1;</code> nunca será ejecutada.</p>
+<p>En Microsoft SQL Server, la sentencia <code>THROW</code> lanza una excepción y transfiere la ejecución al bloque CATCH de una estructura TRY...CATCH. Por lo tanto, la parte <code>RETURN 1;</code> nunca se ejecutará.</p>
 </body>
 </html>

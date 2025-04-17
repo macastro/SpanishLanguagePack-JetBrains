@@ -1,9 +1,9 @@
 <html>
 <body>
-    Reporta punto y coma (<code>;</code>) redundantes que pueden eliminarse de forma segura.
+    Informa sobre puntos y coma (<code>;</code>) redundantes que pueden eliminarse de forma segura.
 <p>
-    Kotlin no requiere un punto y coma al final de cada sentencia o expresión.
-    Se sugiere una corrección rápida para eliminar los puntos y coma redundantes.
+    Kotlin no requiere puntos y coma al final de cada declaración o expresión.
+    Se recomienda usar esta corrección rápida para eliminar los puntos y coma redundantes.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -15,21 +15,19 @@
   val myMap = mapOf("one" to 1, "two" to 2)
   myMap.forEach { (key, value) ->  print("$key -> $value")}
 </code></pre>
-
-<p>Sin embargo, hay dos casos en los que se requiere un punto y coma:</p>
+<p>Hay dos casos donde se requiere el punto y coma:</p>
 <ol>
     <li>
-        Varias sentencias colocadas en una sola línea deben separarse con puntos y coma:
+        Múltiples declaraciones en una misma línea deben separarse con punto y coma:
 <pre><code>
   map.forEach { val (key, value) = it; println("$key -> $value") }
 </code></pre>
     </li>
     <li>
-        Las clases <code>enum</code> que también declaran propiedades o funciones requieren un punto y coma después de la lista de constantes de la enumeración:
+        Las clases <code>enum</code> que declaran propiedades o funciones requieren un punto y coma después de la lista de constantes enum:
         <pre><code>
   enum class Mode {
       SILENT, VERBOSE;
-
       fun isSilent(): Boolean = this == SILENT
   }
         </code></pre>

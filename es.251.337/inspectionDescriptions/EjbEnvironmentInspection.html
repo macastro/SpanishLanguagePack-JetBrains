@@ -1,24 +1,20 @@
 <html>
 <body>
-Informa de las siguientes violaciones de las especificaciones de EJB:
+Reporta las siguientes violaciones de la especificación EJB:
 <ul>
-  <li>El tipo de la propiedad inyectada es inválido</li>
-  <li>Los EJB referenciados son inconsistentes con el `ejb-jar.xml`</li>
+  <li>Tipo de propiedad inyectada no válido</li>
+  <li>La referencia EJB no coincide con `ejb-jar.xml`</li>
 </ul>
-
 <p><b>Ejemplo:</b></p>
 <pre><code>
 @LocalBean
 @Stateless
 public class ExampleBean {
-
   private AnotherBean anotherBean;
-
   @Inject
-  public void getAnotherBean() { // Error: La inyección debe realizarse en un campo o un método setter
+  public void getAnotherBean() { // Error: la inyección debe realizarse en un campo o método setter
     return anotherBean;
   }
-
   ...
 }
 </code></pre>

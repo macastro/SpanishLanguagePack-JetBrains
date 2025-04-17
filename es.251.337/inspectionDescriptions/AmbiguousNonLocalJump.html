@@ -1,18 +1,15 @@
 <html>
 <body>
-Informa los usos de <code>break</code> o <code>continue</code> dentro de lambdas de funciones parecidas a bucles.
+Reporta el uso de <code>break</code> o <code>continue</code> dentro de lambdas en funciones similares a bucles.
 <p>
-    Las palabras clave <code>break</code> y <code>continue</code> siempre se aplican a los bucles reales (<code>for</code>,
-    <code>while</code>, <code>do-while</code>). <code>break</code> y <code>continue</code> nunca se aplican a ninguna función; por ejemplo,
-    <code>break</code> y <code>continue</code> no se aplican a <code>forEach</code>, <code>filter</code>, <code>map</code>.
+    Las palabras clave <code>break</code> y <code>continue</code> siempre se aplican a bucles reales (<code>for</code>, <code>while</code>, <code>do-while</code>). <code>break</code> y <code>continue</code> nunca se aplican a funciones; por ejemplo, <code>break</code> y <code>continue</code> no se aplican a <code>forEach</code>, <code>filter</code>, <code>map</code>.
 </p>
 <p>
-    El uso de <code>break</code> o <code>continue</code> dentro de una función similar a un bucle (por ejemplo, <code>forEach</code>) puede resultar confuso.
-    La inspección sugiere agregar una etiqueta para aclarar a qué declaración se aplican <code>break</code> o <code>continue</code>.
+    El uso de <code>break</code> o <code>continue</code> dentro de funciones similares a bucles (como <code>forEach</code>) puede causar confusión.
+    Esta inspección sugiere agregar etiquetas para aclarar a qué declaración se aplica el <code>Break</code> o <code>Continue</code>.
 </p>
 <p>
-    Como Kotlin no tiene un concepto de funciones similares a bucles, la inspección utiliza la heurística. Asume que las funciones que no
-    tienen uno de los contratos <code>callsInPlace(EXACTLY_ONCE)</code> o <code>callsInPlace(AT_LEAST_ONCE)</code> son funciones similares a bucles.
+    Como Kotlin no tiene el concepto de funciones similares a bucles, esta inspección utilizará heurística. Asume que una función sin el contrato <code>callsInPlace(EXACTLY_ONCE)</code> o <code>callsInPlace(AT_LEAST_ONCE)</code> es una función similar a un bucle.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -23,7 +20,7 @@ Informa los usos de <code>break</code> o <code>continue</code> dentro de lambdas
         }
     }
 </code></pre>
-<p>La solución rápida agrega etiquetas aclaratorias:</p>
+<p>La corrección rápida agregará una etiqueta aclaratoria:</p>
 <pre><code>
     loop@ for (file in files) {
         file.readLines().forEach { line ->
@@ -32,6 +29,5 @@ Informa los usos de <code>break</code> o <code>continue</code> dentro de lambdas
         }
     }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

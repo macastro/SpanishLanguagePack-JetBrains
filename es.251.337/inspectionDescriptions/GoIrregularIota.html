@@ -1,12 +1,11 @@
 <html>
 <body>
-Informa del uso irregular de <code>iota</code> en una declaración constante.
-<p>El identificador <code>iota</code> se reinicia para cada declaración de constante y se incrementa automáticamente para cada especificación de constante.
-  Dentro de una especificación de constante, el identificador mantiene su valor. El hecho de referirse explícitamente a <code>iota</code> no reinicia el contador.</p>
-<p>Para obtener más información, consulta <a href="https://go.dev/ref/spec#Iota">Iota</a> en la especificación de Go.</p>
-<p>Esta inspección se activa si dos especificaciones de constante tienen una lista de expresiones textualmente idéntica que contiene al menos una referencia a <code>iota</code>
-  y solo hay especificaciones de constante sin una lista de expresiones entre ellas.</p>
-<p>Considera la posibilidad de omitir la lista de expresiones redundante o de escribir la lista de expresiones cada vez.</p>
+Reporta usos irregulares de <code>iota</code> en declaraciones de constantes.
+<p><code>iota</code> se reinicia para cada declaración de constantes e incrementa automáticamente para cada especificación de constante.
+  Dentro de una especificación de constante, el identificador mantiene su valor. La referencia explícita a <code>iota</code> no reinicia el contador.</p>
+<p>Para más detalles, consulta <a href="https://go.dev/ref/spec#Iota">Iota</a> en la especificación de Go.</p>
+<p>Esta verificación se activa cuando dos especificaciones de constantes tienen listas de expresiones textualmente idénticas que contienen al menos una referencia a <code>iota</code>, y entre las dos especificaciones solo hay especificaciones de constantes sin listas de expresiones.</p>
+<p>Considera omitir las listas de expresiones redundantes o escribir las listas de expresiones en cada ocasión.</p>
 <p>Ejemplo:</p>
 <pre><code>const (
   a = iota  // 0
@@ -14,7 +13,7 @@ Informa del uso irregular de <code>iota</code> en una declaración constante.
   c = iota  // 2
 )
 </code></pre>
-<p>Activa la inspección porque <code>iota</code> en la definición de <code>c</code> es redundante.</p>
+<p>La verificación se activa porque el <code>iota</code> en la definición de <code>c</code> es redundante.</p>
 <p>Ejemplo:</p>
 <pre><code>const (
   a, aa = iota, iota       // 0, 0
@@ -22,6 +21,6 @@ Informa del uso irregular de <code>iota</code> en una declaración constante.
   c, cc = iota + 40, iota  // 42, 2
 )
 </code></pre>
-<p>No activa la inspección porque ninguna de las listas de expresiones es redundante.</p>
+<p>La verificación no se activa porque ninguna lista de expresiones es redundante.</p>
 </body>
 </html>

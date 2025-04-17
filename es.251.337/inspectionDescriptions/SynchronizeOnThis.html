@@ -1,29 +1,27 @@
 <html>
 <body>
-Reporta sincronización sobre expresiones <code>this</code> o <code>class</code>.
-Las construcciones reportadas incluyen bloques <code>synchronized</code> y llamadas a métodos <code>wait()</code>, <code>notify()</code> o <code>notifyAll()</code>.
-<p>Existen varias razones por las que la sincronización sobre las expresiones <code>this</code> o <code>class</code> pueden ser contraproducentes:</p>
+Informa sobre la sincronización de expresiones <code>this</code> o <code>class</code>.
+El informe incluye bloques <code>synchronized</code> y llamadas a <code>wait()</code>, <code>notify()</code> o <code>notifyAll()</code>.
+<p>Sincronizar expresiones <code>this</code> o <code>class</code> puede no ser una buena idea por varias razones:</p>
 <ol>
   <li>
-    hace que la sincronización sea parte de la interfaz externa de la clase,
-    lo que dificulta un cambio futuro a un mecanismo de bloqueo diferente,
+    Hace que la sincronización sea parte de la interfaz externa de la clase, lo que dificulta cambiar a otros mecanismos de bloqueo en el futuro,
   </li>
   <li>
-    se vuelve difícil rastrear quién está bloqueando un objeto determinado,
+    Es difícil rastrear quién exactamente está bloqueando un objeto dado,
   </li>
   <li>
-    hace posible un ataque de denegación de servicio, ya sea de forma intencional o puede suceder fácilmente por accidente cuando se realiza la subclasificación.
+    Permite ataques de denegación de servicio, ya sea intencionales o accidentales durante la herencia.
   </li>
 </ol>
-<p>Como alternativa, considere la posibilidad de sincronizar sobre un objeto de bloqueo <code>private final</code>, cuyo acceso puede controlarse por completo.</p>
+<p>Como alternativa, considere sincronizar sobre un objeto de bloqueo <code>private final</code>, sobre el cual tiene control total de acceso.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   public void print() {
-    synchronized(this) { // Advertencia: las operaciones de bloqueo sobre 'this' pueden tener efectos colaterales imprevistos
+    synchronized(this) { // Advertencia: el bloqueo sobre 'this' puede tener efectos secundarios impredecibles
       System.out.println("synchronized");
     }
   }
   </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

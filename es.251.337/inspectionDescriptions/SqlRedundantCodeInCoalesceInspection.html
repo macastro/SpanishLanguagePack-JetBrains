@@ -1,8 +1,8 @@
 <html>
 <body>
-Reporta todos los argumentos excepto la primera expresión que no se evalúa a NULL en funciones COALESCE.
+Informa sobre todos los argumentos excepto la primera expresión que no se evalúa como NULL en la función COALESCE.
 <p>Ejemplo (MySQL):</p>
 <pre><code>SELECT COALESCE(NULL, NULL, NULL, 42, NULL, 'string') as a;</code></pre>
-<p>El primer argumento NO NULO es <code>42</code>, todos los demás argumentos quedarán en gris.</p>
+<p>El primer argumento NOT NULL es <code>42</code>, todos los demás argumentos se mostrarán en gris.</p>
 </body>
 </html>

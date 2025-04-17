@@ -1,10 +1,10 @@
 <html>
 <body>
-<p>Informa de llamadas redundantes a <code>requireNotNull</code> o <code>checkNotNull</code> en expresiones no nulas.</p>
+<p>Informa sobre llamadas redundantes a <code>requireNotNull</code> o <code>checkNotNull</code> en expresiones que no pueden ser null.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun foo(i: Int) {
-      requireNotNull(i) // Esta 'i' nunca es nula, por lo que esta llamada a 'requireNotNull' es redundante.
+      requireNotNull(i) //Esta 'i' nunca puede ser null, por lo que la llamada a 'requireNotNull' es redundante.
       ...
   }
 </code></pre>

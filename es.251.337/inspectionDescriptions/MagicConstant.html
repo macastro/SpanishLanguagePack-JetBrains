@@ -1,23 +1,22 @@
 <html>
 <body>
-Reporta expresiones que pueden ser reemplazadas con constantes "mágicas".
+Informa sobre expresiones que pueden ser reemplazadas por constantes "mágicas".
 <p>Ejemplo 1:</p>
 <pre><code>
-  // El literal básico "2" es usado, advertencia:
+  // Uso de literal sin formato "2", advertencia:
   Font font = new Font("Arial", 2)
 </code></pre>
 <p>Ejemplo 2:</p>
 <pre><code>
-  // La constante predefinida es usada, es bueno:
+  // Uso de constante predefinida, correcto:
   Font font = new Font("Arial", Font.ITALIC)
 </code></pre>
 <p>
-  Cuando sea posible, el arreglo rápido inserta una constante predefinida apropiada.
+  Cuando sea posible, la corrección rápida insertará la constante predefinida correspondiente.
 </p>
-<!-- tooltip end -->
 <p>
-  El comportamiento de esta inspección es controlado por la anotación <code>org.intellij.lang.annotations.MagicConstant</code>.
-  Algunos métodos de la librería Java estándar están pre-anotados, pero puedes usar esta anotación en tu código también.
+  El comportamiento de esta inspección está controlado por la anotación <code>org.intellij.lang.annotations.MagicConstant</code>.
+  Algunos métodos de bibliotecas Java estándar están pre-anotados, pero también puede usar esta anotación en su código.
 </p>
 </body>
 </html>

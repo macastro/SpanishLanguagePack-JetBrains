@@ -1,15 +1,12 @@
 <html>
 <body>
-Reporta clases de escucha de entidad sin ningún método de escucha de entidad.
-
+Informa sobre clases de escucha de entidades que no tienen ningún método de escucha de entidades.
 <p><b>Ejemplo:</b></p><br/>
 <pre><code lang="java">
   @Entity
   @EntityListeners(value = JavaEntityListener.class)
   public class JavaEntity { ... }
-
-  class JavaEntityListener { // Error: no se encontraron métodos específicos a los escuchas de entidad
-
+  class JavaEntityListener { // Error: no se encuentran métodos específicos del escuchador de entidades
   }
 </code></pre>
 </body>

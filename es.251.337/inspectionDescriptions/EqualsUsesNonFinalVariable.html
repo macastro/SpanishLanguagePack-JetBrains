@@ -1,25 +1,22 @@
 <html>
 <body>
-Reporta implementaciones del <code>equals()</code> que acceden a variables no <code>final</code>.  Tal acceso puede hacer que el <code>equals()</code> devuelva resultados diferentes en distintos momentos del ciclo de vida del objeto, lo que puede causar problemas al utilizar clases de colección estándar.
+Informa sobre implementaciones de <code>equals()</code> que acceden a variables no <code>final</code>. Este tipo de acceso puede hacer que <code>equals()</code> devuelva diferentes resultados en distintos momentos del ciclo de vida del objeto, lo que puede causar problemas cuando se utilizan clases de colecciones estándar.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  public class Persona {
-    private String apellido;
-
+  public class Person {
+    private String lastName;
     @Override
     public boolean equals(Object obj) {
       ...
-      Persona other = (Persona) obj;
-      if (apellido == null) {
-        if (!apellido.equals(other.apellido)) {
+      Person other = (Person) obj;
+      if (lastName == null) {
+        if (!lastName.equals(other.lastName)) {
         return false;
       ...
       }
     }
   }
-</code>
+  </code>
 </pre>
-<!-- tooltip end -->
-
 </body>
 </html>

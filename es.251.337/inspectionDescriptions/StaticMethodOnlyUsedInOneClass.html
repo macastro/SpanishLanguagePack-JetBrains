@@ -1,18 +1,15 @@
 <html>
 <body>
-Informa sobre los métodos <code>static</code> y campos que solo se usan desde una clase diferente a la clase que los contiene. Dichos miembros pueden moverse a la clase que los usa.
-Las inspecciones ignoran los métodos factory y los miembros a los que se accede desde una clase anónima dentro de la clase del miembro.
-Las sobrecargas de conveniencia, que llaman a un método con el mismo nombre en la misma clase pero tienen menos parámetros, también se ignoran.
-<!-- tooltip end -->
+El informe solo muestra los métodos y campos <code>static</code> que son utilizados por clases distintas a la clase que los contiene. Estos miembros pueden moverse a la clase donde se utilizan.
+Esta inspección ignora los métodos de fábrica y miembros que son accedidos desde clases anónimas dentro de la clase del miembro.
+También se ignoran las sobrecargas de conveniencia que llaman a métodos con el mismo nombre pero menos parámetros en la misma clase.
 <p>
-Usa la primera casilla de verificación para suprimir esta inspección cuando el miembro static solo se usa desde una clase de prueba.
+La primera casilla de verificación permite deshabilitar esta inspección cuando los miembros static son utilizados solo desde clases de prueba.
 <p>
-Usa la segunda casilla de verificación a continuación para ignorar los usos de miembros desde clases internas anónimas, locales o no estáticas.
+La segunda casilla de verificación permite ignorar los usos de miembros en clases anónimas, clases locales o clases internas no estáticas.
 <p>
-Usa la tercera casilla de verificación a continuación para no advertir sobre miembros que no se pueden mover sin problemas,
-por ejemplo, porque ya hay un método con una firma idéntica en la clase de destino,
-o porque no se podrá acceder a un campo o método usado dentro del método cuando se mueva este método.
+La tercera casilla de verificación permite suprimir advertencias para miembros que no pueden moverse aunque no haya problemas, por ejemplo, debido a que ya existe un método con la misma firma en la clase destino, o porque los campos o métodos utilizados dentro del método no serían accesibles después de moverlo.
 <p>
-Usa la cuarta casilla de verificación para ignorar miembros ubicados en clases de utilidades.
+La cuarta casilla de verificación permite ignorar los miembros que se encuentran en clases de utilidad.
 </body>
 </html>

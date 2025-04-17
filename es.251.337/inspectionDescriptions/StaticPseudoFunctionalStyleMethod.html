@@ -1,17 +1,16 @@
 <html>
 <body>
-<code>API de Java Stream</code> informa el uso de código con funciones simuladas de Guava cuando es posible usar 
-<p>La <code>API Iterable de Guava</code> ofrece funciones similares a la <code>API de Java Streams</code> pero con algunas diferencias, y es posible que falten funciones.
-  Especialmente, los elementos del flujo especializados en tipos primitivos como <code>IntStream</code> tienen un mejor rendimiento que los elementos genéricos.</p>
+Reporta el uso de código pseudo-funcional de Guava cuando la <code>Java Stream API</code> está disponible.
+<p>Aunque la <code>Guava Iterable API</code> proporciona funcionalidad similar a la <code>Java Streams API</code>, es ligeramente diferente y puede carecer de algunas características.
+  En particular, las variantes de flujo especializadas en tipos primitivos como <code>IntStream</code> tienen mejor rendimiento que las variantes generales.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-List&lt;String&gt; transformedIterable = Iterables.transform(someList, someTransformFunction);//ADVERTENCIA: Código con estilo de función simulada
+List&lt;String&gt; transformedIterable = Iterables.transform(someList, someTransformFunction);//advertencia: código de estilo pseudo-funcional
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>List&lt;String&gt; transformedIterable = someList.stream().map(someTransformFunction).collect(Collectors.toList());</code></pre>
 <p>
-  <b>Nota:</b> Es posible que el significado del código cambie. Por ejemplo, <code>Iterable.transform</code> de Guava genera una iteración con evaluación retrasada pero el código de reemplazo genera una iteración cuya evaluación es anticipada.
+  <b>Nota</b>: La semántica del código puede cambiar; por ejemplo, el <code>Iterable.transform</code> de Guava produce un iterable con evaluación diferida, pero el reemplazo utiliza evaluación inmediata.
 </p>
-<!-- tooltip end -->
 </body>
 </html>

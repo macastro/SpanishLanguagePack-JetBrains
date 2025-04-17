@@ -1,15 +1,14 @@
 <html>
 <body>
-Los reportes <em>están habilitados para registrar</em> condiciones de sentencias <code>if</code> que no coinciden con el nivel de registro de la llamada de registro contenida.
+Reporta condiciones <em>is log enabled for</em> en declaraciones <code>if</code> donde el nivel de registro no coincide con el nivel de las llamadas de registro incluidas.
 <p>
 Por ejemplo:
 <pre><code lang="java">
   if (LOG.isTraceEnabled()) {
-    // se registró nivel de depuración, pero se verificó nivel de seguimiento
+    // Se registra en nivel debug, pero se verifica el nivel trace
     LOG.debug("some log message");
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Esta inspección entiende los frameworks de registro <em>java.util.logging</em>, <em>Log4j</em>, <em>Log4j2</em>, <em>Apache Commons Logging</em> y <em>SLF4J</em>.
+<p>Esta inspección comprende los frameworks de registro <em>java.util.logging</em>, <em>Log4j</em>, <em>Log4j2</em>, <em>Apache Commons Logging</em> y <em>SLF4J</em>.
 </body>
 </html>

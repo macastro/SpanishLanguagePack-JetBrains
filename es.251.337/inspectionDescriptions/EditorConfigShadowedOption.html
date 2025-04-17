@@ -1,15 +1,14 @@
-<!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. -->
 <html>
 <body>
-Reporta propiedades que ya están definidas en otras secciones.
+Informa sobre propiedades que ya han sido definidas en otras secciones.
 <p>Por ejemplo:
 <pre><code>
 [*.java]
-tamaño_sangría=4
+indent_size=4
 [{*.java,*.js}]
-tamaño_sangría=2
+indent_size=2
 </code></pre>
-La segunda sección incluye todos los archivos <code>*.java</code> también pero también redefine el tamaño_sangría.
-Como resultado, el valor 2 se utilizará para archivos que coincidan con <code>*.java".
+La segunda sección también incluye todos los archivos <code>*.java</code>, pero redefine indent_size.
+Por lo tanto, el valor "2" se utilizará para los archivos que coincidan con <code>*.java</code>.
 </body>
 </html>

@@ -1,14 +1,11 @@
 <html>
 <body>
-<p>Reporta cualquier llamada a métodos de las clases <code>junit.framework.Assert</code>, <code>org.junit.Assert</code>, o <code>org.junit.Assume</code>
- dentro de pruebas de JUnit 5.</p>
-<p>Aunque las pruebas funcionan correctamente, la migración a <code>org.junit.jupiter.api.Assertions</code>/<code>org.junit.jupiter.api.Assumptions</code>
-te ayudará a evitar dependencias en versiones anteriores de JUnit.</p>
+<p>Informa sobre cualquier llamada a métodos de las clases <code>junit.framework.Assert</code>, <code>org.junit.Assert</code> o <code>org.junit.Assume</code> en pruebas JUnit 5.</p>
+<p>Aunque estas pruebas funcionan correctamente, migrar a <code>org.junit.jupiter.api.Assertions</code>/<code>org.junit.jupiter.api.Assumptions</code> ayuda a evitar dependencias de versiones anteriores de JUnit.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   import org.junit.Assert;
   import org.junit.jupiter.api.Test;
-
   public class MyTest {
     @Test
     public void simpleTest() {
@@ -16,11 +13,10 @@ te ayudará a evitar dependencias en versiones anteriores de JUnit.</p>
     }
   }
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code lang="java">
   import org.junit.jupiter.api.Assertions;
   import org.junit.jupiter.api.Test;
-
   public class MyTest {
     @Test
     public void simpleTest() {
@@ -28,6 +24,5 @@ te ayudará a evitar dependencias en versiones anteriores de JUnit.</p>
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

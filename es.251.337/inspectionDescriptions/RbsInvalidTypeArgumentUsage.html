@@ -1,20 +1,19 @@
 <html>
 <body>
-Reporta variables de tipo que son utilizadas como argumentos en ubicaciones que su varianza no permite, siempre y cuando no estén marcadas como
-<code>unchecked</code>. Una variable de tipo puede tener una varianza de covariante (<code>out</code>), contravariante (<code>in</code>), o
+Informa sobre variables de tipo utilizadas como argumentos en posiciones donde su varianza no está permitida (siempre que no estén marcadas como <code>unchecked</code>). La varianza de una variable de tipo puede ser covariante (<code>out</code>), contravariante (<code>in</code>) o
 invariante (ni <code>out</code> ni <code>in</code>).
-<p>Las siguientes reglas son utilizadas para revisar los argumentos de tipo utilizados en atributos y declaraciones de métodos:</p>
+<p>Las siguientes reglas se aplican para verificar los argumentos de tipo utilizados en declaraciones de características y métodos:</p>
 <ul>
-  <li>Argumentos de tipo <code>unchecked</code> son ignorados.</li>
-  <li>Argumentos de tipo covariantes solo pueden ser utilizados en ubicaciones que produzcan valores (por ejemplo, tipos de retorno y parámetros de bloque).</li>
-  <li>Argumentos de tipo contravariantes solo pueden ser utilizados en ubicaciones que consuman argumentos (por ejemplo, parámetros y tipos de retorno de bloque).
+  <li>Los argumentos de tipo <code>unchecked</code> serán ignorados.</li>
+  <li>Los argumentos de tipo covariantes solo pueden usarse en posiciones que producen valores (por ejemplo, tipos de retorno y parámetros de bloque).</li>
+  <li>Los argumentos de tipo contravariantes solo pueden usarse en posiciones que consumen argumentos (por ejemplo, parámetros y tipos de retorno de bloque).
   </li>
-  <li>Argumentos de tipo invariantes pueden ser utilizados en ambas ubicaciones que producen valores y consumen argumentos.</li>
+  <li>Los argumentos de tipo invariantes pueden usarse tanto en posiciones que producen valores como en las que consumen argumentos.</li>
 </ul>
 <p>Ejemplo:</p>
-<pre><code>class Ejemplo[in A, out B]
-  # Variable de tipo covariante 'B' de clase 'Ejemplo' utilizada en una posición contravariante, ...
-  def llamar: (B) -> A
+<pre><code>class Example[in A, out B]
+  # La variable de tipo covariante 'B' de la clase 'Example' se usa en una posición contravariante, ...
+  def call: (B) -> A
 end</code></pre>
 </body>
 </html>

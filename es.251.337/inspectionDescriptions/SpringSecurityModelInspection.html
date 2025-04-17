@@ -1,22 +1,19 @@
 <html>
 <body>
-<p>Informa problemas con el contexto de <a href="https://spring.io/projects/spring-security">Spring Security</a> basado en XML:</p>
-
+<p>Reportar problemas del contexto basado en XML de <a href="https://spring.io/projects/spring-security">Spring Security</a>:</p>
 <ul>
-  <li>Referencias de bean sin resolver</li>
-  <li>Etiquetas o atributos obligatorios faltantes</li>
-  <li>Tipos de propiedad incorrectos</li>
-  <li>Propiedades <code>enum</code> inconsistentes</li>
-  <li>Tipos incorrectos de beans referenciados</li>
+  <li>Referencias de Bean sin resolver</li>
+  <li>Etiquetas o atributos requeridos faltantes</li>
+  <li>Tipo de propiedad incorrecto</li>
+  <li>Propiedad <code>enum</code> inconsistente</li>
+  <li>Tipo incorrecto de Bean referenciado</li>
 </ul>
-
-<p>También informa los siguientes problemas:</p>
-
+<p>También se reportan los siguientes problemas:</p>
 <ul>
   <li>Errores de configuración &lt;https&gt;
     <ul>
-      <li>&lt;http&gt; con el patrón '/**' debe ser el último</li>
-      <li>No se permiten varios elementos &lt;http&gt; sin 'patrón'</li>
+      <li>El &lt;http&gt; con patrón '/**' debe estar al final</li>
+      <li>No se permiten múltiples elementos &lt;http&gt; sin 'pattern'</li>
     </ul>
   </li>
   <li>Errores de configuración &lt;http&gt;
@@ -31,20 +28,20 @@
   </li>
   <li>&lt;ldap-server&gt;
     <ul>
-      <li>'manager-password' es obligatorio cuando se utiliza 'manager-dn'</li>
+      <li>Se requiere 'manager-password' cuando se usa 'manager-dn'</li>
       <li>Debe tener 'user-context-mapper-ref' o 'user-details-class'</li>
     </ul>
   </li>
-  <li> &lt;authentication-provider&gt;
+  <li>&lt;authentication-provider&gt;
     <ul>
-      <li>Solo se permite un tipo de user-service</li>
+      <li>Solo se permite un tipo de servicio de usuario</li>
     </ul>
   </li>
   <li>&lt;global-method-security&gt;
     <ul>
-      <li>'pre-post-annotations' debe tener el valor 'enabled' para utilizar &lt;pre-post-annotation-handling&gt;'</li>
-      <li>No se puede utilizar 'mode' con valor 'aspectj' para &lt;protect-pointcut&gt; y &lt;intercept-url&gt;</li>
-      <li>El atributo 'requires-channel' solo está permitido para el &lt;http&gt; principal</li>
+      <li>El valor de 'pre-post-annotations' debe ser 'enabled' para usar &lt;pre-post-annotation-handling&gt;</li>
+      <li>No se puede usar 'mode' con valor 'aspectj' para &lt;protect-pointcut&gt; y &lt;intercept-url&gt;</li>
+      <li>El atributo 'requires-channel' solo está permitido en el &lt;http&gt; padre</li>
     </ul>
   </li>
   <li>&lt;protect&gt;

@@ -1,18 +1,15 @@
 <html>
 <body>
-Informa de intentos de heredar de interfaces o clases selladas de Kotlin en código Java.
+Informa sobre los intentos de heredar desde código Java una interfaz o clase sealed de Kotlin.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-// Archivo Kotlin: MathExpression.kt
-
+// Kotlin 文件：MathExpression.kt
 sealed class MathExpression
-
 data class Const(val number: Double) : MathExpression()
 data class Sum(val e1: MathExpression, val e2: MathExpression) : MathExpression()
 </code></pre>
 <pre><code>
-// Archivo Java: NotANumber.java
-
+// Java 文件：NotANumber.java
 public class NotANumber extends MathExpression {
 }
 </code></pre>

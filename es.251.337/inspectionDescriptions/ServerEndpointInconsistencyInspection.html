@@ -1,11 +1,11 @@
 <html>
 <body>
-<p>Reporta errores en la declaración de punto final del WebSocket.</p>
+<p>Se informa un error en la declaración del punto final WebSocket.</p>
 <p>
-  De acuerdo con la especificación JSR 356, un punto final de WebSocket debe tener únicamente un método <code>@OnMessage</code> para cada tipo de mensaje (texto, mensaje, pong).
+  Según la especificación JSR 356, un punto final WebSocket debe tener solo un método <code>@OnMessage</code> para cada tipo de mensaje: texto, mensaje y pong
 </p>
 <p>
-  Una clase de punto final con la anotación <code>javax.websocket.server.ServerEndpoint</code> solo puede tener un método acompañado de una de las siguientes tres anotaciones de ciclo de vida:
+  Una clase de punto final anotada con <code>javax.websocket.server.ServerEndpoint</code> solo puede tener un método con una de las siguientes tres anotaciones de ciclo de vida:
 </p>
 <ul>
   <li><code>@OnOpen</code></li>
@@ -13,7 +13,7 @@
   <li><code>@OnError</code></li>
 </ul>
 <p>
-  Una clase de punto final extendida desde <code>javax.websocket.Endpoint</code> debe implementar los métodos correspondientes del ciclo de vida, en lugar de utilizar anotaciones.
+  Las clases de punto final que extienden de <code>javax.websocket.Endpoint</code> deben implementar los métodos de ciclo de vida correspondientes en lugar de usar anotaciones.
 </p>
 </body>
 </html>

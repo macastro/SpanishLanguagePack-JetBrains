@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa de operaciones que no sean de cortocircuito que consumen un flujo infinito. Estas operaciones solamente se pueden completar lanzando una excepción.
+Informa sobre operaciones no de cortocircuito que consumen streams infinitos. Tales operaciones solo pueden completarse lanzando una excepción.
 <p>Ejemplo:</p>
 <pre><code>
   Stream.iterate(0, i -> i + 1).collect(Collectors.toList())

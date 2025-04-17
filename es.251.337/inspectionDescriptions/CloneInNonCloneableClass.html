@@ -1,11 +1,10 @@
 <html>
 <body>
-Se informa de clases que sobreescriben el método <code>clone()</code> pero que no implementan la interfaz <code>Cloneable</code>.
-Esto, a menudo, representa un error de programación.
-<!-- tooltip end -->
+Informa sobre clases que sobrescriben el método <code>clone()</code> pero no implementan la interfaz <code>Cloneable</code>.
+Esto generalmente indica un error de programación.
 <p>
-  Se deben usar las opciones <b>Advertencia sólo para métodos clone 'públicos'</b> para ignorar métodos que no sean <code>public</code>.</p>
-<p>En el caso de clases que están diseñadas para ser heredadas, usted puede optar por no implementar la interfaz <code>Cloneable</code>, sino que sobreescribir <code>clone()</code> y declararla como <code>protected</code>, y decidir implementa <code>Cloneable</code> o no en subclases.
+  Use la opción <b>Advertir solo para métodos clone 'public'</b> para ignorar los métodos que no son <code>public</code>.</p>
+<p>Para clases diseñadas para ser heredadas, puede optar por no implementar la interfaz <code>Cloneable</code>, sino sobrescribir <code>clone()</code> y declararlo como <code>protected</code>, dejando la decisión de implementar la interfaz <code>Cloneable</code> a las subclases.
 </p>
 </body>
 </html>

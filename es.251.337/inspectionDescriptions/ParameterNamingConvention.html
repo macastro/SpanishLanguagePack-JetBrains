@@ -1,13 +1,10 @@
 <html>
 <body>
-Informa los parámetros del método cuyos nombres son demasiado cortos, demasiado largos o que no siguen el patrón de expresión regular especificado.
-<p><b>Ejemplo:</b> <code>void fooBar(int X)</code>
-se debe informar si la inspección está habilitada con la configuración predeterminada en la cual un nombre de parámetro debe comenzar con una letra minúscula.</p>
-
-<!-- tooltip end -->
-<p>Configure la inspección:</p>
+Reporta los parámetros de método cuyo nombre es demasiado corto, demasiado largo o no sigue el patrón de expresión regular especificado.
+<p><b>Ejemplo</b>: Si la inspección está habilitada con la configuración predeterminada (donde los nombres de parámetros deben comenzar con una letra minúscula), se reportará <code>void fooBar(int X)</code>.</p>
+<p>Configuración de la inspección:</p>
 <p>
-Utilice los campos en la sección <b>Opciones</b> para especificar la longitud mínima, longitud máxima y una expresión regular esperada para los nombres de parámetros del método. Especifique <b>0</b> para no verificar la longitud de nombres.</p>
-<p>Las expresiones regulares se deben especificar en el formato estándar <code>java.util.regex</code>.</p>
+  Use los campos en la sección <b>Opciones</b> para especificar la longitud mínima, la longitud máxima y la expresión regular esperada para los nombres de parámetros de método. Especifique <b>0</b> para no verificar la longitud del nombre.</p>
+<p>La expresión regular debe especificarse en el formato estándar de <code>java.util.regex</code>.</p>
 </body>
 </html>

@@ -1,17 +1,14 @@
 <html>
 <body>
-Reporta expresiones lambda cuyo número de declaraciones excede el máximo especificado.
-<p>Las expresiones lambda demasiado largas pueden generar confusión y a menudo es mejor extraer las declaraciones en un método separado.<p>
-<p>Las siguientes declaraciones no se cuentan:</p>
+Reporta expresiones lambda que contienen más sentencias que el máximo especificado.
+<p>Las expresiones lambda demasiado largas pueden ser confusas. Es generalmente mejor extraer las sentencias a un método separado.<p>
+<p>Las siguientes sentencias no se cuentan:</p>
 <ul>
-  <li>declaraciones vacías (punto y coma)</li>
-  <li>declaraciones de bloques</li>
-  <li>declaraciones de inicialización de bucles &quot;for&quot;, es decir, &quot;int i =&gt; ...&quot; dentro de una declaración &quot;for(int i =&gt; ...;...)&quot;
-    </li>
-  <li>declaraciones de actualización de bucle &quot;for&quot;, es decir, &quot;i =+ 2&quot; dentro de una declaración &quot;(int i =&gt; ...;...; i =+ 2)&quot;
-    </li>
+  <li>Sentencias vacías (punto y coma)</li>
+  <li>Sentencias de bloque</li>
+  <li>Sentencias de inicialización en bucles <code>for</code>, es decir, <code>int i = ...</code> en <code>for(int i = ...;...)</code></li>
+  <li>Sentencias de actualización en bucles <code>for</code>, es decir, <code>i += 2</code> en <code>for(int i = ...;...; i += 2)</code></li>
 </ul>
-<!-- tooltip end -->
-<p>Use el campo <b>Límite de declaraciones de fuentes sin comentarios</b> para especificar el número máximo permitido de declaraciones en una expresión lambda.<p>
+<p>Utilice el campo <b>Límite de sentencias de código no comentadas</b> para especificar el número máximo de sentencias permitidas en una expresión lambda.<p>
 </body>
 </html>

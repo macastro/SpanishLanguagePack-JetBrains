@@ -1,21 +1,18 @@
 <html>
 <body>
-Informa de expresiones de conversión innecesarias.
-
+Informa sobre expresiones de conversión innecesarias.
 <p>Ejemplo:</p>
 <pre><code>
   static Object toObject(String s) {
     return (Object) s;
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Utiliza la casilla de verificación siguiente para ignorar conversiones aclaratorias, por ejemplo, conversiones en llamadas de colección donde se espera un <code>Object</code>:
+  Utilice la casilla de verificación a continuación para ignorar las conversiones de aclaración, como las conversiones en llamadas a colecciones que deberían ser de tipo <code>Object</code>:
 <pre><code>
   static void removeFromList(List&lt;String&gt; l, Object o) {
     l.remove((String)o);
   } 
 </code></pre>
-
 </body>
 </html>

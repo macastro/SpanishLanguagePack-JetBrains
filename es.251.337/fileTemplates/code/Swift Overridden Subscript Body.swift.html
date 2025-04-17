@@ -3,19 +3,19 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      Rellena el cuerpo del subíndice al generar subíndices sobrescritos (por ejemplo, con la acción <b>Código | Generar | Sobrescribir métodos</b>).<br>
-      La plantilla es editable. Además de las expresiones y comentarios de Swift, puede utilizar variables predefinidas que se expandirán a los valores correspondientes.
+      Rellena el cuerpo del subíndice al generar subíndices sobrescritos (por ejemplo, usando la acción <b>Código | Generar | Sobrescribir métodos</b>).<br>
+      La plantilla es editable. Además de las expresiones y comentarios de Swift, puede usar variables predefinidas que luego se expandirán a sus valores correspondientes.
     </font></td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas reciben los siguientes valores:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas tomarán los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Llamada al subíndice superior - <code><b>return</b> <b>super</b>[]</code> con parámetros
+    <td width="100%" valign="top"><font face="verdana" size="-1">Llamada al subíndice super - <code><b>return</b> <b>super</b>[]</code> con parámetros
     </font></td>
   </tr>
   <tr>
@@ -36,30 +36,30 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${HAS_SET}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1"><b>"true"</b> si el subíndice tiene un descriptor de acceso `set`</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"><b>"true"</b> cuando el subíndice tiene un setter</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${HAS_SUPER_SET}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1"><b>"true"</b> si el subíndice sobrescrito tiene un descriptor de acceso `set`</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"><b>"true"</b> cuando el subíndice sobrescrito tiene un setter</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${GETTER_EFFECTS}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Efectos del descriptor de acceso `get` de la propiedad (<code>async</code>, <code>throws</code>)</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Efectos del getter de la propiedad (<code>async</code>, <code>throws</code>)</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${GET_ATTRIBUTES}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Atributos del descriptor de acceso `get` del subíndice</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Atributos del getter del subíndice</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${SET_ATTRIBUTES}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Atributos del descriptor de acceso `set` del subíndice</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Atributos del setter del subíndice</font></td>
   </tr>
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">También están disponibles todas las variables predefinidas de la plantilla <b>Encabezado de archivo Swift</b> (pestaña <b>Incluye</b>) (por ejemplo, <font face="verdana" size="-2"><b>${USER}</b></font>, <font face="verdana" size="-2"><b>${DATE}</b></font>, etc.).
+    <td colspan="3"><font face="verdana" size="-1">Todas las variables predefinidas disponibles en la plantilla de <b>Encabezado de archivo Swift</b> (pestaña <b>Include</b>) también están disponibles (por ejemplo, <font face="verdana" size="-2"><b>${USER}</b></font>, <font face="verdana" size="-2"><b>${DATE}</b></font>, etc.).
     </font></td>
   </tr>
 </table>

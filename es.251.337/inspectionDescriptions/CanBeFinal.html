@@ -1,44 +1,37 @@
 <html>
 <body>
-Informa de campos, métodos o clases que pueden tener el modificador <code>final</code> añadido a sus declaraciones.
-<p>Las clases finales no se pueden extender, los métodos finales no pueden ser sobreescritos y los campos finales no se pueden reasignar.</p>
+Informa sobre campos, métodos o clases que podrían tener el modificador <code>final</code> añadido a sus declaraciones.
+<p>Las clases final no pueden ser extendidas, los métodos final no pueden ser sobrescritos y los campos final no pueden ser reasignados.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  public class Persona {
-    private String nombre;
-
-    Persona(String nombre) {
-      this.nombre = nombre;
+  public class Person {
+    private String name;
+    Person(String name) {
+      this.name = name;
     }
-
-    public String getNombre() {
-      return nombre;
+    public String getName() {
+      return name;
     }
-
     public String toString() {
-      return getNombre();
+      return getName();
     }
   }
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  public final class Persona {
-    private final String nombre;
-
-    Persona(String nombre) {
-      this.nombre = nombre;
+  public final class Person {
+    private final String name;
+    Person(String name) {
+      this.name = name;
     }
-
-    public final String getNombre() {
-      return nombre;
+    public final String getName() {
+      return name;
     }
-
     public final String toString() {
-      return getNombre();
+      return getName();
     }
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Utiliza las opciones <b>Informar clases</b> e <b>Informar métodos</b> para definir qué declaraciones se van a informar.</p>
+<p>Use las opciones <b>Informar clases</b> e <b>Informar métodos</b> para definir qué declaraciones deben ser informadas.</p>
 </body>
 </html>

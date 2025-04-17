@@ -2,8 +2,8 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td><font face="verdana" size="-1">Esta es una plantilla integrada que se utiliza cada vez que crea una clase interceptor de métodos de Guice nueva.<br>
-      Puede utilizar la directiva <b>#parse</b> para incluir plantillas en la pestaña <i>Incluir</i>, especificando el nombre completo de la plantilla necesaria entre comillas como parámetro.
+    <td><font face="verdana" size="-1">Esta es la plantilla incorporada utilizada cada vez que crea una nueva clase de escucha de métodos Guice.<br>
+      Puede incluir plantillas en la pestaña <i>Includes</i> usando la directiva <b>#parse</b> con el nombre completo de la plantilla requerida como parámetro entre comillas.
       Por ejemplo:<br>
       <b>#parse("File Header.java")</b>
     </font></td>
@@ -11,72 +11,72 @@
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas tomarán los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PACKAGE_NAME}</b></font></nobr></td>
-    <td width="10"></td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre del paquete en el que se crea la nueva clase</font></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del paquete donde se crea la nueva clase</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
-    <td width="10"></td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre de la nueva clase especificado por el usuario en el cuadro de diálogo <i>Crear clase nueva</i></font></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la nueva clase especificado en el diálogo <i>Crear Nueva Clase</i></font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr></td>
-    <td width="10"></td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre de inicio de sesión del sistema del usuario actual</font></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de inicio de sesión del usuario actual del sistema</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr></td>
-    <td width="10"></td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">La fecha actual del sistema</font></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr></td>
-    <td width="10"></td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">La hora actual del sistema</font></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
   </tr>
   <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr></td>
-     <td width="10"></td>
-     <td width="100%" valign="top"><font face="verdana" size="-1">El año actual</font></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr></td>
-     <td width="10"></td>
-     <td width="100%" valign="top"><font face="verdana" size="-1">El mes actual</font></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
-     <td width="10"></td>
-     <td width="100%" valign="top"><font face="verdana" size="-1">Los primeros 3 caracteres del nombre del mes actual. Por ejemplo: ene, feb, etc.</font></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del mes actual. Por ejemplo: Jan, Feb, etc.</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
-     <td width="10"></td>
-     <td width="100%" valign="top"><font face="verdana" size="-1">El nombre completo del mes actual. Por ejemplo: enero, febrero, etc.</font></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual. Por ejemplo: January, February, etc.</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
-     <td width="10"></td>
-     <td width="100%" valign="top"><font face="verdana" size="-1">El día del mes actual</font></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">Día actual</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr></td>
-     <td width="10"></td>
-     <td width="100%" valign="top"><font face="verdana" size="-1">La hora actual</font></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr></td>
-     <td width="10"></td>
-     <td width="100%" valign="top"><font face="verdana" size="-1">El minuto actual</font></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr></td>
-     <td width="10"></td>
-     <td width="100%" valign="top"><font face="verdana" size="-1">El nombre del proyecto actual</font></td>
+     <td width="10">&nbsp;</td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
    </tr>
 </table>
 </body>

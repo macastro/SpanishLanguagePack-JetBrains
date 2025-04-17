@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa sobre las llamadas a los métodos <code>Assert.assertEquals()</code>, <code>Assert.assertTrue()</code>, etc. que pueden migrarse a llamadas declarativas de <code>Assert.assertThat()</code> de estilo Hamcrest.
+Informa sobre las llamadas a métodos como <code>Assert.assertEquals()</code>, <code>Assert.assertTrue()</code> y otros que pueden migrarse al estilo declarativo Hamcrest usando <code>Assert.assertThat()</code>.
 <p>Por ejemplo:</p>
 <pre><code lang="java">
   public class SubstantialTest {
@@ -27,8 +27,7 @@ Informa sobre las llamadas a los métodos <code>Assert.assertEquals()</code>, <c
     }
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Esta inspección requiere que la biblioteca Hamcrest esté disponible en la ruta de clase.
-<p>Utiliza la opción <b>Importar estáticamente los métodos del emparejador</b> para especificar si deseas que la corrección rápida importe estáticamente los métodos de emparejamiento Hamcrest.
+<p>Esta inspección requiere que la biblioteca Hamcrest esté disponible en el classpath.
+<p>La opción <b>importar estáticamente los métodos matcher</b> permite especificar si desea que la corrección rápida importe estáticamente los métodos matcher de Hamcrest.
 </body>
 </html>

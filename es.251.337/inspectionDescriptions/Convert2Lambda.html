@@ -1,31 +1,26 @@
 <html>
 <body>
-Reporta clases anónimas que pueden ser reemplazadas con expresiones lambda.
+Se informa de clases anónimas que pueden ser reemplazadas por expresiones lambda.
 <p>Ejemplo:</p>
 <pre><code>
   new Thread(new Runnable() {
     @Override
     public void run() {
-      // corre hilo
+      // Ejecutar hilo
     }
   });
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   new Thread(() -> {
-    // corre hilo
+    // Ejecutar hilo
   });
 </code></pre>
 <p>
-Tenga en cuenta que si una clase anónima es convertida en una lambda sin estado, el mismo objeto lambda
-puede ser reutilizado por el runtime Java durante invocaciones subsecuentes. Por otro lado, cuando se emplea una clase anónima,
-se crean objetos separados cada vez. Por tanto, aplicar la corrección rápida puede causar un cambio en la semántica en casos raros,
-por ejemplo, cuando las instancias de una clase anónima se utilizan como claves en un <code>HashMap</code>.
+Tenga en cuenta que si una clase anónima se convierte en un lambda sin estado, el tiempo de ejecución de Java puede reutilizar el mismo objeto lambda durante las llamadas posteriores. Por otro lado, cuando se utilizan clases anónimas, se crea un objeto separado cada vez. Por lo tanto, en casos muy raros, la aplicación de esta corrección rápida podría resultar en un cambio semántico, por ejemplo, cuando una instancia de clase anónima se utiliza como clave en un <code>HashMap</code>.
 </p>
-<!-- tooltip end -->
 <p>
-Utilice la opción <b>Reportar cuando la interfaz no esté anotada con @FunctionalInterface </b> para ignorar los casos en los que una clase anónima
-implementa una interfaz sin la anotación <code>@FunctionalInterface</code>.
+Utilice la opción <b>Informar cuando la interfaz no está anotada con @FunctionalInterface</b> para ignorar los casos donde las clases anónimas implementan interfaces que no tienen la anotación <code>@FunctionalInterface</code>.
 </p>
 </body>
 </html>

@@ -1,15 +1,13 @@
 <html>
 <body>
-Se informa de los casos en los que el argumento de una llamada a un método en un <code>java.util.Collection</code>
-o un <code>java.util.Map</code> es la propia colección o mapa.
-Estas situaciones pueden darse como resultado de una copia y pegado de código con tipos sin procesar.
-
+Informa sobre llamadas a métodos de <code>java.util.Collection</code>
+o <code>java.util.Map</code> donde el argumento es la propia colección o mapa.
+Esto puede ocurrir en código con tipos sin procesar debido a operaciones de copiar y pegar.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   ArrayList list = new ArrayList&lt;&gt;();
-  list.add(list); // aquí se genera una advertencia
-  return list.hashCode(); // lanza StackOverflowError
+  list.add(list); // Aquí hay una advertencia
+  return list.hashCode(); // Lanza StackOverflowError
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

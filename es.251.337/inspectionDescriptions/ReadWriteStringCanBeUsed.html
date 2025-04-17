@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre las llamadas a métodos que leen o escriben una <code>String</code> como bytes mediante <code>java.nio.file.Files</code>.
-Dichas llamadas pueden reemplazarse con una llamada a un método <code>Files.readString()</code> o <code>Files.writeString()</code> introducido en Java 11.
+Reporta llamadas a métodos que usan <code>java.nio.file.Files</code> para leer o escribir un <code>String</code> como bytes
+Estas llamadas pueden ser reemplazadas por llamadas a los métodos <code>Files.readString()</code> o <code>Files.writeString()</code> introducidos en Java 11.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   String s = "example";
@@ -14,7 +14,6 @@ Dichas llamadas pueden reemplazarse con una llamada a un método <code>Files.rea
   Files.writeString(Paths.get("out.txt"), s, StandardOpenOption.WRITE);
   s = Files.readString(Paths.get("in.txt"), StandardCharsets.ISO_8859_1);
 </code></pre>
-<!-- tooltip end -->
-<p><small>Nuevo en 2018.3</small></p>
+<p><small>Novedades de la versión 2018.3</small></p>
 </body>
 </html>

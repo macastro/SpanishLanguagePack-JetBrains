@@ -1,23 +1,22 @@
 <html>
 <body>
-Reporta constructores redundantes declarados dentro de los registros de Java.
+Informa sobre constructores redundantes declarados en registros Java.
 <p><b>Ejemplo 1:</b></p>
 <pre><code>
   record Point(int x, int y) {
-    public Point {} // podría eliminarse
+    public Point {} // se puede eliminar
   }
-  
   record Point(int x, int y) {
-    public Point(int x, int y) { // podría eliminarse
+    public Point(int x, int y) { // se puede eliminar
       this.x = x;
       this.y = y;
     }
   }
 </code></pre>
-<p>El quick-fix elimina los constructores redundantes.</p>
+<p>La corrección rápida elimina los constructores redundantes.</p>
 <p><b>Ejemplo 2:</b></p>
 <pre><code>
-   // podría convertirse en un constructor compacto
+   // se puede convertir a constructor compacto
   record Range(int from, int to) {
     public Range(int from, int to) {
       if (from > to) throw new IllegalArgumentException();
@@ -26,8 +25,7 @@ Reporta constructores redundantes declarados dentro de los registros de Java.
     }
   }
 </code></pre>
-<p>El quick-fix convierte este código en un constructor compacto.</p>
-<!-- tooltip end -->
-<p><small>Nuevo en 2020.1</small></p>
+<p>La corrección rápida convierte este código en un constructor compacto.</p>
+<p><small>Novedades de 2020.1</small></p>
 </body>
 </html>

@@ -1,23 +1,20 @@
 <html>
 <body>
-<p>Detecta el uso de métodos de configuración que fueron descontinuados.</p>
-
-  Los métodos de configuración pueden ser descontinuados por dos posibles razones:
+<p>Detecta el uso de métodos de configuración obsoletos.</p>
+  Los métodos de configuración pueden estar obsoletos por una de estas dos razones posibles:
   <ul>
-  <li>La API de Gradle ha evolucionado, por lo que se deben evitar las opciones de método antiguas;</li>
-  <li>Algún plugin proporciona una mejor versión del método de configuración obsoleto.</li>
+  <li>La API de Gradle ha evolucionado, por lo que se debe evitar el uso de métodos antiguos;</li>
+  <li>Un plugin proporciona una mejor versión del método de configuración obsoleto.</li>
   </ul>
-  Lo más probable es que haya una alternativa para el método obsoleto.
+  Lo más probable es que exista un método alternativo para reemplazar el método obsoleto.
 <p><b>Ejemplo:</b></p>
 <pre><code lang="groovy">
 plugins {
   id 'java'
 }
-
 dependencies {
   archive 'org.gradle.api:gradle:1.0' // reports 'archive'
 }
 </code></pre>
-
 </body>
 </html>

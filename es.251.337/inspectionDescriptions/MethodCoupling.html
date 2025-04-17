@@ -1,14 +1,13 @@
 <html>
 <body>
-Inspecciona métodos que hacen referencia a demasiadas otras clases.
-Los métodos con un acoplamiento demasiado alto pueden ser muy frágiles y probablemente deberían dividirse en métodos más pequeños.
-<p>Cada clase referenciada se cuenta solo una vez, sin importar cuántas veces se haga referencia a ella.</p>
-  <!-- tooltip end -->
-<p>Configurar la inspección:</p>
+Informa sobre métodos que hacen referencia a demasiadas clases externas.
+Los métodos con alto acoplamiento pueden ser muy frágiles y deberían dividirse en métodos más pequeños.
+<p>Cada clase referenciada se cuenta una sola vez, independientemente del número de referencias.</p>
+<p>Configuración de la inspección:</p>
 <ul>
-  <li>Utilice el campo <b>Límite de acoplamiento del método</b> para especificar el acoplamiento máximo permitido para un método.</li>
-  <li>Utilice la opción <b>Incluir acoplamientos a clases del sistema Java</b> para contar referencias a clases de paquetes <code>java</code> o <code>javax</code>.</li>
-  <li>Utilice la opción <b>Incluir acoplamientos a clases de biblioteca</b> para contar referencias a clases de bibliotecas de terceros.</li>
+  <li>Use el campo <b>Límite de acoplamiento del método</b> para especificar el acoplamiento máximo permitido para un método.</li>
+  <li>Use la opción <b>Incluir acoplamiento con clases del sistema Java</b> para contar referencias a clases en los paquetes <code>java</code> o <code>javax</code>.</li>
+  <li>Use la opción <b>Incluir acoplamiento con clases de biblioteca</b> para contar referencias a clases de bibliotecas de terceros.</li>
 </ul>
 </body>
 </html>

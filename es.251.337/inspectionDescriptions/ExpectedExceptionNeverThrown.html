@@ -1,12 +1,11 @@
 <html>
 <body>
-Informa sobre las excepciones marcadas que espera un método de prueba de JUnit 4 y que nunca se lanzan dentro del cuerpo del método.
+Informa sobre excepciones verificadas que son esperadas en métodos de prueba JUnit 4 pero que nunca se lanzan en el cuerpo del método.
 Estos métodos de prueba nunca tendrán éxito.
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   @Test(expected = CloneNotSupportedException.class)
   public void testIt() { }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

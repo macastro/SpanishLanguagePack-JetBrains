@@ -1,6 +1,6 @@
 <html>
 <body>
-Inspecciona las llamadas a <code>forEach()</code> que se pueden reemplazar por un método más conciso, o de las que se pueden extraer pasos intermedios.
+La llamada <code>forEach()</code> puede ser reemplazada por un método más conciso o se pueden extraer los pasos intermedios.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   List&lt;String&gt; findNStrings(List&lt;String&gt; list, int n) {
@@ -11,7 +11,7 @@ Inspecciona las llamadas a <code>forEach()</code> que se pueden reemplazar por u
     return other;
   }
 </code></pre>
-<p>Tras aplicar la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   List&lt;String&gt; findNStrings(List&lt;String&gt; list, int n) {
     List&lt;String&gt; other = list.stream()
@@ -20,7 +20,6 @@ Inspecciona las llamadas a <code>forEach()</code> que se pueden reemplazar por u
     return other;
   }
 </code></pre>
-<!-- tooltip end -->
-<p><small>Nuevo en 2017.3</small></p>
+<p><small>Novedades de la versión 2017.3</small></p>
 </body>
 </html>

@@ -1,28 +1,23 @@
 <html>
 <body>
-Reporta expresiones `instanceof` donde la expresión que es verificada tiene un tipo de clase/interfaz que no extiende/implementa el tipo de clase/interfaz en el lado derecho de la expresión `instanceof`, ni tiene subclases que lo hagan.
+Reporta expresiones <code>instanceof</code> donde el tipo de clase/interfaz que se está comprobando no extiende/implementa el tipo de clase/interfaz del lado derecho de la expresión <code>instanceof</code>, ni tiene subclases que lo hagan.
 <p>
-  A pesar de que podría ser para código de biblioteca por ejemplo, tal construcción es probablemente errónea,
-  porque ninguna instancia de ninguna clase declarada en el proyecto podría pasar esta prueba `instanceof`.
+  Aunque puede usarse en código de bibliotecas, estas construcciones probablemente sean erróneas, ya que ninguna instancia de ninguna clase declarada en el proyecto podrá pasar esta prueba <code>instanceof</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo { }
-
   interface Bar { }
-  
   class Main {
       void test(Foo f, Bar b) {
-          if (f instanceof Bar) { // problema
+          if (f instanceof Bar) { // Problema
               System.out.println("fail");
           }
-          if (b instanceof Foo) { // problema
+          if (b instanceof Foo) { // Problema
               System.out.println("fail");
           }
       }
   }
 </code></pre>
-<!-- tooltip end -->
-
 </body>
 </html>

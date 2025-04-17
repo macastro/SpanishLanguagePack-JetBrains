@@ -1,29 +1,23 @@
 <html>
 <body>
-<p>Inspección sobre tipos que implementan clases anotadas con una anotación JSF especificada y no implementan la interfaz esperada.</p>
-
+<p>Informe sobre clases que utilizan anotaciones JSF específicas sin implementar las interfaces requeridas:</p>
 <ul>
   <li><code>@FacesComponent</code> debe extender <code>&lt;javax/jakarta&gt;.faces.component.FacesComponent</code></li>
   <li><code>@FacesRenderer</code> debe extender <code>&lt;javax/jakarta&gt;.faces.render.Renderer</code></li>
   <li><code>@FacesConverter</code> debe extender <code>&lt;javax/jakarta&gt;.faces.convert.Converter</code></li>
   <li><code>@FacesValidator</code> debe extender <code>&lt;javax/jakarta&gt;.faces.validator.Validator</code></li>
 </ul>
-
-<p><strong>Ejemplos:</strong></p>
+<p><strong>Ejemplo:</strong></p>
 <pre><code>
-
 <strong>@FacesConverter</strong>(value="...")  // La clase debe extender 'javax.faces.convert.Converter'
 public class FooConverter {
 }
-
 <strong>@FacesRenderer</strong>(rendererType="..", componentFamily="..")  // La clase debe extender 'javax.faces.render.Renderer'
-public class FooRenderer {
+public class FooConverter {
 }
-
-<strong>@FacesValidator</strong>(value="...")  // La clase debe extender 'javax.faces.validator.Validator'
+<strong>@FacesRenderer</strong>(rendererType="..", componentFamily="..")  // La clase debe extender 'javax.faces.validator.Validator'
 public class FooValidator {
 }
-
 </code></pre>
 </body>
 </html>

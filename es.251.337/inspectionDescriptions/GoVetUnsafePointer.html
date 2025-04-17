@@ -1,12 +1,12 @@
 <html>
 <body>
-Informa de conversiones posiblemente incorrectas de <code>uintptr</code> a <code>unsafe.Pointer</code>.
-<p>Una conversión de <code>uintptr</code> a <code>unsafe.Pointer</code> no es válida si implica que hay una palabra de tipo <code>uintptr</code> en memoria que contiene un valor de puntero, porque esa palabra será invisible para la copia de pila y para el recolector de basura.
+Informa sobre posibles conversiones erróneas de <code>uintptr</code> a <code>unsafe.Pointer</code>.
+<p>La conversión de <code>uintptr</code> a <code>unsafe.Pointer</code> no es válida si hay palabras de tipo <code>uintptr</code> en memoria que contengan valores de puntero, ya que estas palabras no son visibles para la copia de pila y el recolector de basura.
 </p>
 <p>Ejemplo de uso no válido:</p>
 <pre><code>nums := []int8{42, 24}
 ptr := unsafe.Pointer(&nums[0])
-addr := uintptr(ptr) // la dirección se almacena en una variable local
+addr := uintptr(ptr) // dirección almacenada en variable local
 ptr = unsafe.Pointer(addr + uintptr(1))</code></pre>
 <p>Ejemplo de uso válido:</p>
 <pre><code>nums := []int8{42, 24}

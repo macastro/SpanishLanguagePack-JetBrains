@@ -1,33 +1,31 @@
 <html>
 <body>
-Informa de los negativos unarios innecesarios. Dichas expresiones pueden ser difíciles de entender y podrían contener errores.
+Informa sobre operadores unarios de resta innecesarios. Estas expresiones pueden ser difíciles de entender y podrían contener errores.
 <p><b>Por ejemplo:</b></p>
 <pre><code>void unaryMinus(int i) {
     int x = - -i;
   }</code></pre>
-<p>Aquí se sugieren las siguientes soluciones rápidas:</p>
+<p>Aquí se sugieren las siguientes correcciones rápidas:</p>
 <ul>
-  <li><p>Eliminar los operadores <code>-</code> antes de la variable <code>i</code>:</p>
+  <li><p>Eliminar el operador <code>-</code> antes de la variable <code>i</code>:</p>
     <pre><code>void unaryMinus(int i) {
     int x = i;
   }</code></pre>
   </li>
   <li>
- <p>Reemplazar los operadores <code>-</code> con el operador de decremento prefijo:</p>
+ <p>Reemplazar el operador <code>-</code> con el operador de decremento prefijo:</p>
     <pre><code>void unaryMinus(int i) {
     int x = --i;
   }</code></pre>
   </li>
 </ul>
-
 <p><b>Otro ejemplo:</b></p>
 <pre><code>void unaryMinus(int i) {
     i += - 8;
   }</code></pre>
-<p>Tras aplicar la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>void unaryMinus(int i) {
     i -= 8;
   }</code></pre>
-<!-- tooltip end -->
 </body>
 </html>

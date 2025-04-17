@@ -1,6 +1,8 @@
 <html>
 <body>
-Reporta las clases sealed cuyas cláusulas permits no incluyen algunas de las subclases del mismo archivo.
+Informa sobre clases <code>sealed</code> que no tienen una lista explícita de <code>permits</code>.
+Las clases sealed que solo tienen subclases en el mismo archivo no necesitan tener una lista explícita de <code>permits</code>.
+Por defecto, esta inspección no resalta en el editor y solo proporciona una corrección.
 <p>Ejemplo:</p>
 <pre><code>
   sealed class A {}
@@ -11,7 +13,6 @@ Reporta las clases sealed cuyas cláusulas permits no incluyen algunas de las su
   sealed class A permits B {}
   final class B extends A {}
 </code></pre>
-<!-- tooltip end -->
-<p><small>Novedad en 2020.3</small></p>
+<p><small>Novedades en 2020.3</small></p>
 </body>
 </html>

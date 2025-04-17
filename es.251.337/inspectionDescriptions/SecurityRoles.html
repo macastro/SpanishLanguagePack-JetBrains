@@ -1,15 +1,14 @@
 <html>
 <body>
-Inspecciona nombres incorrectos de roles de seguridad
-
+Reporta nombres de roles de seguridad inválidos.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   &lt;web-app&gt;
     &lt;security-role&gt;
-      &lt;role-name&gt;custom#role&lt;/role-name&gt; // Error: nombre incorrecto
+      &lt;role-name&gt;custom#role&lt;/role-name&gt; // Error: nombre inválido
     &lt;/security-role&gt;
     &lt;security-role&gt;
-      &lt;role-name&gt;customRole&lt;/role-name&gt; // Nombre correcto
+      &lt;role-name&gt;customRole&lt;/role-name&gt; // Buen nombre
     &lt;/security-role&gt;
   &lt;/web-app&gt;
 </code></pre>

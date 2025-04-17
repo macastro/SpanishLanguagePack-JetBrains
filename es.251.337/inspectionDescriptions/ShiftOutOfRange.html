@@ -1,14 +1,13 @@
 <html>
 <body>
-Informa sobre operaciones de desplazamiento que tienen un valor de desplazamiento que es una constante fuera del rango válido.
-<p>Se informa sobre las operaciones de desplazamiento de enteros que están fuera del rango <code>0..31</code> y las operaciones de desplazamiento de long que están fuera del rango <code>0..63</code>. El desplazamiento por un valor negativo o demasiado grande es casi seguro un error de codificación.
+Informa sobre operaciones de desplazamiento con valores de desplazamiento constantes que están fuera del rango razonable.
+<p>Informa sobre operaciones de desplazamiento de enteros fuera del rango <code>0..31</code> y operaciones de desplazamiento largo fuera del rango <code>0..63</code>. Los valores negativos o demasiado grandes casi siempre indican un error de codificación.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  int tamañoDesplazamiento = 32;
-  // Advertencia: Un desplazamiento de 32 bits es igual que un desplazamiento de 0 bits, no hay desplazamiento.
-  int máscara = (1 &lt;&lt; tamañoDesplazamiento) - 1;
+  int shiftSize = 32;
+  // Advertencia: desplazar 32 bits es equivalente a desplazar 0 bits, por lo que no hay desplazamiento real.
+  int mask = (1 &lt;&lt; shiftSize) - 1;
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

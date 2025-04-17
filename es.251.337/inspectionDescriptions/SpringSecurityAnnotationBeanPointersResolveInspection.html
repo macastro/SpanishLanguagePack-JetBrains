@@ -1,18 +1,17 @@
 <html>
 <body>
-<p>Informa de los beans Spring no resueltos referenciados en las anotaciones de <a href="https://spring.io/projects/spring-security">Spring Security</a>.</p>
-
+<p>Reporta los Spring Beans no resueltos que se referencian en las anotaciones de <a href="https://spring.io/projects/spring-security">Spring Security</a>.</p>
 <p><b>Ejemplos:</b></p>
 <ul>
   <li>
     <pre><code>@WithUserDetails(value = "admin", userDetailsServiceBeanName = "unknownUserDetailsService")
-      // Si 'unknownUserDetailsService' no está definido en el modelo Spring, se informará de "No se puede resolver el bean 'unknownUserDetailsService'"
+      // Se reportará "No se puede resolver el Bean 'unknownUserDetailsService'" si 'unknownUserDetailsService' no está definido en el modelo Spring
     </code></pre>
   </li>
   <li>
     <pre><code>@WithUserDetails(value = "admin", userDetailsServiceBeanName = "jpaUserDetailsService")
-      //"El bean debe ser de tipo 'org.springframework.security.core.userdetails.UserDetailsService'"
-      // Se informará si el bean "jpaUserDetailsService" no es de tipo 'UserDetailsService'
+      // "El Bean debe ser de tipo 'org.springframework.security.core.userdetails.UserDetailsService'"
+      // Se reportará si el Bean "jpaUserDetailsService" no es de tipo 'UserDetailsService'
     </code></pre>
   </li>
 </ul>

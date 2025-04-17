@@ -1,11 +1,11 @@
 <html>
 <body>
-Se informa de las clases que hacen referencia a sus propias subclases.
-Estas referencias pueden ser confusas y violan varias reglas de diseño orientado a objetos.
+Informa sobre clases que contienen referencias a una de sus subclases.
+Estas referencias pueden resultar confusas y violan varios principios del diseño orientado a objetos.
 <p>Ejemplo:</p>
 <pre><code>
   class Entity {
-    // Advertencia: La clase hace referencia a su subclase
+    // 警告：该类引用了其子类
     void compare(SimpleEntity entity) {
       ...
     }
@@ -14,6 +14,5 @@ Estas referencias pueden ser confusas y violan varias reglas de diseño orientad
     ...
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

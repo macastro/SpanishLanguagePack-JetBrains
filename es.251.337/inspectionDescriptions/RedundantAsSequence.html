@@ -1,13 +1,11 @@
 <html>
 <body>
-<p>Informa de una llamada redundante a <code>asSequence()</code> que nunca puede tener un efecto positivo en el rendimiento.</p>
+<p>Informa sobre llamadas redundantes a <code>asSequence()</code> que nunca producirán un impacto positivo en el rendimiento.</p>
 <p>
-    <code>asSequence()</code> acelera el procesamiento de una colección que incluye múltiples operaciones porque ejecuta las operaciones con pereza
-    y no crea colecciones intermedias.
+    <code>asSequence()</code> acelera el procesamiento de colecciones con múltiples operaciones, ya que ejecuta las operaciones de forma diferida y no crea colecciones intermedias.
 </p>
 <p>
-    Sin embargo, si se utiliza una operación terminal (como <code>toList()</code>) justo después de <code>asSequence()</code>, no se obtiene
-    ningún efecto positivo en el rendimiento.
+    Sin embargo, si se utiliza una operación terminal (como <code>toList()</code>) inmediatamente después de <code>asSequence()</code>, no se obtiene ningún beneficio de rendimiento.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -15,7 +13,7 @@
       list.<b>asSequence()</b>.last()
   }
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun test(list: List&lt;String&gt;) {
       list.last()

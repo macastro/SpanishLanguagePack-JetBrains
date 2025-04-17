@@ -1,60 +1,55 @@
 <html>
 <body>
-Informa de los usos de clases, campos y métodos obsoletos.
-Hay disponible una solución rápida para convertir automáticamente el uso obsoleto, cuando la información necesaria se puede extraer de la documentación Javadoc del miembro obsoleto.
+Informa sobre el uso de clases, campos y métodos obsoletos.
+Cuando se puede extraer la información necesaria del Javadoc del miembro obsoleto, se puede utilizar una corrección rápida para convertir automáticamente el uso obsoleto.
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
-  class Interessante {
-
+  class Interesting {
     /**
-     * @deprecated Use {@link #newHotness()} en su lugar
+     * @deprecated use {@link #newHotness()} instead
      */
     @Deprecated
     public void oldAndBusted() {}
-
     public void newHotness() {}
   }
-  class EnOtraParte {
-    void x(Interesante i) {
-      i.oldAndBusted(); // advertencia de obsoleto aquí
+  class ElseWhere {
+    void x(Interesting i) {
+      i.oldAndBusted(); // Advertencia de obsolescencia aquí
     }
   }
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code lang="java">
-  class Interessante {
-
+  class Interesting {
     /**
-     * @deprecated Use {@link #newHotness()} en su lugar
+     * @deprecated use {@link #newHotness()} instead
      */
     @Deprecated
     public void oldAndBusted() {}
-
     public void newHotness() {}
   }
-  class EnOtraParte {
-    void x(Interesante i) {
+  class ElseWhere {
+    void x(Interesting i) {
       i.newHotness();
     }
   }
 </code></pre>
-<p>De forma predeterminada, la inspección no produce una advertencia si es imposible o difícil evitarla. Por ejemplo, el siguiente código no será informado:</p>
+<p>Por defecto, la inspección no emite advertencias cuando es imposible o difícil de evitar. Por ejemplo, el siguiente código no será reportado:</p>
 <pre><code lang="java">
   abstract class A { //código de biblioteca
      @Deprecated
      abstract void m();
   }
-  class B extends A { //código de proyecto
+  class B extends A { //código del proyecto
      @Override
      void m() {
         //doSmth;
      }
   }
 </code></pre>
-<p>Configurar la inspección:</p>
+<p>Configuración de la inspección:</p>
 <p>
-  Utiliza las opciones para desactivar esta inspección dentro de miembros obsoletos, anulaciones de métodos obsoletos abstractos, sentencias de importación no estáticas, métodos de clases obsoletas o mismas clases de nivel superior.
+  Las opciones permiten deshabilitar esta inspección para miembros obsoletos, anulaciones de métodos abstractos obsoletos, declaraciones de importación no estáticas, métodos de clases obsoletas o en la misma clase de nivel superior.
 </p>
-
 </body>
 </html>

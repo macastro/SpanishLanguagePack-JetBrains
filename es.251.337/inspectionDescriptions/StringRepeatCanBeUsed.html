@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa de bucles que se pueden reemplazar con un único método <code>String.repeat()</code> (disponible desde Java 11).
+El bucle puede ser reemplazado por un único método <code>String.repeat()</code> (disponible desde Java 11).
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void append(StringBuilder sb, int count, Object obj) {
@@ -9,21 +9,18 @@ Informa de bucles que se pueden reemplazar con un único método <code>String.re
     }
   }
 </code></pre>
-<p>Tras aplicar la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   void append(StringBuilder sb, int count, Object obj) {
     sb.append(String.valueOf(obj).repeat(Math.max(0, count)));
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  De forma predeterminada, la inspección puede encerrar <code>count</code> con <code>Math.max(0, count)</code> si no puede demostrar estáticamente que <code>count</code> no
-  es negativo. Esto se hace para evitar un posible cambio de semántica, ya que <code>String.repeat()</code> rechaza los números negativos.
-  Usa la opción <b>Añadir Math.max(0,count) para evitar un posible cambio de semántica</b> para deshabilitar este comportamiento si es necesario.</p>
-  <p>Del mismo modo, una cadena que quieras repetir se puede encerrar en
-  <code>String.valueOf</code> para evitar una posible <code>NullPointerException</code> si se desconoce si puede ser <code>null</code>.
+  Por defecto, si no se puede demostrar estáticamente que <code>count</code> no es negativo, la comprobación puede envolver <code>count</code> con <code>Math.max(0, count)</code>. Esto se hace para prevenir posibles cambios semánticos, ya que <code>String.repeat()</code> rechaza números negativos.
+  Este comportamiento puede desactivarse si es necesario usando la opción <b>Agregar Math.max(0, count) para evitar posibles cambios semánticos</b>.</p>
+  <p>De manera similar, si no se sabe si la cadena a repetir puede ser <code>null</code>, se puede envolver en <code>String.valueOf</code> para prevenir posibles <code>NullPointerException</code>.
 </p>
-<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 11 o superior.</p>
-<p><small>Novedad en 2019.1</small></p>
+<p>Esta inspección solo se informa cuando el nivel de lenguaje del proyecto o módulo es 11 o superior.</p>
+<p><small>Novedades en 2019.1</small></p>
 </body>
 </html>

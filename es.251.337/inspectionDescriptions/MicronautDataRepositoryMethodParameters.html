@@ -1,22 +1,19 @@
 <html>
 <body>
-<p>Informa de tipos de parámetros de método de repositorio de Datos de Micronaut incorrectos.</p>
-<!-- tooltip end -->
+<p>Reporta tipos de parámetros incorrectos en los métodos del repositorio de Micronaut Data.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
-  public class Persona {
+  public class Person {
     private int id;
-    private String apellido;
-    private Direccion direccion;
+    private String lastname;
+    private Address address;
   }
-
-  public class Direccion {
-    private int codigoPostal;
+  public class Address {
+    private int zipCode;
   }
-
-  public interface RepositorioDeClientes extends CrudRepository&lt;Persona, Integer&gt; {
-    List&lt;Persona&gt; <strong>findByDirección</strong>(String apellido);  // Se espera tipo 'Dirección'
-    List&lt;Persona&gt; <strong>findByDirecciónCódigoPostal</strong>(String str);   // Se espera tipo 'int'
+  public interface CustomerRepository extends CrudRepository&lt;Person, Integer&gt; {
+    List&lt;Person&gt; <strong>findByAddress</strong>(String lastname);  // debería ser tipo 'Address'
+    List&lt;Person&gt; <strong>findByAddressZipCode</strong>(String str);   // debería ser tipo 'int'
   }
 </code></pre>
 </body>

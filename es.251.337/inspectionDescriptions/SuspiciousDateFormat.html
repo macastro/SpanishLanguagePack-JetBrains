@@ -1,21 +1,20 @@
 <html>
 <body>
-Reporta patrones de formato de fecha que probablemente se usan por error.
-<p>Se informan los siguientes patrones:</p>
+Informa sobre posibles usos incorrectos de patrones de formato de fecha.
+<p>Los patrones reportados son:</p>
 <ul>
-  <li>Una "Y" mayúscula, a menos que aparezca "w" cerca. Representa el "año de la semana" que casi siempre es igual al "año" normal (patrón de "y" minúscula), pero puede apuntar al año siguiente a fines de diciembre.</li>
-  <li>Una "M" mayúscula (mes) cerca de "H", "K", "h" o "k" (hora). Es probable que se haya intentado usar una "m" minúscula (minuto).</li>
-  <li>Una "m" minúscula (minuto) cerca de "y" (año) o "d" (día del mes). Es probable que se haya intentado usar una "M" mayúscula (mes).</li>
-  <li>Una "D" mayúscula (día del año) cerca de "M" o "L" (mes). Es probable que se haya intentado usar una "d" minúscula (día del mes).</li>
-  <li>Una "S" mayúscula (milisegundos) cerca de "m" (minutos). Es probable que se haya intentado usar una "s" minúscula (segundos).</li>
+  <li>'Y' mayúscula, a menos que 'w' aparezca cerca. Representa "año de la semana" y casi siempre es igual al "año" normal (patrón 'y' minúscula), pero puede apuntar al año siguiente después del final de diciembre.</li>
+  <li>'M' mayúscula (mes) cerca de 'H', 'K', 'h' o 'k' (hora). Probablemente se pretendía usar 'm' minúscula (minutos).</li>
+  <li>'m' minúscula (minutos) cerca de 'y' (año) o 'd' (día del mes). Probablemente se pretendía usar 'M' mayúscula (mes).</li>
+  <li>'D' mayúscula (día del año) cerca de 'M' o 'L' (mes). Probablemente se pretendía usar 'd' minúscula (día del mes).</li>
+  <li>'S' mayúscula (milisegundos) cerca de 'm' (minutos). Probablemente se pretendía usar 's' minúscula (segundos).</li>
 </ul>
 <p>
   Ejemplos:<br>
-  <code>new SimpleDateFormat("YYYY-MM-dd")</code>: probablemente se haya intentado usar <code>"yyyy-MM-dd"</code>.<br>
-  <code>new SimpleDateFormat("yyyy-MM-DD")</code>: probablemente se haya intentado usar <code>"yyyy-MM-dd"</code>.<br>
-  <code>new SimpleDateFormat("HH:MM")</code>: probablemente se haya intentado usar <code>"HH:mm"</code>.
+  <code>new SimpleDateFormat("YYYY-MM-dd")</code>: probablemente se pretendía usar <code>"yyyy-MM-dd"</code>.<br>
+  <code>new SimpleDateFormat("yyyy-MM-DD")</code>: probablemente se pretendía usar <code>"yyyy-MM-dd"</code>.<br>
+  <code>new SimpleDateFormat("HH:MM")</code>: probablemente se pretendía usar <code>"HH:mm"</code>.
 </p>
-<!-- tooltip end -->
-<p><small>Nuevo en 2020.1</small></p>
+<p><small>Novedades de 2020.1</small></p>
 </body>
 </html>

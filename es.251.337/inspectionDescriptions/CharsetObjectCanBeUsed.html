@@ -1,9 +1,8 @@
 <html>
 <body>
-Informa de los métodos y constructores en los que una constante de <code>String</code> literal de juego de caracteres (por ejemplo, <code>"UTF-8"</code>) puede reemplazarse por un código predeterminado de <code>StandardCharsets.UTF_8</code>.
-<p>El código después de la corrección puede funcionar más rápido, porque la búsqueda de juego de caracteres se vuelve innecesaria.
-  De igual modo, es posible que dejar de capturar <code>UnsupportedEncodingException</code> sea innecesario también. En este caso,
-  el bloque catch se eliminará automáticamente.</p>
+El informe puede reemplazar las constantes de conjuntos de caracteres <code>String</code> literales (por ejemplo, <code>"UTF-8"</code>) con el código predefinido <code>StandardCharsets.UTF_8</code> en métodos y constructores.
+<p>La corrección puede acelerar el código ya que la búsqueda del conjunto de caracteres se vuelve innecesaria.
+  Además, es posible que no necesite capturar <code>UnsupportedEncodingException</code>. En este caso, el bloque catch se eliminará automáticamente.</p>
 <p>Ejemplo:</p>
 <pre><code>
   try {
@@ -11,12 +10,11 @@ Informa de los métodos y constructores en los que una constante de <code>String
   } catch (UnsupportedEncodingException e) {
   }
 </code></pre>
-<p>Después de aplicar una corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   byte[] bytes = "str".getBytes(StandardCharsets.UTF_8);
 </code></pre>
-<!-- tooltip end -->
-<p>La inspección está disponible en Java 7 y versiones posteriores.</p>
-<p><small>Nuevo en 2018.2</small></p>
+<p>Esta inspección está disponible en Java 7 y versiones posteriores.</p>
+<p><small>Cambios más recientes en 2018.2</small></p>
 </body>
 </html>

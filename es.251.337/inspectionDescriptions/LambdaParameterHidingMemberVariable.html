@@ -1,21 +1,20 @@
 <html>
 <body>
-Informa de parámetros lambda que comparten exactamente el mismo campo y nombre que una clase externa.
-Estas denominaciones pueden provocar que se utilicen erróneamente parámetros lambda cuando la intención es utilizar el campo con exactamente el mismo nombre.
-<p>Se sugiere una corrección rápida para cambiar el nombre del parámetro lambda.</p>
+Informa sobre parámetros lambda que tienen el mismo nombre que los campos de las clases circundantes.
+Este tipo de nomenclatura puede llevar a un uso incorrecto del parámetro lambda cuando se pretende usar el campo del mismo nombre.
+<p>Se sugiere renombrar el parámetro lambda mediante una corrección rápida.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   public class MyClass {
     public Object foo;
-
     void sort(List&lt;Integer&gt; list) {
       list.sort((foo, bar) -> foo - bar);
     }
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Usa la opción para seleccionar si se ignoran los campos que no son visibles para la expresión lambda. Por ejemplo, los campos privados de la superclase.
+  Esta opción permite elegir si se ignoran los campos que no son visibles para la expresión lambda.
+  Por ejemplo, los campos private de la superclase.
 <p>
 </body>
 </html>

@@ -1,21 +1,25 @@
-**Versión corta**
-Se informa de las clases que se pueden marcar como servicios ligeros mediante la anotación `@com.intellij.openapi.components.Service` en lugar de registrarse como servicios en `plugin.xml`.
-
-**Versión larga**
-Los servicios que no están destinados a ser anulados no deben registrarse en el archivo `plugin.xml`. En su lugar, añada la anotación `@Service` a la clase de servicio. Para los servicios a nivel de proyecto, especifique `@Service(Service.Level.PROJECT)`.
-
-**Requisitos:**
-
-* IntelliJ Platform 2019.3 o posterior.
-* La clase de servicio debe ser `final`.
-* `serviceInterface` no está especificado.
-* Si el servicio a nivel de aplicación es `com.intellij.openapi.components.PersistentStateComponent`, la itinerancia debe estar deshabilitada (`roamingType = RoamingType.DISABLED`).
-* No se especifica ninguno de los siguientes atributos: `os`, `client`, `overrides`, `id`, `preload`.
-
-Consulte [Servicios](https://plugins.jetbrains.com/docs/intellij/plugin-services.html) en la documentación del SDK del complemento de la plataforma IntelliJ para obtener más detalles.
-
-**Inspección relacionada:**
-
-* `Plugin DevKit | Descriptor de complemento | Servicios convertibles a servicios ligeros`
-
-**Nota:** Esta inspección es nueva en 2023.2.
+<html>
+<body>
+Los servicios pueden marcarse como servicios ligeros usando la anotación <code>@com.intellij.openapi.components.Service</code> en lugar de registrarlos como servicios en <code>plugin.xml</code>
+<p>
+  Los servicios que no necesitan ser sobrescritos no requieren registro en el archivo <code>plugin.xml</code>.
+  En su lugar, se puede anotar la clase de servicio con <code>@Service</code>. Para servicios a nivel de proyecto, especifique <code>@Service(Service.Level.PROJECT)</code>.
+<p>
+  Requisitos:
+<ul>
+  <li>IntelliJ Platform 2019.3 o superior.</li>
+  <li>La clase de servicio debe ser <code>final</code>.</li>
+  <li>No se especifica <code>serviceInterface</code>.</li>
+  <li>Si el servicio a nivel de aplicación es <code>com.intellij.openapi.components.PersistentStateComponent</code>, el roaming debe estar deshabilitado (<code>roamingType = RoamingType.DISABLED</code>).
+  </li>
+  <li>No se especifica ninguna de las siguientes características: <code>os</code>, <code>client</code>, <code>overrides</code>, <code>id</code>, <code>preload</code>, <code>configurationSchemaKey</code>.</li>
+</ul>
+<p>
+  Para más información, consulte la sección de <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html">Servicios</a> en la documentación del SDK de plugins para la plataforma IntelliJ.
+</p>
+<p>
+  Consulte también la inspección <code>Plugin DevKit | Descriptor de Plugin | Los servicios pueden convertirse a servicios ligeros</code>.
+</p>
+<p><small>Cambios en 2023.2</small>
+</body>
+</html>

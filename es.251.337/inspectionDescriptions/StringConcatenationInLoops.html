@@ -1,10 +1,8 @@
 <html>
 <body>
-Informa de la concatenación de String en bucles.
+Informa sobre concatenaciones de String en bucles.
 <p>
-  Como cada concatenación de String copia toda la
-  cadena, normalmente es preferible reemplazarla con llamadas explícitas a <code>StringBuilder.append()</code> o
-  <code>StringBuffer.append()</code>.
+  Dado que cada concatenación de String copia toda la cadena, generalmente es mejor reemplazarla con llamadas explícitas a <code>StringBuilder.append()</code> o <code>StringBuffer.append()</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -22,12 +20,8 @@ Informa de la concatenación de String en bucles.
   }
   str = strBuilder.toString();
 </code></pre>
-<!-- tooltip end -->
 <p>
-  En ocasiones, la corrección rápida permite convertir una variable <code>String</code> en una <code>StringBuilder</code> o
-  introducir una nueva <code>StringBuilder</code>. Tened cuidado si en el código original se maneja especialmente el valor <code>nulo</code>, ya que
-  el reemplazo podría cambiar su semántica. Si <code>nulo</code> es posible, se sugieren correcciones seguras que no admiten valores nulos y que generan
-  las comprobaciones necesarias de valores nulos. Además, no está garantizado que el reemplazo automático mejore siempre el rendimiento.
+  En ocasiones, esta corrección rápida puede convertir una variable <code>String</code> en <code>StringBuilder</code> o introducir un nuevo <code>StringBuilder</code>. Se debe tener cuidado cuando el código original maneja específicamente valores <code>null</code>, ya que el reemplazo podría cambiar la semántica. Si los valores nulos son posibles, se recomienda realizar una corrección segura para nulos, generando las comprobaciones necesarias. Además, no hay garantía de que el reemplazo automático siempre resulte en un mejor rendimiento.
 </p>
 </body>
 </html>

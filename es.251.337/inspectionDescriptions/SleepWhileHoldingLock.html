@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa de las llamadas a los métodos <code>java.lang.Thread.sleep()</code> que se producen dentro de un bloque o método <code>synchronized</code>.
+Informa sobre las llamadas al método <code>java.lang.Thread.sleep()</code> que ocurren dentro de bloques o métodos <code>synchronized</code>.
 <p>
-  <code>sleep()</code> dentro de un bloque <code>synchronized</code> puede provocar una disminución del rendimiento, una escalabilidad deficiente e incluso un posible interbloqueo. Considera la posibilidad de usar <code>wait()</code> en su lugar, ya que liberará el bloqueo retenido.
+  El uso de <code>sleep()</code> dentro de un bloque <code>synchronized</code> puede causar degradación del rendimiento, problemas de escalabilidad e incluso posibles deadlocks. En su lugar, considere usar <code>wait()</code>, ya que liberará el bloqueo retenido.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -10,6 +10,5 @@ Informa de las llamadas a los métodos <code>java.lang.Thread.sleep()</code> que
     Thread.sleep(100);
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

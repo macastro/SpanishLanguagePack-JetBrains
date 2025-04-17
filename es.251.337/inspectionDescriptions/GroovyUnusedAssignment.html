@@ -1,14 +1,13 @@
 <html>
 <body>
-<p>Reporta los casos en que una variable es redundante ya que su valor nunca se usa después de su asignación.</p>
-<p>Si la variable no se usa, recomendamos eliminarla para acortar el código y evitar asignaciones redundantes.</p>
-<p>Los siguientes casos son reportados:</p>
+<p>Informa sobre variables redundantes donde el valor asignado nunca se utiliza.</p>
+<p>Si una variable no se utiliza, se recomienda eliminarla para reducir el código y evitar asignaciones redundantes.</p>
+<p>Se informarán los siguientes casos:</p>
 <ul>
-  <li>la variable nunca se lee después de la asignación</li>
-  <li>el valor siempre se sobrescribe con otra asignación antes de la siguiente lectura de variable</li>
-  <li>el inicializador de variable es redundante (por una de las dos razones anteriores)</li>
+  <li>La variable nunca se lee después de su asignación</li>
+  <li>El valor siempre es sobrescrito por otra asignación antes de la siguiente lectura</li>
+  <li>El inicializador de la variable es redundante (debido a cualquiera de las dos razones anteriores)</li>
 </ul>
-<!-- tooltip end -->
-<p> Para más información ver la misma inspección en Java.</p>
+<p>Para más información, consulte la misma comprobación en Java.</p>
 </body>
 </html>

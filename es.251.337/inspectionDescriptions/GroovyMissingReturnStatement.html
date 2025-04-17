@@ -1,21 +1,20 @@
 <html>
 <body>
-Informa sobre la ausencia de sentencias <code>return</code> al final de los métodos cuyo tipo de retorno no es <b>void</b>.
-El final del método debe ser alcanzable mediante el flujo de ejecución del método.
+Informa sobre métodos con tipo de retorno no <b>void</b> que carecen de una sentencia <code>return</code> al final.
+El flujo de ejecución del método debe poder llegar hasta el final del mismo.
 <p><b>Ejemplo:</b></p>
 <pre>
 <code>
 String foo(int a) {
   if (a > 0) {
-    return "más de cero"
+    return "more than zero"
   }
-} // foo(-1) retornará 'null'
-
+} // foo(-1) devolverá 'null'
 int bar(int a) {
   if (a > 0) {
     return a
   }
-} // bar(-1) fallará con una excepción en tiempo de ejecución
+} // bar(-1) fallará y lanzará una excepción en tiempo de ejecución
 </code>
 </pre>
 </body>

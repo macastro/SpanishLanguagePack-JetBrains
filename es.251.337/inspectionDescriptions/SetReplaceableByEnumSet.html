@@ -1,23 +1,18 @@
 <html>
 <body>
-Informa las instanciaciones de objetos <code>java.util.Set</code> cuyos tipos de contenido son clases enumeradas. Dichos objetos <code>Set</code> pueden remplazarse con objetos <code>java.util.EnumSet</code>.
+Informa sobre la instanciación de objetos <code>java.util.Set</code> para tipos enumerados. Estos objetos <code>Set</code> pueden ser reemplazados por objetos <code>java.util.EnumSet</code>.
 <p>
-  Las implementaciones de <code>EnumSet</code> pueden ser mucho más eficientes en comparación con
-  otros conjuntos, ya que la estructura de datos subyacente es un bit de vector. Utiliza la solución rápida para reemplazar el inicializador con una llamada a
-  <code>EnumSet.noneOf()</code>. Esta solución rápida no está disponible cuando el tipo de variable es una subclase de <code>Set</code>.
+  La implementación de <code>EnumSet</code> es más eficiente que otras colecciones, ya que utiliza un vector de bits como estructura de datos subyacente. Esta corrección rápida puede reemplazar el inicializador con una llamada a <code>EnumSet.noneOf()</code>. Esta corrección rápida no está disponible cuando el tipo de variable es una subclase de <code>Set</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  public enum MyEnum { FOO, BAR; }
-
+  enum MyEnum { FOO, BAR; }
   Set&lt;MyEnum&gt; enums = new HashSet&lt;MyEnum&gt;();
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  public enum MyEnum { FOO, BAR; }
-
+  enum MyEnum { FOO, BAR; }
   Set&lt;MyEnum&gt; enums = EnumSet.noneOf(MyEnum.class);
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

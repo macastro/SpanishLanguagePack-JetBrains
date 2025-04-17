@@ -1,24 +1,23 @@
 <html>
 <body>
-Inspecciona las asignaciones de objetos o conjuntos dentro de los bucles. Si bien no es necesariamente un problema, una asignación de objetos dentro de un bucle es un excelente lugar para buscar fugas de memoria y problemas de rendimiento.
+Informa sobre la asignación de objetos o arrays dentro de bucles. Aunque no necesariamente es un problema, las asignaciones de objetos dentro de bucles son buenos lugares para buscar fugas de memoria y problemas de rendimiento.
 <p>
-  La inspección informa las siguientes construcciones:
+  La inspección informa sobre las siguientes estructuras:
 </p>
 <ul>
   <li>Asignaciones explícitas mediante el operador <code>new</code></li>
-  <li>Métodos que se sabe que devuelven un nuevo objeto</li>
-  <li>Referencias de método vinculadas a la instancia</li>
-  <li>Lambdas que capturan variables o <code>this</code></li>
+  <li>Métodos conocidos que devuelven nuevos objetos</li>
+  <li>Referencias a métodos vinculados a instancias</li>
+  <li>Lambdas que capturan variables o referencias a <code>this</code></li>
 </ul>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  // Asignación explícita
+  // 显式分配
   for (Status status : Status.values()) {
     declarationsMap.put(status, new ArrayList&lt;&gt;());
   }
-
-  // Lambda captura una variable
-  String message = "Motor en marcha.";
+  // Lambda 捕获变量
+  String message = "Engine running.";
   for (Engine engine : engines) {
       if (!isRunning(engine)) {
           logger.warn(() -> {
@@ -26,14 +25,11 @@ Inspecciona las asignaciones de objetos o conjuntos dentro de los bucles. Si bie
           });
       }
   }
-
-  // Referencia de método vinculada a la instancia
+  // 实例绑定方法引用
   for(Node node : nodes) {
     descriptor = node.getDescription();
     descriptor.ifPresent(dynamicTestExecutor::execute);
   }
-</code>
-</pre>
-<!-- tooltip end -->
+</code></pre>
 </body>
 </html>

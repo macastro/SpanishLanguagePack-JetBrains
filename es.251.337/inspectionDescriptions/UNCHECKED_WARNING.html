@@ -1,11 +1,11 @@
 <html>
 <body>
-Informa código en el que el compilador javac emitirá una advertencia sin verificar.
-Cada advertencia sin verificar puede potencialmente desencadenar <code>ClassCastException</code> en tiempo de ejecución.
+Informa sobre código que genera advertencias no verificadas del compilador javac.
+Cada advertencia no verificada podría desencadenar una <code>ClassCastException</code> en tiempo de ejecución.
 <p>Ejemplo:</p>
 <pre><code>
   List items = Arrays.asList("string", "string");
-  List&lt;Integer&gt; numbers = Collections.unmodifiableList(items); // asignación sin verificar
+  List&lt;Integer&gt; numbers = Collections.unmodifiableList(items); // Asignación no verificada
 </code></pre>
 </body>
 </html>

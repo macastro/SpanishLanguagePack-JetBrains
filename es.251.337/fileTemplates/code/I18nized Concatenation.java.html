@@ -3,32 +3,32 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
     <td colspan="2"><font face="verdana" size="-1">
-    Reemplaza la concatenación de cadenas (ej. </font><code>String s = "Hello " + name;</code>)
-    <font face="verdana" size="-1"> con una expresión de código Java internacionalizada (ej. </font>
+    Reemplazar la concatenación de cadenas (como </font><code>String s = "Hello " + name;</code>)
+    <font face="verdana" size="-1">por una expresión Java internacionalizada (como </font>
     <code>String s = MessageFormat.format(&#8203;myResourceBundle.getString(&#8203;"hello.0"), name);</code><font face="verdana" size="-1">).<br>
-        Esta plantilla integrada es editable. Además de expresiones y comentarios Java, puedes usar variables predefinidas que se expandirán a sus valores correspondientes.</font>
+        Esta plantilla incorporada es editable. Además de las expresiones Java y comentarios, puede utilizar variables predefinidas que luego se expandirán a sus valores correspondientes.</font>
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas reciben los siguientes valores:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas aceptan los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${RESOURCE_BUNDLE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Una expresión de tipo <b>java.util.ResourceBundle</b>, cuya instancia está disponible en este contexto.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Una expresión de tipo <b>java.util.ResourceBundle</b> cuya instancia está disponible en este contexto.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAMETERS}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Variables utilizadas en la concatenación de cadenas, normalmente pasadas como argumentos a la expresión internacionalizada.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Variables utilizadas en la concatenación de cadenas, generalmente pasadas como argumentos a la expresión internacionalizada.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_KEY}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
     <td width="100%" valign="top"><font face="verdana" size="-1">El nombre de la clave de propiedad definida en el archivo de propiedades correspondiente.
-      Generalmente, es el valor utilizado como parámetro del método <b>ResourceBundle.getString()</b>.
+      Normalmente, es el valor utilizado como parámetro para el método <b>ResourceBundle.getString()</b>.
     </font></td>
   </tr>
   <tr>

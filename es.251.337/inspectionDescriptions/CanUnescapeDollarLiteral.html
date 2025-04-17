@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa sobre casos donde los caracteres de dólar escapados en cadenas de texto pueden ser reemplazados por literales regulares.
+<p>
+    El escape solo es necesario cuando el contenido que sigue al símbolo de dólar podría interpretarse erróneamente como una entrada de interpolación de cadenas.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun example() {
+    "The price today is \$10. The price tomorrow will be ${'$'}20."
+  }
+</code></pre>
+La corrección rápida convertirá todos los caracteres de dólar escapados que se puedan reemplazar de forma segura a caracteres de dólar regulares:
+<pre><code>
+  fun example() {
+    "The price today is $10. The price tomorrow will be $20."
+  }
+</code></pre>
+</body>
+</html>

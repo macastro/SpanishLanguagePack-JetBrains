@@ -1,23 +1,20 @@
 <html>
 <body>
-Informa las declaraciones <code>defer</code> y <code>go</code> que llaman a <code>panic()</code> o <code>recover()</code> directamente.
-<p>Estas declaraciones rara vez son útiles y podrían indicar un mal uso del mecanismo <code>panic()</code> y <code>recover()</code>.
-  En particular:</p>
+Reporta sentencias <code>defer</code> y <code>go</code> que llaman directamente a <code>panic()</code> o <code>recover()</code>.
+<p>Estas sentencias rara vez son útiles y pueden indicar un uso incorrecto de los mecanismos <code>panic()</code> y <code>recover()</code>.
+  Se debe prestar especial atención a lo siguiente:</p>
 <ul>
-  <li><code>go panic()</code>: una goroutine recién iniciada entrará en pánico inmediatamente.</li>
-  <li><code>defer panic()</code>: una función con esta declaración siempre entrará en pánico al salir.</li>
-  <li><code>go recover()</code>: no tiene ningún efecto porque una goroutine recién iniciada no puede entrar en pánico.</li>
-  <li><code>defer recover()</code>: la función con esta declaración dejará de entrar en pánico silenciosamente. Este podría ser un uso válido,
-    pero una forma idiomática es inspeccionar el valor devuelto por <code>recover()</code>:
+  <li><code>go panic()</code>: una nueva goroutine iniciada entrará inmediatamente en pánico.</li>
+  <li><code>defer panic()</code>: una función con esta sentencia siempre entrará en pánico al salir.</li>
+  <li><code>go recovery()</code>: no tiene ningún efecto ya que la nueva goroutine iniciada no puede entrar en pánico.</li>
+  <li><code>defer recovery()</code>: una función con esta sentencia detendrá silenciosamente el pánico. Aunque esto podría funcionar, la forma idiomática es verificar el valor devuelto por <code>recover()</code>:
     <pre><code>defer func() {
   if r := recover(); r != nil {
-    fmt.Println("Recuperado de: ", r)
+    fmt.Println("Recovered from: ", r)
   }
 }()</code></pre>
   </li>
 </ul>
-<p>Para más información sobre las declaraciones go y el manejo de pánicos, consulta <a href="https://go.dev/ref/spec#Handling_panics">Handling
-  panics</a> y
-  <a href="https://go.dev/ref/spec#Go_statements">Go statements</a> en la especificación del lenguaje Go.</p>
+<p>Para obtener información detallada sobre las sentencias go y el manejo de pánicos, consulte <a href="https://go.dev/ref/spec#Handling_panics">Handling panics</a> y <a href="https://go.dev/ref/spec#Go_statements">Go statements</a> en la especificación del lenguaje Go.</p>
 </body>
 </html>

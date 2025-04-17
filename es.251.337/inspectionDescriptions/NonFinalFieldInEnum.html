@@ -1,15 +1,13 @@
 <html>
 <body>
-Informa de los campos no finales en tipos de enumeraciones.
-Los campos no finales introducen un estado mutable global, lo que generalmente no se considera deseable.
+Informa sobre campos no final en tipos enum.
+Los campos no final introducen un estado mutable global, lo cual generalmente se considera indeseable.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   enum Enum {
     FIRST("first"),
     SECOND("second");
-
     public String str;
-
     Enum(String str) {
         this.str = str;
     }
@@ -20,15 +18,12 @@ Los campos no finales introducen un estado mutable global, lo que generalmente n
   enum Enum {
     FIRST("first"),
     SECOND("second");
-
     public final String str;
-
     Enum(String str) {
         this.str = str;
     }
   }
 </code></pre>
-<!-- tooltip end -->
-Usa la opción "Ignorar campos que no se pueden hacer 'final'" para advertir solo sobre los campos que se pueden hacer finales mediante la corrección rápida.
+La opción "Ignorar campos que no pueden ser 'final'" solo mostrará advertencias para campos que pueden convertirse en final mediante una corrección rápida.
 </body>
 </html>

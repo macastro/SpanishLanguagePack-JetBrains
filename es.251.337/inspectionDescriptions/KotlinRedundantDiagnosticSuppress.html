@@ -1,14 +1,13 @@
 <html>
 <body>
-Informes de usos de anotaciones <code>@Suppress</code> que pueden eliminarse de forma segura porque el diagnóstico del compilador que afectan ya no es aplicable en este contexto.
+Informa sobre las anotaciones <code>@Suppress</code> que pueden eliminarse de manera segura porque los diagnósticos del compilador que afectaban ya no son aplicables en este contexto.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun doSmth(@Suppress("UNUSED_PARAMETER") used: Int) {
     println(used)
   }
 </code></pre>
-
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun doSmth(used: Int) {
     println(used)

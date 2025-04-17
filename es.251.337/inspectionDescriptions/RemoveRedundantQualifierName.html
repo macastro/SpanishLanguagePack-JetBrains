@@ -1,30 +1,26 @@
 <html>
 <body>
-Informa sobre calificadores redundantes (o sus partes) en nombres de clase, funciones y propiedades.
+Informa sobre calificadores redundantes (o partes de ellos) en nombres de clases, funciones y propiedades.
 <p>
-    Un nombre completamente calificado es un identificador inequívoco que especifica a qué objeto, función o propiedad hace referencia una llamada.
-    En los contextos donde el nombre puede acortarse, la inspección informa sobre la oportunidad y la solución rápida asociada 'Quitar nombre de calificador redundante' permite modificar el código.
+    Un nombre completamente calificado es un identificador explícito utilizado para especificar el objeto, función o propiedad al que hace referencia una llamada.
+    En contextos donde el nombre puede acortarse, la inspección notifica las oportunidades y la corrección rápida "Eliminar calificador redundante" asociada puede modificar el código.
 </p>
-<p><b>Ejemplos:</b></p>
+<p><b>Ejemplo:</b></p>
 <pre><code>
   package my.simple.name
   import kotlin.Int.Companion.MAX_VALUE
-
   class Foo
-
   fun main() {
-      val a = my.simple.name.Foo()    // 'Foo' reside en el paquete declarado 'my.simple.name', el calificador es redundante
-      val b = kotlin.Int.MAX_VALUE    // Puede reemplazarse con 'MAX_VALUE' ya que está importado
-      val c = kotlin.Double.MAX_VALUE // Puede reemplazarse con 'Double.MAX_VALUE' ya que los tipos incorporados se importan automáticamente
+      val a = my.simple.name.Foo()    // 'Foo' está en el paquete declarado 'my.simple.name', el calificador es redundante
+      val b = kotlin.Int.MAX_VALUE    // Se puede reemplazar por 'MAX_VALUE' ya que está importado
+      val c = kotlin.Double.MAX_VALUE // Se puede reemplazar por 'Double.MAX_VALUE' ya que los tipos integrados se importan automáticamente
   }
 </code></pre>
-<p>Después de que se aplique la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   package my.simple.name
   import kotlin.Int.Companion.MAX_VALUE
-
   class Foo
-
   fun main() {
       val a = Foo()
       val b = MAX_VALUE

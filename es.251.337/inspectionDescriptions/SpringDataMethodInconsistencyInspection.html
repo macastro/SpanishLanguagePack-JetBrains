@@ -1,26 +1,21 @@
-</body>
-</html>
 <html>
 <body>
 <p>
-  Reporta los métodos del repositorio CRUD de Spring Data para los cuales el
-  <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation">Spring Data Query</a>
-  builder no puede generar la consulta correspondiente.
+  Informa sobre los métodos del repositorio Spring Data CRUD para los cuales el generador de <a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation">Spring Data Query</a> no puede generar las consultas correspondientes.
 </p>
-
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
 interface PersonRepository extends Repository&lt;Person, Long&gt; {
   List&lt;Person&gt; findByEmailAddressAndLastname(EmailAddress emailAddress, String lastname);
-  List&lt;Person&gt; findByEmail<strong>Desconocido</strong>AndLastname(EmailAddress emailAddress, String lastname); // No se puede resolver la propiedad 'Desconocido'
+  List&lt;Person&gt; findByEmail<strong>Unknown</strong>AndLastname(EmailAddress emailAddress, String lastname); // No se puede resolver la propiedad 'Unknown'
   List&lt;Person&gt; <strong>findByAndLastname</strong>(EmailAddress emailAddress, String lastname); // Falta el nombre de la propiedad
-
   List&lt;Person&gt; findDistinctPeopleByLastnameOrFirstname(String lastname, String firstname);
-  List&lt;Person&gt; findPeopleDistinctBy<strong>Desconocido</strong>OrFirstname(String lastname, String firstname); // No se puede resolver la propiedad 'Desconocido'
-
+  List&lt;Person&gt; findPeopleDistinctBy<strong>Unknown</strong>OrFirstname(String lastname, String firstname); // No se puede resolver la propiedad 'Unknown'
   List&lt;Person&gt; findByLastnameOrderByFirstnameAsc(String lastname);
-  List&lt;Person&gt; findByLastnameOrderBy<strong>Desconocido</strong>Desc(String lastname);  // No se puede resolver la propiedad 'Desconocido'
+  List&lt;Person&gt; findByLastnameOrderBy<strong>Unknown</strong>Desc(String lastname);  // No se puede resolver la propiedad 'Unknown'
 }
 </code></pre>
+</body>
+</html>
 </body>
 </html>

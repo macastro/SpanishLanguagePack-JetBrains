@@ -1,16 +1,12 @@
 <html>
 <body>
-
-Reporta expresiones aritméticas y bit a bit con operandos no admitidos.
-
+Informa sobre expresiones aritméticas y de bits con operandos no soportados.
 <p>
-  A partir de PHP 8.0, el uso de los operadores aritméticos y bit a bit <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>**</code>, <code>%</code>, <code>&lt;&lt;</code>, <code>>></code>, <code>&</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>++</code>, <code>--</code>
-  cuando uno de los operandos es un arreglo, recurso u objeto no sobrecargado, resultará en un <code>TypeError</code>. La única excepción es la
-  operación de fusión <code>array + array</code>, que sigue estando admitida.
+  A partir de PHP 8.0, el uso de operadores aritméticos y de bits <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>**</code>, <code>%</code>, <code>&lt; &lt;</code>, <code>></code>, <code>&</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>++</code>, <code>-</code> resultará en un <code>TypeError</code> cuando uno de los operandos sea un array, recurso u objeto no sobrecargado. La única excepción es la operación de unión
+  <code>array + array</code>, que sigue siendo compatible.
 </p>
-
 <p>
-  Ve <a href="https://github.com/php/php-src/blob/master/Zend/tests/operator_unsupported_types.phpt">el código de prueba interno de PHP</a> para la lista completa de operaciones.
+  Para ver la lista completa de operaciones, consulte <a href="https://github.com/php/php-src/blob/master/Zend/tests/operator_unsupported_types.phpt">el código fuente de pruebas internas de PHP</a>.
 </p>
 </body>
 </html>

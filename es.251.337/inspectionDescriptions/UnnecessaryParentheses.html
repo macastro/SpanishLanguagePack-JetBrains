@@ -1,29 +1,22 @@
 <html>
 <body>
-Informa de cualquier instancia de paréntesis innecesarios.
-<p>Los paréntesis se consideran innecesarios si el orden de evaluación de una expresión permanece sin cambios después de eliminar los paréntesis.</p>
+Informa sobre cualquier paréntesis innecesario.
+<p>Los paréntesis no son necesarios si al eliminarlos el orden de evaluación de la expresión se mantiene sin cambios.</p>
 <p>Ejemplo:</p>
 <pre><code>
   int n = 3 + (9 * 8);
 </code></pre>
-<p>Tras aplicar la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   int n = 3 + 9 * 8;
 </code></pre>
-<!-- tooltip end -->
-<p>Configurar la inspección:</p>
+<p>Configuración de la inspección:</p>
 <ul>
-  <li>Utiliza la opción <b>Ignorar paréntesis de aclaración</b> para ignorar los paréntesis que ayudan a aclarar una
-    expresión binaria. Los paréntesis son de aclaración si la expresión entre paréntesis es una
-    expresión <code>instanceof</code> que forma parte de una expresión más grande o tiene un operador diferente al de la expresión primaria.</li>
-  <li>Utiliza la opción <b>Ignorar paréntesis alrededor de la condición de las expresiones condicionales</b> para ignorar los
-    paréntesis alrededor de la condición de las expresiones condicionales. Algunos estándares de codificación especifican que todas estas
-    condiciones deben ir entre paréntesis.</li>
+  <li>Utilice la opción <b>Ignorar paréntesis aclaratorios</b> para ignorar los paréntesis que ayudan a aclarar expresiones binarias. Los paréntesis aclaran que la expresión entre paréntesis es parte de una expresión más grande con <code>instanceof</code> o contiene operadores diferentes a los de la expresión padre.</li>
+  <li>Utilice la opción <b>Ignorar paréntesis alrededor de condiciones en expresiones condicionales</b> para ignorar cualquier paréntesis alrededor de condiciones en expresiones condicionales. Algunos estándares de codificación requieren que todas estas condiciones estén entre paréntesis.</li>
   <li>
-    Utiliza la opción <b>Ignorar paréntesis alrededor de un único parámetro lambda sin tipo formal</b> para ignorar los
-    paréntesis alrededor de un único parámetro lambda dentro de una expresión lambda.
+    Utilice la opción <b>Ignorar paréntesis alrededor de parámetros lambda únicos sin tipo formal</b> para ignorar los paréntesis alrededor de un único parámetro lambda en expresiones lambda.
   </li>
 </ul>
-
 </body>
 </html>

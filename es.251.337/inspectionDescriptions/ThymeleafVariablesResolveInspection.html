@@ -1,12 +1,11 @@
 <html>
 <body>
-<p>Informa referencias no resueltas y expresiones inválidas de Thymeleaf.</p>
-
+<p>Informa sobre referencias no resueltas y expresiones Thymeleaf inválidas.</p>
 <p><strong>Ejemplo:</strong></p>
 <pre><code lang="html">
 &lt;html xmlns:th="https://www.thymeleaf.org"&gt;
 &lt;body&gt;
-  &lt;form th:object="${<strong>unknownPet</strong>}"  &lt;!-- No se puede resolver 'unknownPet'  --&gt;
+  &lt;form th:object="${<strong>unknownPet</strong>}"  &lt;!-- Cannot resolve 'unknownPet'  --&gt;
         class="form-horizontal" method="post"&gt;
     &lt;input type="hidden" name="id" th:value="*{<strong>id</strong>}" /&gt; &lt;!-- No se puede resolver 'id'  --&gt;
   &lt;/form&gt;

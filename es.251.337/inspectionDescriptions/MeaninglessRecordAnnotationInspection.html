@@ -1,23 +1,21 @@
 <html>
 <body>
-Informa sobre anotaciones utilizadas en componentes de registros que no tienen efecto.
-<p>Esto puede suceder en dos casos:</p>
+Informa sobre anotaciones que se utilizan en componentes de registros pero no tienen efecto.
+<p>Esto puede ocurrir en dos casos:</p>
 <ul>
-  <li>La anotación informada tiene el objetivo METHOD, pero el accesor correspondiente está definido explícitamente.</li>
-  <li>La anotación informada tiene el objetivo PARAMETER, pero el constructor canónico está definido explícitamente.</li>
+  <li>La anotación reportada tiene un objetivo METHOD, pero se ha definido explícitamente un accessor correspondiente.</li>
+  <li>La anotación reportada tiene un objetivo PARAMETER, pero se ha definido explícitamente un constructor canónico.</li>
 </ul>
 <p>Ejemplo:</p>
 <pre><code>
 @Target(ElementType.METHOD)
 @interface A { }
-
-// La anotación no aparecerá en el bytecode en absoluto,
-// ya que debería propagarse al accesor pero el accesor está definido explícitamente
+// Esta anotación no aparecerá en el bytecode,
+// ya que debería propagarse al accessor, pero el accessor está definido explícitamente
 record R(@A int x) {
   public int x() { return x; }
 }
 </code></pre>
-<!-- tooltip end -->
-<p><small>Novedad en 2021.1</small></p>
+<p><small>Novedades en 2021.1</small></p>
 </body>
 </html>

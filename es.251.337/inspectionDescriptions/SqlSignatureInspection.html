@@ -1,15 +1,13 @@
 <html>
 <body>
-Reporta los problemas de firma para funciones integradas.
-<p>La inspección reportará un número incorrecto de argumentos, palabras clave no válidas, tipos de datos incorrectos y otros problemas.</p>
+Informa sobre problemas en las firmas de funciones integradas.
+<p>La verificación reportará problemas con el número de argumentos, palabras clave inválidas, tipos de datos incorrectos y otros problemas.</p>
 <p>Ejemplo (MySQL):</p>
 <pre><code>CREATE TABLE foo (a INT, b INT, c INT)
-
 SELECT IFNULL() FROM foo; -- error
 SELECT IFNULL(a) FROM foo; -- error
-SELECT IFNULL(a, b) FROM foo; -- OK
+SELECT IFNULL(a, b) FROM foo; -- correcto
 SELECT IFNULL(a, b, c) FROM foo; -- error</code></pre>
-<p>En MySQL, la función <code>IFNULL()</code> acepta estrictamente dos argumentos. Entonces, solo la consulta <code>SELECT IFNULL(a, b) FROM foo;</code>
-  es correcta.</p>
+<p>En MySQL, la función <code>IFNULL()</code> acepta estrictamente dos argumentos. Por lo tanto, solo la consulta <code>SELECT IFNULL(a, b) FROM foo;</code> es correcta.</p>
 </body>
 </html>

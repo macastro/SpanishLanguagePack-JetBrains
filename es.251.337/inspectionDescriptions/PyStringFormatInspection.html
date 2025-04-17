@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>Reporta errores en operaciones de formateo de cadenas.</p>
+<p>Informa sobre errores en las operaciones de formato de cadenas.</p>
 <p><b>Ejemplo 1:</b></p>
 <pre><code>
 "Hello {1}".format("people")
@@ -9,11 +9,8 @@
 <pre><code>
 def bar():
     return 1
-
-
 "%s %s" % bar()
 </code></pre>
-<p>Para corregirlo, debes reescribir los fragmentos de formateo de cadenas para
-  que cumplan con la <a href="https://docs.python.org/3/library/string.html#format-string-syntax">sintaxis de formateo</a>.</p>
+<p>La solución es reescribir el fragmento de formato de cadena para cumplir con la <a href="https://docs.python.org/3/library/string.html#format-string-syntax">sintaxis de formato</a>.</p>
 </body>
 </html>

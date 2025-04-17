@@ -1,9 +1,10 @@
 <html>
 <body>
-Reporta clases, interfaces y métodos que extienden, implementan o anulan elementos de API marcados con <code>@ApiStatus.NonExtendable</code>.
+Reporta las clases, interfaces y métodos que extienden, implementan o sobrescriben elementos de API marcados con <code>@ApiStatus.NonExtendable</code>.
 <p>
-  La anotación <code>@ApiStatus.NonExtendable</code> indica que la clase, interfaz o método <strong>no debe ser extendido, implementado o anulado</strong>.
-  Como es bastante común hacer un cast de dichas interfaces y clases en la implementación de la biblioteca interna, si un cliente proporciona una implementación diferente, obtendrá <code>ClassCastException</code>. Añadir nuevos métodos abstractos a dichas clases e interfaces romperá la compatibilidad con las implementaciones del cliente.
+  La anotación <code>@ApiStatus.NonExtendable</code> indica que una clase, interfaz o método <strong>no debe ser extendido, implementado o sobrescrito</strong>.
+  Es común que estas interfaces y clases se conviertan en implementaciones de biblioteca interna, por lo que si el cliente proporciona una implementación diferente, se obtendrá una <code>ClassCastException</code>.
+  Agregar nuevos métodos abstractos a este tipo de clases e interfaces romperá la compatibilidad con las implementaciones del cliente.
 </p>
 </body>
 </html>

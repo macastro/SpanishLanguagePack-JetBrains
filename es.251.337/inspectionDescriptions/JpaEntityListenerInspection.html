@@ -1,21 +1,18 @@
 <html>
 <body>
-Reporta los siguientes errores de especificación JPA:<br/>
+Informa de los siguientes errores de especificación JPA:<br/>
 <ul>
-  <li>Clases de listeners de entidades sin constructores públicos sin argumentos</li>
-  <li>Métodos de listeners de entidades con firmas incorrectas</li>
+  <li>Clases de escucha de entidades sin constructor público sin argumentos</li>
+  <li>Métodos de escucha de entidades con firma incorrecta</li>
 </ul><br/>
-
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   @Entity
   @EntityListeners(value = JavaEntityListener.class)
   class JavaEntity { ... }
-
   class JavaEntityListener {
-
     @PostLoad
-    void postLoad(String parameter) { ... } // Error: el método 'postLoad' debería tomar un parámetro de tipo 'Object' aquí
+    void postLoad(String parameter) { ... } // Error: el método 'postLoad' debe tener un parámetro de tipo 'Object' aquí
   }
 </code></pre>
 </body>

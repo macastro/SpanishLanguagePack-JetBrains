@@ -1,28 +1,27 @@
 <html>
 <body>
-Informa campos que se inicializan explícitamente con sus valores por defecto.
+Reporta campos que están explícitamente inicializados con sus valores predeterminados.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  clase Foo {
+  class Foo {
     int foo = 0;
     List bar = null;
   }
 </code></pre>
-<p>Después de que se ha aplicado la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class Foo {
     int foo;
     List bar;
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Usa los ajustes de la inspección para informar solo las inicializaciones explícitas con <code>null</code>, por ejemplo:
+  Usando la configuración de inspección, se pueden reportar solo las inicializaciones explícitas a <code>null</code>, por ejemplo:
 </p>
 <pre><code>
   class Foo {
     int foo = 0;     // sin advertencia
-    List bar = null; // advertencia de inicialización de campo redundante
+    List bar = null; // advertencia de inicialización redundante de campo
   }
 </code></pre>
 </body>

@@ -1,29 +1,26 @@
 <html>
 <body>
-Inspecciona las operaciones de acceso a los campos que no están calificadas con <code>this</code> u otro calificador.
+Informa sobre accesos a campos que no están calificados con <code>this</code> u otros calificadores.
 <p>
-  Algunos de los estilos de programación requieren que todas las operaciones de acceso a campos estén calificadas para evitar la confusión con el acceso a variables o parámetros locales.
+  Algunos estilos de codificación requieren que todos los accesos a campos estén calificados para evitar confusiones con variables locales o parámetros.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
     int foo;
-
     void bar() {
       foo += 1;
     }
   }
 </code></pre>
-<p>Después de que se aplique la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   class Foo {
     int foo;
-
     void bar() {
       this.foo += 1;
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

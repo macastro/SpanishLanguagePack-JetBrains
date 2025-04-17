@@ -1,15 +1,11 @@
 <html>
 <body>
-Informa iteraciones sobre <code>keySet()</code> de una instancia de <code>java.util.Map</code>,
-donde las llaves iteradas se usan para recuperar los valores del mapa.
+Informa sobre la iteración de <code>keySet()</code> en una instancia de <code>java.util.Map</code>, donde las claves iteradas se utilizan para recuperar valores del mapa.
 <p>
-  Tal iteración podría ser más eficiente cuando se reemplaza con una iteración sobre el
-  <code>entrySet()</code> o <code>values()</code> (si la llave no se usa realmente).
+  Este tipo de iteración puede ser más eficiente cuando se reemplaza por una iteración de <code>entrySet()</code> o <code>values()</code> (si las claves no se utilizan realmente).
 </p>
 <p>
-  De manera similar, <code>keySet().forEach(key -&gt; ...)</code>
-  se puede reemplazar con <code>forEach((key, value) -&gt; ...)</code> si los valores se recuperan
-  dentro de una lambda.
+  De manera similar, si se recuperan valores en un lambda, <code>keySet().forEach(key -&gt; ...)</code> puede reemplazarse por <code>forEach((key, value) -&gt; ...)</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -17,10 +13,9 @@ donde las llaves iteradas se usan para recuperar los valores del mapa.
    Object val = map.get(key);
   }
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   for (Object val : map.values()) {}
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

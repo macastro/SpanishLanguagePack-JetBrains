@@ -1,20 +1,17 @@
 <html>
 <body>
-Reporta los métodos <code>equals()</code> que no comprueban el tipo de su parámetro.
-<p>No poder comprobar el tipo del parámetro
-  en el método <code>equals()</code> puede tener como resultado errores latentes si el objeto se usa en una colección no tipada.</p>
+Informa sobre métodos <code>equals()</code> que no verifican el tipo de sus parámetros.
+<p>Cuando no se verifica el tipo del parámetro en el método <code>equals()</code>, pueden producirse errores potenciales si el objeto se utiliza en colecciones sin tipo.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class MyClass {
     int x;
-
     @Override
     public boolean equals(Object obj) {
-      // el método equals debe devolver false si obj no es MyClass
+      // Si obj no es de tipo MyClass, el método equals debería devolver false
       return ((MyClass)obj).x == x;
     }
   }
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

@@ -1,18 +1,17 @@
 <html>
 <body>
-Reporta campos de tipo <code>java.lang.ThreadLocal</code> que no están declarados como <code>static final</code>.
+Informa sobre campos de tipo <code>java.lang.ThreadLocal</code> que no están declarados como <code>static final</code>.
 <p>
-  En el caso más común, una instancia de <code>java.lang.ThreadLocal</code> asocia un estado a un subproceso.
-  Un campo de <code>java.lang.ThreadLocal</code> que no sea estático ni final asocia un estado a una combinación de instancia-subproceso.
-  Esto usualmente es innecesario y a menudo es un error que puede causar pérdidas de memoria y comportamiento incorrecto.
+  En el caso más común, las instancias de <code>java.lang.ThreadLocal</code> asocian estado con un hilo.
+  Los campos <code>java.lang.ThreadLocal</code> que no son static ni final asocian estado con una combinación de instancia y hilo.
+  Esto generalmente es innecesario y suele ser un error que puede provocar fugas de memoria y comportamiento incorrecto.
 </p>
 <p>
-  Se sugiere una corrección rápida para que el campo sea <code>static final</code>.
+  Se recomienda establecer el campo como <code>static final</code> mediante la corrección rápida.
 <p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   private ThreadLocal tl = ThreadLocal.withInitial(() -> Boolean.TRUE);
 </code></pre>
-<!-- tooltip end -->
 </body>
 </html>

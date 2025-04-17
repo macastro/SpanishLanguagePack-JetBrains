@@ -1,20 +1,19 @@
 <html>
 <body>
-Informa del uso de <code>java.awt.Insets</code> y <code>JBUI.insetsXyz()</code> que se pueden simplificar.
+Informa sobre usos simplificables de <code>java.awt.Insets</code> y <code>JBUI.insetsXyz()</code>.
 <p>
-  Las instancias de <code>Insets</code> no son compatibles con DPI, lo que puede provocar problemas de diseño de la interfaz de usuario.
+  Las instancias de <code>Insets</code> no son conscientes del DPI y pueden causar problemas en el diseño de la UI.
 </p>
 <p>
-  La corrección rápida realiza reemplazos por <code>JBUI.insets()</code> o simplifica la expresión.
+  La corrección rápida realizará el reemplazo o simplificará la expresión usando <code>JBUI.insets()</code>.
 </p>
-<p>Ejemplo:</p>
+<p>Ejemplos:</p>
 <pre><code lang="java">
-// Mal:
+// Incorrecto:
 Insets insets1 = new Insets(1, 2, 3, 4);
 Insets insets2 = new Insets(1, 2, 1, 2);
 Insets insets3 = new Insets(1, 0, 0, 0);
-
-// Bien:
+// Correcto:
 Insets insets1 = JBUI.insets(1, 2, 3, 4);
 Insets insets2 = JBUI.insets(1, 2);
 Insets insets3 = JBUI.insetsTop(1);

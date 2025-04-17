@@ -1,17 +1,16 @@
 <html>
 <body>
-Informa de los metacaracteres escapados.
-Algunos estilos de codificación de expresiones regulares especifican que los metacaracteres deben colocarse dentro de una clase de caracteres para que sea más fácil entender la expresión regular.
-Esta inspección no avisa sobre los metacaracteres <code>[</code>, <code>]</code> y <code>^</code> porque necesitarían un escape adicional dentro de una clase de caracteres.
+Reportar caracteres de escape.
+Algunos estilos de código de expresiones regulares especifican que los metacaracteres deben colocarse en clases de caracteres para hacer las expresiones regulares más comprensibles.
+Esta inspección no advierte sobre los metacaracteres <code>[</code>, <code>]</code> y <code>^</code>, ya que estos caracteres pueden requerir escape adicional dentro de las clases de caracteres.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   \d+\.\d+
 </code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   \d+[.]\d+
 </code></pre>
-<!-- tooltip end -->
-<p><small>Novedad de 2017.1</small>
+<p><small>Cambios en 2017.1</small>
 </body>
 </html>

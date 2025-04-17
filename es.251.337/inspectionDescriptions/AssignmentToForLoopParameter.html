@@ -1,39 +1,37 @@
 <html>
 <body>
-Reporta asignaciones o modificaciones a un parámetro de ciclo <code>for</code> dentro del cuerpo del ciclo.
-<p>Aunque a veces es intencional, esta construcción puede ser confusa y, a menudo, es el resultado de un error tipográfico o una variable incorrecta que se está utilizando.</p>
-<p>La corrección rápida agrega una declaración de una nueva variable.</p>
+Informa sobre asignaciones o modificaciones del parámetro del bucle en el cuerpo de un bucle <code>for</code>.
+<p>Aunque a veces es intencional, esta estructura puede ser confusa y generalmente es el resultado de errores tipográficos o el uso de variables incorrectas.</p>
+<p>La corrección rápida añade una declaración para la nueva variable.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   for (String s : list) {
-    // Advertencia: s se modifica dentro del ciclo
+    // Advertencia: s se modifica dentro del bucle
     s = s.trim();
     System.out.println("String: " + s);
   }
 </code></pre>
-<p>Después de que se aplica la corrección rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   for (String s : list) {
     String trimmed = s.trim();
     System.out.println("String: " + trimmed);
   }
 </code></pre>
-<p>No se informan las asignaciones en ciclos <code>for</code> básicos sin una declaración de actualización.
-  En tales casos, la asignación probablemente sea intencional y no se puede mover fácilmente a la parte de actualización del ciclo <code>for</code>.</p>
+<p>No se informan las asignaciones en bucles <code>for</code> básicos sin declaración de actualización.
+  En estos casos, la asignación es probablemente intencionada y no se puede mover fácilmente a la parte de actualización del bucle <code>for</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   for (int i = 0; i &lt; list.size(); ) {
     if (element.equals(list.get(i))) {
       list.remove(i);
     } else {
-      // no se informa la modificación del parámetro de ciclo for
-      // ya que no hay declaración de actualización
+      // No se informa la modificación del parámetro del bucle for
+      // porque no hay declaración de actualización
       i++;
     }
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Use la opción <b>Comprobar parámetros de ciclo 'for' mejorado</b> para especificar si las modificaciones de los parámetros de ciclo <code>for</code> mejorado
-  también deben informarse.</p>
+<p>Utilice la opción <b>Verificar parámetros de bucle 'for' mejorado</b> para especificar si también se deben informar las modificaciones de los parámetros en bucles <code>for</code> mejorados.</p>
 </body>
 </html>

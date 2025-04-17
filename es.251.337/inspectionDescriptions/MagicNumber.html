@@ -1,6 +1,8 @@
 <html>
 <body>
-Informa "números mágicos": literales numéricos que no tienen un nombre asignado por una declaración de constante. <p>El uso de números mágicos puede provocar código poco claro, así como errores si se modifica un número mágico en una ubicación pero permanece sin modificar en otra. Los números 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 1000, 0L, 1L, 2L, 0.0, 1.0, 0.0F y 1.0F no son informados por esta inspección.</p> <p>Ejemplo:</p>
+Reporta "números mágicos": literales numéricos que no están declarados como constantes.
+<p>El uso de números mágicos hace que el código sea menos claro y puede provocar errores si el número se cambia en un lugar pero permanece igual en otro. Esta inspección no reporta los números 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 1000, 0L, 1L, 2L, 0.0, 1.0, 0.0F y 1.0F.</p>
+<p>Ejemplo:</p>
 <pre><code>
   void checkFileSize(long bytes) {
     if (bytes > 1_048_576) {
@@ -8,23 +10,20 @@ Informa "números mágicos": literales numéricos que no tienen un nombre asigna
     }
   }
 </code></pre>
-<p>Una solución rápida introduce una nueva constante:</p>
+<p>La corrección rápida introduce una nueva constante:</p>
 <pre><code>
   static final int MAX_SUPPORTED_FILE_SIZE = 1_048_576;
-
   void checkFileSize(long bytes) {
     if (bytes > MAX_SUPPORTED_FILE_SIZE) {
       throw new IllegalArgumentException("too big");
     }
   }
 </code></pre>
-<!-- tooltip end -->
-<p>Configurar la inspección:</p>
+<p>Configuración de la inspección:</p>
 <ul>
-  <li>Utilice la opción <b>Ignorar constantes en métodos 'hashCode()'</b> para desactivar esta inspección dentro de los métodos <code>hashCode()</code>.</li>
-  <li>Utilice la opción <b>Ignorar en anotaciones</b> para ignorar los números mágicos en las anotaciones.</li>
-  <li>Utilice la opción <b>Ignorar la capacidad inicial para StringBuilders y Collections</b> para ignorar los números mágicos utilizados como capacidad inicial al construir objetos <code>Collection</code>, <code>Map</code>, <code>StringBuilder</code> o <code>StringBuffer</code>.</li>
+  <li>Use la opción <b>Ignorar constantes en el método 'hashCode()'</b> para deshabilitar esta inspección en el método <code>hashCode()</code>.</li>
+  <li>Use la opción <b>Ignorar en anotaciones</b> para ignorar números mágicos en anotaciones.</li>
+  <li>Use la opción <b>Ignorar capacidad inicial de StringBuilders y Collections</b> para ignorar números mágicos usados como capacidad inicial al construir objetos <code>Collection</code>, <code>Map</code>, <code>StringBuilder</code> o <code>StringBuffer</code>.</li>
 </ul>
-
 </body>
 </html>

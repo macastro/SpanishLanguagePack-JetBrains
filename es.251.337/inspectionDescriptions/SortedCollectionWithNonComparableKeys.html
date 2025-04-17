@@ -1,17 +1,16 @@
 <html>
 <body>
-Reporta la construcción de colecciones ordenadas, como <code>TreeSet</code>, que dependen de un ordenamiento natural, cuyo tipo de elemento no implementa la interfaz <code>Comparable</code>.
-<p>Es poco probable que tal colección funcione correctamente.</p>
+Informa sobre estructuras de colecciones ordenadas, como <code>TreeSet</code>, que dependen del orden natural y cuyos tipos de elementos no implementan la interfaz <code>Comparable</code>.
+<p>Es poco probable que estas colecciones funcionen correctamente.</p>
 <p>
- Puede haber un falso positivo si el tipo de elemento de la colección es un supertipo no comparable, pero la colección está pensada para contener únicamente subtipos comparables. Incluso si éste es el caso, es mejor acotar el tipo de elemento de la colección o declarar el supertipo como <code>Comparable</code>, ya que el enfoque mencionado es propenso a errores.
-</p>
-<!-- tooltip end -->
-<p>
-  La inspección también reporta casos cuando el elemento de la colección es un parámetro de tipo que no está declarado como <code>extends Comparable</code>.
-  Puedes suprimir las advertencias sobre los parámetros de tipo utilizando la opción provista (por ejemplo, para mantener la compatibilidad con la API).
+  Pueden producirse falsos positivos cuando el tipo de elemento de la colección es un tipo padre no comparable, pero la colección está destinada a contener solo subtipos comparables. Incluso en este caso, es mejor restringir el tipo de elemento de la colección o declarar el tipo padre como <code>Comparable</code>, ya que el enfoque anterior es propenso a errores.
 </p>
 <p>
-  <small>Nuevo en 2018.3</small>
+  La inspección también informa sobre casos donde los elementos de la colección son parámetros de tipo que no están declarados como <code>extends Comparable</code>.
+  Puede usar la opción proporcionada para suprimir las advertencias sobre parámetros de tipo (por ejemplo, para mantener la compatibilidad de la API).
+</p>
+<p>
+  <small>Novedades en 2018.3</small>
 </p>
 </body>
 </html>

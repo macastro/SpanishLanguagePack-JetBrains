@@ -1,7 +1,7 @@
 <html>
 <body>
 Reporta sentencias <code>if</code> con demasiadas ramas.
-Dichas sentencias pueden resultar confusas y a menudo son el síntoma de niveles inadecuados de abstracción de diseño.
+Este tipo de sentencias pueden ser confusas y generalmente indican una abstracción insuficiente en el diseño.
 <p><b>Ejemplo:</b></p>
 <pre>
 <code>
@@ -12,12 +12,11 @@ if (a) {
 } else if (c) {
   print "baz"
 } else if (d) {
-  print "Demasiadas ramas"
+  print "Too many branches"
 }
 </code>
 </pre>
-<!-- tooltip end -->
 <p>
- Utiliza el campo <b>Número máximo de ramas</b> para especificar el número máximo de ramas esperado.
+Utiliza el campo <b>número máximo de ramas</b> para especificar la cantidad máxima esperada de ramas.
 </body>
 </html>

@@ -1,28 +1,26 @@
 <html>
 <body>
-Informa sobre recursos de socket que no se cierran de forma segura. Los recursos de socket informados por esta inspección incluyen <code>java.net.Socket</code>,
-<code>java.net.DatagramSocket</code>, y <code>java.net.ServerSocket</code>.
+Informa sobre recursos de socket que no se han cerrado de manera segura. Esta comprobación reporta recursos de socket que incluyen <code>java.net.Socket</code>, <code>java.net.DatagramSocket</code> y <code>java.net.ServerSocket</code>.
 <p>
-  De manera predeterminada, la inspección asume que los recursos pueden ser cerrados por cualquier método con 'close' o 'cleanup' en su nombre.
+  Por defecto, esta comprobación asume que los recursos pueden ser cerrados por cualquier método que contenga 'close' o 'cleanup' en su nombre.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   byte[] getMessage(ServerSocket socket) throws IOException {
-    Socket client = socket.accept(); //socket no está cerrado
+    Socket client = socket.accept(); //socket no cerrado
     return client.getInputStream().readAllBytes();
   }
 </code></pre>
-<!-- tooltip end -->
 <p>
-  Utiliza las siguientes opciones para configurar la inspección:
+  Configure la comprobación con las siguientes opciones:
 </p>
 <ul>
   <li>
-    Si se permite que se abra un socket dentro de un bloque <code>try</code>.
-    Este estilo es menos deseable porque es más prolijo que abrir un recurso frente a un bloque <code>try</code>.
+    Si se permite abrir sockets dentro de un bloque <code>try</code>.
+    Este estilo es menos preferible ya que es más verboso que abrir el recurso antes del bloque <code>try</code>.
   </li>
   <li>
-    Si el recurso puede ser cerrado por cualquier llamada a método con el recurso pasado como argumento.
+    Si el recurso puede ser cerrado mediante cualquier llamada a método que tome el recurso como argumento.
   </li>
 </ul>
 </body>

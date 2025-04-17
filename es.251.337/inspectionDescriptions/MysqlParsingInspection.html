@@ -1,7 +1,7 @@
 <html>
 <body>
-Reporta usos inválidos de UNION en consultas.
-<p>La inspección funciona en versiones de MySQL anteriores a la 8.0.</p>
+Uso inválido de UNION en la consulta.
+<p>Esta comprobación se aplica a versiones de MySQL anteriores a 8.0.</p>
 <p>Ejemplo (MySQL):</p>
 <pre><code lang="mysql">
 SELECT * FROM (SELECT 1 UNION (SELECT 1 UNION SELECT 2)) a;

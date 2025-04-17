@@ -1,26 +1,22 @@
 <html>
 <body>
-Informa sobre los bloques de texto con sangría que utilizan tanto espacios como tabulaciones.
-Estos casos producen resultados inesperados porque los espacios y las tabulaciones se tratan por igual en el procesamiento de bloques de texto.
-<p>En el siguiente ejemplo, los espacios y tabulaciones se visualizan como <code>·</code> y <code>␉</code> respectivamente,
-y una tabulación es igual a 4 espacios en el editor.</p>
+Reporta bloques de texto que utilizan simultáneamente espacios y tabulaciones para la indentación.
+Dado que los espacios y tabulaciones son tratados de manera equivalente en los bloques de texto, estas situaciones pueden producir resultados inesperados.
+<p>En el siguiente ejemplo, los espacios y tabulaciones se representan como <code>·</code> y <code>␉</code> respectivamente, donde una tabulación equivale a 4 espacios en el editor.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 String colors = """
-········rojo
-␉   ␉   verde
-········azul""";
+········red
+␉   ␉   green
+········blue""";
 </code></pre>
-
-<p>Tras imprimir una cadena como esta, el resultado será:</p>
+<p>Al imprimir esta cadena, el resultado es:</p>
 <pre><code>
-······rojo
-verde
-······azul
+······red
+green
+······blue
 </code></pre>
-<p>El compilador eliminará una cantidad igual de espacios o tabulaciones del principio de cada línea,
-y algunas líneas mantendrán espacios iniciales.</p>
-<!-- tooltip end -->
-<p><small>Nuevo en 2021.1</small></p>
+<p>Después de que el compilador elimina la misma cantidad de espacios o tabulaciones del inicio de cada línea, algunas líneas conservarán espacios iniciales.</p>
+<p><small>Cambios más recientes en 2021.1</small></p>
 </body>
 </html>
