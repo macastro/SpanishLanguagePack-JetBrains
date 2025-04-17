@@ -1,0 +1,53 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+      Crea el cuerpo de un método <b><code>-description</code></b> sobreescrito cuando se genera,
+      por ejemplo, al llamar a la acción <b>Código | Generar | -description</b>.<br>
+      La plantilla es editable. Junto con las expresiones y comentarios de Objective-C, puede usar variables predefinidas que
+      se expandirán a los valores correspondientes.</font>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas tomarán los siguientes valores:</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Una llamada al método superior, para métodos <b>void</b> — <code>[<b>super</b> <i>nombreMétodo</i>]</code> con o sin parámetros;
+    para otros métodos — <code><b>return</b> [<b>super</b> <i>nombreMétodo</i>]</code> con o sin parámetros
+    </font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El tipo de retorno del método creado</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El valor retornado por el método por defecto</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CONTAINING_CLASS}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre de la clase donde se sobreescribe el método</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CUSTOM_CODE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El cuerpo del método generado</font></td>
+  </tr>
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Todas las variables predefinidas de la plantilla <b>Encabezado de Archivo C</b> (la pestaña <b>Incluye</b>) también están disponibles
+      (<font face="verdana" size="-2"><b>${USER}</b></font>,
+      <font face="verdana" size="-2"><b>${DATE}</b></font>,
+      etc.)</font>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

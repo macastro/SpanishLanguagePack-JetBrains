@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa de sentencias <code>continue</code> con etiquetas.
+<p>Las sentencias <code>continue</code> con etiqueta complican el refactorizado y pueden llevar a confusión.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  void handle(List&lt;String&gt; strs) {
+    exterior:
+    for (String s: strs) {
+      for (char ch : s.toCharArray()) {
+        if ('s' == ch) continue exterior;
+        handleChar(ch);
+      }
+    }
+  }
+</code></pre>
+</body>
+</html>

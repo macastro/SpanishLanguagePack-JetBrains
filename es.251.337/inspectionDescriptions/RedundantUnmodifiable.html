@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta las llamadas redundantes a las implementaciones de colecciones inmutables de la
+clase <code>Collections</code>.
+<p>Si el argumento que se pasa a una implementación de colección inmutable ya es inmutable, tal implementación se vuelve redundante.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  List&lt;String&gt; x = Collections.unmodifiableList(Collections.singletonList("abc"));
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  List&lt;String&gt; x = Collections.singletonList("abc");
+</code></pre>
+<p>Con el fin de detectar los métodos que devuelven colecciones inmutables, la
+inspección usa las anotaciones <code>org.jetbrains.annotations.Unmodifiable</code>
+y <code>org.jetbrains.annotations.UnmodifiableView</code>.
+Úsalas para extender la inspección a tus propias implementaciones de colecciones inmutables.
+</p>
+<!-- tooltip end -->
+<p><small>Novedad en 2020.3</small></p>
+</body>
+</html>

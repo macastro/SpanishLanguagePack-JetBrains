@@ -1,0 +1,39 @@
+<html>
+<body>
+<p>
+  Reporta los usos de <code>self</code> como calificador donde no es requerido por un cierre de escape.
+</p>
+<p>
+  Sugiere eliminar <code>self</code> redundante.
+</p>
+<!-- tooltip end -->
+<p>
+  <b>Ejemplo:</b>
+</p>
+<pre><code>
+  struct URL {
+      func loadAsync() {
+          print(self.path)
+
+          DispatchQueue.global().async {
+              self.loadSync()
+          }
+      }
+  }
+</code></pre>
+<p>
+  Después de que la corrección rápida sea aplicada:
+</p>
+<pre><code>
+  struct URL {
+      func loadAsync() {
+          print(path)
+
+          DispatchQueue.global().async {
+              loadSync()
+          }
+      }
+  }
+</code></pre>
+</body>
+</html>

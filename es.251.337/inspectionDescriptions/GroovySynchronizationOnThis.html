@@ -1,0 +1,9 @@
+<html>
+<body>
+Reportes de sincronización que utilizan <code>this</code> como su expresión de bloqueo.
+<p>
+  Construcciones informadas incluyen bloques <code>synchronized</code> que bloquean <code>this</code> y llamadas a <code>wait()</code> <code>notify()</code> o <code>notifyAll()</code> que se dirigen a <code>wait()</code>.
+  Estas construcciones, como métodos sincronizados, dificultan el seguimiento de quién está bloqueando un objeto determinado y posibilitan ataques de "denegación de servicio" en los objetos. Como alternativa, considera bloquear una variable de instancia privada, cuyo acceso se puede controlar completamente.
+</p>
+</body>
+</html>

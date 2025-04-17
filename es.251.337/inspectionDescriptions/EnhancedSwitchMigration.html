@@ -1,0 +1,44 @@
+<html>
+<body>
+Informa las sentencias <code>switch</code> que se pueden reemplazar automáticamente con sentencias o expresiones <code>switch</code> mejoradas.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  double getPrice(String fruit) {
+    // La sentencia switch se puede reemplazar con 'switch' mejorada
+    switch (fruit) {
+      case "Apple":
+        return 1.0;
+      case "Orange":
+        return 1.5;
+      case "Mango":
+        return 2.0;
+      default:
+        throw new IllegalArgumentException();
+    }
+  }
+</code></pre>
+<p>Después de aplicar la revisión rápida:</p>
+<pre><code>
+  double getPrice(String fruit) {
+    return switch (fruit) {
+      case "Apple" -> 1.0;
+      case "Orange" -> 1.5;
+      case "Mango" -> 2.0;
+      default -> throw new IllegalArgumentException();
+    };
+  }
+  </code></pre>
+<!-- tooltip end -->
+<p>
+<ul>
+  <li>
+    Usa la opción <b>Mostrar advertencia solo si la conversión a expresión es posible</b> para no advertir sobre la conversión a sentencia <code>switch</code>.
+  </li>
+  <li>
+    Usa la opción <b>Número máximo de sentencias en una rama para convertir a expresión switch</b> para advertir sobre la conversión a expresión solo
+    si cada rama tiene menos del número dado de sentencias.
+  </li>
+</ul>
+<p><small>Nuevo en 2019.1</small></p>
+</body>
+</html>

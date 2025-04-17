@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta campos que no tienen garantía de ser inicializados después de que el objeto se deserializa por el método <code>readObject()</code>.
+<p>La inspección no reporta campos transitorios.</p>
+<p>
+  Nota: Esta inspección usa un algoritmo de flujo de control muy conservador, y puede reportar campos como no inicializados de forma incorrecta.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class DataObject implements Serializable {
+  String s; // s no se inicializa en readObject
+  int i;
+
+  private void readObject(ObjectInputStream stream) throws IOException {
+    i = stream.readInt();
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

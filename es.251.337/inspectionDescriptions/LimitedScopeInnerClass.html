@@ -1,0 +1,30 @@
+<html>
+<body>
+Informa clases locales.
+<p>Una clase local es una clase anidada nombrada declarada dentro de un bloque de código.
+Las clases locales son poco comunes y, por lo tanto, pueden resultar confusas.
+Además, algunos estándares de código desaconsejan el uso de clases locales.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class Ejemplo {
+    void test() {
+        class Local { // aquí
+        }
+        new Local();
+    }
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+class Ejemplo {
+    void test() {
+        new Local();
+    }
+
+    private static class Local { // aquí
+    }
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

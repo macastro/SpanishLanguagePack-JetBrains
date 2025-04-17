@@ -1,0 +1,16 @@
+<html>
+<body>
+Reporta llamadas a métodos mutadores (como `fill`, `reverse`, `shuffle`, `sort`) de Java en una colección inmutable de Kotlin.
+<p>Esto puede producir una `UnsupportedOperationException` en tiempo de ejecución.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import java.util.Collections
+
+  fun test() {
+      val listaInmutable = listOf(1, 2)
+      Collections.reverse(listaInmutable)
+  }
+</code></pre>
+<p>Para solucionar el problema, haz que la lista sea mutable.</p>
+</body>
+</html>

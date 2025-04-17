@@ -1,0 +1,15 @@
+<html>
+<body>
+Reporta bloques <code>synchronized</code> que se bloquean en una instancia de <code>java.util.concurrent.locks.Lock</code>.
+Dicha sincronización es casi ciertamente no intencionada, y en cambio deberían utilizarse versiones adecuadas de <code>.lock()</code> y <code>.unlock()</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  final ReentrantLock lock = new ReentrantLock();
+
+  public void foo() {
+    synchronized (lock) {}
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

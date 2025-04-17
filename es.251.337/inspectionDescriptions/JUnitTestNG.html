@@ -1,0 +1,29 @@
+<html>
+<body>
+Inspecciona cualquier clase de prueba basada en JUnit que se pueda convertir en una prueba unitaria basada en TestNG.
+<p>Ejemplo:</p>
+<pre><code>
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class ExampleTest {
+  @Test
+  public void testExample(){
+    assertEquals(2 + 2, 4);
+  }
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class ExampleTest {
+  @Test
+  public void testExample(){
+    Assert.assertEquals(4, 2 + 2);
+  }
+}
+</code></pre>
+</body>
+</html>

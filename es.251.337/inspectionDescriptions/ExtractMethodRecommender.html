@@ -1,0 +1,13 @@
+<html>
+<body>
+Propone extraer un fragmento de código a un método diferente para hacer el código más legible. 
+Esta inspección cuenta con numerosos heurísticos para seleccionar buenos candidatos para la extracción, incluidos:
+<ul>
+  <li>El fragmento extraído no tiene flujo de control no local</li>
+  <li>El fragmento extraído tiene exactamente una variable de salida</li>
+  <li>No hay usos similares de la variable de salida dentro y fuera del fragmento extraído</li>
+  <li>El fragmento extraído solo tiene unos pocos parámetros de entrada (3 o menos de manera predeterminada; configurable en opciones de inspección)</li>
+  <li>La longitud del fragmento extraído no es menor que la longitud configurada (500 caracteres de manera predeterminada), pero no es más del 60% de lo que contiene el cuerpo del método</li>
+</ul>
+</body>
+</html>

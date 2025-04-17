@@ -1,0 +1,21 @@
+<html>
+<body>
+<code>ActionManager.createActionToolbar()</code> y <code>ActionManager.createActionPopupMenu()</code> les pasa un parámetro <code>place</code> no especificado.
+<p>
+  Debe especificar un <code>place</code> apropiado para poder diferenciar el uso de la acción por <code>AnActionEvent.getPlace()</code> en <code>update()/actionPerformed()</code>.
+</p>
+<p>
+Ejemplo:
+<pre><code lang="java">
+// Mala forma:
+actionManager.createActionToolbar("", group, false);
+actionManager.createActionToolbar("unknown", group, false);
+actionManager.createActionPopupMenu(ActionPlaces.UNKNOWN, group);
+
+// Buena forma:
+actionManager.createActionToolbar("MyPlace", group, false);
+actionManager.createActionPopupMenu(ActionPlaces.EDITOR_TOOLBAR, group);
+</code></pre>
+</p>
+</body>
+</html>

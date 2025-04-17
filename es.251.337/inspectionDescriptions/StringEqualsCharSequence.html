@@ -1,0 +1,22 @@
+<html>
+<body>
+<code>CharSequence</code> informa de la llamada a <code>String.equals()</code> que incluye un argumento.
+<p>
+  <code>String.equals()</code> únicamente puede devolver <code>true</code> para un argumento de <code>String</code>. Para comparar el contenido de <code>String</code> con un argumento que no sea <code>String</code> de <code>CharSequence</code>, utilice el método <code>contentEquals()</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  boolean equals(String s, CharSequence ch) {
+    return s.equals(ch);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  boolean equals(String s, CharSequence ch) {
+    return s.contentEquals(ch);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+<small>Novedad en 2017.3</small>
+</body>
+</html>

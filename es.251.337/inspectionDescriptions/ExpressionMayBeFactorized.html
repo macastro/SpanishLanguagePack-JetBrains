@@ -1,0 +1,17 @@
+<!-- Copyright 2000-2021 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. -->
+<html>
+<body>
+Informa expresiones que pueden ser factorizadas, es decir, reorganizadas para extraer un factor común.
+Esto reduce la redundancia y podría mejorar la legibilidad de su código.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  a &amp;&amp; b || a &amp;&amp; c
+</code></pre>
+<p>Después de que se aplica la solución rápida:</p>
+<pre><code>
+  a &amp;&amp; (b || c)
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2021.3</small></p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<body>
+Informa el innecesario calificador <code>this</code>
+<p>
+  El uso de <code>this</code> para desambiguación de una referencia de código es desaconsejado por muchos estilos de codificación
+  y puede fácilmente volverse innecesario
+  mediante refactorizaciones automáticas.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+    int x;
+    void foo() {
+      this.x = 2;
+    }
+  }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  class Foo {
+    int x;
+    void foo() {
+      x = 2;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Usa las configuraciones de inspección para ignorar asignaciones a campos.
+  Por ejemplo, <code>this.x = 2;</code> no será reportado, pero <code>int y = this.x;</code> sí lo será.
+<p>
+</body>
+</html>

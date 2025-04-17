@@ -1,0 +1,35 @@
+<html>
+<body>
+Persiste informes de descriptores XML de ORM que no pueden resolverse dentro del origen de datos configurado y sugiere actualizar el origen de datos o asignar uno diferente.
+
+<p><b>Tabla de base de datos de ejemplo:</b></p>
+<pre><code lang="sql">
+  CREATE TABLE DATA_TABLE (
+    ID INTEGER,
+    DATA VARCHAR(100)
+  );
+</code></pre><br/>
+
+<p><b>Archivo JSP de ejemplo:</b></p>
+<pre><code lang="jsp">
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0"&gt;
+    &lt;entity name="JavaEntity" class="JavaEntity"&gt;
+        &lt;table name="UNKNOWN_TABLE"/&gt; // Error: tabla no resuelta
+        &lt;attributes&gt;
+          &lt;id name="id"&gt;
+            &lt;column name="ID" nullable="false"/&gt;
+          &lt;/id&gt;
+          &lt;basic name="UNKNOWN_COLUMN"&gt; // Error: columna no resuelta
+            &lt;column name="UNKNOWN_COLUMN" length="12"/&gt;
+          &lt;/basic&gt;
+        &lt;/attributes&gt;
+    &lt;/entity&gt;
+  &lt;/entity-mappings&gt;
+</code></pre><br/>
+<!-- tooltip end -->
+<p>
+  <b>NOTA:</b> El origen de datos puede configurarse mediante la acción "Asignar origen de datos".
+</p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<body>
+<p>Reporta métodos con una cláusula de parámetro vacía que sobrescribe métodos sin cláusulas de parámetro.</p>
+
+<p>La convención recomendada es usar un método sin cláusulas de parámetro siempre que no
+    haya parámetros y el método no tenga
+    <a href="https://es.wikipedia.org/wiki/Efecto_secundario_(inform%C3%A1tica)">efectos colaterales</a>.</p>
+
+<p>Esta convención promueve el <a href="https://es.wikipedia.org/wiki/Principio_de_acceso_uniforme">principio de acceso uniforme</a>,
+    que establece que el código del cliente no debe verse afectado por una decisión de implementar un atributo como un campo o un método.</p>
+
+<p>De acuerdo con el <a href="https://es.wikipedia.org/wiki/Principio_de_sustituci%C3%B3n_de_Liskov">principio de sustitución de Liskov</a>,
+    siempre que un método sobreescrito no tenga una cláusula de parámetro, el método que lo sobrescribe también debe declararse como un método sin efectos colaterales.</p>
+
+<p>La solución rápida elimina la cláusula de parámetro vacía.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  trait Base { def isOk: Boolean }
+
+  class Impl extends Base {
+    override def isOk(): Boolean = ???
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  trait Base { def isOk: Boolean }
+
+  class Impl extends Base {
+    override def isOk: Boolean = ???
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

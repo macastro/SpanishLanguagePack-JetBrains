@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta expresiones lambda cuyo número de declaraciones excede el máximo especificado.
+<p>Las expresiones lambda demasiado largas pueden generar confusión y a menudo es mejor extraer las declaraciones en un método separado.<p>
+<p>Las siguientes declaraciones no se cuentan:</p>
+<ul>
+  <li>declaraciones vacías (punto y coma)</li>
+  <li>declaraciones de bloques</li>
+  <li>declaraciones de inicialización de bucles &quot;for&quot;, es decir, &quot;int i =&gt; ...&quot; dentro de una declaración &quot;for(int i =&gt; ...;...)&quot;
+    </li>
+  <li>declaraciones de actualización de bucle &quot;for&quot;, es decir, &quot;i =+ 2&quot; dentro de una declaración &quot;(int i =&gt; ...;...; i =+ 2)&quot;
+    </li>
+</ul>
+<!-- tooltip end -->
+<p>Use el campo <b>Límite de declaraciones de fuentes sin comentarios</b> para especificar el número máximo permitido de declaraciones en una expresión lambda.<p>
+</body>
+</html>

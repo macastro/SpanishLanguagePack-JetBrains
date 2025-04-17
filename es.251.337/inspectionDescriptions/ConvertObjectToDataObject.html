@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>Informa los objetos que pueden convertirse a objetos de datos</p>
+<p>Los objetos de datos autogeneran <code>toString</code>, <code>equals</code> y <code>hashCode</code></p>
+<p>La inspección sugiere convertir objetos a objetos de datos en 2 casos:</p>
+<ul>
+    <li>Cuando <code>toString</code> personalizado devuelve el nombre de la clase</li>
+    <li>Cuando el objeto hereda la clase/interfaz <code>sealed</code></li>
+</ul>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    object Foo {
+        override fun toString(): String = "Foo"
+    }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+    data object Foo
+</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de lenguaje Kotlin del proyecto o módulo es 1.9 o superior</p>
+</body>
+</html>

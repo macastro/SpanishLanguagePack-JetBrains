@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa de secuencias de escape de caracteres redundantes que se pueden reemplazar por caracteres sin escape conservando el significado.
+Muchas secuencias de escape que son necesarias fuera de una clase de caracteres son redundantes dentro de los corchetes <code>[]</code> de una clase de caracteres.
+<p>
+  Aunque las llaves de apertura sin escape <code>{</code> fuera de las clases de caracteres están permitidas en algunos dialectos (JavaScript, Python, etc.),
+  puede causar confusión y hacer que el patrón sea menos portable, porque hay dialectos que requieren escapar las llaves como caracteres.
+  Por esta razón, la inspección no informa de las llaves de apertura con escape.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  \-\;[\.]
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  -;[.]
+</code></pre>
+<!-- tooltip end -->
+<p>
+La opción <b>Ignorar corchetes cerrados '}' y ']' con escape</b> especifica si se debe informar de <code>\}</code> y <code>\]</code> fuera de una clase de caracteres
+cuando el dialecto RegExp permite que no tengan escape.
+<p><small>Nuevo en 2017.3</small>
+</body>
+</html>

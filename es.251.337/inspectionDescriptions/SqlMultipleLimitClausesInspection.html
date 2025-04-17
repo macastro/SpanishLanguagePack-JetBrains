@@ -1,0 +1,14 @@
+<html>
+<body>
+Inspecciona los usos de múltiples cláusulas limitantes de filas en una sola consulta.
+
+<p>Ejemplo (Microsoft SQL Server):</p>
+<pre><code>create table foo(a int);
+select top 1 * from foo order by a offset 10 rows fetch next 20 rows only;</code></pre>
+
+<p>La cláusula SELECT TOP se usa para especificar que solo se debe
+devolver 1 registro. La cláusula FETCH especifica el número de filas a devolver después
+de que la cláusula OFFSET haya sido procesada. Pero como ya tenemos la cláusula limitante SELECT TOP, la cláusula FETCH podría ser redundante.
+</p>
+</body>
+</html>

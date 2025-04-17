@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa sobre un comentario regular que pertenece a un campo, método o clase que puede ser reemplazado por un comentario Javadoc.
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Main {
+    /*
+    * Hola,
+    */
+    // Mundo!
+    void f() {
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  public class Main {
+    /**
+     * Hola,
+     * Mundo!
+     */
+    void f() {
+    }
+  }
+</code></pre>
+</body>
+</html>

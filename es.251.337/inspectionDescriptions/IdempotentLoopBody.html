@@ -1,0 +1,21 @@
+<html>
+<body>
+ Informa sobre bucles cuyas segundas y todas las iteraciones posteriores no producen ningún efecto secundario adicional que no sea el producido por la primera iteración, lo que puede indicar un error de programación.
+<p>Estos bucles pueden iterar solo cero, una, o un número infinito de veces.
+ Si el número infinito de veces es inalcanzable, este bucle se puede reemplazar con una sentencia <code>if</code>.
+  De lo contrario, existe la posibilidad de que el programa se atasque.</p>
+<p>Ejemplo:</p>
+<pre><code>
+    public void foo(String baseName, String names) {
+        int suffix = 1;
+        String name = baseName;
+        while (names.contains(name)) {
+            // error: suffix no se actualiza, lo que hace que el cuerpo del bucle sea idempotente
+            name = baseName + suffix;
+        }
+    }
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2018.1</small></p>
+</body>
+</html>

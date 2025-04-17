@@ -1,0 +1,12 @@
+<html>
+<body>
+Reporta recursos Java ME <code>javax.microedition.io.Connection</code> que no son abiertos antes de un bloque <code>try</code> y cerrados en el bloque <code>finally</code> correspondiente. Tales recursos pueden ser fugados inadvertidamente si es lanzada una excepción antes que el recurso sea cerrado.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void example() throws IOException {
+    Connection c = Connector.open("foo");
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

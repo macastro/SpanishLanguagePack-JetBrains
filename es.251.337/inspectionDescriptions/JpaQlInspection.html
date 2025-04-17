@@ -1,0 +1,20 @@
+<html>
+<body>
+Inspecciona los siguientes errores dentro de consultas Persistence QL:
+<ul>
+  <li>Tipos de expresiones que no coinciden</li>
+  <li>Parámetros incorrectos</li>
+  <li>Condiciones vacías o constantes</li>
+  <li>Símbolos sin resolver</li>
+</ul>
+
+<p><b>Consultas de ejemplo:</b></p>
+<pre><code lang="sql">
+SELECT OBJECT(e) FROM JavaEntity e WHERE TRUE // Aviso: condición constante
+
+SELECT OBJECT(e) FROM JavaEntity e WHERE e.id BETWEEN 0 AND '2' // Error: se esperaba un valor numérico pero se encontró una cadena
+
+SELECT e from JavaEntity e where e.id=?1 and e.name=?3 // Error: solo hay 2 parámetros de consulta reales
+</code></pre>
+</body>
+</html>

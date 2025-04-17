@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa de expresiones de alias que duplican nombres de columnas en tablas y que podrían ser redundantes.
+<p>Ejemplo (PostgreSQL):</p>
+<pre><code>CREATE TABLE foo(a INT, b INT);
+
+SELECT * FROM foo foo(a, b);
+SELECT * FROM foo foo(a);
+SELECT * FROM foo foo(x);
+SELECT * FROM foo foo(x, y);</code></pre>
+<p>Los dos primeros alias utilizan los mismos nombres de columna que la tabla <code>foo</code>. Se consideran redundantes porque los nombres de columna son idénticos.</p>
+</body>
+</html>

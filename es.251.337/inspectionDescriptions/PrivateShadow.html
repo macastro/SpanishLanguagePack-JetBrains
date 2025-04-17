@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>El parámetro de la clase sombrea la variable de superclase</title>
+</head>
+
+<body>
+    <p>Informa de los parámetros de clase que sombrean una <code>var</code> de superclase.</p>
+    <p><b>Ejemplo:</b></p>
+    <pre>
+class Animal {
+  var name: String = ""
+}
+
+class Cat(name: String = "") extends Animal {
+  // Convierte `name` en un val private[this] que sombrea la var
+  def usage = name
+}
+</pre>
+    <p>Al extender una clase con una <code>var</code> no <code>private</code>, el usuario podría esperar que un parámetro de clase de la subclase anulara la <code>var</code> de la superclase, pero de hecho solo la sombreará. Esto a veces puede provocar errores no triviales.</p>
+    <p>Tenga en cuenta que el resaltado aparecerá solo si el valor se utiliza realmente.</p>
+    <!-- tooltip end -->
+</body>
+
+</html>

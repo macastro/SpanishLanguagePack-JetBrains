@@ -1,0 +1,26 @@
+<html>
+<body>
+<code>if</code>&mdash;<code>else</code> La inspección reporta claves redundantes <code>else</code> en las cadenas de sentencias y sentencias.
+<p>
+La clave <code>else</code> es redundante cuando todas las ramas anteriores terminan en sentencias <code>return</code>, <code>throw</code>, <code>break</code> o <code>continue</code>. En este caso, la sentencia de la rama <code>else</code> se puede mover después de la sentencia <code>if</code> y la clave <code>else</code> se puede eliminar.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  if (name == null) {
+      throw new IllegalArgumentException();
+  } else {
+    System.out.println(name);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  if (name == null) {
+    throw new IllegalArgumentException();
+  }
+  System.out.println(name);
+</code></pre>
+<!-- tooltip end -->
+<p>Deshabilita la opción <b>Reportar cuando no hay sentencias después de la sentencia 'if'</b> para ignorar los casos en que la sentencia <code>if</code>&mdash;<code>else</code> es la última sentencia en un bloque de código.</p>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa los tipos de parámetros especificados explícitamente en los establecedores de propiedades.
+<p>
+    El tipo de parámetro del establecedor siempre coincide con el tipo de propiedad, por lo que no es necesario que sea explícito.
+    La acción rápida 'Quitar especificación de tipo explícito' permite modificar el código en conformidad.
+</p>
+<p><b>Ejemplos:</b></p>
+<pre><code>
+  fun process(x: Int) {}
+
+  var x: Int = 0
+      set(value: Int) = process(value) // &lt;== Se puede omitir de forma segura la especificación 'Int'
+</code></pre>
+<p>Después de aplicar la acción rápida:</p>
+<pre><code>
+  fun process(x: Int) {}
+
+  var x: Int = 0
+      set(value) = process(value)
+</code></pre>
+</body>
+</html>

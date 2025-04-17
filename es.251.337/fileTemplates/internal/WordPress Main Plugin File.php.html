@@ -1,0 +1,112 @@
+<html>
+<body>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse; border-color:#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+      Una plantilla integrada para un archivo de plugin principal de WordPress. Se utiliza cada vez que crea un nuevo proyecto del tipo Plugin de WordPress.<br>
+      La plantilla es editable. Junto con las sentencias, expresiones y comentarios PHP, también puede usar las variables predefinidas que se enumeran a continuación. Cada variable se expande como macros al valor correspondiente.<br>
+      Mediante la directiva <b>#parse</b>, puede incluir plantillas de la pestaña <b>Incluye</b> especificando el nombre completo de la plantilla deseada como parámetro entre comillas.</font>
+    </td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse; border-color:#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${PLUGIN_NAME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del plugin actual derivado del nombre del directorio</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${FILE_NAME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del archivo actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de inicio de sesión del sistema del usuario actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Día actual del mes</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${PRODUCT_NAME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del IDE actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
+    </td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Signo de dólar, se evalúa como un carácter '$' simple.</font></td>
+  </tr>
+</table>
+
+</body>
+</html>

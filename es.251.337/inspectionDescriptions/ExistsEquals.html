@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>Informa sobre el uso de <code>exists</code> o <code>forall</code>
+  para localizar un elemento específico.</p>
+
+
+<p>La corrección rápida utiliza <code>contains</code> en su lugar.</p>
+
+<p>Ejemplo:</p>
+<pre><code>
+  set.exists(x => x == "a")
+  set.forall(x => x != "a")
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  set.contains("a")
+  !set.contains("a")
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

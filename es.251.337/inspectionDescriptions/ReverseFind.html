@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>Informa cuando una colección se invierte explícitamente antes de llamar a <code>find</code>.</p>
+
+<p> El arreglo rápido usará <code>xs.findLast(f)</code>, que puede ser más eficiente en algunos casos.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Seq(1, 2).reverse.find(_ == 2)
+</code></pre>
+<p>Después de que se aplique el arreglo rápido:</p>
+<pre><code>
+  Seq(1, 2).findLast(_ == 2)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

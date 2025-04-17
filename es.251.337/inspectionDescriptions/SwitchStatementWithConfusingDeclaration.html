@@ -1,0 +1,20 @@
+<html>
+<body>
+Reporta variables locales declaradas en una rama de una sentencia <code>switch</code> y usadas en otra rama. Estas declaraciones pueden resultar extremadamente confusas.
+<p>Ejemplo:</p>
+<pre><code>
+    switch(i) {
+      case 2:
+          int x = 0;
+          break;
+      case 3:
+          x = 3;
+          System.out.println(x);
+          break;
+    }
+</code></pre>
+<!-- tooltip end -->
+
+
+</body>
+</html>

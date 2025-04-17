@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta clases internas no estáticas que implementan el tipo <code>Serializable</code> y se declaran dentro de una clase que no implementa <code>Serializable</code>.
+<p>
+  Es poco probable que dichas clases se serialicen correctamente debido a referencias implícitas a la clase externa.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class A {
+    class Main implements Serializable {
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Usa las siguientes opciones para configurar la inspección:</p>
+<ul>
+  <li>
+    Lista las clases cuyos herederos no deben ser reportados por esta inspección.
+    Esto es para clases que heredan <code>Serializable</code> de una superclase pero no están pensadas para serialización.
+  </li>
+  <li>
+    Si ignorar o no clases anónimas <code>Serializable</code>.
+  </li>
+</ul>
+</body>
+</html>

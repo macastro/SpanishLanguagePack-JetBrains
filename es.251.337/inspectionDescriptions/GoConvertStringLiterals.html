@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa literales de cadena entre comillas dobles <a href="https://go.dev/ref/spec#String_literals">que se pueden convertir</a>
+a literales de cadena sin formato y literales de cadena sin formato que se pueden convertir a literales de cadena entre comillas dobles.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  var s = "Hola\n   \"Mundo\""
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  var s = `Hola
+   "Mundo"`
+</code></pre>
+<!-- tooltip end -->
+<p>Hay dos notas que debes tener en cuenta al convertir cadenas entre comillas dobles a cadenas sin formato:</p>
+<ul>
+  <li>De acuerdo con <a href="https://go.dev/ref/spec#String_literals">la especificación del lenguaje Go</a>, el carácter de retorno de carro
+    (<code>'\r'</code>) se descarta de los valores de cadena sin formato. Como no hay forma de mostrar el retorno de carro en cadenas sin formato,
+    descartamos los caracteres de retorno de carro al convertir una cadena entre comillas dobles a una cadena sin formato.</li>
+  <li>El carácter backtick (<code>'`'</code>) no puede existir en literales de cadena sin formato porque no hay forma de escaparlo. Por lo tanto, convertir
+  cadenas entre comillas dobles que contienen el carácter backtick a cadenas sin formato no es posible y resultará en un error de sintaxis. El usuario puede decidir deshacer el
+  conversión o utilizar alguna forma de concatenación para conservar el backtick en una cadena entre comillas dobles. Por ejemplo, <code>"`ab``"</code>
+  resultará en <code>`ab``</code>, que es sintácticamente incorrecto. El usuario puede deshacer
+  la operación o cambiar la cadena resultante a <code>`ab` + "`"</code>.</li>
+</ul>
+</body>
+</html>

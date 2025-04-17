@@ -1,0 +1,37 @@
+<html>
+<body>
+Informa los usos de <code>break</code> o <code>continue</code> dentro de lambdas de funciones parecidas a bucles.
+<p>
+    Las palabras clave <code>break</code> y <code>continue</code> siempre se aplican a los bucles reales (<code>for</code>,
+    <code>while</code>, <code>do-while</code>). <code>break</code> y <code>continue</code> nunca se aplican a ninguna función; por ejemplo,
+    <code>break</code> y <code>continue</code> no se aplican a <code>forEach</code>, <code>filter</code>, <code>map</code>.
+</p>
+<p>
+    El uso de <code>break</code> o <code>continue</code> dentro de una función similar a un bucle (por ejemplo, <code>forEach</code>) puede resultar confuso.
+    La inspección sugiere agregar una etiqueta para aclarar a qué declaración se aplican <code>break</code> o <code>continue</code>.
+</p>
+<p>
+    Como Kotlin no tiene un concepto de funciones similares a bucles, la inspección utiliza la heurística. Asume que las funciones que no
+    tienen uno de los contratos <code>callsInPlace(EXACTLY_ONCE)</code> o <code>callsInPlace(AT_LEAST_ONCE)</code> son funciones similares a bucles.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    for (file in files) {
+        file.readLines().forEach { line ->
+            if (line == commentMarkerLine) continue
+            println(line)
+        }
+    }
+</code></pre>
+<p>La solución rápida agrega etiquetas aclaratorias:</p>
+<pre><code>
+    loop@ for (file in files) {
+        file.readLines().forEach { line ->
+            if (line == commentMarkerLine) continue@loop
+            println(line)
+        }
+    }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

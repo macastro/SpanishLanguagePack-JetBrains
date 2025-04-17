@@ -1,0 +1,30 @@
+<html>
+<body>
+Informa sobre la discrepancia entre el nivel de un servicio ligero y sus constructores.
+<p>Se informan los siguientes problemas:</p>
+<ul>
+  <li>Una clase de servicio ligero que tiene un constructor con dos parámetros de tipo <code>com.intellij.openapi.project.Project</code> y <code>kotlinx.coroutines.CoroutineScope</code>, o un constructor con un parámetro de tipo <code>Project</code> que no está anotado como servicio de nivel de proyecto.
+  </li>
+  <li>Un servicio ligero anotado como servicio de nivel de aplicación que no tiene un constructor sin argumentos ni un constructor con un parámetro de tipo <code>CoroutineScope</code>.
+  </li>
+</ul>
+<p></p>
+<p>Ejemplo (Kotlin):</p>
+<pre><code lang="kotlin">
+@Service                              // Se sugiere especificar el parámetro 'Service.Level.PROJECT' en la anotación '@Service'
+class MyService(val project: Project) // Se sugiere eliminar el parámetro del constructor 'MyService'
+</code></pre>
+<p></p>
+<p>Después de aplicar la corrección rápida que sugiere especificar el parámetro 'Service.Level.PROJECT' en la anotación '@Service':</p>
+<pre><code lang="kotlin">
+@Service(Service.Level.PROJECT)
+class MyService(val project: Project)
+</code></pre>
+<p>Después de aplicar la corrección rápida que sugiere eliminar el parámetro del constructor 'MyService':</p>
+<pre><code lang="kotlin">
+@Service
+class MyService()
+</code></pre>
+<p><small>Novedad en 2023.2</small>
+</body>
+</html>

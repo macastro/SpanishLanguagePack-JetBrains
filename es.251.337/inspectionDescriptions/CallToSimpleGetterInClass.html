@@ -1,0 +1,47 @@
+<html>
+<body>
+Informa de llamadas a un simple getter de propiedad desde dentro de la clase de la propiedad.
+<p>
+  Un simple getter de propiedad se define como aquel que simplemente devuelve el valor de un campo,
+  y no hace otros cálculos. Tales llamadas a getters simples pueden ser alineadas de forma segura usando la corrección rápida.
+  Algunos estándares de codificación también sugieren evitar el uso de getters simples por razones de claridad del código.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Salient {
+    private String name;
+
+    public String getName() {
+      return name;
+    }
+
+    @Override
+    public String toString() {
+      return getName();
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  public class Salient {
+    private String name;
+
+    public String getName() {
+      return name;
+    }
+
+    @Override
+    public String toString() {
+      return name;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Utiliza las siguientes opciones para configurar el análisis:</p>
+<ul>
+  <li>Si informar solo llamadas getter en <code>this</code>, no en objetos del mismo tipo pasados como parámetro.</li>
+  <li>Si ignorar los getters no <code>private</code>.</li>
+</ul>
+
+</body>
+</html>

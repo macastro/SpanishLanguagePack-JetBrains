@@ -1,0 +1,11 @@
+<html>
+<body>
+<p>Informa tipos de retorno incorrectos de métodos <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/scheduling/annotation/Async.html">@Async</a>.</p>
+
+<p>Para las firmas de los métodos objetivo, se permiten tipos de parámetros al azar.
+  Sin embargo, el tipo de retorno debe ser <code>void</code> o <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html">Future</a>.
+  También es posible retornar el <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/util/concurrent/ListenableFuture.html">ListenableFuture</a> o <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html">CompletableFuture</a> más específico,
+  que permiten una interacción más enriquecedora con la tarea asíncrona y para composición inmediata con pasos de procesamiento adicionales.</p>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+<body>
+Se informa que el argumento genérico pasado a un tipo genérico no es un subtipo del límite superior esperado. El argumento genérico debe ser un subtipo del límite superior especificado.
+<p>Ejemplo:</p>
+<pre><code>class Ejemplo[A &lt; Numérico]
+end
+
+# 'String' no es subtipo de 'Numérico'
+tipo ejemplo = Ejemplo[String]
+</code></pre>
+</body>
+</html>

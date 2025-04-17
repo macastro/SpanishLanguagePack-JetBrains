@@ -1,0 +1,24 @@
+<html>
+<body>
+Inspecciona variables locales que se usan únicamente en la siguiente sentencia <code>return</code> o que son copias exactas de otras variables.
+<p>Estas variables se pueden insertar en línea de forma segura para que el código sea más claro.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun sum(a: Int, b: Int): Int {
+      val c = a + b
+      return c
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun sum(a: Int, b: Int): Int {
+      return a + b
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+<p>Usa la opción <b>Informar sobre variables devueltas inmediatamente</b> para informar sobre variables devueltas inmediatamente.
+    Cuando se les da nombres descriptivos, dichas variables pueden mejorar la legibilidad del código en algunos casos, por eso esta opción está deshabilitada de forma predeterminada.</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<body>
+Se reportan declaraciones cuyos modificadores no están en el orden canónico preferido (como se indica en la especificación del lenguaje Java).
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+    native public final void foo();
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  class Foo {
+    public final native void foo();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Usa la configuración de inspección para:</p>
+<ul>
+  <li>
+    <p>
+      alternar el informe de anotaciones fuera de lugar:
+      (anotaciones con <code>ElementType.TYPE_USE</code> <em>no</em> directamente
+      antes del tipo y después de las palabras clave del modificador, o
+      otras anotaciones <em>no</em> antes de las palabras clave del modificador).
+      Cuando esta opción está desactivada, cualquier anotación puede colocarse antes o después de las palabras clave del modificador.
+      Las listas de modificadores con anotaciones entre las palabras clave del modificador siempre se informarán.
+    </p>
+  </li>
+  <li>
+    <p>
+      especifica si la anotación <code>ElementType.TYPE_USE</code> debe colocarse directamente antes
+      del tipo, incluso cuando la anotación tiene otros destinos especificados.
+    </p>
+  </li>
+</ul>
+
+</body>
+</html>

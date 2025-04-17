@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa el método y retorna el bloque de valores cuyos tipos inferidos no coinciden con el tipo de retorno esperado del método. El tipo de retorno esperado lo toma de cualquiera de los siguientes:
+<ul>
+  <li>La firma de tipo RBS</li>
+  <li>La firma de tipo Sorbet</li>
+  <li>La etiqueta YARD <code>@return</code></li>
+</ul>
+<p>Ejemplo:</p>
+<pre>
+<code># @return [Integer]
+def method
+  1.0
+end</code>
+</pre>
+</body>
+</html>

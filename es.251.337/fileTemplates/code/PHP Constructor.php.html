@@ -1,0 +1,42 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Plantilla incorporada para un constructor de clase PHP.</font><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAM_LIST}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Lista de parámetros del constructor, separados por comas, uno por cada propiedad seleccionada.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAM_DOC}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Comentario PHPDoc de los parámetros.<br>
+      Se genera como una serie de líneas '* @param tipo nombre'. Si no hay parámetros, se evalúa como contenido vacío.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${THROWS_DOC}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Comentario PHPDoc de las excepciones.<br>
+      Se genera como una serie de líneas '* @throws tipo'. Si no se lanza ninguna excepción, se evalúa como contenido vacío.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CLASS_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la clase.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${BODY}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Cuerpo del constructor que contiene las asignaciones '$this->propiedad=propiedad;'.</font></td>
+  </tr>
+</table>
+</body>
+</html>

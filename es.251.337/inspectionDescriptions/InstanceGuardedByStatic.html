@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa de anotaciones `@GuardedBy` en campos o métodos de instancia en los que el protector es un campo `static`. Proteger un no estático con un static puede dar lugar a un exceso de contienda de bloqueo, ya que el acceso a cada campo bloqueado en cualquier instancia de objeto impedirá el acceso simultáneo a ese campo en cada instancia de objeto.
+<p>Ejemplo:</p>
+<pre><code>
+    private static ReadWriteLock lock = new ReentrantReadWriteLock(); //campo de protección estático
+    private Object state;
+
+    @GuardedBy("lock")
+    public void bar() {
+        state = new Object();
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>Las anotaciones `@GuardedBy` compatibles son:</p>
+<ul>
+  <li><code>net.jcip.annotations.GuardedBy</code></li>
+  <li><code>javax.annotation.concurrent.GuardedBy</code></li>
+  <li><code>org.apache.http.annotation.GuardedBy</code></li>
+  <li><code>com.android.annotations.concurrency.GuardedBy</code></li>
+  <li><code>androidx.annotation.GuardedBy</code></li>
+  <li><code>com.google.errorprone.annotations.concurrent.GuardedBy</code></li>
+</ul>
+</body>
+</html>

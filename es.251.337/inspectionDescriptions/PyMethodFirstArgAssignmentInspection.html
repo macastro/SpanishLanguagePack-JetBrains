@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>Informa los casos cuando se reasigna el primer parámetro,
+  tal como <code>self</code> o <code>cls</code>, en un método.
+  Debido a que en la mayoría de los casos, no existen objetivos en tal reasignación, el
+  IDE indica un error.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class Account:
+    def calc(self, balance):
+        if balance == 0:
+            self = balance
+        return self
+</code></pre>
+<p>Como una solución, es posible que quieras verificar y modificar el algoritmo para asegurar que se necesita la reasignación. Si todo es correcto,
+  puedes invocar acciones de intención para este código y optar por ignorar la advertencia.</p>
+</body></html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sentencias <code>return</code> dentro de bloques <code>finally</code>.
+<p>Aunque en ocasiones se utilizan de manera intencionada, estas sentencias <code>return</code> pueden ocultar excepciones lanzadas y dificultar la depuración.</p>
+<!-- tooltip end -->
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  try {
+    foo();
+  } finally {
+    if (bar()) return;
+  }
+</code></pre>
+</body>
+</html>

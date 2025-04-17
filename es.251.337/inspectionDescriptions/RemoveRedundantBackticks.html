@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre las comillas simples redundantes en las referencias.
+<p>
+    Algunas de las palabras clave de Kotlin son identificadores válidos en Java, por ejemplo: <code>in</code>, <code>object</code>, <code>is</code>.
+    Si una biblioteca de Java utiliza una palabra clave de Kotlin para un método, puedes seguir llamando al método escapándolo
+    con la comilla simple (<code>`</code>), por ejemplo, <code>foo.`is`(bar)</code>.
+    A veces, este escape es redundante y puede omitirse de forma segura. La inspección descubre e informa de estos casos y está
+    emparejada con la solución rápida "Eliminar comillas simples redundantes", que te permite modificar el código resaltado.
+</p>
+<p><b>Ejemplos:</b></p>
+<pre><code>
+  fun `is`(x: String) {}
+  fun foo() {
+      `is`("bar") // 'is' es una palabra clave, se requieren comillas simples
+  }
+
+  fun `test that smth works as designed`() {} // OK, identificador complejo para mejorar la legibilidad
+
+  val `a` = 1  // no es necesario usar comillas simples
+</code></pre>
+</body>
+</html>

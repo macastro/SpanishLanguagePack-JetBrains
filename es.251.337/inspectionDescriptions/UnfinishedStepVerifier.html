@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>Informa de llamadas de terminal <code>StepVerifier</code> perdidas.</p>
+<p>
+  El inicio de las subscripciones y aserciones <code>Publisher</code> requiere llamar a un método de verificación terminal, como <code>verify()</code>, <code>verifyComplete()</code>, etc.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+StepVerifier.create(Flux.just(1,2,3)).expectNext(1);
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code lang="java">
+StepVerifier.create(Flux.just(1,2,3)).expectNext(1).verifyComplete();
+</code></pre>
+</body>
+</html>

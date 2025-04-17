@@ -1,0 +1,12 @@
+<html>
+<body>
+Informa conversiones sospechosas de matrices.
+Una conversión de matriz se considera sospechosa cuando se convierte a un tipo de matriz más específico. Esta conversión es legal en tiempo de compilación, pero puede fallar con una <code>ClassCastException</code> en tiempo de ejecución.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Número[] números = new Número[]{1L, 2L, 4L};
+  Largo[] largomas = (Largo[])números;
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa sobre comentarios Javadoc que pueden convertirse a comentarios de documentación Markdown.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  /**
+   * For blubbering of the florz.
+   *
+   * {@link com.deeps.Querp querping} clase.
+   */
+  class FlorzBlubber {
+  }
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+  /// For blubbering of the florz.
+  /// [querping][com.deeps.Querp] clase.
+  class FlorzBlubber {
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>Novedad en 2024.2</small></p>
+
+</body>
+</html>

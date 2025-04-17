@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>Informa de usos incorrectos de tipos de beans que no pueden ser proxeados.</p>
+<p>El contenedor no puede proxear determinados tipos de beans válidos:
+  clases sin constructor no privado sin parámetros,
+  clases declaradas como final,
+  o con métodos final, tipos primitivos y tipos de matriz.</p>
+
+<p>La inspección informa de las siguientes infracciones para tales tipos de beans:</p>
+<ul>
+  <li>El bean gestionado que declara un ámbito de pasivación debe ser <code>java.io.Serializable</code></li>
+  <li>No se puede inyectar un bean de tipo no serializable en un ámbito de pasivación de beans</li>
+  <li>El bean normal con ámbito de inyección tiene que poder ser proxeado por el contenedor</li>
+</ul>
+</body>
+</html>

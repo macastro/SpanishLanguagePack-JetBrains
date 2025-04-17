@@ -1,0 +1,14 @@
+<html>
+<body>
+Reporta expresiones `when` sólo con una rama `else` que pueden simplificarse.
+<p>La corrección rápida "<b>Simplificar expresión</b>" puede usarse para corregir el código automáticamente.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  fun redundante() {
+      val x = when { // &lt;== redundante, la corrección rápida simplifica la expresión when a "val x = 1"
+          else -> 1
+      }
+  }
+</code></pre>
+</body>
+</html>

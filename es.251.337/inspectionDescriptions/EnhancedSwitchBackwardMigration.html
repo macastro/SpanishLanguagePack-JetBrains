@@ -1,0 +1,34 @@
+<html>
+<body>
+Reporta sentencias y expresiones <code>switch</code> mejoradas. Sugiere reemplazarlas con sentencias <code>switch</code> regulares.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  boolean even = switch (condition) {
+    case 1, 3, 5, 7, 9 -> false;
+    default -> true;
+  };
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  boolean even;
+  switch (condition) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 9:
+      even = false;
+      break;
+    default:
+      even = true;
+      break;
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  <code>switch</code> <i>mejorado</i> apareció en Java 14.
+  Esta inspección puede ayudar a degradar para compatibilidad con versiones anteriores de Java.
+</p>
+<p><small>Nuevo en 2019.1</small></p>
+</body>
+</html>

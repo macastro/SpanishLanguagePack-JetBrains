@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa las acciones, grupos de acciones y otras clases <code>ActionUpdateThreadAware</code> que declaran de manera implícita el modo obsoleto y costoso <code>ActionUpdateThread.OLD_EDT</code>.
+
+<p>
+Cuando una acción o grupo de acciones define su propio método <code>update()</code>, la plataforma IntelliJ imita la forma antigua de invocación sincrónica de métodos <code>update()</code> y <code>getChildren()</code> en el hilo de la interfaz de usuario, y proporciona todos los datos de <code>AnActionEvent.dataContext()</code>.
+Para ello, almacena previamente en caché todos los datos posibles en el hilo de fondo, incluso si no son necesarios.
+</p>
+<p>
+Anula el método <code>getActionUpdateThread()</code> para proporcionar uno de los dos nuevos modos: <code>ActionUpdateThread.EDT</code> o <code>ActionUpdateThread.BGT</code>.
+</p>
+<p>
+Para obtener más información, consulta la documentación de <code>ActionUpdateThread</code>.
+</p>
+</body>
+</html>

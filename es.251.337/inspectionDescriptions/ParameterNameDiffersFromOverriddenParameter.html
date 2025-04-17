@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa de los parámetros cuyos nombres difieren de los parámetros correspondientes de los métodos que anulan o sobrecargan. Si bien es legal en Java, estos nombres incoherentes pueden provocar confusión y disminuir los beneficios de documentación de las buenas prácticas de nombrado.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Persona {
+    Persona(String nombreCompleto) {}
+  }
+  class Niño extends Persona {
+    Niño(String nombre) { super(nombre); }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Persona {
+    Persona(String nombreCompleto) {}
+  }
+  class Niño extends Persona {
+    Niño(String nombreCompleto) { super(nombreCompleto); }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Utilice las opciones para indicar si se deben ignorar los nombres de parámetros anulados que tienen solo un carácter de longitud o que provienen de un método de biblioteca. Ambas pueden ser útiles si no desea estar sujeto a convenciones de nomenclatura dudosas utilizadas en las bibliotecas.
+</p>
+</body>
+</html>

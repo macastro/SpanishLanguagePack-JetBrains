@@ -1,0 +1,12 @@
+<html>
+<body>
+Reporta clases que extienden directamente <code>java.lang.Throwable</code>.
+<p>Extender directamente <code>java.lang.Throwable</code> es generalmente considerado una mala práctica.
+  Suele ser suficiente con extender <code>java.lang.RuntimeException</code>, <code>java.lang.Exception</code> o, en casos especiales, <code>java.lang.Error</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class EnigmaThrowable extends Throwable {} // warning: La clase 'EnigmaThrowable' extiende directamente 'java.lang.Throwable'
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

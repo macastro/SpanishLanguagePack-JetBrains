@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa de llamadas a la función <code>errors.As</code> cuando el segundo argumento no es un puntero a una interfaz o a un tipo que implementa un error.
+<p>Estas llamadas provocan pánico en tiempo de ejecución.</p>
+<p>Para obtener más información sobre la función <code>As</code>, consulta <a href="https://pkg.go.dev/errors#As">func As en go.dev</a>.</p>
+<p>Ejemplo:</p>
+<pre><code>_, err := os.Open("non-existing")
+var pathError *fs.PathError
+if errors.As(err, pathError) { // se requiere un puntero a *fs.PathError
+}</code></pre>
+<p>Después de aplicar la corrección rápida <b>Añadir prefijo '&'</b>:</p>
+<pre><code>_, err := os.Open("non-existing")
+var pathError *fs.PathError
+if errors.As(err, &pathError) {
+}</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si la versión del lenguaje es 1.13 o superior.</p>
+</body>
+</html>

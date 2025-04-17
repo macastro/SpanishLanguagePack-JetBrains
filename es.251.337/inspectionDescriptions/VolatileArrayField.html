@@ -1,0 +1,20 @@
+<html>
+<body>
+Reporta campos de matrices que son declarados <code>volatile</code>. Estas declaraciones pueden ser confusas debido a que acceder al propio arreglo sigue las reglas para campos <code>volatile</code>, pero acceder al contenido del arreglo no.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Data {
+    private volatile int[] idx = new int[0];
+  }
+</code></pre>
+<p>
+  Si dicho acceso volátil es necesario para el contenido del arreglo, considera utilizar clases de <code>java.util.concurrent.atomic</code>:
+</p>
+<pre><code>
+  class Data {
+    private final AtomicIntegerArray idx = new AtomicIntegerArray(new int[0]);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

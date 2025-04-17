@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre expresiones de incremento o decremento que están anidadas dentro de otras expresiones.
+Dichas expresiones pueden generar confusión e infringir el principio general de diseño que establece que cualquier construcción solo debe hacer una cosa.
+<p>La corrección rápida extrae la operación de incremento o decremento en una sentencia de expresión separada.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  int i = 10;
+  while (i-- > 0) {
+    System.out.println(i);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  int i = 10;
+  while (i > 0) {
+    i--;
+    System.out.println(i);
+  }
+  i--;
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

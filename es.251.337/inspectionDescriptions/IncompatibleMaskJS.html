@@ -1,0 +1,17 @@
+<!-- Copied from community/plugins/InspectionGadgets/src/inspectionDescriptions/IncompatibleMask.html -->
+<html>
+<body>
+Reporta una expresión de máscara de bits que seguro
+se evalúa en <code>true</code> o <code>false</code>.
+Las expresiones tienen la forma <code>(var & constante1) == constante2</code> ó
+<code>(var | constante1) == constante2</code>, donde <code>constante1</code>
+y <code>constante2</code> son constantes de máscara de bits incompatibles.
+<p>Ejemplo:</p>
+<pre><code>
+// Máscara incompatible: como el último byte de la máscara es cero,
+// algo como 0x1200 sería posible, pero no 0x1234
+if ((mask & 0xFF00) == 0x1234) {...}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

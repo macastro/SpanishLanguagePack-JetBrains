@@ -1,0 +1,39 @@
+<html>
+<body>
+Reporta asignaciones o modificaciones a un parámetro de ciclo <code>for</code> dentro del cuerpo del ciclo.
+<p>Aunque a veces es intencional, esta construcción puede ser confusa y, a menudo, es el resultado de un error tipográfico o una variable incorrecta que se está utilizando.</p>
+<p>La corrección rápida agrega una declaración de una nueva variable.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  for (String s : list) {
+    // Advertencia: s se modifica dentro del ciclo
+    s = s.trim();
+    System.out.println("String: " + s);
+  }
+</code></pre>
+<p>Después de que se aplica la corrección rápida:</p>
+<pre><code>
+  for (String s : list) {
+    String trimmed = s.trim();
+    System.out.println("String: " + trimmed);
+  }
+</code></pre>
+<p>No se informan las asignaciones en ciclos <code>for</code> básicos sin una declaración de actualización.
+  En tales casos, la asignación probablemente sea intencional y no se puede mover fácilmente a la parte de actualización del ciclo <code>for</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  for (int i = 0; i &lt; list.size(); ) {
+    if (element.equals(list.get(i))) {
+      list.remove(i);
+    } else {
+      // no se informa la modificación del parámetro de ciclo for
+      // ya que no hay declaración de actualización
+      i++;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Use la opción <b>Comprobar parámetros de ciclo 'for' mejorado</b> para especificar si las modificaciones de los parámetros de ciclo <code>for</code> mejorado
+  también deben informarse.</p>
+</body>
+</html>

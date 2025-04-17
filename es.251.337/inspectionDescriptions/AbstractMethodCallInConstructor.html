@@ -1,0 +1,34 @@
+<html>
+<body>
+Reporta llamadas a métodos <code>abstract</code> de la clase actual durante la construcción de objetos.
+<p>Un método es llamado durante la construcción de objetos si se encuentra dentro de:
+<ul>
+  <li>Constructor</li>
+  <li>Inicializador de instancia no estático</li>
+  <li>Inicializador de campo no estático</li>
+  <li>Método <code>clone()</code></li>
+  <li>Método <code>readObject()</code></li>
+  <li>Método <code>readObjectNoData()</code></li>
+</ul>
+<p>Dichas llamadas pueden provocar errores sutiles, ya que la inicialización del objeto puede ocurrir antes de la llamada al método.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  abstract class Parent {
+    abstract void abstractMethod();
+  }
+
+  class Child extends Parent {
+    Child() {
+      abstractMethod();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección comparte la funcionalidad con las siguientes inspecciones:</p>
+<ul>
+  <li>Método sobrecargable llamado durante la construcción del objeto</li>
+  <li>Método sobrecargado llamado durante la construcción del objeto</li>
+</ul>
+<p>Solo se debe habilitar una inspección a la vez para evitar la duplicación de advertencias.</p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<body>
+Informa sobre el uso de sentencias de administración de transacciones como COMMIT o ROLLBACK en cuerpos de desencadenantes.
+<p>Con las sentencias COMMIT o ROLLBACK en un cuerpo de desencadenante, el desencadenante no se compilará.
+  El error ocurre porque los desencadenantes se inician durante las transacciones. Cuando se inicia el desencadenante, la transacción actual aún no se ha completado. Como
+  COMMIT
+  termina una transacción, ambas sentencias (COMMIT y ROLLBACK) provocarían una excepción.
+  Los cambios que se ejecutan en un desencadenante deben ser confirmados (o revertidos) por la transacción propietaria que inició el desencadenante.</p>
+<p>Ejemplo (Oracle):</p>
+<pre><code>CREATE TABLE employee_audit
+(
+    id          INT  NOT NULL,
+    update_date DATE NOT NULL,
+    old_name    VARCHAR2(100),
+    new_name    VARCHAR2(100)
+);
+
+CREATE TABLE employees
+(
+    id   INT           NOT NULL,
+    name VARCHAR2(100) NOT NULL
+);
+
+CREATE OR REPLACE TRIGGER trig_commit
+    AFTER UPDATE OF name
+    ON employees
+    FOR EACH ROW
+BEGIN
+    INSERT INTO employee_audit VALUES (:old.id, SYSDATE, :old.name, :new.name);
+    COMMIT;
+END;
+
+CREATE OR REPLACE TRIGGER trig_rollback
+    AFTER UPDATE OF name
+    ON employees
+    FOR EACH ROW
+BEGIN
+    INSERT INTO employee_audit VALUES (:old.id, SYSDATE, :old.name, :new.name);
+    ROLLBACK;
+END;</code></pre>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>Esta inspección identifica llamadas de método donde un argumento que potencialmente podría ser <code>null</code>
+    se pasa a un parámetro que está anotado con <code>@NotNull</code>,
+    ayudando a detectar <code>NullPointerExceptions</code> potenciales antes de que ocurran en tiempo de ejecución.</p>
+<p><b>Ejemplo:</b></p>
+<pre>
+<code>
+def test(@Nullable saludo: String): Unit = {
+  decirHola(saludo)
+}
+
+def decirHola(@NotNull saludo: String): Unit = {
+  println(saludo.toLowerCase)
+}
+</code>
+</pre>
+<!-- tooltip end -->
+</body>
+</html>

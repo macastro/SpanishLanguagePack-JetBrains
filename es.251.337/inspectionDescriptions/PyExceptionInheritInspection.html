@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>Informa de los casos en los que se lanza una clase de excepción personalizada pero no hereda de la <a href="https://docs.python.org/3/library/exceptions.html">clase de excepción incorporada</a>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class A:
+    pass
+
+
+def me_exception():
+    raise A()
+</code></pre>
+<p>La corrección rápida propuesta cambia el código a:</p>
+<pre><code>
+class A(Exception):
+    pass
+
+
+def me_exception():
+    raise A()
+</code></pre>
+</body>
+</html>

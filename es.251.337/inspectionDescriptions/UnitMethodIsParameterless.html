@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Informa métodos con tipo de resultado <code>Unit</code> que no tienen cláusulas de parámetro.</p>
+<p>Los métodos con un tipo de resultado de <code>Unit</code> solo se ejecutan por sus
+    <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">efectos secundarios</a>
+    y, según la convención, los métodos con efectos secundarios tienen al menos una cláusula de parámetro (vacía).
+    </p>
+<p>La corrección rápida agrega una cláusula de parámetro vacía.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  def test: Unit = ()
+</code></pre>
+<p>Después de que se aplica la corrección rápida:</p>
+<pre><code>
+  def test(): Unit = ()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

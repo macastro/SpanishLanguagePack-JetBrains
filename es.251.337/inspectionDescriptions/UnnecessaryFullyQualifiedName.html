@@ -1,0 +1,30 @@
+<html>
+<body>
+Informa de los nombres de clase totalmente calificados que pueden acortarse.
+<p>El arreglo rápido acorta los nombres totalmente calificados y añade sentencias de importación si es necesario.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  class ListWrapper {
+    java.util.List&lt;Integer&gt; l;
+  }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  import java.util.List;
+  class ListWrapper {
+    List&lt;Integer&gt; l;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+
+<p>
+  Utiliza la opción **Ignorar en sentencias de módulo de Java 9** para ignorar los nombres totalmente calificados dentro de las sentencias de módulo <code>provides</code> y <code>uses</code> de Java 9.
+<p>
+  En <a href="settings://preferences.sourceCode.Java?JavaDoc%20Inner">Ajustes | Editor | Estilo de código | Java | Importaciones</a> utiliza las siguientes opciones para configurar la inspección:</p>
+<ul>
+  <li>Utiliza la opción **Insertar importaciones para clases internas** si las referencias a clases internas deben calificarse con la clase externa.</li>
+  <li>Utiliza la opción **Usar nombres de clase totalmente calificados en JavaDoc** para permitir nombres totalmente calificados en Javadocs.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Informa sobre clases, métodos y campos no utilizados.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Department {
+      private Organization myOrganization;
+  }
+</code></pre>
+<p>Aquí <code>Department</code> hace referencia explícitamente a <code>Organization</code>, pero si la clase <code>Department</code> no se utiliza,
+entonces la inspección informará de ambas clases. 
+
+<p>
+La inspección también informa de los parámetros que no son utilizados por sus métodos y todas las implementaciones/sobreescrituras de métodos, así como las variables locales que están declaradas pero no son utilizadas.
+</p>
+<!-- tooltip end -->
+<p>Para más información, consulta la misma inspección en Java.</p>
+</body>
+</html>

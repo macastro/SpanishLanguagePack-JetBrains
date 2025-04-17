@@ -1,0 +1,15 @@
+<html>
+<body>
+Se informa de los casos en los que el argumento de una llamada a un método en un <code>java.util.Collection</code>
+o un <code>java.util.Map</code> es la propia colección o mapa.
+Estas situaciones pueden darse como resultado de una copia y pegado de código con tipos sin procesar.
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  ArrayList list = new ArrayList&lt;&gt;();
+  list.add(list); // aquí se genera una advertencia
+  return list.hashCode(); // lanza StackOverflowError
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

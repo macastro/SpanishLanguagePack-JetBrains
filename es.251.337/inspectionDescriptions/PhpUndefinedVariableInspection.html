@@ -1,0 +1,33 @@
+<html>
+<body>
+  Produce dos tipos de advertencias:
+  <ul>
+    <li>
+      <i>Variable no definida</i>: la definición de la variable no se encuentra en los archivos del proyecto, las rutas de inclusión configuradas o entre las variables predefinidas de PHP.
+    </li>
+    <li>
+      <i>La variable podría no haber sido definida</i>: hay una o más rutas para alcanzar la línea con el uso de la variable sin definirla.
+    </li>
+  </ul>
+  <p>
+    Usa las siguientes opciones para personalizar la inspección:
+  </p>
+
+  <ul>
+    <li>
+      <b>Informar de que la variable probablemente no esté definida</b>: desmarca la casilla de verificación para deshabilitar las advertencias de <i>La variable podría no haber sido definida</i>.
+    </li>
+    <li>
+      <b>Habilitar la inspección en el espacio global</b>: de forma predeterminada, la inspección está habilitada para el espacio global. Desmarca la casilla de verificación para informar solo de las variables no definidas del ámbito local de las funciones.
+    </li>
+    <li>
+      <p>
+        <b>Buscar la definición de la variable fuera del archivo actual</b>: si se selecciona, el IDE informa de una variable global como no definida solo en caso de que no haya declaraciones <code>include</code> o <code>require</code> en el archivo actual y no se pueda encontrar la definición de la variable en el proyecto. Ten en cuenta que el IDE no examina el contenido real de los archivos incluidos, sino que solo comprueba la presencia de declaraciones <code>include</code> o <code>require</code>.
+      </p>
+      <p>
+        De lo contrario, si no se selecciona, el IDE busca la definición de la variable solo en el archivo actual e ignora las declaraciones <code>include</code> o <code>require</code> si las hay.
+      </p>
+    </li>
+  </ul>
+</body>
+</html>

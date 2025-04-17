@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta parámetros, argumentos y variables que no se usan.
+<p>Ejemplo (PostgreSQL):</p>
+<pre><code>CREATE FUNCTION foo(PARAMUSED INT, PARAMUNUSED INT) RETURNS INT AS
+$$
+BEGIN
+    RETURN PARAMUSED;
+END
+$$ LANGUAGE plpgsql;</code></pre>
+<p>El parámetro <code>PARAMUNUSED</code> no es utilizado por la función y podría ser eliminado.</p>
+</body>
+</html>

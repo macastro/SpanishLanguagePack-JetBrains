@@ -1,0 +1,14 @@
+<html>
+<body>
+Reporta llamadas al método de manipulación de arreglos no genérico, como <code>Arrays.fill ()</code>, donde el tipo de argumento no coincide.
+Tales llamadas no realizan ningún trabajo útil y es probable que sean errores.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  int foo(String[] strings) {
+    return Arrays.binarySearch(strings, 1);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2017.2</small></p>
+</body>
+</html>

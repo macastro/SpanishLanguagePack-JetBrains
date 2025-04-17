@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>Informa errores de inconsistencias en los métodos manejadores de flujos.</p>
+<p>
+  Los métodos manejadores de flujos de entrada y salida anotados con <code>@StreamListener</code> o <code>@StreamEmitter</code> tienen varias restricciones.
+  La violación de las restricciones resulta en errores en tiempo de ejecución.
+</p>
+<p>Por ejemplo:</p>
+<ul>
+  <li>
+    El canal definido en el atributo <code>value</code> de <code>@StreamListener</code> nunca se puede combinar con
+    parámetros del método anotados con <code>@Input</code> o <code>@Output</code>
+  </li>
+  <li>Se debe especificar un canal de entrada para un método anotado con <code>@StreamListener</code></li>
+  <li>Se debe especificar un canal de salida para un método que pueda devolver un valor</li>
+  <li>No se puede especificar un canal de salida para un método que no devuelve un valor</li>
+  <li>El atributo <code>condition</code> de <code>@StreamListener</code> no se puede establecer para métodos que devuelven un valor</li>
+</ul>
+<!-- tooltip end -->
+</body>
+</html>

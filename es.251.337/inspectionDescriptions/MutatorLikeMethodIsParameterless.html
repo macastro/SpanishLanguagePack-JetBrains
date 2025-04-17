@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>Los informes de métodos con nombres similares a mutadores que no tienen cláusulas de parámetro.</p>
+
+<p>Para un método con <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">efectos secundarios</a>,
+    es convencional tener una cláusula de parámetro vacía para indicar que no es sólo un método de acceso.</p>
+
+<p>La solución rápida agrega una cláusula de parámetro vacía.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  trait Test {
+    def updateAll: Boolean
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  trait Test {
+    def updateAll(): Boolean
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

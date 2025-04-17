@@ -1,0 +1,23 @@
+<html>
+<body>
+Se informa del uso de bucles <code>for</code>. Es preferible usar <code>.each</code> en lugar de bucles <code>for</code>.
+<p>Ejemplo:</p>
+<pre>
+<code># Mala práctica
+for i in 0..5
+  puts &quot;El valor es #{i}&quot;
+end</code>
+</pre>
+
+Existe una corrección rápida disponible para convertir un bucle <code>for</code> en un bucle <code>.each</code>. Una vez aplicada la corrección rápida, el resultado se ve así:
+
+<pre>
+<code># Buena práctica
+(0..5).each do |i|
+  puts &quot;El valor es #{i}&quot;
+end
+</code>
+</pre>
+<p><span style="font-size: smaller;">Inspirado en <a href="https://github.com/martinjandrews/roodi">'Roodi'</a></span></p>
+</body>
+</html>

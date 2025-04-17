@@ -1,0 +1,28 @@
+<html>
+<body>
+Reporta enlaces de texto sin formato en los comentario Javadoc.
+<p>
+ El arreglo rápido sugiere envolver el enlace en una etiqueta <code>&lt;a&gt;</code> .
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main {
+   /**
+    * https://en.wikipedia.org/
+    */
+    void foo() {}
+  }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  class Main {
+   /**
+    * &lt;a href="https://en.wikipedia.org/"&gt;https://en.wikipedia.org/&lt;/a&gt;
+    */
+    void foo() {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2022.1</small></p>
+</body>
+</html>

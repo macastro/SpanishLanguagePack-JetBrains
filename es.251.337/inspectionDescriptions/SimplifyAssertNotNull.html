@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa las llamadas `assert` que verifican un valor distinto de nulo de la variable declarada.
+<p>Usar `!!` o `?:` simplifica tu código.</p>
+<p>La corrección rápida reemplaza `assert` con el operador `!!` o `?:` en el inicializador de la variable.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo(p: Array&lt;String?&gt;) {
+      val v = p[0]
+      assert(v != null, { &quot;Debe ser distinto de nulo&quot; })
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun foo(p: Array&lt;String?&gt;) {
+      val v = p[0] ?: error(&quot;Debe ser distinto de nulo&quot;)
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

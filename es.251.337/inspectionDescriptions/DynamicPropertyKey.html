@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>Reporta aquellos literales no cadena que están siendo utilizados como clave de propiedad de paquete.</p>
+<p>Esto es difícil de mantener. Es mejor pasar alrededor las cadenas de lenguajes naturales ya resueltas.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  val key =
+    if (???) "property.key.1"
+    else "property.key.2"
+
+  Bundle.message(key)
+</code></pre>
+<p>Usa en su lugar:</p>
+<pre><code>
+  val string =
+    if (???) Bundle.message("property.key.1")
+    else Bundle.message("property.key.2")
+
+  string
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

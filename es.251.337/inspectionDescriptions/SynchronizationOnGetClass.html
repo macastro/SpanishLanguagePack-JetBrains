@@ -1,0 +1,12 @@
+<html>
+<body>
+Sincronización de informes en una llamada a <code>getClass()</code>.
+<p>
+  Si la clase que contiene la sincronización es subclasificada, la subclase se sincronizará con un objeto de clase diferente. Normalmente, la llamada a <code>getClass()</code> se puede reemplazar por una expresión literal de clase, por ejemplo, <code>String.class</code>. Una solución incluso mejor es sincronizar un objeto de bloqueo <code>private static final</code>, a cuyo acceso se puede controlar completamente.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code> synchronized(getClass()) {}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

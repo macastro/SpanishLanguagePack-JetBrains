@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta el contenido de etiquetas <code>script</code> que son XML inválido.<br>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  &lt;script type="text/javascript">
+    console.log('&lt;');
+  &lt;/script>
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  &lt;script type="text/javascript">
+    console.log('&amp;lt;');
+  &lt;/script>
+</code></pre>
+</body>
+</html>

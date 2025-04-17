@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre posibles escapadas de <code>this</code> durante la inicialización del objeto. Las escapadas ocurren cuando <code>this</code> se utiliza como argumento de método o como objeto de asignación en un constructor o inicializador. Tales escapadas pueden dar lugar a fallos sutiles, ya que el objeto está ahora disponible en el contexto en el que no está garantizado que se inicialice.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+    {
+      System.out.println(this);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

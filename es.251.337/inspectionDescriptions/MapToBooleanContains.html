@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>Informa sobre el mapeo de una colección a valores booleanos y el uso de <code>contains</code> en él.</p>
+
+<p>La solución rápida usa <code>.exists()</code> o <code>!.forall()</code> en su lugar.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  def p(x: Int): Boolean = ???
+  var seq: Seq[Int]
+  seq.map(p).contains(true)
+  seq.map(p).contains(false)
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  def p(x: Int): Boolean = ???
+  var seq: Seq[Int]
+  seq.exists(p)
+  !seq.forall(p)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

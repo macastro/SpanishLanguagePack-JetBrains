@@ -1,0 +1,20 @@
+<html>
+<body>
+Reporta clases que tienen varios registradores declarados.
+
+Asegurar que cada clase tiene un solo registrador dedicado es un paso importante para proporcionar una implementación de registro unificada para una aplicación.
+<p>Por ejemplo:</p>
+<pre><code>
+  <b>public class</b> Critical {
+    <b>protected static final</b> Logger LOG = Logger.getLogger(Critical.class);
+
+    <b>protected static final</b> Logger myLogger = Logger.getLogger(getClass());
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Utiliza la siguiente tabla para especificar los nombres de las clases Logger.
+
+Las clases que declaren varios campos que tienen el tipo de una de las clases especificadas serán reportadas por esta inspección.
+<p>
+</body>
+</html>

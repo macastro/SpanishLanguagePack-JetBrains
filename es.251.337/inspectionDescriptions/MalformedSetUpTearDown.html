@@ -1,0 +1,19 @@
+<html>
+<body>
+Reporta métodos JUnit 3 `setUp()` o `tearDown()` que no están declarados como `public`, no retornan `void` o aceptan parámetros formales.
+Tales métodos ` setUp()` o `tearDown()` probablemente fueron creados por error y el ejecutor de pruebas de JUnit no los ejecutará.
+<p>Ejemplo:</p>
+<pre><code>
+  <b>public class</b> WeightyTest <b>extends</b> TestCase {
+    <b>private</b> File file;
+    <b>private int</b> setUp(String prefix) <b>throws</b> IOException {
+      file = File.createTempFile(prefix, ".tmp");
+      <b>return</b> 0;
+    }
+
+    // ... Las pruebas van aquí
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

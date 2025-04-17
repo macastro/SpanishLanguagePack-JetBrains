@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Reporta y corrige los nombres importados que ocultan clases comunes de Scala como <code>List</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import java.util.List
+
+  val list: List[Int] = null
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  import java.util
+  import java.util.List
+
+  val list: util.List[Int] = null
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

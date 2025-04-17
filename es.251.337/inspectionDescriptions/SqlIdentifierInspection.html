@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa situaciones cuando usas palabras clave reservadas SQL como nombres de identificador en tu consulta.
+<p>Ejemplo (Microsoft SQL Server):</p>
+<pre><code>CREATE TABLE select (identity INT IDENTITY NOT NULL, order INT NOT NULL);</code></pre>
+<p>Usamos <code>select</code>, <code>identity</code> y <code>order</code> como nombres de tabla y columna.
+Pero también son palabras clave reservadas en Microsoft SQL Server.
+Por lo tanto, para usarlos como nombres de objeto en la consulta, debes citar estos identificadores. Para citarlos, puedes usar el quick-fix
+  <b>Citar identificador</b>.</p>
+<p>Después de aplicar el quick-fix:</p>
+<pre><code>CREATE TABLE [select] ([identity] INT IDENTITY NOT NULL, [order] INT NOT NULL);</code></pre>
+</body>
+</html>

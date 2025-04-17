@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa del método que se llama a sí mismo infinitamente a menos que se lance una excepción.
+<p>
+  Los métodos informados por esta inspección no pueden devolver normalmente.
+  Si bien este comportamiento puede ser intencionado, en muchos casos es solo un descuido.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  int baz() {
+      return baz();
+  }</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>Informa las definiciones sin una anotación <code>@targetName</code> las cuales sobrescriben definiciones con anotación <code>@targetName</code>.</p>
+
+<p>Ver <a href="https://docs.scala-lang.org/scala3/reference/other-new-features/targetName.html">La anotación @targetName</a>.</p>
+
+<p>La corrección rápida agrega una anotación <code>@targetName</code> con el nombre externo de la definición sobreescrita.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  trait A:
+    @targetName("multiply")
+    def *(i: Int): A
+
+  class B extends A:
+    override def *(i: Int): A = ???
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  trait A:
+    @targetName("multiply")
+    def *(i: Int): A
+
+  class B extends A:
+    @targetName("multiply")
+    override def *(i: Int): A = ???
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

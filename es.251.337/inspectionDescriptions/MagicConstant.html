@@ -1,0 +1,23 @@
+<html>
+<body>
+Reporta expresiones que pueden ser reemplazadas con constantes "mágicas".
+<p>Ejemplo 1:</p>
+<pre><code>
+  // El literal básico "2" es usado, advertencia:
+  Font font = new Font("Arial", 2)
+</code></pre>
+<p>Ejemplo 2:</p>
+<pre><code>
+  // La constante predefinida es usada, es bueno:
+  Font font = new Font("Arial", Font.ITALIC)
+</code></pre>
+<p>
+  Cuando sea posible, el arreglo rápido inserta una constante predefinida apropiada.
+</p>
+<!-- tooltip end -->
+<p>
+  El comportamiento de esta inspección es controlado por la anotación <code>org.intellij.lang.annotations.MagicConstant</code>.
+  Algunos métodos de la librería Java estándar están pre-anotados, pero puedes usar esta anotación en tu código también.
+</p>
+</body>
+</html>

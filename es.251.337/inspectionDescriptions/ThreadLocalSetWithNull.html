@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta <code>java.lang.ThreadLocal.set()</code> con nulo como argumento.
+<p>Esta llamada no libera los recursos y puede causar una pérdida de memoria.</p>
+Puede ocurrir porque:
+<ul>
+  <li>En primer lugar, <code>ThreadLocal.set(null)</code> encuentra un mapa asociado con el hilo actual. Si no existe tal mapa, se creará</li>
+  <li>Establece clave y valor: <code>map.set(this, value)</code>, donde <code>this</code> se refiere a la instancia de <code>ThreadLocal</code></li>
+</ul>
+<p>Se debe utilizar <code>java.lang.ThreadLocal.remove()</code> para liberar los recursos.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  ThreadLocal&lt;Integer&gt; threadLocal = new ThreadLocal&lt;&gt;();
+  threadLocal.set(null);
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  threadLocal.remove();
+</code></pre>
+<p><small>Novedad de 2023.2</small></p>
+</body>
+</html>

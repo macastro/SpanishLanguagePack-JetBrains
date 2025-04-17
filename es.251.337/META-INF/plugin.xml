@@ -1,0 +1,14 @@
+<idea-plugin>
+ <id>com.intellij.es</id>
+ <version>251.337</version>
+ <idea-version since-build="251" until-build="251.*" />
+ <name>Spanish Language Pack EAP / Paquete de idioma español</name>
+ <vendor>CerebrosAChorro</vendor>
+ <description><![CDATA[The Spanish Language Pack localizes the UI of IntelliJ IDEA, AppCode, CLion, DataGrip, GoLand, PyCharm, PhpStorm, RubyMine, and WebStorm into Korean.<br>Your feedback is very much appreciated. You can submit it directly from the <a target="_blank" href="https://www.jetbrains.com/help/idea/getting-started.html#report-bug">IDE</a> or via <a target="_blank" href="https://youtrack.jetbrains.com/newIssue?project=IDEA&summary=Issue%20name%20(English%20or%20Korean)&description=Describe%20your%20problem&c=Subsystem%20Localization.%20Korean">YouTrack</a> either in English or Korean.<br><br>Spanish Language Pack es un complemento que localiza la interfaz de usuario de IntelliJ IDEA, AppCode, CLion, DataGrip, GoLand, PyCharm, PhpStorm, RubyMine y WebStorm al coreano. Pruébelo y háganos saber lo que piensa. Envíe comentarios directamente desde <a target="_blank" href="https://www.jetbrains.com/help/idea/getting-started.html#report-bug">IDE</a> o puede enviar en inglés o español en <a target="_blank" href="https://youtrack.jetbrains.com/newIssue?project=IDEA&summary=Issue%20name%20(English%20or%20Korean)&description=Describe%20your%20problem&c=Subsystem%20Localization.%20Korean">YouTrack</a>. ¡gracias!]]></description>
+ <change-notes><![CDATA[Noticias<br><a target="_blank" href="https://youtrack.jetbrains.com/articles/IDEA-A-2100661408">Notas de la versión</a>]]></change-notes>
+ <depends>com.intellij.modules.platform</depends>
+ <locale>es</locale>
+ <extensions defaultExtensionNs="com.intellij">
+   <languageBundle locale="es-ES" />
+ </extensions>
+</idea-plugin>

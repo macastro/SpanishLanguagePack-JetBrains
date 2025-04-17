@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa los siguientes problemas en descriptores que se utilizan para implementar tu módulo web en un servidor:
+<ul>
+  <li>Referencias a clases no instanciables</li>
+  <li>Referencias a clases que no extienden la clase requerida</li>
+  <li>Referencias a clases con alcance inapropiado</li>
+  <li>Valores de etiquetas y atributos vacíos</li>
+  <li>Valores de etiquetas y atributos que no coinciden con el patrón requerido (por ejemplo, identificadores de Java)</li>
+  <li>Etiquetas que no incluyen etiquetas o atributos secundarios requeridos</li>
+  <li>Etiquetas que definen objetos con nombres duplicados</li>
+</ul>
+
+<p><b>Ejemplo:</b></p><br/>
+<pre><code>
+&lt;web-app&gt;
+  &lt;filter-mapping&gt;
+    &lt;filter-name&gt;CustomFilter&lt;/filter-name&gt; // Error: se debe definir una etiqueta secundaria servlet-name o url-pattern
+  &lt;/filter-mapping&gt;
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;CustomServletName&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/ baseUrl&lt;/url-pattern&gt; // Error: URI-pattern no debe contener espacios en blanco
+  &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
+</code></pre>
+</body>
+</html>

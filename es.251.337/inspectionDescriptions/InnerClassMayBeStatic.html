@@ -1,0 +1,32 @@
+<html>
+<body>
+Reporta clases internas que pueden ser hechas <code>static</code>.
+<p>Una clase interna <code>static</code> no mantiene una referencia implícita a su instancia envolvente.
+  Esto previene una causa común de fugas de memoria y usa menos memoria por instancia de la clase.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>public class</b> Outer {
+    <b>class</b> Inner { // no static
+      <b>public void</b> foo() {
+        bar("x");
+      }
+
+      <b>private void</b> bar(String string) {}
+    }
+  }
+</code></pre>
+<p>Después de que se aplica la solución rápida:</p>
+<pre><code>
+  <b>public class</b> Outer {
+    <b>static class</b> Inner {
+      <b>public void</b> foo() {
+        bar("x");
+      }
+
+      <b>private void</b> bar(String string) {}
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

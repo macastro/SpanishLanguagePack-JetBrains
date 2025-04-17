@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre operaciones redundantes para colecciones, mapas o arreglos vacíos.
+<p>
+  Iterar, eliminar elementos, ordenar
+  y algunas otras operaciones sobre colecciones vacías no tienen ningún efecto y pueden eliminarse. Además, pueden ser un indicio de un error.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  if (numbers.isEmpty()){
+    //error debido a la negación que falta
+    int max = numbers.stream().max(Comparator.naturalOrder()).get();
+    ...
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2019.1</small></p>
+</body>
+</html>

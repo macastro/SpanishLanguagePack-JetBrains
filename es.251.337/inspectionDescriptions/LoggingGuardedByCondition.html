@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporte de llamadas de registro rodeadas de condiciones de guarda.
+Esta inspección puede usarse para ajustar estilos de código personalizados.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  public class TestObject {
+    void test(Object object) {
+      if(LOG.isDebugEnabled()){
+        LOG.debug("some logging " + expensiveCalculation(1));
+      }
+    }
+  }
+</code></pre>
+<p>Después de aplicar una corrección rápida:</p>
+<pre><code lang="java">
+  public class TestObject {
+    void test(Object object) {
+      LOG.debug("some logging " + expensiveCalculation(1));
+    }
+  }
+</code></pre>
+<p>Esta inspección soporta los frameworks de registro <em>Log4j2</em> y <em>SLF4J</em> (excepto los constructores).
+<!-- tooltip end -->
+<p><small>Nuevo en 2024.2</small></p>
+</body>
+</html>

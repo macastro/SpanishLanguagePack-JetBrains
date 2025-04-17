@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta las llamadas <code>String.equals()</code> o <code>String.equalsIgnoreCase()</code>
+con un argumento de literal de cadena.
+<p>Algunos estándares de codificación especifican que los literales de cadena deberían ser el calificador de <code>equals()</code>, en lugar de
+  argumento, minimizando así <code>NullPointerException</code>-s.</p>
+<p>Hay disponible una corrección rápida para intercambiar el literal y la expresión.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  boolean isFoo(String value) {
+    return value.equals("foo");
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  boolean isFoo(String value) {
+    return "foo".equals(value);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

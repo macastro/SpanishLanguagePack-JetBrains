@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>Reporta expresiones de formato de cadena heredadas (a través de "format", "formatted" o concatenación de cadenas) que pueden convertirse en cadenas interpoladas.</p>
+<p>La nueva sintaxis es más concisa, ofrece más comprobación estática y proporciona un mejor rendimiento en tiempo de ejecución.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  val str = "test"
+  "test %s".format(str)
+</code></pre>
+<p>Después de que se aplica la solución rápida:</p>
+<pre><code>
+  val str = "test"
+  s"test $str"
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>
