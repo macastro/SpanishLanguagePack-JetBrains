@@ -1,16 +1,21 @@
 <html>
 <body>
-Utiliza el procesador <code>STR</code> para informar sobre expresiones de plantillas de cadenas y proporciona una corrección rápida para volver a la concatenación de cadenas simple.
+El procesador <code>STR</code> informa sobre las expresiones de plantillas de cadena y proporciona una corrección rápida para migrar de nuevo a la concatenación de cadenas simple.
+
 <p><b>Ejemplo:</b></p>
 <pre><code>
   String name = "Bob";
-  String greeting = STR."Hello, \{name}. You are 29 years old.";
+  String greeting = STR."Hola, \{name}. Tienes 29 años.";
 </code></pre>
+
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   String name = "Bob";
-  String greeting = "Hello, " + name + ". You are 29 years old.";
+  String greeting = "Hola, " + name + ". Tienes 29 años.";
 </code></pre>
+
+<!-- tooltip end -->
+
 <p><small>Novedades en 2024.2</small></p>
 </body>
 </html>

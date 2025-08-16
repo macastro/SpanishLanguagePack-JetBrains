@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa cuando se crea una instancia de <code>Throwable</code> o sus subclases que nunca se llega a lanzar realmente.
-Además, esta inspección informa sobre las llamadas a métodos que devuelven una instancia de <code>Throwable</code> o sus subclases cuando el resultado no se lanza.
-<p>No se informan las llamadas a métodos anotados con <code>@CanIgnoreReturnValue</code> cuando se usa Error Prone o AssertJ.</p>
+Reporta instanciaciones de <code>Throwable</code> o sus subclases, donde el <code>Throwable</code> creado nunca es realmente arrojado.
+Adicionalmente, esta inspección reporta llamadas de método que retornan instancias de <code>Throwable</code> o sus subclases, cuando el resultado de la llamada de método no es arrojado.
+<p>Llamadas a métodos anotados con la anotación de Error Prone o AssertJ <code>@CanIgnoreReturnValue</code> no será reportada.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
     void check(String s) {
@@ -12,5 +12,6 @@ Además, esta inspección informa sobre las llamadas a métodos que devuelven un
         // ...
     }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

@@ -1,19 +1,23 @@
 <html>
 <body>
-El informe puede ser reemplazado por clases o interfaces más específicas que implementen o extiendan las clases o interfaces comúnmente utilizadas.
-<p>Para realizar esta verificación, la superclase debe estar ubicada en los archivos fuente del proyecto y el proyecto debe usar el sistema de construcción de IntelliJ IDEA.</p>
+Reporta clases o interfaces que pueden ser reemplazados con una implementación o extensión de una clase o interfaz más específica y comúnmente utilizada.
+<p>Para que esta inspección funcione, una superclase necesita estar en los archivos fuente del proyecto y el proyecto necesita usar el sistema de compilación de IntelliJ IDEA.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class MyInheritor implements A {} // B proporciona sugerencias para la referencia A
-  interface A {}
-  abstract class B implements A {}
-  abstract class C1 extends B {}
-  abstract class C2 extends B {}
-  abstract class C3 extends B {}
-  abstract class C4 extends B {}
-  abstract class C5 extends B {}
+  clase MyInheritor implements A {} // Se sugiere B en la referencia A
+
+  interfaz A {}
+
+  clase abstracta B implements A {}
+
+  clase abstracta C1 extiende B {}
+  clase abstracta C2 extiende B {}
+  clase abstracta C3 extiende B {}
+  clase abstracta C4 extiende B {}
+  clase abstracta C5 extiende B {}
 </code></pre>
-<p>Por defecto, esta inspección no resalta problemas en el editor, sino que solo proporciona correcciones rápidas.</p>
-<p><small>Cambios en la versión 2017.2</small>
+<!-- tooltip end -->
+<p>Por defecto, esta inspección no resalta problemas en el editor, pero sólo proporciona una solución rápida.</p>
+<p><small>Nuevo en 2017.2</small>
 </body>
 </html>

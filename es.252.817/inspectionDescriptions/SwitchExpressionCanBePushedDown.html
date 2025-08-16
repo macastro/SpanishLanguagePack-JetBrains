@@ -1,28 +1,31 @@
 <html>
 <body>
-Se informa que cada rama tiene una subexpresión común, por lo que el switch se puede mover dentro de la expresión y declaración <code>switch</code>.
-Esta operación acorta el código. En muchos casos, es razonable extraer la expresión switch resultante a una variable o método separado.
+Inspecciona expresiones `switch` y sentencias donde se puede mover `switch` hacia adentro porque las ramas contienen subexpresiones comunes.
+Esta acción acorta el código. En muchos casos, tiene sentido extraer la expresión `switch` resultante en una variable o método separado.
 <p>Ejemplo:</p>
 <pre><code>
   switch (value) {
-    case 0 -> System.out.println("zero");
-    case 1 -> System.out.println("one");
-    case 2, 3, 4 -> System.out.println("few");
-    default -> System.out.println("many");
+    case 0 -> System.out.println("cero");
+    case 1 -> System.out.println("uno");
+    case 2, 3, 4 -> System.out.println("pocos");
+    default -> System.out.println("muchos");
   }
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  System.out.println(switch (value) {
-    case 0 -> "zero";
-    case 1 -> "one";
-    case 2, 3, 4 -> "few";
-    default -> "many";
-  });
+  System.out.println((
+    switch (value) {
+      case 0 -> "cero";
+      case 1 -> "uno";
+      case 2, 3, 4 -> "pocos";
+      default -> "muchos";
+    }
+  ));
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Esta inspección solo se aplica a las expresiones switch mejoradas que utilizan la sintaxis de flecha.
+  Esta inspección solo se aplica a switch "mejorados" que utilizan la sintaxis de flecha.
 </p>
-<p><small>Novedades de 2022.3</small></p>
+<p><small>Nuevo en 2022.3</small></p>
 </body>
 </html>

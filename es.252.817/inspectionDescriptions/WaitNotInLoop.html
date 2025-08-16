@@ -1,10 +1,10 @@
 <html>
 <body>
-Se informa de una llamada a <code>wait()</code> que no se realiza dentro de un bucle.
+Se informa sobre llamadas de `wait()` que no se realizan dentro de un bucle.
 <p>
-  <code>wait()</code> se utiliza normalmente para suspender un hilo hasta que una condición se vuelva verdadera.
-  El hilo puede despertarse por diferentes razones, por lo que la condición debe verificarse después de que la llamada a <code>wait()</code> retorne.
-  Esto se logra fácilmente utilizando un bucle.
+  <code>wait()</code> se utiliza normalmente para pausar un hilo hasta que se cumpla una condición.
+  Como un hilo puede despertarse por otras razones, la condición debe comprobarse tras el regreso de la llamada a <code>wait()</code>.
+  Una forma sencilla de implementarlo es mediante un bucle.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -16,7 +16,7 @@ Se informa de una llamada a <code>wait()</code> que no se realiza dentro de un b
     }
   }
 </code></pre>
-<p>El código correcto debería ser similar a:</p>
+<p>El código adecuado sería:</p>
 <pre><code>
   class BoundedCounter {
     private int count;
@@ -26,5 +26,6 @@ Se informa de una llamada a <code>wait()</code> que no se realiza dentro de un b
     }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

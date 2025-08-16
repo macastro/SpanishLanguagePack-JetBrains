@@ -1,28 +1,33 @@
 <html>
+<head>
+</head>
 <body>
-Reporta referencias no resueltas a elementos de configuración del plugin.
+Informa sobre referencias no resueltas a componentes de plug-in.
+
 <h4>Extensiones</h4>
 <p>
-  Referenciar extensiones con un <code>id</code> desconocido puede causar errores en tiempo de ejecución.
+  Referenciar una extensión con un <code>id</code> desconocido puede provocar un error en tiempo de ejecución.
 </p>
 <p>
   Se admiten los siguientes puntos de extensión:
 <ul>
-  <li><code>com.intellij.advancedSetting</code> en las claves del paquete de recursos <code>advanced.setting.*</code></li>
+  <li><code>com.intellij.advancedSetting</code> en la clave <code>advanced.setting.*</code> del paquete de recursos.</li>
   <li><code>com.intellij.experimentalFeature</code> en <code>Experiments.isFeatureEnabled()/setFeatureEnabled()</code></li>
-  <li><code>com.intellij.notificationGroup</code> en el constructor de <code>Notification</code> y <code>NotificationGroupManager.getNotificationGroup()</code>
+  <li><code>com.intellij.notificationGroup</code> en el constructor <code>Notification</code> y <code>NotificationGroupManager.getNotificationGroup()</code>
   </li>
-  <li><code>com.intellij.registryKey</code> en el parámetro <code>key</code> de los métodos de <code>Registry</code></li>
-  <li><code>com.intellij.toolWindow</code> en las claves del paquete de recursos <code>toolwindow.stripe.*</code></li>
+  <li><code>com.intellij.registryKey</code> en el parámetro <code>key</code> del método <code>Registry</code></li>
+  <li><code>com.intellij.toolWindow</code> en la clave <code>toolwindow.stripe.*</code> del paquete de recursos</li>
 </ul>
+
 <h4>Puntos de extensión</h4>
 <p>
-  Nombres de puntos de extensión referenciados en <code>plugin.xml</code> que corresponden a declaraciones <code>&lt;extensionPoint></code>.
+  El nombre del punto de extensión que hace referencia a la declaración <code>&lt;extensionPoint></code> correspondiente en <code>plugin.xml</code>.
 <ul>
   <li>Constructor y <code>create()</code> de <code>com.intellij.openapi.extensions.ExtensionPointName</code></li>
   <li>Constructor de <code>com.intellij.openapi.extensions.ProjectExtensionPointName</code></li>
-  <li>Constructor de <code>com.intellij.openapi.util.KeyedExtensionCollector</code> y sus herederos</li>
+  <li>Constructor de <code>com.intellij.openapi.util.KeyedExtensionCollector</code> y herederos</li>
 </ul>
 </p>
+
 </body>
 </html>

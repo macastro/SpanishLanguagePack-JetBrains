@@ -1,18 +1,19 @@
 <html>
 <body>
-Se informa sobre expresiones <code>new FileInputStream()</code> o <code>new FileOutputStream()</code> que pueden ser reemplazadas por llamadas a <code>Files.newInputStream()</code> o <code>Files.newOutputStream()</code> respectivamente.
+Informa las expresiones <code>new FileInputStream()</code> o <code>new FileOutputStream()</code> que se pueden reemplazar con llamadas <code>Files.newInputStream()</code> o <code>Files.newOutputStream()</code>, respectivamente.
 <br>
-Los flujos creados usando los métodos de <code>Files</code> suelen ser más eficientes que los creados usando constructores de flujo.
+Las transmisiones creadas usando métodos <code>Files</code> usualmente son más eficientes que aquellas creadas por los constructores de transmisión.
 <p>Ejemplo:</p>
 <pre><code>
   InputStream is = new BufferedInputStream(new FileInputStream(file));
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de que se aplica el arreglo rápido:</p>
 <pre><code>
   InputStream is = new BufferedInputStream(Files.newInputStream(file.toPath()));
 </code></pre>
-<p>Si el nivel del lenguaje es 10 o superior, esta inspección no mostrará advertencias, pero la corrección rápida seguirá estando disponible.</p>
-<p>Esta inspección solo informa cuando el nivel del lenguaje del proyecto o módulo es 7 o superior.</p>
-<p><small>Novedades en 2022.1</small></p>
+<!-- tooltip end -->
+<p>Esta inspección no muestra advertencia si el nivel de lenguaje es 10 o más alto, pero el arreglo rápido aún está disponible.</p>
+<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 7 o más alto.</p>
+<p><small>Nuevo en 2022.1</small></p>
 </body>
 </html>

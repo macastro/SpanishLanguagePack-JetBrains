@@ -1,27 +1,28 @@
 <html>
 <body>
-Informa sobre las llamadas a <code>String.startsWith()</code> y <code>String.endsWith()</code> donde se pasan literales de cadena de un solo carácter como argumentos.
+Inspecciona las llamadas de `String.startsWith()` y `String.endsWith()` que reciben un literal de cadena de un único carácter como argumento.
 <p>
-  Se sugiere reemplazar estas llamadas mediante una corrección rápida utilizando <code>String.charAt()</code>, que tiene una implementación más eficiente.
+  Se sugiere una corrección rápida para reemplazar estas llamadas por `String.charAt()`, una implementación más eficiente.
 </p>
 <p>
-  Sin embargo, debido a la verificación adicional de longitud no nula, la ganancia de rendimiento de tales cambios es mínima y reduce la legibilidad del código, por lo que se recomienda aplicar esta corrección rápida solo dentro de bucles ajustados.
+  No obstante, la mejora del rendimiento que aporta este cambio es mínima y añade una comprobación de longitud distinta de cero, lo que reduce la legibilidad. Por lo tanto, se recomienda aplicar esta corrección rápida únicamente en bucles estrictos.
 </p>
 <p>
-  Esta inspección es relevante para Java ME y otros entornos con recursos muy limitados.
-  La aplicación indiscriminada de esta inspección puede tener un impacto negativo en la claridad y el diseño del código.
+  Esta inspección se ha diseñado para entornos como Java ME o para otros casos donde el uso de recursos está muy restringido.
+  Aplicar los resultados de esta inspección sin pensarlo puede tener un impacto negativo en la claridad y en el diseño del código.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  boolean startsWithX(String s) {
+  boolean empiezaPorX(String s) {
     return s.startsWith("x");
   }
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  boolean startsWithX(String s) {
+  boolean empiezaPorX(String s) {
     return !s.isEmpty() && s.charAt(0) == 'x';
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

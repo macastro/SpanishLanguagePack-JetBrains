@@ -4,50 +4,52 @@
   <tr>
     <td colspan="3">
       <font face="verdana" size="-1">
-        Esta plantilla incorporada se utiliza para rellenar el cuerpo del método cada vez que se genera un método (por ejemplo, mediante la acción de intención <code>crear método desde uso</code>).<br>
-        La plantilla es editable. Además de expresiones Javascript y comentarios, puede utilizar variables predefinidas.
-        Estas variables serán reemplazadas por sus valores correspondientes cuando se aplique la plantilla.
+        Esta plantilla incorporada se utiliza para rellenar el cuerpo del método cada vez que se genera uno (por ejemplo, mediante la acción de intención <code>Crear método a partir del uso</code>).<br>
+        La plantilla es editable. Además de las expresiones y comentarios de Javascript, también puede utilizar variables predefinidas.
+        Estas variables se sustituirán por los valores correspondientes cuando se aplique la plantilla.
       </font>
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas aceptarán los siguientes valores:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas adoptarán los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${IS_ASSIGNMENT_TARGET}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Devuelve 'true' si el método creado es un objetivo de asignación.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${IS_NEW_CALL}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Devuelve 'true' si el método creado está bajo una llamada 'new'.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${HAS_EXPECTED_TYPE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Devuelve 'true' si el método creado está en una posición donde se espera un tipo.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">El valor predeterminado del tipo esperado para el método creado (o 'undefined' si no hay tipo esperado)</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Valor predeterminado para el tipo esperado del método creado ('undefined' si no hay un tipo esperado)</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${METHOD_NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre del método creado</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del método creado</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${SEMICOLON}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Punto y coma o vacío, según las opciones de estilo de código</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Punto y coma o vacío, basado en las opciones de estilo de código</font></td>
   </tr>
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Todas las variables predefinidas de la plantilla <i>Encabezado de archivo</i> (pestaña <i>Include</i>) también están disponibles.
-      (Por ejemplo: <font face="verdana" size="-2"><b>${USER}</b></font>, <font face="verdana" size="-2"><b>${DATE}</b></font>, etc.)</font>
+    <td colspan="3"><font face="verdana" size="-1">Todas las variables predefinidas de la plantilla <i>Encabezado de archivo</i> (pestaña <i>Incluir</i>) también están disponibles (por ejemplo:
+      <font face="verdana" size="-2"><b>${USER}</b></font>,
+      <font face="verdana" size="-2"><b>${DATE}</b></font>,
+      etc.).</font>
     </td>
   </tr>
 </table>

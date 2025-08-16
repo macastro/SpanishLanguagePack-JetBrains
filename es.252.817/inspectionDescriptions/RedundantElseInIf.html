@@ -1,11 +1,11 @@
 <html>
 <body>
-<p>Reporta un <code>if</code> redundante con <code>return</code> dentro de otro <code>if</code></p>
+<p>Informa de <code>else</code> redundante en <code>if</code> con <code>return</code></p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun foo(arg: Boolean): Int {
       if (arg) return 0
-      else { // este else es redundante, el código entre llaves puede moverse a la izquierda
+      else { // Este else es redundante, el código entre llaves se puede desplazar hacia la izquierda
           someCode()
       }
   }

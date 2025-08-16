@@ -1,15 +1,18 @@
 <html>
 <body>
-Reporta sentencias <code>try</code> que capturan <code>java.lang.Error</code> o cualquiera de sus subclases y no vuelven a lanzar el error.
-<p>No se reportan las sentencias que capturan <code>java.lang.ThreadDeath</code>.</p>
+Reporta declaraciones <code>try</code> que capturan
+<code>java.lang.Error</code> o cualquiera de sus subclases y no vuelven a lanzar el error.
+<p>Las declaraciones que capturan <code>java.lang.ThreadDeath</code> no son
+  reportadas.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   try {
     executeTests(request);
   }
-  catch (OutOfMemoryError ex) { // Advertencia: el error 'ex' no se vuelve a lanzar
+  catch (OutOfMemoryError ex) { // advertencia: el error 'ex' no fue relanzado
     return false;
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

@@ -1,10 +1,11 @@
 <html>
 <body>
-Reporta operadores ternarios anidados. Los operadores ternarios anidados pueden ser difíciles de leer, y generalmente es mejor reescribirlos usando al menos una declaración
-<code>if</code>.
+Reporta operadores ternarios anidados. Los operadores ternarios anidados pueden ser difíciles de leer, y a menudo es preferible utilizar al menos una declaración <code>if</code> en su lugar.
 <p>Ejemplo:</p>
 <p><code>min = x &lt; y ? (x &lt; z ? x : z) : (y &lt; z ? y : z)</code></p>
+
 Después de aplicar la corrección rápida, el resultado se verá así:
+
 <pre>
 <code>min = if x &lt; y
   x &lt; z ? x : z
@@ -12,7 +13,7 @@ else
   y &lt; z ? y : z
 end</code>
 </pre>
-<p><span style="font-size: smaller;">Inspirado por <a href="https://github.com/rubocop-hq/ruby-style-guide#no-nested-ternary">'Ruby Style Guide'</a></span>
+<p><span style="font-size: smaller;">Inspirado en <a href="https://github.com/rubocop-hq/ruby-style-guide#no-nested-ternary">'Ruby Style Guide'</a></span>
 </p>
 </body>
 </html>

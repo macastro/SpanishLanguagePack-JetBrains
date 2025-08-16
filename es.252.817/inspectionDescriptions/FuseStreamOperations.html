@@ -1,18 +1,20 @@
 <html>
 <body>
-Detecta transformaciones que pueden fusionarse en una cadena de Stream API.
+Detecta transformaciones fuera de una cadena Stream API que podrían incorporarse a ella.
 <p>Ejemplo:</p>
 <pre><code>
   List&lt;String&gt; list = stream.collect(Collectors.toList());
   list.sort(null);
   return list.toArray(new String[list.size()]);
 </code></pre>
-<p>Después de la transformación:</p>
+<p>Después de la conversión:</p>
 <pre><code>
   return stream.sorted().toArray(String[]::new);
 </code></pre>
 <p>
-  Tenga en cuenta que, en ocasiones, la cadena Stream transformada puede reemplazar un <code>ArrayList</code> explícito por <code>Collectors.toList()</code> o un <code>HashSet</code> explícito por <code>Collectors.toSet()</code>. Las implementaciones actuales de las bibliotecas utilizan estas colecciones internamente. Sin embargo, este enfoque no es completamente fiable y podría cambiar la semántica del código en el futuro.</p>
-<p>Si esto le preocupa, utilice la opción <b>Desaconsejar los colectores 'toList()' o 'toSet()'</b> para sugerir el uso de <code>Collectors.toCollection()</code> en lugar de los colectores <code>toList</code> y <code>toSet</code>.
+  Tenga en cuenta que a veces la cadena de stream convertida puede reemplazar <code>ArrayList</code> explícito con <code>Collectors.toList()</code> o <code>HashSet</code> explícito con <code>Collectors.toSet()</code>. La implementación actual de la biblioteca utiliza estas colecciones internamente. Sin embargo, este enfoque no es muy confiable y podría cambiar en el futuro alterando la semántica de su código.</p>
+
+<!-- tooltip end -->
+<p>Si le preocupa, use la opción <b>No sugerir recopiladores 'toList()' o 'toSet()'</b> para sugerir <code>Collectors.toCollection()</code> en lugar de los recopiladores <code>toList</code> y <code>toSet</code>.
 </body>
 </html>

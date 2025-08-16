@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre bucles que pueden ser reemplazados por llamadas a la API de Stream usando expresiones lambda.
-<p>Este tipo de reemplazo cambia el estilo imperativo a funcional, haciendo que el código sea más conciso.</p>
+Informa sobre bucles que pueden reemplazarse por llamadas a la API de transmisión que usan expresiones lambda.
+<p>Este tipo de reemplazo cambia el estilo imperativo por uno funcional, y el código se vuelve más compacto.</p>
 <p>Ejemplo:</p>
 <pre><code>
   <b>boolean</b> check(List&lt;String> data) {
@@ -14,11 +14,12 @@ Informa sobre bucles que pueden ser reemplazados por llamadas a la API de Stream
     return true;
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   <b>boolean</b> check(List&lt;String> data) {
     <b>return</b> data.stream().map(String::trim).allMatch(trimmed -> trimmed.startsWith("xyz"));
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

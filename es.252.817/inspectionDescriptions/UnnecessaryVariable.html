@@ -1,7 +1,8 @@
 <html>
 <body>
-Reporta variables locales que se utilizan únicamente en la siguiente instrucción <code>return</code> o en una copia exacta de otra variable.
-<p>Estas variables pueden ser inlineadas de forma segura para hacer el código más claro y comprensible.</p>
+Inspecciona variables locales que se usan únicamente en la siguiente sentencia <code>return</code> o que son copias exactas de otras variables.
+<p>Estas variables se pueden insertar en línea de forma segura para que el código sea más claro.</p>
+
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun sum(a: Int, b: Int): Int {
@@ -15,8 +16,9 @@ Reporta variables locales que se utilizan únicamente en la siguiente instrucci�
       return a + b
   }
 </code></pre>
-<p>Configuración de la inspección:</p>
-<p>La opción <b>Reportar variables que se retornan inmediatamente</b> permite reportar variables que se retornan de inmediato.
-    Estas variables pueden mejorar la legibilidad del código en algunos casos cuando se les da un nombre descriptivo, razón por la cual esta opción está desactivada por defecto.</p>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+<p>Usa la opción <b>Informar sobre variables devueltas inmediatamente</b> para informar sobre variables devueltas inmediatamente.
+    Cuando se les da nombres descriptivos, dichas variables pueden mejorar la legibilidad del código en algunos casos, por eso esta opción está deshabilitada de forma predeterminada.</p>
 </body>
 </html>

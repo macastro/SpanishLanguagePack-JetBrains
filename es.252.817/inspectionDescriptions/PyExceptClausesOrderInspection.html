@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>Informa sobre cláusulas <code>except</code> que no están listadas en el orden correcto de más específica a más general, o cuando una clase de excepción se captura dos veces.</p>
+<p>Informa sobre los casos en los que las cláusulas de <code>except</code> no están en el orden correcto, desde las más específicas a las más genéricas, o cuando una clase de excepción se captura dos veces. </p>
 <p>
-  Si no se corrige el orden, el manejador más específico podría no capturar algunas excepciones.
+  Si no se corrige el orden, es posible que algunas excepciones no sean capturadas por el controlador más específico.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -13,7 +13,7 @@ except ValueError:
 except UnicodeError:
     pass
 </code></pre>
-<p>El IDE sugiere mover la cláusula hacia arriba. Después de aplicar la corrección rápida, el código se convierte en:</p>
+<p>El IDE recomienda mover la cláusula hacia arriba. Cuando se aplica la corrección rápida, el código cambia a:</p>
 <pre><code>
 try:
     call()

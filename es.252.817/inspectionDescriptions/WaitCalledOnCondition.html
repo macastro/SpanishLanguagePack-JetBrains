@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa sobre llamadas a <code>wait()</code> realizadas en objetos <code>java.util.concurrent.locks.Condition</code>. Esto podría ser un error de programación, ya que se debería usar alguna variante del método <code>await()</code>.
+Reporta llamadas a <code>wait()</code> realizadas en un objeto <code>java.util.concurrent.locks.Condition</code>. Esto es probablemente un error de programación y alguna variante del método <code>await()</code> debía usarse en su lugar.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void acquire(Condition released) throws InterruptedException {
@@ -9,7 +9,7 @@ Informa sobre llamadas a <code>wait()</code> realizadas en objetos <code>java.ut
     }
   }
 </code></pre>
-<p>El código correcto debería ser similar a:</p>
+<p>El código correcto se vería así:</p>
 <pre><code>
   void acquire(Condition released) throws InterruptedException {
     while (acquired) {
@@ -17,5 +17,6 @@ Informa sobre llamadas a <code>wait()</code> realizadas en objetos <code>java.ut
     }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

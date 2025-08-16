@@ -1,27 +1,36 @@
 <html>
 <body>
-Informa sobre expresiones y condiciones que siempre producen el mismo resultado, como true, false, null o cero.
-Tales expresiones pueden ser reemplazadas por sus valores constantes correspondientes. Sin embargo, generalmente indican la presencia de un bug en el código.
-<p>Ejemplo:</p>
-<pre><code>  // Siempre es true
-  // Causa raíz: se usa || en lugar de &&
+Informa de expresiones y condiciones que siempre producen el mismo resultado, como true, false, null o cero.
+Dichas expresiones podrían reemplazarse por el valor constante correspondiente. Sin embargo, muy a menudo indican un error
+en el código.
+<p>Ejemplos:</p>
+<pre><code>  // siempre true
+  // causa raíz: se utiliza || en lugar de &&
   if (x &gt; 0 || x &lt; 10) {}
+
   System.out.println(str.trim());
-  // Siempre es false
-  // Causa raíz: la variable se desreferencia antes de la comprobación de null
+  // siempre false
+  // causa raíz: se desreferenció la variable antes de la comprobación de nulidad
   if (str == null) {}
 </code></pre>
 <p>
-  El comportamiento de la inspección puede ser controlado por varias anotaciones, como las anotaciones de <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">nulabilidad</a>, la anotación <code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code>, la anotación <code>@Range</code>, etc.
+  El comportamiento de la inspección puede controlarse mediante varias anotaciones, como las anotaciones de 
+  <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">nulabilidad</a>,
+  la anotación <code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code>, 
+  la anotación <code>@Range</code>, etc.
 </p>
-<p>Configuración de la inspección:</p>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
 <ul>
-  <li>Use la opción <b>No informar sobre aserciones que se demuestre estáticamente que siempre son verdaderas</b> para evitar informes sobre aserciones que se demuestre estáticamente que siempre son verdaderas. Esto incluye también condiciones como <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code>.</li>
-  <li>Use la opción <b>Ignorar declaraciones assert</b> para controlar cómo la inspección maneja las declaraciones <code>assert</code>. Por defecto, esta opción está desactivada, lo que significa que las aserciones se consideran ejecutadas (modo -ea). Si se activa esta opción, las aserciones se ignoran por completo (modo -da).</li>
-  <li>Use la opción <b>Advertir cuando las constantes se almacenan en variables</b> para mostrar advertencias cuando se utilizan variables cuyo valor se sabe que es constante.</li>
+  <li>Usa la opción <b>No informes de aserciones con una condición que se ha demostrado estáticamente que siempre es verdadera</b> para evitar informar de aserciones que se ha demostrado estáticamente que siempre son verdaderas. Esto también incluye condiciones como <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code>.</li>
+  <li>Usa la opción <b>Ignorar declaraciones assert</b> para controlar cómo trata la inspección las declaraciones <code>assert</code>. Por defecto, la opción
+    está deshabilitada, lo que significa que se asume que las aserciones se ejecutan (modo -ea). Si la opción está habilitada, las aserciones se ignorarán por completo
+    (modo -da).</li>
+  <li>Usa la opción <b>Advertencia cuando una constante se almacena en una variable</b> para mostrar advertencias cuando se usa una variable cuyo valor se sabe que es una constante.</li>
 </ul>
 <p>
-  Antes de IntelliJ IDEA 2022.3, esta inspección era parte de la inspección "Condiciones constantes y excepciones". Ahora está dividida en dos inspecciones: "Valores constantes" y "Problemas de nulabilidad y flujo de datos".
+  Antes de IntelliJ IDEA 2022.3, esta inspección formaba parte de la inspección "Condiciones constantes y excepciones". Ahora, se divide en dos inspecciones:
+  "Valores constantes" y "Problemas de flujo de datos y nulidad".
 </p>
 </body>
 </html>

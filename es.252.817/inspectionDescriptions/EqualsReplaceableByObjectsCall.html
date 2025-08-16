@@ -1,6 +1,6 @@
 <html>
 <body>
-La expresión puede reemplazarse con una llamada a <code>java.util.Objects#equals</code>.
+Informa sobre expresiones que pueden reemplazarse mediante una llamada a <code>java.util.Objects#equals</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void f(Object a, Object b) {
@@ -13,8 +13,10 @@ La expresión puede reemplazarse con una llamada a <code>java.util.Objects#equal
     boolean result = Objects.equals(a, b);
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Reemplazar expresiones como <code>a != null && a.equals(b)</code> con <code>Objects.equals(a, b)</code> cambia ligeramente la semántica. Este comportamiento puede habilitarse o deshabilitarse usando la opción <b>Resaltar expresiones similares a 'a != null && a.equals(b)'</b>.
+  La sustitución de expresiones tales como <code>a != null && a.equals(b)</code> por <code>Objects.equals(a, b)</code> cambia ligeramente la semántica. Utiliza la opción <b>Resaltar expresiones similares a "a != null && a.equals(b)"</b> para habilitar o deshabilitar este comportamiento.
 </p>
+<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 7 o superior.</p>
 </body>
 </html>

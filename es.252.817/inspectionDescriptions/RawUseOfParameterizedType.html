@@ -1,24 +1,26 @@
 <html>
 <body>
-Informa sobre clases genéricas donde se ignoran los parámetros de tipo. Aunque este uso <i>raw</i> de tipos genéricos es válido en Java, va en contra del propósito de los parámetros de tipo y puede ocultar errores. Esta inspección refleja la advertencia <code>rawtypes</code> de <code>javac</code>.
+Reporta clases genéricas con parámetros de tipo omitidos. Dicho uso de tipos genéricos <i>crudos</i> es válido en Java, pero anula el propósito de los parámetros de tipo y puede enmascarar errores. Esta inspección se comporta de manera similar a la advertencia `rawtypes` de `javac`.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-//Advertencia: uso raw de la clase parametrizada 'List'
+//ADVERTENCIA: Uso de clase parametrizada sin tipo de argumento 'List'
 List list = new ArrayList&lt;String&gt;();
-//Se creó una lista de strings, pero también acepta enteros
+//Se creó una lista de cadenas, pero también acepta enteros
 list.add(1);
 </code></pre>
 <pre><code>
-//Sin advertencia, ya que no se pueden proporcionar argumentos de tipo durante la creación del array
+//No hay advertencia porque no se puede proporcionar un argumento de tipo durante la creación de la matriz
 IntFunction&lt;List&lt;?&gt;[]> fun = List[]::new;
 </code></pre>
+<!-- tooltip end -->
 <p>Configuración de la inspección:</p>
 <ul>
-  <li>Use la opción <b>Ignorar construcción de nuevos objetos</b> para ignorar tipos raw utilizados en construcciones de objetos.</li>
-  <li>Use la opción <b>Ignorar conversiones de tipo</b> para ignorar tipos raw utilizados en conversiones de tipo.</li>
-  <li>Use la opción <b>Ignorar lugares donde los parámetros de tipo no compilan</b> para ignorar casos donde los parámetros de tipo fallan al compilar (por ejemplo, en la creación de arrays o al sobrescribir métodos de biblioteca).</li>
-  <li>Use la opción <b>Ignorar tipos de parámetros en métodos sobrescritos</b> para ignorar parámetros de tipo utilizados en parámetros de métodos sobrescritos.</li>
-  <li>Use la opción <b>Ignorar cuando la corrección rápida automática no está disponible</b> para ignorar casos donde la corrección rápida no está disponible.</li>
+  <li>Usa la opción <b>Ignorar construcción de objetos nuevos</b> para ignorar los tipos primitivos usados en la construcción de objetos.</li>
+  <li>Utiliza la opción <b>Ignorar conversiones de tipo</b> para ignorar los tipos sin formato utilizados en las conversiones de tipo.</li>
+  <li>Utiliza la opción <b>Ignorar donde los parámetros de tipo no compilan</b> para ignorar los casos en los que los parámetros de tipo no se compilan (por ejemplo, al crear matrices o anular métodos de biblioteca).</li>
+  <li>Usa la opción <b>Ignorar tipo de parámetro del método anulado</b> para ignorar los parámetros de tipo utilizados en los parámetros del método anulado.</li>
+  <li>Usa la opción <b>Ignorar cuando no se puede usar la corrección rápida automática</b> para ignorar los casos en los que la corrección rápida no es compatible.</li>
 </ul>
+Esta inspección solo informará si el nivel de idioma del proyecto o módulo es 5 o superior.
 </body>
 </html>

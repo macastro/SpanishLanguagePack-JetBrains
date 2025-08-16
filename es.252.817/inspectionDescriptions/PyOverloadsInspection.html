@@ -1,15 +1,21 @@
 <html>
 <body>
-<p>Informa sobre casos en archivos Python regulares donde las sobrecargas se colocan después de la implementación o donde sus firmas son incompatibles con la implementación.</p>
+<p>Informa sobre los casos en que se colocan sobrecargas en archivos Python regulares después de la implementación o cuando sus firmas no son compatibles con la implementación.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 from typing import overload
+
+
 @overload
-def foo(p1, p2): # firma de sobrecarga incompatible con la implementación
+def foo(p1, p2): # La firma de sobrecarga no es compatible con la implementación
     pass
+
+
 @overload
-def foo(p1): # firma de sobrecarga incompatible con la implementación
+def foo(p1): # La firma de sobrecarga no es compatible con la implementación
     pass
+
+
 def foo(p1, p2, p3):
     print(p1, p2, p3)
 </code></pre>

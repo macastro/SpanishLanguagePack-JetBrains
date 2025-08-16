@@ -1,28 +1,33 @@
 <html>
 <body>
-Informa sobre propiedades de tipo <code>Array</code> en la clase <code>data</code> que no tienen sobrescritos los métodos <code>equals()</code> o <code>hashCode()</code>.
+Informa propiedades con un tipo <code>Array</code> en una clase <code>data</code> sin <code>equals()</code> o <code>hashCode()</code> reemplazados.
 <p>
-    Los arrays se comparan por igualdad de referencia, lo que puede ser un comportamiento inesperado.
-    En estos casos, se recomienda encarecidamente sobrescribir <code>equals()</code> y <code>hashCode()</code>.
+    Los parámetros de matriz se comparan por igualdad de referencia, lo que probablemente sea un comportamiento inesperado.
+    Se recomienda encarecidamente reemplazar <code>equals()</code> y <code>hashCode()</code> en tales casos.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   data class Text(val lines: Array&lt;String&gt;)
 </code></pre>
-<p>La corrección rápida generará las implementaciones faltantes de <code>equals()</code> y <code>hashCode()</code>:</p>
+<p>La solución rápida genera implementaciones faltantes de <code>equals()</code> y <code>hashCode()</code>:</p>
 <pre><code>
   data class Text(val lines: Array&lt;String&gt;) {
       override fun equals(other: Any?): Boolean {
           if (this === other) return true
           if (javaClass != other?.javaClass) return false
+
           other as Text
+
           if (!lines.contentEquals(other.lines)) return false
+
           return true
       }
+
       override fun hashCode(): Int {
           return lines.contentHashCode()
       }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

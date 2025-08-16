@@ -1,7 +1,10 @@
 <html>
 <body>
-Informa sobre usos de <code>Optional.ofNullable()</code> donde el argumento es siempre null o nunca null.
-En estos casos, usar <code>Optional.ofNullable()</code> no tiene sentido: <code>Optional.empty()</code> u <code>Optional.of()</code> deberían usarse respectivamente para declarar explícitamente la intención de crear un opcional que siempre está vacío o nunca está vacío. También es posible que haya un error en el argumento de <code>Optional.ofNullable()</code>, por lo que debería revisarse.
+Reporta el uso de <code>Optional.ofNullable()</code> donde un argumento siempre nulo o siempre no nulo es pasado.
+No tiene sentido utilizar <code>Optional.ofNullable()</code> en este caso: <code>Optional.empty()</code>
+o <code>Optional.of()</code> debe ser usado para indicar explícitamente la intención de crear un Optional siempre vacío
+o siempre no vacío respectivamente. También es posible que haya un error en el 
+argumento <code>Optional.ofNullable()</code>, por lo que se debe examinar.
 <p>
   Ejemplo:
 </p>
@@ -9,5 +12,6 @@ En estos casos, usar <code>Optional.ofNullable()</code> no tiene sentido: <code>
 Optional&lt;String&gt; empty = Optional.ofNullable(null); // debería ser Optional.empty();
 Optional&lt;String&gt; present = Optional.ofNullable("value"); // debería ser Optional.of("value"); 
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

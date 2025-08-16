@@ -1,14 +1,15 @@
 <html>
 <body>
 Informa sobre métodos <code>clone()</code> que no declaran <code>throws CloneNotSupportedException</code>.
-<p>Sin la declaración <code>throws CloneNotSupportedException</code>, las subclases no podrán prohibir la clonación de manera estándar. Esta inspección no informa sobre métodos <code>clone()</code> declarados como <code>final</code> ni sobre métodos <code>clone()</code> en clases <code>final</code>.</p>
-<p>Configuración de la inspección:</p>
-<p>Use la opción <b>Advertir solo para métodos clone 'protected'</b> para que esta inspección emita advertencias únicamente para métodos <code>protected clone()</code>.
-<i>Effective Java</i> (tanto en su segunda como tercera edición) recomienda omitir la declaración <code>CloneNotSupportedException</code> en métodos <code>public</code>, ya que los métodos que no lanzan excepciones verificadas son más fáciles de usar.
+<p>Si no se declara <code>throws CloneNotSupportedException</code>, las subclases del método no podrán prohibir la clonación de la forma estándar. Esta inspección no informa sobre los métodos <code>clone()</code> declarados <code>final</code> y los métodos <code>clone()</code> en clases <code>final</code>.</p>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+<p>Utiliza la opción <b>Solo avisar en métodos clon 'protegidos'</b> para indicar que esta inspección solo debe avisar en métodos <code>clone()</code> <code>protegidos</code>.
+El libro <i>Effective Java</i> (segunda y tercera edición) recomienda omitir la declaración <code>CloneNotSupportedException</code> en métodos <code>public</code>, porque los métodos que no lanzan excepciones comprobadas son más fáciles de usar.
 <p>Ejemplo:</p>
 <pre><code>
   <b>public class</b> Example <b>implements</b> Cloneable {
-    // El método no declara 'throws CloneNotSupportedException'
+    // el método no declara 'throws CloneNotSupportedException'
     <b>protected</b> Object clone() {
         <b>try</b> {
             <b>return</b> <b>super</b>.clone();
@@ -18,5 +19,6 @@ Informa sobre métodos <code>clone()</code> que no declaran <code>throws CloneNo
     }
   }
 </code></pre>
+
 </body>
 </html>

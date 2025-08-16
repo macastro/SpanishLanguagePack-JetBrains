@@ -1,25 +1,28 @@
 <html>
 <body>
-Informa sobre comparaciones donde los operandos izquierdo y derecho representan la misma expresión.
-Aunque a veces puede ser intencional comparar una expresión consigo misma, generalmente es resultado de un descuido.
+Inspecciona comparaciones donde el operando izquierdo y el operando derecho representan la misma expresión.
+Aunque a veces la comparación de expresiones con ellas mismas puede ser intencionada, normalmente se debe a un descuido.
 <p>Ejemplo:</p>
 <pre><code>
-  // Posiblemente left.getLength() == right.getLength() sea intencional
+  // Puede que sea intencionado que left.getLength() == right.getLength()
   boolean result = left.getLength() == left.getLength();
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Para ignorar las comparaciones que puedan tener efectos secundarios, utilice la opción <b>Ignorar condiciones con efectos secundarios</b>.
-Deshabilitar esta opción puede resultar en falsos positivos, por ejemplo, cuando el mismo método devuelve diferentes valores en llamadas sucesivas.
+  Para ignorar comparaciones que pueden tener efectos secundarios, utiliza la opción <b>Ignorar condiciones con efectos secundarios</b>.
+Deshabilitar esta opción puede provocar falsos positivos, como cuando el mismo método devuelve valores diferentes en llamadas posteriores.
 </p>
 <p>Ejemplo:</p>
 <pre><code>
   native int unknownMethod();
+  
   ...
+  
   if (unknownMethod() &gt; unknownMethod()) {
-    System.out.println("Got it");
+    System.out.println("Lo tengo");
   }
 </code></pre>
-<p>Dado que <code>unknownMethod()</code> puede tener efectos secundarios (en el ejemplo), la advertencia solo se activará cuando la opción <b>Ignorar condiciones con efectos secundarios</b> esté deshabilitada.</p>
-<p><small>Novedades en 2024.2</small></p>
+<p>Como `unknownMethod()` puede tener efectos secundarios (en el ejemplo), solo se activará un aviso cuando la opción <b>Ignorar condiciones con efectos secundarios</b> esté deshabilitada.</p>
+<p><small>Novedad en 2024.2</small></p>
 </body>
 </html>

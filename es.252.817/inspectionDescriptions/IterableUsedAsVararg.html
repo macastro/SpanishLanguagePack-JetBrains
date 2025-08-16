@@ -5,12 +5,14 @@ Informa sobre usos sospechosos de <code>Collection</code> o <code>Iterable</code
 <pre><code>
   &lt;T&gt; boolean contains(T needle, T... haystack) {...}
 </code></pre>
-<p>Una llamada como esta:</p>
+<p>una llamada como</p>
 <pre><code>
   if(contains("item", listOfStrings)) {...}
 </code></pre>
-<p>parece sospechosa porque la lista será envuelta como un array de un solo elemento.
-  Este código se puede compilar correctamente y probablemente se ejecute sin excepciones, pero es posible que se esté utilizando incorrectamente.</p>
-<p><small>Novedades en 2019.2</small></p>
+<p>parece sospechosa ya que la lista se envolverá en una única matriz de elementos.
+  Este código puede compilarse correctamente y probablemente se ejecutará sin
+  excepciones, pero probablemente se use por error.</p>
+<!-- tooltip end -->
+<p><small>Novedad en 2019.2</small></p>
 </body>
 </html>

@@ -1,14 +1,16 @@
 <html>
 <body>
-Informa sobre los descriptores XML de Persistence ORM que no se pueden resolver en el origen de datos configurado y sugiere actualizar el origen de datos o asignar uno diferente.
-<p><b>Ejemplo de tabla de base de datos:</b></p>
+Persiste informes de descriptores XML de ORM que no pueden resolverse dentro del origen de datos configurado y sugiere actualizar el origen de datos o asignar uno diferente.
+
+<p><b>Tabla de base de datos de ejemplo:</b></p>
 <pre><code lang="sql">
   CREATE TABLE DATA_TABLE (
     ID INTEGER,
     DATA VARCHAR(100)
   );
 </code></pre><br/>
-<p><b>Ejemplo de archivo JSP:</b></p>
+
+<p><b>Archivo JSP de ejemplo:</b></p>
 <pre><code lang="jsp">
   &lt;?xml version="1.0" encoding="UTF-8"?&gt;
   &lt;entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0"&gt;
@@ -25,8 +27,9 @@ Informa sobre los descriptores XML de Persistence ORM que no se pueden resolver 
     &lt;/entity&gt;
   &lt;/entity-mappings&gt;
 </code></pre><br/>
+<!-- tooltip end -->
 <p>
-  <b>Nota</b>: El origen de datos se puede configurar mediante la operación `Asignar origen de datos`
+  <b>NOTA:</b> El origen de datos puede configurarse mediante la acción "Asignar origen de datos".
 </p>
 </body>
 </html>

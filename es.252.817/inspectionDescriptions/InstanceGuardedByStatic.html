@@ -1,16 +1,18 @@
 <html>
 <body>
-Un protector de informe es una anotación <code>@GuardedBy</code> en un campo de instancia o método que utiliza un campo <code>static</code> como protector. Usar un protector static para elementos no static puede resultar en una contención excesiva de bloqueos, ya que el acceso a cualquier campo bloqueado en cualquier instancia de objeto impedirá el acceso simultáneo a los campos en todas las instancias de objetos.
+Informa de anotaciones `@GuardedBy` en campos o métodos de instancia en los que el protector es un campo `static`. Proteger un no estático con un static puede dar lugar a un exceso de contienda de bloqueo, ya que el acceso a cada campo bloqueado en cualquier instancia de objeto impedirá el acceso simultáneo a ese campo en cada instancia de objeto.
 <p>Ejemplo:</p>
 <pre><code>
-    private static ReadWriteLock lock = new ReentrantReadWriteLock(); //campo protegido static
+    private static ReadWriteLock lock = new ReentrantReadWriteLock(); //campo de protección estático
     private Object state;
+
     @GuardedBy("lock")
     public void bar() {
         state = new Object();
     }
 </code></pre>
-<p>Las anotaciones <code>@GuardedBy</code> soportadas son:</p>
+<!-- tooltip end -->
+<p>Las anotaciones `@GuardedBy` compatibles son:</p>
 <ul>
   <li><code>net.jcip.annotations.GuardedBy</code></li>
   <li><code>javax.annotation.concurrent.GuardedBy</code></li>

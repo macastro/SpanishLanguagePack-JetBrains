@@ -1,12 +1,13 @@
 <html>
 <body>
-Informa sobre expresiones inicializadoras de arrays que contienen arrays de tipos primitivos con demasiados elementos. Tales inicializadores pueden resultar en archivos de clase demasiado grandes, ya que se debe generar código para inicializar cada elemento del array. En entornos con memoria o ancho de banda limitados, puede ser más eficiente cargar arrays primitivos grandes desde archivos de recursos.
+Informa sobre expresiones de inicialización de arreglos para los arreglos primitivos que contienen demasiados elementos. Esos inicializadores pueden generar archivos de clase demasiado grandes, ya que se debe generar el código para inicializar cada elemento del arreglo. En entornos con restricciones de memoria o ancho de banda, puede ser más eficiente cargar arreglos grandes de primitivas desde archivos de recursos.
 <p>
-  Esta inspección es relevante para Java ME y otros entornos con recursos muy limitados.
-  La aplicación indiscriminada de esta inspección puede tener un impacto negativo en la claridad y el diseño del código.
+  Esta inspección está diseñada para Java ME y otros entornos con muchos recursos restringidos.
+  Aplicar los resultados de esta inspección sin consideración podría tener efectos negativos sobre la claridad y el diseño del código.
 </p>
+<!-- tooltip end -->
 <p>
-  Utilice esta opción para especificar el número máximo de elementos permitidos en los inicializadores de arrays primitivos.
+  Utiliza la opción para especificar el número máximo de elementos que se permitirán en los inicializadores de arreglos primitivos.
 </p>
 </body>
 </html>

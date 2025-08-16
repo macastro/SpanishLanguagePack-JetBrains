@@ -1,12 +1,12 @@
 <html>
 <body>
-Informa sobre llamadas a métodos con un parámetro cuando no se proporcionan argumentos.
-Esto es equivalente a llamar con <code>null</code>, pero este comportamiento suele ser confuso y no intencionado.
+Informa las llamadas sin argumentos al método que tiene exactamente un parámetro. 
+Esto es equivalente a llamar con <code>null</code>, y ese comportamiento suele ser confuso y no intencionado.
 <p><b>Ejemplo:</b></p>
 <pre>
 <code>
 def foo(String s){}
-foo() // Esta llamada es equivalente a 'foo(null)'
+foo() // esta llamada es en realidad una llamada ´foo(null)`
 </code>
 </pre>
 </body>

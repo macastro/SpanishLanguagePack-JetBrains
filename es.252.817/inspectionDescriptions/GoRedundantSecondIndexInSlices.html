@@ -1,12 +1,29 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <html>
 <body>
-Informa sobre índices superiores (límites) redundantes en expresiones de slice.
-<p>Por lo general, el segundo índice es opcional. Eliminarlo puede mejorar la legibilidad del código.</p>
+Reporta un segundo índice redundante (un límite superior) en las expresiones de corte.
+<p>Por lo general, el segundo índice es opcional. Si lo quitas, podrías mejorar la legibilidad del código.</p>
 <p>Ejemplo:</p>
 <pre><code>var a []int
-a = a[0:len(a)] // `a[0:len(a)]` es igual a `a[0:]`</code>
+a = a[0:len(a)] // `a[0:len(a)]` es lo mismo que `a[0:]`</code>
 </pre>
-<p>Puede aplicar la corrección rápida <b>Eliminar índice redundante</b> para estos casos. Después de aplicar la corrección rápida, el código se verá así:</p>
+<p>Puedes aplicar la corrección rápida <b>Eliminar índice redundante</b> a esos casos. Después de aplicar la corrección rápida, este
+  código se ve así:</p>
 <pre><code>var a []int
 a = a[0:]</code>
 </pre>

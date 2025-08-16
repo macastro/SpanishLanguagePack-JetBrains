@@ -1,11 +1,12 @@
 <html>
 <body>
-Informa sobre el uso de desplazamientos no <code>integer</code> en expresiones de acceso a cadenas, como <code>$str[42]</code>.
+Informa sobre los usos de compensaciones que no son <code>integer</code> en expresiones de acceso a cadenas como <code>$str[42]</code>.
+<!-- tooltip end -->
 <p>
-  Desde PHP 5.4, los desplazamientos de cadenas deben ser enteros o cadenas numéricas.
-  Dado que el uso de cadenas como desplazamientos de cadenas se considera una mala práctica, esta inspección también informa sobre tales usos.
+  A partir de PHP 5.4, las compensaciones de cadena deben ser enteras o cadenas de tipo entero.
+  Dado que se considera una mala práctica usar cadenas como compensación de cadena, la inspección también las informa.
 </p>
-<p>Para más información, consulte <a href="https://www.php.net/manual/en/language.types.string.php#language.types.string.substr">String access and modification by character (php.net)</a>.
+<p>Consulte <a href="https://www.php.net/manual/en/language.types.string.php#language.types.string.substr">Acceso y modificación de cadenas por carácter (php.net)</a> para obtener más información.
 </p>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <html>
 <body>
-Informa sobre bucles <code>while</code> que iteran sobre colecciones y pueden ser reemplazados por bucles <code>for</code> mejorados (sintaxis de iteración foreach).
+Reporta los bucles <code>while</code> que iteran sobre colecciones y que pueden reemplazarse con un bucle <code>for</code> mejorado (sintaxis de iteración <em>foreach</em>).
+<!--  'foreach' still used in this description so that the inspection continues to be found using this keyword -->
 <p><b>Ejemplo:</b></p>
 <pre><code>
   Iterator it = c.iterator();
@@ -9,11 +10,12 @@ Informa sobre bucles <code>while</code> que iteran sobre colecciones y pueden se
     System.out.println(obj);
   }
 </code></pre>
-<p>Puede ser reemplazado por:</p>
+<p>Se puede sustituir por:</p>
 <pre><code>
   for (Object obj : c) {
     System.out.println(obj);
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

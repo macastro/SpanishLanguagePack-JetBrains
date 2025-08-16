@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre las declaraciones <code>assert</code> y las aserciones del marco de pruebas que están suprimidas por los bloques catch circundantes.
-Estas aserciones nunca fallarán porque el <code>AssertionError</code> lanzado será capturado e ignorado silenciosamente.
+Reporta sentencias <code>assert</code> y aserciones del marco de pruebas que son suprimidas por un bloque de captura circundante.
+Dichas aserciones nunca fallarán, ya que el <code>AssertionError</code> arrojado será capturado e ignorado silenciosamente.
 <p><b>Ejemplo 1:</b></p>
 <pre><code>
   void javaAssertion() {
@@ -9,7 +9,7 @@ Estas aserciones nunca fallarán porque el <code>AssertionError</code> lanzado s
       ...
       assert 1 == 2;
     } catch (AssertionError e) {
-      // Esta aserción se ignora silenciosamente
+      // la aserción es ignorada silenciosamente
     }
   }
 </code></pre>
@@ -21,7 +21,7 @@ Estas aserciones nunca fallarán porque el <code>AssertionError</code> lanzado s
       ...
       assertThat(1).as("test").isEqualTo(2);
     } catch (AssertionError e) {
-      // Esta aserción se ignora silenciosamente
+      // la aserción es ignorada silenciosamente
     }
   }
 </code></pre>
@@ -33,10 +33,11 @@ Estas aserciones nunca fallarán porque el <code>AssertionError</code> lanzado s
       ...
       assertEquals(1, 2);
     } catch (AssertionError e) {
-      // Esta aserción se ignora silenciosamente
+      // la aserción es ignorada silenciosamente
     }
   }
 </code></pre>
-<p><small>Novedades en 2020.3</small></p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2020.3</small></p>
 </body>
 </html>

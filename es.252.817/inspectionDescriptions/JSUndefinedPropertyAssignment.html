@@ -1,12 +1,13 @@
 <html>
 <body>
-Informa sobre asignaciones a propiedades que no están definidas en el tipo de variable. <p>Ejemplo: </p>
+Informa una asignación a una propiedad que no está definida en el tipo de una variable. <p>Ejemplo: </p>
 <pre><code>
 /**
  * @type {{ property1: string, property2: number }}
  */
 let myVariable = create();
-myVariable.newProperty = 3; // incorrecto
+
+myVariable.newProperty = 3; // malo
 </code></pre>
 </body>
 </html>

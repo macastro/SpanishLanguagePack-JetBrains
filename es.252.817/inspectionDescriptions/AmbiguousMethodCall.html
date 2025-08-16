@@ -1,37 +1,45 @@
 <html>
 <body>
-Informa sobre llamadas a métodos de superclase desde clases anónimas, internas o locales cuando existe un método con la misma firma en el código circundante.
-En estos casos, aunque parezca que se está llamando al método del código circundante, en realidad se está llamando al método de la superclase.
+Informa las llamadas a un método de superclase desde una clase anónima, interna o local,
+si existe un método con la misma firma en el código circundante a la clase.
+En este caso, puede parecer que se llama a un método del código circundante,
+cuando en realidad es una llamada a un método de la superclase.
 <p>
-  Para clarificar la intención del código, se recomienda añadir el calificador explícito <code>super</code> a la llamada del método.
+  Para aclarar la intención del código, se recomienda añadir un calificador explícito
+  <code>super</code> a la llamada del método.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Parent {
+  clase Parent {
     void ambiguous(){}
   }
-  class Example {
+
+  clase Example {
     void ambiguous(){}
-    class Inner extends Parent {
+
+    clase Inner extiende Parent {
       void example(){
         ambiguous(); //advertencia
       }
     }
   }
   </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
-  class Parent {
+  clase Parent {
     void ambiguous(){}
   }
-  class Example {
+
+  clase Example {
     void ambiguous(){}
-    class Inner extends Parent {
+
+    clase Inner extiende Parent {
       void example(){
         super.ambiguous();
       }
     }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

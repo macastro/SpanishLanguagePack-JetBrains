@@ -1,28 +1,31 @@
 <html>
 <body>
-Informa sobre métodos que tienen el mismo nombre que su clase.
-Aunque Java permite este tipo de nomenclatura, por convención está reservada para definir constructores.
-Su uso en métodos puede ser un error o una mala práctica.
+Reporta métodos cuyos nombres son idénticos a su clase.
+Si bien dicho nombre es permitido por el lenguaje Java, por convención se reserva para definir constructores.
+Usarlo para métodos probablemente es un error o una mala práctica.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class MyClass {
+  clase MyClass {
     int val;
-    // El nombre del método MyClass es igual al de su clase contenedora.
-    // Posiblemente se añadió 'void' por error.
+
+    // El método MyClass tiene el mismo nombre que la clase contenedora.
+    // Es probable que 'void' se haya agregado por error.
     void MyClass(int val) {
       this.val = val;
     }
   }
 </code></pre>
-<p>Cuando sea apropiado, el método puede convertirse en un constructor mediante una corrección rápida:</p>
+<p>Cuando es pertinente, un arreglo rápido convierte el método en un constructor:</p>
 <pre><code>
-  class MyClass {
+  clase MyClass {
     int val;
+
     MyClass(int val) {
       this.val = val;
     }
   }
 </code></pre>
-<p>El método también puede renombrarse mediante otra corrección rápida.</p>
+<p>Otro arreglo rápido vuelve a nombrar el método.</p>
+<!-- tooltip end -->
 </body>
 </html>

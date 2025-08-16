@@ -1,12 +1,15 @@
 <html>
 <body>
-Reporta incompatibilidades de tipos de propiedades en las características de JPA.
+Reporta que el tipo de propiedad no coincide con los atributos JPA.
+
 <p><b>Ejemplo:</b></p><br/>
 <pre><code lang="java">
   @Entity
   public class JavaEntity {
+
     @OneToOne
-    Map&lt;Integer, AnotherEntity&gt; incorrectRelationship; // Error: El tipo de característica 'One To One' debe ser Entity, no Map
+    Map&lt;Integer, AnotherEntity&gt; incorrectRelationship; // Error: el tipo de atributo 'One To One' debe ser una entidad, no un mapa
+
     @ManyToMany
     Map&lt;Integer, AnotherEntity&gt; correctRelationship;
   }

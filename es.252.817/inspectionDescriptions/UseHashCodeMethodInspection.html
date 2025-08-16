@@ -1,7 +1,7 @@
 <html>
 <body>
-La inspección puede reemplazar operaciones a nivel de bits con llamadas a los métodos <code>Long.hashCode()</code> o <code>Double.hashCode()</code>.
-Detecta construcciones del tipo <code>(int)(x ^ (x >>> 32))</code>, donde <code>x</code> es una variable de tipo <code>long</code> o el resultado de una llamada previa a <code>Double.doubleToLongBits()</code>. Este reemplazo puede reducir el código y mejorar su legibilidad.
+El informe puede reemplazarse por una operación a nivel de bits de la llamada al método <code>Long.hashCode()</code> o <code>Double.hashCode()</code>.
+Detectará la construcción <code>(int)(x ^ (x >>> 32))</code>, donde <code>x</code> es una variable de tipo <code>long</code>, o el resultado de una llamada <code>Double.doubleToLongBits()</code> anterior. Este reemplazo puede acortar el código y mejorar su legibilidad.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   int result = (int)(var ^ (var >>> 32));
@@ -10,7 +10,8 @@ Detecta construcciones del tipo <code>(int)(x ^ (x >>> 32))</code>, donde <code>
 <pre><code>
   int result = Long.hashCode(var);
 </code></pre>
-<p>Esta inspección solo se informa cuando el nivel de lenguaje del proyecto o módulo es 8 o superior.
-<p><small>Novedades en 2024.1</small></p>
+<!-- tooltip end -->
+<p>Esta inspección solo informará si el nivel de lenguaje del proyecto o módulo es 8 o superior.
+<p><small>Novedades de 2024.1</small></p>
 </body>
 </html>

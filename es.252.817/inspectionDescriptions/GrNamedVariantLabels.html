@@ -1,11 +1,12 @@
 <html>
 <body>
-Informa sobre etiquetas de argumentos no resueltas en llamadas a métodos anotados con <code>@NamedVariant</code>/<code>@NamedParam</code>/<code>@NamedDelegate</code>.
+Reporta etiquetas de argumentos sin resolver en llamadas de métodos anotados por <code>@NamedVariant</code>/<code>@NamedParam</code>/<code>@NamedDelegate</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   @groovy.transform.NamedVariant
   def foo(a, b) {}
-  // Etiqueta no resuelta 'c'
+
+  // Etiqueta sin resolver 'c'
   foo(a: 1, b: 2, c: 3)
 </code></pre>
 </body>

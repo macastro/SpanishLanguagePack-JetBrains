@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa sobre casos de prueba no <code>abstract</code> que no tienen métodos de prueba. Estos casos de prueba generalmente indican código incompleto o posibles residuos de refactorización que deberían eliminarse.
+Inspecciona los casos de prueba que no son <code>abstract</code> sin métodos de prueba. Dichos casos de prueba suelen indicar código sin terminar o podrían ser un resto de refactorización que debería eliminarse.
 <p>Ejemplo:</p>
 <pre><code>
   public class CrucialTest {
@@ -10,8 +10,9 @@ Informa sobre casos de prueba no <code>abstract</code> que no tienen métodos de
     }
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Utilice la opción <b>Ignorar casos de prueba con superclases que contienen métodos de prueba</b> para excluir los casos de prueba que tienen superclases con métodos de prueba.
+  Utiliza la opción <b>Ignorar casos de prueba que tengan superclases con métodos de prueba</b> para ignorar casos de prueba que tengan superclases con métodos de prueba.
 <p>
 </body>
 </html>

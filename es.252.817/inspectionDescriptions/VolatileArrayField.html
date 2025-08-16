@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa sobre campos de array declarados como <code>volatile</code>. Tales declaraciones pueden ser confusas, ya que el acceso al array en sí sigue las reglas de los campos <code>volatile</code>, pero no así el acceso a los contenidos del array.
+Reporta campos de matrices que son declarados <code>volatile</code>. Estas declaraciones pueden ser confusas debido a que acceder al propio arreglo sigue las reglas para campos <code>volatile</code>, pero acceder al contenido del arreglo no.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Data {
@@ -8,12 +8,13 @@ Informa sobre campos de array declarados como <code>volatile</code>. Tales decla
   }
 </code></pre>
 <p>
-  Si se necesita este tipo de acceso volátil al contenido del array, considere usar las clases de <code>java.util.concurrent.atomic</code>:
+  Si dicho acceso volátil es necesario para el contenido del arreglo, considera utilizar clases de <code>java.util.concurrent.atomic</code>:
 </p>
 <pre><code>
   class Data {
     private final AtomicIntegerArray idx = new AtomicIntegerArray(new int[0]);
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
 <body>
-Se informa que el lambda puede reemplazarse con una referencia a método. Las referencias a métodos suelen ser más fáciles de entender y leer que las expresiones lambda, aunque esto generalmente depende de tus preferencias.
-<p>Ejemplo:</p>
+Informa a lambda que puede ser reemplazado por una referencia de método. Esto es generalmente una cuestión de preferencia, pero se puede decir que las referencias de método son más fáciles de entender y leer que las lambda.
+<p>Ejemplos:</p>
 <pre><code>
   Runnable r = () -> System.out.println();
 </code></pre>
@@ -9,9 +9,10 @@ Se informa que el lambda puede reemplazarse con una referencia a método. Las re
 <pre><code>
   Runnable r = System.out::println;
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Esta inspección puede sugerir referencias a métodos incluso cuando el lambda no invoca ningún método, por ejemplo, reemplazando <code>obj -> obj != null</code> por <code>Objects::nonNull</code>. 
-  Utiliza <a href="settings://preferences.sourceCode.Java?Lambda%20Body">Configuración | Editor | Estilo de código | Java | Generación de código</a> para configurar referencias a métodos especiales.
+  Esta inspección puede sugerir una referencia de método, incluso si la lambda no llama a ningún método (por ejemplo, reemplazando <code>obj -> obj != null</code> por <code>Objects::nonNull</code>). 
+  Para configurar referencias de método específicas, usa la configuración "<a href="settings://preferences.sourceCode.Java?Lambda%20Body">Configuración | Editor | Estilo de código | Java | Generación de código</a>".
 </p>
 </body>
 </html>

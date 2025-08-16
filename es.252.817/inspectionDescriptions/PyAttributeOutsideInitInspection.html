@@ -1,22 +1,24 @@
 <html>
 <body>
-Informa sobre problemas de atributos de instancia definidos fuera del método <code>__init__</code>.
+Informa de un problema cuando la definición del atributo de la instancia está fuera del método <code>__init__</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
     class Book:
     def __init__(self):
         self.author = 'Mark Twain'
+
     def release(self):
         self.year = '1889'
 </code></pre>
 <p>
-  Después de aplicar la corrección rápida, el código de ejemplo se convierte en:
+  Cuando se aplica la corrección rápida, el ejemplo de código cambia a:
 </p>
 <pre><code>
     class Book:
     def __init__(self):
         self.year = '1889'
         self.author = 'Mark Twain'
+
     def release(self):
         pass
 </code></pre>

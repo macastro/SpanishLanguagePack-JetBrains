@@ -1,8 +1,9 @@
 <html>
 <body>
-Reporta llamadas a <code>toUpperCase()</code> o <code>toLowerCase()</code> en objetos <code>String</code> sin un <code>java.util.Locale</code> especificado. En estos casos se utiliza la configuración regional predeterminada del sistema, lo que puede causar problemas en entornos internacionalizados.
+Informa sobre llamadas <code>toUpperCase()</code> o <code>toLowerCase()</code> en objetos <code>String</code> que no especifican un <code>java.util.Locale</code>. En estos casos se utiliza la configuración regional predeterminada del sistema, lo que puede provocar problemas en un entorno internacionalizado.
 <p>
-  Por ejemplo, el código <code>"i".toUpperCase().equals("I")</code> devuelve <code>false</code> en las configuraciones regionales de turco y azerbaiyano, donde las 'i' con y sin punto son letras diferentes. Cuando se ejecuta en la configuración regional turca, llamar a <code>toUpperCase()</code> en cadenas en inglés que contienen 'i' devolverá resultados incorrectos. También puede causar errores al procesar cadenas que deberían ser independientes de la configuración regional (como etiquetas HTML).
+  Por ejemplo, el código <code>"i".toUpperCase().equals("I")</code> devuelve <code>false</code> en las configuraciones regionales de turco y azerbaiyano, donde las 'i' con y sin puntos son caracteres distintos. Si se llama a <code>toUpperCase()</code> en una cadena de inglés que contiene una 'i' cuando se ejecuta en una configuración regional de turco, devolverá resultados incorrectos. De forma alternativa, cuando se tratan cadenas que deberían tratarse como independientes de la configuración regional, como las etiquetas HTML, esto puede provocar errores.
 </p>
+<!-- tooltip end -->
 </body>
 </html>

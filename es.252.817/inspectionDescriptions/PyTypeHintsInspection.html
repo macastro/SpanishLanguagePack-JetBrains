@@ -1,17 +1,22 @@
 <html>
 <body>
-<p>Uso inválido de las anotaciones de tipo.</p>
+<p>Informe el uso inválido de sugerencias de tipo.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 from typing import TypeVar
-T0 = TypeVar('T1') # El argumento de 'TypeVar' debe ser 'T0'
-def b(p: int) -> int:  # El tipo está especificado tanto en el comentario como en la anotación
+
+T0 = TypeVar('T1') # Los argumentos del 'TypeVar' debe ser 'T0'
+
+
+def b(p: int) -> int:  # El tipo es especificado en tanto el comentario como en la anotación
     # type: (int) -> int
     pass
-def c(p1, p2): # Demasiados argumentos en la firma del tipo
+
+
+def c(p1, p2): # La firma del tipo tiene demasiados argumentos
     # type: (int) -> int
     pass
 </code></pre>
-<p>Las correcciones rápidas disponibles sugieren varias acciones. Puede renombrar, eliminar o mover los elementos problemáticos. También puede modificar manualmente las declaraciones de tipo para asegurarse de que no se muestren advertencias.</p>
+<p>Los arreglos rápidos propuestos ofrecen una variedad de acciones. Puede renombrar, quitar o mover el elemento problemático. El tipo de declaración también se puede modificar manualmente para garantizar que no aparezca una advertencia.</p>
 </body>
 </html>

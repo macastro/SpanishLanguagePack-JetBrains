@@ -1,10 +1,10 @@
 <html>
 <body>
-Se informa una columna que no está en la cláusula GROUP BY o en una llamada de función de agregación.
+Informa de las columnas que no están en la cláusula <code>GROUP BY</code> o dentro de una llamada a una función de agregación.
 <p>Ejemplo (Microsoft SQL Server):</p>
 <pre><code>CREATE TABLE t1 (a INT, b INT);
 SELECT a, b FROM t1 GROUP BY a;</code></pre>
-<p>Si ejecuta la consulta SELECT, recibirá un error porque Microsoft SQL Server requiere que la columna <code>b</code> esté en GROUP BY o se use dentro de una función de agregación. Los siguientes dos ejemplos corregirán el error.</p>
+<p>Si ejecuta la consulta <code>SELECT</code>, recibirá un error porque Microsoft SQL Server espera que la columna <code>b</code> esté en <code>GROUP BY</code> o utilizada dentro de una función de agregación. Los dos ejemplos siguientes corrigen el error.</p>
 <pre><code>SELECT a, b FROM t1 GROUP BY a, b;
 SELECT a, max(b) max_b FROM t1 GROUP BY a;</code></pre>
 </body>

@@ -1,27 +1,31 @@
 <html>
 <body>
-Informa sobre referencias a clases internas que no utilizan nombres de clase envolvente calificados.
+Informa de las referencias a clases internas que no están cualificadas con el nombre de la clase que las abarca.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   import foo.Foo.Bar;
+
   class Foo {
     class Bar {}
   }
+
   class Baz {
     void f(Bar bar) {}
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   class Foo {
     class Bar {}
   }
+
   class Baz {
     void f(Foo.Bar bar) {}
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  La configuración de la inspección permite ignorar las referencias a clases internas dentro de la misma clase, por lo que estas clases no requieren importación.
+  Usa la configuración de la inspección para ignorar referencias a clases internas dentro de la misma clase, que por tanto no requieren una importación.
 <p>
 </body>
 </html>

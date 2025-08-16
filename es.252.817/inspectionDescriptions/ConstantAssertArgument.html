@@ -1,13 +1,16 @@
 <html>
 <body>
-Reporta llamadas a <code>assertTrue()</code>, <code>assertFalse()</code>, <code>assertNull()</code> y <code>assertNotNull()</code> con argumentos constantes.
+Reporta argumentos constantes en llamadas a <code>assertTrue()</code>, <code>assertFalse()</code>,
+<code>assertNull()</code>, y <code>assertNotNull()</code>.
 <p>
-  Las llamadas a estos métodos con argumentos constantes siempre tendrán éxito o siempre fallarán.
-  Estas declaraciones pueden permanecer inadvertidamente después de una refactorización y pueden no ser intencionales.
+  Las llamadas a estos métodos con
+  argumentos constantes o bien siempre tendrán éxito o siempre fallarán.
+  Tales declaraciones pueden fácilmente quedar después de la refactorización y probablemente no son intencionales.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   assertNotNull("foo");
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

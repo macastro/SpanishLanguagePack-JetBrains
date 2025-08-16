@@ -1,19 +1,23 @@
 <html>
 <body>
-Informa sobre llamadas a <code>Object.notify()</code> u <code>Object.notifyAll()</code> donde no se detectan cambios de estado.
+Informa de las llamadas a <code>Object.notify()</code> u <code>Object.notifyAll()</code> sin que se produzca ningún cambio de estado detectable.
 <p>
-  <code>Object.notify()</code> y <code>Object.notifyAll()</code> se utilizan normalmente para notificar a otros hilos sobre un cambio de estado. Este cambio de estado debería ocurrir en el contexto sincronizado que contiene la llamada a <code>Object.notify()</code> o
-<code>Object.notifyAll()</code>, y antes de la llamada. Aunque la ausencia de dicho cambio de estado no es necesariamente incorrecta, definitivamente merece ser revisada.
+  Normalmente, <code>Object.notify()</code> y <code>Object.notifyAll()</code> se utilizan para informar a otros subprocesos de que se ha
+  producido un cambio de estado. Ese cambio de estado debe producirse en un contexto sincronizado que contenga la llamada a <code>Object.notify()</code> o
+  <code>Object.notifyAll()</code>, y antes de la llamada. Aunque no tener un cambio de estado de este tipo no es necesariamente incorrecto,
+  ciertamente merece la pena examinarlo.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   synchronized (this) {
     notify();
   }
-  // Sin cambios de estado
+  // sin cambio de estado
   synchronized (this) {
-    notify(); // Notificación potencialmente redundante
+    notify(); // esta notificación podría ser redundante
   }
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

@@ -1,39 +1,42 @@
 <html>
 <body>
-Reportar clases vacías y archivos Java vacíos.
-<p>Una clase está vacía si no contiene campos, métodos, constructores o inicializadores. Las clases vacías a veces permanecen después de cambios importantes o refactorizaciones.</p>
+Reporta clases vacías y archivos Java vacíos.
+<p>Una clase está vacía si no contiene algún campo, método, constructor o inicializador. Las clases vacías a veces son dejadas desatendidas después de cambios significativos o refactorizaciones.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Example {
-    List&lt;String&gt; getList() {
+  clase Ejemplo {
+    Lista&lt;String&gt; obtenerLista() {
        return new ArrayList&lt;&gt;() {
+
        };
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de que la reparación rápida es aplicada:</p>
 <pre><code>
-  class Example {
-    List&lt;String&gt; getList() {
+  clase Ejemplo {
+    Lista&lt;String&gt; obtenerLista() {
        return new ArrayList&lt;&gt;();
     }
   }
 </code></pre>
-<p>Configuración de la inspección:</p>
+<!-- tooltip end -->
+<p>Configurar el examen:</p>
 <ul>
   <li>
-    Utilice la opción <b>Ignorar cuando hay anotaciones</b> para especificar anotaciones especiales. La inspección ignorará las clases marcadas con estas anotaciones.
+    Usa la opción <b>Ignorar si está anotada por</b> para especificar anotaciones especiales. El examen ignorará las clases marcadas con estas
+    anotaciones.
   </li>
   <li><p>
-    Utilice la opción <b>Ignorar si la clase es un parámetro del tipo padre</b> para ignorar clases con superclases parametrizadas. Por ejemplo:
+    Usa la opción <b>Ignorar clase si es una parametrización de un supertipo</b> para ignorar las clases que parametrizan una superclase. Por ejemplo:
   </p>
-    <pre><code>class MyList extends ArrayList&lt;String&gt; {}</code></pre>
+    <pre><code>clase MiLista extiende ArrayList&lt;String&gt; {}</code></pre>
   </li>
   <li>
-    Utilice <b>Ignorar subclases de java.lang.Throwable</b> para ignorar clases que extienden de <code>java.lang.Throwable</code>.
+    Usa la opción <b>Ignorar subclases de java.lang.Throwable</b> para ignorar las clases que extienden <code>java.lang.Throwable</code>.
   </li>
   <li>
-    Utilice la opción <b>Considerar comentarios como contenido</b> para ignorar clases que contienen comentarios.
+    Usa la opción <b>Los comentarios cuentan como contenido</b> para ignorar clases que contienen comentarios.
   </li>
 </ul>
 </body>

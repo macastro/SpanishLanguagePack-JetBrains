@@ -1,14 +1,16 @@
 <html>
 <body>
-Informa sobre variables <code>static</code> que posiblemente no estén inicializadas durante la inicialización de la clase.
+Informa de variables <code>static</code> que pueden no estar inicializadas durante la inicialización de clase.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
     public static int bar;
+
     static { }
   }
 </code></pre>
-<p>Tenga en cuenta que esta inspección utiliza un algoritmo de flujo de datos muy conservador y podría reportar incorrectamente variables <code>static</code> como no inicializadas. Las variables reportadas como inicializadas siempre estarán inicializadas.</p>
-<p>Use la opción <b>Ignorar campos primitivos</b> para ignorar los campos primitivos no inicializados.</p>
+<p>Ten en cuenta que esta inspección usa un algoritmo de flujo de datos muy conservador y puede informar incorrectamente de que las variables <code>static</code> no están inicializadas. Las variables que se informa que están inicializadas siempre lo estarán.</p>
+<!-- tooltip end -->
+<p>Usa la opción <b>Ignorar campos primitivos</b> para ignorar campos primitivos no inicializados.</p>
 </body>
 </html>

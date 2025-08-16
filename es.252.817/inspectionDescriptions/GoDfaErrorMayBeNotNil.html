@@ -1,16 +1,16 @@
 <html>
 <body>
-Informa sobre instancias donde las variables pueden tener valores <code>nil</code> o inesperados porque no se verificó si el error asociado era distinto de nil, como en <code>v, err := foo()</code>.
-<p>Esta corrección rápida eliminará la función del alcance de esta verificación.</p>
+Informa de instancias en las que las variables pueden tener <code>nil</code> o un valor inesperado debido a que el error asociado no se comprueba para que no sea <code>nil</code>, como en <code>v, err := foo()</code>.
+<p>El arreglo rápido elimina la función del alcance de esta inspección.</p>
 <p>Ejemplo:</p>
 <pre><code>
 func _() {
     file, err := os.Open("file.txt")
-    // Se omite la verificación de error aquí
+    // Aquí se omite la comprobación de errores
     name := file.Name()
     print(name, err)
 }
 </code></pre>
-<p>En el ejemplo proporcionado, <code>file</code> podría ser <code>nil</code> o tener un valor inesperado cuando <code>err</code> no es <code>nil</code>.</p>
+<p>En el ejemplo proporcionado, <code>file</code> podría ser <code>nil</code> o tener un valor inesperado si <code>err</code> no es <code>nil</code>.</p>
 </body>
 </html>

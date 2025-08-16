@@ -1,24 +1,25 @@
 <html>
 <body>
-El informe puede reemplazarse con una sentencia <code>if</code> que utilice los operadores <code>&&</code>, <code>||</code>, <code>==</code>, <code>!=</code> o <code>?:</code>.
-<p>El resultado suele ser más corto, pero no siempre más claro, por lo que no se recomienda aplicar esta corrección en todos los casos.</p>
-<p>Ejemplo:</p>
+Informa sobre sentencias <code>if</code> que pueden ser reemplazadas por condiciones que utilizan los operadores <code>&&</code>, <code>||</code>, <code>==</code>, <code>!=</code> o <code>?:</code>.
+<p>El resultado es generalmente más corto, aunque no siempre más claro, por lo que no es recomendable aplicar esta corrección rápida en todos los casos.</p>
+<p>Por ejemplo:</p>
 <pre><code>
-  if (condition) return true; else return foo;
+  if (condición) return true; else return foo;
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
-  return condition || foo;
+  return condición || foo;
 </code></pre>
+<!-- tooltip end -->
 <p>Configuración de la inspección:</p>
 <ul>
 <li>
-  Use la opción <b>No sugerir el operador '?:'</b> para deshabilitar las advertencias cuando se sugiera el uso del operador <code>?:</code>. En este caso, solo se resaltarán las sugerencias de <code>&&</code>, <code>||</code>, <code>==</code> y <code>!=</code>. La corrección rápida seguirá disponible en el editor.
+  Usa la opción <b>No sugerir el operador '?'</b> para deshabilitar las advertencias donde se sugiere el operador <code>?:</code>. En este caso, solo se resaltarán las sugerencias <code>&&</code>, <code>||</code>, <code>==</code> y <code>!=</code>. Las correcciones rápidas seguirán estando disponibles en el editor.
 </li>
 <li>
-  Use la opción <b>Ignorar sentencias 'if' encadenadas</b> para deshabilitar las advertencias en cadenas <code>if-else</code>. La corrección rápida seguirá disponible en el editor.
+  Usa la opción <b>Ignorar las sentencias 'if' encadenadas</b> para deshabilitar las advertencias sobre cadenas <code>if-else</code>. Las correcciones rápidas seguirán estando disponibles en el editor.
 </li>
 </ul>
-<p><small>Novedades de la versión 2018.2</small></p>
+<p><small>Novedad de 2018.2</small></p>
 </body>
 </html>

@@ -2,8 +2,8 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Una plantilla incorporada para comentarios PHPDoc de una función PHP. Contiene un fragmento de código que puede incluirse en plantillas de archivo (pestaña <b>Templates</b>) con ayuda de la directiva <b>#parse</b>.<br>
-      La plantilla es editable. Además del texto estático, código y comentarios, puede usar variables predefinidas que se expandirán como macros a sus valores correspondientes.</font><br>
+    <td colspan="3"><font face="verdana" size="-1">Plantilla integrada para comentarios PHPDoc de una función PHP. Contiene un fragmento de código que se puede incluir en plantillas de archivo (pestaña <b>Templates</b>) con la ayuda de la directiva <b>#parse</b>.<br>
+      La plantilla es editable. Además de texto estático, código y comentarios, también puede utilizar variables predefinidas que se expandirán a sus valores correspondientes, como si fueran macros.</font><br>
     </td>
   </tr>
 </table>
@@ -14,38 +14,38 @@
   </tr>
     <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la función.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${TYPE_HINT}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Sugerencia de tipo para el valor de retorno de la función. Se evalúa como 'void' si no se infiere ningún tipo de retorno.</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Sugerencia de tipo (type hint) para el valor de retorno de la función. Se evalúa como 'void' si no se infiere ningún tipo de retorno.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAM_DOC}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top">
       <font face="verdana" size="-1">
-        <p>Comentarios PHPDoc para los parámetros.
-        <p>Se genera como una serie de líneas '* @param type name'. Se evalúa como contenido vacío si no hay parámetros.
+        <p>Comentarios PHPDoc para los parámetros.</p>
+        <p>Se generan como una serie de líneas '* @param type name'. Se evalúa como contenido vacío si no hay parámetros.</p>
       </font>
     </td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${THROWS_DOC}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top">
       <font face="verdana" size="-1">
-        <p>Comentarios de documentación para excepciones.
-        <p>Se genera como una serie de líneas '* @throws type'. Se evalúa como contenido vacío si no se lanzan excepciones.
+        <p>Comentarios de documentación (doc comment) para las excepciones.</p>
+        <p>Se generan como una serie de líneas '* @throws type'. Se evalúa como contenido vacío si no se lanzan excepciones.</p>
       </font>
     </td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${STATIC}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Evalúa a 'static' si la función/método es estático, de lo contrario es una cadena vacía. Por ejemplo:
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Toma el valor 'static' si la función/método es estático, y una cadena vacía en caso contrario. Por ejemplo:
     <pre>
       #if (${STATIC} == "static") * @static
       #end
@@ -55,79 +55,79 @@
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Símbolo del dólar, se evalúa como el carácter "$" normal.</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El signo de dólar, se evalúa como el carácter '$' normal.</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del mes actual. Por ejemplo: Jan, Feb, etc.</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Los primeros 3 caracteres del nombre del mes actual. Ejemplo: Ene, Feb, etc.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual. Por ejemplo: January, February, etc.</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual. Ejemplo: Enero, Febrero, etc.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Día del mes actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${SECOND}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Segundo actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Usuario actual</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b>${CARET}</b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Marca la posición donde debe moverse el cursor después de agregar el comentario.</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Marca la posición a la que debe moverse el cursor de texto después de añadir el comentario.</font></td>
   </tr>
 </table>
 </body>

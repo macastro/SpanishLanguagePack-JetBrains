@@ -1,10 +1,10 @@
 <html>
 <body>
-Informa sobre bloques <code>try-finally</code> que contienen <code>resource.close()</code> en el bloque <code>finally</code> y pueden convertirse en llamadas <code>resource.use()</code>.
-<p><code>use()</code> es más legible y menos propenso a errores ya que no requiere una llamada explícita a <code>close()</code>.</p>
+Informa de un bloque <code>try-finally</code> con <code>resource.close()</code> en <code>finally</code> que puede convertirse en una llamada a <code>resource.use()</code>.
+<p><code>use()</code> es más fácil de leer y menos propenso a errores, ya que no es necesario realizar una llamada explícita a <code>close()</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  fun example() {
+  fun ejemplo() {
       val reader = File("file.txt").bufferedReader()
       try {
           reader.lineSequence().forEach(::print)
@@ -13,13 +13,14 @@ Informa sobre bloques <code>try-finally</code> que contienen <code>resource.clos
       }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras la aplicación de la corrección rápida:</p>
 <pre><code>
-  fun example() {
+  fun ejemplo() {
       File("file.txt").bufferedReader().use { reader ->
           reader.lineSequence().forEach(::print)
       }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

@@ -1,11 +1,13 @@
 <html>
 <body>
-Informa sobre usos obsoletos de la interfaz <code>Serializable</code>.
+Informa sobre el uso de la interfaz <code>Serializable</code> obsoleta.
+<!-- tooltip end -->
 <p>
-  A partir de PHP 8.1, las clases no abstractas que implementan <code>Serializable</code> y no implementan <code>__serialize()</code> y <code>__unserialize()</code> generarán una advertencia de obsolescencia.
+  A partir de PHP 8.1, las clases que no son abstractas, implementan <code>Serializable</code> y no implementan <code>__serialize()</code>
+  y <code>__unserialize()</code> lanzarán una advertencia de obsolescencia.
 </p>
 <p>
-  Para más información, consulte <a href="https://wiki.php.net/rfc/custom_object_serialization">Eliminación gradual de objetos serializables (php.net)</a>.
+  Consulte <a href="https://wiki.php.net/rfc/custom_object_serialization">Eliminación gradual de Serializable (php.net)</a> para obtener más detalles.
 </p>
 </body>
 </html>

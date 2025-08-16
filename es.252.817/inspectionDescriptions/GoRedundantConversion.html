@@ -1,13 +1,18 @@
+**Español**
+
 <html>
 <body>
-Informa sobre conversiones de tipo que pueden ser omitidas.
+Informa de conversiones de tipo que pueden omitirse.
 <p>Ejemplo:</p>
-<pre><code>var s = string("hello")</code></pre>
-<p>El valor <code>"hello"</code> ya es de tipo <code>string</code>, por lo que la conversión adicional a <code>string</code> es redundante.
-  Para eliminar la conversión, considere usar la corrección rápida <b>Eliminar conversión</b>.</p>
-<p>Después de aplicar la corrección rápida:</p>
-<pre><code>var s = "hello"</code></pre>
-<p>En ocasiones, la conversión de una expresión de punto flotante a un tipo de punto flotante puede ser intencional (consulte <a href="https://github.com/mdempsky/unconvert/issues/40">este problema</a>). En estos casos, el IDE le advertirá sobre una conversión <i>potencialmente</i> redundante.
+<pre><code>var s = string("hola")</code></pre>
+<p>El valor <code>"hola"</code> ya es del tipo <code>string</code>, la conversión adicional a <code>string</code> es redundante.
+  Para eliminar la conversión, considera utilizar el quick-fix <b>Eliminar conversión</b>.</p>
+<p>Una vez aplicado el quick-fix:</p>
+<pre><code>var s = "hola"</code></pre>
+<!-- tooltip end -->
+<p>A veces la conversión de una expresión con coma flotante a un tipo con coma flotante puede ser intencionada
+  (para consultar un ejemplo, consulta <a href="https://github.com/mdempsky/unconvert/issues/40">este problema</a>). En estos casos, el IDE emite
+  una advertencia sobre una conversión <i>posiblemente</i> redundante.
 </p>
 </body>
 </html>

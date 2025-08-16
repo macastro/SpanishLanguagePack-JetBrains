@@ -1,22 +1,15 @@
 <html>
 <body>
-Informa sobre el método <code>compareTo()</code> y las restas en implementaciones de <code>java.util.Comparator.compare()</code>.
-<p>
-  Aunque es una práctica común usar el resultado de una resta de enteros como resultado del método <code>compareTo()</code>, esta estructura puede llevar a errores sutiles en casos de desbordamiento de enteros.
-  En la mayoría de los casos, es mejor comparar directamente los valores enteros y devolver <code>-1</code>, <code>0</code> o <code>1</code>.
-</p>
-<p>
-  El redondeo puede causar pérdida de precisión, por lo que también se informan las restas de valores de punto flotante convertidos directamente a enteros.
-</p>
-<p>
-  La comprobación no se informa cuando se determina estáticamente que el rango de valores es limitado y nunca ocurrirá un desbordamiento.
-  Además, la resta de números <code>int</code> mayores o iguales a <code>0</code> nunca producirá un desbordamiento.
-  Por lo tanto, en estos casos esta comprobación no genera advertencias.
-</p>
-<p>
-  Los métodos que siempre devuelven cero o valores mayores pueden marcarse con la anotación <code>javax.annotation.Nonnegative</code> o especificarse en las opciones de esta comprobación.
-</p>
-<p><b>Ejemplo:</b></p>
+Reporta sustracciones en métodos <code>compareTo()</code> y métodos que implementan <code>java.util.Comparator.compare()</code>.<p>
+  Mientras que es un idioma común, utilizar los resultados de la sustracción de enteros como el resultado de un método <code>compareTo()</code>, este constructo puede causar errores sutiles y difíciles en casos de desbordamiento de enteros.
+  Comparar los valores enteros directamente y devolver <code>-1</code>, <code>0</code>, o <code>1</code> es una mejor práctica en la mayoría de los casos.<p>
+  También se informa sobre la resta de valores de punto flotante que se convierten inmediatamente a tipo integral porque es posible que se pierda precisión debido
+  al redondeo.<p>
+  La inspección no informa cuando se determina estáticamente que los rangos de valores son limitados y el desbordamiento nunca ocurre.
+  Además, la resta en números <code>int</code> mayores o iguales que <code>0</code> nunca se desbordará.
+  Por lo tanto, esta inspección intenta no advertir en esos casos.<p>
+  Los métodos que siempre devuelven cero o mayor se pueden marcar con la anotación <code>javax.annotation.Nonnegative</code> o especificar en las opciones de esta inspección.<p>
+  <b>Ejemplo:</b><p>
 <pre><code>
   class DoubleHolder implements Comparable&lt;DoubleHolder&gt; {
     double d;
@@ -24,8 +17,7 @@ Informa sobre el método <code>compareTo()</code> y las restas en implementacion
         return (int)(this.d - that.d);
     }
  }
-</code></pre>
-<p>Este es un ejemplo sin advertencias porque se sabe que <code>String.length()</code> es no negativo:</p>
+</code></pre><p>Un ejemplo sin advertencia porque se sabe que <code>String.length()</code> es no negativo:<p>
 <pre><code>
   class A implements Comparable&lt;A&gt; {
     final String s = "";
@@ -34,9 +26,9 @@ Informa sobre el método <code>compareTo()</code> y las restas en implementacion
     }
  }
 </code></pre>
-<p>
-  Estas opciones permiten listar los métodos que son seguros de usar en restas.
-  Un método es seguro cuando devuelve un valor <code>int</code> que siempre es mayor o igual a <code>0</code>.
-</p>
+<!-- tooltip end --><p>
+  Utiliza las opciones para enlistar métodos que son seguros de usar dentro de una resta.
+  Los métodos son seguros cuando devuelven un valor <code>int</code> que siempre es mayor o igual a <code>0</code>.<p>
+
 </body>
 </html>

@@ -1,18 +1,21 @@
 <html>
 <body>
-Reporta constructores <code>public</code>.
-<p>Algunos estándares de codificación desaconsejan el uso de constructores <code>public</code> y recomiendan usar métodos de fábrica <code>static</code> en su lugar.
-Esto permite intercambiar la implementación sin afectar los puntos de llamada.
+Informa sobre constructores <code>public</code>.
+<p>Algunos estándares de programación desaconsejan el uso de constructores <code>public</code> y recomiendan en su lugar métodos factoría <code>static</code>.
+De esta forma se puede intercambiar la implementación sin afectar a los sitios de llamada.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Test {
     private String name;
+
     public Test(String name) {
         this.name = name;
     }
+
     public void test() {
         System.out.println(name);
     }
+
     public static void main(String[] args) {
         new Test("str").test();
     }
@@ -22,19 +25,24 @@ Esto permite intercambiar la implementación sin afectar los puntos de llamada.
 <pre><code>
   class Test {
     private String name;
+
     private Test(String name) {
         this.name = name;
     }
+
     public static Test getInstance(String name) {
         return new Test(name);
     }
+
     public void test() {
         System.out.println(name);
     }
+
     public static void main(String[] args) {
         getInstance("str").test();
     }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

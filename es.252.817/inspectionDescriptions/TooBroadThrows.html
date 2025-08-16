@@ -1,9 +1,9 @@
 <html>
 <body>
-Cláusula <code>throws</code> que declara excepciones más generales que las que realmente lanza el método.
+Informa cláusulas <code>throws</code> con excepciones que son más genéricas que las excepciones que el método lanza realmente.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  public void createFile() throws Exception { // Advertencia: 'throws Exception' es demasiado general, oculta la excepción 'IOException'
+  public void createFile() throws Exception { // advertencia: 'throws Exception' es demasiado amplia y enmascara la excepción 'IOException'
     File file = new File("pathToFile");
     file.createNewFile();
   }
@@ -15,12 +15,17 @@ Cláusula <code>throws</code> que declara excepciones más generales que las que
     file.createNewFile();
   }
 </code></pre>
-<p>Configuración de la inspección:</p>
+<!-- tooltip end -->
+<p>Configura la inspección:</p>
 <ul>
-  <li>Use el campo <b>Número máximo de excepciones ocultas para advertir</b> para ignorar las excepciones que ocultan más excepciones que el número especificado.</li>
-  <li>Use la opción <b>Advertir solo para RuntimeException, Exception, Error o Throwable</b> para que esta inspección advierta solo sobre las excepciones más comunes.</li>
-  <li>Use la opción <b>Ignorar excepciones declaradas en métodos que sobrescriben métodos de biblioteca</b> para ignorar las cláusulas <code>throws</code> demasiado generales en métodos que sobrescriben métodos de biblioteca.</li>
-  <li>Use la opción <b>Ignorar excepciones que ocultan otras pero que son lanzadas</b> para ignorar cualquier excepción que oculte otras pero que aún pueda ser lanzada desde el cuerpo del método y por lo tanto técnicamente no sea demasiado general.</li>
+  <li>Utiliza el campo <b>Número máximo de excepciones ocultas para advertir</b> para ignorar excepciones que ocultan un número de excepciones más amplio que el especificado.</li>
+  <li>Utiliza la opción <b>Solo advertir en RuntimeException, Exception, Error o Throwable</b> para que esta inspección avise solo en las excepciones más genéricas.
+    </li>
+  <li>Utiliza la opción <b>Ignorar excepciones declaradas en métodos que sobrescriben un método de biblioteca</b> para ignorar cláusulas <code>throws</code> demasiado amplias
+    en métodos que sobrescriben un método de biblioteca.</li>
+  <li>Utiliza la opción <b>Ignorar excepciones que ocultan otras pero se lanzan ellas mismas</b> para ignorar excepciones que ocultan otras excepciones
+    pero que todavía se pueden lanzar desde el cuerpo del método y, por lo tanto,
+    técnicamente no son demasiado amplias.</li>
 </ul>
 </body>
 </html>

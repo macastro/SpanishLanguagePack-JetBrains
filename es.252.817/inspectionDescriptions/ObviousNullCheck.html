@@ -1,14 +1,17 @@
 <html>
 <body>
-Informa sobre llamadas a métodos de verificación de nulos (como <code>Objects.requireNonNull</code> o <code>Assert.assertNotNull</code>) en valores que son evidentemente no nulos (por ejemplo, objetos recién creados). Estas verificaciones son redundantes y pueden indicar un error de programación.
+Reporta si un método de verificación de nulos (por ejemplo <code>Objects.requireNonNull</code> o <code>Assert.assertNotNull</code>)
+es llamado en un valor que es obviamente no nulo (por ejemplo, un objeto recién creado). Esta verificación es redundante y puede indicar
+un error de programación.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   final String greeting = Objects.requireNonNull("Hi!");
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   final String greeting = "Hi!";
 </code></pre>
-<p>Últimos cambios en 2017.2</p>
+<!-- tooltip end -->
+<p>Nuevo en 2017.2</p>
 </body>
 </html>

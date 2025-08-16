@@ -1,18 +1,20 @@
 <html>
 <body>
-Informa sobre casos donde se usa el operador spread redundante en una serie de llamadas a la función <code>arrayOf</code>.
-<p>El código se puede limpiar usando la corrección rápida "Eliminar operador spread redundante".</p>
-<p><b>Ejemplo:</b></p>
+Informa sobre el uso de un operador de propagación redundante para una familia de llamadas de funciones <code>arrayOf</strong.
+<p>Usa el arreglo rápido "Eliminar operador de propagación redundante" para limpiar el código.</p>
+<p><b>Ejemplos:</b></p>
 <pre><code>
   fun foo(vararg s: String) { }
+
   fun bar(ss: Array&lt;String&gt;) {
-      foo(*arrayOf("abc"))       // Para ambas llamadas a 'foo', la creación del array
-      foo(*arrayOf(*ss, "zzz"))  // y su posterior asignación son redundantes
+      foo(*arrayOf("abc"))       // para las dos llamadas de 'foo', la creación del array
+      foo(*arrayOf(*ss, "zzz"))  // y su "propagación" posterior es redundante    
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   fun foo(vararg s: String) { }
+
   fun bar(ss: Array&lt;String&gt;) {
       foo("abc")
       foo(*ss, "zzz")

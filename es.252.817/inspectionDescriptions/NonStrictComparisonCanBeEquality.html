@@ -1,15 +1,16 @@
 <html>
 <body>
-El informe muestra condiciones de desigualdad que, según el análisis de flujo de datos, solo pueden satisfacerse con un único valor operativo.
-Estas condiciones pueden reemplazarse por condiciones de igualdad para hacer el código más claro.
+Reporta condiciones de desigualdad que, según el análisis del flujo de datos, se pueden cumplir solo para un único valor de operando.
+Tales condiciones se pueden reemplazar con condiciones de igualdad para mejorar la claridad del código.
 <p>Ejemplo:</p>
 <pre><code>
   if (x >= 10) {
     ...
-    if (x <= 10) { // can be replaced with 'x == 10'
+    if (x <= 10) { // se puede reemplazar con 'x == 10'
     }
   }
 </code></pre>
-<p><small>Novedades en 2022.2</small></p>
+<!-- tooltip end -->
+<p><small>Novedad en 2022.2</small></p>
 </body>
 </html>

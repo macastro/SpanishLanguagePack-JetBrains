@@ -1,17 +1,19 @@
 <html>
 <body>
-Reporta conversiones de expresiones como <code>string(x)</code>, donde <code>x</code> es un entero pero no es un byte o rune.
-<p>Estas conversiones no son recomendadas ya que devuelven la representación UTF-8 del punto de código Unicode <code>x</code>, en lugar de devolver la representación decimal de <code>x</code> como cadena, que es lo que se podría esperar. Además, si <code>x</code> representa un punto de código inválido, la conversión no puede ser rechazada estáticamente.</p>
-<p>Para conversiones donde se pretende usar puntos de código, considere reemplazarlas por <code>string(rune(x))</code>. En caso contrario, <code>strconv.Itoa</code> y sus funciones equivalentes devolverán la representación en cadena del valor según sea necesario.</p>
+Informa las conversiones de expresiones similares a <code>string(x)</code> donde <code>x</code> es un entero, pero no un byte o una runa.
+
+<p>Estas conversiones están desaconsejadas porque devuelven la representación UTF-8 del punto de código Unicode <code>x</code>, y no una representación de cadena decimal de <code>x</code> como podría esperarse. Además, si <code>x</code> denota un punto de código no válido, la conversión no puede ser rechazada estáticamente.</p>
+
+<p>Para conversiones que pretenden utilizar el punto de código, considera reemplazarlas con <code>string(runa(x))</code>. De lo contrario, <code>strconv.Itoa</code> y sus equivalentes devuelven la representación de cadena del valor en la base deseada.</p>
 <p>Ejemplo:</p>
 <pre><code>func main() {
  a := 1
  _ = string(a)
 }</code></pre>
-<p>Después de aplicar la corrección rápida <b>convertir entero a rune</b>:</p>
+<p>Después de aplicar la corrección rápida <b>Convertir entero a runa</b>:</p>
 <pre><code>func main() {
  a := 1
- _ = string(rune(a))
+ _ = string(runa(a))
 }</code></pre>
 </body>
 </html>

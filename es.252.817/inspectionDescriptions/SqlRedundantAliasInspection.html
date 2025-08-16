@@ -1,12 +1,13 @@
 <html>
 <body>
-El informe puede superponerse con los nombres de las columnas en la tabla y puede contener expresiones de alias redundantes.
+Informa de expresiones de alias que duplican nombres de columnas en tablas y que podrían ser redundantes.
 <p>Ejemplo (PostgreSQL):</p>
 <pre><code>CREATE TABLE foo(a INT, b INT);
+
 SELECT * FROM foo foo(a, b);
 SELECT * FROM foo foo(a);
 SELECT * FROM foo foo(x);
 SELECT * FROM foo foo(x, y);</code></pre>
-<p>Los dos primeros alias utilizan los mismos nombres de columnas que la tabla <code>foo</code>. Estos se consideran redundantes porque las columnas tienen los mismos nombres.</p>
+<p>Los dos primeros alias utilizan los mismos nombres de columna que la tabla <code>foo</code>. Se consideran redundantes porque los nombres de columna son idénticos.</p>
 </body>
 </html>

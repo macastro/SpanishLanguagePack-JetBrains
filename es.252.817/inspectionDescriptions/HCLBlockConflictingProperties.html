@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>Reportar atributos en conflicto en bloques HCL.</p>
+<p>Informa sobre propiedades conflictivas dentro de un bloque HCL.</p>
 <p>Ejemplo del problema:</p>
 <pre><code>
 provider "kubernetes" {
@@ -10,15 +10,15 @@ provider "kubernetes" {
 }
 </code></pre>
 <p>
-  En este ejemplo, el atributo version se declara dos veces en el bloque del proveedor Kubernetes. Esto es un error.
+  En este ejemplo, la propiedad version se declara dos veces dentro del bloque del proveedor kubernetes, lo que es incorrecto.
 </p>
-<p>Ejemplo corregido:</p>
+<p>Ejemplo de corrección:</p>
 <pre><code>
 provider "kubernetes" {
   version = "~> 1.25"
   config_path = "~/.kube/config"
 }
 </code></pre>
-<em>Soporte técnico</em>: <a href="https://plugins.jetbrains.com/plugin/7808-terraform-and-hcl">Plugin de Terraform y HCL</a>
+<em>Implementado por</em>: <a href="https://plugins.jetbrains.com/plugin/7808-terraform-and-hcl">Complemento de Terraform y HCL</a>
 </body>
 </html>

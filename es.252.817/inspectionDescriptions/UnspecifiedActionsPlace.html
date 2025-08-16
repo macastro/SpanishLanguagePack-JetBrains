@@ -1,17 +1,18 @@
 <html>
 <body>
-Informa sobre casos donde se pasan parámetros <code>place</code> no especificados a <code>ActionManager.createActionToolbar()</code> y <code>ActionManager.createActionPopupMenu()</code>.
+<code>ActionManager.createActionToolbar()</code> y <code>ActionManager.createActionPopupMenu()</code> les pasa un parámetro <code>place</code> no especificado.
 <p>
-  Se debe especificar un <code>place</code> correcto para distinguir el uso de la acción en <code>update()/actionPerformed()</code> a través de <code>AnActionEvent.getPlace()</code>.
+  Debe especificar un <code>place</code> apropiado para poder diferenciar el uso de la acción por <code>AnActionEvent.getPlace()</code> en <code>update()/actionPerformed()</code>.
 </p>
 <p>
 Ejemplo:
 <pre><code lang="java">
-// Incorrecto:
+// Mala forma:
 actionManager.createActionToolbar("", group, false);
 actionManager.createActionToolbar("unknown", group, false);
 actionManager.createActionPopupMenu(ActionPlaces.UNKNOWN, group);
-// Correcto:
+
+// Buena forma:
 actionManager.createActionToolbar("MyPlace", group, false);
 actionManager.createActionPopupMenu(ActionPlaces.EDITOR_TOOLBAR, group);
 </code></pre>

@@ -1,6 +1,9 @@
+## Inspecciones para presets
+
+<!-- Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. -->
 <html>
 <body>
-Las propiedades del informe sobrescriben las propiedades previamente definidas en el mismo archivo.
+Informa las propiedades que sobreescriben las mismas propiedades definidas anteriormente en el archivo.
 <p>Por ejemplo:
 <pre><code>
 [*.java]
@@ -8,7 +11,7 @@ indent_size=4
 [{*.java,*.js}]
 indent_size=2
 </code></pre>
-La segunda sección también contiene archivos <code>[*.java]</code>, pero establece indent_size con el valor 2.
-Por lo tanto, la primera declaración <code>indent_size=4</code> será ignorada.
+La segunda sección incluye los mismos archivos que <code>[*.java]</code> pero también establece `indent_size` con valor 2.
+Por consiguiente, la primera declaración `indent_size=4` será ignorada.
 </body>
 </html>

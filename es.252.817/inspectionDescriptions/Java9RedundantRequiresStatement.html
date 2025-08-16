@@ -1,13 +1,16 @@
 <html>
 <body>
-Informa sobre directivas <code>requires</code> redundantes en el archivo <code>module-info.java</code> del Sistema de Módulos de Java Platform.
-Cuando el módulo <code>A</code> requiere el módulo <code>B</code>, pero el código en el módulo <code>A</code> no importa ningún paquete o clase de <code>B</code>, la directiva <code>requires</code> es redundante.
-Además, todos los módulos tienen una dependencia implícita declarada del módulo <code>java.base</code>, por lo que la directiva <code>requires java.base;</code> siempre es redundante.
+Informa las directivas <code>requires</code> redundantes en archivos <code>module-info.java</code> del sistema de módulos de la plataforma Java.
+Una directiva <code>requires</code> es redundante cuando un módulo <code>A</code> requiere un módulo <code>B</code>,
+pero el código del módulo <code>A</code> no importa ningún paquete o clases de <code>B</code>.
+Además, todos los módulos tienen una dependencia implícitamente declarada en el módulo <code>java.base</code>,
+por lo tanto, una directiva <code>requires java.base;</code> siempre es redundante.
 <p>
-  La corrección rápida elimina las directivas <code>requires</code> redundantes.
-  Si la dependencia eliminada reexportaba módulos que se utilizan actualmente, la corrección añadirá directivas <code>requires</code> para esos módulos.
+  La solución rápida elimina la directiva <code>requires</code> redundante.
+  Si la dependencia eliminada volvió a exportar módulos que en realidad se usan, la solución agrega directivas <code>requires</code> para estos módulos.
 </p>
-<p>Esta inspección solo informa cuando el nivel de lenguaje del proyecto o módulo es 9 o superior.</p>
-<p><small>Novedades en 2017.1</small>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 9 o superior.</p>
+<p><small>Nuevo en 2017.1</small>
 </body>
 </html>

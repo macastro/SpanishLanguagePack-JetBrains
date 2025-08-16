@@ -1,19 +1,20 @@
 <html>
 <body>
-El informe sugiere reemplazar la llamada <code>s.substring(0, s.length - x)</code> por <code>s.dropLast(x)</code>.
-<p>El código puede simplificarse usando la función correspondiente.</p>
-<p>Esta corrección rápida reemplazará la llamada <code>substring</code> por <code>dropLast</code>.</p>
+Reporta llamadas como <code>s.substring(0, s.length - x)</code> que se pueden reemplazar con <code>s.dropLast(x)</code>.
+<p>Usar funciones correspondientes simplifica tu código.</p>
+<p>El arreglo rápido reemplaza la llamada <code>substring</code> con <code>dropLast</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun foo(s: String) {
       s.substring(0, s.length - 5)
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   fun foo(s: String) {
       s.dropLast(5)
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

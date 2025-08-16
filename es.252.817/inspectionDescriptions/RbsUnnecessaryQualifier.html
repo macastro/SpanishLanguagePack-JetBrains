@@ -1,14 +1,14 @@
 <html>
 <body>
-Informa sobre calificadores innecesarios en las referencias. Algunos calificadores son innecesarios cuando existe una cláusula 'use' o un espacio de nombres.
-<p>Se pueden eliminar los calificadores innecesarios mediante una corrección rápida.</p>
+Reporta calificadores innecesarios dentro de las referencias. Algunos calificadores son innecesarios cuando hay cláusulas de uso o espacios de nombres presentes.
+<p>Hay una solución rápida disponible para eliminar el calificador innecesario.</p>
 <p>Ejemplo:</p>
 <pre><code>use Enumerator::Generator
 class Example
-  # 'Enumerator::Generator' puede acortarse
+  # 'Enumerator::Generator' se puede acortar
   def call: -> Enumerator::Generator
 end</code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de la solución rápida:</p>
 <pre><code>use Enumerator::Generator
 class Example
   def call: -> Generator

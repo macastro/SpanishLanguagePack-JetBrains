@@ -1,7 +1,7 @@
 <html>
 <body>
-Una interfaz en la lista <code>implements</code> de una clase o en la lista <code>extends</code> de una interfaz que ya está implementada por una superclase o extendida por una superinterfaz.
-Esta declaración es redundante y puede eliminarse de forma segura.
+Inspecciona las interfaces en la lista de <code>implements</code> de la clase, o las interfaces en la lista de <code>extends</code> que ya están implementadas por la superclase o extendidas por la superinterfaz.
+Esta declaración es innecesaria y puede eliminarse de forma segura.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class X implements One, Two {
@@ -16,8 +16,8 @@ Esta declaración es redundante y puede eliminarse de forma segura.
   interface One {}
   interface Two extends One {}
 </code></pre>
+<!-- tooltip end -->
 <p>
-Utilice esta opción para no reportar <code>Serializable</code> o <code>Externalizable</code> en las listas <code>extends</code> o <code>implements</code>.
-</p>
+Utiliza esta opción para no informar sobre <code>Serializable</code> o <code>Externalizable</code> en las listas de <code>extends</code> o <code>implements</code>.
 </body>
 </html>

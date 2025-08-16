@@ -1,8 +1,10 @@
 <html>
 <body>
-Informa sobre llamadas redundantes a métodos de <code>java.lang.Class</code>.
-<p>Por ejemplo, <code>Xyz.class.isInstance(object)</code> puede reemplazarse por <code>object instanceof Xyz</code>.
-Se recomienda usar la comprobación instanceof: aunque el rendimiento puede no ser significativamente diferente de estos métodos, proporcionan una mejor indicación para las comprobaciones estáticas.</p>
-<p><small>Novedades de la versión 2018.2</small></p>
+Reporta llamadas redundantes de métodos <code>java.lang.Class</code>.
+<p>Por ejemplo, <code>Xyz.class.isInstance(object)</code> puede ser reemplazada por <code>object instanceof Xyz</code>.
+Se prefiere la verificación instanceof: aunque probablemente el rendimiento será el mismo, ya que estos métodos son intrínsecos,
+indican mejor una verificación estática.</p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2018.2</small></p>
 </body>
 </html>

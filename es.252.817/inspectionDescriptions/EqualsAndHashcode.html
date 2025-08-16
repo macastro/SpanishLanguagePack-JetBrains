@@ -1,11 +1,14 @@
 <html>
 <body>
-Informa sobre clases que sobrescriben el método <code>equals()</code> pero no sobrescriben el método <code>hashCode()</code>, o viceversa. Esto puede causar problemas cuando se agregan instancias de la clase a una <code>Collection</code> o <code>HashMap</code>.
-<p>La corrección rápida generará una implementación predeterminada para el método faltante.</p>
+Informa de clases que anulan el método
+<code>equals()</code> pero no anulan el método
+<code>hashCode()</code> o viceversa, lo que puede suponer problemas potenciales cuando se añade la clase a una <code>Collection</code> o <code>HashMap</code>.
+<p>La corrección rápida genera la implementación predeterminada para un método ausente.</p>
 <p>Ejemplo:</p>
 <pre><code>
 class StringHolder {
   String s;
+
   @Override public int hashCode() {
     return s != null ? s.hashCode() : 0;
   }
@@ -15,15 +18,20 @@ class StringHolder {
 <pre><code>
 class StringHolder {
   String s;
+
   @Override public int hashCode() {
     return s != null ? s.hashCode() : 0;
   }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
     if (!(o instanceof StringHolder)) return false;
+
     StringHolder holder = (StringHolder)o;
+
     if (s != null ? !s.equals(holder.s) : holder.s != null) return false;
+
     return true;
   }
 }

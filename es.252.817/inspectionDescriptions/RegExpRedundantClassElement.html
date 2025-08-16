@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa sobre el uso redundante de <code>\d</code> o <code>[:digit:]</code> cuando se usa junto con <code>\w</code> o <code>[:word:]</code> (que contiene <code>\D</code> con <code>\W</code>) en la misma clase y puede ser eliminado.
+Se reportan <code>\d</code> o <code>[:dígito:]</code> redundantes que se utilizan en una clase con <code>\w</code> o <code>[:palabra:]</code> (<code>\D</code> con <code>\W</code>) y que se pueden remover.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   [\w\d]
@@ -9,6 +9,7 @@ Informa sobre el uso redundante de <code>\d</code> o <code>[:digit:]</code> cuan
 <pre><code>
   [\w]
 </code></pre>
-<p><small>Novedades de la versión 2022.2</small>
+<!-- tooltip end -->
+<p><small>Novedad en 2022.2</small>
 </body>
 </html>

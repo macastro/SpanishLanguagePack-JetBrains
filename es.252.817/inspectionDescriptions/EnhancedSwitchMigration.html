@@ -1,10 +1,10 @@
 <html>
 <body>
-La inspección puede reemplazar automáticamente las sentencias <code>switch</code> con sentencias o expresiones <code>switch</code> mejoradas.
+Informa las sentencias <code>switch</code> que se pueden reemplazar automáticamente con sentencias o expresiones <code>switch</code> mejoradas.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   double getPrice(String fruit) {
-    // La sentencia Switch puede ser reemplazada por un 'switch' mejorado
+    // La sentencia switch se puede reemplazar con 'switch' mejorada
     switch (fruit) {
       case "Apple":
         return 1.0;
@@ -17,7 +17,7 @@ La inspección puede reemplazar automáticamente las sentencias <code>switch</co
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la revisión rápida:</p>
 <pre><code>
   double getPrice(String fruit) {
     return switch (fruit) {
@@ -28,15 +28,17 @@ La inspección puede reemplazar automáticamente las sentencias <code>switch</co
     };
   }
   </code></pre>
+<!-- tooltip end -->
 <p>
 <ul>
   <li>
-    Use la opción <b>Mostrar advertencia solo cuando sea posible convertir a expresión</b> para no mostrar advertencias sobre la conversión a sentencias <code>switch</code>.
+    Usa la opción <b>Mostrar advertencia solo si la conversión a expresión es posible</b> para no advertir sobre la conversión a sentencia <code>switch</code>.
   </li>
   <li>
-    Use la opción <b>Número máximo de sentencias en una rama para convertir a expresión switch</b> para mostrar advertencias sobre la conversión a expresiones solo cuando el número de sentencias en cada rama sea menor que el número especificado.
+    Usa la opción <b>Número máximo de sentencias en una rama para convertir a expresión switch</b> para advertir sobre la conversión a expresión solo
+    si cada rama tiene menos del número dado de sentencias.
   </li>
 </ul>
-<p><small>Novedades en 2019.1</small></p>
+<p><small>Nuevo en 2019.1</small></p>
 </body>
 </html>

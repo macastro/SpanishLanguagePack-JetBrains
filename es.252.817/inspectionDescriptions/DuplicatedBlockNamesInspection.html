@@ -1,14 +1,15 @@
 <html>
 <body>
-<p>Reporta nombres de bloques duplicados en plantillas Django.</p>
+<p>Informa sobre nombres de bloque duplicados en plantillas de Django.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="DjangoTemplate">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
     &lt;link rel="stylesheet" href="style.css"&gt;
-    &lt;title>{% block title %}My amazing site{% endblock %}&lt;/title&gt;
+    &lt;title>{% block title %}Mi maravilloso sitio{% endblock %}&lt;/title&gt;
 &lt;/head&gt;
+
 &lt;body&gt;
     &lt;div id="sidebar"&gt;
         {% block title %}
@@ -18,6 +19,7 @@
         &lt;/ul&gt;
         {% endblock %}
     &lt;/div&gt;
+
     &lt;div id="content"&gt;
         {% block content %}{% endblock %}
     &lt;/div&gt;

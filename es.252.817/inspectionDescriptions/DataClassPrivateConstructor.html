@@ -1,17 +1,18 @@
 <html>
 <body>
-Reporta un constructor principal <code>private</code> en una clase de datos.
+Informa del constructor principal <code>private</code> en clases de datos.
 <p>
-    Las clases <code>data</code> tienen un método de fábrica <code>copy()</code> que puede usarse como un constructor.
-    Para proporcionar suficiente seguridad, el constructor no debería marcarse como <code>private</code>.
+    Las clases <code>data</code> tienen un método de fábrica <code>copy()</code> que se puede usar de forma similar a un constructor.
+    Un constructor no debe marcarse como <code>private</code> para proporcionar suficiente seguridad.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  data class User private constructor(val name: String)
+  data class Usuario private constructor(val name: String)
 </code></pre>
-<p>Esta corrección rápida cambiará el modificador de visibilidad del constructor a <code>public</code>:</p>
+<p>La solución rápida cambia el modificador de visibilidad del constructor a <code>public</code>:</p>
 <pre><code>
-  data class User(val name: String)
+  data class Usuario(val name: String)
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

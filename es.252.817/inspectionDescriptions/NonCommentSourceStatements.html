@@ -1,14 +1,15 @@
 <html>
 <body>
-Informa sobre métodos que exceden el número máximo especificado de sentencias.
-<p>Los métodos con demasiadas sentencias pueden ser confusos e indican una posible necesidad de refactorización.</p>
-<p>Las siguientes sentencias no se contabilizan:</p>
+Informa sobre métodos cuyo número de sentencias excede el máximo especificado.
+<p>Los métodos con demasiadas sentencias pueden resultar confusos y ser una buena señal de que es necesaria una refactorización.</p>
+<p>Las siguientes sentencias no se cuentan:</p>
 <ul>
   <li>Sentencias vacías (punto y coma)</li>
   <li>Sentencias de bloque</li>
-  <li>Sentencias de inicialización en bucles <code>for</code>, es decir, <code>int i = ...</code> en <code>for(int i = ...;...)</code></li>
-  <li>Sentencias de actualización en bucles <code>for</code>, es decir, <code>i += 2</code> en <code>for(int i = ...;...; i += 2)</code></li>
+  <li>Sentencias de inicialización del bucle <code>for</code>, es decir, <code>int i = ...</code> dentro de una sentencia <code>for(int i = ...;...)</code></li>
+  <li>Sentencias de actualización del bucle <code>for</code>, es decir, <code>i += 2</code> dentro de una sentencia <code>for(int i = ...;...; i += 2)</code></li>
 </ul>
-<p>Utilice el campo <b>número máximo de sentencias por método</b> para especificar el número máximo de sentencias permitidas en un método.<p>
+<!-- tooltip end -->
+<p>Utilice el campo <b>Máximo de sentencias por método</b> para especificar el número máximo permitido de sentencias en un método.<p>
 </body>
 </html>

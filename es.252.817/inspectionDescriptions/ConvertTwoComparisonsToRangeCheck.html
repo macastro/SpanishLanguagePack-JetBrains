@@ -1,18 +1,19 @@
 <html>
 <body>
-Informa sobre dos comparaciones consecutivas que pueden convertirse en una comprobación de rango.
-<p>La comprobación de rangos simplifica el código al eliminar la repetición en la condición de prueba.</p>
+Informa de dos comparaciones consecutivas que se pueden convertir en una comprobación de intervalo.
+<p>Comprobar con un intervalo simplifica el código al eliminar la duplicación del asunto de la prueba.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun checkMonth(month: Int): Boolean {
       return month >= 1 && month &lt;= 12
   }
 </code></pre>
-<p>Esta corrección rápida reemplaza la comprobación basada en comparaciones por una comprobación de rango:</p>
+<p>La corrección rápida reemplaza la comprobación basada en la comparación por una de intervalo:</p>
 <pre><code>
   fun checkMonth(month: Int): Boolean {
       return month in 1..12
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

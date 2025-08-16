@@ -1,10 +1,10 @@
 <html>
 <body>
-Informa sobre inicializaciones peligrosas de arrays (como <code>$arr[] = value</code>).
+Reporta inicializaciones de arreglos peligrosas (como <code>$arr[] = value</code>).
 <p>
-  Esta práctica no es recomendable ya que si <code>$arr</code> ya contiene algún valor (por ejemplo, una cadena de texto proveniente de variables de solicitud), este valor se mantendrá y <code>[]</code> podría actuar como un operador de acceso a cadenas. Es mejor inicializar siempre las variables mediante asignación directa.
+  Se desaconseja esta práctica porque si <code>$arr</code> ya contiene algún valor (por ejemplo, una cadena de una variable de solicitud), este valor permanecerá en su lugar y <code>[]</code> puede representar realmente al operador de acceso a cadena. Siempre es preferible inicializar una variable por asignación directa.
 </p>
-<p>Para más información, consulta <a href="https://www.php.net/manual/en/language.types.array.php#language.types.array.syntax.modifying">Creating/modifying with square bracket syntax (php.net)</a>.
+<p>Consulte <a href="https://www.php.net/manual/en/language.types.array.php#language.types.array.syntax.modifying">Crear/modificar con sintaxis de corchetes (php.net)</a> para obtener más detalles.
 </p>
 </body>
 </html>

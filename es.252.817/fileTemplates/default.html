@@ -2,10 +2,17 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td><font face="verdana" size="-1">En las plantillas de archivo, puede usar texto, código, comentarios y variables predefinidas. A continuación se proporciona una lista de variables predefinidas. Cuando utiliza estas variables en una plantilla, se expandirán posteriormente a sus valores correspondientes en el editor.<br><br>
-       También puede especificar variables personalizadas. Las variables personalizadas utilizan el siguiente formato: <i>${VARIABLE_NAME}</i>, donde <i>VARIABLE_NAME</i> es el nombre de la variable (por ejemplo, <i>${MY_CUSTOM_FUNCTION_NAME}</i>).
-      Antes de que el IDE cree un nuevo archivo usando variables personalizadas, verá un diálogo donde podrá definir los valores para las variables personalizadas en la plantilla.<br><br>
-       Mediante la directiva <i>#parse</i>, puede incluir plantillas de la pestaña <b>Include</b>. Para incluir una plantilla, especifique su nombre completo como parámetro entre comillas (por ejemplo, <i>#parse("File Header")</i>).
+    <td><font face="verdana" size="-1">En las plantillas de archivo, puedes utilizar texto, código, comentarios y
+      variables predefinidas. A continuación se ofrece una lista de variables predefinidas. Cuando utilizas estas variables en las plantillas, más adelante se expanden
+      automáticamente en los valores correspondientes en el editor.<br><br>
+
+      También es posible especificar variables personalizadas. Las variables personalizadas utilizan el formato siguiente: <i>${NOMBRE_VARIABLE}</i>, donde
+      <i>NOMBRE_VARIABLE</i> es el nombre de tu variable (por ejemplo, <i>${NOMBRE_FUNCION_PERSONALIZADA}</i>).
+      Antes de que el IDE cree un archivo nuevo con variables personalizadas, verás un cuadro de diálogo donde puedes definir los valores de las variables personalizadas en la
+      plantilla.<br><br>
+
+      Mediante la directiva <i>#parse</i> puedes incluir plantillas desde la pestaña <b>Incluye</b>. Para incluir una plantilla,
+      especifica el nombre completo de la plantilla como parámetro entre comillas (por ejemplo, <i>#parse("File Header")</i>).
     </font></td>
   </tr>
 </table>
@@ -17,144 +24,127 @@
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${DATE}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${DAY}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Día del mes</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Día actual del mes</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${DAY_NAME_SHORT}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del día de la semana actual (por ejemplo, Mon, Tue, etc.)</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Primeras tres letras del nombre del día actual (Lun, Mar, etc.)</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${DAY_NAME_FULL}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del día de la semana actual (Monday, Tuesday, etc.)</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"> Nombre completo del día actual (Lunes, Martes, etc.)</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${DIR_PATH}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Ruta del directorio del nuevo archivo (relativa a la raíz del proyecto)</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"> Ruta al directorio del nuevo archivo (relativa a la raíz del proyecto)</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${DS}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Símbolo del dólar ($). Esta variable se usa para escapar el carácter dólar para que no se interprete como prefijo de una variable de plantilla.</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"> Signo de dólar ($). Esta variable se utiliza para escapar el carácter de dólar,
+      para que no se trate como un prefijo de una variable de plantilla.</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${FILE_NAME}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del nuevo archivo</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"> Nombre del nuevo archivo</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${HOUR}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${MINUTE}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${SECOND}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Segundo actual</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${MONTH}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${MONTH_NAME_SHORT}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del mes actual (Jan, Feb, etc.)</font>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Las primeras 3 letras del nombre del mes actual (Ene, Feb, etc.)</font>
     </td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${MONTH_NAME_FULL}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual (January, February, etc.)</font>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual (Enero, Febrero, etc.)</font>
     </td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${NAME}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la nueva entidad (archivo, tipo, interfaz, etc.)</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"> Nombre de la nueva entidad (archivo, tipo, interfaz, etc.)</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${ORGANIZATION_NAME}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la organización especificado en la configuración del proyecto</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"> Nombre de tu organización especificado en la configuración del proyecto</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${PRODUCT_NAME}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del IDE</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1"> Nombre del IDE</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${PROJECT_NAME}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><strong>${TIME}</strong></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <nobr><font face="verdana" size="-2"><strong>${USER}</strong></font></nobr>
-    </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de inicio de sesión del usuario actual en el sistema</font></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <nobr><font face="verdana" size="-2"><strong>${YEAR}</strong></font></nobr>
-    </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
-  </tr>
-</table>
-</body>
-</html>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font>

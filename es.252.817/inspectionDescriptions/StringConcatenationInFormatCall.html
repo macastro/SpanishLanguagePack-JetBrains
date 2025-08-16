@@ -1,11 +1,11 @@
 <html>
 <body>
-Informa sobre la concatenación de cadenas no constantes utilizadas como argumentos de formato.
+Informa sobre concatenaciones de cadenas no constantes que se usan como argumentos de cadenas de formato.
 <p>
-  Aunque a veces es intencional, esto generalmente es un uso incorrecto de los métodos de formato y puede incluso provocar problemas de seguridad cuando las variables utilizadas en las cadenas concatenadas contienen caracteres especiales como <code>%</code>.
+  Aunque ocasionalmente se hace con intención, normalmente es un uso erróneo de un método de formateo y puede incluso provocar problemas de seguridad si las variables usadas en la cadena concatenada contienen caracteres especiales como <code>%</code>.
 </p>
 <p>
-  Además, a veces esto puede ser el resultado de concatenar incorrectamente argumentos de formato de cadena al escribir <code>+</code> cuando se debería haber escrito <code>,</code>.
+  Además, a veces puede ser el resultado de concatenar por error un argumento de formato de cadena cuando se escribió <code>+</code> en lugar de <code>,</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -14,11 +14,16 @@ Informa sobre la concatenación de cadenas no constantes utilizadas como argumen
   }
 </code></pre>
 <p>
-  Aquí, <code>userName</code> se interpretará como parte de la cadena de formato, lo que podría resultar en una <code>IllegalFormatException</code> (por ejemplo, si <code>userName</code> es <code>"%"</code>) o en un uso excesivo de memoria (por ejemplo, si <code>userName</code> es <code>"%2000000000%"</code>).
-  La llamada probablemente debería reemplazarse por <code>String.format("Hello, %s", userName);</code>.
+  Aquí, <code>userName</code> se interpretará como parte de la cadena de formato, lo que puede resultar en <code>IllegalFormatException</code> (por ejemplo, si <code>userName</code> es <code>"%"</code>) o en el uso de una gran cantidad de memoria (por ejemplo, si <code>userName</code> es <code>"%2000000000%"</code>).
+  La llamada debería reemplazarse por <code>String.format("Hello, %s", userName);</code>.
 </p>
 <p>
-  Esta inspección verifica las llamadas a métodos de formato en <code>java.util.Formatter</code>, <code>java.lang.String</code>, <code>java.io.PrintWriter</code> o <code>java.io.PrintStream</code>.
+  Esta inspección comprueba las llamadas a métodos de formateo en
+  <code>java.util.Formatter</code>,
+  <code>java.lang.String</code>,
+  <code>java.io.PrintWriter</code>,
+  o <code>java.io.PrintStream</code>.
 </p>
+<!-- tooltip end -->
 </body>
 </html>

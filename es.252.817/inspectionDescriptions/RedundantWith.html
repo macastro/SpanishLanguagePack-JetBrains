@@ -1,19 +1,21 @@
 <html>
 <body>
-Informa sobre llamadas redundantes a la función <code>with</code> que no acceden a ningún contenido del receptor.
-<p><b>Ejemplo:</b></p>
+Reporta llamadas redundantes a la función <code>with</code> que no acceden a nada del receptor.
+<p><b>Ejemplos:</b></p>
 <pre><code>
   class MyClass {
       fun f(): String = ""
   }
+
   fun testRedundant() {
-      with(c) { // &lt;== 'with' es redundante ya que 'c' no se utiliza
+      with(c) { // &lt;== 'with' es redundante ya que 'c' no se usa
           println("1")
       }
   }
+
   fun testOk() {
       val c = MyClass()
-      with(c) { // &lt;== Correcto, ya que 'f()' es un 'c.f()' válido
+      with(c) { // &lt;== OK porque 'f()' es efectivamente 'c.f()'
           println(f())
       }
   }

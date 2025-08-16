@@ -1,8 +1,8 @@
 <html>
 <body>
-Se informa de etiquetas que no apuntan a funciones.
-<p>No se permite declarar etiquetas de destino que no representen funciones.</p>
-<p>Esta corrección rápida eliminará la etiqueta.</p>
+Reporta las etiquetas que no apuntan a funciones.
+<p>Se prohíbe declarar una etiqueta objetivo que no indique una función.</p>
+<p>La corrección rápida elimina la etiqueta.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun testValLabelInReturn() {
@@ -17,6 +17,7 @@ Se informa de etiquetas que no apuntan a funciones.
       fn()
   }
 </code></pre>
-<p>Esta inspección solo se informa cuando el nivel de lenguaje del proyecto o módulo es 1.4 o superior.</p>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 1.4 o superior.</p>
 </body>
 </html>

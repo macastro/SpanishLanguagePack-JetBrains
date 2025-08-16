@@ -1,11 +1,12 @@
 <html>
 <body>
-<p>Informar sobre claves de recursos de mensajes no resueltas.</p>
+<p>Reporta llaves de recursos de mensajes no resueltos.</p>
+
 <p>Ejemplo:</p>
 <pre><code lang="html">
 &lt;html xmlns:th="https://www.thymeleaf.org"&gt;
  &lt;body&gt;
-    &lt;h1 th:text="#{<strong>welcome.unknown</strong>}"&gt;Hallo, World&lt;/h1&gt; &lt;!-- clave de atributo no resuelta --&gt;
+    &lt;h1 th:text="#{<strong>welcome.unknown</strong>}"&gt;Hallo, World&lt;/h1&gt; &lt;!-- No es posible resolver la clave de la propiedad  --&gt;
  &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>

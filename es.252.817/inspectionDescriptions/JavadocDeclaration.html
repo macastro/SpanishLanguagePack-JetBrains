@@ -1,16 +1,16 @@
 <html>
 <body>
-Reporta los siguientes problemas en comentarios y etiquetas Javadoc:
+Informa los siguientes problemas en los comentarios y etiquetas Javadoc:
 <ul>
-  <li>Nombre de etiqueta inválido</li>
-  <li>Descripción de etiqueta incompleta</li>
-  <li>Etiqueta duplicada</li>
-  <li>Descripción Javadoc faltante</li>
+  <li>nombres de etiqueta no válidos</li>
+  <li>descripciones de etiqueta incompletas</li>
+  <li>etiquetas duplicadas</li>
+  <li>descripciones Javadoc faltantes</li>
 </ul>
 <p>Ejemplo:</p>
 <pre><code>
   /**
-   * Nombre de etiqueta inválido
+   * Nombre de etiqueta no válido
    * @poram param description
    */
   public void sample(int param){
@@ -19,15 +19,16 @@ Reporta los siguientes problemas en comentarios y etiquetas Javadoc:
 <p>Ejemplo:</p>
 <pre><code>
   /**
-   * Referencia a sí mismo {@link #sample(int)}
+   * Señalando a sí mismo {@link #sample(int)}
    */
   public void sample(int param){
   }
 </code></pre>
-<p>Esta corrección rápida agregará etiquetas Javadoc desconocidas a la lista de etiquetas adicionales definidas por el usuario.</p>
-<p>Use el campo de texto a continuación para definir etiquetas Javadoc adicionales.</p>
-<p>Use la primera casilla de verificación para ignorar las etiquetas 'throws' duplicadas.</p>
-<p>Use la segunda casilla de verificación para ignorar problemas con la primera oración faltante o incompleta en la descripción.</p>
-<p>Use la tercera casilla de verificación para ignorar las referencias a sí mismo.</p>
+<p>La corrección rápida agrega la etiqueta Javadoc desconocida a la lista de etiquetas adicionales definidas por el usuario.</p>
+<!-- tooltip end -->
+<p>Usa el campo de texto que aparece a continuación para definir etiquetas Javadoc adicionales.</p>
+<p>Utiliza la primera casilla de verificación para ignorar la etiqueta 'throws' duplicada.</p>
+<p>Usa la segunda casilla de verificación para ignorar el problema con la primera oración faltante o incompleta en la descripción.</p>
+<p>Usa la tercera casilla de verificación para ignorar las referencias que señalan a sí mismas.</p>
 </body>
 </html>

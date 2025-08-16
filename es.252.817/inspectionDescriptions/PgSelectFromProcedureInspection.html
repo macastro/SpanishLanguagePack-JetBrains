@@ -1,7 +1,8 @@
 <html>
 <body>
-Informa sobre funciones que ejecutan SELECT o DBLINK sin alias de tipo (por ejemplo, <code> AS t1 (s VARCHAR) </code>).
-  <p>Este requisito no se aplica a funciones escalares.</p>
+Reporta situaciones donde realices un SELECT desde una función o un DBLINK sin un alias con un tipo (por ejemplo,
+  <code>AS t1(s VARCHAR)</code>).
+  <p>Este requerimiento no aplica a funciones escalares.</p>
 <p>Ejemplo (PostgreSQL):</p>
 <pre><code>CREATE FUNCTION produce_a_table() RETURNS RECORD AS $$
 SELECT 1;
@@ -9,8 +10,8 @@ $$ LANGUAGE sql;
 SELECT * FROM produce_a_table() AS s (c1 INT);
 SELECT * FROM produce_a_table() AS s (c1);
 SELECT * FROM DBLINK('dbname=mydb', 'SELECT proname, prosrc FROM pg_proc') AS t1;</code></pre>
-<p><code>AS s (c1 INT)</code> tiene un alias de tipo, mientras que <code>AS s (c1)</code> y <code>AS t1</code> no lo tienen.
-  En este caso, se resaltarán la segunda llamada a <code>produce_a_table()</code> y <code>DBLINK()</code>.
+<p><code>AS s (c1 INT)</code> tiene un alias tipado, mientras que <code>AS s (c1)</code> y <code>AS t1</code> no.
+  En este caso, se resaltará la segunda llamada de <code>produce_a_table()</code> y <code>DBLINK()</code>.
 </p>
 </body>
 </html>

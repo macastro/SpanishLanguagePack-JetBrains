@@ -1,13 +1,14 @@
 <html>
 <body>
-Informa sobre intentos de sincronización en instancias de clases basadas en valores, lo que genera advertencias de compilación y excepciones en tiempo de ejecución a partir de Java 16.
+Informa de intentos de sincronización en una instancia de una clase basada en valores que producen advertencias en tiempo de compilación y lanzan excepciones en tiempo de ejecución a partir de Java 16.
 <p>
-  Por ejemplo, <code>java.lang.Double</code> está anotado con <code>jdk.internal.ValueBased</code>, por lo que el siguiente código genera una advertencia durante la compilación:
+  Por ejemplo, <code>java.lang.Double</code> está anotado con <code>jdk.internal.ValueBased</code>, por lo que el siguiente código producirá una advertencia en tiempo de compilación:
 </p>
 <pre><code>
 Double d = 20.0;
 synchronized (d) { ... } // advertencia de javac
 </code></pre>
-<p><small>Novedades de 2021.1</small></p>
+<!-- tooltip end -->
+<p><small>Novedad en 2021.1</small></p>
 </body>
 </html>

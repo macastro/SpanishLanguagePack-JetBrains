@@ -1,7 +1,8 @@
 <html>
 <body>
-Informa sobre declaraciones <code>try</code> con múltiples recursos que pueden dividirse automáticamente en varias declaraciones try-with-resources independientes.
-<p>Esta transformación es útil para refactorizaciones posteriores (por ejemplo, para extraer declaraciones <code>try</code> anidadas en métodos separados).</p>
+Reporta declaraciones <code>try</code> con múltiples recursos que pueden dividirse automáticamente en varias declaraciones try-with-resource.
+<p>Esta conversión puede ser útil para una refactorización posterior
+(por ejemplo, para extraer la declaración <code>try</code> anidada en un método separado). </p>
 <p>Ejemplo:</p>
 <pre><code>
   try (FileInputStream in = new FileInputStream("in.txt");

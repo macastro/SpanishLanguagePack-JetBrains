@@ -1,23 +1,24 @@
 <html>
 <body>
-Reporta problemas con los campos <code>AtomicLongFieldUpdater</code>, <code>AtomicIntegerFieldUpdater</code> o <code>AtomicReferenceFieldUpdater</code> (paquete <code>java.util.concurrent.atomic</code>).
-<p>Los problemas reportados son los mismos que pueden ocurrir en tiempo de ejecución con los actualizadores de campos atómicos: campo especificado no encontrado, campo especificado inaccesible, tipo de campo especificado incorrecto, etc.</p>
+Informa de problemas con los campos <code>AtomicLongFieldUpdater</code>,
+<code>AtomicIntegerFieldUpdater</code> o <code>AtomicReferenceFieldUpdater</code> (el paquete <code>java.util.concurrent.atomic</code>).
+<p>Los problemas informados son idénticos a los problemas de tiempo de ejecución que pueden ocurrir con los actualizadores de campo atómicos:
+  campo especificado no encontrado, campo especificado no accesible, campo especificado tiene un tipo incorrecto, etc.</p>
 <p><b>Ejemplos:</b></p>
 <ul>
   <li><pre><code>
-  class A {
+  public class A {
     private static volatile int value = 0;
     private static final AtomicIntegerFieldUpdater updater =
-    AtomicIntegerFieldUpdater.newUpdater((A.class), "value"); // Advertencia: el campo 'value' tiene el modificador 'static'
+    AtomicIntegerFieldUpdater.newUpdater((A.class), "value"); // advertencia: El campo 'value' tiene el modificador 'static'
   }
   </code></pre></li>
   <li><pre><code>
-  class B {
+  public class B {
     private static final AtomicIntegerFieldUpdater updater =
-      AtomicIntegerFieldUpdater.newUpdater(B.class, "value"); // Advertencia: no se encuentra el campo 'value' en la clase 'B'
+      AtomicIntegerFieldUpdater.newUpdater(B.class, "value"); // advertencia: no se ha encontrado ningún campo con nombre 'value' en la clase 'B'
   }
   </code></pre></li>
 </ul>
-<p>
 </body>
 </html>

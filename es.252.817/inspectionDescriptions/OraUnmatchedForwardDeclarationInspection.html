@@ -1,13 +1,13 @@
 <html>
 <body>
 Informa sobre declaraciones de procedimientos y funciones que carecen de implementación en el código.
-<p>En Oracle, puede declarar un procedimiento o función sin cuerpo e implementarlo en un momento posterior. Esta verificación informará los nombres de dichos procedimientos o funciones que no han sido implementados.</p>
+<p>En Oracle, se puede declarar un procedimiento o función sin su cuerpo y escribir la implementación más tarde. La inspección informará sobre los nombres de los procedimientos o funciones de este tipo que no tienen implementación.</p>
 <p>Ejemplo (Oracle):</p>
 <pre><code>DECLARE PROCEDURE foo(a int, b varchar2);
 BEGIN
     NULL;
 END;</code></pre>
-<p>El procedimiento <code>foo</code> ha sido declarado pero carece de implementación. Podemos agregar la implementación para eliminar el error.</p>
+<p>El procedimiento <code>foo</code> se declara, pero le falta implementación. Podemos agregar la implementación para deshacernos del error.</p>
 <pre><code>DECLARE PROCEDURE foo(a int, b varchar2);
   PROCEDURE foo(a int, b varchar2) IS
 BEGIN

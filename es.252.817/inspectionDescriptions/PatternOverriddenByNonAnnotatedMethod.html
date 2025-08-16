@@ -1,10 +1,9 @@
 <html>
 <body>
-Informa sobre métodos que sobrescriben métodos anotados con <code>@Pattern</code> sin incluir la anotación <code>@Pattern</code>.
-Esto no impide que se resalten los errores en el editor, pero el método sobrescrito no será verificado en tiempo de ejecución.
+Informa cuando un método sin anotación <code>@Pattern</code> anula un método anotado como <code>@Pattern</code>.
+Esto no impide el resaltado de errores dentro del editor, sin embargo, el método de anulación no se comprobará en tiempo de ejecución.
 <p>
-Se proporciona una corrección rápida para añadir la anotación <code>@Pattern</code> que coincida con la anotación del método de la superclase. Esto asegura
-que la verificación en tiempo de ejecución funcione correctamente.
+Se proporciona una solución rápida para añadir una anotación <code>@Pattern</code> que coincida con la del método de la superclase. Esto asegura que la instrumentación de la comprobación en tiempo de ejecución funciona correctamente.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   abstract class Parent {

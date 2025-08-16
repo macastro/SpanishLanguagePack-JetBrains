@@ -1,9 +1,10 @@
 <html>
 <body>
-Métodos que devuelven <code>this</code>.
+Informa sobre los métodos que devuelven <code>this</code>.
 <p>
-  Aunque este tipo de retorno es válido, raramente es necesario y generalmente indica que el método está diseñado para ser parte de una cadena de llamadas de método (por ejemplo, <code>buffer.append("foo").append("bar").append("baz")</code>).
-  Muchos estándares de codificación desaconsejan este tipo de encadenamiento.
+  Si bien dicha devolución es válida, rara vez es necesaria y generalmente indica que el método está destinado a usarse
+  como parte de una cadena de llamadas a métodos similares (por ejemplo, <code>buffer.append("foo").append("bar").append("baz")</code>).
+  Muchas normas de codificación desaprueban dichas cadenas.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -12,5 +13,6 @@ Métodos que devuelven <code>this</code>.
     return this;
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

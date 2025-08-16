@@ -1,8 +1,12 @@
 <html>
 <body>
-Informa sobre conversiones de tipo demasiado específicas. Por ejemplo, cuando un objeto se convierte a <code>ArrayList</code> cuando una conversión a <code>List</code> también funcionaría.
+Informa conversiones de tipos que son excesivamente fuertes. Por ejemplo,
+convertir un objeto a <code>ArrayList</code> cuando convertirlo a
+<code>List</code> funcionaría igual de bien.
 <p>
-  <b>Nota</b>: Similar a la comprobación de <i>conversiones de tipo redundantes</i>, si intencionalmente está utilizando una conversión más específica para generar un <code>ClassCastException</code>, aplicar esta corrección podría alterar la semántica del programa.
+  <b>Nota:</b> de forma muy parecida a la inspección de <i>Conversión de tipo redundante</i>, aplicar la solución
+  para esta inspección puede cambiar la semántica de su programa si está
+  usando intencionalmente una conversión demasiado fuerte para provocar que se genere una <code>ClassCastException</code>.
 </p>
 <p>Ejemplo:</p>
 <pre><code>
@@ -10,12 +14,14 @@ Informa sobre conversiones de tipo demasiado específicas. Por ejemplo, cuando u
     void doSmth();
   }
   interface Sub extends Super { }
+
   void use(Object obj) {
-    // Advertencia: se puede usar ((Super)obj).doSmth()
+    // Advertencia: ((Super)obj).doSmth() podría usarse
     ((Sub)obj).doSmth();
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Utilice la casilla de verificación a continuación para ignorar las conversiones cuando haya una comprobación de <code>instanceof</code> correspondiente en el código.
+  Use la casilla de verificación a continuación para ignorar conversiones cuando hay una comprobación <code>instanceof</code> coincidente en el código.
 </body>
 </html>

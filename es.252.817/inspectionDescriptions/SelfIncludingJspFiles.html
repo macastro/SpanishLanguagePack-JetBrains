@@ -1,13 +1,16 @@
 <html>
 <body>
-Informa sobre cualquier directiva include que referencie el mismo archivo JSP dentro del archivo JSP.<br/>
-<p><b>Ejemplo de archivo JSP llamado main.jsp:</b></p>
+Informa cualquier directiva de inclusión en un archivo JSP que hace referencia al archivo JSP contenedor.<br/>
+
+<p><b>Archivo JSP de ejemplo llamado main.jsp:</b></p>
 <pre><code>
-  &lt;jsp:include page="./main.jsp" /&gt; // Error: intento de incluir el archivo que lo contiene
+  &lt;jsp:include page="./main.jsp" /&gt; // Error: intento de incluir el archivo contenedor
   ...
 </code></pre><br/>
+
+<!-- tooltip end -->
 <p>
-  <b>Nota</b>: Esta auto-inclusión resulta en una recursión infinita y por lo tanto el archivo JSP no puede compilarse.
+  <b>NOTA:</b> La autoinclusión de este tipo conduce a una recursión infinita, por lo que el archivo JSP no se puede compilar.
 </p>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre bucles que contienen una sentencia <code>if</code> y terminan con <code>break</code> sin alterar la semántica.
-Esto puede evitar iteraciones redundantes en el bucle.
+Reporta un lazo con una sentencia <code>if</code> que puede terminar con <code>break</code> sin cambiar la semántica.
+De esta manera previene una iteración redundante del lazo.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   boolean found = false;
@@ -11,7 +11,7 @@ Esto puede evitar iteraciones redundantes en el bucle.
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   boolean found = false;
   for (int i = 0; i &lt; arr.length; i++) {
@@ -21,6 +21,7 @@ Esto puede evitar iteraciones redundantes en el bucle.
     }
   }
 </code></pre>
-<p><small>Novedades de la versión 2019.2</small></p>
+<!-- tooltip end -->
+<p><small> Nuevo en 2019.2</small></p>
 </body>
 </html>

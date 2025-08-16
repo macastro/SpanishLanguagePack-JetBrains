@@ -1,7 +1,7 @@
 <html>
 <body>
-El informe puede reemplazar la asignación con operadores de asignación compuesta.
-<p>El código que utiliza operadores de asignación compuesta es más corto y potencialmente más claro.</p>
+Informa qué operaciones de asignación pueden ser reemplazadas por asignación de operador.
+<p>El código que usa asignación de operador es más corto y puede ser más claro.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>  x = x + 3;
   x = x / 3;
@@ -10,11 +10,13 @@ El informe puede reemplazar la asignación con operadores de asignación compues
 <pre><code>  x += 3;
   x /= 3;
 </code></pre>
+<!-- tooltip end -->
 <p>
-La opción <b>Ignorar operadores condicionales</b> permite ignorar <code>&amp;&amp;</code> y <code>||</code>. Reemplazar operadores condicionales con operadores de asignación compuesta puede cambiar la evaluación perezosa a evaluación inmediata, alterando potencialmente la semántica de la expresión.
+Usa la opción <b>Ignorar operadores condicionales</b> para ignorar <code>&amp;&amp;</code>
+y <code>||</code>. Reemplazar operadores condicionales con asignación de operador cambiaría la evaluación de perezosa a ansiosa, lo que puede cambiar la semántica de la expresión.
 </p>
 <p>
-La opción <b>Ignorar operadores ambiguos</b> permite ignorar los operadores menos conocidos <code>^</code> y <code>%</code>.
+Usa la opción <b>Ignorar operadores oscuros</b> para ignorar <code>^</code> y <code>%</code>, que son menos conocidos.
 </p>
 </body>
 </html>

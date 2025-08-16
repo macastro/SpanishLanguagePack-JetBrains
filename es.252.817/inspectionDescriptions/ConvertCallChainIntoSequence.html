@@ -1,23 +1,25 @@
 <html>
 <body>
-El informe debe convertirse en una cadena de llamadas en una <code>Collection</code> de tipo <b>Sequence</b>.
-<p>Cada función de transformación de <code>Collection</code> (como <code>map()</code> o <code>filter()</code>) crea una nueva
-     <code>Collection</code> (generalmente una <code>List</code> o <code>Set</code>) en segundo plano.
-    Con múltiples llamadas consecutivas y un gran número de elementos en la <code>Collection</code>, el consumo de memoria puede ser significativo.
-    En estos casos, es mejor utilizar <code>Sequence</code>.
+Se reportan cadenas de llamada en un <code>Collection</code> que debería ser convertido a <b>Sequence</b>.
+<p>Cada función de transformación <code>Collection</code> (como <code>map()</code> o <code>filter()</code>) crea un nuevo
+    <code>Collection</code> (normalmente <code>List</code> o <code>Set</code>) internamente.
+    En caso de múltiples llamadas consecuentes, y un gran número de elementos en <code>Collection</code>, el tráfico de memoria podría ser significativo.
+    En tal caso, es preferible usar <code>Sequence</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Entity(val key: String, val value: String)
+
   fun getValues(lines: List&lt;String&gt;) = lines
       .filter { it.isNotEmpty() }
       .map { it.split(',', limit = 2) }
       .filter { it.size == 2 }
       .map { Entity(it[0], it[1]) }
 </code></pre>
-<p>Esta corrección rápida envolverá la cadena de llamadas con <code>asSequence()</code> y <code>toList()</code>:</p>
+<p>La corrección rápida envuelve la cadena de llamada en <code>asSequence()</code> and <code>toList()</code>:</p>
 <pre><code>
   class Entity(val key: String, val value: String)
+
   fun getValues(lines: List&lt;String&gt;) = lines
       .asSequence()
       .filter { it.isNotEmpty() }
@@ -26,5 +28,6 @@ El informe debe convertirse en una cadena de llamadas en una <code>Collection</c
       .map { Entity(it[0], it[1]) }
       .toList()
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

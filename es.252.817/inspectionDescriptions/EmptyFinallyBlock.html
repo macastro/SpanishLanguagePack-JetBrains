@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre bloques <code>finally</code> vacíos.
-<p>Los bloques <code>finally</code> vacíos generalmente indican un error de codificación. Pueden permanecer después de una refactorización del código y se pueden eliminar de forma segura.</p>
-<p>Esta inspección no informa sobre bloques <code>finally</code> vacíos encontrados en archivos JSP.</p>
+Reporta los bloques vacíos <code>finally</code>.
+<p>Los bloques vacíos <code>finally</code> en general indican errores de programación. También pueden permanecer tras la refactorización del código y pueden eliminarse sin peligro.</p>
+<p>Esta inspección no reporta los bloques vacíos <code>finally</code> hallados en los archivos JSP.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   try {
@@ -10,9 +10,10 @@ Informa sobre bloques <code>finally</code> vacíos.
   } catch (IOException e) {
     throw new RuntimeException(e);
   } finally {
+
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:
+<p>Tras aplicar la corrección rápida:
 <pre><code>
   try {
     Files.readString(Paths.get("in.txt"));
@@ -20,5 +21,6 @@ Informa sobre bloques <code>finally</code> vacíos.
     throw new RuntimeException(e);
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

@@ -1,13 +1,13 @@
 <html>
 <body>
-Informa sobre llamadas a funciones y métodos que no manejan resultados de tipo <code>error</code>.
-<p>La API de estas funciones indica que la ejecución puede fallar y devolver un error.
-  Las llamadas que no manejan el resultado de error pueden indicar un uso incorrecto de la API.</p>
+Reporte llamadas a funciones y métodos que no gestionan el resultado de la llamada de tipo <code>error</code>.
+<p>Esta API de funciones implica que su ejecución podría finalizar sin éxito y devolverían un error.
+  Las llamadas que no gestionan el resultado del error podrían ser un indicio de un mal uso de la API.</p>
 <p>Ejemplo:</p>
 <pre><code>
-os.Remove("non-existing") // Error ignorado</code></pre>
-<p>Después de aplicar la corrección rápida <b>manejar error</b>:</p>
-<pre><code>err := os.Remove("non-existing") // Error manejado
+os.Remove("non-existing") // se ignora el error</code></pre>
+<p>Después de aplicar la corrección rápida <b>Gestionar errores</b>:</p>
+<pre><code>err := os.Remove("non-existing") // se gestiona el error
 if err != nil {
   return err
 }</code></pre>

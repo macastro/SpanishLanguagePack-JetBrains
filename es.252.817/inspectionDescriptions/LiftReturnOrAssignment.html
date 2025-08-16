@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa sobre las declaraciones <code>if</code>, <code>when</code> y <code>try</code> que pueden convertirse en expresiones extrayendo las declaraciones <code>return</code> o asignaciones.
+Reporta sentencias `if`, `when` y `try` que se pueden convertir en expresiones extrayendo la sentencia `return` o una asignación.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun foo(arg: Int): String {
@@ -21,6 +21,6 @@ Después de aplicar la corrección rápida:
       }
   }
 </code></pre>
-<p>Si desea que esta inspección resalte código más complejo con ramas de múltiples declaraciones, desmarque la opción "Informar solo cuando cada rama sea una única declaración".</p>
+<p>Si desea que esta inspección resalte código más complejo con ramas de varias sentencias, deseleccione la opción "Reportar solo si cada rama es una sola sentencia".</p>
 </body>
 </html>

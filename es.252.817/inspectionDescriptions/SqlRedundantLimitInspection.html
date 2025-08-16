@@ -1,11 +1,12 @@
 <html>
 <body>
-Cláusulas redundantes que limitan filas en consultas de subqueries, como FETCH y LIMIT.
+Informa de cláusulas de limitación de filas redundantes como FETCH y LIMIT en consultas.
 <p>Ejemplo (PostgreSQL):</p>
 <pre><code>CREATE TABLE foo(a INT);
+
 SELECT * FROM foo WHERE EXISTS(SELECT * FROM foo LIMIT 2);
 SELECT * FROM foo WHERE EXISTS(SELECT * FROM foo FETCH FIRST 2 ROWS ONLY);</code></pre>
-<p>Para corregir la advertencia, puede agregar OFFSET a la cláusula limitante. Si falta OFFSET, el LIMIT es redundante ya que el uso de LIMIT no afectará el resultado de la operación EXISTS. En el caso de OFFSET, omitimos las primeras <code>N</code> filas, lo que afectará la salida.</p>
+<p>Para corregir la advertencia, puede agregar OFFSET a las cláusulas de limitación. Si falta OFFSET, entonces LIMIT es redundante porque el uso de LIMIT no influye en el resultado de la operación de EXISTS. En el caso de OFFSET, omitimos las primeras <code>N</code> filas y esto influirá en la salida.</p>
 <pre><code>SELECT * FROM foo WHERE EXISTS(SELECT * FROM foo OFFSET 1 ROW LIMIT 2);
 SELECT * FROM foo WHERE EXISTS(SELECT * FROM foo OFFSET 1 ROW FETCH FIRST 2 ROWS ONLY);</code></pre>
 </body>

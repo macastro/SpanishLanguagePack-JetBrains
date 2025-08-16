@@ -1,12 +1,15 @@
 <html>
 <body>
-Informa sobre literales de cadena que contienen caracteres nacionales sin el prefijo <code>N</code>.
-<p>Sin el prefijo N, la cadena se convertirá a la página de códigos predeterminada de la base de datos. Esta página de códigos predeterminada podría no reconocer algunos caracteres. Para más información, consulte la página <a href="https://docs.microsoft.com/en-us/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql" target="_blank">"nchar y nvarchar" (Transact-SQL) en docs.microsoft.com</a>.</p>
+Informa de literales de cadena que usan caracteres nacionales sin el prefijo <code>N</code>.
+<p>Sin el prefijo N, la cadena se convierte a la página de códigos predeterminada de la base de datos. Puede que esta página de códigos predeterminada no reconozca determinados caracteres. Para obtener más información, consulte
+  <a href="https://docs.microsoft.com/es-es/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql" target="_blank">nchar y nvarchar
+    (Transact-SQL)
+    en docs.microsoft.com</a>.</p>
 <p>Ejemplo (Microsoft SQL Server):</p>
 <pre><code>SELECT 'abcde' AS a;
 SELECT N'abcde' AS b;
 SELECT 'абвгд' AS c;
 SELECT N'абвгд' AS d;</code></pre>
-<p><code>SELECT 'абвгд' AS c;</code> no tiene el prefijo <code>N</code>, la parte <code>'абвгд'</code> será resaltada.</p>
+<p><code>SELECT 'абвгд' AS c;</code> no tiene el prefijo <code>N</code>, se resaltará la parte <code>'абвгд'</code>.</p>
 </body>
 </html>

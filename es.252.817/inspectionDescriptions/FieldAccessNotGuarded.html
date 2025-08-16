@@ -8,10 +8,11 @@ Informa sobre accesos a campos declarados como <code>@GuardedBy</code> que no es
         notify();
     }
     void y() {
-        x(); // Llamada a método no protegida
+        x(); // llamada a método sin protección
     }
 </code></pre>
-<p>Las anotaciones <code>@GuardedBy</code> soportadas son:</p>
+<!-- tooltip end -->
+<p>Anotaciones <code>@GuardedBy</code> compatibles:</p>
 <ul>
   <li><code>net.jcip.annotations.GuardedBy</code></li>
   <li><code>javax.annotation.concurrent.GuardedBy</code></li>

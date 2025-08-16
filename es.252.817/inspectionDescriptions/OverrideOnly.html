@@ -1,10 +1,10 @@
 <html>
 <body>
-Informa sobre las llamadas a métodos de API marcados con <code>@ApiStatus.OverrideOnly</code>.
+Reporta llamadas a métodos de API marcados con <code>@ApiStatus.OverrideOnly</code>.
 <p>
-  La anotación <code>@ApiStatus.OverrideOnly</code> indica que el método es parte de una SPI (Interfaz de Proveedor de Servicios).
-  Los clientes de la biblioteca deben implementar o sobrescribir estos métodos en lugar de llamarlos directamente.
-  Marcar una clase o interfaz con esta anotación es equivalente a marcar cada uno de sus métodos.
+  La anotación <code>@ApiStatus.OverrideOnly</code> indica que el método es parte de la SPI (Interfaz del proveedor de servicios).
+  Los clientes de la biblioteca declarada deben implementar o anular dichos métodos, no llamarlos directamente.
+  Marcar una clase o interfaz con esta anotación es lo mismo que marcar todos los métodos con ella.
 </p>
 </body>
 </html>

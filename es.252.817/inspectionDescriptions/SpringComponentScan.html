@@ -1,11 +1,14 @@
 <html>
 <body>
-<p>Informa sobre paquetes no resueltos en la anotación <a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html>@ComponentScan</a> y sus correspondientes alias en la meta-anotación <code>@ComponentScan</code>.<br></p>
+<p>Reporta los paquetes sin resolverse en
+<a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html>@ComponentScan</a>
+anotaciones y atributos alias correspondientes de la meta anotación <code>@ComponentScan</code>.<br></p>
+
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   @ComponentScan(basePackages = {
      "com.my.company",
-     "com.unknown" // Informa "No se puede resolver el paquete 'unknown'"
+     "com.unknown" // reporta "El paquete 'unknown' no se puede resolver"
   }) +
   @Configuration +
   public class MyConfiguration {}

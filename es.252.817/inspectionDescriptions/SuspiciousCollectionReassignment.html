@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre expresiones de asignación aumentada (<code>+=</code>) en <code>Collection</code> de solo lectura.
-<p>Las expresiones de asignación aumentada (<code>+=</code>) en <code>Collection</code> de solo lectura asignan temporalmente una nueva colección, lo que puede afectar al rendimiento.</p>
-<p>La corrección rápida <b>Cambiar tipo a mutable</b> está disponible para corregir el código automáticamente.</p>
+Informa de expresiones de asignación aumentada (<code>+=</code>) en una <code>Collection</code> de solo lectura.
+<p>La expresión de asignación aumentada (<code>+=</code>) en una <code>Collection</code> de solo lectura asigna temporalmente una nueva colección, lo que puede perjudicar el rendimiento.</p>
+<p>El quickfix "<b>Cambiar tipo a mutable</b>" se puede usar para modificar el código automáticamente.</p>
 <p>Ejemplo:</p>
 <pre><code>
   fun test() {
@@ -10,7 +10,7 @@ Informa sobre expresiones de asignación aumentada (<code>+=</code>) en <code>Co
       list += 42 // Aquí se asigna una nueva lista, equivalente a list = list + 42
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el quickfix:</p>
 <pre><code>
   fun test() {
       val list = mutableListOf(0)

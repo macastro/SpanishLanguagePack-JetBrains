@@ -1,10 +1,10 @@
 <html>
 <body>
-Informa sobre sentencias que podrían modificar la base de datos durante una conexión de solo lectura. <p>Para habilitar el modo de solo lectura para una conexión, haz clic derecho en el origen de datos en la ventana de herramientas <b>Base de datos</b> (<b>Ver | Ventanas de herramientas | Base de datos</b>) y selecciona <b>Propiedades</b>.
-  En el diálogo <b>Orígenes de datos y controladores</b>, haz clic en la pestaña <b>Opciones</b> y marca la casilla <b>Solo lectura</b>.</p>
+Informa sobre sentencias que podrían provocar la modificación de la base de datos durante una conexión de solo lectura. <p>Para habilitar el modo de solo lectura para una conexión, haz clic con el botón derecho en un origen de datos en la ventana de herramientas <b>Base de datos</b> (<b>Ver | Ventanas de herramientas | Base de datos</b>) y selecciona <b>Propiedades</b>.
+  En el cuadro de diálogo <b>Orígenes de datos y controladores</b>, haz clic en la pestaña <b>Opciones</b> y marca la casilla de verificación <b>Solo lectura</b>.</p>
 <p>Ejemplo (MySQL):</p>
 <pre><code>CREATE TABLE foo(a INT);
 INSERT INTO foo VALUES (1);</code></pre>
-<p>Como las sentencias <code>CREATE TABLE</code> y <code>INSERT INTO</code> provocan modificaciones en la base de datos, estas sentencias se resaltarán en el modo de conexión de solo lectura.</p>
+<p>Como las sentencias <code>CREATE TABLE</code> e <code>INSERT INTO</code> provocan la modificación de la base de datos, estas sentencias se resaltarán en el modo de conexión de solo lectura.</p>
 </body>
 </html>

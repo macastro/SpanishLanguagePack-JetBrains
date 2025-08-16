@@ -1,14 +1,16 @@
 <html>
 <body>
-Informa sobre objetos temporales innecesarios creados al convertir de <code>String</code> a tipos primitivos.
+Informa de la creación innecesaria de objetos temporales al convertir de <code>String</code> a tipos primitivos.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   new Integer("3").intValue()
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   Integer.valueOf("3")
 </code></pre>
+<!-- tooltip end -->
 <p>
+
 </body>
 </html>

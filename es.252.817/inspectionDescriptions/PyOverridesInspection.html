@@ -1,19 +1,23 @@
 <html>
 <body>
-<p>Informa cuando un método decorado con @override no tiene un método coincidente en su clase superior</p>
+<p>Informa cuando un método decorado con @override no tiene un método correspondiente en sus clases antecesoras</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 from typing import override
-class Parent:
+
+class Padre:
     def foo(self) -> int:
         return 1
+
     def bar(self, x: str) -> str:
         return x
-class Child(Parent):
+
+class Hijo(Padre):
     @override
     def foo(self) -> int:
         return 2
-    @override # Falta el método super para la función sobrescrita
+
+    @override # Falta el método super para la función override
     def baz(self) -> int:
         return 1
 </code></pre>

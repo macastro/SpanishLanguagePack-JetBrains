@@ -1,9 +1,10 @@
 <html>
 <body>
-Informa sobre el boxing redundante de valores ya boxed.
+Reporta la encapsulación de valores ya encapsulados.
 <p>
-  Esta es una operación redundante, ya que cualquier valor boxed primero se desempaquetará automáticamente y luego se volverá a boxear. Este tipo de código puede causar problemas de rendimiento si se realiza dentro de bucles internos.
+  Esta es una operación redundante puesto que cualquier valor encapsulado será primero desempaquetado automáticamente antes de encapsular el valor de nuevo. Si se hace dentro de un ciclo interno, dicho código puede causar problemas de rendimiento.
 </p>
+<!-- tooltip end -->
 <p><b>Ejemplo:</b></p>
 <pre><code>
   Integer value = 1;

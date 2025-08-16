@@ -1,15 +1,20 @@
 <html>
 <body>
-Informa sobre operaciones de conversión entre tipos de datos primitivos que pueden causar pérdida de precisión.
-<p>Estas conversiones no son necesariamente un problema, pero pueden causar errores difíciles de rastrear si la pérdida de precisión es inesperada.</p>
+Reporta operaciones de conversión lanzadas entre tipos numéricos primitivos que pueden
+resultar en pérdida de precisión.
+<p>Tales conversiones no son necesariamente un problema, pero pueden resultar en errores difíciles de
+  rastrear si la pérdida de precisión no es esperada.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   int a = 420;
   byte b = (byte) a;
 </code></pre>
-<p>Use la opción <b>Ignorar conversiones de int a char</b> para ignorar las conversiones de <code>int</code> a <code>char</code>.
-  Este tipo de conversión se usa frecuentemente al implementar operaciones de I/O, ya que el método <code>read()</code> de la clase <code>java.io.Reader</code> devuelve un <code>int</code>.</p>
-<p>Use la opción <b>Ignorar conversiones de int 128-255 a byte</b> para ignorar las conversiones de valores constantes de <code>int</code> a <code>byte</code> (128-255).
-  Estos valores se desbordarán a números negativos que aún caben en un byte.</p>
+<!-- tooltip end -->
+<p>Usa la opción <b>Ignorar conversiones de int a char</b> para ignorar conversiones de <code>int</code> a <code>char</code>.
+Este tipo de conversión se utiliza comúnmente al implementar operaciones de E/S porque el método <code>read()</code> de la
+clase <code>java.io.Reader</code> devuelve un <code>int</code>.</p>
+<p>Usa la opción <b>Ignorar conversiones de int 128-255 a byte </b> para ignorar conversiones de valores constantes (128-255) de <code>int</code> a
+  <code>byte</code>.
+Dichos valores se desbordarán a números negativos que aún caben dentro de un byte.</p>
 </body>
 </html>

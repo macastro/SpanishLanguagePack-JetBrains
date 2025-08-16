@@ -1,44 +1,49 @@
 <html>
 <body>
-Informa sobre bucles <code>while</code> que realizan espera activa sobre campos no <code>volatile</code>, esperando a que sean modificados por otro hilo.
+Informa sobre bucles <code>while</code> que giran sobre un valor de campo no <code>volatile</code> y esperan a que otro hilo lo modifique.
 <p>
-Además de poder consumir mucha CPU cuando se realiza poco trabajo dentro del bucle, estos bucles probablemente tengan una semántica diferente a la esperada.
-Incluso si otro hilo modifica el valor del campo, el modelo de memoria de Java permite que estos bucles nunca terminen.
+Estos bucles pueden consumir muchísima CPU, incluso si apenas realizan trabajo en su interior, y es posible que tengan una semántica distinta a la deseada.
+El modelo de memoria de Java permite que estos bucles nunca terminen, incluso si otro hilo cambia el valor del campo.
 </p>
 <p>
-Además, desde Java 9, se recomienda llamar a <code>Thread.onSpinWait()</code> en bucles de espera activa sobre campos <code>volatile</code>, lo que puede mejorar significativamente el rendimiento en cierto hardware.
+Además, a partir de Java 9 se recomienda llamar a <code>Thread.onSpinWait()</code> dentro de los bucles de giro sobre campos <code>volatile</code>. Esto puede mejorar considerablemente el rendimiento en cierto hardware.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class SpinsOnField {
     boolean ready = false;
+
     void run() {
       while (!ready) {
       }
-      // Realizar algún trabajo
+      // Realiza algo de trabajo
     }
+
     void markAsReady() {
       ready = true;
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   class SpinsOnField {
     volatile boolean ready = false;
+
     void run() {
       while (!ready) {
         Thread.onSpinWait();
       }
-      // Realizar algún trabajo
+      // Realiza algo de trabajo
     }
+
     void markAsReady() {
       ready = true;
     }
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-Use la opción de inspección para informar solo sobre bucles <code>while</code> vacíos.
+Usa las opciones de la inspección para informar solo sobre bucles <code>while</code> vacíos.
 <p>
 </body>
 </html>

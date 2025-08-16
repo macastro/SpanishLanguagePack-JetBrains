@@ -1,7 +1,7 @@
 <html>
 <body>
-Reporta métodos que tienen tres o más negaciones.
-Este tipo de métodos pueden resultar confusos.
+Informa sobre métodos que presentan tres o más negaciones.
+Estos métodos podrían resultar confusos.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void doSmth(int a, int b, boolean flag1, boolean flag2) {
@@ -12,17 +12,18 @@ Este tipo de métodos pueden resultar confusos.
     }
   }
 </code></pre>
-<p>Sin negaciones, el método se vuelve más fácil de entender:</p>
+<p>La eliminación de las negaciones facilita la comprensión del método:</p>
 <pre><code>
   void doSmth(int a, int b, boolean flag1, boolean flag2) {
     if (flag1 || flag2 || a == b) return;
     doOther();
   }
 </code></pre>
-<p>Configuración de la inspección:</p>
+<!-- tooltip end -->
+<p>Cómo configurar la inspección:</p>
 <ul>
-  <li>Utilice la opción <b>Ignorar negaciones en el método 'equals()'</b> para deshabilitar la inspección en los métodos <code>equals()</code>.</li>
-  <li>Utilice <b>Ignorar negaciones en declaraciones 'assert'</b> para deshabilitar la inspección en las declaraciones <code>assert</code>.</li>
+  <li>Utiliza la opción <b>Ignorar negaciones en los métodos "equals()"</b> para desactivar la inspección en los métodos <code>equals()</code>.</li>
+  <li>Utiliza la opción <b>Ignorar negaciones en las sentencias "assert"</b> para desactivar la inspección en las sentencias <code>assert</code>.</li>
 </ul>
 </body>
 </html>

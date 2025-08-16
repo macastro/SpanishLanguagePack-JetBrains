@@ -1,6 +1,7 @@
 <html>
 <body>
-Informa de cualquier instancia de literales <code>String</code> codificados de forma estática.
-<p>Los literales <code>String</code> codificados de forma estática pueden ser problemáticos en entornos internacionalizados. Esta inspección no informa sobre cadenas vacías ni cadenas que solo contienen espacios en blanco. Se puede utilizar una corrección rápida para convertir los literales de cadena en llamadas al método <code>java.util.ResourceBundle.getString()</code>.</p>
+Informa toda instancia de literales <code>String</code> codificados.
+<p>Los literales <code>String</code> codificados probablemente son errores en un entorno internacionalizado. Esta inspección no informará cadenas vacías ni cadenas que solo consten de espacios en blanco. Hay una solución rápida disponible para transformar un literal de cadena en una llamada al método <code>java.util.ResourceBundle.getString()</code>.</p>
+<!-- tooltip end -->
 </body>
 </html>

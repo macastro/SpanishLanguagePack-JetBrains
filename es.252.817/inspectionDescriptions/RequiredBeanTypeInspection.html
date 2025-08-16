@@ -1,6 +1,7 @@
 <html>
 <body>
-<p>Informa sobre tipos incorrectos en la inyección de beans de esquema personalizados definidos en el contexto de aplicación XML.</p>
+<p>Informa sobre tipos incorrectos de inyección de beans de esquemas personalizados definidos en el contexto de la aplicación XML.</p>
+
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   public class SimpleBean{}
@@ -9,9 +10,9 @@
   &lt;beans ...>
     &lt;bean class="SimpleBean" id="simpleBean"/&gt;
        &lt;mvc:annotation-driven
-         conversion-service="simpleBean"      &lt;!-- reports "Bean must be of 'org.springframework.core.convert.ConversionService' type" --&gt;
-         message-codes-resolver="simpleBean"  &lt;!-- informa "El Bean debe ser de tipo 'org.springframework.validation.MessageCodesResolver'" --&gt;
-         validator="simpleBean"               &lt;!-- informa "El Bean debe ser de tipo 'org.springframework.validation.Validator'" --&gt;
+         conversion-service="simpleBean"      &lt;!-- informa de "El bean debe ser de tipo 'org.springframework.core.convert.ConversionService'" --&gt;
+         message-codes-resolver="simpleBean"  &lt;!-- informa de "El bean debe ser de tipo org.springframework.validation.MessageCodesResolver" --&gt;
+         validator="simpleBean"               &lt;!-- informa de "El bean debe ser de tipo 'org.springframework.validation.Validator'" --&gt;
     /&gt;
   &lt;/beans&gt;
 </code></pre>

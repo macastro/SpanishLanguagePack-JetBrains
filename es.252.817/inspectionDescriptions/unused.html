@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre clases, métodos o campos no utilizados o inaccesibles desde los puntos de entrada.
-<p> Los puntos de entrada pueden ser métodos main, pruebas, clases fuera del alcance especificado, clases accesibles desde <code>module-info.java</code>, etc. Los puntos de entrada personalizados se pueden configurar mediante patrones de nombres o anotaciones.
+Reporta clases, métodos o campos que no se usan o que son inalcanzables desde los puntos de entrada.
+<p> Un punto de entrada puede ser un método principal, pruebas, clases externas al ámbito especificado, clases accesibles desde <code>module-info.java</code>, y demás. Es posible configurar puntos de entrada personalizados mediante el uso de patrones de nombre o anotaciones.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -9,23 +9,25 @@ Informa sobre clases, métodos o campos no utilizados o inaccesibles desde los p
     private Organization myOrganization;
   }
 </code></pre>
-<p>En este ejemplo, <code>Department</code> hace referencia explícita a <code>Organization</code>, pero si la clase <code>Department</code> no se utiliza, la inspección informará sobre ambas clases.</p>
+<p>En este ejemplo, <code>Department</code> explícitamente hace referencia a <code>Organization</code> pero si la clase <code>Department</code> en sí es inutilizada, entonces la inspección reportará ambas clases. </p>
 <p>
-  La inspección también informa sobre parámetros cuyos métodos, todas las implementaciones de métodos y anulaciones no se utilizan, así como variables locales declaradas pero no utilizadas.
+  La inspección también reporta parámetros que no son usados por sus métodos y todas las implementaciones y anulaciones de métodos, así como variables locales que son declaradas pero no usadas.
 </p>
 <p>
-  <b>Nota</b>: Es posible que algunos miembros no utilizados no se informen durante el resaltado de código en el editor. Por razones de rendimiento, los miembros no privados solo se verifican cuando sus nombres aparecen raramente en el proyecto.
-  Para ver todos los resultados, ejecute la inspección seleccionando <b>Código | Inspeccionar código</b> o <b>Código | Analizar código | Ejecutar inspección por nombre</b> desde el menú principal.
+  <b>Nota:</b> Algunos miembros inutilizados pueden no ser reportados durante el resaltado de código en el editor. Por razones de rendimiento, solo se verifica un miembro no privado cuando rara vez aparece su nombre en el proyecto.
+  Para ver todos los resultados, ejecuta la inspección seleccionando <b>Código | Inspeccionar código</b> o <b>Código | Analizar código | Ejecutar inspección por nombre</b> en el menú principal.
 </p>
-<p>Los miembros a informar se pueden configurar usando la configuración de visibilidad a continuación. Por ejemplo, configurar para informar métodos <code>private</code> solo indica que se informarán los métodos <code>public</code> de clases internas <code>private</code>, mientras que los métodos <code>protected</code> de clases de nivel superior serán ignorados.</p>
+
+<!-- tooltip end -->
+<p>Utiliza las siguientes configuraciones de visibilidad para configurar los miembros a ser reportados. Por ejemplo, configurar para reportar solo métodos <code>private</code> significa que los métodos <code>public</code> de la clase interna <code>private</code> serán reportados pero los métodos <code>protected</code> de la clase de nivel superior serán ignorados.</p>
 <p>
-  Use la pestaña <b>Puntos de entrada</b> para configurar los puntos de entrada a considerar durante la ejecución de la inspección.</p>
-<p> Los puntos de entrada se pueden agregar manualmente una vez que los resultados de la inspección estén listos.</p>
-<p> Si su código utiliza frameworks no soportados, puede elegir entre las siguientes opciones:</p>
+  Usa la pestaña <b>puntos de entrada</b> para configurar los puntos de entrada a ser considerados durante la ejecución de la inspección.</p>
+<p> Puedes añadir puntos de entrada manualmente cuando los resultados de la inspección estén listos.</p>
+<p> Si tu código utiliza frameworks no soportados, hay varias opciones:</p>
 <ul>
-  <li>Si el framework depende de anotaciones, use el botón <b>Anotaciones...</b> para configurar las anotaciones del framework.</li>
-  <li>Si el framework no depende de anotaciones, puede intentar configurar patrones de nombres de clase que el framework debería tener.</li>
+  <li>Si el framework se basa en anotaciones, usa el botón <b>Anotaciones...</b> para configurar las anotaciones del framework.</li>
+  <li>Si el framework no se basa en anotaciones, intenta configurar patrones de nombre de clase que el framework espere.</li>
 </ul>
-<p>De esta manera, el código anotado accesible dentro del framework se considerará como utilizado.</p>
+<p>De esta forma, el código anotado accesible por los componentes internos del framework será tratado como usado.</p>
 </body>
 </html>

@@ -1,9 +1,8 @@
 <html>
 <body>
-Informa sobre llamadas a <code>String.equals()</code> con <code>CharSequence</code> como argumento.
+<code>CharSequence</code> informa de la llamada a <code>String.equals()</code> que incluye un argumento.
 <p>
-  Para argumentos de tipo <code>String</code>, <code>String.equals()</code> solo puede devolver <code>true</code>.
-  Para comparar el contenido de un <code>String</code> con argumentos <code>CharSequence</code> que no sean <code>String</code>, utilice el método <code>contentEquals()</code>.</p>
+  <code>String.equals()</code> únicamente puede devolver <code>true</code> para un argumento de <code>String</code>. Para comparar el contenido de <code>String</code> con un argumento que no sea <code>String</code> de <code>CharSequence</code>, utilice el método <code>contentEquals()</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   boolean equals(String s, CharSequence ch) {
@@ -16,7 +15,8 @@ Informa sobre llamadas a <code>String.equals()</code> con <code>CharSequence</co
     return s.contentEquals(ch);
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-<small>Novedades de la versión 2017.3</small>
+<small>Novedad en 2017.3</small>
 </body>
 </html>

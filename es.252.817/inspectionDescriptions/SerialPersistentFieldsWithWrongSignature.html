@@ -1,15 +1,21 @@
 <html>
 <body>
-Informa sobre clases <code>Serializable</code> donde el campo <code>serialPersistentFields</code> no está declarado como <code>private static final ObjectStreamField[]</code>.
+Informa las clases <code>Serializable</code> cuyo campo <code>serialPersistentFields</code>
+no esté declarado como <code>private static final ObjectStreamField[]</code>.
 <p>
-  Si el campo <code>serialPersistentFields</code> no se declara con estos modificadores, el comportamiento de serialización será el mismo que si el campo no se hubiera declarado en absoluto.
+  Si un campo <code>serialPersistentFields</code> no se declara con esos modificadores,
+  el comportamiento de serialización será como si el campo no estuviera declarado en absoluto.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class List implements Serializable {
     private List next;
+
     ObjectStreamField[] serialPersistentFields = {new ObjectStreamField("next", List.class)};
+
   }
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

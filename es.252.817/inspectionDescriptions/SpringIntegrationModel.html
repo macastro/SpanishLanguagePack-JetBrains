@@ -1,36 +1,41 @@
 <html>
 <body>
-<p>Problemas en el contexto de aplicación basado en XML de <a href="https://spring.io/projects/spring-integration">Spring Integration</a>:</p>
+<p>Informa de los problemas con el contexto de la aplicación basado en XML de <a href="https://spring.io/projects/spring-integration">Spring Integration</a>:</p>
 <ul>
-  <li>Referencias de Bean sin resolver</li>
-  <li>Etiquetas o atributos requeridos faltantes</li>
-  <li>Tipo de propiedad incorrecto</li>
-  <li>Propiedad de <code>enum</code> inconsistente</li>
-  <li>Tipo incorrecto de Bean referenciado</li>
+  <li>Referencias de beans sin resolver</li>
+  <li>Etiquetas o atributos necesarios que faltan</li>
+  <li>Tipos de propiedad incorrectos</li>
+  <li>Propiedades <code>enum</code> incoherentes</li>
+  <li>Tipos incorrectos de beans referenciados</li>
 </ul>
+
 <p><b>Ejemplo:</b></p>
 <pre><code>
   &lt;beans ... &gt;
-  &lt;int:channel id="channel"&gt; &lt;!-- 'dispatcher' y 'queue' no pueden usarse juntos  --&gt;
+  &lt;int:channel id="channel"&gt; &lt;!-- 'dispatcher' y 'queue' no se pueden usar juntos  --&gt;
     &lt;int:dispatcher failover="true"/&gt;
     &lt;int:priority-queue capacity="4"/&gt;
   &lt;/int:channel&gt;
+  
   &lt;int:channel id="another" &gt;
-    &lt;int:queue &lt;!--Se requiere exactamente uno de 'message-store' o 'ref'  --&gt;
+    &lt;int:queue &lt;!--Exactly one of 'message-store' or 'ref' is required  --&gt;
               capacity="4" message-store="myMessageStore" ref="myQueue"/&gt;
   &lt;/int:channel&gt;
+  
    &lt;int:gateway id="asyncGatewayError"
-                async-executor="dummyBean"/&gt; &lt;!--El Bean debe ser de tipo 'java.util.concurrent.Executor'  --&gt;
+                async-executor="dummyBean"/&gt; &lt;!--El bean debe ser de tipo 'java.util.concurrent.Executor'  --&gt;
+
    &lt;int:delayer default-delay="3"
               message-store="myMessageStore"
               scheduler="scheduler"
               wait-for-tasks-to-complete-on-shutdown="false"/&gt;
-  &lt;!--El Bean debe ser de tipo 'java.util.concurrent.Executor'  --&gt;
+  &lt;!--El bean debe ser de tipo 'java.util.concurrent.Executor'  --&gt;
   &lt;int:delayer
-    default-delay="INVALID_VALUE"  &lt;!--No se puede convertir la cadena 'INVALID_VALUE' a la clase objetivo 'java.lang.Integer' --&gt;
-               message-store="dummyBean" &lt;!-- El Bean debe ser de tipo 'org.springframework.integration.store.MessageStore' --&gt;
-               scheduler="dummyBean" &lt;!-- El Bean debe ser de uno de los siguientes tipos: java.util.concurrent.ScheduledExecutorService,org.springframework.scheduling.TaskScheduler--&gt;
+    default-delay="INVALID_VALUE"  &lt;!--Cannot convert string 'INVALID_VALUE' to target class 'java.lang.Integer' --&gt;
+               message-store="dummyBean" &lt;!-- El bean debe ser de tipo 'org.springframework.integration.store.MessageStore' --&gt;
+               scheduler="dummyBean" &lt;!-- El bean debe ser uno de estos tipos: java.util.concurrent.ScheduledExecutorService,org.springframework.scheduling.TaskScheduler --&gt;
                wait-for-tasks-to-complete-on-shutdown="INVALID_VALUE"/&gt; &lt;!-- No se puede resolver el símbolo 'INVALID_VALUE' --&gt;
+
   &lt;bean id="dummyBean" class="java.lang.String"/&gt;
   &lt;bean id="myMessageStore" class="org.springframework.integration.store.SimpleMessageStore"/&gt;
   &lt;task:scheduler id="scheduler"/&gt;

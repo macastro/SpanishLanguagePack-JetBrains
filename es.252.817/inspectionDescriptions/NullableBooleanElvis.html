@@ -1,13 +1,13 @@
 <html>
 <body>
-Informa sobre casos donde se debería usar una comprobación de igualdad en lugar del operador elvis.
+Informa de los casos en los que debería utilizarse una comprobación de igualdad en lugar del operador "elvis".
 <p><b>Ejemplo:</b></p>
 <pre><code>
 fun check(a: Boolean? == null) {
     if (a ?: false) throw IllegalStateException()
 }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la revisión rápida:</p>
 <pre><code>
 fun check(a: Boolean? == null) {
     if (a == true) throw IllegalStateException()

@@ -1,30 +1,31 @@
 <html>
 <body>
-  Se generan dos tipos de advertencias:
+  Produce dos tipos de advertencias:
   <ul>
     <li>
-      <i>Variable no definida</i>: no se encuentra la definición de la variable en los archivos del proyecto, en las rutas include configuradas o en las variables predefinidas de PHP.
+      <i>Variable no definida</i>: la definición de la variable no se encuentra en los archivos del proyecto, las rutas de inclusión configuradas o entre las variables predefinidas de PHP.
     </li>
     <li>
-      <i>Variable posiblemente no definida</i>: existe una o más rutas que llegan a la línea donde se usa la variable cuando ésta aún no está definida.
+      <i>La variable podría no haber sido definida</i>: hay una o más rutas para alcanzar la línea con el uso de la variable sin definirla.
     </li>
   </ul>
   <p>
-    Use las siguientes opciones para personalizar la inspección:
+    Usa las siguientes opciones para personalizar la inspección:
   </p>
+
   <ul>
     <li>
-      <b>Reportar variables posiblemente no definidas</b>: desmarque la casilla para deshabilitar las advertencias de <i>variable posiblemente no definida</i>.
+      <b>Informar de que la variable probablemente no esté definida</b>: desmarca la casilla de verificación para deshabilitar las advertencias de <i>La variable podría no haber sido definida</i>.
     </li>
     <li>
-      <b>Habilitar inspección en espacio global</b>: por defecto, la inspección está habilitada para el espacio global. Desmarque la casilla para reportar solo variables no definidas en el ámbito local de las funciones.
+      <b>Habilitar la inspección en el espacio global</b>: de forma predeterminada, la inspección está habilitada para el espacio global. Desmarca la casilla de verificación para informar solo de las variables no definidas del ámbito local de las funciones.
     </li>
     <li>
       <p>
-        <b>Buscar definiciones de variables fuera del archivo actual</b>: si esta opción está marcada, el IDE solo reportará variables globales como no definidas cuando no haya sentencias <code>include</code> o <code>require</code> en el archivo actual y la definición de la variable no se encuentre en el proyecto. Tenga en cuenta que el IDE no verifica el contenido real de los archivos incluidos, solo verifica la existencia de sentencias <code>include</code> o <code>require</code>.
+        <b>Buscar la definición de la variable fuera del archivo actual</b>: si se selecciona, el IDE informa de una variable global como no definida solo en caso de que no haya declaraciones <code>include</code> o <code>require</code> en el archivo actual y no se pueda encontrar la definición de la variable en el proyecto. Ten en cuenta que el IDE no examina el contenido real de los archivos incluidos, sino que solo comprueba la presencia de declaraciones <code>include</code> o <code>require</code>.
       </p>
       <p>
-        De lo contrario, si no está seleccionada, el IDE solo buscará definiciones de variables en el archivo actual e ignorará las sentencias <code>include</code> o <code>require</code> si existen.
+        De lo contrario, si no se selecciona, el IDE busca la definición de la variable solo en el archivo actual e ignora las declaraciones <code>include</code> o <code>require</code> si las hay.
       </p>
     </li>
   </ul>

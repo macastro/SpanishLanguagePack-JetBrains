@@ -1,22 +1,25 @@
 <html>
 <body>
-La expresión lambda puede ser reemplazada por una referencia a función.
-<p>Reemplazar lambdas con referencias a funciones generalmente hace que el código sea más conciso y legible.</p>
+Informa de las expresiones literales de función que se pueden sustituir por referencias de función.
+<p>Sustituir las lambdas por referencias de función suele hacer que el código parezca más conciso y comprensible.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  fun Int.isEven() = this % 2 == 0
+  fun Int.esPar() = this % 2 == 0
+
   fun example() {
       val numbers = listOf(1, 2, 4, 7, 9, 10)
-      val evenNumbers = numbers.filter { it.isEven() }
+      val evenNumbers = numbers.filter { it.esPar() }
   }
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  fun Int.isEven() = this % 2 == 0
+  fun Int.esPar() = this % 2 == 0
+
   fun example() {
       val numbers = listOf(1, 2, 4, 7, 9, 10)
-      val evenNumbers = numbers.filter(Int::isEven)
+      val evenNumbers = numbers.filter(Int::esPar)
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

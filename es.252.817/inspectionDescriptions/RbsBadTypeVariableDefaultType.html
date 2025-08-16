@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre variables de tipo donde el tipo predeterminado no es un subtipo del límite superior declarado. El tipo predeterminado debe ser un subtipo de cualquier límite superior especificado.
+Informa sobre un tipo por defecto en la declaración de una variable de tipo que no es un subtipo del límite superior. El tipo por defecto debe ser un subtipo de cualquier límite superior especificado.
 <p>Ejemplo:</p>
-<pre><code># 'String' 不是 'Numeric' 的子类型
+<pre><code># 'String' no es un subtipo de 'Numeric'
 class Example[A &lt; Numeric = String]
 end
 </code></pre>

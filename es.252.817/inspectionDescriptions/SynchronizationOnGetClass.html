@@ -1,11 +1,12 @@
 <html>
 <body>
-Informa sobre la sincronización en llamadas a <code>getClass()</code>.
+Sincronización de informes en una llamada a <code>getClass()</code>.
 <p>
-  Si una clase que contiene sincronización es heredada, la subclase se sincronizará en un objeto de clase diferente. Las llamadas a <code>getClass()</code> generalmente pueden reemplazarse por una expresión literal de clase, por ejemplo <code>String.class</code>. Una mejor solución es sincronizar sobre un objeto de bloqueo <code>private static final</code>, manteniendo así el control total sobre el acceso a dicho objeto.
+  Si la clase que contiene la sincronización es subclasificada, la subclase se sincronizará con un objeto de clase diferente. Normalmente, la llamada a <code>getClass()</code> se puede reemplazar por una expresión literal de clase, por ejemplo, <code>String.class</code>. Una solución incluso mejor es sincronizar un objeto de bloqueo <code>private static final</code>, a cuyo acceso se puede controlar completamente.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code> synchronized(getClass()) {}
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

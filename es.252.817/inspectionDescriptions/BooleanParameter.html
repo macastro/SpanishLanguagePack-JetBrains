@@ -1,15 +1,16 @@
 <html>
 <body>
-Reporta métodos públicos que aceptan parámetros de tipo <code>boolean</code>.
-<p>Si un método público (parte de una API) no es un setter, casi siempre es una mala práctica añadir parámetros de tipo <code>boolean</code>. 
-Al leer el código que utiliza estos métodos, es difícil entender el significado del <code>boolean</code> sin consultar el código fuente o la documentación.</p>
-<p>Este problema también se conoce como <a href="https://ariya.io/2011/08/hall-of-api-shame-boolean-trap">trampa booleana</a>.
-Los parámetros <code>boolean</code> generalmente pueden ser reemplazados por <code>enum</code>.</p>
+Informa sobre métodos públicos que aceptan un parámetro <code>boolean</code>.
+<p>Casi siempre es una mala práctica agregar un parámetro <code>boolean</code> a un método público (parte de una API) si ese método no es un setter.
+Al leer código que utiliza tal método, puede ser difícil descifrar qué representa el <code>boolean</code> sin mirar
+el código fuente o la documentación.</p>
+<p>Este problema también se conoce como <a href="https://ariya.io/2011/08/hall-of-api-shame-boolean-trap">la trampa booleana</a>.
+  El parámetro <code>boolean</code> a menudo puede reemplazarse con una <code>enumeración</code>.</p>
 <p>Ejemplo:</p>
 <pre><code>
-  // Advertencia: al ver las llamadas
-  // a este método, es difícil entender
-  // el significado de los parámetros booleanos
+  // Advertencia: es difícil entender qué
+  // significan los parámetros booleanos al mirar
+  // una llamada a este método
   public boolean setPermission(File f,
                                int access,
                                boolean enable,
@@ -17,8 +18,9 @@ Los parámetros <code>boolean</code> generalmente pueden ser reemplazados por <c
     // ...
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-Utilice la opción <b>reportar solo métodos con múltiples parámetros booleanos</b> para emitir advertencias únicamente cuando un método contenga varios parámetros booleanos.
+Utiliza la opción <b>Solo informar métodos con múltiples parámetros booleanos</b> para advertir solo cuando un método contiene más de un parámetro booleano.
 <p>
 </body>
 </html>

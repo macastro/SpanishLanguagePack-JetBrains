@@ -1,14 +1,15 @@
 <html>
 <body>
-Informa sobre expresiones embebidas redundantes en plantillas <code>STR</code>, como literales simples o expresiones vacías.
+Informa sobre expresiones incrustadas redundantes en las plantillas <code>STR</code>, como literales triviales o expresiones vacías.
 <p>Ejemplo:</p>
 <pre><code>
-  System.out.println(STR."Hello \{"world"}");
+  System.out.println(STR."Hola \{"mundo"}");
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  System.out.println(STR."Hello world");
+  System.out.println(STR."Hola mundo");
 </code></pre>
-<p><small>Novedades en 2023.3</small></p>
+<!-- tooltip end -->
+<p><small>Novedad en 2023.3</small></p>
 </body>
 </html>

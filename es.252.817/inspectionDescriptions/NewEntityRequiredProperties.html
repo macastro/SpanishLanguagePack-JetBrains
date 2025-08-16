@@ -1,32 +1,34 @@
 <html>
 <body>
-Reporta propiedades no asignadas de <code>Entity</code> cuando se crea usando las funciones <code>new</code> o <code>getOrCreate</code> en un <code>ChangeScope</code>.
+<code>ChangeScope</code> informa propiedades no asignadas al crear una <code>Entity</code> con las funciones <code>new</code> u <code>getOrCreate</code>.
 <p>
-  Todas las propiedades no nulables de <code>Entity</code> deben ser asignadas o marcadas con la anotación <code>@Many</code>.
-  De lo contrario, puede producirse una excepción en tiempo de ejecución.
+  Es obligatorio asignar todas las propiedades no nulas de la <code>Entity</code>, o bien etiquetarlas con la anotación <code>@Many</code>.
+  Si no, se producirá una excepción en tiempo de ejecución.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  interface A : LegacyEntity {
+  interfaz A: Entidad {
     var x: Int
     var y: Int?
-    @Many var z: Int
+    @Muchos var z: Int
     var p: Int
   }
+
   fun ChangeScope.foo() {
-    new(A::class) {
-      this.p = 0
+    nueva (A::class) {
+      esta.p = 0
     }
   }
 </code></pre>
-<p>Las asignaciones para las propiedades requeridas faltantes pueden generarse mediante una corrección rápida</p>
+<p>El arreglo rápido generará una asignación para la propiedad obligatoria faltante</p>
 <pre><code>
   fun ChangeScope.foo() {
-    new(A::class) {
-      this.x = x
-      this.p = 0
+    nueva (A::class) {
+      esta.x = x
+      esta.p = 0
     }
   }
 </code></pre>
+<!-- final de la nota -->
 </body>
 </html>

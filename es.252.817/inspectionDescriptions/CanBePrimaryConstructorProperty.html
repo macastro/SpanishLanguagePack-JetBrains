@@ -1,17 +1,18 @@
 <html>
 <body>
-Informa sobre propiedades asignadas explícitamente a parámetros del constructor principal.
-<p>Las propiedades se pueden declarar directamente en el constructor principal, reduciendo la cantidad de código y mejorando su legibilidad.</p>
+Informa de propiedades que están asignadas explícitamente a los parámetros primarios del constructor.
+<p>Las propiedades pueden ser declaradas directamente en el constructor primario, reduciendo la cantidad de código y mejorando la legibilidad del mismo.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class User(name: String) {
-      val name = name
+  class User(nombre: String) {
+      val nombre = nombre
   }
 </code></pre>
-<p>Esta corrección rápida combina la declaración del parámetro y la propiedad en el parámetro del constructor principal:</p>
+<p>La corrección rápida une la declaración del parámetro y la propiedad en un parámetro del constructor primario:</p>
 <pre><code>
-  class User(val name: String) {
+  class User(val nombre: String) {
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

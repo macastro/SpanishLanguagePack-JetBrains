@@ -1,23 +1,26 @@
 <html>
 <body>
-Informa sobre llamadas a métodos no <code>static</code> que no utilizan el calificador <code>this</code> en la misma instancia.
+<code>this</code> no califica llamadas a métodos no <code>static</code> en la misma instancia.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Foo {
-    void bar() {}
-    void foo() {
+  clase Foo {
+    vacío bar() {}
+
+    vacío foo() {
       bar();
     }
   }
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  class Foo {
-    void bar() {}
-    void foo() {
-      this.bar();
+  clase Foo {
+    vacío bar() {}
+
+    vacío foo() {
+      esto.bar();
     }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

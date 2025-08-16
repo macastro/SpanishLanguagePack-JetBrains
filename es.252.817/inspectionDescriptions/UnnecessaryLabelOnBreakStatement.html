@@ -1,21 +1,23 @@
 <html>
 <body>
-Informa sobre declaraciones <code>break</code> con etiquetas innecesarias. Estas etiquetas no alteran el flujo de control pero dificultan el seguimiento del código.
+Reporta sentencias <code>break</code> con etiquetas innecesarias. Dichas etiquetas no cambian el flujo de control pero dificultan el seguimiento del código.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  label:
+  etiqueta:
   for(int i = 0; i &lt; 10; i++) {
-    if (shouldBreak()) break label;
-    //doSmth
+    if (shouldBreak()) break etiqueta;
+    //hacerAlgo
   }
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  label:
+  etiqueta:
   for(int i = 0; i &lt; 10; i++) {
     if (shouldBreak()) break;
-    //doSmth
+    //hacerAlgo
   }
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

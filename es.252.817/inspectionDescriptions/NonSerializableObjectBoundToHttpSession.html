@@ -1,12 +1,15 @@
 <html>
 <body>
-Informa sobre objetos de clase que no implementan <code>java.io.Serializable</code> cuando se utilizan como argumentos en <code>javax.servlet.http.HttpSession.setAttribute()</code> o <code>javax.servlet.http.HttpSession.putValue()</code>.
+Informa sobre objetos de clases que no implementan <code>java.io.Serializable</code> usados como argumentos de
+<code>javax.servlet.http.HttpSession.setAttribute()</code> o
+<code>javax.servlet.http.HttpSession.putValue()</code>.
 <p>
-  Si <code>HttpSession</code> es pasivado o migrado, estos objetos no serán serializados y podrían causar errores difíciles de diagnosticar.
+  Dichos objetos no se serializarán si <code>HttpSession</code> se pasiva o migra, y podrían provocar errores difíciles de diagnosticar.
 </p>
 <p>
-  Esta inspección asume que los objetos de tipo <code>java.util.Collection</code> y
-<code>java.util.Map</code> son <code>Serializable</code>, a menos que sus parámetros de tipo no sean <code>Serializable</code>.
+  Esta inspección asume que los objetos de los tipos <code>java.util.Collection</code> y
+<code>java.util.Map</code> son <code>Serializable</code>,
+a menos que los parámetros de tipo no sean <code>Serializable</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -15,5 +18,7 @@ Informa sobre objetos de clase que no implementan <code>java.io.Serializable</co
   }
   static class NonSerializable {}
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
 <body>
 <p>
-  Detecta referencias a proveedores de claves de cifrado inexistentes en la configuración de bloques de cifrado de OpenTofu. Por ejemplo, para el código
+  Detecta referencias a proveedores de claves de cifrado inexistentes en la configuración del bloque de cifrado de OpenTofu. Por ejemplo, para el código
   <pre>
   <code>
     terraform {
@@ -18,7 +18,8 @@
       }
     }
   </code>
-  </pre> debemos verificar si las referencias al proveedor de claves son correctas. En este caso, se debe resaltar la referencia <code>unknown</code>.
+  </pre>
+  Esta inspección comprueba que la referencia al proveedor de claves sea correcta. En este caso, resalta la referencia <code>unknown</code>.
 </p>
 <p>
   Para más detalles, consulte https://opentofu.org/docs/language/state/encryption/#methods.

@@ -1,26 +1,29 @@
 <html>
 <body>
-Los informes pueden simplificarse a anotaciones en forma abreviada de elemento único o marcador.
+Reporta anotaciones que se pueden simplificar a su forma abreviada de un solo elemento o marcador.
 <p>
 Problemas reportados:
 <ul>
-  <li>Redundancia de <code>value=</code> en pares nombre-valor de anotaciones
-  <li>Llaves redundantes que encierran valores de array que contienen un solo valor
-  <li>Espacio redundante entre el símbolo @ y el nombre de la anotación
-  <li>Espacio redundante entre el nombre de la anotación y la lista de parámetros
-  <li>Paréntesis redundantes en anotaciones sin parámetros
+<li> <code>value=</code> redundante en pares nombre-valor de anotaciones
+<li>Llaves redundantes alrededor de valores de arreglo que contienen solo un valor
+<li>Espacios en blanco redundantes entre el signo @ y el nombre de las anotaciones
+<li>Espacios en blanco redundantes entre los nombres de las anotaciones y las listas de parámetros
+<li>Paréntesis redundantes en anotaciones sin ningún parámetro
 </ul>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   @interface Foo { String[] value(); }
+
   @ Foo({"foo"})
   public String name;
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   @interface Foo { String[] value(); }
+
   @Foo("foo")
   public String name;
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

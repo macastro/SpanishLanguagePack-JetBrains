@@ -1,15 +1,16 @@
 <html>
 <body>
-Informa sobre etiquetas en sentencias <code>switch</code>.
-Aunque a veces es intencional, esta estructura generalmente se debe a errores tipográficos.
+Informa sobre sentencias con etiqueta dentro de sentencias <code>switch</code>.
+Si bien ocasionalmente es intencional, esta construcción a menudo es el resultado de un error tipográfico.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   switch (x) {
       case 1:
-      case2:   // Advertencia: Existe una etiqueta de texto 'case2:' en la sentencia 'switch'
+      case2:   // advertencia: etiqueta de texto 'case2:' en sentencia 'switch'
       case 3:
           break;
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

@@ -1,14 +1,16 @@
 <html>
 <body>
-  Reporta los intentos de convertir a <code>string</code> objetos que no tienen implementado el método <code>__toString</code>.
+  Reporta los intentos de convertir los objetos que no tienen implementado el método <code>__toString</code> a <code>string</code>.
+<!-- tooltip end -->
   <p>
-    Antes de PHP 7.4, esto provocaba un error fatal de nivel <code>E_RECOVERABLE_ERROR</code>. En PHP 7.4, se lanza un error fatal irrecuperable <code>ERROR</code>. A partir de PHP 8.0, el valor devuelto sigue la semántica estándar de tipos de PHP y se convierte a cadena si es posible y el modo estricto de tipos está desactivado.
+    Antes de PHP 7.4, esto conduciría a un error de nivel <code>E_RECOVERABLE_ERROR</code> fatal. En PHP 7.4, se arroja un <code>ERROR</code> fatal no recuperable. En PHP 8.0, el valor de retorno sigue la semántica de tipo de PHP estándar y se convertirá a una cadena si es posible y si se deshabilita la tipificación estricta.
   </p>
   <p>
-    Si la opción <b>Verificar la existencia de __toString para cada tipo de expresión</b> está activada, la comprobación examinará todos los tipos posibles de la expresión y reportará si al menos uno de los tipos no incluye la implementación del método <code>__toString</code>.
+    Si la opción <b>Comprobar si __toString existe para cada tipo de expresión</b> está habilitada, la inspección verificará todos los posibles tipos de la expresión y
+    reportará si al menos uno de ellos no contiene la implementación del método <code>__toString</code>.
   </p>
 <p>
-  Consulte <a href="https://www.php.net/manual/en/language.oop5.magic.php#language.oop5.magic.tostring">__toString (php.net)</a> para más detalles.
+  Ver <a href="https://www.php.net/manual/en/language.oop5.magic.php#language.oop5.magic.tostring">__toString (php.net)</a> para más detalles.
 </p>
 </body>
 </html>

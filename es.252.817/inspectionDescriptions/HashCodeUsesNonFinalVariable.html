@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre implementaciones de <code>hashCode()</code> que acceden a variables no <code>final</code>.
+Reporta implementaciones de <code>hashCode()</code> que acceden a variables no <code>final</code>.
 <p>
-  Este tipo de acceso puede hacer que <code>hashCode()</code> devuelva diferentes valores en distintos momentos durante el ciclo de vida del objeto, lo que puede causar problemas cuando se utilizan clases de colecciones estándar.
+  Dicho acceso puede resultar en que <code>hashCode()</code> regrese valores diferentes en diferentes momentos del ciclo de vida del objeto, lo que a su vez puede causar problemas al usar las clases de colecciones estándar.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -17,14 +17,16 @@ Informa sobre implementaciones de <code>hashCode()</code> que acceden a variable
     Drink coffee = new Drink("Coffee");
     priceMap.put(coffee, 10.0);
     coffee.name = "Tea";
-    double coffeePrice = priceMap.get(coffee); //no se encuentra
+    double coffeePrice = priceMap.get(coffee); //no encontrada
 </code></pre>
-<p>Se sugiere hacer el campo final mediante la corrección rápida:</p>
+<p>Se sugiere una solución rápida para convertir el campo en final:</p>
 <pre><code>
   class Drink {
     final String name;
     ...
   }
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

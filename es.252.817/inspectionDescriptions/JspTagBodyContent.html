@@ -1,9 +1,9 @@
 <html>
 <body>
-Informa sobre contenido del cuerpo de etiquetas JSP que no cumple con las especificaciones de contenido TLD.
-<p>Si se especifica un contenido de cuerpo vacío, el cuerpo de la etiqueta debe estar vacío.</p>
-<p>Si se especifica un contenido de cuerpo sin scripts, el cuerpo de la etiqueta no debe contener JSP scriptlets.</p>
-<p>Para el tipo de contenido vacío, la corrección rápida eliminará el cuerpo de la etiqueta, y si se especifica un tipo de contenido sin scripts, eliminará el scriptlet.</p>
+Informa el contenido del cuerpo de la etiqueta JSP que no cumple con la especificación de contenido del cuerpo TLD.
+<p>Si se especifica un contenido de cuerpo vacío, la etiqueta debe tener un cuerpo vacío.</p>
+<p>Si se especifica un contenido de cuerpo sin script, el cuerpo de la etiqueta no debe contener scriptlets JSP.</p>
+<p>La corrección rápida elimina el cuerpo de una etiqueta para un tipo de contenido vacío y elimina los scriptlets si se especifica un tipo de contenido sin script.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 &lt;s:empty&gt;body not allowed here&lt;/s:empty&gt;

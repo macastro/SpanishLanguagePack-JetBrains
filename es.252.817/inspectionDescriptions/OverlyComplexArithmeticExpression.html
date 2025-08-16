@@ -1,11 +1,12 @@
 <html>
 <body>
-Informa sobre expresiones aritméticas con demasiados operandos. Tales expresiones pueden ser difíciles de entender y propensas a errores.
-<p>Los parámetros, referencias a campos y otras expresiones primarias cuentan como un operando cada uno.</p>
+Informa de las expresiones aritméticas con un número excesivo de términos. Estas expresiones pueden resultar difíciles de entender y podrían contener errores.
+<p>Los parámetros, las referencias de campo y otras expresiones primarias se cuentan como un término.</p>
 <p><b>Ejemplo:</b>
   <pre><code>int calc(int a, int b) {
-        return a + a + a + b + b + b + b; // Esta línea contiene 7 operandos y será reportada.
+        return a + a + a + b + b + b + b; // La línea contiene 7 términos y se informará.
     }</code></pre>
-<p>Utilice el campo siguiente para especificar el número permitido de operandos en una expresión aritmética.</p>
+<!-- tooltip end -->
+<p>Usa el campo siguiente para especificar el número de términos permitidos en expresiones aritméticas.</p>
 </body>
 </html>

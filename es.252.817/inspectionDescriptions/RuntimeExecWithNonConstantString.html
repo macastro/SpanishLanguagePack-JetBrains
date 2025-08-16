@@ -1,19 +1,20 @@
 <html>
 <body>
-Reporta llamadas a <code>java.lang.Runtime.exec()</code> que utilizan cadenas construidas dinámicamente como comandos a ejecutar.
+Reporta llamadas a <code>java.lang.Runtime.exec()</code> que toman una cadena construida dinámicamente como el comando a ejecutar.
 <p>
-  Las cadenas de ejecución construidas dinámicamente son una fuente común de vulnerabilidades de seguridad.
-  Por defecto, esta inspección ignora las constantes en tiempo de compilación.
+Las cadenas de ejecución construidas son una fuente común de brechas de seguridad.
+Por defecto, esta inspección ignora las constantes en tiempo de compilación.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   String i = getUserInput();
   Runtime runtime = Runtime.getRuntime();
-  runtime.exec("foo" + i); // Genera una advertencia
+  runtime.exec("foo" + i); // reporta una advertencia
 </code></pre>
+<!-- tooltip end -->
 <p>
-La configuración de la inspección permite tratar cualquier campo <code>static</code> <code>final</code> como una constante.
-Tenga cuidado, ya que cuando esta opción está habilitada, se ignorarán cadenas como esta:
+Utiliza las configuraciones de inspección para considerar cualquier campo <code>static</code> <code>final</code> como constante.
+Ten cuidado, porque cadenas como la siguiente serán ignoradas cuando se habilite la opción:
 <pre><code>
   static final String COMMAND = "ping " + getDomainFromUserInput() + "'";
 </code></pre>

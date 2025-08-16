@@ -1,13 +1,14 @@
 <html>
 <body>
-Informa sobre variables de patrón que tienen el mismo nombre que los campos de las clases circundantes.
-Debido a esta nomenclatura, puede usar incorrectamente la variable de patrón cuando en realidad pretendía usar el campo del mismo nombre.
+Reporta variables de patrón nombradas de manera idéntica a un campo de una clase circundante.
+Como resultado de dicha denominación, puede utilizar accidentalmente la variable de patrón cuando se pretende utilizar el campo con el mismo nombre.
 <p>
-  Se recomienda renombrar la variable mediante la corrección rápida.
+  Se sugiere una solución rápida para cambiar el nombre de la variable.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Pointless {
     Point p = new Point();
+
     public void test(Object a) {
       if (a instanceof Point p) {
         System.out.print("a is a point (" + p.x + ", " + p.y + ')');
@@ -17,6 +18,7 @@ Debido a esta nomenclatura, puede usar incorrectamente la variable de patrón cu
     }
   }
 </code></pre>
-<p><small>Novedades de 2022.2</small></p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2022.2</small></p>
 </body>
 </html>

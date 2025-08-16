@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre errores comunes en código TypeScript cuando un campo de clase se declara como parámetro del constructor y luego se intenta asignar un valor a ese parámetro.<br/>
-En este caso, <i>no se</i> asigna el valor al campo correspondiente, sino que solo se modifica el valor del parámetro local.
+Informa un error común en el código de TypeScript cuando se declara un campo de clase como parámetro de constructor y luego se le asigna este parámetro.<br/>
+En este caso, <i>no</i> se asignará el campo correspondiente, solo se modifica el valor del parámetro local.
 <pre><code>
 class Foo {
   constructor(private p: number) {

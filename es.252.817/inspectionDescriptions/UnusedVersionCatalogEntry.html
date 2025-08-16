@@ -1,18 +1,23 @@
 <html>
 <body>
-<p>Detecta claves no utilizadas en el descriptor TOML del directorio de versiones.</p>
+<p>Detecta claves no usadas en descriptores TOML de catálogos de versiones. </p>
+
 <p><b>Ejemplo:</b></p>
+
 <pre><code lang="groovy">
 // build.gradle
 dependencies {
   implementation libs.foo.bar
 }
 </code></pre>
+
 <pre><code lang="toml">
 # libs.versions.toml
 [libraries]
 foo-bar = "com.gradle:example:1.0.0"
 bar-baz = "com.gradle:example:2.0.0" # resalta bar-baz
 </code></pre>
+
+
 </body>
 </html>

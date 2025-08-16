@@ -1,16 +1,17 @@
 <html>
 <body>
-Informa sobre métodos de interfaz que entran en conflicto con los métodos <b>protected</b> <code>clone()</code> y <code>finalize()</code> de la clase <code>java.lang.Object</code>.
-<p>En las interfaces, estos métodos pueden declararse con tipos de retorno incompatibles con los métodos de <code>java.lang.Object</code>.
-  Las clases que implementan dichas interfaces no se pueden compilar.
-  Aunque aún es posible crear lambdas a partir de la interfaz cuando funciona, no se recomienda hacerlo.</p>
+Reporta métodos de interfaz que entran en conflicto con los métodos <b>protegidos</b> <code>clone()</code> y <code>finalize()</code> de la clase <code>java.lang.Object</code>.
+<p>En una interfaz, es posible declarar estos métodos con un tipo de retorno que es incompatible con los métodos de <code>java.lang.Object</code>.
+  Una clase que implementa tal interfaz no será compilable.
+  Cuando la interfaz es funcional, sigue siendo posible crear una lambda a partir de ella, pero no se recomienda.</p>
 <p>Ejemplo:</p>
 <pre><code>
-  // // Advertencia: esta interfaz no puede ser implementada por ninguna clase,
-  // solo puede ser implementada por lambdas o referencias a métodos
-  interface MyInterface {
+  // Advertencia: esta interfaz no puede ser implementada
+  // por ninguna clase, solo por una lambda o referencia de método
+  interface MiInterfaz {
     double clone();
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

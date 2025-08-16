@@ -1,22 +1,30 @@
 <html>
 <body>
-Reporta expresiones condicionales que utilizan negación.
-<p>Invertir el orden de las ramas en expresiones condicionales suele mejorar la claridad de estas declaraciones.</p>
+Informa expresiones condicionales cuyas condiciones son negadas.
+<p>Invertir el orden de las ramas de la expresión condicional usualmente incrementa la claridad de tales sentencias.</p>
+<!-- tooltip end -->
 <p>
-  Use las opciones <b>Ignorar comparación '!= null'</b> y <b>Ignorar comparación '!= 0'</b> para ignorar las comparaciones de la forma <code>obj != null</code> o <code>num != 0</code>.
-  Como <code>obj != null</code> significa efectivamente "obj existe", el significado de toda la expresión no implica ninguna negación, por lo que es fácil de entender.
+  Usa las opciones <b>Ignorar comparaciones '!= null' </b> e <b>Ignorar comparaciones '!= 0' </b> para ignorar comparaciones de la forma
+  <code>obj != null</code> o <code>num != 0</code>.
+  Dado que <code>obj != null</code> significa efectivamente "obj existe",
+  el significado de toda la expresión no implica ninguna negación
+  y es por lo tanto fácil de entender.
 <p>
-  El mismo razonamiento se aplica a las expresiones <code>num != 0</code>, especialmente cuando se utilizan máscaras de bits.
+  El mismo razonamiento aplica a expresiones <code>num != 0</code>, especialmente cuando se usan máscaras de bits.
 <p>
-  Estas formas tienen la ventaja adicional de mencionar primero el caso interesante.
-  En la mayoría de los casos, la rama <code>== null</code> tiene el valor <code>null</code> en sí mismo, como se muestra en los siguientes ejemplos:
+  Estas formas tienen el beneficio agregado de mencionar el caso interesante primero.
+  En la mayoría de los casos, el valor para la rama <code>== null</code> es <code>null</code> en sí,
+  como en los siguientes ejemplos:
+
 <pre><code>
     static String getName(Person p) {
         return p != null ? p.getName() : null;
     }
+
     static String getExecutableString(int fileMode) {
-        return (fileMode & 0b001001001) != 0 ? "executable" : "non-executable";
+        return (fileMode & 0b001001001) != 0 ? "ejecutable" : "no ejecutable";
     }
 </code></pre>
+
 </body>
 </html>

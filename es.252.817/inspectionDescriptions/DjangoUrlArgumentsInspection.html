@@ -1,12 +1,12 @@
 <html>
 <body>
-<p>Informa sobre parámetros faltantes en el archivo de plantilla si la ruta URL en la función <code>url()</code> contiene parámetros de forma.</p>
+<p>Informa parámetros faltantes en el archivo de plantilla cuando hay parámetros en la ruta URL de la función <code>url()</code>.</p>
 <p><b>Ejemplo:</b></p>
-<p>En el archivo <code>url.py</code></p>
+<p>Dentro del archivo <code>url.py</code></p>
 <pre><code lang="Python">
 url(r'^(?P&lt;question_id&gt;[0-9]+)/', views.detail, name='detail')
 </code></pre>
-<p>En el archivo de plantilla</p>
+<p>Dentro del archivo de plantilla</p>
 <pre><code lang="DjangoTemplate">
 {% url 'polls:detail' %}
 </code></pre>

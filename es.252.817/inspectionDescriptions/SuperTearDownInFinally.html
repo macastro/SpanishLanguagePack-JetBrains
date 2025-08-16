@@ -1,16 +1,18 @@
 <html>
 <body>
-Informa sobre llamadas al método <code>super.tearDown()</code> de JUnit 3 que no se ejecutan dentro de un bloque <code>finally</code>.
-Si se lanza una excepción antes de llamar a <code>super.tearDown()</code>, podría causar inconsistencias y pérdidas de recursos.
+Reporta las llamadas del método <code>super.tearDown()</code> de JUnit 3 que no se realizan dentro de un bloque <code>finally</code>.
+Si se produce una excepción antes de que se llame a <code>super.tearDown()</code>, podría provocar incoherencias y fugas.
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   public class AnotherTest extends CompanyTestCase {
     private Path path;
+
     @Override
     protected void setUp() throws Exception {
       super.setUp();
       path = Files.createTempFile("File", ".tmp");
     }
+
     @Override
     protected void tearDown() throws Exception {
       Files.delete(path);
@@ -22,11 +24,13 @@ Si se lanza una excepción antes de llamar a <code>super.tearDown()</code>, podr
 <pre><code lang="java">
   public class AnotherTest extends CompanyTestCase {
     private Path path;
+
     @Override
     protected void setUp() throws Exception {
       super.setUp();
       path = Files.createTempFile("File", ".tmp");
     }
+
     @Override
     protected void tearDown() throws Exception {
       try {
@@ -37,5 +41,6 @@ Si se lanza una excepción antes de llamar a <code>super.tearDown()</code>, podr
     }
   }
 </code></pre>
+  <!-- tooltip end -->
 </body>
 </html>

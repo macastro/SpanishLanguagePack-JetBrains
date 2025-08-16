@@ -1,7 +1,9 @@
 <html>
 <body>
-Informa sobre cualquier variable y parámetro que se use en una condición de bucle y no se actualice dentro del mismo.
-<p>Estas variables y parámetros suelen utilizarse incorrectamente, ya que su ejecución puede resultar en bucles infinitos.</p>
+Informa de variables y parámetros utilizados en la condición de un bucle
+y no actualizados en el interior del bucle.
+<p>Estas variables y parámetros son utilizados normalmente por error ya que
+pueden causar un bucle infinito si se ejecutan.</p>
 <p>Ejemplo:</p>
 <pre><code>
   void loopDoesNotLoop(boolean b) {
@@ -11,9 +13,12 @@ Informa sobre cualquier variable y parámetro que se use en una condición de bu
     }
   }
 </code></pre>
-<p>Configuración de la inspección:</p>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
 <p>
-  Use la opción <b>Ignorar posibles modificaciones no locales</b> para desactivar esta inspección si la condición puede actualizarse indirectamente (por ejemplo, a través de un método invocado o mediante actualizaciones concurrentes desde otro hilo).
+  Usa la opción <b>Ignorar posibles cambios no locales</b> para deshabilitar la inspección
+  si la condición puede actualizarse indirectamente (p.e. mediante el método llamado o concurrentemente desde otro hilo).
 </p>
+
 </body>
 </html>

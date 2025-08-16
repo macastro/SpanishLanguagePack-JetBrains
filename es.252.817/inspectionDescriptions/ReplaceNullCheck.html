@@ -1,6 +1,6 @@
 <html>
 <body>
-Las comprobaciones de <code>null</code> pueden ser reemplazadas por llamadas a métodos static de <code>Objects</code> o <code>Stream</code>.
+Informa de comprobaciones de <code>null</code> que pueden ser sustituidas por una llamada a un método estático desde <code>Objects</code> o <code>Stream</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   if (message == null) {
@@ -14,9 +14,10 @@ Las comprobaciones de <code>null</code> pueden ser reemplazadas por llamadas a m
   application.messageStorage()
     .save(Objects.requireNonNullElseGet(message, () -> new EmptyMessage()));
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Utilice la opción <b>No alertar cuando el reemplazo sea más largo que el original</b> para ignorar los casos donde el reemplazo excede la longitud del código original.
+  Utiliza la opción <b>No advertir si la sustitución es más larga que el original</b> para ignorar los casos en los que la sustitución es más larga que el código original.
 </p>
-<p><small>Novedades de la versión 2017.3</small></p>
+<p><small>Nuevo en 2017.3</small></p>
 </body>
 </html>

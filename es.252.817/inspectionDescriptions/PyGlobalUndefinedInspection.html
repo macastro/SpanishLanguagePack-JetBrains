@@ -1,16 +1,19 @@
 <html>
 <body>
-<p>Informa sobre variables definidas con la declaración <code>global</code> que no están definidas en el ámbito del módulo.</p>
+<p>Informa de los problemas cuando una variable definida mediante la declaración <code>global</code> no se define en el ámbito del módulo.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 def foo():
     global bar
     print(bar)
+
 foo()
 </code></pre>
-<p>Se puede corregir moviendo la declaración global:</p>
+<p>Como solución, puedes mover la declaración de la variable global:</p>
 <pre><code>
 global bar
+
+
 def foo():
     print(bar)
 </code></pre>

@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa sobre las comparaciones de <code>.size()</code> o <code>.length()</code> con el literal <code>0</code> que pueden reemplazarse por una llamada a <code>.isEmpty()</code>.
+Reporta comparaciones de <code>.size()</code> o <code>.length()</code> con un literal de <code>0</code> que pueden ser remplazadas con una llamada a <code>.isEmpty()</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   boolean emptyList = list.size() == 0;
@@ -9,10 +9,11 @@ Informa sobre las comparaciones de <code>.size()</code> o <code>.length()</code>
 <pre><code>
   boolean emptyList = list.isEmpty();
   </code></pre>
+<!-- tooltip end -->
 <p>
-  Usando la lista de <b>clases ignoradas</b>, se pueden añadir clases para las que no se deberían reemplazar las comparaciones de <code>.size()</code> o <code>.length()</code>.
+  Usa la tabla <b>Clases ignoradas</b> para añadir clases para las cuales no deben ser reemplazadas las comparaciones de <code>.size()</code> o <code>.length()</code>.
 </p>
-<p>La opción <b>ignorar expresiones que se reemplazarían por <code>'!isEmpty()'</code></b> permite ignorar cualquier expresión que se reemplazaría por <code>!isEmpty()</code>.
+<p>Usa la opción <b>Ignorar expresiones que pueden ser reemplazadas con <code>!isEmpty()</code></b> para ignorar cualquier expresión que pueda ser reemplazada con <code>!isEmpty()</code>.
 </p>
 </body>
 </html>

@@ -1,18 +1,23 @@
 <html>
 <body>
-Informa sobre construcciones de <code>Comparator</code> que pueden simplificarse.
+Informa construcciones combinadoras de <code>Comparator</code> que pueden ser simplificadas.
 <p>Ejemplo:</p>
 <pre><code>
   c.thenComparing(Comparator.comparing(function));
+
   Comparator.comparing(Map.Entry::getKey);
+
   Collections.max(list, Comparator.reverseOrder());
 </code></pre>
-<p>Después de la corrección rápida:</p>
+<p>Después de aplicar las correcciones rápidas:</p>
 <pre><code>
   c.thenComparing(function)
+
   Map.Entry.comparingByKey()
+
   Collections.min(list, Comparator.naturalOrder());
 </code></pre>
-<p><small>Novedades de la versión 2018.1</small></p>
+<!-- tooltip end -->
+<p><small>Novedad en 2018.1</small></p>
 </body>
 </html>

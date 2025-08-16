@@ -1,19 +1,22 @@
 <html>
 <body>
-Informa sobre métodos y campos en clases <code>Serializable</code> y <code>Externalizable</code> que son candidatos para ser anotados con la anotación <code>java.io.Serial</code>. La corrección rápida añade la anotación.
+Indica los métodos y campos de las clases <code>Serializable</code> y <code>Externalizable</code>
+adecuados para ser anotados con la anotación <code>java.io.Serial</code>. Esta corrección rápida añade la anotación.
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class Main implements Serializable {
   private static final long serialVersionUID = 7874493593505141603L;
+
   private void writeObject(ObjectOutputStream out) throws IOException {
   }
 }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   class Main implements Serializable {
     @Serial
     private static final long serialVersionUID = 7874493593505141603L;
+
     @Serial
     private void writeObject(ObjectOutputStream out) throws IOException {
     }
@@ -27,7 +30,7 @@ class Main implements Serializable {
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   class Main implements Externalizable {
     @Serial
@@ -36,7 +39,8 @@ class Main implements Serializable {
     }
   }
 </code></pre>
-<p>Para más información sobre todos los casos posibles, consulte el Javadoc de la clase <code>java.io.Serial</code>.</p>
-<p><small>Novedades de la versión 2020.3</small></p>
+<p>Para obtener más información acerca de todos los casos posibles, consulta la documentación de <code>java.io.Serial</code>.</p>
+<!-- tooltip end -->
+<p><small>Novedad en 2020.3</small></p>
 </body>
 </html>

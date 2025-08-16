@@ -1,9 +1,9 @@
 <html>
 <body>
-Informa sobre violaciones de la <a href="https://en.wikipedia.org/wiki/Law_of_Demeter">Ley de Demeter</a>.
+Informa de infracciones de la <a href="https://en.wikipedia.org/wiki/Law_of_Demeter">Ley de Demeter</a>.
 <p>
-La Ley de Demeter no es una ley real, sino que especifica una directriz de estilo: nunca invocar métodos de objetos obtenidos de otra llamada.
-El código que sigue esta directriz es más fácil de mantener, adaptar y refactorizar, tiene menos acoplamiento entre métodos, menos duplicación y mejor encapsulamiento de información. Por otro lado, es posible que necesites escribir varios métodos wrapper para cumplir con esta directriz.</p>
+La Ley de Demeter no es realmente una ley, sino que especifica una directriz de estilo: nunca llames a un método en un objeto recibido de otra llamada.
+El código que sigue esta directriz es más fácil de mantener, adaptar y refactorizar, tiene menos acoplamiento entre métodos, menos duplicación y mejor ocultación de información. Por otro lado, es posible que necesites escribir muchos métodos wrapper para cumplir con esta directriz.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   boolean pay(Customer c, Invoice invoice) {
@@ -16,8 +16,9 @@ El código que sigue esta directriz es más fácil de mantener, adaptar y refact
     return false;
   }
 </code></pre>
-El ejemplo anterior se implementaría mejor como un método <code>payInvoice(Invoice invoice)</code> en <code>Customer</code>.
+El ejemplo anterior podría implementarse mejor como un método <code>payInvoice(Invoice invoice)</code> en <code>Customer</code>.
+<!-- tooltip end -->
 <p>
-Utiliza la opción <b>Ignorar llamadas a métodos de biblioteca y accesos a campos de biblioteca</b> para ignorar las violaciones de la Ley de Demeter que no se pueden corregir sin modificar las bibliotecas.
+Utiliza la opción <b>Ignorar llamadas a métodos de biblioteca y acceso a campos de biblioteca</b> para ignorar las infracciones de la Ley de Demeter que no se pueden corregir sin cambiar una biblioteca.
 </body>
 </html>

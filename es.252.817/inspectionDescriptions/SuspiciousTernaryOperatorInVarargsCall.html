@@ -1,12 +1,13 @@
 <html>
 <body>
-Informa sobre llamadas a métodos vararg que utilizan operadores ternarios con ramas de array mixtas y no array.
+Informa las llamadas al método `vararg` que usan un operador condicional ternario con ramas de arreglos y sin arreglos mezcladas.
 <p>
-Durante la compilación, ambas ramas se envuelven en arrays. Como resultado, la rama del array se convierte en un array bidimensional, lo que podría indicar un problema.
+Cuando se compila, ambas ramas se convierten en arreglos. Como resultado, la rama del arreglo se convierte en un arreglo bidimensional, lo que puede indicar un problema.
 </p>
 <p>
-La corrección rápida envuelve la rama no array en un array para evitar que el compilador realice la transformación.
+La corrección rápida convierte la rama sin arreglo en un arreglo para evitar que el compilador realice la conversión.
 </p>
+<!-- tooltip end -->
 <p><b>Ejemplo:</b></p>
 <pre><code>
     static void bar(boolean flag) {
@@ -17,7 +18,8 @@ La corrección rápida envuelve la rama no array en un array para evitar que el 
     static void foo(Object... obj) {
     }
 </code></pre>
-<p>Después de aplicar la corrección rápida: </p>
+
+<p>Después de la corrección rápida: </p>
 <pre><code>
     static void bar(boolean flag) {
         Object[] a = {1, 2};
@@ -27,6 +29,7 @@ La corrección rápida envuelve la rama no array en un array para evitar que el 
     static void foo(Object... obj) {
     }
 </code></pre>
-<p><small>Novedades de 2020.3</small></p>
+
+<p><small>Nuevo en 2020.3</small></p>
 </body>
 </html>

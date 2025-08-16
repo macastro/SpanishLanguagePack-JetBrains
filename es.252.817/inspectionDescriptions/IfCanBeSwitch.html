@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre declaraciones <code>if</code> que pueden ser reemplazadas por declaraciones <code>switch</code>.
-<p>El resultado del reemplazo suele ser más conciso y claro.</p>
+Informa declaraciones <code>if</code> que se pueden reemplazar por declaraciones <code> switch </code>.
+<p>El resultado del reemplazo suele ser más corto y claro.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void test(String str) {
@@ -27,14 +27,15 @@ Informa sobre declaraciones <code>if</code> que pueden ser reemplazadas por decl
     }
   }
   </code></pre>
-<p>Esta inspección solo informa cuando el nivel de lenguaje del proyecto o módulo es 7 o superior.</p>
-<p>El campo <b>Número mínimo de ramas de condición 'if'</b> permite especificar el número mínimo de ramas de condición <code>if</code> que debe tener una declaración <code>if</code> para ser reportada. Ten en cuenta que la rama <code>else</code> final (sin <code>if</code>) no se cuenta.</p>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 7 o superior.</p>
+<p>Utiliza el campo <b>Número mínimo de ramas de condición 'if' </b> para especificar el número mínimo de ramas de condición <code>if</code> para una declaración <code> if </code> que debe informarse. Ten en cuenta que la rama terminal <code> else </code> (sin <code> if </code>) no se cuenta.</p>
 <p>
-Usa la opción <b>Habilitar sugerencias de switch para números</b> para activar las sugerencias de declaraciones <code>switch</code> para números primitivos y empaquetados, y caracteres.
+Utiliza la opción <b>Sugerir switch en números</b> para habilitar la sugerencia de declaraciones <code>switch</code> en números y caracteres primitivos y encapsulados.
 <p>
-Usa la opción <b>Habilitar sugerencias de switch para enums</b> para activar las sugerencias de declaraciones <code>switch</code> para constantes <code>enum</code>.
+Utiliza la opción <b>Sugerir switch en enums</b> para habilitar la sugerencia de declaraciones <code> switch </code> en constantes de <code> enum </code>.
 <p>
-  Usa la opción <b>Habilitar sugerencias solo para expresiones null-safe</b> para sugerir solo declaraciones <code>switch</code> que no puedan introducir una <code>NullPointerException</code>.
+Utiliza la opción <b>Sugerir solo en expresiones null-safe</b> para sugerir declaraciones <code> switch </code> que no pueden introducir un <code> NullPointerException </code> únicamente.
 </p>
 </body>
 </html>

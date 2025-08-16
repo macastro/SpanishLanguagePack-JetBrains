@@ -1,7 +1,9 @@
 <html>
 <body>
-<p>Reporta definiciones inconsistentes de <strong>&lt;filter&gt;</strong> en el contexto de aplicación XML <strong>&lt;component-scan&gt;</strong>.</p>
+<p>Reporta definiciones inconsistentes de <strong>&lt;filter&gt;</strong> en <strong>&lt;component-scan&gt;</strong> de contextos de aplicación XML.</p>
+
 <p><b>Ejemplo:</b></p>
+
 <pre><code lang="java">
   public class NonAnnotationTypeClass {}
 </code></pre>
@@ -12,6 +14,7 @@
     &lt;/ctx:component-scan&gt;
   &lt;/beans&gt;
 </code></pre>
-<p>En este ejemplo, <code>NonAnnotationTypeClass</code> debería ser un tipo de anotación.</p>
+
+<p>En este ejemplo, se espera que <code>NonAnnotationTypeClass</code> sea un tipo de anotación.</p>
 </body>
 </html>

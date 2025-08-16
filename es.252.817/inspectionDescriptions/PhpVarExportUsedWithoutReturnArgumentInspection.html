@@ -1,6 +1,7 @@
 <html>
 <body>
-Llamadas a <code>var_export()</code> y <code>print_r()</code> sin el argumento <code>return</code> cuando su resultado se usa explícitamente.
-Es probable que estas llamadas sean erróneas, ya que sin especificar el <code>argument</code>, <code>var_export</code>/<code>print_r</code> siempre devolverán <code>null</code>/<code>true</code>.
+Reporta llamadas a <code>var_export()</code> y <code>print_r()</code> sin el argumento <code>return</code> cuando sus resultados son utilizados explícitamente.
+Tales llamadas probablemente son un error, porque <code>var_export</code>/<code>print_r</code> siempre regresan
+<code>null</code>/<code>true</code> si no se especifica ningún <code>argumento</code>.
 </body>
 </html>

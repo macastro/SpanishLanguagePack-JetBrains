@@ -1,15 +1,16 @@
 <html>
 <body>
-Informa sobre colecciones cuyo contenido ha sido consultado pero no actualizado, o actualizado pero no consultado.
+Reporta colecciones cuyo contenido es consultado y no actualizado, o actualizado y no consultado.
+<!-- tooltip end -->
 <p>
-  Estas inconsistencias entre consultas y actualizaciones carecen de sentido y pueden indicar código muerto o errores tipográficos.
+  Tales consultas y actualizaciones inconsistentes no tienen sentido y pueden indicar código muerto o un error tipográfico.
 </p>
 <p>
-  Los ajustes de la inspección permiten especificar patrones de nombres correspondientes a métodos de actualización/consulta.
-  Los métodos de consulta que devuelven elementos se detectan automáticamente, y solo es necesario especificar los métodos de consulta que escriben datos en parámetros de salida (por ejemplo, <code>OutputStream</code>).
+  Utiliza las configuraciones de inspección para especificar patrones de nombre que correspondan a métodos de actualización/consulta.
+  Los métodos de consulta que retornan un elemento son detectados automáticamente y solo aquellos que escriben datos en un parámetro de salida (por ejemplo, un <code>OutputStream</code>) necesitan ser especificados.
 <p>
 <p><b>Ejemplo:</b></p>
-<p>Supongamos que tiene una clase personalizada <code>FixedStack</code> con un método <code>store()</code>:
+<p>Supón que tienes tu clase <code>FixedStack</code> personalizada con método <code>store()</code>:
 <pre><code>
   public class FixedStack&lt;T&gt; extends Collection&lt;T&gt; {
     public T store(T t) {
@@ -17,7 +18,7 @@ Informa sobre colecciones cuyo contenido ha sido consultado pero no actualizado,
     }
   }
 </code></pre>
-<p>Puede agregar <code>store</code> a la tabla de métodos de actualización para informar sobre consultas no coincidentes, por ejemplo:
+<p>Puedes añadir <code>store</code> a la tabla de métodos de actualización para reportar consultas no coincidentes como:
 <pre><code>
   void test(int i) {
     FixedStack&lt;Integer&gt; stack = new FixedStack&lt;&gt;();

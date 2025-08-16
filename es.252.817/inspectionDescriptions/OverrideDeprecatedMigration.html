@@ -1,23 +1,25 @@
 <html>
 <body>
-Reporta declaraciones propagadas por la anotación <code>@Deprecated</code> que causarán errores de compilación a partir de la versión 1.9.
+Informa sobre declaraciones propagadas mediante la anotación <code>@Deprecated</code> que provocarán un error de compilación desde la versión 1.9.
 <p>Tipos de motivación:</p>
 <ul>
     <li>
-        Necesidad de cambios en la implementación por razones de diseño/arquitectura
+        Se requieren cambios de implementación por razones de diseño o arquitectura de la implementación
     </li>
     <li>
-        Inconsistencias en el diseño (diferentes manejos en diferentes contextos)
+        Incoherencia en el diseño (las cosas se hacen de manera diferente en diferentes contextos)
     </li>
 </ul>
-<p><b>Más información</b>: <a href="https://youtrack.jetbrains.com/issue/KT-47902">KT-47902: No propagar la depreciación a través de métodos sobrescritos</a></p>
-<p>La corrección rápida copia la anotación <code>@Deprecated</code> de la declaración padre.</p>
+
+<p><b>Más detalles:</b> <a href="https://youtrack.jetbrains.com/issue/KT-47902">KT-47902: No propagar la deprecación de métodos a través de las anulaciones</a></p>
+<p>La corrección rápida copia la anotación <code>@Deprecated</code> de la declaración principal.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   open class <b>Base</b> {
       @Deprecated("Don't use")
       open fun foo() {}
   }
+
   class <b>Derived</b> : <b>Base</b>() {
       override fun foo() {}
   }
@@ -28,11 +30,13 @@ Reporta declaraciones propagadas por la anotación <code>@Deprecated</code> que 
       @Deprecated("Don't use")
       open fun foo() {}
   }
+
   class <b>Derived</b> : <b>Base</b>() {
       @Deprecated("Don't use")
       override fun foo() {}
   }
 </code></pre>
-<p>Esta inspección solo reporta cuando el nivel del lenguaje Kotlin del proyecto o módulo es 1.6 o superior.</p>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de lenguaje Kotlin del proyecto o módulo es 1.6 o superior.</p>
 </body>
 </html>

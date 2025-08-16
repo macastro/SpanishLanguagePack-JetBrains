@@ -1,24 +1,29 @@
 <html>
 <body>
-Reporta referencias Javadoc con etiquetas <code>@see</code>, <code>{@link}</code> y <code>{@linkplain}</code> que apuntan a métodos con comentarios, métodos super con comentarios o clases que contienen comentarios.
-<p>Estos enlaces son innecesarios y pueden eliminarse de forma segura mediante la corrección rápida de esta inspección. Si la etiqueta es el único contenido, la corrección rápida eliminará todo el comentario Javadoc.</p>
+Informa los tags Javadoc <code>@see</code>,
+<code>{@link}</code> y <code>{@linkplain}</code>
+que hagan referencia al método al que corresponde el comentario, al supermétodo del método correspondiente al comentario o a la clase que contiene el comentario.
+<p>Tales enlaces son innecesarios y pueden ser eliminados con seguridad mediante la acción rápida de esta inspección. La acción rápida eliminará el comentario Javadoc completo si el tag es su único contenido.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Example {
+  class Ejemplo {
     /**
-     * @see Example#method
+     * @see Ejemplo#método
      */
-    public void method() { }
+    public void método() { }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Luego de aplicar la acción rápida:</p>
 <pre><code>
-class Example {
-  public void method() { }
+class Ejemplo {
+  public void método() { }
 }
 </code></pre>
+<!-- tooltip end -->
 <p>
-Utilice la casilla de verificación a continuación para ignorar los enlaces en línea (<code>{@link}</code> y <code>{@linkplain}</code>) que apuntan a métodos super. Aunque la herramienta Javadoc agrega automáticamente enlaces a todos los métodos super, a veces puede ser necesario tener enlaces en línea a métodos super dentro del texto de un comentario Javadoc.
-</p>
+Utilice el casillero de abajo para ignorar los enlaces en línea (<code>{@link}</code> y <code>{@linkplain}</code>)
+a los supermétodos. Si bien el enlace a todos los supermétodos es añadido automáticamente por la herramienta
+Javadoc, un enlace en línea al supermétodo puede requerirse a veces en los textos de los comentarios Javadoc.
+
 </body>
 </html>

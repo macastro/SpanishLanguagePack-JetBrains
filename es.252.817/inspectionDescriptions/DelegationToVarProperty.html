@@ -1,20 +1,21 @@
 <html>
 <body>
-Delegación de interfaz a la propiedad <code>var</code>
-<p>La delegación solo utiliza el valor inicial de la propiedad, y las asignaciones posteriores no la afectan.</p>
+Inspecciona la delegación de la interfaz a una propiedad <code>var</code>.
+<p>Solo se utiliza el valor inicial de una propiedad para la delegación, cualquier asignación posterior no la afecta.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Example(var text: CharSequence): CharSequence by text
+  class Example(var texto: CharSequence): CharSequence by texto
 </code></pre>
-<p>Esta corrección rápida reemplazará la propiedad por una propiedad inmutable:</p>
+<p>La corrección rápida reemplaza una propiedad por una inmutable:</p>
 <pre><code>
-  class Example(val text: CharSequence): CharSequence by text
+  class Example(val texto: CharSequence): CharSequence by texto
 </code></pre>
-<p>Si por alguna razón necesita mantener la mutabilidad, puede usar este enfoque alternativo:</p>
+<p>Forma alternativa, si por alguna razón confía en la mutabilidad:</p>
 <pre><code>
-  class Example(text: CharSequence): CharSequence by text {
-      var text = text
+  class Example(texto: CharSequence): CharSequence by texto {
+      var texto = texto
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

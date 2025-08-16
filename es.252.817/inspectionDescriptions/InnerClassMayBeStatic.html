@@ -1,8 +1,8 @@
 <html>
 <body>
-La clase interna puede declararse como <code>static</code>.
-<p>Las clases internas <code>static</code> no mantienen una referencia implícita a su instancia contenedora.
-  Cuando se usa Java 17 o versiones anteriores, esto previene fugas de memoria comunes y reduce la memoria utilizada por cada instancia de la clase.</p>
+Reporta clases internas que pueden ser hechas <code>static</code>.
+<p>Una clase interna <code>static</code> no mantiene una referencia implícita a su instancia envolvente.
+  Esto previene una causa común de fugas de memoria y usa menos memoria por instancia de la clase.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   <b>public class</b> Outer {
@@ -10,20 +10,23 @@ La clase interna puede declararse como <code>static</code>.
       <b>public void</b> foo() {
         bar("x");
       }
+
       <b>private void</b> bar(String string) {}
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de que se aplica la solución rápida:</p>
 <pre><code>
   <b>public class</b> Outer {
     <b>static class</b> Inner {
       <b>public void</b> foo() {
         bar("x");
       }
+
       <b>private void</b> bar(String string) {}
     }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

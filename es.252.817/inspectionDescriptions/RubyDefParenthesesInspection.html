@@ -1,20 +1,21 @@
 <html>
 <body>
-Informa sobre definiciones de métodos que utilizan paréntesis de manera incorrecta. A diferencia de las definiciones de métodos sin parámetros,
-las definiciones de métodos con parámetros deben usar paréntesis.
+Informa sobre las definiciones de método con el estilo incorrecto de paréntesis. Se esperan paréntesis en las definiciones de método con parámetros, lo opuesto a las definiciones de método sin parámetros.
 <p>Ejemplo:</p>
 <pre>
-<code># 不良做法
+<code># Mala práctica
 def example_method(); end
 def example_method_with_parameters param1, param2; end</code>
 </pre>
-Los paréntesis se pueden eliminar o agregar mediante una corrección rápida. Después de aplicar la corrección rápida, el resultado se verá así:
+
+Hay soluciones rápidas disponibles para eliminar los paréntesis o agregarlos respectivamente. Después de aplicar las soluciones rápidas, el resultado se ve así:
+
 <pre>
-<code># 优良做法
+<code># Buena práctica
 def example_method; end
 def example_method_with_parameters(param1, param2); end</code>
 </pre>
-<p><span style="font-size: smaller;">Inspirado por <a href="https://github.com/rubocop-hq/ruby-style-guide#method-parens">'RuboCop'</a></span>
+<p><span style="font-size: smaller;">Inspirado en <a href="https://github.com/rubocop-hq/ruby-style-guide#method-parens">'RuboCop'</a></span>
 </p>
 </body>
 </html>

@@ -1,11 +1,12 @@
 <html>
 <body>
-Reporta declaraciones de slice que usan un literal vacío como inicializador en lugar de <code>nil</code>.
-<p>Un slice vacío puede ser representado usando <code>nil</code> o un literal de slice vacío. Son funcionalmente equivalentes — ambos tienen <code>len</code> y <code>cap</code> igual a cero — pero el slice nil es el estilo preferido.
-  Para más información sobre slices vacíos, consulta <a href="https://github.com/golang/go/wiki/CodeReviewComments#declaring-empty-slices">Declaring Empty Slices en github.com/golang</a>.</p>
+Informa las declaraciones de fragmentos con inicializadores literales vacíos utilizados en lugar de <code>nil</code>.
+<p>Un fragmento vacío se puede representar mediante un <code>nil</code> o un literal de fragmento vacío. Son funcionalmente equivalentes, los valores de su <code>len</code> y de su <code>cap</code> son cero; sin embargo, el fragmento nil representa el estilo preferido.
+  Para obtener más información acerca de los fragmentos vacíos, consulta el tema 
+  <a href="https://github.com/golang/go/wiki/CodeReviewComments#declaring-empty-slices">Declaración de fragmentos vacíos en github.com/golang</a>.</p>
 <p>Ejemplo:</p>
 <pre><code>s := []string{}</code></pre>
-<p>Para modificar la declaración, utiliza la corrección rápida <b>Reemplazar con declaración de slice nil (cambio semántico)</b>.
+<p>Para cambiar la declaración, utiliza la corrección rápida <b>Reemplazar con declaración de fragmento nil (cambia semántica)</b>.
   Después de aplicar la corrección rápida:</p>
 <pre><code>var s []string</code></pre>
 </body>

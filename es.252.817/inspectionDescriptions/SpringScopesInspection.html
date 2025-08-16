@@ -1,11 +1,12 @@
 <html>
 <body>
-<p>Valor desconocido del atributo <code>scope</code> en el elemento <code>&lt;bean&gt;</code>.</p>
+<p>Informa valores desconocidos del atributo <code>scope</code> en elementos <code>&lt;bean&gt;</code>.</p>
+
 <p><b>Ejemplo:</b></p>
 <pre><code>
   &lt;beans&gt;
     &lt;bean class="beans.FooComponent" id="foo" scope="unknown"/&gt;
-    &lt;!-- Reportando "No se puede resolver el símbolo 'unknown'"&gt;
+    &lt;!-- informa "No se puede resolver el símbolo 'unknown'" &gt;
     &lt;bean class="beans.BarComponent" id="bar" scope="prototype"/&gt;
   &lt;/beans&gt;
 </code></pre>

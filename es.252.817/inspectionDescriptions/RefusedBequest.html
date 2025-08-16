@@ -1,43 +1,46 @@
 <html>
 <body>
-Informa sobre métodos sobrescritos que no llaman al método super.
-Esto también se conoce como <i>herencia rechazada</i>.
-Estos métodos pueden indicar un fallo en la abstracción, lo que puede llevar a errores difíciles de rastrear.
+Reporta métodos que sobrescriben un super método sin llamarlo.
+Esto es también conocido como <i>legado rechazado</i>.
+Esos métodos pueden representar una falla de abstracción y causar bugs difícil de rastrear.
 <p>
-  La inspección no informa sobre métodos sobrescritos de <code>java.lang.Object</code> (excepto <code>clone()</code>).
-  Por convención, <code>clone()</code> debe llamar a su método super, que devolverá un objeto del tipo correcto.</p>
+  La inspección no reporta métodos sobrescritos de <code>java.lang.Object</code>, a excepción de <code>clone()</code>.
+  El método <code>clone()</code> debería por convención llamar a su super método,
+  que devolverá un objeto del tipo correcto.</p>
 <p><b>Ejemplo 1:</b></p>
 <pre><code>
-  class A {
+  public class A {
     @Override
     public Object clone() {
-      // No llama a 'super.clone()'
+      // no llama a 'super.clone()'
       return new A();
     }
   }
 </code></pre>
 <p><b>Ejemplo 2:</b></p>
 <pre><code>
-  interface I {
+  public interface I {
     default void foo() {}
   }
-  class A implements I {
-    // Advierte sobre el método cuando está desactivada
-    // la opción "Ignorar métodos super 'default'"
+
+  public class A implements I {
+    // advertencia en el método cuándo
+    // está deshabilitado 'Ignorar métodos super 'default''
     @Override
     public void foo(){}
   }
 </code></pre>
-<p>Configuración de la inspección:</p>
+<p>Configura la inspección:</p>
 <ul>
   <li>
-    Use la opción <b>Informar solo cuando el método super está anotado con</b> para ignorar los métodos super marcados con anotaciones de la lista proporcionada. Puede agregar anotaciones a esta lista manualmente.
+    Usa la opción <b>Reportar solo cuándo el método super esté anotado por</b> para ignorar métodos super marcados con las anotaciones
+    de la lista provista. Puedes añadir anotaciones a la lista manualmente.
   </li>
   <li>
-    Use la opción <b>Ignorar métodos super vacíos</b> para ignorar los métodos super que solo lanzan excepciones o están vacíos.
+    Usa la opción <b>Ignorar métodos super vacíos</b> para ignorar métodos super que están vacíos o solo lanzan una excepción.
   </li>
   <li>
-    Use la opción <b>Ignorar métodos super 'default'</b> para ignorar los métodos super <code>default</code> en interfaces.
+    Usa la opción <b>Ignorar métodos super 'default'</b> para ignorar métodos super <code>default</code> de interfaces.
   </li>
 </ul>
 </body>

@@ -1,8 +1,10 @@
 <html>
 <body>
-Informa sobre llamadas a <code>String.equals()</code> o <code>String.equalsIgnoreCase()</code> que contienen literales de cadena como argumentos.
-<p>Algunos estándares de codificación especifican que los literales de cadena deben ser el calificador de <code>equals()</code> en lugar del argumento, para minimizar la posibilidad de <code>NullPointerException</code>.</p>
-<p>Es posible intercambiar el literal y la expresión mediante una corrección rápida.</p>
+Reporta las llamadas <code>String.equals()</code> o <code>String.equalsIgnoreCase()</code>
+con un argumento de literal de cadena.
+<p>Algunos estándares de codificación especifican que los literales de cadena deberían ser el calificador de <code>equals()</code>, en lugar de
+  argumento, minimizando así <code>NullPointerException</code>-s.</p>
+<p>Hay disponible una corrección rápida para intercambiar el literal y la expresión.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   boolean isFoo(String value) {
@@ -15,5 +17,6 @@ Informa sobre llamadas a <code>String.equals()</code> o <code>String.equalsIgnor
     return "foo".equals(value);
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

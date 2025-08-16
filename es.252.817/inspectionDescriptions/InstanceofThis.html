@@ -1,27 +1,29 @@
 <html>
 <body>
-Informa sobre usos de expresiones <code>this</code> con <code>instanceof</code> o <code>getClass() == SomeClass.class</code>.
-<p>Tales expresiones indican un fallo en el diseño orientado a objetos y deberían reemplazarse con construcciones polimórficas.</p>
+Reporta usos de <code>instanceof</code> o <code>getClass() == SomeClass.class</code> en los que se comprueba una expresión <code>this</code>.
+<p>Estas expresiones indican que el diseño orientado a objetos es deficiente y deben reemplazarse por construcciones polimórficas.</p>
 <p>Ejemplo:</p>
 <pre><code>
 class Super {
   void process() {
-    if (this instanceof Sub) { // advertencia
+    if (this instanceof Sub) { // warning
       doSomething();
     } else {
       doSomethingElse();
     }
   }
 }
+  
 class Sub extends Super {}
 </code></pre>
-<p>Para corregir el problema, utilice métodos sobrescritos:</p>
+<p>Para arreglar el problema, usa un método sobreescrito:</p>
 <pre><code>
 class Super {
   void process() {
     doSomethingElse();
   }
 }
+  
 class Sub extends Super {
   @Override
   void process() {
@@ -29,5 +31,6 @@ class Sub extends Super {
   }
 }  
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

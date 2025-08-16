@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre problemas existentes de Javac, problemas de rendimiento e incompatibilidades.
-Por ejemplo, la inferencia de tipos se ralentiza cuando es necesario procesar múltiples llamadas anidadas.
-<p>El siguiente código genera una advertencia porque la llamada al método vararg contiene más de 50 argumentos polimórficos:</p>
+Reporta problemas conocidos de Javac, problemas de rendimiento e incompatibilidades.
+Por ejemplo, la inferencia de tipo puede ser lenta cuando tiene que procesar muchas llamadas anidadas.
+<p>El siguiente código provoca una advertencia, ya que la llamada al método vararg tiene más de 50 argumentos poly:</p>
 <pre><code>
   Arrays.asList(
       Arrays.asList("a1", "b1"),
@@ -10,7 +10,7 @@ Por ejemplo, la inferencia de tipos se ralentiza cuando es necesario procesar m�
       ...
       Arrays.asList("a100", "b100"));
 </code></pre>
-<p>La corrección rápida añade argumentos de tipo explícitos que aceleran tanto la compilación como el IDE.</p>
+<p>La solución rápida agrega argumentos de tipo explícitos, lo que hace que la compilación y el procesamiento de IDE sean mucho más rápidos:</p>
 <pre><code>
   //noinspection RedundantTypeArguments
   Arrays.&lt;List&lt;String&gt;&gt;asList(

@@ -1,10 +1,12 @@
 <html>
 <body>
-<p>Informa sobre variables de Cython que se referencian antes de su declaración.</p>
+<p>Reporta variables Cython que son referenciadas antes de su declaración.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 cdef int c_x
-print(c_x, c_y)  # La variable 'c_y' se usa antes de su declaración
+
+print(c_x, c_y)  # La variable 'c_y' se utiliza antes de su declaración
+
 cdef int c_y = 0
 </code></pre>
 </body>

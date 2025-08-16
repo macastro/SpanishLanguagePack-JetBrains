@@ -1,24 +1,29 @@
 <html>
 <body>
 <p>
-  Reportar tareas no registradas en la <a href="https://docs.celeryproject.org/en/stable/userguide/periodic-tasks.html#beat-schedule">tabla de programación de Celery Beat</a>
+  Informa sobre tareas no registradas en la <a href="https://docs.celeryproject.org/en/stable/userguide/periodic-tasks.html#beat-schedule">programación de Celery Beat</a>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="Python">
   #settings.py
+
   CELERY_BEAT_SCHEDULE = {
       'task_name': {
-          'task': 'example_app.tasks.task_name', # path to a task represented by a class or function
+          'task': 'example_app.tasks.task_name', # ruta a una tarea representada por una clase o función
           'schedule': 3.0,
       },
   }
+
+
   #example_app/tasks.py
+
   @app.task()
   def taskName():
       pass
+
   class TaskName(Task):
       pass
 </code></pre>
-<p>Si una clase de tarea no hereda de Task o una función de tarea no tiene el decorador necesario, no se considerará como registrada</p>
+<p>Si una clase de tarea no hereda de Task o una función de tarea no tiene el decorador necesario, no se considerará registrada.</p>
 </body>
 </html>

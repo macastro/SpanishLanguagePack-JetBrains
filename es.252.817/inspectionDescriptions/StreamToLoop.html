@@ -1,17 +1,16 @@
 <html>
 <body>
-El informe puede convertir automáticamente las cadenas de Stream API, las llamadas a <code>Iterable.forEach()</code> y <code>Map.forEach()</code> en bucles clásicos.
-Esta inspección ayuda a la degradación para mantener la compatibilidad con versiones anteriores de Java.
+Este informe muestra las llamadas de `Iterable.forEach()` y `Map.forEach()` de la cadena de API de secuencias que se puede convertir en un ciclo tradicional.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   String joinNonEmpty(List&lt;String&gt; list) {
-    return list.stream() // el stream puede convertirse en un bucle
+    return list.stream() // Las secuencias se pueden convertir en ciclos
       .filter(s -> !s.isEmpty())
       .map(String::trim)
       .collect(Collectors.joining(", "));
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   String joinNonEmpty(List&lt;String&gt; list) {
     StringJoiner joiner = new StringJoiner(", ");
@@ -25,16 +24,17 @@ Esta inspección ayuda a la degradación para mantener la compatibilidad con ver
   }
 </code></pre>
 <p>
-  Tenga en cuenta que esta inspección puede ocasionalmente resultar en ligeros cambios semánticos.
-  Se debe prestar especial atención al cortocircuito, ya que el cortocircuito de streams no especifica el número real de elementos leídos.
+  Tenga en cuenta que esta inspección a veces puede provocar un ligero cambio de semántica.
+  Se debe prestar especial atención a los cortocircuitos, ya que no se especifica la cantidad real de elementos que se leerán cuando la secuencia se cortocircuita.
 </p>
+<!-- tooltip end -->
 <p>Configuración de la inspección:</p>
-<p>Utilice la opción <b>Iterar fuentes de stream desconocidas a través de Stream.iterator()</b> para sugerir la conversión de streams cuyo origen no puede ser reconocido.
-  En estos casos, se creará un iterador a partir del stream.
-  Por ejemplo, cuando esta casilla está marcada, se sugerirá una conversión aquí:</p>
+<p>Utilice la opción **Iterar por una fuente de secuencia desconocida a través de Stream.iterator()** para sugerir conversiones para secuencias que usan un origen que no se puede reconocer.
+  En este caso, se creará un iterador a partir de la secuencia.
+  Por ejemplo, aquí es donde se sugeriría una conversión si se selecciona la casilla de verificación:</p>
 <pre><code>
   List&lt;ProcessHandle&gt; handles = ProcessHandle.allProcesses().collect(Collectors.toList());</code></pre>
-<p>El resultado en este caso será:</p>
+<p>En este caso, el resultado sería el siguiente:</p>
 <pre><code>
   List&lt;ProcessHandle&gt; handles = new ArrayList&lt;&gt;();
   for (Iterator&lt;ProcessHandle&gt; it = ProcessHandle.allProcesses().iterator(); it.hasNext(); ) {
@@ -42,6 +42,6 @@ Esta inspección ayuda a la degradación para mantener la compatibilidad con ver
     handles.add(allProcess);
   }
 </code></pre>
-<p><small>Novedades de la versión 2017.1</small></p>
+<p><small>Novedad en la versión 2017.1</small></p>
 </body>
 </html>

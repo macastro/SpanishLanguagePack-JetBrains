@@ -1,14 +1,15 @@
 <html>
 <body>
-Informa de las siguientes violaciones de la especificación EJB:
+Se han reportado las siguientes violaciones de la especificación EJB:
 <ul>
-  <li>Las clases EJB expuestas a través de interfaces</li>
-  <li>Nombres de métodos que entran en conflicto con nombres reservados de la especificación</li>
+  <li>La clase EJB está expuesta por una interfaz</li>
+  <li>El nombre del método está en conflict con un nombre de especificación reservado</li>
 </ul>
+
 <p><b>Ejemplo:</b></p>
 <pre><code>
 public interface EntityHome extends javax.ejb.EJBHome {
-  void ejbExampleMethod() // Error: conflicto de nombres
+  void ejbExampleMethod() // Error: Conflicto de nombre
 }
 </code></pre>
 </body>

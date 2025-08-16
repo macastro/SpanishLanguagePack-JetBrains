@@ -1,13 +1,14 @@
 <html>
 <body>
-Reporta los marcadores de posición <code>^</code> o <code>\A</code> que no están al inicio del patrón y los marcadores <code>$</code>, <code>\Z</code> o <code>\z</code> que no están al final del patrón.
-Si estos marcadores de posición de expresiones regulares están en posiciones incorrectas, impedirán que el patrón coincida con cualquier objeto.
-Para los marcadores de posición <code>^</code> y <code>$</code>, es probable que sean caracteres literales y se haya olvidado escaparlos.
+Reporta anclas <code>^</code> o <code>\A</code> que no están al principio del patrón y anclas <code>$</code>, <code>\Z</code> o <code>\z</code> que no están al final del patrón.
+En una posición equivocada, estas anclas de RegExp impiden que el patrón coincida con cualquier cosa.
+En el caso de las anclas <code>^</code> y <code>$</code>, lo más probable es que se quisiera el carácter literal y se olvidó el escape.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   (Price $10)
 </code></pre>
+<!-- tooltip end -->
 <p>
-<small>Cambios en la versión 2018.1</small>
+<small>Novedad de 2018.1</small>
 </body>
 </html>

@@ -1,25 +1,26 @@
 <html>
 <body>
-Reporta las llamadas al método <code>openSession()</code> cuando el recurso <code>org.hibernate.Session</code> devuelto no se cierra de manera segura.
+Reporta la invocación del método <code>openSession()</code> cuando el recurso <code>org.hibernate.Session</code> devuelto no se cierra de forma segura.
 <p>
-  Por defecto, esta inspección asume que el recurso puede ser cerrado por cualquier método que contenga 'close' o 'cleanup' en su nombre.
+  Por defecto, esta inspección asume que un recurso puede ser cerrado por cualquier método cuyo nombre contenga 'close' o 'cleanup'.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void doHibernateQuery(SessionFactory factory) {
-    Session session = factory.openSession(); //advertencia
+    Session session = factory.openSession(); //Advertencia
     session.createQuery("...");
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Configure la inspección con las siguientes opciones:
+  Esta inspección se puede configurar con las siguientes opciones:
 </p>
 <ul>
   <li>
-    Si se permite abrir recursos <code>org.hibernate.Session</code> dentro de un bloque <code>try</code>. Este estilo es menos preferible ya que es más verboso que abrir el recurso antes del bloque <code>try</code>.
+    Si permitir abrir el recurso <code>org.hibernate.Session</code> dentro de un bloque <code>try</code>. Este estilo no es deseable ya que es más redundante que abrir el recurso antes del bloque <code>try</code>.
   </li>
   <li>
-    Si el recurso puede ser cerrado mediante cualquier llamada a método que tome el recurso como argumento.
+    Si el recurso puede ser cerrado por cualquier invocación de método que pase el recurso como argumento.
   </li>
 </ul>
 </body>

@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre modificaciones de variables con asignaciones simples (por ejemplo, <code>y = y + x</code>) que pueden reemplazarse por operadores de asignación compuesta.
-<p>Esta corrección rápida reemplazará la asignación con un operador de asignación compuesta.</p>
+Reporta modificaciones de variables con una asignación simple (tal como <code>y = y + x</code>) que puede ser reemplazada con una asignación de operador.
+<p>El arreglo rápido reemplaza la asignación con un operador de asignación.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun foo() {
@@ -9,12 +9,13 @@ Informa sobre modificaciones de variables con asignaciones simples (por ejemplo,
       list = list + 4
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de que el arreglo rápido es aplicado:</p>
 <pre><code>
   fun foo() {
       val list = mutableListOf(1, 2, 3)
       list += 4
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

@@ -1,9 +1,9 @@
 <html>
 <body>
-<p>Informa sobre variables de plantilla Go duplicadas declaradas en el mismo ámbito.</p>
-<p>Las variables duplicadas reasignan variables existentes con el mismo nombre. Esta operación puede causar diferentes problemas impredecibles.</p>
+<p>Informa sobre variables duplicadas de Go Template declaradas en el mismo ámbito.</p>
+<p>Duplicar una variable reasigna con el mismo nombre la variable existente. Esta operación puede dar lugar a distintos problemas impredecibles.</p>
 <p>Ejemplo:</p>
 <pre><code>{{$v := 0}}{{$v := 1}}{{$v}} es 0. {{/* se evalúa como '1 es 0' */}}
-{{$v := 0}}{{$w := 1}}{{$v}} es 0. {{/* funciona según lo esperado */}}</code></pre>
+{{$v := 0}}{{$w := 1}}{{$v}} es 0. {{/* funciona como se esperaba */}}</code></pre>
 </body>
 </html>

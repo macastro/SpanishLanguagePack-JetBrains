@@ -1,16 +1,17 @@
 <html>
 <body>
-Informa sobre los inicializadores de instancia que pueden ser declarados como <code>static</code>.
+Este informe detecta inicializadores de instancia que se pueden declarar como <code>static</code>.
 <p>
-  Un inicializador de instancia puede ser static si no hace referencia a ningún miembro no static de su clase.
-  Los inicializadores static se ejecutan después de que se resuelve la clase, mientras que los inicializadores de instancia se ejecutan para cada instanciación de esta clase.</p>
-<p>Esta inspección no informa sobre los inicializadores de instancia vacíos ni los inicializadores en clases anónimas.
+  Los inicializadores de instancia que no hacen referencia a ningún miembro no estático de su clase pueden ser estáticos.
+  Los inicializadores estáticos se ejecutan después de la resolución de la clase, mientras que los inicializadores de instancia se ejecutan en cada creación de instancias de esa clase.
+</p>
+<p>Esta inspección no informa sobre inicializadores de instancia y inicializadores vacíos en clases anónimas.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class A {
      public static String CONSTANT;
      {
-        CONSTANT = "Hello";
+        CONSTANT = "Hola";
      }
   }
 </code></pre>
@@ -19,9 +20,11 @@ Informa sobre los inicializadores de instancia que pueden ser declarados como <c
   class A {
      public static String CONSTANT;
      static {
-        CONSTANT = "Hello"; // ahora se instancia solo una vez por clase
+        CONSTANT = "Hola"; // Ahora se instancia solo una vez por clase
      }
   }
 </code></pre>
+
+<!-- tooltip end -->
 </body>
 </html>

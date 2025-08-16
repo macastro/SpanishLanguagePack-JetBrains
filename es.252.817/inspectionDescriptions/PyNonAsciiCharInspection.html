@@ -1,6 +1,6 @@
 <html>
 <body>
-<p>Informa sobre archivos Python 2 que contienen caracteres no ASCII sin una declaración de codificación en la parte superior.</p>
+<p>Informa cuando un archivo contiene caracteres no ASCII y no tiene una declaración de codificación en la parte superior en Python 2.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class A(object):
@@ -8,7 +8,7 @@ class A(object):
     def __init__(self):
         pass
 </code></pre>
-<p>En este ejemplo, el IDE informa sobre un símbolo no ASCII en el comentario y la falta de una declaración de codificación. Aplica la corrección rápida sugerida para añadir la declaración de codificación faltante:</p>
+<p>En este ejemplo, el IDE informa un símbolo no ASCII en un comentario y una falta de declaración de codificación. Aplica la corrección rápida propuesta para añadir una declaración de codificación faltante:</p>
 <pre><code>
 # coding=utf-8
 class A(object)

@@ -1,36 +1,39 @@
 <html>
 <body>
-Informa sobre parámetros de método que tienen el mismo nombre que los campos de las clases circundantes.
-Debido a este tipo de nomenclatura, puede usar accidentalmente el parámetro cuando tiene la intención de usar el campo del mismo nombre.
-<p>Se recomienda renombrar el parámetro mediante una corrección rápida.</p>
+Informa de parámetros de método con nombre idéntico al de un campo de una clase envolvente.
+Como resultado de esta denominación, puedes usar accidentalmente el parámetro cuando se pretende usar el campo con nombre idéntico.
+<p>Se sugiere una corrección rápida para cambiar el nombre del parámetro.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Main {
-    private String value;
-    public Main(String value) {
-      value = value.toUpperCase();
+    private String valor;
+
+    public Main(String valor) {
+      valor = valor.toUpperCase();
     }
   }
   </code></pre>
+<!-- tooltip end -->
 <p>
-  Puede configurar las siguientes opciones para esta inspección:
+  Puedes configurar las siguientes opciones para esta inspección:
 </p>
 <ol>
   <li>
-    <strong>Ignorar para setters de propiedades</strong> - Ignora los parámetros de setters simples.
+    <strong>Ignorar para definidores de propiedades</strong>: ignorar parámetros de definidores simples.
   </li>
   <li>
-    <strong>Ignorar campos de superclase no visibles desde subclases</strong> - Ignora los campos <code>private</code> en la superclase que no son visibles para este método.
+    <strong>Ignorar campos de superclase no visibles desde subclase</strong>: ignorar campos <code>private</code> en una superclase que no son visibles desde el método.
   </li>
   <li>
-    <strong>Ignorar para constructores</strong> - Ignora los parámetros de constructores.
+    <strong>Ignorar para constructores</strong>: ignorar parámetros de constructores.
   </li>
   <li>
-    <strong>Ignorar para métodos abstract</strong> - Ignora los parámetros de métodos abstract.
+    <strong>Ignorar para métodos abstractos</strong>: ignorar parámetros de métodos abstractos.
   </li>
   <li>
-    <strong>Ignorar parámetros de métodos static que ocultan campos de instancia</strong> - Ignora los parámetros de métodos <code>static</code> que ocultan campos de instancia y los parámetros de métodos de instancia en clases internas static que ocultan campos de instancia de la clase externa. Aunque técnicamente no es ocultamiento, estos parámetros pueden resultar confusos.
+    <strong>Ignorar para parámetros de método estático que ocultan campos de instancia</strong>: ignorar parámetros de métodos <code>static</code> que ocultan un campo de instancia e ignorar parámetros de métodos de instancia en clases internas estáticas que ocultan un campo de instancia de una clase externa. Aunque no lo ocultan estrictamente, estos parámetros pueden resultar confusos.
   </li>
 </ol>
+
 </body>
 </html>

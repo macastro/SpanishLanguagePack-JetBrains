@@ -1,9 +1,11 @@
 <html>
 <body>
-Informa sobre los accesos a la propiedad <code>.length</code> de arrays en las condiciones de bucles. En entornos con recursos muy limitados, estas llamadas pueden tener un impacto negativo en el rendimiento.
+Reporta los accesos a la propiedad <code>.length</code> de un array en la parte de condición de
+una sentencia de bucle. En entornos muy restringidos en recursos, dichas llamadas pueden
+tener implicaciones adversas en el rendimiento.
 <p>
-  Esta inspección es relevante para Java ME y otros entornos con recursos muy limitados.
-  La aplicación indiscriminada de esta inspección puede tener un impacto negativo en la claridad y el diseño del código.
+  Esta inspección está pensada para Java ME y otros entornos muy restringidos en recursos.
+  Aplicar los resultados de esta inspección sin consideración podría tener efectos negativos en la claridad del código y el diseño.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -11,5 +13,6 @@ Informa sobre los accesos a la propiedad <code>.length</code> de arrays en las c
     for (int i = 0; i &lt; x.length; i++) { /**/ }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

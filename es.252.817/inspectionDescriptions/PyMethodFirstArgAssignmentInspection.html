@@ -1,7 +1,9 @@
 <html>
 <body>
-<p>Informa sobre casos donde el primer parámetro (como <code>self</code> o <code>cls</code>) se reasigna dentro del método.
-  El IDE indica un error ya que, en la mayoría de los casos, esta reasignación no tiene un propósito válido.</p>
+<p>Informa los casos cuando se reasigna el primer parámetro,
+  tal como <code>self</code> o <code>cls</code>, en un método.
+  Debido a que en la mayoría de los casos, no existen objetivos en tal reasignación, el
+  IDE indica un error.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class Account:
@@ -10,5 +12,6 @@ class Account:
             self = balance
         return self
 </code></pre>
-<p>La solución puede ser revisar y modificar el algoritmo para asegurar que tal reasignación sea necesaria. Si todo está correcto, puede invocar esta acción de intención y elegir ignorar la advertencia.</p>
+<p>Como una solución, es posible que quieras verificar y modificar el algoritmo para asegurar que se necesita la reasignación. Si todo es correcto,
+  puedes invocar acciones de intención para este código y optar por ignorar la advertencia.</p>
 </body></html>

@@ -1,11 +1,28 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <html>
 <body>
-Informa sobre comentarios que no comienzan con el nombre del elemento exportado.
-<p>De acuerdo con <a href="https://github.com/golang/go/wiki/CodeReviewComments#comment-sentences">Comment Sentences en github.com/golang</a>, es una convención comenzar los comentarios con el nombre del elemento exportado.</p>
+Reporta comentarios que no comienzan con el nombre del elemento exportado.
+<p>De acuerdo con <a href="https://github.com/golang/go/wiki/CodeReviewComments#comment-sentences">Comment Sentences en github.com/golang</a>, esta es una convención para empezar un comentario con el nombre del elemento exportado.</p>
 <p>Ejemplo:</p>
 <pre><code>// representa una solicitud para ejecutar un comando.
 type Request struct {}</code></pre>
-<p>El comentario comienza con la descripción de la estructura en lugar del nombre de la estructura. Para cumplir con la convención, puede aplicar la corrección rápida <b>agregar prefijo al comentario</b>. Después de aplicar la corrección rápida, el comentario se verá así:</p>
+
+<p>El comentario comienza con la descripción de la estructura, no con el nombre de la estructura. Para cumplir con las reglas de la convención, puedes aplicar el quick-fix <b>Añadir prefijo al comentario</b>. Después de aplicar el quick-fix, el comentario se ve como sigue:</p>
 <pre>
 // Request representa una solicitud para ejecutar un comando.
 type Request struct {} // mejor

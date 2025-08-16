@@ -1,36 +1,38 @@
 <html>
 <body>
-Reportar referencias ambiguas en el código SQL.
-<p>Por ejemplo, cuando un nombre hace referencia tanto a una columna de tabla como a un parámetro de rutina. La ejecución de dicho código puede provocar errores o resultados inesperados debido a una lógica de resolución contraintuitiva. Por lo general, los nombres con un alcance más local tienen mayor prioridad.</p>
-    <p>Ejemplo (PostgreSQL):</p>
-    <pre><code>CREATE TABLE foo
+Informa sobre referencias ambiguas en el código SQL.
+<p>Por ejemplo, cuando un nombre se refiere a la vez a una columna de una tabla y a un parámetro de rutina. La ejecución de dicho código puede provocar errores o resultados inesperados debido a una lógica de resolución contraintuitiva. Por lo general, los nombres con un ámbito más local tienen mayor prioridad.</p>
+<p>Ejemplo (PostgreSQL):</p>
+<pre><code>CREATE TABLE foo
 (
     id   INT,
-    name VARCHAR(5)
+    nombre VARCHAR(5)
 );
-CREATE FUNCTION func(name VARCHAR(5)) RETURNS INT AS
+CREATE FUNCTION func(nombre VARCHAR(5)) RETURNS INT AS
 $$
 DECLARE
     b INT;
 BEGIN
-      -- `name` es ambiguo ya que se usa como nombre de columna y parámetro
-    SELECT COUNT(*) INTO b FROM foo t WHERE t.name = name;
+      -- `nombre` es ambiguo porque se utiliza como nombre de columna y de parámetro
+    SELECT COUNT(*) INTO b FROM foo t WHERE t.nombre = nombre;
     RETURN b;
 END;
 $$ LANGUAGE plpgsql;</code></pre>
-  <p>En PostgreSQL, puede usar la directiva <code>#variable_conflict</code> para especificar explícitamente la referencia correcta. Por ejemplo, use <code>#variable_conflict use_column</code> para referenciar el nombre de la columna, o <code>#variable_conflict use_variable</code> para referenciar el parámetro.</p>
+<p>En PostgreSQL, puedes utilizar las directivas <code>#variable_conflict</code> para especificar explícitamente una referencia correcta. Por ejemplo,
+utiliza <code>#variable_conflict use_column</code> para referirte a un nombre de columna o <code>#variable_conflict use_variable</code> para referirte a
+un parámetro.</p>
 <pre><code>CREATE TABLE foo
 (
     id   INT,
-    name VARCHAR(5)
+    nombre VARCHAR(5)
 );
-CREATE FUNCTION func(name VARCHAR(5)) RETURNS INT AS
+CREATE FUNCTION func(nombre VARCHAR(5)) RETURNS INT AS
 $$
     #variable_conflict use_column
 DECLARE
     b INT;
 BEGIN
-    SELECT COUNT(*) INTO b FROM foo t WHERE t.name = name;
+    SELECT COUNT(*) INTO b FROM foo t WHERE t.nombre = nombre;
     RETURN b;
 END;
 $$ LANGUAGE plpgsql;</code></pre>

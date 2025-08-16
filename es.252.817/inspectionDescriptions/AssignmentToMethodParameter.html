@@ -1,8 +1,9 @@
 <html>
 <body>
-Informa sobre asignaciones o modificaciones a los parámetros de método.
-<p>Aunque a veces es intencional, esta estructura puede resultar confusa y está prohibida en algunos proyectos Java.</p>
-<p>La corrección rápida añadirá una declaración de nueva variable.</p>
+Reporta asignaciones para o modificaciones de parámetros de método.
+<p>Aunque ocasionalmente se pretende, esta construcción puede ser confuso
+  y por lo tanto es prohibida en algunos proyectos Java.</p>
+<p>La solución rápida agrega una declaración para una nueva variable.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void printTrimmed(String s) {
@@ -10,15 +11,17 @@ Informa sobre asignaciones o modificaciones a los parámetros de método.
     System.out.println(s);
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de que se aplique la solución rápida:</p>
 <pre><code>
   void printTrimmed(String s) {
     String trimmed = s.trim();
     System.out.println(trimmed);
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Use la opción <b>Ignorar si la asignación es una transformación del parámetro original</b> para ignorar las asignaciones que modifican el valor del parámetro basándose en su valor previo.
+  Utiliza la opción <b>Ignorar si la asignación es una transformación del parámetro original</b> para ignorar las asignaciones que modifican
+  el valor del parámetro en base a su valor anterior.
 </p>
 </body>
 </html>
