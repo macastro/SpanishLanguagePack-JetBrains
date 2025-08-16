@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre código que sobrescribe elementos de un <code>Map</code>, elementos de un <code>Set</code>, elementos de array en una secuencia de llamadas <code>add</code>/<code>put</code> o el uso de métodos de fábrica de Java 9 como <code>Set.of</code> (lo que provocará una excepción en tiempo de ejecución).
+<p>Esto suele ser el resultado de errores de copiar y pegar.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  map.put("A", 1);
+  map.put("B", 2);
+  map.put("C", 3);
+  map.put("D", 4);
+  map.put("A", 5); // Clave "A" duplicada, sobrescribe la entrada anterior
+</code></pre>
+<p><small>Novedades de la versión 2017.3</small></p>
+</body>
+</html>

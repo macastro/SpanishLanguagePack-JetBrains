@@ -1,0 +1,92 @@
+<html>
+<body>
+Reporta usos incorrectos de objetos companion en las <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">extensiones</a>.
+<p>
+  Los objetos companion de Kotlin siempre se crean cuando intentas cargar su clase contenedora, y la creación de implementaciones de puntos de extensión debe tener un bajo costo.
+  La carga excesiva de clases en los plugins es un problema importante durante el inicio del IDE.
+</p>
+<p>Patrón incorrecto:</p>
+<pre><code lang="kotlin">
+  class KotlinDocumentationProvider : AbstractDocumentationProvider(), ExternalDocumentationProvider {
+      companion object {
+          private val LOG = Logger.getInstance(KotlinDocumentationProvider::class.java)
+          private val javaDocumentProvider = JavaDocumentationProvider()
+      }
+  }
+</code></pre>
+<p>
+  Aquí <code>KotlinDocumentationProvider</code> está registrado como una extensión en <code>plugin.xml</code>:
+</p>
+<pre><code lang="xml">
+  &lt;lang.documentationProvider language="JAVA"
+                              implementationClass="org.jetbrains.kotlin.idea.KotlinDocumentationProvider"
+                              order="first"/&gt;
+</code></pre>
+<p>
+  En este ejemplo, <code>JavaDocumentationProvider</code> se carga desde el disco cada vez que alguien llama a <code>new KotlinDocumentationProvider()</code>.
+</p>
+<p>
+  Los objetos companion en implementaciones de puntos de extensión solo deben contener loggers y constantes simples.
+  Otras declaraciones pueden resultar en una carga excesiva de clases o en la inicialización prematura de recursos costosos (TokenSet, Regex, etc.)
+  cuando se carga la clase de extensión.
+  Ten en cuenta que incluso las declaraciones marcadas con <code>@JvmStatic</code> generan una clase adicional para el objeto companion, lo que puede llevar a cálculos costosos.
+</p>
+<p>
+  Estas declaraciones deben almacenarse en objetos o en el nivel superior, no en objetos companion.
+</p>
+<h3>Preguntas frecuentes</h3>
+<h4>¿Cómo reescribir ConfigurationType?</h4>
+<p>Mover la declaración al nivel superior:</p>
+<pre><code lang="kotlin">
+  // Correcto, usando fun de nivel superior
+  internal fun mnRunConfigurationType(): MnRunConfigurationType = runConfigurationType&lt;MnRunConfigurationType&gt;()
+  internal class MnRunConfigurationType : ConfigurationType {
+    companion object { // Incorrecto
+      fun getInstance(): MnRunConfigurationType = runConfigurationType&lt;MnRunConfigurationType&gt;()
+    }
+    ...
+</code></pre>
+<h4>¿Cómo reescribir FileType?</h4>
+<p>Antes:</p>
+<pre><code lang="kotlin">
+  internal class SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
+    companion object {
+      val FILE_TYPE = SpringBootImportsFileType()
+      ...
+</code></pre>
+<p>Después:</p>
+<pre><code lang="kotlin">
+  internal object SpringBootImportsFileType : LanguageFileType(SPILanguage.INSTANCE, true) {
+  ...
+</code></pre>
+<p>Usar el fieldName <code>INSTANCE</code> en <code>plugin.xml</code>:</p>
+<pre><code lang="xml">
+  &lt;fileType name="Spring Boot Imports"
+              fieldName="INSTANCE"
+              implementationClass="com.intellij.spring.boot.spi.SpringBootImportsFileType"/&gt;
+</code></pre>
+<h4>¿Cómo reescribir CounterUsagesCollector?</h4>
+<h5>API interna</h5>
+<p>Antes:</p>
+<pre><code lang="kotlin">
+  class AntActionsUsagesCollector : CounterUsagesCollector() {
+    override fun getGroup(): EventLogGroup = GROUP
+    companion object {
+      private val GROUP = EventLogGroup("build.ant.actions", 1)
+      @JvmField
+      val runSelectedBuildAction = GROUP.registerEvent("RunSelectedBuild")
+   }
+}
+</code></pre>
+<p>Después:</p>
+<pre><code lang="kotlin">
+ object AntActionsUsagesCollector : CounterUsagesCollector() {
+  override fun getGroup(): EventLogGroup = GROUP
+  private val GROUP = EventLogGroup("build.ant.actions", 1)
+  @JvmField
+  val runSelectedBuildAction = GROUP.registerEvent("RunSelectedBuild")
+}
+</code></pre>
+<p><small>Cambios en 2023.3</small>
+</body>
+</html>

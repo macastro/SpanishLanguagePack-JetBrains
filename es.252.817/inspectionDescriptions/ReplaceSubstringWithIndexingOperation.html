@@ -1,0 +1,19 @@
+<html>
+<body>
+La llamada <code>"abc".substring(0, 1)</code> puede reemplazarse por <code>"abc"[0]</code>.
+<p>Obtener elementos por índice hace que el código sea más simple.</p>
+<p>Esta corrección rápida reemplazará la llamada <code>substring</code> por el operador de índice.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo() {
+      &quot;abc&quot;.substring(0, 1)
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun foo() {
+      &quot;abc&quot;[0]
+  }
+</code></pre>
+</body>
+</html>

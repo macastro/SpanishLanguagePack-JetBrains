@@ -1,0 +1,23 @@
+<html>
+<body>
+El informe contiene expresiones de conversión de tipo que están precedidas por comprobaciones <code>instanceof</code> de diferentes tipos.
+<p>
+  Aunque esto podría ser intencional, tales estructuras probablemente sean erróneas y resulten en una <code>java.lang.ClassCastException</code> durante la ejecución.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main {
+    int whenCharSequenceCastToNumber(Object o){
+      if (o instanceof CharSequence) {
+        return ((Number) o).intValue();
+      }
+      return 0;
+    }
+    int earlyReturnWhenNotCharSequence(Object o){
+      if (!(o instanceof CharSequence)) return 0;
+      return ((Number)o).intValue();
+    }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<body>
+<p>Informa el tipo de retorno incorrecto de los métodos con la anotación <code>@Deployment</code>.</p>
+<p>
+  Según la <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/es-ES/html/gettingstarted.html#d0e451">documentación de Arquillian</a>, los métodos que tienen la anotación <code>@Deployment</code>, deben tener un tipo de retorno que herede de ShrinkWrap Archive.
+</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // Este caso de prueba no podrá ser iniciado por Arquillian
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    @Deployment
+    public static ZipFile createDeployment() {
+      throw new UnsupportedOperationException("Implement me");
+    }
+
+    @Test
+    public void testSomething() {
+      Assert.fail("To be implemented");
+    }
+  }
+</code></pre>
+<p>Luego de aplicar el arreglo rápido:</p>
+<pre><code>
+  import org.jboss.shrinkwrap.api.Archive;
+
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    @Deployment
+    public static Archive createDeployment() {
+      throw new UnsupportedOperationException("Implement me");
+    }
+
+    @Test
+    public void testSomething() {
+      Assert.fail("To be implemented");
+    }
+  }
+</code></pre>
+</body>
+</html>

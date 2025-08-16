@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa sobre llamadas de registro que no están protegidas por una condición de guarda.
+La evaluación de los argumentos para las llamadas puede ser computacionalmente costosa.
+Envolver las llamadas de registro con una cláusula condicional evita este costo cuando el nivel de registro utilizado en la declaración está deshabilitado. Esto es especialmente útil para los niveles de registro menos severos (trace, debug, finest) ya que son los que más comúnmente se deshabilitan en producción.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  public class TestObject {
+    void test(Object object) {
+      LOG.debug("some logging " + expensiveCalculation(1));
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="java">
+  public class TestObject {
+    void test(Object object) {
+      if(LOG.isDebugEnabled()){
+        LOG.debug("some logging " + expensiveCalculation(1));
+      }
+    }
+  }
+</code></pre>
+<p>Esta inspección soporta los frameworks de registro <em>Log4j2</em> y <em>SLF4J</em> (excepto builders).
+<p><small>Novedades en 2024.2</small></p>
+</body>
+</html>

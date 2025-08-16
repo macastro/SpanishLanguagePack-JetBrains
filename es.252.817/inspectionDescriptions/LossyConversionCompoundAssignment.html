@@ -1,0 +1,18 @@
+<html>
+<body>
+Se informa una asignación compuesta cuando el tipo del operando derecho es incompatible con el tipo de la variable.
+<p>
+Durante este tipo de asignación compuesta, ocurre una conversión implícita que puede resultar en una conversión con pérdida de datos.
+<p>Ejemplo:</p>
+<pre><code>
+  long c = 1;
+  c += 1.2;
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  long c = 1;
+  c += (long) 1.2;
+</code></pre>
+<p><small>Novedades en 2023.2</small></p>
+</body>
+</html>

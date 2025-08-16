@@ -1,0 +1,43 @@
+<html>
+<body>
+ Informa sobre llamadas a registro con argumentos no constantes no rodeados por una condición de protección.
+La evaluación de los argumentos de una llamada al registro puede resultar costosa.
+Rodear una llamada a registro con una cláusula de protección evita ese coste cuando el registro
+está deshabilitado para el nivel utilizado por la instrucción de registro. Esto es especialmente útil para el
+nivel menos grave (traza, depuración, excepcional) de llamadas a registro, porque a menudo son
+deshabilitados en un entorno de producción.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>public class</b> Principal {
+    <b>void</b> malo(Object object) {
+      <b>if</b> (verdadero) {
+        LOG.debug("registro registro registro " + cálculo_costoso(object));
+      }
+      LOG.debug("algo más de registro " + cálculo_costoso(1));
+    }
+
+    <b>void</b> bueno(Object) {
+      <b>if</b> (LOG.isDebug()) {
+        LOG.debug("valor: " + cálculo_costoso(object));
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Configurar la inspección:
+</p>
+<ul>
+  <li>
+      Utiliza el campo <b>Nombre de clase de registro</b> para especificar el nombre de la clase de registro utilizado.
+  </li>
+  <li>
+    <p>
+      Utiliza la tabla para especificar los métodos de registro sobre los que debe advertir esta inspección, con el texto de condición de registro correspondiente.
+  </li>
+  <li>
+      Utiliza la opción <b>Marcar todas las llamadas a registro sin protección</b> para que la inspección marque todas las llamadas a registro sin protección, no sólo aquellas con argumentos no constantes.
+  </li>
+</ul>
+</body>
+</html>

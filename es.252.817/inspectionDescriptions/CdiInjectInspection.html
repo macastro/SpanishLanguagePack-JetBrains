@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>Reporta puntos de inyección incorrectos: campos, métodos y parámetros que usan la anotación <code>@Inject</code> y violan la especificación CDI.</p>
+<p>Requisitos para campos:</p>
+<ul>
+  <li>No pueden ser static ni final</li>
+  <li>No pueden usar la anotación <code>@Produces</code></li>
+</ul>
+<p>Requisitos para métodos con inyección:</p>
+<ul>
+  <li>No pueden ser static ni abstract</li>
+  <li>No pueden tener parámetros con las anotaciones <code>@Disposes</code> y <code>@Observes</code></li>
+</ul>
+</body>
+</html>

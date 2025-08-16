@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>Configuración incorrecta del modo 'mode' en la anotación <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/annotation/DirtiesContext.html">@DirtiesContext</a>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  @ContextConfiguration
+  @DirtiesContext(methodMode = MethodMode.AFTER_METHOD, // No tiene sentido establecer el methodMode en una clase de prueba anotada. Para control a nivel de clase, use classMode en su lugar.
+                  hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // hierarchyMode debe usarse cuando el contexto está configurado como parte de una jerarquía mediante @ContextHierarchy
+  public class MyTest {
+    @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS, // No tiene sentido establecer el classMode en un método de prueba anotado. Para control a nivel de método, use methodMode en su lugar.
+                     hierarchyMode = DirtiesContext.HierarchyMode.CURRENT_LEVEL) // hierarchyMode debe usarse cuando el contexto está configurado como parte de una jerarquía mediante @ContextHierarchy
+    public void testFoo() {...}
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+El informe puede cambiar a tipos de variables y tipos de retorno de métodos más abstractos (más débiles).
+Esto hace que el código sea más abstracto y, por lo tanto, más reutilizable.
+<p>Ejemplo:</p>
+<pre><code>
+  // 形参类型可以削弱为 java.util.List
+  void processList(ArrayList&lt;String&gt; list) {
+    if (list.isEmpty()) return;
+    System.out.println("Processing");
+    for (String s : list) {
+      System.out.println("String: " + s);
+    }
+  }
+</code></pre>
+<p>
+  Active la casilla <b>Debilitar solo a interfaces</b> para informar problemas solo cuando el tipo pueda debilitarse a un tipo de interfaz.
+</p>
+<p>
+  Active la casilla <b>No sugerir debilitar variables declaradas como 'var'</b> para evitar informes sobre variables locales declaradas con la palabra clave 'var' (Java 10+)
+</p>
+<p>
+<b>Clases de parada</b> están destinadas a prevenir el debilitamiento de clases por debajo del nivel de la clase de parada, incluso cuando sea posible.
+En algunos casos, esto puede mejorar la legibilidad.
+</body>
+</html>

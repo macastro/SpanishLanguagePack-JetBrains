@@ -1,0 +1,30 @@
+<html>
+<body>
+Reporta múltiples comprobaciones consecutivas de atributos de <code>java.io.File</code>, como:
+<ul>
+  <li><code>isDirectory()</code></li>
+  <li><code>isFile()</code></li>
+  <li><code>lastModified()</code></li>
+  <li><code>length()</code></li>
+</ul>
+Estas llamadas pueden reemplazarse por una única llamada a <code>Files.readAttributes()</code>.
+Esto generalmente tiene mejor rendimiento que realizar múltiples comprobaciones individuales de atributos.
+<p>Ejemplo:</p>
+<pre><code>
+  boolean isNewFile(File file, long lastModified) throws IOException {
+    return file.isFile() && file.lastModified() > lastModified;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  boolean isNewFile(File file, long lastModified) throws IOException {
+    var fileAttributes = Files.readAttributes(file.toPath(), BasicFileAttributes.class);
+    return fileAttributes.isRegularFile() && fileAttributes.lastModifiedTime().toMillis() > lastModified;
+  }
+</code></pre>
+<p>Si <code>IOException</code> no se maneja en el contexto actual, la inspección no mostrará una advertencia, pero la corrección rápida seguirá estando disponible.</p>
+<p>Tenga en cuenta que el reemplazo generalmente no es exactamente equivalente y debe usarse con precaución. En particular, el comportamiento puede diferir si el archivo no existe.</p>
+<p>Esta inspección solo se reporta cuando el nivel de lenguaje del proyecto o módulo es 7 o superior.</p>
+<p><small>Novedades en 2022.1</small></p>
+</body>
+</html>

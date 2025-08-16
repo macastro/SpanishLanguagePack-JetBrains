@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa sobre los siguientes elementos que pueden eliminarse de forma segura porque las inspecciones que afectan ya no son aplicables en este contexto:
+<ul>
+  <li>anotaciones <code>@SuppressWarning</code> o</li>
+  <li>comentarios de línea <code>// noinspection</code>, o</li>
+  <li>comentarios JavaDoc <code>/** noinspection */</code></li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code lang="java">
+public class C {
+ // El símbolo ya es private,
+ // pero la anotación aún permanece
+  @SuppressWarnings({"WeakerAccess"})
+ private boolean CONST = true;
+ void f() {
+    CONST = false;
+  }
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+<body>
+Reportar referencias a valores locales en funciones de escape
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  int *escapeLocalScope() {
+    int lv = 100;
+    return &#38lv;
+  }
+</code></pre>
+</body>
+</html>

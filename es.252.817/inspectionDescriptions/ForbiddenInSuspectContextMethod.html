@@ -1,0 +1,12 @@
+<html>
+<body>
+Informa sobre el uso inadecuado de métodos en corrutinas de Kotlin que utilizan el contexto de hilo (anotado con <code>@RequiresBlockingContext</code>).
+Muchos de estos métodos tienen alternativas compatibles con corrutinas que pueden utilizarse en un contexto <code>suspend</code>.
+Ejemplos:
+<ul>
+  <li><code>com.intellij.openapi.progress.ProgressManager.checkCanceled()</code> debe reemplazarse por <code>com.intellij.openapi.progress.checkCancelled()</code></li>
+  <li><code>com.intellij.openapi.application.Application.invokeAndWait()</code> debe reemplazarse por <code>withContext(Dispatchers.EDT)</code></li>
+  <li>etc.</li>
+</ul>
+</body>
+</html>

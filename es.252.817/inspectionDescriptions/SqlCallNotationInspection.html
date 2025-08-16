@@ -1,0 +1,18 @@
+<html>
+<body>
+Llamada con argumentos posicionales después de argumentos nombrados. Aplicable para PostgreSQL, Oracle y Db2.
+<p>Ejemplo (en PostgreSQL):</p>
+<pre><code>CREATE FUNCTION foo(a int, b int, c int) RETURNS int
+    LANGUAGE plpgsql AS
+$$
+BEGIN
+    RETURN a + b + c;
+END
+$$;
+SELECT foo(a => 1, b => 2, c => 3);
+  -- `3` después de argumentos nombrados
+SELECT foo(1, b => 2, 3);
+  -- `1` y `3` después de argumentos nombrados
+SELECT foo(b => 2, 1, 3);</code></pre>
+</body>
+</html>

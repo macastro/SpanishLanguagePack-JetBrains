@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre el uso de clases específicas de controladores JDBC. El uso de estas clases vincula tu proyecto a una base de datos y controlador específicos, lo que contradice el propósito de JDBC y resulta en pérdida de portabilidad.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import java.sql.Driver;
+  abstract class Sample implements Driver {
+    public void foo() {
+        Sample sample;
+    }
+  }
+</code></pre>
+</body>
+</html>

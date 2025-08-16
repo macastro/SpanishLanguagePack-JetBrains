@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre anotaciones @OptIn innecesarias que pueden eliminarse de forma segura.
+<p>El código que utiliza APIs experimentales requiere la anotación <code>@OptIn</code> porque estas APIs pueden cambiar en cualquier momento. Si dichas APIs ya no se utilizan (por ejemplo, cuando una API experimental se estabiliza y ya no requiere opt-in), esta anotación se vuelve redundante y potencialmente engañosa.
+</p>
+<p>
+    La corrección rápida <b>Eliminar anotación</b> está disponible para eliminar anotaciones <code>@OptIn</code> innecesarias.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  @OptIn(ExperimentalApi::class)
+  fun foo(x: Bar) {
+      x.baz()
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun foo(x: Bar) {
+      x.baz()
+  }
+</code></pre>
+</body>
+</html>

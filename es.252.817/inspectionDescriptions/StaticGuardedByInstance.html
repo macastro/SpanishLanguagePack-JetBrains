@@ -1,0 +1,23 @@
+<html>
+<body>
+Reporta anotaciones <code>@GuardedBy</code> en campos o métodos <code>static</code> donde el lock especificado es un campo no static o <code>this</code>.
+<p>Proteger elementos static con elementos no static puede llevar a una concurrencia excesiva, ya que múltiples hilos pueden bloquear en diferentes contextos de objeto para acceder simultáneamente al campo protegido.</p>
+<p>Ejemplo:</p>
+<pre><code>
+    private ReadWriteLock lock = new ReentrantReadWriteLock();
+    @GuardedBy("lock")
+    public static void bar() {
+        // ...
+    }
+</code></pre>
+<p>Las anotaciones <code>@GuardedBy</code> soportadas son:</p>
+<ul>
+  <li><code>net.jcip.annotations.GuardedBy</code></li>
+  <li><code>javax.annotation.concurrent.GuardedBy</code></li>
+  <li><code>org.apache.http.annotation.GuardedBy</code></li>
+  <li><code>com.android.annotations.concurrency.GuardedBy</code></li>
+  <li><code>androidx.annotation.GuardedBy</code></li>
+  <li><code>com.google.errorprone.annotations.concurrent.GuardedBy</code></li>
+</ul>
+</body>
+</html>

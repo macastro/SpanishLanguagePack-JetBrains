@@ -1,0 +1,29 @@
+<html>
+<body>
+Informa sobre variables locales que tienen el mismo nombre que los campos de las clases circundantes.
+Este tipo de nomenclatura puede llevar a un uso incorrecto de la variable cuando se pretende usar el campo del mismo nombre.
+<p>Se recomienda renombrar la variable usando la corrección rápida.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Foo {
+    public Object foo;
+    void bar() {
+      Object o = new Object() {
+        void baz() {
+          Object foo; // La variable local 'foo' oculta el campo en la clase 'Foo'
+        }
+      };
+    }
+  }
+</code></pre>
+<p>
+  Puede configurar las siguientes opciones para esta inspección:
+</p>
+<ol>
+  <li><strong>Ignorar campos inaccesibles</strong> - Ignora las variables locales que tienen el mismo nombre que los campos de superclase no visibles (por ejemplo, porque son campos private).</li>
+  <li><strong>Ignorar variables locales en contexto static que ocultan campos no static</strong> - 
+Por ejemplo, cuando la variable local está dentro de un método static o dentro de un método en una clase interna static.
+  </li>
+</ol>
+</body>
+</html>

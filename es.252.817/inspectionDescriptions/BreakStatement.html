@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre el uso de la sentencia <code>break</code> en ubicaciones distintas al final de las ramas de una sentencia <code>switch</code>.
+<p>Las sentencias <code>break</code> complican la refactorización y pueden resultar confusas.</p>
+<p>Ejemplo:</p>
+<pre><code>
+void foo(List&lt;String&gt; strs) {
+  for (String str : strs) {
+    if (str.contains("stop")) break;
+    handleStr(str);
+  }
+}
+</code></pre>
+<p>
+</body>
+</html>

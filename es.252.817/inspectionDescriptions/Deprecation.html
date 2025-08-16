@@ -1,0 +1,55 @@
+<html>
+<body>
+Informa sobre el uso de clases, campos y métodos obsoletos.
+Cuando se puede extraer la información necesaria del Javadoc del miembro obsoleto, se puede utilizar una corrección rápida para convertir automáticamente el uso obsoleto.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  class Interesting {
+    /**
+     * @deprecated use {@link #newHotness()} instead
+     */
+    @Deprecated
+    public void oldAndBusted() {}
+    public void newHotness() {}
+  }
+  class ElseWhere {
+    void x(Interesting i) {
+      i.oldAndBusted(); // Advertencia de obsolescencia aquí
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="java">
+  class Interesting {
+    /**
+     * @deprecated use {@link #newHotness()} instead
+     */
+    @Deprecated
+    public void oldAndBusted() {}
+    public void newHotness() {}
+  }
+  class ElseWhere {
+    void x(Interesting i) {
+      i.newHotness();
+    }
+  }
+</code></pre>
+<p>Por defecto, la inspección no emite advertencias cuando es imposible o difícil de evitar. Por ejemplo, el siguiente código no será reportado:</p>
+<pre><code lang="java">
+  abstract class A { //código de biblioteca
+     @Deprecated
+     abstract void m();
+  }
+  class B extends A { //código del proyecto
+     @Override
+     void m() {
+        //doSmth;
+     }
+  }
+</code></pre>
+<p>Configuración de la inspección:</p>
+<p>
+  Las opciones permiten deshabilitar esta inspección para miembros obsoletos, anulaciones de métodos abstractos obsoletos, declaraciones de importación no estáticas, métodos de clases obsoletas o en la misma clase de nivel superior.
+</p>
+</body>
+</html>

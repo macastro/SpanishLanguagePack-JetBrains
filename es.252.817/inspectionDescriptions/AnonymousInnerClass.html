@@ -1,0 +1,34 @@
+<html>
+<body>
+Informar sobre clases anónimas.
+<p>Ocasionalmente, reemplazar las clases anónimas por clases internas puede mejorar la legibilidad y mantenibilidad del código.
+  Algunos estándares de código no recomiendan el uso de clases anónimas.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Example {
+    public static void main(String[] args) {
+      new Thread() {
+        public void run() {
+          work()
+        }
+        private void work() {}
+      }.start();
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Example {
+    public static void main(String[] args) {
+      new MyThread().start();
+    }
+    private static class MyThread extends Thread {
+      public void run() {
+        work();
+      }
+      private void work() {}
+    }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre la concatenación de cadenas que pueden convertirse en plantillas de cadena.
+<p>Se recomienda usar plantillas de cadena ya que hacen que el código sea más legible.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun example() {
+      val capitals = mapOf("France" to "Paris", "Spain" to "Madrid")
+      for ((country, capital) in capitals) {
+          print(capital + " is a capital of " + country)
+      }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun example() {
+      val capitals = mapOf("France" to "Paris", "Spain" to "Madrid")
+      for ((country, capital) in capitals) {
+          print("$capital is a capital of $country")
+      }
+  }
+</code></pre>
+</body>
+</html>

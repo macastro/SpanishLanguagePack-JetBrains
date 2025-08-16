@@ -1,0 +1,10 @@
+<html>
+<body>
+<p>Reporta llamadas redundantes a <code>ReactorDebugAgent.init()</code>.</p>
+<p>
+  El IDE puede inicializar automáticamente el modo Debug de Reactor, por lo que los usuarios no necesitan llamar explícitamente a <code>ReactorDebugAgent.init()</code> o <code>Hooks.onOperatorDebug()</code>.
+  </p>
+  <p>Además, llamar simultáneamente a <code>ReactorDebugAgent.init()</code> y <code>Hooks.onOperatorDebug()</code> provocará que Reactor genere el doble de frames en la pila de depuración.
+  </p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+    Reemplazar texto en JSP,
+    por ejemplo:</font>
+    <br>
+      <code>&nbsp;&nbsp;&lt;<b>html</b>&gt;&lt;<b>body</b>&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Hello!<br>
+        &nbsp;&nbsp;&lt;/<b>body</b>&gt;&lt;/<b>html</b>&gt;</code>
+      <br>
+      <font face="verdana" size="-1">Con etiquetas personalizadas JSP internacionalizadas, por ejemplo:</font>
+      <br>
+      <code>&nbsp;&nbsp;&lt;<b>html</b>&gt;&lt;<b>body</b>&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;<b>bean:message</b>&nbsp;key="HelloKey"/&gt;<br>
+        &nbsp;&nbsp;&lt;/<b>body</b>&gt;&lt;/<b>html</b>&gt;</code>
+    <br>
+      <font face="verdana" size="-1">Esta plantilla incorporada es editable. Además de las expresiones permitidas en el contexto JSP, puede utilizar variables predefinidas que luego se expandirán a sus valores correspondientes.</font>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas aceptan los siguientes valores:</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_KEY}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre de la clave de propiedad especificada en el archivo de propiedades correspondiente.
+    </font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_VALUE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El valor de la propiedad especificada en el archivo de propiedades correspondiente.
+      Este es el valor del texto JSP original seleccionado.
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+El método <code>createOptionsPanel()</code> en la implementación del inspector puede convertirse automáticamente a <code>getOptionsPane()</code>.
+<p>
+  La creación de controles de opciones de inspección a través de <code>createOptionsPanel()</code> está obsoleta y debe reemplazarse por la descripción declarativa de controles <code>getOptionsPane()</code>.
+  Esta inspección analiza las implementaciones de <code>createOptionsPanel()</code> y sugiere automáticamente la conversión a la nueva API si utilizan InspectionOptionsPanel o sus descendientes y son lo suficientemente simples.
+</p>
+<p>
+  Esta inspección actualmente solo es compatible con Java y Kotlin.
+  No puede convertir código que utilice métodos de Kotlin como <code>apply</code> o <code>also</code>. Intente integrarlos directamente.
+</p>
+<p><small>Novedades en 2023.1</small></p>
+</body>
+</html>

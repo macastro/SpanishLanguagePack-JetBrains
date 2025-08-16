@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>Informa sobre beans gestionados que tienen campos de instancia públicos con un ámbito diferente al predeterminado <code>@Dependent</code>.
+  Según la especificación CDI, los ámbitos contextuales (<code>@RequestScoped</code>, <code>@ApplicationScoped</code>, <code>@SessionScoped</code> y <code>ConversationScoped</code>) no están permitidos para beans gestionados que tienen campos de instancia públicos.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  @ApplicationScoped // Advertencia: Un bean con ámbito no predeterminado no debe tener campos públicos
+  class Car {
+    public String engine;
+  }
+</code></pre>
+</body>
+</html>

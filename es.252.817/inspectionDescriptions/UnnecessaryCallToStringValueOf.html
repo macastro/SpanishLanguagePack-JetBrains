@@ -1,0 +1,34 @@
+<html>
+<body>
+Informa sobre llamadas innecesarias a métodos static que convierten sus parámetros a cadenas (por ejemplo, <code>String.valueOf()</code> o <code>Integer.toString()</code>).
+Estas llamadas son innecesarias cuando se utilizan en concatenaciones de cadenas.
+<p>Ejemplo:</p>
+<pre><code>
+  System.out.println("Number: " + Integer.toString(count));
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  System.out.println("Number: " + count);
+</code></pre>
+Además, estas llamadas son innecesarias cuando se utilizan como argumentos en métodos de biblioteca que realizan su propia conversión a cadena.
+Algunos ejemplos de métodos de biblioteca que realizan su propia conversión a cadena son:
+<ul>
+  <li>
+    Clases <code>java.io.PrintWriter</code>, <code>java.io.PrintStream</code>
+    <ul><li><code>print()</code>, <code>println()</code></li></ul>
+  </li>
+  <li>
+    Clases <code>java.lang.StringBuilder</code>, <code>java.lang.StringBuffer</code>
+    <ul><li><code>append()</code></li></ul>
+  </li>
+  <li>
+    Clase <code>org.slf4j.Logger</code>
+    <ul>
+      <li><code>trace()</code>, <code>debug()</code>, <code>info()</code>, <code>warn()</code>, <code>error()</code></li>
+    </ul>
+  </li>
+</ul>
+<p>
+  La opción <b>Informar llamadas que pueden ser reemplazadas por concatenación con cadena vacía</b> también informa sobre casos donde las llamadas a <code>String.valueOf()</code> pueden ser reemplazadas por concatenación con una cadena vacía.
+</body>
+</html>

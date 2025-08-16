@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre declaraciones de variables que se superponen con declaraciones en un ámbito externo.
+<p>Esta situación puede causar confusión y consecuencias inesperadas, ya que el significado de las variables depende del ámbito.</p>
+<p>Ejemplo:</p>
+<pre><code>for i := 0; i &lt; len(nums); i++ {
+    for i := 0; i &lt; len(nums); i++ {
+    }
+  }</code></pre>
+<p>La variable <code>i</code> en el bucle anidado está oculta. Para eliminar el ocultamiento, considere renombrar la variable en el bucle anidado.</p>
+<pre><code>for i := 0; i &lt; len(nums); i++ {
+    for j := 0; j &lt; len(nums); j++ {
+    }
+  }</code></pre>
+</body>
+</html>

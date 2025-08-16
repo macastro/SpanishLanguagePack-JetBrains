@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre campos de tipo <code>java.lang.ThreadLocal</code> que no están declarados como <code>static final</code>.
+<p>
+  En el caso más común, las instancias de <code>java.lang.ThreadLocal</code> asocian estado con un hilo.
+  Los campos <code>java.lang.ThreadLocal</code> que no son static ni final asocian estado con una combinación de instancia y hilo.
+  Esto generalmente es innecesario y suele ser un error que puede provocar fugas de memoria y comportamiento incorrecto.
+</p>
+<p>
+  Se recomienda establecer el campo como <code>static final</code> mediante la corrección rápida.
+<p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  private ThreadLocal tl = ThreadLocal.withInitial(() -> Boolean.TRUE);
+</code></pre>
+</body>
+</html>

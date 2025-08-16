@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa sobre la sincronización de expresiones <code>this</code> o <code>class</code>.
+El informe incluye bloques <code>synchronized</code> y llamadas a <code>wait()</code>, <code>notify()</code> o <code>notifyAll()</code>.
+<p>Sincronizar expresiones <code>this</code> o <code>class</code> puede no ser una buena idea por varias razones:</p>
+<ol>
+  <li>
+    Hace que la sincronización sea parte de la interfaz externa de la clase, lo que dificulta cambiar a otros mecanismos de bloqueo en el futuro,
+  </li>
+  <li>
+    Es difícil rastrear quién exactamente está bloqueando un objeto dado,
+  </li>
+  <li>
+    Permite ataques de denegación de servicio, ya sea intencionales o accidentales durante la herencia.
+  </li>
+</ol>
+<p>Como alternativa, considere sincronizar sobre un objeto de bloqueo <code>private final</code>, sobre el cual tiene control total de acceso.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public void print() {
+    synchronized(this) { // Advertencia: el bloqueo sobre 'this' puede tener efectos secundarios impredecibles
+      System.out.println("synchronized");
+    }
+  }
+  </code></pre>
+</body>
+</html>

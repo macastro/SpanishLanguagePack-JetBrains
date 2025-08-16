@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre la declaración de <code>equal()</code> con un solo parámetro.
+Normalmente, esto es un error tipográfico, cuando en realidad se pretendía usar <code>equals()</code>.
+<p>Se sugiere renombrar el método a <code>equals</code> mediante una corrección rápida.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main {
+    public boolean equal(Object obj) {
+      return true;
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Main {
+    public boolean equals(Object obj) {
+      return true;
+    }
+  }
+</code></pre>
+</body>
+</html>

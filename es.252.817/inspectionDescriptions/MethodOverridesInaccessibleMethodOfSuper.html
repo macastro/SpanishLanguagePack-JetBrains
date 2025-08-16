@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre métodos que tienen la misma firma que métodos inaccesibles en la superclase,
+por ejemplo, métodos private o package-private de la superclase en otro paquete.
+<p>
+  Tales nombres de métodos pueden ser confusos, ya que el método en la subclase parece sobrescribir, pero en realidad oculta el método inaccesible de la superclase.
+  Además, si la visibilidad del método en la superclase cambia en el futuro, podría alterar silenciosamente la semántica de la subclase o causar un error de compilación.
+</p>
+<p>Se recomienda renombrar el método utilizando la corrección rápida.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Super {
+    private void test() {
+    }
+  }
+  public class Sub extends Super {
+    void test() { // Hacer 'Super.test()' public causará un error de compilación
+                  // Hacer 'Super.test()' package-private convertirá 'Sub.test()' en una sobrescritura
+    }
+  }</code></pre>
+<p>
+</body>
+</html>

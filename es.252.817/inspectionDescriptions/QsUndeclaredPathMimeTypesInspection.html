@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>
+  Informa sobre métodos endpoint que no tienen las anotaciones <code>@Produces</code> o <code>@Consumes</code>.
+</p>
+<p>
+  Quarkus analiza estas anotaciones y limita la cantidad de proveedores JAX-RS incluidos en el ejecutable nativo al mínimo necesario para la aplicación. Esto reduce el tamaño del ejecutable nativo.
+</p>
+<p>
+  Anota el método o la clase completa con <code>@Produces</code> o <code>@Consumes</code> (si el método HTTP lo admite) y especifica el tipo MIME objetivo.
+</p>
+</body>
+</html>

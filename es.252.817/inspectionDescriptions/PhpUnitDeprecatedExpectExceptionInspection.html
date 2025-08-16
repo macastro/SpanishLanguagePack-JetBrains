@@ -1,0 +1,18 @@
+<html>
+<body>
+Reporta el uso obsoleto de <code>expectException()</code>.
+<p>
+  El soporte para usar <code>\PHPUnit\Framework\Error\Deprecated</code>,
+  <code>\PHPUnit\Framework\Error\Error</code>,
+  <code>\PHPUnit\Framework\Error\Notice</code> y
+  <code>\PHPUnit\Framework\Error\Warning</code> con <code>expectException()</code> está obsoleto y será eliminado en PHPUnit 10.
+</p>
+<p>
+  En su lugar, se deben usar los métodos <code>expectDeprecation()</code>, <code>expectError()</code>, <code>expectNotice()</code> y 
+  <code>expectWarning()</code>.
+</p>
+<p>
+  Para más información, consulte <a href="https://phpunit.readthedocs.io/en/stable/writing-tests-for-phpunit.html#testing-php-errors-warnings-and-notices">Testing PHP Errors, Warnings, and Notices (phpunit.readthedocs.io)</a>.
+</p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>Informa sobre problemas detectados con valores mutables como listas o diccionarios utilizados como valores predeterminados en argumentos. <br/>
+  Los valores predeterminados de los argumentos se evalúan solo una vez durante la definición de la función, lo que significa que modificar el valor predeterminado de ese argumento afectará a todas las llamadas posteriores a esta función.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+def func(s, cache={}):
+    cache[s] = None
+</code></pre>
+<p>Después de aplicar la corrección rápida, el código se convierte en:</p>
+<pre><code>
+def func(s, cache=None):
+    if cache is None:
+        cache = {}
+    cache[s] = None
+</code></pre>
+</body>
+</html>

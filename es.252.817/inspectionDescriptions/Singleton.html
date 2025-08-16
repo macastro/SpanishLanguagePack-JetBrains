@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta clases singleton.
+<p>Una clase singleton se declara de manera que solo se pueda instanciar una única instancia de la misma. Los singletons complican las pruebas y su presencia puede indicar deficiencias en el diseño orientado a objetos.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Singleton {
+    private static final Singleton ourInstance = new Singleton();
+    private Singleton() {
+    }
+    public Singleton getInstance() {
+        return ourInstance;
+    }
+  }
+</code></pre>
+</body>
+</html>

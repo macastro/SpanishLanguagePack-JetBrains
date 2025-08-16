@@ -1,0 +1,19 @@
+<html>
+<body>
+Reporta implementaciones del método <code>clone()</code>, sus invocaciones y el uso de la interfaz <code>java.lang.Cloneable</code>.
+<p>Algunos estándares de codificación prohíben el uso de <code>clone()</code> y sugieren usar constructores de copia o métodos de fábrica <code>static</code> en su lugar.</p>
+<p>Esta inspección ignora las llamadas a <code>clone()</code> en arrays, ya que es una forma correcta y concisa de copiar arrays.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Copy implements Cloneable /*advertencia*/ {
+    public Copy clone() /*advertencia*/ {
+      try {
+        return (Copy) super.clone(); // advertencia
+      } catch (CloneNotSupportedException e) {
+        throw new AssertionError();
+      }
+    }
+  }
+</code></pre>
+</body>
+</html>

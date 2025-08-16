@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre métodos getter o setter que acceden a campos con nombres diferentes a los esperados.
+Por ejemplo, cuando <code>getY()</code> devuelve el campo <code>x</code>. Esto generalmente puede indicar un error de copiar y pegar.
+<p><b>Ejemplo:</b></p>
+<pre><code>class Point {
+    private int x;
+    private int y;
+    public void setX(int x) { // Advertencia: el setter 'setX()' asigna el campo 'y'
+      this.y = x;
+    }
+    public int getY() { // Advertencia: el getter 'getY()' devuelve el campo 'x'
+      return x;
+    }
+  }
+</code></pre>
+<p>
+  Utilice la casilla de verificación a continuación para informar casos donde los nombres de los campos en la clase coinciden con los nombres de los getters o setters.
+<p>
+</body>
+</html>

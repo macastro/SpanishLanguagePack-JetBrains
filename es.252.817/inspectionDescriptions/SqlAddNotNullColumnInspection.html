@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa sobre intentos de crear columnas NOT NULL sin un valor DEFAULT.
+<p>Ejemplo (Microsoft SQL Server):</p>
+<pre><code>CREATE TABLE foo (a INT, b  INT)
+ALTER TABLE foo ADD c INT NOT NULL;</code></pre>
+<p>Por defecto, las columnas contienen valores NULL. En el ejemplo, usamos la restricción NOT NULL para forzar que la columna no acepte valores NULL.
+  Si prohibimos el uso de valores NULL, debemos establecer un valor DEFAULT que SQL pueda usar al crear nuevos registros.
+</p>
+<pre><code>ALTER TABLE foo ADD c INT NOT NULL DEFAULT 42;</code></pre>
+<p>Puede usar la corrección rápida <b>Agregar valor DEFAULT</b> para añadir rápidamente un valor DEFAULT.</p>
+</body>
+</html>

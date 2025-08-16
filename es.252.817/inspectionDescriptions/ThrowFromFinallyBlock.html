@@ -1,0 +1,21 @@
+<html>
+<body>
+Reporta las declaraciones <code>throw</code> dentro de bloques <code>finally</code>. 
+Aunque a veces es intencional, tales declaraciones <code>throw</code> pueden ocultar excepciones lanzadas desde bloques <code>try</code> y <code>catch</code>, complicando el proceso de depuración.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Fascinating {
+    void doTask(Task t) {
+      try {
+        t.activity();
+      } finally {
+        if (!t.finish()) {
+          throw new IllegalStateException();
+        }
+      }
+    }
+  }
+</code></pre>
+<p>Utiliza la opción <b>Advertir en cada lugar donde se pueda lanzar una excepción declarada</b> para recibir advertencias también cuando se llaman métodos que declaran excepciones.</p>
+</body>
+</html>

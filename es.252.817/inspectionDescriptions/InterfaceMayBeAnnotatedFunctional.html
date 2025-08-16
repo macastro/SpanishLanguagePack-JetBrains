@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre interfaces que pueden ser anotadas con <code>@FunctionalInterface</code>.
+<p>Anotar una interfaz con <code>@FunctionalInterface</code> indica que es una interfaz funcional y no se pueden añadir más métodos <code>abstract</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  interface FileProcessor {
+    void execute(File file);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  @FunctionalInterface
+  interface FileProcessor {
+    void execute(File file);
+  }
+</code></pre>
+</body>
+</html>

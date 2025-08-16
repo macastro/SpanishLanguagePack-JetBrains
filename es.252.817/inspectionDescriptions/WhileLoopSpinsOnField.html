@@ -1,0 +1,44 @@
+<html>
+<body>
+Informa sobre bucles <code>while</code> que realizan espera activa sobre campos no <code>volatile</code>, esperando a que sean modificados por otro hilo.
+<p>
+Además de poder consumir mucha CPU cuando se realiza poco trabajo dentro del bucle, estos bucles probablemente tengan una semántica diferente a la esperada.
+Incluso si otro hilo modifica el valor del campo, el modelo de memoria de Java permite que estos bucles nunca terminen.
+</p>
+<p>
+Además, desde Java 9, se recomienda llamar a <code>Thread.onSpinWait()</code> en bucles de espera activa sobre campos <code>volatile</code>, lo que puede mejorar significativamente el rendimiento en cierto hardware.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class SpinsOnField {
+    boolean ready = false;
+    void run() {
+      while (!ready) {
+      }
+      // Realizar algún trabajo
+    }
+    void markAsReady() {
+      ready = true;
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class SpinsOnField {
+    volatile boolean ready = false;
+    void run() {
+      while (!ready) {
+        Thread.onSpinWait();
+      }
+      // Realizar algún trabajo
+    }
+    void markAsReady() {
+      ready = true;
+    }
+  }
+</code></pre>
+<p>
+Use la opción de inspección para informar solo sobre bucles <code>while</code> vacíos.
+<p>
+</body>
+</html>

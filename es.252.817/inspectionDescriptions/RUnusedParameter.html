@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>Informa sobre parámetros de función no utilizados en el cuerpo de la función.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+my_fahrenheit_to_celsius  &lt;- function(f_temp) {
+  return((temp - 32) * 5 / 9)
+}
+</code></pre>
+<p>Modifica el fragmento de código resaltado para asegurar que el parámetro se utilice o se elimine.</p>
+<p><b>Posible solución:</b></p>
+<pre><code>
+my_fahrenheit_to_celsius  &lt;- function(f_temp) {
+  return((f_temp - 32) * 5 / 9)
+}
+</code></pre>
+</body>
+</html>

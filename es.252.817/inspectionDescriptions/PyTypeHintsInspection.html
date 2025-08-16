@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>Uso inválido de las anotaciones de tipo.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+from typing import TypeVar
+T0 = TypeVar('T1') # El argumento de 'TypeVar' debe ser 'T0'
+def b(p: int) -> int:  # El tipo está especificado tanto en el comentario como en la anotación
+    # type: (int) -> int
+    pass
+def c(p1, p2): # Demasiados argumentos en la firma del tipo
+    # type: (int) -> int
+    pass
+</code></pre>
+<p>Las correcciones rápidas disponibles sugieren varias acciones. Puede renombrar, eliminar o mover los elementos problemáticos. También puede modificar manualmente las declaraciones de tipo para asegurarse de que no se muestren advertencias.</p>
+</body>
+</html>

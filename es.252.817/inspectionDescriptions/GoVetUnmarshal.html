@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre llamadas a <code>json.Unmarshal</code> y funciones similares cuando el argumento para almacenar el resultado no es un puntero o interfaz.
+<p>Estas llamadas fallarán y devolverán un error.</p>
+<p>Para más información sobre <code>Unmarshal</code>, consulta <a href="https://pkg.go.dev/encoding/json#Unmarshal">func Unmarshal en go.dev</a>.</p>
+<p>Ejemplo:</p>
+<pre><code>var animals []Animal
+err := json.Unmarshal(jsonData, animals) // siempre devuelve un error</code></pre>
+<p>Después de aplicar la corrección rápida <b>preponer '&amp;'</b>:</p>
+<pre><code>var animals []Animal
+err := json.Unmarshal(jsonData, &animals)</code>
+</pre>
+</body>
+</html>

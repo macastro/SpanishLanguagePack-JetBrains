@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta las siguientes características no resueltas en las anotaciones relacionadas con EntityGraph:<br/>
+<ul>
+  <li>Valores en <code>@NamedAttributeNode</code></li>
+  <li>Subgráficos nombrados en <code>@NamedAttributeNode</code></li>
+  <li>Nombres en <code>@NamedEntityGraph</code></li>
+</ul><br/>
+<p><b>Ejemplo:</b></p><br/>
+<pre><code lang="java">
+  @Entity
+  @NamedEntityGraph(name = "entity-graph", ...)
+  public class JavaEntity {
+    public void foo() {
+      Persistence.createEntityManagerFactory("")
+        .createEntityManager()
+        .getEntityGraph("unknown-entity-graph"); // Referencia no resuelta
+    }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<html>
+<body>
+Informa sobre comparaciones de igualdad entre valores <code>short</code> y <code>char</code>.
+<p>Este tipo de comparaciones pueden llevar a errores difíciles de detectar, ya que aunque ambos valores tienen 2 bytes de longitud, el valor <code>short</code> tiene signo mientras que el valor <code>char</code> no tiene signo.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+if (Character.MAX_VALUE == shortValue()) {} // Nunca puede ser verdadero
+</code></pre>
+</body>
+</html>

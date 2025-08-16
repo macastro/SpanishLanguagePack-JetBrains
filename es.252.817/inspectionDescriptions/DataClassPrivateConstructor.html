@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta un constructor principal <code>private</code> en una clase de datos.
+<p>
+    Las clases <code>data</code> tienen un método de fábrica <code>copy()</code> que puede usarse como un constructor.
+    Para proporcionar suficiente seguridad, el constructor no debería marcarse como <code>private</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  data class User private constructor(val name: String)
+</code></pre>
+<p>Esta corrección rápida cambiará el modificador de visibilidad del constructor a <code>public</code>:</p>
+<pre><code>
+  data class User(val name: String)
+</code></pre>
+</body>
+</html>

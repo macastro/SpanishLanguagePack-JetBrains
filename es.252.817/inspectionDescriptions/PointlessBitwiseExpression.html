@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre expresiones bit a bit sin sentido.
+<p>
+  Estas expresiones incluyen la aplicación del operador <code>&</code> al valor máximo de un tipo dado, el operador <code>or</code> aplicado a cero y desplazamientos de cero. Tales expresiones pueden aparecer como resultado de refactorizaciones automáticas incompletas y es poco probable que representen la intención original.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // Advertencia: operación sin sentido, puede reemplazarse por `flags`
+  // 0xFFFF_FFFF es el valor máximo de un entero y ambos literales
+  // son tratados como literales enteros de 32 bits.
+  int bits = flags & 0xFFFF_FFFF;
+  // Advertencia: operación sin sentido, puede reemplazarse por `bits`
+  // Una operación OR con 0 siempre produce el otro operando.
+  int or = bits | 0x0;
+  // Advertencia: operación sin sentido, el resultado siempre es 0
+  int xor = or ^ or;
+</code></pre>
+</body>
+</html>

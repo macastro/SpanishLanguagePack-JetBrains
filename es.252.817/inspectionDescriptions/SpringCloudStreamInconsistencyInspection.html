@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Reporta inconsistencias en los métodos del procesador de flujos.</p>
+<p>
+  Los métodos del procesador de flujos de entrada y salida anotados con <code>@StreamListener</code> o <code>@StreamEmitter</code> tienen varias restricciones.
+  Violar estas restricciones resulta en errores en tiempo de ejecución.
+</p>
+<p>Por ejemplo:</p>
+<ul>
+  <li>
+    El atributo <code>value</code> de <code>@StreamListener</code> nunca puede combinarse con parámetros de método anotados con <code>@Input</code> o <code>@Output</code>
+  </li>
+  <li>Se debe especificar un canal de entrada para los métodos anotados con <code>@StreamListener</code></li>
+  <li>Se debe especificar un canal de salida para los métodos que pueden devolver valores</li>
+  <li>No se puede especificar un canal de salida para métodos que no devuelven valores</li>
+  <li>El atributo <code>condition</code> de <code>@StreamListener</code> no puede establecerse para métodos que devuelven valores</li>
+</ul>
+</body>
+</html>

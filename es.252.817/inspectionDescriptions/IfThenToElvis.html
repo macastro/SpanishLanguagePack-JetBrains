@@ -1,0 +1,17 @@
+<html>
+<body>
+El informe se puede contraer a una expresión <code>if-then</code> dentro de una expresión elvis (<code>?:</code>).
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun maybeFoo(): String? = "foo"
+  var foo = maybeFoo()
+  val bar = if (foo == null) "hello" else foo
+</code></pre>
+<p>Esta corrección rápida convertirá la expresión <code>if-then</code> en una expresión elvis (<code>?:</code>):</p>
+<pre><code>
+  fun maybeFoo(): String? = "foo"
+  var foo = maybeFoo()
+  val bar = foo ?: "hello"
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+Reporta clases anidadas <code>public</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Outer {
+    public static class Nested {} // advertencia
+    public class Inner {}         // advertencia
+    public enum Mode {}           // advertencia según la configuración
+    public interface I {}         // advertencia según la configuración
+  }
+</code></pre>
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>Utiliza la opción <b>Ignorar enums internos 'public'</b> para ignorar enumeraciones internas <code>public</code>.</li>
+  <li>Utiliza la opción <b>Ignorar interfaces internas 'public'</b> para ignorar interfaces internas <code>public</code>.</li>
+</ul>
+</body>
+</html>

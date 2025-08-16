@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre clases que no tienen un logger declarado.
+<p>Asegurar que cada clase tenga su propio logger dedicado es un paso importante para proporcionar una implementación de logging uniforme en la aplicación. Esta inspección no informa sobre interfaces, enumeraciones, anotaciones, clases internas ni clases abstractas.</p>
+<p>Por ejemplo:</p>
+<pre><code>
+  <b>public class</b> NoLoggerDeclared {
+    <b>int</b> calculateNthDigitOfPi(<b>int</b> n) {
+      // todo
+      <b>return</b> 1;
+    }
+  }
+</code></pre>
+<p>
+  Se pueden especificar los nombres de las clases logger usando la tabla en la sección de <b>Options</b>.
+Esta inspección informará sobre las clases que no tengan declarado un campo de alguno de los tipos especificados.
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta los siguientes problemas en los descriptores utilizados para desplegar módulos Web en el servidor:
+<ul>
+  <li>Referencias a clases no instanciables</li>
+  <li>Referencias a clases que no extienden las clases requeridas</li>
+  <li>Referencias a clases con ámbito inadecuado</li>
+  <li>Etiquetas y valores de atributos vacíos</li>
+  <li>Etiquetas y valores de atributos que no coinciden con el esquema requerido (por ejemplo, identificadores Java)</li>
+  <li>Etiquetas que no contienen las subetiquetas o atributos requeridos</li>
+  <li>Etiquetas que definen objetos con nombres duplicados</li>
+</ul>
+<p><b>Ejemplo:</b></p><br/>
+<pre><code>
+&lt;web-app&gt;
+  &lt;filter-mapping&gt;
+    &lt;filter-name&gt;CustomFilter&lt;/filter-name&gt; // Error: debe definirse una subetiqueta servlet-name o url-pattern
+  &lt;/filter-mapping&gt;
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;CustomServletName&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/ baseUrl&lt;/url-pattern&gt; // Error: el patrón URI no debe contener espacios
+  &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<html>
+<body>
+Reporta llamadas a <code>notify()</code> y <code>notifyAll()</code> que no se realizan dentro de una sentencia synchronized o método synchronized correspondiente.
+<p>
+  Llamar a estos métodos sin tener el bloqueo del objeto resultará en una excepción <code>IllegalMonitorStateException</code>.
+  Esta construcción no es necesariamente un error, ya que el bloqueo requerido podría haberse obtenido antes de llamar al método contenedor, pero aun así merece una revisión cuidadosa.
+</p>
+</body>
+</html>

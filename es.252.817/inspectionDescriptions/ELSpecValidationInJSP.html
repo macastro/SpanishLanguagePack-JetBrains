@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre problemas potenciales con extensiones EL no estándar: expresiones JSF EL fuera de especificación, expresiones EL no estándar, etc.
+<p><b>Ejemplo:</b></p><br/>
+<pre><code>
+&lt;f:view&gt;
+  &lt;h:form&gt;
+    &lt;f:loadBundle var="example"/&gt;
+    &lt;h:commandButton action="${example.size()}"/&gt; // Advertencia: la llamada al método es una extensión no estándar
+  &lt;/h:form&gt;
+&lt;/f:view&gt;
+</code></pre>
+</body>
+</html>

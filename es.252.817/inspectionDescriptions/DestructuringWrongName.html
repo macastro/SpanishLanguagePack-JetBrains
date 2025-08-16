@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre las declaraciones de desestructuración donde los nombres de las propiedades no coinciden con los de la clase de datos.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  data class Foo(val a: String, val b: Int, val c: String)
+  fun bar(f: Foo) {
+      val (a, c) = f
+  }
+</code></pre>
+<p>La corrección rápida cambia los nombres de las variables para que coincidan con los nombres de los campos de la clase:</p>
+<pre><code>
+  data class Foo(val a: String, val b: Int, val c: String)
+  fun bar(f: Foo) {
+      val (a, b) = f
+  }
+</code></pre>
+</body>
+</html>

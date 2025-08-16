@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre operandos de cadenas vacías en la concatenación de cadenas.
+La concatenación con cadenas vacías se puede usar para convertir objetos no <code>String</code> o tipos primitivos a <code>String</code>, pero sería más claro usar el método <code>String.valueOf()</code>.
+<p>
+  Se sugiere simplificar la concatenación mediante la corrección rápida.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void foo(int x, int y) {
+    String s = "" + x + " ; " + y;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void foo(int x, int y) {
+    String s = x + " ; " + y;
+  }
+</code></pre>
+<p>
+  La opción <b>Informar solo casos donde la cadena vacía puede eliminarse sin cambios adicionales</b> ignora los casos donde eliminar la cadena vacía requeriría agregar una conversión <code>String.valueOf()</code> de otro operando.
+</p>
+</body>
+</html>

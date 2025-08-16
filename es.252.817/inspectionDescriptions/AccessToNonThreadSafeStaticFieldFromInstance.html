@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa sobre accesos a campos <code>static</code> de tipos no seguros para hilos.
+<p>
+  Cuando se accede a campos <code>static</code> desde métodos de instancia o bloques no sincronizados, múltiples hilos pueden acceder al campo.
+  Esto puede provocar efectos secundarios no especificados, como excepciones y resultados incorrectos.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Sample {
+    private static final SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+    String method() {
+      return df.format("");
+    }
+  }
+</code></pre>
+<p>
+  Puede especificar qué tipos deben considerarse no seguros para hilos.
+  Solo se informará sobre campos que tengan exactamente estos tipos o se inicialicen con estos tipos exactos, ya que pueden existir subclases seguras para hilos de estos tipos.
+</p>
+</body>
+</html>

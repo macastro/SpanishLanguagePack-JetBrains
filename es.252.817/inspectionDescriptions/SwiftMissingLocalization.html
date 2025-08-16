@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>
+  Informa sobre el uso de cadenas localizadas que no están agregadas a los archivos de cadenas.
+</p>
+<p>
+  Por defecto, esta inspección se activa si una clave de localización no está definida en ningún archivo de cadenas disponible. Utiliza la casilla de verificación a continuación para emitir advertencias solo cuando la clave no está definida en ningún idioma.
+</p>
+<p>
+  Se recomienda agregar los pares clave-valor faltantes a los archivos de cadenas.
+</p>
+<p>
+  <b>Ejemplo:</b>
+</p>
+<pre><code>
+  let presentation = "Do It"
+</code></pre>
+<p>
+  Después de aplicar la corrección rápida:
+</p>
+<pre><code>
+  let presentation = NSLocalizedString("Do It", comment: ""))
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre casos donde una expresión lambda común se usa en otro método que funciona de la misma manera pero acepta un valor concreto en lugar de un lambda.
+<p>Esta inspección ayuda a simplificar el código.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  Optional.orElseGet(() -> null)
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  Optional.orElse(null)
+</code></pre>
+<p><small>Novedades de la versión 2017.1</small></p>
+</body>
+</html>

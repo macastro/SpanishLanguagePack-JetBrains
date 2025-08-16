@@ -1,0 +1,11 @@
+<html>
+<body>
+Columnas con el mismo nombre que pertenecen a diferentes tablas.
+<p>Ejemplo (MySQL):</p>
+<pre><code>CREATE TABLE foo(id INT PRIMARY KEY);
+CREATE TABLE bar(id INT PRIMARY KEY);
+SELECT foo.id, bar.id FROM foo, bar WHERE id > 0;</code></pre>
+<p>La columna <code>id</code> aparece en las tablas <code>foo</code> y <code>bar</code>. Necesitas calificar el nombre de la columna para que la consulta sea correcta.</p>
+<pre><code>SELECT foo.id, bar.id FROM foo, bar WHERE foo.id > 0;</code></pre>
+</body>
+</html>

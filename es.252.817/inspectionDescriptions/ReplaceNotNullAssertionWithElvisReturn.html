@@ -1,0 +1,19 @@
+<html>
+<body>
+El informe puede reemplazarse con el operador elvis y return (<code>?: return</code>) en lugar de la aserción non-null (<code>!!</code>).
+<p>La aserción non-null puede producir NPE (NullPointerException) inesperados. Se recomienda evitar el uso de <code>!!</code>.</p>
+<p>Esta corrección rápida reemplazará la aserción non-null con <code>return</code> o <code>return null</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun test(number: Int?) {
+      val x = number!!
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun test(number: Int?) {
+      val x = number ?: return
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+Reporta llamadas sospechosas a <code>System.arraycopy()</code>.
+<p>Este tipo de llamadas son sospechosas en los siguientes casos:</p>
+<ul>
+<li>El origen o destino no son de tipo array
+<li>Los tipos de origen y destino son diferentes
+<li>La longitud del bloque copiado es mayor que <code>src.length - srcPos</code>
+<li>La longitud del bloque copiado es mayor que <code>dest.length - destPos</code>
+<li>Cuando el origen y destino son el mismo array, los rangos siempre se superponen
+</ul>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void foo() {
+    int[] src = new int[] { 1, 2, 3, 4 };
+    System.arraycopy(src, 0, src, 1, 2); // Advertencia: copia al mismo array con rangos superpuestos
+  }
+</code></pre>
+<p>
+</body>
+</html>

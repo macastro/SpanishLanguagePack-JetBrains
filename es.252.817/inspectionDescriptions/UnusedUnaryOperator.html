@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre operadores unarios numéricos no utilizados en expresiones.
+<p>Cuando se utilizan operadores unarios sin llaves, estos interrumpen la expresión anterior.
+Por lo tanto, las expresiones matemáticas que abarcan múltiples líneas pueden ser engañosas.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  fun main() {
+      val result = 1 + 2 * 3
+                  + 3              // &lt;== Nota que '+ 3' no pertenece a la variable 'result' y no se utiliza
+      println("Result = $result")  // El resultado es '7', no '10' como se podría esperar
+  }
+</code></pre>
+</body>
+</html>

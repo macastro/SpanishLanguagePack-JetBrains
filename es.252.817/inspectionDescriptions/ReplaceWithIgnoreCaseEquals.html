@@ -1,0 +1,24 @@
+<html>
+<body>
+El informe puede reemplazarse con una comparación sin distinción entre mayúsculas y minúsculas usando <code>equals(..., ignoreCase = true)</code>.
+<p>Con <code>equals()</code>, las cadenas se pueden comparar sin necesidad de asignar cadenas adicionales con <code>toLowerCase()</code> o <code>toUpperCase()</code>.</p>
+<p>Esta corrección rápida reemplazará las comparaciones sin distinción entre mayúsculas y minúsculas que usan <code>toLowerCase()</code> o <code>toUpperCase()</code> por <code>equals(..., ignoreCase = true)</code>.</p>
+<p><b>Nota</b>: La semántica puede cambiar para algunas configuraciones regionales.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun main() {
+      val a = &quot;KoTliN&quot;
+      val b = &quot;KOTLIN&quot;
+      println(a.toLowerCase() == b.toLowerCase())
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun main() {
+      val a = &quot;KoTliN&quot;
+      val b = &quot;KOTLIN&quot;
+      println(a.equals(b, ignoreCase = true))
+  }
+</code></pre>
+</body>
+</html>

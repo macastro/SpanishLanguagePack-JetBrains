@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre expresiones afectadas por la conversión de unboxing (conversión automática de objetos a valores primitivos).
+Es preferible usar primitivos en lugar de objetos. Esto puede tener un impacto significativo en el rendimiento.
+<p><b>Ejemplo:</b></p>
+<pre><code>int x = new Integer(42);</code></pre>
+<p>La corrección rápida hará la conversión explícita:</p>
+<pre><code>int x = new Integer(42).intValue();</code></pre>
+<p>
+  El <i>auto-unboxing</i> fue introducido en Java 5.
+  Esta inspección ayuda con la compatibilidad hacia atrás con versiones anteriores de Java.
+</p>
+</body>
+</html>

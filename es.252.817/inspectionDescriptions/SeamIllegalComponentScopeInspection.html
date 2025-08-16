@@ -1,0 +1,78 @@
+<html>
+<head>
+    <style type="text/css">
+<!--
+    th {font-family:monospace;vertical-align:top;}
+    td {font-family:monospace;text-align:center;}
+-->
+    </style>
+</head>
+<body>
+<p>Informa de anotaciones <code>@Scope</code>, <code>@Role</code> y <code>@DataModel</code> que especifican un ámbito no compatible para un componente determinado.</p>
+
+<p>La siguiente tabla enumera los ámbitos compatibles para cada tipo de componente (los ámbitos predeterminados están en **negrita**):</p>
+<table border="1">
+    <tr>
+        <th></th>
+        <th>Bean de sesión sin estado</th>
+        <th>Bean de sesión con estado</th>
+        <th>Bean de entidad</th>
+        <th>Bean Java</th>
+    </tr>
+    <tr>
+        <th>STATELESS</th>
+        <td><b>X</b></td>
+        <td></td>
+        <td></td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <th>EVENT</th>
+        <td></td>
+        <td>x</td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <th>PAGE</th>
+        <td></td>
+        <td></td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <th>CONVERSATION</th>
+        <td></td>
+        <td><b>X</b></td>
+        <td><b>X</b></td>
+        <td><b>X</b></td>
+    </tr>
+    <tr>
+        <th>SESSION</th>
+        <td></td>
+        <td>x</td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <th>BUSINESS_PROCESS</th>
+        <td></td>
+        <td>x</td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <th>APPLICATION</th>
+        <td></td>
+        <td>x</td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+
+</table>
+
+<p>Las variables de contexto <code>@DataModel</code> tienen diferentes restricciones en su ámbito: si el ámbito no se especifica, el ámbito es el mismo que el ámbito del componente envolvente (EVENT si el componente está en ámbito STATELESS).
+Alternativamente, se puede especificar un ámbito PAGE para las variables de contexto <code>@DataModel</code>.</p>
+
+</body>
+</html>

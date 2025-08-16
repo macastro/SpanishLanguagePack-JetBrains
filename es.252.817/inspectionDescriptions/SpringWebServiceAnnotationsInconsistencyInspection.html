@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Reporta anotaciones incorrectas de <a href="https://spring.io/projects/spring-ws">Spring Web Services</a>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // 1.  @PayloadRoot on non-endpoint classes…
+  public class HolidayEndpoint {
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "HolidayRequest") // @Endpoint clase soporta @PayloadRoot
+	public void handleHolidayRequest(@RequestPayload Element holidayRequest) throws Exception {…}
+  }
+  // 2.  @XPathParam en método @PayLoad
+  @Endpoint
+  public class AirlineEndpoint {
+	  @Namespace(prefix = "m", uri = MESSAGES_NAMESPACE) @ResponsePayload
+	  public GetFlightsResponse getFlights(@XPathParam("//m:sc") String serviceClassString) {…} // método @PayLoad soporta @XPathParam
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<html>
+<body>
+Informar sobre conversiones sospechosas de arrays.
+La conversión de arrays se considera sospechosa cuando un array se convierte a un tipo de array más específico. Aunque estas conversiones son legales en tiempo de compilación, pueden fallar en tiempo de ejecución con una <code>ClassCastException</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Number[] numbers = new Number[]{1L, 2L, 4L};
+  Long[] longs = (Long[])numbers;
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa sobre clases que hacen referencia a sus subclases en inicializadores static o campos static.
+<p>Este tipo de referencias pueden causar un deadlock a nivel de JVM en entornos multihilo (es decir, cuando un hilo intenta cargar la superclase mientras otro hilo intenta cargar la subclase simultáneamente).</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Parent {
+    static final Child field = new Child();
+  }
+  class Child extends Parent { }
+</code></pre>
+</body>
+</html>

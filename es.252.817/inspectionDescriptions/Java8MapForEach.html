@@ -1,0 +1,26 @@
+<html>
+<body>
+Se sugiere reemplazar <code>for(Entry&lt;?,?&gt; entry : map.entrySet()) {...}</code> o 
+<code>map.entrySet().forEach(entry -&gt; ...)</code> por <code>map.forEach((key, value) -> ...)</code>.
+<p>Ejemplo</p>
+<pre><code>
+  void print(Map&lt;String, Integer&gt; map) {
+    map.entrySet().forEach(entry -> {
+      String str = entry.getKey();
+      System.out.println(str + ":" + entry.getValue());
+    });
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void print(Map&lt;String, Integer&gt; map) {
+    map.forEach((str, value) -> System.out.println(str + ":" + value));
+  }
+</code></pre>
+<p>
+  Con la opción <b>No informar bucles</b> habilitada, solo se informarán los casos de <code>entrySet().forEach()</code>.
+  Sin embargo, la corrección rápida también está disponible para bucles <code>for</code>.
+</p>
+<p><small>Novedades de la versión 2017.1</small></p>
+</body>
+</html>

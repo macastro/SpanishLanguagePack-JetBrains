@@ -1,0 +1,93 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td><font face="verdana" size="-1">
+      Define la plantilla para generar JavaDoc para campos, por ejemplo, cuando se aplica la intención <i>Añadir Javadoc</i>.<br><br>
+Además de las expresiones y comentarios de Java, puedes usar variables predefinidas que se expandirán como macros a sus valores correspondientes.<br><br>
+Las plantillas de la pestaña <b>Includes</b> pueden incluirse usando la directiva <i>#parse</i>. Para incluir una plantilla, especifica su nombre completo como un parámetro entre comillas (por ejemplo, <i>#parse("File Header.java")</i>).
+    </font></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas aceptan los siguientes valores:</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${ELEMENT_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del miembro de la clase para el que se genera el JavaDoc</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CONTAINING_CLASS}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la clase contenedora</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PACKAGE_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del paquete donde se crea el nuevo enum</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del nuevo enum que especificaste en el diálogo <b>Crear Nueva Clase</b></font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de inicio de sesión del usuario actual en el sistema</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del mes actual (Jan, Feb, etc.)</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual (January, February, etc.)</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Día del mes actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+El bucle puede ser reemplazado por un único método <code>String.repeat()</code> (disponible desde Java 11).
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void append(StringBuilder sb, int count, Object obj) {
+    for (int i = 0; i &lt; count; i++) {
+      sb.append(obj);
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void append(StringBuilder sb, int count, Object obj) {
+    sb.append(String.valueOf(obj).repeat(Math.max(0, count)));
+  }
+</code></pre>
+<p>
+  Por defecto, si no se puede demostrar estáticamente que <code>count</code> no es negativo, la comprobación puede envolver <code>count</code> con <code>Math.max(0, count)</code>. Esto se hace para prevenir posibles cambios semánticos, ya que <code>String.repeat()</code> rechaza números negativos.
+  Este comportamiento puede desactivarse si es necesario usando la opción <b>Agregar Math.max(0, count) para evitar posibles cambios semánticos</b>.</p>
+  <p>De manera similar, si no se sabe si la cadena a repetir puede ser <code>null</code>, se puede envolver en <code>String.valueOf</code> para prevenir posibles <code>NullPointerException</code>.
+</p>
+<p>Esta inspección solo se informa cuando el nivel de lenguaje del proyecto o módulo es 11 o superior.</p>
+<p><small>Novedades en 2019.1</small></p>
+</body>
+</html>

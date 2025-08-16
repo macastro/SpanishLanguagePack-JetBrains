@@ -1,0 +1,18 @@
+<html>
+<body>
+Se informa sobre expresiones <code>new FileInputStream()</code> o <code>new FileOutputStream()</code> que pueden ser reemplazadas por llamadas a <code>Files.newInputStream()</code> o <code>Files.newOutputStream()</code> respectivamente.
+<br>
+Los flujos creados usando los métodos de <code>Files</code> suelen ser más eficientes que los creados usando constructores de flujo.
+<p>Ejemplo:</p>
+<pre><code>
+  InputStream is = new BufferedInputStream(new FileInputStream(file));
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  InputStream is = new BufferedInputStream(Files.newInputStream(file.toPath()));
+</code></pre>
+<p>Si el nivel del lenguaje es 10 o superior, esta inspección no mostrará advertencias, pero la corrección rápida seguirá estando disponible.</p>
+<p>Esta inspección solo informa cuando el nivel del lenguaje del proyecto o módulo es 7 o superior.</p>
+<p><small>Novedades en 2022.1</small></p>
+</body>
+</html>

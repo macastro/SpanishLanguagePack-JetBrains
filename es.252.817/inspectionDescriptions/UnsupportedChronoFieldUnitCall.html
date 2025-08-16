@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta llamadas a métodos de <code>java.time</code> (<code>get()</code>, <code>getLong()</code>,
+<code>with()</code>, <code>plus()</code>, <code>minus()</code>) que utilizan constantes enum no soportadas de <code>java.time.temporal.ChronoField</code> o <code>java.time.temporal.ChronoUnit</code> como argumentos.
+Estas llamadas lanzarán una <code>UnsupportedTemporalTypeException</code> en tiempo de ejecución.
+<p>Ejemplo:</p>
+<pre><code>
+LocalTime localTime = LocalTime.now();
+int year = localTime.get(ChronoField.YEAR);
+</code></pre>
+<p><small>Novedades de la versión 2023.2</small></p>
+</body>
+</html>

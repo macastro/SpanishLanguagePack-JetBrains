@@ -1,0 +1,30 @@
+<html>
+<body>
+Informa sobre implementaciones de <code>hashCode()</code> que acceden a variables no <code>final</code>.
+<p>
+  Este tipo de acceso puede hacer que <code>hashCode()</code> devuelva diferentes valores en distintos momentos durante el ciclo de vida del objeto, lo que puede causar problemas cuando se utilizan clases de colecciones estándar.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Drink {
+    String name;
+    Drink(String name) { this.name = name; }
+    @Override public int hashCode() {
+      return Objects.hash(name); //advertencia
+    }
+  }
+  ...
+    Drink coffee = new Drink("Coffee");
+    priceMap.put(coffee, 10.0);
+    coffee.name = "Tea";
+    double coffeePrice = priceMap.get(coffee); //no se encuentra
+</code></pre>
+<p>Se sugiere hacer el campo final mediante la corrección rápida:</p>
+<pre><code>
+  class Drink {
+    final String name;
+    ...
+  }
+</code></pre>
+</body>
+</html>

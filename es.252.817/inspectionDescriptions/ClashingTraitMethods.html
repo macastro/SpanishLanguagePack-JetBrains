@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa sobre clases que implementan dos o más traits (que contienen métodos con la misma firma).
+<p>La invocación de dichos métodos puede producir resultados inesperados.</p>
+<p>Esta corrección rápida añade una sobrescritura explícita del método.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  trait T1 {
+      def foo() {}
+  }
+  trait T2 {
+      def foo() {}
+  }
+  class X implements T1, T2 {}
+  // Llamará a T2.foo()
+  new X().foo()
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class X implements T1, T2 {
+      @Override
+      Object foo() {
+          return T2.super.foo()
+      }
+  }
+</code></pre>
+</body>
+</html>

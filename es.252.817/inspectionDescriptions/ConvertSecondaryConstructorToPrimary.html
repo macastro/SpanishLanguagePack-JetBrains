@@ -1,0 +1,19 @@
+<html>
+<body>
+El informe indica que el constructor secundario puede reemplazarse por un constructor principal más conciso.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class User {
+      val name: String
+      constructor(name: String) {
+          this.name = name
+      }
+  }
+</code></pre>
+<p>La corrección rápida convertirá automáticamente el código a:</p>
+<pre><code>
+  class User(val name: String) {
+  }
+</code></pre>
+</body>
+</html>

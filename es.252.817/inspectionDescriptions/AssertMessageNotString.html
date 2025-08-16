@@ -1,0 +1,15 @@
+<html>
+<body>
+Reporta mensajes <code>assert</code> que no son del tipo <code>java.lang.String</code>.
+<p>El uso de cadenas de texto permite proporcionar más información, lo que ayuda a diagnosticar fallos o razones de la aserción.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void foo(List&lt;Integer&gt; myList) {
+    assert myList.isEmpty() : false;
+  }
+</code></pre>
+<p>
+La opción <b>Advertir solo cuando el mensaje de <code>assert</code> es 'boolean' o 'java.lang.Boolean'</b> emite advertencias únicamente cuando el tipo del mensaje <code>assert</code> es <code>boolean</code> o <code>java.lang.Boolean</code>.
+Los mensajes detallados de tipo <code>boolean</code> difícilmente proporcionan información adicional sobre el fallo de la aserción y podrían ser el resultado de escribir incorrectamente <code>:</code> en lugar de <code>&</code>.
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre métodos <code>clone()</code> que no están marcados como <code>final</code>.
+<p>
+  El método <code>clone()</code> puede usarse para instanciar objetos sin usar constructores, por lo que permitir la sobrescritura del método <code>clone()</code> puede llevar a la corrupción de objetos e incluso a vulnerabilidades de seguridad. Esto se puede prevenir haciendo que el método <code>clone()</code> o la clase contenedora sea <code>final</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main implements Cloneable {
+      @Override
+      protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+      }
+  }
+</code></pre>
+</body>
+</html>

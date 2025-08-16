@@ -1,0 +1,19 @@
+<html>
+<body>
+Reporta clases anidadas con modificador <code>protected</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Outer {
+    protected static class Nested {} // advertencia
+    protected class Inner {}         // advertencia
+    protected enum Mode {}           // advertencia según configuración
+    protected interface I {}         // advertencia según configuración
+  }
+</code></pre>
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>Utiliza la opción <b>Ignorar enumeraciones internas 'protected'</b> para ignorar enumeraciones internas con modificador <code>protected</code>.</li>
+  <li>Utiliza la opción <b>Ignorar interfaces internas 'protected'</b> para ignorar interfaces internas con modificador <code>protected</code>.</li>
+</ul>
+</body>
+</html>

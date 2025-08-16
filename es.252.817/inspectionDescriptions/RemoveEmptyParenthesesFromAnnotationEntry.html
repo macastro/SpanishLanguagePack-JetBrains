@@ -1,0 +1,21 @@
+<html>
+<body>
+Reporta paréntesis redondos redundantes en las entradas de anotaciones.
+<p>Use la corrección rápida "Eliminar paréntesis innecesarios" para limpiar el código.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  annotation class MyAnnotationA
+  annotation class MyAnnotationB(val x: Int)
+  annotation class MyAnnotationC(val x: Int = 10) // tiene valor predeterminado
+  @MyAnnotationA() // &lt;== paréntesis redundantes
+  fun testA() {
+  }
+  @MyAnnotationB() // &lt;== faltan argumentos, paréntesis obligatorios
+  fun testB() {
+  }
+  @MyAnnotationC() // &lt;== paréntesis redundantes
+  fun testC() {
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+Informa sobre recursos <code>Channel</code> que no se han cerrado de forma segura, incluyendo cualquier instancia creada mediante la llamada a <code>getChannel()</code> en recursos de archivo o socket.
+<p>
+  Por defecto, esta inspección asume que los recursos pueden ser cerrados por cualquier método que contenga 'close' o 'cleanup' en su nombre.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void send(Socket socket) throws IOException {
+    SocketChannel channel = socket.getChannel(); //advertencia
+    channel.write(ByteBuffer.wrap("message".getBytes()));
+  }
+</code></pre>
+<p>
+  Configure la inspección con las siguientes opciones:
+</p>
+<ul>
+  <li>
+    Si se permite abrir recursos <code>Channel</code> dentro de un bloque <code>try</code>. Este estilo es menos preferible ya que es más complejo que abrir el <code>Channel</code> antes del bloque <code>try</code>.
+  </li>
+  <li>
+    Si el recurso puede ser cerrado por cualquier llamada a método que tome el recurso como argumento.
+  </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>Informa sobre elementos XML obsoletos en el contexto de aplicaciones basadas en XML de la versión actual de <a href="https://spring.io/projects/spring-integration">Spring Integration</a>.</p>
+<p>Para más información, consulte la <a href="https://github.com/SpringSource/spring-integration/wiki/Spring-Integration-2.0-to-2.1-Migration-Guide">guía de migración</a>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+&lt;beans ... &gt;
+   &lt;int:channel id="failChannel"
+                dispatcher="<strong>failover</strong>"/&gt; &lt;!-- Esta característica está obsoleta, utilice el subelemento dispatcher en su lugar --&gt;
+   &lt;int:poller default="true"&gt;
+     &lt;<strong>int:cron-trigger</strong>  expression="5"/&gt;  &lt;!-- Este elemento ha sido eliminado en Spring Integration 2.1, utilice la característica 'cron' en su lugar --&gt;
+     &lt;<strong>int:interval-trigger</strong> interval="3"/&gt; &lt;!-- Este elemento ha sido eliminado en Spring Integration 2.1, utilice la característica interval-trigger en su lugar --&gt;
+  &lt;/int:poller&gt;
+  &lt;ftp:inbound-channel-adapter session-factory="ftpSessionFactory"
+                               cache-sessions="<strong>false</strong>" &lt;!--  This attribute is deprecated, use CachingSessionFactory instead --&gt;
+                               channel="channel"/&gt;
+&lt;/beans&gt;
+</code></pre>
+</body>
+</html>

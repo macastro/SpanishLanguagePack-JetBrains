@@ -1,0 +1,35 @@
+<html>
+<body>
+Informa sobre la asignación de objetos o arrays dentro de bucles. Aunque no necesariamente es un problema, las asignaciones de objetos dentro de bucles son buenos lugares para buscar fugas de memoria y problemas de rendimiento.
+<p>
+  La inspección informa sobre las siguientes estructuras:
+</p>
+<ul>
+  <li>Asignaciones explícitas mediante el operador <code>new</code></li>
+  <li>Métodos conocidos que devuelven nuevos objetos</li>
+  <li>Referencias a métodos vinculados a instancias</li>
+  <li>Lambdas que capturan variables o referencias a <code>this</code></li>
+</ul>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // 显式分配
+  for (Status status : Status.values()) {
+    declarationsMap.put(status, new ArrayList&lt;&gt;());
+  }
+  // Lambda 捕获变量
+  String message = "Engine running.";
+  for (Engine engine : engines) {
+      if (!isRunning(engine)) {
+          logger.warn(() -> {
+              return String.format(message);
+          });
+      }
+  }
+  // 实例绑定方法引用
+  for(Node node : nodes) {
+    descriptor = node.getDescription();
+    descriptor.ifPresent(dynamicTestExecutor::execute);
+  }
+</code></pre>
+</body>
+</html>

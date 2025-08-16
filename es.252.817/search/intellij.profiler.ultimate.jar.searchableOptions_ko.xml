@@ -1,0 +1,35 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="hprof" path="ActionManager" hit="Hprof 스냅샷 열기" />
+    <option name="스냅샷" path="ActionManager" hit="Hprof 스냅샷 열기" />
+    <option name="열기" path="ActionManager" hit="Hprof 스냅샷 열기" />
+    <option name="메모리" path="ActionManager" hit="메모리 스냅샷 캡처" />
+    <option name="스냅샷" path="ActionManager" hit="메모리 스냅샷 캡처" />
+    <option name="캡처" path="ActionManager" hit="메모리 스냅샷 캡처" />
+    <option name="프로세스" path="ActionManager" hit="프로세스 프로파일" />
+    <option name="프로파일" path="ActionManager" hit="프로세스 프로파일" />
+    <option name="연결" path="ActionManager" hit="프로파일러 연결" />
+    <option name="프로파일러" path="ActionManager" hit="프로파일러 연결" />
+  </configurable>
+  <configurable id="profiler.jvm" configurable_name="Java 프로파일러">
+    <option name="java" hit="Java 프로파일러" />
+    <option name="프로파일러" hit="Java 프로파일러" />
+    <option name="gc" hit="네이티브 호출 수집 GC 스레드  JNI 호출 등 " />
+    <option name="jni" hit="네이티브 호출 수집 GC 스레드  JNI 호출 등 " />
+    <option name="네이티브" hit="네이티브 호출 수집 GC 스레드  JNI 호출 등 " />
+    <option name="등" hit="네이티브 호출 수집 GC 스레드  JNI 호출 등 " />
+    <option name="수집" hit="네이티브 호출 수집 GC 스레드  JNI 호출 등 " />
+    <option name="스레드" hit="네이티브 호출 수집 GC 스레드  JNI 호출 등 " />
+    <option name="호출" hit="네이티브 호출 수집 GC 스레드  JNI 호출 등 " />
+    <option name="md" hit="비동기 프로파일러 README md" />
+    <option name="readme" hit="비동기 프로파일러 README md" />
+    <option name="비동기" hit="비동기 프로파일러 README md" />
+    <option name="프로파일러" hit="비동기 프로파일러 README md" />
+    <option name="에이전트" hit="에이전트 " />
+    <option name="에이전트" hit="에이전트 옵션 " />
+    <option name="옵션" hit="에이전트 옵션 " />
+    <option name="m" hit="이름 M  " />
+    <option name="이름" hit="이름 M  " />
+  </configurable>
+</options>

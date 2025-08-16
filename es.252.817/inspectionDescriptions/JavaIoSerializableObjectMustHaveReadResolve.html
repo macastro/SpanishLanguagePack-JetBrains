@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>
+    Reporta un <code>object</code> (incluyendo <code>data object</code>) que implementa <code>java.io.Serializable</code> pero no implementa <a href="https://docs.oracle.com/en/java/javase/11/docs/specs/serialization/input.html#the-readresolve-method">readResolve</a>
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import java.io.Serializable
+  object Foo : Serializable
+</code></pre>
+<p>La corrección rápida implementará el método <code>readResolve</code>:</p>
+<pre><code>
+  import java.io.Serializable
+  object Foo : Serializable {
+      private fun readResolve() = Foo
+  }
+</code></pre>
+</body>
+</html>

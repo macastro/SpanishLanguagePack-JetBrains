@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa sobre operaciones individuales dentro de un bucle que pueden ser reemplazadas por métodos por lotes.
+<p>
+  Los métodos por lotes no solo son más concisos, sino que a veces también tienen mejor rendimiento.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  void test(Collection&lt;Integer&gt; numbers) {
+    List&lt;Integer&gt; result = new ArrayList&lt;>();
+    for (Integer i : numbers) {
+      result.add(i);
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección:</p>
+<pre><code>
+  void test(Collection&lt;Integer&gt; numbers) {
+    List&lt;Integer&gt; result = new ArrayList&lt;>();
+    result.addAll(numbers);
+  }
+</code></pre>
+<p>
+  Aunque los métodos por lotes requieren colecciones, la opción <b>envolver arrays con Arrays.asList()</b> permite informar sobre arrays.
+  En este caso, la corrección rápida envolverá automáticamente el array en una llamada a <code>Arrays.asList()</code>.
+</p>
+<p><small>Novedades de la versión 2017.1</small></p>
+</body>
+</html>

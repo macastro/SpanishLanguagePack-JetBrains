@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre clases <code>Serializable</code> que no implementan los métodos <code>readObject()</code> y <code>writeObject()</code>.
+<p>
+  Sin la implementación de los métodos <code>readObject()</code> y <code>writeObject()</code>, se utilizará el algoritmo de serialización predeterminado, lo que puede ser una opción subóptima para el rendimiento y la compatibilidad en muchos entornos.
+</p>
+<p>
+  Configure la inspección con las siguientes opciones:
+</p>
+<ul>
+  <li>
+    Lista de clases cuyos herederos no deberían ser reportados por esta inspección.
+    Esto es aplicable a clases que heredan <code>Serializable</code> de una superclase pero no se utilizan para serialización.
+  </li>
+  <li>
+    Si se deben ignorar las clases <code>Serializable</code> sin campos no estáticos.
+  </li>
+  <li>
+    Si se deben ignorar las clases anónimas <code>Serializable</code>.
+  </li>
+</ul>
+</body>
+</html>

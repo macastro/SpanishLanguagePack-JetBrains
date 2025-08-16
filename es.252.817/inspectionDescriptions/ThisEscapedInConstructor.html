@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa sobre posibles escapes de <code>this</code> durante la inicialización de objetos. El escape ocurre cuando <code>this</code> se utiliza como argumento de método o como objeto de asignación en un constructor o inicializador. Estos escapes pueden provocar errores difíciles de detectar, ya que el objeto queda disponible en un contexto donde no se garantiza su inicialización.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+    {
+      System.out.println(this);
+    }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre bucles que pueden ser reemplazados por llamadas a la API de Stream usando expresiones lambda.
+<p>Este tipo de reemplazo cambia el estilo imperativo a funcional, haciendo que el código sea más conciso.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  <b>boolean</b> check(List&lt;String> data) {
+    <b>for</b> (String e : data) {
+      String trimmed = e.trim();
+      <b>if</b> (!trimmed.startsWith("xyz")) {
+        <b>return</b> false;
+      }
+    }
+    return true;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  <b>boolean</b> check(List&lt;String> data) {
+    <b>return</b> data.stream().map(String::trim).allMatch(trimmed -> trimmed.startsWith("xyz"));
+  }
+</code></pre>
+</body>
+</html>

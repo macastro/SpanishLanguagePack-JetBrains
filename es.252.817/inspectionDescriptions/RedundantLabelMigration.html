@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>A partir de Kotlin 1.4, se reportan las etiquetas redundantes que causan errores de compilación.</p>
+<p>Desde Kotlin 1.0, es posible etiquetar cualquier declaración:</p>
+<pre><code>
+  fun foo() {
+    L1@ val x = L2@bar()
+  }
+</code></pre>
+Sin embargo, estas etiquetas solo se pueden referenciar de algunas formas limitadas:
+<ul>
+    <li>break/continue en bucles</li>
+    <li>retornos no locales desde lambdas inline o funciones anónimas inline</li>
+</ul>
+<p>A partir de Kotlin 1.4, el uso de tales etiquetas está prohibido.</p>
+<p>Esta comprobación solo se reporta cuando el nivel del lenguaje Kotlin del proyecto o módulo es 1.4 o superior.</p>
+</body>
+</html>

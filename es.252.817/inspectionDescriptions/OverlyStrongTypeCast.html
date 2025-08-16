@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre conversiones de tipo demasiado específicas. Por ejemplo, cuando un objeto se convierte a <code>ArrayList</code> cuando una conversión a <code>List</code> también funcionaría.
+<p>
+  <b>Nota</b>: Similar a la comprobación de <i>conversiones de tipo redundantes</i>, si intencionalmente está utilizando una conversión más específica para generar un <code>ClassCastException</code>, aplicar esta corrección podría alterar la semántica del programa.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  interface Super {
+    void doSmth();
+  }
+  interface Sub extends Super { }
+  void use(Object obj) {
+    // Advertencia: se puede usar ((Super)obj).doSmth()
+    ((Sub)obj).doSmth();
+  }
+</code></pre>
+<p>
+  Utilice la casilla de verificación a continuación para ignorar las conversiones cuando haya una comprobación de <code>instanceof</code> correspondiente en el código.
+</body>
+</html>

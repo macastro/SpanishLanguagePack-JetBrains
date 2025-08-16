@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta variables locales que se utilizan únicamente en la siguiente instrucción <code>return</code> o en una copia exacta de otra variable.
+<p>Estas variables pueden ser inlineadas de forma segura para hacer el código más claro y comprensible.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun sum(a: Int, b: Int): Int {
+      val c = a + b
+      return c
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun sum(a: Int, b: Int): Int {
+      return a + b
+  }
+</code></pre>
+<p>Configuración de la inspección:</p>
+<p>La opción <b>Reportar variables que se retornan inmediatamente</b> permite reportar variables que se retornan de inmediato.
+    Estas variables pueden mejorar la legibilidad del código en algunos casos cuando se les da un nombre descriptivo, razón por la cual esta opción está desactivada por defecto.</p>
+</body>
+</html>

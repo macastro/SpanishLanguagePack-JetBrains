@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa sobre variables declaradas como <code>java.lang.String</code> que se concatenan repetidamente. Estas variables pueden declararse de manera más eficiente como <code>java.lang.StringBuffer</code> o <code>java.lang.StringBuilder</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  String s = "";
+  for (int i = 0; i &lt; names.length; i++) {
+    String name = names[i] + (i == names.length - 1 ? "" : " ");
+    s = s + name;
+  }
+</code></pre>
+<p>Este tipo de bucle puede reemplazarse por:</p>
+<pre><code>
+  StringBuilder s = new StringBuilder();
+  for (int i = 0; i &lt; names.length; i++) {
+    String name = names[i] + (i == names.length - 1 ? "" : " ");
+    s.append(name);
+  }
+</code></pre>
+<p>O incluso puede reemplazarse por:</p>
+<pre><code>
+  String s = String.join(" ", names);
+</code></pre>
+<p>
+  Utilice esta opción para que la inspección solo informe cuando la variable se concatene dentro de un bucle.
+</p>
+</body>
+</html>

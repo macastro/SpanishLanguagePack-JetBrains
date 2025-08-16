@@ -1,0 +1,23 @@
+<html>
+<body>
+Una interfaz en la lista <code>implements</code> de una clase o en la lista <code>extends</code> de una interfaz que ya está implementada por una superclase o extendida por una superinterfaz.
+Esta declaración es redundante y puede eliminarse de forma segura.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class X implements One, Two {
+  }
+  interface One {}
+  interface Two extends One {}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class X implements Two {
+  }
+  interface One {}
+  interface Two extends One {}
+</code></pre>
+<p>
+Utilice esta opción para no reportar <code>Serializable</code> o <code>Externalizable</code> en las listas <code>extends</code> o <code>implements</code>.
+</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre el acceso a campos <code>private</code> o <code>protected</code> de otro objeto.
+Java permite el acceso a estos campos de objetos que pertenecen a la misma clase que el objeto actual, pero algunos estilos de codificación desaconsejan este uso. Además, este acceso directo a campos <code>private</code> puede fallar en arquitecturas orientadas a componentes (como Spring o Hibernate), que esperan que todo acceso a otros objetos se realice mediante llamadas a métodos, permitiendo que el framework medie el acceso mediante proxies.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Base {
+    protected int bar;
+    void increment(Base base) {
+      bar++;
+      base.bar++; // warning: direct access to another object's non-public field
+    }
+  }
+</code></pre>
+El campo puede ser encapsulado mediante una corrección rápida.
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>Use la opción <b>Ignorar accesos desde la misma clase</b> para ignorar los accesos desde la misma clase y solo informar sobre accesos desde clases internas o externas.
+    <p>Para ignorar accesos desde clases internas, use la opción anidada <b>Ignorar accesos desde clases internas</b>.</p>
+  </li>
+  <li>Use <b>Ignorar accesos desde el método 'equals()'</b> para ignorar los accesos desde el método <code>equals()</code>.</li>
+</ul>
+</body>
+</html>

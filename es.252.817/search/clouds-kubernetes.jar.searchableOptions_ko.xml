@@ -1,0 +1,452 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="'종속성' 섹션에 새 종속성 추가" />
+    <option name="새" path="ActionManager" hit="'종속성' 섹션에 새 종속성 추가" />
+    <option name="섹션에" path="ActionManager" hit="'종속성' 섹션에 새 종속성 추가" />
+    <option name="종속성" path="ActionManager" hit="'종속성' 섹션에 새 종속성 추가" />
+    <option name="추가" path="ActionManager" hit="'종속성' 섹션에 새 종속성 추가" />
+    <option name="helm" path="ActionManager" hit="Helm Lint" />
+    <option name="lint" path="ActionManager" hit="Helm Lint" />
+    <option name="helm" path="ActionManager" hit="Helm 매개변수 구성" />
+    <option name="구성" path="ActionManager" hit="Helm 매개변수 구성" />
+    <option name="매개변수" path="ActionManager" hit="Helm 매개변수 구성" />
+    <option name="helm" path="ActionManager" hit="Helm 종속성" />
+    <option name="종속성" path="ActionManager" hit="Helm 종속성" />
+    <option name="helm" path="ActionManager" hit="Helm 종속성 업데이트" />
+    <option name="업데이트" path="ActionManager" hit="Helm 종속성 업데이트" />
+    <option name="종속성" path="ActionManager" hit="Helm 종속성 업데이트" />
+    <option name="helm" path="ActionManager" hit="Helm 차트" />
+    <option name="차트" path="ActionManager" hit="Helm 차트" />
+    <option name="helm" path="ActionManager" hit="Helm 템플릿" />
+    <option name="템플릿" path="ActionManager" hit="Helm 템플릿" />
+    <option name="kubectl을" path="ActionManager" hit="Kubectl을 설치하는 방법…" />
+    <option name="방법" path="ActionManager" hit="Kubectl을 설치하는 방법…" />
+    <option name="설치하는" path="ActionManager" hit="Kubectl을 설치하는 방법…" />
+    <option name="kubernetes" path="ActionManager" hit="Kubernetes 리소스" />
+    <option name="리소스" path="ActionManager" hit="Kubernetes 리소스" />
+    <option name="kubernetes" path="ActionManager" hit="Kubernetes 리소스 파일(YAML)을 생성합니다" />
+    <option name="yaml" path="ActionManager" hit="Kubernetes 리소스 파일(YAML)을 생성합니다" />
+    <option name="리소스" path="ActionManager" hit="Kubernetes 리소스 파일(YAML)을 생성합니다" />
+    <option name="생성합니다" path="ActionManager" hit="Kubernetes 리소스 파일(YAML)을 생성합니다" />
+    <option name="을" path="ActionManager" hit="Kubernetes 리소스 파일(YAML)을 생성합니다" />
+    <option name="파일" path="ActionManager" hit="Kubernetes 리소스 파일(YAML)을 생성합니다" />
+    <option name="telepresence" path="ActionManager" hit="Telepresence 연결" />
+    <option name="연결" path="ActionManager" hit="Telepresence 연결" />
+    <option name="telepresence" path="ActionManager" hit="Telepresence 인터셉션을 생성합니다" />
+    <option name="생성합니다" path="ActionManager" hit="Telepresence 인터셉션을 생성합니다" />
+    <option name="인터셉션을" path="ActionManager" hit="Telepresence 인터셉션을 생성합니다" />
+    <option name="telepresence" path="ActionManager" hit="Telepresence 인터셉트를 생성합니다" />
+    <option name="생성합니다" path="ActionManager" hit="Telepresence 인터셉트를 생성합니다" />
+    <option name="인터셉트를" path="ActionManager" hit="Telepresence 인터셉트를 생성합니다" />
+    <option name="telepresence" path="ActionManager" hit="Telepresence 종료" />
+    <option name="종료" path="ActionManager" hit="Telepresence 종료" />
+    <option name="telepresence로" path="ActionManager" hit="Telepresence로 인터셉트" />
+    <option name="인터셉트" path="ActionManager" hit="Telepresence로 인터셉트" />
+    <option name="telepresence를" path="ActionManager" hit="Telepresence를 클러스터에 연결하고 인터셉트를 활성화합니다" />
+    <option name="연결하고" path="ActionManager" hit="Telepresence를 클러스터에 연결하고 인터셉트를 활성화합니다" />
+    <option name="인터셉트를" path="ActionManager" hit="Telepresence를 클러스터에 연결하고 인터셉트를 활성화합니다" />
+    <option name="클러스터에" path="ActionManager" hit="Telepresence를 클러스터에 연결하고 인터셉트를 활성화합니다" />
+    <option name="활성화합니다" path="ActionManager" hit="Telepresence를 클러스터에 연결하고 인터셉트를 활성화합니다" />
+    <option name="telepresence을" path="ActionManager" hit="Telepresence을 종료하고 데몬을 중지합니다" />
+    <option name="데몬을" path="ActionManager" hit="Telepresence을 종료하고 데몬을 중지합니다" />
+    <option name="종료하고" path="ActionManager" hit="Telepresence을 종료하고 데몬을 중지합니다" />
+    <option name="중지합니다" path="ActionManager" hit="Telepresence을 종료하고 데몬을 중지합니다" />
+    <option name="yaml" path="ActionManager" hit="YAML 보기" />
+    <option name="보기" path="ActionManager" hit="YAML 보기" />
+    <option name="kubeconfig" path="ActionManager" hit="kubeconfig 콘텐츠 붙여넣기…" />
+    <option name="붙여넣기" path="ActionManager" hit="kubeconfig 콘텐츠 붙여넣기…" />
+    <option name="콘텐츠" path="ActionManager" hit="kubeconfig 콘텐츠 붙여넣기…" />
+    <option name="kubeconfig" path="ActionManager" hit="kubeconfig 콘텐츠로부터 Kubernetes 컨텍스트를 연결합니다" />
+    <option name="kubernetes" path="ActionManager" hit="kubeconfig 콘텐츠로부터 Kubernetes 컨텍스트를 연결합니다" />
+    <option name="연결합니다" path="ActionManager" hit="kubeconfig 콘텐츠로부터 Kubernetes 컨텍스트를 연결합니다" />
+    <option name="컨텍스트를" path="ActionManager" hit="kubeconfig 콘텐츠로부터 Kubernetes 컨텍스트를 연결합니다" />
+    <option name="콘텐츠로부터" path="ActionManager" hit="kubeconfig 콘텐츠로부터 Kubernetes 컨텍스트를 연결합니다" />
+    <option name="kubeconfig" path="ActionManager" hit="kubeconfig 파일 변경 시 구성이 다시 로드됩니다" />
+    <option name="구성이" path="ActionManager" hit="kubeconfig 파일 변경 시 구성이 다시 로드됩니다" />
+    <option name="다시" path="ActionManager" hit="kubeconfig 파일 변경 시 구성이 다시 로드됩니다" />
+    <option name="로드됩니다" path="ActionManager" hit="kubeconfig 파일 변경 시 구성이 다시 로드됩니다" />
+    <option name="변경" path="ActionManager" hit="kubeconfig 파일 변경 시 구성이 다시 로드됩니다" />
+    <option name="시" path="ActionManager" hit="kubeconfig 파일 변경 시 구성이 다시 로드됩니다" />
+    <option name="파일" path="ActionManager" hit="kubeconfig 파일 변경 시 구성이 다시 로드됩니다" />
+    <option name="kubeconfig" path="ActionManager" hit="kubeconfig 파일에서 Kubernetes 컨텍스트를 연결합니다" />
+    <option name="kubernetes" path="ActionManager" hit="kubeconfig 파일에서 Kubernetes 컨텍스트를 연결합니다" />
+    <option name="연결합니다" path="ActionManager" hit="kubeconfig 파일에서 Kubernetes 컨텍스트를 연결합니다" />
+    <option name="컨텍스트를" path="ActionManager" hit="kubeconfig 파일에서 Kubernetes 컨텍스트를 연결합니다" />
+    <option name="파일에서" path="ActionManager" hit="kubeconfig 파일에서 Kubernetes 컨텍스트를 연결합니다" />
+    <option name="kubeconfig" path="ActionManager" hit="kubeconfig 파일을 에디터에서 열기" />
+    <option name="에디터에서" path="ActionManager" hit="kubeconfig 파일을 에디터에서 열기" />
+    <option name="열기" path="ActionManager" hit="kubeconfig 파일을 에디터에서 열기" />
+    <option name="파일을" path="ActionManager" hit="kubeconfig 파일을 에디터에서 열기" />
+    <option name="kubectl" path="ActionManager" hit="kubectl 설치" />
+    <option name="설치" path="ActionManager" hit="kubectl 설치" />
+    <option name="kubectl을" path="ActionManager" hit="kubectl을 설치하는 방법…" />
+    <option name="방법" path="ActionManager" hit="kubectl을 설치하는 방법…" />
+    <option name="설치하는" path="ActionManager" hit="kubectl을 설치하는 방법…" />
+    <option name="가져오기" path="ActionManager" hit="가져오기 설명" />
+    <option name="설명" path="ActionManager" hit="가져오기 설명" />
+    <option name="구성" path="ActionManager" hit="구성" />
+    <option name="구성" path="ActionManager" hit="구성 다시 로드" />
+    <option name="다시" path="ActionManager" hit="구성 다시 로드" />
+    <option name="로드" path="ActionManager" hit="구성 다시 로드" />
+    <option name="구성을" path="ActionManager" hit="구성을 자동으로 다시 로드" />
+    <option name="다시" path="ActionManager" hit="구성을 자동으로 다시 로드" />
+    <option name="로드" path="ActionManager" hit="구성을 자동으로 다시 로드" />
+    <option name="자동으로" path="ActionManager" hit="구성을 자동으로 다시 로드" />
+    <option name="각" path="ActionManager" hit="기본값으로 각 클러스터 리소스를 자동으로 새로고침" />
+    <option name="기본값으로" path="ActionManager" hit="기본값으로 각 클러스터 리소스를 자동으로 새로고침" />
+    <option name="리소스를" path="ActionManager" hit="기본값으로 각 클러스터 리소스를 자동으로 새로고침" />
+    <option name="새로고침" path="ActionManager" hit="기본값으로 각 클러스터 리소스를 자동으로 새로고침" />
+    <option name="자동으로" path="ActionManager" hit="기본값으로 각 클러스터 리소스를 자동으로 새로고침" />
+    <option name="클러스터" path="ActionManager" hit="기본값으로 각 클러스터 리소스를 자동으로 새로고침" />
+    <option name="기존" path="ActionManager" hit="기존 인터셉트를 제거합니다" />
+    <option name="인터셉트를" path="ActionManager" hit="기존 인터셉트를 제거합니다" />
+    <option name="제거합니다" path="ActionManager" hit="기존 인터셉트를 제거합니다" />
+    <option name="네임스페이스" path="ActionManager" hit="네임스페이스" />
+    <option name="네임스페이스" path="ActionManager" hit="네임스페이스 목록을 사용자 지정합니다" />
+    <option name="목록을" path="ActionManager" hit="네임스페이스 목록을 사용자 지정합니다" />
+    <option name="사용자" path="ActionManager" hit="네임스페이스 목록을 사용자 지정합니다" />
+    <option name="지정합니다" path="ActionManager" hit="네임스페이스 목록을 사용자 지정합니다" />
+    <option name="네임스페이스" path="ActionManager" hit="네임스페이스 사용자 지정…" />
+    <option name="사용자" path="ActionManager" hit="네임스페이스 사용자 지정…" />
+    <option name="지정" path="ActionManager" hit="네임스페이스 사용자 지정…" />
+    <option name="네임스페이스를" path="ActionManager" hit="네임스페이스를 선택합니다" />
+    <option name="선택합니다" path="ActionManager" hit="네임스페이스를 선택합니다" />
+    <option name="다음에서" path="ActionManager" hit="다음에서 셸 실행…" />
+    <option name="셸" path="ActionManager" hit="다음에서 셸 실행…" />
+    <option name="실행" path="ActionManager" hit="다음에서 셸 실행…" />
+    <option name="다운로드" path="ActionManager" hit="다음의 로그 다운로드…" />
+    <option name="다음의" path="ActionManager" hit="다음의 로그 다운로드…" />
+    <option name="로그" path="ActionManager" hit="다음의 로그 다운로드…" />
+    <option name="다음의" path="ActionManager" hit="다음의 로그 추적…" />
+    <option name="로그" path="ActionManager" hit="다음의 로그 추적…" />
+    <option name="추적" path="ActionManager" hit="다음의 로그 추적…" />
+    <option name="다음의" path="ActionManager" hit="다음의 콘솔 열기…" />
+    <option name="열기" path="ActionManager" hit="다음의 콘솔 열기…" />
+    <option name="콘솔" path="ActionManager" hit="다음의 콘솔 열기…" />
+    <option name="더보기" path="ActionManager" hit="더보기" />
+    <option name="kubernetes" path="ActionManager" hit="디폴트 디렉터리로부터 Kubernetes 컨텍스트를 추가합니다" />
+    <option name="디렉터리로부터" path="ActionManager" hit="디폴트 디렉터리로부터 Kubernetes 컨텍스트를 추가합니다" />
+    <option name="디폴트" path="ActionManager" hit="디폴트 디렉터리로부터 Kubernetes 컨텍스트를 추가합니다" />
+    <option name="추가합니다" path="ActionManager" hit="디폴트 디렉터리로부터 Kubernetes 컨텍스트를 추가합니다" />
+    <option name="컨텍스트를" path="ActionManager" hit="디폴트 디렉터리로부터 Kubernetes 컨텍스트를 추가합니다" />
+    <option name="디렉터리로부터" path="ActionManager" hit="디폴트 디렉터리로부터…" />
+    <option name="디폴트" path="ActionManager" hit="디폴트 디렉터리로부터…" />
+    <option name="다운로드" path="ActionManager" hit="로그 다운로드" />
+    <option name="로그" path="ActionManager" hit="로그 다운로드" />
+    <option name="다운로드" path="ActionManager" hit="로그 다운로드…" />
+    <option name="로그" path="ActionManager" hit="로그 다운로드…" />
+    <option name="로그" path="ActionManager" hit="로그 추적" />
+    <option name="추적" path="ActionManager" hit="로그 추적" />
+    <option name="로그" path="ActionManager" hit="로그 추적…" />
+    <option name="추적" path="ActionManager" hit="로그 추적…" />
+    <option name="리소스" path="ActionManager" hit="리소스 삭제" />
+    <option name="삭제" path="ActionManager" hit="리소스 삭제" />
+    <option name="네임스페이스" path="ActionManager" hit="모든 네임스페이스" />
+    <option name="모든" path="ActionManager" hit="모든 네임스페이스" />
+    <option name="네임스페이스" path="ActionManager" hit="모든 네임스페이스 정보를 표시합니다" />
+    <option name="모든" path="ActionManager" hit="모든 네임스페이스 정보를 표시합니다" />
+    <option name="정보를" path="ActionManager" hit="모든 네임스페이스 정보를 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="모든 네임스페이스 정보를 표시합니다" />
+    <option name="사용" path="ActionManager" hit="사용 위치 찾기" />
+    <option name="위치" path="ActionManager" hit="사용 위치 찾기" />
+    <option name="찾기" path="ActionManager" hit="사용 위치 찾기" />
+    <option name="kubeconfigs으로부터" path="ActionManager" hit="사용자 지정 kubeconfigs으로부터…" />
+    <option name="사용자" path="ActionManager" hit="사용자 지정 kubeconfigs으로부터…" />
+    <option name="지정" path="ActionManager" hit="사용자 지정 kubeconfigs으로부터…" />
+    <option name="사용할" path="ActionManager" hit="사용할 컨텍스트 설정" />
+    <option name="설정" path="ActionManager" hit="사용할 컨텍스트 설정" />
+    <option name="컨텍스트" path="ActionManager" hit="사용할 컨텍스트 설정" />
+    <option name="구성되지" path="ActionManager" hit="삭제(현재 컨텍스트가 구성되지 않음)" />
+    <option name="삭제" path="ActionManager" hit="삭제(현재 컨텍스트가 구성되지 않음)" />
+    <option name="않음" path="ActionManager" hit="삭제(현재 컨텍스트가 구성되지 않음)" />
+    <option name="컨텍스트가" path="ActionManager" hit="삭제(현재 컨텍스트가 구성되지 않음)" />
+    <option name="현재" path="ActionManager" hit="삭제(현재 컨텍스트가 구성되지 않음)" />
+    <option name="비밀" path="ActionManager" hit="새 비밀 생성" />
+    <option name="새" path="ActionManager" hit="새 비밀 생성" />
+    <option name="생성" path="ActionManager" hit="새 비밀 생성" />
+    <option name="비밀" path="ActionManager" hit="새 비밀 생성…" />
+    <option name="새" path="ActionManager" hit="새 비밀 생성…" />
+    <option name="생성" path="ActionManager" hit="새 비밀 생성…" />
+    <option name="새" path="ActionManager" hit="새 인터셉트 생성" />
+    <option name="생성" path="ActionManager" hit="새 인터셉트 생성" />
+    <option name="인터셉트" path="ActionManager" hit="새 인터셉트 생성" />
+    <option name="새" path="ActionManager" hit="새 차트 생성" />
+    <option name="생성" path="ActionManager" hit="새 차트 생성" />
+    <option name="차트" path="ActionManager" hit="새 차트 생성" />
+    <option name="새로고침" path="ActionManager" hit="새로고침" />
+    <option name="셸" path="ActionManager" hit="셸 실행" />
+    <option name="실행" path="ActionManager" hit="셸 실행" />
+    <option name="kubectl을" path="ActionManager" hit="안정적인 최신 버전의 kubectl을 다운로드하고 설치합니다" />
+    <option name="다운로드하고" path="ActionManager" hit="안정적인 최신 버전의 kubectl을 다운로드하고 설치합니다" />
+    <option name="버전의" path="ActionManager" hit="안정적인 최신 버전의 kubectl을 다운로드하고 설치합니다" />
+    <option name="설치합니다" path="ActionManager" hit="안정적인 최신 버전의 kubectl을 다운로드하고 설치합니다" />
+    <option name="안정적인" path="ActionManager" hit="안정적인 최신 버전의 kubectl을 다운로드하고 설치합니다" />
+    <option name="최신" path="ActionManager" hit="안정적인 최신 버전의 kubectl을 다운로드하고 설치합니다" />
+    <option name="사용자" path="ActionManager" hit="알림 사용자 지정…" />
+    <option name="알림" path="ActionManager" hit="알림 사용자 지정…" />
+    <option name="지정" path="ActionManager" hit="알림 사용자 지정…" />
+    <option name="사용자" path="ActionManager" hit="알림을 사용자 지정합니다" />
+    <option name="알림을" path="ActionManager" hit="알림을 사용자 지정합니다" />
+    <option name="지정합니다" path="ActionManager" hit="알림을 사용자 지정합니다" />
+    <option name="구성합니다" path="ActionManager" hit="외부 스키마 사양을 구성합니다" />
+    <option name="사양을" path="ActionManager" hit="외부 스키마 사양을 구성합니다" />
+    <option name="스키마" path="ActionManager" hit="외부 스키마 사양을 구성합니다" />
+    <option name="외부" path="ActionManager" hit="외부 스키마 사양을 구성합니다" />
+    <option name="helm" path="ActionManager" hit="이 차트에 대한 공통 Helm 명령어 매개변수 구성" />
+    <option name="공통" path="ActionManager" hit="이 차트에 대한 공통 Helm 명령어 매개변수 구성" />
+    <option name="구성" path="ActionManager" hit="이 차트에 대한 공통 Helm 명령어 매개변수 구성" />
+    <option name="대한" path="ActionManager" hit="이 차트에 대한 공통 Helm 명령어 매개변수 구성" />
+    <option name="매개변수" path="ActionManager" hit="이 차트에 대한 공통 Helm 명령어 매개변수 구성" />
+    <option name="명령어" path="ActionManager" hit="이 차트에 대한 공통 Helm 명령어 매개변수 구성" />
+    <option name="이" path="ActionManager" hit="이 차트에 대한 공통 Helm 명령어 매개변수 구성" />
+    <option name="차트에" path="ActionManager" hit="이 차트에 대한 공통 Helm 명령어 매개변수 구성" />
+    <option name="끝내기" path="ActionManager" hit="인터셉트 끝내기" />
+    <option name="인터셉트" path="ActionManager" hit="인터셉트 끝내기" />
+    <option name="감시" path="ActionManager" hit="자동 감시 시작을 활성화/비활성화합니다" />
+    <option name="비활성화합니다" path="ActionManager" hit="자동 감시 시작을 활성화/비활성화합니다" />
+    <option name="시작을" path="ActionManager" hit="자동 감시 시작을 활성화/비활성화합니다" />
+    <option name="자동" path="ActionManager" hit="자동 감시 시작을 활성화/비활성화합니다" />
+    <option name="활성화" path="ActionManager" hit="자동 감시 시작을 활성화/비활성화합니다" />
+    <option name="구성되지" path="ActionManager" hit="적용(현재 컨텍스트가 구성되지 않음)" />
+    <option name="않음" path="ActionManager" hit="적용(현재 컨텍스트가 구성되지 않음)" />
+    <option name="적용" path="ActionManager" hit="적용(현재 컨텍스트가 구성되지 않음)" />
+    <option name="컨텍스트가" path="ActionManager" hit="적용(현재 컨텍스트가 구성되지 않음)" />
+    <option name="현재" path="ActionManager" hit="적용(현재 컨텍스트가 구성되지 않음)" />
+    <option name="닫기" path="ActionManager" hit="중지하고 닫기" />
+    <option name="중지하고" path="ActionManager" hit="중지하고 닫기" />
+    <option name="업데이트" path="ActionManager" hit="차트 종속성 업데이트" />
+    <option name="종속성" path="ActionManager" hit="차트 종속성 업데이트" />
+    <option name="차트" path="ActionManager" hit="차트 종속성 업데이트" />
+    <option name="결과를" path="ActionManager" hit="차트 템플릿 결과를 표시합니다" />
+    <option name="차트" path="ActionManager" hit="차트 템플릿 결과를 표시합니다" />
+    <option name="템플릿" path="ActionManager" hit="차트 템플릿 결과를 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="차트 템플릿 결과를 표시합니다" />
+    <option name="검사합니다" path="ActionManager" hit="차트에 이슈가 있는지 검사합니다" />
+    <option name="이슈가" path="ActionManager" hit="차트에 이슈가 있는지 검사합니다" />
+    <option name="있는지" path="ActionManager" hit="차트에 이슈가 있는지 검사합니다" />
+    <option name="차트에" path="ActionManager" hit="차트에 이슈가 있는지 검사합니다" />
+    <option name="액션" path="ActionManager" hit="추가 액션 표시…" />
+    <option name="추가" path="ActionManager" hit="추가 액션 표시…" />
+    <option name="표시" path="ActionManager" hit="추가 액션 표시…" />
+    <option name="api" path="ActionManager" hit="캐시 처리된 구성 및 클러스터 정보를 다시 로드하고 API 스키마를 다시 읽습니다" />
+    <option name="구성" path="ActionManager" hit="캐시 처리된 구성 및 클러스터 정보를 다시 로드하고 API 스키마를 다시 읽습니다" />
+    <option name="다시" path="ActionManager" hit="캐시 처리된 구성 및 클러스터 정보를 다시 로드하고 API 스키마를 다시 읽습니다" />
+    <option name="로드하고" path="ActionManager" hit="캐시 처리된 구성 및 클러스터 정보를 다시 로드하고 API 스키마를 다시 읽습니다" />
+    <option name="및" path="ActionManager" hit="캐시 처리된 구성 및 클러스터 정보를 다시 로드하고 API 스키마를 다시 읽습니다" />
+    <option name="스키마를" path="ActionManager" hit="캐시 처리된 구성 및 클러스터 정보를 다시 로드하고 API 스키마를 다시 읽습니다" />
+    <option name="읽습니다" path="ActionManager" hit="캐시 처리된 구성 및 클러스터 정보를 다시 로드하고 API 스키마를 다시 읽습니다" />
+    <option name="정보를" path="ActionManager" hit="캐시 처리된 구성 및 클러스터 정보를 다시 로드하고 API 스키마를 다시 읽습니다" />
+    <option name="처리된" path="ActionManager" hit="캐시 처리된 구성 및 클러스터 정보를 다시 로드하고 API 스키마를 다시 읽습니다" />
+    <option name="캐시" path="ActionManager" hit="캐시 처리된 구성 및 클러스터 정보를 다시 로드하고 API 스키마를 다시 읽습니다" />
+    <option name="클러스터" path="ActionManager" hit="캐시 처리된 구성 및 클러스터 정보를 다시 로드하고 API 스키마를 다시 읽습니다" />
+    <option name="추가" path="ActionManager" hit="컨텍스트 추가" />
+    <option name="컨텍스트" path="ActionManager" hit="컨텍스트 추가" />
+    <option name="열기" path="ActionManager" hit="콘솔 열기" />
+    <option name="콘솔" path="ActionManager" hit="콘솔 열기" />
+    <option name="뷰" path="ActionManager" hit="클러스터 뷰 설정을 표시합니다" />
+    <option name="설정을" path="ActionManager" hit="클러스터 뷰 설정을 표시합니다" />
+    <option name="클러스터" path="ActionManager" hit="클러스터 뷰 설정을 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="클러스터 뷰 설정을 표시합니다" />
+    <option name="설정" path="ActionManager" hit="클러스터 설정 표시…" />
+    <option name="클러스터" path="ActionManager" hit="클러스터 설정 표시…" />
+    <option name="표시" path="ActionManager" hit="클러스터 설정 표시…" />
+    <option name="새로고침" path="ActionManager" hit="클러스터 액션 새로고침" />
+    <option name="액션" path="ActionManager" hit="클러스터 액션 새로고침" />
+    <option name="클러스터" path="ActionManager" hit="클러스터 액션 새로고침" />
+    <option name="고칩니다" path="ActionManager" hit="클러스터 정보를 새로 고칩니다" />
+    <option name="새로" path="ActionManager" hit="클러스터 정보를 새로 고칩니다" />
+    <option name="정보를" path="ActionManager" hit="클러스터 정보를 새로 고칩니다" />
+    <option name="클러스터" path="ActionManager" hit="클러스터 정보를 새로 고칩니다" />
+    <option name="yaml을" path="ActionManager" hit="클러스터에서 YAML을 로드한 후 에디터에 표시합니다" />
+    <option name="로드한" path="ActionManager" hit="클러스터에서 YAML을 로드한 후 에디터에 표시합니다" />
+    <option name="에디터에" path="ActionManager" hit="클러스터에서 YAML을 로드한 후 에디터에 표시합니다" />
+    <option name="클러스터에서" path="ActionManager" hit="클러스터에서 YAML을 로드한 후 에디터에 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="클러스터에서 YAML을 로드한 후 에디터에 표시합니다" />
+    <option name="후" path="ActionManager" hit="클러스터에서 YAML을 로드한 후 에디터에 표시합니다" />
+    <option name="리소스를" path="ActionManager" hit="클러스터에서 리소스를 삭제합니다" />
+    <option name="삭제합니다" path="ActionManager" hit="클러스터에서 리소스를 삭제합니다" />
+    <option name="클러스터에서" path="ActionManager" hit="클러스터에서 리소스를 삭제합니다" />
+    <option name="결과를" path="ActionManager" hit="클러스터에서 리소스를 설명하고 결과를 에디터에 표시합니다" />
+    <option name="리소스를" path="ActionManager" hit="클러스터에서 리소스를 설명하고 결과를 에디터에 표시합니다" />
+    <option name="설명하고" path="ActionManager" hit="클러스터에서 리소스를 설명하고 결과를 에디터에 표시합니다" />
+    <option name="에디터에" path="ActionManager" hit="클러스터에서 리소스를 설명하고 결과를 에디터에 표시합니다" />
+    <option name="클러스터에서" path="ActionManager" hit="클러스터에서 리소스를 설명하고 결과를 에디터에 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="클러스터에서 리소스를 설명하고 결과를 에디터에 표시합니다" />
+    <option name="다시" path="ActionManager" hit="클러스터에서 콘텐츠 다시 로드" />
+    <option name="로드" path="ActionManager" hit="클러스터에서 콘텐츠 다시 로드" />
+    <option name="콘텐츠" path="ActionManager" hit="클러스터에서 콘텐츠 다시 로드" />
+    <option name="클러스터에서" path="ActionManager" hit="클러스터에서 콘텐츠 다시 로드" />
+    <option name="다시" path="ActionManager" hit="클러스터에서 콘텐츠를 다시 로드하고 에디터에서 업데이트합니다" />
+    <option name="로드하고" path="ActionManager" hit="클러스터에서 콘텐츠를 다시 로드하고 에디터에서 업데이트합니다" />
+    <option name="업데이트합니다" path="ActionManager" hit="클러스터에서 콘텐츠를 다시 로드하고 에디터에서 업데이트합니다" />
+    <option name="에디터에서" path="ActionManager" hit="클러스터에서 콘텐츠를 다시 로드하고 에디터에서 업데이트합니다" />
+    <option name="콘텐츠를" path="ActionManager" hit="클러스터에서 콘텐츠를 다시 로드하고 에디터에서 업데이트합니다" />
+    <option name="클러스터에서" path="ActionManager" hit="클러스터에서 콘텐츠를 다시 로드하고 에디터에서 업데이트합니다" />
+    <option name="diff를" path="ActionManager" hit="클러스터에서 콘텐츠를 로드하고 현재 파일과의 Diff를 표시합니다" />
+    <option name="로드하고" path="ActionManager" hit="클러스터에서 콘텐츠를 로드하고 현재 파일과의 Diff를 표시합니다" />
+    <option name="콘텐츠를" path="ActionManager" hit="클러스터에서 콘텐츠를 로드하고 현재 파일과의 Diff를 표시합니다" />
+    <option name="클러스터에서" path="ActionManager" hit="클러스터에서 콘텐츠를 로드하고 현재 파일과의 Diff를 표시합니다" />
+    <option name="파일과의" path="ActionManager" hit="클러스터에서 콘텐츠를 로드하고 현재 파일과의 Diff를 표시합니다" />
+    <option name="표시합니다" path="ActionManager" hit="클러스터에서 콘텐츠를 로드하고 현재 파일과의 Diff를 표시합니다" />
+    <option name="현재" path="ActionManager" hit="클러스터에서 콘텐츠를 로드하고 현재 파일과의 Diff를 표시합니다" />
+    <option name="리소스를" path="ActionManager" hit="클러스터에서 파일에 정의된 리소스를 삭제합니다" />
+    <option name="삭제합니다" path="ActionManager" hit="클러스터에서 파일에 정의된 리소스를 삭제합니다" />
+    <option name="정의된" path="ActionManager" hit="클러스터에서 파일에 정의된 리소스를 삭제합니다" />
+    <option name="클러스터에서" path="ActionManager" hit="클러스터에서 파일에 정의된 리소스를 삭제합니다" />
+    <option name="파일에" path="ActionManager" hit="클러스터에서 파일에 정의된 리소스를 삭제합니다" />
+    <option name="비교" path="ActionManager" hit="클러스터와 비교" />
+    <option name="클러스터와" path="ActionManager" hit="클러스터와 비교" />
+    <option name="구성을" path="ActionManager" hit="파일 내 구성을 클러스터에 적용합니다" />
+    <option name="내" path="ActionManager" hit="파일 내 구성을 클러스터에 적용합니다" />
+    <option name="적용합니다" path="ActionManager" hit="파일 내 구성을 클러스터에 적용합니다" />
+    <option name="클러스터에" path="ActionManager" hit="파일 내 구성을 클러스터에 적용합니다" />
+    <option name="파일" path="ActionManager" hit="파일 내 구성을 클러스터에 적용합니다" />
+    <option name="포워딩" path="ActionManager" hit="포트 포워딩…" />
+    <option name="포트" path="ActionManager" hit="포트 포워딩…" />
+    <option name="pod로" path="ActionManager" hit="포트를 Pod로 포워딩합니다" />
+    <option name="포워딩합니다" path="ActionManager" hit="포트를 Pod로 포워딩합니다" />
+    <option name="포트를" path="ActionManager" hit="포트를 Pod로 포워딩합니다" />
+    <option name="닫습니다" path="ActionManager" hit="프로세스를 중지하고 탭을 닫습니다" />
+    <option name="중지하고" path="ActionManager" hit="프로세스를 중지하고 탭을 닫습니다" />
+    <option name="탭을" path="ActionManager" hit="프로세스를 중지하고 탭을 닫습니다" />
+    <option name="프로세스를" path="ActionManager" hit="프로세스를 중지하고 탭을 닫습니다" />
+    <option name="내" path="ActionManager" hit="프로젝트 소스 내 사용 위치 찾기" />
+    <option name="사용" path="ActionManager" hit="프로젝트 소스 내 사용 위치 찾기" />
+    <option name="소스" path="ActionManager" hit="프로젝트 소스 내 사용 위치 찾기" />
+    <option name="위치" path="ActionManager" hit="프로젝트 소스 내 사용 위치 찾기" />
+    <option name="찾기" path="ActionManager" hit="프로젝트 소스 내 사용 위치 찾기" />
+    <option name="프로젝트" path="ActionManager" hit="프로젝트 소스 내 사용 위치 찾기" />
+    <option name="설정" path="ActionManager" hit="현재 컨텍스트 설정" />
+    <option name="컨텍스트" path="ActionManager" hit="현재 컨텍스트 설정" />
+    <option name="현재" path="ActionManager" hit="현재 컨텍스트 설정" />
+  </configurable>
+  <configurable id="com.intellij.kubernetes.config.KubernetesConfigurable" configurable_name="Kubernetes">
+    <option name="1" hit="   " />
+    <option name="6" hit="   " />
+    <option name="7" hit="   " />
+    <option name="8" hit="   " />
+    <option name="9" hit="   " />
+    <option name="1" hit="    " />
+    <option name="10" hit="    " />
+    <option name="11" hit="    " />
+    <option name="12" hit="    " />
+    <option name="13" hit="    " />
+    <option name="14" hit="    " />
+    <option name="15" hit="    " />
+    <option name="16" hit="    " />
+    <option name="17" hit="    " />
+    <option name="18" hit="    " />
+    <option name="19" hit="    " />
+    <option name="20" hit="    " />
+    <option name="21" hit="    " />
+    <option name="22" hit="    " />
+    <option name="23" hit="    " />
+    <option name="24" hit="    " />
+    <option name="25" hit="    " />
+    <option name="26" hit="    " />
+    <option name="27" hit="    " />
+    <option name="28" hit="    " />
+    <option name="29" hit="    " />
+    <option name="0" hit="       kubectl v     v    에 포함됨 " />
+    <option name="14-v1" hit="       kubectl v     v    에 포함됨 " />
+    <option name="2" hit="       kubectl v     v    에 포함됨 " />
+    <option name="20에" hit="       kubectl v     v    에 포함됨 " />
+    <option name="3" hit="       kubectl v     v    에 포함됨 " />
+    <option name="kubectl" hit="       kubectl v     v    에 포함됨 " />
+    <option name="v1" hit="       kubectl v     v    에 포함됨 " />
+    <option name="포함됨" hit="       kubectl v     v    에 포함됨 " />
+    <option name="4" hit="  x 구성 요소  인라인 패치   replicas    envs  등 " />
+    <option name="envs" hit="  x 구성 요소  인라인 패치   replicas    envs  등 " />
+    <option name="replicas" hit="  x 구성 요소  인라인 패치   replicas    envs  등 " />
+    <option name="x" hit="  x 구성 요소  인라인 패치   replicas    envs  등 " />
+    <option name="구성" hit="  x 구성 요소  인라인 패치   replicas    envs  등 " />
+    <option name="등" hit="  x 구성 요소  인라인 패치   replicas    envs  등 " />
+    <option name="요소" hit="  x 구성 요소  인라인 패치   replicas    envs  등 " />
+    <option name="인라인" hit="  x 구성 요소  인라인 패치   replicas    envs  등 " />
+    <option name="패치" hit="  x 구성 요소  인라인 패치   replicas    envs  등 " />
+    <option name="kubernetes" hit="Kubernetes" />
+    <option name="api" hit="Kubernetes API 버전 " />
+    <option name="kubernetes" hit="Kubernetes API 버전 " />
+    <option name="버전" hit="Kubernetes API 버전 " />
+    <option name="kustomize" hit="Kustomize 버전 " />
+    <option name="버전" hit="Kustomize 버전 " />
+    <option name="api" hit="가능한 경우 활성 클러스터의 API 스키마 사용" />
+    <option name="가능한" hit="가능한 경우 활성 클러스터의 API 스키마 사용" />
+    <option name="경우" hit="가능한 경우 활성 클러스터의 API 스키마 사용" />
+    <option name="사용" hit="가능한 경우 활성 클러스터의 API 스키마 사용" />
+    <option name="스키마" hit="가능한 경우 활성 클러스터의 API 스키마 사용" />
+    <option name="클러스터의" hit="가능한 경우 활성 클러스터의 API 스키마 사용" />
+    <option name="활성" hit="가능한 경우 활성 클러스터의 API 스키마 사용" />
+    <option name="구성" hit="구성 확인" />
+    <option name="확인" hit="구성 확인" />
+    <option name="사용할" hit="사용할 컨텍스트 " />
+    <option name="컨텍스트" hit="사용할 컨텍스트 " />
+    <option name="스키마" hit="스키마 캐시 재설정" />
+    <option name="재설정" hit="스키마 캐시 재설정" />
+    <option name="캐시" hit="스키마 캐시 재설정" />
+    <option name="구성" hit="클러스터 설정 구성" />
+    <option name="설정" hit="클러스터 설정 구성" />
+    <option name="클러스터" hit="클러스터 설정 구성" />
+  </configurable>
+  <configurable id="com.intellij.kubernetes.view.ui.settings.KubernetesViewConfigurable" configurable_name="Kubernetes">
+    <option name="helm" hit="Helm 실행 파일 경로 " />
+    <option name="경로" hit="Helm 실행 파일 경로 " />
+    <option name="실행" hit="Helm 실행 파일 경로 " />
+    <option name="파일" hit="Helm 실행 파일 경로 " />
+    <option name="kubernetes" hit="Kubernetes" />
+    <option name="pod" hit="Pod 셸" />
+    <option name="셸" hit="Pod 셸" />
+    <option name="kubectl" hit="kubectl 실행 파일 경로 " />
+    <option name="경로" hit="kubectl 실행 파일 경로 " />
+    <option name="실행" hit="kubectl 실행 파일 경로 " />
+    <option name="파일" hit="kubectl 실행 파일 경로 " />
+    <option name="구성" hit="구성" />
+    <option name="구성을" hit="구성을 자동으로 다시 로드" />
+    <option name="다시" hit="구성을 자동으로 다시 로드" />
+    <option name="로드" hit="구성을 자동으로 다시 로드" />
+    <option name="자동으로" hit="구성을 자동으로 다시 로드" />
+    <option name="경우" hit="네임스페이스 클러스터에서 로드할 수 없는 경우 적용됨 " />
+    <option name="네임스페이스" hit="네임스페이스 클러스터에서 로드할 수 없는 경우 적용됨 " />
+    <option name="로드할" hit="네임스페이스 클러스터에서 로드할 수 없는 경우 적용됨 " />
+    <option name="수" hit="네임스페이스 클러스터에서 로드할 수 없는 경우 적용됨 " />
+    <option name="없는" hit="네임스페이스 클러스터에서 로드할 수 없는 경우 적용됨 " />
+    <option name="적용됨" hit="네임스페이스 클러스터에서 로드할 수 없는 경우 적용됨 " />
+    <option name="클러스터에서" hit="네임스페이스 클러스터에서 로드할 수 없는 경우 적용됨 " />
+    <option name="다운로드" hit="다운로드 전 로그 저장 위치 묻기" />
+    <option name="로그" hit="다운로드 전 로그 저장 위치 묻기" />
+    <option name="묻기" hit="다운로드 전 로그 저장 위치 묻기" />
+    <option name="위치" hit="다운로드 전 로그 저장 위치 묻기" />
+    <option name="저장" hit="다운로드 전 로그 저장 위치 묻기" />
+    <option name="전" hit="다운로드 전 로그 저장 위치 묻기" />
+    <option name="도구" hit="도구 위치 전역 설정 " />
+    <option name="설정" hit="도구 위치 전역 설정 " />
+    <option name="위치" hit="도구 위치 전역 설정 " />
+    <option name="전역" hit="도구 위치 전역 설정 " />
+    <option name="경로" hit="로그 다운로드 경로 " />
+    <option name="다운로드" hit="로그 다운로드 경로 " />
+    <option name="로그" hit="로그 다운로드 경로 " />
+    <option name="로그" hit="로그 전역 설정 " />
+    <option name="설정" hit="로그 전역 설정 " />
+    <option name="전역" hit="로그 전역 설정 " />
+    <option name="로그" hit="로그 파일 이름에 타임스탬프 추가" />
+    <option name="이름에" hit="로그 파일 이름에 타임스탬프 추가" />
+    <option name="추가" hit="로그 파일 이름에 타임스탬프 추가" />
+    <option name="타임스탬프" hit="로그 파일 이름에 타임스탬프 추가" />
+    <option name="파일" hit="로그 파일 이름에 타임스탬프 추가" />
+    <option name="설치" hit="설치" />
+    <option name="대해" hit="이 셸 명령어를 모든 프로젝트에 대해 전역으로 설정" />
+    <option name="명령어를" hit="이 셸 명령어를 모든 프로젝트에 대해 전역으로 설정" />
+    <option name="모든" hit="이 셸 명령어를 모든 프로젝트에 대해 전역으로 설정" />
+    <option name="설정" hit="이 셸 명령어를 모든 프로젝트에 대해 전역으로 설정" />
+    <option name="셸" hit="이 셸 명령어를 모든 프로젝트에 대해 전역으로 설정" />
+    <option name="이" hit="이 셸 명령어를 모든 프로젝트에 대해 전역으로 설정" />
+    <option name="전역으로" hit="이 셸 명령어를 모든 프로젝트에 대해 전역으로 설정" />
+    <option name="프로젝트에" hit="이 셸 명령어를 모든 프로젝트에 대해 전역으로 설정" />
+    <option name="내부에서" hit="컨테이너 내부에서 셸을 실행하는 명령어 " />
+    <option name="명령어" hit="컨테이너 내부에서 셸을 실행하는 명령어 " />
+    <option name="셸을" hit="컨테이너 내부에서 셸을 실행하는 명령어 " />
+    <option name="실행하는" hit="컨테이너 내부에서 셸을 실행하는 명령어 " />
+    <option name="컨테이너" hit="컨테이너 내부에서 셸을 실행하는 명령어 " />
+    <option name="테스트" hit="테스트" />
+  </configurable>
+</options>

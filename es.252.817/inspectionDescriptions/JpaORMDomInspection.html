@@ -1,0 +1,36 @@
+<html>
+<body>
+Reportar referencias no resueltas a objetos de base de datos en el archivo de configuración `orm.xml`:
+<ul>
+  <li>Tablas</li>
+  <li>Columnas</li>
+  <li>Esquemas</li>
+  <li>Catálogos</li>
+  <li>Secuencias</li>
+</ul>
+<p><b>Tabla de base de datos de ejemplo:</b></p><br/>
+<pre><code lang="sql">
+CREATE TABLE DATA_TABLE (
+  ID INTEGER,
+  DATA VARCHAR(100)
+);
+</code></pre><br/>
+<p><b>Archivo orm.xml de ejemplo:</b></p><br/>
+<pre><code lang="xml">
+&lt;entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0"&gt;
+    &lt;package&gt;example&lt;/package&gt;
+    &lt;entity name="JavaEntity" class="JavaEntity"&gt;
+        &lt;table name="DATA_TABLE"/&gt;
+        &lt;attributes&gt;
+          &lt;id name="id"&gt;
+            &lt;column name="UNKNOWN_ID" nullable="false" length="20"/&gt; // Error: nombre de columna no resuelto
+          &lt;/id&gt;
+          &lt;basic name="data"&gt;
+            &lt;column name="DATA" length="12"/&gt; // OK
+          &lt;/basic&gt;
+        &lt;/attributes&gt;
+    &lt;/entity&gt;
+&lt;/entity-mappings&gt;
+</code></pre>
+</body>
+</html>

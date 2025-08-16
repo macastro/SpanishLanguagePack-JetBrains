@@ -1,0 +1,42 @@
+<html>
+<body>
+Informa sobre las declaraciones <code>assert</code> y las aserciones del marco de pruebas que están suprimidas por los bloques catch circundantes.
+Estas aserciones nunca fallarán porque el <code>AssertionError</code> lanzado será capturado e ignorado silenciosamente.
+<p><b>Ejemplo 1:</b></p>
+<pre><code>
+  void javaAssertion() {
+    try {
+      ...
+      assert 1 == 2;
+    } catch (AssertionError e) {
+      // Esta aserción se ignora silenciosamente
+    }
+  }
+</code></pre>
+<p><b>Ejemplo 2:</b></p>
+<pre><code>
+  @Test
+  void testWithAssertJ() {
+    try {
+      ...
+      assertThat(1).as("test").isEqualTo(2);
+    } catch (AssertionError e) {
+      // Esta aserción se ignora silenciosamente
+    }
+  }
+</code></pre>
+<p><b>Ejemplo 3:</b></p>
+<pre><code>
+  @Test
+  void testWithJunit() {
+    try {
+      ...
+      assertEquals(1, 2);
+    } catch (AssertionError e) {
+      // Esta aserción se ignora silenciosamente
+    }
+  }
+</code></pre>
+<p><small>Novedades en 2020.3</small></p>
+</body>
+</html>

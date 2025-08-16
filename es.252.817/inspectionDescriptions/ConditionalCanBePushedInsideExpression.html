@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre expresiones condicionales que tienen ramas <code>then</code> y <c>else</c> lo suficientemente similares como para que la expresión pueda moverse hacia adentro. Esta operación acorta el código.
+<p>Ejemplo:</p>
+<pre><code>
+  double g(int a, int b) {
+    return a == b ? Math.cos(0) : Math.cos(1);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  double g(int a, int b) {
+    return Math.cos(a == b ? 0 : 1);
+  }
+</code></pre>
+<p><small>Novedades de la versión 2017.2</small></p>
+</body>
+</html>

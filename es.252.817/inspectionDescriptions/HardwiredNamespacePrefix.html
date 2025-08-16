@@ -1,0 +1,9 @@
+<html>
+<body>
+Informa sobre la comparación de la función <code>name()</code> con cadenas que contienen dos puntos (<code>:</code>). Este uso generalmente indica la presencia de un prefijo de espacio de nombres codificado de forma rígida en la comparación. Como resultado, el código fallará cuando se ejecute con XML que utilice un prefijo diferente para el mismo espacio de nombres.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  &lt;xsl:if test="name() = 'xlink:href'">...&lt;xsl:if>
+</code></pre>
+</body>
+</html>

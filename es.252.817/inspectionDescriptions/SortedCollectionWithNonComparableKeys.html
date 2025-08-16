@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre estructuras de colecciones ordenadas, como <code>TreeSet</code>, que dependen del orden natural y cuyos tipos de elementos no implementan la interfaz <code>Comparable</code>.
+<p>Es poco probable que estas colecciones funcionen correctamente.</p>
+<p>
+  Pueden producirse falsos positivos cuando el tipo de elemento de la colección es un tipo padre no comparable, pero la colección está destinada a contener solo subtipos comparables. Incluso en este caso, es mejor restringir el tipo de elemento de la colección o declarar el tipo padre como <code>Comparable</code>, ya que el enfoque anterior es propenso a errores.
+</p>
+<p>
+  La inspección también informa sobre casos donde los elementos de la colección son parámetros de tipo que no están declarados como <code>extends Comparable</code>.
+  Puede usar la opción proporcionada para suprimir las advertencias sobre parámetros de tipo (por ejemplo, para mantener la compatibilidad de la API).
+</p>
+<p>
+  <small>Novedades en 2018.3</small>
+</p>
+</body>
+</html>

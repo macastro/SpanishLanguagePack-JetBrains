@@ -1,0 +1,11 @@
+<html>
+<body>
+Reemplazar referencias posicionales con nombres de columnas.
+<p>Algunos DBMS permiten referenciar columnas en las cláusulas ORDER BY y GROUP BY mediante números de secuencia. Todos los dialectos soportan ORDER BY, excepto Cassandra, ClickHouse, Hive, Spark y HSQLDB. MySQL, Maria, PostgreSQL (y sus subdialectos), Exasol, SQLite y Snowflake soportan GROUP BY.</p>
+<p>Ejemplo (PostgreSQL):</p>
+<pre><code>CREATE TABLE tab(a INT, b INT);
+SELECT * FROM tab ORDER BY 1;</code></pre>
+<p>Puede usar esta intención para reemplazar el <code>1</code> con el nombre de la columna en la consulta SELECT. Después de aplicar esta intención, la consulta se verá así.</p>
+<pre><code>SELECT * FROM tab ORDER BY a;</code></pre>
+</body>
+</html>

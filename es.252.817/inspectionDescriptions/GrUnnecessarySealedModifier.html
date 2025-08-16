@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>Informa sobre el uso innecesario del modificador <code>sealed</code> en métodos, campos o variables.</p>
+<p>Este modificador solo es válido para clases, interfaces y traits.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>sealed</b> boolean foo() {} // Modificador innecesario
+  <b>sealed</b> Object bar // Modificador innecesario
+  // Modificador requerido, por lo tanto no está resaltado
+  <b>sealed</b> class A {}
+</code></pre>
+</body>
+</html>

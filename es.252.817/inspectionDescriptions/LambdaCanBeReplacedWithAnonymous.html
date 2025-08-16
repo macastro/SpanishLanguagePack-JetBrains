@@ -1,0 +1,19 @@
+<html>
+<body>
+El informe puede ser reemplazado por una expresión lambda de clase anónima.
+<p>
+  La expansión de una expresión lambda a una clase anónima es útil cuando se necesita implementar métodos adicionales en la clase anónima.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  s -> System.out.println(s)
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>new Consumer&lt;String&gt;() {
+  @Override
+  public void accept(String s) {
+    System.out.println(s);
+  }
+}</code></pre>
+</body>
+</html>

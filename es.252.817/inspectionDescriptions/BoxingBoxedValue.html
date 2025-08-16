@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre el boxing redundante de valores ya boxed.
+<p>
+  Esta es una operación redundante, ya que cualquier valor boxed primero se desempaquetará automáticamente y luego se volverá a boxear. Este tipo de código puede causar problemas de rendimiento si se realiza dentro de bucles internos.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Integer value = 1;
+  method(Integer.valueOf(value));
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  Integer value = 1;
+  method(value);
+</code></pre>
+<p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+Reporta clases <code>Serializable</code> cuyo ancestro no serializable más cercano no tiene un constructor sin argumentos. Estas clases no se pueden deserializar y fallarán lanzando una <code>InvalidClassException</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Ancestor {
+    private String name;
+    Ancestor(String name) {
+      this.name = name;
+    }
+  }
+  //Se genera una advertencia para esta clase porque la superclase
+//no es serializable y su constructor acepta argumentos
+  class Descendant extends Ancestor implements Serializable {
+    Descendant() {
+      super("Bob");
+    }
+  }
+</code></pre>
+</body>
+</html>

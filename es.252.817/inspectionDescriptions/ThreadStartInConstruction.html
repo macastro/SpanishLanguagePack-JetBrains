@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre llamadas a <code>start()</code> en <code>java.lang.Thread</code> o cualquiera de sus subclases durante la construcción del objeto.
+<p>
+  Aunque estas estructuras pueden ser ocasionalmente útiles, deben evitarse debido a problemas de herencia.
+  Las subclases de una clase que inicia un hilo durante la construcción del objeto no completarán ninguna de sus lógicas de inicialización antes de que el hilo se inicie.
+</p>
+<p>Esta inspección no informa si la clase que inicia el hilo está declarada como <code>final</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class MyThread extends Thread {
+    MyThread() {
+      start();
+    }
+  }
+</code></pre>
+</body>
+</html>

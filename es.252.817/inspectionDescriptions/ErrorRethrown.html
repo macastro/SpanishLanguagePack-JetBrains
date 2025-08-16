@@ -1,0 +1,15 @@
+<html>
+<body>
+Reporta sentencias <code>try</code> que capturan <code>java.lang.Error</code> o cualquiera de sus subclases y no vuelven a lanzar el error.
+<p>No se reportan las sentencias que capturan <code>java.lang.ThreadDeath</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  try {
+    executeTests(request);
+  }
+  catch (OutOfMemoryError ex) { // Advertencia: el error 'ex' no se vuelve a lanzar
+    return false;
+  }
+</code></pre>
+</body>
+</html>

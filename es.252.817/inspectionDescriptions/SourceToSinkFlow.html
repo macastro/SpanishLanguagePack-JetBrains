@@ -1,0 +1,50 @@
+<html>
+<body>
+Informa sobre casos donde se pasan objetos no seguros a métodos con parámetros que están anotados con <code>@Untainted</code>, se devuelven desde métodos anotados, o se asignan a campos, parámetros o variables locales anotadas. No se admite el uso de métodos Kotlin <code>set</code> y <code>get</code> de campos como puntos de entrada.
+<p>
+  Los objetos seguros (en la misma clase) son:
+<ul>
+  <li>Literales de cadena, instancias de interfaz u objetos enum</li>
+  <li>Resultados de llamadas a métodos marcados con <code>@Untainted</code></li>
+  <li>Campos private que solo se asignan con literales de cadena y tienen inicializadores seguros</li>
+  <li>Campos final con inicializadores seguros</li>
+  <li>Variables locales o parámetros marcados con <code>@Untainted</code> que no se asignan desde objetos no seguros</li>
+  Este campo, variable local o parámetro no debe pasarse como argumento a métodos ni usarse como calificador, o debe ser un tipo primitivo, su wrapper o un objeto inmutable.
+</ul>
+Además, los campos static final también se consideran seguros.
+<p>
+  El análisis se realiza solo dentro de un archivo. Para manejar dependencias de otras clases, use las opciones.
+  El análisis se extiende a métodos private o static y tiene un límite de profundidad de propagación.
+<p>
+  Ejemplo:
+<pre>
+<code lang="java">
+  void doSmth(boolean b) {
+    String s = safe();
+    String s1 = "other";
+    if (b) s1 = s;
+    sink(s);
+  }
+  String sink(@Untainted String s) {}
+</code>
+</pre>
+<p>
+  Aquí no se asigna ninguna cadena no segura a <code>s</code>, por lo que no se genera ninguna advertencia. Por otro lado:
+<pre>
+<code lang="java">
+  void doSmth(boolean b) {
+    String s = safe();
+    String s1 = "other";
+    s1 = foo();
+    if (b) s = s1;
+    sink(s);        // advertencia aquí
+  }
+  String foo();
+  String sink(@Untainted String s) {}
+</code>
+</pre>
+<p>
+  Aquí hay una advertencia porque <code>s1</code> tiene un estado desconocido después de la asignación del resultado de la llamada a <code>foo</code>.
+<p><small>Novedades de 2021.2</small></p>
+</body>
+</html>

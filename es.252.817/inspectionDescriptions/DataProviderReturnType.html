@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre métodos anotados con <code>@DataProvider</code> que no devuelven <code>Object[][]</code> o <code>Iterator&lt;Object&gt;</code>.
+Si se devuelve otro tipo, TestNG lanzará una excepción.
+<p>Ejemplo:</p>
+<pre><code>
+public class TestNgTest {
+  @DataProvider(name = "Languages")
+  List&lt;String&gt; getData() {
+    return List.of("Java", "Kotlin");
+  }
+  @Test(dataProvider = "Languages")
+  public void testData(String language) {
+    System.out.println(language);
+  }
+}
+</code></pre>
+</body>
+</html>

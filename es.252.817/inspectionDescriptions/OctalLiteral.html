@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre literales enteros en formato octal. Algunos estándares de codificación prohíben el uso de literales octales porque pueden confundirse fácilmente con literales decimales.
+<p>Ejemplo:</p>
+<pre><code>
+  int i = 015;
+  int j = 0_777;
+</code></pre>
+<p>Esta inspección ofrece dos correcciones rápidas diferentes.
+  Al aplicar la corrección rápida <b>Convertir literal octal a decimal</b>, el código se convierte en:</p>
+<pre><code>
+  int i = 13;
+  int j = 511;
+</code></pre>
+<p>Al aplicar la corrección rápida <b>Eliminar cero inicial para convertir a decimal</b>, el código se convierte en:</p>
+<pre><code>
+  int i = 15;
+  int j = 777;
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td><font face="verdana" size="-1">Incluye un fragmento de código que puede incluirse en una plantilla de archivo (pestaña <b>Plantillas</b>) usando la directiva <code>#parse</code>.<br>
+      La plantilla es editable. Además del texto estático, código y comentarios, puede usar variables predefinidas que luego se expandirán como macros a sus valores correspondientes.
+    </font><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas tomarán los siguientes valores:</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${FILE_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del archivo actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de inicio de sesión del sistema del usuario actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del usuario actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${ORGANIZATION_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la organización del proyecto Xcode</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del mes actual. Por ejemplo: Jan, Feb, etc.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual. Por ejemplo: January, February, etc.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Día actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY_NAME_SHORT}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del día actual. Por ejemplo: Mon, Tue, etc.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY_NAME_FULL}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del día actual. Por ejemplo: Monday, Tuesday, etc.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${COMPILER_VERSION_MAJOR}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Versión principal del compilador Swift</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${COMPILER_VERSION_MINOR}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Versión secundaria del compilador Swift</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PREFER_EXPLICIT_RETURN}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Valor de la opción <b>Preferir retorno explícito</b> (<b>Preferencias | Editor | Estilo de código | Swift | Generación de código</b>)</font></td>
+  </tr>
+</table>
+</body>
+</html>

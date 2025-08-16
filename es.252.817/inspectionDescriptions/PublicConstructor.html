@@ -1,0 +1,40 @@
+<html>
+<body>
+Reporta constructores <code>public</code>.
+<p>Algunos estándares de codificación desaconsejan el uso de constructores <code>public</code> y recomiendan usar métodos de fábrica <code>static</code> en su lugar.
+Esto permite intercambiar la implementación sin afectar los puntos de llamada.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Test {
+    private String name;
+    public Test(String name) {
+        this.name = name;
+    }
+    public void test() {
+        System.out.println(name);
+    }
+    public static void main(String[] args) {
+        new Test("str").test();
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Test {
+    private String name;
+    private Test(String name) {
+        this.name = name;
+    }
+    public static Test getInstance(String name) {
+        return new Test(name);
+    }
+    public void test() {
+        System.out.println(name);
+    }
+    public static void main(String[] args) {
+        getInstance("str").test();
+    }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre caracteres no latinos básicos en literales y sugiere reemplazarlos por entidades unicode.
+<p>Ejemplo:</p>
+<pre><code>
+  // © 2021
+  char c = '©';
+  String s = "Áî";
+</code>
+</pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  // &amp;copy; 2021
+  char c = '\u00a9';
+  String s = "\u00c1\u00ee";
+</code></pre>
+</body>
+</html>

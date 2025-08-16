@@ -1,0 +1,16 @@
+<html>
+<body>
+La inspección puede reemplazar operaciones a nivel de bits con llamadas a los métodos <code>Long.hashCode()</code> o <code>Double.hashCode()</code>.
+Detecta construcciones del tipo <code>(int)(x ^ (x >>> 32))</code>, donde <code>x</code> es una variable de tipo <code>long</code> o el resultado de una llamada previa a <code>Double.doubleToLongBits()</code>. Este reemplazo puede reducir el código y mejorar su legibilidad.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  int result = (int)(var ^ (var >>> 32));
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  int result = Long.hashCode(var);
+</code></pre>
+<p>Esta inspección solo se informa cuando el nivel de lenguaje del proyecto o módulo es 8 o superior.
+<p><small>Novedades en 2024.1</small></p>
+</body>
+</html>

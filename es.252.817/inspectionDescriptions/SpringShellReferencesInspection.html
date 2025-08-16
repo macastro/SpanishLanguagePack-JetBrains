@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>
+  Informa sobre referencias no válidas en la anotación Spring Shell <code>org.springframework.shell.standard.ShellMethodAvailability</code>.
+</p>
+<p>Ejemplo:</p>
+<pre><code lang="java">
+@ShellComponent
+public class MyCommands {
+    @ShellMethod("sum")
+    @ShellMethodAvailability("sumAvailability") // el valor de la anotación se resaltará como un símbolo no resuelto
+    public int sum(int a, int b) {
+        return a + b;
+    }
+    @ShellMethodAvailability("sumMethod") // el valor de la anotación se resaltará como un símbolo no resuelto
+    public Availability isSumAvailable() {
+        return Availability.available();
+    }
+}
+</code></pre>
+</body>
+</html>

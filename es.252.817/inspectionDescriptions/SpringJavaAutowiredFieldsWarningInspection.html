@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>Informa sobre campos inyectados o autowired en componentes Spring.</p>
+<p>Esta corrección rápida sugiere la inyección de dependencias basada en constructor para campos obligatorios en Beans y aserciones.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class MyComponent {
+  @Inject MyCollaborator collaborator; // campo inyectado
+  public void myBusinessMethod() {
+    collaborator.doSomething(); // lanza NullPointerException
+  }
+}
+</code></pre>
+<br>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+class MyComponent {
+  private final MyCollaborator collaborator;
+  @Inject
+  public MyComponent(MyCollaborator collaborator) {
+    Assert.notNull(collaborator, "MyCollaborator must not be null!");
+    this.collaborator = collaborator;
+  }
+  public void myBusinessMethod() {
+    collaborator.doSomething(); // ahora esta llamada es segura
+  }
+}
+</code></pre>
+</body>
+</html>

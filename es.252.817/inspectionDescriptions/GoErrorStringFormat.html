@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta problemas de formato en las cadenas de error.
+<p>Ejemplo:</p>
+<pre><code>err := fmt.Errorf("Cannot read the file!")
+log.Printf("Reading %s: %v", file, err)</code></pre>
+<p>Según <a href="https://github.com/golang/go/wiki/CodeReviewComments#error-strings">Error Strings en github.com/golang</a>, las cadenas de error no deben comenzar con mayúscula ni terminar con signos de puntuación, ya que pueden aparecer en otros contextos.
+</p>
+<p>Para corregir el formato, puedes aplicar la corrección rápida <b>Corregir formato de cadena de error</b>. Después de aplicar la corrección rápida, la cadena de error se verá así:</p>
+<pre><code>err := fmt.Errorf("cannot read the file")
+log.Printf("Reading %s: %v", file, err)</code></pre>
+</body>
+</html>

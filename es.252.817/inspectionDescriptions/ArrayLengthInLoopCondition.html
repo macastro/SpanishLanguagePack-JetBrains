@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre los accesos a la propiedad <code>.length</code> de arrays en las condiciones de bucles. En entornos con recursos muy limitados, estas llamadas pueden tener un impacto negativo en el rendimiento.
+<p>
+  Esta inspección es relevante para Java ME y otros entornos con recursos muy limitados.
+  La aplicación indiscriminada de esta inspección puede tener un impacto negativo en la claridad y el diseño del código.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void foo(Object[] x) {
+    for (int i = 0; i &lt; x.length; i++) { /**/ }
+  }
+</code></pre>
+</body>
+</html>

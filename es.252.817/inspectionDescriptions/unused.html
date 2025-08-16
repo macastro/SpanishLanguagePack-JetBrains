@@ -1,0 +1,31 @@
+<html>
+<body>
+Informa sobre clases, métodos o campos no utilizados o inaccesibles desde los puntos de entrada.
+<p> Los puntos de entrada pueden ser métodos main, pruebas, clases fuera del alcance especificado, clases accesibles desde <code>module-info.java</code>, etc. Los puntos de entrada personalizados se pueden configurar mediante patrones de nombres o anotaciones.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Department {
+    private Organization myOrganization;
+  }
+</code></pre>
+<p>En este ejemplo, <code>Department</code> hace referencia explícita a <code>Organization</code>, pero si la clase <code>Department</code> no se utiliza, la inspección informará sobre ambas clases.</p>
+<p>
+  La inspección también informa sobre parámetros cuyos métodos, todas las implementaciones de métodos y anulaciones no se utilizan, así como variables locales declaradas pero no utilizadas.
+</p>
+<p>
+  <b>Nota</b>: Es posible que algunos miembros no utilizados no se informen durante el resaltado de código en el editor. Por razones de rendimiento, los miembros no privados solo se verifican cuando sus nombres aparecen raramente en el proyecto.
+  Para ver todos los resultados, ejecute la inspección seleccionando <b>Código | Inspeccionar código</b> o <b>Código | Analizar código | Ejecutar inspección por nombre</b> desde el menú principal.
+</p>
+<p>Los miembros a informar se pueden configurar usando la configuración de visibilidad a continuación. Por ejemplo, configurar para informar métodos <code>private</code> solo indica que se informarán los métodos <code>public</code> de clases internas <code>private</code>, mientras que los métodos <code>protected</code> de clases de nivel superior serán ignorados.</p>
+<p>
+  Use la pestaña <b>Puntos de entrada</b> para configurar los puntos de entrada a considerar durante la ejecución de la inspección.</p>
+<p> Los puntos de entrada se pueden agregar manualmente una vez que los resultados de la inspección estén listos.</p>
+<p> Si su código utiliza frameworks no soportados, puede elegir entre las siguientes opciones:</p>
+<ul>
+  <li>Si el framework depende de anotaciones, use el botón <b>Anotaciones...</b> para configurar las anotaciones del framework.</li>
+  <li>Si el framework no depende de anotaciones, puede intentar configurar patrones de nombres de clase que el framework debería tener.</li>
+</ul>
+<p>De esta manera, el código anotado accesible dentro del framework se considerará como utilizado.</p>
+</body>
+</html>

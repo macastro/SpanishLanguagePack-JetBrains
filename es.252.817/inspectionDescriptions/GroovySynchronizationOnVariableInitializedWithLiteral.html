@@ -1,0 +1,8 @@
+<html>
+<body>
+Informa sobre bloques synchronized que se bloquean en objetos inicializados con literales.
+<p>
+  Los literales de cadena se almacenan en el pool de strings y los literales de <code>Number</code> pueden asignarse desde el caché. Por esta razón, es posible que otras partes del sistema (que usan objetos inicializados con el mismo literal) contengan referencias al mismo objeto. Esto puede provocar situaciones inesperadas de interbloqueo si la cadena se considera un objeto privado.
+</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa sobre bloques <code>synchronized</code> que se bloquean en objetos inicializados con literales.
+<p>
+  Los literales de cadena se almacenan en el pool de strings, y los literales de <code>Character</code>, <code>Boolean</code> y <code>Number</code> pueden asignarse desde el caché.
+  Por lo tanto, es posible que otras partes del sistema (que utilizan objetos inicializados con el mismo literal) contengan referencias al mismo objeto. Esto puede provocar situaciones inesperadas de interbloqueo si se considera que el objeto bloqueado es privado.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main {
+    final String mutex = "Mutex";
+    void method() {
+      synchronized (mutex) {
+      }
+    }
+  }
+</code></pre>
+<p>
+  La opción <strong>advertir sobre todos los literales posibles</strong> informa sobre cualquier sincronización de objetos <code>String</code>, <code>Character</code>, <code>Boolean</code> y <code>Number</code>.
+</p>
+</body>
+</html>

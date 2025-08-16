@@ -1,0 +1,46 @@
+<html>
+<body>
+<p>Reporta problemas de autowiring en los puntos de inyección de Spring Beans con <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html">@Component</a>, <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html">@Service</a> y similares.</p>
+<ul>
+  <li>Más de un tipo 'concrete' de Bean</li>
+  <li>Ningún Bean de tipo 'concrete'</li>
+  <li>Ningún Bean con calificador</li>
+  <li>Uso incorrecto de <code>@Autowired</code> en constructores de Spring Beans</li>
+  <li>Campos/métodos inyectados o autowired en clases que no son Spring Beans válidos</li>
+</ul>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+public interface FooInterface {...}
+  @Component public class FooBean implements FooInterface {...}
+  @Component public class OtherBean implements FooInterface {...}
+@Component
+public class MyComponent {
+	@Autowired
+	FooInterface foo;  // No se puede realizar autowiring. Existe más de un Bean de tipo 'FooInterface'.
+                     // Beans: fooBean(FooBean.java), otherBean(OtherBean.java)"
+}
+</code></pre>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+@Component
+public class MyComponent {
+	@Autowired
+	public MyComponent(BarBean bean) {...} // Reporta "solo se permite un constructor con @Autowired"
+	@Autowired
+	public MyComponent(FooBean bean) {...} // Reporta "solo se permite un constructor con @Autowired"
+}
+@Component
+public class MyFactory {  // Reporta "no hay constructor @Autowired coincidente"
+	public MyFactory(String str) {...}
+	public MyFactory(int count) {...}
+}
+</code></pre>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+public class FooBeanClass {
+  @Autowired   // Reporta 'El miembro autowired debe definirse en un Spring Bean válido: @Component, @Service, etc.'
+  ServiceBean bean;
+  }
+</code></pre>
+</body>
+</html>

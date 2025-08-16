@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre literales de cadena que están duplicados en todo el proyecto sin modificaciones.
+Proporciona dos correcciones rápidas. Una introduce una constante para la cadena duplicada y la utiliza en todo el proyecto, y la otra muestra las ubicaciones de todas las ocurrencias de un literal de cadena específico.
+<p>Ejemplo:</p>
+<pre><code>
+  class C1 { String CONST1 = "duplicate string"; }
+  class C2 { String CONST2 = "duplicate string"; }
+</code></pre>
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>Utilice el campo <b>Longitud mínima de cadena</b> para establecer la longitud mínima de cadena requerida para detectar duplicados.</li>
+  <li>Utilice la opción <b>Ignorar expresiones @PropertyKey</b> para ignorar las cadenas que se pasan como argumentos a métodos anotados con <code>org.jetbrains.annotations.PropertyKey</code>.</li>
+</ul>
+</body>
+</html>

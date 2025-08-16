@@ -1,0 +1,14 @@
+<html>
+<body>
+Reporta expresiones lambda que contienen más sentencias que el máximo especificado.
+<p>Las expresiones lambda demasiado largas pueden ser confusas. Es generalmente mejor extraer las sentencias a un método separado.<p>
+<p>Las siguientes sentencias no se cuentan:</p>
+<ul>
+  <li>Sentencias vacías (punto y coma)</li>
+  <li>Sentencias de bloque</li>
+  <li>Sentencias de inicialización en bucles <code>for</code>, es decir, <code>int i = ...</code> en <code>for(int i = ...;...)</code></li>
+  <li>Sentencias de actualización en bucles <code>for</code>, es decir, <code>i += 2</code> en <code>for(int i = ...;...; i += 2)</code></li>
+</ul>
+<p>Utilice el campo <b>Límite de sentencias de código no comentadas</b> para especificar el número máximo de sentencias permitidas en una expresión lambda.<p>
+</body>
+</html>

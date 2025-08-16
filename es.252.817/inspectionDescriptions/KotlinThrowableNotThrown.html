@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa cuando se crea una instancia de <code>Throwable</code> o sus subclases que nunca se lanza realmente.
+<p>El código reportado indica errores que son difíciles de capturar en las pruebas.</p>
+<p>
+    Además, esta inspección informa sobre las llamadas a métodos que devuelven una instancia de <code>Throwable</code> o sus subclases cuando la instancia resultante no se lanza.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun check(condition: Boolean) {
+      if (!condition) /* throw is missing here */ IllegalArgumentException("condition is not met");
+  }
+  fun createError() = RuntimeException()
+  fun foo() {
+      /* throw is missing here */ createError()
+  }
+</code></pre>
+</body>
+</html>

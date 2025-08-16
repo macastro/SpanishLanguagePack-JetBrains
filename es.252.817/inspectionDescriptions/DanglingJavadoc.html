@@ -1,0 +1,32 @@
+<html>
+<body>
+Informa sobre comentarios Javadoc que no pertenecen a ninguna clase, método o campo.
+La herramienta Javadoc ignora los comentarios Javadoc flotantes y no los incluye en su documentación HTML generada.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class A {
+    /**
+     * Dangling comment
+     */
+    /**
+     * Method javadoc
+     */
+     public void m(){}
+  }
+</code></pre>
+<p>Estos comentarios se pueden eliminar completamente o convertir en comentarios de bloque mediante una corrección rápida. Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class A {
+    /*
+      Dangling comment
+    */
+    /**
+     * Method javadoc
+     */
+    public void m(){}
+  }
+</code></pre>
+<p>Use la opción <b>Ignorar comentarios de encabezado con formato JavaDoc</b> para ignorar los comentarios al inicio de los archivos Java.
+Estos suelen ser mensajes de copyright.
+</body>
+</html>

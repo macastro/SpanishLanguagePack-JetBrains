@@ -1,0 +1,15 @@
+<html>
+<body>
+Reporta expresiones <code>when</code> que tienen ramas constantes con <code>true</code> o <code>false</code>.
+<p><b>Simplificar "when"</b> está disponible como corrección rápida para arreglar el código automáticamente.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  fun redundant() {
+      when { // &lt;== Redundante, la corrección rápida simplificará la expresión when a "println("true")"
+          true -> println("true")
+          else -> println("false")
+      }
+  }
+</code></pre>
+</body>
+</html>

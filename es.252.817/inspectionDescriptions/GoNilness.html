@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre problemas causados por el uso incorrecto de valores <code>nil</code>.
+<p>El IDE analizará el flujo de datos para determinar si las variables pueden tener valores <code>nil</code> o no <code>nil</code>.
+  El IDE informará sobre problemas potenciales en el código basándose en estos resultados. Considere las siguientes situaciones que pueden llevar a consecuencias inesperadas:</p>
+<ul>
+  <li>Las llamadas a métodos con un receptor <code>nil</code> pueden causar 'desreferencia de puntero nil'.</li>
+  <li>El índice de un slice <code>nil</code> puede causar un panic.</li>
+  <li>Las comparaciones como <code>v == nil</code> pueden ser sin sentido si se sabe que <code>v</code> es siempre <code>nil</code> o nunca <code>nil</code>.
+  </li>
+  <li>No se verifica si una variable con su error correspondiente es <code>nil</code>. Un error corresponde a una variable cuando ambos se definen o asignan juntos en una declaración como <code>v, err := foo()</code>.
+  </li>
+</ul>
+</body>
+</html>

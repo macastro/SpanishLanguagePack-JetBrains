@@ -1,0 +1,426 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="watch" path="ActionManager" hit="watch 제거" />
+    <option name="제거" path="ActionManager" hit="watch 제거" />
+    <option name="관련" path="ActionManager" hit="관련 스택 표시..." />
+    <option name="스택" path="ActionManager" hit="관련 스택 표시..." />
+    <option name="표시" path="ActionManager" hit="관련 스택 표시..." />
+    <option name="다음" path="ActionManager" hit="다음 중지된 중단점으로 전환" />
+    <option name="전환" path="ActionManager" hit="다음 중지된 중단점으로 전환" />
+    <option name="중단점으로" path="ActionManager" hit="다음 중지된 중단점으로 전환" />
+    <option name="중지된" path="ActionManager" hit="다음 중지된 중단점으로 전환" />
+    <option name="다음으로" path="ActionManager" hit="다음으로 표시" />
+    <option name="표시" path="ActionManager" hit="다음으로 표시" />
+    <option name="대입" path="ActionManager" hit="대입 위치로 이동" />
+    <option name="위치로" path="ActionManager" hit="대입 위치로 이동" />
+    <option name="이동" path="ActionManager" hit="대입 위치로 이동" />
+    <option name="데이터" path="ActionManager" hit="데이터 뷰 사용자 지정..." />
+    <option name="뷰" path="ActionManager" hit="데이터 뷰 사용자 지정..." />
+    <option name="사용자" path="ActionManager" hit="데이터 뷰 사용자 지정..." />
+    <option name="지정" path="ActionManager" hit="데이터 뷰 사용자 지정..." />
+    <option name="끄기" path="ActionManager" hit="렌더러 끄기" />
+    <option name="렌더러" path="ActionManager" hit="렌더러 끄기" />
+    <option name="메모리" path="ActionManager" hit="메모리 뷰를 숨긴 채 추적 활성화" />
+    <option name="뷰를" path="ActionManager" hit="메모리 뷰를 숨긴 채 추적 활성화" />
+    <option name="숨긴" path="ActionManager" hit="메모리 뷰를 숨긴 채 추적 활성화" />
+    <option name="채" path="ActionManager" hit="메모리 뷰를 숨긴 채 추적 활성화" />
+    <option name="추적" path="ActionManager" hit="메모리 뷰를 숨긴 채 추적 활성화" />
+    <option name="활성화" path="ActionManager" hit="메모리 뷰를 숨긴 채 추적 활성화" />
+    <option name="메서드" path="ActionManager" hit="메서드 중단점 전환" />
+    <option name="전환" path="ActionManager" hit="메서드 중단점 전환" />
+    <option name="중단점" path="ActionManager" hit="메서드 중단점 전환" />
+    <option name="또는" path="ActionManager" hit="모든 스레드 정보를 텍스트 파일 또는 클립보드에 저장합니다" />
+    <option name="모든" path="ActionManager" hit="모든 스레드 정보를 텍스트 파일 또는 클립보드에 저장합니다" />
+    <option name="스레드" path="ActionManager" hit="모든 스레드 정보를 텍스트 파일 또는 클립보드에 저장합니다" />
+    <option name="저장합니다" path="ActionManager" hit="모든 스레드 정보를 텍스트 파일 또는 클립보드에 저장합니다" />
+    <option name="정보를" path="ActionManager" hit="모든 스레드 정보를 텍스트 파일 또는 클립보드에 저장합니다" />
+    <option name="클립보드에" path="ActionManager" hit="모든 스레드 정보를 텍스트 파일 또는 클립보드에 저장합니다" />
+    <option name="텍스트" path="ActionManager" hit="모든 스레드 정보를 텍스트 파일 또는 클립보드에 저장합니다" />
+    <option name="파일" path="ActionManager" hit="모든 스레드 정보를 텍스트 파일 또는 클립보드에 저장합니다" />
+    <option name="강제" path="ActionManager" hit="반환 강제 실행" />
+    <option name="반환" path="ActionManager" hit="반환 강제 실행" />
+    <option name="실행" path="ActionManager" hit="반환 강제 실행" />
+    <option name="강제로" path="ActionManager" hit="반환문에 도달하기 전에 메서드를 강제로 반환합니다" />
+    <option name="도달하기" path="ActionManager" hit="반환문에 도달하기 전에 메서드를 강제로 반환합니다" />
+    <option name="메서드를" path="ActionManager" hit="반환문에 도달하기 전에 메서드를 강제로 반환합니다" />
+    <option name="반환문에" path="ActionManager" hit="반환문에 도달하기 전에 메서드를 강제로 반환합니다" />
+    <option name="반환합니다" path="ActionManager" hit="반환문에 도달하기 전에 메서드를 강제로 반환합니다" />
+    <option name="전에" path="ActionManager" hit="반환문에 도달하기 전에 메서드를 강제로 반환합니다" />
+    <option name="범위" path="ActionManager" hit="범위 조정..." />
+    <option name="조정" path="ActionManager" hit="범위 조정..." />
+    <option name="hotswap" path="ActionManager" hit="변경된 모든 클래스를 디버그 중인 애플리케이션으로 다시 로드합니다(HotSwap)." />
+    <option name="다시" path="ActionManager" hit="변경된 모든 클래스를 디버그 중인 애플리케이션으로 다시 로드합니다(HotSwap)." />
+    <option name="디버그" path="ActionManager" hit="변경된 모든 클래스를 디버그 중인 애플리케이션으로 다시 로드합니다(HotSwap)." />
+    <option name="로드합니다" path="ActionManager" hit="변경된 모든 클래스를 디버그 중인 애플리케이션으로 다시 로드합니다(HotSwap)." />
+    <option name="모든" path="ActionManager" hit="변경된 모든 클래스를 디버그 중인 애플리케이션으로 다시 로드합니다(HotSwap)." />
+    <option name="변경된" path="ActionManager" hit="변경된 모든 클래스를 디버그 중인 애플리케이션으로 다시 로드합니다(HotSwap)." />
+    <option name="애플리케이션으로" path="ActionManager" hit="변경된 모든 클래스를 디버그 중인 애플리케이션으로 다시 로드합니다(HotSwap)." />
+    <option name="중인" path="ActionManager" hit="변경된 모든 클래스를 디버그 중인 애플리케이션으로 다시 로드합니다(HotSwap)." />
+    <option name="클래스를" path="ActionManager" hit="변경된 모든 클래스를 디버그 중인 애플리케이션으로 다시 로드합니다(HotSwap)." />
+    <option name="다시" path="ActionManager" hit="변경된 클래스 다시 로드" />
+    <option name="로드" path="ActionManager" hit="변경된 클래스 다시 로드" />
+    <option name="변경된" path="ActionManager" hit="변경된 클래스 다시 로드" />
+    <option name="클래스" path="ActionManager" hit="변경된 클래스 다시 로드" />
+    <option name="값을" path="ActionManager" hit="별도의 창에서 선택한 노드의 텍스트 값을 봅니다" />
+    <option name="노드의" path="ActionManager" hit="별도의 창에서 선택한 노드의 텍스트 값을 봅니다" />
+    <option name="별도의" path="ActionManager" hit="별도의 창에서 선택한 노드의 텍스트 값을 봅니다" />
+    <option name="봅니다" path="ActionManager" hit="별도의 창에서 선택한 노드의 텍스트 값을 봅니다" />
+    <option name="선택한" path="ActionManager" hit="별도의 창에서 선택한 노드의 텍스트 값을 봅니다" />
+    <option name="창에서" path="ActionManager" hit="별도의 창에서 선택한 노드의 텍스트 값을 봅니다" />
+    <option name="텍스트" path="ActionManager" hit="별도의 창에서 선택한 노드의 텍스트 값을 봅니다" />
+    <option name="계산" path="ActionManager" hit="보존된 크기 계산..." />
+    <option name="보존된" path="ActionManager" hit="보존된 크기 계산..." />
+    <option name="크기" path="ActionManager" hit="보존된 크기 계산..." />
+    <option name="비동기" path="ActionManager" hit="비동기 스택 추적" />
+    <option name="스택" path="ActionManager" hit="비동기 스택 추적" />
+    <option name="추적" path="ActionManager" hit="비동기 스택 추적" />
+    <option name="새" path="ActionManager" hit="새 인스턴스 추적" />
+    <option name="인스턴스" path="ActionManager" hit="새 인스턴스 추적" />
+    <option name="추적" path="ActionManager" hit="새 인스턴스 추적" />
+    <option name="새" path="ActionManager" hit="새 인스턴스 표시" />
+    <option name="인스턴스" path="ActionManager" hit="새 인스턴스 표시" />
+    <option name="표시" path="ActionManager" hit="새 인스턴스 표시" />
+    <option name="watch" path="ActionManager" hit="새 클래스 수준의 watch ..." />
+    <option name="새" path="ActionManager" hit="새 클래스 수준의 watch ..." />
+    <option name="수준의" path="ActionManager" hit="새 클래스 수준의 watch ..." />
+    <option name="클래스" path="ActionManager" hit="새 클래스 수준의 watch ..." />
+    <option name="생성" path="ActionManager" hit="생성..." />
+    <option name="내보내기" path="ActionManager" hit="스레드 내보내기..." />
+    <option name="스레드" path="ActionManager" hit="스레드 내보내기..." />
+    <option name="덤프" path="ActionManager" hit="스레드 덤프 받기" />
+    <option name="받기" path="ActionManager" hit="스레드 덤프 받기" />
+    <option name="스레드" path="ActionManager" hit="스레드 덤프 받기" />
+    <option name="뷰" path="ActionManager" hit="스레드 뷰 사용자 지정..." />
+    <option name="사용자" path="ActionManager" hit="스레드 뷰 사용자 지정..." />
+    <option name="스레드" path="ActionManager" hit="스레드 뷰 사용자 지정..." />
+    <option name="지정" path="ActionManager" hit="스레드 뷰 사용자 지정..." />
+    <option name="스텝" path="ActionManager" hit="스텝 필터 추가..." />
+    <option name="추가" path="ActionManager" hit="스텝 필터 추가..." />
+    <option name="필터" path="ActionManager" hit="스텝 필터 추가..." />
+    <option name="던지기" path="ActionManager" hit="예외 던지기" />
+    <option name="예외" path="ActionManager" hit="예외 던지기" />
+    <option name="던집니다" path="ActionManager" hit="예외를 던집니다" />
+    <option name="예외를" path="ActionManager" hit="예외를 던집니다" />
+    <option name="인스턴스" path="ActionManager" hit="인스턴스 표시" />
+    <option name="표시" path="ActionManager" hit="인스턴스 표시" />
+    <option name="인스턴스로만" path="ActionManager" hit="인스턴스로만 표시" />
+    <option name="표시" path="ActionManager" hit="인스턴스로만 표시" />
+    <option name="일시" path="ActionManager" hit="일시 중지" />
+    <option name="중지" path="ActionManager" hit="일시 중지" />
+    <option name="자동" path="ActionManager" hit="자동" />
+    <option name="재개" path="ActionManager" hit="재개" />
+    <option name="중단" path="ActionManager" hit="중단" />
+    <option name="액션" path="ActionManager" hit="중단점 액션" />
+    <option name="중단점" path="ActionManager" hit="중단점 액션" />
+    <option name="추적된" path="ActionManager" hit="추적된 클래스만 표시" />
+    <option name="클래스만" path="ActionManager" hit="추적된 클래스만 표시" />
+    <option name="표시" path="ActionManager" hit="추적된 클래스만 표시" />
+    <option name="메서드" path="ActionManager" hit="캐럿 위치에 있는 메서드의 메서드 중단점을 전환합니다" />
+    <option name="메서드의" path="ActionManager" hit="캐럿 위치에 있는 메서드의 메서드 중단점을 전환합니다" />
+    <option name="위치에" path="ActionManager" hit="캐럿 위치에 있는 메서드의 메서드 중단점을 전환합니다" />
+    <option name="있는" path="ActionManager" hit="캐럿 위치에 있는 메서드의 메서드 중단점을 전환합니다" />
+    <option name="전환합니다" path="ActionManager" hit="캐럿 위치에 있는 메서드의 메서드 중단점을 전환합니다" />
+    <option name="중단점을" path="ActionManager" hit="캐럿 위치에 있는 메서드의 메서드 중단점을 전환합니다" />
+    <option name="캐럿" path="ActionManager" hit="캐럿 위치에 있는 메서드의 메서드 중단점을 전환합니다" />
+    <option name="위치에" path="ActionManager" hit="캐럿 위치에 있는 필드의 필드 중단점을 전환합니다" />
+    <option name="있는" path="ActionManager" hit="캐럿 위치에 있는 필드의 필드 중단점을 전환합니다" />
+    <option name="전환합니다" path="ActionManager" hit="캐럿 위치에 있는 필드의 필드 중단점을 전환합니다" />
+    <option name="중단점을" path="ActionManager" hit="캐럿 위치에 있는 필드의 필드 중단점을 전환합니다" />
+    <option name="캐럿" path="ActionManager" hit="캐럿 위치에 있는 필드의 필드 중단점을 전환합니다" />
+    <option name="필드" path="ActionManager" hit="캐럿 위치에 있는 필드의 필드 중단점을 전환합니다" />
+    <option name="필드의" path="ActionManager" hit="캐럿 위치에 있는 필드의 필드 중단점을 전환합니다" />
+    <option name="기록" path="ActionManager" hit="컬렉션 기록 표시" />
+    <option name="컬렉션" path="ActionManager" hit="컬렉션 기록 표시" />
+    <option name="표시" path="ActionManager" hit="컬렉션 기록 표시" />
+    <option name="블록에서" path="ActionManager" hit="코드 블록에서 스탭아웃" />
+    <option name="스탭아웃" path="ActionManager" hit="코드 블록에서 스탭아웃" />
+    <option name="코드" path="ActionManager" hit="코드 블록에서 스탭아웃" />
+    <option name="소스로" path="ActionManager" hit="타입 소스로 이동" />
+    <option name="이동" path="ActionManager" hit="타입 소스로 이동" />
+    <option name="타입" path="ActionManager" hit="타입 소스로 이동" />
+    <option name="타입" path="ActionManager" hit="타입 표시" />
+    <option name="표시" path="ActionManager" hit="타입 표시" />
+    <option name="보기" path="ActionManager" hit="텍스트 보기" />
+    <option name="텍스트" path="ActionManager" hit="텍스트 보기" />
+    <option name="다시" path="ActionManager" hit="파일 컴파일 및 다시 로드" />
+    <option name="로드" path="ActionManager" hit="파일 컴파일 및 다시 로드" />
+    <option name="및" path="ActionManager" hit="파일 컴파일 및 다시 로드" />
+    <option name="컴파일" path="ActionManager" hit="파일 컴파일 및 다시 로드" />
+    <option name="파일" path="ActionManager" hit="파일 컴파일 및 다시 로드" />
+    <option name="편집" path="ActionManager" hit="편집..." />
+    <option name="소스" path="ActionManager" hit="프레임 소스 편집" />
+    <option name="편집" path="ActionManager" hit="프레임 소스 편집" />
+    <option name="프레임" path="ActionManager" hit="프레임 소스 편집" />
+    <option name="감시점" path="ActionManager" hit="필드 감시점 전환" />
+    <option name="전환" path="ActionManager" hit="필드 감시점 전환" />
+    <option name="필드" path="ActionManager" hit="필드 감시점 전환" />
+    <option name="제거" path="ActionManager" hit="필터 제거" />
+    <option name="필터" path="ActionManager" hit="필터 제거" />
+    <option name="필터" path="ActionManager" hit="필터..." />
+    <option name="핫스왑" path="ActionManager" hit="핫스왑" />
+    <option name="추적" path="ActionManager" hit="호출 추적" />
+    <option name="호출" path="ActionManager" hit="호출 추적" />
+  </configurable>
+  <configurable id="project.propDebugger" configurable_name="디버거">
+    <option name="jit" hit="JIT 비활성화" />
+    <option name="비활성화" hit="JIT 비활성화" />
+    <option name="java" hit="Java" />
+    <option name="m" hit="공유 메모리 M " />
+    <option name="공유" hit="공유 메모리 M " />
+    <option name="메모리" hit="공유 메모리 M " />
+    <option name="대체" hit="대체 소스 전환기 표시" />
+    <option name="소스" hit="대체 소스 전환기 표시" />
+    <option name="전환기" hit="대체 소스 전환기 표시" />
+    <option name="표시" hit="대체 소스 전환기 표시" />
+    <option name="디버그" hit="디버그 프로세스를 즉시 종료" />
+    <option name="종료" hit="디버그 프로세스를 즉시 종료" />
+    <option name="즉시" hit="디버그 프로세스를 즉시 종료" />
+    <option name="프로세스를" hit="디버그 프로세스를 즉시 종료" />
+    <option name="메모리" hit="메모리 에이전트 연결" />
+    <option name="에이전트" hit="메모리 에이전트 연결" />
+    <option name="연결" hit="메모리 에이전트 연결" />
+    <option name="s" hit="소켓 S " />
+    <option name="소켓" hit="소켓 S " />
+    <option name="전송" hit="전송 " />
+  </configurable>
+  <configurable id="Debugger_Data_Views_Java" configurable_name="Java">
+    <option name="" hit=" toString    객체 뷰 활성화 O  " />
+    <option name="o" hit=" toString    객체 뷰 활성화 O  " />
+    <option name="tostring" hit=" toString    객체 뷰 활성화 O  " />
+    <option name="객체" hit=" toString    객체 뷰 활성화 O  " />
+    <option name="뷰" hit=" toString    객체 뷰 활성화 O  " />
+    <option name="활성화" hit=" toString    객체 뷰 활성화 O  " />
+    <option name="" hit=" toString    메서드를 재정의하는 모든 클래스에서 사용" />
+    <option name="tostring" hit=" toString    메서드를 재정의하는 모든 클래스에서 사용" />
+    <option name="메서드를" hit=" toString    메서드를 재정의하는 모든 클래스에서 사용" />
+    <option name="모든" hit=" toString    메서드를 재정의하는 모든 클래스에서 사용" />
+    <option name="사용" hit=" toString    메서드를 재정의하는 모든 클래스에서 사용" />
+    <option name="재정의하는" hit=" toString    메서드를 재정의하는 모든 클래스에서 사용" />
+    <option name="클래스에서" hit=" toString    메서드를 재정의하는 모든 클래스에서 사용" />
+    <option name="java" hit="Java" />
+    <option name="s" hit="Static 필드 S " />
+    <option name="static" hit="Static 필드 S " />
+    <option name="필드" hit="Static 필드 S " />
+    <option name="throwable" hit="Throwable 객체의 스택 추적 자동 생성" />
+    <option name="객체의" hit="Throwable 객체의 스택 추적 자동 생성" />
+    <option name="생성" hit="Throwable 객체의 스택 추적 자동 생성" />
+    <option name="스택" hit="Throwable 객체의 스택 추적 자동 생성" />
+    <option name="자동" hit="Throwable 객체의 스택 추적 자동 생성" />
+    <option name="추적" hit="Throwable 객체의 스택 추적 자동 생성" />
+    <option name="f" hit="static final 필드 F " />
+    <option name="final" hit="static final 필드 F " />
+    <option name="static" hit="static final 필드 F " />
+    <option name="필드" hit="static final 필드 F " />
+    <option name="i" hit="객체 ID I " />
+    <option name="id" hit="객체 ID I " />
+    <option name="객체" hit="객체 ID I " />
+    <option name="16진수" hit="기본 타입에 대한   진수 값 표시" />
+    <option name="값" hit="기본 타입에 대한   진수 값 표시" />
+    <option name="기본" hit="기본 타입에 대한   진수 값 표시" />
+    <option name="대한" hit="기본 타입에 대한   진수 값 표시" />
+    <option name="타입에" hit="기본 타입에 대한   진수 값 표시" />
+    <option name="표시" hit="기본 타입에 대한   진수 값 표시" />
+    <option name="값" hit="데이터 흐름 분석에 따라 조건 값 및 예외 예측" />
+    <option name="데이터" hit="데이터 흐름 분석에 따라 조건 값 및 예외 예측" />
+    <option name="따라" hit="데이터 흐름 분석에 따라 조건 값 및 예외 예측" />
+    <option name="및" hit="데이터 흐름 분석에 따라 조건 값 및 예외 예측" />
+    <option name="분석에" hit="데이터 흐름 분석에 따라 조건 값 및 예외 예측" />
+    <option name="예외" hit="데이터 흐름 분석에 따라 조건 값 및 예외 예측" />
+    <option name="예측" hit="데이터 흐름 분석에 따라 조건 값 및 예외 예측" />
+    <option name="조건" hit="데이터 흐름 분석에 따라 조건 값 및 예외 예측" />
+    <option name="흐름" hit="데이터 흐름 분석에 따라 조건 값 및 예외 예측" />
+    <option name="것으로" hit="도달할 수 없는 것으로 예측되는 코드 블록을 회색으로 표시" />
+    <option name="도달할" hit="도달할 수 없는 것으로 예측되는 코드 블록을 회색으로 표시" />
+    <option name="블록을" hit="도달할 수 없는 것으로 예측되는 코드 블록을 회색으로 표시" />
+    <option name="수" hit="도달할 수 없는 것으로 예측되는 코드 블록을 회색으로 표시" />
+    <option name="없는" hit="도달할 수 없는 것으로 예측되는 코드 블록을 회색으로 표시" />
+    <option name="예측되는" hit="도달할 수 없는 것으로 예측되는 코드 블록을 회색으로 표시" />
+    <option name="코드" hit="도달할 수 없는 것으로 예측되는 코드 블록을 회색으로 표시" />
+    <option name="표시" hit="도달할 수 없는 것으로 예측되는 코드 블록을 회색으로 표시" />
+    <option name="회색으로" hit="도달할 수 없는 것으로 예측되는 코드 블록을 회색으로 표시" />
+    <option name="목록의" hit="목록의 클래스 " />
+    <option name="클래스" hit="목록의 클래스 " />
+    <option name="문자열의" hit="문자열의 타입 표시" />
+    <option name="타입" hit="문자열의 타입 표시" />
+    <option name="표시" hit="문자열의 타입 표시" />
+    <option name="n" hit="배열 및 컬렉션 내 null 요소 숨기기 N " />
+    <option name="null" hit="배열 및 컬렉션 내 null 요소 숨기기 N " />
+    <option name="내" hit="배열 및 컬렉션 내 null 요소 숨기기 N " />
+    <option name="및" hit="배열 및 컬렉션 내 null 요소 숨기기 N " />
+    <option name="배열" hit="배열 및 컬렉션 내 null 요소 숨기기 N " />
+    <option name="숨기기" hit="배열 및 컬렉션 내 null 요소 숨기기 N " />
+    <option name="요소" hit="배열 및 컬렉션 내 null 요소 숨기기 N " />
+    <option name="컬렉션" hit="배열 및 컬렉션 내 null 요소 숨기기 N " />
+    <option name="l" hit="새 지역 변수로 자동 스크롤 L " />
+    <option name="변수로" hit="새 지역 변수로 자동 스크롤 L " />
+    <option name="새" hit="새 지역 변수로 자동 스크롤 L " />
+    <option name="스크롤" hit="새 지역 변수로 자동 스크롤 L " />
+    <option name="자동" hit="새 지역 변수로 자동 스크롤 L " />
+    <option name="지역" hit="새 지역 변수로 자동 스크롤 L " />
+    <option name="t" hit="선언된 타입 T " />
+    <option name="선언된" hit="선언된 타입 T " />
+    <option name="타입" hit="선언된 타입 T " />
+    <option name="q" hit="완전히 정규화된 이름 Q " />
+    <option name="완전히" hit="완전히 정규화된 이름 Q " />
+    <option name="이름" hit="완전히 정규화된 이름 Q " />
+    <option name="정규화된" hit="완전히 정규화된 이름 Q " />
+    <option name="v" hit="지역 변수로서의  val 필드 V " />
+    <option name="val" hit="지역 변수로서의  val 필드 V " />
+    <option name="변수로서의" hit="지역 변수로서의  val 필드 V " />
+    <option name="지역" hit="지역 변수로서의  val 필드 V " />
+    <option name="필드" hit="지역 변수로서의  val 필드 V " />
+    <option name="e" hit="컬렉션 클래스에 대한 대체 항목 보기 활성화 E " />
+    <option name="대체" hit="컬렉션 클래스에 대한 대체 항목 보기 활성화 E " />
+    <option name="대한" hit="컬렉션 클래스에 대한 대체 항목 보기 활성화 E " />
+    <option name="보기" hit="컬렉션 클래스에 대한 대체 항목 보기 활성화 E " />
+    <option name="컬렉션" hit="컬렉션 클래스에 대한 대체 항목 보기 활성화 E " />
+    <option name="클래스에" hit="컬렉션 클래스에 대한 대체 항목 보기 활성화 E " />
+    <option name="항목" hit="컬렉션 클래스에 대한 대체 항목 보기 활성화 E " />
+    <option name="활성화" hit="컬렉션 클래스에 대한 대체 항목 보기 활성화 E " />
+    <option name="y" hit="통합 필드 Y " />
+    <option name="통합" hit="통합 필드 Y " />
+    <option name="필드" hit="통합 필드 Y " />
+    <option name="표시" hit="표시" />
+  </configurable>
+  <configurable id="reference.idesettings.debugger.typerenderers" configurable_name="자바 타입 렌더러">
+    <option name="노드가" hit="노드가 확장될 수 있는지 테스트 선택 사항  " />
+    <option name="사항" hit="노드가 확장될 수 있는지 테스트 선택 사항  " />
+    <option name="선택" hit="노드가 확장될 수 있는지 테스트 선택 사항  " />
+    <option name="수" hit="노드가 확장될 수 있는지 테스트 선택 사항  " />
+    <option name="있는지" hit="노드가 확장될 수 있는지 테스트 선택 사항  " />
+    <option name="테스트" hit="노드가 확장될 수 있는지 테스트 선택 사항  " />
+    <option name="확장될" hit="노드가 확장될 수 있는지 테스트 선택 사항  " />
+    <option name="노드를" hit="노드를 렌더링할 때" />
+    <option name="때" hit="노드를 렌더링할 때" />
+    <option name="렌더링할" hit="노드를 렌더링할 때" />
+    <option name="노드를" hit="노드를 확장할 때" />
+    <option name="때" hit="노드를 확장할 때" />
+    <option name="확장할" hit="노드를 확장할 때" />
+    <option name="다음의" hit="다음의 표현식 사용 " />
+    <option name="사용" hit="다음의 표현식 사용 " />
+    <option name="표현식" hit="다음의 표현식 사용 " />
+    <option name="디폴트" hit="디폴트 렌더러 사용" />
+    <option name="렌더러" hit="디폴트 렌더러 사용" />
+    <option name="사용" hit="디폴트 렌더러 사용" />
+    <option name="디폴트" hit="디폴트 하위 추가" />
+    <option name="추가" hit="디폴트 하위 추가" />
+    <option name="하위" hit="디폴트 하위 추가" />
+    <option name="렌더러" hit="렌더러 이름 " />
+    <option name="이름" hit="렌더러 이름 " />
+    <option name="온디맨드" hit="온디맨드" />
+    <option name="렌더러" hit="자바 타입 렌더러" />
+    <option name="자바" hit="자바 타입 렌더러" />
+    <option name="타입" hit="자바 타입 렌더러" />
+    <option name="객체" hit="타입 객체 완전히 정규화된 이름 에 렌더러 적용 " />
+    <option name="렌더러" hit="타입 객체 완전히 정규화된 이름 에 렌더러 적용 " />
+    <option name="에" hit="타입 객체 완전히 정규화된 이름 에 렌더러 적용 " />
+    <option name="완전히" hit="타입 객체 완전히 정규화된 이름 에 렌더러 적용 " />
+    <option name="이름" hit="타입 객체 완전히 정규화된 이름 에 렌더러 적용 " />
+    <option name="적용" hit="타입 객체 완전히 정규화된 이름 에 렌더러 적용 " />
+    <option name="정규화된" hit="타입 객체 완전히 정규화된 이름 에 렌더러 적용 " />
+    <option name="타입" hit="타입 객체 완전히 정규화된 이름 에 렌더러 적용 " />
+    <option name="id" hit="타입 및 객체 ID 표시" />
+    <option name="객체" hit="타입 및 객체 ID 표시" />
+    <option name="및" hit="타입 및 객체 ID 표시" />
+    <option name="타입" hit="타입 및 객체 ID 표시" />
+    <option name="표시" hit="타입 및 객체 ID 표시" />
+    <option name="목록" hit="표현식 목록 사용 " />
+    <option name="사용" hit="표현식 목록 사용 " />
+    <option name="표현식" hit="표현식 목록 사용 " />
+  </configurable>
+  <configurable id="debugger.stepping" configurable_name="단계별 실행">
+    <option name="java" hit="Java" />
+    <option name="g" hit="단순 getter 건너뛰기 G " />
+    <option name="getter" hit="단순 getter 건너뛰기 G " />
+    <option name="건너뛰기" hit="단순 getter 건너뛰기 G " />
+    <option name="단순" hit="단순 getter 건너뛰기 G " />
+    <option name="k" hit="묻기 K " />
+    <option name="묻기" hit="묻기 K " />
+    <option name="c" hit="생성자 건너뛰기 C " />
+    <option name="건너뛰기" hit="생성자 건너뛰기 C " />
+    <option name="생성자" hit="생성자 건너뛰기 C " />
+    <option name="e" hit="안 함 E " />
+    <option name="안" hit="안 함 E " />
+    <option name="함" hit="안 함 E " />
+    <option name="o" hit="클래스 로더 건너뛰기 O " />
+    <option name="건너뛰기" hit="클래스 로더 건너뛰기 O " />
+    <option name="로더" hit="클래스 로더 건너뛰기 O " />
+    <option name="클래스" hit="클래스 로더 건너뛰기 O " />
+    <option name="i" hit="클래스로 스텝인투 안 함 I " />
+    <option name="스텝인투" hit="클래스로 스텝인투 안 함 I " />
+    <option name="안" hit="클래스로 스텝인투 안 함 I " />
+    <option name="클래스로" hit="클래스로 스텝인투 안 함 I " />
+    <option name="함" hit="클래스로 스텝인투 안 함 I " />
+    <option name="p" hit="통합 메서드 건너뛰기 P " />
+    <option name="건너뛰기" hit="통합 메서드 건너뛰기 P " />
+    <option name="메서드" hit="통합 메서드 건너뛰기 P " />
+    <option name="통합" hit="통합 메서드 건너뛰기 P " />
+    <option name="finally" hit="팝 프레임과 조기 반환에서 finally 블록 평가" />
+    <option name="반환에서" hit="팝 프레임과 조기 반환에서 finally 블록 평가" />
+    <option name="블록" hit="팝 프레임과 조기 반환에서 finally 블록 평가" />
+    <option name="조기" hit="팝 프레임과 조기 반환에서 finally 블록 평가" />
+    <option name="팝" hit="팝 프레임과 조기 반환에서 finally 블록 평가" />
+    <option name="평가" hit="팝 프레임과 조기 반환에서 finally 블록 평가" />
+    <option name="프레임과" hit="팝 프레임과 조기 반환에서 finally 블록 평가" />
+    <option name="a" hit="항상 A " />
+    <option name="항상" hit="항상 A " />
+    <option name="l" hit="항상 스마트 스텝인투 실행 L " />
+    <option name="스마트" hit="항상 스마트 스텝인투 실행 L " />
+    <option name="스텝인투" hit="항상 스마트 스텝인투 실행 L " />
+    <option name="실행" hit="항상 스마트 스텝인투 실행 L " />
+    <option name="항상" hit="항상 스마트 스텝인투 실행 L " />
+    <option name="스레드만" hit="현재 스레드만 재개" />
+    <option name="재개" hit="현재 스레드만 재개" />
+    <option name="현재" hit="현재 스레드만 재개" />
+  </configurable>
+  <configurable id="debugger.hotswap" configurable_name="핫스왑">
+    <option name="" hit=" JVM이 중단됩니다  경고 켜기" />
+    <option name="jvm이" hit=" JVM이 중단됩니다  경고 켜기" />
+    <option name="경고" hit=" JVM이 중단됩니다  경고 켜기" />
+    <option name="중단됩니다" hit=" JVM이 중단됩니다  경고 켜기" />
+    <option name="켜기" hit=" JVM이 중단됩니다  경고 켜기" />
+    <option name="java" hit="Java" />
+    <option name="k" hit="묻기 K " />
+    <option name="묻기" hit="묻기 K " />
+    <option name="n" hit="안 함 N " />
+    <option name="안" hit="안 함 N " />
+    <option name="함" hit="안 함 N " />
+    <option name="다시" hit="컴파일 후 클래스를 다시 로드 " />
+    <option name="로드" hit="컴파일 후 클래스를 다시 로드 " />
+    <option name="컴파일" hit="컴파일 후 클래스를 다시 로드 " />
+    <option name="클래스를" hit="컴파일 후 클래스를 다시 로드 " />
+    <option name="후" hit="컴파일 후 클래스를 다시 로드 " />
+    <option name="다시" hit="클래스를 다시 로드하기 전에 프로젝트를 빌드" />
+    <option name="로드하기" hit="클래스를 다시 로드하기 전에 프로젝트를 빌드" />
+    <option name="빌드" hit="클래스를 다시 로드하기 전에 프로젝트를 빌드" />
+    <option name="전에" hit="클래스를 다시 로드하기 전에 프로젝트를 빌드" />
+    <option name="클래스를" hit="클래스를 다시 로드하기 전에 프로젝트를 빌드" />
+    <option name="프로젝트를" hit="클래스를 다시 로드하기 전에 프로젝트를 빌드" />
+    <option name="a" hit="항상 A " />
+    <option name="항상" hit="항상 A " />
+  </configurable>
+  <configurable id="reference.idesettings.debugger.capture" configurable_name="비동기 스택 추적">
+    <option name="비동기" hit="비동기 스택 추적" />
+    <option name="스택" hit="비동기 스택 추적" />
+    <option name="추적" hit="비동기 스택 추적" />
+    <option name="구성" hit="어노테이션 구성   " />
+    <option name="어노테이션" hit="어노테이션 구성   " />
+    <option name="디버거" hit="조율 에이전트 디버거 재시작 필요 " />
+    <option name="에이전트" hit="조율 에이전트 디버거 재시작 필요 " />
+    <option name="재시작" hit="조율 에이전트 디버거 재시작 필요 " />
+    <option name="조율" hit="조율 에이전트 디버거 재시작 필요 " />
+    <option name="필요" hit="조율 에이전트 디버거 재시작 필요 " />
+    <option name="기반" hit="중단점 기반 " />
+    <option name="중단점" hit="중단점 기반 " />
+    <option name="느려질" hit="지역 변수 캡처 실행 속도가 크게 느려질 수 있음 " />
+    <option name="변수" hit="지역 변수 캡처 실행 속도가 크게 느려질 수 있음 " />
+    <option name="속도가" hit="지역 변수 캡처 실행 속도가 크게 느려질 수 있음 " />
+    <option name="수" hit="지역 변수 캡처 실행 속도가 크게 느려질 수 있음 " />
+    <option name="실행" hit="지역 변수 캡처 실행 속도가 크게 느려질 수 있음 " />
+    <option name="있음" hit="지역 변수 캡처 실행 속도가 크게 느려질 수 있음 " />
+    <option name="지역" hit="지역 변수 캡처 실행 속도가 크게 느려질 수 있음 " />
+    <option name="캡처" hit="지역 변수 캡처 실행 속도가 크게 느려질 수 있음 " />
+    <option name="크게" hit="지역 변수 캡처 실행 속도가 크게 느려질 수 있음 " />
+  </configurable>
+</options>

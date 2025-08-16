@@ -1,0 +1,12 @@
+<html>
+<body>
+Reporta los nombres de exportación que comienzan con el nombre del paquete. Esta inspección no reporta dichos nombres en el paquete <code>main</code>.
+<p>Ejemplo:</p>
+<pre><code>package myPackage
+func MyPackageGetIP() {
+}</code></pre>
+<p>El nombre <code>MyPackageGetIP</code> será resaltado porque comienza con el nombre del paquete.</p>
+<p>Según <a href="https://github.com/golang/go/wiki/CodeReviewComments#package-names">Package Names en github.com/golang</a>, todas las referencias a nombres en un paquete se realizarán con el nombre del paquete, por lo que se puede omitir ese nombre en el identificador.
+  Por ejemplo, si estás en el paquete <code>foo</code>, no necesitas un tipo <code>FooFile</code> porque los clientes lo escribirán como <code>foo.FooFile</code>. En su lugar, nombra el tipo como <code>File</code> y los clientes lo escribirán como <code>foo.File</code>.</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa sobre asignaciones donde la división en el lado derecho no debería truncarse a enteros.
+<p>Aunque a veces es intencional, esta estructura generalmente indica un error.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  int x = 18;
+  x *= 3/2; // no cambiará x debido al resultado de la división de enteros
+</code></pre>
+<p>
+Este código debería reemplazarse por:
+<pre><code>
+  int x = 18;
+  x *= 3.0/2;
+</code></pre>
+<p>
+  En las opciones de inspección, se pueden desactivar las advertencias para divisiones sospechosas pero potencialmente correctas, como cuando el dividendo no se puede calcular estáticamente.
+<pre><code>
+  void calc(int d) {
+     int x = 18;
+     x *= d/2;
+  }
+</code></pre>
+<p>
+  <small>Nuevo en 2019.2</small>
+</p>
+</body>
+</html>

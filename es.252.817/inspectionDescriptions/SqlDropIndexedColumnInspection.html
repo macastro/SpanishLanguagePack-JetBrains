@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre intentos de eliminar columnas que están incluidas en índices. Esta comprobación está disponible en Microsoft SQL Server y Sybase ASE.
+<p>Ejemplo (Microsoft SQL Server):</p>
+<pre><code>CREATE TABLE test_index
+(
+col  INT NOT NULL,
+col2 INT NOT NULL,
+col3 INT NOT NULL UNIQUE,
+col4 VARCHAR(200)
+);
+CREATE UNIQUE INDEX aaaa ON test_index (col, col2);
+ALTER TABLE test_index
+DROP COLUMN col;</code></pre>
+<p>No se puede eliminar la columna <code>col</code> porque está incluida en un índice. Para eliminar esta columna, primero debe eliminar el índice <code>aaaa</code> (por ejemplo, DROP INDEX aaaa).</p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+Informa sobre llamadas a <code>list.remove(index)</code> en bucles de conteo ascendente.
+<p>
+  Esto es sospechoso porque después de eliminar un elemento, la lista se acorta y se salta el siguiente elemento. Una solución simple es decrementar la variable del índice después de la eliminación, pero un enfoque más robusto sería eliminar usando un iterador o el método <code>removeIf()</code> (Java 8 y versiones posteriores).
+  Si no desea que <code>remove()</code> se llame múltiples veces en el bucle, considere agregar un <code>break</code> después.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  public static void main(String[] args) {
+    process(new ArrayList&lt;>(
+      Arrays.asList("1", "2", "|", "3", "4")));
+  }
+  static void process(List&lt;String&gt; list) {
+    for (int i = 0; i &lt; list.size(); i++) {
+      if (list.get(i).equals("|")) {
+        list.remove(i);
+        continue;
+      }
+      System.out.println(list.get(i));
+    }
+  }
+</code></pre>
+<p>El código parece que debería imprimir <code>1 2 3 4</code>, pero en realidad saltará <code>3</code> en la salida.</p>
+<p><small>Cambios en la versión 2018.2</small></p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>Informa sobre posibles <b>NullPointerException</b> que pueden ocurrir durante llamadas encadenadas a métodos o propiedades.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  domain?.getZone().getName()
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  domain?.getZone()?.getName()
+</code></pre>
+</body>
+</html>

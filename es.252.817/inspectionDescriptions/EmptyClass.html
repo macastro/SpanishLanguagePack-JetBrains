@@ -1,0 +1,40 @@
+<html>
+<body>
+Reportar clases vacías y archivos Java vacíos.
+<p>Una clase está vacía si no contiene campos, métodos, constructores o inicializadores. Las clases vacías a veces permanecen después de cambios importantes o refactorizaciones.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Example {
+    List&lt;String&gt; getList() {
+       return new ArrayList&lt;&gt;() {
+       };
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Example {
+    List&lt;String&gt; getList() {
+       return new ArrayList&lt;&gt;();
+    }
+  }
+</code></pre>
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>
+    Utilice la opción <b>Ignorar cuando hay anotaciones</b> para especificar anotaciones especiales. La inspección ignorará las clases marcadas con estas anotaciones.
+  </li>
+  <li><p>
+    Utilice la opción <b>Ignorar si la clase es un parámetro del tipo padre</b> para ignorar clases con superclases parametrizadas. Por ejemplo:
+  </p>
+    <pre><code>class MyList extends ArrayList&lt;String&gt; {}</code></pre>
+  </li>
+  <li>
+    Utilice <b>Ignorar subclases de java.lang.Throwable</b> para ignorar clases que extienden de <code>java.lang.Throwable</code>.
+  </li>
+  <li>
+    Utilice la opción <b>Considerar comentarios como contenido</b> para ignorar clases que contienen comentarios.
+  </li>
+</ul>
+</body>
+</html>

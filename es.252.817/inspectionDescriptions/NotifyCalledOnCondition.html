@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre llamadas a <code>notify()</code> o <code>notifyAll()</code> en objetos <code>java.util.concurrent.locks.Condition</code>.
+<p>
+  Esto podría ser un error de programación donde se deberían haber usado variantes de los métodos <code>signal()</code> o <code>signalAll()</code>, de lo contrario podría producirse una <code>IllegalMonitorStateException</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class C {
+    final Lock l = new ReentrantLock();
+    final Condition c = l.newCondition();
+    void release() {
+      l.lock();
+      try {
+        c.notifyAll(); // Aquí probablemente debería usarse 'signalAll()'
+      } finally {
+        l.unlock();
+      }
+    }
+  }
+</code></pre>
+</body>
+</html>

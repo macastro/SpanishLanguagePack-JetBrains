@@ -1,0 +1,32 @@
+<html>
+<body>
+Informa sobre estructuras inicializadas sin nombres de campo especificados. Por defecto, esta inspección solo está disponible cuando se utilizan tipos definidos en paquetes diferentes.
+<p>Al inicializar estructuras, es mejor especificar explícitamente los nombres de los campos para asegurar que continúen siendo direccionados correctamente en caso de que cambie el orden o los nombres de estos campos.</p>
+<p>Ejemplo:</p>
+<pre><code>_ = io.LimitedReader{nil, 10}</code></pre>
+<p>La inicialización de <code>LimitedReader</code> será resaltada porque faltan los nombres explícitos de los campos de la estructura.
+  Puede aplicar la corrección rápida <b>Agregar claves y eliminar valores cero</b> a la inicialización de la estructura. Después de aplicar la corrección rápida, el código se verá así:</p>
+<pre><code>_ = io.LimitedReader{N: 10}</code></pre>
+<p>Esta inspección tiene las siguientes opciones:</p>
+<ul>
+  <li><p><b>Informar sobre tipos definidos en el paquete actual</b>: Informa sobre casos donde las estructuras se declaran e inicializan en el mismo paquete.
+    Considere el siguiente ejemplo.</p>
+    <pre><code>d := struct {
+  c string
+ }{ "dsd "}</code></pre>
+  </li>
+  <li><p><b>Informar sobre literales de estructura sin tipo</b>: Informa sobre campos sin nombre cuando se omite el tipo (estructura o interfaz).
+    El siguiente ejemplo muestra un caso donde se omite el tipo.</p>
+    <pre><code>_ = []io.LimitedReader{
+ {nil, 10},
+ {nil, 20},
+ }</code></pre>
+    <p>En el siguiente ejemplo, el tipo está presente pero es redundante.</p>
+    <pre><code>_ = []io.LimitedReader{
+ io.LimitedReader{nil, 10},
+ io.LimitedReader{nil, 20},
+}</code></pre>
+  </li>
+</ul>
+</body>
+</html>

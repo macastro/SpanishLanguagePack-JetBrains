@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta comprobaciones de igualdad usando <code>Float.NaN</code> o <code>Double.NaN</code> (deberían reemplazarse por comprobaciones <code>isNaN()</code>).
+<p>
+    Según IEEE 754, las comprobaciones de igualdad contra NaN siempre devuelven <code>false</code>, incluso para <code>NaN == NaN</code>.
+    Por lo tanto, es probable que estas comprobaciones sean erróneas.
+</p>
+<p>Esta corrección rápida reemplaza la comparación por una comprobación <code>isNaN()</code> que utiliza una técnica de comparación diferente y maneja correctamente los valores <code>NaN</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun check(value: Double): Boolean {
+      return Double.NaN == value
+  }
+</code></pre>
+<p>Después de aplicar la corrección:</p>
+<pre><code>
+  fun check(value: Double): Boolean {
+      return value.isNaN()
+  }
+</code></pre>
+</body>
+</html>

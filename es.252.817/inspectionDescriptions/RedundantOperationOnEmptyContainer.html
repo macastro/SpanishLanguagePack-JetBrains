@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre operaciones redundantes en colecciones, mapas o arrays vacíos.
+<p>
+  Las operaciones de iteración, eliminación de elementos, ordenamiento y algunas otras operaciones en colecciones vacías no tienen efecto y pueden ser eliminadas. Además, podrían indicar la presencia de un error.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  if (numbers.isEmpty()){
+    //Error debido a la falta de negación
+    int max = numbers.stream().max(Comparator.naturalOrder()).get();
+    ...
+  }
+</code></pre>
+<p><small>Novedades en 2019.1</small></p>
+</body>
+</html>

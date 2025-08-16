@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa sobre parámetros de método redundantes que pueden ser reemplazados por variables locales.
+<p>Un parámetro puede ser eliminado si todos sus usos locales están precedidos inmediatamente por una asignación a ese parámetro.
+No tiene sentido tener tales parámetros ya que el valor que se les pasa será sobrescrito.
+Este problema suele ser el resultado de una refactorización.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  void test(int p) {
+    p = 1;
+    System.out.print(p);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void test() {
+    int p = 1;
+    System.out.print(p);
+  }
+</code></pre>
+</body>
+</html>

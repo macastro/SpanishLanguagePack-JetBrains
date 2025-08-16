@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre secciones de especificación de métodos escritas en inglés que entran en conflicto con la declaración del método. Esto incluye:
+<ul>
+  <li>Métodos especificados para devolver <code>true</code> o <code>false</code>, pero su tipo de retorno no es booleano.</li>
+  <li>Métodos especificados para devolver <code>null</code>, pero están anotados con <code>@NotNull</code> o su tipo de retorno es primitivo.</li>
+  <li>Métodos especificados para devolver una lista, pero su tipo de retorno es un conjunto o un array.</li>
+  <li>Y así sucesivamente.</li>
+</ul>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  /**
+   * @return true if user is found, false otherwise
+   */
+  User findUser(String name);
+</code></pre>
+<p>
+  Ten en cuenta que pueden producirse falsos positivos, ya que esta comprobación intenta interpretar el lenguaje humano. Sin embargo, incluso si la comprobación informa incorrectamente, la descripción puede seguir siendo confusa y debería reescribirse.
+</p>
+<p>
+  <small>Cambios más recientes en 2022.3</small>
+</p>
+</body>
+</html>

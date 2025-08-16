@@ -1,0 +1,23 @@
+<html>
+<body>
+Reporta llamadas a <code>c</code> con cero o un argumento. Esta inspección sugiere eliminar las llamadas redundantes.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    a &lt;- c()
+</code></pre>
+<p>y</p>
+<pre><code>
+    c(10) + 10
+</code></pre>
+<p>
+  Cuando aplique la corrección rápida, el código se convertirá en:
+</p>
+<pre><code>
+    a &lt;- NULL
+</code></pre>
+<p>y</p>
+<pre><code>
+    10 + 10
+</code></pre>
+</body>
+</html>

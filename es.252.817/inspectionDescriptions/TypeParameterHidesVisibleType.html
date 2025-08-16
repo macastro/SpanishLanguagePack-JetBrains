@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre parámetros de tipo que tienen el mismo nombre que los tipos visibles en el ámbito actual. Estos nombres de parámetros pueden resultar confusos.
+<p>Ejemplo:</p>
+<pre><code>
+  abstract class MyList&lt;T&gt; extends AbstractList&lt;T&gt; {
+    private List&lt;T&gt; elements;
+    // El parámetro de tipo 'T' oculta el parámetro de tipo 'T'
+    public &lt;T&gt; T[] toArray(T[] array) {
+        return elements.toArray(array);
+    }
+}
+</code></pre>
+</body>
+</html>

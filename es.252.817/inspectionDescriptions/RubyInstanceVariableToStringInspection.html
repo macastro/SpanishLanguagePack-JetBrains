@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre variables interpoladas (de instancia o globales) sin llaves en expresiones.
+<p>Ejemplo:</p>
+<pre>
+<code># 不良做法
+@name = 'John Doe'
+puts &quot;Hi #@name&quot;</code>
+</pre>
+Las llaves faltantes se pueden insertar mediante una corrección rápida. Después de aplicar la corrección rápida, el resultado se verá así:
+<pre>
+<code># 优良做法
+@name = 'John Doe'
+puts &quot;Hi #{@name}&quot;</code>
+</pre>
+</body>
+</html>

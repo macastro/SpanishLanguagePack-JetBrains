@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre las directivas include que no se utilizan o no son necesarias y que se pueden eliminar de forma segura.
+<dl>
+  <dt><b>Detectar directivas include completamente sin usar</b></dt>
+  <dd>Una directiva include se considera sin usar si ninguna de sus declaraciones se utiliza en la unidad de traducción.</dd>
+  <dt><b>Detectar directivas include no utilizadas directamente</b></dt>
+  <dd>Una directiva include se considera sin usar si sus declaraciones no se utilizan directamente en el archivo. Funciona mejor con la política "Incluir lo que usas".</dd>
+  <dt><b>Detectar directivas include innecesarias</b></dt>
+  <dd>Detecta el conjunto mínimo de directivas include necesarias para compilar el archivo. Todas las demás directivas #include se consideran sin usar.</dd>
+</dl>
+<p>Utilice las casillas de verificación a continuación para ejecutar la inspección en archivos de encabezado.</p>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<html>
+<body>
+Informa sobre el uso de comparaciones <code>==</code> y <code>===</code> en la misma variable dentro de una única expresión.
+<p>Debido a su similitud, <code>==</code> y <code>===</code> pueden mezclarse inadvertidamente, por lo que es necesario verificar cuidadosamente si se está usando <code>==</code> en lugar de <code>===</code></p>
+<p>Ejemplo:</p>
+<pre><code>
+  if (type === FIELD || type == METHOD || type == ANNOTATION_METHOD || // Observe el uso incorrecto de "=="
+      type === LAMBDA_EXPRESSION) return
+</code></pre>
+</body>
+</html>

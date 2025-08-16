@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa sobre referencias a clases internas que no utilizan nombres de clase envolvente calificados.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import foo.Foo.Bar;
+  class Foo {
+    class Bar {}
+  }
+  class Baz {
+    void f(Bar bar) {}
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Foo {
+    class Bar {}
+  }
+  class Baz {
+    void f(Foo.Bar bar) {}
+  }
+</code></pre>
+<p>
+  La configuración de la inspección permite ignorar las referencias a clases internas dentro de la misma clase, por lo que estas clases no requieren importación.
+<p>
+</body>
+</html>

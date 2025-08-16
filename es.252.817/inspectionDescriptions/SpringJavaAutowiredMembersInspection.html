@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>Inspección de campos/métodos inyectados o por autocableado en clases que no son Spring Bean válidos:
+<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Component.html">@Component</a>, <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html">@Service</a>, etc.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+public class FooBeanClass {
+  @Autowired   // Informe 'Los miembros autocableados deben definirse en un Spring Bean válido: @Component, @Service, etc.'
+  ServiceBean bean;
+  }
+</code></pre>
+</body>
+</html>

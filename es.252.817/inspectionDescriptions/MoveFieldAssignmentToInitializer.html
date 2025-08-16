@@ -1,0 +1,23 @@
+<html>
+<body>
+Se sugiere reemplazar la inicialización de campos mediante asignación por la inicialización en la declaración del campo.
+<p>Solo se informa cuando la asignación del campo está en un inicializador de instancia o static, y cuando es seguro combinarla con la declaración del campo.
+  En otros casos (como asignaciones en constructores), la corrección rápida no se resalta porque la refactorización podría cambiar la semántica.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  class MyClass {
+    static final int intConstant;
+    static {
+      intConstant = 10;
+    }
+  }
+</code></pre>
+La corrección rápida moverá el valor asignado al inicializador del campo y eliminará el inicializador de clase cuando sea posible:
+<pre><code>
+  class MyClass {
+    static final int intConstant = 10;
+  }
+</code></pre>
+<small>Desde 2017.2</small>
+</body>
+</html>

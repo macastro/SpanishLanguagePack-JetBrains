@@ -1,0 +1,34 @@
+<html>
+<body>
+<p>Reporta <strong>&lt;lookup-method&gt;</strong> incorrectos en Beans dentro del contexto de aplicación XML.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  public abstract class FooLookupBean {
+    protected abstract FooBean createCommand();
+    private FooBean createCommand() {...}
+    protected static FooBean createCommandStatic() {...}
+    protected abstract FooBean createWithArgs(String foo);
+    protected abstract OtherBean createOtherBean();
+  }
+  </code></pre>
+<pre><code lang="xml">
+  &lt;beans&gt;
+    &lt;bean class="FooLookupBean" id="lookupTest"&gt;
+      &lt;lookup-method bean="fooBean" name="createCommand"/&gt;
+      &lt;!-- private --&gt;
+      &lt;lookup-method bean="fooBean" name="createCommand"/&gt; &lt;!-- "El método debe ser public o protected" --&gt;
+      &lt;!-- static --&gt;
+      &lt;lookup-method bean="fooBean" name="createCommandStatic"/&gt; &lt;!-- No se permite un método static aquí --&gt;
+      &lt;!-- with arguments --&gt;
+      &lt;lookup-method bean="fooBean" name="createWithArgs"/&gt; &lt;!-- El método no debe tener parámetros --&gt;
+      &lt;!-- not exist --&gt;
+      &lt;lookup-method bean="fooBean" name="unknown"/&gt; &lt;!-- Método desconocido --&gt;
+      &lt;!-- mismatch --&gt;
+      &lt;lookup-method bean="fooBean" name="createOtherBean"/&gt; &lt;!-- El tipo de retorno del método lookup no coincide con el tipo del Bean 'FooBean' --&gt;
+    &lt;/bean&gt;
+    &lt;bean class="FooBean" id="fooBean"/&gt;
+    &lt;bean class="OtherBean" id="otherBean"/&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+Informa sobre llamadas redundantes a <code>let</code> basadas en argumentos.
+<p>La función <code>let</code> es redundante cuando el parámetro lambda solo se usa como calificador en una expresión de llamada.</p>
+<p>Si necesitas nombrar la expresión calificadora, declara una variable local.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun splitNumbers() {
+      "1,2,3".let { it.split(',') }
+  }
+</code></pre>
+<p>La corrección rápida eliminará la llamada <code>let()</code> adicional:</p>
+<pre><code>
+  fun example() {
+      "1,2,3".split(',')
+  }
+</code></pre>
+<p>O bien:</p>
+<pre><code>
+  fun splitNumbers() {
+      val numbers = "1,2,3"
+      numbers.split(',')
+  }
+</code></pre>
+</body>
+</html>

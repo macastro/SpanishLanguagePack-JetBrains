@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre los mismos problemas HTML en comentarios Javadoc que reporta DocLint desde Java 8.
+<p>Esta inspección detecta los siguientes problemas:</p>
+<ul>
+  <li>Etiquetas autocerrantes, sin cerrar, desconocidas, mal ubicadas o vacías</li>
+  <li>Atributos desconocidos o incorrectos</li>
+  <li>Texto mal ubicado</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code>
+/**
+ * Etiqueta desconocida: List&lt;String&gt;
+ * Etiqueta sin cerrar: error&lt;/b&gt;
+ * Texto o etiquetas mal ubicadas: &lt;ul&gt;&lt;li&gt;one&lt;/li&gt;, &lt;li&gt;two&lt;/li&gt;&lt;/ul&gt;
+ * Atributos incorrectos o vacíos: &lt;a href=""&gt;&lt;/a&gt;
+ * Etiqueta autocerrante: &lt;br/&gt;
+ * …
+ */
+void sample(){ }
+</code></pre>
+</body>
+</html>

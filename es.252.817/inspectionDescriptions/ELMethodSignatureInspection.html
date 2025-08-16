@@ -1,0 +1,20 @@
+<html>
+<body>
+Reporta llamadas a métodos en EL que no coinciden con la restricción <code>method-signature</code> en archivos TLD.
+<p><b>Ejemplo de clase Java:</b></p><br/>
+<pre><code lang="java">
+public class ExampleAction {
+  public void goodAction() { ... }
+  public void badAction(String str) { ... }
+}
+</code></pre>
+<p><b>Ejemplo de archivo JSP:</b></p><br/>
+<pre><code lang="jsp">
+&lt;jsp:useBean id="example" scope="request" type="org.example.ExampleAction"/&gt;
+&lt;f:view&gt;
+  &lt;h:commandButton action="#{example.goodAction}"/&gt; // Correcto: el método acepta cero argumentos y devuelve `void`
+  &lt;h:commandButton action="#{example.badAction}"/&gt; // Error: el método `void badAction(String)` devuelve `java.lang.String` en lugar de `void`
+&lt;/f:view&gt;
+</code></pre>
+</body>
+</html>

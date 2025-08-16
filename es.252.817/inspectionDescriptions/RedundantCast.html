@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre expresiones de conversión innecesarias.
+<p>Ejemplo:</p>
+<pre><code>
+  static Object toObject(String s) {
+    return (Object) s;
+  }
+</code></pre>
+<p>
+  Utilice la casilla de verificación a continuación para ignorar las conversiones de aclaración, como las conversiones en llamadas a colecciones que deberían ser de tipo <code>Object</code>:
+<pre><code>
+  static void removeFromList(List&lt;String&gt; l, Object o) {
+    l.remove((String)o);
+  } 
+</code></pre>
+</body>
+</html>

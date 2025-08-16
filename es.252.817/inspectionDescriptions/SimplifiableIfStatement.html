@@ -1,0 +1,24 @@
+<html>
+<body>
+El informe puede reemplazarse con una sentencia <code>if</code> que utilice los operadores <code>&&</code>, <code>||</code>, <code>==</code>, <code>!=</code> o <code>?:</code>.
+<p>El resultado suele ser más corto, pero no siempre más claro, por lo que no se recomienda aplicar esta corrección en todos los casos.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  if (condition) return true; else return foo;
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  return condition || foo;
+</code></pre>
+<p>Configuración de la inspección:</p>
+<ul>
+<li>
+  Use la opción <b>No sugerir el operador '?:'</b> para deshabilitar las advertencias cuando se sugiera el uso del operador <code>?:</code>. En este caso, solo se resaltarán las sugerencias de <code>&&</code>, <code>||</code>, <code>==</code> y <code>!=</code>. La corrección rápida seguirá disponible en el editor.
+</li>
+<li>
+  Use la opción <b>Ignorar sentencias 'if' encadenadas</b> para deshabilitar las advertencias en cadenas <code>if-else</code>. La corrección rápida seguirá disponible en el editor.
+</li>
+</ul>
+<p><small>Novedades de la versión 2018.2</small></p>
+</body>
+</html>

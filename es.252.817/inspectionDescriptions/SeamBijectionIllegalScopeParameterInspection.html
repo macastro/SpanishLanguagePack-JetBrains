@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>Cuando Seam siempre usa el alcance definido por el componente en sí, reporta el parámetro `scope` en las anotaciones `@In` y `@Out`.</p>
+
+<ul>
+  <li>
+    Cuando se especifica `@In(create=true)`, la variable de contexto debe pertenecer al componente Seam declarado.
+    De lo contrario, Seam no sabrá qué clase instanciar.
+    Es decir, para `create=true`, no se puede inyectar valores que no son componentes Seam.
+    Seam siempre usa el alcance definido en la declaración del componente (el alcance predeterminado del tipo de componente o el alcance definido en `@Scope` o `@Role`).
+  </li>
+  <li>
+    Cuando se inyectan valores de componentes Seam declarados con `@Out`, el alcance siempre se obtiene de ese componente.
+    Solo se puede usar `@Out(scope=...)` cuando no se están inyectando componentes Seam.
+  </li>
+</ul>
+</body>
+</html>

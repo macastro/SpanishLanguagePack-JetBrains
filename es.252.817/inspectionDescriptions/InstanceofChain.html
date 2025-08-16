@@ -1,0 +1,30 @@
+<html>
+<body>
+Reporta cualquier cadena de declaraciones <code>if</code>-<code>else</code> donde todas las condiciones son expresiones <code>instanceof</code> o expresiones de igualdad de clase (por ejemplo, comparaciones con <code>String.class</code>).
+Tales estructuras generalmente indican un fallo en el diseño orientado a objetos, que requiere que este tipo de distribución basada en tipos se realice a través de llamadas a métodos polimórficos en lugar de cadenas explícitas de comprobaciones de tipo.
+<p>Ejemplo:</p>
+<pre><code>
+  double getArea(Shape shape) {
+    // Advertencia: Fallo de abstracción.
+    // Es mejor declarar getArea() como método abstracto
+    // en la interfaz shape e implementarlo
+    // en cada clase heredada.
+    if (shape instanceof Point) {
+      return 0;
+    }
+    if (shape instanceof Circle) {
+      return Math.PI *
+        Math.pow(((Circle) shape).radius(), 2);
+    }
+    if (shape instanceof Rectangle) {
+      return ((Rectangle) shape).width() *
+        ((Rectangle) shape).height();
+    }
+    throw new IllegalArgumentException();
+  }
+</code></pre>
+<p>
+  Utilice la casilla de verificación siguiente para ignorar las expresiones <code>instanceof</code> en las clases de biblioteca.
+<p>
+</body>
+</html>

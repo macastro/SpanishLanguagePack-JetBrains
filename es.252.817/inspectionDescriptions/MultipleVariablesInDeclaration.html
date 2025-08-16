@@ -1,0 +1,29 @@
+<html>
+<body>
+Informa sobre múltiples variables declaradas en una sola declaración y sugiere crear declaraciones separadas para cada variable.
+<p>Algunos estándares de codificación prohíben este tipo de declaraciones.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  int x = 1, y = 2;
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  int x = 1;
+  int y = 2;
+</code></pre>
+<p>Configuración de la inspección:</p>
+<ul>
+<li>Utilice la opción <b>Ignorar declaraciones en bucles 'for'</b> para ignorar múltiples variables declaradas en la inicialización de una sentencia de bucle 'for', por ejemplo:
+<pre><code>
+  <b>for</b> (int i = 0, max = list.size(); i &gt; max; i++) {}
+</code></pre>
+</li>
+<li>Utilice la opción <b>Advertir solo sobre diferentes dimensiones de arrays en una única declaración</b> para emitir advertencias únicamente cuando se declaren variables con diferentes dimensiones de arrays en una sola declaración, por ejemplo:
+<pre><code>
+  String s = "", array[];
+</code></pre>
+</li>
+</ul>
+<p><small>Novedades en 2019.2</small></p>
+</body>
+</html>

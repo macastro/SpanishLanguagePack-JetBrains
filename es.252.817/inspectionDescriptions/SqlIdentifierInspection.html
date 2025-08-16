@@ -1,0 +1,12 @@
+<html>
+<body>
+Informa sobre casos donde se utilizan palabras reservadas de SQL como nombres de identificadores en las consultas.
+<p>Ejemplo (Microsoft SQL Server):</p>
+<pre><code>CREATE TABLE select (identity INT IDENTITY NOT NULL, order INT NOT NULL);</code></pre>
+<p>Usamos <code>select</code>, <code>identity</code> y <code>order</code> como nombres de tabla y columnas.
+  Sin embargo, estas son palabras reservadas en Microsoft SQL Server.
+  Por lo tanto, para utilizarlas como nombres de objetos en consultas, debe entrecomillar estos identificadores. Para entrecomillarlos, puede usar la corrección rápida <b>Entrecomillar identificadores</b>.</p>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>CREATE TABLE [select] ([identity] INT IDENTITY NOT NULL, [order] INT NOT NULL);</code></pre>
+</body>
+</html>

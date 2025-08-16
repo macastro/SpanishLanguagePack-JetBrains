@@ -1,0 +1,23 @@
+<html>
+<body>
+La notificación puede reemplazarse con <code>Collection.indices</code> o los operadores <code>until</code> y <code>rangeTo</code> para la iteración de colecciones en bucles <code>for</code>.
+<p>El uso de azúcar sintáctico puede hacer que el código sea más simple.</p>
+<p>Esta corrección rápida reemplazará el rango manual con la construcción correspondiente.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun main(args: Array&lt;String&gt;) {
+      for (index in 0..args.size - 1) {
+          println(args[index])
+      }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun main(args: Array&lt;String&gt;) {
+      for (element in args) {
+          println(element)
+      }
+  }
+</code></pre>
+</body>
+</html>

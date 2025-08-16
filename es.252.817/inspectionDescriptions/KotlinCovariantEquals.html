@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa cuando una clase tiene un método <code>equals()</code> con un tipo de parámetro diferente a <code>Any?</code>, sin tener otro método <code>equals()</code> que use <code>Any?</code> como tipo de parámetro.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+      fun equals(other: Foo?): Boolean {
+          return true
+      }
+  }
+</code></pre>
+<p>Para corregir este problema, cree un método <code>equals()</code> que tome un parámetro de tipo <code>Any?</code>.</p>
+</body>
+</html>

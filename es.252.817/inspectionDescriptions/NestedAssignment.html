@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre expresiones de asignación anidadas dentro de otras expresiones.
+<p>Estas expresiones pueden resultar confusas y violan el principio general de diseño de que cada construcción debe tener un solo propósito.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  String userName;
+  // Advertencia: se utiliza el resultado de la asignación a 'userName'
+  String message = "Hello " + (userName = "Alice") + "!"
+  System.out.println(message);
+  System.out.println("Goodbye " + userName);
+</code></pre>
+</body>
+</html>

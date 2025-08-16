@@ -1,0 +1,29 @@
+<html>
+<body>
+Reporta llamadas a métodos de bloqueo de hilos en segmentos de código que no deberían bloquear hilos.
+<p><b>Ejemplo (Proyecto Reactor):</b></p>
+<pre><code lang="java">
+Flux.just("1").flatMap(f -&gt; {
+    Flux&lt;String&gt; just = loadUsersFromDatabase();
+    just.toIterable(); // Error: llamada a operador de bloqueo en contexto no bloqueante
+    return just;
+  }
+);
+</code></pre>
+<p>Considere usar un <a href="https://projectreactor.io/docs/core/release/reference/#faq.wrap-blocking">planificador apropiado</a> (por ejemplo, <code>Schedulers.boundedElastic()</code>) para ejecutar código bloqueante, o busque una API no bloqueante alternativa.</p>
+<br/>
+<p><b>Ejemplo (Corrutinas Kotlin):</b></p>
+<pre><code lang="kotlin">
+suspend fun exampleFun() {
+    Thread.sleep(100); // Error: llamada a método bloqueante en función suspendida
+}
+</code></pre>
+<p>Considere <a href="https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html">usar un dispatcher especial</a> (por ejemplo, <code>Dispatchers.IO</code>) para ejecutar código bloqueante, o busque una API no bloqueante alternativa.</p>
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>En la lista de <b>anotaciones bloqueantes</b>, especifique las anotaciones que marcan métodos que bloquean hilos.</li>
+  <li>En la lista de <b>anotaciones no bloqueantes</b>, especifique las anotaciones que marcan métodos no bloqueantes.</li>
+</ul>
+<p>Las anotaciones especificadas pueden usarse como <a href="https://www.jetbrains.com/help/idea/external-annotations.html">anotaciones externas</a></p>
+</body>
+</html>

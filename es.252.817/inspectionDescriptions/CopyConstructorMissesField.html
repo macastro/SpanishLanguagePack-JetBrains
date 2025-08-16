@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre constructores de copia que no copian todos los campos de la clase.
+<p>
+  Los campos <code>final</code> con inicializadores y los campos <code>transient</code> se consideran que no necesitan ser copiados.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Point {
+    private int x;
+    private int y;
+    Point(int x, int y) {
+      this.x = x;
+      this.y = y;
+    }
+    Point(Point other) {
+      // Los campos x e y no están inicializados
+    }
+  }
+</code></pre>
+<p><small>Cambios en la versión 2018.1</small>
+</body>
+</html>

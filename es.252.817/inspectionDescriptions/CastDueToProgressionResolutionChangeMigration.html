@@ -1,0 +1,35 @@
+<html>
+<body>
+<p>
+    Los argumentos reportados requieren una conversión explícita para resolverse como una llamada a función sobrecargada correctamente declarada.
+    La advertencia actual del compilador (disponible desde Kotlin 1.6.20) se convertirá en un error en Kotlin 1.8.
+</p>
+<p>
+    Los tipos de progresión y rango (<code>kotlin.ranges</code>) implementarán la interfaz <code>Collection</code> a partir de la versión 1.9 y posteriores. Esta actualización provocará cambios en la resolución de funciones sobrecargadas. Por ejemplo, en el siguiente caso, la llamada <code>test(1..5)</code> se resolverá como <code>test(t: Any)</code> en Kotlin 1.8 y versiones anteriores, mientras que en Kotlin 1.9 y versiones posteriores se resolverá como <code>test(t: Collection&lt;*&gt;)</code>.
+</p>
+<pre><code>
+  fun test(t: Any) { }
+  fun test(t: Collection&lt;*&gt;) { }
+  fun invoke() {
+    test(1..5) // IntRange se convertirá en Collection en la versión 1.9
+  }
+</code></pre>
+<p>La corrección rápida proporcionada captura el comportamiento específico del compilador en la versión 1.8 y anteriores:</p>
+<pre><code>
+  fun test(t: Any) { }
+  fun test(t: Collection&lt;*&gt;) { }
+  fun invoke() {
+    test(1..5) // Se resuelve como 'test(t: T)' antes de Kotlin 1.9
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun test(t: Any) { }
+  fun test(t: Collection&lt;*&gt;) { }
+  fun invoke() {
+    test((1..5) as Iterable&lt;Int&gt;) // Se resuelve como 'test(t: T)' en Kotlin 1.9
+  }
+</code></pre>
+<p>La comprobación del nivel del lenguaje Kotlin está disponible desde la versión 1.6.</p>
+</body>
+</html>

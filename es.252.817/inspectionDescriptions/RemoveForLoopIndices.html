@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa sobre el uso de la función <code>withIndex()</code> en lugar de una variable de índice en bucles <code>for</code> para iterar colecciones.
+<p>El código se puede limpiar usando la corrección rápida "Eliminar índice del bucle 'for'".</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo(bar: List&lt;String&gt;) {
+     for ((index : Int, value: String) in bar.withIndex()) { // &lt;== 'index' no utilizado
+         println(value)
+     }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun foo(bar: List&lt;String&gt;) {
+      for (value: String in bar) { // &lt;== '.withIndex()' e 'index' han sido eliminados
+          println(value)
+      }
+  }
+</code></pre>
+</body>
+</html>

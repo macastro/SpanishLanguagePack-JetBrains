@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta declaraciones <code>import</code> redundantes.
+<p>Las importaciones predeterminadas y no utilizadas se pueden eliminar de forma segura.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import kotlin.*
+  import kotlin.collections.*
+  import kotlin.comparisons.*
+  import kotlin.io.*
+  import kotlin.ranges.*
+  import kotlin.sequences.*
+  import kotlin.text.*
+  // Específico para jvm
+  import java.lang.*
+  import kotlin.jvm.*
+  // Específico para js
+  import kotlin.js.*
+  import java.io.* // Esta importación no se usa y puede eliminarse
+  import java.util.*
+  fun foo(list: ArrayList&lt;String&gt;) {
+      list.add("")
+  }
+</code></pre>
+</body>
+</html>

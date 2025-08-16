@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa sobre declaraciones de arrays con sintaxis estilo C, donde los corchetes del array se colocan después del nombre de la variable o después de la lista de parámetros del método.
+La mayoría de los estilos de código prefieren las declaraciones de arrays estilo Java, donde los corchetes se colocan después del nombre del tipo.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>public</b> String process(String value[])[] {
+    return value;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  <b>public</b> String[] process(String[] value) {
+    return value;
+  }
+</code></pre>
+<p>Configuración de la inspección:</p>
+<p>
+Utilice la opción <b>Ignorar declaraciones estilo C en variables</b> para informar solo sobre declaraciones de arrays estilo C en tipos de retorno de métodos.
+<p>
+</body>
+</html>

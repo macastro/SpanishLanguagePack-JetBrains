@@ -1,0 +1,6 @@
+<html>
+<body>
+<p>Informa sobre llamadas incondicionales a <b>wait()</b> en un contexto sincronizado.
+Normalmente, <b>wait()</b> se utiliza para bloquear un hilo hasta que se cumpla una condición. Si se llama a <b>wait()</b> de forma incondicional, esto suele indicar que la condición se verificó antes de obtener el bloqueo. En este caso, puede producirse una condición de carrera si la condición se vuelve verdadera entre el momento de la verificación y la obtención del bloqueo. Aunque esta estructura detectada no es necesariamente incorrecta, definitivamente merece ser revisada.</p>
+</body>
+</html>

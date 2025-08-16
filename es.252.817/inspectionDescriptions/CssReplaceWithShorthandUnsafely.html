@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre un grupo de propiedades CSS regulares y sugiere reemplazar un conjunto incompleto de propiedades CSS regulares con su forma abreviada, aunque en este caso la forma abreviada no es 100% equivalente.
+<p>
+  Por ejemplo, las 2 propiedades <code>outline-color</code> y <code>outline-style</code> pueden reemplazarse con un único <code>outline</code>.
+  Este tipo de reemplazo no es 100% equivalente, ya que la forma abreviada restablece todos los subvalores omitidos a su estado inicial.
+  En este caso, cambiar a la forma abreviada <code>outling</code> significa que <code>outling-width</code> también se establecerá en su valor inicial, que es <code>medium</code>.
+</p>
+<p>
+  Esta inspección no maneja grupos completos de propiedades regulares (cuando el cambio a la forma abreviada es 100% seguro).
+  Para esos casos, consulte la inspección "Las propiedades pueden reemplazarse de forma segura por su forma abreviada".
+</p>
+</body>
+</html>

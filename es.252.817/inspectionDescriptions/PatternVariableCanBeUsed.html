@@ -1,0 +1,19 @@
+<html>
+<body>
+El informe indica que las declaraciones de variables locales pueden reemplazarse por variables de patrón, que suelen ser más concisas.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  if (obj instanceof String) {
+    String str = (String) obj;
+    System.out.println(str);
+  }
+</code></pre>
+<p>Puede reemplazarse por:</p>
+<pre><code>
+  if (obj instanceof String str) {
+    System.out.println(str);
+  }
+</code></pre>
+<p><small>Cambios en 2020.1</small></p>
+</body>
+</html>

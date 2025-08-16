@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre indentación sospechosa en las declaraciones que siguen a las estructuras de control sin llaves.
+<p>
+  Con este tipo de indentación, aunque la declaración parezca estar dentro de la estructura de control, en realidad se ejecutará incondicionalmente después de ella.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Bar {
+      void foo(int i) {
+          if (i == 0)
+              System.out.println("foo");
+              System.out.println("bar"); // advertencia
+          if (i == 1);
+              System.out.println("great"); // advertencia
+          if (i == 42)
+              System.out.println("answer");
+                  System.out.println("question"); // advertencia
+      }
+  }
+</code></pre>
+</body>
+</html>

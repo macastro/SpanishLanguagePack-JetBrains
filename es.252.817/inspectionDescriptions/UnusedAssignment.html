@@ -1,0 +1,59 @@
+<html>
+<body>
+Informa sobre asignaciones que no se utilizan después de realizarse.
+Es mejor eliminar estas asignaciones si no se utilizan para acortar el código y evitar asignaciones redundantes.
+<p>Se informará sobre los siguientes casos:</p>
+<ul>
+  <li>Variables que nunca se leen después de una asignación</li>
+  <li>Variables que siempre se sobrescriben con nuevos valores antes de ser leídas</li>
+  <li>Inicializadores de variables redundantes (por cualquiera de las dos razones anteriores)</li>
+</ul>
+<p>Configuración de la inspección:</p>
+<p>
+Utiliza la opción <b>Informar inicializadores redundantes</b> para detectar inicializadores redundantes:
+</p>
+<pre><code>
+  int getI() {
+    int i = 0; // Inicialización redundante
+    i = 2;
+    return i;
+  }
+</code></pre>
+<p>
+Utiliza la opción <b>Informar expresiones de prefijo que pueden ser reemplazadas por expresiones binarias</b> para detectar casos donde una expresión <code>++i</code> puede ser reemplazada por <code>i + 1</code>:
+</p>
+<pre><code>
+  int preInc(int value) {
+    int res = value;
+    return ++res;
+  }
+</code></pre>
+<p>
+Utiliza la opción <b>Informar expresiones de sufijo donde el valor modificado no se utiliza</b> para detectar casos de <code>i++</code> donde el valor de <code>i</code> no se utiliza posteriormente:
+</p>
+<pre><code>
+  int postInc(int value) {
+    int res = value;
+    return res++;
+  }
+</code></pre>
+<p>
+Utiliza la opción <b>Informar variables de patrón cuyo valor nunca se utiliza</b> para detectar casos donde el valor de una variable de patrón se sobrescribe antes de ser leído:
+</p>
+<pre><code>
+  if (object instanceof String s) {
+      s = "hello";
+      System.out.println(s);
+  }
+</code></pre>
+<p>
+Utiliza la opción <b>Informar parámetros de iteración cuyo valor nunca se utiliza</b> para detectar casos donde el valor del parámetro de iteración en una sentencia <code>for</code> mejorada se sobrescribe antes de ser leído:
+</p>
+<pre><code>
+  for (String arg : args) {
+      arg = "test";
+      System.out.println(arg);
+  }
+</code></pre>
+</body>
+</html>

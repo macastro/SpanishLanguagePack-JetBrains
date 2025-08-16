@@ -1,0 +1,13 @@
+<html>
+<body>
+El informe contiene expresiones binarias con diferentes operadores y sin paréntesis.
+<p>Estas expresiones pueden ser difíciles de leer debido a las diferentes <a href="https://kotlinlang.org/docs/reference/grammar.html#expressions">reglas de precedencia</a> de los operadores.</p>
+<p>Ejemplo:</p>
+<pre>
+  fun foo(b: Boolean?, i: Int?) {
+      val x = b ?: i == null // se evalúa como `(b ?: i) == null`
+      val y = i ?: 0 + 1 // se evalúa como `i ?: (0 + 1)`
+  }
+</pre>
+</body>
+</html>

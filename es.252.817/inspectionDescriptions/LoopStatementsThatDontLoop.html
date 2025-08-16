@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre cualquier instancia de sentencias <code>for</code>, <code>while</code> y <code>do</code> donde el cuerpo se ejecuta como máximo una vez. Esto generalmente indica la presencia de un error.
+<p>
+Utilice la opción <b>Ignorar bucles for mejorados</b> para excluir los bucles foreach.
+Estos a veces se utilizan como una forma compacta de realizar operaciones solo en el primer elemento de un iterable.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  <b>for</b> (String s : stringIterable) {
+    doSomethingOnFirstString(s);
+    <b>break</b>;
+  }
+</code></pre>
+</body>
+</html>

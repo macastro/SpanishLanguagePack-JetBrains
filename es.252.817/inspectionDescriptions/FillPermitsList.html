@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre clases <code>sealed</code> que no tienen una lista explícita de <code>permits</code>.
+Las clases sealed que solo tienen subclases en el mismo archivo no necesitan tener una lista explícita de <code>permits</code>.
+Por defecto, esta inspección no resalta en el editor y solo proporciona una corrección.
+<p>Ejemplo:</p>
+<pre><code>
+  sealed class A {}
+  final class B extends A {}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  sealed class A permits B {}
+  final class B extends A {}
+</code></pre>
+<p><small>Novedades en 2020.3</small></p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>Informa de las llamadas a los métodos accesores de Java con cláusulas de argumento vacías.</p>
+
+<p>Se espera que los métodos que siguen el contrato de nombres <a href="https://es.wikipedia.org/wiki/JavaBean">JavaBean</a> para accesores no tengan <a href="https://es.wikipedia.org/wiki/Efecto_secundario_(inform%C3%A1tica)">efectos secundarios</a>.
+    La convención recomendada es utilizar un método sin parámetros siempre que no haya parámetros y el método no tenga efectos secundarios.
+    Esta convención promueve el <a href="https://es.wikipedia.org/wiki/Principio_de_acceso_uniforme">principio de acceso uniforme</a>,
+    que dice que el código cliente no debe verse afectado por la decisión de implementar un atributo como campo o método.</p>
+
+<p>El problema es que Java no implementa el principio de acceso uniforme.
+    Para salvar esa brecha, Scala le permite omitir los paréntesis vacíos
+    en una invocación de un método Java que no toma argumentos.</p>
+
+<p>El arreglo rápido elimina la cláusula de argumento vacía.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  "test".getClass()
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  "test".getClass
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

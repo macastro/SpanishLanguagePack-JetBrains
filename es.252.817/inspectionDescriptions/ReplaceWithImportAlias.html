@@ -1,0 +1,19 @@
+<html>
+<body>
+El informe puede reemplazar un nombre completamente calificado con el alias de importación existente.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+import foo.Foo as Bar
+fun main() {
+    foo.Foo()
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+import foo.Foo as Bar
+fun main() {
+    Bar()
+}
+</code></pre>
+</body>
+</html>

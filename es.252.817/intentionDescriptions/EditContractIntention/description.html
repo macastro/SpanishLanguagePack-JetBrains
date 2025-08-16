@@ -1,0 +1,31 @@
+<html><body>
+Esta intención modifica el contrato de un método de biblioteca.
+La sintaxis del contrato de método es la siguiente:
+<pre><code>
+ contract ::= (clause ';')* clause
+ clause ::= args '->' effect
+ args ::= ((arg ',')* arg )?
+ arg ::= value-constraint
+ value-constraint ::= '_' | 'null' | '!null' | 'false' | 'true'
+ effect ::= value-constraint | 'fail' | 'new' | 'this' | 'param' number
+ number ::= [1-9] [0-9]*
+</code></pre>
+Las restricciones significan:<br/>
+<ul>
+  <li> <code>_</code>: cualquier valor
+  <li> <code>null</code>: valor null
+  <li> <code>null!</code>: valor demostrado estáticamente como no null
+  <li> <code>true</code>: valor booleano true
+  <li> <code>false</code>: valor booleano false
+  <li> <code>fail</code>: el método lanzará una excepción si los argumentos cumplen con las restricciones de argumentos
+  <li> <code>new</code>: el método devolverá un nuevo objeto no null cada vez que se ejecute, diferente de cualquier otro objeto existente en el heap antes de la ejecución del método. Si el método es puro, el nuevo objeto no se almacenará en campos o arrays, y se perderá si no se utiliza el valor devuelto por el método.
+  <li> <code>this</code>: el método devuelve una referencia no null a this
+  <li> <code>param1 (param2, param3, etc.)</code>: el método devuelve su primer (segundo, tercer, etc.) argumento
+</ul>
+Ejemplos:<br/>
+<ul>
+  <li> <code>@Contract("_, null -> null")</code>: el método devolverá null si su segundo argumento es null.
+  <li> <code>@Contract("_, null -> null; _, !null -> !null")</code> - el método devolverá null si su segundo argumento es null, de lo contrario devolverá un valor no null.
+  <li> <code>@Contract("true -> fail")</code> - un método típico <code>assertFalse</code> que lanzará una excepción si se le pasa <code>true</code>.
+</ul>
+</body></html>

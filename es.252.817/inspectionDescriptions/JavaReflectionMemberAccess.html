@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa sobre accesos por reflexión a campos y métodos inexistentes o no visibles.
+<p>Ejemplo:</p>
+<pre><code>
+  Field stringHashField() throws NoSuchFieldException {
+    return String.class.getField("hash");
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  Field stringHashField() throws NoSuchFieldException {
+    return String.class.getDeclaredField("hash");
+  }
+</code></pre>
+<p>
+  Para clases <code>final</code>, es evidente si existe un campo o método con el nombre especificado en la clase.
+</p>
+<p>
+  Para clases no <code>final</code>, pueden producirse falsos positivos ya que los campos o métodos con ese nombre podrían existir en las subclases.
+  La configuración de esta inspección permite suprimir estos falsos positivos en cualquier lugar o para clases específicas.
+</p>
+<p><small>Novedades de 2017.2</small></p>
+</body>
+</html>

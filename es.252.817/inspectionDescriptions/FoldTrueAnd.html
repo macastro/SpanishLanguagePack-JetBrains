@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Informa sobre el uso de <code>fold</code> para verificar una condición para todos los elementos.</p>
+
+<p>La solución rápida reemplaza el <code>fold</code> con un <code>forall</code> equivalente.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  var x: Seq[Int]
+  x.foldLeft(true)((x,y) => x && p(y))
+</code></pre>
+<p>Una vez aplicada la solución rápida:</p>
+<pre><code>
+  var x: Seq[Int]
+  x.forall(y => p(y))
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+El informe puede extraer las partes comunes de las sentencias <code>if</code> de las ramas.
+<p>Estas partes comunes son independientes de la condición y dificultan la comprensión de las sentencias <code>if</code>.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  if (x &gt; 12) {
+    doSomethingBefore();
+    doSomethingDifferent1();
+    doSomethingAfter();
+  } else {
+    doSomethingBefore();
+    doSomethingDifferent2();
+    doSomethingAfter();
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  doSomethingBefore();
+  if (x &gt; 12) {
+    doSomethingDifferent1();
+  } else {
+    doSomethingDifferent2();
+  }
+  doSomethingAfter();
+</code></pre>
+<p><small>Esta función se actualizó en la versión 2018.1</small></p>
+</body>
+</html>

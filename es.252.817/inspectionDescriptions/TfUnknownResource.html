@@ -1,0 +1,44 @@
+<html>
+<body>
+<p>
+  Se detectó un recurso/fuente de datos que no se puede resolver según los proveedores conocidos.
+  El proveedor debe especificarse en la sección <code>required_providers</code> o debe provenir del espacio de nombres <code>hashicorp</code>.
+</p>
+<p>
+  Por ejemplo, el siguiente código generará un error:
+</p>
+<pre><code>
+terraform {
+  required_version = "1.1.3"
+}
+resource "abbey_demo" "demo" {
+  email      = "user@mail.company"
+  permission = "user"
+}
+</code></pre>
+<p>
+  Terraform intentará importar el proveedor <code>hashicorp/abbey</code> para el recurso <code>abbey_demo</code>.
+</p>
+<p>
+  Para corregir este problema, necesitamos especificar las coordenadas exactas del proveedor:
+</p>
+<pre><code>
+terraform {
+  required_version = "1.1.3"
+  required_providers {
+    abbey = {
+      source  = "abbeylabs/abbey"
+      version = "0.2.9"
+    }
+  }
+}
+resource "abbey_demo" "demo" {
+  email      = "user@mail.company"
+  permission = "user"
+}
+</code></pre>
+<p>
+  Para más información, consulte la <a href ="https://developer.hashicorp.com/terraform/language/providers/requirements#requiring-providers">documentación de Terraform</a>.
+</p>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa sobre expresiones <code>if</code> que tienen condiciones literales constantes <code>true</code> o <code>false</code> y que pueden simplificarse.
+<p>Aunque a veces es intencional, esta estructura puede resultar confusa y generalmente es el resultado de errores tipográficos o refactorizaciones previas.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun example() {
+      if (true) {
+          throw IllegalStateException("Unexpected state")
+      }
+  }
+</code></pre>
+<p>La corrección rápida elimina la condición <code>if</code>:</p>
+<pre><code>
+  fun example() {
+      throw IllegalStateException("Unexpected state")
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa de las siguientes violaciones de la especificación EJB:
+<ul>
+  <li>La clase implementa interfaces no permitidas</li>
+  <li>La clase contiene campos static no final</li>
+</ul>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+public class SessionEJB {
+  public SessionEJB() {}
+  static Object data; // Error: no se permiten campos static mutables
+}
+</code></pre>
+</body>
+</html>

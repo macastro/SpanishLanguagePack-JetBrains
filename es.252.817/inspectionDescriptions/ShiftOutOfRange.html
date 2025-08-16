@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa sobre operaciones de desplazamiento con valores de desplazamiento constantes que están fuera del rango razonable.
+<p>Informa sobre operaciones de desplazamiento de enteros fuera del rango <code>0..31</code> y operaciones de desplazamiento largo fuera del rango <code>0..63</code>. Los valores negativos o demasiado grandes casi siempre indican un error de codificación.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  int shiftSize = 32;
+  // Advertencia: desplazar 32 bits es equivalente a desplazar 0 bits, por lo que no hay desplazamiento real.
+  int mask = (1 &lt;&lt; shiftSize) - 1;
+</code></pre>
+</body>
+</html>

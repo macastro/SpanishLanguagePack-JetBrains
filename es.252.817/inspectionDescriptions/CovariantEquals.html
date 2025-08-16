@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa sobre métodos <code>equals()</code> que tienen un tipo de parámetro diferente a <code>java.lang.Object</code> si la clase contenedora no tiene otras sobrecargas de <code>equals()</code> que usen <code>java.lang.Object</code> como tipo de parámetro.
+<p>
+  Las versiones covariantes de <code>equals()</code> no sobrescriben el método <code>Object.equals(Object)</code>. Esto puede llevar a comportamientos inesperados en tiempo de ejecución. Por ejemplo, cuando la clase se utiliza para construir una clase de colección estándar que espera que se sobrescriba el método <code>Object.equals(Object)</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+      public boolean equals(Foo foo) {  // advertencia
+          return false;
+      }
+  }
+  class Bar {
+      public boolean equals(Bar bar) {  // sin advertencia aquí
+          return false;
+      }
+      @Override
+      public boolean equals(Object obj) {
+          return false;
+      }
+  }
+</code></pre>
+</body>
+</html>

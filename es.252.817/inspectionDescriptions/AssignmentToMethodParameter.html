@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre asignaciones o modificaciones a los parámetros de método.
+<p>Aunque a veces es intencional, esta estructura puede resultar confusa y está prohibida en algunos proyectos Java.</p>
+<p>La corrección rápida añadirá una declaración de nueva variable.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void printTrimmed(String s) {
+    s = s.trim();
+    System.out.println(s);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void printTrimmed(String s) {
+    String trimmed = s.trim();
+    System.out.println(trimmed);
+  }
+</code></pre>
+<p>
+  Use la opción <b>Ignorar si la asignación es una transformación del parámetro original</b> para ignorar las asignaciones que modifican el valor del parámetro basándose en su valor previo.
+</p>
+</body>
+</html>

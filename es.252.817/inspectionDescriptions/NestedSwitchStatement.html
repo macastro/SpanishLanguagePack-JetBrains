@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta declaraciones o expresiones anidadas de <code>switch</code>.
+<p>Las declaraciones anidadas de <code>switch</code> pueden hacer que el código sea especialmente confuso. Estas declaraciones se pueden extraer a un método separado.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  int res = switch (i) {
+            case 0 -> 0;
+            default -> switch (i) {
+                case 100 -> 0;
+                default -> i;
+            };
+        };
+</code></pre>
+<p>
+</body>
+</html>

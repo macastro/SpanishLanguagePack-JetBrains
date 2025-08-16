@@ -1,0 +1,31 @@
+<html>
+<body>
+Informa sobre calificadores redundantes (o partes de ellos) en nombres de clases, funciones y propiedades.
+<p>
+    Un nombre completamente calificado es un identificador explícito utilizado para especificar el objeto, función o propiedad al que hace referencia una llamada.
+    En contextos donde el nombre puede acortarse, la inspección notifica las oportunidades y la corrección rápida "Eliminar calificador redundante" asociada puede modificar el código.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  package my.simple.name
+  import kotlin.Int.Companion.MAX_VALUE
+  class Foo
+  fun main() {
+      val a = my.simple.name.Foo()    // 'Foo' está en el paquete declarado 'my.simple.name', el calificador es redundante
+      val b = kotlin.Int.MAX_VALUE    // Se puede reemplazar por 'MAX_VALUE' ya que está importado
+      val c = kotlin.Double.MAX_VALUE // Se puede reemplazar por 'Double.MAX_VALUE' ya que los tipos integrados se importan automáticamente
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  package my.simple.name
+  import kotlin.Int.Companion.MAX_VALUE
+  class Foo
+  fun main() {
+      val a = Foo()
+      val b = MAX_VALUE
+      val c = Double.MAX_VALUE
+  }
+</code></pre>
+</body>
+</html>

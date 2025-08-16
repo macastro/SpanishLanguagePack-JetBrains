@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre clases que contienen referencias a una de sus subclases.
+Estas referencias pueden resultar confusas y violan varios principios del diseño orientado a objetos.
+<p>Ejemplo:</p>
+<pre><code>
+  class Entity {
+    // 警告：该类引用了其子类
+    void compare(SimpleEntity entity) {
+      ...
+    }
+  }
+  class SimpleEntity extends Entity {
+    ...
+  }
+</code></pre>
+</body>
+</html>

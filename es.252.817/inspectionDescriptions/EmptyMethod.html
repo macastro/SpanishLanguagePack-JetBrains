@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa sobre métodos vacíos que pueden ser eliminados.
+<p>Un método se considera vacío si está vacío por sí mismo y solo es sobrescrito o implementado por métodos vacíos. Tenga en cuenta que los métodos que solo contienen comentarios y llamadas a <code>super()</code> con sus propios parámetros también se consideran vacíos.</p>
+<p>Esta inspección ignora los métodos con anotaciones especiales, como las anotaciones EJB <code>javax.ejb.Init</code> y <code>javax.ejb.Remove</code>.</p>
+<p>La corrección rápida elimina de forma segura los métodos innecesarios.</p>
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>Use la opción <b>Considerar comentarios y javadoc como contenido</b> para elegir si los métodos con comentarios deben considerarse como métodos no vacíos.</li>
+  <li>Use la opción <b>Anotaciones especiales adicionales</b> para configurar otras anotaciones que esta inspección debe ignorar.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+El informe contiene una tabla con dos columnas de auto-incremento. En los dialectos MySQL, Microsoft SQL Server y Db2, una tabla solo puede tener un campo con opción de auto-incremento, y este campo debe ser una clave.
+<p>Ejemplo (MySQL):</p>
+<pre><code>CREATE TABLE my_table
+(
+    id INT AUTO_INCREMENT,
+    c2 INT AUTO_INCREMENT,
+);</code></pre>
+<p>La restricción AUTO_INCREMENT de <code>c2</code> se resaltará porque <code>c1</code> ya tiene esta restricción. Para corregir la advertencia, puede establecer <code>id</code> como clave primaria y eliminar el AUTO_INCREMENT de <code>c2</code>.</p>
+<pre><code>CREATE TABLE my_table
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    c2 INT,
+);</code></pre>
+</body>
+</html>

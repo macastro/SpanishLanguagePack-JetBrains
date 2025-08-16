@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre funciones de alcance intercambiables (<code>let</code>, <code>run</code>, <code>apply</code>, <code>also</code>).
+<p>El código se puede simplificar usando la función correspondiente.</p>
+<p>Esta corrección rápida permite intercambiar entre las diferentes funciones de alcance.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  val x = &quot;&quot;.let {
+      it.length
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  val x = &quot;&quot;.run {
+      length
+  }
+</code></pre>
+</body>
+</html>

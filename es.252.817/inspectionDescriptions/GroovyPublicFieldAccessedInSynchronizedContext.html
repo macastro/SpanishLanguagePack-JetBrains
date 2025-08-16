@@ -1,0 +1,8 @@
+<html>
+<body>
+Informa sobre campos no <code>final</code> y no <code>private</code> accedidos en un contexto sincronizado.
+<p>
+  No se puede garantizar que los campos no privados sean siempre accedidos de manera sincronizada, y estos accesos "parcialmente sincronizados" pueden llevar accidentalmente a estructuras de datos inconsistentes. Para los propósitos de esta verificación, se ignoran los accesos en constructores e inicializadores.
+</p>
+</body>
+</html>

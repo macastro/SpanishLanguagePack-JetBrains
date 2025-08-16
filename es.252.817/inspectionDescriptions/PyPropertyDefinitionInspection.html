@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>Informa sobre problemas con los argumentos de <code>property()</code> y funciones decoradas con <code>@property</code>.</p>
+<pre><code>
+class C:
+    @property
+    def abc(self):  # El Getter debe retornar o generar algún contenido
+        pass
+    @abc.setter
+    def foo(self, value):  # El nombre de la función no coincide con el decorador
+        pass
+    @abc.setter
+    def abc(self, v1, v2):  # La firma del Setter debe ser (self, value)
+        pass
+    @abc.deleter
+    def abc(self, v1):  # La firma del Deleter debe ser (self)
+        pass
+</code></pre>
+<p>La corrección rápida sugiere actualizar los parámetros.</p>
+</body>
+</html>

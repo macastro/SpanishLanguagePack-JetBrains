@@ -1,0 +1,28 @@
+<html>
+<body>
+Reporta declaraciones o expresiones <code>switch</code> donde la rama <code>default</code> está ubicada antes de otro case.
+Esta estructura puede causar confusión innecesaria.
+Si es posible, se puede mover la rama <code>default</code> a la última posición mediante una corrección rápida.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  switch (n) {
+      default:
+          System.out.println();
+          break;
+      case 1:
+          break;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  switch (n) {
+    case 1:
+        break;
+    default:
+        System.out.println();
+        break;
+  }
+</code></pre>
+<p>
+</body>
+</html>

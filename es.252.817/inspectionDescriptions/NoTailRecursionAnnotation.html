@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>Informa de métodos recursivos terminales sin la anotación <code>@tailrec</code> que verifica que el método será
+  compilado con
+  optimización de llamada de cola.</p>
+
+<p>Ten en cuenta que un método debe ser efectivamente <code>final</code> para que se muestre esta inspección.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  def factorial(n: Long, acc: Long = 1): Long =
+    if (n <= 1) acc else factorial(n - 1, acc * n)
+</code></pre>
+<p>Después de que el arreglo rápido es aplicado:</p>
+<pre><code>
+  @tailrec
+  def factorial(n: Long, acc: Long = 1): Long =
+    if (n <= 1) acc else factorial(n - 1, acc * n)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

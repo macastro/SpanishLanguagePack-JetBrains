@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa sobre declaraciones <code>synchronized</code> anidadas.
+Se recomienda evitar la sincronización anidada ya que, en algunos casos, puede provocar deadlocks.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  synchronized (lockA){
+    //El hilo 1 está esperando lockB
+    synchronized (lockB){ //advertencia
+    }
+  }
+  ...
+  synchronized (lockB) {
+    //El hilo 2 está esperando lockA
+    synchronized (lockA) { //advertencia
+    }
+  }
+</code></pre>
+</body>
+</html>

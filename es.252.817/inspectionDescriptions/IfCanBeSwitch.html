@@ -1,0 +1,40 @@
+<html>
+<body>
+Informa sobre declaraciones <code>if</code> que pueden ser reemplazadas por declaraciones <code>switch</code>.
+<p>El resultado del reemplazo suele ser más conciso y claro.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void test(String str) {
+    if (str.equals("1")) {
+      System.out.println(1);
+    } else if (str.equals("2")) {
+      System.out.println(2);
+    } else if (str.equals("3")) {
+      System.out.println(3);
+    } else {
+      System.out.println(4);
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void test(String str) {
+    switch (str) {
+      case "1" -&gt; System.out.println(1);
+      case "2" -&gt; System.out.println(2);
+      case "3" -&gt; System.out.println(3);
+      default -&gt; System.out.println(4);
+    }
+  }
+  </code></pre>
+<p>Esta inspección solo informa cuando el nivel de lenguaje del proyecto o módulo es 7 o superior.</p>
+<p>El campo <b>Número mínimo de ramas de condición 'if'</b> permite especificar el número mínimo de ramas de condición <code>if</code> que debe tener una declaración <code>if</code> para ser reportada. Ten en cuenta que la rama <code>else</code> final (sin <code>if</code>) no se cuenta.</p>
+<p>
+Usa la opción <b>Habilitar sugerencias de switch para números</b> para activar las sugerencias de declaraciones <code>switch</code> para números primitivos y empaquetados, y caracteres.
+<p>
+Usa la opción <b>Habilitar sugerencias de switch para enums</b> para activar las sugerencias de declaraciones <code>switch</code> para constantes <code>enum</code>.
+<p>
+  Usa la opción <b>Habilitar sugerencias solo para expresiones null-safe</b> para sugerir solo declaraciones <code>switch</code> que no puedan introducir una <code>NullPointerException</code>.
+</p>
+</body>
+</html>

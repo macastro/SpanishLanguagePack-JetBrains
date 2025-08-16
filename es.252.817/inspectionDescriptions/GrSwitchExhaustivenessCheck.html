@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre expresiones switch que no cubren todos los resultados posibles de la expresión coincidente.
+<p>Groovy no requiere que las expresiones switch sean exhaustivas. Funciona como si tuviera una rama implícita <code>default -> null</code>.
+  Si el desarrollador olvida insertar las ramas <code>case</code> necesarias, esto puede resultar en valores null inesperados.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  enum A { X, Y }
+  def foo(A a) {
+    def x = switch (a) { // reports switch
+      case A.X -> ...
+    }
+  }
+</code></pre>
+</body>
+</html>

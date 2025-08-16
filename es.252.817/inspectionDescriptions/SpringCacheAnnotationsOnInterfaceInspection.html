@@ -1,0 +1,9 @@
+<html>
+<body>
+<p>Anotación <code>@Cache*</code> reportada en la interfaz.</p>
+<p>Solo debe usar anotaciones <code>@Cache*</code> en clases concretas (y métodos de clases concretas).
+El uso de anotaciones <code>@Cache*</code> en interfaces (o métodos de interfaz) requiere el uso de proxies basados en interfaces.
+Debido a que las anotaciones de Java no se heredan de las interfaces, la infraestructura de proxy y tejido no reconocerá la configuración de caché cuando se utilicen proxies basados en clases (<code>proxy-target-class="true"</code>) o aspectos basados en tejido (<code>mode="aspectj"</code>).
+Como resultado, el objeto no será envuelto en un proxy de caché.</p>
+</body>
+</html>

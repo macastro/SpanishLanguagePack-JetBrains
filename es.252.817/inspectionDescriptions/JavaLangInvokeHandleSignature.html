@@ -1,0 +1,29 @@
+<html>
+<body>
+Reporta llamadas a métodos de fábrica de <code>MethodHandle</code> y <code>VarHandle</code> que no coinciden con ningún método o campo.
+<p>También reporta argumentos que no coinciden con la firma de <code>MethodHandle</code> en <code>MethodHandle.invoke()</code> y métodos similares, así como argumentos de <code>VarHandle.set()</code> que no coinciden con el tipo de <code>VarHandle</code>
+<p>Ejemplo:</p>
+<pre>
+  MethodHandle mh = MethodHandles.lookup().findVirtual(
+      MyClass.class, "foo", MethodType.methodType(void.class, int.class));
+  <i>// Este argumento debería ser un valor <b>int</b></i>
+  mh.invoke(myObj, "<b>abc</b>");
+</pre>
+<br>
+<pre>
+  <i>// Este argumento debería ser <b>String</b>.class</i>
+  VarHandle vh = MethodHandles.lookup().findVarHandle(
+      MyClass.class, "text", <b>int</b>.class);
+</pre>
+<br>
+<pre>
+  VarHandle vh = MethodHandles.lookup().findVarHandle(
+      MyClass.class, "text", String.class);
+  <i>// Este argumento debería ser un valor <b>String</b></i>
+  vh.set(myObj, <b>42</b>);
+</pre>
+<p>
+  <small>Novedades de la versión 2017.2</small>
+</p>
+</body>
+</html>

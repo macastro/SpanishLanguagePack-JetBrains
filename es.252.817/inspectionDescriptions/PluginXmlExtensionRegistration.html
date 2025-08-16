@@ -1,0 +1,21 @@
+<html>
+<body>
+Reporta problemas de registro de extensiones en <code>plugin.xml</code>.
+<p>
+  Se informarán los siguientes problemas:
+<ul>
+  <li>Falta la declaración de <code>language</code>.
+    Si la extensión no está dirigida a un lenguaje específico, utilice la corrección rápida para crear una declaración explícita para "cualquier lenguaje".
+  </li>
+  <li>Inspección: características faltantes</li>
+  <li>Servicios: declaración redundante de <code>serviceInterface</code></li>
+  <li><code>com.intellij.stubElementTypeHolder</code> sin <code>externalIdPrefix</code>, consulte <a
+    href='https://plugins.jetbrains.com/docs/intellij/stub-indexes.html?from=?from=DevkitPluginXmlInspectionDescription'>índices stub</a>
+  </li>
+  <li><code>com.intellij.statusBarWidgetFactory</code> sin <code>id</code></li>
+  <li><code>com.intellij.applicationConfigurable|projectConfigurable</code> sin <code>displayName</code>/<code>key</code></li>
+</ul>
+</p>
+<p><small>Cambios más recientes en 2022.3</small>
+</body>
+</html>

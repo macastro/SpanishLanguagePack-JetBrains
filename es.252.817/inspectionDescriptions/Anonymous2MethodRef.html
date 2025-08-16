@@ -1,0 +1,22 @@
+<html>
+<body>
+Se informa que la clase anónima puede reemplazarse con una referencia a método.
+<p>
+  Tenga en cuenta que si una clase anónima se convierte en una referencia a método no vinculada, el tiempo de ejecución de Java puede reutilizar el mismo objeto de referencia a método durante las llamadas posteriores. Por otro lado, cuando se usa una clase anónima, se crea un objeto separado cada vez. Por lo tanto, en casos muy raros, la aplicación de esta corrección rápida puede resultar en un cambio semántico, por ejemplo, cuando una instancia de clase anónima se usa como clave en un <code>HashMap</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Runnable r = new Runnable() {
+    @Override
+    public void run() {
+      System.out.println();
+    }
+  };
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  Runnable r = System.out::println;
+</code></pre>
+<p>Use la opción <b>Informar cuando la interfaz no está anotada con @FunctionalInterface</b> para habilitar esta inspección en interfaces que no utilizan la anotación <code>@FunctionalInterface</code>.</p>
+</body>
+</html>

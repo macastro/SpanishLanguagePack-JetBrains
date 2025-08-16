@@ -1,0 +1,37 @@
+<html>
+<body>
+Reporta campos que impiden el funcionamiento normal de la vista previa de intenciones en las implementaciones de <code>LocalQuickFix</code> y <code>IntentionAction</code>. Además, reporta anotaciones <code>@SafeFieldForPreview</code> excesivas en campos que se sabe que son seguros por su tipo.
+<p>
+  La vista previa de intenciones es una característica de la plataforma IntelliJ que muestra los cambios que se realizarán en el archivo actual después de aplicar una corrección rápida o una acción de intención. Para implementar esto en correcciones rápidas, se llama a <code>LocalQuickFix.generatePreview()</code> con un <code>ProblemDescriptor</code> personalizado que apunta a una copia no física del archivo actual. Para acciones de intención, se llama a <code>IntentionAction.generatePreview()</code> con una copia no física del archivo actual y un editor virtual.
+  Normalmente, estos métodos solo delegan en <code>LocalQuickFix.applyFix()</code> o <code>IntentionAction.invoke()</code>.
+  Sin embargo, algunas correcciones rápidas pueden hacer referencia directa o indirectamente a elementos físicos y usarlos para escritura. La vista previa no funciona porque la corrección rápida intenta actualizar el PSI físico en lugar del PSI no físico.
+  Para evitar esto, la implementación predeterminada de <code>generatePreview()</code> solo delega cuando todos los campos de instancia de la clase de corrección rápida o acción de intención tienen tipos seguros (primitivos, cadenas, etc.).
+</p>
+<p>
+  Puede corregir este problema de varias maneras:
+</p>
+<ol>
+  <li>
+    Si el campo realmente no almacena ninguna referencia PSI, o si el PSI solo se usa para lectura,
+puede anotar el campo con <code>@SafeFieldForPreview</code>. También puede usar <code>@SafeTypeForPreview</code> si el tipo de campo nunca puede almacenar referencias PSI escribibles.
+  </li>
+  <li>
+    Puede sobrescribir el método <code>getFileModifierForPreview()</code> y crear una copia de la corrección rápida, revinculándola a la copia no física del archivo proporcionada como parámetro. Use <code>PsiTreeUtil.findSameElementInCopy()</code> para encontrar elementos PSI correspondientes en la copia no física proporcionada.
+  </li>
+  <li>
+    En lugar de almacenar referencias PSI en campos, intente extraer toda la información necesaria de <code>ProblemDescriptor.getPsiElement()</code> en correcciones rápidas o del archivo/editor proporcionado en acciones de intención.
+    También puede extender la clase abstracta <code>LocalQuickFixAndIntentionActionOnPsiElement</code> e implementar sus métodos <code>invoke()</code> e <code>isAvailable()</code> que tienen
+parámetros <code>startElement</code> y <code>endElement</code>. Estos parámetros se mapean automáticamente a la copia no física del archivo.
+  </li>
+  <li>
+    Puede sobrescribir el método <code>generatePreview()</code> y proporcionar un comportamiento de vista previa completamente personalizado.
+    Por ejemplo, puede mostrar un documento HTML personalizado en lugar de una vista previa real si está realizando operaciones además de modificar el archivo actual.
+  </li>
+</ol>
+<p>
+  Esta inspección no informa sobre la existencia de implementaciones personalizadas de <code>getFileModifierForPreview()</code> o <code>generatePreview()</code>. Sin embargo, esto no significa que la implementación sea correcta y que la vista previa funcione.
+  Por favor, realice pruebas. También tenga en cuenta que los resultados de la vista previa se calculan en un hilo en segundo plano, por lo que no puede iniciar operaciones de escritura ni realizar ningún cálculo que requiera operaciones de escritura durante la vista previa. Finalmente, si <code>startInWriteAction()</code> devuelve <code>false</code>, no se generará automáticamente una vista previa. En este caso, se necesita una implementación personalizada de <code>generatePreview()</code>.
+</p>
+<p><small>Novedades en 2022.1</small></p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta referencias no resueltas en comentarios Javadoc.
+<p>En el siguiente ejemplo, el parámetro <code>someParam</code> se resaltará debido a que falta:</p>
+<pre><code>
+class A {
+    /**
+     * @param someParam description
+     **/
+    void foo() {
+    }
+}
+</code></pre>
+<p>
+  Deshabilita la opción <b>Reportar símbolos inaccesibles</b> para ignorar las etiquetas que hacen referencia a parámetros de método, clases, campos y métodos faltantes.</p>
+</body>
+</html>

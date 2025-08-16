@@ -1,0 +1,12 @@
+<html>
+<body>
+Informa sobre expresiones de máscara de bits que deberían evaluarse como <code>true</code> o <code>false</code>.
+<p>
+  La inspección verifica expresiones de la forma <code>(var & constant1) == constant2</code> o <code>(var | constant1) == constant2</code>, donde <code>constant1</code> y <code>constant2</code> son constantes de máscara de bits incompatibles.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  // Máscaras incompatibles: como la máscara termina en 00,
+  // el resultado podría ser 0x1200, pero no 0x1234
+  if ((mask & 0xFF00) == 0x1234) {...}
+</code></pre>
+</body>
+</html>

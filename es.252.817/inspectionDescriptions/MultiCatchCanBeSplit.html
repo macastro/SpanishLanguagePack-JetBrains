@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre múltiples secciones <code>catch</code> y sugiere separarlas en bloques <code>catch</code> individuales.
+<p>Ejemplo:</p>
+<pre><code>
+  try {
+    int i = getIndex();
+  } catch (NullPointerException|IndexOutOfBoundsException e) {
+    e.printStackTrace();
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  try {
+    int i = getIndex();
+  } catch (NullPointerException e) {
+    e.printStackTrace();
+  } catch (IndexOutOfBoundsException e) {
+    e.printStackTrace();
+  }
+</code></pre>
+</body>
+</html>

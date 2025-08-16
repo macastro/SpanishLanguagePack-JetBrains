@@ -1,0 +1,11 @@
+<html>
+<body>
+Se informa una columna que no está en la cláusula GROUP BY o en una llamada de función de agregación.
+<p>Ejemplo (Microsoft SQL Server):</p>
+<pre><code>CREATE TABLE t1 (a INT, b INT);
+SELECT a, b FROM t1 GROUP BY a;</code></pre>
+<p>Si ejecuta la consulta SELECT, recibirá un error porque Microsoft SQL Server requiere que la columna <code>b</code> esté en GROUP BY o se use dentro de una función de agregación. Los siguientes dos ejemplos corregirán el error.</p>
+<pre><code>SELECT a, b FROM t1 GROUP BY a, b;
+SELECT a, max(b) max_b FROM t1 GROUP BY a;</code></pre>
+</body>
+</html>

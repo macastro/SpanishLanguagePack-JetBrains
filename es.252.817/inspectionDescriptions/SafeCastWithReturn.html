@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre conversiones seguras con <code>return</code> que pueden ser reemplazadas por comprobaciones de tipo <code>if</code>.
+<p>El código se puede simplificar usando la función correspondiente.</p>
+<p>Esta corrección rápida reemplazará la conversión segura por una comprobación de tipo <code>if</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun test(x: Any) {
+      x as? String ?: return
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun test(x: Any) {
+      if (x !is String) return
+  }
+</code></pre>
+</body>
+</html>

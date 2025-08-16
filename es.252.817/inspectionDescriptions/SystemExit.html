@@ -1,0 +1,12 @@
+<html>
+<body>
+Informa sobre las llamadas a <code>System.exit()</code>, <code>Runtime.exit()</code> y <code>Runtime.halt()</code>.
+<p>
+  Las llamadas a <code>System.exit()</code> o <code>Runtime.exit()</code> invocan los hooks de cierre y terminan la máquina virtual de Java en ejecución. La llamada a <code>Runtime.halt()</code> termina la JVM de forma forzada sin activar los hooks de cierre.
+  Cada uno de estos métodos debe usarse con extrema precaución. Las llamadas a estos métodos hacen que el código que las invoca no sea portable para la mayoría de los servidores de aplicaciones.
+</p>
+<p>
+  Utilice esta opción para ignorar las llamadas en el método principal.
+<p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre posibles desreferencias de <code>nil</code>. La desreferencia de <code>nil</code> puede provocar un <code>NoMethodError</code>.
+<p>Usando la lista de <i>receptores ignorados</i>, puedes especificar las llamadas a métodos que deben ignorarse como receptores (por ejemplo, <code>Foo#call</code> o <code>Foo::call</code> para métodos de instancia o singleton respectivamente).</p>
+<p>Ejemplo:</p>
+<pre>
+<code>def foo
+  rand(2) == 1 ? nil : 1
+end
+a = foo
+a.nomethod # La llamada al método puede producir NoMethodError</code>
+</pre>
+</body>
+</html>

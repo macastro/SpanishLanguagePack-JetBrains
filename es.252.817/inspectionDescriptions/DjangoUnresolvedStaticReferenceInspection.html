@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>Informa sobre referencias no resueltas a recursos estáticos.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="DjangoTemplate">
+{% load staticfiles %}
+&lt;link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" /&gt;
+</code></pre>
+<p>En este ejemplo, si el archivo <code>style.css</code> no existe en el directorio <code>static/poll</code>, 
+se resaltará este archivo.</p>
+</body>
+</html>

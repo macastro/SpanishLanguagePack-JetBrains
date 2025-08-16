@@ -1,0 +1,33 @@
+<html>
+<body>
+Informa sobre usos de expresiones <code>this</code> con <code>instanceof</code> o <code>getClass() == SomeClass.class</code>.
+<p>Tales expresiones indican un fallo en el diseño orientado a objetos y deberían reemplazarse con construcciones polimórficas.</p>
+<p>Ejemplo:</p>
+<pre><code>
+class Super {
+  void process() {
+    if (this instanceof Sub) { // advertencia
+      doSomething();
+    } else {
+      doSomethingElse();
+    }
+  }
+}
+class Sub extends Super {}
+</code></pre>
+<p>Para corregir el problema, utilice métodos sobrescritos:</p>
+<pre><code>
+class Super {
+  void process() {
+    doSomethingElse();
+  }
+}
+class Sub extends Super {
+  @Override
+  void process() {
+    doSomething();
+  }
+}  
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>Reporta llamadas a <code>subscribe()</code> en métodos "reactive".</p>
+<p>Los métodos que devuelven tipos <code>Publisher</code> (incluyendo <code>Flux</code> y <code>Mono</code>) no deberían llamar directamente al método <code>subscribe()</code>, ya que esto puede romper la cadena de llamadas reactivas.</p>
+<p>En lugar de usar <code>subscribe()</code>, considera utilizar operadores de composición como <code>flatMap()</code>, <code>zip()</code>, <code>then()</code> y otros.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  Flux&lt;String&gt; stringFlux(){
+    Flux&lt;String&gt; flux = Flux.just("abc");
+    flux.subscribe(); // &lt;- Llamada bloqueante a 'subscribe' en un contexto no bloqueante
+    return flux;
+  }
+</code></pre>
+</body>
+</html>

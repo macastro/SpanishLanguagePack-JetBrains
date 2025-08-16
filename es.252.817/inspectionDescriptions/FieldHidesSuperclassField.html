@@ -1,0 +1,29 @@
+<html>
+<body>
+Informa sobre campos en clases derivadas que tienen el mismo nombre que los campos en la superclase.
+Los campos de Java no se pueden sobrescribir en clases derivadas, por lo que los campos en la clase derivada ocultan los campos de la superclase.
+<p>
+  Debido a este tipo de nomenclatura, puede usar incorrectamente el campo de la clase derivada en situaciones donde se pretendía usar el campo de la clase base con el mismo nombre.
+</p>
+<p>Se recomienda renombrar el campo en la clase derivada mediante la corrección rápida.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>class Parent {
+  Parent parent;
+}
+class Child extends Parent {
+  Child parent;
+}
+</code></pre>
+<p>
+  Puede configurar las siguientes opciones para esta inspección:
+</p>
+<ol>
+  <li>
+    <strong>Ignorar campos inaccesibles</strong> - Indica si la inspección debe informar sobre todos los conflictos de nombres o solo sobre conflictos con campos visibles para la subclase.
+  </li>
+  <li>
+    <strong>Ignorar campos static que ocultan campos static</strong> - Ignora los campos <code>static</code> que ocultan campos <code>static</code> en la clase base.
+  </li>
+</ol>
+</body>
+</html>

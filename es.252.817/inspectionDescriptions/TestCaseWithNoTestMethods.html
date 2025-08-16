@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre casos de prueba no <code>abstract</code> que no tienen métodos de prueba. Estos casos de prueba generalmente indican código incompleto o posibles residuos de refactorización que deberían eliminarse.
+<p>Ejemplo:</p>
+<pre><code>
+  public class CrucialTest {
+    @Before
+    public void setUp() {
+      System.out.println("setting up");
+    }
+  }
+</code></pre>
+<p>
+  Utilice la opción <b>Ignorar casos de prueba con superclases que contienen métodos de prueba</b> para excluir los casos de prueba que tienen superclases con métodos de prueba.
+<p>
+</body>
+</html>

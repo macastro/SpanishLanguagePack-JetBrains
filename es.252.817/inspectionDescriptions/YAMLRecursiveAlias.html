@@ -1,0 +1,12 @@
+<html>
+<body>
+Informar sobre recursión en alias YAML.
+<p>Los alias no pueden ser recursivos ni utilizarse en los datos referenciados por la marca de anclaje correspondiente.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  some_key: &some_anchor
+    sub_key1: value1
+    sub_key2: *some_anchor
+</code></pre>
+</body>
+</html>

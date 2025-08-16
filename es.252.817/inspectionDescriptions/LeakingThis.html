@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta operaciones inseguras al usar <code>this</code> durante la construcción de objetos, incluyendo:
+<ul>
+  <li>Acceso a propiedades no finales durante la inicialización de la clase: desde constructores o inicializadores de propiedades</li>
+  <li>Llamadas a funciones no finales durante la inicialización de la clase</li>
+  <li>Uso de <code>this</code> como argumento de función en constructores de clases no finales</li>
+</ul>
+<p>
+    Si otras clases heredan de la clase dada, es posible que no estén completamente inicializadas cuando se realizan las operaciones inseguras.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>abstract class</b> Base {
+      <b>val</b> code = calculate()
+      <b>abstract fun</b> calculate(): Int
+  }
+  <b>class</b> Derived(<b>private val</b> x: Int) : Base() {
+      <b>override fun</b> calculate() = x
+  }
+  <b>fun</b> testIt() {
+      println(Derived(42).code) <i>// Valor esperado: 42, valor real: 0</i>
+  }
+</code></pre>
+</body>
+</html>

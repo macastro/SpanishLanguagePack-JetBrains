@@ -1,0 +1,13 @@
+<html><body>
+Se ha proporcionado un nombre de método no válido al atributo <code>dependsOnMethods</code> de la anotación <code>@Test</code>.
+<p>Un nombre de método se considera no válido si no puede resolverse como un método accesible y válido anotado con <code>@Test</code> en la clase actual o en cualquiera de sus clases padre.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  public class SampleTest {
+    @Test(dependsOnMethods = "testSpellignError")
+    public void testSample() {}
+    @Test
+    public void testSpellingError(){}
+  }
+</code></pre>
+</body></html>

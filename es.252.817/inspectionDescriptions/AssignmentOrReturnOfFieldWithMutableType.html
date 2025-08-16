@@ -1,0 +1,37 @@
+<html>
+<body>
+Informa sobre retornos o asignaciones desde parámetros de método a arrays o tipos mutables (como <code>Collection</code>, <code>Date</code>, <code>Map</code>, <code>Calendar</code>, etc.)
+<p>Debido a que estos tipos son mutables, esta estructura puede llevar a modificaciones inesperadas del estado del objeto desde fuera de su clase. Aunque esta estructura puede ser útil por razones de rendimiento, es inherentemente propensa a errores.</p>
+<p>Se informan los siguientes tipos mutables:</p>
+<ul>
+  <li><code>java.util.Date</code></li>
+  <li><code>java.util.Calendar</code></li>
+  <li><code>java.util.Collection</code></li>
+  <li><code>java.util.Map</code></li>
+  <li><code>com.google.common.collect.Multimap</code></li>
+  <li><code>com.google.common.collect.Table</code></li>
+</ul>
+<p>La corrección rápida añade una llamada al método <code>.clone()</code> del campo.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Log {
+    String[] messages;
+    ...
+    String[] getMessages() {
+      return messages; // Advertencia: devolviendo campo String[] 'messages'
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Log {
+    String[] messages;
+    ...
+    String[] getMessages() {
+      return messages.clone();
+    }
+  }
+</code></pre>
+<p>Use la opción <b>Ignorar asignaciones y retornos en métodos private</b> para ignorar las asignaciones y retornos en métodos <code>private</code>.
+</body>
+</html>

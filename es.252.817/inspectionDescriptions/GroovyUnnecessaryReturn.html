@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Reporta las declaraciones <code>return</code> al final de constructores y métodos que devuelven <code>void</code>. Estas declaraciones son innecesarias y pueden eliminarse de forma segura.</p>
+<p><b>Ejemplo:</b>
+<pre><code>
+  <b>void</b> foo (String s){
+      print(s)
+      <b>return</b>
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  <b>void</b> foo (String s){
+      print(s)
+  }
+</code></pre>
+<p>Para más detalles, consulte la misma inspección en Java.</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa sobre comparaciones donde los operandos izquierdo y derecho representan la misma expresión.
+Aunque a veces puede ser intencional comparar una expresión consigo misma, generalmente es resultado de un descuido.
+<p>Ejemplo:</p>
+<pre><code>
+  // Posiblemente left.getLength() == right.getLength() sea intencional
+  boolean result = left.getLength() == left.getLength();
+</code></pre>
+<p>
+  Para ignorar las comparaciones que puedan tener efectos secundarios, utilice la opción <b>Ignorar condiciones con efectos secundarios</b>.
+Deshabilitar esta opción puede resultar en falsos positivos, por ejemplo, cuando el mismo método devuelve diferentes valores en llamadas sucesivas.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  native int unknownMethod();
+  ...
+  if (unknownMethod() &gt; unknownMethod()) {
+    System.out.println("Got it");
+  }
+</code></pre>
+<p>Dado que <code>unknownMethod()</code> puede tener efectos secundarios (en el ejemplo), la advertencia solo se activará cuando la opción <b>Ignorar condiciones con efectos secundarios</b> esté deshabilitada.</p>
+<p><small>Novedades en 2024.2</small></p>
+</body>
+</html>

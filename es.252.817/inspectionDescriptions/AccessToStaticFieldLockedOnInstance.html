@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre accesos a campos static no constantes que están sincronizados sobre <code>this</code> o sobre campos de instancia de <code>this</code>.
+<p>
+  Sincronizar campos static sobre datos de instancia no evita que otras instancias modifiquen el campo, lo que puede llevar a condiciones de carrera inesperadas.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  static String test;
+  public void foo() {
+      synchronized (this) {
+          System.out.println(test); // advertencia
+      }
+  }
+</code></pre>
+<p>
+  Los campos static de tipos específicos pueden ser ignorados mediante una corrección rápida.
+  Los tipos ignorados pueden gestionarse en las opciones de inspección.
+</p>
+<p>
+  Las clases que deben ignorarse para campos static pueden especificarse usando las opciones de inspección.
+<p>
+</body>
+</html>

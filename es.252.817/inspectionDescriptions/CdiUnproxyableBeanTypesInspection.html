@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>Informa sobre usos incorrectos de tipos de Bean que no pueden ser proxy.</p>
+<p>El contenedor no puede crear proxies para ciertos tipos válidos de Bean: clases sin un constructor no privado sin parámetros, clases declaradas como final o con métodos finales, tipos primitivos y tipos array.</p>
+<p>Esta inspección informa sobre las siguientes violaciones para dichos tipos de Bean:</p>
+<ul>
+  <li>Los Beans gestionados con alcance pasivante deben ser <code>java.io.Serializable</code></li>
+  <li>Los Beans de tipos no serializables no pueden ser inyectados en Beans de alcance pasivante</li>
+  <li>El contenedor debe poder crear proxies para Beans de alcance normal que se inyectan</li>
+</ul>
+</body>
+</html>

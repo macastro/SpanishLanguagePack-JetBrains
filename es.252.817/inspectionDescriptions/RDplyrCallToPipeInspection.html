@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Informa sobre llamadas anidadas de dplyr y sugiere reemplazarlas con tuberías.</p>
+<p><b>Ejemplo:</b></p>
+<p>
+  <code>
+    summarise(filter(diamonds, depth > 62.0), mean = mean(carat))
+  </code>
+</p>
+<p>Cuando aplique la corrección rápida, el código se convertirá en:</p>
+<p>
+  <code>
+    diamonds %>%
+    filter(depth > 62.0) %>%
+    summarise(mean = mean(carat))
+  </code>
+</p>
+</body>
+</html>

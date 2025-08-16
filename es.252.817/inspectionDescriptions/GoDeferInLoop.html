@@ -1,0 +1,19 @@
+<html>
+<body>
+Reporta las declaraciones <code>defer</code> dentro de bucles.
+<p>El uso de <code>defer</code> dentro de bucles puede provocar fugas de memoria o un orden de ejecución impredecible de las declaraciones.</p>
+<p>Ejemplo:</p>
+<pre><code>func main() {
+ for {
+  field, err := db.Query("SELECT 1")
+  if err != nil {
+   // ...
+  }
+  defer field.Close()
+  // ...
+ }
+}</code></pre>
+<p>La llamada a <code>defer row.Close()</code> dentro del bucle no se ejecutará hasta que la función termine su ejecución,
+  no al final de cada iteración del bucle <code>for</code>. Esta implementación puede causar desbordamiento de pila de la función y otros problemas.</p>
+</body>
+</html>

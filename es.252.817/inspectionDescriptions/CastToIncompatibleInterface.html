@@ -1,0 +1,19 @@
+<html>
+<body>
+Reporta expresiones de conversión de tipo donde la expresión convertida tiene un tipo de clase/interfaz que no extiende/implementa el tipo de clase/interfaz de conversión, ni tiene subclases que lo hagan.
+<p>
+  Es probable que estas estructuras sean erróneas y lancen una <code>java.lang.ClassCastException</code> en tiempo de ejecución.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  interface A {}
+  interface Z {}
+  static class C {}
+  void x(C c) {
+    if (c instanceof Z) {
+      A a = ((A)c); // Conversión a interfaz incompatible 'A'
+    }
+  }
+</code></pre>
+</body>
+</html>

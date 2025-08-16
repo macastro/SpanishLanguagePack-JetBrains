@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Informa sobre variables no utilizadas en el ámbito actual.
+  Estas variables son innecesarias y pueden eliminarse.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+my_func  &lt;- function(a) {
+  x  &lt;- 3
+  return (a^2)
+}
+</code></pre>
+<p>La variable <code>x</code> no se utiliza y puede eliminarse:</p>
+<pre><code>
+my_func  &lt;- function(a) {
+  return (a^2)
+}
+</code></pre>
+</body>
+</html>

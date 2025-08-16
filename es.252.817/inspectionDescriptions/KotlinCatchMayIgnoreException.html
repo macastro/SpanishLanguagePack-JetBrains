@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa sobre bloques <code>catch</code> vacíos o que posiblemente ignoren excepciones.
+<p>Aunque a veces es intencional, los bloques <code>catch</code> vacíos pueden dificultar la depuración.
+    Además, ignorar el parámetro <code>catch</code> podría ser un error.</p>
+<p>
+    Esta inspección no informa sobre parámetros <code>catch</code> nombrados como <code>ignore</code>, <code>ignored</code> o <code>_</code>.
+</p>
+<p>
+    Puede utilizar la corrección rápida para cambiar el nombre de la excepción a <code>_</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  try {
+    throwingMethod()
+  } catch (ex: IOException) {
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  try {
+    throwingMethod()
+  } catch (_: IOException) {
+  }
+</code></pre>
+Use la opción <b>No avisar cuando el bloque 'catch' contenga comentarios</b> para ignorar los bloques <code>catch</code> que contengan comentarios.
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+El bucle puede ser colapsado en una única llamada a <code>Collection.removeIf()</code>.
+<p>Ejemplo:</p>
+<pre><code>
+  for (Iterator&lt;String&gt; it = collection.iterator(); it.hasNext(); ) {
+    String aValue = it.next();
+    if(shouldBeRemoved(aValue)) {
+      it.remove();
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  collection.removeIf(aValue -> shouldBeRemoved(aValue));
+</code></pre>
+</body>
+</html>

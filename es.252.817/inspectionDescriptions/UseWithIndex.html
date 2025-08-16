@@ -1,0 +1,29 @@
+<html>
+<body>
+Informa sobre bucles <code>for</code> que utilizan variables de índice con incremento manual.
+<p>Los bucles <code>for</code> que utilizan variables de índice con incremento manual se pueden simplificar usando la función <code>withIndex()</code>.</p>
+<p>La corrección rápida <b>Reemplazar incremento manual de índice con withIndex()</b> está disponible para corregir el código automáticamente.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  fun foo(list: List&lt;String&gt;): Int? {
+      var index = 0
+      for (s in list) { &lt;== can be simplified
+          val x = s.length * index
+          index++
+          if (x > 0) return x
+      }
+      return null
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun foo(list: List&lt;String&gt;): Int? {
+      for ((index, s) in list.withIndex()) {
+          val x = s.length * index
+          if (x > 0) return x
+      }
+      return null
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa sobre el uso de elementos obsoletos.
+<p>Ejemplo:</p>
+<pre><code>// Obsoleto: usar io.SeekStart, io.SeekCurrent y io.SeekEnd.
+const (
+ SEEK_SET int = 0 // Buscar relativo al origen del archivo
+ SEEK_CUR int = 1 // Buscar relativo al desplazamiento actual
+ SEEK_END int = 2 // Buscar relativo al final
+)</code></pre>
+<p>Según las <a href="https://pkg.go.dev/os#pkg-constants">Constantes en go.dev</a>, <code>SEEK_SET</code>, <code>SEEK_CUR</code> y <code>SEEK_END</code> están obsoletos.</p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta declaraciones <code>unless</code> que se utilizan con <code>else</code>. Es mejor poner la rama positiva primero.
+<p>Ejemplo:</p>
+<pre>
+<code># 不良做法
+a = 1
+unless a > 2
+  puts 'a is 2 or less'
+else
+  puts 'a is greater than 2'
+end</code>
+</pre>
+Se puede convertir <code>unless</code> a <code>if</code> mediante una corrección rápida. Después de aplicar la corrección rápida, se verá así:
+<pre>
+<code># 优良做法
+a = 1
+if a > 2
+  puts 'a is greater than 2'
+else
+  puts 'a is 2 or less'
+end</code>
+</pre>
+<p><span style="font-size: smaller;">Inspirado por <a href="https://github.com/rubocop-hq/ruby-style-guide#no-else-with-unless">'Ruby Style Guide'</a></span></p>
+</body>
+</html>

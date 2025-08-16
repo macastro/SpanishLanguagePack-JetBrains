@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>Informa sobre métodos con cláusulas de parámetro vacías que anulan métodos de acceso Java.</p>
+
+<p>Se espera que los métodos que siguen el contrato de nombres JavaBean para los accesores no tengan efectos secundarios. Se recomienda utilizar un método sin parámetros siempre que no haya parámetros y el método no tenga efectos secundarios. Esta convención promueve el principio de acceso uniforme, que establece que el código del cliente no debe verse afectado por la decisión de implementar un atributo como campo o método.</p>
+
+<p>El problema es que Java no implementa el principio de acceso uniforme y no permite métodos sin cláusulas de parámetros. Para cerrar esa brecha, Scala te permite anular métodos con cláusulas de parámetros vacías con métodos sin cláusulas de parámetros.</p>
+
+<p>La solución rápida elimina la cláusula de parámetro vacía.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class TestException extends Exception {
+    override def getMessage(): String = ???
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  class TestException extends Exception {
+    override def getMessage: String = ???
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

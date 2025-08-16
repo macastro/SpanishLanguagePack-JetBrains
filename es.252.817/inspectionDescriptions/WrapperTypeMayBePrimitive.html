@@ -1,0 +1,34 @@
+<html>
+<body>
+El informe se utiliza principalmente para variables locales de tipos wrapper de tipos primitivos.
+<p>En algunos casos, el boxing puede causar una pérdida significativa de rendimiento, especialmente en bucles.</p>
+<p>Se utiliza una estimación heurística del número de operaciones de boxing. Por ejemplo, las conversiones dentro de un bucle se consideran más numerosas.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  public void example() {
+    Integer value = 12;
+    needBox(value);
+    for (int i = 0; i &lt; 10; i++) {
+      // El uso en el bucle se vuelve cada vez más frecuente
+      needPrimitive(value);
+    }
+  }
+  void needPrimitive(int value) {}
+  void needBox(Integer value) {}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>  public void example() {
+    int value = 12;
+    needBox(value);
+    for (int i = 0; i &lt; 10; i++) {
+      // El uso en el bucle se vuelve cada vez más frecuente
+      needPrimitive(value);
+    }
+  }
+  void needPrimitive(int value) {}
+  void needBox(Integer value) {}
+</code></pre>
+<p>
+  <small>Novedades de la versión 2018.2</small>
+</p>
+</body>
+</html>

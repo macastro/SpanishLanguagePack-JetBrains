@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Reporta la flecha lambda redundante en expresiones lambda sin parámetros.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo(f: () -> Unit) = f()
+  fun bar() {
+      foo { <b>-></b> println("Hi!") }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun foo(f: () -> Unit) = f()
+  fun bar() {
+      foo { println("Hi!") }
+  }
+</code></pre>
+</body>
+</html>

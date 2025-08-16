@@ -1,0 +1,10 @@
+<html>
+<body>
+Informa sobre paquetes y especificaciones de tipos de objetos que carecen de declaraciones de cuerpo.
+<p>Las especificaciones de paquetes y tipos de objetos que declaran rutinas y cursores deben tener declaraciones de cuerpo que implementen estas rutinas y cursores. La ausencia del cuerpo provocará errores en tiempo de ejecución cuando se llamen las rutinas o cursores en el código del programa.</p>
+<p>Ejemplo (Oracle):</p>
+<pre><code>CREATE OR REPLACE PACKAGE ppp IS
+    FUNCTION foo(a INT) RETURN INT;
+END;</code></pre>
+</body>
+</html>

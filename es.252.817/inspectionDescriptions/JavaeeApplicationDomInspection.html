@@ -1,0 +1,23 @@
+<html>
+<body>
+Reporta los siguientes problemas en el archivo de configuración `application.xml`:
+<ul>
+  <li>Referencias a clases que no se pueden instanciar</li>
+  <li>Referencias a clases que no extienden las clases requeridas</li>
+  <li>Referencias a clases con ámbito inadecuado</li>
+  <li>Etiquetas y valores de atributos que no coinciden con los patrones requeridos (por ejemplo, identificadores Java)</li>
+  <li>Etiquetas que no contienen las subetiquetas o atributos requeridos</li>
+  <li>Etiquetas que definen objetos con nombres duplicados</li>
+</ul>
+<p><b>Ejemplo:</b></p><br/>
+<pre><code>
+&lt;application&gt;
+    &lt;module id="ExampleWebModule"&gt;
+      &lt;web&gt; // Error: debe definirse la subetiqueta "web-uri"
+        &lt;context-root&gt;ExampleWebApp&lt;/context-root&gt;
+      &lt;/web&gt;
+    &lt;/module&gt;
+&lt;/application&gt;
+</code></pre>
+</body>
+</html>

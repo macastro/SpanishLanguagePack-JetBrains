@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre posibles desreferencias de punteros que podrían contener <code>nullptr</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  using namespace std;
+  void process(string *a, string b) {
+    if (a != nullptr || a->length()) {
+      a = &#38b;
+    }
+  }
+</code></pre>
+</body>
+</html>

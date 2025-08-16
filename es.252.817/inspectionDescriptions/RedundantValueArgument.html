@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre los argumentos que son iguales a los valores predeterminados de los parámetros correspondientes.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+fun foo(x: Int, y: Int = 2) {}
+fun bar() {
+    foo(1, 2)
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+fun bar() {
+    foo(1)
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>Informa de casos en los que <code>sort</code> y <code>filter</code> podrían cambiarse para un mejor rendimiento.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  var seq: Seq[Int]
+  seq.sortWith(lessThan).filter(p)
+  seq.sortBy(f).filter(p)
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  var seq: Seq[Int]
+  seq.filter(p).sortWith(lessThan)
+  seq.filter(p).sortBy(f)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

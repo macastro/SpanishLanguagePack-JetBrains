@@ -1,0 +1,8 @@
+<html>
+<body>
+Informa sobre llamadas a métodos que no aceptan expresiones regulares y que pueden ser reemplazadas por llamadas a métodos equivalentes que aceptan lambdas.
+<p>
+La conversión de expresiones a lambdas garantiza que las expresiones no utilizadas en el método no sean evaluadas. Por ejemplo, <code>optional.orElse(createDefaultValue())</code> puede convertirse a <code>optional.orElseGet(this::createDefaultValue)</code>.
+<p><small>Novedades de la versión 2018.1</small></p>
+</body>
+</html>

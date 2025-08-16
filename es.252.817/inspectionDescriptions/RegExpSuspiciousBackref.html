@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre referencias inversas que no se pueden resolver en tiempo de ejecución.
+Esto significa que la referencia inversa nunca podrá coincidir con ningún contenido.
+Una referencia inversa no será resoluble si el grupo se define después de la referencia inversa, o si el grupo se define en una rama diferente de una alternativa.
+<p><b>Ejemplo de un grupo definido después de su referencia inversa:</b></p>
+<pre><code>
+  \1(abc)
+</code></pre>
+<p><b>Ejemplo de un grupo y referencia inversa en diferentes ramas:</b></p>
+<pre><code>
+  a(b)c|(xy)\1z
+</code></pre>
+<p><small>Cambios más recientes en 2022.1</small>
+</body>
+</html>

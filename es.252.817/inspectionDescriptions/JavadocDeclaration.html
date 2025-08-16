@@ -1,0 +1,33 @@
+<html>
+<body>
+Reporta los siguientes problemas en comentarios y etiquetas Javadoc:
+<ul>
+  <li>Nombre de etiqueta inválido</li>
+  <li>Descripción de etiqueta incompleta</li>
+  <li>Etiqueta duplicada</li>
+  <li>Descripción Javadoc faltante</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code>
+  /**
+   * Nombre de etiqueta inválido
+   * @poram param description
+   */
+  public void sample(int param){
+  }
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code>
+  /**
+   * Referencia a sí mismo {@link #sample(int)}
+   */
+  public void sample(int param){
+  }
+</code></pre>
+<p>Esta corrección rápida agregará etiquetas Javadoc desconocidas a la lista de etiquetas adicionales definidas por el usuario.</p>
+<p>Use el campo de texto a continuación para definir etiquetas Javadoc adicionales.</p>
+<p>Use la primera casilla de verificación para ignorar las etiquetas 'throws' duplicadas.</p>
+<p>Use la segunda casilla de verificación para ignorar problemas con la primera oración faltante o incompleta en la descripción.</p>
+<p>Use la tercera casilla de verificación para ignorar las referencias a sí mismo.</p>
+</body>
+</html>

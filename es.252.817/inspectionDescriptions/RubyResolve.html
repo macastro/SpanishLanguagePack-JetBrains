@@ -1,0 +1,10 @@
+<html>
+<body>
+Informa sobre referencias en el código que no pueden resolverse a ninguna declaración (como referencias a métodos o constantes).
+Las referencias no resueltas suelen ocurrir debido a errores tipográficos y pueden causar errores en tiempo de ejecución:
+<code>NoMethodError</code>, <code>NameError</code>, etc.
+<p>Al buscar declaraciones, primero se verifica el tipo del receptor (resolución explícita o tipada). Si no se encuentra una declaración coincidente en el receptor, se aceptarán las declaraciones coincidentes de cualquier parte del proyecto (resolución implícita o basada en texto).</p>
+<p>Por defecto, se emite una advertencia cuando no hay declaraciones coincidentes para ningún receptor, es decir, cuando falla la resolución implícita.</p>
+<p>Utilice la casilla de verificación <i>Informar referencias no resueltas</i> para receptores tipados para mostrar advertencias cuando no haya declaraciones coincidentes en ese receptor.</p>
+</body>
+</html>

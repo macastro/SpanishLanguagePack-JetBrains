@@ -1,0 +1,30 @@
+<html>
+<body>
+Reporta instancias de <code>java.util.concurrent.ThreadLocalRandom</code> que podrían compartirse entre hilos.
+<p>
+  <code>ThreadLocalRandom</code> no debe compartirse entre hilos ya que no es seguro para hilos.
+  Esta inspección puede reportar instancias asignadas a campos que se usan como argumentos de método, o asignadas a variables locales y utilizadas en clases anónimas o anidadas, ya que podrían compartirse entre hilos.
+</p>
+<p>
+  El uso de <code>ThreadLocalRandom</code> generalmente debería ser similar a <code>ThreadLocalRandom.current().nextInt(...)</code> (o <code>nextDouble(...)</code>, etc.).
+  Cuando todos los usos siguen este patrón, las instancias de <code>ThreadLocalRandom</code> no serán mal utilizadas por múltiples hilos.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    class Main {
+      void printRandomNumbersAsync() {
+        ThreadLocalRandom random = ThreadLocalRandom.current();
+        CompletableFuture.supplyAsync(() -&gt; generateNumbers(random))
+          .thenAccept(numbers -&gt; System.out.println(Arrays.toString(numbers)));
+      }
+      private int[] generateNumbers(Random random) {
+        return random.ints(1000, 0, 100).toArray();
+      }
+    }
+  </code></pre>
+<p>
+  Utilice estas opciones para listar los métodos que pueden aceptar instancias de <code>ThreadLocalRandom</code> como argumentos.
+  Se pueden usar expresiones regulares para los nombres de métodos.
+</p>
+</body>
+</html>

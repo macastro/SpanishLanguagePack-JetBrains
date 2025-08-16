@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>Reporta elementos incorrectos en el archivo Java Server Faces <code>faces-config.xml</code>:</p>
+<ul>
+  <li>Referencias a clases no instanciables</li>
+  <li>Referencias a clases que no extienden las clases requeridas</li>
+  <li>Referencias a clases con ámbito inadecuado</li>
+  <li>Etiquetas y valores de atributos vacíos</li>
+  <li>Etiquetas y valores de atributos que no coinciden con el esquema requerido (por ejemplo, identificadores Java)</li>
+  <li>Etiquetas que no contienen las subetiquetas o atributos requeridos</li>
+  <li>Etiquetas que definen objetos con nombres duplicados</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code>
+  &lt;faces-config &gt;
+     &lt;application&gt;
+        &lt;action-listener&gt;<strong>java.lang.String</strong>&lt;/action-listener&gt;  &lt;!-- 'java.lang.String' no es asignable a 'javax.faces.event.ActionListener'  --&gt;
+    &lt;/application&gt;
+    &lt;navigation-rule&gt;
+        &lt;from-view-id&gt;myView.xhtml&lt;/from-view-id&gt;
+        &lt;navigation-case&gt;
+            &lt;to-view-id&gt;<strong>unknown.xhtml</strong>&lt;/to-view-id&gt;  &lt;!-- No se puede resolver 'unknown.xhtml'  --&gt;
+        &lt;/navigation-case&gt;
+    &lt;/navigation-rule&gt;
+  &lt;/faces-config&gt;
+</code></pre>
+</body>
+</html>

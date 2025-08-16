@@ -1,0 +1,29 @@
+<html>
+<body>
+Informa sobre variables locales innecesarias que no mejoran la comprensión del método, incluyendo:
+<ul>
+  <li>Variables locales que se devuelven inmediatamente.</li>
+  <li>Variables locales que se asignan inmediatamente a otra variable y no se vuelven a utilizar.</li>
+  <li>Variables locales que siempre tienen el mismo valor que otra variable local o parámetro.</li>
+</ul>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  boolean yes() {
+    boolean b = true;
+    return b;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  boolean yes() {
+    return true;
+  }
+  </code></pre>
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>Utilice la opción <b>Ignorar variables que se devuelven o lanzan inmediatamente</b> para ignorar variables que se devuelven o lanzan inmediatamente.
+    Algunos estilos de codificación recomiendan usar estas variables para mayor claridad y facilidad de depuración.</li>
+  <li>Utilice la opción <b>Ignorar variables con anotaciones</b> para ignorar variables que tienen anotaciones.</li>
+</ul>
+</body>
+</html>

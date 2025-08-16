@@ -1,0 +1,32 @@
+<html>
+<body>
+Informa sobre declaraciones o expresiones <code>switch</code> de enumeración donde la rama <code>default</code> nunca será alcanzada porque todas las posibles valores están cubiertos por las ramas <code>case</code>.
+<p>Tales elementos son redundantes, especialmente para expresiones <code>switch</code>, ya que no se compilarán cuando las ramas <code>case</code> no cubran todas las constantes de enumeración.</p>
+<p>
+  El nivel de lenguaje debe configurarse en 14 para que se informen las expresiones <code>switch</code>.
+</p>
+<p>La corrección rápida proporcionada puede eliminar la rama <code>default</code>.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  enum E { A, B }
+  int foo(E e) {
+    return switch (e) {
+      case A -&gt; 1;
+      case B -&gt; 2;
+      default -&gt; 3;
+    };
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  enum E { A, B }
+  int foo(E e) {
+    return switch (e) {
+      case A -&gt; 1;
+      case B -&gt; 2;
+    };
+  }
+</code></pre>
+<p>Use la opción <b>Informar solo expresiones switch</b> para informar únicamente sobre ramas <code>default</code> redundantes en expresiones switch.</p>
+</body>
+</html>

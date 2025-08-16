@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa sobre anotaciones <code>@DelegatesTo.Target</code> no utilizadas y valores de atributos <code>@DelegatedTo.target</code> no resueltos.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // Objetivo 't1' no utilizado y objetivo 't2' no resuelto
+  def m(
+      @DelegatesTo.Target('t1') target,
+      @DelegatesTo(target = 't2') Closure c
+  ) {}
+</code></pre>
+</body>
+</html>

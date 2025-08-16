@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>Informa de argumentos separados por comas que pueden convertirse en tuplas.</p>
+<p>El compilador de Scala intenta convertir argumentos separados por comas en tuplas si no hay métodos apropiados de varios argumentos pero hay un único método apropiado de un argumento. Dicha conversión puede interrumpir la seguridad del tipo y generar resultados inesperados.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  def foo(a: Any) = {}
+  foo(1, 2)
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  def foo(a: Any) = {}
+  foo((1, 2))
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

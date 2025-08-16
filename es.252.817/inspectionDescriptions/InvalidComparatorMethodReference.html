@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre referencias a métodos que no cumplen con el contrato al ser mapeadas a la interfaz <code>Comparator</code>.
+<p>
+Algunas referencias a métodos, como <code>Integer::max</code>, pueden ser mapeadas a la interfaz <code>Comparator</code>.
+Sin embargo, usarlas como <code>Comparator</code> no tiene sentido y los resultados pueden ser impredecibles.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  ArrayList&lt;Integer&gt; ints = foo();
+  ints.sort(Math::min);
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  ArrayList&lt;Integer&gt; ints = foo();
+  ints.sort(Comparator.reverseOrder());
+</code></pre>
+</body>
+</html>

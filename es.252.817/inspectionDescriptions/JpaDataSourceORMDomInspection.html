@@ -1,0 +1,32 @@
+<html>
+<body>
+Informa sobre los descriptores XML de Persistence ORM que no se pueden resolver en el origen de datos configurado y sugiere actualizar el origen de datos o asignar uno diferente.
+<p><b>Ejemplo de tabla de base de datos:</b></p>
+<pre><code lang="sql">
+  CREATE TABLE DATA_TABLE (
+    ID INTEGER,
+    DATA VARCHAR(100)
+  );
+</code></pre><br/>
+<p><b>Ejemplo de archivo JSP:</b></p>
+<pre><code lang="jsp">
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0"&gt;
+    &lt;entity name="JavaEntity" class="JavaEntity"&gt;
+        &lt;table name="UNKNOWN_TABLE"/&gt; // Error: tabla no resuelta
+        &lt;attributes&gt;
+          &lt;id name="id"&gt;
+            &lt;column name="ID" nullable="false"/&gt;
+          &lt;/id&gt;
+          &lt;basic name="UNKNOWN_COLUMN"&gt; // Error: columna no resuelta
+            &lt;column name="UNKNOWN_COLUMN" length="12"/&gt;
+          &lt;/basic&gt;
+        &lt;/attributes&gt;
+    &lt;/entity&gt;
+  &lt;/entity-mappings&gt;
+</code></pre><br/>
+<p>
+  <b>Nota</b>: El origen de datos se puede configurar mediante la operación `Asignar origen de datos`
+</p>
+</body>
+</html>
