@@ -1,0 +1,73 @@
+<html>
+<body>
+<p>
+    Informa sobre una delegación cuando el objeto delegado es una instancia de una clase que sobrescribe (para clases <code>final</code> y <code>sealed</code>) o podría sobrescribir (para clases <code>open</code> y <code>abstract</code>) un método por defecto de Java.
+</p>
+<p>
+    Por diseño, la delegación de Kotlin no sobrescribe los métodos por defecto de Java, lo que puede provocar errores sutiles y difíciles de detectar, sobre todo en jerarquías de herencia profundas.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+// Base.java:
+public interface Base {
+  default void print() {
+    System.out.println("Base");
+  }
+}
+</code></pre>
+<pre><code lang="kotlin">
+// BaseImpl.kt:
+class BaseImpl : Base {
+  override fun print() {
+    println("BaseImpl")
+  }
+}
+</code></pre>
+<pre><code lang="kotlin">
+// Main.kt:
+fun main() {
+  val inherited = BaseImpl()
+  val delegated = object : Base by inherited {}
+  inherited.print() // Salida: BaseImpl
+  delegated.print() // Salida: Base
+}
+</code></pre>
+<p>
+    Los desarrolladores suelen esperar que se reenvíen todos los métodos, incluidos los métodos por defecto sobrescritos en el delegado. En su lugar, se llama al método por defecto de Java, lo que puede dar lugar a resultados inesperados.
+</p>
+<p>
+    Una corrección rápida es sobrescribir los métodos por defecto de Java delegando su implementación al objeto delegado.
+</p>
+<pre><code>
+// Main.kt:
+fun main() {
+  val inherited = BaseImpl()
+  val delegated = object : Base by inherited {
+    override fun print() {
+      inherited.print()
+    }
+  }
+  inherited.print() // Salida: BaseImpl
+  delegated.print() // Salida: BaseImpl
+}
+</code></pre>
+<p>
+    Otra corrección rápida es sobrescribir los métodos por defecto de Java delegando explícitamente su implementación a la superclase.
+</p>
+<pre><code>
+// Main.kt:
+fun main() {
+  val inherited = BaseImpl()
+  val delegated = object : Base by inherited {
+    override fun print() {
+      super.print()
+    }
+  }
+  inherited.print() // Salida: BaseImpl
+  delegated.print() // Salida: Base
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>Novedad de 2025.1</small></p>
+</body>
+</html>

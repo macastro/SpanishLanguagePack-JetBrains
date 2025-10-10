@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>
+  Informa sobre el recorte excesivo de espacios en blanco en las expresiones de plantilla de Go.
+  La inspección sigue la siguiente lógica aplicada a cada sentencia:<br>
+  1. Sin recorte → Omitir<br>
+  2. Con ambos recortes y rodeado por elementos distintos a espacios en blanco → Problema<br>
+  3. Con ambos recortes y un elemento precedente o subsiguiente distinto a un espacio en blanco → Problema si produce un valor (por ejemplo: es un elemento no vacío por sí mismo)<br>
+  4. Con recorte a la izquierda y un elemento precedente distinto a un espacio en blanco → Igual que el anterior<br>
+  5. Con recorte a la derecha y un elemento subsiguiente distinto a un espacio en blanco → Igual que el anterior<br>
+</p>
+</body>
+</html>

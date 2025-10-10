@@ -1,0 +1,194 @@
+<html>
+<body>
+<h1>Inspección de <code>flagUsage</code> de Lombok en IntelliJ</h1>
+
+<p>
+  Esta inspección es compatible con todas las configuraciones <code>flagUsage</code> especificadas en el archivo <code>lombok.config</code>. Emite una advertencia o un error en IntelliJ cuando se utiliza una funcionalidad de Lombok cuyo uso ha sido marcado. Esta retroalimentación proactiva ayuda a mantener los estándares de código y garantiza que solo se utilicen las funcionalidades de Lombok aprobadas.
+</p>
+
+<h2>Configuraciones <code>flagUsage</code> compatibles</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Clave de configuración</th>
+    <th>Descripción</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>lombok.anyConstructor.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza cualquier anotación XxxArgsConstructor.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.allArgsConstructor.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@AllArgsConstructor</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.noArgsConstructor.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@NoArgsConstructor</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.requiredArgsConstructor.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@RequiredArgsConstructor</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.data.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Data</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.value.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Value</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.getter.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Getter</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.getter.lazy.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Getter(lazy=true)</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.setter.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Setter</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.equalsAndHashCode.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@EqualsAndHashCode</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.toString.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@ToString</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.builder.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Builder</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.cleanup.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Cleanup</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.delegate.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Delegate</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.nonNull.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@NonNull</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.sneakyThrows.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@SneakyThrows</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.synchronized.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Synchronized</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.val.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza la palabra clave del lenguaje <code>val</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.var.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza la palabra clave del lenguaje <code>var</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.with.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@With</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.log.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza cualquier anotación de registro.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.log.apacheCommons.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@CommonsLog</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.log.javaUtilLogging.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Log</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.log.log4j.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Log4j</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.log.log4j2.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Log4j2</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.log.slf4j.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Slf4j</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.log.xslf4j.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@XSlf4j</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.log.jbosslog.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@JBossLog</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.log.flogger.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Flogger</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.log.custom.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@CustomLog</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.experimental.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utilizan funcionalidades experimentales.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.accessors.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Accessors</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.extensionMethod.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@ExtensionMethod</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.fieldDefaults.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@FieldDefaults</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.helper.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Helper</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.locked.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Locked</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.onX.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza el parámetro <code>onX</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.utilityClass.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@UtilityClass</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.fieldNameConstants.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@FieldNameConstants</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.superBuilder.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@SuperBuilder</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.withBy.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@WithBy</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.jacksonized.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@Jacksonized</code>.</td>
+  </tr>
+  <tr>
+    <td><code>lombok.standardException.flagUsage</code></td>
+    <td>Emite una advertencia o un error si se utiliza <code>@StandardException</code>.</td>
+  </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

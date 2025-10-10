@@ -1,0 +1,11 @@
+<html>
+<body>
+<p>Esta inspección detecta las llamadas a las funciones de la biblioteca estándar de Kotlin <code>filterIsInstance</code>/<code>filterIsInstanceTo</code> cuyo tipo de destino no es un subtipo del tipo de elemento que se filtra.</p>
+
+<p>Ejemplo:</p>
+<pre><code>
+    val list = listOf&lt;Int&gt;(1, 2, 3)
+    val filteredList = list.filterIsInstance&lt;Boolean&gt;() // resultado vacío
+</code></pre>
+</body>
+</html>

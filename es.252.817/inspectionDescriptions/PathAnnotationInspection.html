@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa sobre el uso incorrecto de las anotaciones de ruta.
+
+<p>
+  Esta inspección detecta los casos en los que una cadena con una anotación de ruta se utiliza en un contexto que requiere otra anotación de ruta.
+  Ayuda a garantizar el uso correcto de las anotaciones <code>@MultiRoutingFileSystemPath</code> y <code>@NativePath</code>.
+</p>
+
+<p>La inspección resalta los siguientes problemas:</p>
+<ul>
+  <li>Cuando una cadena anotada con <code>@NativePath</code> se utiliza en un constructor Path o en un método de fábrica.</li>
+  <li>Cuando una cadena anotada con <code>@NativePath</code> se pasa a un parámetro de método anotado con <code>@MultiRoutingFileSystemPath</code>.</li>
+  <li>Cuando una cadena anotada con <code>@MultiRoutingFileSystemPath</code> se pasa a un parámetro de método anotado con <code>@NativePath</code>.</li>
+  <li>Cuando se utiliza un literal de cadena en un contexto que requiere cualquiera de las dos anotaciones.</li>
+</ul>
+
+<p>
+  Se proporciona una solución rápida para añadir la anotación adecuada donde sea necesario.
+</p>
+<!-- tooltip end -->
+<p>
+  Esta inspección ayuda a prevenir errores en tiempo de ejecución que pueden producirse cuando se utilizan incorrectamente rutas de diferentes formatos.
+  La anotación <code>@MultiRoutingFileSystemPath</code> se utiliza para las rutas que deben funcionar en diferentes sistemas de archivos, mientras que la anotación <code>@NativePath</code> se utiliza para las rutas específicas del sistema de archivos nativo.
+</p>
+</body>
+</html>

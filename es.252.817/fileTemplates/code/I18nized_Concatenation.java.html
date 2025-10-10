@@ -1,0 +1,44 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="2"><font face="verdana" size="-1">
+    Reemplace una concatenación de String (por ejemplo </font><code>String s = "Hello " + name;</code>)
+    <font face="verdana" size="-1">por una expresión de código Java internacionalizada (por ejemplo </font>
+    <code>String s = MessageFormat.format(&#8203;myResourceBundle.getString(&#8203;"hello.0"), name);</code><font face="verdana" size="-1">).<br>
+        Esta plantilla incorporada es editable. Junto con las expresiones y comentarios de Java, también puede usar las variables predefinidas que
+      luego se expandirán a los valores correspondientes.</font>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${RESOURCE_BUNDLE}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Expresión del tipo <b>java.util.ResourceBundle</b>, cuya instancia está disponible en este contexto.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAMETERS}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Variables usadas en la concatenación de cadenas, generalmente pasan como argumentos a la expresión internacionalizada.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_KEY}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de clave de propiedad que se define en el archivo de propiedades correspondiente.
+      Normalmente es el valor que se utiliza para el parámetro del método <b>ResourceBundle.getString()</b>.
+    </font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_VALUE}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Valor de propiedad que se define en el archivo de propiedades correspondiente.
+      Este es el valor literal de cadena de Java original.
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>
