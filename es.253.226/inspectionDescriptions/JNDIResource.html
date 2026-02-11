@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa sobre recursos JNDI que no están cerrados de forma segura. Los recursos JNDI notificados por esta inspección incluyen <code>javax.naming.InitialContext</code> y <code>javax.naming.NamingEnumeration</code>.
+<p>
+  Por defecto, la inspección supone que los recursos pueden ser cerrados mediante cualquier método cuyo nombre tenga "close" o "cleanup".
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Object findObject(Properties properties, String name) throws NamingException {
+    Context context = new InitialContext(properties); //el contexto no se cierra
+    return context.lookup(name);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Utilice las siguientes opciones para configurar la inspección:
+</p>
+<ul>
+  <li>
+    Si un recurso JNDI puede abrirse dentro de un bloque <code>try</code>.
+    Este estilo es menos deseable porque es más detallado que abrir un recurso delante de un bloque <code>try</code>.
+  </li>
+  <li>
+    Si el recurso puede ser cerrado mediante cualquier llamada a método con el recurso pasado como argumento.
+  </li>
+</ul>
+</body>
+</html>

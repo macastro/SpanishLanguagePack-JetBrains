@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>Informa del uso repetido de una anotación que no es <code>@Repeatable</code> en los accesores de propiedades.</p>
+<p>
+    Como resultado de utilizar una anotación que no es <code>@Repeatable</code> varias veces, ambos usos de la anotación aparecerán en el bytecode, lo que lleva a una ambigüedad en las llamadas de reflexión.
+</p>
+<p>
+    Desde Kotlin 1.4, es obligatorio marcar la anotación como <code>@Repeatable</code> o no repetir la anotación; de lo contrario, se producirá un error de compilación.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  annotation class Foo(val x: Int)
+
+  @get:<b>Foo</b>(10)
+  val a: String
+      @<b>Foo</b>(20) get() = "foo" // anotación repetida dos veces pero no marcada como @Repeatable
+</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de lenguaje Kotlin del proyecto o módulo es 1.4 o superior.</p>
+</body>
+</html>

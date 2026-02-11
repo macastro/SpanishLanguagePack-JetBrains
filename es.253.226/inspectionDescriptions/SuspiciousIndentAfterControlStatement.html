@@ -1,0 +1,26 @@
+<html>
+<body>
+Inspecciona saltos de línea sospechosos de sentencias tras una sentencia de control sin llaves.
+<p>
+  Estos saltos de línea pueden hacer que parezca que la sentencia está dentro de la sentencia de control,
+  cuando en realidad se ejecuta sin condición tras la sentencia de control.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Bar {
+      void foo(int i) {
+          if (i == 0)
+              System.out.println("foo");
+              System.out.println("bar"); // warning
+          if (i == 1);
+              System.out.println("great"); // warning
+          if (i == 42)
+              System.out.println("answer");
+                  System.out.println("question"); // warning
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

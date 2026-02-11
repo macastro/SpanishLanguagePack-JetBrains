@@ -1,0 +1,21 @@
+<html>
+<body>
+Información de arreglos usados en concatenaciones de <code>String</code> o pasados como parámetros a métodos de <code>java.io.PrintStream</code>, tales como <code>System.out.println()</code>.
+<p>
+  Por lo general, el contenido del arreglo debe usarse y no el objeto arreglo en sí.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void print(Object[] objects) {
+    System.out.println(objects);
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  void print(Object[] objects) {
+    System.out.println(Arrays.toString(objects));
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,9 @@
+<html>
+<body>
+Reporta un descriptor de módulo GWT que no registra el directorio predeterminado <i>client</i> o <i>public</i>, pero sí registra un directorio fuente o público personalizado.
+<p>GWT solo trata implícitamente a la carpeta <i>client</i> como una ruta de origen del lado del cliente si el archivo gwt.xml no tiene las etiquetas <code>source</code> o <code>super-source</code>.
+  Por lo tanto, es probable que sea un error si el directorio <i>client</i> existe pero no está registrado en el archivo gwt.xml y ese archivo gwt.xml declara una etiqueta <code>source</code> o <code>super-source</code> personalizada.</p>
+<p>De manera similar, también puede ser un error si el archivo gwt.xml declara un directorio <i>public</i> personalizado, pero no registra una carpeta existente con el nombre predeterminado.</p>
+<p>Arreglo rápido agrega un registro explícito para la carpeta predeterminada en el archivo gwt.xml.</p>
+</body>
+</html>

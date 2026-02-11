@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Reporta perfiles inactivos en los contextos de aplicación Spring XML.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  &lt;!-- el perfil activo <strong>'DEV'</strong> es elegido para este contexto de aplicación --&gt;
+  &lt;beans profile="<strong>DEV</strong>"&gt;
+    &lt;bean class="MyFactory" factory-method="createBean"/&gt;
+  &lt;/beans&gt;
+  &lt;!--  el contenido de esta etiqueta es resaltado como 'no utilizado' --&gt;
+  <em>&lt;beans profile="<strong>TESTS</strong>"&gt;
+    &lt;bean class="MyTestFactory" factory-method="createBean"/&gt;
+  &lt;/beans&gt;</em>
+  &lt;!--  final de la sección 'no utilizada' --&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

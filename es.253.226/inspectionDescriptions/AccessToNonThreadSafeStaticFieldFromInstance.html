@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta el acceso a campos <code>static</code> que son de un tipo que no es seguro para la ejecución en múltiples subprocesos.
+<p>
+  Cuando un campo <code>static</code> se accede desde un método de instancia o un bloque no sincronizado,
+  múltiples subprocesos pueden acceder a ese campo.
+  Esto puede provocar efectos secundarios no especificados, como excepciones y resultados incorrectos.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Sample {
+    private static final SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+    String method() {
+      return df.format("");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Puedes especificar qué tipos deberían considerarse no seguros para la ejecución en múltiples subprocesos.
+  Solo se reportan los campos con estos tipos exactos o inicializados con estos tipos exactos,
+  porque puede haber subclases seguras para la ejecución en múltiples subprocesos de estos tipos.
+</p>
+
+</body>
+</html>

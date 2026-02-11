@@ -1,0 +1,38 @@
+<html>
+<body>
+Informa de los métodos con un tipo de devolución <code>boolean</code> que siempre se niegan al ser llamados.
+<p>Se proporciona una corrección rápida para invertir y, opcionalmente, renombrar el método.
+  Por razones de rendimiento, es posible que no todos los métodos problemáticos se resalten en el editor.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  class C {
+    boolean alwaysTrue() {
+      return true;
+    }
+
+    void f() {
+      if (!alwaysTrue()) {
+        return;
+      }
+    }
+    boolean member = !alwaysTrue();
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class C {
+    boolean alwaysFalse() {
+      return false;
+    }
+
+    void f() {
+      if (alwaysFalse()) {
+        return;
+      }
+    }
+    boolean member = alwaysFalse();
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

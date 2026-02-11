@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>Informa sobre docstrings que faltan o vacíos.</p>
+<p><b>Ejemplo de un docstring faltante</b></p>
+<pre><code>
+def demo(a):
+    c = a ** 2
+</code></pre>
+<p><b>Ejemplo de un docstring vacío</b></p>
+<pre><code>
+def demo(a):
+    """
+    """
+    c = a ** 2
+</code></pre>
+<p>Cuando se aplica el arreglo rápido, los fragmentos de código cambian a:</p>
+<pre><code>
+def demo(a):
+    """
+
+    :param a:
+    """
+    c = a ** 2
+</code></pre>
+<p>Necesita proporcionar algunos detalles acerca del parámetro en la plantilla generada.</p>
+</body>
+</html>

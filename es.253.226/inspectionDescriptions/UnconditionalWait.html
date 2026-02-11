@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta llamadas a <code>wait()</code> sin condiciones dentro de un contexto sincronizado.
+<p>
+  Normalmente, <code>wait()</code> se usa para bloquear un hilo hasta que una condición sea verdadera. Si <code>wait()</code> se llama incondicionalmente, a menudo indica que la condición se verificó antes de adquirir un bloqueo. En ese caso, puede ocurrir una carrera de datos, donde la condición se vuelve verdadera entre el momento en que se verificó y el momento en que se adquirió el bloqueo.
+</p>
+<p>
+  Si bien las construcciones encontradas por esta inspección no son necesariamente incorrectas, ciertamente vale la pena examinarlas.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Bar {
+      void foo() throws InterruptedException {
+          synchronized (this) {
+              wait(); // aviso
+          }
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<body>
+<p>
+  Reporta claves de configuración sin resolver y obsoletas, y valores no válidos en archivos de configuración <code>.properties</code> de la aplicación Spring Boot, lo cual puede provocar errores de tiempo de ejecución.
+</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+server.port=invalid # Informa 'No se puede convertir 'invalid' a java.lang.Integer'
+</code></pre>
+
+<p>Si una clave de configuración obsoleta tiene una clave de reemplazo, puedes aplicar el arreglo rápido 'Usar clave de reemplazo'.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+logging.path=${path} # Informa 'Propiedad de configuración obsoleta 'logging.path''
+</code></pre>
+
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+logging.file.path=${path}
+</code></pre>
+
+<p>
+  Si una clave de configuración no está definida en <code>spring-configuration-metadata.json</code>, puedes aplicar el arreglo rápido 'Definir clave de configuración' que crea el archivo <code>META-INF/spring-additional-configuration-metadata.json</code> y define la clave necesaria.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+new.key=value # Informa 'No se puede resolver la propiedad de configuración 'new.key''
+</code></pre>
+
+<p>Después de aplicar el arreglo rápido, lo siguiente se agrega a <code>META-INF/spring-additional-configuration-metadata.json</code>:</p>
+<pre><code>
+{
+  "properties": [
+    {
+      "name": "new.key",
+      "type": "java.lang.String",
+      "description": "Description for new.key."
+  }
+] }
+</code></pre>
+
+<p>La inspección también resalta errores de notación de índice en las claves de configuración de listas y mapas.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+spring.datasource.schema[]=${schema} # Informa 'Valor de índice faltante'
+</code></pre>
+<!-- tooltip end -->
+
+<p>
+  Usa la opción <b>Tokens de reemplazo</b> para definir tokens usados para marcadores de posición de valor en archivos de configuración.
+  Estos tokens se especifican en el formato <code>beginToken*endToken</code>.
+  Sin el <code>*</code>, se asume que el token es el mismo para el inicio y el final.
+</p>
+<p>
+  Por ejemplo, el valor predeterminado es <code>@</code> tanto para el token de inicio como para el de finalización,
+  lo que te permite definir marcadores de posición como <code>some.property=@another.property@</code>.
+</p>
+<p>Los valores dentro del token de reemplazo (<code>@property.key@</code>) no se resaltarán.</p>
+</body>

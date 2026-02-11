@@ -1,0 +1,13 @@
+  <html>
+<body>
+Informa sobre las sentencias <code>assert</code> que causan efectos colaterales.
+<p>
+  Como las aseveraciones se pueden desactivar,
+  estos efectos colaterales no están garantizados, lo que puede provocar fallos sutiles. Los efectos colaterales no deseados habituales detectados por esta inspección son
+  modificaciones de variables y campos. Cuando se involucran llamadas a métodos, se analizan un nivel de profundidad.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  assert i++ &lt; 10;
+</code></pre>
+</body>
+</html>

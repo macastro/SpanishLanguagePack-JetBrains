@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre ciclos que no pueden completarse sin un sobreflujo de índices o ciclos que no se ejecutan en absoluto.
+Habitualmente, esto sucede por un error en la operación de actualización.
+<p>Ejemplo:</p>
+<pre><code>
+  void foo(int s) {
+    para (int i = s; i > 12; i++) { // Aquí debería ir i--
+      System.out.println(i);
+    }
+  }
+</code></pre>
+<!-- final de la información sobre herramientas -->
+<p><small>Novedad en 2019.1</small></p>
+</body>
+</html>

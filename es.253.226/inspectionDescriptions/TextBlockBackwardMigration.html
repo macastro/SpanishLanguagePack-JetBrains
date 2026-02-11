@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa bloques de texto que pueden ser reemplazados con literales de cadena normales.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Object obj = engine.eval("""
+                           function hello() {
+                             print('"Hello, world"');
+                           }
+
+                           hello();
+                           """);
+</code></pre>
+<p>Después de aplicar corrección rápida:</p>
+<pre><code>
+  Object obj = engine.eval("function hello() {\n" +
+                           "  print('\"Hello, world\"');\n" +
+                           "}\n" +
+                           "\n" +
+                           "hello();\n");
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2019.3</small></p>
+</body>
+</html>

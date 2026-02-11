@@ -1,0 +1,18 @@
+<html>
+<body>
+Reporta llamadas a <code>Objects.equals(a, b)</code> en las que se sabe estáticamente que el primer argumento no es nulo.
+<p>Esta llamada puede reemplazarse de forma segura por <code>a.equals(b)</code> o <code>a == b</code> si ambos argumentos son primitivos.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  String defaultName = "default";
+  boolean isDefault = Objects.equals(defaultName, name);
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  String defaultName = "default";
+  boolean isDefault = defaultName.equals(name);
+</code></pre>
+<!-- tooltip end -->
+<p><small>Novedad en 2018.3</small></p>
+</body>
+</html>

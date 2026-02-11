@@ -1,0 +1,31 @@
+<html>
+<body>
+Informa acerca de instancias <code>Logger</code> que se inicializan con un literal de <code>class</code> de una clase distinta de aquella en la que se contiene <code>Logger</code>. Esto puede ocurrir fácilmente cuando se copia y pega algún código de otra clase y puede resultar en el registro de eventos bajo una categoría inesperada y provocar que los filtros se apliquen incorrectamente.
+<p>Se proporciona una solución rápida para reemplazar el literal de clase externo por uno de la clase circundante.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>public class</b> Paramount {
+    <b>protected static final</b> Logger LOG = Logger.getLogger(Critical.class);
+
+    // ... otros campos y métodos
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  <b>public class</b> Paramount {
+    <b>protected static final</b> Logger LOG = Logger.getLogger(Paramount.class);
+
+    // ... otros campos y métodos
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Configurar la inspección:
+</p>
+<ul>
+  <li>Utiliza la tabla para especificar las clases y métodos de fábrica de registradores reconocidos por esta inspección.</li>
+  <li>Utiliza la opción <b>Ignorar registradores inicializados con una superclase</b> para ignorar los registradores que se inicializan con una superclase de la clase que contiene el registrador.</li>
+  <li>Utiliza <b>Ignorar registradores en clases no públicas</b> para advertir solo sobre los registradores en clases <code>public</code>.</li>
+</ul>
+</body>
+</html>

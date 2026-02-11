@@ -1,0 +1,23 @@
+<html>
+<body>
+Inspecciona las interfaces en la lista de <code>implements</code> de la clase, o las interfaces en la lista de <code>extends</code> que ya están implementadas por la superclase o extendidas por la superinterfaz.
+Esta declaración es innecesaria y puede eliminarse de forma segura.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class X implements One, Two {
+  }
+  interface One {}
+  interface Two extends One {}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class X implements Two {
+  }
+  interface One {}
+  interface Two extends One {}
+</code></pre>
+<!-- tooltip end -->
+<p>
+Utiliza esta opción para no informar sobre <code>Serializable</code> o <code>Externalizable</code> en las listas de <code>extends</code> o <code>implements</code>.
+</body>
+</html>

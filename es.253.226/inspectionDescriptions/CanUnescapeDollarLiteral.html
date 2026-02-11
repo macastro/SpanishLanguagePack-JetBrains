@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre literales de dólar con escape en una cadena que pueden sustituirse por un literal normal.
+<p>
+    El escapado solo es necesario cuando el contenido que sigue al símbolo de dólar podría malinterpretarse como una entrada de interpolación de cadenas.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun example() {
+    "The price today is \$10. The price tomorrow will be ${'$'}20."
+  }
+</code></pre>
+La corrección rápida convertirá todos los caracteres de dólar con escape que se puedan sustituir de forma segura en caracteres de dólar normales:
+<pre><code>
+  fun example() {
+    "The price today is $10. The price tomorrow will be $20."
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

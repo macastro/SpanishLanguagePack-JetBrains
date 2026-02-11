@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta declaraciones <code>for</code>, <code>while</code> o <code>do</code> que solo pueden terminar al lanzar una excepción. Si bien estas declaraciones pueden ser correctas, a menudo ocurren debido a errores de codificación.
+<p>Ejemplo:</p>
+<pre><code>
+  for (;;) {
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+Utilice la opción <b>Ignorar cuando se coloca en Thread.run</b> para ignorar las declaraciones de bucle infinito dentro de <code>Thread.run</code>.
+Puede resultar útil para los subprocesos de demonio.
+<p>Ejemplo:</p>
+<pre><code>
+  new Thread(() -&gt; {
+    while (true) {
+    }
+  }).start();
+</code></pre>
+<p>
+</body>
+</html>

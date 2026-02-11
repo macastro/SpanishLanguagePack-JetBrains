@@ -1,0 +1,19 @@
+<html>
+<body>
+Reporta declaraciones inconsistentes en clases y módulos alias. Las clases no pueden ser alias de módulos, y los módulos no pueden ser alias de clases.
+<p>
+  Declarar una clase como alias de módulo o un módulo como alias de clase resultará en un error <code>InconsistentClassModuleAliasError</code>.
+</p>
+<p>Hay una corrección rápida disponible para navegar a la declaración en conflicto.</p>
+<p>
+  Ejemplo:
+</p>
+<pre><code>
+class User
+end
+
+# La clase 'User' se usa como objetivo del alias de módulo
+module Customer = User
+</code></pre>
+</body>
+</html>

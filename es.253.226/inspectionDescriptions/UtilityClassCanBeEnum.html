@@ -1,0 +1,20 @@
+<html>
+<body>
+Reporta clases de utilidades que pueden ser convertidas a enumeraciones.
+<p>Algunas guías de estilo de codificación requieren la implementación de clases de utilidades como enumeraciones para evitar problemas de cobertura de código en constructores <code>private</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class StringUtils {
+    public static final String EMPTY = "";
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  enum StringUtils {
+    ;
+    public static final String EMPTY = "";
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa cualquier directiva de inclusión en un archivo JSP que hace referencia al archivo JSP contenedor.<br/>
+
+<p><b>Archivo JSP de ejemplo llamado main.jsp:</b></p>
+<pre><code>
+  &lt;jsp:include page="./main.jsp" /&gt; // Error: intento de incluir el archivo contenedor
+  ...
+</code></pre><br/>
+
+<!-- tooltip end -->
+<p>
+  <b>NOTA:</b> La autoinclusión de este tipo conduce a una recursión infinita, por lo que el archivo JSP no se puede compilar.
+</p>
+</body>
+</html>

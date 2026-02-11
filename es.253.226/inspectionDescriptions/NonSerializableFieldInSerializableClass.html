@@ -1,0 +1,39 @@
+<html>
+<body>
+Inspecciona los campos no serializables en las clases que implementan <code>java.io.Serializable</code>. Estos campos generarán una excepción de tiempo de ejecución si se serializa el objeto.
+<p>
+  Los campos declarados como <code>transient</code> o <code>static</code> no se muestran. Tampoco se muestran los campos de las clases que tienen definido un método <code>writeObject</code>.
+</p>
+<p>
+  Esta inspección asume que los campos de los tipos <code>java.util.Collection</code> y <code>java.util.Map</code> son <code>Serializable</code>, a menos que los tipos 
+ en los que se declaren sean no <code>Serializable</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class NonSerializableClass {}
+
+  public class SerializableClass implements Serializable {
+      NonSerializableClass clazz; // advertencia: Campo no serializable 'clazz' en una clase serializable
+      static NonSerializableClass staticClazz; // sin advertencias
+  }
+  </code>
+</pre>
+<!-- tooltip end -->
+<p>
+  Utiliza las siguientes opciones para configurar la inspección:
+</p>
+<ul>
+  <li>
+    Lista las clases cuyos herederos no se deben mostrar con esta inspección. Esto está hecho para clases que heredan
+    <code>Serializable</code> de una superclase pero no están destinadas a la serialización.
+  </li>
+  <li>
+    Lista las anotaciones que harán que la inspección ignore los campos anotados.
+  </li>
+  <li>
+    Si se deben ignorar los campos inicializados con una clase anónima.
+  </li>
+</ul>
+
+</body>
+</html>

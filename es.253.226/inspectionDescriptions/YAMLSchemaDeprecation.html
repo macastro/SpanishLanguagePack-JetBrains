@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta claves obsoletas en archivos YAML.
+<p>La obsolescencia se comprueba sólo si existe un esquema JSON asociado con el archivo YAML correspondiente.</p>
+<p>Ten en cuenta que el mecanismo de obsolescencia no está definido aún en la especificación de esquema JSON, y esta inspección usa una extensión no estándar <code>deprecationMessage</code>.</p>
+<p><b>Ejemplo de esquema de obsolescencia:</b></p>
+<pre><code>
+  {
+    "properties": {
+      "SomeDeprecatedProperty": {
+        "deprecationMessage": "Baz",
+        "description": "Foo bar"
+      }
+    }
+  }
+</code></pre>
+<p><b>El siguiente es un ejemplo con el mensaje de advertencia correspondiente:</b></p>
+<pre><code>
+  SomeDeprecatedProperty: some value
+</code></pre>
+</body>
+</html>

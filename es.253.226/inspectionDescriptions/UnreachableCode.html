@@ -1,0 +1,16 @@
+<html>
+<body>
+Inspecciona el código que nunca se alcanza según el análisis del flujo de datos. 
+Puede ser el resultado de una condición anterior siempre verdadera o siempre falsa, de un cuerpo de bucle inalcanzable o de una sección de captura. Generalmente (pero no siempre) el código inalcanzable es consecuencia de una advertencia anterior,
+así que compruebe las advertencias de inspección procedentes de "Problemas de nulidad y flujo de datos", "Valores constantes" o
+"Operación redundante en un contenedor vacío" para entender mejor la causa.
+<p>Ejemplo:</p>
+<pre><code>
+  void finishApplication() {
+    System.exit(0);
+    System.out.println("Application is terminated"); // Código inalcanzable
+  }
+</code></pre>
+<p><small>Nuevo en 2024.1</small></p>
+</body>
+</html>

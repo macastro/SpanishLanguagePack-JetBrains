@@ -1,0 +1,32 @@
+<html>
+<body>
+<p>Informa sobre las diferentes formas de comprobar si las colecciones y las <code>Options</code> están vacías y sugiere reemplazarlas por <code>.isEmpty</code>、<code>.nonEmpty</code> o <code>.isDefined</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  !Seq(1).isEmpty
+  Seq(1).size == 0
+  Seq(1).size != 0
+  !(Seq(1).length > 0)
+  Seq(1).exists(_ => true)
+  import scala.Function.const
+  Seq(1).exists(const(true))
+  !Option(0).isEmpty
+  Option(0) == None
+  Option(0) != None
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  Seq(1).nonEmpty
+  Seq(1).isEmpty
+  Seq(1).nonEmpty
+  Seq(1).isEmpty
+  Seq(1).nonEmpty
+  import scala.Function.const
+  Seq(1).nonEmpty
+  Option(0).isDefined
+  Option(0).isEmpty
+  Option(0).isDefined
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre los siguientes problemas en los archivos de configuración de `application.xml`:
+<ul>
+  <li>Referencias a clases que no se pueden instanciar</li>
+  <li>Referencias a clases que no extienden la clase requerida</li>
+  <li>Referencias a clases con un alcance inadecuado</li>
+  <li>Valores de etiquetas y atributos que no coinciden con el patrón requerido (por ejemplo, identificadores Java)</li>
+  <li>Etiquetas que no incluyen etiquetas o atributos secundarios requeridos</li>
+  <li>Etiquetas que definen objetos con nombres duplicados</li>
+</ul>
+
+<p><b>Ejemplo:</b></p><br/>
+<pre><code>
+&lt;application&gt;
+    &lt;module id="ExampleWebModule"&gt;
+      &lt;web&gt; // Error: debe definirse la etiqueta secundaria 'web-uri'
+        &lt;context-root&gt;ExampleWebApp&lt;/context-root&gt;
+      &lt;/web&gt;
+    &lt;/module&gt;
+&lt;/application&gt;
+</code></pre>
+</body>
+</html>

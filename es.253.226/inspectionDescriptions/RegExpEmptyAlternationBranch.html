@@ -1,0 +1,17 @@
+<html>
+<body>
+Inspecciona ramas vacías en una alternancia RegExp.
+Una rama vacía sólo coincidirá con la cadena vacía, y en la mayoría de los casos eso no es lo deseado.
+Esta inspección no reportará una rama vacía simple al principio o al final de una alternancia.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  (alpha||bravo)
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  (alpha|bravo)
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2017.2</small>
+</body>
+</html>

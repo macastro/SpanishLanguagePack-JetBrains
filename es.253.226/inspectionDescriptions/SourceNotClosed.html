@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>Informa sobre <code>scala.io.Source</code> sin cerrar.</p>
+
+<p>El uso de una función como <code>.mkString</code> o <code>.getLines</code> directamente en <code>Source</code> abierta mediante <code>fromFile</code>, <code>fromURL</code> o <code>fromURI</code> provocará una fuga del controlador de archivo subyacente.</p>
+
+<p>Considera utilizar <code>.close()</code> con <code>try</code>/<code>finally</code> para gestionar la duración de la vida del recurso o utilizar <a href="https://scala-lang.org/files/archive/api/2.13.0/scala/util/Using$.html"><code>Using</code> de Scala 2.13</a>.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Source.fromFile("file.txt").getLines()
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+Reporta un ciclo <code>for</code>
+que no contiene ni el componente de inicialización ni el de actualización. Sugiere reemplazar el ciclo con un enunciado <code>while</code> más simple.
+<p>Ejemplo:</p>
+<pre><code>
+  for(; exitCondition(); ) {
+    process();
+  }
+</code></pre>
+<p>Después de que se haya aplicado la corrección rápida, el resultado se ve así:</p>
+<pre><code>
+  while(exitCondition()) {
+    process();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Use la casilla de verificación a continuación si desea que esta inspección ignore los ciclos <b>for</b> con condiciones triviales o inexistentes.</p>
+</body>
+</html>

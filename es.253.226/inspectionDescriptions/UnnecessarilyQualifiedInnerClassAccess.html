@@ -1,0 +1,24 @@
+<html>
+<body>
+<strong>Inspecciona Clases Internas Calificadas Innecesariamente</strong>
+<p>Reporta toda referencia a clases internas que están calificadas innecesariamente con el nombre de la clase contenedora.</p>
+<p>Tal calificación se puede eliminar de forma segura, que a veces añade una importación para la clase interna.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  class X {
+     X.Y foo;
+     class Y{}
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class X {
+     Y foo;
+     class Y{}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Usa la opción <b>Ignorar referencias para las que se necesita una importación</b> para ignorar referencias a clases internas, donde eliminar la calificación añade una importación.
+<p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>Se informan los constructores de clases anotadas por <code>@Singleton</code> a menos que se declare no estricta.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  @Singleton
+  class Foo{
+      Foo(){
+      }
+  }
+</code></pre>
+<p>Hay dos posibles correcciones rápidas: eliminar el constructor o declarar que <code>@Singleton</code> no es estricta.</p>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  @Singleton
+  class Foo{
+  }
+</code></pre>
+<p>o:</p>
+<pre><code>
+  @Singleton(<b>strict = false</b>)
+  class Foo{
+      Foo(){
+      }
+  }
+</code></pre>
+</body>
+</html>

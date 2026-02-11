@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>Informe el uso inválido de sugerencias de tipo.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+from typing import TypeVar
+
+T0 = TypeVar('T1') # Los argumentos del 'TypeVar' debe ser 'T0'
+
+
+def b(p: int) -> int:  # El tipo es especificado en tanto el comentario como en la anotación
+    # type: (int) -> int
+    pass
+
+
+def c(p1, p2): # La firma del tipo tiene demasiados argumentos
+    # type: (int) -> int
+    pass
+</code></pre>
+<p>Los arreglos rápidos propuestos ofrecen una variedad de acciones. Puede renombrar, quitar o mover el elemento problemático. El tipo de declaración también se puede modificar manualmente para garantizar que no aparezca una advertencia.</p>
+</body>
+</html>

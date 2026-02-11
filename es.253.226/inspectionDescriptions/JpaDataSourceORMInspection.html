@@ -1,0 +1,38 @@
+<html>
+<body>
+Reporta referencias dentro de las siguientes anotaciones de ORM de persistencia si no pueden resolverse en el origen de datos configurado:<br/>
+<ul>
+  <li> Tabla</li>
+  <li> Columna</li>
+  <li> [Any]To[Any]</li>
+  <li> JoinColumn / JoinTable</li>
+  <li> NamedQuery / NativeQuery</li>
+  <li> Empotrable</li>
+</ul><br/>
+
+Sugiere actualizar el origen de datos o asignar uno diferente.<br/>
+
+<p><b>Ejemplo de tabla de base de datos:</b></p>
+<pre><code lang="sql">
+  CREATE TABLE DATA_TABLE (
+    ID INTEGER,
+    DATA VARCHAR(100)
+);
+</code></pre><br/>
+
+<p><b>Ejemplo de clase de entidad JPA:</b></p>
+<pre><code lang="java">
+  @Entity
+  @Table(name = "UNKNOWN_TABLE") // referencia no resuelta
+  public class JavaEntity {
+    @Column(name = "ID") // no se pueden resolver las columnas en una tabla que no está definida
+    Integer id;
+  }
+</code></pre><br/>
+
+<!-- tooltip end -->
+<p>
+  <b>NOTA:</b> El origen de datos se puede configurar mediante la acción `Asignar origen de datos` o el icono de canal correspondiente para la clase de entidad
+</p>
+</body>
+</html>

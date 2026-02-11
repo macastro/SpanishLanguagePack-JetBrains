@@ -1,0 +1,20 @@
+<html>
+<body>
+Reporta asignaciones compuestas si el tipo del operando de la derecha no es compatible con el tipo de la variable.
+<p>
+Durante dichas asignaciones compuestas, ocurre un casteo implícito, lo que puede resultar en conversiones con pérdida de datos.
+
+<p>Ejemplo:</p>
+<pre><code>
+  long c = 1;
+  c += 1.2;
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  long c = 1;
+  c += (long) 1.2;
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2023.2</small></p>
+</body>
+</html>

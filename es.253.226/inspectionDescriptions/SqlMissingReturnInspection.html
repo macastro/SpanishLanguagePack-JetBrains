@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa de las funciones que no tienen sentencias RETURN.
+
+<p>Ejemplo (Oracle):</p>
+
+<pre>
+<code>CREATE FUNCTION foo RETURN int AS
+BEGIN
+END;
+</code></pre>
+
+<p>La función <code>foo</code> debe retornar el valor entero pero el cuerpo de la función no retorna nada. Para arreglar el error,
+agrega una sentencia RETURN (por ejemplo, <code>return 1;</code>).</p>
+
+<pre><code>CREATE FUNCTION foo RETURN int AS
+BEGIN
+ RETURN 1;
+END;</code></pre>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+<code>delete</code> operador o la funcion <code>free(void* ptr)</code> informan sobre el uso de punteros que referencian memoria eliminada.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void process() {
+    for(node *pt = head; pt != nullptr; pt = pt->next) {
+        delete pt;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

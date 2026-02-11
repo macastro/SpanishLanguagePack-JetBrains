@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa las construcciones de código Java que podrían fallar en compilaciones en futuras versiones de Java.
+<p>Se informan los siguientes problemas:</p>
+<ul>
+  <li>Uso de <code>assert</code>, <code>enum</code> o <code>_</code> como identificador</li>
+  <li>Uso de identificadores restringidos <code>var</code>, <code>yield</code> o <code>record</code> como nombres de tipos</li>
+  <li>Llamadas al método <code>yield</code> sin calificadores</li>
+  <li>Modificadores en la declaración <code>requires java.base</code> dentro de <code>module-info.java</code></li>
+  <li>Punto y coma redundante entre declaraciones de importación</li>
+</ul>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // Esta clase solía ser válida, pero no compila para Java 14 ya que
+  // 'yield' se convirtió en un identificador restringido.
+  public class yield {} 
+</code></pre>
+<p>Solucionar estos problemas oportunamente puede simplificar la migración a futuras versiones de Java.</p>
+<!-- tooltip end -->
+</body>
+</html>

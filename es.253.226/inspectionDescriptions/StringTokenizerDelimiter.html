@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa llamadas al contructor <code>StringTokenizer()</code> o llamadas al método <code>nextToken()</code> que contienen caracteres duplicados en el argumento delimitador.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void printTokens(String text) {
+    StringTokenizer tokenizer = new StringTokenizer(text, "\n\n");
+    while (tokenizer.hasMoreTokens()) {
+      System.out.println(tokenizer.nextToken());
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void printTokens(String text) {
+    StringTokenizer tokenizer = new StringTokenizer(text, "\n");
+    while (tokenizer.hasMoreTokens()) {
+      System.out.println(tokenizer.nextToken());
+    }
+  }
+</code></pre>
+</body>
+</html>

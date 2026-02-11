@@ -1,0 +1,12 @@
+<html>
+<body>
+Reporta llamadas a los métodos <code>String</code> <code>replace()</code>, <code>replaceAll()</code> o <code>replaceFirst()</code> que no tienen efecto. Se puede garantizar que tales llamadas no tengan efecto cuando el calificador y la cadena de búsqueda son constantes de tiempo de compilación y la cadena de búsqueda no se encuentra en el calificador. Esto es redundante y puede indicar un error.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // el reemplazo no hace nada
+  "hello".replace("$value$", value);
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2022.1</small></p>
+</body>
+</html>

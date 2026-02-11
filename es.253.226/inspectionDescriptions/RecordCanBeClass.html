@@ -1,0 +1,59 @@
+<html>
+<body>
+Inspeccionar clases record y sugerir su conversión a clases normales.
+<p>Esta inspección permite aplicar un arreglo rápido a los registros de Java, lo que posibilita mover dichos registros a una base de código que utilice versiones anteriores de Java.</p>
+<p>
+  Sin embargo, ten en cuenta que la clase resultante no será completamente equivalente al registro original.
+</p>
+<ul>
+  <li>La clase resultante ya no extenderá <code>java.lang.Record</code>, por lo que <code>instanceof Record</code> retornará <code>false</code>.</li>
+  <li>Los métodos de reflexión como <code>Class.isRecord()</code> y <code>Class.getRecordComponents()</code> arrojarán resultados diferentes.</li>
+  <li>La implementación generada de <code>hashCode()</code> puede arrojar resultados diferentes, ya que la fórmula para calcular el <code>hashCode</code> del registro no se especificó intencionalmente.</li>
+  <li>El mecanismo de serialización de registros difiere del de las clases normales.
+    Para más información, consulta la <i>Java Object Serialization Specification</i>.</li>
+</ul>
+<!-- tooltip end -->
+<p>Ejemplo:</p>
+<pre><code>
+  record Point(int x, int y) {}
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  final class Point {
+    private final int x;
+    private final int y;
+
+    Point(int x, int y) {
+      this.x = x;
+      this.y = y;
+    }
+
+    public int x() { return x; }
+
+    public int y() { return y; }
+
+    @Override
+    public boolean equals(Object obj) {
+      if (obj == this) return true;
+      if (obj == null || obj.getClass() != this.getClass()) return false;
+      var that = (Point)obj;
+      return this.x == that.x &&
+             this.y == that.y;
+    }
+
+    @Override
+    public int hashCode() {
+      return Objects.hash(x, y);
+    }
+
+    @Override
+    public String toString() {
+      return "Point[" +
+             "x=" + x + ", " +
+             "y=" + y + ']';
+    }
+  }
+</code></pre>
+<p><small>Nueva característica en 2020.3</small></p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<body>
+Reporta campos <code>public</code>.
+Las constantes (campos marcados con <code>static</code> y <code>final</code>) no son reportadas.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main {
+    public String name;
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  class Main {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+<ul>
+  <li>Usa la lista <b>Ignorar si cuenta con anotaciones</b> para especificar anotaciones a ignorar. La inspección ignorará los campos con
+    cualquiera de estas anotaciones.</li>
+  <li>Usa la opción <b>Ignorar campos 'public final' de enums</b> para ignorar los campos <code>public final</code>
+    del tipo <code>enum</code>.</li>
+</ul>
+</body>
+</html>

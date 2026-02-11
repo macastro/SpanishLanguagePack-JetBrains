@@ -1,0 +1,30 @@
+<html>
+<body>
+Informa sobre las instrucciones <code>import</code> no utilizadas en el código Python.
+
+<p>
+  Esta inspección detecta las instrucciones <code>import</code> del código que no se utilizan y que pueden eliminarse de forma segura.
+  Eliminar las importaciones no utilizadas ayuda a mantener el código limpio y reduce el riesgo de colisiones de nombres.
+</p>
+
+<!-- tooltip end -->
+<p><b>Ejemplo:</b></p>
+
+<pre><code>
+import os           # Importación no utilizada
+import sys         # Importación utilizada
+from math import pi # Importación no utilizada
+
+print(sys.version)
+</code></pre>
+
+<p>
+  La inspección proporciona una corrección rápida para optimizar las importaciones que elimina todas las instrucciones <code>import</code> no utilizadas.
+</p>
+
+<p>
+  Tenga en cuenta que algunas importaciones pueden usarse indirectamente (p. ej., por sus efectos secundarios) y no deberían eliminarse.
+  Si ciertas importaciones son necesarias por sus efectos secundarios, puede suprimir esta inspección para ellas.
+</p>
+</body>
+</html>

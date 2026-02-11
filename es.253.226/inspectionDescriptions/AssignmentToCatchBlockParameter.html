@@ -1,0 +1,37 @@
+<html>
+<body>
+<code>catch</code> asigna el parámetro de bloque.
+<p>No se recomienda modificar el parámetro del bloque <code>catch</code>, ya que puede causar una gran confusión.</p>
+<p>Esta corrección rápida añade una declaración nueva de variable.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void processFile(String fileName) throws Exception {
+    try {
+      doProcessFile(fileName);
+    } catch(Exception ex) {
+      if (ex instanceof UncheckedIOException) {
+        // Warning: catch block parameter reassigned
+        ex = ((UncheckedIOException) ex).getCause();
+      }
+      throw ex;
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void processFile(String fileName) throws Exception {
+    try {
+      doProcessFile(fileName);
+    } catch(Exception ex) {
+      Exception unwrapped = ex;
+      if (unwrapped instanceof UncheckedIOException) {
+        unwrapped = ((UncheckedIOException)
+          unwrapped).getCause();
+      }
+      throw unwrapped;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa las llamadas de <code>toString()</code> en plantillas de cadenas que se pueden eliminar de manera segura.
+<p><b>Ejemplo:</b></p>
+<pre><code>  fun foo(a: Int, b: Int) = a + b
+
+  fun test(): String {
+      return "Foo: ${foo(0, 4).toString()}" // 'toString()' es redundante
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>  fun foo(a: Int, b: Int) = a + b
+
+  fun test(): String {
+      return "Foo: ${foo(0, 4)}"
+  }
+</code></pre>
+</body>
+</html>

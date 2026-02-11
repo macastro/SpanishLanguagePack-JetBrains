@@ -1,0 +1,18 @@
+<html>
+<body>
+Se están reportando intentos de verificar reflexivamente la presencia de anotaciones que no están en tiempo de ejecución.
+<p>Usar <code>Class.isAnnotationPresent()</code> para probar anotaciones que tienen su política de retención establecida como <code>SOURCE</code> o <code>CLASS</code> (valor predeterminado) siempre resultará en un resultado negativo. Este error es fácil de pasar por alto.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  {
+    getClass().isAnnotationPresent(SourceAnnotation.class); //Siempre devuelve falso
+  }
+
+  @Retention(RetentionPolicy.SOURCE)
+  @interface SourceAnnotation {}
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporta la invocación del método <code>openSession()</code> cuando el recurso <code>org.hibernate.Session</code> devuelto no se cierra de forma segura.
+<p>
+  Por defecto, esta inspección asume que un recurso puede ser cerrado por cualquier método cuyo nombre contenga 'close' o 'cleanup'.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void doHibernateQuery(SessionFactory factory) {
+    Session session = factory.openSession(); //Advertencia
+    session.createQuery("...");
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Esta inspección se puede configurar con las siguientes opciones:
+</p>
+<ul>
+  <li>
+    Si permitir abrir el recurso <code>org.hibernate.Session</code> dentro de un bloque <code>try</code>. Este estilo no es deseable ya que es más redundante que abrir el recurso antes del bloque <code>try</code>.
+  </li>
+  <li>
+    Si el recurso puede ser cerrado por cualquier invocación de método que pase el recurso como argumento.
+  </li>
+</ul>
+</body>
+</html>

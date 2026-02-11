@@ -1,0 +1,26 @@
+<html>
+<body>
+Informes de referencias a variables de bucle desde dentro de literales `func` en sentencias `defer` y `go`. 
+  Tales variables pueden tener valores inesperados porque no se copian a literales `func`, 
+  y los literales `func` en `defer` y `go` no se ejecutan inmediatamente.
+
+<p>Para obtener más información sobre cierres y goroutines, consulte <a href="https://go.dev/doc/faq#closures_and_goroutines">What happens
+  with closures running as goroutines? en go.dev</a>.</p>
+<p>Ejemplo:</p>
+<pre><code>for _, v := range []string{"a", "b", "c"} {
+  go func() {
+    fmt.Println(v) // probablemente el resultado sea `c c c` no `a b c`
+  }()
+}</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>for _, v := range []string{"a", "b", "c"} {
+  v := v // `v` se ha copiado ahora
+  go func() {
+    fmt.Println(v)
+  }()
+}</code></pre>
+<!-- tooltip end -->
+<p>Tenga en cuenta que el analizador solo verifica las sentencias `defer` y `go` cuando son la última sentencia en el cuerpo del bucle. 
+  De lo contrario, el análisis puede producir detecciones falsas.</p>
+</body>
+</html>

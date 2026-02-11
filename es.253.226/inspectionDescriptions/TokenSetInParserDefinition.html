@@ -1,0 +1,84 @@
+<html>
+<body>
+Informa del campo `TokenSet` de declaración que hace referencia un tipo de elemento no de plataforma en la clase `ParserDefinition`.
+<p>
+  La `ParserDefinition` de todos los lenguajes se crea durante el inicio de la aplicación.
+  Definir un `TokenSet` que refiere el tipo de elemento de los lenguajes no de plataforma puede ocasionar que se creen y registren todoslos tipos de elementos de ese lenguaje en la clase contenedor del tipo referido, incluso si el proyecto no contiene ningún archivo de este lenguaje.
+</p>
+
+<p>Ejemplo:</p>
+<pre><code lang="java">
+// Holder de tipo de elemento
+public interface MyLangTokenTypes {
+  IElementType COMMENT = new MyLangTokenType("COMMENT");
+  IElementType TYPE1 = new MyLangTokenType("TYPE1");
+  IElementType TYPE2 = new MyLangTokenType("TYPE2");
+  // Otros tipos...
+}
+
+
+// Incorrecto:
+
+public class MyLangParserDefinition implements ParserDefinition {
+  // Este campo inicializa y registra todos los tipos en MyLangTokenTypes:
+  private static final TokenSet COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
+
+  @NotNull
+  @Override
+  public TokenSet getCommentTokens() {
+    return COMMENTS;
+  }
+  ...
+}
+
+
+// Correcto:
+
+public final class MyLangTokenSets {
+  public static final TokenSet COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
+}
+
+public class MyLangParserDefinition implements ParserDefinition {
+  @NotNull
+  @Override
+  public TokenSet getCommentTokens() {
+    // El tipo solo se referencia y se registra cuando se llama a este método:
+    return MyLangTokenSets.COMMENTS;
+  }
+  ...
+}
+
+// Correcto (Kotlin):
+
+// Las declaraciones de nivel superior no se cargan hasta que se llama al método getCommentTokens():
+private val COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
+
+class MyLangParserDefinition : ParserDefinition {
+  override getCommentTokens(): TokenSet {
+    return COMMENTS;
+  }
+  ...
+}
+
+// Correcto:
+
+public class MyLangParserDefinition implements ParserDefinition {
+  // Se permite un TokenSet de plataforma:
+  private static final TokenSet COMMENTS1 = TokenSet.EMPTY;
+  // Se permite un TokenType de plataforma:
+  private static final TokenSet COMMENTS2 = TokenSet.create(TokenType.WHITE_SPACE);
+
+  @NotNull
+  @Override
+  public TokenSet getCommentTokens() {
+    ...
+  }
+  ...
+}
+
+</code></pre>
+
+<!-- tooltip end -->
+<p><small>Nuevo en 2023.2</small>
+</body>
+</html>

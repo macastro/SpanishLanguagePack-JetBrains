@@ -1,0 +1,23 @@
+<html>
+<body>
+
+Informa los siguientes problemas dentro de archivos de configuración XML:
+<ul>
+  <li>Referencias a clases no instanciables</li>
+  <li>Referencias a clases que no extienden la clase requerido</li>
+  <li>Referencias a clases con alcance inapropiado</li>
+  <li>Valores de tags y atributos que no coinciden con el patrón requerido (por ejemplo, identificadores de Java)</li>
+  <li>Tags que no incluyen tags o atributos requeridos</li>
+  <li>Tags que definen objetos con nombres duplicados</li>
+</ul>
+
+<p><b>Ejemplo:</b></p><br/>
+<pre><code>
+&lt;persistence&gt;
+    &lt;persistence-unit name="example-persistence-unit"&gt;
+        &lt;provider&gt;org.example.SomeRandomClass&lt;/provider&gt; // Error: la clase del proveedor debe implementar la interfaz PersistenceProvider
+    &lt;/persistence-unit&gt;
+&lt;/persistence&gt;
+</code></pre>
+</body>
+</html>

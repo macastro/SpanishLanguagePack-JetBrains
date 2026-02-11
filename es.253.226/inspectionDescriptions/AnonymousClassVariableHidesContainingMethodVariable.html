@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre campos en una clase anónima que tienen el mismo nombre que variables locales o parámetros del método contenedor o expresión lambda.
+<p>
+  Como resultado de dicha denominación, es posible que uses accidentalmente el campo de clase anónimo donde se propone la variable o parámetro con el mismo nombre del método contenedor.
+</p>
+<p>Se sugiere una corrección rápida para cambiar el nombre del campo.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Test {
+    public Test(String value) {
+      Object foo = new Object() {
+        private String value = "TEST";
+        public void foo() {
+          System.out.println(value); //se accede al campo y no al parámetro
+        }
+      };
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

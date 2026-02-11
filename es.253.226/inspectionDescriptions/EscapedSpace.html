@@ -1,0 +1,18 @@
+<html>
+<body>
+Reporta secuencias de escape de <code>\s</code> en cualquier lugar excepto al final de línea de bloque de texto o dentro de una serie de varios espacios escapados.
+Estos usos pueden ser confusos o un error, especialmente si la cadena se interpreta como una expresión regular.
+La secuencia de escape <code>\s</code> está destinada a codificar un espacio al final de las líneas de bloque de texto donde los espacios normales se recortan.
+En otras ubicaciones, así como en cadenas regulares o literales de caracteres, <code>\s</code> es idéntico a un carácter de espacio ordinario (<code>""</code>).
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  if (str.matches("\s+")) {...}
+</code></pre>
+Aquí es probable que se haya pretendido <code>"\\s+"</code> (para que coincida con cualquier carácter de espacio en blanco). Si no es así, el uso de <code>str.matches("+")</code> sería menos confuso.
+<p>
+  Se proporciona una solución rápida que reemplaza las secuencias de escape <code>\s</code> con caracteres de espacio.
+</p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2022.3</small></p>
+</body>
+</html>

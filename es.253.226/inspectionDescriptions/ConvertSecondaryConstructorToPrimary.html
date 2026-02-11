@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre un constructor secundario que puede sustituirse por un constructor principal más conciso.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  clase Usuario {
+      val nombre: String
+
+      constructor(nombre: String) {
+          this.nombre = nombre
+      }
+  }
+</code></pre>
+<p>La corrección rápida convierte el código automáticamente:</p>
+<pre><code>
+  clase Usuario(val nombre: String) {
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

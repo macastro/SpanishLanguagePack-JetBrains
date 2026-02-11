@@ -1,0 +1,13 @@
+<!--
+  ~ Copyright (c) Haulmont 2022. All Rights Reserved.
+  ~ Use is subject to license terms.
+  -->
+
+<html>
+<body>
+Esta inspección verifica las asociaciones `@ManyToMany` con el atributo `CascadeType.REMOVE`.
+Especificar `CascadeType.REMOVE` para `@ManyToMany` no tiene sentido para la cascada, ya que se propaga fuera de la tabla de enlaces. La eliminación automática puede provocar una `ConstraintViolationException` porque el otro lado puede ser referenciado por otras entidades del lado primario.
+Por ejemplo, si se define `@ManyToMany(cascade = CascadeType.ALL)` y se elimina la primera persona, Hibernate lanzará una excepción porque otra persona aún está asociada con la dirección que se está eliminando.
+Para obtener más información, consulta el <a href="https://vladmihalcea.com/hypersistence-optimizer/docs/user-guide/#ManyToManyCascadeRemoveEvent">artículo</a>.
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre herederos directos de clases `sealed` que no tienen estado ni método `equals()` anulado.
+<p>Se recomienda encarecidamente anular `equals()` para proporcionar estabilidad de comparación, o bien convertir la `clase` en un `objeto` para alcanzar el mismo efecto.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  sealed class Receptor {
+      class Todos : Receptor()
+      class Usuario(val id: Int) : Receptor()
+  }
+</code></pre>
+<p>La corrección rápida convierte una `clase` en un `objeto`:</p>
+<pre><code>
+  sealed class Receptor {
+      object Todos : Receptor()
+      class Usuario(val id: Int) : Receptor()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

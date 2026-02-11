@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>
+  Informa sobre las claves no resueltas en la configuración de <a href="https://django-constance.readthedocs.io/en/latest/">Django Constance</a>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="Python">
+  # settings.py
+  CONSTANCE_CONFIG = {
+    'SITE_NAME': ('My Title', 'Website title'),
+  }
+
+  # en alguna parte del proyecto
+  from constance import config
+  print(config.SITE_DESCRIPTION)
+</code></pre>
+</body>
+</html>

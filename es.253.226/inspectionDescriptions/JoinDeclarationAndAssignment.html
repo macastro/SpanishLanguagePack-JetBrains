@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa declaraciones de propiedades que se pueden unir con la siguiente asignación.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  val x: String
+  x = System.getProperty("")
+</code></pre>
+<p>El arreglo rápido une la declaración con la asignación:</p>
+<pre><code>
+  val x = System.getProperty("")
+</code></pre>
+
+<!-- tooltip end -->
+<p>Ajustar la inspección:</p>
+<p>Puedes desactivar la opción <b>Reportar con inicialización compleja de propiedades de miembros</b> para omitir las propiedades con inicialización compleja. Esto cubre dos casos:</p>
+<ol>
+    <li>El inicializador de propiedades es complejo (es una expresión compuesta/de control de flujo o de varias líneas)</li>
+    <li>La propiedad se inicializa primero y luego se usa inmediatamente en el código subsecuente (por ejemplo, para llamar a métodos de inicialización adicionales)</li>
+</ol>
+</body>
+</html>

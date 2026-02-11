@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>Reporta redundancia: <code>?: return null</code></p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo(): Int? {
+      ...
+  }
+
+  fun test() : Int? {
+      return foo() <b>?: return null</b>
+  }
+</code></pre>
+<p>Después de aplicar quick-fix:</p>
+<pre><code>
+  fun foo(): Int? {
+      ...
+  }
+
+  fun test() : Int? {
+      return foo()
+  }
+</code></pre>
+</body>
+</html>

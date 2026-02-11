@@ -1,0 +1,46 @@
+<html>
+<body>
+Reporta ciclos, métodos como <code>forEach</code> y <code>ContainerUtil.process()</code> que faltan verificación de cancelación.
+<p>Sólo se ejecuta dentro de métodos anotados con <code>com.intellij.util.concurrency.annotations.RequiresReadLock</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="kotlin">
+@RequiresReadLock
+fun doSomething() {
+  ...
+  for (item in items) {
+        ProgressManager.checkCanceled() // Debe estar en la primera línea
+    ...
+  }
+
+  items.forEach {
+    ProgressManager.checkCanceled() // Debe estar en la primera línea
+    ...
+  }
+  ...
+}
+</code></pre>
+
+<p>En caso de múltiples ciclos anidados sin nada en el medio:</p>
+<pre><code lang="kotlin">
+@RequiresReadLock
+fun doSomething() {
+  ...
+  for (item in items) {
+        // nothing in between
+        for (inner in item.inners) {
+            ProgressManager.checkCanceled() // Debe estar únicamente en la primera línea del ciclo interno
+        ...
+    }
+  }
+  ...
+}
+</code></pre>
+<p>
+    En un contexto de bloqueo se debe utilizar <code>com.intellij.openapi.progress.ProgressManager#checkCanceled</code> y en un contexto de suspensión se debe utilizar <code>com.intellij.openapi.progress.CoroutinesKt#checkCancelled</code>.
+</p>
+<p>
+    Para obtener más información, consulte <a href="https://plugins.jetbrains.com/docs/intellij/general-threading-rules.html#background-processes-and-processcanceledexception">Procesos en segundo plano y ProcessCanceledException</a> en la documentación del SDK del complemento de la plataforma IntelliJ.
+</p>
+</body>
+<p><small>Nuevo en 2023.1</small>
+</html>

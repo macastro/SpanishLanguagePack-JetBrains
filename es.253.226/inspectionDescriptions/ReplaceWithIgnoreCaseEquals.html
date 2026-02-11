@@ -1,0 +1,25 @@
+<html>
+<body>
+ Informa de comparaciones que no distinguen mayúsculas o minúsculas que se pueden reemplazar con <code>equals(..., ignoreCase = true)</code>.
+<p>Al usar <code>equals()</code>, no tienes que asignar cadenas adicionales con <code>toLowerCase()</code> o <code>toUpperCase()</code> para comparar cadenas.</p>
+<p>La corrección rápida reemplaza la comparación que no distingue entre mayúsculas y minúsculas que utiliza <code>toLowerCase()</code> o <code>toUpperCase()</code> con <code>equals(..., ignoreCase = true)</code>.</p>
+<p><b>Nota:</b> Puede cambiar la semántica de algunos lugares.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun main() {
+      val a = &quot;KoTliN&quot;
+      val b = &quot;KOTLIN&quot;
+      println(a.toLowerCase() == b.toLowerCase())
+  }
+</code></pre>
+<p>Después de que se aplica la corrección rápida:</p>
+<pre><code>
+  fun main() {
+      val a = &quot;KoTliN&quot;
+      val b = &quot;KOTLIN&quot;
+      println(a.equals(b, ignoreCase = true))
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

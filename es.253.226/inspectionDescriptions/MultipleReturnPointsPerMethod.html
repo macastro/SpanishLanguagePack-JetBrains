@@ -1,0 +1,42 @@
+<html>
+<body>
+Informa de métodos cuyo número de puntos de <code>return</code> supera el máximo especificado. Los métodos con demasiados puntos de <code>return</code> pueden ser confusos y difíciles de refactorizar.
+<p>Un punto de <code>return</code> es una sentencia de <code>return</code> o una caída a través del fondo de un método o constructor <code>void</code>.</p>
+<p><b>Ejemplo:</b></p>
+<p>El siguiente método se notifica si solo se permiten dos sentencias de <code>return</code>:</p>
+<pre><code>
+  void doSmth(User[] users) {
+    for (User user : users) {
+      if (cond1(user)) {
+        user.setId(getId());
+        return;
+      } else if (cond2(user)) {
+        if (cond3(user)) {
+          user.setId(getId());
+          return;
+        }
+      }
+    }
+  }
+</code></pre>
+<p>Considera reescribir el método para que sea más fácil de entender:</p>
+<pre><code>
+  void doSmth(User[] users) {
+    for (User user : users) {
+      if (cond1(user) || cond2(user) && cond3(user)) {
+        user.setId(getId());
+        return;
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+<ul>
+  <li>Usa el campo <b>Límite de puntos de retorno</b> para especificar el número máximo permitido de puntos de <code>return</code> para un método.</li>
+  <li>Usa la opción <b>Ignorar cláusulas de protección</b> para ignorar las cláusulas de protección.
+    Una cláusula de protección es una sentencia <code>if</code> que solo contiene una sentencia <code>return</code></li>
+  <li>Usa la opción <b>Ignorar métodos 'equals()'</b> para ignorar los puntos de <code>return</code> dentro de los métodos <code>equals()</code>.</li>
+</ul>
+</body>
+</html>

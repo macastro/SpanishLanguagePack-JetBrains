@@ -1,0 +1,10 @@
+<html>
+<body>
+Resalte las referencias que se resuelven a objetos persistentes como entidades o sus propiedades.
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+SELECT new foo.bar.Construct(d, sum(d.age)) FROM Developer d ORDER BY d.name; // Serán resaltados Construct y la entidad Developer
+</code></pre>
+</body>
+</html>

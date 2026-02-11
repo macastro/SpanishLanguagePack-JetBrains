@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>Reporta pruebas parametrizadas con parámetros de origen mal formados:</p>
+<ul>
+  <li><code>MethodSource</code> tiene un objetivo desconocido o el método no es estático, <code>no-arg</code>.</li>
+  <li>El tipo <code>ValueSource</code> y <code>EnumSource</code> no se puede convertir a un parámetro de método.</li>
+  <li>Origen no definido.</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code>
+  class Test {
+    @MethodSource("parameters")
+    @ParameterizedTest
+    void foo(String param) {}
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Test {
+    private static Stream&lt;Arguments&gt; parameters() {
+        return Stream.empty();
+    }
+
+    @MethodSource("parameters")
+    @ParameterizedTest
+    void foo(String param) {}
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

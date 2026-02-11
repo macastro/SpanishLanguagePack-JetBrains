@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre las rutas de ejecución que no llaman a la función <code>cancel</code> devuelta por
+  las funciones <code>context.WithCancel</code> y otras similares.
+<p>Las funciones <code>WithCancel</code>, <code>WithDeadline</code> y <code>WithTimeout</code> toman un <code>Context</code> (el padre) y
+  devuelven un
+  <code>Context</code> derivado (el hijo) y un <code>CancelFunc</code>.
+  Al llamar a <code>CancelFunc</code> se cancela el hijo y sus hijos, se elimina la referencia del padre al hijo, y se detienen todos los
+  temporizadores asociados.
+  Si no se llama a <code>CancelFunc</code> se pierde el hijo y sus hijos hasta que se cancela el padre o se dispara el temporizador.</p>
+<p>Para más información sobre el paquete <code>context</code>, referirse a <a href="https://pkg.go.dev/context">Paquete context en
+  go.dev</a>.</p>
+<p>Ejemplo:</p>
+<pre><code>func _(ctx context.Context, cancel func()) {
+ var ctx2 context.Context
+ ctx2, cancel = context.WithCancel(ctx)
+ _ = ctx2
+}
+</code></pre>
+</body>
+</html>

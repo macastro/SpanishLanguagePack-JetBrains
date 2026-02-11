@@ -1,0 +1,16 @@
+<html>
+<body>
+Reporta instrucciones <code>return</code> que devuelven una instancia de una clase anónima, local o interna.
+Tales instancias mantienen una referencia implícita a la instancia externa, la cual puede evitar que la instancia externa sea recolectada por la basura.
+Cualquier invocador de un método que devuelva tal instancia podría causar una fuga de memoria manteniendo una referencia a la instancia devuelta.
+<!-- tooltip end -->
+<p>
+  Configurar la inspección:
+</p>
+<ul>
+  <li>Usa la opción <b>Ignorar devoluciones de métodos no públicos</b> para ignorar devoluciones de métodos <code>protected</code> o privados de paquete.
+    Las devoluciones de métodos <code>private</code> siempre son ignoradas.
+  </li>
+</ul>
+</body>
+</html>

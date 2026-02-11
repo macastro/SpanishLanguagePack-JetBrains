@@ -1,0 +1,25 @@
+<html>
+<body>
+Reporta comparaciones del resultado de llamadas de <code>Comparator.compare()</code> o <code>Comparable.compareTo()</code> con constantes distintas de cero.
+Por convención, estos métodos pueden devolver cualquier entero (no solo -1, 0 o 1), por lo que comparar con números particulares es una mala práctica. Algunos métodos de comparación ampliamente utilizados (por ejemplo, <code>String.compareTo()</code>) en realidad devuelven valores fuera del rango [-1..1], y dicha comparación puede causar un comportamiento incorrecto del programa.
+<p>Ejemplo:</p>
+<pre><code>
+  void validate(String s1, String s2) {
+    // Comparar a 1 es incorrecto
+    if (s1.compareTo(s2) == 1) {
+      throw new IllegalArgumentException("Incorrect order");
+    }
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  void validate(String s1, String s2) {
+    if (s1.compareTo(s2) > 0) {
+      throw new IllegalArgumentException("Incorrect order");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2017.2</small></p>
+</body>
+</html>

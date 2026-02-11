@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa los ciclos que se pueden reemplazar con llamadas a <code>Arrays.setAll()</code> o <code>Arrays.fill()</code>.
+<p>Esta inspección sugiere reemplazar los ciclos con <code>Arrays.setAll()</code> si el nivel de idioma del proyecto o módulo es 8 o superior.
+  Es posible reemplazar los ciclos con <code>Arrays.fill()</code> con cualquier nivel de idioma.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  for (int i=0; i&lt;array.length; i++) {
+     array[i] = calc(i);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  Arrays.setAll(array, this::calc);
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2017.1</small></p>
+</body>
+</html>

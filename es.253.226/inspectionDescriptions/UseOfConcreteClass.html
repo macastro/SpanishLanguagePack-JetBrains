@@ -1,0 +1,32 @@
+<html>
+<body>
+Informa usos de clases concretas en lugar de interfaces.
+Estas declaraciones pueden representar una falla de abstracción y pueden dificultar las pruebas.
+<p>
+Esta inspección no informará las declaraciones cuyas clases provengan de bibliotecas del sistema o de terceros.
+No se informan conversiones, instancias ni variables locales en las implementaciones del método <code>equals()</code>.
+Además, no se informan las conversiones en las implementaciones del método <code>clone()</code>.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  interfaz Entidad {}
+  clase EntidadImplementa implements Entidad {}
+
+  anular processObject(Objeto obj) {
+    // advertencia: instancia de la clase concreta
+    si (obj instanceof EntidadImplementa) {
+      // advertencia: conversión a la clase concreta,
+      // en lugar de la interfaz
+      processEntity((EntidadImplementa)obj);
+    }
+  }
+  // advertencia: parámetro de clase concreta
+  anular processEntity(EntidadImplementa obj) {
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Usa la opción <b>Ignorar tipo de clase abstracta</b> para ignorar conversiones a clases abstractas.</p>
+<p>Usa las opciones siguientes para controlar los contextos en los que se informa el problema.</p>
+</body>
+</html>

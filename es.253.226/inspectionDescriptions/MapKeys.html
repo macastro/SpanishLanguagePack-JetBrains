@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>Informa de métodos no estándar para extraer claves en <code>Map</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.map(_._1)
+  map.map(_._1).toSet
+  map.map(_._1).toIterator
+</code></pre>
+<p>Tras aplicar la solución rápida:</p>
+<pre><code>
+  val map = Map(1 -> 42)
+  map.keys
+  map.keySet
+  map.keysIterator
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

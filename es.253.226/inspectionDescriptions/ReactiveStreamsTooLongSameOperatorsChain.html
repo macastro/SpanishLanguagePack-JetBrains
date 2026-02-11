@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>Reporta cadenas largas de transformaciones de Reactive Streams.</p>
+<p>Cada llamada de método operador, como <code>map()</code> o <code>filter()</code>, crea algunos objetos para esos operadores.
+  Llamar a una cadena larga de operadores en cada suscripción, para cada elemento de la secuencia, puede causar una sobrecarga de rendimiento.
+  Para evitarlo, combine una cadena larga de llamadas en una sola llamada de operador cuando sea posible.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+Flux.just(1, 2, 3)
+        .map(it -> it + 1)
+        .map(it -> it + 2)
+        .map(it -> it + 3)
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="java">
+Flux.just(1, 2, 3)
+        .map(it -> it + 1 + 2 + 3)
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2019.3</small></p>
+</body>
+</html>

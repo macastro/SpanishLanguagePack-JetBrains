@@ -1,0 +1,23 @@
+<html>
+<body>
+Inspecciona variables usadas como valores de retorno.
+<p>Ejemplo:</p>
+
+<pre>
+<code># Mala práctica
+def foo(bar)
+  resultado = bar + 1
+  resultado
+end</code>
+</pre>
+
+Se cuenta con una solución rápida para eliminar dichas variables. Luego de aplicar la solución rápida, el resultado se ve así:
+
+<pre>
+<code># Buena práctica
+def foo(bar)
+  bar + 1
+end</code>
+</pre>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<body>
+Reporta casos de manejo incorrecto de <code>ProcessCanceledException</code> y <code>CancellationException</code>.
+<p>
+  No se debe capturar, suprimir, registrar o manejar <code>ProcessCanceledException</code> y sus herederos de ninguna manera.
+  En su lugar, debe ser relanzada para que la infraestructura de la plataforma IntelliJ pueda manejarla correctamente.
+</p>
+<p>
+  En el contexto de las corrutinas, no se debe capturar, suprimir, registrar o manejar <code>CancellationException</code> de ninguna manera.
+  En su lugar, debe ser relanzada para que la infraestructura de corrutinas pueda manejarla correctamente.
+</p>
+<p>
+  La inspección reporta capturas explícitas de <code>ProcessCanceledException</code> (incluyendo herederos) y <code>CancellationException</code>, así como capturas de <code>RuntimeException</code>, <code>Exception</code> y <code>Throwable</code> que ocultan excepciones de cancelación.
+</p>
+<h3>Ejemplos:</h3>
+<h4><code>ProcessCanceledException</code>:</h4>
+<pre><code lang="java">
+// malo:
+try {
+  // ...
+} catch (ProcessCanceledException e) { // no se debe suprimir la excepción
+}
+// incorrecto:
+try {
+  // ...
+} catch (ProcessCanceledException e) {
+  LOG.error("Error occurred", e); // no se debe registrar la excepción
+  throw e;
+}
+// correcto:
+try {
+  // ...
+} catch (ProcessCanceledException e) {
+  // acciones adicionales
+  throw e;
+}
+</code></pre>
+<h4><code>CancellationException</code>:</h4>
+<pre><code lang="kotlin">
+// malo:
+cs.launch {
+  try {
+    // ...
+  } catch (e: CancellationException) { // no se debe suprimir la excepción
+  }
+}
+// incorrecto:
+suspend fun suspendingFunction() {
+  try {
+    // ...
+  } catch (ProcessCanceledException e) {
+    LOG.error("Error occurred", e); // no se debe registrar la excepción
+    throw e;
+  }
+}
+// correcto:
+cs.launch {
+  try {
+    // ...
+  } catch (ProcessCanceledException e) {
+    // acciones adicionales
+    throw e;
+  }
+}
+</code></pre>
+<p><small>Cambios en 2023.2</small></p>
+</body>
+</html>

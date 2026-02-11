@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa de las llamadas a funciones de la biblioteca que podrían sustituirse por otras más simples.
+<p>El uso de funciones correspondientes simplifica el código.</p>
+<p>La corrección rápida sustituye las llamadas a funciones por otras.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun test(list: List&lt;Any&gt;) {
+      list.filter { it is String }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun test(list: List&lt;Any&gt;) {
+      list.filterIsInstance&lt;String&gt;()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

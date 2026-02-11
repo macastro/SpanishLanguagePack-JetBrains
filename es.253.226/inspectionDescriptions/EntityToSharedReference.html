@@ -1,0 +1,26 @@
+<html>
+<body>
+<code>Entity</code> a <code>SharedEntity</code> referencia inválida.
+<p>
+  No se puede referenciar <code>Entity</code> desde <code>SharedEntity</code>.
+  Solo se puede referenciar <code>SharedEntity</code> desde <code>Entity</code> si la propiedad admite valores nulos o tiene la anotación <code>@CascadeDeleteBy</code>.
+  De lo contrario, se producirá una excepción de tiempo de ejecución.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  interface A: Entity {
+    var x: SharedEntity
+    var y: SharedEntity
+  }
+</code></pre>
+<p>La corrección rápida genera la anotación o hace que el tipo admita valores nulos</p>
+<pre><code>
+  interface A: Entity {
+    var x: SharedEntity?
+    @CascadeDeleteBy
+    var y: SharedEntity
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

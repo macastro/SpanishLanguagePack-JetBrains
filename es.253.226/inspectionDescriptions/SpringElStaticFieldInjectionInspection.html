@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>Informa sobre los intentos de inyección de Spring Expression Language (SpEL) en los campos estáticos (se inyecta un valor 'nulo').</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+@Controller
+public class MyController {
+    <strong>@Value</strong>("#{systemProperties['some.key']}")  //  No está permitida la inyección en campos estáticos
+    static String spelWithDefaultValue;
+}
+</code></pre>
+</body>
+</html>

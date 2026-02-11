@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>Informa sobre métodos con nombres similares a los accesorios que tienen una cláusula de parámetro vacía.</p>
+<p>Se espera que los métodos que siguen el contrato de nombres <a href="https://en.wikipedia.org/wiki/JavaBean">JavaBean</a> para los accesorios no tengan <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">efectos secundarios</a>. La convención recomendada para estos métodos es utilizar un método sin parámetros siempre que no haya parámetros.</p>
+<p>Esta convención promueve el <a href="https://en.wikipedia.org/wiki/Uniform_access_principle">principio de acceso uniforme</a>, que indica que el código del cliente no debe verse afectado por una decisión de implementar un atributo como campo o método.</p>
+<p>La solución rápida elimina la cláusula de parámetro vacía.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  trait Test {
+    def hasProperty(): Boolean
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  trait Test {
+    def hasProperty: Boolean
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección no informará sobre los métodos que anulan otros miembros.</p>
+</body>
+</html>

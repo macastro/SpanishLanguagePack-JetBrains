@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>Informa sobre las definiciones con una anotación <code>@targetName</code> que anulan definiciones sin la anotación <code>@targetName</code>.</p>
+
+<p>Consulta la <a href="https://docs.scala-lang.org/scala3/reference/other-new-features/targetName.html">anotación @targetName</a>.</p>
+
+<p>La solución rápida elimina la anotación <code>@targetName</code>.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class A:
+    def foo: Int = 1
+
+  class B extends A:
+    @targetName("overriddenFoo")
+    override def foo: Int = 2
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  class A:
+    def foo: Int = 1
+
+  class B extends A:
+    override def foo: Int = 2
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

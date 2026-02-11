@@ -1,0 +1,33 @@
+<html>
+<body>
+Informa sobre usos del operador unitario <code>+</code>. El signo más unitario suele ser una operación nula y su presencia puede ser muestra de un error de codificación. Por ejemplo, en una combinación con el operador de incremento (como en <code>+++</code>) o con el operador de igual (como en <code>=+</code>).
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void unaryPlus(int i) {
+    int x = + +i;
+  }
+</code></pre>
+<p>Se sugieren las siguientes correcciones rápidas:</p>
+<ul>
+  <li><p>Eliminar los operadores <code>+</code> antes de la variable <code>i</code>:</p>
+<pre><code>
+  void unaryPlus(int i) {
+    int x = i;
+  }
+</code></pre>
+  </li>
+  <li><p>Sustituir los operadores <code>+</code> por el operador de incremento de prefijo:</p>
+<pre><code>
+  void unaryPlus(int i) {
+    int x = ++i;
+  }
+</code></pre>
+  </li>
+</ul>
+<!-- tooltip end -->
+<p>
+Utiliza la siguiente casilla de verificación para informar sobre los signos más unitarios que se utilizan junto con una expresión binaria o unitaria.
+Esto significa que la inspección no informará de situaciones en las que se utilice una expresión de signo más unitario en expresiones de inicialización de matriz o como argumento de un método.
+</p>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="" path="ActionManager" hit="" />
+    <option name="c++" path="ActionManager" hit="C++ STL 타입 단순화" />
+    <option name="stl" path="ActionManager" hit="C++ STL 타입 단순화" />
+    <option name="단순화" path="ActionManager" hit="C++ STL 타입 단순화" />
+    <option name="타입" path="ActionManager" hit="C++ STL 타입 단순화" />
+    <option name="gdb" path="ActionManager" hit="GDB/LLDB 콘솔로 이동" />
+    <option name="lldb" path="ActionManager" hit="GDB/LLDB 콘솔로 이동" />
+    <option name="이동" path="ActionManager" hit="GDB/LLDB 콘솔로 이동" />
+    <option name="콘솔로" path="ActionManager" hit="GDB/LLDB 콘솔로 이동" />
+    <option name="감시점" path="ActionManager" hit="감시점 추가" />
+    <option name="추가" path="ActionManager" hit="감시점 추가" />
+    <option name="값" path="ActionManager" hit="값 렌더러 활성화" />
+    <option name="렌더러" path="ActionManager" hit="값 렌더러 활성화" />
+    <option name="활성화" path="ActionManager" hit="값 렌더러 활성화" />
+    <option name="다른" path="ActionManager" hit="다른 스레드 중지" />
+    <option name="스레드" path="ActionManager" hit="다른 스레드 중지" />
+    <option name="중지" path="ActionManager" hit="다른 스레드 중지" />
+    <option name="등록" path="ActionManager" hit="등록" />
+    <option name="디스어셈블" path="ActionManager" hit="디스어셈블" />
+    <option name="매개변수" path="ActionManager" hit="매개변수 타입 표시" />
+    <option name="타입" path="ActionManager" hit="매개변수 타입 표시" />
+    <option name="표시" path="ActionManager" hit="매개변수 타입 표시" />
+    <option name="메모리" path="ActionManager" hit="메모리 뷰에 표시" />
+    <option name="뷰에" path="ActionManager" hit="메모리 뷰에 표시" />
+    <option name="표시" path="ActionManager" hit="메모리 뷰에 표시" />
+    <option name="모듈" path="ActionManager" hit="모듈 이름 표시" />
+    <option name="이름" path="ActionManager" hit="모듈 이름 표시" />
+    <option name="표시" path="ActionManager" hit="모듈 이름 표시" />
+    <option name="모든" path="ActionManager" hit="모든 스레드 중지 해제" />
+    <option name="스레드" path="ActionManager" hit="모든 스레드 중지 해제" />
+    <option name="중지" path="ActionManager" hit="모든 스레드 중지 해제" />
+    <option name="해제" path="ActionManager" hit="모든 스레드 중지 해제" />
+    <option name="배열로" path="ActionManager" hit="배열로 표시…" />
+    <option name="표시" path="ActionManager" hit="배열로 표시…" />
+    <option name="범위" path="ActionManager" hit="범위 외 변수 숨기기" />
+    <option name="변수" path="ActionManager" hit="범위 외 변수 숨기기" />
+    <option name="숨기기" path="ActionManager" hit="범위 외 변수 숨기기" />
+    <option name="외" path="ActionManager" hit="범위 외 변수 숨기기" />
+    <option name="끄기" path="ActionManager" hit="변수 끄기" />
+    <option name="변수" path="ActionManager" hit="변수 끄기" />
+    <option name="네임스페이스" path="ActionManager" hit="보조 네임스페이스 제거" />
+    <option name="보조" path="ActionManager" hit="보조 네임스페이스 제거" />
+    <option name="제거" path="ActionManager" hit="보조 네임스페이스 제거" />
+    <option name="설정" path="ActionManager" hit="설정" />
+    <option name="스레드" path="ActionManager" hit="스레드 중지" />
+    <option name="중지" path="ActionManager" hit="스레드 중지" />
+    <option name="스레드" path="ActionManager" hit="스레드 중지 해제" />
+    <option name="중지" path="ActionManager" hit="스레드 중지 해제" />
+    <option name="해제" path="ActionManager" hit="스레드 중지 해제" />
+    <option name="설정" path="ActionManager" hit="실행 지점을 커서로 설정" />
+    <option name="실행" path="ActionManager" hit="실행 지점을 커서로 설정" />
+    <option name="지점을" path="ActionManager" hit="실행 지점을 커서로 설정" />
+    <option name="커서로" path="ActionManager" hit="실행 지점을 커서로 설정" />
+    <option name="메모리" path="ActionManager" hit="에디터에서 메모리 뷰 표시" />
+    <option name="뷰" path="ActionManager" hit="에디터에서 메모리 뷰 표시" />
+    <option name="에디터에서" path="ActionManager" hit="에디터에서 메모리 뷰 표시" />
+    <option name="표시" path="ActionManager" hit="에디터에서 메모리 뷰 표시" />
+    <option name="16진수" path="ActionManager" hit="정수를 16진수 값으로 표시" />
+    <option name="값으로" path="ActionManager" hit="정수를 16진수 값으로 표시" />
+    <option name="정수를" path="ActionManager" hit="정수를 16진수 값으로 표시" />
+    <option name="표시" path="ActionManager" hit="정수를 16진수 값으로 표시" />
+    <option name="복사" path="ActionManager" hit="주소 복사" />
+    <option name="주소" path="ActionManager" hit="주소 복사" />
+    <option name="주소" path="ActionManager" hit="주소 표시" />
+    <option name="표시" path="ActionManager" hit="주소 표시" />
+    <option name="타입" path="ActionManager" hit="타입 표시" />
+    <option name="표시" path="ActionManager" hit="타입 표시" />
+    <option name="인수" path="ActionManager" hit="템플릿 인수 표시" />
+    <option name="템플릿" path="ActionManager" hit="템플릿 인수 표시" />
+    <option name="표시" path="ActionManager" hit="템플릿 인수 표시" />
+    <option name="데코레이션" path="ActionManager" hit="프레임 데코레이션" />
+    <option name="프레임" path="ActionManager" hit="프레임 데코레이션" />
+    <option name="사용자" path="ActionManager" hit="프레젠테이션 사용자 지정" />
+    <option name="지정" path="ActionManager" hit="프레젠테이션 사용자 지정" />
+    <option name="프레젠테이션" path="ActionManager" hit="프레젠테이션 사용자 지정" />
+    <option name="반환값" path="ActionManager" hit="함수 반환값 표시" />
+    <option name="표시" path="ActionManager" hit="함수 반환값 표시" />
+    <option name="함수" path="ActionManager" hit="함수 반환값 표시" />
+    <option name="표시" path="ActionManager" hit="항상 표시" />
+    <option name="항상" path="ActionManager" hit="항상 표시" />
+    <option name="드래그" path="ActionManager" hit="화살표를 드래그 앤 드롭하여 실행 지점을 설정" />
+    <option name="드롭하여" path="ActionManager" hit="화살표를 드래그 앤 드롭하여 실행 지점을 설정" />
+    <option name="설정" path="ActionManager" hit="화살표를 드래그 앤 드롭하여 실행 지점을 설정" />
+    <option name="실행" path="ActionManager" hit="화살표를 드래그 앤 드롭하여 실행 지점을 설정" />
+    <option name="앤" path="ActionManager" hit="화살표를 드래그 앤 드롭하여 실행 지점을 설정" />
+    <option name="지점을" path="ActionManager" hit="화살표를 드래그 앤 드롭하여 실행 지점을 설정" />
+    <option name="화살표를" path="ActionManager" hit="화살표를 드래그 앤 드롭하여 실행 지점을 설정" />
+  </configurable>
+  <configurable id="Debugger.ObjectiveC" configurable_name="C/C++">
+    <option name="c++" hit="C   타입 프레임 및 변수 " />
+    <option name="및" hit="C   타입 프레임 및 변수 " />
+    <option name="변수" hit="C   타입 프레임 및 변수 " />
+    <option name="타입" hit="C   타입 프레임 및 변수 " />
+    <option name="프레임" hit="C   타입 프레임 및 변수 " />
+    <option name="c" hit="C C  " />
+    <option name="c++" hit="C C  " />
+    <option name="cocoa" hit="Cocoa 렌더러" />
+    <option name="렌더러" hit="Cocoa 렌더러" />
+    <option name="core" hit="Core Data 렌더러" />
+    <option name="data" hit="Core Data 렌더러" />
+    <option name="렌더러" hit="Core Data 렌더러" />
+    <option name="c++" hit="GNU C   라이브러리 렌더러 활성화" />
+    <option name="gnu" hit="GNU C   라이브러리 렌더러 활성화" />
+    <option name="라이브러리" hit="GNU C   라이브러리 렌더러 활성화" />
+    <option name="렌더러" hit="GNU C   라이브러리 렌더러 활성화" />
+    <option name="활성화" hit="GNU C   라이브러리 렌더러 활성화" />
+    <option name="lldb에" hit="LLDB에 대한 NatVis 렌더러 활성화" />
+    <option name="natvis" hit="LLDB에 대한 NatVis 렌더러 활성화" />
+    <option name="대한" hit="LLDB에 대한 NatVis 렌더러 활성화" />
+    <option name="렌더러" hit="LLDB에 대한 NatVis 렌더러 활성화" />
+    <option name="활성화" hit="LLDB에 대한 NatVis 렌더러 활성화" />
+    <option name="stl" hit="STL 타입 단순화" />
+    <option name="단순화" hit="STL 타입 단순화" />
+    <option name="타입" hit="STL 타입 단순화" />
+    <option name="값" hit="값 렌더러 활성화 " />
+    <option name="렌더러" hit="값 렌더러 활성화 " />
+    <option name="활성화" hit="값 렌더러 활성화 " />
+    <option name="매개변수" hit="매개변수 타입 표시" />
+    <option name="타입" hit="매개변수 타입 표시" />
+    <option name="표시" hit="매개변수 타입 표시" />
+    <option name="모듈" hit="모듈 이름 표시" />
+    <option name="이름" hit="모듈 이름 표시" />
+    <option name="표시" hit="모듈 이름 표시" />
+    <option name="범위" hit="범위 외 변수 숨기기" />
+    <option name="변수" hit="범위 외 변수 숨기기" />
+    <option name="숨기기" hit="범위 외 변수 숨기기" />
+    <option name="외" hit="범위 외 변수 숨기기" />
+    <option name="변수" hit="변수" />
+    <option name="네임스페이스" hit="보조 네임스페이스 제거" />
+    <option name="보조" hit="보조 네임스페이스 제거" />
+    <option name="제거" hit="보조 네임스페이스 제거" />
+    <option name="비활성화됨" hit="비활성화됨" />
+    <option name="상세" hit="상세" />
+    <option name="오류만" hit="오류만" />
+    <option name="값과" hit="원래 값과 함께 표시" />
+    <option name="원래" hit="원래 값과 함께 표시" />
+    <option name="표시" hit="원래 값과 함께 표시" />
+    <option name="함께" hit="원래 값과 함께 표시" />
+    <option name="16진수" hit="정수를   진수 값으로 표시" />
+    <option name="값으로" hit="정수를   진수 값으로 표시" />
+    <option name="정수를" hit="정수를   진수 값으로 표시" />
+    <option name="표시" hit="정수를   진수 값으로 표시" />
+    <option name="진단" hit="진단 " />
+    <option name="인수를" hit="템플릿 인수를 타입으로 표시" />
+    <option name="타입으로" hit="템플릿 인수를 타입으로 표시" />
+    <option name="템플릿" hit="템플릿 인수를 타입으로 표시" />
+    <option name="표시" hit="템플릿 인수를 타입으로 표시" />
+    <option name="인수를" hit="템플릿 인수를 함수로 표시" />
+    <option name="템플릿" hit="템플릿 인수를 함수로 표시" />
+    <option name="표시" hit="템플릿 인수를 함수로 표시" />
+    <option name="함수로" hit="템플릿 인수를 함수로 표시" />
+    <option name="프레임" hit="프레임" />
+  </configurable>
+  <configurable id="Debugger.C.SymbolServers" configurable_name="심볼 서버">
+    <option name="microsoft" hit="Microsoft 심볼 서버 추가" />
+    <option name="서버" hit="Microsoft 심볼 서버 추가" />
+    <option name="심볼" hit="Microsoft 심볼 서버 추가" />
+    <option name="추가" hit="Microsoft 심볼 서버 추가" />
+    <option name="pdb" hit="PDB 심볼 서버는 Windows에서만 사용할 수 있습니다 " />
+    <option name="windows에서만" hit="PDB 심볼 서버는 Windows에서만 사용할 수 있습니다 " />
+    <option name="사용할" hit="PDB 심볼 서버는 Windows에서만 사용할 수 있습니다 " />
+    <option name="서버는" hit="PDB 심볼 서버는 Windows에서만 사용할 수 있습니다 " />
+    <option name="수" hit="PDB 심볼 서버는 Windows에서만 사용할 수 있습니다 " />
+    <option name="심볼" hit="PDB 심볼 서버는 Windows에서만 사용할 수 있습니다 " />
+    <option name="있습니다" hit="PDB 심볼 서버는 Windows에서만 사용할 수 있습니다 " />
+    <option name="공유" hit="공유 심볼 스토리지 " />
+    <option name="스토리지" hit="공유 심볼 스토리지 " />
+    <option name="심볼" hit="공유 심볼 스토리지 " />
+    <option name="로컬" hit="로컬 심볼 저장소 " />
+    <option name="심볼" hit="로컬 심볼 저장소 " />
+    <option name="저장소" hit="로컬 심볼 저장소 " />
+    <option name="서버" hit="심볼 서버" />
+    <option name="심볼" hit="심볼 서버" />
+    <option name="서버" hit="심볼 서버 " />
+    <option name="심볼" hit="심볼 서버 " />
+    <option name="사용" hit="심볼 서버 지원 사용" />
+    <option name="서버" hit="심볼 서버 지원 사용" />
+    <option name="심볼" hit="심볼 서버 지원 사용" />
+    <option name="지원" hit="심볼 서버 지원 사용" />
+  </configurable>
+</options>

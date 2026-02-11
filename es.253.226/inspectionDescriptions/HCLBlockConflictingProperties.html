@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>Informa sobre propiedades conflictivas dentro de un bloque HCL.</p>
+<p>Ejemplo del problema:</p>
+<pre><code>
+provider "kubernetes" {
+  version = "~> 1.25"
+  config_path = "~/.kube/config"
+  version = "~> 1.24"
+}
+</code></pre>
+<p>
+  En este ejemplo, la propiedad version se declara dos veces dentro del bloque del proveedor kubernetes, lo que es incorrecto.
+</p>
+<p>Ejemplo de corrección:</p>
+<pre><code>
+provider "kubernetes" {
+  version = "~> 1.25"
+  config_path = "~/.kube/config"
+}
+</code></pre>
+<em>Implementado por</em>: <a href="https://plugins.jetbrains.com/plugin/7808-terraform-and-hcl">Complemento de Terraform y HCL</a>
+</body>
+</html>

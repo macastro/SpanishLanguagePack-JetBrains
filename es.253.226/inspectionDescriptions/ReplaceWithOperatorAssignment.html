@@ -1,0 +1,21 @@
+<html>
+<body>
+Reporta modificaciones de variables con una asignación simple (tal como <code>y = y + x</code>) que puede ser reemplazada con una asignación de operador.
+<p>El arreglo rápido reemplaza la asignación con un operador de asignación.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo() {
+      val list = mutableListOf(1, 2, 3)
+      list = list + 4
+  }
+</code></pre>
+<p>Después de que el arreglo rápido es aplicado:</p>
+<pre><code>
+  fun foo() {
+      val list = mutableListOf(1, 2, 3)
+      list += 4
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>
