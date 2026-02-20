@@ -1,32 +1,40 @@
 <html>
 <body>
-Reporta casos de manejo incorrecto de <code>ProcessCanceledException</code> y <code>CancellationException</code>.
+Informa sobre casos en los que <code>ProcessCanceledException</code> y <code>CancellationException</code> se manejan de forma incorrecta.
+
 <p>
-  No se debe capturar, suprimir, registrar o manejar <code>ProcessCanceledException</code> y sus herederos de ninguna manera.
-  En su lugar, debe ser relanzada para que la infraestructura de la plataforma IntelliJ pueda manejarla correctamente.
+  <code>ProcessCanceledException</code> y sus descendientes no deben capturarse, omitirse, registrarse ni procesarse de ninguna manera.
+  En su lugar, deben relanzarse para que la infraestructura de IntelliJ Platform pueda manejarlas correctamente.
 </p>
 <p>
-  En el contexto de las corrutinas, no se debe capturar, suprimir, registrar o manejar <code>CancellationException</code> de ninguna manera.
-  En su lugar, debe ser relanzada para que la infraestructura de corrutinas pueda manejarla correctamente.
+  <code>CancellationException</code> no debe capturarse, omitirse, registrarse ni procesarse de ninguna manera dentro de un contexto de corrutina.
+  En su lugar, debe relanzarse para que la infraestructura de corrutinas pueda manejarla correctamente.
 </p>
+
 <p>
-  La inspección reporta capturas explícitas de <code>ProcessCanceledException</code> (incluyendo herederos) y <code>CancellationException</code>, así como capturas de <code>RuntimeException</code>, <code>Exception</code> y <code>Throwable</code> que ocultan excepciones de cancelación.
+  La inspección informa sobre capturas explícitas de <code>ProcessCanceledException</code> (incluidos sus descendientes) y <code>CancellationException</code>, así como capturas de <code>RuntimeException</code>, <code>Exception</code> y <code>Throwable</code> que cubran excepciones de cancelación.
 </p>
+
 <h3>Ejemplos:</h3>
+
 <h4><code>ProcessCanceledException</code>:</h4>
+
 <pre><code lang="java">
-// malo:
+// mal:
 try {
   // ...
-} catch (ProcessCanceledException e) { // no se debe suprimir la excepción
+} catch (ProcessCanceledException e) { // la excepción no debe omitirse
 }
+
 // incorrecto:
 try {
   // ...
 } catch (ProcessCanceledException e) {
-  LOG.error("Error occurred", e); // no se debe registrar la excepción
+  LOG.error("Error occurred", e); // la excepción no debe registrarse
   throw e;
 }
+
+
 // correcto:
 try {
   // ...
@@ -35,24 +43,28 @@ try {
   throw e;
 }
 </code></pre>
+
 <h4><code>CancellationException</code>:</h4>
 <pre><code lang="kotlin">
-// malo:
+// mal:
 cs.launch {
   try {
     // ...
-  } catch (e: CancellationException) { // no se debe suprimir la excepción
+  } catch (e: CancellationException) { // la excepción no debe omitirse
   }
 }
+
 // incorrecto:
 suspend fun suspendingFunction() {
   try {
     // ...
   } catch (ProcessCanceledException e) {
-    LOG.error("Error occurred", e); // no se debe registrar la excepción
+    LOG.error("Error occurred", e); // la excepción no debe registrarse en el log
     throw e;
   }
 }
+
+
 // correcto:
 cs.launch {
   try {
@@ -63,6 +75,12 @@ cs.launch {
   }
 }
 </code></pre>
-<p><small>Cambios en 2023.2</small></p>
+
+<p>
+  <i>Nota: la inspección está deshabilitada en las fuentes de prueba.</i>
+</p>
+
+<!-- tooltip end -->
+<p><small>Novedad en 2023.2</small></p>
 </body>
 </html>
