@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>Informa sobre importaciones sospechosas de paquetes de IO de Java/Kotlin en los módulos de la capa común o del espacio de trabajo de Fleet.</p>
+<p>Los siguientes prefijos de importación son problemáticos:</p>
+<ul>
+  <li><code>java.io.File</code></li>
+  <li><code>java.nio</code></li>
+  <li><code>kotlin.io.path</code></li>
+</ul>
+<p>Estas API son específicas de la plataforma. Utilice abstracciones independientes de la plataforma a través de la API de Fleet, a menos que realmente desee ejecutar algo junto al proceso de la JVM local (por ejemplo, por motivos de rendimiento).</p>
+</body>
+</html>

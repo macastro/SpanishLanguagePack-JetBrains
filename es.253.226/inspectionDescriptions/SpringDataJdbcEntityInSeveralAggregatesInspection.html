@@ -1,0 +1,8 @@
+<html>
+<body>
+Una entidad dentro de un agregado de Spring Data JDBC está referenciando a otra entidad que ya pertenece a un agregado diferente.
+En Spring Data JDBC, cada referencia a otras entidades debe mantenerse estrictamente dentro de los límites del mismo agregado.
+Las relaciones entre agregados no pueden representarse como referencias directas a entidades, sino que deben modelarse utilizando el identificador del agregado de destino (por ejemplo, almacenando la clave foránea como un tipo de valor simple).
+<a href="https://docs.spring.io/spring-data/relational/reference/jdbc/mapping.html#jdbc.entity-persistence.types.referenced-entities">Documentación de Spring Data</a>
+</body>
+</html>

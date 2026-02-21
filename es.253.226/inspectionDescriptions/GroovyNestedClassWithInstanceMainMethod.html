@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>Informa sobre los métodos <code>main</code> de instancia declarados dentro de una clase anidada.</p>
+
+<p>
+  Groovy no procesa directamente las llamadas al método <code>main</code> dentro de una clase anidada; sin embargo, es posible delegando la ejecución a Java.
+  En este caso, el código solo se ejecutará correctamente si la versión de Java es lo suficientemente reciente. Considere el siguiente ejemplo:
+</p>
+<pre><code>
+class Outer {
+  static class Nested {
+    void main() {
+      println 'Hello from nested'
+    }
+  }
+}
+</code></pre>
+
+El código se ejecuta correctamente en Java 25, pero falla en Java 17.
+</body>
+</html>

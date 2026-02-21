@@ -1,0 +1,41 @@
+<html>
+<body>
+<p>Informa sobre las asignaciones en las que el valor asignado nunca se utiliza posteriormente en el código.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo(): Int = 42
+
+  fun example() {
+      var local = 0
+      print(local)
+      local = 42  // el valor asignado nunca se lee
+  }
+</code></pre>
+<ul>
+    <li>Después de la corrección rápida, se elimina la asignación:</li>
+</ul>
+<pre><code>
+  fun foo(): Int = 42
+
+  fun example() {
+      var local = 0
+      print(local)
+  }
+</code></pre>
+
+<ul>
+    <li>Si la expresión del lado derecho (RHS) puede tener efectos secundarios, la corrección rápida también sugerirá mantener la expresión RHS para preservar dichos efectos secundarios:
+    </li>
+</ul>
+<pre><code>
+  fun foo(): Int = 42
+
+  fun example() {
+      var local = 0
+      print(local)
+      foo()  // esta llamada a la función se mantiene por sus efectos secundarios
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

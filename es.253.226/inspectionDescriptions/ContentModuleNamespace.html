@@ -1,0 +1,13 @@
+<html>
+<body>
+Valida el atributo de espacio de nombres de las declaraciones de módulos de contenido en el archivo <code>plugin.xml</code>.
+<p>
+  Esta inspección informa los siguientes problemas:
+</p>
+<ul>
+  <li><strong>Falta el espacio de nombres</strong>: se requiere un espacio de nombres de contenido cuando el contenido del complemento incluye al menos un módulo con una visibilidad que no sea privada.</li>
+  <li><strong>Formato de espacio de nombres no válido</strong>: el espacio de nombres debe coincidir con el patrón requerido (<code>[a-zA-Z0-9]+([_-][a-zA-Z0-9]+)*</code>) y su longitud debe estar entre 5 y 30 caracteres.</li>
+  <li><strong>Espacio de nombres inconsistente</strong>: todos los elementos de contenido deben definir el mismo espacio de nombres.</li>
+</ul>
+</body>
+</html>

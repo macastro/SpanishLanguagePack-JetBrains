@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre el uso de <code>Thread.ofVirtual</code> en lugar de <code>IntelliJVirtualThreads.ofVirtual</code>.
+<p>
+  <code>Thread.ofVirtual</code> es una API genérica de Java para crear hilos virtuales que no es adecuada para las necesidades de la plataforma IntelliJ.
+</p>
+<p>
+  La corrección rápida sustituirá el uso por <code>IntelliJVirtualThreads.ofVirtual</code>.
+</p>
+<p>
+  Ejemplo:
+</p>
+<pre><code lang="java">
+// Incorrecto:
+Thread thread = Thread.ofVirtual().start();
+
+// Correcto:
+Thread thread = IntelliJVirtualThreads.ofVirtual().start();
+</code></pre>
+</body>
+</html>

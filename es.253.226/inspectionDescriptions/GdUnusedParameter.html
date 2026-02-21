@@ -1,0 +1,32 @@
+<html>
+<body>
+<p>Informa sobre los parámetros de funciones o métodos de GDScript que se han declarado pero nunca se utilizan en el cuerpo de la función correspondiente.</p>
+
+<p>
+Esta inspección le ayuda a detectar parámetros ineficaces o redundantes. Solo comprueba el contenido dentro de la función o método contenedor e ignora las declaraciones de señales. Los parámetros cuyos nombres comienzan con un guion bajo se consideran intencionadamente no utilizados y no se informan. Si existe una sugerencia de tipo (type hint) pero hace referencia a un tipo no incorporado (non-builtin) sin resolver, el parámetro se ignora para evitar falsos positivos.
+</p>
+
+<p>Ejemplo:</p>
+<pre><code>
+func damage(target, amount):
+    print("Damaged!")
+    # 'target' y 'amount' no se utilizan nunca → se informa
+
+func _process(_delta):
+    # El guion bajo inicial marca el parámetro como intencionadamente no utilizado → no se informa
+    pass
+
+func spawn(enemy: UnknownType):
+    # Se ignora si UnknownType no se puede resolver
+    pass
+</code></pre>
+
+<p>Acción de corrección rápida:</p>
+<ul>
+  <li>Añadir un guion bajo como prefijo para marcar el parámetro como intencionadamente no utilizado.</li>
+</ul>
+
+<!-- tooltip end -->
+<p>Esta inspección no informa sobre los parámetros que se referencien en cualquier lugar del cuerpo de la función o método. También omite los parámetros de señales y los parámetros con tipos sin resolver para evitar falsos positivos.</p>
+</body>
+</html>

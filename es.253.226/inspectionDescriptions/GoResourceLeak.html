@@ -1,0 +1,23 @@
+<html>
+<body>
+Reporta posibles fugas de recursos, como archivos no cerrados, filas SQL, cuerpos de respuesta HTTP u otros recursos que implementan
+<code>io.Closer</code> y requieren un cierre explícito.
+<p>Ejemplo:</p>
+<pre><code>
+func readFile() ([]byte, error) {
+    f, err := os.Open("data.txt") // fuga de recursos: no se cierra en todas las rutas
+    if err != nil {
+        return nil, err
+    }
+
+    data, err := io.ReadAll(f)
+    if err != nil {
+        return nil, err // 'f' no se cierra aquí
+    }
+
+    f.Close()
+    return data, nil
+}
+</code></pre>
+</body>
+</html>

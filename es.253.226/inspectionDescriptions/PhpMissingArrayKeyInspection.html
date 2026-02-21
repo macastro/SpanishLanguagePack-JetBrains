@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <p>
+      Informa sobre los arrays que no proporcionan todas las claves o entradas obligatorias definidas en la forma del array.
+    </p>
+    <p>
+      Esta inspección ayuda a identificar escenarios en los que la instanciación de un array podría causar problemas en tiempo de ejecución debido a la falta de entradas obligatorias, garantizando una mejor consistencia del código y el cumplimiento de la estructura definida.
+    </p>
+    <p>
+      Fragmento de código embebido:
+    </p>
+    <pre><code>
+      function connect(#[ArrayShape([
+          'path' => 'string',
+          'host' => [
+              'name' => 'string',
+              'port' => 'int'
+          ]
+      ])] array $options = []) { };
+      connect(['host' => ['name' => 'localhost', 'port' => 1234]]); // Falta la clave 'path'
+    </code></pre>
+  </body>
+</html>
