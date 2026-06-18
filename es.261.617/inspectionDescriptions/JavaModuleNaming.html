@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta en <code>module-info.java</code> violaciones de las <a href="http://mail.openjdk.org/pipermail/jpms-spec-experts/2017-March/000659.html">recomendaciones</a> del Sistema de Módulos de la Plataforma Java para nombres de módulos, para evitar codificar información de versión agregando uno o más dígitos al final del nombre del módulo.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+ module foo.bar2 {}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  module foo.bar {}
+</code></pre>
+</body>
+</html>

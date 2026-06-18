@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre las llamadas a métodos de la API de colecciones que pueden simplificarse usando los métodos de <code>SequencedCollection</code>.
+<p>Se admiten las siguientes transformaciones:</p>
+<ul>
+  <li><code>list.add(0, element)</code> &rarr; <code>list.addFirst(element);</code></li>
+  <li><code>list.get(0)</code> &rarr; <code>list.getFirst();</code></li>
+  <li><code>list.get(list.size() - 1)</code> &rarr; <code>list.getLast();</code></li>
+  <li><code>list.remove(0)</code> &rarr; <code>list.removeFirst();</code></li>
+  <li><code>list.remove(list.size() - 1)</code> &rarr; <code>list.removeLast();</code></li>
+  <li><code>collection.iterator().next()</code> &rarr; <code>collection.getFirst();</code></li>
+</ul>
+<p><small>Novedades de la versión 2023.3</small></p>
+</body>
+</html>

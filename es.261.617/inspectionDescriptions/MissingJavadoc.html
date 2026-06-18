@@ -1,0 +1,26 @@
+<html>
+<body>
+Informa sobre comentarios y etiquetas Javadoc faltantes.
+<p>Ejemplo:</p>
+<pre><code>
+  /**
+   * Informa sobre "@param" faltante (si está configurado).
+   */
+  public void sample(int param){
+  }
+</code></pre>
+<p>La corrección rápida añadirá las etiquetas faltantes o los comentarios Javadoc faltantes:</p>
+<pre><code>
+  /**
+   * Informa sobre "@param" faltante (si está configurado).
+   * @param param
+   */
+  public void sample(int param){
+  }
+</code></pre>
+<p>
+La inspección se puede configurar para ignorar elementos obsoletos o métodos de acceso simples como <code>getField()</code> o <code>setField()</code>.
+</p>
+También puede configurar las etiquetas requeridas y la visibilidad mínima requerida para elementos de código específicos como métodos, campos, clases, paquetes, módulos, etc.
+</body>
+</html>

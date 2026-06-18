@@ -1,0 +1,33 @@
+<html>
+<body>
+Reporta declaraciones <code>if</code> que tienen tres o más ramas y que pueden ser reemplazadas por una expresión <code>when</code> con cuerpo.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun translateNumber(n: Int): String {
+    return if (n == 1) {
+      "one"
+    } else if (n == 2) {
+      "two"
+    } else {
+      "???"
+    }
+  }
+</code></pre>
+<p>La corrección rápida convertirá la expresión <code>if</code> a <code>when</code>:</p>
+<pre><code>
+  fun translateNumber(n: Int): String {
+    return when (n) {
+      1 -> {
+        "one"
+      }
+      2 -> {
+        "two"
+      }
+      else -> {
+        "???"
+      }
+    }
+  }
+</code></pre>
+</body>
+</html>

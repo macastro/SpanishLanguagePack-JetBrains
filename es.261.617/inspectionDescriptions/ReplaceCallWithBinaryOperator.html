@@ -1,0 +1,15 @@
+<html>
+<body>
+El informe puede reemplazar las llamadas a funciones con operadores binarios (especialmente los operadores de comparación).
+<p><b>Ejemplo:</b></p>
+<pre><code>  fun test(): Boolean {
+      return 2.compareTo(1) > 0 // 'compareTo()' reemplazable
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>  fun test(): Boolean {
+      return 2 > 1
+  }
+</code></pre>
+</body>
+</html>

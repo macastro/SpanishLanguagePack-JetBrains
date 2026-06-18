@@ -1,0 +1,38 @@
+<html>
+<body>
+<p>Reporta accesos implícitos al receptor <code>CoroutineScope</code> que pueden ser problemáticos en contextos de suspensión.</p>
+<p>
+  Cuando una función de suspensión o Lambda captura un receptor <code>CoroutineScope</code> implícito desde un contexto externo, puede provocar comportamientos inesperados.
+  Esto se debe a que el scope capturado puede ser cancelado o completado mientras la función de suspensión aún se está ejecutando.
+</p>
+<p>
+  Esta inspección puede detectar casos donde el código accede implícitamente al receptor <code>CoroutineScope</code> en funciones de suspensión o Lambdas,
+el acceso implícito crea una dependencia potencialmente peligrosa al scope externo.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class MyClass {
+    fun CoroutineScope.launchJobs() {
+        launch { // OK: uso directo en función de extensión
+            doSomething()
+        }
+        suspendingFunction { // Advertencia: acceso sospechoso al receptor 'CoroutineScope' implícito
+            launch { // la llamada launch usa el CoroutineScope implícito del contexto externo
+                doSomethingElse()
+            }
+        }
+    }
+}
+</code></pre>
+<p><b>Opciones:</b></p>
+<ul>
+  <li><b>Detectar subtipos de CoroutineScope</b> – Cuando está habilitado, la inspección también detectará accesos implícitos a subtipos de CoroutineScope</li>
+</ul>
+<p>Para resolver este problema, puedes:</p>
+<ul>
+  <li>Especificar explícitamente el receptor usando <code>this@receiverLabel.method()</code></li>
+  <li>Pasar el scope como parámetro a la función de suspensión</li>
+  <li>Usar el constructor <code>coroutineScope { }</code> para crear un scope hijo vinculado al ciclo de vida de la función de suspensión</li>
+</ul>
+</body>
+</html>

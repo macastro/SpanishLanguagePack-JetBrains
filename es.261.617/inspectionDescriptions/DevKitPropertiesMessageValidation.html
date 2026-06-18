@@ -1,0 +1,55 @@
+<html>
+<body>
+Reporta los siguientes problemas de <code>MessageFormat</code> en los valores de las propiedades:
+<p><b>Tipo de formato desconocido</b>
+<p>
+  <code>MessageFormat</code> solo admite los siguientes tipos de formato:
+<ul>
+  <li>number</li>
+  <li>date</li>
+  <li>time</li>
+  <li>choice</li>
+</ul>
+  Se reportarán otros tipos de formato.
+<p><b>Comillas sin emparejar</b>
+<pre><code>
+  property.key=Shouldn't happen: {0}
+</code></pre>
+<p>
+  Las comillas simples se interpretan como escape hasta el final de la propiedad y no aparecerán en la cadena resultante.
+  En la mayoría de los casos, esto no es lo que pretendemos.
+  Si la comilla simple debe aparecer en la cadena resultante, debe duplicarse en la propiedad.
+<p><b>Llaves desemparejadas</b>
+<p>
+  Cada marcador de posición debe tener una llave de cierre.
+<p><b>Exceso de comillas</b>
+<p>
+  En algunos casos (por ejemplo, <code>it's</code>), se espera solo una comilla en la cadena resultante.
+  Se reportan los casos donde hay dos o más comillas juntas en la cadena resultante.
+<p><b>Límite inferior incorrecto en <code>ChoiceFormat</code> anidado</b>
+<p>
+  Los límites inferiores deben ser números y estar ordenados de forma ascendente.
+<p><b>Número incorrecto de comillas alrededor de los parámetros</b>
+<p>
+  En los patrones de <code>java.text.MessageFormat</code>, las comillas simples se utilizan para escape.
+  Para hacer visibles las comillas, deben duplicarse.
+  Por ejemplo, al pasar <code>1</code>:
+<ul>
+  <li><code>'{0}'</code> &rarr; <code>{0}</code></li>
+  <li><code>''{0}''</code> &rarr; <code>'1'</code></li>
+</ul>
+<p>
+  Con el formato choice, los formatos anidados se evalúan como cadenas de formato en sí mismas y las comillas deben duplicarse dos veces.
+  Por ejemplo, al pasar <code>1</code>:
+<ul>
+  <li><code>{0, choice, 0#no|1#''{0}'' files}</code> &rarr; <code>{0} files</code></li>
+  <li><code>{0, choice, 0#no|1#''''{0}'''' files}</code> &rarr; <code>'1' files</code></li>
+</ul>
+<p><b>Nota</b>
+<p>
+  Los valores de las propiedades solo se validan cuando contienen el texto literal <code>{0}</code>, <code>{0,</code>, <code>{1}</code> o <code>{1,</code>.
+  Esto es para asegurar que estos valores de propiedades se utilizan realmente como patrones de <code>MessageFormat</code>.
+</p>
+<p><small>Novedades de 2023.2</small>
+</body>
+</html>

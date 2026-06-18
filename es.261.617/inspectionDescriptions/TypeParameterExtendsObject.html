@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre parámetros de tipo y argumentos de tipo comodín que declaran explícitamente la extensión de <code>java.lang.Object</code>.
+<p>Esta cláusula 'extends' es redundante ya que <code>java.lang.Object</code> es el supertipo de todas las clases.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  class ClassA&lt;T extends Object&gt; {}
+</code></pre>
+<p>
+  Si necesita mantener la cláusula 'extends Object' debido a anotaciones, deshabilite la opción <b>Ignorar cuando java.lang.Object está anotado</b>.
+  Esto puede ser útil, por ejemplo, cuando se utiliza un analizador de nulos y la cláusula 'extends Object' contiene anotaciones <code>@Nullable</code>/<code>@NotNull</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  class MyClass&lt;T extends @NotNull Object&gt; {}
+</code></pre>
+</body>
+</html>

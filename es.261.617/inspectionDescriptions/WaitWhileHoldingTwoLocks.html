@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa sobre posibles llamadas al método <code>wait()</code> cuando el hilo actual mantiene dos bloqueos.
+<p>
+  La llamada a <code>wait()</code> solo libera un bloqueo en el objeto objetivo, por lo que esperar mientras se mantienen dos bloqueos puede conducir fácilmente a un interbloqueo.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  synchronized (lockA) {
+    synchronized (lockB) {
+      lockB.wait(); //advertencia
+      //El hilo A se bloquea aquí, manteniendo lockA
+    }
+  }
+  synchronized (lockA) { //El hilo B no puede entrar en este bloque y liberar el hilo A
+    lockB.notify();
+  }
+</code></pre>
+</body>
+</html>

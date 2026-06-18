@@ -1,0 +1,9 @@
+<html>
+<body>
+Verifica la siguiente asociación <pre><code>@OneToOne</code></pre> en el lado no propietario (con el atributo <pre><code>FetchType.Lazy</code></pre>).
+La especificación de <pre><code>FetchType.LAZY</code></pre> (para el lado no propietario de una asociación <pre><code>@OneToOne</code></pre>) no afecta a la carga.
+La entidad relacionada se seguirá cargando como si se hubiera definido <pre><code>FetchType.EAGER</code></pre>.
+Para más detalles, consulta la <a
+  href="https://docs.jboss.org/hibernate/orm/6.1/userguide/html_single/Hibernate_User_Guide.html#associations-one-to-one-bidirectional-lazy">documentación</a>.
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+Reportar excepciones lanzadas desde JSP Scriptlets de nivel superior.<br/>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="jsp">
+  &lt;%!
+  String getFormattedDate() {
+    ...
+    throw new IllegalArgumentException(...); // Error
+  }
+  %&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+    &lt;title&gt;Hello, JSP!&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;i&gt;Today is &lt;%= getFormattedDate() %&gt;&lt;/i&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</code></pre><br/>
+<p>
+  <b>Nota</b>: Tales páginas JSP se compilarán, ya que el contenedor servlet envuelve todo el código JSP en bloques <b>try {} catch() {}</b>, pero generarán excepciones en tiempo de ejecución cuando se desplieguen en el servidor.
+</p>
+</body>
+</html>

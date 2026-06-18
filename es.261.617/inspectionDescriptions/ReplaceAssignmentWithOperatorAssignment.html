@@ -1,0 +1,20 @@
+<html>
+<body>
+El informe puede reemplazar la asignación con operadores de asignación compuesta.
+<p>El código que utiliza operadores de asignación compuesta es más corto y potencialmente más claro.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  x = x + 3;
+  x = x / 3;
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>  x += 3;
+  x /= 3;
+</code></pre>
+<p>
+La opción <b>Ignorar operadores condicionales</b> permite ignorar <code>&amp;&amp;</code> y <code>||</code>. Reemplazar operadores condicionales con operadores de asignación compuesta puede cambiar la evaluación perezosa a evaluación inmediata, alterando potencialmente la semántica de la expresión.
+</p>
+<p>
+La opción <b>Ignorar operadores ambiguos</b> permite ignorar los operadores menos conocidos <code>^</code> y <code>%</code>.
+</p>
+</body>
+</html>

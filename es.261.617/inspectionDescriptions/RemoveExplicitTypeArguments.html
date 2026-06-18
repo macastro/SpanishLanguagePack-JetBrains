@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre llamadas a funciones con argumentos de tipo que pueden ser inferidos automáticamente. Estos argumentos de tipo son redundantes y pueden omitirse de forma segura.
+<p>Utilice la corrección rápida "Eliminar argumentos de tipo explícitos" para limpiar el código.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // Aquí se puede inferir el tipo 'String'
+  fun foo(): MutableList&lt;String&gt; = mutableListOf&lt;String&gt;()
+  // Aquí no se puede inferir 'String', el argumento de tipo es obligatorio
+  fun bar() = mutableListOf&lt;String&gt;()
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun foo(): MutableList&lt;String&gt; = mutableListOf() &lt;== actualizado
+  fun bar() = mutableListOf&lt;String&gt;()
+</code></pre>
+</body>
+</html>

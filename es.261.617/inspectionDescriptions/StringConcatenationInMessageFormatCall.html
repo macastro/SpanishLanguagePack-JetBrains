@@ -1,0 +1,21 @@
+<html>
+<body>
+Se informa sobre la concatenación de cadenas no constantes utilizadas como argumentos en llamadas a <code>MessageFormat.format()</code>.
+<p>
+  Aunque a veces es intencional, esto generalmente es un uso incorrecto del método de formato y puede incluso provocar excepciones cuando la cadena concatenada contiene caracteres especiales como <code>{</code>.
+</p>
+<p>
+  Además, en ocasiones esto puede ser el resultado de escribir accidentalmente <code>+</code> en lugar de <code>,</code> al especificar argumentos de formato de cadena.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  String formatGreeting(String userName, int balance) {
+    return MessageFormat.format("Hello, " + userName + "! Your balance is {0}.", balance);
+  }
+</code></pre>
+<p>
+  Aquí, <code>userName</code> se interpreta como parte de la cadena de formato, lo que puede provocar una <code>IllegalArgumentException</code> (por ejemplo, si <code>userName</code> es <code>"{"</code>).
+  Esta llamada probablemente debería reemplazarse por <code>MessageFormat.format("Hello, {0}! Your balance is {1}.", userName, balance)</code>.
+</p>
+</body>
+</html>

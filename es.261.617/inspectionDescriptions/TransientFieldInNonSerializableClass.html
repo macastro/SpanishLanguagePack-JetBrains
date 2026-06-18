@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre campos <code>transient</code> en clases que no implementan <code>java.io.Serializable</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class NonSerializableClass {
+    private transient String password;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  public class NonSerializableClass {
+    private String password;
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre el uso de módulos automáticos en la directiva <code>requires</code>.
+<p>Los módulos automáticos no son fiables ya que pueden depender de tipos en el classpath, y su nombre y paquetes exportados pueden cambiar cuando se convierten en módulos explícitos.</p>
+<p>Corresponde a las opciones de Javac <code>-Xlint:requires-automatic</code> y <code>-Xlint:requires-transitive-automatic</code>.
+La primera opción proporciona información sobre cuándo se utilizan módulos automáticos.
+La segunda opción advierte a los autores de módulos que establecer legibilidad implícita sobre módulos automáticos expondrá a los usuarios del módulo a riesgos.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  //module-info.java
+  module org.printer {
+    requires transitive drivers.corp.org; // Informa cuando 'drivers.corp.org' es un módulo automático
+  }
+</code></pre>
+<p>
+  Use la opción <b>Resaltar solo dependencias transitivas</b> para emitir advertencias únicamente sobre dependencias transitivas.
+</p>
+</body>
+</html>

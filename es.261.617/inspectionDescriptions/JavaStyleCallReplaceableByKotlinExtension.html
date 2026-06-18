@@ -1,0 +1,28 @@
+thoughtful
+<html>
+<body>
+Informa de los lugares donde se pueden utilizar extensiones de Kotlin para Spring en lugar de llamadas con argumentos <code>::class.java</code>.
+
+<p>
+  Spring proporciona numerosas extensiones de Kotlin para métodos genéricos de Java con parámetros de token de tipo (type token).
+  Esta inspección informa sobre los usos de la API de Spring donde una llamada de estilo Java se puede sustituir por una llamada de extensión de Kotlin sin cambiar la semántica.
+</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+import org.springframework.core.env.PropertyResolver
+
+fun example(resolver: PropertyResolver): String? =
+    resolver.getProperty("test.property", String::class.java)
+</code></pre>
+
+<p><b>Después de aplicar la corrección:</b></p>
+<pre><code>
+import org.springframework.core.env.PropertyResolver
+import org.springframework.core.env.getProperty
+
+fun example(resolver: PropertyResolver): String? =
+    resolver.getProperty&lt;String&gt;("test.property")
+</code></pre>
+</body>
+</html>

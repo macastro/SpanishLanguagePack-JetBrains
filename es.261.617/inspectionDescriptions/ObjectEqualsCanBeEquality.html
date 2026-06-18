@@ -1,0 +1,8 @@
+<html>
+<body>
+Informa sobre las llamadas a <code>equals()</code> que pueden reemplazarse por expresiones <code>==</code> o <code>!=</code> sin alterar la semántica.
+<p>Estas llamadas pueden reemplazarse cuando se utilizan para comparar clases <code>final</code> que no tienen su propia implementación de <code>equals()</code> y utilizan el <code>Object.equals()</code> predeterminado.
+Este reemplazo puede mejorar el rendimiento.</p>
+<p>Las llamadas a <code>equals()</code> en valores <code>enum</code> se verifican por separado: Llamada a 'equals()' en valores Enum.</p>
+</body>
+</html>

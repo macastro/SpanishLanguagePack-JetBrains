@@ -1,0 +1,6 @@
+<html>
+<body>
+Informa sobre clases <code>Externalizable</code> que no tienen un constructor público sin parámetros.
+<p>Durante la reconstrucción de un objeto <code>Externalizable</code>, se crea una instancia utilizando el constructor público sin parámetros antes de llamar al método <code>readExternal</code>. Si el constructor público sin parámetros no está disponible, se lanzará una <code>java.io.InvalidClassException</code> en tiempo de ejecución.
+</body>
+</html>

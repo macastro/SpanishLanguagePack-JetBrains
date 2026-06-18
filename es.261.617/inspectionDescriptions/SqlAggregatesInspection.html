@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporta usos inválidos de funciones de agregación SQL.
+<p>Específicamente en los siguientes casos:</p>
+<ul>
+  <li><p>Columnas que se utilizan en las cláusulas HAVING y ORDER BY pero se omiten en la cláusula GROUP BY.</p>
+    <pre><code>CREATE TABLE foo(id INT PRIMARY KEY, a INT, b INT);
+SELECT a, MAX(b) FROM foo GROUP BY a HAVING b > 0;
+SELECT * FROM foo GROUP BY a ORDER BY b;</code></pre>
+    <p>Esta regla no se aplica cuando se agrupa por clave primaria.</p>
+    <pre><code>SELECT * FROM foo GROUP BY id ORDER BY b;</code></pre>
+  </li>
+  <li><p>Funciones de agregación en contextos incorrectos. Generalmente, puede usar funciones de agregación en los siguientes contextos: lista de expresiones en SELECT; en las secciones HAVING y ORDER BY; y otros casos específicos del dialecto. Las siguientes consultas mostrarán un error.</p>
+    <pre><code>SELECT a FROM foo WHERE MAX(b) > 0;
+SELECT a FROM foo GROUP BY MAX(a);</code></pre>
+  </li>
+  <li><p>Llamadas anidadas de funciones de agregación.</p>
+    <pre><code>SELECT MAX(SUM(a)) FROM foo GROUP BY a;</code></pre>
+    <p>Esta regla no se aplica a las funciones de ventana. La siguiente consulta es válida y correcta.</p>
+    <pre><code>SELECT MAX(SUM(a) OVER ()) FROM foo;</code></pre>
+  </li>
+  <li><p>Uso de HAVING sin funciones de agregación. En este caso, considere reescribir su código usando la sección WHERE.</p>
+    <pre><code>SELECT a, MAX(b) FROM foo GROUP BY a HAVING a > 0;</code></pre>
+  </li>
+</ul>
+</body>
+</html>

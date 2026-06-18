@@ -1,0 +1,19 @@
+<html>
+<body>
+El uso del constructor SAM (Single Abstract Method) puede ser reemplazado por una expresión lambda.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun main() {
+      foo(<b>Runnable</b> { println("Hi!") })
+  }
+  fun foo(other: Runnable) {}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun main() {
+      foo( { println("Hi!") })
+  }
+  fun foo(other: Runnable) {}
+</code></pre>
+</body>
+</html>

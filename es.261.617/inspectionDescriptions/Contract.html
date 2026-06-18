@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre problemas en la anotación <code>@Contract</code> del método. Los tipos de problemas que se pueden informar son:
+<ul>
+<li>Errores de sintaxis en el contrato</li>
+<li>Contratos que no coinciden con la firma del método (número incorrecto de parámetros)</li>
+<li>Implementaciones de método que no cumplen con el contrato (por ejemplo, devolver <code>true</code> cuando el contrato declara <code>false</code>)</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code>
+  // El método no tiene parámetros, pero el contrato espera 1
+  @Contract("_ -> fail")
+  <b>void</b> x() {
+    <b>throw</b> new AssertionError();
+  }
+</code></pre>
+</body>
+</html>

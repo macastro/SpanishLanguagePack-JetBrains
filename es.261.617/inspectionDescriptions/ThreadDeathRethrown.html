@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta sentencias <code>try</code> que capturan <code>java.lang.ThreadDeath</code> y no vuelven a lanzar la excepción.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  try {
+    executeInParallel(request);
+  } catch (ThreadDeath ex) { // warning: ThreadDeath 'ex' not rethrown
+    return false;
+  }
+</code></pre>
+</body>
+</html>

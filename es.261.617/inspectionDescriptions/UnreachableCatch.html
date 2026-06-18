@@ -1,0 +1,35 @@
+<html>
+<body>
+Reporta aquellas partes catch que, aunque cumplen con la especificación del lenguaje Java, nunca son ejecutadas.
+<p>
+  Aunque las partes catch inalcanzables generalmente no son permitidas por el compilador de Java y se reportan como errores de compilación, en ciertas situaciones, el análisis requerido por la especificación del lenguaje Java no es completo.
+  Esta inspección proporciona un análisis mejorado y reportará algunas partes catch inalcanzables que el compilador no reporta.
+  Estas partes son redundantes y pueden ser eliminadas de forma segura.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void method() {
+    try { 
+      throw new FileNotFoundException(); 
+    }
+    catch (FileNotFoundException e) { 
+    }
+    catch (IOException e) {
+      // La especificación permite este catch
+      // pero nunca es ejecutado
+    }
+  }
+</code></pre>
+<p>Se proporciona una corrección rápida para eliminar las partes catch redundantes:</p>
+<pre><code>
+  void method() {
+    try { 
+      throw new FileNotFoundException(); 
+    }
+    catch (FileNotFoundException e) { 
+    }
+  }
+</code></pre>
+<p><small>Nuevo en 2025.1</small></p>
+</body>
+</html>

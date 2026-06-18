@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa sobre usos simplificables de <code>javax.swing.border.EmptyBorder</code> y <code>JBUI.Borders.emptyXyz()</code>.
+<p>
+  Las instancias de <code>EmptyBorder</code> no son conscientes del DPI y pueden causar problemas de diseño en la interfaz de usuario.
+</p>
+<p>
+  La corrección rápida realizará el reemplazo o simplificará la expresión usando <code>JBUI.Borders.empty()</code>.
+</p>
+<p>Ejemplos:</p>
+<pre><code lang="java">
+// Incorrecto:
+Border border1 = new EmptyBorder(1, 2, 3, 4);
+Border border2 = new EmptyBorder(1, 2, 1, 2);
+Border border3 = new EmptyBorder(1, 0, 0, 0);
+// Correcto:
+Border border1 = JBUI.Borders.empty(1, 2, 3, 4);
+Border border2 = JBUI.Borders.empty(1, 2);
+Border border3 = JBUI.Borders.emptyTop(1);
+</code></pre>
+</body>
+</html>

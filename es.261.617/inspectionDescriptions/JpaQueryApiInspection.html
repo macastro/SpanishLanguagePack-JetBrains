@@ -1,0 +1,23 @@
+<html>
+<body>
+Símbolos no resueltos en nombres de informes, consultas nativas y métodos API relacionados:
+<ul>
+  <li>Consultas con nombres desconocidos</li>
+  <li>Parámetros de consulta desconocidos</li>
+</ul>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  @Entity
+  @NamedQuery(name = "SelectByConditionQuery", query = "...")
+  public class JavaEntity { ... }
+  class Main {
+    public static void executeQuery() {
+      Persistence.createEntityManagerFactory("")
+        .createEntityManager()
+        .createNamedQuery("SelectAllQuery") // Error: nombre de consulta desconocido
+        ...
+    }
+  }
+</code></pre>
+</body>
+</html>

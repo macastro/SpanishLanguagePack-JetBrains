@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre campos no inicializados después de la deserialización de objetos en el método <code>readObject()</code>.
+<p>Esta inspección no informa sobre campos transitorios.</p>
+<p>
+  Nota: Esta inspección utiliza un algoritmo de flujo de control muy conservador y podría informar erróneamente campos como no inicializados.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class DataObject implements Serializable {
+  String s; // s no está inicializado en readObject
+  int i;
+  private void readObject(ObjectInputStream stream) throws IOException {
+    i = stream.readInt();
+  }
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>Detecta declaraciones no permitidas antes del bloque 'plugins {}'.</p>
+Debido a las limitaciones del DSL de plugins de Gradle, solo un conjunto restringido de declaraciones Groovy está disponible antes del bloque '<code>plugins {}</code>'. Las únicas opciones son '<code>buildscript {}</code>', '<code>pluginManagement {}</code>' y otros '<code>plugins {}</code>'. <br>
+  <a href="https://docs.gradle.org/current/userguide/plugins.html#plugins_dsl_limitations">Consulte la documentación de Gradle</a>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="groovy">
+import foo.bar.Baz
+plugins {} // reporta 'plugins'
+plugins {
+  foo() // reporta 'foo'
+  id 'java'
+}
+</code></pre>
+</body>
+</html>

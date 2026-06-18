@@ -1,0 +1,31 @@
+<html>
+<body>
+Informa sobre clases que implementan la interfaz <code>Cloneable</code> pero no sobrescriben el método <code>clone()</code>.
+<p>Estas clases utilizan la implementación predeterminada de <code>clone()</code>, que no es <code>public</code> sino <code>protected</code>, y no copia el estado mutable de la clase.</p>
+<p>Se puede generar un método <code>clone()</code> básico mediante una corrección rápida, que puede servir como base para un método <code>clone()</code> funcional como se espera en las clases <code>Cloneable</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>public class</b> Data <b>implements</b> Cloneable {
+    <b>private</b> String[] names;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  <b>public class</b> Data <b>implements</b> Cloneable {
+    <b>private</b> String[] names;
+    @Override
+    <b>public</b> Data clone() {
+      <b>try</b> {
+        Data clone = (Data) <b>super</b>.clone();
+        // TODO: Copiar el estado mutable aquí, para que el clon no pueda modificar los elementos internos del original
+         <b>return</b> clone;
+      } <b>catch</b> (CloneNotSupportedException e) {
+        <b>throw new</b> AssertionError();
+      }
+    }
+  }
+</code></pre>
+<p>Use la opción <b>Ignorar clases clonables por herencia</b> para ignorar las clases que son <code>Cloneable</code> por heredar de una clase <code>Cloneable</code>.</p>
+<p>Use la opción <b>Ignorar casos donde Cloneable es necesario para llamar al clone() de la superclase</b> para ignorar las clases que necesitan implementar <code>Cloneable</code> debido a llamadas al método <code>clone()</code> desde la superclase.</p>
+</body>
+</html>

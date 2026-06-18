@@ -1,0 +1,27 @@
+<html>
+<body>
+Se detecta la asignación de un array de longitud cero cuando hay una constante en la clase que reporta el tipo de elementos del array.
+Dado que los arrays de longitud cero son inmutables, puede reutilizar la misma instancia del array para ahorrar memoria.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Item {
+    // Constante public de array de longitud cero reutilizable
+    public static final Item[] EMPTY_ARRAY = new Item[0];
+  }
+  class EmptyNode {
+    Item[] getChildren() {
+      // Creación innecesaria de array de longitud cero
+      return new Item[0];
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class EmptyNode {
+    Item[] getChildren() {
+      return Item.EMPTY_ARRAY;
+    }
+  }
+</code></pre>
+</body>
+</html>

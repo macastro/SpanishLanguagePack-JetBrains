@@ -1,0 +1,11 @@
+<html>
+<body>
+Informa sobre expresiones dinámicas que requieren expresiones diferidas o expresiones diferidas que requieren expresiones dinámicas.
+<p><b>Ejemplo:</b></p><br/>
+<pre><code>
+&lt;jsp:useBean id="exampleBean" scope="request" type="java.util.Date"/&gt;
+&lt;h:outputText id="${exampleBean.day}" value="#{exampleBean.day}" /&gt; // OK
+&lt;h:outputText id="#{exampleBean.day}" value="${exampleBean.day}" /&gt; // Error: el atributo 'id' requiere una expresión dinámica, 'value' - diferida
+</code></pre>
+</body>
+</html>

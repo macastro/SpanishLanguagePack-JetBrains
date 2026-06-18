@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre el método <code>getClass()</code> cuando se llama en instancias de <code>java.lang.Class</code>.
+<p>Esto suele ser un error, ya que el resultado siempre es equivalente a <code>Class.class</code>.
+Si es un error, es mejor eliminar la llamada a <code>getClass()</code> y usar el calificador directamente.
+Si el comportamiento es intencional, es mejor escribir explícitamente <code>Class.class</code> para evitar confusiones.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  void test(Class&lt;?&gt; clazz) {
+    String name = clazz.getClass().getName();
+  }
+</code></pre>
+<p>Después de aplicar una de las posibles correcciones rápidas:</p>
+<pre><code>
+  void test(Class&lt;?&gt; clazz) {
+    String name = clazz.getName();
+  }
+</code></pre>
+<p><small>Novedades de la versión 2018.2</small></p>
+</body>
+</html>

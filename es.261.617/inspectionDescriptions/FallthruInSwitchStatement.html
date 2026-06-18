@@ -1,0 +1,40 @@
+<html>
+<body>
+Reporta las caídas directas en las declaraciones <code>switch</code>.
+<p>Una caída directa ocurre cuando una serie de declaraciones ejecutables después de una etiqueta <code>case</code> no garantiza la transferencia de control antes de la siguiente etiqueta <code>case</code>. Esto puede ocurrir, por ejemplo, cuando una rama carece de una declaración <code>break</code>.
+En tal caso, el control cae directamente a las declaraciones después de la etiqueta <code>switch</code>, incluso cuando la expresión del <code>switch</code> no es igual al valor de la etiqueta. Aunque a veces es intencional, esta estructura puede ser confusa y generalmente es el resultado de errores tipográficos.</p>
+<p>
+Esta inspección ignorará cualquier caída directa que tenga un comentario de texto que coincida con el patrón de expresión regular <code>(?i)falls?\s*thro?u</code>.
+</p>
+<p>Se puede corregir añadiendo una declaración <code>break</code> a las ramas que puedan caer directamente a la siguiente rama.</p>
+<p>Ejemplo:</p>
+<pre><code>
+    switch(x) {
+      case (4):
+          if (condition) {
+              System.out.println("3");
+              // Sin break aquí
+          } else {
+              break;
+          }
+      case (6):
+          System.out.println("4");
+    }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+    switch(x) {
+        case (4):
+            if (condition) {
+                System.out.println("3");
+            } else {
+                break;
+            }
+            break;
+        case (6):
+            System.out.println("4");
+    }
+</code></pre>
+<p>
+</body>
+</html>

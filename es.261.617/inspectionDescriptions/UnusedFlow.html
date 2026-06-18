@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>Reporta Kotlinx Coroutines Flow que han sido creados pero nunca utilizados o pasados a otras funciones.</p>
+<p>A menos que se recolecte el Flow usando un operador terminal, el código que define el Flow no se ejecutará.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+fun foo() {
+    flowOf(1).onEach { println(it) }
+}
+</code></pre>
+<p>Consulta <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/">algunos ejemplos</a> de operadores terminales.</p>
+</body>
+</html>

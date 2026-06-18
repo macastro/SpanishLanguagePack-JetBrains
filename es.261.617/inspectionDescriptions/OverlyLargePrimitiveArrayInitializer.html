@@ -1,0 +1,12 @@
+<html>
+<body>
+Informa sobre expresiones inicializadoras de arrays que contienen arrays de tipos primitivos con demasiados elementos. Tales inicializadores pueden resultar en archivos de clase demasiado grandes, ya que se debe generar código para inicializar cada elemento del array. En entornos con memoria o ancho de banda limitados, puede ser más eficiente cargar arrays primitivos grandes desde archivos de recursos.
+<p>
+  Esta inspección es relevante para Java ME y otros entornos con recursos muy limitados.
+  La aplicación indiscriminada de esta inspección puede tener un impacto negativo en la claridad y el diseño del código.
+</p>
+<p>
+  Utilice esta opción para especificar el número máximo de elementos permitidos en los inicializadores de arrays primitivos.
+</p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre anotaciones de caché incorrectas: <code>@Cacheable</code>, <code>@CacheEvict</code>, <code>@CachePut</code>, <code>@CacheConfig</code>, etc.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+@org.springframework.stereotype.Component
+public class MyCacheManager implements CacheManager {...}
+public class MyConfiguration {
+   @Cacheable(value = "a",
+       cacheResolver ="myCacheManager") // Informa "El Bean debe ser de tipo 'org.springframework.cache.interceptor.CacheResolver'"
+   public String getCache(String isbn) {...}
+   @Cacheable(value = "abc",
+   private String getAbc() // Informa "Las anotaciones de caché deben definirse en métodos públicos"
+   {...}
+}
+</code></pre>
+</body>
+</html>

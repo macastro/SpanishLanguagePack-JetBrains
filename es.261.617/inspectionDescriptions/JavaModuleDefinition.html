@@ -1,0 +1,12 @@
+<html>
+<body>
+Reporta varios problemas en archivos module-info.java. Por ejemplo, reporta servicios que han sido proporcionados pero no exportados o utilizados.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+module myModule {
+  // Servicio proporcionado, pero su paquete contenedor no está exportado
+  provides com.example.MyService with com.example.MyServiceImpl;
+}
+</code></pre>
+</body>
+</html>

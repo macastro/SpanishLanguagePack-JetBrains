@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa sobre expresiones aritméticas sin sentido. Estas expresiones incluyen sumar 0, restar 0, multiplicar por 0 o 1, y dividir por 1.
+<p>Estas expresiones pueden ser el resultado de refactorizaciones automáticas y es poco probable que sean la intención del desarrollador.</p>
+<p>La corrección rápida simplifica estas expresiones.</p>
+<p><b>Ejemplo:</b>
+<pre><code>
+  void f(int a) {
+    int x = a - a;
+    int y = a + 0;
+    int res = x / x;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void f(int a) {
+    int x = 0;
+    int y = a;
+    int res = 1;
+  }
+</code></pre>
+<p>
+  Tenga en cuenta que, en casos muy raros, la sustitución sugerida puede no ser completamente equivalente al código original para todas las entradas posibles. Por ejemplo, la inspección sugiere reemplazar <code>x / x</code> por <code>1</code>.
+  Sin embargo, si <code>x</code> es cero, el código original lanzará una <code>ArithmeticException</code> o resultará en <code>NaN</code>.
+  Además, si <code>x</code> es <code>NaN</code>, el resultado también será <code>NaN</code>. Es poco probable que estos comportamientos sean intencionales.
+</p>
+</body>
+</html>

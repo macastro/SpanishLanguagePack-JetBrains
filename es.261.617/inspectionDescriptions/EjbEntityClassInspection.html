@@ -1,0 +1,18 @@
+<html>
+<body>
+Detecta las siguientes violaciones de la especificación EJB de nivel de error:
+<ul>
+  <li>Métodos Finder y Selector definidos incorrectamente</li>
+  <li>Accesores de campos CMP y CMR definidos incorrectamente</li>
+</ul>
+</body>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+public class SessionEJB implements javax.ejb.SessionBean {
+  // Error: el método 'ejbCreateXXX' debe ser public
+  protected void ejbCreateExample() { ... }
+  // Error: el método 'ejbCreateAnotherExample' debe devolver 'void'
+  public int ejbCreateAnotherExample() { ... }
+}
+</code></pre>
+</html>

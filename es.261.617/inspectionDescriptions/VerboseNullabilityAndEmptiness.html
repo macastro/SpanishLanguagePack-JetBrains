@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>El informe se puede simplificar a una única combinación de comprobaciones de <code>null</code> y vacío.</p>
+<p>Esta corrección rápida reemplazará las comprobaciones resaltadas con una llamada de comprobación combinada, como <code>isNullOrEmpty()</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun test(list: List&lt;Int>?) {
+      if (list == null || list.isEmpty()) {
+          println("List is empty!")
+      } else {
+          println(list.joinToString())
+      }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun test(list: List&lt;Int>?) {
+      if (list.isNullOrEmpty()) {
+          println("List is empty!")
+      } else {
+          println(list.joinToString())
+      }
+  }
+</code></pre>
+</body>
+</html>

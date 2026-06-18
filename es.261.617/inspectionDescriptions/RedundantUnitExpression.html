@@ -1,0 +1,32 @@
+<html>
+<body>
+Reporta expresiones redundantes de <code>Unit</code>.
+<p>
+    En Kotlin, <code>Unit</code> puede usarse como tipo de retorno para funciones que no devuelven ningún valor significativo.
+    El tipo <code>Unit</code> solo tiene un valor posible, que es el objeto <code>Unit</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun redundantA(): Unit {
+      return Unit // Redundante, 'Unit' se devuelve por defecto y coincide con el tipo de retorno esperado
+  }
+  fun requiredA(condition: Boolean): Any {
+      if (condition) return "hello"
+      return Unit // 'Unit' explícito es necesario porque el tipo esperado es 'Any'
+  }
+  fun redundantB(condition: Boolean): Any = if (condition) {
+      fun ancillary(): Int = 1
+      println("${ancillary()}")
+      Unit // Redundante porque la expresión anterior ya es de tipo 'Unit'
+  } else {
+      println("else")
+  }
+  fun requiredB(condition: Boolean): Any = if (condition) {
+      1024
+      Unit // Necesario, de lo contrario '1024' (Int) sería el valor de retorno
+  } else {
+      println("else")
+  }
+</code></pre>
+</body>
+</html>

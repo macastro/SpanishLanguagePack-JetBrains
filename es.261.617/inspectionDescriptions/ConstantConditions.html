@@ -1,0 +1,36 @@
+<html>
+<body>
+Señala estructuras de código que siempre violan el contrato de no nulidad, pueden arrojar excepciones o simplemente son redundantes, según el análisis del flujo de datos.
+<p>Ejemplos:</p>
+<pre><code>if (array.length &lt; index) {
+  System.out.println(array[index]);
+} // El índice del arreglo siempre está fuera de rango
+
+if (str == null) System.out.println("str is null");
+System.out.println(str.trim());
+// La última instrucción puede arrojar NPE
+
+@NotNull
+Integer cuadrado(@Nullable Integer entrada) {
+    // Se viola el contrato del método
+    return entrada == null ? null : entrada * entrada;
+}</code></pre>
+<p>
+  El comportamiento de esta inspección puede controlarse con varias anotaciones, como anotaciones de <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">anulabilidad</a>, anotaciones de <code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code>, anotaciones de <code>@Range</code>, etc.
+</p>
+<!-- tooltip end -->
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>Utilice la opción <b>Sugerir anotación @Nullable en métodos/campos/parámetros que aceptan valores nulos</b> para emitir advertencias cuando un valor nulo se pasa como argumento a un método con parámetros no anotados, cuando se almacena en un campo no anotado o cuando se devuelve por un método no anotado. En tal caso, la inspección sugerirá propagar la anotación <code>@Nullable</code>. También puede configurar anotaciones de anulabilidad con el botón <b>Configurar anotaciones</b>.</li>
+  <li>Utilice la opción <b>Tratar los miembros y parámetros no anotados como @Nullable</b> para suponer que los miembros no anotados pueden ser nulos y, por lo tanto, no deben utilizarse en contextos no nulos.</li>
+  <li>Utilice la opción <b>Informar de parámetros no nulos obligatorios que utilizan argumentos nulos literales</b> para reportar parámetros de método que no pueden ser nulos (por ejemplo, desreferenciados inmediatamente en el cuerpo del método) pero que tienen sitios de llamadas que pasan el literal <code>null</code>.</li>
+  <li>Utilice la opción <b>Informar métodos que pueden ser nulos pero que siempre devuelven un valor que no es nulo</b> para informar sobre métodos anotados como <code>@Nullable</code> pero que siempre devuelven un valor que no es nulo. En tal caso, se recomienda cambiar la anotación a <code>@NotNull</code>.</li>
+  <li>Utilice la opción <b>Ignorar instrucciones assert</b> para controlar cómo procesa la inspección las sentencias <code>assert</code>. Por defecto, esta opción está deshabilitada, lo que significa que las aserciones se consideran ejecutadas (modo -ea). Si se habilita esta opción, las aserciones se ignorarán por completo (modo -da).</li>
+  <li>Utilice la opción <b>Reportar problemas que ocurren solo en algunas rutas de código</b> para controlar si se informan problemas que pueden ocurrir solo en algunas rutas de código. Si esta opción está deshabilitada, no se informarán advertencias como "la excepción es posible". La inspección solo informará advertencias como "la excepción ocurrirá definitivamente". Este modo puede reducir significativamente el número de falsos positivos, particularmente si el código no está anotado de manera consistente con anotaciones de anulabilidad y de contrato. Es por eso que puede ser útil para encontrar los problemas más serios en las bases de código heredadas.
+  </li>
+</ul>
+<p>
+  Antes de la versión 2022.3 de IntelliJ IDEA, esta inspección formaba parte de la inspección "Condiciones constantes y excepciones". Ahora se ha dividido en dos inspecciones: "Valores constantes" y "Problemas de anulabilidad y flujo de datos".
+</p>
+</body>
+</html>

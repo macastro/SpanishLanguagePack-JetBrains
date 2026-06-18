@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>Reporta cuando se llama a `typing.cast` y ningún valor posible del tipo de origen puede asignarse al tipo de destino. Podemos llamar a esto tipos "no superpuestos".</p>
+<p>Esto generalmente indica un error. Si la conversión es intencional, primero convierte la expresión a un tipo padre común para expresar claramente la intención.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+from typing import cast
+# Tipos no superpuestos — posiblemente un error
+<b>cast(int, "a")</b>          # 'str' -> 'int'
+<b>cast(list[int], ["a"])</b>  # 'list[str]' -> 'list[int]'
+# El método de escape explícito recomendado es usar "conversión doble"
+cast(int, <b>cast(object, "a")</b>)  # ok
+# Casos de superposición legítimos
+cast(int, object())    # Downcasting válido
+cast(object, 1)        # Upcasting válido
+# Aunque lo siguiente es una conversión inválida, porque <code>list</code> es inmutable. Esta verificación no está soportada actualmente
+int_list = [1, 2, 3]
+cast(list[object], int_list)
+</code></pre>
+<p>La verificación depende de información de tipos estática; no se reportan advertencias cuando los tipos son desconocidos.
+  La varianza de tipos genéricos aún no se considera.</p>
+</body>
+</html>

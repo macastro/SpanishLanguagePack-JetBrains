@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre los valores de retorno de funciones que no devuelven ningún contenido.
+La llamada a estas funciones siempre genera un valor <code>undefined</code>, y tales asignaciones pueden indicar un error. <p>Ejemplo:</p>
+<pre><code>
+let a = console.log('foo');
+</code></pre>
+<br/>
+Los siguientes usos serán ignorados:
+<ul>
+  <li>Dentro de una declaración return</li>
+  <li>En ciertas operaciones binarias</li>
+  <li>Para funciones sobrescritas que no son void</li>
+</ul>
+</body>
+</html>

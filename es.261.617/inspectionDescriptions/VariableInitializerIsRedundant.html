@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta inicializadores redundantes de variables locales.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun example() {
+      var local = 42 // 初始值设定项冗余
+      local = 0
+      println(local)
+  }
+</code></pre>
+</body>
+</html>

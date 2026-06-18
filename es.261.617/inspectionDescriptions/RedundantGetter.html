@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>Reportar getters redundantes.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Test {
+      val a = 1
+          <b>get</b>
+      val b = 1
+          <b>get() = field</b>
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Test {
+      val a = 1
+      val b = 1
+  }
+</code></pre>
+</body>
+</html>

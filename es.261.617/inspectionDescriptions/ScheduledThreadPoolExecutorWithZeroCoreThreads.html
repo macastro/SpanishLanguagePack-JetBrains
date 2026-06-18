@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre cualquier instancia de <code>java.util.concurrent.ScheduledThreadPoolExecutor</code> donde <code>corePoolSize</code> se establece en cero, ya sea mediante el método <code>setCorePoolSize</code> o mediante el constructor del objeto.
+<p>
+  Un <code>ScheduledThreadPoolExecutor</code> sin hilos principales no ejecutará ningún contenido.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void foo(int corePoolSize) {
+      if (corePoolSize != 0) return;
+      ThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(corePoolSize); // Advertencia
+      executor.setCorePoolSize(corePoolSize); // Advertencia
+  }
+</code></pre>
+</body>
+</html>

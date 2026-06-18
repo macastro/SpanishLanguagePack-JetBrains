@@ -1,0 +1,24 @@
+<html>
+<body>
+Reporta palabras clave <code>else</code> redundantes en declaraciones <code>if</code>&mdash;<code>else</code> y cadenas de declaraciones.
+<p>
+La palabra clave <code>else</code> es redundante cuando todas las ramas anteriores terminan con declaraciones <code>return</code>, <code>throw</code>, <code>break</code> o <code>continue</code>. En estos casos, las declaraciones de la rama <code>else</code> pueden colocarse después de la declaración <code>if</code> y la palabra clave <code>else</code> puede eliminarse.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  if (name == null) {
+      throw new IllegalArgumentException();
+  } else {
+      System.out.println(name);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  if (name == null) {
+      throw new IllegalArgumentException();
+  }
+  System.out.println(name);
+</code></pre>
+<p>Deshabilita la opción <b>Reportar cuando no hay declaraciones después del 'if'</b> para ignorar los casos donde la declaración <code>if</code>&mdash;<code>else</code> es la última declaración en un bloque de código.</p>
+</body>
+</html>

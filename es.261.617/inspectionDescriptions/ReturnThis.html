@@ -1,0 +1,16 @@
+<html>
+<body>
+Métodos que devuelven <code>this</code>.
+<p>
+  Aunque este tipo de retorno es válido, raramente es necesario y generalmente indica que el método está diseñado para ser parte de una cadena de llamadas de método (por ejemplo, <code>buffer.append("foo").append("bar").append("baz")</code>).
+  Muchos estándares de codificación desaconsejan este tipo de encadenamiento.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public Builder append(String str) {
+    // [...]
+    return this;
+  }
+</code></pre>
+</body>
+</html>

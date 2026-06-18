@@ -1,0 +1,20 @@
+<html>
+<body>
+El informe puede reemplazarse con secuencias de escape de caracteres redundantes que conservan su significado como caracteres sin escape.
+Muchas secuencias de escape que son necesarias fuera de las clases de caracteres son redundantes dentro de los corchetes <code>[]</code> de las clases de caracteres.
+<p>
+  Aunque algunos dialectos (JavaScript, Python, etc.) permiten el uso de llaves izquierdas sin escape <code>{</code> fuera de las clases de caracteres, esto puede causar confusión y reducir la portabilidad del patrón, ya que algunos dialectos requieren que las llaves se escapen como caracteres.
+  Por lo tanto, esta verificación no informa sobre llaves izquierdas con escape.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  \-\;[\.]
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  -;[.]
+</code></pre>
+<p>
+La opción <b>Ignorar llaves y corchetes derechos con escape '}' y ']'</b> permite especificar si se deben informar <code>\}</code> y <code>\]</code> sin escape cuando el dialecto RegExp lo permite fuera de las clases de caracteres.
+<p><small>Cambios más recientes en 2017.3</small>
+</body>
+</html>

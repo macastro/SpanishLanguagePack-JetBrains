@@ -1,0 +1,8 @@
+<html>
+<body>
+Reporta el uso de miembros package-private declarados en el mismo paquete de software pero en diferentes módulos, así como el uso en el entorno de pruebas de miembros package-private declarados en el entorno de producción.
+<p>Si la clase declarante es cargada por diferentes cargadores, el código que accede a miembros package-private fallará en tiempo de ejecución mostrando <code>IllegalAccessError</code>.</p>
+<p>Si un método sobrescribe un método package-private en una clase cargada por un cargador diferente, entonces no será invocado al llamar al método super en una instancia de la clase de implementación.</p>
+<p>Si un método implementa un método abstract package-private desde una clase cargada por un cargador diferente, entonces llamar al método super en una instancia de la clase de implementación fallará mostrando <code>AbstractMethodError</code>.</p>
+</body>
+</html>

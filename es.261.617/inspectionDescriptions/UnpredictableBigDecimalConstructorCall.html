@@ -1,0 +1,25 @@
+<html>
+<body>
+Reporta llamadas al constructor de <code>BigDecimal</code> que acepta valores <code>double</code>.
+Estos constructores producen un <code>BigDecimal</code> igual al valor <code>double</code> proporcionado.
+Sin embargo, dado que double está codificado en formato de punto flotante binario de doble precisión IEEE 754 de 64 bits, el valor exacto puede ser inesperado.
+<p>Por ejemplo, <code>new BigDecimal(0.1)</code> producirá un objeto <code>BigDecimal</code> con el valor <small><code>0.1000000000000000055511151231257827021181583404541015625</code></small>, que es el número más cercano a 0.1 representable como <code>double</code>.
+  Para obtener un <code>BigDecimal</code> que contenga el valor esperado <code>0.1</code>, use <code>new BigDecimal("0.1")</code> o <code>BigDecimal.valueOf(0.1)</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Constructor {
+    void foo() {
+      new BigDecimal(0.1);
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Constructor {
+    void foo() {
+      new BigDecimal("0.1");
+    }
+  }
+</code></pre>
+</body>
+</html>

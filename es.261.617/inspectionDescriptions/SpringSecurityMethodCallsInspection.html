@@ -1,0 +1,6 @@
+<html>
+<body>
+Uso de @PreFilter/@PostFilter/@PreAuthorize: en modo proxy (predeterminado), solo se interceptarán las llamadas a métodos externos que entren a través del proxy.
+Esto significa que las auto-llamadas (que son en realidad llamadas de método a método dentro del mismo objeto destino) no funcionarán en tiempo de ejecución, incluso si el método llamado está marcado con @PreFilter/@PostFilter/@PreAuthorize
+</body>
+</html>

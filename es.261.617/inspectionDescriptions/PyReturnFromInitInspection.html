@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>
+  Informa sobre las declaraciones <code>return</code> que devuelven valores en el método <code>__init__</code> de una clase.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class Sum:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+        self.sum = a + b
+        return self.sum
+</code></pre>
+<p>El constructor no debe devolver ningún valor. El método <code>__init__</code> solo debe inicializar los valores de los miembros de la nueva instancia del objeto.</p>
+<p>La corrección rápida propuesta por el IDE es eliminar la declaración <code>return</code>.</p>
+</body>
+</html>

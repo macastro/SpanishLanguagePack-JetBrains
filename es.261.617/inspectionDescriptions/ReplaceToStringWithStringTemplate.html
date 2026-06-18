@@ -1,0 +1,21 @@
+<html>
+<body>
+El informe puede reemplazarse con una llamada a la función <code>toString</code> usando plantillas de cadena.
+<p>El uso de plantillas de cadena hace que el código sea más simple.</p>
+<p>Esta corrección rápida reemplazará <code>toString</code> con una plantilla de cadena.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun test(): String {
+      val x = 1
+      return x.toString()
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun test(): String {
+      val x = 1
+      return &quot;$x&quot;
+  }
+</code></pre>
+</body>
+</html>

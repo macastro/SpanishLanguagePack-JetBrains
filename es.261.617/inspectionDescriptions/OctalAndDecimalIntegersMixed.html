@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre literales enteros octales y decimales mezclados en un único inicializador de array.
+Esto puede ocurrir cuando se copian listas de números en inicializadores de arrays.
+Algunos números en el array pueden estar rellenados con ceros, lo que el compilador interpreta como octales.
+<p><b>Ejemplo:</b></p>
+<pre><code>int[] elapsed = {1, 13, 052};</code></pre>
+<p>Después de aplicar la corrección rápida para eliminar los ceros iniciales:</p>
+<pre><code>int[] elapsed = {1, 13, 52};</code></pre>
+<p>Si se trata de un número octal (por ejemplo, después de una variable en línea), puede usar otra corrección rápida para convertir el octal a decimal:</p>
+<code>int[] elapsed = {1, 13, 42};</code>
+<p>
+</body>
+</html>

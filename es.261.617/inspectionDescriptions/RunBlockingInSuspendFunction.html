@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporta llamadas a <code>runBlocking</code> dentro de funciones <code>suspend</code>.
+<p>Usar <code>runBlocking</code> en una función <code>suspend</code> bloquea el hilo de llamada, lo cual va en contra del propósito de la programación asíncrona.</p>
+<p>Esta corrección rápida puede reemplazar la llamada a <code>runBlocking</code> con una de las siguientes alternativas, dependiendo del contexto:</p>
+<ul>
+    <li>Una llamada a <code>run</code>.</li>
+    <li>Una llamada a <code>withContext</code> cuando se usa un <code>CoroutineContext</code> específico.</li>
+    <li>Código inline directo sin el wrapper <code>runBlocking</code>.</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code>
+suspend fun something() {
+  runBlocking {
+    code() // el hilo se bloquea aquí
+  }
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+suspend fun something() {
+  code() // se ejecuta de forma asíncrona
+}
+</code></pre>
+<p><small>Nuevo en 2025.1</small></p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<body>
+Reporta casos donde se pasan cadenas no vacías como parámetro <code>$enclosure</code> en métodos y funciones relacionadas con CSV.
+  <ul>
+    <li><code>SplFileObject::setCsvControl()</code></li>
+    <li><code>SplFileObject::fputcsv()</code></li>
+    <li><code>SplFileObject::fgetcsv()</code></li>
+    <li><code>fputcsv()</code></li>
+    <li><code>fgetcsv()</code></li>
+    <li><code>str_getcsv()</code>.</li>
+  </ul>
+<p>
+  Pasar una cadena no vacía como parámetro <code>$enclosure</code> está <a href="https://wiki.php.net/rfc/deprecations_php_8_4#deprecate_proprietary_csv_escaping_mechanism">obsoleto desde PHP 8.4</a>.
+</p>
+</body>
+</html>

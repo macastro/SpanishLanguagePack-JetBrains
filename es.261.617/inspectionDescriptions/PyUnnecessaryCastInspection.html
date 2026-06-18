@@ -1,0 +1,11 @@
+<html>
+<body>
+<p>Reporta llamadas innecesarias a typing.cast cuando la expresión ya tiene el tipo de destino especificado.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+from typing import cast
+a: int
+b = <b>cast(int, a)</b>  # Innecesario, a ya es int
+</code></pre>
+</body>
+</html>

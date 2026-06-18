@@ -1,0 +1,9 @@
+<html>
+<body>
+Informa sobre consultas que no tienen alias explícitos en las expresiones de salida (por ejemplo, en sentencias SELECT).
+<p>Ejemplo (PostgreSQL):</p>
+<pre><code>CREATE TABLE foo(a INT, b INT);
+SELECT 1, a + 1 AS A2, MAX(b) AS M
+FROM foo;</code></pre>
+</body>
+</html>

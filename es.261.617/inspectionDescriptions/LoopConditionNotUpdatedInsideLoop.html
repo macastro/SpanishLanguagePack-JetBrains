@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre cualquier variable y parámetro que se use en una condición de bucle y no se actualice dentro del mismo.
+<p>Estas variables y parámetros suelen utilizarse incorrectamente, ya que su ejecución puede resultar en bucles infinitos.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  void loopDoesNotLoop(boolean b) {
+    while (b) {
+      System.out.println();
+      break;
+    }
+  }
+</code></pre>
+<p>Configuración de la inspección:</p>
+<p>
+  Use la opción <b>Ignorar posibles modificaciones no locales</b> para desactivar esta inspección si la condición puede actualizarse indirectamente (por ejemplo, a través de un método invocado o mediante actualizaciones concurrentes desde otro hilo).
+</p>
+</body>
+</html>

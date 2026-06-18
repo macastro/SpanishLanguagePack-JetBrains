@@ -1,0 +1,38 @@
+<html>
+<body>
+Inspecciona las llamadas al método `values()` en clases de enumeración de Kotlin que podrían reemplazarse por una lectura de la propiedad `entries`.
+<p>
+    El uso de `Enum.entries` puede mejorar el rendimiento del código.
+</p>
+<p>
+    Esta corrección rápida reemplaza `values()` por `entries`.
+</p>
+<p>
+    <b>Más información</b>: <a href="https://youtrack.jetbrains.com/issue/KT-48872">KT-48872 Proporciona una alternativa moderna y de alto rendimiento para Enum.values()</a>
+</p>
+<p>
+    <b>Nota</b>: El tipo de la propiedad `entries` es diferente del tipo de valor retornado por el método `values()`, (`EnumEntries&lt;T&gt;` hereda de `List&lt;T&gt;`, en lugar de `Array&lt;T&gt;`).
+    Por lo tanto, en algunos casos la corrección rápida inserta una conversión adicional `toTypedArray()` para evitar romper el código, pero en la mayoría de los casos la sustitución se realizará sin dicha conversión (por ejemplo, en bucles `for`).
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    enum class Version {
+        V1, V2
+    }
+
+    Version.<b>values()</b>.forEach { /* .. */ }
+    val firstVersion = Version.<b>values()</b>[0]
+    functionExpectingArray(Version.<b>values()</b>)
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+    enum class Version {
+        V1, V2
+    }
+
+    Version.<b>entries</b>.forEach { /* .. */ }
+    val firstVersion = Version.<b>entries</b>[0]
+    functionExpectingArray(Version.<b>entries.toTypedArray()</b>)
+</code></pre>
+</body>
+</html>

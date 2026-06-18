@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre bucles <code>for</code> que pueden reemplazarse por una secuencia de operaciones stdlib (como <code>map</code>, <code>filter</code>, etc.).
+<p><b>Ejemplo:</b></p>
+<pre><code>
+fun foo(list: List&lt;String&gt;): List&lt;Int&gt; {
+  val result = ArrayList&lt;Int&gt;()
+  for (s in list) {
+     if (s.length &gt; 0)
+       result.add(s.hashCode())
+     }
+  return result
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+fun foo(list: List&lt;String&gt;): List&lt;Int&gt; {
+  val result = list
+    .filter { it.length &gt; 0 }
+    .map { it.hashCode() }
+  return result
+}</code></pre>
+</body>
+</html>

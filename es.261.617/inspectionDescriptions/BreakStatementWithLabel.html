@@ -1,0 +1,19 @@
+<html>
+<body>
+Reporte de declaraciones <code>break</code> que contienen etiquetas.
+<p>Las declaraciones <code>break</code> con etiquetas complican la refactorización y pueden resultar confusas.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  void handle(List&lt;String&gt; strs) {
+    outer:
+    for (String s: strs) {
+      for (char ch : s.toCharArray()) {
+        if ('s' == ch) break outer;
+        handleChar(ch);
+      }
+    }
+  }
+</code></pre>
+<p>
+</body>
+</html>

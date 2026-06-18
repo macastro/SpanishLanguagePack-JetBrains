@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre operaciones, grupos de operaciones y otras clases <code>ActionUpdateThreadAware</code> que no declaran explícitamente su modo.
+<p>
+  Cuando una operación o un grupo de operaciones define su propio método <code>update()</code>, la plataforma IntelliJ intenta emular el antiguo comportamiento sincrónico de llamar a los métodos <code>update()</code> y <code>getChildren()</code> en el hilo de UI, proporcionándoles todos los datos en <code>AnActionEvent.dataContext()</code>.
+  Para esto, almacena en caché todos los datos posibles en un hilo en segundo plano (incluso si no son necesarios).
+</p>
+<p>
+  Proporcione uno de los dos modos sobrescribiendo el método <code>getActionUpdateThread()</code>: <code>ActionUpdateThread.EDT</code> o <code>ActionUpdateThread.BGT</code>.
+</p>
+<p>
+  Para más detalles, consulte la documentación de <code>ActionUpdateThread</code>.
+</p>
+</body>
+</html>

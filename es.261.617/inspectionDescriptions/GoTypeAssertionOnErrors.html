@@ -1,0 +1,24 @@
+<html>
+<body>
+Reporta aserciones de tipo o switch de tipo incorrectos en errores, como <code>err.(*MyErr)</code> o <code>switch err.(type)</code>, y sugiere usar <code>errors.As</code> en su lugar.
+<p>Desde Go 1.13, es posible envolver errores usando la función <code>fmt.Errorf</code> con el verbo <code>%w</code>. Como resultado, las aserciones de tipo o switch de tipo en errores fallarán en errores envueltos. La forma recomendada de comprobar un tipo de error específico es usar la función <a href="https://pkg.go.dev/errors#As">errors.As</a> de la biblioteca estándar, ya que esta función recorre la cadena de errores envueltos al verificar un tipo de error específico.</p>
+<p>Para más información sobre <code>errors.As</code>, consulta <a href="https://go.dev/blog/go1.13-errors">working with Errors in Go 1.13</a>.</p>
+<p>Esta corrección rápida reemplaza las aserciones de tipo y switch de tipo incorrectos con llamadas a <code>errors.As</code>.</p>
+<p><b>Ejemplo</b></p>
+<pre><code>
+errFoo, ok := err.(*ErrFoo)
+switch err.(type) {
+  case *ErrBar:
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+var errFoo *ErrFoo
+ok := errors.As(err, &errFoo)
+var errBar *ErrBar
+switch {
+case errors.As(err, &errBar):
+}
+</code></pre>
+</body>
+</html>

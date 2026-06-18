@@ -1,0 +1,21 @@
+<html>
+<body>
+Reporta declaraciones de código que no se pueden ejecutar.
+<p>
+    Esta corrección rápida puede eliminar el código inalcanzable.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun value(): Int {
+      return 42
+      print("Hello, world !")
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun value(): Int {
+      return 42
+  }
+</code></pre>
+</body>
+</html>

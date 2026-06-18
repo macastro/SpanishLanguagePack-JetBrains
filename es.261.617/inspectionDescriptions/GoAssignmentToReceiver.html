@@ -1,0 +1,39 @@
+<html>
+<body>
+Asignación reportada al receptor del método.
+<p>Cuando asigna un valor a un receptor de método, el valor no se reflejará fuera del método en sí.
+  El valor se reflejará en las llamadas subsiguientes desde el mismo método.</p>
+<p>Ejemplo:</p>
+<pre><code>package main
+import "fmt"
+type demo struct {
+ Val int
+}
+func (d *demo) change() {
+ d = nil // la asignación al receptor del método solo se propaga al destinatario y no al llamador
+ d.myVal()
+}
+func (d *demo) myVal() {
+ fmt.Printf("my val: %#v\n", d)
+}
+func (d demo) change2() {
+ d = demo{} // la asignación al receptor del método no se propaga a otras llamadas
+ d.myVal()
+}
+func (d *demo) change3() {
+ d.Val = 3
+ d.myVal()
+}
+func main() {
+ d := &demo{}
+ d.myVal()
+ d.change()
+ d.myVal()
+ d.Val = 2
+ d.change2()
+ d.myVal()
+ d.change3()
+ d.myVal()
+}</code></pre>
+</body>
+</html>

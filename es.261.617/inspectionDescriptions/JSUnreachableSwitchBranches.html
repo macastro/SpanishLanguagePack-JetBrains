@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre ramas <code>case</code> inalcanzables en declaraciones <code>switch</code>. <p>Ejemplo:</p>
+<pre><code>
+/**
+ * @param {('foo' | 'bar')} p
+ */
+function foo(p) {
+    switch (p) {
+        case 'foo': break;
+        case 'bar': break;
+        case 'baz': break; // Inalcanzable
+    }
+}
+</code></pre>
+</body>
+</html>

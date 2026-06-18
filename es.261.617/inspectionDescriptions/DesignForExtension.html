@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa sobre métodos que no son <code>static</code>, <code>private</code>, <code>final</code> o <code>abstract</code>, y que tienen un cuerpo de declaraciones no vacío.
+<p>
+  Programar con un estilo que evite este tipo de métodos puede proteger los contratos de clase para que no sean violados por sus subclases. La ventaja de este estilo es que las subclases no pueden romper el estado de la superclase al olvidar llamar al método super. El costo es que la flexibilidad de las subclases está limitada, especialmente porque no pueden impedir la ejecución del código en la superclase. La corrección rápida puede utilizarse para agregar los modificadores faltantes.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+    public boolean equals(Object o) { return true; }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Foo {
+    public final boolean equals(Object o) { return true; }
+  }
+</code></pre>
+Esta inspección es apropiada para código que se utilizará en entornos seguros y puede no ser adecuada para entornos con menos restricciones.
+</body>
+</html>

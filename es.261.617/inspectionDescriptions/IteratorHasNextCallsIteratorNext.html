@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa sobre implementaciones de <code>Iterator.hasNext()</code> o <code>ListIterator.hasPrevious()</code> que llaman a <code>Iterator.next()</code> o <code>ListIterator.previous()</code> en la instancia del iterador. Tales llamadas son casi seguramente erróneas, ya que métodos como <code>hasNext()</code> no deberían modificar el estado del iterador, mientras que <code>next()</code> sí debería hacerlo.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class MyIterator implements Iterator&lt;Integer&gt; {
+    public boolean hasNext() {
+      return next() != null;
+    }
+  }
+</code></pre>
+</body>
+</html>

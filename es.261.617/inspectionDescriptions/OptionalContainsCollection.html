@@ -1,0 +1,18 @@
+<html>
+<body>
+Reporta el uso de tipos <code>java.util.Optional</code> o <code>com.google.common.base.Optional</code> que contienen parámetros de tipo array o colección.
+<p>En estos casos, es más claro usar un array o colección vacía para representar la ausencia de resultados.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Optional&lt;List&lt;Integer&gt;&gt; foo() {
+    return Optional.empty();
+  }
+</code></pre>
+<p>Este código podría escribirse como:</p>
+<pre><code>
+  List&lt;Integer&gt; foo() {
+    return List.of();
+  }
+  </code></pre>
+</body>
+</html>

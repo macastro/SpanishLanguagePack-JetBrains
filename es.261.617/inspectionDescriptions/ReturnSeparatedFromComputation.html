@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa sobre las declaraciones <code>return</code> que devuelven variables locales cuyos valores se calculan en otro lugar dentro del mismo método.
+<p>La corrección rápida permite integrar la variable devuelta moviendo la declaración return al lugar donde se calcula el valor de la variable.
+  Cuando el valor devuelto no se puede integrar en la declaración <code>return</code>, la corrección rápida intenta mover la declaración return lo más cerca posible de donde se calcula el valor devuelto.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  int n = -1;
+  for (int i = 0; i &lt; a.length; i++) {
+    if (a[i] == b) {
+      n = i;
+      break;
+    }
+  }
+  return n;
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  int n = -1;
+  for (int i = 0; i &lt; a.length; i++) {
+    if (a[i] == b) {
+      return i;
+    }
+  }
+  return n;
+</code></pre>
+</body>
+</html>

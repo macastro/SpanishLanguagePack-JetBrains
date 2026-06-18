@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>
+  Reporta funciones de extensión públicas para Driver/Finder/IdeaFrameUI en clases de test del módulo intellij.driver.tests.
+</p>
+<p>
+  Las funciones de extensión públicas en el módulo intellij.driver.tests crean problemas de mantenibilidad porque:
+</p>
+<ul>
+  <li>Son visibles para todos los tests en todos los contextos</li>
+  <li>Pueden llevar a dependencias de test poco claras y mayor dificultad de mantenimiento</li>
+</ul>
+<p>
+  <b>Soluciones recomendadas:</b>
+</p>
+<ul>
+  <li>Mover las funciones a un objeto companion privado</li>
+  <li>Reubicar en el objeto de página apropiado:
+    <ul>
+      <li>Objetos de página genéricos para funciones ampliamente aplicables</li>
+      <li>Objetos de página específicos para funciones dependientes del contexto</li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

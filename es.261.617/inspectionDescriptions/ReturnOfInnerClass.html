@@ -1,0 +1,15 @@
+<html>
+<body>
+Reporta las declaraciones <code>return</code> que devuelven instancias de clases anónimas, locales o internas.
+Estas instancias mantienen una referencia implícita a la instancia externa, lo que puede evitar que la instancia externa sea recolectada por el garbage collector.
+Cualquier invocación a métodos que devuelvan tales instancias podría causar fugas de memoria si el llamador retiene la instancia devuelta.
+<p>
+  Configuración de la inspección:
+</p>
+<ul>
+  <li>Use la opción <b>Ignorar valores devueltos de métodos no públicos</b> para ignorar los valores devueltos por métodos <code>protected</code> o package-private.
+    Los valores devueltos por métodos <code>private</code> siempre se ignoran.
+  </li>
+</ul>
+</body>
+</html>

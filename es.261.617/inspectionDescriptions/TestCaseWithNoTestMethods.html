@@ -1,0 +1,14 @@
+<html>
+<body>
+Reporta casos de test no <code>abstract</code> que no tienen ningún método de test. Tales casos de test generalmente indican código incompleto, o pueden ser código residual de refactoring que debería ser eliminado.
+<p>Ejemplo:</p>
+<pre><code lang="java">
+  public class CrucialTest {
+    @Before
+    public void setUp() {
+      System.out.println("setting up");
+    }
+  }
+</code></pre>
+</body>
+</html>

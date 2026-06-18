@@ -1,0 +1,10 @@
+<html>
+<body>
+Informa sobre variables en blanco opcionales en bucles range.
+<p>Cuando se itera sobre un slice usando un bucle <code>range</code>, se devuelven dos valores para cada iteración. El primer valor es el número de índice, y el segundo valor es una copia del elemento en ese índice. Si no necesita el segundo valor, puede omitirlo usando un identificador en blanco.</p>
+<p>Ejemplo:</p>
+<pre><code>for a, _ = range v {} // `for a, _ =` es igual que `for a =`</code></pre>
+<p>Para eliminar el identificador en blanco, puede usar la corrección rápida <b>Eliminar argumento en blanco</b>. Después de aplicar la corrección rápida, el código se verá así:</p>
+<pre><code>for a = range v {}</code></pre>
+</body>
+</html>

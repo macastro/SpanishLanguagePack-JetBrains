@@ -1,0 +1,21 @@
+<html>
+<body>
+Reporta código que compara cadenas de texto usando <b>==</b> o <b>!=</b>.
+<p>
+  Estos operadores determinan la igualdad de referencia en lugar de comparar el contenido.
+  En la mayoría de los casos, se debe usar <code>equals()</code> para comparar cadenas, que realiza una comparación carácter por carácter cuando las cadenas son objetos diferentes.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void foo(String s, String t) {
+    final boolean b = t == s;
+  }
+</code></pre>
+<p>Si se sabe que <code>t</code> no es null, se puede aplicar de manera segura la corrección rápida "insegura" y obtener un resultado similar al siguiente:</p>
+<pre><code>
+  void foo(String s, String t) {
+    final boolean b = t.equals(s);
+  }
+</code></pre>
+<p>
+</body>
+</html>

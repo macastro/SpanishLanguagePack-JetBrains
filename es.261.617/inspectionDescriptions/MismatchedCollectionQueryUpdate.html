@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa sobre colecciones cuyo contenido ha sido consultado pero no actualizado, o actualizado pero no consultado.
+<p>
+  Estas inconsistencias entre consultas y actualizaciones carecen de sentido y pueden indicar código muerto o errores tipográficos.
+</p>
+<p>
+  Los ajustes de la inspección permiten especificar patrones de nombres correspondientes a métodos de actualización/consulta.
+  Los métodos de consulta que devuelven elementos se detectan automáticamente, y solo es necesario especificar los métodos de consulta que escriben datos en parámetros de salida (por ejemplo, <code>OutputStream</code>).
+<p>
+<p><b>Ejemplo:</b></p>
+<p>Supongamos que tiene una clase personalizada <code>FixedStack</code> con un método <code>store()</code>:
+<pre><code>
+  public class FixedStack&lt;T&gt; extends Collection&lt;T&gt; {
+    public T store(T t) {
+      // implementación
+    }
+  }
+</code></pre>
+<p>Puede agregar <code>store</code> a la tabla de métodos de actualización para informar sobre consultas no coincidentes, por ejemplo:
+<pre><code>
+  void test(int i) {
+    FixedStack&lt;Integer&gt; stack = new FixedStack&lt;&gt;();
+    stack.store(i);
+  }
+</code></pre>
+</body>
+</html>

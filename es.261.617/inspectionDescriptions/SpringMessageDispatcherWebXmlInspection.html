@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>Reporta un Servlet <a href="https://docs.spring.io/spring-ws/sites/2.0/apidocs/org/springframework/ws/transport/http/MessageDispatcherServlet.html">MessageDispatcherServlet</a> que está registrado en <code>web.xml</code> pero carece del contexto de aplicación XML requerido en el directorio raíz Web.</p>
+<p><b>Ejemplo de web.xml:</b></p>
+<pre><code>
+&lt;web-app&gt;
+  &lt;servlet&gt;
+    &lt;servlet-name&gt;<strong>spring-ws</strong>&lt;/servlet-name&gt;  &lt;!-- No se encuentra el contexto de aplicación WEB-INF/spring-ws-servlet.xml --&gt;
+    &lt;servlet-class&gt;org.springframework.ws.transport.http.MessageDispatcherServlet&lt;/servlet-class&gt;
+    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+  &lt;/servlet&gt;
+&lt;/web-app&gt;
+</code></pre>
+</body>
+</html>
+</body>
+</html>

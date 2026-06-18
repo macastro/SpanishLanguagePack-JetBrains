@@ -1,0 +1,19 @@
+<html>
+<body>
+Reportar métodos con nombres específicos cuando:
+<ul>
+  <li>El nombre del método coincide con el nombre de varios métodos de interfaz conocidos en la biblioteca estándar</li>
+  <li>La firma no coincide con la firma del método de interfaz correspondiente</li>
+</ul>
+<p>Estos métodos pueden indicar que el tipo receptor pretende satisfacer una interfaz de la biblioteca estándar, pero no puede hacerlo debido a errores en la firma del método.</p>
+<p>Ejemplo:</p>
+<pre><code>type MyReader []byte
+func (r MyReader) ReadByte(data []byte) (byte, error) {
+}</code></pre>
+<p>Este uso es sospechoso porque parece intentar implementar <code>io.ByteReader</code>, pero la firma es incorrecta.
+  La forma correcta sería:</p>
+<pre><code>type MyReader []byte
+func (r MyReader) ReadByte() (byte, error) {
+}</code></pre>
+</body>
+</html>

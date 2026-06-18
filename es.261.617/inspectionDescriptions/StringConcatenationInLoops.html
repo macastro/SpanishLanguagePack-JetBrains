@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa sobre concatenaciones de String en bucles.
+<p>
+  Dado que cada concatenación de String copia toda la cadena, generalmente es mejor reemplazarla con llamadas explícitas a <code>StringBuilder.append()</code> o <code>StringBuffer.append()</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  String str = "";
+  for(int i=0; i&lt;10; i++) {
+    str += i;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  String str = "";
+  StringBuilder strBuilder = new StringBuilder(str);
+  for(int i = 0; i&lt;10; i++) {
+    strBuilder.append(i);
+  }
+  str = strBuilder.toString();
+</code></pre>
+<p>
+  En ocasiones, esta corrección rápida puede convertir una variable <code>String</code> en <code>StringBuilder</code> o introducir un nuevo <code>StringBuilder</code>. Se debe tener cuidado cuando el código original maneja específicamente valores <code>null</code>, ya que el reemplazo podría cambiar la semántica. Si los valores nulos son posibles, se recomienda realizar una corrección segura para nulos, generando las comprobaciones necesarias. Además, no hay garantía de que el reemplazo automático siempre resulte en un mejor rendimiento.
+</p>
+</body>
+</html>

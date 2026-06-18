@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre excepciones duplicadas en la lista <code>throws</code> del método.
+<p>Ejemplo:</p>
+<pre><code>
+  void f() throws Exception, Exception {}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void f() throws Exception {}
+</code></pre>
+<p>
+  Use la opción <b>Ignorar excepciones que son subclases de otras excepciones</b> para ignorar las excepciones que son subclases de otras excepciones.
+</p>
+</body>
+</html>

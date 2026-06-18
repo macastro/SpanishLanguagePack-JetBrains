@@ -1,0 +1,30 @@
+<html>
+<body>
+Informa sobre métodos <code>private</code> que solo son llamados desde clases internas de la clase que contiene dicho método. Estos métodos pueden moverse de forma segura a la clase interna.
+<p>Ejemplo:</p>
+<pre><code>
+public class Outer {
+  public static void main(String[] args) {
+    new Inner().run(args[0]);
+  }
+  static class Inner {
+    void run(String arg) {
+      // El método isEmpty() solo se usa desde la clase interna
+      // Considere moverlo a la clase interna
+      if (!isEmpty(arg)) {
+        System.out.println("Argument is supplied");
+      }
+    }
+  }
+  private static boolean isEmpty(String s) {
+    return s != null && s.trim().isEmpty();
+  }
+}
+</code></pre>
+<p>
+Use la primera casilla de verificación para ignorar los métodos <code>private</code> llamados desde clases anónimas o locales.
+<p>
+Use la tercera casilla de verificación para informar solo sobre métodos <code>static</code>.
+<p>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+<body>
+<p>
+    Reporta delegación cuando el objeto delegado es una instancia de una clase que sobrescribe (en el caso de clases <code>final</code> y <code>sealed</code>) o puede sobrescribir (en el caso de clases <code>open</code> y <code>abstract</code>) métodos por defecto de Java.
+</p>
+<p>
+    Por diseño, la delegación de Kotlin no sobrescribe métodos por defecto de Java, lo que puede llevar a errores difíciles de detectar, especialmente en jerarquías de herencia profundas.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+// Base.java:
+public interface Base {
+  default void print() {
+    System.out.println("Base");
+  }
+}
+</code></pre>
+<pre><code lang="kotlin">
+// BaseImpl.kt:
+class BaseImpl : Base {
+  override fun print() {
+    println("BaseImpl")
+  }
+}
+</code></pre>
+<pre><code lang="kotlin">
+// Main.kt:
+fun main() {
+  val inherited = BaseImpl()
+  val delegated = object : Base by inherited {}
+  inherited.print() // Outputs: BaseImpl
+  delegated.print() // Outputs: Base
+}
+</code></pre>
+<p>
+    Los desarrolladores normalmente esperan que todos los métodos, incluyendo los métodos por defecto sobrescritos en la delegación, sean reenviados. En su lugar, se invoca el método por defecto de Java, lo que puede llevar a resultados inesperados.
+</p>
+<p>
+    Una solución rápida es sobrescribir estos métodos delegando la implementación del método por defecto de Java al objeto delegado.
+</p>
+<pre><code>
+// Main.kt:
+fun main() {
+  val inherited = BaseImpl()
+  val delegated = object : Base by inherited {
+    override fun print() {
+      inherited.print()
+    }
+  }
+  inherited.print() // Outputs: BaseImpl
+  delegated.print() // Outputs: BaseImpl
+}
+</code></pre>
+<p>
+    Otra solución rápida es sobrescribir estos métodos delegando explícitamente la implementación del método por defecto de Java a la superclase.
+</p>
+<pre><code>
+// Main.kt:
+fun main() {
+  val inherited = BaseImpl()
+  val delegated = object : Base by inherited {
+    override fun print() {
+      super.print()
+    }
+  }
+  inherited.print() // Outputs: BaseImpl
+  delegated.print() // Outputs: Base
+}
+</code></pre>
+<p><small>Nuevo en 2025.1</small></p>
+</body>
+</html>

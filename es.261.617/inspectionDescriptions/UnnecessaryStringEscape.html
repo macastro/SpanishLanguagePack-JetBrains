@@ -1,0 +1,20 @@
+<html>
+<body>
+Reporta caracteres de escape innecesarios en literales de <code>String</code> y <code>char</code> (opcional).
+<p>Aunque no necesita ser escapado, el carácter de tabulación escapado (<code>\t</code>) no será reportado, porque las tabulaciones son difíciles de distinguir de los espacios.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  String s = "\'Scare\' quotes";
+  String t = """
+    All you need is\n\tLove\n""";
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  String s = "'Scare' quotes";
+  String t = """
+    All you need is
+    \tLove
+    """;
+</code></pre>
+</body>
+</html>

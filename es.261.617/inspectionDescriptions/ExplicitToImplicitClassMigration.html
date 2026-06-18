@@ -1,0 +1,24 @@
+<html>
+<body>
+Reporta clases ordinarias que pueden convertirse en archivos fuente compactos
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Sample {
+      public static void main(String[] args) {
+          System.out.println("Hello, world!");
+      }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void main() {
+      IO.println("Hello, world!");
+  }
+</code></pre>
+<p>Configurar inspección:</p>
+<ul>
+  <li>Selecciona <b>Reemplazar 'System.out.print()' y 'System.out.println()' con métodos de la clase 'java.lang.IO'</b> para convertir estas llamadas a métodos IO.</li>
+</ul>
+<p><small>Nuevo en 2024.1</small></p>
+</body>
+</html>

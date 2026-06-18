@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre comprobaciones innecesarias de longitud de array después de una iteración. Cuando un array tiene longitud cero, la iteración se omite, por lo que no es necesario verificar explícitamente la longitud.
+<p>Ejemplo:</p>
+<pre><code>
+  void f(String[] array) {
+    if (array.length != 0) { // Comprobación innecesaria
+      for (String str : array) {
+        System.out.println(str);
+      }
+    }
+  }
+</code></pre>
+<p>Utilice la corrección rápida para desenvolver o eliminar la comprobación de longitud:</p>
+<pre><code>
+  void f(String[] array) {
+    for (String str : array) {
+      System.out.println(str);
+    }
+  }
+</code></pre>
+<p><small>Novedades en 2022.3</small></p>
+</body>
+</html>

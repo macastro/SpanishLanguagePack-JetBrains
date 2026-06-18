@@ -1,0 +1,64 @@
+<html>
+<body>
+Informa sobre problemas en los archivos de propiedades contenidos en el paquete de recursos.
+<ul>
+  <li><b>Informar sobre traducciones faltantes</b> <br><br>
+  Utiliza esta opción para informar sobre propiedades que están presentes en el archivo de propiedades padre pero faltan en las propiedades heredadas (a menos que sea un dialecto del idioma).
+  <br><br> <p>Ejemplo:</p>
+  <pre><code>
+    # messages.properties
+    abc=xxx
+    # messages_fr.properties
+    # archivo vacío
+  </code></pre>
+  La propiedad vacía <code>abc</code> se informará como no traducida.
+  <br><br><br> </li>
+  <li><b>Informar sobre propiedades inconsistentes</b> <br><br>
+  Utiliza esta opción para informar sobre propiedades que están presentes en los archivos de propiedades heredados pero faltan en las propiedades padre (o en las propiedades del mismo nivel si no hay padre).
+  <br><br> <p>Ejemplo:</p>
+  <pre><code>
+    # messages.properties
+    # archivo vacío
+    # messages_fr.properties
+    abc=xxx
+  </code></pre>
+  Aquí, la propiedad <code>abc</code> traducida no está disponible para ningún idioma excepto francés, por lo que se informará como faltante en el archivo de propiedades (predeterminado) <code>messages.properties</code>.
+  <br><br><br> </li>
+  <li><b>Informar sobre propiedades sobrescritas con el mismo valor</b> <br><br>
+  Utiliza esta opción para informar sobre propiedades que se han copiado y pegado literalmente en múltiples archivos de propiedades.<br>
+  <br><br> <p>Ejemplo:</p>
+  <pre><code>
+    # messages.properties
+    abc=xxx
+    # messages_fr.properties
+    abc=xxx
+  </code></pre>
+  La propiedad <code>abc</code> se informará como heredada innecesariamente en el archivo <code>messages_fr.properties</code>.
+  <br><br><br> </li>
+  <li><b>Informar sobre propiedades sobrescritas con marcadores de posición diferentes</b> <br><br>
+  Utiliza esta opción para verificar la consistencia de los marcadores de posición en las propiedades sobrescritas.
+  <br><br> <p>Ejemplo:</p>
+  <pre><code>
+    # messages.properties
+    qwe={0}xxx{1}
+    abc={0}yyy{1}
+    # messages_fr.properties
+    qwe={0}xxx{0}xxx{1}
+    abc={0}yyy
+  </code></pre>
+  La propiedad <code>abc</code> se informará como una propiedad que contiene marcadores de formato de mensaje que no corresponden con <code>messages.properties</code>.
+  <br><br><br> </li>
+  <li><b>Informar sobre propiedades sobrescritas con diferentes terminaciones</b> <br><br>
+  Utiliza esta opción para verificar la consistencia de las terminaciones en las propiedades sobrescritas.
+  <br><br> <p>Ejemplo:</p>
+  <pre><code>
+    # messages.properties
+    abc=xxxzzz
+    # messages_fr.properties
+    abc=xxx;
+  </code></pre>
+  La propiedad <code>abc</code> se informará como terminada con un carácter especial (<code>!</code> / <code>?</code> / <code>.</code> / <code>:</code> / <code>;</code>) mientras que el valor padre en <code>messages.properties</code> no lo hace.
+  </li>
+</ul>
+</body>
+</html>

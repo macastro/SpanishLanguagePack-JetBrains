@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta variables locales que se declaran con la palabra clave <code>var</code> pero nunca se modifican.
+<p>Kotlin recomienda usar la palabra clave <code>val</code> para declarar variables prácticamente inmutables, asegurando que sus valores nunca cambiarán.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun example() {
+      var primeNumbers = listOf(1, 2, 3, 5, 7, 11, 13)
+      var fibonacciNumbers = listOf(1, 1, 2, 3, 5, 8, 13)
+      print("Same numbers: " + primeNumbers.intersect(fibonacciNumbers))
+  }
+</code></pre>
+<p>La corrección rápida reemplazará la palabra clave <code>var</code> por <code>val</code>:</p>
+<pre><code>
+  fun example() {
+      val primeNumbers = listOf(1, 2, 3, 5, 7, 11, 13)
+      val fibonacciNumbers = listOf(1, 1, 2, 3, 5, 8, 13)
+      print("Same numbers: " + primeNumbers.intersect(fibonacciNumbers))
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<body>
+Inspección de archivos YAML/JSON interpretados como parte de la especificación OpenAPI/Swagger.
+<p>
+  Dichos archivos no contienen características de especificación explícitas, pero son referenciados desde el archivo de especificación principal cercano.
+</p>
+<!-- tooltip end -->
+
+<p>
+  El siguiente ejemplo contiene dos archivos ubicados en el mismo directorio. El primero es un archivo de especificación principal simple.
+  El segundo es referenciado desde el primero, por lo que se sugiere considerarlo también como una especificación.
+</p>
+
+<p><b>Archivo de especificación principal `openapi.yaml`:</b></p>
+<pre><code>
+openapi: 3.1.0
+components:
+  schemas:
+    CustomSchema:
+      description: Objeto de esquema personalizado
+      properties:
+        foo:
+          $ref: 'common.components.yaml#/components/schemas/CommonSchema'
+</code></pre>
+
+<p><b>Candidato a archivo de especificación `common.components.yaml`:</b></p>
+<pre><code>
+components: # Resaltado 'Marcar archivo como especificación OpenAPI'
+  schemas:
+    CommonSchema:
+      description: Objeto de esquema común reutilizado en varias especificaciones
+</code></pre>
+</body>
+</html>

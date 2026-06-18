@@ -1,0 +1,41 @@
+<html>
+<body>
+Reporta las siguientes deficiencias en los comentarios Javadoc:
+<ul>
+  <li>Falta de Javadoc donde se requiere</li>
+  <li>Ausencia de etiquetas requeridas</li>
+  <li>Etiquetas inválidas o incompletas</li>
+  <li>Descripción Javadoc faltante o incompleta</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code>
+  class Main {
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  /**
+   *
+   */
+  class Main {
+  }
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code>
+  String id(String value) {
+    return value;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  /**
+   * @param value
+   * @return
+   */
+  String id(String value) {
+    return value;
+  }
+</code></pre>
+Use la pestaña y las opciones de inspección correspondientes para definir el nivel de visibilidad que requiere Javadoc, así como las etiquetas Javadoc necesarias para clases, métodos, campos y clases internas.
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre operaciones no atómicas en campos volatile.
+<p>
+  Un ejemplo de operación no atómica es actualizar un campo usando operadores de incremento.
+  Como la operación involucra lectura y escritura, y otras modificaciones pueden ocurrir entre ellas, los datos pueden corromperse.
+  La operación se puede hacer atómica envolviendo el código en un bloque <code>synchronized</code> o usando una de las clases del paquete <code>java.util.concurrent.atomic</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  private volatile int v = 1;
+  void foo() {
+    v = 2 * v;
+  }
+</code></pre>
+</body>
+</html>

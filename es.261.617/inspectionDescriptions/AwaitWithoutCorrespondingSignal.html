@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa sobre llamadas a <code>Condition.await()</code> que no tienen las correspondientes llamadas a <code>Condition.signal()</code> o <code>Condition.signalAll()</code>.
+<p>
+  Llamar a <code>Condition.await()</code> en un hilo sin el correspondiente <code>Condition.signal()</code> puede resultar en que el hilo se bloquee hasta que sea interrumpido o ocurra un "despertar espurio".
+</p>
+<p>Esta inspección solo informa sobre llamadas que tienen como objetivo los campos de la clase actual.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Queue {
+    private final Condition isEmpty = ...;
+    void add(Object elem) {
+      // ...
+      // isEmpty.signal();
+      // ...
+    }
+    void remove(Object elem) throws InterruptedException {
+      // ...
+      isEmpty.await(); // 'await()' no tiene la correspondiente llamada a 'signal()'/'signalAll()'
+      // ...
+    }
+  }
+</code></pre>
+</body>
+</html>

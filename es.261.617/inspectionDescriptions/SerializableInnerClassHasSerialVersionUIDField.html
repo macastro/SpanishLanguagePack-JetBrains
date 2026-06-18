@@ -1,0 +1,35 @@
+<html>
+<body>
+Reporta clases internas no estáticas que implementan <code>java.io.Serializable</code> pero no definen el campo <code>serialVersionUID</code>.
+<p>
+  Sin un campo <code>serialVersionUID</code>, cualquier cambio en la clase hará que las versiones previamente serializadas sean ilegibles. Se recomienda encarecidamente que las clases internas no estáticas <code>Serializable</code> incluyan un campo <code>serialVersionUID</code>, de lo contrario, el algoritmo de serialización predeterminado puede causar incompatibilidades de versiones serializadas entre compiladores debido a diferencias en los métodos de acceso sintéticos.
+</p>
+<p>
+  Se recomienda agregar el campo <code>serialVersionUID</code> faltante mediante una corrección rápida.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Outer {
+      class Inner implements Serializable {}
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Outer {
+      class Inner implements Serializable {
+          private static final long serialVersionUID = -7004458730436243902L;
+      }
+  }
+</code></pre>
+<p>Configure la inspección con las siguientes opciones:</p>
+<ul>
+  <li>
+    Lista de clases cuyos herederos no deberían ser reportados por esta inspección.
+    Esto aplica a clases que heredan <code>Serializable</code> de una superclase pero no se utilizan para serialización.
+  </li>
+  <li>
+    Si se deben ignorar las clases anónimas <code>Serializable</code>.
+  </li>
+</ul>
+</body>
+</html>

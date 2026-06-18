@@ -1,0 +1,24 @@
+<html>
+<body>
+Reporta bloques de texto con caracteres de espacios finales.
+Los espacios finales se consideran incidentales y serán eliminados por el compilador de Java.
+<p><b>Ejemplo (donde los espacios se representan con puntos):</b></p>
+<pre><code>
+..String.count.=."""
+....one
+....two....
+....three
+....""";
+</code></pre>
+<p>Se proporcionan dos correcciones rápidas.
+  Una para eliminar los espacios finales, y otra para escapar los espacios finales para evitar que sean eliminados por el compilador:</p>
+<pre><code>
+..String.count.=."""
+....one
+....two...\s
+....three
+....""";
+</code></pre>
+<p><small>Novedad en 2021.1</small></p>
+</body>
+</html>

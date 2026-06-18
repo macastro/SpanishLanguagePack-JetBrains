@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>Reporta etiquetas personalizadas inexistentes.</p>
+
+<p>
+  Puede crear etiquetas personalizadas para su aplicación usando archivos de plantilla simples que se almacenan en el directorio <code>app/views/tags</code>.
+  El nombre de archivo de la plantilla se utiliza como nombre de la etiqueta.
+  Por ejemplo, para crear una etiqueta <code>hola</code>, simplemente cree el archivo <code>app/views/tags/hola.html</code>.
+  Para hacer referencia a la etiqueta directamente: <code>#{hola /}</code>.
+</p>
+
+<p>Esta inspección reportará la referencia <code>#{hola /}</code> si <code>app/views/tags/hola.html</code> no existe.</p>
+
+</body>
+</html>

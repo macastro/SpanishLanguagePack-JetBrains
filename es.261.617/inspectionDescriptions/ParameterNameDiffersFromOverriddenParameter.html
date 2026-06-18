@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta parámetros que tienen nombres diferentes en los métodos sobrescritos o sobrecargados correspondientes. Aunque es legal en Java, estos nombres inconsistentes pueden resultar confusos y reducir los beneficios de la documentación con buenas prácticas de nomenclatura.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Person {
+    Person(String fullName) {}
+  }
+  class Child extends Person {
+    Child(String name) { super(name); }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Person {
+    Person(String fullName) {}
+  }
+  class Child extends Person {
+    Child(String fullName) { super(fullName); }
+  }
+</code></pre>
+<p>
+  Las opciones permiten especificar si se deben ignorar los nombres de parámetros que tienen solo un carácter de longitud o que provienen de métodos de biblioteca. Ambos son útiles si no desea estar limitado por convenciones de nomenclatura cuestionables utilizadas en las bibliotecas.
+</p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<body>
+Reporta todas las cadenas con prefijo de interpolación.
+<p>
+    La corrección rápida de la inspección eliminará el prefijo de interpolación, actualizará las entradas de interpolación y escapará los caracteres de signo de dólar inseguros.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+val foo = $$"""
+{
+    "foo": $ref,
+    "bar": {
+        "baz": "$20"
+        "boo": "$${100 + 200}"
+    }
+}
+"""
+</code></pre>
+<p><b>Después de aplicar la corrección rápida:</b></p>
+<pre><code>
+val foo = """
+{
+    "foo": ${'$'}ref,
+    "bar": {
+        "baz": "$20"
+        "boo": "${100 + 200}"
+    }
+}
+"""
+</code></pre>
+</body>
+</html>

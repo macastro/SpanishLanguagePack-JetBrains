@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre llamadas a métodos modificadores de Java (como <code>fill</code>, <code>reverse</code>, <code>shuffle</code>, <code>sort</code>) en colecciones inmutables de Kotlin.
+<p>Esto puede provocar una <code>UnsupportedOperationException</code> en tiempo de ejecución.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import java.util.Collections
+  fun test() {
+      val immutableList = listOf(1, 2)
+      Collections.reverse(immutableList)
+  }
+</code></pre>
+<p>Para corregir este problema, haga que la lista sea mutable.</p>
+</body>
+</html>

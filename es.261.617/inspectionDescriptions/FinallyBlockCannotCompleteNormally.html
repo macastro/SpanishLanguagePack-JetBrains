@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre el uso de las declaraciones <code>return</code>, <code>throw</code>, <code>break</code>, <code>continue</code> y <code>yield</code> dentro de un bloque <code>finally</code>.
+Estas provocan que el bloque <code>finally</code> termine de forma abrupta en lugar de completarse normalmente.
+Se suprimirá cualquier excepción lanzada desde los bloques <code>try</code> y <code>catch</code> de la misma declaración <code>try</code>-<code>catch</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void x() {
+    <b>try</b> {
+      throw new RuntimeException();
+    } <b>finally</b> {
+      // Si bar() devuelve true, RuntimeException será suprimida
+      <b>if</b> (bar()) <b>return</b>;
+    }
+  }
+</code></pre>
+</body>
+</html>

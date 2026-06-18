@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>Informa sobre parámetros <code>@PathVariable</code> que están declarados en la firma del método pero no existen en la ruta URL, o que están declarados en la ruta URL pero no existen en la firma del método.
+  Esta corrección rápida añadirá los parámetros faltantes.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  @RequestMapping("/path/{myVariable}/")
+  public String handler(@PathVariable String name_is_not_equal_to_myVariable) {
+    return "...";
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida, el resultado se verá así:</p>
+<pre><code lang="java">
+  @RequestMapping("/path/{myVariable}/")
+  public String handler(@PathVariable String myVariable) {
+    return "...";
+  }
+</code></pre>
+</body>
+</html>

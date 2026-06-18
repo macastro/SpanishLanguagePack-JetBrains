@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta bloques de texto que usan espacios y tabulaciones para la indentación.
+Esto puede producir resultados inesperados, ya que el procesamiento de bloques de texto de javac trata los espacios y las tabulaciones como equivalentes.
+<p>En el siguiente ejemplo, los espacios y las tabulaciones se representan como <code>·</code> y <code>␉</code> respectivamente, en el editor, una tabulación equivale a 2 espacios.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+String colors = """
+····red
+␉ ␉ green
+····blue""";
+</code></pre>
+<p>Después de imprimir esta cadena, el resultado es:</p>
+<pre><code>
+··red
+green
+··blue
+</code></pre>
+<p>Después de que el compilador elimina la misma cantidad de caracteres de espacio del inicio de cada línea, algunas líneas aún conservan espacios iniciales.</p>
+<p><small>Novedad en 2021.1</small></p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="키맵">
+    <option name="시작" path="ActionManager" hit="타이머 시작/중지" />
+    <option name="중지" path="ActionManager" hit="타이머 시작/중지" />
+    <option name="타이머" path="ActionManager" hit="타이머 시작/중지" />
+    <option name="대해" path="ActionManager" hit="활성 작업에 대해 타이머 시작/중지" />
+    <option name="시작" path="ActionManager" hit="활성 작업에 대해 타이머 시작/중지" />
+    <option name="작업에" path="ActionManager" hit="활성 작업에 대해 타이머 시작/중지" />
+    <option name="중지" path="ActionManager" hit="활성 작업에 대해 타이머 시작/중지" />
+    <option name="타이머" path="ActionManager" hit="활성 작업에 대해 타이머 시작/중지" />
+    <option name="활성" path="ActionManager" hit="활성 작업에 대해 타이머 시작/중지" />
+  </configurable>
+  <configurable id="tasks.timeTracking" configurable_name="시간 추적">
+    <option name="시간" hit="시간 추적" />
+    <option name="추적" hit="시간 추적" />
+    <option name="설정" hit="시간 추적 설정" />
+    <option name="시간" hit="시간 추적 설정" />
+    <option name="추적" hit="시간 추적 설정" />
+    <option name="e" hit="시간 추적 활성화 E " />
+    <option name="시간" hit="시간 추적 활성화 E " />
+    <option name="추적" hit="시간 추적 활성화 E " />
+    <option name="활성화" hit="시간 추적 활성화 E " />
+    <option name="일시" hit="일시 중지 지연 " />
+    <option name="중지" hit="일시 중지 지연 " />
+    <option name="지연" hit="일시 중지 지연 " />
+    <option name="초" hit="초" />
+  </configurable>
+</options>

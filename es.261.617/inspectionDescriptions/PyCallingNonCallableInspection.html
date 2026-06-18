@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>Informa sobre intentos de llamar a objetos no invocables como propiedades:</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class Record:
+    @property
+    def as_json(self):
+json = Record().as_json()
+</code></pre>
+</body>
+</html>

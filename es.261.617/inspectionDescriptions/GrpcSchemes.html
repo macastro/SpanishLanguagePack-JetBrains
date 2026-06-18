@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>
+  Reporta el uso innecesario del esquema `grpc` o los esquemas estándar `http[s]` en las peticiones gRPC
+</p>
+<p>
+  Ejemplos de peticiones:
+</p>
+<pre><code>
+# El esquema `grpc` puede omitirse, ya que por defecto se asume una conexión no segura
+GRPC grpc://localhost/TestService/testRpc
+</code></pre>
+<pre><code>
+# El esquema `http` puede omitirse: se prefiere un esquema vacío para conexiones no seguras y el esquema específico `grpcs` para conexiones seguras
+GRPC http://localhost/TestService/testRpc
+</code></pre>
+<pre><code>
+# El esquema `https` debe reemplazarse por `grpcs`: se prefiere el esquema específico `grpcs` para indicar que se requiere seguridad de capa de transporte para ejecutar la petición
+GRPC https://localhost/TestService/testRpc
+</code></pre>
+<p>
+  Para evitar confusiones, se recomienda usar el esquema específico `grpcs` en peticiones gRPC cuando se requiera un canal de comunicación seguro. En caso contrario, el esquema puede omitirse por completo
+</p>
+</body>
+</html>

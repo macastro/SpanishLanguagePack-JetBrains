@@ -1,0 +1,14 @@
+<html>
+<body>
+Las propiedades del informe sobrescriben las propiedades previamente definidas en el mismo archivo.
+<p>Por ejemplo:
+<pre><code>
+[*.java]
+indent_size=4
+[{*.java,*.js}]
+indent_size=2
+</code></pre>
+La segunda sección también contiene archivos <code>[*.java]</code>, pero establece indent_size con el valor 2.
+Por lo tanto, la primera declaración <code>indent_size=4</code> será ignorada.
+</body>
+</html>

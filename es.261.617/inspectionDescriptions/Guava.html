@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre los usos de primitivas de Guava que pueden migrarse a llamadas de API Java estándar.
+<p>Por ejemplo, la inspección informa sobre el uso de clases e interfaces (como <code>FluentIterable</code>, <code>Optional</code>, <code>Function</code>, <code>Predicate</code> o <code>Supplier</code>).</p>
+<p>Ejemplo:</p>
+<pre><code>
+  ImmutableList&lt;String&gt; results = FluentIterable.from(List.of(1, 2, 3)).transform(Object::toString).toList();
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  List&lt;String&gt; results = List.of(1, 2, 3).stream().map(Object::toString).collect(Collectors.toList());
+</code></pre>
+<p>
+La corrección rápida puede cambiar la semántica. Algunos iterables de evaluación perezosa de Guava pueden convertirse en iterables de evaluación anticipada.
+</p>
+</body>
+</html>

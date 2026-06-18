@@ -1,0 +1,46 @@
+<html>
+<body>
+Informa sobre instancias de <code>AutoCloseable</code> que no se utilizan en una declaración try-with-resources, también conocida como <i>gestión automática de recursos</i>.
+<p>
+  Esto significa que también informa sobre el estilo "abrir recurso antes/dentro de <code>try</code>, cerrar en <code>finally</code>" utilizado antes de que try-with-resources estuviera disponible.
+  Al desarrollar en Java 7 y versiones posteriores, esta inspección pretende reemplazar todas las comprobaciones de recursos <i>abiertos pero no cerrados de manera segura</i>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  private static void foo() throws IOException {
+    InputStream profile = Thread.currentThread().getContextClassLoader().getResourceAsStream("/someFile");
+    System.out.println(profile.read());
+  }
+</code></pre>
+<p>
+  Configure la inspección con las siguientes opciones:
+</p>
+<ul>
+  <li>
+    Lista de subclases de <code>AutoCloseable</code> que no necesitan ser cerradas y que esta inspección debería ignorar.
+    <br/>
+    <b>Nota</b>: Incluso si se lista <code>java.util.stream.Stream</code> para ser ignorado, la inspección seguirá informando sobre los streams devueltos por los métodos <code>lines()</code>, <code>walk()</code>, <code>list()</code> y <code>find()</code> de <code>java.nio.file.Files</code>.
+    Estos streams contienen recursos de E/S asociados que necesitan ser cerrados.
+  </li>
+  <li>
+    Lista de métodos que devuelven <code>AutoCloseable</code> que deberían ser ignorados en las llamadas.
+  </li>
+  <li>
+    Si se debe ignorar <code>AutoCloseable</code> cuando es el resultado de una llamada a método.
+    Cuando esta opción está habilitada, también se ignorarán los resultados de los métodos factory.
+  </li>
+  <li>
+    Si la inspección debe informar cuando una instancia de <code>AutoCloseable</code> se pasa como argumento a una llamada de método.
+    Si esta opción está habilitada, la inspección asumirá que el recurso se cierra en el método llamado.
+    Las llamadas a métodos en bloques <code>finally</code> y argumentos <code>AutoCloseable</code> que contengan 'close' en sus nombres no serán ignoradas.
+  </li>
+  <li>
+    Si se deben ignorar las referencias a métodos para constructores de clases de recursos.
+  </li>
+  <li>
+    Si se deben ignorar los métodos que devuelven recursos y comienzan con 'get'.
+    Esto puede reducir los falsos positivos ya que la mayoría de los getters no transfieren la propiedad del recurso y sus puntos de llamada no son responsables de cerrar el recurso.
+  </li>
+</ul>
+</body>
+</html>

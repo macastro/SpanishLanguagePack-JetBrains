@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa sobre declaraciones <code>case</code> que no contienen un bloque <code>else</code>. El bloque <code>else</code> siempre debe estar presente para especificar
+el resultado por defecto cuando no se encuentra ninguna coincidencia.
+<p>Ejemplo:</p>
+<pre>
+<code># Mala práctica
+case status
+when :active
+  perform_action
+end</code>
+</pre>
+Se puede insertar un bloque <code>else</code> mediante una corrección rápida. Después de aplicar la corrección rápida, el resultado se muestra así:
+<pre>
+<code># Buena práctica
+case status
+when :active
+  perform_action
+else
+  # Escriba el código aquí
+end</code>
+</pre>
+<p><span style="font-size: smaller;">Inspirado por <a href="https://github.com/martinjandrews/roodi">'Roodi'</a></span></p>
+</body>
+</html>

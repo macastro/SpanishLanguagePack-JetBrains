@@ -1,0 +1,8 @@
+<html>
+<body>
+Informa sobre cláusulas ELSE NULL redundantes.
+<p>Ejemplo (MySQL):</p>
+<pre><code>SELECT CASE WHEN 2 > 1 THEN 'OK' ELSE NULL END AS alias FROM foo;</code></pre>
+<p>La parte <code>ELSE NULL</code> nunca se ejecutará y puede omitirse.</p>
+</body>
+</html>

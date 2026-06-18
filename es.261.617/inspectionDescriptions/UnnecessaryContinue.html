@@ -1,0 +1,33 @@
+<html>
+<body>
+Informa sobre las sentencias <code>continue</code> que son las últimas alcanzables en un bucle.
+Estas sentencias <code>continue</code> son innecesarias y pueden eliminarse de forma segura.
+<p>Ejemplo:</p>
+<pre><code>
+  for (String element: elements) {
+    System.out.println();
+    continue;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  for (String element: elements) {
+    System.out.println();
+  }
+</code></pre>
+<p>Esta inspección no analiza archivos JSP.</p>
+<p>
+  Utilice la opción <b>Ignorar en la rama 'then' de las sentencias 'if' con rama 'else'</b> para ignorar las sentencias <code>continue</code> que se encuentran en la rama <code>then</code> de una sentencia completa <code>if</code>-<code>else</code>.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  for (String element: elements) {
+    if(element.isEmpty()) {
+      continue;
+    } else {
+      //...
+    }
+  }
+</code></pre>
+</body>
+</html>

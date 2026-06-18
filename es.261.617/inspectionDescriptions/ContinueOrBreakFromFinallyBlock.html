@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre las declaraciones <code>break</code> o <code>continue</code> en bloques <code>finally</code>.
+<p>Aunque a veces sea intencional, estas declaraciones son muy confusas, pueden ocultar excepciones lanzadas y complicar la depuración.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    while (true) {
+        try {
+          throwingMethod();
+        } finally {
+            continue;
+        }
+    }
+</code></pre>
+</body>
+</html>

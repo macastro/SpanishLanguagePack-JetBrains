@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa sobre llamadas a métodos de operaciones de arrays no genéricos con tipos de argumentos incompatibles, como <code>Arrays.fill()</code>.
+Estas llamadas no realizan ningún trabajo útil y probablemente sean erróneas.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  int foo(String[] strings) {
+    return Arrays.binarySearch(strings, 1);
+  }
+</code></pre>
+<p><small>Novedades de la versión 2017.2</small></p>
+</body>
+</html>

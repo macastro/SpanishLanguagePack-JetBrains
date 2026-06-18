@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre las llamadas a <code>Collection&lt;T&gt;.count()</code>.
+<p>
+    Esta llamada a función puede ser reemplazada por <code>.size</code>.
+</p>
+<p>
+    La forma <code>.size</code> garantiza que la operación es O(1) y no asigna objetos adicionales, mientras que <code>count()</code> puede confundirse con <code>Iterable&lt;T&gt;.count()</code>, que es O(n) y realiza asignaciones.
+    <br>
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  fun foo() {
+      var list = listOf(1,2,3)
+      list.count() // 'count()' reemplazable
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>  fun foo() {
+      var list = listOf(1,2,3)
+      list.size
+  }
+</code></pre>
+</body>
+</html>

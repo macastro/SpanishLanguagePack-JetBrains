@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>Informa sobre firmas incompatibles entre los métodos <code>__new__</code> y <code>__init__</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class MyClass(object):
+    def __new__(cls, arg1):
+        return super().__new__(cls)
+    def __init__(self):
+        pass
+</code></pre>
+<p>No es posible instanciar <code>MyClass</code> si <code>__new__</code> y <code>__init__</code> tienen diferentes argumentos.</p>
+<p>El IDE sugiere aplicar la refactorización "Cambiar firma" como solución.</p>
+</body>
+</html>

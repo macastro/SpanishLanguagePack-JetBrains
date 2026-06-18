@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Informa sobre el código que no se puede alcanzar.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  def test(): Unit = {
+    throw new Exception()
+    println("esto nunca se alcanzará")
+  }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  def test(): Unit = {
+    throw new Exception()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

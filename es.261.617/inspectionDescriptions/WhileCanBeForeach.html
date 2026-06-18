@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre bucles <code>while</code> que iteran sobre colecciones y pueden ser reemplazados por bucles <code>for</code> mejorados (sintaxis de iteración foreach).
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Iterator it = c.iterator();
+  while(it.hasNext()) {
+    Object obj = it.next();
+    System.out.println(obj);
+  }
+</code></pre>
+<p>Puede ser reemplazado por:</p>
+<pre><code>
+  for (Object obj : c) {
+    System.out.println(obj);
+  }
+</code></pre>
+</body>
+</html>

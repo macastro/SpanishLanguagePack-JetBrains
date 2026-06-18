@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>Informa sobre cláusulas <code>except</code> que no están listadas en el orden correcto de más específica a más general, o cuando una clase de excepción se captura dos veces.</p>
+<p>
+  Si no se corrige el orden, el manejador más específico podría no capturar algunas excepciones.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+try:
+    call()
+except ValueError:
+    pass
+except UnicodeError:
+    pass
+</code></pre>
+<p>El IDE sugiere mover la cláusula hacia arriba. Después de aplicar la corrección rápida, el código se convierte en:</p>
+<pre><code>
+try:
+    call()
+except UnicodeError:
+    pass
+except ValueError:
+    pass
+</code></pre>
+</body>
+</html>

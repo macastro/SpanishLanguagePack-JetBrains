@@ -1,0 +1,35 @@
+<html>
+<body>
+<p>
+  Informa sobre propiedades faltantes y obsoletas, referencias no resueltas y valores inválidos en el archivo de configuración <code>additional-spring-configuration-metadata.json</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  {
+    "properties": [
+      {
+        "name": "old.key",
+        "type": "com.Unknown", // Informa 'No se puede resolver la clase 'Unknown''
+        "description": "Description for old.key", // Informa 'El texto debe terminar con un punto'
+        "deprecation": {
+          "replacement": "new.key", // Informa 'No se puede resolver la referencia de clave de configuración 'new.key''
+          "reason": "Reason", // Informa 'El texto debe terminar con un punto'
+          "level": "warning"
+         }
+      },
+      {
+        "name": "duplicate", // Informa 'Entrada duplicada para 'duplicate''
+        "type": "java.lang.String"
+      },
+      {
+        "name": "duplicate", // Informa 'Entrada duplicada para 'duplicate''
+        "type": "java.lang.String"
+      },
+      {
+        // Informa 'Falta el 'name' requerido'
+        "type": "java.lang.String"
+      }
+    ]
+  }
+</code></pre>
+</body>
+</html>

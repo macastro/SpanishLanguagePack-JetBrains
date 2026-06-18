@@ -1,0 +1,43 @@
+<html>
+<body>
+Informa cuando `ProcessCanceledException` es manejada incorrectamente.
+
+<p>
+  `ProcessCanceledException` y sus herederas no deben ser cacheadas, leídas, registradas o procesadas de ninguna manera.
+  En cambio, deben ser lanzadas nuevamente para que la infraestructura las maneje correctamente.
+</p>
+
+<p>
+  La inspección reporta tanto el cacheo explícito de `ProcessCanceledException` o sus herederas, como el cacheo de `RuntimeException`, `Exception` y `Throwable` que cubren `ProcessCanceledException`.
+</p>
+
+<p>Ejemplos:</p>
+
+<pre><code lang="java">
+// mal:
+try {
+  // ...
+} catch (ProcessCanceledException e) { // La excepción no debe ser leída
+}
+
+// mal:
+try {
+  // ...
+} catch (ProcessCanceledException e) {
+  LOG.error("Error ocurrido", e); // La excepción no debe ser registrada
+  throw e;
+}
+
+
+// bien:
+try {
+  // ...
+} catch (ProcessCanceledException e) {
+  // Otra acción
+  throw e;
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2023.2</small></p>
+</body>
+</html>

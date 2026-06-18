@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre el uso redundante de <code>\d</code> o <code>[:digit:]</code> cuando se usa junto con <code>\w</code> o <code>[:word:]</code> (que contiene <code>\D</code> con <code>\W</code>) en la misma clase y puede ser eliminado.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  [\w\d]
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  [\w]
+</code></pre>
+<p><small>Novedades de la versión 2022.2</small>
+</body>
+</html>

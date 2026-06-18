@@ -1,0 +1,30 @@
+<html>
+<body>
+Informa sobre casos donde se utilizan clases concretas en lugar de interfaces.
+Tales declaraciones pueden representar una falla en la abstracción y pueden dificultar las pruebas.
+<p>
+Esta inspección no informa sobre declaraciones cuyas clases provienen de bibliotecas del sistema o de terceros.
+No se informan las conversiones, instanceof y variables locales en implementaciones del método <code>equals()</code>.
+Además, no se informan las conversiones en implementaciones del método <code>clone()</code>.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  interface Entity {}
+  class EntityImpl implements Entity {}
+  void processObject(Object obj) {
+    // Advertencia: instanceof de clase concreta
+    if (obj instanceof EntityImpl) {
+      // Advertencia: conversión a clase concreta
+      // en lugar de interfaz
+      processEntity((EntityImpl)obj);
+    }
+  }
+  // Advertencia: parámetro de clase concreta
+  void processEntity(EntityImpl obj) {
+  }
+</code></pre>
+<p>
+  Utilice la opción <b>Ignorar tipos de clases abstractas</b> para ignorar las conversiones a clases abstractas.</p>
+<p>Use las opciones siguientes para controlar el contexto en el que se informan los problemas.</p>
+</body>
+</html>

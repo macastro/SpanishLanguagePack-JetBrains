@@ -1,0 +1,23 @@
+<html>
+<body>
+Métodos JUnit 4.0 <code>@BeforeClass</code> o <code>@AfterClass</code> que no se declaran como <code>public</code> y <code>static</code>, no devuelven <code>void</code> o aceptan argumentos reales.
+Este tipo de métodos se pueden crear fácilmente por error, pero el ejecutor de pruebas JUnit no los ejecutará.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class MainTest {
+    @BeforeClass
+    String beforeClass(int i) {
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida, el método se convierte en:</p>
+<pre><code>
+  class MainTest {
+    @BeforeClass
+    public static void beforeClass() {
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

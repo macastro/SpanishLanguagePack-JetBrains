@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>Informa sobre operaciones zip con argumentos que tienen un valor de retorno <code>Mono&lt;Void&gt;</code> dentro de una cadena Reactor.</p>
+<p>
+  El <code>Zip</code> completa inmediatamente una operación vacía después de que el <code>Mono&lt;Void&gt;</code> entrante se complete.
+  La corrección rápida sugiere reemplazar <code>zip()</code>, <code>zipWhen()</code> y <code>zipWith()</code> por <code>when</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">Mono.zip(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
+                .map(v -> "New value")
+                .doFinally(System.out::println);
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="java">Mono.when(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
+                .then(Mono.fromCallable(() -> "New value"))
+                .doFinally(System.out::println);
+</code></pre>
+<p><small>Novedades de 2023.1</small></p>
+</body>
+</html>

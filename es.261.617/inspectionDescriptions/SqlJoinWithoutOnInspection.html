@@ -1,0 +1,10 @@
+<html>
+<body>
+Informa sobre comprobaciones de condiciones faltantes en sentencias que podrían modificar toda la base de datos.
+<p>Por ejemplo, usar cláusulas JOIN en sentencias DELETE sin las cláusulas ON o WHERE. Si no se realiza una comprobación de condiciones en el JOIN, el DELETE eliminará todo el contenido de la tabla.</p>
+<p>Ejemplo (MySQL):</p>
+<pre><code>CREATE TABLE foo (a INT,b INT,c INT);
+CREATE TABLE bar (a INT,b INT,c INT);
+DELETE table1 FROM foo table1  INNER JOIN bar table2;</code></pre>
+</body>
+</html>

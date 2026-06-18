@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre variables <code>static</code> que posiblemente no estén inicializadas durante la inicialización de la clase.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+    public static int bar;
+    static { }
+  }
+</code></pre>
+<p>Tenga en cuenta que esta inspección utiliza un algoritmo de flujo de datos muy conservador y podría reportar incorrectamente variables <code>static</code> como no inicializadas. Las variables reportadas como inicializadas siempre estarán inicializadas.</p>
+<p>Use la opción <b>Ignorar campos primitivos</b> para ignorar los campos primitivos no inicializados.</p>
+</body>
+</html>

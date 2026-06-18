@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporta secciones <code>catch</code> idénticas dentro de una misma declaración <code>try</code>.
+<p>Combinar estas secciones en un bloque <i>multi-catch</i> reduce la duplicación de código y evita situaciones donde una sección <code>catch</code> se actualiza mientras que otra queda sin actualizar.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    try {
+        doSmth();
+    }
+    catch (IOException e) {
+        LOG.error(e);
+    }
+    catch (URISyntaxException e) {
+        LOG.error(e);
+    }
+</code></pre>
+<p>El código se puede hacer más compacto mediante una corrección rápida:</p>
+<pre><code>
+    try {
+        doSmth();
+    }
+    catch (IOException | URISyntaxException e) {
+        LOG.error(e);
+    }
+</code></pre>
+</body>
+</html>

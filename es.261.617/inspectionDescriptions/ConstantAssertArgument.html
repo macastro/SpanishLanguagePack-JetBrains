@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta llamadas a <code>assertTrue()</code>, <code>assertFalse()</code>, <code>assertNull()</code> y <code>assertNotNull()</code> con argumentos constantes.
+<p>
+  Las llamadas a estos métodos con argumentos constantes siempre tendrán éxito o siempre fallarán.
+  Estas declaraciones pueden permanecer inadvertidamente después de una refactorización y pueden no ser intencionales.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  assertNotNull("foo");
+</code></pre>
+</body>
+</html>

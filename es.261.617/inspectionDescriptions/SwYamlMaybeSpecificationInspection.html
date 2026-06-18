@@ -1,0 +1,30 @@
+<html>
+<body>
+Detecta archivos YAML que pueden interpretarse como parte de una especificación OpenAPI/Swagger.
+<p>
+  Estos archivos no contienen características explícitas de la especificación, pero hacen referencia a un archivo de especificación principal cercano.
+</p>
+<p>
+  El siguiente ejemplo contiene dos archivos ubicados en el mismo directorio. El primero es un archivo de especificación principal normal.
+  El segundo hace referencia al primero, por lo que se sugiere tratarlo como una especificación.
+</p>
+<p><b>Archivo de especificación principal <code>openapi.yaml</code>:</b></p>
+<pre><code>
+openapi: 3.1.0
+components:
+  schemas:
+    CustomSchema:
+      description: Custom schema object
+      properties:
+        foo:
+          $ref: 'common.components.yaml#/components/schemas/CommonSchema'
+</code></pre>
+<p><b>Archivo candidato de especificación <code>common.components.yaml</code>:</b></p>
+<pre><code>
+components: # 'Mark file as OpenAPI specification' highlighting
+  schemas:
+    CommonSchema:
+      description: Common schema object reused in several specifications
+</code></pre>
+</body>
+</html>

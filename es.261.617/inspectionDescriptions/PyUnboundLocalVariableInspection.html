@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Informa sobre variables locales referenciadas antes de su asignación.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+x = 0
+if x > 10:
+    b = 3
+print(b)
+</code></pre>
+<p>El IDE informa un problema en <code>print(b)</code>. Una posible solución es:</p>
+<pre><code>
+x = 0
+if x > 10:
+    b = 3
+    print(b)
+</code></pre>
+</body>
+</html>

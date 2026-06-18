@@ -1,0 +1,36 @@
+<html>
+<body>
+El método reportado llama a otro método que a su vez realiza otra llamada.
+Esta corrección rápida sugiere introducir una variable local.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class X {
+    int foo(File f) {
+      return f.getName().length();
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class X {
+    int foo(File f) {
+      final String name = f.getName();
+      return name.length();
+    }
+  }
+</code></pre>
+<p>Utilice las opciones de inspección para alternar las advertencias para:</p>
+<ul>
+  <li>
+    <p>
+      Llamadas a métodos en cadena en inicializadores de campos, por ejemplo <code>private final int i = new Random().nextInt();</code>
+    </p>
+  </li>
+  <li>
+    <p>
+      Llamadas a métodos en cadena que operan sobre el mismo tipo, por ejemplo, <code>new StringBuilder().append("x: ").append(new X()).append("y: ").append(new Y()).toString();</code>.
+    </p>
+  </li>
+</ul>
+</body>
+</html>

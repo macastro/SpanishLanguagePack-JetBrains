@@ -1,0 +1,26 @@
+<html>
+<body>
+Informa sobre métodos de prueba JUnit que tienen múltiples excepciones en la cláusula <code>throws</code>.
+Estas cláusulas crean una verbosidad innecesaria.
+Los métodos de prueba no serán llamados desde otro código del proyecto, por lo que no es necesario manejar estas excepciones por separado.
+<p>Por ejemplo:</p>
+<pre><code lang="java">
+  @Test
+  public void testReflection() throws NoSuchMethodException,
+      InvocationTargetException, IllegalAccessException {
+    String result = (String) String.class.getMethod("trim")
+        .invoke(" hello ");
+    assertEquals("hello", result);
+  }
+</code></pre>
+<p>Reemplaza la declaración de excepciones con una única excepción mediante la corrección rápida:</p>
+<pre><code lang="java">
+  @Test
+  public void testReflection() throws Exception {
+    String result = (String) String.class.getMethod("trim")
+        .invoke(" hello ");
+    assertEquals("hello", result);
+  }
+</code></pre>
+</body>
+</html>

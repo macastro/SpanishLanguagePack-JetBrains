@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>Reporta valores incorrectos en los valores <code>max</code> y <code>min</code> de las anotaciones de restricción de validación de Bean.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code>
+public class Car {
+  @NotNull
+  @Size(min = 14, max = <strong>2</strong>) // El valor 'max' es menor que el valor 'min'
+  private String licensePlate;
+}
+</code></pre>
+</body>
+</html>

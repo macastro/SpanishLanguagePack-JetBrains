@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>
+  El bucle <code>while</code> se puede escribir de manera más efectiva como un bucle <code>do-while</code>.
+  Existe un bucle <code>while</code> donde el código antes del bucle es idéntico al código dentro del cuerpo del bucle.
+  Reemplazarlo con un bucle <code>do-while</code> eliminará el código duplicado.
+  Para los bucles <code>while</code> sin dicha duplicación de código, la corrección rápida también está disponible en el editor, pero sin resaltado.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  foo();
+  while (x) {
+      foo();
+  }
+</code></pre>
+<p>Se puede reemplazar por:</p>
+<pre><code>
+  do {
+    foo();
+  } while (x);
+</code></pre>
+<p>
+  <small>Novedades en 2024.1</small>
+</p>
+</body>
+</html>

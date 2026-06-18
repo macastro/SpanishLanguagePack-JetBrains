@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa sobre declaraciones de módulos, clases, campos o métodos que tienen la etiqueta Javadoc <code>@deprecated</code> pero carecen de la anotación <code>@java.lang.Deprecated</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  /**
+   * @deprecated use {@code example()} instead
+   */
+  void sample(){ }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  /**
+   * @deprecated use {@code example()} instead
+   */
+  @Deprecated
+  void sample(){ }
+</code></pre>
+<p>
+Utilice la casilla de verificación a continuación para informar sobre miembros que usan la anotación <code>@Deprecated</code> pero no tienen explicación en la etiqueta Javadoc <code>@deprecated</code>.
+</body>
+</html>

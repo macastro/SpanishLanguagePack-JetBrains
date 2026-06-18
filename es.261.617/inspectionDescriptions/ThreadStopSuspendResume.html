@@ -1,0 +1,9 @@
+<html>
+<body>
+Informa sobre las llamadas a <code>Thread.stop()</code>, <code>Thread.suspend()</code> y <code>Thread.resume()</code>.
+<p>
+  Estas llamadas son inherentemente propensas a la corrupción de datos y bloqueos mutuos, por lo que se recomienda encarecidamente no utilizarlas.
+  Es mejor usar la cancelación cooperativa en lugar de <code>stop</code>, y el uso de interrupciones en lugar de llamadas directas a <code>suspend</code> y <code>resume</code>.
+</p>
+</body>
+</html>

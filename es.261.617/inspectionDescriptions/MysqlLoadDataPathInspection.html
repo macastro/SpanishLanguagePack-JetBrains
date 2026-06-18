@@ -1,0 +1,11 @@
+<html>
+<body>
+Informa sobre rutas que comienzan con el símbolo de tilde en sentencias LOAD.
+<p>Ejemplo (MySQL):</p>
+<pre><code lang="mysql">CREATE TABLE table_name (id int);
+LOAD DATA LOCAL INFILE '~/Documents/some_file.txt'
+INTO TABLE table_name FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
+IGNORE 1 LINES;</code></pre>
+<p>Utilice la ruta completa del archivo en lugar del símbolo de tilde.</p>
+</body>
+</html>

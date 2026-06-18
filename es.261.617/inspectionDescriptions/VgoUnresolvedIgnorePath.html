@@ -1,0 +1,12 @@
+<html>
+<body>
+Reporta rutas de archivos no resueltas en directivas ignore dentro de archivos de módulos Go.
+<p>
+  Esta inspección ayuda a identificar rutas especificadas en directivas ignore que no pueden resolverse a archivos o directorios reales en el módulo.
+  Solo valida rutas que son relativas a la raíz del módulo (que comienzan con "./"), ya que otras rutas pueden existir en varias profundidades en la jerarquía del módulo y no pueden resolverse de manera confiable.
+</p>
+<p>
+  La directiva ignore hace que el comando go ignore las rutas de directorio especificadas y cualquier archivo o directorio contenido recursivamente dentro de ellas.
+</p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>Informa sobre usos inválidos de clases que definen <code>__slots__</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class Foo:
+    __slots__ = ['foo', 'bar']
+foo = Foo()
+foo.baz = 'spam'
+</code></pre>
+</body>
+</html>

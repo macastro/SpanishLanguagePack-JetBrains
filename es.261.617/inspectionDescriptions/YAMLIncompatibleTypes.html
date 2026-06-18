@@ -1,0 +1,12 @@
+<html>
+<body>
+Informa sobre valores escalares en archivos YAML cuyo tipo no coincide con otros valores en posiciones similares.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+myElements:
+  - value1
+  - value2
+  - false # &lt;- reportado porque es un booleano mientras que los otros valores son cadenas de texto
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>Informa sobre operaciones de transformación llamadas en valores <code>Mono&lt;Void&gt;</code> dentro de una cadena Reactor.</p>
+<p>
+  <code>Mono&lt;Void&gt;</code> se completa sin ningún valor, por lo que no se llamará a nada en la función de transformación.
+  La corrección rápida sugiere reemplazar <code>map()</code> y <code>flatMap()</code> por <code>then()</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">Mono.when(Mono.just(1), Mono.just(2))
+                .map(v -> "New value")
+                .doFinally(System.out::println);
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="java">Mono.when(Mono.just(1), Mono.just(2))
+                .then(Mono.fromCallable(() -> "New value"))
+                .doFinally(System.out::println);
+</code></pre>
+<p><small>Novedades en 2023.1</small></p>
+</body>
+</html>

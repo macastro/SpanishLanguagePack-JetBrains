@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>Detecta el uso inconsistente de caracteres de indentación en espacios en blanco iniciales, específicamente, marca tabulaciones donde se configuraron espacios y marca espacios donde se configuraron tabulaciones.</p>
+<p>Godot no permite mezclar tabulaciones y espacios en la indentación.</p>
+<p>
+    Por ejemplo, si tu estilo de código está configurado para usar espacios para la indentación:
+</p>
+<pre><code>
+func _init():
+  var x = 1
+\tvar y = 2 # Resaltado: se encontró tabulación donde sería mejor usar espacios
+</code></pre>
+<p>
+    O, si tu estilo de código está configurado para usar tabulaciones para la indentación:
+</p>
+<pre><code>
+func _init():
+\tvar x = 1
+    var y = 2 # Resaltado: se encontraron espacios donde sería mejor usar tabulaciones
+</code></pre>
+</body>
+</html>

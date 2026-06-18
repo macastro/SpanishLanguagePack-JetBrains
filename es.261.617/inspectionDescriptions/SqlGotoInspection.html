@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa sobre el uso de las sentencias GOTO hacia atrás y las sentencias GOTO utilizadas para salir de bucles.
+<p>Generalmente no se recomienda el uso extensivo de sentencias GOTO. Para más información, consulte <a href="https://www.ibm.com/docs/no/db2/11.5?topic=procedures-goto-statement-in-sql">GOTO statement in SQL procedures en ibm.com</a>.</p>
+<p>Considere usar bucles en lugar de usar GOTO para volver a una sentencia anterior.</p>
+<p>Considere usar otra sentencia de control de flujo, como RETURN o BREAK, en lugar de usar GOTO para salir de un bucle WHILE.</p>
+<p>Ejemplo (Oracle):</p>
+<pre><code>CREATE PROCEDURE test(n INT) AS
+DECLARE
+    x INT;
+BEGIN
+    x := 0;
+    GOTO a;
+    &lt;&lt;a&gt;&gt; x := 1;
+    IF (n = 0) THEN
+        GOTO a;
+    END IF;
+    WHILE TRUE
+        LOOP
+            GOTO b;
+        END LOOP;
+    &lt;&lt;b&gt;&gt; x := 3;
+END;</code></pre>
+</body>
+</html>

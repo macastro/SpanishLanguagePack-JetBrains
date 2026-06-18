@@ -1,0 +1,26 @@
+<html>
+<body>
+Informa sobre llamadas a <code>List.remove(index)</code> en bucles que pueden ser reemplazadas por <code>List.subList().clear()</code>.
+<p>Esta sustitución es más eficiente para la mayoría de implementaciones de <code>List</code> cuando se eliminan múltiples elementos.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  void removeRange(List&lt;String&gt; list, int from, int to) {
+    for (int i = from; i &lt; to; i++) {
+        list.remove(from);
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void removeRange(List&lt;String&gt; list, int from, int to) {
+    if (to &gt; from) {
+      list.subList(from, to).clear();
+    }
+  }
+</code></pre>
+<p>
+  La corrección rápida añade automáticamente una comprobación de rango para prevenir posibles <code>IndexOutOfBoundsException</code> cuando el valor mínimo es mayor que el máximo. Si este caso no es posible en el código, esta comprobación puede eliminarse.
+</p>
+<p><small>Novedades de la versión 2018.2</small></p>
+</body>
+</html>

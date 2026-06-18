@@ -1,0 +1,26 @@
+<html>
+<body>
+Informa sobre campos logger que no están declarados como <code>static</code> y/o <code>final</code>.
+Asegurar que cada logger de clase sea una constante válida y esté vinculado a esa clase simplifica la tarea de proporcionar una implementación de registro uniforme para la aplicación.
+<p>Se proporciona una corrección rápida para cambiar los modificadores del logger a <code>static final</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>public class</b> Significant {
+    <b>private</b> Logger LOG = Logger.getLogger(Critical.class);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  <b>public class</b> Significant {
+    <b>private static final</b> Logger LOG = Logger.getLogger(Critical.class);
+  }
+</code></pre>
+<p>
+  Configuración de la inspección:
+</p>
+<ul>
+  <li>La tabla <b>Nombres de clase logger</b> permite especificar nombres de clases logger. La inspección informará sobre campos que no son <code>static</code> y <code>final</code> y cuyo tipo coincide con uno de los nombres de clase especificados.
+  </li>
+</ul>
+</body>
+</html>

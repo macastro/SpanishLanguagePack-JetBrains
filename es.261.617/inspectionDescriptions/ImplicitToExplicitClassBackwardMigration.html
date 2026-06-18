@@ -1,0 +1,23 @@
+<html>
+<body>
+Reporta archivos fuente compactos y sugiere reemplazarlos con clases regulares.
+<p><b>Ejemplo (en el archivo Sample.java):</b></p>
+<pre><code>
+  void main() {
+      String a = "Hello, world!";
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+public class Sample {
+    void main() {
+        String a = "Hello, world!";
+    }
+}
+</code></pre>
+<p>
+  Esta inspección ayuda a degradar para compatibilidad hacia atrás con versiones anteriores de Java.
+</p>
+<p><small>Nuevo en 2024.1</small></p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre el uso de miembros importados estáticamente con nombres de clase calificados.
+<p>Esta calificación es innecesaria y puede eliminarse, ya que los miembros importados estáticamente son accesibles directamente por su nombre.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import static foo.Test.WIDTH;
+  class Bar {
+    void bar() {
+      System.out.println(Test.WIDTH);
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  import static foo.Test.WIDTH;
+  class Bar {
+    void bar() {
+      System.out.println(WIDTH);
+    }
+  }
+</code></pre>
+</body>
+</html>

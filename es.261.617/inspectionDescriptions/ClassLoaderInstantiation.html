@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre la instanciación de la clase <code>java.lang.ClassLoader</code>.
+<p>Aunque generalmente es benigna, cualquier instanciación de <code>ClassLoader</code> debe examinarse cuidadosamente en cualquier auditoría de seguridad.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>    Class&lt;?&gt; loadExtraClass(String name) throws Exception {
+      try(URLClassLoader loader =
+          new URLClassLoader(new URL[]{new URL("extraClasses/")})) {
+        return loader.loadClass(name);
+      }
+    }
+  </code>
+</pre>
+</body>
+</html>

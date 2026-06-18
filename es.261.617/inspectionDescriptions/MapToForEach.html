@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>Informa sobre las llamadas a <code>map</code> cuyo resultado se ignora y que pueden sustituirse por <code>forEach</code>.</p>
+
+<p>El uso de <code>map</code> de esta forma es engañoso, ya que <code>map</code> está diseñado para transformar colecciones y devolver un resultado.
+    Cuando su valor de retorno no se utiliza, la llamada crea asignaciones innecesarias y reduce la legibilidad del código.
+    En tales casos, se debe utilizar <code>forEach</code> en su lugar, ya que expresa claramente una iteración con efectos secundarios.</p>
+
+<p>La corrección rápida sustituirá la llamada a <code>map</code> por una llamada a <code>forEach</code>.</p>
+
+<p>Ejemplo:</p>
+<pre><code>
+fun foo(list: List&lt;String&gt;) {
+ list.map { print(it) } // Informado
+
+ val x = list.map { it.length } // No informado: el resultado se utiliza
+}
+</code></pre>
+
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+fun foo(list: List&lt;String&gt;) {
+ list.forEach { print(it) }
+
+ val x = list.map { it.length } // No informado: el resultado se utiliza
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

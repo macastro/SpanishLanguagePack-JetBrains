@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta casos donde se proporcionan argumentos de tipo nullable a colecciones Java que no aceptan null.
+<p>
+    Algunas colecciones Java proporcionadas en la biblioteca estándar de Java no soportan elementos, claves o valores null.
+    Los argumentos de tipo de tales colecciones no deberían ser instanciados con tipos nullable.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+val map = ConcurrentHashMap&lt;String, String?&gt;()
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+val map = ConcurrentHashMap&lt;String, String&gt;()
+</code></pre>
+</body>
+</html>

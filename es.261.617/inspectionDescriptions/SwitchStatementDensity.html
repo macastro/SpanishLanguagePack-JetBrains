@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa sobre declaraciones o expresiones <code>switch</code> que tienen una proporción demasiado baja entre etiquetas switch y declaraciones ejecutables.
+<p>Estas declaraciones <code>switch</code> pueden resultar confusas y podrían requerir una refactorización.</p>
+<p>Ejemplo:</p>
+<pre><code>
+    switch (i) { // 1 case, 5 declaraciones ejecutables -> 20% de densidad
+        case 1:
+            System.out.println("1");
+            System.out.println("2");
+            System.out.println("3");
+            System.out.println("4");
+            System.out.println("5");
+            break;
+    }
+</code></pre>
+<p>
+<p>Utilice el campo <b>Densidad mínima de ramas</b> para especificar la proporción permitida entre etiquetas switch y declaraciones ejecutables.</p>
+</body>
+</html>

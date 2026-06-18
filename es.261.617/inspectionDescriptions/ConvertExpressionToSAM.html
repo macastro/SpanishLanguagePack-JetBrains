@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>Reporta expresiones que pueden ser convertidas a SAM (Single Abstract Method).</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  new Thread(new Runnable {
+      override def run() = println()
+  })
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  new Thread(() => println())
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

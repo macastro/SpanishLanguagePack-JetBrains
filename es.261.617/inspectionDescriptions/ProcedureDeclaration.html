@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>Informa sobre declaraciones de métodos con sintaxis de procedimiento.</p>
+<p>No se recomienda que los desarrolladores usen sintaxis de tipo procedimiento para métodos.</p>
+<p>Es inconsistente, puede generar errores y se eliminará en Scala 3.</p>
+<p>La corrección rápida convierte la declaración de sintaxis de procedimiento a sintaxis de función.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  trait Test {
+    def method()
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  trait Test {
+    def method(): Unit
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><em>Sugerencia:</em> puedes usar Analizar / Ejecutar inspección por nombre (Ctrl+Alt+Shift+I) para aplicar esta inspección a todo
+    el proyecto.</p>
+</body>
+</html>

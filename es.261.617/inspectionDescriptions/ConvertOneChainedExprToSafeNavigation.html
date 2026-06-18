@@ -1,0 +1,18 @@
+<html>
+<body>
+El informe sugiere simplificar las llamadas en cadena utilizando el operador de navegación segura (<code>&amp;.</code>). Una secuencia de llamadas en cadena es un patrón común
+para verificar <code>nil</code> en cada componente de la llamada.
+<p>Ejemplo:</p>
+<pre>
+<code># 不良做法
+if user &amp;&amp; user.profile &amp;&amp; user.profile.thumbnails
+end</code>
+</pre>
+Se puede utilizar la corrección rápida para simplificar la expresión usando <code>&amp;.</code>. Después de aplicar la corrección rápida, el resultado se verá así:
+<pre>
+<code># 优良做法
+if user&amp;.profile&amp;.thumbnails
+end</code>
+</pre>
+</body>
+</html>

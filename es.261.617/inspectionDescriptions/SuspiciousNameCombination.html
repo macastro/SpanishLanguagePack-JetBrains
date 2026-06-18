@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa sobre asignaciones y llamadas a funciones donde el nombre de la variable de destino o del parámetro de función no coincide con el nombre del valor que se le asigna.
+<p>Ejemplo 1:</p>
+<pre><code>
+  <b>int</b> x = 0;
+  <b>int</b> y = x; // x se usa como coordenada y
+  </code></pre>
+<p>Ejemplo 2:</p>
+<pre><code>
+  <b>int</b> x = 0, y = 0;
+  // x se usa como coordenada y, y se usa como coordenada x
+  Rectangle rc = <b>new</b> Rectangle(y, x, 20, 20);
+</code></pre>
+<p>Configuración de la inspección:</p>
+<p>Use la sección <b>Grupos de nombres</b> para especificar nombres que no deberían usarse juntos: se informará un error si el nombre del parámetro o el objetivo de la asignación contiene una palabra de un grupo, mientras que el nombre de la variable asignada o pasada contiene una palabra de otro grupo.
+<p>Use la sección <b>Métodos a ignorar</b> para especificar métodos que no deberían ser verificados pero cuyos nombres podrían ser cuestionables.
+Por ejemplo, los parámetros de <code>Integer.compare()</code> se nombran como <code>x</code> e <code>y</code>, pero no están relacionados con coordenadas.
+</body>
+</html>

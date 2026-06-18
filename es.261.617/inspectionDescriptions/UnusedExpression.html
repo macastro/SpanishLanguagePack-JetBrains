@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta expresiones no utilizadas, lo que generalmente indica código incompleto o la falta de una declaración <code>return</code>.
+<p>
+    Si la expresión no utilizada es la última declaración en una función y su tipo coincide con el tipo de valor de retorno de la función, una corrección rápida agregará automáticamente la palabra clave <code>return</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+fun example(): Int {
+    val x = 10
+    x // Advertencia: expresión no utilizada
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+fun example(): Int {
+    val x = 10
+    return x
+}
+</code></pre>
+</body>
+</html>

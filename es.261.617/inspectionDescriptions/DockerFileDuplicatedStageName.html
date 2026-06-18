@@ -1,0 +1,11 @@
+<html>
+<body>
+<p>Reporta nombres de stage duplicados en comandos <code>FROM ... AS stage-name </code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  # Los siguientes comandos fallarán
+  FROM ubuntu:latest AS stage1
+  FROM ubuntu:latest AS stage1
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<html>
+<body>
+Informa sobre declaraciones de variables, argumentos o funciones que se superponen con palabras clave incorporadas o reservadas.
+<p>Si ve este error, significa que su código no es tan explícito como podría ser y podría confundir a otros usuarios.</p>
+<p>Ejemplo:</p>
+<pre><code>type byte struct{}
+type string interface{}</code></pre>
+<p>Los tipos <code>byte</code> y <code>string</code> entran en conflicto con los alias de tipos incorporados. Por lo tanto, estos se resaltarán.
+  Considere renombrar estas declaraciones.</p>
+</body>
+</html>

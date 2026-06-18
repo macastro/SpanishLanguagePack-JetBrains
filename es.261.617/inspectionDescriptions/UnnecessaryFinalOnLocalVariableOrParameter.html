@@ -1,0 +1,38 @@
+<html>
+<body>
+Informa sobre variables locales o parámetros declarados innecesariamente como <code>final</code>.
+<p>Por razones de concisión, algunos estándares de codificación desaconsejan las variables declaradas como <code>final</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+    Foo(Object o) {}
+    void bar(final Object o) {
+      new Foo(o);
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Foo {
+    Foo(Object o) {}
+    void bar(Object o) {
+      new Foo(o);
+    }
+  }
+</code></pre>
+<p>
+  Las opciones de inspección permiten alternar los informes para:
+</p>
+<ul>
+  <li>
+    Variables locales
+  </li>
+  <li>
+    Parámetros (incluyendo parámetros en bloques <code>catch</code> y sentencias <code>for</code> mejoradas)
+  </li>
+</ul>
+<p>
+  Además, puede configurar la inspección para que solo informe sobre parámetros <code>final</code> en métodos <code>abstract</code> o de interfaz, que pueden considerarse redundantes ya que tales marcadores no afectan la implementación de estos métodos.
+</p>
+</body>
+</html>

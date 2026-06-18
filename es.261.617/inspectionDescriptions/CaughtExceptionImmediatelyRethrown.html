@@ -1,0 +1,14 @@
+<html>
+<body>
+Un bloque <code>catch</code> que no realiza ninguna operación y simplemente vuelve a lanzar la excepción capturada.
+Este tipo de bloque <code>catch</code> es innecesario y no maneja el error.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+        try {
+            new FileInputStream("");
+        } catch (FileNotFoundException e) {
+            throw e;
+        }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre métodos <code>final</code> en clases <code>final</code>.
+<p>Dado que las clases <code>final</code> no pueden ser heredadas, marcar los métodos como <code>final</code> puede ser redundante y confuso.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>record Bar(int a, int b) {
+  public final int sum() { 
+     return a + b;
+  }
+}
+</code>
+</pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>record Bar(int a, int b) {
+  public int sum() { 
+     return a + b;
+  }
+}
+</code></pre>
+<p>Como se muestra en este ejemplo, la clase puede estar marcada como <code>final</code> de manera explícita o implícita.</p>
+<p>
+</body>
+</html>

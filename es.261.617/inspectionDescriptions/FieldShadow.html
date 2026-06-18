@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sombreado sospechoso de campo de clase o característica</title>
+</head>
+<body>
+<p>La situación más común es declarar un campo en una clase y luego usar un valor o variable local con el mismo nombre en un método:</p>
+<pre><code>
+class Foo(foo: Int) {
+  def test(): Int = {
+    val foo: Int = 1 // Resaltado
+    foo
+  }
+}
+</code></pre>
+
+<p>Esto es fácil de detectar, pero se vuelve más difícil si el campo se declara en una superclase o característica en otro archivo, lo que puede hacer que el campo sea aún menos visible y más propenso errores:</p>
+
+<pre><code>
+// TraitA.scala
+trait TraitA {
+  def n: Int = 1
+}
+
+// ObjectA.scala
+object ObjectA extends TraitA {
+  def foo(): Unit = {
+    val n: Int = 0 // Resaltado
+  }
+}
+</code></pre>
+
+<p>En casos extremos, una clase define una variable, mientras que una subclase define un valor con el mismo nombre. El valor de la subclase no puede sobrescribir la variable de la superclase, solo puede sombrearla. Esto puede provocar errores no evidentes en ocasiones.
+    El compilador de Scala ofrece la opción -Xlint:private-shadow que emite una advertencia en estos casos.</p>
+<p>El cuadro combinado en la sección "Opciones" le permite controlar cómo se resalta este caso extremo. Puede optar por resaltar <b>siempre</b> junto con los campos locales que sombrean el campo de clase o característica, puede optar por <b>nunca</b> resaltar y conservar otros resaltados, puede optar por <b>Comprobar la opción del compilador</b> y dejar que la inspección se comporte en consecuencia, o puede optar por resaltar <b>solo</b> el caso extremo (si existe la opción del compilador) y no resaltar otros casos sombreados.</p>
+
+<pre><code>
+class C(var c: Int)
+
+// `c` sombrea `var c` de la clase `C`
+class D(c: Int) extends C(c) {
+  def f: Int = c
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

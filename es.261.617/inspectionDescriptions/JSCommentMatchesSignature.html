@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre discrepancias entre los nombres y el número de parámetros en los comentarios JSDoc y los parámetros reales de la función.
+Se recomienda actualizar los parámetros en los comentarios JSDoc.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+/**
+ * @param height Height in pixels
+ */
+function sq(height, width) {} // ancho no documentado
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+/**
+ * @param height Height in pixels
+ * @param width
+ */
+function sq(height, width) {}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre tablas derivadas sin alias.
+<p>Ejemplo (MySQL):</p>
+<pre><code>CREATE TABLE table1 (id INT, name VARCHAR(20), cats FLOAT);
+CREATE TABLE table2 (id INT, age INTEGER);
+SELECT id AS ID, name, cats, age
+FROM (SELECT table1.id, name, cats, age
+FROM table1
+JOIN table2 ON table1.id = table2.id);</code></pre>
+<p>Según las <a href="https://dev.mysql.com/doc/refman/8.0/en/derived-tables.html">Tablas Derivadas en dev.mysql.com</a>, los alias son obligatorios. Puede utilizar la corrección rápida <b>Introducir alias</b> para añadir el alias.</p>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>SELECT id AS ID, name, cats, age
+FROM (SELECT table1.id, name, cats, age
+FROM table1
+JOIN table2 ON table1.id = table2.id);</code></pre>
+</body>
+</html>

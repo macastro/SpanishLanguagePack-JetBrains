@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre llamadas a métodos <code>synchronized</code> dentro de bloques o métodos <code>native</code>.
+<p>
+  Cuando sea posible, es mejor mantener las llamadas a métodos <code>native</code> fuera del contexto de sincronización, ya que estas llamadas pueden causar cambios de contexto costosos y potenciales problemas de rendimiento.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  native void nativeMethod();
+  void example(){
+    synchronized (lock){
+      nativeMethod();//advertencia
+    }
+  }
+</code></pre>
+</body>
+</html>

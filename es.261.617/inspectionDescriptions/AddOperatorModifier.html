@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta funciones que coinciden con una de las convenciones de operadores pero carecen de la palabra clave <code>operator</code>.
+<p>Al agregar el modificador <code>operator</code>, puede permitir que los usuarios de la función escriban código Kotlin idiomático.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Complex(val real: Double, val imaginary: Double) {
+      fun plus(other: Complex) =
+          Complex(real + other.real, imaginary + other.imaginary)
+  }
+  fun usage(a: Complex, b: Complex) {
+      a.plus(b)
+  }
+</code></pre>
+<p>La corrección rápida agregará la palabra clave del modificador <code>operator</code>:</p>
+<pre><code>
+  class Complex(val real: Double, val imaginary: Double) {
+      operator fun plus(other: Complex) =
+          Complex(real + other.real, imaginary + other.imaginary)
+  }
+  fun usage(a: Complex, b: Complex) {
+      a + b
+  }
+</code></pre>
+</body>
+</html>

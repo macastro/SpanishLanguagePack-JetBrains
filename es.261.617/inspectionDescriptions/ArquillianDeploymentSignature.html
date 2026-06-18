@@ -1,0 +1,40 @@
+<html>
+<body>
+<p>Inspecciona las firmas incorrectas de los métodos que usan la anotación de <code>@Deployment</code>.</p>
+<p>
+  Según la <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/es-ES/html/gettingstarted.html#d0e451">documentación de Arquillian</a>, las clases de prueba de Arquillian deben definir un archivo de implementación mediante un método static public con una firma específica y anotado con <code>@Deployment</code>.
+</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  //Este caso de prueba no podrá arrancarse por Arquillian, el método de implementación no es static
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    @Deployment
+    public JavaArchive crearImplementación() {
+      throw new UnsupportedOperationException("Implementarme");
+    }
+
+    @Test
+    public void probarAlgo() {
+      Assert.fail("Implementar");
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    @Deployment
+    public static JavaArchive crearImplementación() {
+      throw new UnsupportedOperationException("Implementarme");
+    }
+
+    @Test
+    public void probarAlgo() {
+      Assert.fail("Implementar");
+    }
+  }
+</code></pre>
+</body>
+</html>

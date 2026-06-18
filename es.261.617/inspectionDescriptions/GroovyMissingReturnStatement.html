@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre métodos con tipo de retorno no <b>void</b> que carecen de una sentencia <code>return</code> al final.
+El flujo de ejecución del método debe poder llegar hasta el final del mismo.
+<p><b>Ejemplo:</b></p>
+<pre>
+<code>
+String foo(int a) {
+  if (a > 0) {
+    return "more than zero"
+  }
+} // foo(-1) devolverá 'null'
+int bar(int a) {
+  if (a > 0) {
+    return a
+  }
+} // bar(-1) fallará y lanzará una excepción en tiempo de ejecución
+</code>
+</pre>
+</body>
+</html>

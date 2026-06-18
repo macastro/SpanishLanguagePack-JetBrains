@@ -1,0 +1,14 @@
+<html>
+<body>
+Reportar identificadores no resueltos en los valores de las propiedades <code>includes</code> y <code>excludes</code> de las anotaciones <code>@TupleConstructor</code> y <code>@MapConstructor</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // 'c' no resuelto
+  @TupleConstructor(includes = ['a', 'b', 'c'])
+  class X {
+      def a
+      def b
+  }
+</code></pre>
+</body>
+</html>

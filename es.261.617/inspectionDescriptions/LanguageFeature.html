@@ -1,0 +1,48 @@
+<html>
+<body>
+<p>Informa de los usos de funciones avanzadas de lenguaje que no están habilitadas en el archivo actual.</p>
+
+<p>Las funciones avanzadas de lenguaje deben habilitarse mediante la opción de compilador correspondiente
+    o mediante la importación de un indicador de función explícito en el archivo donde se utilizan.</p>
+
+<p>
+    Notación de operador de sufijo:<br>
+    <code>val s = 123 toString</code>
+</p>
+
+<p>
+    Llamada reflexiva:<br>
+    <code>def foo(v: {def bar()}) = v.bar()</code>
+</p>
+
+<p>
+    Selección dinámica de miembros:<br>
+    <code>class Foo extends Dynamic</code>
+</p>
+
+<p>
+    Conversión implícita:<br>
+    <code>implicit def toInt(s: String) = s.toInt</code>
+</p>
+
+<p>
+    Tipo de orden superior<small>(habilitado por defecto desde <em>Scala 2.13.1</em>)</small>:<br>
+    <code>class Bar[M[A]]</code>
+</p>
+
+<p>
+    Tipo existencial:<br>
+    <code>def foo(v: Seq[T] forSome { type T })</code>
+</p>
+
+<p>
+    Definición de macro:<br>
+    <code>def assert(s: String) = macro Asserts.assertImpl</code>
+</p>
+<!-- tooltip end -->
+
+<p>El compilador de Scala también puede emitir estas advertencias cuando se proporciona la opción "-feature". </p>
+
+<p>Para las opciones del compilador, consulte: <a href="settings://scala.compiler?Features">Archivo | Configuración | Compilación, ejecución, implementación | Compilador | Compilador de Scala | Funciones</a></p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<body>
+Informa sobre las llamadas a métodos como <code>Assert.assertEquals()</code>, <code>Assert.assertTrue()</code> y otros que pueden migrarse al estilo declarativo Hamcrest usando <code>Assert.assertThat()</code>.
+<p>Por ejemplo:</p>
+<pre><code lang="java">
+  public class SubstantialTest {
+    @Test
+    public void testContents(Collection&lt;String&gt; c, String s) {
+      Assert.assertTrue(c.contains(s));
+      Assert.assertEquals(c, s);
+      Assert.assertNotNull(c);
+      Assert.assertNull(c);
+      Assert.assertFalse(c.contains(s));
+    }
+  }
+</code></pre>
+<p>Se proporciona una corrección rápida para realizar la migración:</p>
+<pre><code lang="java">
+  public class SubstantialTest {
+    @Test
+    public void testContents(Collection&lt;String&gt; c, String s) {
+      assertThat(c, hasItem(o));
+      assertThat(o, is(c));
+      assertThat(c, notNullValue());
+      assertThat(c, nullValue());
+      assertThat(c, not(hasItem(o)));
+    }
+  }
+</code></pre>
+<p>Esta inspección requiere que la biblioteca Hamcrest esté disponible en el classpath.
+<p>La opción <b>importar estáticamente los métodos matcher</b> permite especificar si desea que la corrección rápida importe estáticamente los métodos matcher de Hamcrest.
+</body>
+</html>

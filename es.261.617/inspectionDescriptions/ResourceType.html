@@ -1,0 +1,17 @@
+<html>
+<body>
+Esta inspección examina las llamadas a la API de Android que utilizan varias anotaciones de soporte (como RequiresPermission o UiThread) y marca cualquier llamada que no use la API correctamente según lo especificado en las anotaciones.
+<br><br>
+Ejemplos de errores marcados por esta inspección:
+<ul>
+  <li>Pasar un entero de recurso del tipo incorrecto (como R.string) a una API que requiere un tipo diferente (como R.dimen).</li>
+  <li>Olvidar llamar a un método sobrescrito (mediante super) en métodos que lo requieren</li>
+  <li>Llamar a métodos que requieren permisos que no están declarados en el manifiesto</li>
+  <li>Pasar una referencia de color de recurso a un método que requiere un valor entero RGB.</li>
+</ul>
+...y más.
+<br><br>
+Para más información, consulte la documentación en 
+<a href="http://developer.android.com/tools/debugging/annotations.html">http://developer.android.com/tools/debugging/annotations.html</a>
+</body>
+</html>

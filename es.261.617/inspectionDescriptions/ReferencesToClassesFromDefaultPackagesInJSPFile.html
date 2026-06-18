@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre cualquier referencia a clases en el paquete predeterminado dentro de archivos JSP.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="jsp">
+  &lt;%!
+  Integer countSomeUsefulStuff() {
+    ...
+    new ClassFromDefaultPackage(...); // Error
+    new com.example.GoodClass(...); // OK
+  }
+  %&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;Hello, JSP!&lt;/title&gt;
+    &lt;/head&gt;
+  &lt;/html&gt;
+</code></pre><br/>
+<p>
+  <b>Nota</b>: Estas referencias no se resolverán durante la compilación de JSP, ya que las clases compiladas de JSP generalmente se colocan en paquetes no predeterminados (por ejemplo, "org.apache.jsp" para Tomcat, "com.ibm._jsp" para WebSphere), y Java no permite importar desde el paquete predeterminado.
+</p>
+</body>
+</html>

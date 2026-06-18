@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa sobre la construcción de objetos (temporales) nuevos dentro de los métodos <code>equals()</code>, <code>hashCode()</code>, <code>compareTo()</code> y <code>Comparator.compare()</code>.
+<p>
+  Además de las llamadas a constructores, los objetos nuevos también pueden crearse mediante autoboxing o creación de iteradores en sentencias <code>foreach</code>.
+  Esto puede causar problemas de rendimiento, por ejemplo, al agregar objetos a un <code>Set</code> o <code>Map</code>, donde estos métodos se invocan frecuentemente.
+</p>
+<p>
+  La inspección no informará cuando los objetos se creen en sentencias <code>throw</code> o <code>assert</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Person {
+    private String name;
+    private int age;
+    public boolean equals(Object o) {
+      return Arrays.equals(new Object[] {name, age}, new Object[] {((Foo)o).name, ((Foo)o).age});
+    }
+    public int hashCode() {
+      return (name + age).hashCode();
+    }
+  }
+</code></pre>
+<p>
+  En este ejemplo, se crean dos arrays adicionales dentro de <code>equals()</code>, el uso del campo <code>age</code> requiere autoboxing, y <code>name + age</code> crea implícitamente una nueva cadena de texto.
+</p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>
+  Reporta campos de documento no resueltos especificados en la anotación <code>org.springframework.data.mongodb.repository.Query</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+@Document
+class User {
+  @Field
+  String name;
+}
+interface UserRepository extends Repository&lt;User, Long&gt; {
+  @Query("{ age: { $gt: ?0 } }") // 'age' se resalta como no resuelto
+  List&lt;User&gt; findUsersOlderThan(Integer age);
+}
+</code></pre>
+</body>
+</html>

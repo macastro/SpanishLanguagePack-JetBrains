@@ -1,0 +1,23 @@
+<html>
+<body>
+Reporta declaraciones import no utilizadas en código Python.
+<p>
+  Esta inspección detecta declaraciones import que no se utilizan en el código y pueden ser eliminadas de forma segura.
+  Eliminar imports no utilizados ayuda a mantener el código limpio y reduce el riesgo de conflictos de nombres.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+import os           # Unused import
+import sys         # Used import
+from math import pi # Unused import
+print(sys.version)
+</code></pre>
+<p>
+  Esta inspección proporciona una corrección rápida para optimizar imports que puede eliminar todas las declaraciones import no utilizadas.
+</p>
+<p>
+  Ten en cuenta que algunos imports pueden ser utilizados indirectamente (por ejemplo, para efectos secundarios) y no deberían ser eliminados.
+  Si algunos imports existen para efectos secundarios, puedes suprimir esta inspección para ellos.
+</p>
+</body>
+</html>

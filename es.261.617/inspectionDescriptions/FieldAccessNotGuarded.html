@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre accesos a campos declarados como <code>@GuardedBy</code> que no están protegidos por una estructura de sincronización adecuada.
+<p>Ejemplo:</p>
+<pre><code>
+    @GuardedBy("this")
+    void x() {
+        notify();
+    }
+    void y() {
+        x(); // Llamada a método no protegida
+    }
+</code></pre>
+<p>Las anotaciones <code>@GuardedBy</code> soportadas son:</p>
+<ul>
+  <li><code>net.jcip.annotations.GuardedBy</code></li>
+  <li><code>javax.annotation.concurrent.GuardedBy</code></li>
+  <li><code>org.apache.http.annotation.GuardedBy</code></li>
+  <li><code>com.android.annotations.concurrency.GuardedBy</code></li>
+  <li><code>androidx.annotation.GuardedBy</code></li>
+  <li><code>com.google.errorprone.annotations.concurrent.GuardedBy</code></li>
+</ul>
+</body>
+</html>

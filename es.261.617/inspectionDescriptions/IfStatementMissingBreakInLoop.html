@@ -1,0 +1,26 @@
+<html>
+<body>
+Informa sobre bucles que contienen una sentencia <code>if</code> y terminan con <code>break</code> sin alterar la semántica.
+Esto puede evitar iteraciones redundantes en el bucle.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  boolean found = false;
+  for (int i = 0; i &lt; arr.length; i++) {
+    if (Objects.equals(value, arr[i])) {
+      found = true;
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  boolean found = false;
+  for (int i = 0; i &lt; arr.length; i++) {
+    if (Objects.equals(value, arr[i])) {
+      found = true;
+      break;
+    }
+  }
+</code></pre>
+<p><small>Novedades de la versión 2019.2</small></p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre cadenas de llamadas <code>Optional</code> que pueden ser reemplazadas por una secuencia de declaraciones <code>if</code>.
+<p>Ejemplo:</p>
+<pre><code>
+  return Optional.ofNullable(name)
+    .map(this::extractInitials)
+    .map(initials -> initials.toUpperCase(Locale.ENGLISH))
+    .orElseGet(this::getDefault);
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  if (name != null) {
+    String initials = extractInitials(name);
+    if (initials != null) return initials.toUpperCase(Locale.ENGLISH);
+  }
+  return getDefault();
+</code></pre>
+<p>
+  Esta inspección ayuda con la degradación para mantener la compatibilidad con versiones anteriores de Java.
+</p>
+<p><small>Novedades de 2020.2</small></p>
+</body>
+</html>

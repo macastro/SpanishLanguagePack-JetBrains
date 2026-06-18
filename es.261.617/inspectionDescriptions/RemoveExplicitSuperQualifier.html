@@ -1,0 +1,48 @@
+<html>
+<body>
+Informa sobre llamadas redundantes a miembros <code>super</code> con tipo padre calificado.
+<p>
+    El código en una clase derivada puede llamar a las implementaciones de funciones y propiedades de su clase padre usando la palabra clave <code>super</code>.
+    Para especificar el tipo padre del cual se hereda la implementación, se puede calificar <code>super</code> con el nombre del tipo padre entre corchetes angulares, por ejemplo <code>super&lt;Base&gt;</code>. A veces esta calificación es redundante y se puede omitir.
+    El código se puede limpiar usando la corrección rápida "Eliminar calificación explícita del tipo padre".
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  open class B {
+      open fun foo(){}
+  }
+  class A : B() {
+      override fun foo() {
+         super&lt;B&gt;.foo() // &lt;== Redundante, ya que 'B' es el único tipo padre
+      }
+  }
+  interface I {
+      fun foo() {}
+  }
+  class C : B(), I {
+      override fun foo() {
+          super&lt;B&gt;.foo() // &lt;== Aquí, el calificador &lt;B&gt; es necesario para distinguir entre 'B.foo()' y 'I.foo()'
+      }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  open class B {
+      open fun foo(){}
+  }
+  class A : B() {
+      override fun foo() {
+         super.foo() // &lt;== Actualizado
+      }
+  }
+  interface I {
+      fun foo() {}
+  }
+  class C : B(), I {
+      override fun foo() {
+          super&lt;B&gt;.foo()
+      }
+  }
+</code></pre>
+</body>
+</html>

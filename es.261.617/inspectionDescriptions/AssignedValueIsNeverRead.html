@@ -1,0 +1,36 @@
+<html>
+<body>
+<p>Reporta casos donde un valor asignado nunca se usa en el código después de la asignación.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo(): Int = 42
+  fun example() {
+      var local = 0
+      print(local)
+      local = 42  // El valor asignado nunca se lee
+  }
+</code></pre>
+<ul>
+    <li>Después del quick fix, la asignación se elimina:</li>
+</ul>
+<pre><code>
+  fun foo(): Int = 42
+  fun example() {
+      var local = 0
+      print(local)
+  }
+</code></pre>
+<ul>
+    <li>Si la expresión del lado derecho (RHS) puede tener efectos secundarios, el quick fix también sugiere conservar la expresión RHS para preservar estos efectos secundarios:
+    </li>
+</ul>
+<pre><code>
+  fun foo(): Int = 42
+  fun example() {
+      var local = 0
+      print(local)
+      foo()  // La llamada a la función se conserva por sus efectos secundarios
+  }
+</code></pre>
+</body>
+</html>

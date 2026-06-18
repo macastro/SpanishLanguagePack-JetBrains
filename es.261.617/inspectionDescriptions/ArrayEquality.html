@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre el uso de los operadores <code>==</code> y <code>!=</code> para comparar la igualdad de arrays.
+En la mayoría de los casos, cuando se necesita comparar el contenido de los arrays, esto se puede lograr usando el método <code>java.util.Arrays.equals()</code>.
+<p>
+  Se recomienda usar la corrección rápida para reemplazar <code>==</code> por <code>java.util.Arrays.equals()</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void foo(Object[] x, Object[] y) {
+    boolean comparison = x == y;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void foo(Object[] x, Object[] y) {
+    boolean comparison = Arrays.equals(x, y);
+  }
+</code></pre>
+</body>
+</html>

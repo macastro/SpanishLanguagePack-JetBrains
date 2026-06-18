@@ -1,0 +1,30 @@
+<html>
+<body>
+Reporta expresiones y condiciones que siempre producen el mismo resultado, como <code>true</code>, <code>false</code>, <code>null</code> <code>o cero</code>.
+Tales expresiones pueden ser reemplazadas por el valor constante correspondiente, o pueden indicar la presencia de un bug en el código.
+<p>Ejemplo:</p>
+<pre><code>  // Siempre true
+  // Razón: se usa ||, no &&
+  if (x &gt; 0 || x &lt; 10) {}
+  System.out.println(str.trim());
+  // Siempre false
+  // Razón: la variable se desreferencia antes de la verificación de null
+  if (str == null) {}
+</code></pre>
+<p>
+  El comportamiento de la inspección puede ser controlado por muchas anotaciones, como las anotaciones <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">de nullabilidad</a>, la anotación <code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code>, la anotación <code>@Range</code>, etc.
+</p>
+<p>Configurar la inspección:</p>
+<ul>
+  <li>Usa la opción <b>No reportar aserciones que están estáticamente probadas como siempre true</b> para evitar reportar aserciones que están estáticamente probadas como siempre true. Esto también incluye condiciones como <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code>.</li>
+  <li>Usa la opción <b>Ignorar declaraciones assert</b> para controlar cómo la inspección maneja las declaraciones <code>assert</code>.
+    Por defecto, las aserciones se asumen como ejecutadas (modo <code>-ea</code>).
+    Cuando esta opción está habilitada, las aserciones serán ignoradas (modo <code>-da</code>).</li>
+  <li>Usa la opción <b>Advertir cuando las constantes se almacenan en variables</b> para mostrar advertencias cuando se usan variables cuyo valor se conoce que es constante.</li>
+</ul>
+<p>
+  Antes de IntelliJ IDEA 2022.3, esta inspección era parte de la inspección <i>Condiciones constantes y excepciones</i>.
+  Esta inspección se ha dividido en dos inspecciones: <i>Valores constantes</i> y <i>Problemas de nullabilidad y flujo de datos</i>.
+</p>
+</body>
+</html>

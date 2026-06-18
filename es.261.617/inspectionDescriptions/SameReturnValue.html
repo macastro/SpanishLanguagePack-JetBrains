@@ -1,0 +1,38 @@
+<html>
+<body>
+Informa sobre métodos y jerarquías de métodos que siempre devuelven la misma constante.
+<p>
+Esta inspección funciona de manera diferente en modo por lotes (con <b>Código | Inspeccionar código</b> o <b>Código | Analizar código | Ejecutar inspección por nombre</b>) y cuando se ejecuta dinámicamente en el editor:
+<ul>
+  <li>En modo por lotes, la inspección informa sobre métodos y jerarquías de métodos que siempre devuelven la misma constante.</li>
+  <li>En el editor, la inspección solo informa sobre métodos que tienen múltiples declaraciones <code>return</code>, no tienen un método superior y no pueden ser sobrescritos. Si un método sobrescribe o implementa otro método, la convención puede requerir que devuelva una constante específica, pero aun así podríamos querer tener múltiples puntos de salida. Si un método puede ser sobrescrito, podría devolver valores diferentes en las subclases.
+  </li>
+</ul>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class X {
+                // Advertencia solo en modo por lotes:
+    int xxx() { // El método 'xxx()' y todos sus métodos de sobrescritura siempre devuelven '0'
+      return 0;
+    }
+  }
+  class Y extends X {
+    @Override
+    int xxx() {
+        return 0;
+    }
+                // Advertencia solo en modo por lotes:
+    int yyy() { // El método 'yyy()' siempre devuelve '0'
+        return 0;
+    }
+                                  // Advertencia tanto en modo por lotes como en ejecución dinámica:
+    final int zzz(boolean flag) { // El método 'zzz()' siempre devuelve '0'
+        if (Math.random() > 0.5) {
+            return 0;
+        }
+        return 0;
+    }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<body>
+<p>Reporta definiciones y usos inválidos de clases abstractas.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+from abc import abstractmethod, ABC
+class Figure(ABC):
+    @abstractmethod
+    def do_figure(self):
+        pass
+class Triangle(Figure):  # 'Triangle' 类中未定义所有 abstract 方法
+    def do_triangle(self):
+        pass
+Triangle()  # 无法实例化抽象类 'Triangle'
+</code></pre>
+<p>Después de aplicar la corrección rápida, el IDE implementa los métodos abstractos para la clase <code>Triangle</code>:</p>
+<pre><code>
+from abc import abstractmethod, ABC
+class Figure(ABC):
+    @abstractmethod
+    def do_figure(self):
+        pass
+class Triangle(Figure):
+    def do_figure(self):
+        pass
+    def do_triangle(self):
+        pass
+Triangle()
+</code></pre>
+También emite una advertencia si se usa <code>abc.abstractmethod</code> en una clase cuya metaclase no es <code>abc.ABCMeta</code>:
+<code><pre>
+from abc import abstractmethod
+class MyClass:
+    @abstractmethod  # 'MyClass' 不是抽象类
+    def foo(self):
+        ...
+</code></pre>
+</body>
+</html>

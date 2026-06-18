@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa sobre expresiones <code>return</code> sin etiquetar dentro de lambdas en línea.
+<p>Estas expresiones pueden resultar confusas ya que puede no estar claro a qué ámbito pertenece el <code>return</code>.</p>
+<p><b>La corrección rápida Cambiar a return@...</b> está disponible para arreglar el código automáticamente.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  fun test(list: List&lt;Int&gt;) {
+      list.forEach {
+          // Esta expresión return retorna desde la función test
+          // Se puede cambiar a return@forEach para modificar el ámbito
+          if (it == 10) return
+      }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun test(list: List&lt;Int&gt;) {
+      list.forEach {
+          if (it == 10) return@test
+      }
+  }
+</code></pre>
+</body>
+</html>

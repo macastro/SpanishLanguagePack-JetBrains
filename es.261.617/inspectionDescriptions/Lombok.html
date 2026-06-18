@@ -1,0 +1,34 @@
+<html>
+<body>
+Proporciona inspecciones generales para las anotaciones de Lombok.
+<p>
+Las advertencias y errores reportados por esta inspección están diseñados para coincidir 1:1 con las advertencias y errores reportados en tiempo de compilación por el procesador de anotaciones de Lombok, por ejemplo:
+<ul>
+  <li>
+    Anotaciones aplicadas de forma redundante (reportadas como advertencias)
+    <p><b>Ejemplo:</b></p>
+    <pre><code>
+      @ToString
+      class Person {
+        final String name;
+        final int age;
+        @Override
+        public String toString() {
+            return "Person{name='" + name + "', age=" + age + '}';
+        }
+      }
+    </code></pre>
+    La corrección rápida sugiere eliminar la anotación redundante.
+  </li>
+  <li>
+    Anotaciones aplicadas incorrectamente (reportadas como errores)
+    <p><b>Ejemplo:</b></p>
+    <pre><code>
+      @Value
+      record Person(String name, int age) {}
+    </code></pre>
+    La corrección rápida sugerirá eliminar la anotación inválida.
+  </li>
+</ul>
+</body>
+</html>

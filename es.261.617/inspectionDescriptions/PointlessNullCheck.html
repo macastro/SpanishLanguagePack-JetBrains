@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre comprobaciones de <code>null</code> seguidas de llamadas a métodos que siempre devuelven <code>false</code> cuando se pasa <code>null</code> (por ejemplo, <code>Class.isInstance</code>).
+<p>En estos casos, dado que la llamada al método siempre devolverá <code>false</code>, estas comprobaciones parecen redundantes.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  if (x != null && myClass.isInstance(x)) { ... }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  if (myClass.isInstance(x)) { ... }
+</code></pre>
+<p>
+</body>
+</html>

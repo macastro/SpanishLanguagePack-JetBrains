@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>Reporta campos <code>var</code> si se están usando en <code>hashCode</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Test {
+    var value = 3
+    override def hashCode(): Int =
+      value // value puede cambiar, indicando un mal uso en hashCode()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

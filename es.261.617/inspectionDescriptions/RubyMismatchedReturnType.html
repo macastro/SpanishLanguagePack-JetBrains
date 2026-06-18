@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre valores de retorno de métodos y bloques donde el tipo inferido no coincide con el tipo de retorno esperado. El tipo de retorno esperado se obtiene de cualquiera de los siguientes:
+<ul>
+  <li>Firma de tipo RBS</li>
+  <li>Firma de tipo Sorbet</li>
+  <li>Etiqueta YARD <code>@return</code></li>
+</ul>
+<p>Ejemplo:</p>
+<pre>
+<code># @return [Integer]
+def method
+  1.0
+end</code>
+</pre>
+</body>
+</html>

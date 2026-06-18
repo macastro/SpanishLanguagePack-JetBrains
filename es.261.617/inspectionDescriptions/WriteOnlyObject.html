@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre objetos modificados que nunca han sido consultados.
+<p>Esta inspección se basa en contratos de mutación de métodos, que pueden ser inferidos o anotados previamente para algunos métodos de biblioteca. La inspección no informa sobre colecciones, mapas y StringBuilder, ya que otras inspecciones más específicas informan sobre estos tipos.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  AtomicReference&lt;String&gt; ref = new AtomicReference&lt;&gt;();
+  ref.set("hello"); // ref no se usa más
+</code></pre>
+<p>
+  La opción <b>Ignorar constructores no puros</b> controla si se procesan objetos creados por constructores o métodos cuya pureza es desconocida.
+  Desmarcar esta opción puede generar falsos positivos si las referencias a objetos se filtran intencionalmente durante la construcción.
+</p>
+<b><small>Novedades en 2021.2</small></b>
+</body>
+</html>

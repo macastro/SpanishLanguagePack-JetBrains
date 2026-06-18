@@ -1,0 +1,39 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td ><font face="verdana" size="-1">
+    Reemplaza una expresión literal de cadena (por ejemplo, </font><code>String s = "Hello";</code><font face="verdana" size="-1">)
+    por una expresión de código Java internacionalizada
+    (por ejemplo, </font><code>String s = myResourceBundle.getString("hello");</code><font face="verdana" size="-1">).<br>
+    Esta plantilla incorporada se puede editar. Junto con las expresiones de Java y los comentarios, puedes utilizar también las variables predefinidas que
+    luego se expandirán en los valores correspondientes.</font>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${RESOURCE_BUNDLE}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Expresión del tipo <b>java.util.ResourceBundle</b>, cuya instancia está disponible en este contexto.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_KEY}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la clave de la propiedad que se especifica en el archivo de propiedades correspondiente.
+      Normalmente es el valor que se utiliza para el parámetro del método <b>ResourceBundle.getString()</b>.
+    </font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROPERTY_VALUE}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Valor de la propiedad que se define en el archivo de propiedades correspondiente.
+      Este es el valor del literal de cadena Java original.
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>

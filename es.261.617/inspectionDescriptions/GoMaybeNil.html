@@ -1,0 +1,24 @@
+<html>
+<body>
+Esta inspección puede detectar potenciales desreferencias nil y considera todas las llamadas a funciones.
+El análisis es interprocedimental y considera las llamadas en todo el proyecto, incluyendo llamadas entre diferentes paquetes.
+<p>Ejemplo:</p>
+<pre><code>
+package a
+func CreateUser(name string) *User {
+  if isValid(name) {
+    return &User{Name: name}
+  }
+  return nil
+}
+</code></pre>
+<pre><code>
+package main
+func main() {
+	user := CreateUser("NilDereference")
+	print(user.Name) // Potencial desreferencia nil
+}
+</code></pre>
+<p>En el ejemplo proporcionado, <code>user</code> es un puntero a la estructura <code>User</code>, pero puede ser <code>nil</code>, ya que <code>CreateUser</code> puede devolver <code>nil</code>. Intentar desreferenciar <code>user</code> para acceder a <code>Name</code> sin verificar si <code>user</code> es <code>nil</code> causará un error en tiempo de ejecución.</p>
+</body>
+</html>

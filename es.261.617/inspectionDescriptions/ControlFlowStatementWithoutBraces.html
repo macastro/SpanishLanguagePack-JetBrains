@@ -1,0 +1,43 @@
+<html>
+<body>
+Informa sobre declaraciones <code>if</code>, <code>while</code>, <code>do</code> o <code>for</code> sin llaves.
+Algunos estilos de código, como la <a href="https://google.github.io/styleguide/javaguide.html">Guía de Estilo de Google para Java</a>, requieren que todas las declaraciones de control incluyan llaves.
+<p>
+  Al agregar más declaraciones a una estructura de control sin llaves, es importante no olvidar añadirlas.
+  También se debe tener especial cuidado al comentar una línea de código cuando no se usan llaves, para evitar que la siguiente declaración se convierta inadvertidamente en parte de la estructura de control.
+  Usar siempre llaves permite insertar o comentar líneas de código de manera más segura.
+<p>
+  Si siempre se sigue un estilo de código que utiliza llaves, es menos probable que ocurran vulnerabilidades como el <a href="https://www.imperialviolet.org/2014/02/22/applebug.html">fallo goto</a>.
+  Las estructuras de control con llaves hacen que el flujo de control sea más fácil de visualizar, sin depender de una indentación que podría ser incorrecta.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  class Strange {
+    void x(boolean one, boolean two) {
+      if(one)
+        if(two)
+          foo();
+      else
+        bar();
+    }
+    void foo() {}
+    void bar() {}
+  }
+</code></pre>
+<p>Corrección rápida envolviendo el cuerpo de las declaraciones con llaves:</p>
+<pre><code>
+  class Strange {
+    void x(boolean one, boolean two) {
+      if(one) {
+        if(two) {
+          foo();
+        } else {
+          bar();
+        }
+      }
+    }
+    void foo() {}
+    void bar() {}
+  }
+</code></pre>
+</body>
+</html>

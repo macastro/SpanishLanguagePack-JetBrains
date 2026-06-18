@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta tipos de retorno <code>Unit</code> redundantes que pueden omitirse.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun test(): Unit {
+      ...
+  }
+</code></pre>
+<p>La corrección rápida eliminará el tipo de retorno <code>Unit</code>:</p>
+<pre><code>
+  fun test() {
+      ...
+  }
+</code></pre>
+</body>
+</html>

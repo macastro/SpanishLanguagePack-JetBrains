@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>Informa de encabezados de sintaxis wiki desequilibrados y el texto ignorado después de dichos encabezados en Scaladocs.</p>
+<p>En el siguiente ejemplo, se marca <code>====</code>:</p>
+<pre><code>
+  /**
+   * == I'm a wiki style header ====
+   */
+  def test(i: Int): Unit = {
+
+  }
+</code></pre>
+<p>En el siguiente ejemplo, se marca <code>Texto ignorado</code>:</p>
+<pre><code>
+  /**
+   * == I'm a wiki style header == Texto ignorado
+   */
+  def test(i: Int): Unit = {
+
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

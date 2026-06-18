@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre el uso de la etiqueta <code>&lt;code&gt;</code> en comentarios Javadoc.
+Desde Java 5, estas etiquetas pueden ser reemplazadas por la estructura <code>{@code ...}</code>.
+Esto permite usar los símbolos menor que <code>&lt;</code> y mayor que <code>&gt;</code> en lugar de entidades HTML en los comentarios.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  /**
+   * @return empty &lt;code&gt;ArrayList&amp;lt;Integer&amp;gt;&lt;/code&gt;
+   */
+  List&lt;Integer&gt; getList(){ ... }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  /**
+   * @return empty {@code ArrayList&lt;Integer&gt;}
+   */
+  List&lt;Integer&gt; getList(){ ... }
+</code></pre>
+</body>
+</html>

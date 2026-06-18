@@ -1,0 +1,42 @@
+<html>
+<body>
+Informa sobre métodos que exceden el número máximo especificado de puntos de <code>return</code>.
+Los métodos con demasiados puntos de <code>return</code> pueden ser confusos y difíciles de refactorizar.
+<p>Un punto de <code>return</code> puede ser una declaración <code>return</code> o una caída directa desde el final de un método <code>void</code> o constructor.</p>
+<p><b>Ejemplo:</b></p>
+<p>El siguiente método se informará si solo se permiten dos declaraciones <code>return</code>:</p>
+<pre><code>
+  void doSmth(User[] users) {
+    for (User user : users) {
+      if (cond1(user)) {
+        user.setId(getId());
+        return;
+      } else if (cond2(user)) {
+        if (cond3(user)) {
+          user.setId(getId());
+          return;
+        }
+      }
+    }
+  }
+</code></pre>
+<p>Considere reescribir el método para hacerlo más comprensible:</p>
+<pre><code>
+  void doSmth(User[] users) {
+    for (User user : users) {
+      if (cond1(user) || cond2(user) && cond3(user)) {
+        user.setId(getId());
+        return;
+      }
+    }
+  }
+</code></pre>
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>Use el campo <b>Límite de puntos return</b> para especificar el número máximo permitido de puntos <code>return</code> en un método.</li>
+  <li>Use la opción <b>Ignorar cláusulas críticas</b> para ignorar las cláusulas críticas.
+    Una cláusula crítica es una declaración <code>if</code> que solo contiene una declaración <code>return</code></li>
+  <li>Use la opción <b>Ignorar para método 'equals()'</b> para ignorar los puntos de <code>return</code> en el método <code>equals()</code>.</li>
+</ul>
+</body>
+</html>

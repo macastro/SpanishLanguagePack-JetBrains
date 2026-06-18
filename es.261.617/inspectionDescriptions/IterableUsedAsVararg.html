@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre usos sospechosos de <code>Collection</code> o <code>Iterable</code> en llamadas a métodos vararg.
+<p>Por ejemplo, en el siguiente método:</p>
+<pre><code>
+  &lt;T&gt; boolean contains(T needle, T... haystack) {...}
+</code></pre>
+<p>Una llamada como esta:</p>
+<pre><code>
+  if(contains("item", listOfStrings)) {...}
+</code></pre>
+<p>parece sospechosa porque la lista será envuelta como un array de un solo elemento.
+  Este código se puede compilar correctamente y probablemente se ejecute sin excepciones, pero es posible que se esté utilizando incorrectamente.</p>
+<p><small>Novedades en 2019.2</small></p>
+</body>
+</html>

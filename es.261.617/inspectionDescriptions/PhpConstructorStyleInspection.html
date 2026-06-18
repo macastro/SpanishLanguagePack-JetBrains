@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta las declaraciones de constructores antiguos (<code>ClassName()</code>) y sugiere reemplazarlos con el nuevo estilo de constructor (<code>__construct()</code>).
+<p>
+  Antes de PHP 8.0, la sintaxis del constructor antiguo utilizada en clases en el espacio de nombres global se consideraba obsoleta y generaba un error <code>E_DEPRECATED</code>. Si se definían tanto el método <code>__construct()</code> como el método <code>ClassName()</code>, se llamaba a <code>__construct()</code>.
+</p>
+<p>En clases con espacio de nombres o en cualquier clase de PHP 8.0, el método <code>ClassName()</code> nunca tuvo un significado especial y no se llamaba como constructor. Por lo tanto, si el nivel de lenguaje PHP está configurado a 8.0 o superior, la inspección no reportará estos casos.
+</p>
+<p>
+  Para más información, consulte <a href="https://www.php.net/manual/en/language.oop5.decon.php">Constructors and destructors (php.net)</a>.
+</p>
+</body>
+</html>

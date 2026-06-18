@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa sobre las llamadas al método <code>toString()</code> que utilizan la implementación predeterminada de <code>java.lang.Object</code>.
+<p>Esta implementación predeterminada raramente es intencional y podría ser un uso incorrecto.</p>
+<p>
+  Esta inspección ignora las llamadas a <code>toString()</code> en objetos cuyo tipo es <code>java.lang.Object</code>, una interfaz o una clase abstracta.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Bar {
+      void foo1(Bar bar) {
+          String s = bar.toString(); // advertencia
+          /* ... */
+      }
+      void foo2(Object obj) {
+          String s = obj.toString(); // sin advertencia aquí
+          /* ... */
+      }
+  }
+</code></pre>
+</body>
+</html>

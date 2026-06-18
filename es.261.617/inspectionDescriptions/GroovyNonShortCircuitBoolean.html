@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre el uso de formas no de cortocircuito de los operadores booleanos 'and' y 'or' (<code>&</code>
+y <code>|</code>).
+<p>
+  Las versiones sin cortocircuito son ocasionalmente útiles, sin embargo, suelen ser el resultado de errores tipográficos de las formas con cortocircuito (<code>&&</code>
+  y <code>||</code>) y pueden producir errores difíciles de detectar.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+if (a & b) {}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+if (a && b) {}
+</code></pre>
+</body>
+</html>

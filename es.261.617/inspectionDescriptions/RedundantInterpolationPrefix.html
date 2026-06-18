@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta prefijos de signo de dólar redundantes en expresiones de plantillas de cadena.
+<p>
+Estos prefijos pueden eliminarse de forma segura.
+</p>
+<p>
+Ejemplo:
+</p>
+<pre><code>
+fun example() {
+    $"示例：长度为一的前缀始终冗余"
+    $$"示例：字符串不包含任何内插值"
+    $$"示例：这里的 $$ 美元符号是普通字符 $$"
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+fun example() {
+    "示例：长度为一的前缀始终冗余"
+    "示例：字符串不包含任何内插值"
+    "示例：这里的 $$ 美元符号是普通字符 $$"
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+Se notifica cuando en un constructor compacto de un registro, las llamadas a los métodos acceden a los campos.
+<p>Estas invocaciones parecen sospechosas porque los campos del registro pueden no estar inicializados en el momento de estas invocaciones.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+public record MyRecord(String name, int id) {
+    public MyRecord {
+        validateMyFields(); // Parece sospechoso
+    }
+
+    private void validateMyFields() {
+        if (this.name.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+    }
+}
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2024.1</small></p>
+</body>
+</html>

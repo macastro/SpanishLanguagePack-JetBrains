@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa sobre clases <code>Serializable</code> que tienen métodos <code>readObject</code> o <code>writeObject</code> no declarados como private.
+No hay razón para que estos métodos tengan una visibilidad mayor que <code>private</code>.
+<p>
+  Se recomienda establecer los métodos correspondientes como <code>private</code> mediante la corrección rápida.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Test implements Serializable {
+    public void readObject(ObjectInputStream stream) {
+      /* ... */
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  public class Test implements Serializable {
+    private void readObject(ObjectInputStream stream) {
+      /* ... */
+    }
+  }
+</code></pre>
+</body>
+</html>

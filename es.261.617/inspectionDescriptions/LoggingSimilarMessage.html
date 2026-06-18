@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa sobre llamadas de registro SLF4J o Log4j2 en una clase, como <code>logger.info("message: {}", key)</code> con mensajes de registro similares.
+Estas llamadas pueden ser indistinguibles entre sí, lo que dificulta entender de dónde proviene un mensaje de registro específico.
+<p><b>Ejemplo (Java):</b></p>
+<pre><code lang="java">
+  private static void request1(String text) {
+      log.info("Message: {}", text); //llamadas similares
+      doSomething1();
+  }
+  private static void request2(int i) {
+      log.info("Message: {}", i); //llamadas similares
+      doSomething2();
+  }
+</code></pre>
+<ul>
+  <li>
+    Utiliza la opción <b>longitud mínima de secuencia similar</b> para establecer la longitud mínima de la secuencia antes de que se informen las llamadas
+  </li>
+  <li>
+    Utiliza la opción <b>no informar llamadas con nivel de registro 'error'</b> para ignorar los mensajes con nivel de registro 'error' que contengan excepciones.
+    Ocultar estas advertencias puede ser útil ya que aún es posible localizar el punto de llamada usando el seguimiento de pila
+  </li>
+</ul>
+<p><small>Novedades en 2024.1</small></p>
+</body>
+</html>

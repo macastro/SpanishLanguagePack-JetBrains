@@ -1,0 +1,47 @@
+<html>
+<body>
+Reporta clases que pueden convertirse en clases record.
+<p>Las clases record se enfocan en modelar datos inmutables en lugar de comportamiento extensible.
+Las implementaciones automáticas implícitas de métodos orientados a datos (como <code>equals()</code> y accessors) ayudan a reducir el código repetitivo.</p>
+<p>
+  Ten en cuenta que no todas las clases pueden ser clases record. Estas son algunas limitaciones:
+</p>
+<ul>
+  <li>La clase no puede tener subclases.</li>
+  <li>Todos los campos no static en la clase deben ser final.</li>
+  <li>No debe haber inicializadores, constructores genéricos ni métodos nativos.</li>
+</ul>
+<p>Para una descripción completa de las clases record, consulta la <a href="https://docs.oracle.com/javase/specs/jls/se21/html/jls-8.html#jls-8.10">Especificación del Lenguaje Java</a>.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  class Point {
+    private final double x;
+    private final double y;
+    Point(double x, double y) {
+      this.x = x;
+      this.y = y;
+    }
+    double getX() {
+      return x;
+    }
+    double getY() {
+      return y;
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  record Point(int x, int y) {
+  }
+</code></pre>
+<p>Habilitar la opción <b>Sugerir renombrar métodos accessor</b> puede renombrar automáticamente los accessors <code>getX()</code>/<code>isX()</code> a <code>x()</code>.</p>
+<p>
+  Usa la opción <b>Deshabilitar resaltado si los miembros se vuelven más accesibles</b> para excluir clases donde la accesibilidad de los miembros se debilitaría por la conversión.
+  La corrección rápida siempre estará disponible como una intención, y activarla mostrará los miembros afectados y solicitará confirmación.
+  En modo batch, la conversión no será sugerida.
+</p>
+<p>Usa la lista <b>Prohibir conversión de clases con las siguientes anotaciones</b> para excluir de la conversión las clases cuyas anotaciones coincidan con los patrones especificados.
+</p>
+<p><small>Nuevo en 2020.3</small></p>
+</body>
+</html>

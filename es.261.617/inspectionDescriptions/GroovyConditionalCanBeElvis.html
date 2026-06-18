@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre expresiones ternarias que pueden ser reemplazadas por expresiones elvis.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  def notNull(o, defaultValue) {
+      o != null ? o : defaultValue
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  def notNull(o, defaultValue) {
+      o ?: defaultValue
+  }
+</code></pre>
+</body>
+</html>

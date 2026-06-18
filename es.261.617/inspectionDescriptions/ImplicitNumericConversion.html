@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre conversiones implícitas entre tipos numéricos.
+<p>Las conversiones numéricas implícitas no son un problema en sí mismas, pero pueden dificultar el seguimiento de errores si son accidentales.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  double m(int i) {
+    return i * 10;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  double m(int i) {
+    return (double) (i * 10);
+  }
+</code></pre>
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>Use la opción <b>Ignorar conversiones de ampliación</b> para ignorar las conversiones implícitas que no resultan en pérdida de datos (por ejemplo, <code>int</code>-&gt;<code>long</code>).</li>
+  <li>Use la opción <b>Ignorar conversiones entre 'char' y otros tipos</b> para ignorar las conversiones entre <code>char</code> y otros tipos. La inspección seguirá informando sobre conversiones entre números de punto flotante y otros tipos.</li>
+  <li>Use <b>Ignorar conversiones desde constantes y literales</b> para que la inspección ignore las conversiones desde literales y constantes en tiempo de compilación.</li>
+</ul>
+</body>
+</html>

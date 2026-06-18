@@ -1,0 +1,21 @@
+<html>
+<body>
+Reporta métodos de instancia que tienen el mismo nombre y número de parámetros que el método de la superclase, pero al menos uno de los parámetros es de un tipo incompatible.
+<p>
+  En este caso, el método en la subclase sobrecarga en lugar de sobrescribir el método de la superclase. Esto puede llevar a errores potenciales si no es intencional.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Foo {
+    void foo(int x) {}
+  }
+  public class Bar extends Foo {
+    void foo(Number x) {} // En casos donde la sobrescritura podría ser intencional,
+                          // el método 'foo()' sobrecarga el método compatible de la superclase
+  }
+</code></pre>
+<p>
+  Utilice esta opción para determinar si la inspección también debe reportar casos de tipos de parámetros incompatibles.
+<p>
+</body>
+</html>

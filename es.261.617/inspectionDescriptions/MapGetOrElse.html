@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>Reporta y sugiere reemplazar <code>map</code> y <code>getOrElse</code> en <code>Option</code>
+  por <code>fold</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  def p(x: Int): Boolean = ???
+  Option(0).map(p).getOrElse(false)
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  def p(x: Int): Boolean = ???
+  Option(0).fold(false)(p)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

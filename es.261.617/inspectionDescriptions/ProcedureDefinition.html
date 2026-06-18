@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>Reporta definiciones de métodos con sintaxis de procedimiento.</p>
+<p>No se recomienda que los desarrolladores usen sintaxis tipo procedimiento para métodos.
+  Es inconsistente, puede generar errores y se eliminará en Scala 3.</p>
+<p>El arreglo rápido convierte la definición de sintaxis de procedimiento a sintaxis de función.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Test {
+    def method() { }
+  }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  class Test {
+    def method(): Unit = { }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><em>Sugerencia:</em> Puede usar Analizar / Ejecutar inspección por nombre (Ctrl+Alt+Shift+I) para aplicar esta inspección a todo el proyecto.</p>
+</body>
+</html>

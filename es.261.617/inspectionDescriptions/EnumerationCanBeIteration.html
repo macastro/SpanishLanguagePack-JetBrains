@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre llamadas a métodos de <code>Enumeration</code> en colecciones que pueden ser reemplazadas por estructuras equivalentes de <code>Iterator</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Enumeration&lt;String&gt; keys = map.keys();
+  while (keys.hasMoreElements()) {
+    String name = keys.nextElement();
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  Iterator&lt;String&gt; iterator = map.keySet().iterator();
+  while (iterator.hasNext()) {
+    String name = iterator.next();
+  }
+</code></pre>
+</body>
+</html>

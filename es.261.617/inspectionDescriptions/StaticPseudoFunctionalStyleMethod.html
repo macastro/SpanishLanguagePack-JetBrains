@@ -1,0 +1,16 @@
+<html>
+<body>
+Reporta el uso de código pseudo-funcional de Guava cuando la <code>Java Stream API</code> está disponible.
+<p>Aunque la <code>Guava Iterable API</code> proporciona funcionalidad similar a la <code>Java Streams API</code>, es ligeramente diferente y puede carecer de algunas características.
+  En particular, las variantes de flujo especializadas en tipos primitivos como <code>IntStream</code> tienen mejor rendimiento que las variantes generales.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+List&lt;String&gt; transformedIterable = Iterables.transform(someList, someTransformFunction);//advertencia: código de estilo pseudo-funcional
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>List&lt;String&gt; transformedIterable = someList.stream().map(someTransformFunction).collect(Collectors.toList());</code></pre>
+<p>
+  <b>Nota</b>: La semántica del código puede cambiar; por ejemplo, el <code>Iterable.transform</code> de Guava produce un iterable con evaluación diferida, pero el reemplazo utiliza evaluación inmediata.
+</p>
+</body>
+</html>

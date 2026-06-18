@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre <i>fallthrough</i> en las declaraciones switch. Aunque ocasionalmente útil, el fallthrough suele ser involuntario y puede provocar errores inesperados.
+<p><b>Ejemplo:</b></p>
+<pre>
+<code>
+switch(n) {
+  case 1:
+    print 1
+  case 2: // "case 1" cae directamente a "case 2". Las declaraciones que comienzan en "case 2" se ejecutarán inmediatamente después de "case 1".
+    print 2
+    break
+  default:
+    print "Default"
+}
+</code>
+</pre>
+</body>
+</html>

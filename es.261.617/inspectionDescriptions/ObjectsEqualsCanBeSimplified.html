@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre llamadas a <code>Objects.equals(a, b)</code> donde se sabe estáticamente que el primer argumento no es null.
+<p>Si ambos argumentos son primitivos, estas llamadas se pueden reemplazar de forma segura por <code>a.equals(b)</code> o <code>a == b</code>.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  String defaultName = "default";
+  boolean isDefault = Objects.equals(defaultName, name);
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  String defaultName = "default";
+  boolean isDefault = defaultName.equals(name);
+</code></pre>
+<p><small>Novedades de la versión 2018.3</small></p>
+</body>
+</html>

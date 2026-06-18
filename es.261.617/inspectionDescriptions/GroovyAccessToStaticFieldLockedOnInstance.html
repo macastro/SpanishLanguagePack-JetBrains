@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre accesos a campos static no constantes que están sincronizados sobre <code>this</code> o sobre campos de instancia de <code>this</code>.
+<p>
+  Sincronizar campos static sobre datos de instancia no evita que otras instancias modifiquen el campo, lo que puede provocar condiciones de carrera inesperadas.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  static String s;
+  def foo() {
+      synchronized (this) {
+          System.out.println(s); // advertencia
+      }
+  }
+</code></pre>
+</body>
+</html>

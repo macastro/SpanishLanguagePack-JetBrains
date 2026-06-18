@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>Reporta canales no resueltos en las anotaciones <code>@StreamListener</code>, <code>@SendTo</code>, <code>@Output</code> y <code>@Input</code>.</p>
+<p>El uso de nombres de vinculación inválidos resulta en errores 'Bean not found' en tiempo de ejecución.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  @EnableBinding(Sink.class)
+  public class LogSource {
+    @StreamListener(Sink.class)
+	  public void log1() {
+    }
+    @StreamListener("invalid")  // Reporta 'canal no encontrado'
+	  public void log2() {
+    }
+  }
+</code></pre>
+</body>
+</html>

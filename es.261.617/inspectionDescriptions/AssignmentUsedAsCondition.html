@@ -1,0 +1,26 @@
+<html>
+<body>
+Informe sobre el uso de asignaciones como condiciones en sentencias <code>if</code>, <code>while</code>, <code>for</code> o
+<code>do</code> o en expresiones condicionales.
+<p>Aunque a veces es intencional, este uso puede resultar confuso y podría indicar un error tipográfico (por ejemplo, usar <code>=</code> en lugar de <code>==</code>).</p>
+<p>Esta corrección rápida reemplazará <code>=</code> por <code>==</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void update(String str, boolean empty) {
+    // Advertencia: 'empty' está siendo reasignado,
+    // no comparado con str.isEmpty()
+    if (empty = str.isEmpty()) {
+      ...
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void update(String str, boolean empty) {
+    if (empty == str.isEmpty()) {
+      ...
+    }
+  }
+</code></pre>
+</body>
+</html>

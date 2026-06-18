@@ -1,0 +1,12 @@
+<html>
+<body>
+Informa sobre llamadas a métodos de aridad variable (arity) donde el argumento en la posición del parámetro vararg es <code>null</code> o un array de un subtipo del parámetro vararg.
+Este tipo de argumentos puede resultar confuso, ya que no queda claro si se requiere una llamada vararg o no vararg.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  String[] ss = new String[]{"foo", "bar"};
+  System.out.printf("%s", ss);
+</code></pre>
+<p>En este ejemplo, no se imprimirá todo el array, sino solo el primer elemento del array.</p>
+</body>
+</html>

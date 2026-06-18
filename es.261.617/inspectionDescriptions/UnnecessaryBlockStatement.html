@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre bloques de código semánticamente redundantes en el programa que pueden ser reemplazados por su contenido.
+<p>Los bloques de código que funcionan como cuerpo principal de las declaraciones <code>if</code>, <code>do</code>, <code>while</code> o <code>for</code> no serán reportados por esta inspección.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  void foo() {
+    { // Innecesario
+      int result = call();
+      analyze(result);
+    } // Innecesario
+  }
+</code></pre>
+<p>Configuración de la inspección:</p>
+<p>
+Utilice la opción <b>Ignorar ramas de declaraciones 'switch'</b> para ignorar los bloques de código que actúan como ramas de declaraciones switch.
+<p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+Reporta operaciones de escritura dentro de métodos <code>@SafeVarargs</code> donde el parámetro vararg es reasignado a otros objetos.
+En este caso, el array recién asignado no está relacionado con la aridad variable del sitio de llamada y puede que ya no sea seguro.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    @SafeVarargs
+    public final &lt;T&gt; void test(T[] tt, T... t) {
+        t = tt;
+        System.out.println(t[0]);
+    }
+</code></pre>
+</body>
+</html>

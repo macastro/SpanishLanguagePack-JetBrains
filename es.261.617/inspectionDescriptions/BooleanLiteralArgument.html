@@ -1,0 +1,23 @@
+<html>
+<body>
+Argumento de llamada de tipo <code>Boolean</code> sin nombre de parámetro explícito.
+<p>
+    Cuando se pasan múltiples literales booleanos en secuencia, es fácil olvidar el orden de los parámetros, lo que puede provocar errores.
+    Los nombres explícitos de parámetros facilitan la lectura y comprensión del código.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun check(checkName: Boolean, checkAddress: Boolean, checkPhone: Boolean) {}
+  fun usage() {
+      check(true, false, true) //¿Qué significa esto?
+  }
+</code></pre>
+<p>La corrección rápida añadirá los nombres de parámetros faltantes:</p>
+<pre><code>
+  fun check(checkName: Boolean, checkAddress: Boolean, checkPhone: Boolean) {}
+  fun usage() {
+      check(checkName = true, checkAddress = false, checkPhone = true)
+  }
+</code></pre>
+</body>
+</html>

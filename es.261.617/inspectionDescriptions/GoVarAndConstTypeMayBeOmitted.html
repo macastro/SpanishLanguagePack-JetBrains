@@ -1,0 +1,11 @@
+<html>
+<body>
+Informa sobre tipos de variables y constantes que pueden omitirse porque el compilador puede inferirlos.
+  Esta redundancia de tipos puede eliminarse para mejorar la legibilidad del código.
+<p>Ejemplo:</p>
+<pre><code>var s string = fmt.Sprintln("hi")</code></pre>
+<p>El tipo <code>string</code> en la declaración de variable puede omitirse. Para eliminar este tipo, utilice la corrección rápida <b>Eliminar tipo</b>.
+  Después de aplicar la corrección rápida:</p>
+<pre><code>var s = fmt.Sprintln("hi")</code></pre>
+</body>
+</html>

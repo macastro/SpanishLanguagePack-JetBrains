@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa sobre cualquier implementación del método <code>Object.finalize()</code> que esté declarado como <code>public</code>.
+<p>
+  Por convención de <code>Object.finalize()</code>, solo el recolector de basura debe llamar a este método. Declararlo como public puede ser confuso, ya que sugiere que el método puede ser utilizado desde otro código.
+</p>
+<p>
+  Se puede utilizar una corrección rápida para establecer el método como <code>protected</code>, evitando así que sea llamado por otras clases.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>class</b> X {
+    <b>public void</b> finalize() {
+      /* ... */
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  <b>class</b> X {
+    <b>protected void</b> finalize() {
+      /* ... */
+    }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>Esta inspección está diseñada para identificar fragmentos de código potencialmente vulnerables, en los que los datos obtenidos desde fuentes potencialmente no confiables puedan ser utilizados en operaciones que comporten un riesgo de seguridad.</p>
+
+<p>Seguimiento del flujo de datos:</p>
+
+<p>La inspección monitoriza el flujo de datos desde la fuente hasta su uso en operaciones críticas.
+  Esto incluye el análisis de la transferencia de datos a través de métodos, objetos y variables.</p>
+
+<p>Consideremos un ejemplo en el que la entrada del usuario se utiliza directamente en una consulta SQL, sin el procesamiento adecuado previo.
+  La inspección emitirá una advertencia sobre la posible inyección SQL.</p>
+<pre>
+String userInput = getUserInput();
+String sqlQuery = "SELECT * FROM users WHERE username = '" + userInput + "'";
+</pre>
+</body>
+</html>

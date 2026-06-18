@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>Detecta posibles errores de ubicación en las llamadas a métodos de Gradle.</p>
+  Los buildscripts de Gradle contienen múltiples closures anidados, lo que hace que la estructura del código sea similar a un lenguaje de marcado.
+  Debido al comportamiento del DSL, los métodos que se pueden escribir en el closure externo también se pueden usar en los closures internos.
+  Estos métodos pueden no tener sentido cuando se escriben fuera de su ámbito. <br>A veces puede ser difícil detectar esta situación.
+  El propósito de esta inspección es identificar tales métodos.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+repositories {
+  // 'repositories' 的委托具有方法 'exclusiveContent'，可在此处编写
+  maven {
+    // 'maven' 的委托具有方法 'content'，可在此处编写
+    // 但也可使用 'exclusiveContent'
+    exclusiveContent {} // 报告 'exclusiveContent'
+  }
+}
+</code></pre>
+</body>
+</html>

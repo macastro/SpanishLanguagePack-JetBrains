@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre objetos <code>StringBuilder</code>, <code>StringBuffer</code> o <code>StringJoiner</code> cuyo contenido ha sido leído pero no escrito, o escrito pero no leído.
+<p>Esta inconsistencia en la lectura y escritura no tiene sentido y puede indicar código muerto, código incompleto o errores.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public void m1() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("a");
+  }
+</code></pre>
+<p>
+</body>
+</html>

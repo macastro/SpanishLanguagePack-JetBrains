@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa sobre funciones y variables con tipos de retorno que admiten valores nulos, pero que nunca devuelven ni se convierten en <code>null</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun greeting(user: String): String? = "Hello, $user!"
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun greeting(user: String): String = "Hello, $user!"
+</code></pre>
+</body>
+</html>

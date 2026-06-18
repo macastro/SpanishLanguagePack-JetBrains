@@ -1,0 +1,12 @@
+<html>
+<body>
+<p>Reporta mónadas con estado anidadas que pueden conducir a errores de arquitectura.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import scala.concurrent.Future
+  val a = Future { }
+  Future { a }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

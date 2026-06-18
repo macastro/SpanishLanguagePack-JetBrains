@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>Informa las anotaciones de biyección de dependencia de JBoss Seam en donde el tipo de la propiedad (parámetro del campo o del método de acceso) no concuerda con el tipo de la variable del contexto.</p>
+
+
+<p><strong>Ejemplo:</strong></p>
+
+<pre><code>
+   @In("loggedInUser")
+   private User user;
+</code>
+</pre>
+
+<p>La variable <code>loggedInUser</code> debe poder asignarse a <code>User</code> o a sus subclases.</p>
+</body>
+</html>

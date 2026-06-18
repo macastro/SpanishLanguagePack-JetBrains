@@ -56,6 +56,8 @@ Nos gustaría extender nuestro agradecimiento a los siguientes patrocinadores po
 
 253.226	Para versiones:	2025.3 — 2025.3.x	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.253.226.jar)**
 
+261.617	Para versiones:	2026.1 — 2026.1.x	**[Descargar](https://github.com/macastro/SpanishLanguagePack-JetBrains/raw/master/Build/es.261.617.jar)**
+
 Arrastre el archivo es.###.###.jar al IDE y proceda a reiniciar.
 
 ## Contribuyendo

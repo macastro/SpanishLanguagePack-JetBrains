@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre cadenas de doble llamada que pueden ser reemplazadas por una única llamada.
+<p>Esto ayuda a evitar la ejecución redundante de código.</p>
+<p>La corrección rápida reemplaza la cadena de llamadas por una única llamada.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun main() {
+      listOf(1, 2, 3).filter { it &gt; 1 }.count()
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun main() {
+      listOf(1, 2, 3).count { it &gt; 1 }
+  }
+</code></pre>
+</body>
+</html>

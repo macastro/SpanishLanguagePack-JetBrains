@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>
+  Reporta cadenas de texto con comillas simples en formato de array JSON.
+</p>
+<p>
+  En la sintaxis de arrays JSON, se deben usar comillas dobles (") alrededor de las palabras, no comillas simples ('). De lo contrario, la construcción de Docker fallará.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  # Todos los siguientes comandos fallarán
+  RUN ['/bin/bash', '-c', 'echo hello']
+  ADD ['binaryA.jar', 'binary2.jar', 'destination/']
+  COPY ['binaryA.jar', 'binary2.jar', 'destination/']
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  RUN ["/bin/bash", "-c", "echo hello"]
+  ADD ["binaryA.jar", "binary2.jar", "destination/"]
+  COPY ["binaryA.jar", "binary2.jar", "destination/"]
+</code></pre>
+</body>
+</html>

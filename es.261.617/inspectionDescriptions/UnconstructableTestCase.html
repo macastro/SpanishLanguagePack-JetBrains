@@ -1,0 +1,22 @@
+<html>
+<body>
+Se informa de clases de pruebas JUnit que no pueden construirse por el ejecutor de pruebas JUnit estándar.
+<p>
+  Las clases de prueba JUnit 4 deben ser <code>public</code> e incluir un constructor <code>public</code> sin argumentos o no incluir constructor alguno (constructor predeterminado implícito), y no deben tener otros constructores <code>public</code>.
+  Las clases de prueba Junit 3 deben ser <code>public</code> y requieren un constructor <code>public</code> sin argumentos o un constructor <code>public</code> con un único parámetro de tipo <code>String</code> (que llame al superconstructor coincidente).
+  De lo contrario, las clases de prueba no pueden ser ejecutadas por el ejecutor de pruebas JUnit estándar.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+public class MyTest {
+
+  private MyTest() {} // el constructor sin argumentos es private
+
+  @Test
+  public void testSomething() {
+    assertEquals(1, 1);
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

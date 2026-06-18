@@ -1,0 +1,32 @@
+<html>
+<body>
+Reporta propiedades no asignadas de <code>Entity</code> cuando se crea usando las funciones <code>new</code> o <code>getOrCreate</code> en un <code>ChangeScope</code>.
+<p>
+  Todas las propiedades no nulables de <code>Entity</code> deben ser asignadas o marcadas con la anotación <code>@Many</code>.
+  De lo contrario, puede producirse una excepción en tiempo de ejecución.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  interface A : LegacyEntity {
+    var x: Int
+    var y: Int?
+    @Many var z: Int
+    var p: Int
+  }
+  fun ChangeScope.foo() {
+    new(A::class) {
+      this.p = 0
+    }
+  }
+</code></pre>
+<p>Las asignaciones para las propiedades requeridas faltantes pueden generarse mediante una corrección rápida</p>
+<pre><code>
+  fun ChangeScope.foo() {
+    new(A::class) {
+      this.x = x
+      this.p = 0
+    }
+  }
+</code></pre>
+</body>
+</html>

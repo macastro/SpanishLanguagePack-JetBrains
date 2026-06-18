@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa sobre cualquier referencia a clases internas que esté innecesariamente calificada con el nombre de la clase contenedora.
+<p>Esta calificación puede eliminarse de forma segura, lo que a veces requiere añadir importaciones para las clases internas.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  class X {
+     X.Y foo;
+     class Y{}
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class X {
+     Y foo;
+     class Y{}
+  }
+</code></pre>
+<p>Utilice la opción <b>Ignorar referencias que requieran importaciones</b> para ignorar las referencias a clases internas donde la eliminación de la calificación requeriría añadir importaciones.
+<p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre expresiones de asignación aumentada (<code>+=</code>) en <code>Collection</code> de solo lectura.
+<p>Las expresiones de asignación aumentada (<code>+=</code>) en <code>Collection</code> de solo lectura asignan temporalmente una nueva colección, lo que puede afectar al rendimiento.</p>
+<p>La corrección rápida <b>Cambiar tipo a mutable</b> está disponible para corregir el código automáticamente.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  fun test() {
+      var list = listOf(0)
+      list += 42 // Aquí se asigna una nueva lista, equivalente a list = list + 42
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun test() {
+      val list = mutableListOf(0)
+      list += 42
+  }
+</code></pre>
+</body>
+</html>

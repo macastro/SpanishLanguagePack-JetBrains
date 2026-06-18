@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre parámetros de tipo declarados que extienden una clase <code>final</code>.
+<p>Dado que no es posible extender una clase <code>final</code>, se sugiere reemplazar el parámetro de tipo por el tipo de la clase <code>final</code> especificada.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>void</b> foo() {
+    List&lt;? <b>extends</b> Integer&gt; list; // advertencia: la clase Integer es final
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  <b>void</b> foo() {
+    List&lt;Integer&gt; list;
+  }
+</code></pre>
+</body>
+</html>

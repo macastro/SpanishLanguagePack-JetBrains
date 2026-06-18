@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa sobre variables utilizadas como valores de retorno.
+<p>Ejemplo:</p>
+<pre>
+<code># 不良做法
+def foo(bar)
+  result = bar + 1
+  result
+end</code>
+</pre>
+Estas variables pueden eliminarse mediante una corrección rápida. Después de aplicar la corrección rápida, el resultado se muestra así:
+<pre>
+<code># 优良做法
+def foo(bar)
+  bar + 1
+end</code>
+</pre>
+</body>
+</html>

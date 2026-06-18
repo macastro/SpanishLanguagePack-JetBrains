@@ -1,0 +1,21 @@
+<html>
+<body>
+El informe puede convertir cadenas de texto entrecomilladas dobles en cadenas entrecomilladas simples. Se pueden convertir las cadenas que no contengan sustituciones de expresiones ni símbolos especiales.
+<p>Ejemplo:</p>
+<pre>
+<code># 不良做法
+&quot;Hello world&quot;
+&quot;Hello \&quot;John Doe\&quot;&quot;</code>
+</pre>
+Las cadenas con comillas dobles se pueden convertir mediante una corrección rápida. Después de aplicar la corrección rápida, el resultado se muestra así:
+<pre>
+<code># 优良做法
+'Hello world'
+'Hello &quot;John Doe&quot;'
+&quot;Hello 'John Doe'&quot;</code>
+</pre>
+<p>Use la casilla de verificación <i>Ignorar cadenas que contienen comillas simples</i> para ignorar las cadenas que requieren escape.</p>
+<p><span style="font-size: smaller;">Inspirado por <a href="https://github.com/rubocop-hq/ruby-style-guide#consistent-string-literals">'RuboCop'</a></span>
+</p>
+</body>
+</html>

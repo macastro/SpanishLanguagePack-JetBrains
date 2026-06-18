@@ -1,0 +1,14 @@
+<html>
+<body>
+Cuando solo se puede usar una ruta <code>String</code>, se informa sobre la creación redundante de <code>File</code> en uno de los siguientes constructores: <code>FileInputStream</code>, <code>FileOutputStream</code>, <code>FileReader</code>, <code>FileWriter</code>, <code>PrintStream</code>, <code>PrintWriter</code>, <code>Formatter</code>.
+<p>Ejemplo:</p>
+<pre><code>
+InputStream is = new FileInputStream(new File("in.txt"));
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+InputStream is = new FileInputStream("in.txt");
+</code></pre>
+<p><small>Novedades de la versión 2020.3</small></p>
+</body>
+</html>

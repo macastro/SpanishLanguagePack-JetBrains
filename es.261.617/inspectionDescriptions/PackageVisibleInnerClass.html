@@ -1,0 +1,19 @@
+<html>
+<body>
+Reporta las clases anidadas que se declaran sin ningún modificador de acceso (también conocidas como package-private).
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Outer {
+    static class Nested {}  // advertencia
+    class Inner {}          // advertencia
+    enum Mode {}            // advertencia según la configuración
+    interface I {}          // advertencia según la configuración
+  }
+</code></pre>
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>Use la opción <b>Ignorar enums internos con visibilidad de paquete</b> para ignorar los enums internos package-private.</li>
+  <li>Use la opción <b>Ignorar interfaces internas con visibilidad de paquete</b> para ignorar las interfaces internas package-private.</li>
+</ul>
+</body>
+</html>

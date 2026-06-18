@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Reporta los Spring Beans no resueltos que se referencian en las anotaciones de <a href="https://spring.io/projects/spring-security">Spring Security</a>.</p>
+<p><b>Ejemplos:</b></p>
+<ul>
+  <li>
+    <pre><code>@WithUserDetails(value = "admin", userDetailsServiceBeanName = "unknownUserDetailsService")
+      // Se reportará "No se puede resolver el Bean 'unknownUserDetailsService'" si 'unknownUserDetailsService' no está definido en el modelo Spring
+    </code></pre>
+  </li>
+  <li>
+    <pre><code>@WithUserDetails(value = "admin", userDetailsServiceBeanName = "jpaUserDetailsService")
+      // "El Bean debe ser de tipo 'org.springframework.security.core.userdetails.UserDetailsService'"
+      // Se reportará si el Bean "jpaUserDetailsService" no es de tipo 'UserDetailsService'
+    </code></pre>
+  </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre declaraciones <code>continue</code> con etiquetas innecesarias.
+<p>Ejemplo:</p>
+<pre><code>
+  LABEL:
+  while (a &gt; b) {
+    System.out.println("Hello");
+    //Esta es la última declaración en el bucle,
+    //por lo tanto, la etiqueta y el continue son innecesarios
+    continue LABEL;
+  }
+</code></pre>
+</body>
+</html>

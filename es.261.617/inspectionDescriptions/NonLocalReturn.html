@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentencia de retorno no local</title>
+</head>
+<body>
+<p>Informa cuando se utiliza una palabra clave <code>return</code> dentro de una función anónima para salir antes de tiempo.
+    Los retornos no locales se implementan lanzando y capturando <code>scala.runtime.NonLocalReturnException</code>-s.
+    Esto es raramente lo que pretende el programador. Puede ser problemático debido al coste de rendimiento oculto de
+    lanzar y capturar excepciones. </p>
+<p>Además, es una implementación con fugas: un manejador de excepciones catch-all puede interceptar un <code>NonLocalReturnException</code>.</p>
+
+<pre><code>
+def foo(números: Seq[Int]): Int =
+  números.map { n =>
+    si (n > 5)
+      return 0 // resaltado
+    n * 2
+  }.sum
+</code></pre>
+
+<!-- tooltip end -->
+</body>
+</html>

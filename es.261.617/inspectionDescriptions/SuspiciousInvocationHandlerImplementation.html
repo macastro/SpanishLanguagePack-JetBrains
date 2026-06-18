@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre implementaciones de <code>InvocationHandler</code> que no delegan los métodos estándar de <code>Object</code> como <code>hashCode()</code>, <code>equals()</code> y <code>toString()</code>.
+<p>No manejar estos métodos puede causar problemas inesperados cuando se invocan en instancias proxy.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  InvocationHandler myHandler = (proxy, method, params) -&gt; {
+    System.out.println("Hello World!");
+    <b>return</b> null;
+  };
+  Runnable myProxy = (Runnable) Proxy.newProxyInstance(
+    Thread.currentThread().getContextClassLoader(),
+    <b>new</b> Class[] {Runnable.class}, myHandler
+  );
+</code></pre>
+<p>
+  Este fragmento de código está destinado a delegar solo el método <code>Runnable.run()</code>.
+  Sin embargo, también delegará cualquier llamada a métodos de <code>Object</code> como <code>hashCode()</code>.
+  Esto puede causar problemas como <code>NullPointerException</code>, por ejemplo, al agregar <code>myProxy</code> a un <code>HashSet</code>.
+</p>
+<p><small>Cambios en la versión 2020.2</small>
+</body>
+</html>

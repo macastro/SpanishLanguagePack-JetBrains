@@ -1,0 +1,67 @@
+<html>
+<body>
+<p>Informa de las anotaciones Seam que aparecen en clases o métodos con campos de firma o tipo no válidos.</p>
+
+<ul>
+  <li>
+    <p><code>@Name</code> no es válido en interfaces y clases abstractas. En la clase anotada se requiere un constructor sin parámetros.</p>
+  </li>
+  <li>
+    <p><code>@In</code> debe aparecer en un campo o en un método setter, como <code>void setUser(User user)</code>.</p>
+    <ul>
+      <li>Tipo de retorno void</li>
+      <li>Un parámetro</li>
+      <li>No estático</li>
+      <li>El nombre debe comenzar por <code>set</code></li>
+    </ul>
+  </li>
+  <li>
+    <p><code>@Out</code> debe aparecer en un campo o en un método getter, como <code>User getUser()</code>.</p>
+    <ul>
+      <li>Tipo de retorno no void</li>
+      <li>Sin parámetros</li>
+      <li>No estático</li>
+      <li>El nombre debe comenzar por <code>get</code>, pudiendo comenzar opcionalmente por <code>is</code> si el tipo de retorno es <code>boolean</code></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>@DataModel</strong> debe aparecer en un campo o en un método getter (igual que la anotación <code>@Out</code>).
+    El tipo de campo o el tipo de retorno debe ser uno de los siguientes:</p>
+    <ul>
+      <li><code>java.util.List</code></li>
+      <li><code>java.util.Set</code></li>
+      <li><code>java.util.Map</code></li>
+    </ul>
+  </li>
+  <li>
+    <p><code>@DataModelSelection</code> debe aparecer en un método setter.</p>
+  </li>
+  <li>
+    <p><code>@DataModelSelectionIndex</code> debe aparecer en un método setter.</p>
+  </li>
+  <li>
+    <p><code>@Factory</code> y <code>@Unwrap</code> deben aparecer en métodos con la siguiente firma:</p>
+    <ul>
+      <li>Tipo de retorno no void</li>
+      <li>No hay parámetros o un único parámetro <code>org.jboss.seam.Component</code> (o su supertipo)</li>
+      <li>No estático</li>
+    </ul>
+  </li>
+  <li>
+    <p><code>@Create</code> debe aparecer en métodos con la siguiente firma:</p>
+    <ul>
+      <li>No hay parámetros o un único parámetro <code>org.jboss.seam.Component</code> (o su supertipo)</li>
+      <li>No estático</li>
+    </ul>
+  </li>
+  <li>
+    <p><code>@Destroy</code> debe aparecer en métodos con la siguiente firma:</p>
+    <ul>
+      <li>Tipo de retorno void</li>
+      <li>No hay parámetros</li>
+      <li>No estático</li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

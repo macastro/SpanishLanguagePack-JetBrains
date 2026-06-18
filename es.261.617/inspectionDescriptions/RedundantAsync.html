@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>
+    Informa las llamadas `async` con `await` inmediatamente después.
+    Esas llamadas se pueden reemplazar por llamadas bloqueantes.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  suspend fun test(ctx: CoroutineContext, scope: CoroutineScope) {
+      scope.async(ctx) { doSomeJob() }.await()
+  }
+</code></pre>
+<p>Después de aplicar la reparación rápida:</p>
+<pre><code>
+  suspend fun test(ctx: CoroutineContext, scope: CoroutineScope) {
+      withContext(scope.coroutineContext + ctx) { doSomeJob() }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3">
+      <font face="verdana" size="-1">
+        Esta plantilla incorporada se utiliza para completar el cuerpo del método cada vez que se genera un método sobrescrito (por ejemplo, al invocar la funcionalidad <code>Código | Sobrescribir métodos...</code>).<br>
+        La plantilla es editable. Además de las expresiones Javascript y comentarios, puede utilizar variables predefinidas. 
+        Cuando se aplica la plantilla, estas variables se reemplazan con sus valores correspondientes.
+      </font>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas aceptarán los siguientes valores:</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Llamada al método super, para métodos <b>void</b> - <code><b>super</b>.<i>method_name</i>();</code> con o sin parámetros formales;
+      para otros métodos - <code><b>return</b> <b>super</b>.<i>method_name</i>();</code> con o sin parámetros formales
+    </font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PLAIN_CALL_SUPER}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Llamada al método super, <code><b>super</b>.<i>method_name</i>();</code> con o sin parámetros formales;
+    </font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Tipo de retorno del método creado</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Valor de retorno predeterminado del método</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${METHOD_NAME}</b></font></nobr></td>
+    <td width="10">&nbsp;</td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del método sobrescrito</font></td>
+  </tr>
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Todas las variables predefinidas de la plantilla de <i>encabezado de archivo</i> (pestaña <i>Include</i>) también están disponibles.
+      (Por ejemplo: <font face="verdana" size="-2"><b>${USER}</b></font>, <font face="verdana" size="-2"><b>${DATE}</b></font>, etc.)</font>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

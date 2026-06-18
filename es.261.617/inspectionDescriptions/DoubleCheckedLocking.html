@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta un caso de <a href="https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html">doble comprobación de bloqueo</a>.
+<p>
+  La doble comprobación de bloqueo intenta inicializar campos bajo demanda de manera segura para subprocesos, evitando la sobrecarga de la sincronización.
+  Desafortunadamente, no es seguro para subprocesos cuando se usa en campos que no están declarados como <code>volatile</code>.
+  En Java 1.4 y versiones anteriores, la doble comprobación de bloqueo no funciona correctamente ni siquiera con campos <code>volatile</code>.
+  Lee el artículo enlazado arriba para una explicación detallada del problema.
+</p>
+<p>Ejemplo incorrecto de doble comprobación de bloqueo:</p>
+<pre><code>
+  class Foo {
+    private Helper helper = null;
+    public Helper getHelper() {
+      if (helper == null)
+        synchronized(this) {
+          if (helper == null) helper = new Helper();
+        }
+        return helper;
+      }
+    }
+    // Otras funciones y miembros...
+  }
+</code></pre>
+</body>
+</html>

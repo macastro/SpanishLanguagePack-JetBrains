@@ -1,0 +1,11 @@
+<html>
+<body>
+Informa sobre llamadas inválidas a los métodos <code>String</code> <code>replace()</code>, <code>replaceAll()</code> o <code>replaceFirst()</code>. Estas llamadas se consideran inválidas cuando tanto el patrón como la cadena de búsqueda son constantes en tiempo de compilación, y la cadena de búsqueda no se encuentra en el patrón. Esto representa código redundante y podría indicar un error.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // El reemplazo no tiene ningún efecto
+  "hello".replace("$value$", value);
+</code></pre>
+<p><small>Novedades en 2022.1</small></p>
+</body>
+</html>

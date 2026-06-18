@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre comillas invertidas redundantes en referencias.
+<p>
+    Algunas palabras clave de Kotlin son identificadores válidos en Java, por ejemplo: <code>in</code>, <code>object</code>, <code>is</code>.
+    Si una biblioteca Java usa palabras clave de Kotlin para métodos, aún puede llamar a ese método y escaparlo usando el carácter de comilla invertida (<code>`</code>), por ejemplo <code>foo.`is`(bar)</code>.
+    A veces este escape es redundante y se puede omitir de manera segura. Esta inspección detecta e informa sobre tales casos y se combina con la corrección rápida "Eliminar comillas invertidas redundantes", permitiéndole modificar el código resaltado.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun `is`(x: String) {}
+  fun foo() {
+      `is`("bar") // 'is' es una palabra clave, las comillas invertidas son obligatorias
+  }
+  fun `test that smth works as designed`() {} // Válido, los identificadores complejos ayudan a mejorar la legibilidad
+  val `a` = 1  // No se necesitan comillas invertidas
+</code></pre>
+</body>
+</html>

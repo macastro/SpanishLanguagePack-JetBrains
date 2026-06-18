@@ -1,0 +1,14 @@
+<html>
+<body>
+Reporta las clases internas en clases de tipo <code>interface</code>.
+<p>Algunos estándares de codificación no recomiendan el uso de estas clases. Esta inspección no reporta clases enum ni interfaces de anotación.</p>
+<p>
+Use la opción <b>Ignorar interfaces internas</b> para ignorar las interfaces internas. Por ejemplo:
+<pre><code>
+  interface I {
+    interface Inner {
+    }
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<body>
+Informa sobre clases <code>abstract</code> que pueden convertirse en interfaces.
+<p>Es preferible usar interfaces en lugar de clases, ya que Java no admite herencia múltiple de clases, pero una clase puede implementar múltiples interfaces.</p>
+<p>Una clase puede convertirse en interfaz si no tiene superclase (excepto Object), solo tiene campos <code>public static final</code>, métodos <code>public abstract</code> y clases internas <code>public</code>.
+<p>Ejemplo:</p>
+<pre><code>
+abstract class Example {
+    public static final int MY_CONST = 42;
+    public abstract void foo();
+}
+class Inheritor extends Example {
+    @Override
+    public void foo() {
+        System.out.println(MY_CONST);
+    }
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+interface Example {
+    int MY_CONST = 42;
+    void foo();
+}
+class Inheritor implements Example {
+    @Override
+    public void foo() {
+        System.out.println(MY_CONST);
+    }
+}
+</code></pre>
+<p>Configuración de la inspección:</p>
+<p>
+  La opción <b>Informar clases con métodos no abstractos cuando se usa Java 8</b> está disponible para informar solo sobre clases cuyos métodos <code>static</code> y no abstractos pueden convertirse en métodos <code>default</code> (solo aplicable para nivel de lenguaje 8 o superior).
+<p>
+</body>
+</html>

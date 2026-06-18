@@ -1,0 +1,9 @@
+<html>
+<body>
+<p>Reporta el uso de variables desconocidas en plantillas Go.</p>
+<p>El análisis de estas plantillas provocará un panic, ya que las variables deben declararse antes de usarse.</p>
+<p>Ejemplo:</p>
+<pre><code>{{$v}} 为零。 {{/* 不良，$v 未知 */}}
+{{$v := 0}}{{$v}} 为零。 {{/* 优良 */}}</code></pre>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre las llamadas a <code>MutableCollection.addAll</code> / <code>+=</code> donde el argumento es una llamada a <code>Iterable.map/filter</code>.
+<p>
+    Este código asigna un objeto <code>List</code> adicional que puede evitarse utilizando <code>mapTo/filterTo</code>.
+</p>
+<p>
+    La corrección rápida permite reemplazar la llamada por <code>mapTo/filterTo</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    coll1.addAll(coll2.map { transform(it) })
+    coll1 += coll2.map { transform(it) }
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+    coll2.mapTo(coll1) { transform(it) }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

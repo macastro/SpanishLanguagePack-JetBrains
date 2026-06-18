@@ -1,0 +1,37 @@
+<html>
+<body>
+Informa sobre campos, métodos o clases que podrían tener el modificador <code>final</code> añadido a sus declaraciones.
+<p>Las clases final no pueden ser extendidas, los métodos final no pueden ser sobrescritos y los campos final no pueden ser reasignados.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Person {
+    private String name;
+    Person(String name) {
+      this.name = name;
+    }
+    public String getName() {
+      return name;
+    }
+    public String toString() {
+      return getName();
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  public final class Person {
+    private final String name;
+    Person(String name) {
+      this.name = name;
+    }
+    public final String getName() {
+      return name;
+    }
+    public final String toString() {
+      return getName();
+    }
+  }
+</code></pre>
+<p>Use las opciones <b>Informar clases</b> e <b>Informar métodos</b> para definir qué declaraciones deben ser informadas.</p>
+</body>
+</html>

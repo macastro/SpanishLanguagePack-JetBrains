@@ -1,0 +1,12 @@
+<html>
+<body>
+Informa sobre llamadas a <code>Object.notify()</code> o <code>Object.notifyAll()</code> para las cuales no se puede encontrar la correspondiente llamada a <code>Object.wait()</code>.
+<p>Esta inspección solo informa sobre llamadas dirigidas a campos de la clase actual.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  synchronized (synList) {
+    synList.notify(); //nunca se llama a synList.wait()
+  }
+</code></pre>
+</body>
+</html>

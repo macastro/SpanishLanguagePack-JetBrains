@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre declaraciones de sobreescritura redundantes.
+<p>
+    La sobreescritura puede omitirse si no modifica la semántica de la firma heredada, por ejemplo, al cambiar la visibilidad.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>open class</b> Foo {
+      open fun singleExpression() {
+      }
+  }
+  class Bar : Foo() {
+      <b>override</b> fun singleExpression() = super.singleExpression()
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Bar : Foo() {
+  }
+</code></pre>
+</body>
+</html>

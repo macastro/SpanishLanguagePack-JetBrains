@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre llamadas a <code>toString()</code> en objetos de clases que extienden <code>Number</code>.
+Estas llamadas generalmente son incorrectas en un entorno internacionalizado y deberían utilizar un formato específico según la configuración regional.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void print(Double d) {
+    System.out.println(d.toString());
+  }
+</code></pre>
+Una posible forma de corregir este problema es:
+<pre><code>
+  void print(Double d) {
+    System.out.printf("%f%n", d);
+  }
+</code></pre>
+Esto utilizará la configuración regional predeterminada para formatear el número, la cual se establece durante el inicio de la JVM y se basa en el entorno del host.
+</body>
+</html>

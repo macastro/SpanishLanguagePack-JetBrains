@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporta estados ilegales del cursor en rutinas SQL.
+<ul>
+  <li>La rutina tiene una sentencia CLOSE o FETCH, pero el cursor podría estar cerrado.</li>
+  <li>La rutina tiene una sentencia OPEN, pero el cursor podría estar abierto.</li>
+</ul>
+<p>Ejemplo (Microsoft SQL Server):</p>
+<pre><code>CREATE TABLE t(col INT);
+CREATE PROCEDURE foo() AS
+BEGIN
+DECLARE my_cursor CURSOR FOR SELECT * FROM t;
+DECLARE a INT;
+FETCH my_cursor INTO a;
+CLOSE my_cursor;
+END;</code></pre>
+<p>Según <a href="https://docs.microsoft.com/en-us/sql/t-sql/language-elements/close-transact-sql">CLOSE (Transact-SQL) en docs.microsoft.com</a>, CLOSE debe ejecutarse para un cursor que esté abierto y no está permitido ejecutar CLOSE en un cursor que solo esté declarado o que ya esté cerrado. Por lo tanto, necesitamos abrir el cursor para corregir la advertencia.</p>
+<pre><code>CREATE PROCEDURE foo() AS
+BEGIN
+DECLARE my_cursor CURSOR FOR SELECT * FROM t;
+DECLARE a INT;
+OPEN my_cursor;
+FETCH my_cursor INTO a;
+CLOSE my_cursor;
+END;</code></pre>
+</body>
+</html>

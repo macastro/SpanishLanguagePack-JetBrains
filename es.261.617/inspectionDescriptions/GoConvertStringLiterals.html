@@ -1,0 +1,19 @@
+<html>
+<body>
+Se informa que los literales de cadena entre comillas dobles pueden convertirse a literales de cadena sin formato (<a href="https://go.dev/ref/spec#String_literals">literales de cadena</a>), y los literales de cadena sin formato pueden convertirse a literales de cadena entre comillas dobles.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  var s = "Hello\n   \"World\""
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  var s = `Hello
+   "World"`
+</code></pre>
+<p>Al convertir cadenas entre comillas dobles a cadenas sin formato, hay que tener en cuenta dos puntos:</p>
+<ul>
+  <li>Según la <a href="https://go.dev/ref/spec#String_literals">especificación de Go</a>, los caracteres de retorno de carro (<code>'\r'</code>) se descartan de los valores de cadena sin formato. Como no es posible mostrar caracteres de retorno de carro en cadenas sin formato, los descartamos al convertir cadenas entre comillas dobles a cadenas sin formato.</li>
+  <li>Los literales de cadena sin formato no pueden contener caracteres de comilla invertida (<code>'`'</code>) porque no pueden escaparse. Por lo tanto, no es posible convertir una cadena entre comillas dobles que contenga caracteres de comilla invertida a una cadena sin formato, ya que resultaría en un error de sintaxis. El usuario puede decidir deshacer la conversión o utilizar alguna forma de concatenación para preservar las comillas invertidas de la cadena entre comillas dobles. Por ejemplo, <code>"`ab``"</code> produciría <code>`ab``</code>, lo cual es sintácticamente incorrecto. El usuario puede deshacer la operación o modificar la cadena resultante a <code>`ab` + "`"</code>.</li>
+</ul>
+</body>
+</html>

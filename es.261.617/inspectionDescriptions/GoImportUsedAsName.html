@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa sobre declaraciones de variables, argumentos o funciones que se superponen con los imports utilizados.
+<p>Aunque estas declaraciones son legalmente válidas, pueden hacer que los identificadores exportados del paquete no estén disponibles después de la declaración o causar confusión al leer el código.</p>
+<p>Ejemplo:</p>
+<pre><code>import "fmt"
+import _ "fmt"
+import iio "io"
+func _() {
+ fmt.Println("demo")
+ demo := true
+ _, _ = iio.EOF, demo
+}
+func demo() (int, int) {
+ return 1, 2
+}
+func _() {
+ _, _ = iio.EOF, demo
+ fmt := "demo"
+ iio := 1
+ _, _ = iio, fmt
+ a, _ := demo()
+ _ = a
+}</code></pre>
+<p>Los nombres de variables <code>fmt</code> y <code>iio</code> entran en conflicto con los nombres de los paquetes importados. Para evitar confusiones posteriores en el código, es mejor renombrar estas variables.</p>
+</body>
+</html>

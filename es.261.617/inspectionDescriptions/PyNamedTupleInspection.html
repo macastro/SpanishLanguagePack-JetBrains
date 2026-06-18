@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>Definición no válida de <a href="https://docs.python.org/3/library/typing.html#typing.NamedTuple">typing.NamedTuple</a>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+import typing
+class FullName(typing.NamedTuple):
+    first: str
+    last: str = ""
+    middle: str
+</code></pre>
+<p>La solución es colocar los campos con valores predeterminados después de los campos sin valores predeterminados:</p>
+<pre><code>
+import typing
+class FullName(typing.NamedTuple):
+    first: str
+    middle: str
+    last: str = ""
+</code></pre>
+</body>
+</html>

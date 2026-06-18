@@ -1,0 +1,10 @@
+<html>
+<body>
+<p>Informa sobre casos donde las etiquetas de apertura y cierre no coinciden correctamente en las plantillas de Django.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="DjangoTemplate">
+{% if error_message %}&lt;p&gt;&lt;strong&gt;{{ error_message }}&lt;/p&gt;{% endif %}
+</code></pre>
+<p>El IDE informa sobre un error de etiqueta <code>strong</code> sin cerrar.</p>
+</body>
+</html>

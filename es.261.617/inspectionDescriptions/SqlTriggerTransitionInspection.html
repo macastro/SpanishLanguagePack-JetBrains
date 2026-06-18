@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre el uso incorrecto de las tablas de transición en los triggers.
+<p>Ejemplo (HSQLDB):</p>
+<pre><code>CREATE TABLE foo(a INT);
+CREATE TRIGGER trg
+ AFTER DELETE ON foo
+BEGIN
+   SELECT * FROM NEW;
+END;
+CREATE TRIGGER trig AFTER INSERT ON foo
+   REFERENCING OLD ROW AS newrow
+   FOR EACH ROW WHEN (a > 1)
+   INSERT INTO foo VALUES (1)</code></pre>
+<p>En HSQLDB, los triggers DELETE solo pueden usar el estado OLD, mientras que los triggers INSERT solo pueden usar el estado NEW. Por lo tanto, en el ejemplo anterior, se resaltarán NEW en <code>SELECT * FROM NEW;</code> y OLD en <code>REFERENCING OLD ROW AS newrow</code>.</p>
+</body>
+</html>

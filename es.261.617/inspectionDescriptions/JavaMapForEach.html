@@ -1,0 +1,23 @@
+<html>
+<body>
+El informe puede reemplazarse con una llamada al método <b>forEach</b> de Java Map para Kotlin.<code>forEach</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun test(map: HashMap&lt;Int, String>) {
+      map.forEach { key, value ->
+          foo(key, value)
+      }
+  }
+  fun foo(i: Int, s: String) {}
+</code></pre>
+<p>La corrección rápida añadirá paréntesis:</p>
+<pre><code>
+  fun test(map: HashMap&lt;Int, String>) {
+      map.forEach { (key, value) ->
+          foo(key, value)
+      }
+  }
+  fun foo(i: Int, s: String) {}
+</code></pre>
+</body>
+</html>

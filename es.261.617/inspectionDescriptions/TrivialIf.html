@@ -1,0 +1,27 @@
+<html>
+<body>
+La declaración <code>if</code> se puede simplificar a una única asignación, declaración <code>return</code> o <code>assert</code>.
+<p>Ejemplo:</p>
+<pre><code>
+  if (foo()) {
+    return true;
+  } else {
+    return false;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  return foo();
+</code></pre>
+<p>Configuración de la inspección:</p>
+<p>Para ocultar advertencias en declaraciones <code>if</code> encadenadas, utilice la opción <b>Ignorar declaraciones 'if' encadenadas</b>.</p>
+<p>Por ejemplo, en el siguiente código, la advertencia se ocultará pero la corrección rápida seguirá disponible:</p>
+<pre><code>
+  if (condition1) return true;
+  if (condition2) return false;
+  return true;
+</code></pre>
+<p>Tenga en cuenta que si la condición tiene efectos secundarios, reemplazar <code>if (isTrue()) assert false;</code> por <code>assert isTrue();</code> podría cambiar la semántica del programa cuando las aserciones están deshabilitadas.
+  Para ocultar advertencias en declaraciones <code>if</code> que solo contienen una declaración <code>assert</code> en su cuerpo, utilice la opción <b>Ignorar declaraciones 'if' con 'assert' simple</b>.</p>
+</body>
+</html>

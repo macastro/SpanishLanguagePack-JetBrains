@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre el uso del operador <code>rangeTo</code> o <code>..</code> en lugar del uso de <code>until</code>.
+<p>El código puede simplificarse usando la función correspondiente.</p>
+<p>Esta corrección rápida reemplazará la llamada a <code>rangeTo</code> o <code>..</code> por <code>until</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo(a: Int) {
+      for (i in 0..a - 1) {
+      }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun foo(a: Int) {
+      for (i in 0 until a) {
+      }
+  }
+</code></pre>
+</body>
+</html>

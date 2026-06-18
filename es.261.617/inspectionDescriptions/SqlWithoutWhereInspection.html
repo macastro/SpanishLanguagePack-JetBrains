@@ -1,0 +1,10 @@
+<html>
+<body>
+Informa sobre el uso de sentencias DELETE o UPDATE sin cláusula WHERE.
+  <p>Sin una cláusula WHERE, DELETE eliminará todos los datos de la tabla y UPDATE sobrescribirá los valores de todas las filas de la tabla.</p>
+<p>Ejemplo (MySQL):</p>
+<pre><code>CREATE TABLE t1 (a TEXT, b INT, c BOOLEAN);
+update t1 set  a = 'Smith';
+delete from t1;</code></pre>
+</body>
+</html>

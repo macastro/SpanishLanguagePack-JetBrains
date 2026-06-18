@@ -1,0 +1,24 @@
+<html>
+<body>
+Reporta los siguientes errores de especificación JPA:
+<ul>
+  <li>Múltiples anotaciones configuradas para un método o campo</li>
+  <li>Uso de anotaciones no permitidas en objetos Embeddable (JPA 1.0)</li>
+  <li>Metadatos de persistencia no especificados en campos o getters de propiedades</li>
+  <li>Falta de setter o getter para el acceso basado en propiedades</li>
+</ul>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  @Entity
+  @Table(name = "TABLE")
+  public class JavaEntity {
+    private Integer id; // Error: deben existir tanto getter como setter
+    public Integer getId() { ... }
+    private String data;
+    public String getData() { ... }
+    @Basic // Error: la anotación de persistencia debe estar en el campo o método getter
+    public void setData(String data) { ... }
+  }
+</code></pre><br/>
+</body>
+</html>

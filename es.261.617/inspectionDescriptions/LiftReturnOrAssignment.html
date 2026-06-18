@@ -1,0 +1,26 @@
+<html>
+<body>
+Informa sobre las declaraciones <code>if</code>, <code>when</code> y <code>try</code> que pueden convertirse en expresiones extrayendo las declaraciones <code>return</code> o asignaciones.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo(arg: Int): String {
+      when (arg) {
+          0 -> return "Zero"
+          1 -> return "One"
+          else -> return "Multiple"
+      }
+  }
+</code></pre>
+Después de aplicar la corrección rápida:
+<pre><code>
+  fun foo(arg: Int): String {
+      return when (arg) {
+          0 -> "Zero"
+          1 -> "One"
+          else -> "Multiple"
+      }
+  }
+</code></pre>
+<p>Si desea que esta inspección resalte código más complejo con ramas de múltiples declaraciones, desmarque la opción "Informar solo cuando cada rama sea una única declaración".</p>
+</body>
+</html>

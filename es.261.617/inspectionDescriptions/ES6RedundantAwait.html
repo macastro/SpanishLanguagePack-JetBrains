@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta usos redundantes de <code>await</code>, como <code>await await</code> o esperar resultados que no son promesas.
+<p>
+  Cuando la opción "Reportar promesas" está seleccionada, sugiere eliminar el <code>await</code> que precede a las promesas cuando sea aplicable (en declaraciones <code>return</code> y cuando se incluye <code>Promise.resolve/reject</code>).
+</p>
+<p>Eliminar <code>await</code> en estos contextos puede causar dos problemas.</p>
+<ul>
+  <li>
+    Envolver el código en un bloque <code>try-catch</code> y olvidar añadir <code>await</code> cambiará la semántica del código sin que te des cuenta.
+  </li>
+  <li>
+    Usar <code>await</code> explícitamente puede impedir que el tiempo de ejecución de V8 proporcione <a href="http://bit.ly/v8-zero-cost-async-stack-traces">trazas de pila asíncronas</a>.
+  </li>
+</ul>
+</body>
+</html>

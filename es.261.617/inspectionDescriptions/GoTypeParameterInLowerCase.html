@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa sobre parámetros de tipo declarados en minúsculas.
+<p>Los ejemplos en la documentación oficial de Go utilizan parámetros de tipo en mayúsculas.
+  Esta inspección sigue esta convención de mayúsculas para los parámetros de tipo.</p>
+<pre><code>func PrintSlice[t any](s []t) {
+    for _, v := range s{
+        print(v)
+    }
+}</code></pre>
+<p>El parámetro de tipo <code>t</code> está declarado en minúscula, por lo que será reportado.</p>
+</body>
+</html>

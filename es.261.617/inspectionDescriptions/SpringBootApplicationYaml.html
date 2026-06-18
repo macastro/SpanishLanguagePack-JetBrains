@@ -1,0 +1,51 @@
+<html>
+<body>
+<p>
+  Informa sobre claves de configuración no resueltas y obsoletas, así como valores inválidos en archivos de configuración <code>.yaml</code> de aplicaciones Spring Boot, que podrían causar errores en tiempo de ejecución.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+server:
+  port: invalid # Informa 'No se puede convertir 'invalid' a java.lang.Integer'
+</code></pre>
+<p>Si una clave de configuración obsoleta tiene una clave de reemplazo, puede aplicar la corrección rápida "Usar clave de reemplazo".</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+logging:
+  path: ${path} # Informa 'Propiedad de configuración obsoleta 'logging.path''
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+logging:
+  file:
+    path: ${path}
+</code></pre>
+<p>
+  Si la clave de configuración no está definida en <code>spring-configuration-metadata.json</code>, puede aplicar la corrección rápida "Definir clave de configuración" para crear el archivo <code>META-INF/spring-additional-configuration-metadata.json</code> y definir las claves necesarias.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+new:
+  key: value # Informa 'No se puede resolver la propiedad de configuración 'new.key''
+</code></pre>
+<p>Después de aplicar la corrección rápida, se añadirá lo siguiente a <code>META-INF/spring-additional-configuration-metadata.json</code>:</p>
+<pre><code>
+{
+  "properties": [
+    {
+      "name": "new.key",
+      "type": "java.lang.String",
+      "description": "Description for new.key."
+  }
+] }
+</code></pre>
+<p>
+  La opción <b>Tokens de reemplazo</b> permite definir tokens para los marcadores de posición de valores en los archivos de configuración.
+  Estos tokens se especifican en el formato <code>beginToken*endToken</code>.
+  Si no hay <code>*</code>, se asume que los tokens de inicio y fin son iguales.
+</p>
+<p>
+  Por ejemplo, el valor predeterminado para los tokens de inicio y fin es <code>@</code>, lo que permite definir marcadores de posición como <code>some.property=@another.property@</code>.
+</p>
+<p>Los valores dentro de los tokens de reemplazo (<code>@property.key@</code>) no se resaltarán.</p>
+</body>
+</html>

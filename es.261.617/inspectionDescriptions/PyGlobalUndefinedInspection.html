@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>Informa sobre variables definidas con la declaración <code>global</code> que no están definidas en el ámbito del módulo.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+def foo():
+    global bar
+    print(bar)
+foo()
+</code></pre>
+<p>Se puede corregir moviendo la declaración global:</p>
+<pre><code>
+global bar
+def foo():
+    print(bar)
+</code></pre>
+</body>
+</html>

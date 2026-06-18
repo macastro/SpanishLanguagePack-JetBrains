@@ -1,0 +1,25 @@
+<html>
+<body>
+El informe muestra una expresión <code>when</code> que puede simplificarse mediante la introducción de un argumento principal.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun test(obj: Any): String {
+      return when {
+          obj is String -> "string"
+          obj is Int -> "int"
+          else -> "unknown"
+      }
+  }
+</code></pre>
+<p>La corrección rápida introducirá un argumento principal:</p>
+<pre><code>
+  fun test(obj: Any): String {
+      return when (obj) {
+          is String -> "string"
+          is Int -> "int"
+          else -> "unknown"
+      }
+  }
+</code></pre>
+</body>
+</html>

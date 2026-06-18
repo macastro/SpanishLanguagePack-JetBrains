@@ -1,0 +1,21 @@
+<html>
+<body>
+Reporta llamadas a <code>java.lang.System.loadLibrary()</code>, <code>java.lang.System.load()</code>, <code>java.lang.Runtime.loadLibrary()</code> y <code>java.lang.Runtime.load()</code> que utilizan cadenas construidas dinámicamente como nombres de biblioteca.
+<p>
+  Los nombres de biblioteca construidos dinámicamente son una fuente común de vulnerabilidades de seguridad.
+  Por defecto, esta inspección ignora las constantes en tiempo de compilación.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void test(int i) {
+    System.loadLibrary("foo" + i);
+  }
+</code></pre>
+<p>
+La configuración de la inspección permite tratar cualquier campo <code>static final</code> como una constante.
+Tenga cuidado, ya que cuando esta opción está habilitada, se ignorarán cadenas como esta:
+</p>
+<pre><code>
+  private static final String LIBRARY = getUserInput();
+</code></pre>
+</body>
+</html>

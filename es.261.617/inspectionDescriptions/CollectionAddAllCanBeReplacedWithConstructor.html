@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre llamadas a <code>Collection.addAll()</code> y <code>Map.putAll()</code> inmediatamente después de instanciar una colección usando un constructor sin parámetros.
+<p>Estas estructuras pueden ser reemplazadas por una única llamada a un constructor parametrizado, simplificando así el código. Además, para algunas colecciones, el reemplazo puede ser más eficiente.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Set&lt;String&gt; set = new HashSet&lt;&gt;();
+  set.addAll(Arrays.asList("alpha", "beta", "gamma"));
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  Set&lt;String&gt; set = new HashSet&lt;&gt;(Arrays.asList("alpha", "beta", "gamma"));
+</code></pre>
+<p>
+  Las clases de colección JDK están soportadas por defecto.
+  Además, se pueden especificar clases adicionales usando el panel <b>Clases a verificar</b>.
+</p>
+</body>
+</html>

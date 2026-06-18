@@ -1,0 +1,11 @@
+<html>
+<body>
+Informa sobre llamadas a <code>divide()</code> o <code>setScale()</code> sin un modo de redondeo especificado.
+<p>Estas llamadas pueden provocar una <code>ArithmeticException</code> cuando el valor exacto no puede ser representado en el resultado (por ejemplo, debido a una expansión decimal no terminante).</p>
+<p>Especificar un modo de redondeo evita la <code>ArithmeticException</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  BigDecimal.valueOf(1).divide(BigDecimal.valueOf(3));
+</code></pre>
+</body>
+</html>

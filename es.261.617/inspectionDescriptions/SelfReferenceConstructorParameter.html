@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre constructores con parámetros autorreferenciados no nulos.
+<p>Estos constructores nunca pueden instanciar la clase.</p>
+<p>La corrección rápida convertirá el tipo del parámetro en nullable.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class SelfRef(val ref: SelfRef)
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class SelfRef(val ref: SelfRef?)
+</code></pre>
+</body>
+</html>

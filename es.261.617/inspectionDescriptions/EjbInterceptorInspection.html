@@ -1,0 +1,15 @@
+<html>
+<body>
+Se informa de una clase que está definida simultáneamente como EJB y como clase listener.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+  @Interceptors(ExampleBean.class) // Error: la clase está definida simultáneamente como EJB y listener
+  public void getAnotherBean() {
+    ...
+  }
+}
+</code></pre>
+</body>
+</html>

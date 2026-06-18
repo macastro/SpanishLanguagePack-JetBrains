@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre expresiones condicionales que tienen ramas <code>then</code> y <code>else</code> idénticas.
+<p>Tales expresiones casi siempre indican un error. Esta inspección proporciona una corrección para colapsar la expresión condicional.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  int y = x == 10 ? 4 : 4;
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  int y = 4;
+</code></pre>
+<p>
+</body>
+</html>

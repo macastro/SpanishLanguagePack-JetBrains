@@ -1,0 +1,11 @@
+<html>
+<body>
+Informa sobre declaraciones <code>assert</code> que causan efectos secundarios.
+<p>
+  Dado que las aserciones pueden desactivarse, estos efectos secundarios no están garantizados, lo que puede llevar a errores difíciles de detectar. Esta inspección detecta efectos secundarios comunes no deseados como modificaciones de variables y campos. Cuando hay llamadas a métodos involucradas, se realiza un análisis de primer nivel.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  assert i++ &lt; 10;
+</code></pre>
+</body>
+</html>

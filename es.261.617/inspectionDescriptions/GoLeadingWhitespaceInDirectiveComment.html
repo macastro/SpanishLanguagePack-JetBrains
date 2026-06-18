@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta espacios en blanco iniciales antes de las directivas Go en los comentarios.
+<p>La directiva Go no será reconocida si hay espacios entre <code>//</code> y la directiva Go.</p>
+<p>Esta corrección rápida elimina los espacios en blanco iniciales antes de la directiva Go.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+//  go:embed file.txt
+var File string
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+//go:embed file.txt
+var File string
+</code></pre>
+</body>
+</html>

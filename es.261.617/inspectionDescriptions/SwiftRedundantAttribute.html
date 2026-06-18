@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>
+  Informa sobre el uso del atributo <code>@objc</code> en declaraciones que ya tienen un atributo <code>@objc</code> inferido.
+</p>
+<p>
+  Se sugiere eliminar los atributos redundantes <code>@objc</code> y <code>@nonobjc</code>.
+</p>
+<p>
+  <b>Ejemplo:</b>
+</p>
+<pre><code>
+  @objc
+  class C : NSObject {
+  }
+</code></pre>
+<p>
+  Después de aplicar la corrección rápida:
+</p>
+<pre><code>
+  class C : NSObject {
+  }
+</code></pre>
+</body>
+</html>

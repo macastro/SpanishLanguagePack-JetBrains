@@ -1,0 +1,34 @@
+<html>
+<body>
+Informa sobre declaraciones de variables locales y accesores que pueden ser reemplazados por variables de patrón en declaraciones 'for' mejoradas (que suelen ser más concisas).
+<p><b>Ejemplo:</b></p>
+<pre><code>
+record Record(Integer x, String y) {
+}
+public static void test(List&lt;Record&gt; records) {
+    for (Record record : records) {
+        System.out.println(record.y());
+        Integer x = record.x;
+        System.out.println(x);
+    }
+}
+</code></pre>
+<p>Puede ser reemplazado por:</p>
+<pre><code>
+record Record(Integer x, String y) {
+}
+public static void test(List&lt;Record&gt; records) {
+    for (Record(Integer x, String y) : records) {
+        System.out.println(y);
+        System.out.println(x);
+    }
+}
+</code></pre>
+<ul>
+  <li>Utilice la opción <b>Límite de profundidad de anidamiento</b> para especificar el número máximo de patrones de desestructuración anidados a informar</li>
+  <li>Utilice la opción <b>Número máximo de componentes a desestructurar</b> para especificar el número máximo de componentes que puede contener un registro para ser utilizado en un patrón de desestructuración</li>
+  <li>Utilice la opción <b>Número máximo de componentes no utilizados</b> para especificar el número máximo de componentes no utilizados en la declaración <code>for</code></li>
+</ul>
+<p><small>Novedades de 2023.1</small></p>
+</body>
+</html>

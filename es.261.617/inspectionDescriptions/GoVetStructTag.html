@@ -1,0 +1,12 @@
+<html>
+<body>
+Informa sobre etiquetas de estructura que no cumplen con las <a href="https://pkg.go.dev/reflect#StructTag">convenciones de etiquetas de estructura de Go</a>.
+<p>Según estas convenciones, la cadena de etiquetas es una concatenación de pares opcionales <code>key:"value"</code> separados por espacios. Cada clave es una cadena no vacía de caracteres no de control, excluyendo <code>space (U+0020 ' ')</code>, <code>quote (U+0022 '"')</code> y <code>colon (U+003A ':')</code>. Cada valor está entrecomillado usando el carácter <code>U+0022 '"'</code> y la sintaxis de literales de cadena de Go.</p>
+<p>Además, esta verificación comprueba si los campos con etiquetas están exportados.</p>
+<p>Ejemplo de etiquetas válidas:</p>
+<pre><code>type Example struct {
+  Field int `json:"field" xml:"demo"`
+}</code>
+</pre>
+</body>
+</html>

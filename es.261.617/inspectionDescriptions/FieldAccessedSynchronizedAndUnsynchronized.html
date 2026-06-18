@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa sobre campos no final que se acceden tanto en contextos <code>synchronized</code> como no <code>synchronized</code>.
+Los campos <code>volatile</code> y los accesos en constructores e inicializadores son ignorados por esta inspección.
+<p>
+  Estos accesos "parcialmente sincronizados" suelen ser descuidos de programación y pueden provocar inconsistencias inesperadas en las estructuras de datos.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Program {
+    Console console; // Advertencia: el campo 'console' se accede tanto en contexto sincronizado como no sincronizado
+    public synchronized void execute() {
+      console.print("running");
+    }
+    public void check() {
+      console.check();
+    }
+  }
+</code>
+</pre>
+<p>
+  Utilice esta opción para especificar si los getters y setters simples también deben considerarse como accesos.
+<p>
+</body>
+</html>

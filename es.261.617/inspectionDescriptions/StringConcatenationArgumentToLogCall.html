@@ -1,0 +1,35 @@
+<html>
+<body>
+Informa sobre la concatenación de cadenas no constantes utilizadas como argumentos en los métodos de registro de <b>SLF4J</b> y <b>Log4j 2</b>.
+La concatenación no constante se evalúa en tiempo de ejecución incluso cuando el mensaje de registro no se registra; esto tiene un impacto negativo en el rendimiento.
+Se recomienda usar mensajes de registro parametrizados en su lugar, que no se evalúan cuando el registro está deshabilitado.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>public class</b> Vital {
+    <b>private static final</b> Logger LOG = LoggerFactory.getLogger(Vital.class);
+    <b>public void</b> saveTheWorld(<b>int</b> i, String s, <b>boolean</b> b) {
+      LOG.info("saveTheWorld(" + i + ", " + s + ", "  + b + ")");
+      // todo
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  <b>public class</b> Vital {
+    <b>private static final</b> Logger LOG = LoggerFactory.getLogger(Vital.class);
+    <b>public void</b> saveTheWorld(<b>int</b> i, String s, <b>boolean</b> b) {
+      LOG.info("saveTheWorld({}, {}, {})", i, s, b);
+      // todo
+    }
+  }
+</code></pre>
+<p>
+  Configuración de la inspección:
+</p>
+<ul>
+  <li>
+    Use la lista de <b>niveles de advertencia</b> para ignorar ciertos niveles de registro más altos. Los niveles de registro más altos pueden estar habilitados incluso en producción y los argumentos siempre se evaluarán.
+  </li>
+</ul>
+</body>
+</html>

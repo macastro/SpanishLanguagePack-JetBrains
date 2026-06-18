@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa sobre declaraciones <code>synchronized</code> con cuerpo vacío.
+<p>
+  Las declaraciones <code>synchronized</code> vacías a veces se utilizan para esperar a que otros hilos liberen un recurso específico. Sin embargo, no hay garantía de que el mismo recurso no se vuelva a adquirir después de que se complete la declaración <code>synchronized</code> vacía.
+  Para una sincronización correcta, el recurso debe utilizarse dentro del bloque <code>synchronized</code>.
+</p>
+<p>
+  Además, los bloques <code>synchronized</code> vacíos pueden aparecer después de una refactorización cuando se elimina código redundante. En este caso, el propio bloque <code>synchronized</code> es redundante y también debe eliminarse.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  synchronized(lock) {}
+</code></pre>
+<p>
+  Se recomienda eliminar las declaraciones synchronized vacías mediante la corrección rápida.
+</p>
+<p>
+  Esta inspección está desactivada para archivos JSP.
+<p>
+</body>
+</html>

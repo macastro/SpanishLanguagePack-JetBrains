@@ -1,0 +1,16 @@
+<html>
+<body>
+Reporta una sentencia INSERT que intenta asignar valores a columnas generadas. Las columnas generadas pueden ser leídas pero no se pueden escribir directamente.
+<p>Ejemplo (PostgreSQL):</p>
+<pre><code>CREATE TABLE foo
+(
+   col1 INT,
+   col2 INT GENERATED ALWAYS AS (col1 + 1) STORED
+);
+INSERT INTO foo(col1, col2) VALUES (1, 2);</code>
+</pre>
+<p>No puede insertar <code>2</code> en la columna <code>col2</code> porque es una columna generada.
+  Para que este script funcione, puede cambiar <code>2</code> por DEFAULT.</p>
+<code>INSERT INTO foo(col1, col2) VALUES (1, DEFAULT);</code>
+</body>
+</html>

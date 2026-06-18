@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa sobre parámetros lambda que tienen el mismo nombre que los campos de las clases circundantes.
+Este tipo de nomenclatura puede llevar a un uso incorrecto del parámetro lambda cuando se pretende usar el campo del mismo nombre.
+<p>Se sugiere renombrar el parámetro lambda mediante una corrección rápida.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class MyClass {
+    public Object foo;
+    void sort(List&lt;Integer&gt; list) {
+      list.sort((foo, bar) -> foo - bar);
+    }
+  }
+</code></pre>
+<p>
+  Esta opción permite elegir si se ignoran los campos que no son visibles para la expresión lambda.
+  Por ejemplo, los campos private de la superclase.
+<p>
+</body>
+</html>

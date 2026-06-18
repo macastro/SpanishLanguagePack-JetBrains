@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre cadenas de condiciones que comprueban rangos de valores y que pueden simplificarse en una única comprobación.
+<p>Esta corrección rápida reemplaza la cadena de condiciones por una expresión simplificada:</p>
+<p>Ejemplo:</p>
+<pre><code>
+  x > 2 && x &lt; 4
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  x == 3
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code>
+  arr.length == 0 || arr.length > 1
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  arr.length != 1
+</code></pre>
+<p><small>Novedades de la versión 2019.1</small></p>
+</body>
+</html>

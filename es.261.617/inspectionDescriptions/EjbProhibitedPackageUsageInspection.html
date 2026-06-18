@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre paquetes y clases prohibidas en EJB.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+  public void getAnotherBean() {
+    ...
+    java.lang.Thread.sleep(100); // Error: uso de paquete ilegal en clase Bean
+  }
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre patrones de formato de fecha y hora incorrectos.
+<p>Informa sobre los siguientes errores:</p>
+<ul>
+  <li>Letras de patrón no soportadas, como "TT"</li>
+  <li>Uso de caracteres reservados, como "#"</li>
+  <li>Uso incorrecto del relleno</li>
+  <li>Corchetes no balanceados</li>
+  <li>Cantidad incorrecta de letras de patrón consecutivas</li>
+</ul>
+<p>Ejemplos:</p>
+<pre><code>
+  DateTimeFormatter.ofPattern("[][]]"); // No hay '[' izquierdo antes del ']' derecho
+  DateTimeFormatter.ofPattern("TT"); // Letra de patrón ilegal 'T'
+  DateTimeFormatter.ofPattern("{"); // Uso del carácter reservado '{'
+  DateTimeFormatter.ofPattern("MMMMMM"); // Demasiadas letras de patrón 'M' consecutivas
+</code></pre>
+<p><small>Novedades de 2022.3</small>
+</body>
+</html>

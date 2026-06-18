@@ -1,0 +1,30 @@
+<html>
+<body>
+Informa sobre declaraciones <code>if</code> que contienen una rama <code>else</code> y tienen una condición negada.
+<p>Invertir el orden de las ramas <code>if</code> y <code>else</code> generalmente mejora la claridad de tales declaraciones.</p>
+<p>Se puede corregir invirtiendo la declaración <code>if</code> actual.</p>
+<p>Ejemplo:</p>
+<pre><code>
+    void m(Object o1, Object o2) {
+        if (o1 != o2) {
+            System.out.println(1);
+        }
+        else {
+            System.out.println(2);
+        }
+    }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+    void m(Object o1, Object o2) {
+        if (o1 == o2) {
+            System.out.println(2);
+        } else {
+            System.out.println(1);
+        }
+    }
+</code></pre>
+<p>Use la opción <b>Ignorar comparaciones '!= null'</b> para ignorar las comparaciones de la forma <code>!= null</code>.</p>
+<p>Use la opción <b>Ignorar comparaciones '!= 0'</b> para ignorar las comparaciones de la forma <code>!= 0</code>.</p>
+</body>
+</html>

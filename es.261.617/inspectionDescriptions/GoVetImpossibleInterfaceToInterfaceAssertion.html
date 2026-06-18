@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta aserciones de tipo imposibles entre interfaces.
+<p>Verifica las aserciones de tipo <code>v.(T)</code> y los casos switch de tipo correspondientes donde el tipo estático <code>v</code> de <code>V</code> es una interfaz que no puede implementar la interfaz objetivo <code>T</code>. Esto ocurre cuando <code>V</code> y <code>T</code> contienen métodos con el mismo nombre pero diferentes firmas.</p>
+<p>Ejemplo:</p>
+<pre><code>var v interface {
+  Read()
+}
+_ = v.(io.Reader)</code></pre>
+<p>El método <code>Read</code> en <code>v</code> tiene una firma diferente al método <code>Read</code> en <code>io.Reader</code>, por lo que la aserción fallará.</p>
+<p>Esta verificación solo se reporta cuando la versión del lenguaje es 1.15 o superior.</p>
+</body>
+</html>

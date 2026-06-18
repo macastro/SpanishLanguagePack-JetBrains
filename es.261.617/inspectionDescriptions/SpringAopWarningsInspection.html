@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>Informa sobre aspectos y puntos de corte incorrectos.
+Cuando ciertos consejos AOP coinciden con beans de aspecto, pueden producirse errores en tiempo de ejecución.</p>
+<p><b>Ejemplo:</b>
+<pre><code>
+&lt;beans&gt;
+  &lt;aop:config&gt;
+    &lt;aop:pointcut expression="args()"/&gt; &lt;!-- El punto de corte debe tener un ID --&gt;
+    &lt;aop:aspect/&gt; &lt;!-- Debe definirse el atributo 'ref' --&gt;
+  &lt;/aop:config&gt;
+&lt;/beans&gt;
+&lt;beans&gt;
+  &lt;bean id="aspect1" class="Aspect1"/&gt;
+  &lt;bean id="aspect2" class="Aspect2"/&gt;
+  &lt;aop:config&gt;
+    &lt;aop:aspect ref="aspect1"&gt; &lt;!-- Algunos consejos coinciden con este Bean --&gt;
+    &lt;aop:before method="xxx" pointcut="execution(* foo())"/&gt;
+    &lt;/aop:aspect&gt;
+    &lt;aop:aspect ref="aspect2"&gt;
+      &lt;aop:before method="xxx" pointcut="execution(* foo())"/&gt;
+    &lt;/aop:aspect&gt;
+  &lt;/aop:config&gt;
+&lt;/beans&gt;
+</code></pre>
+</body>
+</html>

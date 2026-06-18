@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre referencias a métodos o expresiones lambda que apuntan a métodos con su propio tipo de interfaz funcional, permitiéndole eliminar asignaciones de objetos innecesarias reemplazándolas por sus calificadores.
+<p>Ejemplo:</p>
+<pre><code>
+  SwingUtilities.invokeLater(r::run);
+  SwingUtilities.invokeAndWait(() -> r.run());
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  SwingUtilities.invokeLater(r);
+  SwingUtilities.invokeAndWait(r);
+</code></pre>
+<p>Esta inspección solo informa cuando el nivel de lenguaje del proyecto o módulo es 8 o superior.</p>
+</body>
+</html>

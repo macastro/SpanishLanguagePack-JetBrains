@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta métodos que se llaman a sí mismos infinitamente a menos que se lance una excepción.
+<p>
+  Esta inspección reporta métodos que no pueden retornar normalmente.
+  Aunque este tipo de comportamiento puede ser intencional, en muchos casos, puede ser simplemente un descuido.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  int baz() {
+      return baz();
+  }</code></pre>
+</body>
+</html>

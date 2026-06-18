@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa sobre métodos que sobrescriben métodos anotados con <code>@Pattern</code> sin incluir la anotación <code>@Pattern</code>.
+Esto no impide que se resalten los errores en el editor, pero el método sobrescrito no será verificado en tiempo de ejecución.
+<p>
+Se proporciona una corrección rápida para añadir la anotación <code>@Pattern</code> que coincida con la anotación del método de la superclase. Esto asegura
+que la verificación en tiempo de ejecución funcione correctamente.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  abstract class Parent {
+    abstract @Pattern("\\d\\d-\\d\\d\\d") String getId();
+  }
+  class Child extends Parent {
+    @Override String getId() { // advertencia aquí
+      return "12-345";
+    }
+  }
+</code></pre>
+</body>
+</html>

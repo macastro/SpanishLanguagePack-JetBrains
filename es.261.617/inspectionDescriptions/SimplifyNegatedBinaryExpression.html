@@ -1,0 +1,30 @@
+<html>
+<body>
+Informa sobre expresiones booleanas negadas que pueden simplificarse.
+<p>Esta corrección rápida simplifica la expresión booleana.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    fun test(n: Int) {
+        !(0 == 1)
+    }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+    fun test(n: Int) {
+        0 != 1
+    }
+</code></pre>
+<p>Tenga en cuenta que esta operación puede alterar la semántica del código cuando se involucran valores IEEE-754 NaN:</p>
+<pre><code>
+    fun main() {
+        println(!(Double.NaN &gt;= 0)) // true
+    }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+    fun main() {
+        println(Double.NaN &lt; 0) // false
+    }
+</code></pre>
+</body>
+</html>

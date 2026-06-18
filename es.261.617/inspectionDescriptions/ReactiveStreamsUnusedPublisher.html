@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>Reporta instancias no utilizadas de <code>Publisher</code>.</p>
+<p>
+  Para usar operadores que generan nuevas instancias de <code>Publisher</code> (métodos que devuelven objetos Mono/Flux/Flowable de Mono/Flux/Flowable), debe suscribirse al <code>Publisher</code> creado mediante <code>subscribe()</code>.
+</p>
+<p>
+  Usar una fábrica (por ejemplo, <code>Mono.just()</code>) sin suscribirse al <code>Publisher</code> devuelto crea un objeto que nunca se utiliza y se considera una asignación de memoria innecesaria.
+</p>
+<p>
+  Por ejemplo, <code>Mono.just(1, 2, 3).map(i -> i + 3)</code> no se ejecutará a menos que se suscriba a este <code>Publisher</code>, o a menos que genere un nuevo <code>Publisher</code> aplicando operadores y se suscriba a él.
+</p>
+<p><b>Ejemplo:</b></p>
+<p>Instancia de <code>Flux</code> no utilizada:</p>
+<pre><code lang="java">
+Flux.just(1, 2, 3);
+</code></pre>
+<p>Instancia de <code>Flux</code> utilizada por el consumidor:</p>
+<pre><code lang="java">
+Flux.just(1, 2, 3).subscribe(System.out::println);
+</code></pre>
+<p>No se reportarán las llamadas a métodos anotados con la anotación <code>@CanIgnoreReturnValue</code> cuando se use Error Prone o AssertJ.</p>
+<p><small>Novedades de la versión 2019.3</small></p>
+</body>
+</html>

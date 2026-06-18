@@ -1,0 +1,45 @@
+<html>
+<body>
+Informa sobre el uso innecesario de miembros static calificados con nombres de clase.
+<p>
+No es necesario calificar la clase cuando los miembros static están disponibles en la clase circundante o en sus superclases. Esta calificación se puede eliminar de forma segura.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+    static void foo() {}
+    static int x;
+    void bar() {
+      Foo.foo();
+      System.out.println(Foo.x);
+    }
+    static void baz() { Foo.foo(); }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Foo {
+    static void foo() {}
+    static int x;
+    void bar() {
+      foo();
+      System.out.println(x);
+    }
+    static void baz() { foo(); }
+  }
+</code></pre>
+<p>
+  Las opciones de inspección permiten alternar los informes para:
+</p>
+<ul>
+  <li>
+    <p>Acceso a campos static:<br><code>void bar() { System.out.println(Foo.x); }</code></p>
+  </li>
+  <li>
+    <p>Llamadas a métodos static:<br><code>void bar() { Foo.foo(); }</code></p>
+  </li>
+</ul>
+<p>
+  Además, puede configurar la inspección para que solo informe sobre el uso de miembros static en contextos static. En este caso, solo se informará sobre <code>static void baz() { Foo.foo(); }</code>.
+</p>
+</body>
+</html>
