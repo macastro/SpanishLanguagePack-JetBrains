@@ -1,93 +1,97 @@
 <html>
 <body>
+
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse; border-color:#111111">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      Una plantilla incorporada para archivos RBS. Esta plantilla se utiliza cada vez que crea un nuevo archivo RBS. Seleccione <i>Nuevo | Archivo/Clase RBS</i> desde el menú contextual en una de las vistas del proyecto. Además de las declaraciones, expresiones y comentarios de RBS, puede utilizar las variables predefinidas que se enumeran a continuación. Cada variable se expande como una macro a su valor correspondiente. Con la directiva <b><code>#parse</code></b>, puede incluir plantillas de la pestaña <i>Include</i> especificando el nombre completo de la plantilla deseada como un parámetro entre comillas.</font>
+      Plantilla integrada para archivos RBS. Se utiliza cada vez que crea un nuevo archivo RBS, seleccionando <i>Nuevo | Archivo/Clase RBS</i> en el menú emergente de una de las vistas de proyecto. Además de las sentencias, expresiones y comentarios de RBS, también puede utilizar las variables predefinidas que se enumeran a continuación. Cada variable se expande a su valor correspondiente, al igual que una macro. Utilizando la directiva <b><code>#parse</code></b>, puede incluir plantillas de la pestaña <i>Incluir</i> especificando el nombre completo de la plantilla deseada como parámetro entre comillas.
+    </font>
     </td>
   </tr>
 </table>
+
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse; border-color:#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas aceptan los siguientes valores:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${FILE_NAME}</code></b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">nombre del archivo actual</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del archivo actual</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${USER}</code></b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">nombre de inicio de sesión del usuario actual</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de inicio de sesión del usuario actual en el sistema</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${DATE}</code></b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">fecha actual del sistema</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${TIME}</code></b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">hora actual del sistema</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${YEAR}</code></b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">año actual</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${MONTH}</code></b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">mes actual</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${DAY}</code></b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">día del mes actual</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Día actual del mes</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${HOUR}</code></b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">hora actual</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${MINUTE}</code></b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">minuto actual</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${PRODUCT_NAME}</code></b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">nombre del IDE actual</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del IDE actual</font></td>
   </tr>
   <tr>
     <td valign="top">
       <nobr><font face="verdana" size="-2"><b><code>${PROJECT_NAME}</code></b></font></nobr>
     </td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">nombre del proyecto actual</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
   </tr>
 </table>
+
 </body>
 </html>

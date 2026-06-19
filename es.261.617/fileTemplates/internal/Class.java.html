@@ -2,81 +2,88 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td><font face="verdana" size="-1">Aplicable a nuevas clases Java creadas mediante <b>Nuevo | Clase Java | Clase</b> en la ventana de herramientas <b>Proyecto</b>.<br>
-       Esta plantilla incorporada es editable. Además de expresiones Java y comentarios, puede usar variables predefinidas (listadas a continuación) que se expandirán como macros a sus valores correspondientes.<br><br>
-       También puede especificar variables personalizadas. Las variables personalizadas utilizan el siguiente formato: <i>${VARIABLE_NAME}</i>, donde <i>VARIABLE_NAME</i> es el nombre de la variable (por ejemplo, <i>${MY_CUSTOM_FUNCTION_NAME}</i>).
-      Antes de que el IDE cree un nuevo archivo usando variables personalizadas, verá un diálogo donde podrá definir los valores para las variables personalizadas en la plantilla.<br><br>
-       Usando la directiva <i>#parse</i>, puede incluir plantillas de la pestaña <b>Include</b>. Para incluir una plantilla, especifique su nombre completo como un parámetro entre comillas (por ejemplo, <i>#parse("File Header.java")</i>).
+    <td><font face="verdana" size="-1">Se aplica a las nuevas clases Java que se crean invocando
+      <b>Nuevo | Clase Java | Clase</b> en la ventana de herramientas <b>Proyecto</b>.<br>
+      Esta plantilla incorporada es editable. Junto con las expresiones y comentarios de Java puedes también usar las variables predefinidas
+      (listadas abajo) que luego se expandirán como macros en los valores correspondientes.<br><br>
+
+      También es posible especificar variables personalizadas. Las variables personalizadas usan el siguiente formato: <i>${VARIABLE_NAME}</i>, donde
+      <i>VARIABLE_NAME</i> es un nombre para tu variable (por ejemplo, <i>${MY_CUSTOM_FUNCTION_NAME}</i>).
+      Antes de que el IDE cree un nuevo archivo con variables personalizadas, verás un cuadro de diálogo donde puedes definir los valores para las variables personalizadas en la
+      plantilla.<br><br>
+
+      Usando la directiva <i>#parse</i>, puedes incluir plantillas desde la pestaña <b>Incluir</b>. Para incluir una plantilla,
+      especifica el nombre completo de la plantilla como un parámetro entre comillas (por ejemplo, <i>#parse("File Header.java")</i>.
     </font></td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas aceptan los siguientes valores:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PACKAGE_NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del paquete donde se crea la nueva clase</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del paquete en el cual una nueva clase es creada</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la nueva clase que especifica en el diálogo <i>Crear Nueva Clase</i></font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la nueva clase especificada por ti en el cuadro de diálogo <i>Crear nueva clase</i></font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de inicio de sesión del sistema del usuario actual</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de login de sistema del usuario actual</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
   </tr>
   <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr></td>
-     <td width="10">&nbsp;</td>
+     <td width="10"></td>
      <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr></td>
-     <td width="10">&nbsp;</td>
+     <td width="10"></td>
      <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
-     <td width="10">&nbsp;</td>
-     <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del mes actual (Jan, Feb, etc.)</font></td>
+     <td width="10"></td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del mes actual (Ene, Feb, etc.)</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
-     <td width="10">&nbsp;</td>
-     <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual (January, February, etc.)</font></td>
+     <td width="10"></td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual (Enero, Febrero, etc.)</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
-     <td width="10">&nbsp;</td>
-     <td width="100%" valign="top"><font face="verdana" size="-1">Día del mes actual</font></td>
+     <td width="10"></td>
+     <td width="100%" valign="top"><font face="verdana" size="-1">Día actual del mes</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr></td>
-     <td width="10">&nbsp;</td>
+     <td width="10"></td>
      <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr></td>
-     <td width="10">&nbsp;</td>
+     <td width="10"></td>
      <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
    </tr>
    <tr>
      <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr></td>
-     <td width="10">&nbsp;</td>
+     <td width="10"></td>
      <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
    </tr>
 </table>

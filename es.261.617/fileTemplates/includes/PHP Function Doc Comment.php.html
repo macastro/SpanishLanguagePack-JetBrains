@@ -2,8 +2,8 @@
 <body>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Una plantilla incorporada para comentarios PHPDoc de una función PHP. Contiene un fragmento de código que puede incluirse en plantillas de archivo (pestaña <b>Templates</b>) con ayuda de la directiva <b>#parse</b>.<br>
-      La plantilla es editable. Además del texto estático, código y comentarios, puede usar variables predefinidas que se expandirán como macros a sus valores correspondientes.</font><br>
+    <td colspan="3"><font face="verdana" size="-1">Una plantilla integrada para comentarios PHPDoc de funciones PHP. Contiene un fragmento de código que se puede incluir en las plantillas de archivos (pestaña <b>Plantillas</b>) mediante la directiva <b>#parse</b>.<br>
+      La plantilla es editable. Además de texto estático, código y comentarios, puede utilizar variables predefinidas que se expanden a sus valores correspondientes como si fueran macros.</font><br>
     </td>
   </tr>
 </table>
@@ -20,7 +20,7 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${TYPE_HINT}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Sugerencia de tipo para el valor de retorno de la función. Se evalúa como 'void' si no se infiere ningún tipo de retorno.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Sugerencia de tipo (type hint) para el valor de retorno de la función. Si no se puede inferir el tipo de retorno, se evalúa como 'void'.</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAM_DOC}</b></font></nobr></td>
@@ -28,7 +28,7 @@
     <td width="100%" valign="top">
       <font face="verdana" size="-1">
         <p>Comentarios PHPDoc para los parámetros.
-        <p>Se genera como una serie de líneas '* @param type name'. Se evalúa como contenido vacío si no hay parámetros.
+        <p>Se genera como una serie de líneas '* @param tipo nombre'. Si no hay parámetros, se evalúa como contenido vacío.
       </font>
     </td>
   </tr>
@@ -38,14 +38,14 @@
     <td width="100%" valign="top">
       <font face="verdana" size="-1">
         <p>Comentarios de documentación para excepciones.
-        <p>Se genera como una serie de líneas '* @throws type'. Se evalúa como contenido vacío si no se lanzan excepciones.
+        <p>Se genera como una serie de líneas '* @throws tipo'. Si no se lanzan excepciones, se evalúa como contenido vacío.
       </font>
     </td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${STATIC}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Evalúa a 'static' si la función/método es estático, de lo contrario es una cadena vacía. Por ejemplo:
+    <td width="100%" valign="top"><font face="verdana" size="-1">Si la función o el método es estático, el valor es 'static'; de lo contrario, es una cadena vacía. Por ejemplo:
     <pre>
       #if (${STATIC} == "static") * @static
       #end
@@ -56,7 +56,7 @@
       <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Símbolo del dólar, se evalúa como el carácter "$" normal.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El signo de dólar, que se evalúa como el carácter '$' ordinario.</font></td>
   </tr>
   <tr>
     <td valign="top">
@@ -85,12 +85,12 @@
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del mes actual. Por ejemplo: Jan, Feb, etc.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Las primeras 3 letras del nombre del mes actual (por ejemplo: Jan, Feb, etc.).</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual. Por ejemplo: January, February, etc.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual (por ejemplo: January, February, etc.).</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
@@ -127,7 +127,7 @@
       <nobr><font face="verdana" size="-2"><b>${CARET}</b></font></nobr>
     </td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Marca la posición donde debe moverse el cursor después de agregar el comentario.</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Marca la posición a la que debe moverse el cursor después de añadir el comentario.</font></td>
   </tr>
 </table>
 </body>

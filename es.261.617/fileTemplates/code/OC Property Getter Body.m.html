@@ -3,55 +3,57 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
     <td colspan="3"><font face="verdana" size="-1">
-      Crea el cuerpo del método getter sobrescrito de la propiedad cuando se genera (por ejemplo, al invocar la acción <b>Código | Sobrescribir métodos</b>).<br>
-      La plantilla es editable. Además de las expresiones y comentarios de Objective-C, puede usar variables predefinidas que luego se expandirán a sus valores correspondientes.</font>
+      Genera el cuerpo del método getter sobrescrito de una propiedad, creado al generar (por ejemplo, al invocar la acción <b>Code | Override Method</b>).<br>
+      La plantilla es editable. Además de expresiones y comentarios de Objective-C, también puede usar variables predefinidas, que luego se expandirán a sus valores correspondientes.</font>
     </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas tomarán los siguientes valores:</font></td>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Llamada al método super, para métodos <b>void</b> — <code>[<b>super</b> <i>methodName</i>]</code>, con o sin parámetros formales;
-      para otros métodos — <code><b>return</b> [<b>super</b> <i>methodName</i>]</code>, con o sin parámetros formales
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Llamada al método super: para métodos <b>void</b> — <code>[<b>super</b> <i>methodName</i>]</code>, con o sin parámetros;
+      para otros métodos — <code><b>return</b> [<b>super</b> <i>methodName</i>]</code>, con o sin parámetros
     </font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Tipo de retorno del método creado</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Tipo del valor de retorno del método creado</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Valor de retorno predeterminado del método</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Valor devuelto por defecto por el método</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CONTAINING_CLASS}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la clase en la que se sobrescribe el método</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${IVAR_IS_AVAILABLE}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Es <b>"true"</b> cuando la propiedad tiene una variable de instancia</font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Es <b>"true"</b> si la propiedad tiene una variable de instancia</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${IVAR}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
+    <td width="10"></td>
     <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la variable de instancia</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${SETTER_SEMANTICS}</b></font></nobr></td>
-    <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">En modo ARC: <b>"copyArc"</b> si el atributo <code>copy</code> está establecido, de lo contrario <b>"assign"</b><br>
-      En modo no ARC: <b>"copy"</b> si el atributo <code>copy</code> está establecido, <b>"retain"</b> si el atributo <code>retain</code> está establecido, de lo contrario <b>"assign"</b></font></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">En modo ARC: <b>"copyArc"</b> si el atributo <code>copy</code> está configurado, de lo contrario <b>"assign"</b><br>
+      En modo no ARC: <b>"copy"</b> si el atributo <code>copy</code> está configurado, <b>"retain"</b> si el atributo <code>retain</code> está configurado, de lo contrario <b>"assign"</b></font></td>
   </tr>
   <tr>
-    <td colspan="3"><font face="verdana" size="-1">Todas las variables predefinidas disponibles en la plantilla de <b>Encabezado C</b> (pestaña <b>Include</b>) también están disponibles (<font face="verdana" size="-2"><b>${USER}</b></font>, <font face="verdana" size="-2"><b>${DATE}</b></font>, etc.)</font>
+    <td colspan="3"><font face="verdana" size="-1">Todas las variables predefinidas del plantilla <b>C File Header</b> (pestaña <b>Include</b>) también están disponibles (por ejemplo, <font face="verdana" size="-2"><b>${USER}</b></font>,
+      <font face="verdana" size="-2"><b>${DATE}</b></font>
+      , etc.)</font>
     </td>
   </tr>
 </table>

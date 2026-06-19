@@ -3,9 +3,11 @@
 <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
   <tr>
     <td><font face="verdana" size="-1">
-      Define la plantilla para generar JavaDoc para métodos sobrescritos, por ejemplo, cuando se aplica la intención <i>Añadir Javadoc</i>.<br><br>
-Además de las expresiones Java y comentarios, puede usar variables predefinidas que se expandirán como macros a sus valores correspondientes.<br><br>
-Usando la directiva <i>#parse</i>, puede incluir plantillas de la pestaña <b>Includes</b>. Para incluir una plantilla, especifique su nombre completo como parámetro entre comillas (por ejemplo, <i>#parse("File Header.java")</i>).
+      Define la plantilla utilizada para generar JavaDoc para métodos sobrescritos, por ejemplo, cuando se aplica la acción de intención <i>Add Javadoc</i>.<br><br>
+
+      Además de las expresiones y comentarios de Java, puede utilizar variables predefinidas que se expandirán a sus valores correspondientes como si fueran macros.<br><br>
+
+      Mediante el uso de la directiva <i>#parse</i>, puede incluir plantillas de la pestaña <b>Includes</b>. Para incluir una plantilla, especifique el nombre completo de la plantilla entre comillas como un parámetro (por ejemplo, <i>#parse("File Header.java")</i>).
     </font></td>
   </tr>
 </table>
@@ -13,6 +15,7 @@ Usando la directiva <i>#parse</i>, puede incluir plantillas de la pestaña <b>In
   <tr>
     <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas aceptan los siguientes valores:</font></td>
   </tr>
+
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAMS}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
@@ -31,37 +34,38 @@ Usando la directiva <i>#parse</i>, puede incluir plantillas de la pestaña <b>In
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Tipo devuelto por el método</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El tipo devuelto por el método</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAMS_INHERITED}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Lista de parámetros con descripción del método super</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Lista de parámetros con descripciones del supermétodo</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${ELEMENT_NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del miembro de clase propietario del JavaDoc generado</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del miembro de la clase para el que se genera el JavaDoc</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${CONTAINING_CLASS}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la clase padre</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la clase contenedora</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${SUPER_METHOD}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completamente calificado del método super</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo (fully qualified name) del supermétodo</font></td>
   </tr>
+  <!--Copied from file-->
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${PACKAGE_NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del paquete donde se crea el nuevo enum</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del paquete en el que se crea la nueva enumeración</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del nuevo enum que especificó en el diálogo <b>Crear Nueva Clase</b></font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la nueva enumeración especificada en el cuadro de diálogo <b>Crear nueva clase</b></font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr></td>
@@ -91,12 +95,12 @@ Usando la directiva <i>#parse</i>, puede incluir plantillas de la pestaña <b>In
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del mes actual (Jan, Feb, etc.)</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Las primeras 3 letras del nombre del mes actual (Jan, Feb, etc.)</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
     <td width="10">&nbsp;</td>
-    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual (January, February, etc.)</font></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre completo del mes actual (January, February, etc.)</font></td>
   </tr>
   <tr>
     <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
