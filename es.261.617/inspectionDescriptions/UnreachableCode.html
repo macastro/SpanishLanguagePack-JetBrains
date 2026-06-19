@@ -1,39 +1,41 @@
 <html>
 <body>
-Reporta código que nunca se alcanza según el análisis de flujo de datos. 
-Puede ser el resultado de una condición anterior que siempre es true o siempre es false, un cuerpo de bucle inalcanzable o una parte catch. Usualmente (aunque no siempre) el código inalcanzable es el resultado de advertencias previas, por lo que revise las advertencias de las inspecciones que forman "Problemas de nullabilidad y flujo de datos", "Valores constantes" o "Operaciones redundantes en contenedores vacíos" para entender mejor la causa.
+Informa sobre código al que nunca se llega basándose en el análisis de flujo de datos.
+Puede ser el resultado de una condición previa que siempre es verdadera o siempre falsa, un cuerpo de bucle inalcanzable o una sección catch. A menudo (aunque no siempre), el código inalcanzable es consecuencia de advertencias previas, por lo que conviene revisar las advertencias de las inspecciones de "Problemas de nulabilidad y flujo de datos", "Valores constantes" u "Operaciones redundantes en contenedores vacíos" para comprender mejor la causa.
 <p>Ejemplo:</p>
 <pre><code>
   void finishApplication() {
     System.exit(0);
-    System.out.println("Application is terminated"); // código inalcanzable
+    System.out.println("Application is terminated"); // Código inalcanzable
   }
 </code></pre>
 <p>
-  Tenga en cuenta que esta inspección depende de la inferencia de contratos de métodos. En particular, si llama a un método static o final que siempre lanza una excepción, se inferirá el contrato "siempre falla", y el código después de la llamada al método será considerado inalcanzable. Por ejemplo:
+  Tenga en cuenta que esta inspección depende de la inferencia de contratos de métodos. En particular, si llama a un método <code>static</code> o <code>final</code> que siempre lanza una excepción, se inferirá un contrato de "siempre falla" y el código posterior a la llamada al método se considerará inalcanzable. Por ejemplo:
 </p>
 <pre><code>
   void run() {
     performAction();
-    System.out.println("Action is performed"); // código inalcanzable
+    System.out.println("Action is performed"); // Código inalcanzable
   }
+  
   static void performAction() {
     throw new AssertionError();
   }
 </code></pre>
 <p>
-  Esto puede causar falsos positivos si usa cualquier tipo de postprocesamiento de código, por ejemplo, si un procesador de anotaciones reemplaza posteriormente el cuerpo del método con contenido útil. Para evitar advertencias de falsos positivos, use la anotación explícita <code>@org.jetbrains.annotations.Contract</code> del paquete <code>org.jetbrains:annotations</code> para suprimir la inferencia automática de contratos:
+  Esto puede provocar falsos positivos si se utiliza algún tipo de postprocesamiento de código; por ejemplo, si un procesador de anotaciones reemplaza posteriormente el cuerpo del método con contenido útil. Para evitar advertencias de falsos positivos, utilice la anotación explícita <code>@org.jetbrains.annotations.Contract</code> del paquete <code>org.jetbrains:annotations</code> para suprimir la inferencia automática de contratos:
 </p>
 <pre><code>
   void run() {
     performAction();
-    System.out.println("Action is performed"); // ya no hay advertencia
+    System.out.println("Action is performed"); // Ya no hay advertencia
   }
-  @Contract("-> _") // la implementación será reemplazada
+
+  @Contract("-> _") // La implementación será reemplazada
   static void performAction() {
     throw new AssertionError();
   }
 </code></pre>
-<p><small>Nuevo en 2024.1</small></p>
+<p><small>Novedades de 2024.1</small></p>
 </body>
 </html>

@@ -1,15 +1,17 @@
 <html>
 <body>
-Informa sobre anotaciones esperadas opcionales en algunos módulos de plataforma donde no hay anotaciones reales.
+Informa anotaciones esperadas opcionalmente sin anotación real en algunos módulos de la plataforma.
 <p><b>Ejemplo:</b></p>
-<pre><code>// 通用代码
+<pre><code>// código común
 @OptionalExpectation
 expect annotation class JvmName(val name: String)
+
 @JvmName(name = "JvmFoo")
 fun foo() { }
-// jvm 代码
+
+// código jvm
 actual annotation class JvmName(val name: String)
 </code></pre>
-<p>Esta inspección también informa sobre la omisión de <code>actual annotation class JvmName</code> para plataformas que no son JVM (por ejemplo, Native).</p>
+<p>La inspección también informa casos cuando se omite <code>actual annotation class JvmName</code> para plataformas no JVM (por ejemplo, Native).</p>
 </body>
 </html>

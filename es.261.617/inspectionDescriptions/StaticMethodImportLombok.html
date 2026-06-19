@@ -1,10 +1,11 @@
 <html>
 <body>
-Reportar el uso de importación estática de métodos generados por Lombok.<br>
+Reporta usos de importaciones estáticas para métodos generados por Lombok.<br>
 <p>
-  Esto fallará durante la compilación con javac. La razón es que los métodos static se analizan antes de que se inicie el procesador de anotaciones de Lombok.
-  En este punto, javac utiliza el código original antes del código que debería generar el procesador de anotaciones, y por lo tanto javac reportará símbolos faltantes (métodos generados).
+  Esto fallará en la compilación con javac. La razón es que los métodos estáticos se resuelven antes de que el procesador de anotaciones de Lombok entre en funcionamiento.
+  En este momento, javac usa el código original antes del que debería haber sido generado por el procesador de anotaciones, luego javac, por supuesto,
+  reporta los símbolos faltantes (métodos generados).
 </p>
-Ver más <a href="https://github.com/projectlombok/lombok/issues/2044">información detallada</a>
+Ver más <a href="https://github.com/projectlombok/lombok/issues/2044">detalles</a>
 </body>
 </html>

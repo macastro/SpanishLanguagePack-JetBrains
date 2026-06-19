@@ -1,16 +1,16 @@
 <html>
 <body>
-Informa sobre campos, métodos o clases que podrían tener un alcance de modificador de acceso más restrictivo.
+Informa sobre campos, métodos o clases que pueden tener su modificador de acceso restringido.
 <p>Ejemplo:</p>
 <pre><code>
   class Sample {
     void foo() {
         bar("foo", "foo");
     }
-    void bar(String x, String y) { } // podría ser private
+    void bar(String x, String y) { } // puede ser privado
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   class Sample {
     void foo() {
@@ -19,6 +19,7 @@ Informa sobre campos, métodos o clases que podrían tener un alcance de modific
     private void bar(String x, String y) { }
   }
 </code></pre>
-<p>Las opciones de inspección permiten definir las reglas para sugerir cambios de modificadores.</p>
+<!-- tooltip end -->
+<p>Utilice las opciones de inspección para definir las reglas para las sugerencias de cambio de modificador.</p>
 </body>
 </html>

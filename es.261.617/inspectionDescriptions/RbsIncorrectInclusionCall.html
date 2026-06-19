@@ -1,10 +1,10 @@
 <html>
 <body>
-Informa sobre las llamadas de inclusión de clases (<code>include</code>, <code>prepend</code> y <code>extend</code>). Las llamadas de inclusión solo pueden hacer referencia a módulos o interfaces.
-<p>Las llamadas de inclusión incorrectas se pueden eliminar mediante una corrección rápida.</p>
+Reporta llamadas de inclusión de referencias de clase (<code>include</code>, <code>prepend</code> y <code>extend</code>). Las llamadas de inclusión pueden hacer referencia sólo a módulos o interfaces.
+<p>Puedes usar una corrección rápida para eliminar la llamada de inclusión incorrecta.</p>
 <p>Ejemplo:</p>
 <pre><code>class Example
-  # En la llamada 'include' usando la clase 'Object'
+  # se usa la clase 'Object' en la llamada 'include'
   include Object
 end</code></pre>
 <p>Después de aplicar la corrección rápida:</p>

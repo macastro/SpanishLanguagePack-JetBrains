@@ -1,12 +1,13 @@
 <html>
 <body>
-Informa sobre cualquier implementación del método <code>Object.finalize()</code> que esté declarado como <code>public</code>.
+Informa cualquier implementación del método <code>Object.finalize()</code> que esté declarado como <code>public</code>.
 <p>
-  Por convención de <code>Object.finalize()</code>, solo el recolector de basura debe llamar a este método. Declararlo como public puede ser confuso, ya que sugiere que el método puede ser utilizado desde otro código.
+  De acuerdo con el contrato del <code>Object.finalize()</code>, sólo el recolector de basura llama a este método. Hacer público este método puede generar confusión, porque significa que el método puede ser usado desde otro código.
 </p>
 <p>
-  Se puede utilizar una corrección rápida para establecer el método como <code>protected</code>, evitando así que sea llamado por otras clases.
+  Se proporciona una corrección rápida para hacer <code>protected</code> al método, para evitar que sea invocado desde otras clases.
 </p>
+<!-- tooltip end -->
 <p><b>Ejemplo:</b></p>
 <pre><code>
   <b>class</b> X {

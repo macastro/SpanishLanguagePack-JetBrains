@@ -1,44 +1,47 @@
 <html>
 <body>
-Informa sobre las declaraciones <code>return</code> que devuelven <code>null</code>.
-Aunque ocasionalmente útil, esta estructura puede hacer que el código falle debido a que es más propenso a <code>NullPointerException</code>.
+Reporta las sentencias return con valores de retorno null.
+Si bien ocasionalmente son útiles, esta construcción puede hacer que el código sea más propenso a fallar con una NullPointerException.
 <p>
-  Si un método está diseñado para devolver <code>null</code>, se recomienda marcarlo con la anotación <code>@Nullable</code> - los métodos así marcados serán ignorados por esta inspección.
+  Si un método está diseñado para devolver null, se sugiere marcarlo con la anotación @Nullable, estos métodos serán ignorados por esta inspección.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Person {
-    public String getName () {
+  class Persona {
+    public String getNombre () {
       return null;
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
-  class Person {
-    public @Nullable String getName () {
+  class Persona {
+    @Nullable
+    public String getNombre () {
       return null;
     }
   }
 </code></pre>
 <p>
-  Si el tipo de retorno es <code>java.util.Optional</code>, se recomienda usar otra corrección rápida para convertir <code>null</code> en <code>Optional.empty()</code>.
+  Si el tipo de retorno es java.util.Optional, se sugiere un arreglo rápido adicional para convertir null a Optional.empty().
 </p>
+<!-- tooltip end -->
 <p>
-  Configure la inspección con las siguientes opciones:
+  Usa las siguientes opciones para configurar la inspección:
 </p>
 <ul>
   <li>
-    Si se deben ignorar los métodos <code>private</code>.
-    Esto también ignorará los valores <code>null</code> devueltos desde clases anónimas y lambdas.
+    Si se ignoran los métodos 'private'.
+    Esto también ignorará el retorno de null desde clases anónimas y lambdas.
   </li>
   <li>
-    Si se deben informar los valores <code>null</code> devueltos para arrays, objetos de colección, objetos regulares o una combinación de los tres.
-    Siempre se informarán los valores <code>null</code> devueltos en métodos con tipo de retorno <code>java.util.Optional</code>.
+    Si se deben reportar los valores null en retornos de arreglos, retornos de objetos de colección, retornos de objetos simples o una combinación de los tres.
+    El retorno de null en métodos con tipo de retorno java.util.Optional siempre se reporta.
   </li>
   <li>
-    Haga clic en <b>Configurar anotaciones</b> para especificar qué anotaciones deben considerarse como 'nullable'.
+    Haz clic en <b>Configurar anotaciones</b> para especificar qué anotaciones deben considerarse 'nullable'.
   </li>
 </ul>
+
 </body>
 </html>

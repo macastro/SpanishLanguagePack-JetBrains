@@ -1,20 +1,22 @@
 <html>
 <body>
-Informa sobre cualquier método public que no contenga declaraciones de registro (logging). Esta inspección no informa sobre getters y setters simples.
+Reporta cualquier método público que no contenga una sentencia de registro. Esta inspección no informa sobre getters y setters simples.
 <p>Por ejemplo:</p>
 <pre><code>
   <b>public class</b> Crucial {
     <b>private static final </b>Logger LOG = LoggerFactory.getLogger(Crucial.class);
     <b>public void</b> doImportantStuff() {
-      // Se genera una advertencia para este método
+      // advertencia para este método
     }
+
     <b>public void</b> doOtherStuff() {
       LOG.info("do other stuff");
     }
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-Utilice la tabla siguiente para especificar los nombres de las clases logger.
-Esta inspección informará sobre los métodos public que no utilicen métodos de instancia de las clases especificadas.
+Use la tabla siguiente para especificar nombres de clase Logger.
+Esta inspección informará sobre métodos públicos que no utilizan métodos de instancia de las clases especificadas.
 </body>
 </html>

@@ -1,8 +1,8 @@
 <html>
 <body>
-Las llamadas a la función <code>map.put</code> pueden reemplazarse por el operador de indexación (<code>[]</code>).
-<p>El código puede simplificarse usando azúcar sintáctico.</p>
-<p>Esta corrección rápida reemplazará la llamada a <code>put</code> por una asignación.</p>
+Reporta llamadas a la función <code>map.put</code> que pueden ser reemplazadas con operador de indexación (<code>[]</code>).
+<p>El uso de sintaxis dulce hace más simple tu código.</p>
+<p>La corrección rápida reemplaza la llamada <code>put</code> con la asignación.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun foo(map: MutableMap&lt;Int, String&gt;) {
@@ -15,5 +15,6 @@ Las llamadas a la función <code>map.put</code> pueden reemplazarse por el opera
       map[42] = &quot;foo&quot;
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

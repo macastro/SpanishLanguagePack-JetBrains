@@ -1,8 +1,11 @@
 <html>
 <body>
-Reporta valores de retorno de campos de array o tipos mutables (como <code>Collection</code>, <code>Date</code>, <code>Map</code>, <code>Calendar</code>, etc.) o asignaciones desde parámetros de método a campos de array o tipos mutables.
-<p>Dado que este tipo es mutable, esta estructura puede llevar a modificaciones inesperadas del estado del objeto desde fuera de la clase propietaria. Aunque esta estructura puede ser útil por razones de rendimiento, es inherentemente propensa a errores.</p>
-<p>Se reportan los siguientes tipos mutables:</p>
+Reporta el retorno o la asignación desde un parámetro de método a una matriz o a un tipo mutable como 
+<code>Collection</code>, <code>Date</code>, <code>Map</code>, <code>Calendar</code>, etc.
+<p>Debido a que tales tipos son mutables, esta construcción puede
+    resultar en modificaciones inesperadas del estado del objeto desde fuera de la clase propietaria. Aunque esta construcción puede ser útil por razones de
+    rendimiento, es inherentemente propensa a errores.</p>
+<p>Se informan los siguientes tipos mutables:</p>
 <ul>
   <li><code>java.util.Date</code></li>
   <li><code>java.util.Calendar</code></li>
@@ -11,35 +14,32 @@ Reporta valores de retorno de campos de array o tipos mutables (como <code>Colle
   <li><code>com.google.common.collect.Multimap</code></li>
   <li><code>com.google.common.collect.Table</code></li>
 </ul>
-<p>La corrección rápida añade una llamada al método <code>.clone()</code> del campo para arrays, o utiliza wrappers de colecciones no modificables.</p>
+<p>La solución rápida agrega una llamada al método <code>.clone()</code> del campo.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  import java.util.*;
-  class Log {
-    private String[] messages = {"one", "two", "three"};
-    private Map&lt;String, String&gt; map = new HashMap<>();
-    String[] getMessages() {
-      return messages; // Advertencia: retorna el campo String[] 'messages'
-    }
-    Map&lt;String, String&gt; mapping() {
-      return map; // Advertencia: retorna el campo Map&lt;String, String&gt; 'map'
+  class Registro {
+    String[] mensajes;
+    ...
+
+    String[] getMensajes() {
+      return mensajes; // advertencia: Retorno del campo String[] 'mensajes'
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
-  import java.util.*;
-  class Log {
-    String[] messages = {"one", "two", "three"};
-    private Map&lt;String, String&gt; map = new HashMap<>();
-    String[] getMessages() {
-      return messages.clone();
-    }
-    Map&lt;String, String&gt; mapping() {
-      return Collections.unmodifiableMap(map);
+  class Registro {
+    String[] mensajes;
+    ...
+
+    String[] getMensajes() {
+      return mensajes.clone();
     }
   }
 </code></pre>
-<p>Usa la opción <b>Ignorar asignaciones y valores de retorno en métodos private</b> para ignorar asignaciones y valores de retorno en métodos <code>private</code>.
+<!-- tooltip end -->
+<p>Utiliza la opción <b>Ignorar asignaciones y retornos en métodos privados</b> para ignorar las asignaciones y retornos en métodos <code>private</code>.
+
+  <!--<p><small>New in 2017.3</small>-->
 </body>
 </html>

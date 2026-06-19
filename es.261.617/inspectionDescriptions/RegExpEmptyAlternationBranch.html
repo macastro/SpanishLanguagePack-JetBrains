@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre ramas vacías en reemplazos de expresiones regulares.
-Las ramas vacías solo pueden coincidir con cadenas vacías, lo cual en la mayoría de los casos no es el objetivo deseado.
-Esta inspección no informa sobre ramas vacías individuales al principio o al final del reemplazo.
+Inspecciona ramas vacías en una alternancia RegExp.
+Una rama vacía sólo coincidirá con la cadena vacía, y en la mayoría de los casos eso no es lo deseado.
+Esta inspección no reportará una rama vacía simple al principio o al final de una alternancia.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   (alpha||bravo)
@@ -11,6 +11,7 @@ Esta inspección no informa sobre ramas vacías individuales al principio o al f
 <pre><code>
   (alpha|bravo)
 </code></pre>
-<p><small>Novedades de 2017.2</small>
+<!-- tooltip end -->
+<p><small>Nuevo en 2017.2</small>
 </body>
 </html>

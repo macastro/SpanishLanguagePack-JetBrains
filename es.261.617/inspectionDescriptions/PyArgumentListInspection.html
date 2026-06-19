@@ -1,20 +1,24 @@
 <html>
 <body>
-<p>Informa sobre las diferencias entre los parámetros formales declarados y los argumentos reales, además de reportar argumentos incorrectos (como argumentos nombrados duplicados) y orden incorrecto de argumentos.</p>
+<p>Informa sobre discrepancias entre los parámetros declarados, los argumentos reales, y los argumentos incorrectos (por ejemplo, argumentos nombrados duplicados, orden incorrecto de los argumentos).</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class Foo:
     def __call__(self, p1: int, *, p2: str = "%"):
         return p2 * p1
+
+
 bar = Foo()
-bar.__call__() # parámetros faltantes
+bar.__call__() # parámetro no ingresado
 bar(5, "#") # argumento inesperado
 </code></pre>
-<p>El código correcto se muestra a continuación:</p>
+<p>El fragmento de código correcto se vería así:</p>
 <pre><code>
 class Foo:
     def __call__(self, p1: int, *, p2: str = "%"):
         return p2 * p1
+
+
 bar = Foo()
 bar.__call__(5)
 bar(5, p2="#")

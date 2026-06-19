@@ -1,16 +1,18 @@
 <html>
 <body>
-Informa sobre clases <code>abstract</code> que no tienen ningún método <code>abstract</code>.
-En la mayoría de los casos, una clase <code>abstract</code> sin métodos <code>abstract</code> no tiene sentido y el modificador <code>abstract</code> puede eliminarse de la clase.
-Si una clase se declara como <code>abstract</code> para prevenir su instanciación, generalmente es mejor usar un constructor <code>private</code> para evitar la instanciación.
+Inspecciona clases <code>abstract</code> que no tienen métodos <code>abstract</code>.
+En la mayoría de los casos no tiene sentido tener una clase <code>abstract</code> sin ningún método <code>abstract</code>, y el modificador <code>abstract</code> puede ser removido de la clase.
+Si la clase fue declarada <code>abstract</code> para prevenir la instanciación,
+a menudo es una mejor opción usar un constructor <code>private</code> para prevenir la instanciación en su lugar.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  abstract class Example {
-    public String getName() {
+  clase abstract Ejemplo {
+    public String getNombre() {
       return "IntelliJ IDEA";
     }
   }
 </code></pre>
-<p>Use esta opción para ignorar las clases de utilidad.</p>
+<!-- tooltip end -->
+<p>Use la opción para ignorar las clases utilitarias.
 </body>
 </html>

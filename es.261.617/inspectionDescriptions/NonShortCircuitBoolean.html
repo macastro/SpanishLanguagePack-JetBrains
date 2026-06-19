@@ -1,9 +1,9 @@
 <html>
 <body>
-Informa sobre el uso de formas no de cortocircuito de los operadores booleanos 'and' y 'or' (<code>&amp;</code>, <code>|</code>, <code>&amp;=</code> y <code>|=</code>).
-Aunque las versiones sin cortocircuito ocasionalmente son útiles, en la mayoría de los casos se deberían usar las formas de cortocircuito (<code>&amp;&amp;</code> y <code>||</code>), y estos usos no intencionados pueden llevar a errores difíciles de detectar.
+Se encuentran usos de los operadores booleanos 'and' y 'or' no cortocircuitados (<code>&amp;</code>, <code>|</code>, <code>&amp;=</code>, <code>|=</code>).
+Si bien las versiones no cortocircuitadas pueden ser válidas en algunos casos, en la mayoría de los casos deben utilizarse las versiones cortocircuitadas (<code>&amp;&amp;</code> y <code>||</code>) ya que el uso no intencional de las versiones no cortocircuitadas puede generar errores difíciles de detectar.
 <p>
-  Se sugiere utilizar las versiones de cortocircuito mediante una corrección rápida.
+  Se sugiere una corrección rápida para utilizar las versiones cortocircuitadas.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -17,5 +17,6 @@ Aunque las versiones sin cortocircuito ocasionalmente son útiles, en la mayorí
     if (x || y) { x = x || z; }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

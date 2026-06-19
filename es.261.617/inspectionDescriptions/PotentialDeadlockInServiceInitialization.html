@@ -1,10 +1,10 @@
 <html>
 <body>
-Reporte de operaciones de lectura/escritura e <code>invokeAndWait</code> llamadas durante la inicialización del servicio:
+Informa sobre las operaciones de lectura/escritura y las llamadas a <code>invokeAndWait</code> desde el ámbito de inicialización del servicio:
 <ul>
-  <li>Constructor del servicio y bloques de inicialización (incluyendo static)</li>
-  <li>Bloques de inicialización del objeto companion del servicio (Kotlin)</li>
-  <li>Métodos de servicio utilizados en bloques de inicialización e inicialización de campos</li>
+  <li>Constructores de servicios y bloques de inicialización (incluidos los <code>static</code>)</li>
+  <li>Bloques de inicialización de objetos complementarios de servicios (Kotlin)</li>
+  <li>Métodos de servicio utilizados en bloques de inicialización y en la inicialización de campos</li>
   <li>Métodos del ciclo de vida de inicialización de <code>PersistentStateComponent</code>:
     <ul>
       <li><code>loadState</code></li>
@@ -12,33 +12,39 @@ Reporte de operaciones de lectura/escritura e <code>invokeAndWait</code> llamada
       <li><code>initializeComponent</code></li>
     </ul>
 </ul>
-<p>Ejecutar operaciones de lectura/escritura o llamar a <code>invokeAndWait</code> durante la inicialización del servicio puede causar deadlocks.</p>
-<p><b>Ejemplos:</b></p>
+
+<p>Ejecutar operaciones de lectura/escritura o llamar a <code>invokeAndWait</code> durante la inicialización del servicio puede provocar interbloqueos.</p>
+
+<p><b>Ejemplo:</b></p>
 <p>Kotlin:</p>
 <pre><code lang="kotlin">
 @Service
 internal class MyService {
   private val myData = initMyData();
+
   constructor() {
-    val data = runReadAction { // Error: ejecutar operación de lectura en el constructor
+    val data = runReadAction { // Error: se ejecuta una acción de lectura en el constructor
       // leer datos
     }
   }
+
   private fun initMyData(): Data {
-    return runWriteAction { // Error: llamada durante la inicialización de la propiedad myData
+    return runWriteAction { // Error: se llama durante la inicialización de la propiedad myData
       // escribir datos
     }
   }
+
   companion object {
     lateinit var companionData: String
     init {
-      companionData = runReadAction { // Error: ejecutar operación de lectura en el bloque init
+      companionData = runReadAction { // Error: se ejecuta una acción de lectura en el bloque init
         // leer datos
       }
     }
   }
 }
 </code></pre>
+
 <p>Java:</p>
 <pre><code lang="java">
 @Service
@@ -47,50 +53,61 @@ class MyService {
     // leer datos
   });
   private static final Data ourData2;
+
   static {
-    ourData2 = ReadAction.compute(() -> { // Error: ejecutar operación de lectura en el bloque de inicialización static
+    ourData2 = ReadAction.compute(() -> { // Error: se ejecuta una acción de lectura en el bloque de inicialización static
       // leer datos
     });
   }
+
   private final Data myData2 = initMyData();
+
   MyService() {
-    Data data = WriteAction.compute(() -> { // Error: ejecutar operación de lectura en el constructor
+    Data data = WriteAction.compute(() -> { // Error: se ejecuta una acción de escritura en el constructor
       // escribir datos
     });
   }
+
   private Data initMyData() {
-    return ReadAction.compute(() -> { // Error: llamada durante la inicialización de la propiedad myData
+    return ReadAction.compute(() -> { // Error: se llama durante la inicialización de la propiedad myData
       // leer datos
     });
   }
 }
 </code></pre>
+
 <p><code>PersistentStateComponent</code>:</p>
 <pre><code lang="kotlin">
 @Service
 @State(...)
 internal class MySettings : PersistentStateComponent&lt;MyService> {
   var stateValue: String? = null
+
   override fun loadState(state: MySettings) {
-    val data = runReadAction { // Error: ejecutar operación de lectura en loadState
+    val data = runReadAction { // Error: se ejecuta una acción de lectura en loadState
       // leer datos
     }
     // ...
   }
+
   override fun noStateLoaded() {
-    val data = runWriteAction { // Error: ejecutar operación de lectura en noStateLoaded
+    val data = runWriteAction { // Error: se ejecuta una acción de escritura en noStateLoaded
       // escribir datos
     }
     // ...
   }
+
   override fun initializeComponent() {
-    val data = runReadAction { // Error: ejecutar operación de lectura en initializeComponent
+    val data = runReadAction { // Error: se ejecuta una acción de lectura en initializeComponent
       // leer datos
     }
     // ...
   }
+
 }
 </code></pre>
-<p><small>Cambios en 2024.2</small>
+
+<!-- tooltip end -->
+<p><small>Novedad de 2024.2</small>
 </body>
 </html>

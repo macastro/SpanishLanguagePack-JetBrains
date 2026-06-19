@@ -1,6 +1,7 @@
 <html>
 <body>
-Informa sobre las declaraciones <code>assert</code> y sugiere reemplazarlas por declaraciones <code>if</code> que lanzan <code>java.lang.AssertionError</code>.
+Informa sobre sentencias <code>assert</code> y sugiere reemplazarlas con sentencias
+<code>if</code> que lancen <code>java.lang.AssertionError</code>.
 <p>Ejemplo:</p>
 <pre><code>
   assert param != null;
@@ -9,5 +10,7 @@ Informa sobre las declaraciones <code>assert</code> y sugiere reemplazarlas por 
 <pre><code>
   if (param == null) throw new AssertionError();
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

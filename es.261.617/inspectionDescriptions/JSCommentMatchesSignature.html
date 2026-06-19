@@ -1,21 +1,22 @@
 <html>
 <body>
-Informa sobre discrepancias entre los nombres y el número de parámetros en los comentarios JSDoc y los parámetros reales de la función.
-Se recomienda actualizar los parámetros en los comentarios JSDoc.
+Informa de la falta de coincidencia entre los nombres y el número de parámetros en un comentario JSDoc y los parámetros reales de una función.
+Sugiere actualizar los parámetros en el comentario JSDoc.
+<!-- tooltip end -->
 <p><b>Ejemplo:</b></p>
 <pre><code>
 /**
- * @param height Height in pixels
+ * @param height Altura en píxeles
  */
-function sq(height, width) {} // ancho no documentado
+function sq(altura, width) {} // width no está documentado
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras aplicar la solución rápida:</p>
 <pre><code>
 /**
- * @param height Height in pixels
+ * @param height Altura en píxeles
  * @param width
  */
-function sq(height, width) {}
+function sq(altura, width) {}
 </code></pre>
 </body>
 </html>

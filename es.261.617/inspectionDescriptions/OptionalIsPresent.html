@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre expresiones <code>Optional</code> que se utilizan como condiciones en expresiones <code>if</code> o condicionales que pueden reescribirse usando un estilo funcional.
-El resultado suele ser más conciso y legible.
+Informa las expresiones <code>Optional</code> utilizadas como condiciones <code>if</code> o en expresiones condicionales que se pueden reescribir en un estilo funcional.
+El resultado es generalmente más corto y fácil de leer.
 <p>Ejemplo:</p>
 <pre><code>
   if (str.isPresent()) str.get().trim();
@@ -10,5 +10,6 @@ El resultado suele ser más conciso y legible.
 <pre><code>
   str.ifPresent(String::trim);
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

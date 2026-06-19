@@ -1,18 +1,21 @@
 <html>
 <body>
-<p>Informa sobre violaciones de las convenciones de nomenclatura de <a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>.</p>
+<p>Notifica vulneraciones de las convenciones de nomenclatura
+  <a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class mammalia(object):
     extremities = 4
+
     def feeds(self):
         print("milk")
 </code></pre>
-<p>En este código, el IDE sugiere renombrar <code>mammalia</code> a <code>Mammalia</code>.
-  Después de aplicar la corrección rápida, el código queda así:</p>
+<p>En este fragmento de código, el IDE ofrece renombrar <code>mammalia</code> por <code>Mammalia</code>.
+  Cuando se aplica la corrección rápida, el código cambia a:</p>
 <pre><code>
 class Mammalia(object):
     extremities = 4
+
     def feeds(self):
         print("milk")
 </code></pre>

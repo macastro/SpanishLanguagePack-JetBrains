@@ -1,10 +1,13 @@
 <html>
 <body>
-Informa sobre anotaciones @OptIn innecesarias que pueden eliminarse de forma segura.
-<p>El código que utiliza APIs experimentales requiere la anotación <code>@OptIn</code> porque estas APIs pueden cambiar en cualquier momento. Si dichas APIs ya no se utilizan (por ejemplo, cuando una API experimental se estabiliza y ya no requiere opt-in), esta anotación se vuelve redundante y potencialmente engañosa.
+Reporta anotaciones innecesarias de opt-in que pueden eliminarse de forma segura.
+
+<p>La anotación <code>@OptIn</code> es requerida para código que utiliza APIs experimentales que pueden cambiar
+en cualquier momento en el futuro. Esta anotación pasa a ser inútil y posiblemente engañosa si no se utiliza ninguna API de este tipo
+(por ejemplo, cuando la API experimental se vuelve estable y ya no requiere opt-in para su uso).
 </p>
 <p>
-    La corrección rápida <b>Eliminar anotación</b> está disponible para eliminar anotaciones <code>@OptIn</code> innecesarias.
+    El quick-fix <b>Remover anotación</b> puede usarse para eliminar la anotación <code>@OptIn</code> innecesaria.
 </p>
 <p>Ejemplo:</p>
 <pre><code>
@@ -13,7 +16,7 @@ Informa sobre anotaciones @OptIn innecesarias que pueden eliminarse de forma seg
       x.baz()
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de que se aplica el quick-fix:</p>
 <pre><code>
   fun foo(x: Bar) {
       x.baz()

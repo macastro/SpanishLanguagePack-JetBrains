@@ -1,10 +1,12 @@
 <html>
 <body>
-<p>Informa sobre archivos o directorios no resueltos en las anotaciones <a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/PropertySource.html>@PropertySource</a> y <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/TestPropertySource.html">@TestPropertySource</a>.</p>
+<p>Informa archivos o directorios no resueltos en las anotaciones <a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/PropertySource.html>@PropertySource</a> y <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/TestPropertySource.html">@TestPropertySource</a>.
+</p>
+
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   @Configuration
-  @PropertySource("classpath:/com/mycompany/unknown.properties") // Informa "No se puede resolver el archivo 'unknown.properties'"
+  @PropertySource("classpath:/com/mycompany/unknown.properties") // informa "No se puede resolver el archivo 'unknown.properties'"
   public class AppConfig {...}
 </code></pre>
 </body>

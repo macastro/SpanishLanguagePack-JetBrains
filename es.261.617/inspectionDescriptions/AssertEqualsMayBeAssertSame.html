@@ -1,8 +1,8 @@
 <html>
 <body>
-Se informa sobre las llamadas JUnit <code>assertEquals()</code> que pueden ser reemplazadas por llamadas equivalentes <code>assertSame()</code>.
-Esto puede ocurrir cuando los argumentos son instancias de clases <code>final</code> que no sobrescriben el método <code>Object.equals()</code> y comparan explícitamente la identidad del objeto.
-<p>Se sugiere reemplazar <code>assertEquals()</code> por <code>assertSame()</code>.</p>
+Reporta llamadas a JUnit <code>assertEquals()</code> que pueden ser reemplazadas con una llamada <code>assertSame()</code> equivalente.
+Esto es posible cuando los argumentos son instancias de una clase <code>final</code> que no sobreescribe el método `Object.equals()` y explicita que la identidad del objeto es comparada.
+<p>Sugiere reemplazar <code>assertEquals()</code> con <code>assertSame()</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   @Test
@@ -11,7 +11,7 @@ Esto puede ocurrir cuando los argumentos son instancias de clases <code>final</c
     Assert.assertEquals(String.class, o.getClass());
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de que se aplica el arreglo rápido:</p>
 <pre><code>
   @Test
   public void testSort() {

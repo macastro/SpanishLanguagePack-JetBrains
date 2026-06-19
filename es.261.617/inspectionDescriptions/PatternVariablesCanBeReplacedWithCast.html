@@ -1,10 +1,13 @@
 <html>
 <body>
-Reporta patrones con <code>instanceof</code> y sugiere convertirlos a <code>instanceof</code> normal con conversión.
-<p>Esta inspección puede mover patrones con <code>instanceof</code> a bases de código que utilizan versiones anteriores de Java mediante la aplicación de una corrección rápida.</p>
+Informa de <code>instanceof</code> con patrones y sugiere convertirlos a <code>instanceof</code> ordinarios con conversiones.
+<p>Esta inspección permite mover <code>instanceof</code> con patrones a una base de código que utiliza una versión anterior de Java
+  aplicando la corrección rápida.</p>
 <p>
-  Ten en cuenta que cuando se utilizan expresiones complejas antes de <code>instanceof</code>, el resultado no puede ser completamente equivalente al <code>instanceof</code> original con patrón. En este caso, la expresión se evaluará nuevamente.
+  Ten en cuenta que el resultado puede no ser completamente equivalente al <code>instanceof</code> original con patrones cuando
+  se utiliza una expresión compleja antes de <code>instanceof</code>. En este caso, esta expresión se volverá a evaluar.
 </p>
+<!-- tooltip end -->
 <p>Ejemplo:</p>
 <pre><code>
   if (object instanceof String txt && txt.length() == 1) {
@@ -25,6 +28,7 @@ Reporta patrones con <code>instanceof</code> y sugiere convertirlos a <code>inst
   String txt = (String) object;
   System.out.println(txt);
 </code></pre>
-<p><small>Novedades de 2023.1</small></p>
+<!-- tooltip end -->
+<p><small>Novedad en 2023.1</small></p>
 </body>
 </html>

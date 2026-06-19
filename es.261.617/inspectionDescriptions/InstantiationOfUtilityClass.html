@@ -1,9 +1,9 @@
 <html>
 <body>
-Informa sobre la instanciación de clases de utilidad usando la palabra clave <code>new</code>.
+Reporta instanciación de clases de utilidades utilizando la palabra clave <code>new</code>.
 <p>
-  En las clases de utilidad, todos los campos y métodos son <code>static</code>.
-  La instanciación de este tipo de clases probablemente sea innecesaria e indica un error.</p>
+  En clases de utilidades, todos los campos y métodos son <code>static</code>.
+  La instanciación de tales clases probablemente sea innecesaria e indica un error.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class MyUtils {
@@ -13,13 +13,15 @@ Informa sobre la instanciación de clases de utilidad usando la palabra clave <c
   }
   class Main {
     public static void main(String[] args) {
-      // Instanciación de una clase de utilidad
+      // Instanciación de clase de utilidades
       MyUtils utils = new MyUtils();
     }
   }
 </code></pre>
 <p>
-  Para evitar la instanciación de clases de utilidad, se recomienda usar un constructor <code>private</code>.
+  Para evitar que las clases de utilidades sean instanciadas,
+  se recomienda usar un constructor <code>private</code>.
 </p>
+<!-- tooltip end -->
 </body>
 </html>

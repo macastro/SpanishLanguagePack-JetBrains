@@ -1,8 +1,8 @@
 <html>
 <body>
-Reporta secciones <code>catch</code> idénticas dentro de una misma declaración <code>try</code>.
-<p>Combinar estas secciones en un bloque <i>multi-catch</i> reduce la duplicación de código y evita situaciones donde una sección <code>catch</code> se actualiza mientras que otra queda sin actualizar.</p>
-<p><b>Ejemplo:</b></p>
+Informa secciones `catch` idénticas dentro de una única sentencia `try`.
+<p>Colapsar dichas secciones en un único bloque `multi-catch` puede reducir la duplicación de código y prevenir situaciones en las que una sección `catch` es actualizada pero otra no lo es.</p>
+<p>**Ejemplo:**</p>
 <pre><code>
     try {
         doSmth();
@@ -14,7 +14,7 @@ Reporta secciones <code>catch</code> idénticas dentro de una misma declaración
         LOG.error(e);
     }
 </code></pre>
-<p>El código se puede hacer más compacto mediante una corrección rápida:</p>
+<p>Se puede utilizar un arreglo rápido para hacer que el código sea más conciso:</p>
 <pre><code>
     try {
         doSmth();
@@ -23,5 +23,6 @@ Reporta secciones <code>catch</code> idénticas dentro de una misma declaración
         LOG.error(e);
     }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

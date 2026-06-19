@@ -1,16 +1,18 @@
 <html>
 <body>
-Informa sobre sugerencias faltantes o redundantes en la creación de <code>UastHintedVisitorAdapter</code>.
+Informe de sugerencias faltantes o redundantes en la creación de <code>UastHintedVisitorAdapter</code>.
 <p>
-  <code>UastHintedVisitorAdapter</code> puede recibir sugerencias que permiten optimizar la ejecución del visitador UAST visitando solo los elementos de las clases especificadas en la lista de sugerencias.
+  <code>UastHintedVisitorAdapter</code> puede recibir sugerencias que permiten optimizar la ejecución del visitante de UAST, al visitar únicamente los elementos de las clases especificadas en la lista de sugerencias.
 </p>
 <p>
-  Por ejemplo, si el visitador implementa el método <code>visitCallExpression</code> pero no incluye <code>UCallExpression</code> en las sugerencias, el método no se ejecutará.
+  Por ejemplo, si el visitante implementa el método <code>visitCallExpression</code> pero no incluye <code>UCallExpression</code> en las sugerencias, el método no se ejecutará.
 </p>
 <p>
-  Por ejemplo, si el visitador no implementa el método <code>visitCallExpression</code> pero incluye <code>UCallExpression</code> en las sugerencias, el método heredado se ejecutará innecesariamente.
+  Por ejemplo, si el visitante no implementa el método <code>visitCallExpression</code> pero incluye <code>UCallExpression</code> en las sugerencias, el método heredado se ejecutará innecesariamente.
 </p>
-<h3>Ejemplos</h3>
+
+<h3>Ejemplo</h3>
+
 <pre><code lang="kotlin">
 return UastHintedVisitorAdapter.create(
   language,
@@ -19,15 +21,17 @@ return UastHintedVisitorAdapter.create(
       inspectLoopExpression()
       return true
     }
-    override fun visitDoWhileExpression(node: UDoWhileExpression): Boolean { // No se usa en tiempo de ejecución
+
+    override fun visitDoWhileExpression(node: UDoWhileExpression): Boolean { // No utilizado en tiempo de ejecución
       inspectLoopExpression()
       return true
     }
     //...
   },
-  arrayOf(UForExpression::class.java) // Error: falta UDoWhileExpression::class.java
+  arrayOf(UForExpression::class.java) // Malo: falta UDoWhileExpression::class.java
 )
 </code></pre>
+
 <pre><code lang="kotlin">
 UastHintedVisitorAdapter.create(
   language,
@@ -40,10 +44,12 @@ UastHintedVisitorAdapter.create(
   },
   arrayOf(
     UForExpression::class.java,
-    UDoWhileExpression::class.java // Error: visitador no implementado para UDoWhileExpression
+    UDoWhileExpression::class.java // Malo: acceso a UDoWhileExpression no implementado
   )
 )
 </code></pre>
-<p><small>Cambios en 2024.2</small>
+
+<!-- tooltip end -->
+<p><small>Cambios recientes 2024.2</small>
 </body>
 </html>

@@ -1,12 +1,15 @@
 <html>
 <body>
-Informa sobre situaciones en las que el código en tiempo de ejecución impide que un framework (como Spring o Hibernate) realice la subclasificación de clases.
-<p>Ejemplos típicos donde la subclasificación es necesaria pero imposible:</p>
+Informa de los casos en que tu código impide que una clase sea subclasificada por un marco (por ejemplo, Spring o Hibernate) en tiempo de ejecución.
+<!-- tooltip end -->
+<p>Ejemplos típicos de subclasificación necesaria pero imposible:</p>
 <ul>
-  <li>Clases <code>final</code> marcadas con anotaciones específicas del framework (como Spring <code>@Configuration</code>)</li>
-  <li>Métodos <code>final</code>, <code>static</code> o <code>private</code> marcados con anotaciones específicas del framework (como Spring <code>@Transactional</code>)</li>
-  <li>Métodos marcados con anotaciones específicas del framework dentro de clases <code>final</code></li>
+  <li>Clases <code>final</code> marcadas con anotaciones específicas del marco (por ejemplo, <code>@Configuration</code> de Spring)</li>
+  <li>Métodos <code>final</code>, <code>static</code> o <code>private</code>
+    marcados con anotaciones específicas del marco (por ejemplo, <code>@Transactional</code> de Spring)</li>
+  <li>Métodos marcados con anotaciones específicas del marco dentro de clases <code>final</code></li>
 </ul>
-<p>La lista de situaciones reportadas depende del framework utilizado.</p>
+
+<p>El listado de los casos informados depende de los marcos utilizados.</p>
 </body>
 </html>

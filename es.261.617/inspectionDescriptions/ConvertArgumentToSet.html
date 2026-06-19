@@ -1,22 +1,29 @@
 <html>
 <body>
-Detecta llamadas a funciones que pueden acelerarse convirtiendo los argumentos a <code>Set</code>.
+Detecta las llamadas a funciones que podrían funcionar más rápido con un argumento convertido a <code>Set</code>.
+
 <p>
-    Cuando los argumentos son colecciones, operaciones como 'minus' o 'intersect' son más eficientes.
-    Convertir explícitamente <code>Iterable&lt;T&gt;</code> o <code>Array&lt;T&gt;</code> a <code>Set&lt;T&gt;</code> generalmente puede mejorar la eficiencia del código.
+    Operaciones como 'minus' o 'intersect' son más efectivas cuando su argumento es un conjunto.
+    Una conversión explícita de un <code>Iterable&lt;T&gt;</code> o un <code>Array&lt;T&gt;</code>
+    a un <code>Set&lt;T&gt;</code> a menudo puede hacer que el código sea más efectivo.
 </p>
+
 <p>
-    Esta corrección rápida añade una conversión explícita a la llamada de función.
+    La solución rápida agrega una conversión explícita a la llamada de función.
 </p>
+
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun &lt;T&gt; f(a: Iterable&lt;T&gt;, b: Iterable&lt;T&gt;): Int =
       a.intersect(b).size
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   fun &lt;T&gt; f(a: Iterable&lt;T&gt;, b: Iterable&lt;T&gt;): Int =
       a.intersect(b.toSet()).size
 </code></pre>
+</body>
+<!-- tooltip end -->
 </body>
 </html>

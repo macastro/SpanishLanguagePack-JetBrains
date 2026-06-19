@@ -1,7 +1,23 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <html>
 <body>
-Reporta las declaraciones <code>defer</code> dentro de bucles.
-<p>El uso de <code>defer</code> dentro de bucles puede provocar fugas de memoria o un orden de ejecución impredecible de las declaraciones.</p>
+Informa sobre las declaraciones <code>defer</code> dentro de los bucles.
+<p>El uso de <code>defer</code> en los bucles puede provocar pérdidas de recursos o un orden de ejecución de las declaraciones impredecible.</p>
 <p>Ejemplo:</p>
 <pre><code>func main() {
  for {
@@ -13,7 +29,7 @@ Reporta las declaraciones <code>defer</code> dentro de bucles.
   // ...
  }
 }</code></pre>
-<p>La llamada a <code>defer row.Close()</code> dentro del bucle no se ejecutará hasta que la función termine su ejecución,
-  no al final de cada iteración del bucle <code>for</code>. Esta implementación puede causar desbordamiento de pila de la función y otros problemas.</p>
+<p>Las llamadas a <code>defer row.Close()</code> dentro del bucle no se ejecutan hasta que la función completa su ejecución.
+  No al final de cada paso del bucle <code>for</code>. Esta implementación puede provocar un desbordamiento de la pila de la función y otros problemas.</p>
 </body>
 </html>

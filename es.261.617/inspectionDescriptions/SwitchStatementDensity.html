@@ -1,10 +1,11 @@
 <html>
 <body>
-Informa sobre declaraciones o expresiones <code>switch</code> que tienen una proporción demasiado baja entre etiquetas switch y declaraciones ejecutables.
-<p>Estas declaraciones <code>switch</code> pueden resultar confusas y podrían requerir una refactorización.</p>
+Informa de las sentencias u expresiones de <code>switch</code> con una proporción demasiado baja de etiquetas de <code>switch</code> a sentencias ejecutables.
+<p>Estas sentencias de <code>switch</code> pueden resultar confusas y probablemente deban refactorizarse.</p>
+
 <p>Ejemplo:</p>
 <pre><code>
-    switch (i) { // 1 case, 5 declaraciones ejecutables -> 20% de densidad
+    switch (i) { // un caso y 5 sentencias ejecutables -> densidad del 20%
         case 1:
             System.out.println("1");
             System.out.println("2");
@@ -14,7 +15,8 @@ Informa sobre declaraciones o expresiones <code>switch</code> que tienen una pro
             break;
     }
 </code></pre>
+<!-- tooltip end -->
 <p>
-<p>Utilice el campo <b>Densidad mínima de ramas</b> para especificar la proporción permitida entre etiquetas switch y declaraciones ejecutables.</p>
+<p>Usa el campo <b>Densidad mínima de ramas</b> para especificar la proporción permitida de etiquetas de <code>switch</code> a sentencias ejecutables.</p>
 </body>
 </html>

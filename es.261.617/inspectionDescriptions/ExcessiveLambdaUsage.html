@@ -1,6 +1,7 @@
 <html>
 <body>
-Informa sobre casos donde una expresión lambda común se usa en otro método que funciona de la misma manera pero acepta un valor concreto en lugar de un lambda.
+Informa si se utiliza una expresión lambda trivial en casos en los que existe un método alternativo que se comporta de la misma manera, pero que acepta un valor concreto
+en lugar de una lambda.
 <p>Esta inspección ayuda a simplificar el código.</p>
 <p>Ejemplo:</p>
 <pre><code>
@@ -10,6 +11,7 @@ Informa sobre casos donde una expresión lambda común se usa en otro método qu
 <pre><code>
   Optional.orElse(null)
 </code></pre>
-<p><small>Novedades de la versión 2017.1</small></p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2017.1</small></p>
 </body>
 </html>

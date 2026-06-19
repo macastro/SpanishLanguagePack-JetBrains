@@ -1,16 +1,15 @@
 <html>
 <body>
-Informa sobre los valores de retorno de funciones que no devuelven ningún contenido.
-La llamada a estas funciones siempre genera un valor <code>undefined</code>, y tales asignaciones pueden indicar un error. <p>Ejemplo:</p>
+Informa el valor de retorno de una función que no devuelve nada. Llamar a dichas funciones siempre produce un valor <code>indefinido</code> y dicha asignación puede indicar un error. <p>Ejemplo:</p>
 <pre><code>
 let a = console.log('foo');
 </code></pre>
 <br/>
-Los siguientes usos serán ignorados:
+Se ignoran los siguientes usos:
 <ul>
-  <li>Dentro de una declaración return</li>
-  <li>En ciertas operaciones binarias</li>
-  <li>Para funciones sobrescritas que no son void</li>
+  <li>Dentro de una declaración de retorno</li>
+  <li>En algunas operaciones binarias</li>
+  <li>Para funciones no nulas sobrescritas</li>
 </ul>
 </body>
 </html>

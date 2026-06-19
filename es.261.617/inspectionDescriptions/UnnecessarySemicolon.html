@@ -1,10 +1,10 @@
 <html>
 <body>
-Informa sobre cualquier punto y coma innecesario, incluyendo los que se encuentran entre miembros de clase, dentro de bloques de declaración o después de definiciones de clase.
-<p>Aunque estos puntos y coma son válidos en Java, son redundantes y pueden eliminarse.</p>
+Informa cualquier punto y coma innecesario, incluyendo los puntos y comas utilizados entre miembros de una clase, dentro de instrucciones de bloque o después de definiciones de clase.
+<p>Incluso si estos puntos y comas son válidos en Java, son redundantes y pueden eliminarse.</p>
 <p>Ejemplo:</p>
 <pre><code>
-  class C {
+  clase C {
     ;
     void m() throws Exception {
         try (AutoCloseable r1 = createAutoCloseable();) {
@@ -14,15 +14,17 @@ Informa sobre cualquier punto y coma innecesario, incluyendo los que se encuentr
     ;
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
-  class C {
+  clase C {
     void m() throws Exception {
       try (AutoCloseable r1 = createAutoCloseable()) {
       }
     }
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
+
 </body>
 </html>

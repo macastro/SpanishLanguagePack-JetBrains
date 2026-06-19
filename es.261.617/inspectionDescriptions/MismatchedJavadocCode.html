@@ -1,24 +1,25 @@
 <html>
 <body>
-Informa sobre secciones de especificación de métodos escritas en inglés que entran en conflicto con la declaración del método. Esto incluye:
+Reporta partes de especificaciones de métodos escritos en inglés que contradicen con la declaración del método. Esto incluye:
 <ul>
-  <li>Métodos especificados para devolver <code>true</code> o <code>false</code>, pero su tipo de retorno no es booleano.</li>
-  <li>Métodos especificados para devolver <code>null</code>, pero están anotados con <code>@NotNull</code> o su tipo de retorno es primitivo.</li>
-  <li>Métodos especificados para devolver una lista, pero su tipo de retorno es un conjunto o un array.</li>
+  <li>Método especificado para retornar <code>true</code> o <code>false</code> pero su tipo de retorno no es booleano.</li>
+  <li>Método especificado para retornar <code>null</code> pero está anotado como <code>@NotNull</code> o su tipo de retorno es primitivo.</li>
+  <li>Método especificado para retornar una lista pero su tipo de retorno es un conjunto o un arreglo.</li>
   <li>Y así sucesivamente.</li>
 </ul>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   /**
-   * @return true if user is found, false otherwise
+   * @return true si se encuentra el usuario, false de lo contrario
    */
-  User findUser(String name);
+  Usuario encontrarUsuario(String nombre);
 </code></pre>
 <p>
-  Ten en cuenta que pueden producirse falsos positivos, ya que esta comprobación intenta interpretar el lenguaje humano. Sin embargo, incluso si la comprobación informa incorrectamente, la descripción puede seguir siendo confusa y debería reescribirse.
+  Nótese que es posible que se produzcan falsos positivos, ya que esta inspección intenta interpretar un lenguaje humano. Sin embargo, si la inspección informa incorrectamente, aún es posible que la descripción sea confusa y deba reescribirse.
 </p>
+<!-- tooltip end -->
 <p>
-  <small>Cambios más recientes en 2022.3</small>
+  <small>Novedad en 2022.3</small>
 </p>
 </body>
 </html>

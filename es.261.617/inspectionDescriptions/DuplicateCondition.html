@@ -1,23 +1,28 @@
 <html>
 <body>
-Informa sobre expresiones <code>&amp;&amp;</code> y <code>||</code> y condiciones duplicadas en las ramas de las declaraciones <code>if</code>.
-Estas condiciones duplicadas a veces son intencionales, pero generalmente son el resultado de un descuido.
+<code>&amp;&amp;</code> y <code>||</code> expresiones y condiciones duplicadas en las ramas de sentencia <code>if</code>.
+Estas condiciones duplicadas pueden ser intencionales, pero la mayoría de las veces se deben a descuidos.
 <p>Ejemplo:</p>
 <pre><code>
   boolean result = digit1 != digit2 || digit1 != digit2;
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Para ignorar las condiciones que pueden tener efectos secundarios, utilice la opción <b>Ignorar condiciones con efectos secundarios</b>.
-Deshabilitar esta opción puede resultar en falsos positivos, por ejemplo, cuando el mismo método devuelve diferentes valores en llamadas sucesivas.
+  Para ignorar condiciones que pueden generar efectos secundarios, use la opción "<b>Ignorar condiciones con efectos secundarios</b>".
+Deshabilitar esta opción puede producir falsos positivos, por ejemplo, cuando el mismo método devuelve valores diferentes en llamadas posteriores.
 </p>
 <p>Ejemplo:</p>
 <pre><code>
   native boolean unknownMethod();
+  
   ...
+  
   if (unknownMethod() || unknownMethod()) {
-    System.out.println("Got it");
+    System.out.println("Lo conseguí");
   }
 </code></pre>
-<p>Debido a que <code>unknownMethod()</code> puede tener efectos secundarios (en el ejemplo), la advertencia solo se activará cuando la opción <b>Ignorar condiciones con efectos secundarios</b> esté deshabilitada.</p>
+<p>Due to possible side effects of <code>unknownMethod()</code> (on the example), the warning will only be
+  triggered if the <b>Ignore conditions with side effects</b> option is disabled.</p>
+
 </body>
 </html>

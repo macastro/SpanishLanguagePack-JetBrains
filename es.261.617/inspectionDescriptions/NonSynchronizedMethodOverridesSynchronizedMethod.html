@@ -1,8 +1,9 @@
 <html>
 <body>
-Informa sobre métodos no <code>synchronized</code> que sobrescriben métodos <code>synchronized</code>.
+Informa sobre métodos no <code>synchronized</code> que reemplazan a métodos <code>synchronized</code>.
 <p>
-  Si un método de la superclase está declarado como <code>synchronized</code>, el método sobrescrito no se sincronizará automáticamente. Esto puede provocar condiciones de carrera inesperadas cuando se utiliza la subclase.
+  El método reemplazado no se sincronizará automáticamente si el método de la superclase
+  se declara como <code>synchronized</code>. Esto puede generar condiciones de carrera inesperadas al utilizar la subclase.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -10,9 +11,10 @@ Informa sobre métodos no <code>synchronized</code> que sobrescriben métodos <c
     synchronized void process() {}
   }
   class Sub extends Super {
-    // Método no synchronized 'process()' sobrescribe un método synchronized
+    // El método no sincronizado 'process()' reemplaza al método sincronizado
     void process() {}
   }  
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

@@ -1,9 +1,9 @@
 <html>
 <body>
-Informa sobre constructores innecesarios.
+Informar de constructores innecesarios.
 <p>
-  Un constructor es innecesario si es el único constructor de la clase, no tiene parámetros, tiene el mismo modificador de acceso que su clase contenedora y no realiza ninguna inicialización excepto la llamada explícita o implícita al constructor de la superclase sin argumentos.
-  Este tipo de constructor puede eliminarse de forma segura ya que será generado por el compilador incluso si no se especifica.</p>
+  Si el constructor es el único constructor de la clase, no tiene parámetros, tiene el mismo modificador de acceso que su clase contenedora y no realiza ninguna inicialización excepto invocar explícita o implícitamente al constructor de la superclase sin argumentos, entonces es innecesario.
+  Tales constructores pueden eliminarse de forma segura, ya que serán generados por el compilador incluso si no se especifican.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   public class Foo {
@@ -14,8 +14,10 @@ Informa sobre constructores innecesarios.
 <pre><code>
   public class Foo {}
 </code></pre>
+<!-- tooltip end -->
 <p>
-Los constructores innecesarios con anotaciones pueden ignorarse usando la configuración de la inspección.
+Utilice la configuración de la inspección para ignorar los constructores innecesarios anotados.
 <p>
+
 </body>
 </html>

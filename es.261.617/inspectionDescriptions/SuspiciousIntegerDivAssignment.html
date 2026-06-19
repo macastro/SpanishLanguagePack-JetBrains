@@ -1,11 +1,11 @@
 <html>
 <body>
-Informa sobre asignaciones donde la división en el lado derecho no debería truncarse a enteros.
-<p>Aunque a veces es intencional, esta estructura generalmente indica un error.</p>
+Informa las asignaciones cuyo lado derecho sea una división que no debería truncarse como entero.
+<p>Aunque a veces es intencional, esta construcción es, con frecuencia, defectuosa.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   int x = 18;
-  x *= 3/2; // no cambiará x debido al resultado de la división de enteros
+  x *= 3/2; // no cambia x por el resultado de la división entera
 </code></pre>
 <p>
 Este código debería reemplazarse por:
@@ -13,16 +13,19 @@ Este código debería reemplazarse por:
   int x = 18;
   x *= 3.0/2;
 </code></pre>
+<!-- tooltip end -->
 <p>
-  En las opciones de inspección, se pueden desactivar las advertencias para divisiones sospechosas pero potencialmente correctas, como cuando el dividendo no se puede calcular estáticamente.
+  En las opciones de inspección, puede deshabilitar las advertencias para divisiones sospechosas, pero posiblemente correctas;
+  por ejemplo, cuando el dividendo no puede calcularse estáticamente.
 <pre><code>
   void calc(int d) {
      int x = 18;
      x *= d/2;
   }
 </code></pre>
+
 <p>
-  <small>Nuevo en 2019.2</small>
+  <small>Nuevo en la versión 2019.2</small>
 </p>
 </body>
 </html>

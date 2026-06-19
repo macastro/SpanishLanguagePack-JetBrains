@@ -1,19 +1,21 @@
 <html>
 <body>
-Informa sobre el uso implícito de <b>this</b>.
+Reporta usos implícitos de <b>this</b>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
       fun s() = ""
+
       fun test() {
           s()
       }
   }
 </code></pre>
-<p>La corrección rápida especificará explícitamente <b>this</b>:</p>
+<p>La solución rápida especifica <b>this</b> explícitamente:</p>
 <pre><code>
   class Foo {
       fun s() = ""
+
       fun test() {
           this.s()
       }

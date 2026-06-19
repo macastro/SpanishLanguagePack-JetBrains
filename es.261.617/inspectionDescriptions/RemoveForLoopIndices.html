@@ -1,11 +1,11 @@
 <html>
 <body>
-Informa sobre el uso de la función <code>withIndex()</code> en lugar de una variable de índice en bucles <code>for</code> para iterar colecciones.
-<p>El código se puede limpiar usando la corrección rápida "Eliminar índice del bucle 'for'".</p>
-<p><b>Ejemplo:</b></p>
+Informa sobre los bucles <code>for</code> que iteran sobre una colección usando la función <code>withIndex()</code> y que no utilizan la variable de índice.
+<p>Utiliza la corrección rápida "Eliminar índices en el bucle 'for'" para optimizar el código.</p>
+<p><b>Ejemplos:</b></p>
 <pre><code>
   fun foo(bar: List&lt;String&gt;) {
-     for ((index : Int, value: String) in bar.withIndex()) { // &lt;== 'index' no utilizado
+     for ((index : Int, value: String) in bar.withIndex()) { // &lt;== 'index' no se usa
          println(value)
      }
   }
@@ -13,7 +13,7 @@ Informa sobre el uso de la función <code>withIndex()</code> en lugar de una var
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
   fun foo(bar: List&lt;String&gt;) {
-      for (value: String in bar) { // &lt;== '.withIndex()' e 'index' han sido eliminados
+      for (value: String in bar) { // &lt;== '.withIndex()' e 'index' se han eliminado
           println(value)
       }
   }

@@ -1,28 +1,30 @@
 <html>
 <body>
-Informa sobre la construcción de objetos (temporales) nuevos dentro de los métodos <code>equals()</code>, <code>hashCode()</code>, <code>compareTo()</code> y <code>Comparator.compare()</code>.
+Reporte de construcción de nuevos objetos (temporales) dentro de métodos <code>equals()</code>, <code>hashCode()</code>, <code>compareTo()</code> y <code>Comparator.compare()</code>.
 <p>
-  Además de las llamadas a constructores, los objetos nuevos también pueden crearse mediante autoboxing o creación de iteradores en sentencias <code>foreach</code>.
-  Esto puede causar problemas de rendimiento, por ejemplo, al agregar objetos a un <code>Set</code> o <code>Map</code>, donde estos métodos se invocan frecuentemente.
+  Además de invocaciones de constructores, también se pueden crear nuevos objetos mediante autoboxing o creación de iteradores dentro de una declaración <code>foreach</code>.  Esto puede causar problemas de rendimiento, por ejemplo, cuando se añaden objetos a una <code>Set</code> o <code>Map</code>, donde estos métodos se llamarán a menudo.
 </p>
 <p>
-  La inspección no informará cuando los objetos se creen en sentencias <code>throw</code> o <code>assert</code>.
+  La inspección no reportará cuando los objetos son creados en una declaración <code>throw</code> o <code>assert</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Person {
-    private String name;
-    private int age;
+  class Persona {
+    private String nombre;
+    private int edad;
+
     public boolean equals(Object o) {
-      return Arrays.equals(new Object[] {name, age}, new Object[] {((Foo)o).name, ((Foo)o).age});
+      return Arrays.equals(new Object[] {nombre, edad}, new Object[] {((Foo)o).nombre, ((Foo)o).edad});
     }
+
     public int hashCode() {
-      return (name + age).hashCode();
+      return (nombre + edad).hashCode();
     }
   }
 </code></pre>
 <p>
-  En este ejemplo, se crean dos arrays adicionales dentro de <code>equals()</code>, el uso del campo <code>age</code> requiere autoboxing, y <code>name + age</code> crea implícitamente una nueva cadena de texto.
+  En este ejemplo, se crean dos arrays adicionales dentro de <code>equals()</code>, los usos del campo <code>edad</code> requieren boxing, y <code>nombre + edad</code> implícitamente crea una nueva cadena.
 </p>
+<!-- tooltip end -->
 </body>
 </html>

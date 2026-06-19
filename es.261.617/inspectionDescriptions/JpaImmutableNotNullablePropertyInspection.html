@@ -1,9 +1,9 @@
 <html>
 <body>
-Reports usages of immutable properties in validated JPA entities.
+Informa sobre los usos de propiedades inmutables en entidades JPA validadas.
 <p>
-  Detects immutable properties annotated with <code>@NotNull</code>.
-  Suggests making them mutable, to ensure Hibernate compatibility.
+  Detecta propiedades inmutables anotadas con <code>@NotNull</code>.
+  Sugiere hacerlas mutables para garantizar la compatibilidad con Hibernate.
 </p>
 <p>
   Fragmento de código incrustado:
@@ -17,7 +17,7 @@ open class User(
   val name: String = "",
 )
 </code></pre>
-After applying the quickfix:
+Después de aplicar la corrección rápida:
 <pre><code>
 @Entity
 open class User(
@@ -27,5 +27,6 @@ open class User(
   var name: String = "",
 )
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

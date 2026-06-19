@@ -1,13 +1,14 @@
 <html>
 <body>
-Informa sobre argumentos nombrados en llamadas al constructor predeterminado de clase que no corresponden con las propiedades de dicha clase.
+Informa de los argumentos con nombre de una llamada al constructor de clase predeterminado que no se corresponden con propiedades de esta clase.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Person {
       def name
       def age
   }
-  // La propiedad 'firstName' no existe
+
+  // no existe la propiedad 'firstName'
   new Person(firstName: "John")
 </code></pre>
 </body>

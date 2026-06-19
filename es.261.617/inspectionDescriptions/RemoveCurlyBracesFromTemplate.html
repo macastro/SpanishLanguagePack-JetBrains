@@ -1,26 +1,28 @@
 <html>
 <body>
-Informa sobre el uso de llaves que encierran identificadores simples en plantillas de cadenas.
-<p>Use la corrección rápida "Eliminar llaves" para eliminar las llaves redundantes.</p>
-<p><b>Ejemplo:</b></p>
+Reporta el uso de llaves en plantillas de cadena alrededor de identificadores simples.
+<p>Usa la acción rápida de "Eliminar llaves" para eliminar las llaves redundantes.</p>
+<p><b>Ejemplos:</b></p>
 <pre><code>
-  fun redundant() {
+  fun redundante() {
      val x = 4
      val y = "${x}" // &lt;== redundante
   }
-  fun correctUsage() {
+
+  fun uso_correcto() {
       val x = "x"
-      val y = "${x.length}" // &lt;== correcto
+      val y = "${x.length}" // &lt;== Ok
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la acción rápida:</p>
 <pre><code>
-  fun redundant() {
+  fun redundante() {
      val x = 4
      val y = "$x"
   }
-  fun correctUsage() {
-      val x = "x" &lt;== actualizado
+
+  fun uso_correcto() {
+      val x = "x" &lt;== Actualizado
       val y = "${x.length}"
   }
 </code></pre>

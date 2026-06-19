@@ -1,23 +1,26 @@
 <html>
 <body>
-Informa sobre llamadas a <code>notify()</code> o <code>notifyAll()</code> en objetos <code>java.util.concurrent.locks.Condition</code>.
+Informa de las llamadas a <code>notify()</code> o <code>notifyAll()</code> que se realizan en un objeto <code>java.util.concurrent.locks.Condition</code>.
 <p>
-  Esto podría ser un error de programación donde se deberían haber usado variantes de los métodos <code>signal()</code> o <code>signalAll()</code>, de lo contrario podría producirse una <code>IllegalMonitorStateException</code>.
+  Esto probablemente sea un error de programación y es posible que se pretendiera alguna variante del método <code>signal()</code> o <code>signalAll()</code>, ya que, de lo contrario, se podría producir <code>IllegalMonitorStateException</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class C {
     final Lock l = new ReentrantLock();
     final Condition c = l.newCondition();
+
     void release() {
       l.lock();
       try {
-        c.notifyAll(); // Aquí probablemente debería usarse 'signalAll()'
+        c.notifyAll(); // probablemente se pretendía 'signalAll()' aquí
       } finally {
         l.unlock();
       }
     }
   }
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

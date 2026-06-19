@@ -1,8 +1,11 @@
 <html>
 <body>
-Informa sobre las declaraciones <code>return</code> que devuelven variables locales cuyos valores se calculan en otro lugar dentro del mismo método.
-<p>La corrección rápida permite integrar la variable devuelta moviendo la declaración return al lugar donde se calcula el valor de la variable.
-  Cuando el valor devuelto no se puede integrar en la declaración <code>return</code>, la corrección rápida intenta mover la declaración return lo más cerca posible de donde se calcula el valor devuelto.</p>
+Reporta declaraciones <code>return</code> que retornan una variable local donde el valor de la variable se calcula
+en algún otro lugar dentro del mismo método.
+<p>El arreglo rápido realiza un ajuste en línea de la variable retornada moviendo la declaración return a la ubicación
+en la que se calcula el valor de la variable.
+Cuando el valor retornado no puede ajustarse en línea en la declaración <code>return</code>,
+el arreglo rápido intenta mover la declaración return lo más cerca posible al cálculo del valor retornado.</p>
 <p>Ejemplo:</p>
 <pre><code>
   int n = -1;
@@ -14,7 +17,7 @@ Informa sobre las declaraciones <code>return</code> que devuelven variables loca
   }
   return n;
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   int n = -1;
   for (int i = 0; i &lt; a.length; i++) {

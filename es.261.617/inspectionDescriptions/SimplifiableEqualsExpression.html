@@ -1,6 +1,7 @@
 <html>
 <body>
-Informa sobre comparaciones con <code>null</code> seguidas de llamadas a <code>equals()</code> con argumentos constantes.
+Informa las comparaciones con <code>null</code> que van seguidas de una llamada a <code>equals()</code> con un argumento constante.
+
 <p><b>Ejemplo:</b></p>
 <pre><code>
   if (s != null && s.equals("literal")) {}
@@ -9,8 +10,10 @@ Informa sobre comparaciones con <code>null</code> seguidas de llamadas a <code>e
 <pre><code>
   if ("literal".equals(s)) {}
 </code></pre>
+<!-- tooltip end -->
 <p>
-    Cuando se demuestra que el argumento de <code>equals()</code> no es <code>null</code>, la configuración de inspección puede informar sobre llamadas a <code>equals()</code> con argumentos no constantes.
+    Usa la configuración de la inspección para informar las llamadas a <code>equals()</code> con un argumento no constante
+    cuando se demuestra que el argumento para <code>equals()</code> no es <code>null</code>.
 </p>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <html>
 <body>
-Informa sobre llamadas a métodos en la parte condicional de las sentencias de bucle. Tales llamadas pueden afectar negativamente al rendimiento en entornos con recursos muy limitados.
+Informa de llamadas de método en la parte de condición de una instrucción de bucle. En entornos con muchos recursos limitados, dichas llamadas pueden tener implicaciones adversas para el rendimiento.
 <p>
-  La aplicación indiscriminada de esta inspección puede tener un impacto negativo en la claridad del código y el diseño.
-  Esta inspección es relevante para Java ME y otros entornos con recursos muy limitados.
+  La aplicación sin consideración de los resultados de esta inspección podría tener efectos negativos en la claridad y el diseño del código.
+  Esta inspección está pensada para Java ME y otros entornos con muchos recursos limitados.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -12,7 +12,7 @@ Informa sobre llamadas a métodos en la parte condicional de las sentencias de b
     System.out.println(s.charAt(i));
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   String s = "example";
   int length = s.length();
@@ -20,8 +20,10 @@ Informa sobre llamadas a métodos en la parte condicional de las sentencias de b
     System.out.println(s.charAt(i));
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Esta opción permite ignorar las llamadas a métodos comunes de iteración de Java (como <code>Iterator.hasNext()</code>) y métodos conocidos con efectos secundarios (como <code>Atomic*.compareAndSet</code>).
+  Utilice esta opción para ignorar las llamadas a métodos de iteración comunes de Java, como <code>Iterator.hasNext()</code>, y los métodos conocidos con efectos secundarios, como <code>Atomic*.compareAndSet</code>.
 </p>
+
 </body>
 </html>

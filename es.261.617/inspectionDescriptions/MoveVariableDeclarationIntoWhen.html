@@ -1,9 +1,10 @@
 <html>
 <body>
-La declaración de variable puede moverse a la expresión <code>when</code>.
+Reporta declaraciones de variables que se pueden mover dentro de una expresión <code>when</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
 fun someCalc(x: Int) = x * 42
+
 fun foo(x: Int): Int {
   val a = someCalc(x)
   return when (a) {
@@ -13,7 +14,7 @@ fun foo(x: Int): Int {
   }
 }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la intervención rápida:</p>
 <pre><code>
 fun foo(x: Int): Int {
   return when (val a = someCalc(x)) {

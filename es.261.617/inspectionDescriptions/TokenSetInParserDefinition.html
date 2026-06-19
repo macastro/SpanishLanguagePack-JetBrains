@@ -1,23 +1,28 @@
 <html>
 <body>
-Informe sobre la declaración de campos <code>TokenSet</code> que hacen referencia a tipos de elementos no pertenecientes a la plataforma en la clase <code>ParserDefinition</code>.
+Informa del campo `TokenSet` de declaración que hace referencia un tipo de elemento no de plataforma en la clase `ParserDefinition`.
 <p>
-  Todas las definiciones de analizador <code>ParserDefinition</code> se crean durante el inicio de la aplicación.
-  Declarar un <code>TokenSet</code> que hace referencia a tipos de elementos de lenguaje no pertenecientes a la plataforma puede resultar en la creación y registro de todos los tipos de elementos del lenguaje en la clase contenedora de los tipos referenciados, incluso si el proyecto no contiene archivos de ese lenguaje.
+  La `ParserDefinition` de todos los lenguajes se crea durante el inicio de la aplicación.
+  Definir un `TokenSet` que refiere el tipo de elemento de los lenguajes no de plataforma puede ocasionar que se creen y registren todoslos tipos de elementos de ese lenguaje en la clase contenedor del tipo referido, incluso si el proyecto no contiene ningún archivo de este lenguaje.
 </p>
+
 <p>Ejemplo:</p>
 <pre><code lang="java">
-// Contenedor de tipos de elementos:
+// Holder de tipo de elemento
 public interface MyLangTokenTypes {
   IElementType COMMENT = new MyLangTokenType("COMMENT");
   IElementType TYPE1 = new MyLangTokenType("TYPE1");
   IElementType TYPE2 = new MyLangTokenType("TYPE2");
-  // Más tipos...
+  // Otros tipos...
 }
+
+
 // Incorrecto:
+
 public class MyLangParserDefinition implements ParserDefinition {
-  // Este campo causa la inicialización y registro de todos los tipos en MyLangTokenTypes:
+  // Este campo inicializa y registra todos los tipos en MyLangTokenTypes:
   private static final TokenSet COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
+
   @NotNull
   @Override
   public TokenSet getCommentTokens() {
@@ -25,34 +30,44 @@ public class MyLangParserDefinition implements ParserDefinition {
   }
   ...
 }
+
+
 // Correcto:
+
 public final class MyLangTokenSets {
   public static final TokenSet COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
 }
+
 public class MyLangParserDefinition implements ParserDefinition {
   @NotNull
   @Override
   public TokenSet getCommentTokens() {
-    // Los tipos solo se referencian y registran cuando se llama a este método:
+    // El tipo solo se referencia y se registra cuando se llama a este método:
     return MyLangTokenSets.COMMENTS;
   }
   ...
 }
+
 // Correcto (Kotlin):
-// Las declaraciones de nivel superior no se cargan hasta que se llama a getCommentTokens():
+
+// Las declaraciones de nivel superior no se cargan hasta que se llama al método getCommentTokens():
 private val COMMENTS = TokenSet.create(MyLangTokenTypes.COMMENT);
+
 class MyLangParserDefinition : ParserDefinition {
   override getCommentTokens(): TokenSet {
     return COMMENTS;
   }
   ...
 }
+
 // Correcto:
+
 public class MyLangParserDefinition implements ParserDefinition {
-  // TokenSet de plataforma permitido:
+  // Se permite un TokenSet de plataforma:
   private static final TokenSet COMMENTS1 = TokenSet.EMPTY;
-  // TokenType de plataforma permitido:
+  // Se permite un TokenType de plataforma:
   private static final TokenSet COMMENTS2 = TokenSet.create(TokenType.WHITE_SPACE);
+
   @NotNull
   @Override
   public TokenSet getCommentTokens() {
@@ -60,7 +75,10 @@ public class MyLangParserDefinition implements ParserDefinition {
   }
   ...
 }
+
 </code></pre>
-<p><small>Cambios en 2023.2</small>
+
+<!-- tooltip end -->
+<p><small>Nuevo en 2023.2</small>
 </body>
 </html>

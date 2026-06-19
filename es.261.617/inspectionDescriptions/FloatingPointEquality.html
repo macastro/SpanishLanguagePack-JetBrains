@@ -1,13 +1,14 @@
 <html>
 <body>
-Reporta comparaciones de valores de punto flotante que utilizan los operadores <code>==</code> o <code>!=</code>.
-<p>Los valores de punto flotante son inherentemente imprecisos, y comparar su igualdad exacta raramente es la semántica deseada.</p>
-<p>Esta inspección ignora las comparaciones con literales cero e infinito.</p>
+Informa los valores en punto flotante que se están comparando usando el operador <code>==</code> o <code>!=</code>.
+<p>Los valores en punto flotante son inherentemente inexactos, y compararlos para que tengan una igualdad exacta raramente es la semántica deseada.</p>
+<p>Esta inspección ignora las comparaciones con los literales cero e infinito.</p>
 <p><b>Ejemplo:</b>
 <pre><code>
   void m(double d1, double d2) {
     if (d1 == d2) {}
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

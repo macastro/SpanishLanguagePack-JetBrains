@@ -1,11 +1,12 @@
 <html>
 <body>
-Informa sobre los parámetros de anotación que se asignan a su valor <code>default</code>.
+Informa los parámetros de anotación que están asignados a su valor predeterminado <code>default</code>.
 <p>Ejemplo:</p>
 <pre><code>
   @interface Test {
       Class&lt;?> expected() default Throwable.class;
   }
+
   @Test(expected = Throwable.class)
   void testSmth() {}
 </code></pre>
@@ -14,5 +15,6 @@ Informa sobre los parámetros de anotación que se asignan a su valor <code>defa
   @Test()
   void testSmth() {}
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

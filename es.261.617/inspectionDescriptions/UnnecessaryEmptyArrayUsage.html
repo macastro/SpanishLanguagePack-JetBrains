@@ -1,21 +1,21 @@
 <html>
 <body>
-Se detecta la asignación de un array de longitud cero cuando hay una constante en la clase que reporta el tipo de elementos del array.
-Dado que los arrays de longitud cero son inmutables, puede reutilizar la misma instancia del array para ahorrar memoria.
+Informa sobre las asignaciones de arreglos con longitudes conocidas de cero cuando hay una constante para eso en la clase del tipo de elemento del arreglo.
+Como los arreglos de longitud cero son inmutables, puedes ahorrar memoria reutilizando la misma instancia de arreglo.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Item {
-    // Constante public de array de longitud cero reutilizable
+    // Constante de matriz pública de longitud cero que se puede reutilizar
     public static final Item[] EMPTY_ARRAY = new Item[0];
   }
   class EmptyNode {
     Item[] getChildren() {
-      // Creación innecesaria de array de longitud cero
+      // Creación innecesaria de matriz de longitud cero
       return new Item[0];
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   class EmptyNode {
     Item[] getChildren() {
@@ -23,5 +23,6 @@ Dado que los arrays de longitud cero son inmutables, puede reutilizar la misma i
     }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

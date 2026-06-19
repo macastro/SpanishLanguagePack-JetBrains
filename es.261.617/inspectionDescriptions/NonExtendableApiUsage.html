@@ -1,30 +1,9 @@
 <html>
 <body>
-Reporta clases, interfaces y métodos que extienden, implementan o sobrescriben elementos de API marcados con <code>@ApiStatus.NonExtendable</code>.
+Reporta clases, interfaces y métodos que extienden, implementan o anulan elementos de API marcados con <code>@ApiStatus.NonExtendable</code>.
 <p>
-  La anotación <code>@ApiStatus.NonExtendable</code> indica que una clase, interface o método <strong>no debe ser extendido, implementado o sobrescrito</strong>.
-  Es común convertir tales interfaces y clases en implementaciones internas de biblioteca, por lo tanto, si el cliente proporciona una implementación diferente, obtendrá una <code>ClassCastException</code>.
-  Agregar nuevos métodos abstract a tales clases e interfaces romperá la compatibilidad con las implementaciones del cliente.
+  La anotación <code>@ApiStatus.NonExtendable</code> indica que la clase, interfaz o método <strong>no debe ser extendido, implementado o anulado</strong>.
+  Como es bastante común hacer un cast de dichas interfaces y clases en la implementación de la biblioteca interna, si un cliente proporciona una implementación diferente, obtendrá <code>ClassCastException</code>. Añadir nuevos métodos abstractos a dichas clases e interfaces romperá la compatibilidad con las implementaciones del cliente.
 </p>
-<p><b>Ejemplo:</b></p>
-<pre><code lang="java">
-  // En código de biblioteca upstream
-  @ApiStatus.NonExtendable
-  public interface MyService {
-    public void perform();
-  }
-  // En código de cliente downstream
-  public class MyServiceImpl implements MyService {
-    @Override
-    public void perform() {
-      // ...
-    }
-  }
-</code></pre>
-Esta inspección también puede detectar los siguientes problemas relacionados con la aplicación incorrecta de anotaciones:
-<ul>
-  <li>Agregar anotaciones a clases/métodos que no pueden ser extendidos/sobrescritos</li>
-  <li>Agregar redundantemente anotaciones a métodos en clases que ya están anotadas con <code>@ApiStatus.NonExtendable</code></li>
-</ul>
 </body>
 </html>

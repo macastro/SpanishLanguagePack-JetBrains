@@ -1,17 +1,80 @@
 <html>
 <body>
-En Java 21 y versiones anteriores, se reportan los métodos nombrados como "main" que no tienen la firma <code>public static void main(String[])</code>.
-A partir de la versión preliminar de Java 21, la inspección no resalta los métodos main que son package-private, protected o de instancia (también sin parámetros).
-Además, se reportan los métodos main que se encuentran en clases anónimas o locales.
-Las clases anónimas y locales no tienen un nombre completamente calificado, por lo que no se pueden ejecutar.
-<p>Estos métodos pueden causar confusión, ya que un método llamado "main" debería ser el punto de entrada de la aplicación.</p>
+Métodos de informes que se denominan "principales", pero no tienen la firma <code>public static void main(String[])</code>en Java hasta 21.
+A partir de Java 21 Preview, la inspección no resalta en caso de métodos principales de paquete privado, protegido o instancia, también sin parámetros.
+Además, se informan los métodos principales ubicados en clases anónimas o locales.
+Las clases anónimas y locales no tienen un nombre totalmente calificado y, por lo tanto, no se pueden ejecutar.
+<p>Estos métodos pueden ser confusos, ya que se espera que los métodos denominados "main" sean puntos de entrada de la aplicación.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Main {
-    void main(String[] args) {} //Advertencia aquí porque faltan los modificadores "public static"
+    void main(String[] args) {} // advertencia aquí porque no hay modificadores "public static"
   }
 </code></pre>
-<p>La corrección rápida para renombrar estos métodos solo está disponible en el editor.</p>
+<p>Una solución rápida que cambia el nombre de dichos métodos está disponible solo en el editor.</p>
+<!-- tooltip end -->
 <p>
+
+</body>
+</html>
+<html>
+<body>
+Informes los métodos que se nombran "main", pero no tienen la firma <code>public static void main(String[])</code> en Java hasta la versión 21.
+A partir de la versión preliminar de Java 21, la inspección no resalta en caso de métodos principales de paquetes privados, protegidos o de instancias,
+también sin parámetros.
+Además, se informan los métodos principales ubicados en clases anónimas o locales.
+Las clases anónimas y locales no tienen un nombre totalmente calificado y, por lo tanto, no se pueden ejecutar.
+<p>Estos métodos pueden resultar confusos, ya que se espera que los métodos denominados "main" sean puntos de entrada de aplicaciones.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main {
+    void main(String[] args) {} // aquí aparece una advertencia porque no hay modificadores "public static"
+  }
+</code></pre>
+<p>Una corrección rápida que cambia el nombre de estos métodos solo está disponible en el editor.</p>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>
+
+<html>
+<body>
+Java 21 이내에서 'main'이라는 이름을 가지고 있지만 <code>public static void main(String[])</code> 시그니처가 없는 메서드를 보고합니다.
+Java 21 사전 테스트 버전부터 검사에서는 package-private, protected 또는 인스턴스 main 메서드와 매개변수가 없는 경우에 강조 표시하지 않습니다.
+또한 로컬 클래스에 있는 main 메서드를 보고합니다.
+로컬 클래스는 완전히 정규화된 이름이 없으므로 실행할 수 없습니다.
+<p>'main'이라는 이름의 메서드는 애플리케이션 진입점이 되기 때문에 그러한 메서드는 혼란을 일으킬 수 있습니다.</p>
+<p><b>예:</b></p>
+<pre><code>
+  class Main {
+    void main(String[] args) {} // 'public static' 제어자가 없기 때문에 경고가 표시됩니다.
+  }
+</code></pre>
+<p>그러한 메서드의 이름을 변경하는 빠른 수정은 에디터에서만 사용할 수 있습니다.</p>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>
+
+<html>
+<body>
+En Java 21 y versiones anteriores, informa métodos que se denominan "principales", pero no tienen la firma <code>public static void main(String[])</code>.
+A partir de la versión preliminar de Java 21, la inspección no resalta en el caso de métodos principales privados del paquete, protegidos o de instancia,
+también sin parámetros.
+Además, se informan los métodos principales ubicados en clases anónimas o locales.
+Las clases anónimas y locales no tienen un nombre totalmente calificado y, por lo tanto, no se pueden ejecutar.
+<p>Estos métodos pueden ser confusos, ya que se espera que los métodos denominados "main" sean puntos de entrada de la aplicación.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main {
+    void main(String[] args) {} // aquí aparece una advertencia porque no hay modificadores "public static"
+  }
+</code></pre>
+<p>Una corrección rápida que cambia el nombre de estos métodos solo está disponible en el editor.</p>
+<!-- tooltip end -->
+<p>
+
 </body>
 </html>

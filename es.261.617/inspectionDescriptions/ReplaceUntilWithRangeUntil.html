@@ -1,8 +1,8 @@
 <html>
 <body>
-<p>El informe puede ser reemplazado por el operador <code>..&lt;</code> en lugar de <code>until</code>.</p>
-<p>Cada reemplazo de <code>until</code> por <code>..&lt;</code> no altera la semántica de ninguna manera.</p>
-<p>Los estudios de experiencia de usuario muestran que los desarrolladores cometen aproximadamente 20-30% menos errores al leer código con <code>..&lt;</code> en comparación con <code>until</code>.</p>
+<p>Informa de los <code>until</code> que se pueden reemplazar por el operador <code>..&lt;</code>.</p>
+<p>Ningún reemplazo de <code>until</code> por <code>..&lt;</code> cambia la semántica de ninguna manera.</p>
+<p>La investigación UX muestra que los desarrolladores cometen ~20-30% menos errores al leer código que contiene <code>..&lt;</code> en comparación con <code>until</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun main(args: Array&lt;String&gt;) {
@@ -11,7 +11,7 @@
       }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   fun main(args: Array&lt;String&gt;) {
       for (index in 0..&lt;args.size) {
@@ -19,6 +19,7 @@
       }
   }
 </code></pre>
-<p>Esta inspección solo se informa cuando el nivel del lenguaje Kotlin del proyecto o módulo es 1.7 o superior.</p>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de lenguaje Kotlin del proyecto o módulo es 1,7 o superior.</p>
 </body>
 </html>

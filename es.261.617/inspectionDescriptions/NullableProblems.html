@@ -1,9 +1,9 @@
 <html>
 <body>
-Informa sobre problemas relacionados con anotaciones de nulabilidad.
+Informa sobre problemas relacionados con las anotaciones de anulabilidad.
 <p><b>Ejemplos:</b></p>
 <ul>
-  <li>Método sobrescrito sin anotación:
+  <li>Los métodos que sobreescriben no están anotados:
     <pre><code>
 abstract class A {
   @NotNull abstract String m();
@@ -13,9 +13,9 @@ class B extends A {
 }
     </code></pre>
   </li>
-  <li>Tipo primitivo anotado: <code>@NotNull int myFoo;</code> </li>
-  <li><code>@Nullable</code> y <code>@NotNull</code> en el mismo miembro: <code>@Nullable @NotNull String myFooString;</code></li>
-  <li>Colección de elementos nulables asignada a una colección de elementos no nulables:
+  <li>Tipos primitivos anotados: <code>@NotNull int myFoo;</code> </li>
+  <li><code>@Nullable</code> y <code>@NotNull</code> están presentes en el mismo miembro: <code>@Nullable @NotNull String myFooString;</code></li>
+  <li>La colección de elementos anulables se asigna a una colección de elementos no anulables:
     <pre><code>
 void testList(List&lt;@Nullable String> nullableList) {
    List&lt;@NotNull String> list2 = nullableList;
@@ -23,7 +23,9 @@ void testList(List&lt;@Nullable String> nullableList) {
     </code></pre>
   </li>
 </ul>
-<p>Utilice el botón <b>Configurar anotaciones</b> para especificar las anotaciones de nulabilidad y use las casillas de verificación para ajustar dónde la inspección proporciona advertencias.</p>
-<p>Esta inspección solo informa cuando el nivel de lenguaje del proyecto o módulo es 5 o superior y las anotaciones de nulabilidad están disponibles en el classpath.</p>
+<!-- tooltip end -->
+<p>Usa el botón <b>Configurar anotaciones</b> para especificar las anotaciones de anulabilidad y las casillas de verificación para ajustar dónde debe proporcionar advertencias la inspección.</p>
+<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 5 o superior, 
+  y las anotaciones de anulabilidad están disponibles en la classpath.</p>
 </body>
 </html>

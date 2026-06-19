@@ -1,19 +1,19 @@
 <html>
 <body>
-Informa sobre expresiones <code>return</code> sin etiquetar dentro de lambdas en línea.
-<p>Estas expresiones pueden resultar confusas ya que puede no estar claro a qué ámbito pertenece el <code>return</code>.</p>
-<p><b>La corrección rápida Cambiar a return@...</b> está disponible para arreglar el código automáticamente.</p>
+Reporta expresiones `return` sin etiqueta dentro de una lambda inline.
+<p>Tales expresiones pueden ser confusas porque puede no estar claro a qué espectro pertenece `return`.</p>
+<p>El "arreglo rápido" <strong>Cambiar a `return@...`</strong> puede usarse para modificar el código automáticamente.</p>
 <p>Ejemplo:</p>
 <pre><code>
   fun test(list: List&lt;Int&gt;) {
       list.forEach {
-          // Esta expresión return retorna desde la función test
-          // Se puede cambiar a return@forEach para modificar el ámbito
+          // Esta expresión `return` regresa desde la función `test`
+          // Puedes cambiarla a `return@forEach` para cambiar el espectro
           if (it == 10) return
       }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de que el arreglo rápido sea aplicado:</p>
 <pre><code>
   fun test(list: List&lt;Int&gt;) {
       list.forEach {

@@ -1,6 +1,6 @@
 <html>
 <body>
-La propiedad <a href="https://vuejs.org/v2/api/#data">data</a> no es una función del componente Vue. Se recomienda envolver el objeto literal en una función.
-<p>Al definir un componente, <code>data</code> debe declararse como una función que devuelve el objeto de datos inicial, ya que se crearán múltiples instancias usando la misma definición. Si <code>data</code> sigue siendo un objeto simple, ¡ese objeto se compartirá por referencia en todas las instancias creadas! Con una función <code>data</code>, cada vez que se crea una nueva instancia, se puede llamar directamente para devolver una nueva copia de los datos iniciales.
+Informa de una propiedad <a href="https://vuejs.org/v2/api/#data">``data```</a> de un componente Vue que no es una función. Sugiere envolver un literal de objeto con una función.
+<p>Al definir un componente, ``data``` debe declararse como una función que devuelve el objeto de datos inicial, porque la misma definición se utilizará para crear numerosas instancias. Si se sigue utilizando un objeto sin formato para ``data```, ese mismo objeto se compartirá por referencia en todas las instancias creadas. Con una función ``data```, cada vez que se crea una nueva instancia, podemos simplemente llamarla para devolver una nueva copia de los datos iniciales.
 </body>
 </html>

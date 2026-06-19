@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre llamadas a JUnit <code>assertEquals()</code> con argumentos de tipo array.
-Este método compara las referencias de los arrays, no su contenido.
-Se debe usar el método <code>assertArrayEquals()</code> para verificar el contenido de los arrays.
+Informa de las llamadas JUnit <code>assertEquals()</code> con argumentos de tipo array.
+Tales métodos comparan las identidades de las matrices en lugar de los contenidos de las matrices.
+El contenido de las matrices debe comprobarse con el método <code>assertArrayEquals()</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   @Test
@@ -12,7 +12,7 @@ Se debe usar el método <code>assertArrayEquals()</code> para verificar el conte
     Assert.assertEquals(new int[] {0, 56, 248, 496}, actual);
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras la aplicación de la corrección rápida:</p>
 <pre><code lang="java">
   @Test
   public void testSort() {
@@ -21,6 +21,7 @@ Se debe usar el método <code>assertArrayEquals()</code> para verificar el conte
     Assert.assertArrayEquals(new int[] {0, 56, 248, 496}, actual);
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
 </body>
 </html>

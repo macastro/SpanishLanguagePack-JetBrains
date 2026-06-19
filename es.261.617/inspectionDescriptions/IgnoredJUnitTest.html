@@ -1,23 +1,25 @@
 <html>
 <body>
-Informa sobre el uso de la anotación <code>@Ignore</code> de JUnit 4 o <code>@Disabled</code> de JUnit 5.
-El uso prolongado de estas anotaciones en las pruebas se considera un code smell, especialmente cuando no se especifica un motivo.
+Informa sobre el uso de las anotaciones <code>@Ignore</code> de JUnit 4 o <code>@Disabled</code> de JUnit 5.
+Se considera un mal olor de código tener pruebas anotadas con estas anotaciones por mucho tiempo, especialmente cuando no se especifica ningún motivo.
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   @Ignore
-  <b>public class</b> UrgentTest {
+  <b>public class</b> PruebaUrgente {
+
     @Test
-    <b>public void</b> testIt() {
-      Assert.assertEquals("expected", "actual");
+    <b>public void</b> probarlo() {
+      Assert.assertEquals("esperado", "real");
     }
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Configuración de la inspección:
+  Configurar la inspección:
 </p>
 <ul>
   <li>
-    La opción <b>Informar solo anotaciones sin motivo</b> permite reportar únicamente los casos donde no se especifica un motivo como atributo <code>value</code> de la anotación.
+    Utiliza la opción <b>Solo informar anotaciones sin motivo</b> para informar solamente los casos en que no se especifica ningún motivo como el atributo <code>value</code> de la anotación.
   </li>
 </ul>
 </body>

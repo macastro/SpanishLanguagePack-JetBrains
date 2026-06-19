@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre constructores que no comienzan con una llamada al constructor "super" o a otro constructor de la misma clase.
-<p>Se puede asumir que estos constructores comienzan implícitamente con una llamada a <code>super()</code>. Algunos estándares de codificación prefieren llamar a <code>super()</code> explícitamente.</p>
+Inspecciona constructores que no comienzan invocando al constructor "super" u otro constructor dentro de la misma clase.
+<p>Se puede considerar que estos constructores comienzan implícitamente con una invocación a <code>super()</code>. Algunos estándares de codificación prefieren que se especifique explícitamente esta invocación a <code>super()</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
@@ -16,16 +16,18 @@ Informa sobre constructores que no comienzan con una llamada al constructor "sup
     }
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  La configuración de la inspección permite ignorar las clases que extienden directamente de <code>Object</code>.
+  Utiliza las opciones de la inspección para ignorar las clases que extienden directamente de <code>Object</code>.
   Por ejemplo:
 </p>
 <pre><code>
   class Foo {
-    Foo() {} // No informado
+    Foo() {} // No se informa
   }
+
   class Bar extends Foo {
-    Bar() {} // Llamada implícita a 'super()'
+    Bar() {} // Invocación implícita a 'super()'
   }
 </code></pre>
 </body>

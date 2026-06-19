@@ -1,15 +1,17 @@
 <html>
 <body>
-Se informan las referencias en las siguientes anotaciones de Persistence ORM si no se pueden resolver en las fuentes de datos configuradas:<br/>
+Reporta referencias dentro de las siguientes anotaciones de ORM de persistencia si no pueden resolverse en el origen de datos configurado:<br/>
 <ul>
-  <li> Table</li>
-  <li> Column</li>
+  <li> Tabla</li>
+  <li> Columna</li>
   <li> [Any]To[Any]</li>
   <li> JoinColumn / JoinTable</li>
   <li> NamedQuery / NativeQuery</li>
-  <li> Embeddable</li>
+  <li> Empotrable</li>
 </ul><br/>
-Se recomienda actualizar la fuente de datos o asignar una fuente de datos diferente.<br/>
+
+Sugiere actualizar el origen de datos o asignar uno diferente.<br/>
+
 <p><b>Ejemplo de tabla de base de datos:</b></p>
 <pre><code lang="sql">
   CREATE TABLE DATA_TABLE (
@@ -17,17 +19,20 @@ Se recomienda actualizar la fuente de datos o asignar una fuente de datos difere
     DATA VARCHAR(100)
 );
 </code></pre><br/>
+
 <p><b>Ejemplo de clase de entidad JPA:</b></p>
 <pre><code lang="java">
   @Entity
-  @Table(name = "UNKNOWN_TABLE") // Referencia no resuelta
+  @Table(name = "UNKNOWN_TABLE") // referencia no resuelta
   public class JavaEntity {
-    @Column(name = "ID") // No se puede resolver la columna en una tabla no definida
+    @Column(name = "ID") // no se pueden resolver las columnas en una tabla que no está definida
     Integer id;
   }
 </code></pre><br/>
+
+<!-- tooltip end -->
 <p>
-  <b>Nota</b>: La fuente de datos se puede configurar mediante la acción `Asignar fuente de datos` o mediante el icono del área de conexión correspondiente a la clase de entidad
+  <b>NOTA:</b> El origen de datos se puede configurar mediante la acción `Asignar origen de datos` o el icono de canal correspondiente para la clase de entidad
 </p>
 </body>
 </html>

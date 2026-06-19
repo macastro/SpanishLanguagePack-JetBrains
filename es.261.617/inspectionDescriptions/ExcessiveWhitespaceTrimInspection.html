@@ -1,13 +1,13 @@
 <html>
 <body>
 <p>
-  Reporta exceso de recorte de espacios en blanco en expresiones de plantillas Go.
-  La inspección sigue la siguiente lógica aplicada a cada declaración:<br>
-  1. Sin recorte → omitir<br>
-  2. Con recorte y rodeado por elementos no vacíos → problema<br>
-  3. Con recorte y con elementos no vacíos precedentes o siguientes → problema si produce un valor (por ejemplo, es en sí mismo un elemento no vacío)<br>
-  4. Con recorte izquierdo y elemento no vacío precedente → igual que el anterior<br>
-  5. Con recorte derecho y elemento no vacío siguiente → igual que el anterior<br>
+  Informa sobre el recorte excesivo de espacios en blanco en las expresiones de plantilla de Go.
+  La inspección sigue la siguiente lógica aplicada a cada sentencia:<br>
+  1. Sin recorte → Omitir<br>
+  2. Con ambos recortes y rodeado por elementos distintos a espacios en blanco → Problema<br>
+  3. Con ambos recortes y un elemento precedente o subsiguiente distinto a un espacio en blanco → Problema si produce un valor (por ejemplo: es un elemento no vacío por sí mismo)<br>
+  4. Con recorte a la izquierda y un elemento precedente distinto a un espacio en blanco → Igual que el anterior<br>
+  5. Con recorte a la derecha y un elemento subsiguiente distinto a un espacio en blanco → Igual que el anterior<br>
 </p>
 </body>
 </html>

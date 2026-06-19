@@ -1,7 +1,8 @@
 <html>
 <body>
-Informa sobre cualquier referencia a clases internas que esté innecesariamente calificada con el nombre de la clase contenedora.
-<p>Esta calificación puede eliminarse de forma segura, lo que a veces requiere añadir importaciones para las clases internas.</p>
+<strong>Inspecciona Clases Internas Calificadas Innecesariamente</strong>
+<p>Reporta toda referencia a clases internas que están calificadas innecesariamente con el nombre de la clase contenedora.</p>
+<p>Tal calificación se puede eliminar de forma segura, que a veces añade una importación para la clase interna.</p>
 <p>Ejemplo:</p>
 <pre><code>
   class X {
@@ -16,7 +17,8 @@ Informa sobre cualquier referencia a clases internas que esté innecesariamente 
      class Y{}
   }
 </code></pre>
-<p>Utilice la opción <b>Ignorar referencias que requieran importaciones</b> para ignorar las referencias a clases internas donde la eliminación de la calificación requeriría añadir importaciones.
+<!-- tooltip end -->
+<p>Usa la opción <b>Ignorar referencias para las que se necesita una importación</b> para ignorar referencias a clases internas, donde eliminar la calificación añade una importación.
 <p>
 </body>
 </html>

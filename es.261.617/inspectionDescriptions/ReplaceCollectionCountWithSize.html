@@ -1,11 +1,12 @@
 <html>
 <body>
-Informa sobre las llamadas a <code>Collection&lt;T&gt;.count()</code>.
+Informa llamadas a <code>Collection&lt;T&gt;.count()</code>.
 <p>
-    Esta llamada a función puede ser reemplazada por <code>.size</code>.
+    Esta llamada de función puede ser reemplazada por <code>.size</code>.
 </p>
 <p>
-    La forma <code>.size</code> garantiza que la operación es O(1) y no asigna objetos adicionales, mientras que <code>count()</code> puede confundirse con <code>Iterable&lt;T&gt;.count()</code>, que es O(n) y realiza asignaciones.
+    La estructura <code>.size</code> asegura que la operación sea de O(1) y que no se asignen objetos extra, 
+    mientras que <code>count()</code> puede ser confundido con <code>Iterable&lt;T&gt;.count()</code>, que es O(n) y de asignación.
     <br>
 </p>
 <p><b>Ejemplo:</b></p>

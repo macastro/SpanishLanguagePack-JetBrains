@@ -1,6 +1,6 @@
 <html>
 <body>
-Reporta clases <code>Serializable</code> cuyo ancestro no serializable más cercano no tiene un constructor sin argumentos. Estas clases no se pueden deserializar y fallarán lanzando una <code>InvalidClassException</code>.
+Reporta clases <code>Serializable</code> cuya clase padre más cercana no serializable no tiene un constructor sin argumentos. Estas clases no pueden deserializarse y fallarán con una <code>InvalidClassException</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Ancestor {
@@ -9,13 +9,15 @@ Reporta clases <code>Serializable</code> cuyo ancestro no serializable más cerc
       this.name = name;
     }
   }
-  //Se genera una advertencia para esta clase porque la superclase
-//no es serializable y su constructor acepta argumentos
+
+  // advierte sobre esta clase porque la superclase no es
+  // serializable y su constructor toma argumentos
   class Descendant extends Ancestor implements Serializable {
     Descendant() {
       super("Bob");
     }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

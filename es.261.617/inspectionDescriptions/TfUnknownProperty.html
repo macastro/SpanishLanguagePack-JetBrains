@@ -1,7 +1,7 @@
 <html>
 <body>
-<p>Propiedad desconocida en el bloque de informe</p>
-<p>Ejemplo del problema:</p>
+<p>Inspección de propiedades desconocidas en bloques</p>
+<p>Ejemplo de problema:</p>
 <pre><code>
 resource "awscc_appflow_flow" "aws_flow1" {
   flow_name          = ""
@@ -11,11 +11,12 @@ resource "awscc_appflow_flow" "aws_flow1" {
   tasks {}
   test = ""
 }
+
 </code></pre>
 <p>
-  En este ejemplo, la propiedad <code>test</code> en el bloque es desconocida.
+  En este ejemplo, la propiedad 'test' en el bloque es desconocida.
 </p>
-<p>Ejemplo corregido:</p>
+<p>Ejemplo de corrección:</p>
 <pre><code>
 resource "awscc_appflow_flow" "aws_flow1" {
   flow_name          = ""
@@ -24,6 +25,7 @@ resource "awscc_appflow_flow" "aws_flow1" {
   destination_flow_config_list {}
   tasks {}
 }
+
 </code></pre>
 </body>
 </html>

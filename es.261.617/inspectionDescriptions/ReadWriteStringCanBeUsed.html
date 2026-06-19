@@ -1,7 +1,7 @@
 <html>
 <body>
-Reporta llamadas a métodos que usan <code>java.nio.file.Files</code> para leer o escribir <code>String</code> como bytes
-Estas llamadas pueden ser reemplazadas por llamadas a los métodos <code>Files.readString()</code> o <code>Files.writeString()</code> introducidos en Java 11.
+Informa sobre las llamadas a métodos que leen o escriben una <code>String</code> como bytes mediante <code>java.nio.file.Files</code>.
+Dichas llamadas pueden reemplazarse con una llamada a un método <code>Files.readString()</code> o <code>Files.writeString()</code> introducido en Java 11.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   String s = "example";
@@ -14,10 +14,7 @@ Estas llamadas pueden ser reemplazadas por llamadas a los métodos <code>Files.r
   Files.writeString(Paths.get("out.txt"), s, StandardOpenOption.WRITE);
   s = Files.readString(Paths.get("in.txt"), StandardCharsets.ISO_8859_1);
 </code></pre>
-<p>
-  Tenga en cuenta que <code>readString()</code> se comporta de manera diferente a <code>new String(bytes, charset)</code> cuando se trata de manejar caracteres inválidos (no mapeables). En tal caso, el método <code>readString()</code> lanzará una excepción, mientras que el método <code>new String(bytes, charset)</code> reemplazará silenciosamente los caracteres inválidos con caracteres de reemplazo. 
-  Si desea el reemplazo silencioso, es mejor suprimir la advertencia de inspección. 
-</p>
+<!-- tooltip end -->
 <p><small>Nuevo en 2018.3</small></p>
 </body>
 </html>

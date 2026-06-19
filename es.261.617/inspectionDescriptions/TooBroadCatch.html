@@ -1,16 +1,16 @@
 <html>
 <body>
-Bloque <code>catch</code> que reporta parámetros formales más generales que las excepciones lanzadas por el bloque <code>try</code> correspondiente.
+Reporta los bloques <code>catch</code> cuyos parámetros son más generales que las excepciones lanzadas por el bloque <code>try</code> correspondiente.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   try  {
     File file = new File(pathToFile);
     return file.getAbsolutePath();
-  } catch (Exception ex) { // warning: 'catch' of 'Exception' is too broad, masking exceptions 'RuntimeException'
+  } catch (Exception ex) { // advertencia: el 'catch' de 'Exception' es demasiado amplio, ocultando la excepción 'RuntimeException'
     return defaultFilePath;
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   try  {
     File file = new File(pathToFile);
@@ -19,10 +19,11 @@ Bloque <code>catch</code> que reporta parámetros formales más generales que la
     return defaultFilePath;
   }
 </code></pre>
+<!-- tooltip end -->
 <p>Configuración de la inspección:</p>
 <ul>
-  <li>Use la opción <b>Advertir solo para RuntimeException, Exception, Error o Throwable</b> para que esta inspección emita advertencias solo para las excepciones más comunes.</li>
-  <li>Use la opción <b>Ignorar excepciones que ocultan otras pero que son lanzadas</b> para ignorar cualquier excepción que oculte otras pero que aún pueda ser lanzada, por lo que técnicamente no es demasiado general.</li>
+  <li>Utilice la opción <b>Advertir solo para RuntimeException, Exception, Error o Throwable</b> para que esta inspección solo advierta sobre las excepciones más comunes.</li>
+  <li>Utilice la opción <b>Ignorar excepciones que ocultan otras excepciones pero que son lanzadas por sí mismas</b> para ignorar cualquier excepción que oculte otras excepciones pero que aún pueda ser lanzada y, por lo tanto, técnicamente no sea demasiado amplia.</li>
 </ul>
 </body>
 </html>

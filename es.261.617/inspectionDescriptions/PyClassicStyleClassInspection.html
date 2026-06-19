@@ -1,12 +1,13 @@
 <html>
 <body>
-<p>Informa sobre el uso de <a href="https://docs.python.org/2/reference/datamodel.html#new-style-and-classic-classes">clases de estilo clásico</a>. Esta inspección solo se aplica a Python 2.
+<p>Reportes <a href="https://docs.python.org/2/reference/datamodel.html#new-style-and-classic-classes">
+  uso de clases de estilo clásico</a>. Esta inspección solo aplica para Python 2.
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class A:
     pass
 </code></pre>
-<p>Después de aplicar la corrección rápida proporcionada por el IDE, el código se convierte en:</p>
+<p>Con los arreglos rápidos proporcionados por el IDE, el fragmento de código cambia a:</p>
 <pre><code>
 class A(object):
     def __init__(self):

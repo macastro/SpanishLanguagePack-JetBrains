@@ -1,11 +1,11 @@
 <html>
 <body>
-Informa sobre código que utiliza bucles para copiar contenido de arrays a colecciones.
+Informa del código que usa un bucle para copiar el contenido de un array a una colección.
 <p>
-  Una forma más corta y potencialmente más rápida (dependiendo de la implementación de la colección) es usar <code>Collection.addAll(Arrays.asList())</code> o <code>Collections.addAll()</code>.
+  Una forma más corta y, potencialmente, más rápida (dependiendo de la implementación de la colección) de hacerlo es usar <code>Collection.addAll(Arrays.asList())</code> o <code>Collections.addAll()</code>.
 </p>
 <p>
-<p>Solo se informan los bucles que no contienen declaraciones adicionales en su interior.</p>
+<p>Solo los bucles sin declaraciones adicionales en su interior son informados.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void addAll(List&lt;String&gt; list, String[] arr) {
@@ -21,6 +21,8 @@ Informa sobre código que utiliza bucles para copiar contenido de arrays a colec
     Collections.addAll(list, arr);
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
+
 </body>
 </html>

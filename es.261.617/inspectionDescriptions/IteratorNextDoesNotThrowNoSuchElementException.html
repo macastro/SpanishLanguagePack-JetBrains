@@ -1,8 +1,10 @@
 <html>
 <body>
-Informa sobre implementaciones de <code>Iterator.next()</code> que no lanzan <code>java.util.NoSuchElementException</code>.
+Informar implementaciones de <code>Iterator.next()</code>
+que no pueden arrojar <code>java.util.NoSuchElementException</code>.
 <p>
-  Tales implementaciones violan el contrato de <code>java.util.iterator</code> y pueden causar errores difíciles de rastrear cuando el iterador se usa de manera no estándar.
+  Tales implementaciones violan el contrato de <code>java.util.Iterator</code>,
+  y pueden provocar errores sutiles si el iterador se utiliza de manera no estándar.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -12,11 +14,13 @@ Informa sobre implementaciones de <code>Iterator.next()</code> que no lanzan <co
         if (hasNext()) {
             return generateNext();
         } else {
-            return null; //debería lanzar NoSuchElementException en su lugar
+            return null; //arrojar NoSuchElementException en su lugar
         }
     }
+
     ...
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

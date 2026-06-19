@@ -1,41 +1,48 @@
 <html>
 <body>
-Declaraciones de miembros de prueba JUnit con formato incorrecto que posiblemente no sean reconocidas por el marco de pruebas JUnit.
-Esta inspección reporta los siguientes problemas:
+Informa las declaraciones de miembros de prueba de JUnit que están mal formadas y es probable que el framework de prueba de JUnit no las reconozca.
+Esta inspección informa los siguientes problemas:
 <ul>
   <li>Clases de prueba que no se pueden construir</li>
-  <li>Campos anotados con <code>@RegisterExtension</code> de tipo incorrecto o no declarados como static cuando es necesario</li>
-  <li>Clases internas static o private anotadas con <code>@Nested</code></li>
-  <li>Pruebas parametrizadas definidas sin fuentes</li>
-  <li>Pruebas parametrizadas que contienen <code>@MethodSource</code> con objetivos desconocidos, no static o sin argumentos</li>
-  <li>Discrepancia de tipos entre los parámetros del método de prueba parametrizado y los valores especificados en <code>@ValueSource</code> o <code>@EnumSource</code></li>
-  <li>Pruebas anotadas con múltiples anotaciones de <code>@Test</code>, <code>@ParameterizedTest</code> o <code>@RepeatedTest</code></li>
-  <li>Métodos <code>setup()</code> o <code>tearDown()</code> no public, con tipo de retorno diferente a void o que aceptan argumentos</li>
-  <li>Métodos <code>suite()</code> que son private, aceptan argumentos o no son static</li>
+  <li>Campos anotados por <code>@RegisterExtension</code> que tienen el tipo incorrecto o que no se declaran como estáticos cuando es requerido</li>
+  <li>Clases internas estáticas o privadas anotadas con <code>@Nested</code></li>
+  <li>Pruebas parametrizadas que se definen sin un origen</li>
+  <li>Pruebas parametrizadas con un <code>@MethodSource</code> que tiene un destino desconocido, no estático o sin argumentos</li>
+  <li>Tipos incompatibles entre el parámetro del método de prueba parametrizado y los valores especificados de <code>@ValueSource</code> o <code>@EnumSource</code></li>
+  <li>Pruebas anotadas por más de uno de <code>@Test</code>, <code>@ParameterizedTest</code> o <code>@RepeatedTest</code></li>
+  <li>Métodos <code>setup()</code> o <code>tearDown()</code> que no son públicos, cuyo tipo de retorno no es nulo o que toman argumentos</li>
+  <li>Métodos <code>suite()</code> que son privados, toman argumentos o no son estáticos</li>
   <li>
-    Métodos anotados con <code>@BeforeClass</code>, <code>@AfterClass</code>, <code>@BeforeAll</code> o <code>@AfterAll</code> que no son public, no son static, tienen tipo de retorno diferente a void o no tienen una lista válida de parámetros
+    Métodos anotados por <code>@BeforeClass</code>, <code>@AfterClass</code>, <code>@BeforeAll</code> o <code>@AfterAll</code> que no son públicos,
+    no estáticos, cuyo tipo de retorno no es void o no tienen una lista de parámetros válida
   </li>
   <li>
-    Métodos anotados con <code>@Before</code>, <code>@After</code>, <code>@BeforeEach</code> o <code>@AfterEach</code> que no son public, tienen tipo de retorno diferente a void o aceptan argumentos
+    Métodos anotados por <code>@Before</code>, <code>@After</code>, <code>@BeforeEach</code> o <code>@AfterEach</code> que no son públicos, 
+    cuyo tipo de retorno no es void o aceptan argumentos
   </li>
-  <li>Inyección de <code>RepetitionInfo</code> en métodos <code>@BeforeAll</code> o <code>@AfterAll</code></li>
+  <li><code>RepetitionInfo</code> inyectado en métodos <code>@BeforeAll</code> o <code>@AfterAll</code></li>
   <li>
-    Inyección de <code>RepetitionInfo</code> en métodos <code>@BeforeEach</code> o <code>@AfterEach</code> utilizados en pruebas anotadas con <code>@Test</code>
+    <code>RepetitionInfo</code> inyectado en métodos <code>@BeforeEach</code> o <code>@AfterEach</code> que son utilizados por 
+    pruebas anotadas con <code>@Test</code>
   </li>
-  <li>Campos y métodos anotados con <code>@DataPoint</code> o <code>@DataPoints</code> que no son public o no son static</li>
+  <li>Campos y métodos anotados por <code>@DataPoint</code> o <code>@DataPoints</code> que no son públicos o estáticos</li>
   <li>
-    Campos y métodos anotados con <code>@Rule</code> que no son public o no son subtipos de <code>TestRule</code> o <code>MethodRule</code>
+    Campos y métodos anotados por <code>@Rule</code> que no son públicos o no son un subtipo de <code>TestRule</code>
+    o <code>MethodRule</code>
   </li>
-  <li>Campos y métodos anotados con <code>@ClassRule</code> que no son public, no son static o no son subtipos de <code>TestRule</code></li>
+  <li>Campos y métodos anotados por <code>@ClassRule</code> que no son públicos, no estáticos o no son un subtipo de <code>TestRule</code></li>
   <li>
-    Métodos en subclases de <code>TestCase</code> con prefijo <code>test</code> que no son public, tienen tipo de retorno diferente a void, aceptan argumentos o son static
+    Métodos dentro de una subclase de <code>TestCase</code> con un prefijo <code>test</code> que no son públicos, cuyo tipo de retorno 
+    no es void, aceptan argumentos o son estáticos
   </li>
   <li>
-    Métodos anotados con <code>@Test</code> que no son public, tienen tipo de retorno diferente a void, aceptan argumentos o son static
+    Métodos anotados por <code>@Test</code> que no son públicos, cuyo tipo de retorno no es void, aceptan argumentos o son estáticos
   </li>
 </ul>
-Tenga en cuenta que en Kotlin, las funciones suspendidas tienen argumentos y tipos de retorno diferentes a void. Por lo tanto, tampoco serán ejecutadas por el ejecutor de pruebas JUnit. Esta inspección también reportará este problema.
-<p><b>Ejemplo de método <code>@Before</code> con formato incorrecto:</b></p>
+
+Ten en cuenta que en Kotlin, las funciones de suspensión tienen argumentos y un tipo de retorno que no es void. Por lo tanto, tampoco serán ejecutadas por el corredor de pruebas de JUnit. Esta inspección también informará sobre este problema.
+
+<p><b>Ejemplo de un método <code>@Before</code> mal formado:</b></p>
 <pre><code lang="java">
   @Before private int foo(int arg) { }
 </code></pre>
@@ -43,7 +50,8 @@ Tenga en cuenta que en Kotlin, las funciones suspendidas tienen argumentos y tip
 <pre><code lang="java">
   @Before public void foo() { }
 </code></pre>
-<p><b>Ejemplo de código fuente de método faltante (Kotlin):</b></p>
+
+<p><b>Ejemplo de falta de origen del método (Kotlin):</b></p>
 <pre><code lang="kotlin">
   class Example {
     @MethodSource("parameters")
@@ -57,6 +65,7 @@ Tenga en cuenta que en Kotlin, las funciones suspendidas tienen argumentos y tip
     @MethodSource("parameters")
     @ParameterizedTest
     fun foo(param: String) { ... }
+
     companion object {
       @JvmStatic
       fun parameters(): Stream&lt;Arguments&gt; {
@@ -65,7 +74,9 @@ Tenga en cuenta que en Kotlin, las funciones suspendidas tienen argumentos y tip
     }
   }
 </code></pre>
-<p>Las opciones de inspección permiten especificar anotaciones. No se reportarán los parámetros anotados con cualquiera de estas anotaciones.
+
+<!-- tooltip end -->
+<p>Utiliza las opciones de inspección para especificar anotaciones. Cualquier parámetro anotado con una de estas anotaciones no será informado.
 </p>
 </body>
 </html>

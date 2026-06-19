@@ -1,9 +1,11 @@
 <html>
 <body>
-Informa sobre métodos cuyo cuerpo contiene una única sentencia <code>synchronized</code>.
-Para métodos de instancia, la expresión de bloqueo de esta sentencia <code>synchronized</code> debe ser igual a <code>this</code>; para métodos static, debe ser igual a <code>[ClassName].class</code>.
+Reporta métodos cuyo cuerpo contiene una sola expresión `synchronized`.
+La expresión de bloqueo para esta expresión `synchronized` debe ser igual a
+`this` para métodos de instancia o `[NombreClase].class` para métodos estáticos.
 <p>
-  Para mejorar la legibilidad de estos métodos, se puede eliminar el contenedor <code>synchronized</code> y marcar el método como <code>synchronized</code>.
+  Para mejorar la legibilidad de este tipo de métodos,
+  puedes eliminar el contenedor `synchronized` y marcar el método como `synchronized`.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -13,11 +15,13 @@ Para métodos de instancia, la expresión de bloqueo de esta sentencia <code>syn
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la correción rápida:</p>
 <pre><code>
   public synchronized int generateInt(int x) {
     return 1;
   }
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

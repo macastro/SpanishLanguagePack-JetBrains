@@ -1,7 +1,7 @@
 <html>
 <body>
-Reporta operaciones de escritura dentro de métodos <code>@SafeVarargs</code> donde el parámetro vararg es reasignado a otros objetos.
-En este caso, el array recién asignado no está relacionado con la aridad variable del sitio de llamada y puede que ya no sea seguro.
+Informa sobre operaciones de escritura dentro de un método <code>@SafeVarargs</code> en las que el parámetro vararg se reasigna a otro objeto.
+En este caso, el array recién asignado no está relacionado con los argumentos de aridad variable del sitio de la llamada y puede que ya no sea seguro.
 <p><b>Ejemplo:</b></p>
 <pre><code>
     @SafeVarargs
@@ -10,5 +10,6 @@ En este caso, el array recién asignado no está relacionado con la aridad varia
         System.out.println(t[0]);
     }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

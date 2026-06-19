@@ -1,15 +1,19 @@
 <html>
 <body>
-<p>Informa sobre inconsistencias en la firma de métodos sobreescritos.</p>
+<p>Reporta inconsistencias al anular firmas de métodos.</p>
+
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class Book:
     def add_title(self):
         pass
+
+
 class Novel(Book):
     def add_title(self, text):
         pass
 </code></pre>
-<p>El método <code>add_title</code> en la clase <code>Novel</code> tiene parámetros que no coinciden con la firma del método especificado en la clase <code>Book</code>. El IDE sugiere aplicar la refactorización "Cambiar firma" como solución.</p>
+
+<p>Los parámetros del método <code>add_title</code> en la clase <code>Novel</code> no coinciden con la firma del método especificada en la clase <code>Book</code>. Como solución, el IDE ofrece aplicar la refactorización Cambiar firma.</p>
 </body>
 </html>

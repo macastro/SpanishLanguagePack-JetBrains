@@ -1,17 +1,18 @@
 <html>
 <body>
-Los exports se dirigen al mismo módulo Java 9 que los define o a paquetes abiertos en ese módulo.
-Esta corrección rápida elimina tales directivas del archivo <code>module-info.java</code>.
+Reporta los paquetes que son exportados o abiertos en el mismo módulo Java 9 en el que fueron definidos.
+El arreglo rápido elimina tales directivas de <code>module-info.java</code>.
 <p>Ejemplo:</p>
 <pre><code>
   module com.mycomp {
     exports com.mycomp.main to com.mycomp;
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   module main {
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

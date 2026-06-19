@@ -1,14 +1,15 @@
 <html>
 <body>
-Informa sobre métodos que devuelven tipo <code>boolean</code> y siempre son negados cuando se invocan.
-<p>Se proporciona una corrección rápida para invertir y opcionalmente renombrar el método.
-  Por razones de rendimiento, no todos los métodos problemáticos se resaltan en el editor.</p>
+Informa de los métodos con un tipo de devolución <code>boolean</code> que siempre se niegan al ser llamados.
+<p>Se proporciona una corrección rápida para invertir y, opcionalmente, renombrar el método.
+  Por razones de rendimiento, es posible que no todos los métodos problemáticos se resalten en el editor.</p>
 <p>Ejemplo:</p>
 <pre><code>
   class C {
     boolean alwaysTrue() {
       return true;
     }
+
     void f() {
       if (!alwaysTrue()) {
         return;
@@ -23,6 +24,7 @@ Informa sobre métodos que devuelven tipo <code>boolean</code> y siempre son neg
     boolean alwaysFalse() {
       return false;
     }
+
     void f() {
       if (alwaysFalse()) {
         return;
@@ -31,5 +33,6 @@ Informa sobre métodos que devuelven tipo <code>boolean</code> y siempre son neg
     boolean member = alwaysFalse();
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

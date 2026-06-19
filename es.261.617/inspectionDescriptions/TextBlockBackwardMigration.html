@@ -1,17 +1,17 @@
 <html>
 <body>
-Reporta bloques de texto que pueden ser reemplazados por literales de cadena regulares.
-Esta inspección ayuda con la degradación para mantener la compatibilidad con versiones anteriores de Java.
+Informa bloques de texto que pueden ser reemplazados con literales de cadena normales.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   Object obj = engine.eval("""
                            function hello() {
                              print('"Hello, world"');
                            }
+
                            hello();
                            """);
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar corrección rápida:</p>
 <pre><code>
   Object obj = engine.eval("function hello() {\n" +
                            "  print('\"Hello, world\"');\n" +
@@ -19,6 +19,7 @@ Esta inspección ayuda con la degradación para mantener la compatibilidad con v
                            "\n" +
                            "hello();\n");
 </code></pre>
-<p><small>Novedades de la versión 2019.3</small></p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2019.3</small></p>
 </body>
 </html>

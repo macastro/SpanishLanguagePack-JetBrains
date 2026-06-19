@@ -1,9 +1,9 @@
 <html>
 <body>
-Informa sobre usos de <code>StringBuffer</code>, <code>StringBuilder</code> o <code>StringJoiner</code> que pueden ser reemplazados por concatenación de <code>String</code>.
-<p>El uso de concatenación de <code>String</code> hace que el código sea más corto y simple.</p>
+Informa sobre el uso de `StringBuffer`, `StringBuilder` o `StringJoiner` que pueden sustituirse por una única concatenación de `String`.
+<p>El uso de concatenación de `String` hace que el código sea más corto y simple.</p>
 <p>
-Esta inspección solo informa cuando el reemplazo sugerido no causará una degradación significativa del rendimiento en JVMs modernas. En muchos casos, la concatenación de <code>String</code> puede funcionar mejor.
+Esta inspección solo informa cuando el reemplazo sugerido no introduce un problema de rendimiento significativo en las JVM modernas. En la mayoría de los casos, la concatenación de `String` puede mejorar el rendimiento.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -18,5 +18,6 @@ Esta inspección solo informa cuando el reemplazo sugerido no causará una degra
   String result = "i = " + i + ";";
   return result;
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

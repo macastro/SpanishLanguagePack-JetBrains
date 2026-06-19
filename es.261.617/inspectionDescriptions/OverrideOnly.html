@@ -2,34 +2,9 @@
 <body>
 Reporta llamadas a métodos de API marcados con <code>@ApiStatus.OverrideOnly</code>.
 <p>
-  La anotación <code>@ApiStatus.OverrideOnly</code> indica que el método anotado debe ser implementado o sobrescrito por el código cliente, pero no debe ser llamado directamente.
-  Este patrón aparece típicamente en mecanismos de extensión donde tu implementación debe cumplir con cierta interfaz, pero llamarla no es tu responsabilidad.
-  Un ejemplo de tal mecanismo de extensión es una interfaz de proveedor de servicios.
-  Marcar una clase o interfaz con esta anotación es equivalente a marcar cada método con ella.
+  La anotación <code>@ApiStatus.OverrideOnly</code> indica que el método es parte de la SPI (Interfaz del proveedor de servicios).
+  Los clientes de la biblioteca declarada deben implementar o anular dichos métodos, no llamarlos directamente.
+  Marcar una clase o interfaz con esta anotación es lo mismo que marcar todos los métodos con ella.
 </p>
-<p>
-  La anotación <code>@ApiStatus.OverrideOnly</code> indica que el método es parte de un SPI (Interfaz de Proveedor de Servicios).
-  Los clientes de la biblioteca declarante deben implementar o sobrescribir tales métodos, en lugar de llamarlos directamente.
-  Marcar una clase o interfaz con esta anotación es equivalente a marcar cada método con ella.
-</p>
-<p><b>Ejemplo:</b></p>
-<pre><code lang="java">
-  // En código de biblioteca upstream
-@ApiStatus.OverrideOnly
-public class MyService {
-    public void perform();
-}
-// En código cliente downstream
-public class Foo {
-    public void bar(MyService myService) {
-        myService.perform();
-    }
-}
-</code></pre>
-Esta inspección también puede detectar los siguientes problemas relacionados con la aplicación incorrecta de la anotación:
-<ul>
-  <li>Anotar clases/métodos que no pueden ser extendidos/sobrescritos</li>
-  <li>Anotar redundantemente métodos en clases que ya están anotadas con <code>@ApiStatus.OverrideOnly</code></li>
-</ul>
 </body>
 </html>

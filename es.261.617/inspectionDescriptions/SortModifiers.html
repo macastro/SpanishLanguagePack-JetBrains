@@ -1,11 +1,12 @@
 <html>
 <body>
-El informe detecta modificadores que no siguen el orden recomendado en la <a href="https://kotlinlang.org/docs/coding-conventions.html#modifiers-order">guía de estilo</a>.
-<p><b>La corrección rápida de ordenación de modificadores</b> está disponible para corregir el código automáticamente.</p>
-<p>Ejemplo:</p>
+Informa los modificadores que no siguen el orden recomendado en la <a href="https://kotlinlang.org/docs/coding-conventions.html#modifiers-order">guía de estilos</a>.
+<p>El arreglo rápido <b>Ordenar modificadores</b> puede utilizarse para modificar el código automáticamente.</p>
+<p>Ejemplos:</p>
 <pre><code>
   private inline fun correctOrder(f: () -> Unit) {} // &lt;== Ok
-  infix private fun Int.wrongOrder(expr: Int) {} // &lt;== Orden incorrecto, la corrección rápida lo cambiará a "private infix"
+
+  infix private fun Int.wrongOrder(expr: Int) {} // &lt;== Orden incorrecto, el arreglo rápido modifica los modificadores a "private infix"
 </code></pre>
 </body>
 </html>

@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre asignaciones o modificaciones a parámetros lambda.
-Aunque a veces es intencional, esta estructura puede ser confusa y generalmente es el resultado de errores tipográficos o el uso de variables incorrectas.
-<p>La corrección rápida añadirá una declaración de nueva variable.</p>
+Reporta una asignación o modificación del parámetro lambda.
+Aunque a veces sea intencional, este tipo de construcción puede resultar confusa y a menudo ocurre por errores ortográficos o por el uso de una variable equivocada.
+<p>La solución rápida agregará una declaración de la nueva variable.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   list.forEach(s -> {
@@ -10,13 +10,14 @@ Aunque a veces es intencional, esta estructura puede ser confusa y generalmente 
     System.out.println("String: " + s);
   });
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras aplicar la solución rápida:</p>
 <pre><code>
   list.forEach(s -> {
     String trimmed = s.trim();
     System.out.println("String: " + trimmed);
   });
 </code></pre>
-<p>Utilice la opción <b>Ignorar si la asignación es una transformación del parámetro original</b> para ignorar las asignaciones que modifican el valor del parámetro basándose en su valor anterior.</p>
+<!-- tooltip end -->
+<p>Utiliza la opción <b>Ignorar si la asignación es una transformación del parámetro original</b> para ignorar las asignaciones que modifican el valor del parámetro según el valor anterior.</p>
 </body>
 </html>

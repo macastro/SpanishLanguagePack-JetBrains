@@ -1,6 +1,6 @@
 <html>
 <body>
-El bucle puede ser colapsado en una única llamada a <code>Collection.removeIf()</code>.
+Informa de bucles que se pueden reducir a una sola llamada a <code>Collection.removeIf</code>.
 <p>Ejemplo:</p>
 <pre><code>
   for (Iterator&lt;String&gt; it = collection.iterator(); it.hasNext(); ) {
@@ -10,9 +10,10 @@ El bucle puede ser colapsado en una única llamada a <code>Collection.removeIf()
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras aplicarse el arreglo rápido:</p>
 <pre><code>
   collection.removeIf(aValue -> shouldBeRemoved(aValue));
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

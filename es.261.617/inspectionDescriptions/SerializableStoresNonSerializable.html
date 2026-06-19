@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre cualquier referencia a variables locales no <code>Serializable</code> que se encuentren fuera de lambdas <code>Serializable</code>, clases locales y clases anónimas.
+<code>Serializable</code> informa sobre cualquier referencia a variables locales no <code>Serializable</code> fuera de lambdas, clases locales y clases anónimas.
 <p>
-  Cuando se hace referencia a variables locales desde una clase anónima, su valor se almacena en un campo implícito de esa clase. Lo mismo ocurre con las clases locales y lambdas. Si el tipo de variable no es <code>Serializable</code>, la serialización fallará.
+  Cuando una variable local es referenciada desde una clase anónima, su valor se almacena en un campo implícito de la clase. Un comportamiento similar ocurre con las clases locales y las lambdas. Si el tipo de la variable no es <code>Serializable</code>, la serialización fallará.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -22,5 +22,7 @@ Informa sobre cualquier referencia a variables locales no <code>Serializable</co
       }
   }
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

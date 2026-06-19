@@ -1,7 +1,8 @@
 <html>
 <body>
-Informa sobre llamadas redundantes a <code>Stream</code> u <code>Optional</code> (por ejemplo, <code>map(x -&gt; x)</code>, <code>filter(x -&gt; true)</code>) o llamadas redundantes a <code>sorted()</code> o <code>distinct()</code>.
-<p>Ten en cuenta que las operaciones de mapeo como <code>streamOfIntegers.map(Integer::valueOf)</code> en el código funcionan como una comprobación <code>requireNonNull()</code>: si el stream contiene <code>null</code>, lanzará una <code>NullPointerException</code>, por lo que no es completamente redundante.
-  Si no deseas que se informen estos casos, desactiva la opción <b>Informar sobre boxing redundante en Stream.map()</b>.</p>
+<code>map(x -&gt; x)</code> o <code>filter(x -&gt; true)</code> llamadas <code>Stream</code> u <code>Optional</code> redundantes, o <code>sorted</code> o <code>distinct</code> redundantes.
+<!-- tooltip end -->
+<p>Tenga en cuenta que las operaciones de asignación en código como <code>streamOfIntegers.map(Integer::valueOf)</code> actúan como verificaciones <code>requireNonNull()</code>: si la transmisión contiene <code>null</code>, se lanzará <code>NullPointerException</code>, por lo que no es completamente redundante.
+  Para evitar que se informen dichos casos, deshabilite la opción <b>Informar de encajonamientos redundantes en <code>Stream.map()</code></b>.</p>
 </body>
 </html>

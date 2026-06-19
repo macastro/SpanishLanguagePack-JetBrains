@@ -1,21 +1,22 @@
 <html>
 <body>
-Informa sobre llamadas a <code>assertEquals()</code> donde el orden de los argumentos esperados y reales está invertido.
+Informe las llamadas <code>assertEquals()</code> que tienen el argumento esperado y el argumento real en el orden incorrecto.
 <p>
-  Para JUnit 3, 4 y 5, el orden correcto es <code>(expected, actual)</code>.
-  Para TestNG, el orden correcto es <code>(actual, expected)</code>.
+  Para JUnit 3, 4 y 5 el orden correcto es <code>(esperado, real)</code>.
+  Para TestNG el orden correcto es <code>(real, esperado)</code>.
 </p>
 <p>
-  Estas llamadas no presentan problemas para las aserciones que pasan, pero pueden generar mensajes de error confusos cuando fallan.
-  La corrección rápida permite invertir el orden de los argumentos.
+  Tales llamadas se comportarán bien para afirmaciones que pasan, pero pueden dar informes de error confusos en caso de falla.
+  Use la solución rápida para cambiar el orden de los argumentos.
 </p>
 <p><b>Ejemplo (JUnit):</b></p>
 <pre><code>
-  assertEquals(actual, expected)
+  assertEquals(real, esperado)
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de que se aplica la solución rápida:</p>
 <pre><code>
-  assertEquals(expected, actual)
+  assertEquals(esperado, real)
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

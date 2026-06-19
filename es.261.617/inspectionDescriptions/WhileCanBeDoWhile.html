@@ -1,10 +1,10 @@
 <html>
 <body>
 <p>
-  El bucle <code>while</code> se puede escribir de manera más efectiva como un bucle <code>do-while</code>.
-  Existe un bucle <code>while</code> donde el código antes del bucle es idéntico al código dentro del cuerpo del bucle.
-  Reemplazarlo con un bucle <code>do-while</code> eliminará el código duplicado.
-  Para los bucles <code>while</code> sin dicha duplicación de código, la corrección rápida también está disponible en el editor, pero sin resaltado.
+  Reporta ciclos <code>while</code> que podrían escribirse de manera más efectiva como ciclos <code>do-while</code>.
+  Hay ciclos <code>while</code> en los que el código justo antes del ciclo es idéntico al código en el cuerpo del ciclo.
+  El reemplazo con un ciclo <code>do-while</code> elimina el código duplicado.
+  Para ciclos <code>while</code> sin dicho código duplicado, la solución rápida también se ofrece en el editor, pero sin resaltar.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -13,14 +13,15 @@
       foo();
   }
 </code></pre>
-<p>Se puede reemplazar por:</p>
+<p>Puede reemplazarse con:</p>
 <pre><code>
   do {
     foo();
   } while (x);
 </code></pre>
+<!-- tooltip end -->
 <p>
-  <small>Novedades en 2024.1</small>
+  <small>Nuevo en 2024.1</small>
 </p>
 </body>
 </html>

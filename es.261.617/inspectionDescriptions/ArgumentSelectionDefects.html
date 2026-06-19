@@ -1,19 +1,21 @@
 <html>
 <body>
-Informa sobre discrepancias entre los nombres de los identificadores de argumentos y los nombres de los parámetros.
-Esto ayuda a detectar errores de programación, por ejemplo, cuando se intercambian accidentalmente argumentos del mismo tipo.
+Informa de discrepancias entre el nombre del identificador del argumento y el nombre del parámetro formal.
+Esto puede ayudar a detectar errores de programación, por ejemplo, cuando se intercambian accidentalmente argumentos del mismo tipo.
 El documento de investigación original se puede encontrar <a href="https://static.googleusercontent.com/media/research.google.com/ru//pubs/archive/46317.pdf">aquí</a>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   const User* get_User(int64_t company_id, int64_t user_id) {
     return new User{company_id, user_id, "foo"};
   }
+
   void call_User(int64_t company_id, int64_t user_id) {
-    const User* user = get_User(user_id, company_id); // Aquí hay un problema potencial
+    const User* user = get_User(user_id, company_id); // posible problema aquí
     //...
   }
 </code></pre>
-<p>Utilice la casilla de verificación a continuación para comprobar argumentos con nombres de menos de tres símbolos.</p>
+<!-- tooltip end -->
+<p>Utilice la casilla de verificación siguiente para inspeccionar argumentos con nombres de menos de tres símbolos.</p>
 <p><small><a href="https://www.jetbrains.com/help/clion/argument-selection-defects-inspection.html">Más información.</a></small></p>
 </body>
 </html>

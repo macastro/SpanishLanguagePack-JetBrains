@@ -1,6 +1,7 @@
 <html>
 <body>
-Informa sobre clases no <code>Serializable</code> que definen métodos <code>readObject()</code> o <code>writeObject()</code>. La presencia de estos métodos en este contexto generalmente indica un error.
+Reporta clases no <code>Serializable</code> que definen métodos <code>readObject()</code>
+o <code>writeObject()</code>.  Estos metodos en este contexto normalmente indican un error.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   public class SampleClass {
@@ -8,5 +9,7 @@ Informa sobre clases no <code>Serializable</code> que definen métodos <code>rea
     private void writeObject(ObjectOutputStream str) {}
   }
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

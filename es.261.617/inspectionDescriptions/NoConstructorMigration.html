@@ -1,22 +1,25 @@
 <html>
 <body>
-Reporta llamadas a constructores en tipos de función padre que causarán errores de compilación a partir de la versión 1.9.
-<p>Tipo de motivación:</p>
+Informa sobre llamadas a constructores en supertipos funcionales que darán lugar a un error de compilación a partir de la versión 1.9.
+<p>Tipos de motivaciones:</p>
 <ul>
     <li>
-        La implementación no cumple con la especificación o documentación publicada
+        La implementación no cumple con una especificación o documentación publicada
     </li>
 </ul>
-<p><b>Más detalles</b>: <a href="https://youtrack.jetbrains.com/issue/KT-46344">KT-46344: No hay error al llamar al constructor de superclase en una interfaz de función en la lista de tipos padre</a></p>
-<p>La corrección rápida elimina la llamada al constructor.</p>
+
+<p><b>Más detalles:</b> <a href="https://youtrack.jetbrains.com/issue/KT-46344">KT-46344: No se produce error en una llamada al constructor de una superclase en una interfaz de función en la lista de supertipos</a></p>
+<p>La corrección rápida elimina una llamada al constructor.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   abstract class A : () -> Int()
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   abstract class A : () -> Int
 </code></pre>
-<p>Esta inspección solo reporta cuando el nivel del lenguaje Kotlin del proyecto o módulo es 1.7 o superior.</p>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel del lenguaje Kotlin del proyecto o módulo es 1.7 o superior.</p>
 </body>
 </html>

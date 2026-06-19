@@ -1,45 +1,50 @@
 <html>
 <body>
-Informa sobre bloques <code>catch</code> vacíos o que posiblemente ignoren excepciones.
-<p>Aunque a veces es intencional, los bloques <code>catch</code> vacíos pueden dificultar la depuración.
-Además, ignorar el parámetro <code>catch</code> podría ser un error.
-  Finalmente, el analizador de código estático informará si detecta bloques <code>catch</code> que puedan ignorar silenciosamente excepciones importantes de la VM, como <code>NullPointerException</code>. Ignorar tales excepciones (sin registrarlas ni relanzarlas) puede ocultar errores.</p>
+Informa sobre bloques <code>catch</code> vacíos o que podrían estar omitiendo excepciones.
+<p>Aunque ocasionalmente es intencionado, los bloques <code>catch</code> vacíos pueden complicar la depuración.
+Además, ignorar los parámetros de un <code>catch</code> puede ser un error.
+  Por último, los analizadores de código estático informan si detectan que un bloque <code>catch</code> podría estar ignorando silenciosamente excepciones importantes de la VM, como <code>NullPointerException</code>. Ignorar tales excepciones (sin registrarlas ni volver a lanzarlas) puede ocultar errores.</p>
+
 <p>
-  Esta inspección no informa sobre parámetros <code>catch</code> nombrados como <code>ignore</code> o <code>ignored</code>.
-  En cambio, emitirá una advertencia para los parámetros <code>catch</code> nombrados como <code>ignore</code> o <code>ignored</code> que realmente se estén utilizando.
-  Además, la inspección no informa sobre parámetros <code>catch</code> nombrados como <code>expected</code> u <code>ok</code> en código fuente de pruebas.
+  Esta inspección no informará sobre ningún parámetro <code>catch</code> denominado <code>ignore</code> o <code>ignored</code>.
+  Por el contrario, advertirá sobre los parámetros <code>catch</code> llamados <code>ignore</code> o <code>ignored</code> que se estén utilizando realmente.
+  Además, la inspección no informará sobre los parámetros <code>catch</code> en fuentes de prueba denominados <code>expected</code> u <code>ok</code>.
 </p>
 <p>
-  Puede usar la corrección rápida para cambiar el nombre de la excepción a <code>ignored</code>.
-  Para bloques <b>catch</b> vacíos, se sugieren otras correcciones rápidas para generar el cuerpo del <b>catch</b>.
-  Puede modificar la plantilla "Catch Statement Body" en la pestaña "Código" en <a href="settings://fileTemplates">Configuración | Editor | Archivos y Plantillas de Código</a>.
+  Puede utilizar un arreglo rápido para cambiar el nombre de la excepción a <code>ignored</code>.
+  Para los bloques <b>catch</b> vacíos, se sugiere otro arreglo rápido para generar el cuerpo del <b>catch</b>.
+  Puede modificar la plantilla "Catch Statement Body" en la pestaña "Código" en <a href="settings://fileTemplates">Configuración | Editor | Plantillas de archivos y código</a>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   try {
     throwingMethod();
   } catch (IOException ex) {
+
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   try {
     System.out.println(System.in.read());
   } catch (IOException ignored) {
+
   }
 </code></pre>
-<p>Configuración de la inspección:</p>
+  <!-- tooltip end -->
+<p>Configurar inspección:</p>
 <ul>
   <li>
-    Use la opción <b>No informar cuando el bloque 'catch' contenga comentarios</b> para ignorar bloques <code>catch</code> que contengan comentarios.
+    Utilice la opción <b>No advertir cuando el bloque 'catch' contenga un comentario</b> para omitir los bloques <code>catch</code> que contienen comentarios.
   </li>
   <li>
-    Use la opción <b>No informar cuando el bloque 'catch' no esté vacío</b> para ignorar bloques <code>catch</code> que contengan declaraciones o comentarios pero no usen la variable en sí.
+    Utilice la opción <b>No advertir cuando el bloque 'catch' no esté vacío</b> para omitir los bloques <code>catch</code> que contienen sentencias o comentarios pero no utilizan la variable en sí.
   </li>
   <li>
-    Use la opción <b>No informar cuando una excepción nombrada 'ignore(d)' no sea realmente ignorada</b> para ignorar variables nombradas como <code>ignored</code> que estén en uso.
+    Utilice la opción <b>No advertir cuando una excepción de nombre 'ignore(d)' no se ignore realmente</b> para omitir las variables en uso denominadas <code>ignored</code>.
   </li>
 </ul>
-<p><small>Cambios en 2018.1</small></p>
+
+<p><small>Novedad en 2018.1</small></p>
 </body>
 </html>

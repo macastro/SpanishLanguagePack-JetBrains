@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre las llamadas a la función <code>StringBuilder.append(CharArray, offset, len)</code> que deberían ser reemplazadas por llamadas a <code>StringBuilder.appendRange(CharArray, startIndex, endIndex)</code> en la plataforma JVM.
-<p>La función <code>append</code> se comporta de manera diferente en las plataformas JVM, JS y Native, por lo que se recomienda usar la función <code>appendRange</code>.</p>
+Reporta una llamada a la función <code>StringBuilder.append(CharArray, offset, len)</code> en la plataforma JVM que debería ser reemplazada por una llamada a la función <code>StringBuilder.appendRange(CharArray, startIndex, endIndex)</code>.
+<p>La función <code>append</code> se comporta de manera diferente en las plataformas JVM, JS y Native, por lo que se recomienda utilizar la función <code>appendRange</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun f(charArray: CharArray, offset: Int, len: Int): String {

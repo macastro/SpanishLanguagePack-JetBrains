@@ -1,7 +1,10 @@
 <html>
 <body>
-Informa sobre divisiones o módulos por cero.
-Para números de punto flotante o doble precisión, estas expresiones producen resultados <code>Infinity</code>, <code>-Infinity</code> o <code>NaN</code>; para enteros, se lanza una excepción <code>ArithmeticException</code>.
-<p>Cuando el resultado de la expresión es <code>NaN</code>, esta inspección sugiere reemplazar la expresión de división por la constante <code>NaN</code>.
+Reporta división por cero o resto por cero.
+Tales expresiones producirán un resultado <code>Infinity</code>, <code>-Infinity</code> o <code>NaN</code> para dobles o flotantes,
+y lanzarán una <code>ArithmeticException</code> para enteros.
+<p>Cuando la expresión tiene un resultado <code>NaN</code>, la corrección sugiere reemplazar la expresión de división con la constante <code>NaN</code>.
+<!-- tooltip end -->
+
 </body>
 </html>

@@ -1,17 +1,17 @@
 <html>
 <body>
-Informa sobre llamadas innecesarias a métodos static que convierten sus parámetros a cadenas (por ejemplo, <code>String.valueOf()</code> o <code>Integer.toString()</code>).
-Estas llamadas son innecesarias cuando se utilizan en concatenaciones de cadenas.
+Informa sobre llamadas innecesarias a métodos estáticos que convierten sus parámetros en una cadena, p. ej. <code>String.valueOf()</code> o <code>Integer.toString()</code>.
+Dichas llamadas son innecesarias cuando se usan en concatenaciones de cadenas.
 <p>Ejemplo:</p>
 <pre><code>
   System.out.println("Number: " + Integer.toString(count));
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   System.out.println("Number: " + count);
 </code></pre>
-Además, estas llamadas son innecesarias cuando se utilizan como argumentos en métodos de biblioteca que realizan su propia conversión a cadena.
-Algunos ejemplos de métodos de biblioteca que realizan su propia conversión a cadena son:
+Además, dichas llamadas son innecesarias cuando se usan como argumentos en métodos de biblioteca que realizan su propia conversión de cadena.
+Algunos ejemplos de métodos de biblioteca que realizan su propia conversión de cadena son:
 <ul>
   <li>
     Clases <code>java.io.PrintWriter</code>, <code>java.io.PrintStream</code>
@@ -21,6 +21,7 @@ Algunos ejemplos de métodos de biblioteca que realizan su propia conversión a 
     Clases <code>java.lang.StringBuilder</code>, <code>java.lang.StringBuffer</code>
     <ul><li><code>append()</code></li></ul>
   </li>
+
   <li>
     Clase <code>org.slf4j.Logger</code>
     <ul>
@@ -28,7 +29,9 @@ Algunos ejemplos de métodos de biblioteca que realizan su propia conversión a 
     </ul>
   </li>
 </ul>
+<!-- tooltip end -->
 <p>
-  La opción <b>Informar llamadas que pueden ser reemplazadas por concatenación con cadena vacía</b> también informa sobre casos donde las llamadas a <code>String.valueOf()</code> pueden ser reemplazadas por concatenación con una cadena vacía.
+  Utiliza la opción <b>Informar sobre llamadas que pueden ser reemplazadas por una concatenación con una cadena vacía</b>
+  para informar también sobre casos en los que las concatenaciones con una cadena vacía pueden ser utilizadas en lugar de una llamada a <code>String.valueOf()</code>.
 </body>
 </html>

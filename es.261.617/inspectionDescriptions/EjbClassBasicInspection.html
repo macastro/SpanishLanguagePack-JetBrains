@@ -1,19 +1,19 @@
 <html>
 <body>
-Reporta las siguientes violaciones de la especificación EJB:
+Se informa de las siguientes infracciones de la especificación EJB:
 <ul>
-  <li>La clase no implementa las interfaces esperadas (EJBLocalObject, EJBObject, etc.)</li>
-  <li>La clase no define un constructor público sin parámetros</li>
-  <li>Uso de clase en lugar de interfaz o uso de interfaz en lugar de clase</li>
-  <li>El método EJB es static</li>
-  <li>La clase Bean de sesión sin estado define múltiples métodos `ejbCreate`</li>
-  <li>El tipo de retorno del método de la clase Bean de sesión es incorrecto</li>
-  <li>El EJB define un método `finalize`</li>
+  <li>La clase no implementa la interfaz requerida (p. ej., EJBLocalObject, EJBObject)</li>
+  <li>La clase no define un constructor público sin argumentos</li>
+  <li>Se usa una clase en lugar de una interfaz (o viceversa)</li>
+  <li>El método EJB es estático</li>
+  <li>La clase del bean de sesión sin estado define varios métodos `ejbCreate`</li>
+  <li>Tipo de retorno de método de clase de bean de sesión incorrecto</li>
+  <li>EJB define el método `finalize`</li>
 </ul>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-public class SessionEJB implements java.io.Serializable { // Error: la clase debería extender `SessionBean`
-  private SessionEJB() {} // Error: la clase debería definir un constructor público sin parámetros
+public class SessionEJB implements java.io.Serializable { // Error: La clase debe extender `SessionBean`
+  private SessionEJB() {} // Error: La clase debe definir un constructor público sin argumentos
 }
 </code></pre>
 </body>

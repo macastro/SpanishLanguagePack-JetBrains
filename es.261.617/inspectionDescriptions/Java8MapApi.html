@@ -1,12 +1,12 @@
 <html>
 <body>
-Informa sobre patrones comunes de uso de <code>java.util.Map</code> y sugiere reemplazarlos por:
-<code>getOrDefault()</code>, <code>computeIfAbsent()</code>, <code>putIfAbsent()</code>, <code>merge()</code> o <code>replaceAll( )</code>.
+Informa de patrones de uso comunes de <code>java.util.Map</code> y sugiere sustituirlos por:
+<code>getOrDefault()</code>, <code>computeIfAbsent()</code>, <code>putIfAbsent()</code>, <code>merge()</code> o <code>replaceAll()</code>.
 <p>Ejemplo:</p>
 <pre><code>
   map.containsKey(key) ? map.get(key) : "default";
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   map.getOrDefault(key, "default");
 </code></pre>
@@ -18,7 +18,7 @@ Informa sobre patrones comunes de uso de <code>java.util.Map</code> y sugiere re
     map.put(key, list);
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   map.computeIfAbsent(key, localKey -> new ArrayList&lt;&gt;());
 </code></pre>
@@ -28,7 +28,7 @@ Informa sobre patrones comunes de uso de <code>java.util.Map</code> y sugiere re
   if (val == null) map.put(key, 1);
   else map.put(key, val + 1);
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   map.merge(key, 1, (localKey, localValue) -> localValue + 1);
 </code></pre>
@@ -38,12 +38,14 @@ Informa sobre patrones comunes de uso de <code>java.util.Map</code> y sugiere re
     map.put(entry.getKey(), transform(entry.getValue()));
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   map.replaceAll((localKey, localValue) -> transform(localValue));
 </code></pre>
-<p>Tenga en cuenta que si el código extraído a una expresión lambda modifica el mismo <code>Map</code>, el reemplazo por <code>computeIfAbsent()</code> o <code>merge()</code> podría no funcionar correctamente para algunos <code>Map</code>. Por defecto, no se mostrará ninguna advertencia si este código tiene efectos secundarios. Si es necesario, habilite la opción <b>Sugerir reemplazo incluso si la lambda puede tener efectos secundarios</b> para mostrar siempre la advertencia.</p>
-<p>Además, la semántica podría cambiar debido al diferente manejo de valores <code>null</code> entre los métodos antiguos como <code>put()</code> y los nuevos como <code>computeIfAbsent()</code> o <code>merge()</code>. Esto debe considerarse si es importante almacenar valores null en el <code>Map</code> dado. La inspección no sugiere reemplazos cuando el valor es estáticamente conocido como null, pero sí sugiere reemplazos para valores cuya nulidad es desconocida. En estos casos, recomendamos suprimir la advertencia y agregar un comentario explicativo.
+
+<!-- tooltip end -->
+<p>Ten en cuenta que el reemplazo con <code>computeIfAbsent()</code> o <code>merge()</code> podría funcionar incorrectamente para algunas implementaciones de <code>Map</code> si el código extraído en la expresión lambda modifica el mismo <code>Map</code>. De forma predeterminada, la advertencia no aparece si este código podría tener efectos secundarios. Si es necesario, activa la opción <b>Sugerir reemplazo incluso si lambda puede tener efectos secundarios</b> para mostrar siempre la advertencia.</p>
+<p>Además, debido al diferente manejo del valor <code>null</code> en métodos antiguos como <code>put()</code> y métodos más nuevos como <code>computeIfAbsent()</code> o <code>merge()</code>, la semántica podría cambiar si es importante almacenar el valor <code>null</code> en el <code>Map</code> dado. La inspección no sugerirá el reemplazo cuando se sepa estáticamente que el valor es anulable, pero para los valores con nulidad desconocida, el reemplazo todavía se sugiere. En estos casos, recomendamos suprimir la advertencia y agregar un comentario explicativo.
 </p>
 </body>
 </html>

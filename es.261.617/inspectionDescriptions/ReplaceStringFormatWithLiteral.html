@@ -1,8 +1,8 @@
 <html>
 <body>
-La llamada a <code>String.format</code> puede ser reemplazada por una plantilla de cadena.
-<p>El uso de plantillas de cadena hace que el código sea más simple.</p>
-<p>Esta corrección rápida reemplazará la llamada con una plantilla de cadena.</p>
+Reporta llamadas <code>String.format</code> que se pueden reemplazar con plantillas de cadenas.
+<p>El uso de plantillas de cadenas hace que tu código sea más sencillo.</p>
+<p>La solución rápida reemplaza la llamada con una plantilla de cadena.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun main() {
@@ -11,7 +11,7 @@ La llamada a <code>String.format</code> puede ser reemplazada por una plantilla 
       val s = String.format(&quot;%s_%s_%s&quot;, id, date, id)
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   fun main() {
       val id = &quot;abc&quot;
@@ -19,5 +19,6 @@ La llamada a <code>String.format</code> puede ser reemplazada por una plantilla 
       val s = &quot;${id}_${date}_$id&quot;
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

@@ -1,11 +1,13 @@
 <html>
 <body>
-<p>Informa sobre mapeos de puertos sin comillas en archivos Docker Compose.</p>
+<p>Informa sobre las asignaciones de puertos sin comillas en los archivos Docker Compose.</p>
 <p>
-  Según la <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-1">especificación del archivo Compose</a>, los mapeos de puertos en formato <code>HOST:CONTAINER</code> pueden producir resultados incorrectos cuando se utilizan puertos de contenedor menores a 60, ya que YAML interpreta los números en formato <code>xx:yy</code> como valores sexagesimales.
-  Por lo tanto, recomendamos especificar siempre los mapeos de puertos explícitamente como cadenas de texto.
+  De acuerdo con la <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-1">especificación del archivo Compose</a>,
+  asignar puertos en el formato <code>HOST:CONTAINER</code> puede generar resultados erróneos cuando se usa un puerto de contenedor menor a 60,
+  debido a que YAML analiza los números en el formato <code>xx:yy</code> como un valor en base 60.
+  Por este motivo, recomendamos especificar siempre explícitamente las asignaciones de puerto como cadenas.
 </p>
-<p><b>Ejemplo:</b></p>
+<p><b>Ejemplos:</b></p>
 <pre><code>
   ports:
     - 3000

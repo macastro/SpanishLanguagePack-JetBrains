@@ -1,19 +1,21 @@
 <html>
 <body>
-<p>Reporta elementos incorrectos en el archivo de validación de Bean <code>&lt;validation-config&gt;</code>:</p>
+<p>Informa de elementos incorrectos en archivos Bean Validation <code>&lt;validation-config&gt;</code>:</p>
+
 <ul>
   <li>Referencias a clases no instanciables</li>
-  <li>Referencias a clases que no extienden las clases requeridas</li>
-  <li>Referencias a clases con ámbito inadecuado</li>
-  <li>Etiquetas y atributos vacíos</li>
-  <li>Etiquetas y valores de atributos que no coinciden con el esquema requerido (por ejemplo, identificadores Java)</li>
-  <li>Etiquetas que no contienen las subetiquetas o atributos requeridos</li>
+  <li>Referencias a clases que no extienden la clase requerida</li>
+  <li>Referencias a clases con un ámbito inapropiado</li>
+  <li>Etiquetas y valores de atributos vacíos</li>
+  <li>Etiquetas y valores de atributos que no coinciden con el patrón requerido (por ejemplo, identificadores de Java)</li>
+  <li>Etiquetas que no incluyen las etiquetas o atributos secundarios requeridos</li>
   <li>Etiquetas que definen objetos con nombres duplicados</li>
 </ul>
+
 <p><strong>Ejemplo:</strong></p>
 <pre><code>
 &lt;validation-config&gt;
-  &lt;default-provider&gt;<strong>foo.UnknownProvider</strong>&lt;/default-provider&gt;  &lt;!-- No se puede resolver la clase o el paquete 'UnknownProvider' --&gt;
+  &lt;default-provider&gt;<strong>foo.UnknownProvider</strong>&lt;/default-provider&gt;  &lt;!-- No se puede resolver la clase o paquete 'UnknownProvider'  --&gt;
   &lt;message-interpolator&gt;my.Interpolator&lt;/message-interpolator&gt;
   &lt;constraint-mapping&gt;META-INF/ConstraintMappings.xml&lt;/constraint-mapping&gt;
   &lt;constraint-mapping&gt;META-INF/<strong>unknown.xml</strong>&lt;/constraint-mapping&gt;

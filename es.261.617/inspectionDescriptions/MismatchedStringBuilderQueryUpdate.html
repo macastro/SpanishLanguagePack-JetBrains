@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre objetos <code>StringBuilder</code>, <code>StringBuffer</code> o <code>StringJoiner</code> cuyo contenido ha sido leído pero no escrito, o escrito pero no leído.
-<p>Esta inconsistencia en la lectura y escritura no tiene sentido y puede indicar código muerto, código incompleto o errores.</p>
+Reporta los objetos <code>StringBuilder</code>, <code>StringBuffer</code> o <code>StringJoiner</code> cuyo contenido se lee pero no se escribe, o se escribe pero no se lee.
+<p>Estas lecturas y escrituras inconsistentes no tienen sentido y probablemente indican un código incorrecto, incompleto o muerto.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   public void m1() {
@@ -9,6 +9,7 @@ Informa sobre objetos <code>StringBuilder</code>, <code>StringBuffer</code> o <c
     sb.append("a");
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
 </body>
 </html>

@@ -1,12 +1,13 @@
 <html>
 <body>
-Informa sobre el uso de sintaxis obsoleta desde Ruby 1.9. Por ejemplo, para las declaraciones de una línea <code>if</code>, <code>when</code>, <code>unless</code>,
-usando <code>:</code> en lugar de <code>then</code>.
+Informa del uso de la sintaxis desaprobada por Ruby 1.9. Por ejemplo, <code>:</code> en lugar de <code>then</code> para 
+<code>if</code> de una línea, <code>when</code>, <code>unless</code>.
 <p>Ejemplo:</p>
 <pre>
 <code>condition = true
 if condition: 1 else 0 # -> if condition then 1 else 0
 unless condition: 0 else 1 # -> unless condition then 0 else 1
+
 value = 1
 case value
 when 1: true # -> when 1 then true

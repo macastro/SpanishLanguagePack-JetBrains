@@ -1,14 +1,15 @@
 <html>
 <body>
-Informa sobre condiciones y valores no triviales que se sabe estáticamente que siempre son true, false, null o cero.
-Aunque a veces esto es intencional, generalmente es un indicio de un error lógico en el programa. Además, informa sobre ramas <code>when</code> que nunca son alcanzables y ciertas expresiones que se sabe estáticamente que siempre fallarán.
-<p>Ejemplo:</p>
+Reporta condiciones y valores no triviales que estáticamente se sabe que siempre son verdad, falso, nulos o cero.
+Si bien a veces es intencional, a menudo es un signo de error lógico en el programa. Además,
+informa ramas <code>when</code> nunca alcanzables y algunas expresiones que estáticamente se sabe que siempre fallan.
+<p>Ejemplos:</p>
 <pre><code>
 fun process(x: Int?) {
   val isNull = x == null
   if (!isNull) {
-    if (<span style="background: yellow">x != null</span>) {} // La condición siempre es true
-    require(<span style="background: yellow">x!! &lt; 0 && x &gt; 10</span>) // La condición siempre es false
+    if (<span style="background: yellow">x != null</span>) {} // La condición siempre es verdadera
+    require(<span style="background: yellow">x!! &lt; 0 && x &gt; 10</span>) // La condición siempre es falsa
   } else {
     println(x<span style="background: yellow">!!</span>) // El operador !! siempre fallará
   }
@@ -16,13 +17,14 @@ fun process(x: Int?) {
 fun process(v: Any) {
   when(v) {
     is CharSequence -&gt; println(v <span style="background: yellow">as</span> Int) // La conversión siempre fallará
-    <span style="background: yellow">is String</span> -&gt; println(v) // La rama nunca será alcanzada
+    <span style="background: yellow">is String</span> -&gt; println(v) // La rama es inalcanzable
   }
 }
 </code></pre>
 <p>
-    Desmarca la opción "Emitir advertencias cuando las constantes se almacenan en variables" para evitar informes sobre variables con valores constantes que no están en condiciones.
+    Desmarque la opción "Avisar cuando la constante se almacena en una variable" para evitar informar sobre variables que tienen valores constantes que no están en condiciones.
 </p>
-<p><small>Novedades en 2021.3</small></p>
+<!-- tooltip end -->
+<p><small>Novedad en 2021.3</small></p>
 </body>
 </html>

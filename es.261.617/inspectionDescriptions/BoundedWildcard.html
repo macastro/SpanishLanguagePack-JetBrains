@@ -1,54 +1,64 @@
 <html>
 <body>
-Los informes pueden usar parámetros de método genéricos con <a href="https://en.wikipedia.org/wiki/Wildcard_(Java)">comodines limitados</a>.
+Informa de parámetros de métodos genéricos que pueden utilizar <a href="https://en.wikipedia.org/wiki/Wildcard_(Java)">comodines acotados</a>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void process(Consumer&lt;Number&gt; consumer);
 </code></pre>
-<p>Debe reemplazarse por:</p>
+<p>debería sustituirse por:</p>
 <pre><code>
   void process(Consumer&lt;? super Number&gt; consumer);
 </code></pre>
 <p>
-  Esta firma de método es más flexible ya que acepta más tipos: no solo <code>Consumer&lt;Number&gt;</code>, sino también <code>Consumer&lt;Object&gt;</code>.
+  Esta signatura de método es más flexible porque acepta más tipos: no solo
+  <code>Consumer&lt;Number&gt;</code>, sino también <code>Consumer&lt;Object&gt;</code>.
 </p>
-<p>De manera similar, para parámetros de entrada en posición covariante:</p>
+<p>Del mismo modo, los parámetros de tipo en posición covariante:</p>
 <pre><code>
   T produce(Producer&lt;T&gt; p);
 </code></pre>
-<p>Debe reemplazarse por:</p>
+<p>debería sustituirse por:</p>
 <pre><code>
   T produce(Producer&lt;? extends T&gt; p);
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Citando a <a href="https://en.wikipedia.org/wiki/Joshua_Bloch#Effective_Java">Joshua Bloch</a> en <em>Effective Java</em>, tercera edición:
+  Citando a <a href="https://en.wikipedia.org/wiki/Joshua_Bloch#Effective_Java">Joshua Bloch</a> en la tercera edición de <em>Effective Java</em>:
 </p>
 <blockquote>
-  <h4>Ítem 31: Utiliza comodines limitados para aumentar la flexibilidad del API</h4>
-  Aunque el uso de tipos comodín en las APIs es complicado, hace que las APIs sean más flexibles.
-  Si escribes una biblioteca que será ampliamente utilizada, debes forzar el uso correcto de los tipos comodín.
-  Recuerda la regla básica: producer-extends, consumer-super (PECS).
-  También recuerda que todos los Comparable y Comparator son consumidores.
+  <h4>Elemento 31: Utiliza comodines acotados para aumentar la flexibilidad de la API</h4>
+  El uso de tipos comodín en tus API, aunque es complicado, las hace mucho más flexibles.
+  Si escribes una biblioteca que tendrá un uso generalizado, debe considerarse obligatorio el uso adecuado de tipos comodín.
+  Recuerda la regla básica: productor-extends, consumidor-super (PECS).
+  Recuerda también que todos los Comparable y Comparator son consumidores.
 </blockquote>
+
 <p>
-  Las opciones de inspección permiten alternar los informes para:
+  Utiliza las opciones de inspección para alternar la información de:
 </p>
 <ul>
   <li>
     <p>
-      Clases invariantes. Un ejemplo de una clase invariante es <code>java.util.List&lt;T&gt;</code>, ya que tanto acepta valores (a través del método <code>List.add(T)</code>) como produce valores (a través del método <code>T List.get()</code>).
+      Clases invariantes. Un ejemplo de clase invariante es <code>java.util.List&lt;T&gt;</code> porque acepta valores
+      (a través del método <code>List.add(T)</code>)
+      y produce valores (a través del método <code>T List.get()</code>).
     </p>
     <p>
-      Por otro lado, las clases <code>contravariant</code> solo aceptan valores, por ejemplo, <code>java.util.function.Consumer&lt;T&gt;</code> que solo tiene el método <code>accept(T)</code>. De manera similar, las clases <code>covariant</code> solo producen valores, por ejemplo, <code>java.util.function.Supplier&lt;T&gt;</code> que solo tiene el método <code>T get()</code>.
+      Por otra parte, las clases <code>contravariantes</code> solo reciben valores, por ejemplo, <code>java.util.function.Consumer&lt;T&gt;</code>
+      con el único método <code>accept(T)</code>. Del mismo modo, las clases <code>covariantes</code>
+      solo producen valores, por ejemplo, <code>java.util.function.Supplier&lt;T&gt;</code>
+      con el único método <code>T get()</code>.
     </p>
     <p>
-      Es común usar comodines limitados en clases covariantes/contravariantes, pero evitarlos en clases invariantes, como en <code>void process(List&lt;? extends T&gt; l)</code>.
-      Deshabilitar esta opción ignorará tales clases invariantes y mantendrá su tipado estricto, por ejemplo, <code>void process(List&lt;T&gt; l)</code>.
+      La gente suele utilizar comodines acotados en clases covariantes/contravariantes,
+      pero evita los comodines en clases invariantes, por ejemplo, <code>void process(List&lt;? extends T&gt; l)</code>.
+      Desactiva esta opción para ignorar esas clases invariantes y déjalas con una tipificación rígida, por ejemplo, <code>void
+      process(List&lt;T&gt; l)</code>.
     </p>
   </li>
   <li>
     <p>
-      Métodos <code>private</code> que pueden considerarse que no forman parte de la API pública
+      Métodos <code>private</code>, que pueden considerarse no parte de la API pública
     </p>
   </li>
   <li>

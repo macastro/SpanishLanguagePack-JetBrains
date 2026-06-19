@@ -1,15 +1,20 @@
 <html>
 <body>
-<p>Reporte de referencia a un Bean abstracto.</p>
-<p>Los Beans abstractos solo pueden utilizarse como definiciones de Bean plantilla, es decir, como padres de definiciones secundarias.
-  Intentar usar estos Beans padre abstractos de forma independiente, ya sea referenciándolos como atributo ref de otro Bean o llamando a <code>getBean()</code> con el ID del Bean padre, resultará en un error.</p>
+<p>Informa sobre beans abstractos referenciados.</p>
+
+<p>Los beans abstractos sólo pueden usarse como definiciones de beans plantilla, es decir, padres para definiciones hijo.
+  Intentar usar un bean padre abstracto de este tipo por sí mismo refiriéndose a él como una propiedad <code>ref</code> de otro bean,
+  o llamando a <code>getBean()</code> con el ID del bean padre, dará como resultado un error.</p>
+
 <p><b>Ejemplo:</b></p>
+
 <pre><code>
   &lt;bean abstract="true" id="parentBeanWithoutClass"/&gt;
   &lt;bean class="com.my.company.FooBean" id="childBean" parent="parentBeanWithoutClass"&gt;
-  &lt;!--  properties --&gt;
+  &lt;!--  propiedades --&gt;
   &lt;/bean&gt;
 </code></pre>
-<p>En este ejemplo, el Bean padre no puede ser instanciado por sí mismo porque está incompleto y está explícitamente declarado como abstracto.</p>
+
+<p>En este ejemplo, el bean padre no se puede instanciar por sí mismo ya que está incompleto y marcado explícitamente como abstracto.</p>
 </body>
 </html>

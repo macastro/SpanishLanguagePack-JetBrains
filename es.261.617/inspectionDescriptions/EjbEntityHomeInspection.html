@@ -1,16 +1,17 @@
 <html>
 <body>
-Informa sobre definiciones incorrectas de los siguientes elementos relacionados con EJB:
+Se informa de las siguientes definiciones incorrectas de elementos relacionados con EJB de entidad:
 <ul>
-  <li>Clases que no implementan las interfaces esperadas (EJBLocalObject, EJBObject, etc.)</li>
-  <li>Modificadores de clase EJB incorrectos</li>
-  <li>Clases que no definen un constructor público sin parámetros</li>
-  <li>Uso de clases en lugar de interfaces o interfaces en lugar de clases</li>
+  <li>La clase no implementa las interfaces necesarias (por ejemplo, EJBLocalObject o EJBObject)</li>
+  <li>Los modificadores de la clase EJB son incorrectos</li>
+  <li>La clase no define un constructor público sin argumentos</li>
+  <li>Se utiliza una clase en lugar de una interfaz (o viceversa)</li>
 </ul>
+
 <p><b>Ejemplo:</b></p>
 <pre><code>
 public final class SessionEJB implements javax.ejb.SessionBean {
-  private SessionEJB() {} // Error: la clase debe definir un constructor público sin parámetros
+  private SessionEJB() {} // Error: la clase debe definir un constructor público sin argumentos
 }
 </code></pre>
 </body>

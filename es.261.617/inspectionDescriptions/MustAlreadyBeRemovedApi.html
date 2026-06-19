@@ -1,17 +1,17 @@
 <html>
 <body>
-Informa sobre las declaraciones marcadas con <code>@ApiStatus.ScheduledForRemoval</code>
-que deben eliminarse de la biblioteca de declaraciones en la versión actual.
-<p>Compara la versión especificada para eliminación programada con la versión que se puede configurar a continuación.</p>
+Informa las declaraciones marcadas como <code>@ApiStatus.ScheduledForRemoval</code> que deberían haberse eliminado en la versión actual de la biblioteca que declara.
+<!-- tooltip end -->
+<p>Compara la versión especificada prevista para su eliminación con la versión establecida por el usuario a continuación.</p>
 <p>
-  Las versiones se especifican como cadenas separadas por puntos, opcionalmente con los sufijos
+  Especifica la versión como una cadena delimitada por puntos y opcionalmente con el sufijo
   <code>alpha</code>, <code>beta</code>, <code>snapshot</code> o <code>eap</code>.
 </p>
-<p>Ejemplos de versiones válidas: <code>1.0</code>, <code>2.3.1</code>, <code>2018.1</code>, <code>7.5-snapshot</code>, <code>3.0-eap</code>.
-</p>
+<p>Ejemplos de versiones válidas: <code>1.0</code>, <code>2.3.1</code>, <code>2018.1</code>, <code>7.5-snapshot</code>, <code>3.0-eap</code>.</p>
 <p>
-  La comparación de versiones es intuitiva, por ejemplo: <code>1.0 &lt; 2.0</code>, <code>1.0-eap &lt; 1.0</code>, <code>2.3-snapshot &lt; 2.3</code>, etc.
-  Para obtener detalles sobre la lógica de comparación, consulte la implementación de <a
+  La comparación de versiones es intuitiva: <code>1.0 &lt; 2.0</code>, <code>1.0-eap &lt; 1.0</code>, <code>2.3-snapshot &lt; 2.3</code>, etc.
+  Para obtener más información sobre la lógica de comparación, consulta la implementación de
+  <a
   href="https://github.com/JetBrains/intellij-community/blob/master/platform/util-rt/src/com/intellij/util/text/VersionComparatorUtil.java">VersionComparatorUtil</a>.
 </p>
 </body>

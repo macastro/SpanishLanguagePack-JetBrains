@@ -1,19 +1,21 @@
 <html>
 <body>
-El informe indica que el constructor secundario puede reemplazarse por un constructor principal más conciso.
+Informa sobre un constructor secundario que puede sustituirse por un constructor principal más conciso.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class User {
-      val name: String
-      constructor(name: String) {
-          this.name = name
+  clase Usuario {
+      val nombre: String
+
+      constructor(nombre: String) {
+          this.nombre = nombre
       }
   }
 </code></pre>
-<p>La corrección rápida convertirá automáticamente el código a:</p>
+<p>La corrección rápida convierte el código automáticamente:</p>
 <pre><code>
-  class User(val name: String) {
+  clase Usuario(val nombre: String) {
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

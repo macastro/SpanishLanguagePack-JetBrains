@@ -1,9 +1,9 @@
 <html>
 <body>
-Informa sobre variables locales innecesarias que no mejoran la comprensión del método, incluyendo:
+Se informan las siguientes variables locales innecesarias que no contribuyen a la comprensión del método:
 <ul>
-  <li>Variables locales que se devuelven inmediatamente.</li>
-  <li>Variables locales que se asignan inmediatamente a otra variable y no se vuelven a utilizar.</li>
+  <li>Variables locales que se devuelven inmediatamente y.</li>
+  <li>Variables locales que se asignan inmediatamente a otra variable y que después no se usan.</li>
   <li>Variables locales que siempre tienen el mismo valor que otra variable local o parámetro.</li>
 </ul>
 <p><b>Ejemplo:</b></p>
@@ -19,11 +19,12 @@ Informa sobre variables locales innecesarias que no mejoran la comprensión del 
     return true;
   }
   </code></pre>
+<!-- tooltip end -->
 <p>Configuración de la inspección:</p>
 <ul>
-  <li>Utilice la opción <b>Ignorar variables que se devuelven o lanzan inmediatamente</b> para ignorar variables que se devuelven o lanzan inmediatamente.
-    Algunos estilos de codificación recomiendan usar estas variables para mayor claridad y facilidad de depuración.</li>
-  <li>Utilice la opción <b>Ignorar variables con anotaciones</b> para ignorar variables que tienen anotaciones.</li>
+  <li>Utiliza la opción "<b>Ignorar variables que se devuelven o se procesan inmediatamente</b>" para ignorar las variables que se devuelven o se procesan inmediatamente.
+    Algunos estilos de código recomiendan utilizar este tipo de variables para mayor claridad y facilidad de depuración.</li>
+  <li>Utiliza la opción "<b>Ignorar variables con anotaciones</b>" para ignorar las variables que tienen anotaciones.</li>
 </ul>
 </body>
 </html>

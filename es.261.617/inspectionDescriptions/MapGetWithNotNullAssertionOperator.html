@@ -1,11 +1,11 @@
 <html>
 <body>
-Informa sobre el uso de <code>map.get()!!</code> que puede ser reemplazado por <code>map.getValue()</code>, <code>map.getOrElse()</code> u otros.
+Reporta <code>map.get()!!</code> que puede reemplazarse por <code>map.getValue()</code>, <code>map.getOrElse()</code>, etc.
 <p><b>Ejemplo:</b></p>
 <pre><code>
 fun test(map: Map&lt;Int, String&gt;): String = map.get(0)!!
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de que se aplica la corrección rápida:</p>
 <pre><code>
 fun test(map: Map&lt;Int, String&gt;): String = map.getValue(0)
 </code></pre>

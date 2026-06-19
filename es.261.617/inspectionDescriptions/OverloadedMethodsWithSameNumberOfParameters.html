@@ -1,16 +1,17 @@
 <html>
 <body>
-Informa sobre métodos declarados en la misma clase que tienen el mismo nombre y el mismo número de parámetros.
-Este tipo de sobrecarga puede ser muy confusa, ya que puede no estar claro qué sobrecarga se está invocando.
+Informa de métodos declarados en la misma clase, con el mismo nombre y el mismo número de parámetros.
+Estas sobrecargas pueden resultar muy confusas, porque puede no estar claro qué sobrecarga se invoca.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Main {
+  clase Main {
     public static void execute(Runnable r) {}
     public static &lt;T&gt; void execute(RunnableFuture&lt;T&gt; c) {}
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Use esta opción para ignorar las sobrecargas de métodos donde los tipos de parámetros son absolutamente incompatibles.
+  Utiliza la opción para ignorar métodos sobrecargados cuyos tipos de parámetro son definitivamente incompatibles.
 </p>
 </body>
 </html>

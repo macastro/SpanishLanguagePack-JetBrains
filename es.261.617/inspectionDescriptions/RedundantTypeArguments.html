@@ -1,14 +1,14 @@
 <html>
 <body>
-Informa sobre llamadas a métodos parametrizados donde los argumentos de tipo explícitos pueden omitirse (ya que el compilador puede inferirlos claramente).
+Informa las llamadas a métodos parametrizados con tipos de argumentos explícitos que pueden omitirse ya que el compilador los inferirá inequívocamente.
 <p>
-  El uso de argumentos de tipo redundantes es innecesario y reduce la legibilidad del código.
+  El uso de argumentos de tipo redundantes es innecesario y dificulta la lectura del código.
 </p>
 <p>Ejemplo:</p>
 <pre><code>
   List&lt;String&gt; list = Arrays.&lt;String&gt;asList("Hello", "World");
 </code></pre>
-<p>Los argumentos de tipo redundantes pueden eliminarse mediante una corrección rápida:</p>
+<p>Se proporciona un arreglo rápido para eliminar los argumentos de tipo redundantes:</p>
 <pre><code>
   List&lt;String&gt; list = Arrays.asList("Hello", "World");
 </code></pre>

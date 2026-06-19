@@ -1,31 +1,34 @@
 <html>
 <body>
-Informa sobre métodos cuyo valor de retorno nunca se utiliza cuando son invocados.
-El tipo de retorno de estos métodos puede establecerse como <code>void</code>.
-<p>No se informarán los métodos anotados con <code>@CanIgnoreReturnValue</code> de Error Prone o AssertJ.
-  La corrección rápida actualizará la firma del método y eliminará las declaraciones <code>return</code> del método.</p>
+Informa de los métodos cuyos valores devueltos nunca se usan cuando son llamados.
+El tipo de retorno de dichos métodos puede configurarse como <code>void</code>.
+<p>No se informará de los métodos anotados con la anotación <code>@CanIgnoreReturnValue</code> de Error Prone o AssertJ.
+  La corrección rápida actualiza la firma del método y elimina sentencias <code>return</code> del interior del método.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  // Se informa cuando la visibilidad es Protected o Public
+  // informado si la configuración de visibilidad es Protected o Public
   protected String myToUpperCase(String s) {
     return s.toUpperCase();
   }
-  // Simple setter, se informa según la configuración
+
+  // simple setter, reporting depends on setting
   public String setStr(String str) {
     myStr = str;
     return myStr;
   }
+
   void test() {
-    setStr("value");          // Valor de retorno no utilizado
-    myToUpperCase("result");  // Valor de retorno no utilizado
+    setStr("value");          // el valor devuelto no se usa
+    myToUpperCase("result");  // el valor devuelto no se usa
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida a ambos métodos:</p>
+<p>Tras aplicar la corrección rápida a ambos métodos:</p>
 <pre><code>
     protected void myToUpperCase(String s) {
-      // 'return' completamente eliminado
+      // 'return' eliminado por completo
       // ya que 's.toUpperCase()' no tiene efectos secundarios
     }
+
     public void setStr(String str) {
       myStr = str;
       // 'return' eliminado
@@ -33,10 +36,11 @@ El tipo de retorno de estos métodos puede establecerse como <code>void</code>.
   ...
 </code></pre>
 <p>
-  <b>Nota</b>: Por razones de rendimiento, algunos métodos pueden no ser informados durante el resaltado en el editor.
-  Para ver todos los resultados, ejecute la inspección a través de <b>Código | Inspeccionar código</b> o <b>Código | Analizar código | Ejecutar inspección por nombre</b>
+  <b>NOTA:</b> Puede que algunos métodos no se informen durante el resaltado en el editor por motivos de rendimiento.
+  Para ver todos los resultados, ejecutar la inspección usando <b>Código | Inspeccionar código</b> o <b>Código | Analizar código | Ejecutar inspección por nombre</b>>
 </p>
-<p>Use la opción <b>Ignorar métodos encadenables</b> para ignorar los valores de retorno no utilizados en llamadas encadenables.</p>
-<p>Use la opción <b>Informar visibilidad máxima del método</b> para controlar la visibilidad máxima de los métodos a informar.</p>
+<!-- tooltip end -->
+<p>Utiliza la opción <b>Ignorar métodos encadenables</b> para ignorar los valores devueltos no usados de llamadas encadenables.</p>
+<p>Utiliza la opción <b>Visibilidad máxima de método informada</b> para controlar la visibilidad máxima de los métodos a informar.</p>
 </body>
 </html>

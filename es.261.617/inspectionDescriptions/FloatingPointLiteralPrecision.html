@@ -1,18 +1,26 @@
 <html>
 <body>
-Informa sobre literales de punto flotante de tipo <code>Float</code> y <code>Double</code> que no pueden representarse con la precisión deseada usando <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a>.
+Reporta los literales de punto flotante que no se pueden representar con la precisión requerida
+usando los tipos <a href="https://es.wikipedia.org/wiki/IEEE_754">IEEE 754</a> <code>Float</code> y <code>Double</code>.
+
 <p>
-    Por ejemplo, <code>1.9999999999999999999</code> tiene demasiados dígitos significativos, por lo que su representación como <code>Double</code> se redondeará a <code>2.0</code>.
-    Especificar dígitos adicionales puede ser engañoso, ya que oculta el hecho de que los cálculos se realizarán con el valor redondeado.
+    Por ejemplo, <code>1.9999999999999999999</code> tiene demasiados dígitos significativos,
+    por lo que su representación como un <code>Double</code> se redondeará a <code>2.0</code>.
+    Especificar dígitos en exceso puede ser engañoso ya que oculta el hecho de que los cálculos
+    usan valores redondeados en su lugar.
 </p>
+
 <p>
-    Esta corrección rápida reemplaza el literal con el valor redondeado que coincide con la representación real de la constante.
+    La corrección rápida reemplaza el literal con un valor redondeado que coincide con la representación real
+    de la constante.
 </p>
+
 <p><b>Ejemplo:</b></p>
 <pre><code>
   val x: Float = 3.14159265359f
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+
+<p>Después de que se aplica la corrección rápida:</p>
 <pre><code>
   val x: Float = 3.1415927f
 </code></pre>

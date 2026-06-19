@@ -1,17 +1,20 @@
 <html>
 <body>
-Informa sobre variables utilizadas como valores de retorno.
+Inspecciona variables usadas como valores de retorno.
 <p>Ejemplo:</p>
+
 <pre>
-<code># 不良做法
+<code># Mala práctica
 def foo(bar)
-  result = bar + 1
-  result
+  resultado = bar + 1
+  resultado
 end</code>
 </pre>
-Estas variables pueden eliminarse mediante una corrección rápida. Después de aplicar la corrección rápida, el resultado se muestra así:
+
+Se cuenta con una solución rápida para eliminar dichas variables. Luego de aplicar la solución rápida, el resultado se ve así:
+
 <pre>
-<code># 优良做法
+<code># Buena práctica
 def foo(bar)
   bar + 1
 end</code>

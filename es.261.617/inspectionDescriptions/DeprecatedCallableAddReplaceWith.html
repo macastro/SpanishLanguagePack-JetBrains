@@ -1,21 +1,25 @@
 <html>
 <body>
-Informa sobre funciones y propiedades obsoletas que no tienen el argumento <code>kotlin.ReplaceWith</code> en su anotación <code>kotlin.deprecated</code>, el IDE sugiere agregarlo basándose en su implementación.
+Informa sobre funciones y propiedades obsoletas que no tienen el argumento <code>kotlin.ReplaceWith</code> en su
+anotación <code>kotlin.deprecated</code> y sugiere añadir uno basado en su cuerpo.
 <p>
-    Kotlin proporciona el argumento <code>ReplaceWith</code> para reemplazar automáticamente las declaraciones obsoletas.
-    Se recomienda usar el argumento para corregir problemas de obsolescencia en el código.
+    Kotlin proporciona el argumento <code>ReplaceWith</code> para reemplazar declaraciones obsoletas automáticamente.
+    Se recomienda utilizar el argumento para corregir problemas de obsolescencia en el código.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   @Deprecated("Use refined() instead.")
   fun deprecated() = refined()
+
   fun refined() = 42
 </code></pre>
-<p>La corrección rápida agregará el argumento <code>ReplaceWith()</code>:</p>
+<p>La solución rápida añade el argumento <code>ReplaceWith()</code>:</p>
 <pre><code>
   @Deprecated("Use refined() instead.", ReplaceWith("refined()"))
   fun deprecated() = refined()
+
   fun refined() = 42
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

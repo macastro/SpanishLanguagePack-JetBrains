@@ -1,44 +1,46 @@
 <html>
 <body>
-Reporta declaraciones <code>when</code> no exhaustivas que causarán errores de compilación a partir de la versión 1.7.
+Reporta sentencias <code>when</code> no exhaustivas que provocarán un error de compilación desde la versión 1.7.
 <p>Tipos de motivación:</p>
 <ul>
     <li>
-        Patrones de uso problemáticos/sin sentido que deben desalentarse/prevenirse (por ejemplo, comportamientos contraintuitivos)
+        Patrones de uso problemáticos/sin sentido que necesitan ser desaconsejados/bloqueados (por ejemplo, comportamientos contraintuitivos)
         <ul>
             <li>
-                Código propenso a errores
+                El código es propenso a errores
             </li>
         </ul>
     </li>
     <li>
-        Inconsistencias en el diseño (diferentes tratamientos en diferentes contextos)
+        Inconsistencia en el diseño (las cosas se hacen de manera diferente en diferentes contextos)
     </li>
 </ul>
 <p>Tipos de impacto:</p>
 <ul>
     <li>
-        Compilación. Algún código que antes compilaba dejará de hacerlo
+        Compilación. Algún código que antes se compilaba ya no se compilará
         <ul>
             <li>
-                En algunos casos, dicho código podría funcionar sin excepciones
+                Hubo casos en que dicho código funcionó sin excepciones
                 <ul>
                     <li>
-                        Parte de este código podría compilar sin ninguna advertencia
+                        Parte de dicho código podría compilarse sin ninguna advertencia
                     </li>
                 </ul>
             </li>
         </ul>
     </li>
 </ul>
-<p><b>Más información</b>: <a href="https://youtrack.jetbrains.com/issue/KT-47709">KT-47709: Hacer exhaustivas por defecto las declaraciones when con sujetos enum, sealed y boolean</a></p>
-<p>La corrección rápida añadirá la rama faltante <code>else -> {}</code>.</p>
+
+<p><b>Más detalles:</b> <a href="https://youtrack.jetbrains.com/issue/KT-47709">KT-47709: Hacer que las sentencias when con sujetos enum, sealed y booleanos sean exhaustivas por defecto</a></p>
+<p>La corrección rápida agrega la rama <code>else -> {}</code> que falta.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   sealed class <b>Base</b> {
       class <b>A</b> : <b>Base</b>()
       class <b>B</b> : <b>Base</b>()
   }
+
   fun test(base: <b>Base</b>) {
       when (base) {
           is <b>Base</b>.<b>A</b> -> ""
@@ -51,6 +53,7 @@ Reporta declaraciones <code>when</code> no exhaustivas que causarán errores de 
       class <b>A</b> : <b>Base</b>()
       class <b>B</b> : <b>Base</b>()
   }
+
   fun test(base: <b>Base</b>) {
       when (base) {
           is <b>Base</b>.<b>A</b> -> ""
@@ -58,6 +61,7 @@ Reporta declaraciones <code>when</code> no exhaustivas que causarán errores de 
       }
   }
 </code></pre>
-<p>Esta inspección solo reportará cuando el nivel del lenguaje Kotlin del proyecto o módulo sea 1.6 o superior.</p>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de idioma Kotlin del proyecto o módulo es 1.6 o superior.</p>
 </body>
 </html>

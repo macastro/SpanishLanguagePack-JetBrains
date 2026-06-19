@@ -1,17 +1,41 @@
 <html>
 <body>
-Informa sobre la concatenación de <code>String</code> utilizada como argumento para <code>StringBuffer.append()</code>, <code>StringBuilder.append()</code> o <code>Appendable.append()</code>.
+Informa de la concatenación de cadena <code>String</code> utilizada como argumento a <code>StringBuffer.append()</code>,
+<code>StringBuilder.append()</code> o <code>Appendable.append()</code>.
 <p>
-  Tales llamadas pueden transformarse ventajosamente en llamadas encadenadas de append en el <code>StringBuffer/Builder/Appendable</code> existente, ahorrando así el costo de asignación adicional de <code>StringBuffer/Builder</code>.
-  Esta inspección ignorará las concatenaciones de <code>String</code> que se evalúan en tiempo de compilación, casos en los que la conversión solo reduciría el rendimiento.
+  Tales llamadas pueden convirtirse ventajosamente en llamadas de anexión encadenadas en el <code>StringBuffer/Builder/Appendable</code> existente, lo que ahorra el coste de una asignación extra de <code>StringBuffer/Builder</code>.
+  Esta inspección ignora las concatenaciones de <code>String</code> evaluadas en tiempo de compilación, en cuyo caso la conversión solo empeoraría el rendimiento.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void bar(StringBuilder builder, String name) {
-    builder.append("Hello," + name);    //advertencia
-    builder.append("Hello," + "world"); //sin advertencia
+    builder.append("Hola, " + name);    //advertencia
+    builder.append("Hola, " + "mundo"); //sin advertencia
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
+
+</body>
+</html>
+
+<html>
+<body>
+Informa de la concatenación de <code>String</code> utilizada como argumento a <code>StringBuffer.append()</code>,
+<code>StringBuilder.append()</code> o <code>Appendable.append()</code>.
+<p>
+  Tales llamadas pueden convertirse ventajosamente en llamadas de anexión encadenadas en el <code>StringBuffer/Builder/Appendable</code> existente, ahorrando el coste de una asignación extra de <code>StringBuffer/Builder</code>.
+  Esta inspección ignora las concatenaciones de <code>String</code> evaluadas en tiempo de compilación, en cuyo caso la conversión solo empeoraría el rendimiento.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void bar(StringBuilder builder, String name) {
+    builder.append("Hola, " + name);    //advertencia
+    builder.append("Hola, " + "mundo"); //sin advertencia
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
 </body>
 </html>

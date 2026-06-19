@@ -1,10 +1,12 @@
 <html>
 <body>
-Informa sobre expresiones de tabla comunes (CTE) no utilizadas en la consulta.
+Reporta las expresiones de tabla comunes (CTE) no usadas dentro de la consulta.
 <p>Ejemplo (PostgreSQL):</p>
 <pre><code>CREATE TABLE foo(a INT);
+
 WITH a AS (SELECT 1 AS x FROM foo)
 SELECT 1 + 2 FROM foo;</code></pre>
-<p>Usando WITH, creamos un conjunto de resultados temporal con nombre llamado <code>a</code>, también conocido como expresión de tabla común (CTE). Sin embargo, no utilizamos este CTE más adelante en el código. El CTE no utilizado se muestra en gris.</p>
+<p>Al utilizar WITH, creamos un conjunto de resultados nombrado temporal con el nombre <code>a</code>, también conocido como una expresión de tabla común (CTE). Pero
+  no usamos este CTE posteriormente en el código. El CTE no usado está atenuado.</p>
 </body>
 </html>

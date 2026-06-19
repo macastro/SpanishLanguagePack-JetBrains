@@ -1,11 +1,14 @@
 <html>
 <body>
-Reporta métodos con anotaciones JUnit cuando se utilizan en casos de prueba de diferentes versiones de JUnit. Para determinar la versión del framework del caso de prueba, la inspección verifica la versión del framework de la superclase cuando está disponible. Cuando una superclase no está disponible, utiliza el framework más común en el caso de prueba.
-<p>Ejemplo (anotaciones JUnit 4 en un caso de prueba JUnit 3):</p>
+Reporta métodos anotados con JUnit cuando se usan en un caso de prueba desde una versión de JUnit distinta. Determina la versión del framework para un caso de prueba
+la inspección revisa la versión del framework de la super clase cuando está disponible. Cuando una super clase no está disponible usará el
+framework más utilizado en el caso de prueba.
+<p>Ejemplo (anotación JUnit 4 en caso de prueba JUnit 3):</p>
 <pre><code lang="java">
   public class MyTest extends TestCase {
       @Test
       public void foo() { }
+
       @Test
       @Ignore
       public void testBar() { }
@@ -15,16 +18,20 @@ Reporta métodos con anotaciones JUnit cuando se utilizan en casos de prueba de 
 <pre><code lang="java">
   public class MyTest extends TestCase {
       public void testFoo() {}
+
       public void _testBar() {}
   }
 </code></pre>
-<p>Ejemplo (anotaciones JUnit 5 en un caso de prueba JUnit 4):</p>
+
+<p>Ejemplo (anotación JUnit 5 en caso de prueba JUnit 4):</p>
 <pre><code lang="java">
   public class MyTest {
-      @BeforeAll // Método del ciclo de vida de JUnit 5
+      @BeforeAll // Método de ciclo de vida JUnit 5
       public void initialize() { }
+
       @org.junit.Test  // Anotación de prueba JUnit 4
       public void test() {}
+
       @org.junit.Test  // Anotación de prueba JUnit 4
       public void testWouldBeExecuted() {}
   }
@@ -32,13 +39,16 @@ Reporta métodos con anotaciones JUnit cuando se utilizan en casos de prueba de 
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code lang="java">
   public class MyTest {
-      @BeforeClass // Método del ciclo de vida de JUnit 4
+      @BeforeClass // Método de ciclo de vida JUnit 4
       public void initialize() { }
+
       @org.junit.Test  // Anotación de prueba JUnit 4
       public void test() {}
+
       @org.junit.Test  // Anotación de prueba JUnit 4
       public void testWouldBeExecuted() {}
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

@@ -1,22 +1,25 @@
 <html>
 <body>
-Informa sobre las llamadas al método <code>toString()</code> que utilizan la implementación predeterminada de <code>java.lang.Object</code>.
-<p>Esta implementación predeterminada raramente es intencional y podría ser un uso incorrecto.</p>
+Reporta las llamadas a <code>toString()</code> que usan la implementación por defecto de <code>java.lang.Object</code>.
+<p>La implementación por defecto rara vez es intencional pero se puede utilizar por accidente.</p>
 <p>
-  Esta inspección ignora las llamadas a <code>toString()</code> en objetos cuyo tipo es <code>java.lang.Object</code>, una interfaz o una clase abstracta.
+  Las llamadas a <code>toString()</code> en objetos con tipo <code>java.lang.Object</code>, interface o clase abstracta son ignoradas por esta inspección.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Bar {
       void foo1(Bar bar) {
-          String s = bar.toString(); // advertencia
+          String s = bar.toString(); // warning
           /* ... */
       }
+
       void foo2(Object obj) {
-          String s = obj.toString(); // sin advertencia aquí
+          String s = obj.toString(); // no warning here
           /* ... */
       }
   }
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

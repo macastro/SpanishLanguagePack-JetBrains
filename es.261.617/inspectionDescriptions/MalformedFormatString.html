@@ -1,16 +1,18 @@
 <html>
 <body>
 Reporta cadenas de formato que no cumplen con la sintaxis estándar de Java.
-<p>Por defecto, la inspección trata una cadena como cadena de formato si es una constante de compilación utilizada como argumento para los métodos correspondientes en <code>java.util.Formatter</code>, <code>java.lang.String</code>, <code>java.io.PrintWriter</code> o
-<code>java.io.PrintStream</code>.
+<p>Por defecto, la inspección considera una constante de tiempo de compilación una cadena de formato si se usa como argumento para los métodos correspondientes en
+<code>java.util.Formatter</code>, <code>java.lang.String</code>, <code>java.io.PrintWriter</code> o <code>java.io.PrintStream</code>.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   String.format("x = %d, y = %d", 42);
 </code></pre>
-<p>Se pueden marcar otras clases y métodos como relacionados con el formato de cadenas utilizando la configuración de la inspección.</p>
-<p>Como alternativa, puede usar la anotación <code>org.intellij.lang.annotations.PrintFormat</code> 
-para marcar los parámetros de método de cadena de formato. En este caso, el parámetro de formato debe seguir inmediatamente después de la cadena de formato y debe ser el último parámetro del método. Ejemplo:</p>
+<!-- tooltip end -->
+<p>Utilice los ajustes de inspección para marcar clases y métodos adicionales como relacionados con el formato de la cadena.</p>
+<p>Como alternativa, se puede utilizar la anotación <code>org.intellij.lang.annotations.PrintFormat</code>
+  para marcar el parámetro del método de la cadena de formato. En este caso,
+  el parámetro de argumentos de formato debe seguir inmediatamente a la cadena de formato y ser el último parámetro del método. Ejemplo:</p>
 <pre><code>
   void myFormatMethod(int mode, @PrintFormat String formatString, Object... args) {...}
 </code></pre>

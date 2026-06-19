@@ -1,10 +1,11 @@
 <html>
 <body>
   Reporta los métodos <code>__toString</code> que no devuelven <code>string</code>.
-  <p>Antes de PHP 7.4, esto provocaba un error fatal de nivel <code>E_RECOVERABLE_ERROR</code>. En PHP 7.4, se lanza un error fatal irrecuperable <code>ERROR</code>. A partir de PHP 8.0, el valor devuelto sigue la semántica estándar de tipos de PHP, realizando una conversión a cadena cuando es posible y el modo estricto de tipos está desactivado.
+  <!-- tooltip end -->
+  <p>Antes de PHP 7.4, esto resultaría en un error <code>E_RECOVERABLE_ERROR</code>. En PHP 7.4, se lanza un <code>ERROR</code> no recuperable. En PHP 8.0, el valor del retorno sigue las semánticas del tipo PHP estándar y se convertirá en un string si es posible y si el tipado estricto está deshabilitado.
   </p>
   <p>
-    Consulte <a href="https://www.php.net/manual/en/language.oop5.magic.php#language.oop5.magic.tostring">__toString (php.net)</a> para más detalles.
+    Ver <a href="https://www.php.net/manual/en/language.oop5.magic.php#language.oop5.magic.tostring">__toString (php.net)</a> para detalles.
   </p>
 </body>
 </html>

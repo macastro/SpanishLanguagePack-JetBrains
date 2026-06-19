@@ -1,30 +1,36 @@
 <html>
 <body>
-Reporta expresiones y condiciones que siempre producen el mismo resultado, como <code>true</code>, <code>false</code>, <code>null</code> <code>o cero</code>.
-Tales expresiones pueden ser reemplazadas por el valor constante correspondiente, o pueden indicar la presencia de un bug en el código.
-<p>Ejemplo:</p>
-<pre><code>  // Siempre true
-  // Razón: se usa ||, no &&
+Informa de expresiones y condiciones que siempre producen el mismo resultado, como true, false, null o cero.
+Dichas expresiones podrían reemplazarse por el valor constante correspondiente. Sin embargo, muy a menudo indican un error
+en el código.
+<p>Ejemplos:</p>
+<pre><code>  // siempre true
+  // causa raíz: se utiliza || en lugar de &&
   if (x &gt; 0 || x &lt; 10) {}
+
   System.out.println(str.trim());
-  // Siempre false
-  // Razón: la variable se desreferencia antes de la verificación de null
+  // siempre false
+  // causa raíz: se desreferenció la variable antes de la comprobación de nulidad
   if (str == null) {}
 </code></pre>
 <p>
-  El comportamiento de la inspección puede ser controlado por muchas anotaciones, como las anotaciones <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">de nullabilidad</a>, la anotación <code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code>, la anotación <code>@Range</code>, etc.
+  El comportamiento de la inspección puede controlarse mediante varias anotaciones, como las anotaciones de 
+  <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">nulabilidad</a>,
+  la anotación <code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code>, 
+  la anotación <code>@Range</code>, etc.
 </p>
+<!-- tooltip end -->
 <p>Configurar la inspección:</p>
 <ul>
-  <li>Usa la opción <b>No reportar aserciones que están estáticamente probadas como siempre true</b> para evitar reportar aserciones que están estáticamente probadas como siempre true. Esto también incluye condiciones como <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code>.</li>
-  <li>Usa la opción <b>Ignorar declaraciones assert</b> para controlar cómo la inspección maneja las declaraciones <code>assert</code>.
-    Por defecto, las aserciones se asumen como ejecutadas (modo <code>-ea</code>).
-    Cuando esta opción está habilitada, las aserciones serán ignoradas (modo <code>-da</code>).</li>
-  <li>Usa la opción <b>Advertir cuando las constantes se almacenan en variables</b> para mostrar advertencias cuando se usan variables cuyo valor se conoce que es constante.</li>
+  <li>Usa la opción <b>No informes de aserciones con una condición que se ha demostrado estáticamente que siempre es verdadera</b> para evitar informar de aserciones que se ha demostrado estáticamente que siempre son verdaderas. Esto también incluye condiciones como <code>if (alwaysFalseCondition) throw new IllegalArgumentException();</code>.</li>
+  <li>Usa la opción <b>Ignorar declaraciones assert</b> para controlar cómo trata la inspección las declaraciones <code>assert</code>. Por defecto, la opción
+    está deshabilitada, lo que significa que se asume que las aserciones se ejecutan (modo -ea). Si la opción está habilitada, las aserciones se ignorarán por completo
+    (modo -da).</li>
+  <li>Usa la opción <b>Advertencia cuando una constante se almacena en una variable</b> para mostrar advertencias cuando se usa una variable cuyo valor se sabe que es una constante.</li>
 </ul>
 <p>
-  Antes de IntelliJ IDEA 2022.3, esta inspección era parte de la inspección <i>Condiciones constantes y excepciones</i>.
-  Esta inspección se ha dividido en dos inspecciones: <i>Valores constantes</i> y <i>Problemas de nullabilidad y flujo de datos</i>.
+  Antes de IntelliJ IDEA 2022.3, esta inspección formaba parte de la inspección "Condiciones constantes y excepciones". Ahora, se divide en dos inspecciones:
+  "Valores constantes" y "Problemas de flujo de datos y nulidad".
 </p>
 </body>
 </html>

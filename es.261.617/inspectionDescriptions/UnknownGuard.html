@@ -1,15 +1,17 @@
 <html>
 <body>
-Reporta anotaciones <code>@GuardedBy</code> que especifican campos protegidos desconocidos.
+Informa sobre las anotaciones <code>@GuardedBy</code> en las que se desconoce el campo de protección especificado.
 <p>Ejemplo:</p>
 <pre><code>
     private Object state;
-    @GuardedBy("lock") //referencia protegida desconocida
+
+    @GuardedBy("lock") //referencia de protección desconocida
     public void bar() {
         state = new Object();
     }
 </code></pre>
-<p>Las anotaciones <code>@GuardedBy</code> soportadas son:</p>
+<!-- fin información sobre herramientas -->
+<p>Las anotaciones <code>@GuardedBy</code> compatibles son:</p>
 <ul>
   <li><code>net.jcip.annotations.GuardedBy</code></li>
   <li><code>javax.annotation.concurrent.GuardedBy</code></li>

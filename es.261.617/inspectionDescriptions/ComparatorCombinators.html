@@ -1,10 +1,12 @@
 <html>
 <body>
-Informa sobre instancias de <code>Comparator</code> que pueden ser expresadas como expresiones lambda utilizando la llamada <code>Comparator.comparing()</code>.
-También informa sobre comparaciones encadenadas que pueden ser reemplazadas por expresiones <code>Comparator.thenComparing()</code>.
+Informa sobre instancias de <code>Comparator</code> definidas como expresiones lambda que podrían expresarse usando llamadas a
+ <code>Comparator.comparing()</code>.
+También se informa sobre comparaciones encadenadas que pueden reemplazarse por la expresión <code>Comparator.thenComparing()</code>.
 <p>Ejemplo:</p>
 <pre><code>
   myList.sort((person1, person2) -> person1.getName().compareTo(person2.getName()));
+
   myList2.sort((person1, person2) -> {
       int res = person1.first().compareTo(person2.first());
       if(res == 0) res = person1.second().compareTo(person2.second());
@@ -12,12 +14,14 @@ También informa sobre comparaciones encadenadas que pueden ser reemplazadas por
       return res;
   });
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar las correcciones rápidas:</p>
 <pre><code>
   myList.sort(Comparator.comparing(Person::getName));
+
   myList2.sort(Comparator.comparing(Person::first)
                          .thenComparing(Person::second)
                          .thenComparingInt(Person::third));
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

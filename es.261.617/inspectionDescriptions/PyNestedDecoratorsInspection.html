@@ -1,20 +1,24 @@
 <html>
 <body>
-<p>Informa sobre problemas con decoradores anidados. Esta inspección resalta los casos donde <code>classmethod</code> o <code>staticmethod</code> se aplican después de otro decorador.</p>
+<p>Informa de problemas con la anidación de decoradores. Esta inspección resalta los casos en que se aplica <code>classmethod</code> o <code>staticmethod</code>
+  antes de otro decorador.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 def innocent(f):
     return f
+
+
 class A:
-    @innocent  # El decorador no recibirá el callable esperado
+    @innocent  # El decorador no va a recibir una función
     @classmethod
     def f2(cls):
         pass
-    @innocent  # El decorador no recibirá el callable esperado
+
+    @innocent  # El decorador no va a recibir una función
     @staticmethod
     def f1():
         pass
 </code></pre>
-<p>La corrección rápida propuesta por el IDE es eliminar este decorador.</p>
+<p>Como solución rápida, el IDE ofrece eliminar el decorador.</p>
 </body>
 </html>

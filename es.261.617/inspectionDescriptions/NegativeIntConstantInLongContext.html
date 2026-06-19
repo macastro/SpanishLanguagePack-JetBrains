@@ -1,13 +1,15 @@
 <html>
 <body>
-Informa sobre constantes hexadecimales int negativas en un contexto long. Estas constantes se amplían implícitamente a long, lo que significa que sus bits superiores serán 1 en lugar de 0 (por ejemplo, 0xFFFF_FFFF se convertirá en 0xFFFF_FFFF_FFFF_FFFFL).
-Es poco probable que esto sea intencional, e incluso si lo fuera, usar una constante long explícita sería menos confuso.
+Informa constantes hexadecimales int negativas en contexto long. Dichas constantes se amplían implícitamente a
+long, lo que significa que sus bits superiores se volverán 1 en lugar de 0 (por ejemplo, 0xFFFF_FFFF se convertirá en 0xFFFF_FFFF_FFFF_FFFF).
+Es poco probable que esto sea intencionado, e incluso si lo es, usar una constante long explícita sería menos confuso.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   // Advertencia: esta es una constante int -1 que se amplía a long
-  // convirtiéndose en 0xFFFF_FFFF_FFFF_FFFFL.
+  // convirtiéndose en 0xFFFF_FFFF_FFFF_FFFF.
   long mask = 0xFFFF_FFFF;
 </code></pre>
-<p><small>Novedades en 2022.3</small></p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2022.3</small></p>
 </body>
 </html>

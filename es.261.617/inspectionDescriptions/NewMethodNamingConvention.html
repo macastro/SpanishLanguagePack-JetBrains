@@ -1,11 +1,12 @@
 <html>
 <body>
-Reporta métodos cuyos nombres son demasiado cortos, demasiado largos o no siguen el patrón de expresión regular especificado.
-<p>Esta inspección ignora los métodos de instancia que sobrescriben métodos de biblioteca y constructores.</p>
-<p><b>Ejemplo</b>: Si la inspección está habilitada para métodos static y la longitud mínima especificada para nombres de métodos es 4 (valor predeterminado), el siguiente método static generará una advertencia porque su nombre tiene una longitud de 3, que es menor que 4: <code>public static int max(int a, int b)</code>.</p>
-<p>La corrección rápida para renombrar estos métodos solo está disponible en el editor.</p>
-<p>Configuración de la inspección:</p>
-<p>Utilice la lista en la sección de <b>Opciones</b> para especificar qué métodos deben ser inspeccionados. Desmarque las casillas de los tipos de métodos que desea excluir de la inspección. Especifique <b>0</b> en los campos de longitud para omitir la inspección correspondiente.</p>
-<p>Las expresiones regulares deben especificarse en el formato estándar de <code>java.util.regex</code>.</p>
+Informa de métodos cuyos nombres son demasiado cortos, demasiado largos o no siguen el patrón de la expresión regular especificada.
+<p>Los métodos de instancias que sobrescriben métodos y constructores de biblioteca se ignoran por esta inspección.</p>
+<p><b>Ejemplo:</b> si la inspección está habilitada para métodos estáticos y la longitud mínima del nombre del método es 4 (el valor predeterminado), el siguiente método estático produce una advertencia, porque su nombre mide 3, lo cual es menor que 4: <code>public static int max(int a, int b)</code>.
+<p>Existe una corrección rápida para renombrar dichos métodos, y solo está disponible en el editor.</p>
+<!-- tooltip end -->
+<p>Configura la inspección:</p>
+<p>Utiliza la lista en la sección <b>Opciones</b> para especificar qué métodos se deben verificar. Anula la selección de las casillas de verificación para los tipos de método que se van a omitir de la verificación. Especifica <b>0</b> en los campos de longitud para omitir las verificaciones correspondientes.</p>
+<p>Las expresiones regulares se deben especificar con el formato estándar <code>java.util.regex</code>.</p>
 </body>
 </html>

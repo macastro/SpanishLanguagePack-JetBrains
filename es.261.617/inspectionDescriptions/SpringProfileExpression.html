@@ -1,23 +1,27 @@
 <html>
 <body>
-<p>Reporta expresiones <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Profile.html">@Profile</a> incorrectas:</p>
+<p>Reporta expresiones incorrectas de <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Profile.html">@Profile</a>:</p>
+
 <ul>
-  <li>Los perfiles de Spring no pueden estar vacíos</li>
-  <li>Los operadores '&' y '|' no pueden mezclarse sin paréntesis en las expresiones de perfil de Spring</li>
+  <li>Los profiles de Spring no deben estar vacíos</li>
+  <li>Los operadores '&' y '|' no se deben mezclar sin paréntesis en las expresiones de profiles de Spring</li>
 </ul>
+
 <p><b>Ejemplos:</b></p>
 <pre><code lang="java">
-  // Configuración correcta
+  // Configurado correctamente
   @Configuration
   @Profile("a & (b | c)")
   public class MyConfiguration {...}
-  // Vacío 
+
+  // Vacío
   @Configuration
-  @Profile() // Reporta "La expresión del perfil debe contener texto"
+  @Profile() // Reporta "Una expresión de Profile debe contener texto"
   public class MyConfiguration {...}
-  // Operadores mixtos sin paréntesis 
+
+  // Operadores mezclados sin paréntesis
   @Configuration
-  @Profile("a & b | c") // Reporta "Expresión de perfil con formato incorrecto"
+  @Profile("a & b | c") // Reporta "Expresión de Profile mal formada"
   public class MyConfiguration {...}
 </code></pre>
 </body>

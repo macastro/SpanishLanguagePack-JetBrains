@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre las llamadas a <code>java.util.Random.nextDouble()</code> que se utilizan para crear números enteros positivos multiplicando la llamada por un coeficiente y convirtiéndola a entero.
+Reporta las llamadas a <code>java.util.Random.nextDouble()</code> que se utilizan para crear números enteros positivos mediante la multiplicación de la llamada por un factor y la conversión a un número entero.
 <p>
-  Para generar números enteros positivos aleatorios dentro de un rango, <code>java.util.Random.nextInt(int)</code> es más simple y eficiente.
+  Usar <code>java.util.Random.nextInt(int)</code> para generar números enteros positivos aleatorios dentro de un rango es más simple y eficiente.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -11,11 +11,13 @@ Informa sobre las llamadas a <code>java.util.Random.nextDouble()</code> que se u
   }
   </code>
 </pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   int getRandomInt() {
     return (new Random()).nextInt(SIZE);
   }
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

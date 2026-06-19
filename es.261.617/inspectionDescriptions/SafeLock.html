@@ -1,9 +1,9 @@
 <html>
 <body>
-Se informa de un recurso <code>java.util.concurrent.locks.Lock</code> que no se adquiere dentro de un bloque <code>try</code> o no se desbloquea en el bloque <code>finally</code> correspondiente. Este tipo de recursos pueden tener fugas involuntarias si se lanza una excepción antes de que se liberen.
+Se informan los recursos de <code>java.util.concurrent.locks.Lock</code> que no se adquieren antes de un bloque <code>try</code> o que no se desbloquean en el bloque <code>finally</code> correspondiente. Dichos recursos pueden perderse sin darse cuenta si se lanza una excepción antes de que se cierre el recurso.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  lock.lock(); // Se informa debido a la ausencia del bloque 'finally'
+  lock.lock(); // se informará ya que falta el bloque 'finally'
   try {
     doSmthWithLock();
   } catch (IOException e) {
@@ -11,5 +11,6 @@ Se informa de un recurso <code>java.util.concurrent.locks.Lock</code> que no se 
   }
   lock.unlock();
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

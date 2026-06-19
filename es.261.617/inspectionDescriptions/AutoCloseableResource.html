@@ -1,9 +1,10 @@
 <html>
 <body>
-Informa sobre instancias de <code>AutoCloseable</code> que no se utilizan en una declaración try-with-resources, también conocida como <i>gestión automática de recursos</i>.
+Reporta instancias de <code>AutoCloseable</code> que no son utilizadas en una declaración de try-with-resources, también conocidas como
+<i>Administración automática de recursos</i>.
 <p>
-  Esto significa que también informa sobre el estilo "abrir recurso antes/dentro de <code>try</code>, cerrar en <code>finally</code>" utilizado antes de que try-with-resources estuviera disponible.
-  Al desarrollar en Java 7 y versiones posteriores, esta inspección pretende reemplazar todas las comprobaciones de recursos <i>abiertos pero no cerrados de manera segura</i>.
+  Esto significa que el estilo "abrir recurso antes/en <code>try</code>, cerrar en <code>finally</code>" que se había utilizado antes de que try-with-resources estuviera disponible, también se reporta.
+  Esta inspección está destinada a reemplazar a todas las inspecciones de <i>abierto pero no cerrado de forma segura</i> al desarrollar en Java 7 y superior.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -12,34 +13,38 @@ Informa sobre instancias de <code>AutoCloseable</code> que no se utilizan en una
     System.out.println(profile.read());
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Configure la inspección con las siguientes opciones:
+  Utiliza las siguientes opciones para configurar la inspección:
 </p>
 <ul>
   <li>
-    Lista de subclases de <code>AutoCloseable</code> que no necesitan ser cerradas y que esta inspección debería ignorar.
+    Lista las subclases de <code>AutoCloseable</code> que no necesitan ser cerradas y que deben ser ignoradas por esta inspección.
     <br/>
-    <b>Nota</b>: Incluso si se lista <code>java.util.stream.Stream</code> para ser ignorado, la inspección seguirá informando sobre los streams devueltos por los métodos <code>lines()</code>, <code>walk()</code>, <code>list()</code> y <code>find()</code> de <code>java.nio.file.Files</code>.
-    Estos streams contienen recursos de E/S asociados que necesitan ser cerrados.
+    <b>Nota</b>: la inspección seguirá reportando transmisiones devueltas por los métodos <code>java.nio.file.Files</code> <code>lines()</code>,
+    <code>walk()</code>, <code>list()</code> y <code>find()</code>,
+    incluso cuando <code>java.util.stream.Stream</code> está en la lista para ser ignorado.
+    Estas transmisiones contienen un recurso de E/S asociado que necesita ser cerrado.
   </li>
   <li>
-    Lista de métodos que devuelven <code>AutoCloseable</code> que deberían ser ignorados en las llamadas.
+    Enumera los métodos que devuelven <code>AutoCloseable</code> que deben ignorarse cuando se invocan.
   </li>
   <li>
-    Si se debe ignorar <code>AutoCloseable</code> cuando es el resultado de una llamada a método.
-    Cuando esta opción está habilitada, también se ignorarán los resultados de los métodos factory.
+    Determina si se debe ignorar un <code>AutoCloseable</code> si es el resultado de una llamada a un método.
+    Cuando esta opción está habilitada, los resultados de los métodos de fábrica también se ignorarán.
   </li>
   <li>
-    Si la inspección debe informar cuando una instancia de <code>AutoCloseable</code> se pasa como argumento a una llamada de método.
-    Si esta opción está habilitada, la inspección asumirá que el recurso se cierra en el método llamado.
-    Las llamadas a métodos en bloques <code>finally</code> y argumentos <code>AutoCloseable</code> que contengan 'close' en sus nombres no serán ignoradas.
+    Indica si la inspección debe reportar si una instancia de <code>AutoCloseable</code> se pasa como argumento de llamada al método.
+    Si esta opción está habilitada, la inspección asume que el recurso se cierra en el método llamado.
+    Las llamadas a métodos dentro de un bloque <code>finalmente</code> con "cerrar" en el nombre y un argumento <code>AutoCloseable</code> no se ignorarán.
   </li>
   <li>
-    Si se deben ignorar las referencias a métodos para constructores de clases de recursos.
+    Determina si se deben ignorar las referencias de método a los constructores de clases de recursos.
   </li>
   <li>
-    Si se deben ignorar los métodos que devuelven recursos y comienzan con 'get'.
-    Esto puede reducir los falsos positivos ya que la mayoría de los getters no transfieren la propiedad del recurso y sus puntos de llamada no son responsables de cerrar el recurso.
+    Indica si se deben ignorar los métodos que devuelven un recurso y cuyo nombre comienza con "get".
+    Esto puede reducir los falsos positivos porque la mayoría de los getters no transfieren la propiedad del recurso,
+    y sus sitios de llamada no son responsables de cerrar el recurso.
   </li>
 </ul>
 </body>

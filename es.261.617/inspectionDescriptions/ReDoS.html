@@ -1,10 +1,17 @@
+<!--
+  ~ Copyright 2000-2018 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
+  -->
+
 <html>
 <body>
-Informa sobre retrocesos exponenciales en expresiones regulares (que pueden causar coincidencias extremadamente lentas).
-El retroceso exponencial ocurre cuando una cadena puede coincidir de múltiples maneras, lo que resulta en un tiempo de ejecución exponencial.
-El retroceso exponencial también se conoce como denegación de servicio por expresiones regulares (ReDoS), retroceso catastrófico, cuantificadores explosivos y coincidencia exponencial.
-Esta inspección solo detecta formas limitadas de retroceso exponencial, por lo que la ausencia de advertencias no garantiza que el patrón esté libre de problemas de retroceso exponencial.
+Informa de retroceso exponencial en una expresión regular, lo que puede provocar una coincidencia extremadamente lenta.
+El retroceso exponencial puede ocurrir cuando una sola cadena puede coincidir de varias maneras, lo que lleva a un tiempo de ejecución exponencial.
+El retroceso exponencial también se conoce como Denegación de servicio de expresión regular (ReDoS), retroceso catastrófico, cuantificadores explosivos y coincidencia exponencial.
+Esta inspección sólo detecta una forma limitada de retroceso exponencial,
+por lo que la ausencia de una advertencia no garantiza que el patrón no contenga un problema de retroceso exponencial.
+
+<!-- tooltip end -->
 <p>
-  <small>Novedades de la versión 2017.1</small>
+  <small>Novedad en 2017.1</small>
 </body>
 </html>

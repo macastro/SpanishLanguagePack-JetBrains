@@ -1,22 +1,28 @@
 <html>
 <body>
-<p>Reporta propiedades de canal incorrectas en anotaciones de métodos de punto final:
+<p>Informa de atributos de canal incorrectos en anotaciones de método de punto final:
 <a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/Gateway.html">@Gateway</a>,
-<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/ServiceActivator.html">@ServiceActivator</a>,
-<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/Filter.html">@Filter</a> etc.</p>
+<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/ServiceActivator.html">@ServiceActivator,</a>
+<a href="https://docs.spring.io/spring-integration/api/org/springframework/integration/annotation/Filter.html">@Filter</a>, etc.</p>
+
+
 <p><b>Ejemplo:</b></p>
+
 <pre><code>
   @Component
   public class MyComponent {}
      @Gateway(requestChannel = "requestChannel", replyChannel = "replyChannel")
      public void gateway() {...}
+
      @Gateway(
-        requestChannel ="<strong>simpleBean</strong>",   // El Bean debe ser de uno de estos tipos: org.springframework.integration.MessageChannel,org.springframework.messaging.MessageChannel
-        replyChannel = "<strong>unknownChannel</strong>")   // Canal no encontrado
+        requestChannel ="<strong>simpleBean</strong>",   // Bean debe ser de uno de estos tipos: org.springframework.integration.MessageChannel,org.springframework.messaging.MessageChannel
+        replyChannel = "<strong>unknownChannel</strong>")   // No se puede encontrar el canal
      public void errors() {...}
+
      @Bean
      public MyBean simpleBean() {...}
   }
 </code></pre>
+
 </body>
 </html>

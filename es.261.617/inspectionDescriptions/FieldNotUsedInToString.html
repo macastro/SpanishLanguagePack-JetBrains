@@ -1,17 +1,18 @@
 <html>
 <body>
-Informa sobre campos no utilizados en el método <code>toString()</code> de la clase.
-<p>Ayuda a descubrir campos que se han añadido después de la última actualización del método <code>toString()</code>.
-  La corrección rápida regenerará el método <code>toString()</code>.</p>
+Informa sobre los campos que no se usan en el método <code>toString()</code> de una clase.
+<p>Ayuda a descubrir los campos añadidos después de que el método <code>toString()</code> se actualizó por última vez.
+  La corrección rápida regenera el método <code>toString()</code>.</p>
 <p>
-Los campos pueden ser excluidos de esta inspección en el diálogo <b>Generar | toString()</b>.
-Si la opción <em>habilitar getters en la generación de código</em> está activada, esta inspección también verificará si existen problemas con los métodos getter.
+En el cuadro de diálogo <b>"Generar | toString()"</b>, es posible excluir campos de esta comprobación.
+Esta inspección también buscará problemas con los métodos getter si la opción <em>Habilitar getters en la generación de código</em> está activada allí.
 <p>Ejemplo:</p>
 <pre><code>
   <b>public class</b> Relevant {
-    <b>private</b> String name; // No utilizado en toString()
+    <b>private</b> String name; // no usado en toString()
     <b>private int</b> index;
     <b>private int</b> length;
+
     @Override
     <b>public</b> String toString() {
         <b>return</b> "Relevant{" + "index=" + index +
@@ -25,6 +26,7 @@ Si la opción <em>habilitar getters en la generación de código</em> está acti
     <b>private</b> String name;
     <b>private int</b> index;
     <b>private int</b> length;
+
     @Override
     <b>public</b> String toString() {
         <b>return</b> "Relevant{" + "name='" + name + '\'' +

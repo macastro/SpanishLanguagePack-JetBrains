@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre campos logger que no están declarados como <code>static</code> y/o <code>final</code>.
-Asegurar que cada logger de clase sea una constante válida y esté vinculado a esa clase simplifica la tarea de proporcionar una implementación de registro uniforme para la aplicación.
-<p>Se proporciona una corrección rápida para cambiar los modificadores del logger a <code>static final</code>.</p>
+Informa de campos de registro que no se declaran <code>static</code> o <code>final</code>.
+Asegurarse de que cada registrador de clase es efectivamente constante y está vinculado a dicha clase simplifica la tarea de proporcionar una implementación de registro unificada para una aplicación.
+<p>Se proporciona una corrección rápida para cambiar los modificadores de registro a <code>static final</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   <b>public class</b> Significant {
@@ -15,11 +15,12 @@ Asegurar que cada logger de clase sea una constante válida y esté vinculado a 
     <b>private static final</b> Logger LOG = Logger.getLogger(Critical.class);
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Configuración de la inspección:
+  Configurar la inspección:
 </p>
 <ul>
-  <li>La tabla <b>Nombres de clase logger</b> permite especificar nombres de clases logger. La inspección informará sobre campos que no son <code>static</code> y <code>final</code> y cuyo tipo coincide con uno de los nombres de clase especificados.
+  <li>Usa la tabla <b>Nombre de clase de registro</b> para especificar los nombres de clase de registro. La inspección informará sobre los campos que no son <code>static</code> y <code>final</code> y que son de un tipo igual a uno de los nombres de clase especificados.
   </li>
 </ul>
 </body>

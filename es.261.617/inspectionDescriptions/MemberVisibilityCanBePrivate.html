@@ -1,13 +1,13 @@
 <html>
 <body>
-El informe puede establecerse como <code>private</code> para cumplir con el principio de encapsulamiento.
+Informa sobre las declaraciones que pueden definirse como <code>private</code> para seguir el principio de encapsulamiento.
 <p><b>Ejemplo:</b></p>
 <pre><code>
 class Service(val url: String) {
     fun connect(): URLConnection = URL(url).openConnection()
 }
 </code></pre>
-<p>Después de aplicar la corrección rápida (considerando que <code>url</code> no se utiliza fuera de la clase <code>Service</code>):</p>
+<p>Después de aplicar la corrección rápida (considerando que no hay usos de <code>url</code> fuera de la clase <code>Service</code>):</p>
 <pre><code>
 class Service(private val url: String) {
     fun connect(): URLConnection = URL(url).openConnection()

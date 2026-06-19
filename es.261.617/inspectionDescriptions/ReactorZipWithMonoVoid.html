@@ -1,20 +1,24 @@
 <html>
 <body>
-<p>Informa sobre operaciones zip con argumentos que tienen un valor de retorno <code>Mono&lt;Void&gt;</code> dentro de una cadena Reactor.</p>
+<p>Informa sobre operaciones zip que contienen argumentos con un valor de retorno <code>Mono&lt;Void&gt;</code> dentro de una cadena de Reactor.</p>
+
 <p>
-  El <code>Zip</code> completa inmediatamente una operación vacía después de que el <code>Mono&lt;Void&gt;</code> entrante se complete.
-  La corrección rápida sugiere reemplazar <code>zip()</code>, <code>zipWhen()</code> y <code>zipWith()</code> por <code>when</code>.
+  <code>Zip</code> se completa como vacío tan pronto como se completa <code>Mono&lt;Void&gt;</code> entrante.
+  La solución rápida sugiere reemplazar <code>zip()</code>, <code>zipWhen()</code> y <code>zipWith()</code> con <code>when</code>.
 </p>
+<!-- tooltip end -->
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">Mono.zip(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
-                .map(v -> "New value")
+                .map(v -> "Nuevo valor")
                 .doFinally(System.out::println);
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+
+<p>Después de aplicar la solución rápida:</p>
 <pre><code lang="java">Mono.when(Mono.just(1), Mono.fromRunnable(() -> System.out.println("value")))
-                .then(Mono.fromCallable(() -> "New value"))
+                .then(Mono.fromCallable(() -> "Nuevo valor"))
                 .doFinally(System.out::println);
 </code></pre>
-<p><small>Novedades de 2023.1</small></p>
+
+<p><small>Novedad en 2023.1</small></p>
 </body>
 </html>

@@ -1,11 +1,12 @@
 <html>
 <body>
-Informa sobre expresiones booleanas que pueden reducirse a constantes.
-<p>Esta corrección rápida simplifica la condición.</p>
+Informa las partes de la expresión booleana que se pueden reducir a constantes.
+<p>La corrección rápida simplifica la condición.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun use(arg: Boolean) {
       if (false == arg) {
+
       }
   }
 </code></pre>
@@ -13,8 +14,10 @@ Informa sobre expresiones booleanas que pueden reducirse a constantes.
 <pre><code>
   fun use(arg: Boolean) {
       if (!arg) {
+
       }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

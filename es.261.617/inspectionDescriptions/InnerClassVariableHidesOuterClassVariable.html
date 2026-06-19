@@ -1,19 +1,23 @@
 <html>
 <body>
-Informa sobre campos de clases internas que tienen el mismo nombre que los campos de la clase contenedora.
-Este tipo de nomenclatura puede llevar a un uso incorrecto del campo de la clase interna cuando se pretende usar el campo de la clase contenedora con el mismo nombre.
-<p>Se sugiere renombrar el campo de la clase interna mediante una corrección rápida.</p>
+Reporta los campos de clase interna con el mismo nombre que un campo de la clase circundante.
+Como resultado de esta denominación, puede usar accidentalmente el campo de la clase interna cuando se pretende utilizar el campo con el mismo nombre de una clase circundante.
+
+<p>Se sugiere una solución rápida para renombrar el campo de clase interna.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Outer {
     private String name;
+
     class Inner {
       private String name;
     }
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Esta opción permite elegir si la inspección debe informar sobre todos los conflictos de nombres o solo sobre los conflictos con campos visibles desde la clase interna.
+  Utilice la opción para elegir si esta inspección debe reportar todos los conflictos de nombres o solo los conflictos con campos que son visibles desde la clase interna.
 </p>
+
 </body>
 </html>

@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre cualquier campo no final en clases que contengan la anotación <code>@Immutable</code>.
-Esto viola la convención de la anotación <code>@Immutable</code>.
+Inspecciona cualquier campo no final en una clase con la anotación <code>@Immutable</code>.
+Esto viola el contrato de la anotación <code>@Immutable</code>.
 <p>Ejemplo:</p>
 <pre><code>
   import javax.annotation.concurrent.Immutable;
@@ -10,7 +10,8 @@ Esto viola la convención de la anotación <code>@Immutable</code>.
     String bar = "foo";
   }
 </code></pre>
-<p>Las anotaciones <code>@GuardedBy</code> soportadas son:</p>
+<!-- tooltip end -->
+<p>Las anotaciones <code>@GuardedBy</code> compatibles son:</p>
 <ul>
   <li><code>net.jcip.annotations.GuardedBy</code></li>
   <li><code>javax.annotation.concurrent.GuardedBy</code></li>

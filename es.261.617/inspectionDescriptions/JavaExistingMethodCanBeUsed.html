@@ -1,30 +1,33 @@
 <html>
 <body>
-Informa sobre segmentos de código Java que son similares a métodos static existentes y sugiere reutilizar estos métodos static. La reutilización de métodos existentes puede hacer que el código sea más corto y más legible.
+Informa sobre fragmentos de código Java que son idénticos a los métodos static existentes, sugiriendo reutilizar dichos métodos static. La reutilización de los métodos existentes acorta el código y lo hace más legible.
+<!-- tooltip end -->
 <p>Ejemplo:</p>
 <pre><code lang="java">
   static List&lt;String&gt; readFileAndTrim(Path path) throws IOException {
     List&lt;String&gt; lines = Files.readAllLines(path);
     return lines.stream().map(String::trim).toList();
   }
+  
   static List&lt;String&gt; readFileAndTrim(String path) throws IOException {
     Path p = Path.of(path);
     List&lt;String&gt; lines = Files.readAllLines(p);
     return lines.stream().map(String::trim).toList();
   }
 </code></pre>
-Aquí, el segundo método es muy similar al primero, y el primer método puede ser reutilizado en su implementación.
-Después de aplicar la corrección rápida, el resultado se verá así:
+Aquí, el segundo método es bastante parecido al primero, y el primero puede reutilizarse en su implementación.
+Después de aplicar la corrección rápida, el resultado será el siguiente:
 <pre><code lang="java">
   static List&lt;String&gt; readFileAndTrim(Path path) throws IOException {
     List&lt;String&gt; lines = Files.readAllLines(path);
     return lines.stream().map(String::trim).toList();
   }
+
   static List&lt;String&gt; readFileAndTrim(String path) throws IOException {
     Path p = Path.of(path);
     return readFileAndTrim(p);
   }
 </code></pre>
-<p><small>Novedades de 2024.1</small></p>
+<p><small>Nuevo en 2024.1</small></p>
 </body>
 </html>

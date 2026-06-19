@@ -1,17 +1,17 @@
 <html>
 <body>
-<p>Informa sobre declaraciones inalcanzables. Esto puede ocurrir cuando una declaración está después de un bucle infinito o después de las declaraciones <code>return</code>, <code>break</code> o <code>continue</code>.</p>
+<p>Informen sentencias que no son alcanzables. Esto puede ocurrir si la sentencia está después de un bucle infinito, sentencia <code>return</code>, <code>break</code> o <code>continue</code>.</p>
 <p><b>Ejemplo:</b>
 <pre><code>
   <b>void</b> foo (int n) {
       if (n < 1) {
           return
-          <b>print('This statement is unreachable')</b>
+          <b>print('Esta sentencia no es alcanzable')</b>
       }
-      while (true){
-          print ('Hello, world!')
+      mientras (verdadero){
+          print ('¡Hola, mundo!')
       }
-      <b>print('This statement is unreachable too')</b>
+      <b>print('Esta sentencia tampoco es alcanzable')</b>
   }
 </code></pre>
 </body>

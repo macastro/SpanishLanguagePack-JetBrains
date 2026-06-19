@@ -1,34 +1,35 @@
 <html>
 <body>
-Informa sobre líneas vacías en comentarios Javadoc.
+Informa sobre líneas en blanco en comentarios de Javadoc.
 <p>
-  Las líneas vacías en Javadoc pueden indicar la intención de dividir el texto en párrafos diferentes. Sin embargo, tanto la herramienta Javadoc como IntelliJ IDEA las ignoran al renderizar los comentarios de documentación.
+  Las líneas en blanco en Javadoc pueden indicar la intención de dividir el texto en distintos párrafos. Sin embargo, la herramienta Javadoc y IntelliJ IDEA las ignorarán al representar los comentarios de documentación.
 </p>
 <p>
-  La corrección rápida sugiere reemplazar las líneas vacías con etiquetas de párrafo (&lt;p&gt;).
+  La corrección rápida sugiere reemplazar la línea en blanco con una etiqueta de párrafo (&lt;p&gt;).
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Main {
     /**
-     * No funciona.
+     * No hace nada.
      *
-     * No funciona en absoluto
+     * No hace absolutamente nada
      */
     void foo() {}
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   class Main {
     /**
-     * No funciona.
+     * No hace nada.
      * &lt;p&gt;
-     * No funciona en absoluto
+     * No hace absolutamente nada
      */
     void foo() {}
   }
 </code></pre>
-<p><small>Novedades de 2022.1</small></p>
+<!-- tooltip end -->
+<p><small>Novedad en 2022.1</small></p>
 </body>
 </html>

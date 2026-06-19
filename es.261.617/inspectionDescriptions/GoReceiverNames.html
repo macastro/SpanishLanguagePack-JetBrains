@@ -1,8 +1,8 @@
 <html>
 <body>
-Reporta nombres de receptores que son diferentes a <code>me</code>, <code>this</code>, <code>self</code> u otros nombres de receptores similares para este tipo.
+Reportan nombres de receptores, como <code>me</code>, <code>this</code>, <code>self</code>, o nombres que difieren para otros nombres de receptores de este tipo.
 <p>Ejemplo:</p>
 <pre><code>func (self *MeterSnapshot) Rate5() float64 { return math.Float64frombits(self.rate5) }</code></pre>
-<p>Según <a href="https://github.com/golang/go/wiki/CodeReviewComments#receiver-names">Receiver Names en github.com/golang</a>, no deberías usar nombres genéricos como "me", "this" o "self". Estos identificadores son típicos en lenguajes orientados a objetos y podrían implicar un significado especial para el método.</p>
+<p>De acuerdo con <a href="https://github.com/golang/go/wiki/CodeReviewComments#receiver-names">Nombres de receptor en github.com/golang</a>, no debes usar nombres genéricos como "me", "this", o "self". Estos identificadores son típicos de lenguajes orientados a objetos y le pueden dar a los métodos un significado especial.</p>
 </body>
 </html>

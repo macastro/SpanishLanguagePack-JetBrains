@@ -1,17 +1,18 @@
 <html>
 <body>
-Reporta llamadas a <code>IO.println()</code> e <code>IO.print()</code>, y sugiere reemplazarlas con métodos de <code>System.out</code>.
+Informa de las llamadas a <code>IO.println()</code> y <code>IO.print()</code> y sugiere reemplazarlas por métodos de <code>System.out</code>.
 <p>
-  Esta inspección ayuda a migrar código de la clase <code>java.lang.IO</code> de vuelta a las llamadas tradicionales de <code>System.out</code>.</p>
+  Esta inspección ayuda a migrar el código desde la clase <code>java.lang.IO</code> de vuelta a las llamadas tradicionales a <code>System.out</code>.</p>
 <p>
   <b>Ejemplo:</b>
 </p>
 <pre><code>IO.println("Hello, World!");</code></pre>
-<p>Después de aplicar la solución rápida:</p>
+<p>Después de aplicar la corrección rápida:</p>
 <pre><code>System.out.println("Hello, World!");</code></pre>
+<!-- tooltip end -->
 <p>
-  Esta inspección ayuda a degradar para compatibilidad con versiones anteriores de Java.
+  Esta inspección resulta útil para realizar una degradación de versión a fin de mantener la retrocompatibilidad con versiones anteriores de Java.
 </p>
-<p><small>Nuevo en 2025.2</small></p>
+<p><small>Novedad de 2025.2</small></p>
 </body>
 </html>

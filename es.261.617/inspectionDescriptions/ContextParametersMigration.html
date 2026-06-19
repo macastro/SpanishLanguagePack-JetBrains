@@ -1,9 +1,9 @@
 <html>
 <body>
-Reporta receptores de contexto que deberían migrarse a parámetros de contexto.
+Informa sobre los receptores de contexto que deben migrarse a parámetros de contexto.
 <p>
-    A partir de Kotlin 2.2.0, los receptores de contexto han sido reemplazados por parámetros de contexto.
-    Esta inspección ayuda a migrar proyectos que tienen receptores de contexto habilitados pero aún no han migrado a la sintaxis de parámetros de contexto.
+    A partir de Kotlin 2.2.0, los receptores de contexto han sido sustituidos por los parámetros de contexto.
+    Esta inspección ayuda a migrar de receptores de contexto a parámetros de contexto en proyectos que tienen habilitados los receptores de contexto pero que aún no han migrado a la sintaxis de parámetros de contexto.
 </p>
 <p>
     Ejemplo:
@@ -15,9 +15,11 @@ private fun foo() {
     bar()
     baz()
 }
+
 class C {
     fun bar() {}
 }
+
 fun C.baz() {}
 </code></pre>
 Después de la migración:
@@ -28,10 +30,14 @@ private fun foo() {
     c.bar()
     c.baz()
 }
+
 class C {
     fun bar() {}
 }
+
 fun C.baz() {}
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

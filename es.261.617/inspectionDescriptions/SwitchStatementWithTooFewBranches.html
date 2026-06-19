@@ -1,33 +1,33 @@
 <html>
 <body>
-Informa sobre declaraciones y expresiones <code>switch</code> con muy pocas etiquetas <code>case</code> y sugiere reescribirlas como declaraciones <code>if</code> y <code>else if</code>.
+Informa sobre sentencias y expresiones <code>switch</code> con muy pocas etiquetas <code>case</code>, y sugiere reescribirlas como sentencias <code>if</code> y <code>else if</code>.
 <p>Ejemplo (mínimo de ramas == 3):</p>
 <pre><code>
-  switch (expression) {
+  switch (expresión) {
     case "foo" -&gt; foo();
     case "bar" -&gt; bar();
   }
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
 <pre><code>
-  if ("foo".equals(expression)) {
+  if ("foo".equals(expresión)) {
     foo();
-  } else if ("bar".equals(expression)) {
+  } else if ("bar".equals(expresión)) {
     bar();
   }
 </code></pre>
-<p>No se informan las expresiones switch exhaustivas (Java 14+) ni las declaraciones switch de patrones sin rama 'default' (versión preliminar de Java 17).
-  Esto se debe a que cuando se convierte un <code>switch</code> a <code>if</code>, se pierde la verificación de exhaustividad en tiempo de compilación (lo cual puede ser un resultado no deseado).
+<p>No se informa sobre expresiones switch exhaustivas (Java 14+) o sentencias switch de patrones (vista previa de Java 17) sin la rama 'default'. Esto se debe a que la comprobación de exhaustividad en tiempo de compilación se perderá cuando el <code>switch</code> se convierta en <code>if</code>, lo que podría no ser deseable.
 </p>
-<p>Configuración de la inspección:</p>
-<p>Utilice el campo <b>número mínimo de ramas</b> para especificar la cantidad mínima esperada de etiquetas <code>case</code>.</p>
-<p>Utilice la opción <b>no informar sobre declaraciones switch de patrones</b> para evitar informes sobre declaraciones y expresiones switch que contengan ramas de patrones. Por ejemplo:</p>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+<p>Utiliza el campo <b>Número mínimo de ramas</b> para especificar el número mínimo esperado de etiquetas <code>case</code>.</p>
+<p>Utiliza la opción <b>No informar sobre sentencias de switch de patrones</b> para evitar informar sobre sentencias y expresiones switch que tengan ramas de patrones. Por ejemplo:</p>
 <pre><code>
-  String result = switch(obj) {
+  String resultado = switch(obj) {
     case String str -> str.trim();
-    default -> "none";
+    default -> "ninguno";
   };
 </code></pre>
-<p>El switch debe mantenerse incluso con una sola rama de patrón, en lugar de usar una declaración <code>instanceof</code>.</p>
+<p>Puede ser preferible mantener el switch incluso con una sola rama de patrón, en lugar de usar la sentencia <code>instanceof</code>.</p>
 </body>
 </html>

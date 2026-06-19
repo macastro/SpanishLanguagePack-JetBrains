@@ -1,8 +1,8 @@
 <html>
 <body>
-El bucle puede reemplazarse por una llamada a <code>Arrays.setAll()</code> o <code>Arrays.fill()</code>.
-<p>Si el nivel de lenguaje del proyecto o módulo es 8 o superior, esta inspección sugiere reemplazar el bucle con <code>Arrays.setAll()</code>.
-  Puede reemplazar el bucle con <code>Arrays.fill()</code> en cualquier nivel de lenguaje.</p>
+Informa los ciclos que se pueden reemplazar con llamadas a <code>Arrays.setAll()</code> o <code>Arrays.fill()</code>.
+<p>Esta inspección sugiere reemplazar los ciclos con <code>Arrays.setAll()</code> si el nivel de idioma del proyecto o módulo es 8 o superior.
+  Es posible reemplazar los ciclos con <code>Arrays.fill()</code> con cualquier nivel de idioma.</p>
 <p>Ejemplo:</p>
 <pre><code>
   for (int i=0; i&lt;array.length; i++) {
@@ -13,6 +13,7 @@ El bucle puede reemplazarse por una llamada a <code>Arrays.setAll()</code> o <co
 <pre><code>
   Arrays.setAll(array, this::calc);
 </code></pre>
-<p><small>Cambios en la versión 2017.1</small></p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2017.1</small></p>
 </body>
 </html>

@@ -1,13 +1,15 @@
 <html>
 <body>
-<p>Reporta directorios de destino no válidos en los comandos <code>ADD</code> y <code>COPY</code>.</p>
+<p>Informa directorios de destino no válidos en los comandos <code>ADD</code> y <code>COPY</code>.</p>
 <p>
-  Según la <a href="https://docs.docker.com/engine/reference/builder/#add">especificación de Dockerfile</a>, cuando se especifican múltiples fuentes, el destino debe ser un directorio y debe terminar con una barra diagonal '/'.
-  De lo contrario, la construcción de Docker fallará.
+  De acuerdo con la <a href="https://docs.docker.com/engine/reference/builder/#add">especificación Dockerfile</a>,
+  si se especifican múltiples fuentes, entonces el destino debe ser un directorio, y debe terminar con una barra '/'.
+  De lo contrario, la compilación de Docker fallará.
 </p>
-<p><b>Ejemplo:</b></p>
+<!-- tooltip end -->
+<p><b>Ejemplos:</b></p>
 <pre><code>
-  # Todos los comandos siguientes fallarán
+  # todos los comandos a continuación fallarán
   ADD textA.txt textB.txt relativeDir
   ADD ["binaryA.jar", "binary2.jar", "destination"]
   COPY text3.txt text4.txt /absolute/path

@@ -1,12 +1,13 @@
 <html>
 <body>
-Los argumentos proporcionados a <code>Method.invoke()</code> y <code>Constructor.newInstance()</code> no coinciden con las firmas especificadas en <code>Class.getMethod()</code> y <code>Class.getConstructor()</code>.
+Reporta casos en los que los argumentos proporcionados para <code>Method.invoke()</code> y <code>Constructor.newInstance()</code> no coinciden con la firma especificada en <code>Class.getMethod()</code> y <code>Class.getConstructor()</code>.
 <p>Ejemplo:</p>
 <pre><code>
   Method m = myObj.getClass().getMethod("myMethod", <b>int</b>.class);
-  <i>//El argumento debería ser un valor <b>int</b></i>
+  <i>// el argumento debe ser un valor <b>int</b></i>
   m.invoke(myObj, "<b>abc</b>");
 </code></pre>
-<p><small>Cambios en la versión 2017.2</small></p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2017.2</small></p>
 </body>
 </html>

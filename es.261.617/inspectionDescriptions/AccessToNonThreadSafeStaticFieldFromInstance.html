@@ -1,8 +1,9 @@
 <html>
 <body>
-Informa sobre accesos a campos <code>static</code> de tipos no seguros para hilos.
+Reporta el acceso a campos <code>static</code> que son de un tipo que no es seguro para la ejecución en múltiples subprocesos.
 <p>
-  Cuando se accede a campos <code>static</code> desde métodos de instancia o bloques no sincronizados, múltiples hilos pueden acceder al campo.
+  Cuando un campo <code>static</code> se accede desde un método de instancia o un bloque no sincronizado,
+  múltiples subprocesos pueden acceder a ese campo.
   Esto puede provocar efectos secundarios no especificados, como excepciones y resultados incorrectos.
 </p>
 <p><b>Ejemplo:</b></p>
@@ -14,9 +15,12 @@ Informa sobre accesos a campos <code>static</code> de tipos no seguros para hilo
     }
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Puede especificar qué tipos deben considerarse no seguros para hilos.
-  Solo se informará sobre campos que tengan exactamente estos tipos o se inicialicen con estos tipos exactos, ya que pueden existir subclases seguras para hilos de estos tipos.
+  Puedes especificar qué tipos deberían considerarse no seguros para la ejecución en múltiples subprocesos.
+  Solo se reportan los campos con estos tipos exactos o inicializados con estos tipos exactos,
+  porque puede haber subclases seguras para la ejecución en múltiples subprocesos de estos tipos.
 </p>
+
 </body>
 </html>

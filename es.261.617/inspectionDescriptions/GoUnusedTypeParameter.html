@@ -1,12 +1,13 @@
 <html>
 <body>
-Informar sobre parámetros de tipo no utilizados.
+Se informa de los parámetros de tipo sin usar.
 <pre><code>func main() {
  printAll(
   42,
   "bird",
  )
 }
+
 func printAll[I int, S string](
  i I,
  s string,
@@ -14,8 +15,8 @@ func printAll[I int, S string](
  fmt.Println(i)
  fmt.Println(s)
 }</code></pre>
-<p>La función <b>printAll</b> tiene dos parámetros de tipo <code>I</code> y <code>S</code>, pero solo se utiliza el primero.
-  Por lo tanto, <code>S string</code> se mostrará en gris.
+<p>La función <b>printAll</b> tiene dos parámetros de tipo <code>I</code> y <code>S</code> pero solo usa el primero de ellos.
+  Por lo tanto, <code>S string</code> aparece atenuado.
 </p>
 </body>
 </html>

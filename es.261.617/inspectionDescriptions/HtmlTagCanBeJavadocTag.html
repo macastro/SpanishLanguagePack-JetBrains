@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre el uso de la etiqueta <code>&lt;code&gt;</code> en comentarios Javadoc.
-Desde Java 5, estas etiquetas pueden ser reemplazadas por la estructura <code>{@code ...}</code>.
-Esto permite usar los símbolos menor que <code>&lt;</code> y mayor que <code>&gt;</code> en lugar de entidades HTML en los comentarios.
+Reporta los usos de las etiquetas <code>&lt;code&gt;</code> en los comentarios Javadoc.
+Desde Java 5, estas etiquetas pueden ser remplazadas con construcciones <code>{@code ...}</code>.
+Esto permite usar los signos de menor que <code>&lt;</code> y mayor que <code>&gt;</code> dentro del comentario en lugar de entidades de carácter HTML.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   /**
@@ -10,12 +10,13 @@ Esto permite usar los símbolos menor que <code>&lt;</code> y mayor que <code>&g
    */
   List&lt;Integer&gt; getList(){ ... }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de que la corrección rápida es aplicada:</p>
 <pre><code>
   /**
    * @return empty {@code ArrayList&lt;Integer&gt;}
    */
   List&lt;Integer&gt; getList(){ ... }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

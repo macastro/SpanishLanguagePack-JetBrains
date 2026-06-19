@@ -1,10 +1,26 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <html>
 <body>
-Informa sobre variables en blanco opcionales en bucles range.
-<p>Cuando se itera sobre un slice usando un bucle <code>range</code>, se devuelven dos valores para cada iteración. El primer valor es el número de índice, y el segundo valor es una copia del elemento en ese índice. Si no necesita el segundo valor, puede omitirlo usando un identificador en blanco.</p>
+Informa las variables en blanco opcionales en los bucles de rango.
+<p>Cuando utilizas el bucle <code>range</code> para iterar sobre una porción, se devuelven dos valores para cada iteración. El primero es el número de índice y el segundo es una copia del elemento en ese índice. Si no necesitas el segundo valor, puedes omitir este elemento en lugar de utilizar un identificador en blanco.</p>
 <p>Ejemplo:</p>
-<pre><code>for a, _ = range v {} // `for a, _ =` es igual que `for a =`</code></pre>
-<p>Para eliminar el identificador en blanco, puede usar la corrección rápida <b>Eliminar argumento en blanco</b>. Después de aplicar la corrección rápida, el código se verá así:</p>
+<pre><code>for a, _ = range v {} // `for a, _ =` es lo mismo que `for a =`</code></pre>
+<p>Para eliminar el identificador en blanco, puedes usar la corrección rápida <b>Eliminar argumento en blanco</b>. Una vez aplicada la corrección rápida, el código se verá de la siguiente manera:</p>
 <pre><code>for a = range v {}</code></pre>
 </body>
 </html>

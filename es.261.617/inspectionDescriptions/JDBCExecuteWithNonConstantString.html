@@ -1,17 +1,18 @@
 <html>
 <body>
-Informa sobre llamadas a <code>java.sql.Statement.execute()</code> o cualquiera de sus variantes que utilicen cadenas construidas dinámicamente como consultas a ejecutar.
-<p>Las sentencias SQL construidas dinámicamente son una fuente común de vulnerabilidades de seguridad.
-  Por defecto, esta inspección ignora las constantes en tiempo de compilación.</p>
+Informa sobre llamadas a <code>java.sql.Statement.execute()</code> o cualquiera de sus variantes que toman una cadena construida dinámicamente como la consulta a ejecutar.
+<p>Las sentencias SQL construidas son una fuente común de brechas de seguridad.
+  Por defecto, esta inspección ignora las constantes de tiempo de compilación.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   ResultSet execute(Statement statement, String name) throws SQLException {
-    return statement.executeQuery("select * from " + name); // Genera advertencia
+    return statement.executeQuery("select * from " + name); // informa de una advertencia
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-Las opciones de inspección permiten tratar cualquier campo <code>static</code> <code>final</code> como una constante.
-Tenga cuidado, ya que cuando esta opción está habilitada, se ignorarán cadenas como esta:
+Utiliza las opciones de inspección para considerar cualquier campo <code>static</code> <code>final</code> como constante.
+Ten cuidado, porque cadenas como la siguiente se ignorarán cuando la opción esté habilitada:
 <pre><code>
   private static final String SQL = "SELECT * FROM user WHERE name='" + getUserInput() + "'";
 </code></pre>

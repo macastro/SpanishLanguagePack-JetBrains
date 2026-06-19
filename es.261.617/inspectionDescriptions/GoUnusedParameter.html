@@ -1,19 +1,21 @@
 <html>
 <body>
-Informa sobre parámetros de función no utilizados.
+Reporta parámetros de función no utilizados.
 <pre><code>func main() {
  printAll(
   42,
   "bird",
  )
 }
+
 func printAll(
  i int,
  s string,
 ) {
  fmt.Println(i)
 }</code></pre>
-<p>Llamamos a la función <b>printAll</b> pasando <code>42</code> y <code>bird</code> como argumentos. La función <b>printAll</b> acepta dos parámetros, <code>int</code> y <code>string</code>, pero solo utiliza el primer parámetro. Por lo tanto, <code>s string</code> se mostrará en gris.
+<p>Llamamos a la función <b>printAll</b> pasando <code>42</code> y <code>bird</code> como argumentos. La función <b>printAll</b> acepta dos
+  parámetros <code>int</code> y <code>string</code> pero utiliza sólo el primero de ellos. Por lo tanto, el <code>s string</code> está en gris.
 </p>
 </body>
 </html>

@@ -1,8 +1,10 @@
 <html>
 <body>
-Reporta calificadores <code>this</code> innecesarios.
+Informa el innecesario calificador <code>this</code>
 <p>
-  El uso de <code>this</code> para desambiguar referencias en el código no es recomendado en muchos estilos de codificación y puede volverse innecesario fácilmente mediante refactorización automática.
+  El uso de <code>this</code> para desambiguación de una referencia de código es desaconsejado por muchos estilos de codificación
+  y puede fácilmente volverse innecesario
+  mediante refactorizaciones automáticas.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -13,7 +15,7 @@ Reporta calificadores <code>this</code> innecesarios.
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   class Foo {
     int x;
@@ -22,8 +24,9 @@ Reporta calificadores <code>this</code> innecesarios.
     }
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Las asignaciones a campos pueden ignorarse usando la configuración de la inspección.
+  Usa las configuraciones de inspección para ignorar asignaciones a campos.
   Por ejemplo, <code>this.x = 2;</code> no será reportado, pero <code>int y = this.x;</code> sí lo será.
 <p>
 </body>

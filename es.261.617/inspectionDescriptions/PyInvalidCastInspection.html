@@ -1,23 +1,35 @@
 <html>
 <body>
-<p>Reporta cuando se llama a `typing.cast` y ningún valor posible del tipo de origen puede asignarse al tipo de destino. Podemos llamar a esto tipos "no superpuestos".</p>
-<p>Esto generalmente indica un error. Si la conversión es intencional, primero convierte la expresión a un tipo padre común para expresar claramente la intención.</p>
-<p><b>Ejemplo:</b></p>
+<p>Informa sobre las llamadas a <code>typing.cast</code> donde los tipos de origen y destino no están relacionados.</p>
+<p>Se informa un error cuando el tipo de origen no es un subtipo del destino y el tipo de destino tampoco es un subtipo del origen.
+  Tales conversiones suelen indicar un error lógico, ya que no se puede asumir que una instancia de un tipo sea una instancia de otro, y <code>typing.cast</code> no verifica el tipo dinámicamente.</p>
+
+<p>Esta inspección se aplica incluso a tipos que teóricamente podrían tener descendientes comunes.
+  Por ejemplo, marcará una conversión entre dos clases hermanas <code>Left</code> y <code>Right</code> si ambas heredan de <code>Top</code>, pero no tienen una relación de herencia directa entre sí.</p>
+
+<p><b>Ejemplos:</b></p>
 <pre><code>
 from typing import cast
-# Tipos no superpuestos — posiblemente un error
+
+# Tipos que no se solapan — probablemente un error
 <b>cast(int, "a")</b>          # 'str' -> 'int'
 <b>cast(list[int], ["a"])</b>  # 'list[str]' -> 'list[int]'
-# El método de escape explícito recomendado es usar "conversión doble"
+
+# La vía de escape explícita recomendada es utilizar un "doble cast"
 cast(int, <b>cast(object, "a")</b>)  # ok
-# Casos de superposición legítimos
-cast(int, object())    # Downcasting válido
-cast(object, 1)        # Upcasting válido
-# Aunque lo siguiente es una conversión inválida, porque <code>list</code> es inmutable. Esta verificación no está soportada actualmente
+
+# Casos de solapamiento legítimos
+cast(int, object())    # downcast válido
+cast(object, 1)        # upcast válido
+
+# Pero la siguiente es una conversión inválida porque <code>list</code> es invariante. 
+# Actualmente no es compatible con esta inspección
 int_list = [1, 2, 3]
 cast(list[object], int_list)
 </code></pre>
-<p>La verificación depende de información de tipos estática; no se reportan advertencias cuando los tipos son desconocidos.
-  La varianza de tipos genéricos aún no se considera.</p>
+<!-- tooltip end -->
+<p>La inspección depende de la información de tipos estáticos; no se informarán advertencias cuando el tipo sea desconocido.
+
+  La varianza de los tipos genéricos aún no se tiene en cuenta.</p>
 </body>
 </html>

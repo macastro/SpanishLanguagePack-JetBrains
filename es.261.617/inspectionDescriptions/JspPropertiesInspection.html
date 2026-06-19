@@ -1,11 +1,13 @@
 <html>
 <body>
-Reportar propiedades no resueltas en archivos <code>*.properties</code>.
+Notifica propiedades no resueltas de archivos <code>*.properties</code>.
+
 <p><b>Ejemplo de archivo JSP:</b></p>
 <pre><code>
 &lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;
 &lt;%@ taglib uri="/tags/fmt" prefix="fmt" %&gt;
-&lt;fmt:message bundle="bundle.properties" key="unknown.property"/&gt; // Error: no existe tal propiedad en el archivo referenciado
+
+&lt;fmt:message bundle="bundle.properties" key="unknown.property"/&gt; // Error: no existe tal propiedad dentro del archivo referenciado
 </code></pre>
 </body>
 </html>

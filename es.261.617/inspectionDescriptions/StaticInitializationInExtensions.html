@@ -1,10 +1,10 @@
 <html>
 <body>
-Informe sobre inicializaciones static en la <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">implementación de puntos de extensión</a>.
+Se informa de la inicialización estática en <a href="https://plugins.jetbrains.com/docs/intellij/plugin-extensions.html">Implementación de puntos de extensión</a>.
 <p>
-  La inicialización static se ejecuta tan pronto como se carga la clase, lo que puede resultar en la carga de demasiadas clases o la inicialización prematura de recursos costosos.
-  Dado que la creación de implementaciones de puntos de extensión debe tener un bajo costo, no pueden tener inicializadores static.
+  La inicialización estática se ejecuta una vez que se carga una clase y puede provocar la carga excesiva de clases o la inicialización anticipada de grandes cantidades de recursos.
+  Las implementaciones de puntos de extensión deberían tener un coste de creación bajo, por lo que no deberían tener inicializadores estáticos.
 </p>
-<p><small>Cambios recientes en 2023.3</small>
+<p><small>Novedad en 2023.3</small>
 </body>
 </html>

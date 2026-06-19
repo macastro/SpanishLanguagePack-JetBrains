@@ -1,12 +1,13 @@
 <html>
 <body>
-Informa sobre llamadas a <code>Object.notify()</code> o <code>Object.notifyAll()</code> para las cuales no se puede encontrar la correspondiente llamada a <code>Object.wait()</code>.
-<p>Esta inspección solo informa sobre llamadas dirigidas a campos de la clase actual.</p>
+Reporta llamadas a <code>Object.notify()</code> u <code>Object.notifyAll()</code> para las que no se encuentra una llamada correspondiente a <code>Object.wait()</code>.
+<p>Esta inspección sólo reporta llamadas que tengan como objetivo los campos de la clase actual.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   synchronized (synList) {
-    synList.notify(); //nunca se llama a synList.wait()
+    synList.notify(); //synList.wait() nunca es llamado
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

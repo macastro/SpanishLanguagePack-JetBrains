@@ -1,16 +1,17 @@
 <html>
 <body>
-Informa sobre declaraciones cíclicas de alias de clases o módulos.
+Reporta declaraciones cíclicas de clase o alias de módulos.
+
 <p>
-  Las declaraciones cíclicas generan un <code>CyclicClassAliasDefinitionError</code>.
+  Las declaraciones cíclicas producen el error <code>CyclicClassAliasDefinitionError</code>.
 </p>
 <p>
   Ejemplo:
 </p>
 <pre><code>
 # Declaración cíclica de alias de clase
-class User = Customer
-class Customer = User
+class Usuario = Cliente
+class Cliente = Usuario
 </code></pre>
 </body>
 </html>

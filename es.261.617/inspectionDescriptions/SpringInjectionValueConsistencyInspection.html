@@ -1,36 +1,41 @@
 <html>
 <body>
-<p>Reporta inconsistencias en etiquetas y atributos en los puntos de inyección del contexto de aplicación XML.</p>
+<p>Informe sobre etiquetas y atributos inconsistentes en puntos de inyección que se encuentren en contextos de aplicaciones XML.</p>
+
 <ul>
-  <li><code>&lt;property&gt;</code> y <code>&lt;constructor-arg&gt;</code> deben especificar <code>ref</code>, <code>value</code> o elementos hijo</li>
-  <li><code>&lt;property&gt;</code> y <code>&lt;constructor-arg&gt;</code> no pueden contener múltiples elementos hijo</li>
-  <li><code>&lt;ref&gt;</code> puede contener el atributo <code>bean</code>, el atributo <code>local</code> o el atributo <code>parent</code></li>
-  <li><code>&lt;ref&gt;</code> debe especificar un Bean</li>
-  <li><code>&lt;idref&gt;</code> puede contener el atributo <code>bean</code> o el atributo <code>local</code></li>
-  <li><code>&lt;idref&gt;</code> debe especificar un Bean</li>
-  <li><code>&lt;map&gt;</code> debe especificar una clave</li>
-  <li><code>&lt;idref&gt;</code> puede contener el atributo <code>key</code>, el atributo <code>key-ref</code> o el elemento hijo <code>&lt;key&gt;</code></li>
+  <li><code>&lt;property&gt;</code> y <code>&lt;constructor-arg&gt;</code> deben especificar un <code>ref</code>, <code>value</code> o un sub-elemento</li>
+  <li><code>&lt;property&gt;</code> y <code>&lt;constructor-arg&gt;</code> no pueden contener más de un sub-elemento</li>
+  <li><code>&lt;ref&gt;</code> puede contener un atributo <code>bean</code>, <code>local</code> o <code>parent</code></li>
+  <li><code>&lt;ref&gt;</code> debe especificar un bean</li>
+  <li><code>&lt;idref&gt;</code> puede contener un atributo <code>bean</code> o <code>local</code></li>
+  <li><code>&lt;idref&gt;</code> debe especificar un bean</li>
+  <li><code>&lt;map&gt;</code> debe especificar una key</li>
+  <li><code>&lt;idref&gt;</code> puede contener un atributo <code>key</code>, un atributo <code>key-ref</code> o un sub-elemento <code>&lt;key&gt;</code></li>
 </ul>
+
 <p><b>Ejemplo:</b></p>
 <pre><code>
   &lt;beans&gt;
-  <em>&lt;!-- 1. La propiedad solo puede contener el atributo "ref" o el atributo "value" o elementos hijo --&gt;</em>
+
+  <em>&lt;!-- 1.  La propiedad únicamente puede contener un atributo "ref" O un atributo "value" O un sub-elemento --&gt;</em>
   &lt;bean class="MyClass"&gt;
     &lt;property name="bean" ref="myBean" value="foo"/&gt;
-    &lt;!-- La propiedad solo puede contener el atributo "ref" o el atributo "value" o elementos hijo --&gt;
+    &lt;!-- La propiedad únicamente puede contener un atributo "ref" O un atributo "value" O un sub-elemento --&gt;
   &lt;/bean&gt;
-  <em>&lt;!-- 2. La propiedad no puede contener múltiples elementos hijo --&gt;</em>
+
+  <em>&lt;!--  2.  La propiedad no debe contener más de un sub-elemento --&gt;</em>
   &lt;bean class="MyFactory"&gt;
     &lt;property name="bean"&gt;
-    &lt;ref&gt;bean&lt;/ref&gt; &lt;!-- La propiedad no puede contener múltiples elementos hijo --&gt;
-     &lt;value&gt;foo&lt;/value&gt; &lt;!-- La propiedad no puede contener múltiples elementos hijo --&gt;
+    &lt;ref&gt;bean&lt;/ref&gt; &lt;!-- La propiedad no debe contener más de un sub-elemento --&gt;
+     &lt;value&gt;foo&lt;/value&gt; &lt;!-- La propiedad no debe contener más de un sub-elemento --&gt;
      &lt;/property&gt;
   &lt;/bean&gt;
-  <em>&lt;!-- 3. La entrada del mapa debe especificar una clave --&gt;</em>
+
+  <em>&lt;!-- 3. La entrada en el mapa debe especificar una clave  --&gt;</em>
   &lt;bean class="MyBean"&gt;
      &lt;property name="map"&gt;
         &lt;map&gt;
-           &lt;entry value="foo"/&gt;  &lt;!-- La entrada del mapa debe especificar una clave --&gt;
+           &lt;entry value="foo"/&gt;  &lt;!-- La entrada en el mapa debe especificar una clave --&gt;
         &lt;/map&gt;
      &lt;/property&gt;
   &lt;/bean&gt;

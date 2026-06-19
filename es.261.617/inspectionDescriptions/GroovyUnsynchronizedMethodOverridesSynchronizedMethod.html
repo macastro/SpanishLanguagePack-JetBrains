@@ -1,14 +1,14 @@
 <html>
 <body>
-<p>Informa sobre métodos no <b>synchronized</b> que sobrescriben métodos <b>synchronized</b>.</p>
+<p>Informa métodos no <b>sincronizados</b> que sobreescriben métodos <b>sincronizados</b>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  abstract class Base {
+  clase abstracta Base {
       <b>synchronized</b> void foo() {
           // ...
       }
   }
-  class Derived extends Base {
+  clase Derivada extends Base {
       @Override
       <b>void foo()</b> {
           super.foo()
@@ -16,6 +16,6 @@
         }
     }
 </code></pre>
-<p>Aquí, el método no synchronized <code>foo()</code> en la clase <code>Bar</code> sobrescribe un método synchronized.</p>
+<p>En este caso, el método no sincronizado <code>foo()</code> de la clase <code>Bar</code> sobreescribe un método sincronizado.
 </body>
 </html>

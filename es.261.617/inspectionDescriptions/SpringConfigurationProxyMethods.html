@@ -1,12 +1,16 @@
 <html>
 <body>
-Advertencia sobre el uso incorrecto de métodos proxy.
-Spring Framework 5.2 introdujo una optimización en el procesamiento de clases @Configuration, que se puede habilitar mediante la característica @Configuration(proxyBeanMethods = false).
+Informa advertencias sobre métodos proxy utilizados de forma incorrecta.
+
+Spring Framework 5.2 ha introducido una optimización para el procesamiento de la clase @Configuration que se puede activar a través de un atributo
+ @Configuration(proxyBeanMethods = false).
 <p>
-Si se deshabilita <code>proxyBeanMethods</code>, no se crearán instancias proxy y las llamadas al método se reiniciarán (devolviendo una nueva instancia cada vez).
-Por lo tanto, no puede garantizar que realmente esté inyectando el Bean correspondiente en el contexto.
+Si desactivas <code>proxyBeanMethods</code>,
+ya no se crean las instancias proxy y al llamar al método se vuelve a invocar (devolviendo una nueva instancia cada vez).
+Como resultado, no tienes garantía de que estás inyectando realmente el bean correspondiente en el contexto.
 </p>
-<p>Ejemplo de llamada incorrecta a método Bean:</p>
+<!-- tooltip end -->
+<p>Ejemplo de llamada incorrecta al método bean:</p>
 <pre><code lang="java">
 @Configuration(proxyBeanMethods = false)
 class TestConfiguration {
@@ -14,13 +18,15 @@ class TestConfiguration {
   public FirstBean firstBean() {
     return new FirstBean();
   }
+
   @Bean
   public SecondBean secondBean() {
     return new SecondBean(firstBean()); // -> llamada incorrecta
   }
 }
 </code></pre>
-<p>Puede establecer <code>proxyBeanMethods</code> como true o reescribir el código de la siguiente manera:</p>
+
+<p>Puedes establecer <code>proxyBeanMethods</code> a true o reescribir el código de la siguiente manera:</p>
 <pre><code lang="java">
 @Configuration(proxyBeanMethods = false)
 class TestConfiguration {
@@ -28,13 +34,15 @@ class TestConfiguration {
   public FirstBean firstBean() {
     return new FirstBean();
   }
+
   @Bean
-  public SecondBean secondBean(FirstBean someBean) { // -> inyección correcta de instancia
+  public SecondBean secondBean(FirstBean someBean) { // -> instancia inyectada correctamente
     return new SecondBean(someBean);
   }
 }
 </code></pre>
-<p>Además, esta verificación también examina las llamadas a métodos <code>@Bean</code> en clases sin el estereotipo <code>@Configuration</code> (en "modo Bean lite"):</p>
+
+<p>Además, la inspección comprueba las llamadas al método <code>@Bean</code> en una clase sin el estereotipo <code>@Configuration</code> (en "bean lite mode"):</p>
 <pre><code lang="java">
 @Component
 class TestComponent {
@@ -42,11 +50,13 @@ class TestComponent {
   public FirstBean firstBean() {
     return new FirstBean();
   }
+
   @Bean
   public SecondBean secondBean() {
     return new SecondBean(firstBean()); // -> llamada incorrecta
   }
 }
 </code></pre>
+
 </body>
 </html>

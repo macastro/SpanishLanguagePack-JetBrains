@@ -1,34 +1,53 @@
 <html>
 <body>
-Según el análisis de flujo de datos, reporta código que siempre viola las convenciones de nulabilidad, puede lanzar excepciones o simplemente estructuras de código redundantes.
-<p>Ejemplo:</p>
+Informa los constructos de código que siempre violan los contratos de nulidad, pueden generar excepciones o son redundantes, según el análisis del flujo de datos.
+<p>Ejemplos:</p>
 <pre><code>if (array.length &lt; index) {
   System.out.println(array[index]);
-} // El índice del array siempre está fuera de los límites
-if (str == null) System.out.println("str is null");
+} // El índice de la matriz siempre está fuera de los límites
+
+if (str == null) System.out.println("str es nulo");
 System.out.println(str.trim());
-// La última declaración puede lanzar NPE
+// la última instrucción puede arrojar un NPE
+
 @NotNull
 Integer square(@Nullable Integer input) {
-    // Viola el contrato del método
+    // se infringe el contrato del método
     return input == null ? null : input * input;
 }</code></pre>
 <p>
-  El comportamiento de la inspección puede ser controlado por muchas anotaciones, como las anotaciones de <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">nulabilidad</a>, la anotación <code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code>, la anotación <code>@Range</code>, etc.
+  El comportamiento de la inspección puede estar controlado por una serie de anotaciones, como anotaciones de
+  <a href="https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html">nulidad</a>,
+  anotación <code><a href="https://www.jetbrains.com/help/idea/contract-annotations.html">@Contract</a></code>,
+  anotación <code>@Range</code>, etc.
 </p>
-<p>Configurar la inspección:</p>
+<!-- tooltip end -->
+<p>Configura la inspección:</p>
 <ul>
-  <li>Usa la opción <b>Sugerir anotación @Nullable para métodos/campos/parámetros que pueden ser null</b> para emitir advertencias cuando: valores null se pasan como argumentos a métodos con parámetros no anotados, se almacenan en campos no anotados, o se devuelven desde métodos no anotados. En este caso, la inspección sugerirá propagar la anotación <code>@Nullable</code>. También puedes configurar las anotaciones de nulabilidad usando el botón <b>Configurar anotaciones</b>.</li>
-  <li>Usa la opción <b>Tratar miembros y parámetros no anotados como @Nullable</b> para asumir que los miembros no anotados pueden ser null, por lo tanto no deben usarse en contextos no null.</li>
-  <li>Usa la opción <b>Reportar parámetros requeridos no null con uso de argumentos literales null</b> para reportar parámetros de método que no pueden ser null (por ejemplo, se desreferencian inmediatamente en el cuerpo del método), pero tienen puntos de llamada que pasan el literal <code>null</code>.</li>
-  <li>Usa la opción <b>Reportar métodos nullable que siempre devuelven valores no null</b> para reportar métodos anotados como <code>@Nullable</code> pero que siempre devuelven valores no null. En este caso, se sugiere cambiar la anotación a <code>@NotNull</code>.</li>
-  <li>Usa la opción <b>Ignorar declaraciones assert</b> para controlar cómo la inspección maneja las declaraciones <code>assert</code>. Por defecto, esta opción está deshabilitada, lo que significa que las aserciones se consideran ejecutadas (modo -ea). Si se habilita la opción, las aserciones serán completamente ignoradas (modo -da).</li>
-  <li>Usa la opción <b>Reportar problemas que ocurren solo en algunas rutas de código</b> para controlar si se reportan problemas que ocurren solo en algunas rutas de código. Si esta opción está deshabilitada, no se reportarán advertencias como <i>exception is possible</i>. La inspección solo reportará advertencias como <i>exception will definitely occur</i>. Este modo puede reducir significativamente el número de falsos positivos, especialmente si el código no está consistentemente anotado con anotaciones de nulabilidad y contrato. Por eso es útil para encontrar los problemas más importantes en bases de código antiguas.
+  <li>Usa la opción <b>Sugerir la anotación @Nullable para métodos/campos/parámetros donde se utilizan valores que aceptan nulos</b> para advertir cuando un
+    valor nulo se pasa como argumento a un método con un parámetro no anotado,
+    se almacena en un campo no anotado o se devuelve desde un método no anotado. En este caso, la inspección sugerirá propagar
+    la anotación <code>@Nullable</code>. También puedes configurar las anotaciones de nulidad utilizando el botón <b>Configurar anotaciones</b>.</li>
+  <li>Usa la opción <b>Tratar los miembros y parámetros no anotados como @Nullable</b> para asumir que los miembros no anotados pueden ser nulos,
+    por lo que no deben utilizarse en un contexto no nulo.</li>
+  <li>Utiliza la opción <b>Reportar parámetros requeridos no nulos con usos de argumentos literales nulos</b> para informar sobre los parámetros del método que no pueden ser
+    nulos (por ejemplo, desreferenciados inmediatamente en el cuerpo del método), pero hay sitios de llamada donde se pasa un literal <code>nulo</code>.</li>
+  <li>Usa la opción <b>Reportar métodos que aceptan nulos que siempre devuelven un valor no nulo</b> para reportar métodos que están anotados como
+  <code>@Nullable</code>, pero siempre regresan un valor no nulo. En este caso, se sugiere que cambies la anotación a <code>@NotNull</code>.</li>
+  <li>Usa la opción <b>Ignorar declaraciones `assert`</b> para controlar cómo la inspección trata las declaraciones `assert`. De manera predeterminada, la opción
+    está deshabilitada, lo que significa que se supone que las aserciones se ejecutan (modo -ea). Si la opción está habilitada, las aserciones se ignorarán por completo
+    (modo -da).</li>
+  <li>Usa la opción <b>Reportar problemas que ocurren solo en algunas rutas de código</b> para controlar si se deben reportar problemas que pueden ocurrir solo
+    en algunas rutas del código. Si esta opción está deshabilitada, no se informarán advertencias como <i>es posible una excepción</i>. La inspección reportará
+    solo advertencias como <i>definitivamente ocurrirá una excepción</i>. Este modo puede reducir en gran medida el número de falsos positivos, especialmente si el código
+    no está anotado constantemente con anotaciones de nulidad y de contrato. Es por eso que puede ser útil para encontrar los problemas más
+    importantes en las bases de código heredadas.
   </li>
 </ul>
 <p>
-  Antes de la versión IntelliJ IDEA 2022.3, esta inspección era parte de la inspección "Condiciones constantes y excepciones".
-  Ahora, se ha dividido en dos inspecciones: "Valores constantes" y "Problemas de nulabilidad y flujo de datos".
+  Antes de IntelliJ IDEA 2022.3, esta inspección formaba parte de la inspección "Condiciones constantes y excepciones".
+  Ahora se divide en dos inspecciones:
+  "Valores constantes" y "Problemas de nulidad y flujo de datos".
 </p>
 </body>
 </html>

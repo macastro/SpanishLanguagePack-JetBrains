@@ -1,11 +1,12 @@
 <html>
 <body>
-Informa sobre clases, métodos y campos que hacen referencia a tipos de API inestables en sus firmas, pero que no están marcados con la misma anotación de inestabilidad.
+Informa de las declaraciones de clases, métodos y campos que hacen referencia a un tipo de API inestable en la firma, pero que no están marcados con la misma anotación inestable.
 <p>
-  Esta inspección asegura que las firmas de la API pública no expongan tipos <i>inestables</i> (internos, experimentales).
-  Por ejemplo, si un método devuelve una clase <i>experimental</i>, se considera que el método es <i>experimental</i>,
-ya que los cambios incompatibles en el tipo (eliminación o traslado a otro paquete) resultarían en cambios incompatibles en la firma del método.
+  Esta inspección garantiza que las firmas de una API pública no expongan ningún tipo <i>inestable</i> (interno, experimental).
+  Por ejemplo, si un método devuelve una clase <i>experimental</i>, el método en sí se considera <i>experimental</i>
+  porque los cambios incompatibles del tipo (supresión o traslado a otro paquete) llevan a cambios incompatibles de firma de método.
 </p>
-<p>Use la lista siguiente para especificar las anotaciones que marcan las API inestables.</p>
+<!-- tooltip end -->
+<p>Utilice la siguiente lista para especificar qué anotaciones marcan una API inestable.</p>
 </body>
 </html>

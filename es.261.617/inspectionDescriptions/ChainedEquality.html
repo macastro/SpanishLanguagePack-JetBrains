@@ -1,18 +1,20 @@
 <html>
 <body>
 Informa sobre comparaciones de igualdad encadenadas.
-<p>Este tipo de comparaciones pueden ser confusas: <code>a == b == c</code> significa <code>(a == b) == c</code>, pero probablemente <code>a == b && a == c</code> era la intención.</p>
+<p>Este tipo de comparaciones pueden resultar confusas: <code>a == b == c</code> significa <code>(a == b) == c</code>,
+  pero es posible que se pretenda <code>a == b && a == c</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   boolean chainedEquality(boolean a, boolean b, boolean c) {
     return a == b == c;
   }
 </code></pre>
-<p>Puede usar paréntesis para hacer la comparación menos confusa:</p>
+<p>Puedes utilizar paréntesis para que la comparación resulte menos confusa:</p>
 <pre><code>
   boolean chainedEquality(boolean a, boolean b, boolean c) {
     return (a == b) == c;
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

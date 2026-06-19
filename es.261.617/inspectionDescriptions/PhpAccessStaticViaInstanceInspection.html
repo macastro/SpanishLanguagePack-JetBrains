@@ -1,8 +1,9 @@
 <html>
 <body>
-Reporta referencias a métodos y campos estáticos a través de instancias de clase en lugar de la clase misma.
-<p>Aunque la especificación de PHP permite referenciar miembros estáticos a través de variables de instancia, esto puede confundir a los lectores, quienes podrían asumir erróneamente que el método depende de la instancia.</p>
-<p>Esta corrección rápida reemplazará la variable de instancia con el nombre de la clase.</p>
+Reporta referencias a métodos y campos estáticos por medio de una instancia de clase en vez de la clase misma.
+<p>A pesar de que PHP permite referencias a miembros estáticos a través de variables de instancia,
+  esto vuelve confuso el código, ya que el lector podría pensar que el resultado del método depende de la instancia.</p>
+<p>El arreglo rápido reemplaza la variable de instancia con el nombre de clase.</p>
 <p>Ejemplo:</p>
 <pre><code>
   class StaticClass {
@@ -10,14 +11,17 @@ Reporta referencias a métodos y campos estáticos a través de instancias de cl
     {
         return 3;
     }
+
   }
+
   $var = new StaticClass
   $var::someStaticFunction();
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de que se aplica el arreglo rápido:</p>
 <pre><code>
   StaticClass::someStaticFunction()
 </code></pre>
 <p>
+
 </body>
 </html>

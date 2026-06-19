@@ -1,7 +1,7 @@
 <html>
 <body>
-<p>Se informa de una llamada a <code>wait()</code> que no se realiza dentro de una sentencia synchronized o método synchronized correspondiente.</p>
-<p>Llamar a <code>wait()</code> en un objeto sin tener su bloqueo provocará una <code>IllegalMonitorStateException</code>.
-Esta estructura no es necesariamente incorrecta, ya que el bloqueo necesario podría haberse adquirido antes de llamar al método contenedor, pero aun así debe revisarse cuidadosamente.</p>
+<p>Reporta llamadas a <code>wait()</code> no realizadas dentro de una sentencia <em>synchronized</em> o método <em>synchronized</em> correspondiente.</p>
+<p>Llamar <code>wait()</code> sobre un objeto sin mantener un bloqueo sobre ese objeto resultará en una <code>IllegalMonitorStateException</code> lanzada.
+Tal constructo no es necesariamente un error, ya que el bloqueo necesario puede ser adquirido antes de que se llame al método contenedor, pero vale la pena revisarlo.</p>
 </body>
 </html>

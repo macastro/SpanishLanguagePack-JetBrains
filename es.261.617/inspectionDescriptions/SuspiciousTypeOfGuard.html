@@ -1,16 +1,16 @@
 <html>
 <body>
-Reporta comprobaciones de tipo no exhaustivas con <code>typeof</code> o <code>instanceof</code>.
-Una comprobación de tipo <code>typeof x</code> puede ser no exhaustiva en dos casos:
+Informa una verificación de protección de tipo errónea de <code>typeof</code> o <code>instanceof</code>.
+La protección de tipo <code>typeof x</code> puede resultar errónea en uno de los dos casos siguientes:
 <ul>
-<li><code>typeof x</code> no corresponde al valor especificado (por ejemplo, cuando <code>x</code> es de tipo 'string | boolean', <code>typeof x === 'number'</code>)</li>
-<li><code>typeof x</code> siempre corresponde al valor especificado (por ejemplo, cuando <code>x</code> es de tipo 'string', <code>typeof x === 'string'</code>)</li>
+<li><code>typeof x</code> nunca corresponde al valor especificado (por ejemplo, <code>typeof x === 'number'</code> cuando <code>x</code> es de tipo 'string | boolean')</li>
+<li><code>typeof x</code> siempre corresponde al valor especificado (por ejemplo, <code>typeof x === 'string'</code> cuando <code>x</code> es de tipo 'string')</li>
 </ul>
 <br>
-Una comprobación de tipo <code>x instanceof A</code> puede ser no exhaustiva en dos casos:
+La protección de tipo <code>x instanceof A</code> puede resultar errónea en uno de los dos casos siguientes:
 <ul>
-  <li>El tipo de <code>x</code> no está relacionado con <code>A</code></li>
-  <li>El tipo de <code>x</code> es <code>A</code> o un subtipo de <code>A</code></li>
+<li>El tipo de <code>x</code> no está relacionado con <code>A</code></li>
+<li>El tipo de <code>x</code> es <code>A</code> o un subtipo de <code>A</code></li>
 </ul>
 </body>
 </html>

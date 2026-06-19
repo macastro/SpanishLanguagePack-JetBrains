@@ -1,8 +1,8 @@
 <html>
 <body>
-Informa sobre todos los usos de variables que se sabe que son constantes.
-<p>Esto ocurre cuando el uso (lectura) de una variable está envuelto en una sentencia <code>if</code>, <code>while</code> o <code>for</code>, y existe una condición <code>==</code> que compara dicha variable con una constante.
-  En estos casos, el uso de la variable que se sabe que es constante puede ser reemplazado por la constante real.</p>
+Reporta todos los usos de variables conocidas como constantes.
+<p>Esto se aplica cuando las ubicaciones donde se usa (lee) la variable están encerradas en instrucciones <code>if</code>, <code>while</code> o <code>for</code> que contienen una condición <code>==</code> que compara la variable con una constante.
+  En este caso, los usos de la variable conocida como constante se pueden reemplazar por la constante real.</p>
 <p>Ejemplo:</p>
 <pre><code>
     private static void foo(double number) {
@@ -21,5 +21,7 @@ Informa sobre todos los usos de variables que se sabe que son constantes.
     }
     private static void f(double number) {}
 </code></pre>
+<!-- tooltip end -->
+
 </body>
 </html>

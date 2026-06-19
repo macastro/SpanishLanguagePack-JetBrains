@@ -1,18 +1,21 @@
 <html>
 <body>
-Reporta casos de prueba que tienen lógica de inicialización en sus constructores.
-Si el constructor falla, no se llamarán los métodos con la anotación <code>@After</code> ni el método <code>tearDown()</code>.
-Esto puede resultar en un entorno de pruebas parcialmente inicializado, afectando negativamente a otras pruebas.
-En su lugar, la inicialización del caso de prueba debe realizarse en el método <code>setUp()</code> o en métodos con la anotación <code>@Before</code>.
+Informa sobre los casos de prueba que tienen lógica de inicialización en su constructor.
+Si el constructor falla, no se llamará a los métodos anotados con <code>@After</code> ni al método <code>tearDown()</code>.
+Esto puede dejar el entorno de prueba parcialmente inicializado, lo que podría afectar negativamente a otras pruebas.
+En su lugar, la inicialización del caso de prueba debe realizarse en el método <code>setUp()</code> o en los métodos anotados con <code>@Before</code>.
 <p>Ejemplo incorrecto:</p>
 <pre><code lang="java">
   public class ImportantTest {
     private File file;
+
     public ImportantTest() throws IOException {
       file = File.createTempFile("xyz", ".tmp");
     }
+
     // ... tests go here
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

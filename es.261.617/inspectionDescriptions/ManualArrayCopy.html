@@ -1,15 +1,16 @@
 <html>
 <body>
-Se informa que la copia manual del contenido del array puede ser reemplazada por una llamada a <code>System.arraycopy()</code>.
+Informa sobre la copia manual del contenido de una matriz que se puede reemplazar por una llamada a <code>System.arraycopy()</code>.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   for (int i = 0; i &lt; array.length; i++) {
     newArray[i] = array[i];
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Una vez aplicada la corrección rápida:</p>
 <pre><code>
   System.arraycopy(array, 0, newArray, 0, array.length);
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

@@ -1,23 +1,25 @@
 <html>
 <body>
-<p>Reporta tipos explícitos de variables locales que son obvios y redundantes, como en <code>val f: Foo = Foo()</code>.</p>
+<p>Informa acerca de variables locales con tipos explícitamente indicados que son obvios y por tanto redundantes, como <code>val f: Foo = Foo()</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  class Point(val x: Int, val y: Int)
-  fun foo() {
-      val t: <b>Boolean</b> = true
-      val p: <b>Point</b> = Point(1, 2)
-      val i: <b>Int</b> = 42
-  }
+class Point(val x: Int, val y: Int)
+
+fun foo() {
+    val t: <b>Boolean</b> = true
+    val p: <b>Point</b> = Point(1, 2)
+    val i: <b>Int</b> = 42
+}
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
-  class Point(val x: Int, val y: Int)
-  fun foo() {
-      val t = true
-      val p = Point(1, 2)
-      val i = 42
-  }
+class Point(val x: Int, val y: Int)
+
+fun foo() {
+    val t = true
+    val p = Point(1, 2)
+    val i = 42
+}
 </code></pre>
 </body>
 </html>

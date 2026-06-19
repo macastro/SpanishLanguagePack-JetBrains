@@ -1,22 +1,26 @@
 <html>
 <body>
-Informa sobre referencias a miembros <code>private</code> no constantes desde clases anidadas hacia clases externas.
-Para estas referencias, javac genera métodos de acceso sintéticos a nivel package-private, lo que puede comprometer la seguridad ya que los miembros aparentemente private son en realidad accesibles desde todo el paquete.
+Reporta referencias de una clase anidada a miembros <code>private</code> no constantes de una clase externa.
+Para estas referencias, javac generará métodos de acceso sintético privados de paquete,
+lo que puede comprometer la seguridad porque los miembros que parecen ser privados serán de hecho accesibles desde todo el paquete.
 <p>
-  Las clases anidadas y sus clases externas se compilan en archivos de clase separados. La Máquina Virtual de Java normalmente prohíbe el acceso a campos y métodos private de una clase desde otra clase. Para permitir que las clases anidadas accedan a los miembros private de la clase externa, javac crea un método de acceso sintético package-private.
+  Una clase anidada y su clase externa se compilan en archivos de clase independientes. La máquina virtual Java normalmente prohíbe el acceso desde una clase a campos y métodos privados
+  de otra clase. Para permitir el acceso desde una clase anidada a miembros privados de una clase externa, javac crea un método de acceso sintético privado de paquete.
 </p>
 <p>
-  Al cambiar los miembros <code>private</code> a package-private, la accesibilidad real se vuelve explícita.
-  Esto también ahorra una pequeña cantidad de memoria y podría mejorar el rendimiento en entornos con recursos limitados.
+  Al hacer que el miembro <code>private</code> sea privado de paquete en su lugar, se hace explícita la accesibilidad real.
+  Esto también ahorra un poco de memoria, lo que puede mejorar el rendimiento en entornos con recursos limitados.
 </p>
 <p>
-  Esta inspección solo informa cuando el nivel de lenguaje del proyecto o módulo es 10 o inferior.
-  En Java 11 y versiones posteriores, los métodos de acceso ya no se generan debido al control de acceso basado en anidamiento (<a href="https://openjdk.org/jeps/181">JEP 181</a>).
+  Esta inspección solo se informa si el nivel de idioma del proyecto o módulo es 10 o inferior.
+  Según Java 11 y superior, los métodos de acceso ya no se generan,
+  debido al control de acceso basado en nidos (<a href="https://openjdk.org/jeps/181">JEP 181</a>).
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Outer {
     private void x() {}
+
     class Inner {
       void y() {
         x();
@@ -24,10 +28,11 @@ Para estas referencias, javac genera métodos de acceso sintéticos a nivel pack
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Una vez aplicada la corrección rápida:</p>
 <pre><code>
   class Outer {
     void x() {}
+
     class Inner {
       void y() {
         x();
@@ -35,5 +40,6 @@ Para estas referencias, javac genera métodos de acceso sintéticos a nivel pack
     }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

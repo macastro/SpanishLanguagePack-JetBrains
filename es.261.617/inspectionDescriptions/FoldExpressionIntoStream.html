@@ -1,13 +1,13 @@
 <html>
 <body>
-El patrón repetitivo detectado puede ser reemplazado por una expresión usando <i>Stream API</i> o la llamada <code>String.join()</code>.
+Reporta expresiones con un patrón repetitivo que podrían ser reemplazadas con <i>Stream API</i> o <code>String.join()</code>.
 <p>Ejemplo:</p>
 <pre><code>
   boolean allStartWith(String a, String b, String c, String d, String prefix) {
     return a.startsWith(prefix) && b.startsWith(prefix) && c.startsWith(prefix) && d.startsWith(prefix);
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   boolean foo(String a, String b, String c, String d, String prefix) {
     return Stream.of(a, b, c, d).allMatch(s -> s.startsWith(prefix));
@@ -19,12 +19,13 @@ El patrón repetitivo detectado puede ser reemplazado por una expresión usando 
     return a + "," + b + "," + c + "," + d;
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   String joinAll(String a, String b, String c, String d) {
     return String.join(",", a, b, c, d);
   }
 </code></pre>
-<p><small>Novedades de la versión 2018.2</small></p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2018.2</small></p>
 </body>
 </html>

@@ -1,14 +1,15 @@
 <html>
 <body>
-Informa sobre expresiones lambda que contienen un bloque de código como cuerpo cuando se puede utilizar un estilo de expresión.
-El resultado de la conversión es más corto y claro.
+Reporta expresiones lambda con cuerpos de bloques de código cuando se pueden utilizar cuerpos de estilo de expresión en su lugar.
+El resultado de la conversión es más corto y más claro.
 <p>Ejemplo:</p>
 <pre><code>
   Comparable&lt;String&gt; c = o -> {return 0;};
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de que se ha aplicado la solución rápida:</p>
 <pre><code>
   Comparable&lt;String&gt; c = o -> 0;
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

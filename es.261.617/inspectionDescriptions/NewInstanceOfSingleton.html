@@ -1,12 +1,13 @@
 <html>
 <body>
-<p>Informa sobre la creación de nuevas instancias de clases anotadas con <code>@groovy.lang.Singleton</code>.
-  Esta construcción puede provocar una excepción en tiempo de ejecución <b>imposible instanciar el singleton</b>.</p>
+<p>Reporta creación de nuevas instancias de clases anotadas con <code>@groovy.lang.Singleton</code>.
+  Tales construcciones pueden conducir a excepciones en tiempo de ejecución <b>No se puede instanciar singleton</b>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   @Singleton
   class Foo{
   }
+  
   Foo foo = <b>new Foo()</b>
 </code></pre>
 <p>Después de aplicar la corrección rápida:</p>
@@ -14,6 +15,7 @@
   @Singleton
   class Foo{
   }
+  
   Foo foo = <b>Foo.instance</b>
 </code></pre>
 </body>

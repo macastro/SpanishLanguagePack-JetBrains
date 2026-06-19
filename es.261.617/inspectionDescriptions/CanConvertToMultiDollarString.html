@@ -1,8 +1,8 @@
 <html>
 <body>
-El informe muestra situaciones que pueden beneficiarse de la conversión de cadenas a versiones con prefijos de interpolación de múltiples símbolos de dólar.
+Informa sobre los casos en los que resulta beneficioso convertir una cadena a una versión con un prefijo de interpolación de varios signos de dólar.
 <p>
-Los prefijos de interpolación pueden hacer que las cadenas sean más fáciles de entender, ya que las cadenas con prefijo pueden usar símbolos de dólar literales sin necesidad de escape adicional.
+Un prefijo de interpolación puede hacer que una cadena sea más fácil de entender, ya que una cadena con prefijo puede usar literales de dólar sin escapes adicionales.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -11,12 +11,13 @@ val jsonSchema: String = """
   "${'$'}id": "https://example.com/product.schema.json",
 }"""
 </code></pre>
-La corrección rápida convertirá todos los caracteres de dólar escapados que se puedan reemplazar de forma segura en caracteres de dólar regulares:
+La corrección rápida convierte todos los caracteres de dólar escapados que se pueden reemplazar de forma segura en caracteres de dólar normales:
 <pre><code>
 val jsonSchema: String = $$"""
 {
   "$id": "https://example.com/product.schema.json",
 }"""
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

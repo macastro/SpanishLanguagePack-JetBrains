@@ -1,6 +1,7 @@
 <html>
 <body>
-<p>Esta inspección detecta llamadas a las funciones de la biblioteca estándar de Kotlin <code>filterIsInstance</code>/<code>filterIsInstanceTo</code> donde el tipo objetivo no es un subtipo del tipo de elemento sobre el que se aplica el filtro. </p>
+<p>Esta inspección detecta las llamadas a las funciones de la biblioteca estándar de Kotlin <code>filterIsInstance</code>/<code>filterIsInstanceTo</code> cuyo tipo de destino no es un subtipo del tipo de elemento que se filtra.</p>
+
 <p>Ejemplo:</p>
 <pre><code>
     val list = listOf&lt;Int&gt;(1, 2, 3)

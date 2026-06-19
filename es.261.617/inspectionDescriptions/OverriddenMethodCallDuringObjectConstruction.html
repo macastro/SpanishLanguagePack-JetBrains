@@ -1,34 +1,37 @@
 <html>
 <body>
 Informa sobre cualquier llamada a métodos sobrescritos de la clase actual durante la construcción del objeto.
-Esto ocurre dentro de:
+Esto sucede si la construcción de un objeto se encuentra dentro de:
 <ul>
-  <li>Constructores</li>
-  <li>Inicializadores de instancia no static</li>
-  <li>Inicializadores de campos no static</li>
+  <li>Un constructor</li>
+  <li>Un inicializador de instancia no estático</li>
+  <li>Un inicializador de campo no estático</li>
   <li><code>clone()</code></li>
   <li><code>readObject()</code></li>
   <li><code>readObjectNoData()</code></li>
 </ul>
-<p>Este tipo de llamadas pueden provocar errores difíciles de detectar, ya que no hay garantía de que el objeto esté inicializado antes de que se produzca la llamada al método.</p>
+<p>Estas llamadas pueden generar errores sutiles, ya que no se garantiza que el objeto se inicialice antes de que ocurra la llamada al método.</p>
 <p>Ejemplo:</p>
 <pre><code>
   abstract class Parent {
     void someMethod() { }
   }
+
   class Child extends Parent {
     Child() {
       someMethod();
     }
+
     @Override
     void someMethod() { }
   }
 </code></pre>
+<!-- tooltip end -->
 <p>Esta inspección comparte su funcionalidad con:</p>
 <ul>
-  <li>La inspección de <b>llamadas a métodos abstract durante la construcción del objeto</b></li>
-  <li>La inspección de <b>llamadas a métodos sobrescribibles durante la construcción del objeto</b></li>
+  <li>La inspección <b>Método abstracto llamado durante la construcción del objeto</b></li>
+  <li>La inspección <b>Método reemplazable llamado durante la construcción del objeto</b></li>
 </ul>
-<p>Solo se debe habilitar una inspección a la vez para evitar advertencias duplicadas.</p>
+<p>Solamente una inspección debería estar habilitada a la vez para prevenir advertencias duplicadas.</p>
 </body>
 </html>

@@ -1,15 +1,17 @@
 <html>
 <body>
-Informa sobre el boxing explícito, es decir, el empaquetado de valores primitivos en objetos.
-<p>Para Java 5 y versiones posteriores, el boxing manual explícito es innecesario y puede eliminarse de forma segura.</p>
+Informe del "boxing" explícito que envuelve valores primitivos de objetos.
+<p>A partir de Java 5 no es necesario el "boxing" manual explícito, y se puede eliminar de manera segura.</p>
 <p><b>Ejemplo:</b></p>
 <ul>
   <li><code>Integer i = new Integer(1);</code> &rarr; <code>Integer i = Integer.valueOf(1);</code></li>
-  <li><code>Integer i = Integer.valueOf(1);</code> &rarr; <code>int i = 1;</code></li>
+  <li><code>int i = Integer.valueOf(1);</code> &rarr; <code>int i = 1;</code></li>
 </ul>
+
+<!-- tooltip end -->
 <p>
-La opción <b>Informar solo sobre expresiones de boxing verdaderamente redundantes</b> permite informar únicamente sobre los casos de boxing realmente redundantes, donde el valor empaquetado se desempaqueta inmediatamente de forma implícita o explícita.
-En este caso, se puede eliminar todo el proceso de boxing-unboxing. Esta inspección no informa sobre el simple boxing explícito.
-<p>Esta inspección solo informa cuando el nivel de lenguaje del proyecto o módulo es 5 o superior.</p>
+Utiliza la opción <b> Informar sólo expresiones "boxing" realmente innecesarias </b> para informar sólo de los "boxing" realmente innecesarios, en los que el valor "boxing" se "unboxing" inmediatamente, implícita o explícitamente.
+En estos casos, se puede eliminar todo el paso de "boxing" y "unboxing". Esta inspección no informa sobre lo explícito y simple "boxing".
+<p>Esta inspección sólo informa si el nivel de idioma del proyecto o módulo es 5 o superior.</p>
 </body>
 </html>

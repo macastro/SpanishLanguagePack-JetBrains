@@ -1,28 +1,31 @@
 <html>
 <body>
-Informa sobre métodos getter estándar que pueden ser reemplazados por la anotación lombok <code>@Getter</code>.
+Informa sobre los métodos getter estándar que pueden reemplazarse por la anotación <code>@Getter</code> de lombok.
 <p>Ejemplo:</p>
 <pre><code>
   import java.util.Date;
+
   public class MyClass {
     /**
      * Fecha de procesamiento.
      */
     private Date processDate;
+
     /**
      * Devuelve la fecha.
      *
-     * @return The date
+     * @return La fecha
      */
     public Date getProcessDate() {
       return processDate;
     }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida/limpieza:</p>
+<p>Después de aplicar la corrección rápida o limpieza:</p>
 <pre><code>
   import lombok.Getter;
   import java.util.Date;
+
   @Getter
   public class MyClass {
     /**
@@ -30,12 +33,13 @@ Informa sobre métodos getter estándar que pueden ser reemplazados por la anota
      * -- GETTER --
      * Devuelve la fecha.
      *
-     * @return The date
+     * @return La fecha
      */
     private Date processDate;
   }
 </code></pre>
-<p>Solo se informa cuando la biblioteca lombok está configurada. Para eliminar lombok, consulte el sitio web de lombok.</p>
-<p><small>Novedades en 2023.2</small></p>
+<p>Solo se informa si la biblioteca lombok está configurada. Para eliminar lombok, consulte el sitio web de lombok.</p>
+<!-- tooltip end -->
+<p><small>Novedades de 2023.2</small></p>
 </body>
 </html>

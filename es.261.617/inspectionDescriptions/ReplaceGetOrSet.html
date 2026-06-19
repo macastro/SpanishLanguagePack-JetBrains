@@ -1,26 +1,30 @@
 <html>
 <body>
-Informa sobre llamadas explícitas a funciones <code>get</code> o <code>set</code> que pueden ser reemplazadas por el operador de índice <code>[]</code>.
+Reporta llamadas explicitas a funciones <code>get</code> o <code>set</code> que pueden remplazarse por un operador de indexación <code>[]</code>.
 <p>
-    Kotlin permite implementaciones personalizadas de un conjunto predefinido de operadores para tipos.
+    Kotlin permite implementar de manera personalizada el conjunto de operadores predefinidos en tipos.
     Para sobrecargar un operador, puede marcar la función correspondiente con el modificador <code>operator</code>:
     <pre><code>
   operator fun get(index: Int) {}
   operator fun set(index: Int, value: Int) {}
     </code></pre>
-Estas funciones corresponden al operador de índice.
+
+Las funciones anteriores corresponden al operador de indexación.
+
 <p><b>Ejemplo:</b></p>
 <pre><code>  class Test {
       operator fun get(i: Int): Int = 0
   }
+
   fun test() {
       Test().get(0) // 'get()' reemplazable
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el quick-fix:</p>
 <pre><code>  class Test {
       operator fun get(i: Int): Int = 0
   }
+
   fun test() {
       Test()[0]
   }

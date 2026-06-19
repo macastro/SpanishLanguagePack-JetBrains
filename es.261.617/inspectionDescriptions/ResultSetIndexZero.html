@@ -1,12 +1,13 @@
 <html>
 <body>
-Informa sobre intentos de acceder a la columna 0 de <code>java.sql.ResultSet</code> o <code>java.sql.PreparedStatement</code>.
-Por razones históricas, las columnas en <code>java.sql.ResultSet</code> y <code>java.sql.PreparedStatement</code> no comienzan en <b>0</b>, sino en <b>1</b>, y el acceso a la columna 0 es un error común en la programación JDBC.
+Informa sobre los intentos de acceso a la columna 0 de <code>java.sql.ResultSet</code> o <code>java.sql.PreparedStatement</code>.
+Por razones históricas, las columnas de <code>java.sql.ResultSet</code> y <code>java.sql.PreparedStatement</code> se numeran empezando por <b>1</b>, en lugar de por <b>0</b>, y acceder a la columna 0 es un error común en la programación JDBC.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   String getName(ResultSet rs) {
     <b>return</b> rs.getString(0);
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

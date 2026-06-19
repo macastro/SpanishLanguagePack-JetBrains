@@ -1,10 +1,11 @@
 <html>
 <body>
-Reporta nombres incorrectamente formateados de pruebas, benchmarks y ejemplos.
-<p>Según el <a href="https://pkg.go.dev/testing">paquete testing en go.dev</a>, los nombres deben seguir convenciones específicas para que las herramientas de go puedan procesarlos correctamente.</p>
+Informa de nombres mal formados para pruebas, evaluaciones comparativas y ejemplos.
+<p>Según <a href="https://pkg.go.dev/testing">Package testing en go.dev</a>, los nombres deben seguir una convención especial
+para que la herramienta de Go los procese correctamente.</p>
 <p>Ejemplo:</p>
-<pre><code>func Testfoo(*testing.T) {} // la herramienta 'go' no ejecutará esta prueba</code></pre>
-<p>Después de aplicar la corrección rápida <b>Renombrar a</b>:</p>
+<pre><code>func Testfoo(*testing.T) {} // la herramienta "go" no ejecutará esta prueba</code></pre>
+<p>Después de aplicar la solución rápida <b>Cambiar nombre a</b>:</p>
 <pre><code>func TestFoo(*testing.T) {}</code></pre>
 </body>
 </html>

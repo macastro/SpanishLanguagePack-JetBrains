@@ -1,20 +1,21 @@
 <html>
 <body>
-Informa sobre declaraciones <code>synchronized</code> anidadas.
-Se recomienda evitar la sincronización anidada ya que, en algunos casos, puede provocar deadlocks.
+Reporta sentencias <code>synchronized</code> anidadas.
+Es recomendable evitar la sincronización anidada si es posible, porque en algunos casos puede provocar un interbloqueo.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   synchronized (lockA){
-    //El hilo 1 está esperando lockB
+    // el hilo 1 está esperando por lockB
     synchronized (lockB){ //advertencia
     }
   }
   ...
   synchronized (lockB) {
-    //El hilo 2 está esperando lockA
+    // el hilo 2 está esperando por lockA
     synchronized (lockA) { //advertencia
     }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

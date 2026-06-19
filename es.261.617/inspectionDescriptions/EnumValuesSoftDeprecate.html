@@ -1,33 +1,38 @@
 <html>
 <body>
-Informa sobre las llamadas al método <code>values()</code> en clases enum de Kotlin que pueden ser reemplazadas por la propiedad <code>entries</code>.
+Informa sobre las llamadas desde Kotlin al método <code>values()</code> en clases de tipo enumeración que pueden reemplazarse con la lectura de la propiedad <code>entries</code>.
 <p>
-    El uso de <code>Enum.entries</code> puede mejorar el rendimiento del código.
+    El uso de <code>Enum.entries</code> puede mejorar el rendimiento de tu código.
 </p>
 <p>
-    Esta corrección rápida reemplazará <code>values()</code> por <code>entries</code>.
+    El quick-fix reemplazará <code>values()</code> por <code>entries</code>.
 </p>
 <p>
-    <b>Más información</b>: <a href="https://youtrack.jetbrains.com/issue/KT-48872">KT-48872 Alternativa moderna y eficiente para Enum.values()</a>
+    <b>Más detalles:</b> <a href="https://youtrack.jetbrains.com/issue/KT-48872">
+    KT-48872 Proporciona un reemplazo moderno y de alto rendimiento a Enum.values()</a>
 </p>
 <p>
-    <b>Nota</b>: El tipo de la propiedad <code>entries</code> es diferente del tipo de retorno del método <code>values()</code> (<code>EnumEntries&lt;T&gt;</code> hereda de <code>List&lt;T&gt;</code>, no de <code>Array&lt;T&gt;</code>).
-    Por lo tanto, en algunos casos, la corrección rápida insertará una conversión adicional <code>.toTypedArray()</code> para evitar romper el código, pero en la mayoría de los casos, el reemplazo se realizará sin esta conversión (por ejemplo, en bucles <code>for</code>).
+    <b>Aviso:</b> El tipo de propiedad <code>entries</code> es diferente del tipo de retorno del método <code>values()</code>
+    (<code>EnumEntries&lt;T&gt;</code> que hereda de <code>List&lt;T&gt;</code> en vez de <code>Array&lt;T&gt;</code>).
+    Debido a esto, en algunos casos la corrección rápida inserta una conversión extra <code>.toTypedArray()</code> para no romper el código, pero
+    en los casos más comunes el reemplazo se hará sin ella (por ejemplo en un bucle <code>for</code>).
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
     enum class Version {
         V1, V2
     }
+
     Version.<b>values()</b>.forEach { /* .. */ }
     val firstVersion = Version.<b>values()</b>[0]
     functionExpectingArray(Version.<b>values()</b>)
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras la aplicación del quick-fix:</p>
 <pre><code>
     enum class Version {
         V1, V2
     }
+
     Version.<b>entries</b>.forEach { /* .. */ }
     val firstVersion = Version.<b>entries</b>[0]
     functionExpectingArray(Version.<b>entries.toTypedArray()</b>)

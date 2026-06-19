@@ -1,6 +1,7 @@
 <html>
 <body>
-Informa cuando una clase tiene un método <code>equals()</code> con un tipo de parámetro diferente a <code>Any?</code>, sin tener otro método <code>equals()</code> que use <code>Any?</code> como tipo de parámetro.
+Reporta que <code>equals()</code> Toma un tipo de argumento que no sea <code>Any?</code>
+Si al clase no tiene otro <code>equals ()</code> que tome <code>Any?</code> como su tipo de argumento.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
@@ -9,6 +10,6 @@ Informa cuando una clase tiene un método <code>equals()</code> con un tipo de p
       }
   }
 </code></pre>
-<p>Para corregir este problema, cree un método <code>equals()</code> que tome un parámetro de tipo <code>Any?</code>.</p>
+<p>Para solucionar el problema, crea el método <code>equals ()</code> que tome un argumento de tipo <code>Any?</code>.</p>
 </body>
 </html>

@@ -1,36 +1,40 @@
 <html>
 <body>
-Informa cuando el modificador <code>inner</code> en una clase es redundante si la clase no hace referencia a los miembros de su clase externa.
+Informa del modificador <code>inner</code> en una clase como redundante si no hace referencia a miembros de su clase externa.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   class Foo {
-      <b>inner</b> class InnerClass { // Modificador `inner` redundante
+      <b>inner</b> class InnerClass { // modificador `inner` redundante
           fun hello() {
-              println("Hi!")
+              println("¡Hola!")
           }
       }
   }
+
   class List {
       val objects = Array&lt;Any&gt;(42) { Any() }
-      <b>inner</b> class Iterator { // Modificador `inner` no redundante
+
+      <b>inner</b> class Iterator { // modificador `inner` no redundante
           fun next(): Any {
               return objects[0]
           }
       }
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras aplicar la corrección rápida:</p>
 <pre><code>
   class Foo {
-      class InnerClass { // Modificador `inner` redundante
+      class InnerClass { // modificador `inner` redundante
           fun hello() {
-              println("Hi!")
+              println("¡Hola!")
           }
       }
   }
+
   class List {
       val objects = Array&lt;Any&gt;(42) { Any() }
-      <b>inner</b> class Iterator { // Modificador `inner` no redundante
+
+      <b>inner</b> class Iterator { // modificador `inner` no redundante
           fun next(): Any {
               return objects[0]
           }

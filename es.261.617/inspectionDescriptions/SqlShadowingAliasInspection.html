@@ -1,9 +1,9 @@
 <html>
 <body>
-Informa sobre coincidencias entre nombres de alias en SELECT y nombres de columnas en la cláusula FROM.
+Informa sobre alias SELECT con nombres que coinciden con nombres de columna en la cláusula FROM.
 <p>Ejemplo (MySQL):</p>
 <pre><code>CREATE TABLE foo (a INT, b INT, c INT);
 SELECT a b, c FROM foo;</code></pre>
-<p>La columna <code>a</code> usa el alias <code>b</code>, pero el nombre <code>b</code> también es utilizado por una columna en la tabla <code>foo</code>.</p>
+<p>La columna <code>a</code> usa el alias <code>b</code> pero el nombre <code>b</code> también lo usa la columna de la tabla <code>foo</code>.</p>
 </body>
 </html>

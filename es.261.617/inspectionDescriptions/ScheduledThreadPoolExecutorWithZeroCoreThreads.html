@@ -1,15 +1,15 @@
 <html>
 <body>
-Informa sobre cualquier instancia de <code>java.util.concurrent.ScheduledThreadPoolExecutor</code> donde <code>corePoolSize</code> se establece en cero, ya sea mediante el método <code>setCorePoolSize</code> o mediante el constructor del objeto.
+Reporta cualquier instancia de <code>java.util.concurrent.ScheduledThreadPoolExecutor</code> en la que se estableció <code>corePoolSize</code> en cero mediante el método <code>setCorePoolSize</code> o el constructor del objeto.
 <p>
-  Un <code>ScheduledThreadPoolExecutor</code> sin hilos principales no ejecutará ningún contenido.
+  Un <code>ScheduledThreadPoolExecutor</code> con cero subprocesos centrales no ejecutará nada.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   void foo(int corePoolSize) {
       if (corePoolSize != 0) return;
-      ThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(corePoolSize); // Advertencia
-      executor.setCorePoolSize(corePoolSize); // Advertencia
+      ThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(corePoolSize); // advertencia
+      executor.setCorePoolSize(corePoolSize); // advertencia
   }
 </code></pre>
 </body>

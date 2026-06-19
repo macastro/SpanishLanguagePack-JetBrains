@@ -1,6 +1,6 @@
 <html>
 <body>
-Reporta las llamadas a los siguientes métodos en el objeto <code>java.util.Properties</code>:
+<code>java.util.Properties</code> objeto en las siguientes llamadas al método:
 <ul>
   <li><code>put()</code></li>
   <li><code>putIfAbsent()</code></li>
@@ -8,11 +8,11 @@ Reporta las llamadas a los siguientes métodos en el objeto <code>java.util.Prop
   <li><code>get()</code></li>
 </ul>
 <p>
-  Por razones históricas, <code>java.util.Properties</code> hereda de <code>java.util.Hashtable</code>, pero no se recomienda usar estos métodos para evitar la contaminación con valores de propiedades que no sean de tipo <code>String</code>.
+  Por razones históricas, <code>java.util.Properties</code> hereda de <code>java.util.Hashtable</code>, pero no se recomienda utilizar estos métodos para evitar la contaminación de valores de propiedades que no sean de tipo <code>String</code>.
 </p>
 <p>
-  Las llamadas a <code>java.util.Properties.putAll()</code> no se reportan cuando los parámetros de clave y valor en el mapa son de tipo <code>String</code>.
-  Estas llamadas son seguras y no hay mejores alternativas.
+  Si tanto los parámetros de clave como de valor en el mapa son de tipo <code>String</code>, no se notificará la llamada a <code>java.util.Properties.putAll()</code>.
+  Estas llamadas son seguras y no hay una alternativa mejor.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
@@ -23,7 +23,7 @@ Reporta las llamadas a los siguientes métodos en el objeto <code>java.util.Prop
     return props.get("Hello");
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   Object f(Properties props) {
     props.setProperty("hello", "world");
@@ -32,5 +32,6 @@ Reporta las llamadas a los siguientes métodos en el objeto <code>java.util.Prop
     return props.getProperty("hello");
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

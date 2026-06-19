@@ -1,18 +1,19 @@
 <html>
 <body>
-El informe puede ser reemplazado por un array de constantes enum usando la llamada <code>EnumType.values()</code>.
-<p>Normalmente, al actualizar dicha enumeración, debe actualizar también el array. Sin embargo, si usa <code>EnumType.values()</code> en su lugar, no necesitará modificarlo.</p>
+Informa una matriz compuesta por constantes de tipos de enumeraciones que puedan reemplazarse por la llamada a `EnumType.values()`.
+<p>Usualmente cuándo se actualiza una enumeración de este tipo, se debe actualizar también la matriz. Pero si se usa `EnumType.values()` en vez de, no es necesario hacer cambios.</p>
 <p>Ejemplo:</p>
 <pre><code>
   enum States {
      NOT_RUN, IN_PROGRESS, FINISHED;
   }
+  
   handleStates(new States[] {NOT_RUN, IN_PROGRESS, FINISHED});
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   handleStates(States.values());
 </code></pre>
-<p><small>Novedades de 2019.1</small></p>
+<p><small>Funcionalidad nueva en 2019.1</small></p>
 </body>
 </html>

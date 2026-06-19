@@ -1,10 +1,11 @@
 <html>
 <body>
-Informa sobre columnas, alias y otros elementos de subconsultas no referenciados en expresiones de consultas externas.
+Informar de columnas, alias y otros elementos de subconsulta que no están referenciados en la expresión de consulta externa.
 <p>Ejemplo (PostgreSQL):</p>
 <pre><code>CREATE TABLE for_subquery(id INT);
 SELECT a, q FROM (SELECT 1 AS a, 10 AS b, 2 + 3 AS q, id
       FROM for_subquery) x;</code></pre>
-<p>Hacemos referencia a los alias <code>a</code> y <code>q</code> de la subconsulta. Sin embargo, el alias <code>b</code> y la columna <code>id</code> no se referencian en la sentencia SELECT externa. Por lo tanto, <code>b</code> e <code>id</code> se mostrarán en gris.</p>
+<p>Hacemos referencia a los alias <code>a</code> y <code>q</code> de una subconsulta. Pero el alias <code>b</code> y la columna <code>id</code>
+  no están referenciados en la sentencia SELECT exterior. Por lo tanto, <code>b</code> y <code>id</code> aparecen atenuados.</p>
 </body>
 </html>

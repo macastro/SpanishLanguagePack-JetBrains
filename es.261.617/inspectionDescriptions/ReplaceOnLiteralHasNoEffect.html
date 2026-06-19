@@ -1,11 +1,12 @@
 <html>
 <body>
-Informa sobre llamadas inválidas a los métodos <code>String</code> <code>replace()</code>, <code>replaceAll()</code> o <code>replaceFirst()</code>. Estas llamadas se consideran inválidas cuando tanto el patrón como la cadena de búsqueda son constantes en tiempo de compilación, y la cadena de búsqueda no se encuentra en el patrón. Esto representa código redundante y podría indicar un error.
+Reporta llamadas a los métodos <code>String</code> <code>replace()</code>, <code>replaceAll()</code> o <code>replaceFirst()</code> que no tienen efecto. Se puede garantizar que tales llamadas no tengan efecto cuando el calificador y la cadena de búsqueda son constantes de tiempo de compilación y la cadena de búsqueda no se encuentra en el calificador. Esto es redundante y puede indicar un error.
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  // El reemplazo no tiene ningún efecto
+  // el reemplazo no hace nada
   "hello".replace("$value$", value);
 </code></pre>
-<p><small>Novedades en 2022.1</small></p>
+<!-- tooltip end -->
+<p><small>Nuevo en 2022.1</small></p>
 </body>
 </html>

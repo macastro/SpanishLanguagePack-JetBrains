@@ -1,16 +1,16 @@
 <html>
 <body>
-Reporta comentarios y etiquetas Javadoc con los siguientes problemas:
+Informa los siguientes problemas en los comentarios y etiquetas Javadoc:
 <ul>
-  <li>Nombre de etiqueta inválido</li>
-  <li>Descripción de etiqueta incompleta</li>
-  <li>Etiqueta duplicada</li>
-  <li>Falta descripción Javadoc</li>
+  <li>nombres de etiqueta no válidos</li>
+  <li>descripciones de etiqueta incompletas</li>
+  <li>etiquetas duplicadas</li>
+  <li>descripciones Javadoc faltantes</li>
 </ul>
 <p>Ejemplo:</p>
 <pre><code>
   /**
-   * 标记名称无效
+   * Nombre de etiqueta no válido
    * @poram param description
    */
   public void sample(int param){
@@ -19,11 +19,16 @@ Reporta comentarios y etiquetas Javadoc con los siguientes problemas:
 <p>Ejemplo:</p>
 <pre><code>
   /**
-   * 指向自身 {@link #sample(int)}
+   * Señalando a sí mismo {@link #sample(int)}
    */
   public void sample(int param){
   }
 </code></pre>
-<p>Esta corrección rápida agregará etiquetas Javadoc desconocidas a la lista de etiquetas adicionales definidas por el usuario.</p>
+<p>La corrección rápida agrega la etiqueta Javadoc desconocida a la lista de etiquetas adicionales definidas por el usuario.</p>
+<!-- tooltip end -->
+<p>Usa el campo de texto que aparece a continuación para definir etiquetas Javadoc adicionales.</p>
+<p>Utiliza la primera casilla de verificación para ignorar la etiqueta 'throws' duplicada.</p>
+<p>Usa la segunda casilla de verificación para ignorar el problema con la primera oración faltante o incompleta en la descripción.</p>
+<p>Usa la tercera casilla de verificación para ignorar las referencias que señalan a sí mismas.</p>
 </body>
 </html>

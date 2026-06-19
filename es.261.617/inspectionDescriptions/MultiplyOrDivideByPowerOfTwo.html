@@ -1,21 +1,28 @@
 <html>
+<head>
+<title>Inspección de multiplicaciones/divisiones de potencias de 2</title>
+</head>
 <body>
-Informa sobre productos de valores enteros con constantes enteras que pueden representarse como potencias de 2. Tales expresiones pueden reemplazarse por operaciones de desplazamiento a la derecha o izquierda para mejorar el rendimiento.
+<h1>Inspección de multiplicaciones/divisiones de potencias de 2</h1>
+
+Esta inspección informa sobre la multiplicación de un valor entero por una constante entera que se puede representar como una potencia de 2. Estas expresiones se pueden reemplazar por operaciones de desplazamiento a la derecha o a la izquierda para una posible mejora del rendimiento.
+
 <p>
-  Tenga en cuenta que esta inspección no es relevante para las JVM modernas (como HotSpot u OpenJ9), ya que sus compiladores JIT realizarán esta optimización.
-  Solo puede ser útil en algunos sistemas embebidos que no realizan compilación JIT.
+  Tenga en cuenta que esta inspección no es relevante para las JVM modernas (por ejemplo, HotSpot u OpenJ9) porque sus compiladores JIT realizarán esta optimización.
+  Sólo puede ser útil en algunos sistemas integrados en los que no se realiza la compilación JIT.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   int y = x * 4;
 </code></pre>
-<p>Se sugiere reemplazar la operación de multiplicación o división por una operación de desplazamiento mediante una corrección rápida:</p>
+<p>Se sugiere una solución rápida para reemplazar la operación de multiplicación o división por la operación de desplazamiento:</p>
 <pre><code>
   int y = x &lt;&lt; 2;
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Esta opción hace que la inspección también informe sobre divisiones por potencias de dos.
-  Tenga en cuenta que la sustitución de divisiones por potencias de dos con desplazamientos no es aplicable a números negativos.
+  Utilice la opción para que la inspección también informe sobre la división por una potencia de dos.
+  Tenga en cuenta que reemplazar una división de potencia de dos por un desplazamiento no funciona para números negativos.
 </p>
 </body>
 </html>

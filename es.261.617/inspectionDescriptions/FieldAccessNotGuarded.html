@@ -1,6 +1,6 @@
 <html>
 <body>
-Informa sobre accesos a campos declarados como <code>@GuardedBy</code> que no están protegidos por una estructura de sincronización adecuada.
+Informa sobre los accesos a campos declarados como <code>@GuardedBy</code> que no están protegidos por una estructura de sincronización adecuada.
 <p>Ejemplo:</p>
 <pre><code>
     @GuardedBy("this")
@@ -8,10 +8,11 @@ Informa sobre accesos a campos declarados como <code>@GuardedBy</code> que no es
         notify();
     }
     void y() {
-        x(); // Llamada a método no protegida
+        x(); // llamada a método no protegida
     }
 </code></pre>
-<p>Las anotaciones <code>@GuardedBy</code> soportadas son:</p>
+<!-- tooltip end -->
+<p>Las anotaciones <code>@GuardedBy</code> compatibles son:</p>
 <ul>
   <li><code>net.jcip.annotations.GuardedBy</code></li>
   <li><code>javax.annotation.concurrent.GuardedBy</code></li>

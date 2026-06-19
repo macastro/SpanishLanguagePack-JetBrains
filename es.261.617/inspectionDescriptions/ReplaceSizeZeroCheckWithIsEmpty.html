@@ -1,8 +1,8 @@
 <html>
 <body>
-Se sugiere reemplazar la comprobación <code>size == 0</code> de <code>Collections/Array/String</code> por <code>isEmpty()</code>.
-<p>Usar <code>isEmpty()</code> hace que el código sea más simple.</p>
-<p>Esta corrección rápida reemplazará la comprobación de tamaño por <code>isEmpty()</code>.</p>
+Informe las comprobaciones de <code>size == 0</code> de <code>Collections/Array/String</code> que deberían reemplazarse con <code>isEmpty()</code>.
+<p>El uso de <code>isEmpty()</code> simplifica el código.</p>
+<p>El arreglo rápido reemplazará las comprobaciones de tamaño por <code>isEmpty()</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun foo() {
@@ -10,12 +10,13 @@ Se sugiere reemplazar la comprobación <code>size == 0</code> de <code>Collectio
       arrayOf.size == 0
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar el arreglo rápido:</p>
 <pre><code>
   fun foo() {
       val arrayOf = arrayOf(1, 2, 3)
       arrayOf.isEmpty()
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

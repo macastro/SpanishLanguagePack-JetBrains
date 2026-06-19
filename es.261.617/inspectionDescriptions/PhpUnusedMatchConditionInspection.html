@@ -1,11 +1,11 @@
 <html>
 <body>
-Informa sobre condiciones que nunca coincidirán en una expresión <code>match</code>.
+Informa sobre las condiciones en una expresión <code>match</code> que nunca coincidirán.
 <p>
-  Similar al comportamiento del motor PHP, la comprobación utiliza una comparación estricta (<code>===</code>) para verificar los tipos bajo las condiciones <code>match</code> con el tipo del argumento <code>match</code>, independientemente de la directiva <code>strict_types</code>. Debido a que no se produce coerción de tipos, algunas condiciones pueden no coincidir debido a incompatibilidad de tipos.
+  Al igual que el comportamiento del motor de PHP, esta inspección utiliza la comparación estricta (<code>===</code>) para verificar los tipos en las condiciones de <code>match</code> con respecto al tipo del argumento de <code>match</code>, independientemente de la directiva <code>strict_types</code>. Dado que no se produce coerción de tipos, es posible que algunas condiciones nunca coincidan debido a una discrepancia de tipos.
 </p>
 <p>
-  Consulte <a href="https://wiki.php.net/rfc/match_expression_v2">Match expression (php.net)</a> para más detalles.
+  Para obtener más información, consulta <a href="https://wiki.php.net/rfc/match_expression_v2">Match expression (php.net)</a>.
 </p>
 </body>
 </html>

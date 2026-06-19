@@ -1,12 +1,14 @@
 <html>
 <body>
-Informa sobre el cálculo incorrecto del código hash de arrays.
-<p>Para calcular correctamente el código hash de los arrays, realice lo siguiente:</p>
+Reporta cálculo de código hash incorrecto para arreglos.
+<p>Para calcular correctamente el código hash de un arreglo, use:</p>
 <ul>
-  <li>Use <code>Arrays.hashcode()</code> para arrays unidimensionales</li>
-  <li>Use <code>Arrays.deepHashcode()</code> para arrays multidimensionales</li>
+  <li><code>Arrays.hashcode()</code> para arreglos lineales</li>
+  <li><code>Arrays.deepHashcode()</code> para arreglos multidimensionales</li>
 </ul>
-Estos métodos también deben usarse con <code>Objects.hash()</code> cuando la secuencia de entrada contiene arrays, por ejemplo: <code>Objects.hash(string, Arrays.hashcode(array))</code>
+Estos métodos también deben usarse con <code>Objects.hash()</code> cuando la secuencia de valores de entrada incluye arreglos, por ejemplo:
+<code>Objects.hash(string, Arrays.hashcode(array))</code>
+<!-- tooltip end -->
 <p>
 </body>
 </html>

@@ -1,18 +1,20 @@
 <html>
 <body>
-Se informa que la clase anónima puede reemplazarse de manera segura por una clase interna <code>static</code>.
-Si una clase anónima no hace referencia explícita a su instancia envolvente o clase local desde el método circundante, puede ser una clase interna <code>static</code>.
+Reporta clases anónimas que se pueden reemplazar de forma segura con clases internas <code>static</code>.
+Una clase anónima puede ser una clase interna <code>static</code> si no hace referencia explícitamente a su instancia envolvente o clases locales desde su método envolvente.
 <p>
-Las clases internas <code>static</code> no mantienen una referencia implícita a su instancia envolvente.
-Esto previene fugas de memoria comunes y reduce la memoria utilizada por cada instancia de clase.
+Una clase interna <code>static</code> no mantiene una referencia implícita a su instancia envolvente.
+Esto evita una causa común de fugas de memoria y utiliza menos memoria por instancia de clase.
 </p>
 <p>
-  A partir de Java 18, solo las clases anónimas serializables mantienen una referencia implícita a su instancia envolvente cuando no utilizan esta referencia. Por lo tanto, si el nivel de lenguaje del módulo es Java 18 o superior, esta inspección solo informará sobre clases serializables.
+Desde Java 18, únicamente las clases anónimas serializables mantienen una referencia implícita a su instancia envolvente,
+si no se utiliza esta referencia. Por lo tanto, si el nivel del lenguaje del módulo es Java 18 o superior,
+esta inspección reporta únicamente clases serializables.
 </p>
-<p>La corrección rápida extrae la clase anónima a una clase interna <code>static</code> con nombre.</p>
+<p>La solución rápida extrae la clase anónima en una clase interna <code>static</code> con nombre.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  void sample(){
+  void sample() {
     Thread thread = new Thread(new Runnable() {
       @Override
       public void run() {
@@ -20,16 +22,18 @@ Esto previene fugas de memoria comunes y reduce la memoria utilizada por cada in
     });
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Tras aplicar la solución rápida:</p>
 <pre><code>
   void sample() {
     Thread thread = new Thread(new Task());
   }
+
   private static class Task implements Runnable {
     @Override
     public void run() {
     }
   }
 </code></pre>
+  <!-- tooltip end -->
 </body>
 </html>

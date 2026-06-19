@@ -1,14 +1,15 @@
 <html>
 <body>
-Informa sobre campos de colección <code>public</code> <code>static</code> que son modificables.
-<p>Aunque estos campos se utilizan frecuentemente para almacenar colecciones de valores constantes, siguen representando un riesgo de seguridad ya que su contenido puede ser modificado incluso cuando el campo está declarado como <code>final</code>.</p>
+Informa sobre los campos de la colección <code>public</code> <code>static</code> modificables.
+<p>Si bien suelen usarse para almacenar colecciones de valores constantes, estos campos representan un riesgo de seguridad, ya que su contenido puede modificarse aunque el campo esté declarado como <code>final</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
-  public static final List&lt;String&gt; EVENTS = new ArrayList&lt;&gt;();
+  public static final List&lt;String&gt; EVENTOS = new ArrayList&lt;&gt;();
   </code>
 </pre>
+<!-- tooltip end -->
 <p>
-  Utilice la tabla en la sección de <b>Opciones</b> para especificar métodos que devuelvan colecciones inmutables.
-  Los campos de colección <code>public</code> <code>static</code> inicializados usando estos métodos no serán reportados.
+  Utilice la tabla en la sección <b>Opciones</b> para especificar los métodos que devuelven colecciones no modificables.
+  Los campos de colección <code>public</code> <code>static</code> inicializados con estos métodos no se informarán.
 </body>
 </html>

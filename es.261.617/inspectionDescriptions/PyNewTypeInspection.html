@@ -1,22 +1,25 @@
 <html>
 <body>
 <p>
-  Reporta el uso inválido de <a href="https://docs.python.org/3/library/typing.html#typing.NewType">NewType</a>.
+  Informa sobre usos no válidos de <a href="https://docs.python.org/3/library/typing.html#typing.NewType">NewType</a>.
 </p>
 <p>
   <b>Ejemplo:</b>
 </p>
 <pre><code>
   from typing import NewType
-  InvalidName = NewType("Name", int)  # El nombre de variable 'InvalidName' no coincide con el nombre de NewType 'Name'
+
+  InvalidName = NewType("Name", int)  # El nombre de la variable 'InvalidName' no coincide con el nombre del NewType 'Name'
 </code></pre>
 <pre><code>
   from typing import Literal
-  InvalidType = NewType("InvalidType", Literal[1])  # NewType no puede usarse con 'Literal[1]'
+
+  InvalidType = NewType("InvalidType", Literal[1])  # NewType no se puede utilizar con 'Literal[1]'
 </code></pre>
 <pre><code>
   Base = NewType("Base", str)
-  class Derived(Base):  # 'Base' cannot be subclassed
+
+  class Derived(Base):  # No se pueden crear subclases de 'Base'
       pass
 </code></pre>
 </body>

@@ -1,13 +1,13 @@
 <html>
 <body>
 <h1>Excepciones verificadas en Kotlin</h1>
-<p>Esta detección solo se aplica a métodos con la anotación <code>com.intellij.openapi.ThrowsChecked</code>.</p>
-<p>Esta verificación intenta encontrar casos donde se llama a funciones anotadas pero no se capturan las excepciones.</p>
+<p>Esta inspección solo se aplica a los métodos con la anotación <code>com.intellij.openapi.ThrowsChecked</code>.</p>
+<p>La inspección intenta detectar casos en los que se llama a una función anotada pero no se captura la excepción.</p>
 <p>Diferencias con las excepciones verificadas de Java:</p>
 <ul>
-  <li>Esta verificación produce advertencias, pero no interrumpe la compilación.</li>
-  <li>Por diseño, se pueden suprimir las excepciones.</li>
-  <li>Esta verificación no debería intentar demostrar en cada caso que ciertas excepciones no son capturadas. Solo sirve para recordar a los usuarios de la API sobre las excepciones.
+  <li>Esta inspección genera advertencias, pero no interrumpe la compilación.</li>
+  <li>Por diseño, está permitido suprimir las excepciones.</li>
+  <li>Esta inspección no pretende demostrar en todos los casos que no se capturan ciertas excepciones. Su único propósito es recordar a los usuarios de la API la existencia de dichas excepciones.
   </li>
 </ul>
 </body>

@@ -1,14 +1,15 @@
 <html>
 <body>
-Llamadas a métodos de aserción donde los tipos de argumentos "expected" y "actual" son incompatibles.
-<p>Tales llamadas generalmente indican un error en la prueba.
-  Esta inspección verifica los métodos relevantes de JUnit, TestNG y AssertJ.</p>
+Informa sobre las llamadas a métodos de aserción donde los tipos del argumento "esperado" y "real" no son compatibles.
+<p>La presencia de dichas llamadas suele indicar que hay un error en la prueba.
+Esta inspección comprueba los métodos relevantes de JUnit, TestNG y AssertJ.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   assertEquals("1", 1);
   assertNotSame(new int[0], 0);
-  // Advertencia débil, posiblemente solo prueba la convención equals()
-  assertThat(foo).as("user type").isNotEqualTo(bar);
+
+  // Advertencia débil. Puede que solo esté probando el contrato equals()
+  assertThat(foo).as("tipo de usuario").isNotEqualTo(bar);
 </code></pre>
 </body>
 </html>

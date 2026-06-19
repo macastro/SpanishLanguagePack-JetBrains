@@ -1,10 +1,27 @@
+<!--
+  ~ Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
 <html>
 <body>
-Informa sobre declaraciones de tipo redundantes en literales compuestos.
+Reporta declaraciones de tipo redundantes en literales compuestos.
 <p>Ejemplo:</p>
 <pre><code>nums := [][]int{[]int{1}, []int{2}}</code></pre>
-<p>Esto es un slice de slices de tipo <code>int</code>. En este caso, puede usar una definición más corta. Puede corregir este código manualmente o usar la corrección rápida <b>Eliminar tipo redundante</b>. Después de aplicar la corrección rápida, el código se verá así:</p>
+<p>Tenemos una rebanada de rebanadas del tipo <code>int</code>. En este caso, puedes usar una definición más corta. Puedes corregir este código manualmente o usar el arreglo rápido <b>Eliminar tipo redundante</b>. Después de aplicar el arreglo rápido, el código queda de la siguiente manera:</p>
 <pre><code>nums := [][]int{{1},{2}}</code></pre>
-<p>Para obtener más información sobre literales compuestos, consulte la <a href="https://go.dev/ref/spec#Composite_literals">Especificación del Lenguaje Go: Literales Compuestos en go.dev</a>.</p>
+<p>Para obtener más información sobre los literales compuestos, consulta <a href="https://go.dev/ref/spec#Composite_literals">Go Language Specification:
+  Composite Literals en go.dev</a>.</p>
 </body>
 </html>

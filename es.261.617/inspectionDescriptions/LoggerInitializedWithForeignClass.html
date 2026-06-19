@@ -1,29 +1,31 @@
 <html>
 <body>
-Reporta instancias de <code>Logger</code> donde la clase del literal <code>class</code> usado para la inicialización pertenece a una clase diferente de la que contiene el <code>Logger</code>. Esto puede ocurrir fácilmente al copiar y pegar código desde otra clase, y puede resultar en eventos registrados bajo categorías inesperadas y filtros aplicados incorrectamente.
-<p>Se proporciona una corrección rápida para reemplazar el literal de clase externa con el literal de la clase contenedora.</p>
+Informa acerca de instancias <code>Logger</code> que se inicializan con un literal de <code>class</code> de una clase distinta de aquella en la que se contiene <code>Logger</code>. Esto puede ocurrir fácilmente cuando se copia y pega algún código de otra clase y puede resultar en el registro de eventos bajo una categoría inesperada y provocar que los filtros se apliquen incorrectamente.
+<p>Se proporciona una solución rápida para reemplazar el literal de clase externo por uno de la clase circundante.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   <b>public class</b> Paramount {
     <b>protected static final</b> Logger LOG = Logger.getLogger(Critical.class);
-    // …otros campos y métodos
+
+    // ... otros campos y métodos
   }
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la solución rápida:</p>
 <pre><code>
   <b>public class</b> Paramount {
     <b>protected static final</b> Logger LOG = Logger.getLogger(Paramount.class);
-    // …otros campos y métodos
+
+    // ... otros campos y métodos
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Configuración de la inspección:
+  Configurar la inspección:
 </p>
 <ul>
-  <li>Use la tabla para especificar las clases y métodos de fábrica del logger que esta inspección debe reconocer.</li>
-  <li>Use la opción <b>Ignorar loggers inicializados con superclase</b> para ignorar los loggers inicializados con la superclase de la clase que contiene el logger.</li>
-  <li>Use <b>Ignorar loggers en clases no públicas</b> para emitir advertencias solo para loggers en clases <code>public</code>.</li>
-  <li>Use <b>Ignorar loggers no inicializados en campos final</b> para reportar solo los loggers inicializados en campos final, ignorando otros casos.</li>
+  <li>Utiliza la tabla para especificar las clases y métodos de fábrica de registradores reconocidos por esta inspección.</li>
+  <li>Utiliza la opción <b>Ignorar registradores inicializados con una superclase</b> para ignorar los registradores que se inicializan con una superclase de la clase que contiene el registrador.</li>
+  <li>Utiliza <b>Ignorar registradores en clases no públicas</b> para advertir solo sobre los registradores en clases <code>public</code>.</li>
 </ul>
 </body>
 </html>

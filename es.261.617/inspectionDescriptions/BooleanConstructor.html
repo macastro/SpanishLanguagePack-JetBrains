@@ -1,17 +1,21 @@
 <html>
 <body>
-Informa sobre la creación de objetos <code>Boolean</code>.
+Informa la creación de objetos <code>Boolean</code>.
 <p>
-  La creación de nuevos objetos <code>Boolean</code> es generalmente innecesaria y puede causar problemas de rendimiento si se hace con frecuencia. Además, el constructor <code>Boolean</code> está obsoleto desde Java 9 y podría ser eliminado o volverse inaccesible en futuras versiones de Java.</p>
+  Rara vez es necesario construir nuevos objetos <code>Boolean</code>,
+  y puede ocasionar problemas de desempeño si se hace lo suficiente seguido. Además, los constructores de <code>Boolean</code>
+  están obsoletos desde Java 9 y podrían eliminarse o volverse
+  inaccecibles en futuras versiones de Java.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   Boolean b1 = new Boolean(true);
   Boolean b2 = new Boolean(str);
 </code></pre>
-<p>Después de aplicar la corrección rápida:</p>
+<p>Después de aplicar la reparación rápida:</p>
 <pre><code>
   Boolean b1 = Boolean.TRUE;
   Boolean b2 = Boolean.valueOf(str);
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

@@ -1,11 +1,12 @@
 <html>
 <body>
-Informa sobre las pruebas de JUnit 4 que pueden migrarse automáticamente a JUnit 5.
-Aunque el ejecutor predeterminado puede convertirse automáticamente, los ejecutores personalizados, las reglas de método y las reglas de campo no pueden convertirse automáticamente y requieren cambios manuales.
+Informa de las pruebas JUnit 4 que se pueden migrar automáticamente a JUnit 5.
+Aunque los ejecutores predeterminados se pueden convertir automáticamente, los ejecutores personalizados, las reglas de método y campo no lo son y requieren cambios manuales.
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
   import org.junit.Assert;
   import org.junit.Test;
+
   public class RelevantTest {
     @Test
     public void testIt() {
@@ -17,6 +18,7 @@ Aunque el ejecutor predeterminado puede convertirse automáticamente, los ejecut
 <pre><code lang="java">
   import org.junit.jupiter.api.Assertions;
   import org.junit.jupiter.api.Test;
+
   public class RelevantTest {
     @Test
     public void testIt() {
@@ -24,6 +26,7 @@ Aunque el ejecutor predeterminado puede convertirse automáticamente, los ejecut
     }
   }
 </code></pre>
-<p>Esta inspección requiere que la biblioteca JUnit 5 esté disponible en el classpath y que el proyecto esté configurado con JDK 1.8 o superior.</p>
+<!-- tooltip end -->
+<p>Esta inspección requiere que la biblioteca JUnit 5 esté disponible en la ruta de clase y que JDK 1.8 o posterior esté configurado para el proyecto.</p>
 </body>
 </html>

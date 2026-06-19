@@ -1,12 +1,13 @@
 <html>
 <body>
-Clases con nombres demasiado cortos, demasiado largos o que no siguen el patrón de expresión regular especificado.
-<p><b>Ejemplo</b>: Si la inspección está habilitada para pruebas y la longitud mínima especificada del nombre de clase es 8 (valor predeterminado), se generará una advertencia para la siguiente clase de prueba porque su nombre tiene una longitud de 6, que es menor que 8: <code>public class MyTest{}</code>.
-<p>Estas clases solo se pueden renombrar mediante la corrección rápida en el editor.</p>
+Informa sobre las clases cuyos nombres son demasiado cortos, demasiado largos o no siguen el patrón de expresión regular especificado.
+<p><b>Ejemplo</b>: si la inspección está habilitada para pruebas y la longitud mínima especificada para el nombre de la clase es 8 (valor predeterminado), la siguiente clase de prueba generará una advertencia porque la longitud de su nombre es 6, que es menor que 8: <code>public class MyTest{}</code>.
+<p>La corrección rápida para renombrar este tipo de clases solo está disponible en el editor.</p>
+<!-- tooltip end -->
 <p>Configuración de la inspección:</p>
 <p>
-  Utilice la lista en la sección <b>Opciones</b> para especificar qué clases deben ser inspeccionadas. Desmarque las casillas correspondientes a las clases que desea excluir de la inspección.</p>
-<p>Para cada tipo de clase, utilice los campos de entrada proporcionados para especificar la longitud mínima, la longitud máxima y la expresión regular que debe tener el nombre de la clase. Especifique <b>0</b> en los campos de longitud para omitir la verificación correspondiente.</p>
+  Utilice la lista en la sección <b>Opciones</b> para especificar qué clases deben inspeccionarse. Desactive la casilla de verificación de las clases para las que desee omitir la inspección.</p>
+<p>Para cada tipo de clase, utilice los campos de entrada proporcionados para especificar la longitud mínima, la longitud máxima y la expresión regular que debe tener el nombre de la clase. Especifique <b>0</b> en los campos de longitud para omitir la comprobación correspondiente.</p>
 <p>Las expresiones regulares deben especificarse en el formato estándar de <code>java.util.regex</code>.</p>
 </body>
 </html>

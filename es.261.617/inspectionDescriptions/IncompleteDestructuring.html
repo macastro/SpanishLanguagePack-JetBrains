@@ -1,13 +1,13 @@
 <html>
 <body>
-Informa sobre declaraciones de desestructuración incompletas.
+Reporta una declaración de desestructuración incompleta.
 <p><b>Ejemplo:</b></p>
 <pre><code>
   data class Person(val name: String, val age: Int)
   val person = Person("", 0)
   val (name) = person
 </code></pre>
-<p>La corrección rápida completa la declaración de desestructuración con nuevas variables:</p>
+<p>La acción rápida completa la declaración de desestructuración con las nuevas variables:</p>
 <pre><code>
   data class Person(val name: String, val age: Int)
   val person = Person("", 0)

@@ -1,11 +1,12 @@
 <html>
 <body>
-<p>Informa sobre errores de sintaxis en el código Spring Expression Language (SpEL), como referencias no resueltas y ubicaciones inválidas.</p>
+<p>Informa errores de sintaxis en el código del Spring Expression Language (SpEL), como las referencias no resueltas y las ubicaciones no válidas.</p>
+
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
 @Controller
 public class MyController {
-    @Value("#{T(java.lang.Math).<strong>unknown</strong>()}") // No se puede resolver la propiedad o método 'unknown'
+    @Value("#{T(java.lang.Math).<strong>unknown</strong>()}") // No se puede resolver la propiedad o el método 'unknown'
     public void setValue(String s) {}
 }
 </code></pre>

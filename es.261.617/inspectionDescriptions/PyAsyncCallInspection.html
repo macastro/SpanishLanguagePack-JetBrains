@@ -1,17 +1,22 @@
 <html>
 <body>
-<p>Informa sobre corrutinas que se llaman sin utilizar la sintaxis <code>await</code>.</p>
+<p>Informa corrutinas que fueron llamadas
+  sin usar la sintaxis <code>await</code>.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
 async def bar():
     pass
+
+
 async def foo():
     bar()
 </code></pre>
-<p>Después de aplicar la corrección rápida, el código se convierte en:</p>
+<p>Después de que se aplica la corrección rápida, el código cambia a:</p>
 <pre><code>
 async def bar():
     pass
+
+
 async def foo():
     await bar()
 </code></pre>

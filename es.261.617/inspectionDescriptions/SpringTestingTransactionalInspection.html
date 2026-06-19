@@ -1,15 +1,22 @@
 <html>
 <body>
-<p>El informe indica declaraciones inválidas de métodos del ciclo de vida transaccional que utilizan las anotaciones <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/transaction/BeforeTransaction.html">@BeforeTransaction</a> y <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/transaction/AfterTransaction.html">@AfterTransaction</a> en una clase de prueba anotada con <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Transactional.html">@Transactional</a>.</p>
+<p>Reportar declaraciones de métodos de ciclo de vida transaccional inválidos con anotaciones
+<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/transaction/BeforeTransaction.html">@BeforeTransaction</a>
+y <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/transaction/AfterTransaction.html">@AfterTransaction</a>
+en clases de prueba anotadas como
+<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Transactional.html">@Transactional</a>.</p>
+
 <p>Los métodos anotados no deben tener argumentos ni tipo de retorno.</p>
+
 <p><b>Ejemplo:</b></p>
 <pre><code>
   @ContextConfiguration
   @Transactional
   public class AbstractShowcaseTest {
-    @BeforeTransaction // El tipo de retorno del método debe ser 'void'
+    @BeforeTransaction // El tipo de retorno de método esperado es 'void'
     public boolean setupData() {...}
-    @AfterTransaction // Número incorrecto de argumentos
+
+    @AfterTransaction // Número de argumentos incorrecto
     public void disposeData(boolean a) throws Exception {...}
   }
 </code></pre>

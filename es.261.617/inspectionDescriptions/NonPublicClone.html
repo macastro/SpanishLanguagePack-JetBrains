@@ -1,6 +1,8 @@
 <html>
 <body>
-Informa sobre el método <code>clone()</code> declarado como <code>protected</code> en lugar de <code>public</code>.
-<p>Al sobrescribir el método <code>clone()</code> de <code>java.lang.Object</code>, este debería declararse como <code>public</code> para permitir el acceso desde clases no heredadas fuera del paquete.</p>
+Informa de métodos <code>clone()</code> que son <code>protected</code> y no <code>public</code>.
+<p>Al sobrescribir el método <code>clone()</code> de <code>java.lang.Object</code>, se espera que el método sea <code>public</code>,
+  para que sea accesible desde subclases que no están en el paquete.</p>
+<!-- tooltip end -->
 </body>
 </html>

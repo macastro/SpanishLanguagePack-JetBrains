@@ -1,11 +1,13 @@
 <html>
 <body>
-<p>Informa sobre el autowiring incorrecto de Beans de Spring configurados en el contexto de la aplicación XML.</p>
+<p>Informa cableado automático incorrecto de Spring beans configurados en contextos de aplicaciones XML.</p>
+
 <p><b>Ejemplo:</b></p>
 <pre><code lang="java">
 public interface FooInterface {...}
 @Component public class FooBean implements FooInterface {...}
 @Component public class OtherBean implements FooInterface {...}
+
 @Component
 public class MyComponent {
 	 public void setFooInterface(FooInterface foo) {...}
@@ -15,7 +17,8 @@ public class MyComponent {
 &lt;beans&gt;
 	&lt;bean class="beans.OtherBean" id="otherBean"/&gt;
 	&lt;bean class="beans.FooBean" id="fooBean"/&gt;
-	&lt;bean autowire="byType" class="beans.MyComponent" id="foo"/&gt; &lt;!- Reporta "No se puede realizar autowiring". Existe más de un Bean del tipo 'FooInterface'. --&gt;
+
+	&lt;bean autowire="byType" class="beans.MyComponent" id="foo"/&gt; &lt;!-- informa "No se pudo cablear automáticamente. Hay más de un bean del tipo 'FooInterface'. --&gt;
                                                                    &lt;!--          Beans: otherBean,fooBean. Propiedades: 'fooInterface' " --&gt;
 &lt;/beans&gt;
 </code></pre>

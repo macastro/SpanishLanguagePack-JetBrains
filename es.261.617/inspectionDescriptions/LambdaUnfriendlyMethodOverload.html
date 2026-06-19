@@ -1,8 +1,8 @@
 <html>
 <body>
-El informe detecta métodos sobrecargados con firmas de métodos abstractos en conflicto en las interfaces funcionales utilizadas.
-<p>Este tipo de sobrecarga introduce ambigüedad y requiere que el invocador convierta el lambda a un tipo específico o declare explícitamente los tipos de parámetros del lambda.
-  Es mejor asignar nombres diferentes a los métodos sobrecargados para eliminar la ambigüedad.</p>
+Informa acerca de métodos sobrecargados que adoptan interfaces funcionales con firmas de método abstracto conflictivas.
+<p>Tales sobrecargas presentan ambigüedad y requieren que las personas que llaman conviertan lambdas a un tipo específico o especifiquen tipos de parámetros lambda explícitamente.
+  Es preferible dar a los métodos sobrecargados nombres diferentes para eliminar la ambigüedad.</p>
 <p>Ejemplo:</p>
 <pre><code>
   interface MyExecutor {
@@ -11,8 +11,10 @@ El informe detecta métodos sobrecargados con firmas de métodos abstractos en c
   }
 </code></pre>
 <p>
-Aquí, <code>Supplier</code> y <code>Callable</code> son interfaces funcionales cuyos métodos abstractos únicos no aceptan parámetros y devuelven un valor no void.
-Por lo tanto, no es posible inferir el tipo del lambda en el punto de invocación sin una conversión explícita.
+Aquí, <code>Supplier</code> y <code>Callable</code> son interfaces funcionales
+cuyos únicos métodos abstractos no adoptan parámetros y devuelven un valor no nulo.
+Como resultado, el tipo de lambda no se puede inferir en el sitio de llamada a menos que se use una conversión explícita.
 </p>
+<!-- tooltip end -->
 </body>
 </html>

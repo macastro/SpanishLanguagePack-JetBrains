@@ -1,15 +1,9 @@
 <html>
 <body>
-Reporta secuencias de escape Unicode innecesarias.
-Cuando la codificación del archivo puede manejar el carácter sin necesidad de escape, las secuencias de escape Unicode serán innecesarias.
-Esta inspección no reportará caracteres de control Unicode, excepto los saltos de línea y tabulaciones horizontales.
+Reporta secuencias de escape Unicode innecesarias. Por ejemplo, cuando la codificación del archivo puede manejar el carácter sin necesidad de escape.
+Los caracteres de control Unicode no son reportados por esta inspección (a excepción del salto de línea y el tabulador).
 <p><b>Ejemplo:</b></p>
-<pre><code>
-  String s = "\u0078";
-</code></pre>
-<p>Después de aplicar la corrección rápida:</p>
-<pre><code>
-  String s = "x";
-</code></pre>
+<pre><code>String s = "\u0062";</code></pre>
+<!-- tooltip end -->
 </body>
 </html>

@@ -1,14 +1,14 @@
 <html>
 <body>
-Informa sobre las negaciones de <code>isEmpty()</code> y <code>isNotEmpty()</code> para colecciones y <code>String</code>, o <code>isBlank()</code> y <code>isNotBlank()</code> para <code>String</code>.
-<p>El código puede simplificarse utilizando las funciones correspondientes.</p>
-<p>Esta corrección rápida reemplazará las llamadas negadas por las llamadas correspondientes de la biblioteca estándar.</p>
+Reporta la negación <code>isEmpty()</code> e <code>isNotEmpty()</code> para colecciones y <code>String</code>, o <code>isBlank()</code> e <code>isNotBlank()</code> para <code>String</code>.
+<p>Usar las funciones correspondientes simplifica tu código.</p>
+<p>La corrección rápida reemplaza la llamada de negación con la llamada correspondiente de la librería estándar.</p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   fun main() {
       val list = listOf(1,2,3)
       if (!list.isEmpty()) {
-          // ejecutar algo
+          // hacer algo
       }
   }
 </code></pre>
@@ -17,9 +17,10 @@ Informa sobre las negaciones de <code>isEmpty()</code> y <code>isNotEmpty()</cod
   fun main() {
       val list = listOf(1,2,3)
       if (list.isNotEmpty()) {
-          // ejecutar algo
+          // hacer algo
       }
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

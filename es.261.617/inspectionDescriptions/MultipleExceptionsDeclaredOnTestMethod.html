@@ -1,7 +1,7 @@
 <html>
 <body>
-Informa sobre métodos de prueba JUnit que tienen múltiples excepciones en la cláusula <code>throws</code>.
-Estas cláusulas crean una verbosidad innecesaria.
+Reporta cláusulas `throws` con más de una excepción en métodos de prueba JUnit.
+Dichas cláusulas son innecesariamente extensas.
 Los métodos de prueba no serán llamados desde otro código del proyecto, por lo que no es necesario manejar estas excepciones por separado.
 <p>Por ejemplo:</p>
 <pre><code lang="java">
@@ -13,7 +13,7 @@ Los métodos de prueba no serán llamados desde otro código del proyecto, por l
     assertEquals("hello", result);
   }
 </code></pre>
-<p>Reemplaza la declaración de excepciones con una única excepción mediante la corrección rápida:</p>
+<p>Se proporciona una solución rápida para reemplazar las declaraciones de excepciones con una única excepción:</p>
 <pre><code lang="java">
   @Test
   public void testReflection() throws Exception {
@@ -22,5 +22,6 @@ Los métodos de prueba no serán llamados desde otro código del proyecto, por l
     assertEquals("hello", result);
   }
 </code></pre>
+<!-- tooltip end -->
 </body>
 </html>

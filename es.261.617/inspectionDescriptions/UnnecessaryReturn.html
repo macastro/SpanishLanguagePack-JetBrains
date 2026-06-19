@@ -1,21 +1,24 @@
 <html>
 <body>
-Informa sobre las declaraciones <code>return</code> al final de constructores y métodos que devuelven <code>void</code>. Estas declaraciones son redundantes y se pueden eliminar de forma segura.
-<p>Esta inspección no se informa en archivos JSP.
+Informa sobre las sentencias <code>return</code> al final de los constructores y métodos que devuelven
+<code>void</code>. Estas sentencias son redundantes y pueden eliminarse de forma segura.
+<p>Esta inspección no informa en archivos JSP.
 <p>Ejemplo:</p>
 <pre><code>
   <b>void</b> message() {
-    System.out.println("Hello World");
+    System.out.println("Hola Mundo");
     <b>return</b>;
   }
 </code></pre>
 <p>Después de aplicar la corrección rápida:
 <pre><code>
   <b>void</b> message() {
-    System.out.println("Hello World");
+    System.out.println("Hola Mundo");
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-La opción <b>Ignorar en la rama 'then' de las declaraciones 'if' con rama 'else'</b> permite ignorar las declaraciones <code>return</code> en la rama then de las declaraciones <code>if</code> que también tienen una rama <code>else</code>.
+Utilice la opción <b>Ignorar en el bloque then de la sentencia 'if' con un bloque 'else'</b> para ignorar las sentencias <code>return</code> en el bloque then de las sentencias <code>if</code>
+que también tienen un bloque <code>else</code>.
 </body>
 </html>

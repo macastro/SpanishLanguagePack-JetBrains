@@ -1,26 +1,29 @@
 <html>
 <body>
-Informa sobre recursos JDBC que no se han cerrado de forma segura. Esta comprobación informa sobre recursos JDBC que incluyen <code>java.sql.Connection</code>, <code>java.sql.Statement</code>, <code>java.sql.PreparedStatement</code>, <code>java.sql.CallableStatement</code> y <code>java.sql.ResultSet</code>.
+Informa de recursos JDBC que no están cerrados correctamente. Los recursos JDBC informados por esta inspección incluyen <code>java.sql.Connection</code>,
+<code>java.sql.Statement</code>, <code>java.sql.PreparedStatement</code>,
+<code>java.sql.CallableStatement</code> y <code>java.sql.ResultSet</code>.
 <p>
-  Por defecto, esta comprobación asume que los recursos pueden ser cerrados por cualquier método que contenga 'close' o 'cleanup' en su nombre.
+De manera predeterminada, la inspección asume que los recursos se pueden cerrar mediante cualquier método con 'close' o 'cleanup' en su nombre.
 </p>
 <p><b>Ejemplo:</b></p>
 <pre><code>
   ResultSet findAllElements(Connection connection) throws SQLException {
-    PreparedStatement statement = connection.prepareStatement("SELECT * FROM TABLE");//declaración no cerrada
+    PreparedStatement statement = connection.prepareStatement("SELECT * FROM TABLE"); // La declaración no está cerrada
     statement.execute();
     return statement.getResultSet();
   }
 </code></pre>
+<!-- tooltip end -->
 <p>
-  Configure la comprobación con las siguientes opciones:
+Utiliza las siguientes opciones para configurar la inspección:
 </p>
 <ul>
   <li>
-    Si se permite abrir recursos JDBC dentro de un bloque <code>try</code>. Este estilo es menos preferible ya que es más verboso que abrir recursos antes del bloque <code>try</code>.
+    Si se permite abrir un recurso JDBC dentro de un bloque <code>try</code>. Este estilo es menos deseable porque es más detallado que abrir un recurso delante de un bloque <code>try</code>.
   </li>
   <li>
-    Si los recursos pueden cerrarse mediante cualquier llamada a método que tome el recurso como argumento.
+    Si el recurso se puede cerrar mediante cualquier llamada a un método con el recurso pasado como argumento.
   </li>
 </ul>
 </body>
