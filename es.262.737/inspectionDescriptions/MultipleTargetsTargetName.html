@@ -1,0 +1,35 @@
+<html>
+<body>
+<p>Reporta el uso de la anotación <code>@targetName</code> en múltiples targets.</p>
+
+<p>La solución rápida elimina la anotación <code>@targetName</code>.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // 1
+  val list: List[Int] = (1 to 5).toList
+  @targetName("head_and_tail")
+  val (head, tail) = (list.head, list.tail)
+
+  // 2
+  enum E:
+    case A
+    @targetName("b_and_c")
+    case B, C
+    case D
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  // 1
+  val list: List[Int] = (1 to 5).toList
+  val (head, tail) = (list.head, list.tail)
+
+  // 2
+  enum E:
+    case A
+    case B, C
+    case D
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

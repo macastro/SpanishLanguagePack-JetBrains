@@ -1,0 +1,32 @@
+<html>
+<body>
+Inspección para reportar llamadas para obtener servicios que pueden reemplazarse por llamadas a los métodos estáticos <code>getInstance()</code> o <code>getInstance(Project)</code> existentes.
+<p>Ejemplo (Java):</p>
+<pre><code lang="java">
+@Service
+public class MyAppService {
+  public static MyAppService getInstance() {
+    return ApplicationManager.getApplication().getService(MyAppService.class);
+  }
+}
+
+@Service(Service.Level.PROJECT)
+public class MyProjectService {
+  public static MyProjectService getInstance(Project project) {
+    return project.getService(MyProjectService.class);
+  }
+}
+</code></pre>
+<pre><code lang="java">
+// Mal ejemplo:
+MyAppService applicationService = ApplicationManager.getApplication().getService(MyAppService.class);
+MyProjectService projectService = project.getService(MyProjectService.class);
+</code></pre>
+<pre><code lang="java">
+// Buen ejemplo:
+MyAppService applicationService = MyAppService.getInstance();
+MyProjectService projectService = MyProjectService.getInstance(project);
+</code></pre>
+<p><small>Nueva función de la versión 2023.2</small>
+</body>
+</html>

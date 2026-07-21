@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa una expresión <code>when</code> que puede ser simplificada introduciendo un argumento de sujeto.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun test(obj: Any): String {
+      return when {
+          obj is String -> "string"
+          obj is Int -> "int"
+          else -> "unknown"
+      }
+  }
+</code></pre>
+<p>La solución rápida introduce un argumento de sujeto:</p>
+<pre><code>
+  fun test(obj: Any): String {
+      return when (obj) {
+          is String -> "string"
+          is Int -> "int"
+          else -> "unknown"
+      }
+  }
+</code></pre>
+</body>
+</html>

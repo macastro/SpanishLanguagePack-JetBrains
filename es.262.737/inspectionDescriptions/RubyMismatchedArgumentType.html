@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre llamadas a métodos y yield con argumentos cuyos tipos inferidos no coinciden con el tipo esperado del parámetro. El tipo de parámetro esperado se toma de cualquiera de los siguientes:
+<ul>
+  <li>La signatura de tipo RBS</li>
+  <li>La signatura de tipo Sorbet</li>
+  <li>La etiqueta YARD <code>@param</code></li>
+</ul>
+<p>Ejemplo:</p>
+<pre>
+<code># @param [Integer] param
+def method(param) end
+
+method([1, 2])
+</code>
+</pre>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre los casos en que vuelve a escribir una variable de bucle con un bucle interno.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    for i in range(5):
+      for i in range(20, 25):
+          print("Interno", i)
+      print("Externo", i)
+  </code></pre>
+
+También le advierte si una variable declarada en la declaración `with` se vuelve a declarar dentro del cuerpo de la declaración:
+<pre><code>
+    with open("file") as f:
+      f.read()
+      with open("file") as f:
+  </code></pre>
+</body>
+</html>

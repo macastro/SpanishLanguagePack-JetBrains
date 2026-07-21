@@ -1,0 +1,32 @@
+<html>
+<body>
+Informa de las pruebas JUnit 4 que se pueden migrar automáticamente a JUnit 5.
+Aunque los ejecutores predeterminados se pueden convertir automáticamente, los ejecutores personalizados, las reglas de método y campo no lo son y requieren cambios manuales.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  import org.junit.Assert;
+  import org.junit.Test;
+
+  public class RelevantTest {
+    @Test
+    public void testIt() {
+      Assert.assertEquals("expected", "actual");
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="java">
+  import org.junit.jupiter.api.Assertions;
+  import org.junit.jupiter.api.Test;
+
+  public class RelevantTest {
+    @Test
+    public void testIt() {
+      Assertions.assertEquals("expected", "actual");
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección requiere que la biblioteca JUnit 5 esté disponible en la ruta de clase y que JDK 1.8 o posterior esté configurado para el proyecto.</p>
+</body>
+</html>

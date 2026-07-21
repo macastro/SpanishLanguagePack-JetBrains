@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa de las sentencias u expresiones de <code>switch</code> con una proporción demasiado baja de etiquetas de <code>switch</code> a sentencias ejecutables.
+<p>Estas sentencias de <code>switch</code> pueden resultar confusas y probablemente deban refactorizarse.</p>
+
+<p>Ejemplo:</p>
+<pre><code>
+    switch (i) { // un caso y 5 sentencias ejecutables -> densidad del 20%
+        case 1:
+            System.out.println("1");
+            System.out.println("2");
+            System.out.println("3");
+            System.out.println("4");
+            System.out.println("5");
+            break;
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>
+<p>Usa el campo <b>Densidad mínima de ramas</b> para especificar la proporción permitida de etiquetas de <code>switch</code> a sentencias ejecutables.</p>
+</body>
+</html>

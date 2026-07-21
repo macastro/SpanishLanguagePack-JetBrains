@@ -1,0 +1,8 @@
+<html>
+<body>
+<code>map(x -&gt; x)</code> o <code>filter(x -&gt; true)</code> llamadas <code>Stream</code> u <code>Optional</code> redundantes, o <code>sorted</code> o <code>distinct</code> redundantes.
+<!-- tooltip end -->
+<p>Tenga en cuenta que las operaciones de asignación en código como <code>streamOfIntegers.map(Integer::valueOf)</code> actúan como verificaciones <code>requireNonNull()</code>: si la transmisión contiene <code>null</code>, se lanzará <code>NullPointerException</code>, por lo que no es completamente redundante.
+  Para evitar que se informen dichos casos, deshabilite la opción <b>Informar de encajonamientos redundantes en <code>Stream.map()</code></b>.</p>
+</body>
+</html>

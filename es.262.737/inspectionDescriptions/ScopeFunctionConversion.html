@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa de las funciones de ámbito (<code>let</code>, <code>run</code>, <code>apply</code>, <code>also</code>) que se pueden convertir entre sí.
+<p>El uso de las funciones correspondientes simplifica tu código.</p>
+<p>La corrección rápida reemplaza la función de ámbito con otra.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  val x = &quot;&quot;.let {
+      it.length
+  }
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+  val x = &quot;&quot;.run {
+      length
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

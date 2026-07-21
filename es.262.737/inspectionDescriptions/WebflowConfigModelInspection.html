@@ -1,0 +1,38 @@
+<html>
+<body>
+<p>Informe problemas con el contexto basado en XML de <a href="https://spring.io/projects/spring-webflow">Spring Webflow</a>:</p>
+
+<ul>
+  <li>Referencia de Bean no resuelta</li>
+  <li>Falta etiqueta o atributo requerido</li>
+  <li>Tipo de propiedad incorrecto</li>
+  <li>Propiedad <code>enum</code> inconsistente</li>
+  <li>Tipo incorrecto de Bean referenciado</li>
+</ul>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  &lt;beans ...
+    xmlns:webflow="http://www.springframework.org/schema/webflow-config ..."&gt;
+    
+    &lt;webflow:flow-executor id="flowExecutorWithoutFlowRegistryRef"/&gt; &lt;!-- No se puede encontrar &lt;flow-registry&gt; con ID predeterminado 'flowRegistry' --&gt;
+    &lt;webflow:flow-executor
+      id=""  &lt;!--Value must not be empty--&gt;
+      flow-registry="INVALID_VALUE"  &lt;!-- No se puede resolver el Bean INVALID_VALUE --&gt;
+           &lt;webflow:flow-execution-repository
+                   conversation-manager="dummyBean" &lt;!-- Bean must be of 'org.springframework.webflow.conversation.ConversationManager' type"--&gt;
+                    max-executions="INVALID_VALUE" &lt;!-- El valor debe ser un entero --&gt;
+                    max-execution-snapshots="INVALID_VALUE"/&gt;  &lt;!-- El valor debe ser un entero --&gt;
+           &lt;webflow:flow-execution-listeners&gt;
+			&lt;webflow:listener criteria="*"
+                           ref="dummyBean" /&gt; &lt;!-- Bean debe ser de tipo 'org.springframework.webflow.execution.FlowExecutionListener' --&gt;
+           &lt;/webflow:flow-execution-listeners&gt;
+    &lt;/webflow:flow-executor&gt;
+    &lt;webflow:flow-executor id="dummy"
+      flow-registry="dummyBean"/&gt; &lt;!-- Bean debe ser de tipo 'org.springframework.webflow.definition.registry.FlowDefinitionRegistry' --&gt;
+
+    &lt;bean id="dummyBean" class="java.lang.String"/&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

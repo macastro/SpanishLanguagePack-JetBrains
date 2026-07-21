@@ -1,0 +1,23 @@
+<html>
+<body>
+Reporta llamadas a JUnit <code>assertEquals()</code> que pueden ser reemplazadas con una llamada <code>assertSame()</code> equivalente.
+Esto es posible cuando los argumentos son instancias de una clase <code>final</code> que no sobreescribe el método `Object.equals()` y explicita que la identidad del objeto es comparada.
+<p>Sugiere reemplazar <code>assertEquals()</code> con <code>assertSame()</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  @Test
+  public void testObjectType() {
+    Object o = getObject();
+    Assert.assertEquals(String.class, o.getClass());
+  }
+</code></pre>
+<p>Después de que se aplica el arreglo rápido:</p>
+<pre><code>
+  @Test
+  public void testSort() {
+    Object o = getObject();
+    Assert.assertSame(String.class, o.getClass());
+  }
+</code></pre>
+</body>
+</html>

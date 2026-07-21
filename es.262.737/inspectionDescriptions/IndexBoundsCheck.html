@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Reporta verificaciones explícitas de límites de índice.</p>
+
+<p>La corrección rápida implementa <code>lift</code> en su lugar.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  var x: Seq[Int]
+  if (i &lt; x.length) Some(x(i)) else None
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  var x: Seq[Int]
+  x.lift(i)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

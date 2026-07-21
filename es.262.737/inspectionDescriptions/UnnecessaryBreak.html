@@ -1,0 +1,20 @@
+<html>
+<body>
+Reporta cualquier sentencia `break` innecesaria.
+<p>Una sentencia `break` es innecesaria si no se ejecuta ninguna otra sentencia después de que haya sido removida.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  switch (e) {
+    case A -&gt; {
+        System.out.println("A");
+        break; // reporta sentencia 'break' innecesaria
+    }
+    default -&gt; {
+        System.out.println("Default");
+        break; // reporta sentencia 'break' innecesaria
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>Informa de errores de sintaxis y plantillas URI no utilizadas en las anotaciones <code>@Path</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  @GET
+  @Path("/<b>{unused}</b>") // La plantilla 'unused' nunca se utiliza
+  public String get() {
+    return "";
+  }
+</code></pre>
+</body>
+</html>

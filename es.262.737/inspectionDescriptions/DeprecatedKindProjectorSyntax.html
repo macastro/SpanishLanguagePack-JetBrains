@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa el uso del identificador <code>?</code> en la sintaxis de kind-projector.
+<p>El identificador <code>?</code> se utilizará para argumentos comodín en tipos en Scala 3 (mira <a href="https://dotty.epfl.ch/docs/reference/changed-features/wildcards.html">Argumentos comodín en tipos</a>).
+Su uso en lambdas de tipo kind-projector está obsoleto y será reemplazado por <code>*</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  List[?]
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  List[*]
+</code></pre>
+<!-- tooltip end -->
+<p><small>Esta inspección se ejecuta cuando el complemento <b>Kind Projector</b> está habilitado.</small></p>
+</body>
+</html>

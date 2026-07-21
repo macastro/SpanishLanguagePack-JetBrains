@@ -1,0 +1,7 @@
+<html>
+<body>
+Detecta el uso inseguro de <code>CString</code>.
+
+El código como <code>CString::new("hello").unwrap().as_ptr()</code> puede causar inseguridad de memoria, ya que la cadena se libera al final de la expresión.
+</body>
+</html>

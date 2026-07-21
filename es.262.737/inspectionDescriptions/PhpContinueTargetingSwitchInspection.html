@@ -1,0 +1,17 @@
+<html>
+<body>
+Notifica las sentencias <code>continue</code> que están dirigidas a sentencias <code>switch</code>. En PHP 7.3 y posteriores, tales usos están obsoletos y emitirán un <code>E_WARNING</code>, ya que es muy probable que sean el resultado de un error de programación.
+<!-- tooltip end -->
+<ul>
+  <li>
+    En PHP, tales sentencias <code>continue</code> son equivalentes a <code>break</code>, es decir, terminan la ejecución de la estructura <code>switch</code> actual.
+  </li>
+  <li>
+    En otros lenguajes, tales sentencias <code>continue</code> se comportan como <code>continue 2</code> en PHP, es decir, llevan la ejecución a una estructura de control de nivel superior (por ejemplo, la siguiente iteración de un bucle exterior).
+  </li>
+</ul>
+<p>
+  Consulte <a href="https://www.php.net/manual/es/control-structures.continue.php">continue (php.net)</a>, <a href="https://www.php.net/manual/es/control-structures.break.php">break (php.net)</a> y <a href="https://www.php.net/manual/es/control-structures.switch.php">switch (php.net)</a> para obtener más información.
+</p>
+</body>
+</html>

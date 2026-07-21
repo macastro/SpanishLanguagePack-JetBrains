@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta clases genéricas con parámetros de tipo omitidos. Dicho uso de tipos genéricos <i>crudos</i> es válido en Java, pero anula el propósito de los parámetros de tipo y puede enmascarar errores. Esta inspección se comporta de manera similar a la advertencia `rawtypes` de `javac`.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+//ADVERTENCIA: Uso de clase parametrizada sin tipo de argumento 'List'
+List list = new ArrayList&lt;String&gt;();
+//Se creó una lista de cadenas, pero también acepta enteros
+list.add(1);
+</code></pre>
+<pre><code>
+//No hay advertencia porque no se puede proporcionar un argumento de tipo durante la creación de la matriz
+IntFunction&lt;List&lt;?&gt;[]> fun = List[]::new;
+</code></pre>
+<!-- tooltip end -->
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>Usa la opción <b>Ignorar construcción de objetos nuevos</b> para ignorar los tipos primitivos usados en la construcción de objetos.</li>
+  <li>Utiliza la opción <b>Ignorar conversiones de tipo</b> para ignorar los tipos sin formato utilizados en las conversiones de tipo.</li>
+  <li>Utiliza la opción <b>Ignorar donde los parámetros de tipo no compilan</b> para ignorar los casos en los que los parámetros de tipo no se compilan (por ejemplo, al crear matrices o anular métodos de biblioteca).</li>
+  <li>Usa la opción <b>Ignorar tipo de parámetro del método anulado</b> para ignorar los parámetros de tipo utilizados en los parámetros del método anulado.</li>
+  <li>Usa la opción <b>Ignorar cuando no se puede usar la corrección rápida automática</b> para ignorar los casos en los que la corrección rápida no es compatible.</li>
+</ul>
+Esta inspección solo informará si el nivel de idioma del proyecto o módulo es 5 o superior.
+</body>
+</html>

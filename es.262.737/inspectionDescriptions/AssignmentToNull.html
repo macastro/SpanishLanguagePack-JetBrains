@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa sobre las variables que se asignan a <code>null</code> fuera de una declaración.
+<p>El propósito principal de <code>null</code> en Java es denotar variables de referencia no inicializadas. En casos excepcionales, asignar una variable explícitamente a <code>null</code> es útil para ayudar a la recolección de basura. Sin embargo, utilizar <code>null</code> para denotar un valor ausente, no especificado o no válido o un elemento no encontrado se considera una mala práctica y puede hacer que su código sea más propenso a generar <code>NullPointerExceptions</code>.
+En su lugar, considere definir un objeto centinela con la semántica prevista o utilizar tipos de biblioteca como <code>Optional</code> para denotar la ausencia de un valor.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Integer convert(String s) {
+    Integer value;
+    try {
+      value = Integer.parseInt(s);
+    } catch (NumberFormatException e) {
+      // Aviso: null se utiliza para denotar un 'valor no válido'
+      value = null;
+    }
+    return value;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+Utilice la opción <b>Ignorar asignaciones a campos</b> para ignorar las asignaciones a campos.
+</p>
+
+</body>
+</html>

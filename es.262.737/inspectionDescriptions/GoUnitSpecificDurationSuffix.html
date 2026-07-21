@@ -1,0 +1,10 @@
+<html>
+<body>
+Reporta sufijos específicos de unidad en los nombres de constantes y variables de tipo <code>time.Duration</code>.
+<p>La inspección viene de <code>go lint</code>. Una lista de sufijos que implican una unidad de tiempo está disponible en <a href="https://github.com/golang/lint/blob/c5fb716d6688a859aae56d26d3e6070808df29f7/lint.go#L1365-L1373">el repositorio golang en github.com</a>.
+</p>
+<p><code>time.Duration</code> representa un valor en nanosegundos, por lo que agregar un sufijo de unidad de tiempo podría hacer que el significado de la variable sea confuso, o incluso indicar un mal uso de la API <code>time.Duration</code>.</p>
+<p>Ejemplo:</p>
+<pre><code>var timeoutSeconds = 5 * time.Second</code></pre>
+</body>
+</html>

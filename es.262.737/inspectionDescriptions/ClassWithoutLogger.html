@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa clases que no tienen un registrador declarado.
+<p>Asegurarse de que cada clase tiene un registrador dedicado es un paso importante para proveer una implementación de registro unificada para una aplicación. Las interfaces, enumeraciones, anotaciones, clases internas y clases abstractas no son informadas por esta inspección.</p>
+<p>Por ejemplo:</p>
+<pre><code>
+  <b>public class</b> NoLoggerDeclared {
+
+    <b>int</b> calculateNthDigitOfPi(<b>int</b> n) {
+      // todo
+      <b>return</b> 1;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Usa la tabla en la sección <b>Opciones</b> para especificar nombres de clases de registrador.
+Las clases que no declaren un campo con el tipo de una de las clases especificadas serán informadas por esta inspección.
+
+</body>
+</html>

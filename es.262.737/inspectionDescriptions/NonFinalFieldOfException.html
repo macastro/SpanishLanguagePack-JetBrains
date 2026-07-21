@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta los campos de las subclases de <code>java.lang.Exception</code> que no están declarados como <code>final</code>.
+<p>Los datos de los objetos de excepción no deben ser modificados, ya que esto puede provocar la pérdida del contexto de error para su posterior depuración y registro.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class EditorException extends Exception {
+    private String message; // advertencia: campo no final 'message' de la clase de excepción
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

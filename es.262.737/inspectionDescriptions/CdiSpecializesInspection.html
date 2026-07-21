@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>Informa sobre usos incorrectos de la anotación <code>@Specializes</code>.</p>
+
+<ul>
+  <li>El bean especializado debe extender otro bean</li>
+  <li>El método especializado debe anular un método <code>@Produces</code> de su superclase directa</li>
+  <li>La anotación <code>@Named</code> no se puede usar en la clase especializada y en la clase especializante</li>
+  <li>Dos o más clases no pueden especializar la misma superclase</li>
+  <li>El método especializado no puede ser estático</li>
+</ul>
+</body>
+</html>

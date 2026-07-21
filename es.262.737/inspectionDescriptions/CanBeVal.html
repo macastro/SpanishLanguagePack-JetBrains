@@ -1,0 +1,23 @@
+<html>
+<body>
+Inspecciona variables locales declaradas con la palabra clave <code>var</code> que nunca son modificadas.
+<p>Kotlin fomenta la declaración de variables prácticamente inmutables usando la palabra clave <code>val</code>, asegurando que su valor nunca cambiará.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun ejemplo() {
+      var numerosPrimos = listOf(1, 2, 3, 5, 7, 11, 13)
+      var numerosFibonacci = listOf(1, 1, 2, 3, 5, 8, 13)
+      print("Números iguales: " + numerosPrimos.intersect(numerosFibonacci))
+  }
+</code></pre>
+<p>La corrección rápida reemplaza la palabra clave <code>var</code> con <code>val</code>:</p>
+<pre><code>
+  fun ejemplo() {
+      val numerosPrimos = listOf(1, 2, 3, 5, 7, 11, 13)
+      val numerosFibonacci = listOf(1, 1, 2, 3, 5, 8, 13)
+      print("Números iguales: " + numerosPrimos.intersect(numerosFibonacci))
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

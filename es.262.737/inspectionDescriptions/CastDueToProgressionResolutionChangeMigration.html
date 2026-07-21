@@ -1,0 +1,39 @@
+<html>
+<body>
+<p>
+    Informa sobre llamadas de funciones sobrecargadas en las que un argumento requiere una conversión explícita para resolverse en una declaración correcta.
+    La advertencia actual del compilador (disponible desde Kotlin 1.6.20) se convertirá en un error en Kotlin 1.8.
+</p>
+<p>
+    Las progresiones y los tipos de rangos (<code>kotlin.ranges</code>) comenzarán a implementar la interfaz <code>Collection</code> en Kotlin 1.9 y posteriores. Esta actualización causará un cambio en la resolución para funciones sobrecargadas. Por ejemplo, en el siguiente ejemplo, la llamada de <code>test(1..5)</code> se resolverá como <code>test(t: Any)</code> en Kotlin 1.8 y anteriores, y como <code>test(t: Collection&lt;*&gt;)</code> en Kotlin 1.9 y posteriores.
+</p>
+<pre><code>
+  fun test(t: Any) { }
+  fun test(t: Collection&lt;*&gt;) { }
+  fun invoke() {
+    test(1..5) // IntRange se convierte en Collection in 1.9
+  }
+</code></pre>
+
+<p>El arreglo rápido proporcionado captura el comportamiento específico del compilador de la versión 1.8 y anteriores:</p>
+<pre><code>
+  fun test(t: Any) { }
+  fun test(t: Collection&lt;*&gt;) { }
+
+  fun invoke() {
+    test(1..5) // resuelto como 'test(t: T)' antes de Kotlin 1.9
+  }
+</code></pre>
+
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  fun test(t: Any) { }
+  fun test(t: Collection&lt;*&gt;) { }
+
+  fun invoke() {
+    test((1..5) as Iterable&lt;Int&gt;) // resuelto como 'test(t: T)' en Kotlin 1.9
+  }
+</code></pre>
+<p>La inspección está disponible para el nivel de lenguaje Kotlin a partir de 1.6.</p>
+</body>
+</html>

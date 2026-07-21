@@ -1,0 +1,16 @@
+<html>
+<body>
+Reporta métodos varargs con el mismo nombre que otros métodos en la clase o en una superclase.
+Los métodos sobrecargados que reciben un número variable de argumentos pueden ser muy confusos
+debido a que con frecuencia no está claro qué sobrecarga se invoca.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    public void execute(Runnable... r) {} // advertencia
+    public void execute(Runnable r1, Runnable r2) {}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Utilice la opción para ignorar aquellos métodos sobrecargados cuyos tipos de parámetro son definitivamente incompatibles.
+</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<body>
+Informa sobre los receptores de contexto que deben migrarse a parámetros de contexto.
+<p>
+    A partir de Kotlin 2.2.0, los receptores de contexto han sido sustituidos por los parámetros de contexto.
+    Esta inspección ayuda a migrar de receptores de contexto a parámetros de contexto en proyectos que tienen habilitados los receptores de contexto pero que aún no han migrado a la sintaxis de parámetros de contexto.
+</p>
+<p>
+    Ejemplo:
+</p>
+<pre><code>
+context(MutableList&lt;String&gt;, C)
+private fun foo() {
+    add("new")
+    bar()
+    baz()
+}
+
+class C {
+    fun bar() {}
+}
+
+fun C.baz() {}
+</code></pre>
+Después de la migración:
+<pre><code>
+context(strings: MutableList&lt;String&gt;, c: C)
+private fun foo() {
+    strings.add("new")
+    c.bar()
+    c.baz()
+}
+
+class C {
+    fun bar() {}
+}
+
+fun C.baz() {}
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

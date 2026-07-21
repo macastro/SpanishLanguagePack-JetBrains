@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>Detecta posibles llamadas mal ubicadas de los métodos Gradle.</p>
+  Los scripts de compilación de Gradle comprenden muchos cierres anidados, lo que hace que la estructura del código sea similar a un lenguaje de marcado.
+  Debido al comportamiento de los lenguajes DSL, los métodos que se pueden escribir en los cierres externos también están disponibles en los internos.
+  Dichos métodos pueden no tener significado cuando se escriben fuera de su ámbito. <br>
+  A veces puede ser difícil detectar esta situación.
+  Esta inspección tiene como objetivo detectar tales métodos.
+
+ <p><b>Ejemplo:</b></p>
+<pre><code>
+repositories {
+  // el delegado de 'repositories' tiene el método 'exclusiveContent', que se puede escribir aquí
+  maven {
+    // el delegado de 'maven' tiene el método 'content', que se puede escribir aquí
+    // pero 'exclusiveContent' también está disponible
+    exclusiveContent {} // reporta 'exclusiveContent'
+  }
+}
+</code></pre>
+</body>
+</html>

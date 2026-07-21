@@ -1,0 +1,30 @@
+<html>
+<body>
+Reporta los usos de clases en una firma de campo o método donde la clase tiene menos visibilidad que el miembro que la usa.
+Aunque es Java legal, dichos miembros no se pueden usar fuera del alcance de visibilidad del tipo de clase al que hacen referencia.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Padre {
+    public Hijo obtenerHijo() {
+      return new Hijo();
+    }
+
+    private class Hijo {}
+  }
+</code></pre>
+<p>
+Además, en Java 9 y superior, un módulo puede ocultar algunas de sus clases a otros módulos al no exportar sus paquetes.
+Sin embargo, si un miembro que es parte de la API exportada hace referencia a una clase no exportada en su firma,
+ese miembro no se puede utilizar fuera del módulo.
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+<ul>
+  <li>Use la opción <b>Reportar clases no exportadas expuestas en la API del módulo (Java 9+)</b> para informar a los miembros de la API del módulo
+    que exponen clases no exportadas.<br>Tenga en cuenta que el nivel de lenguaje del proyecto o módulo debe ser 9 o superior para esta opción.</li>
+  <li>Utilice la opción <b>Reportar clases inaccesibles expuestas en la API pública</b> para informar sobre miembros públicos
+    que exponen clases con un alcance de visibilidad menor.</li>
+  <li>Utilice la opción <b>Reportar clases privadas expuestas en la API de paquete local</b> para informar sobre miembros locales del paquete
+    que exponen clases <code>private</code>.</li>
+</ul>
+</body>
+</html>

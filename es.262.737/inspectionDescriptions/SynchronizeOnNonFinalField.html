@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta expresiones de bloqueo de sentencias <code>synchronized</code>
+que consisten en una referencia de campo no <code>final</code>.
+Es poco probable que tales sentencias tengan una semántica útil, ya que diferentes
+subprocesos pueden adquirir bloqueos diferentes incluso cuando operan sobre el mismo objeto.
+<!-- tooltip end -->
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  private Object o;
+  public void foo() {
+    synchronized (o) // sincronización en un campo no final
+    { }
+  }
+</code></pre>
+</body>
+</html>

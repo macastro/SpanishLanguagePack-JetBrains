@@ -1,0 +1,14 @@
+<html>
+<body>
+Inspecciona las expresiones pasadas como argumentos para los parámetros `@Pattern` y devueltas por los métodos anotados por `@Pattern` que no concuerdan con el patrón especificado.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  @Pattern("\\d\\d-\\d\\d\\d") String getId() {
+    <b>return</b> "1";
+  }
+</code></pre>
+<p>
+  Utiliza la opción <b>Marcar expresiones de constantes no compilables en tiempo</b> para permitir que la inspección informe expresiones con un valor desconocido y ofrezca agregar una anotación de sustitución (<code>@Subst</code>).
+</p>
+</body>
+</html>

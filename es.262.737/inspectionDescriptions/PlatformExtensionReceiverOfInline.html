@@ -1,0 +1,33 @@
+<html>
+<body>
+<p>Informa de llamadas potencialmente inseguras de funciones en línea con receptores de extensión flexibles que admiten valores null (tipo de plataforma con posibilidad desconocida de valor nulo).</p>
+<p>Antes de Kotlin 1.2, las llamadas a <code>inline fun</code> con receptor de extensión flexible que admite valores null (un tipo de plataforma con posibilidad desconocida de valor nulo) no incluían comprobaciones de posibilidad de valor nulo en el bytecode. Desde Kotlin 1.2, las comprobaciones de posibilidad de valor nulo se incluyen en el bytecode (véase <a href="https://youtrack.jetbrains.com/issue/KT-12899">KT-12899</a>).</p>
+<p>Se recomienda añadir un <code>!!</code> explícito si se quiere que se lance una excepción o considerar la posibilidad de cambiar el tipo de receptor de la función a aquel que admite valores null, si es que debe funcionar sin excepciones.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  inline fun String.removePrefix(prefijo: String): String {
+      return this.substring(prefijo.length)
+  }
+
+  fun main() {
+      // `System.getProperty` devuelve un tipo `String!` no denotable
+      val property = System.getProperty("user.dir")
+      println(property.removePrefix("/home"))
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  inline fun String.removePrefix(prefijo: String): String {
+      return this.substring(prefijo.length)
+  }
+
+  fun main() {
+      // `System.getProperty` devuelve un tipo `String!` no denotable
+      val property = System.getProperty("user.dir")
+      println(property!!.removePrefix("/home"))
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de lenguaje Kotlin del proyecto o módulo es inferior a 1.2.</p>
+</body>
+</html>

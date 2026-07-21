@@ -1,0 +1,31 @@
+<html>
+<body>
+Informa sobre las variables de ruta no utilizadas en el DSL de enrutador de Kotlin, así como los usos de variables de ruta no declaradas.
+<p>
+  Las variables de ruta deben declararse en la ruta (path) antes de acceder a ellas.
+  El intento de acceder a una variable de ruta no declarada provocará un error de tiempo de ejecución.
+</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+@Configuration
+class RouterConfiguration {
+    @Bean
+    fun myRouter() = router {
+        GET("/test/{var}") { ServerResponse.ok().body("${it.pathVariable("bar")}") }
+    }
+}
+</code></pre>
+
+<p><b>Después de aplicar la corrección:</b></p>
+<pre><code>
+@Configuration
+class RouterConfiguration {
+    @Bean
+    fun myRouter() = router {
+        GET("/test/{var}") { ServerResponse.ok().body("${it.pathVariable("var")}") }
+    }
+}
+</code></pre>
+</body>
+</html>

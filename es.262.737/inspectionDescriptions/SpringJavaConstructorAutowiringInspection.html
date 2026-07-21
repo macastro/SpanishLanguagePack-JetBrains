@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>Informa sobre el uso incorrecto de <code>@Autowired</code> en constructores de Spring Bean: varios constructores <code>@Autowired</code>, ningún constructor <code>@Autowired</code> coincidente, etc.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+@Component
+public class MyComponent {
+    @Autowired
+    public MyComponent(BarBean bean) {...} // informa 'Sólo se permite un constructor @Autowired'
+
+    @Autowired
+    public MyComponent(FooBean bean) {...} // informa 'Sólo se permite un constructor @Autowired'
+}
+
+@Component
+public class MyFactory {  // informa 'No se ha encontrado ningún constructor @Autowired coincidente'
+    public MyFactory(String str) {...}
+    public MyFactory(int count) {...}
+}
+</code></pre>
+</body>
+</html>

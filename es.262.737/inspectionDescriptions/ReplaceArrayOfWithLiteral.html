@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa de llamadas al método <code>arrayOf</code> que pueden reemplazarse por literales de matriz <code>[...]</code>.
+<p><b>Ejemplos:</b></p>
+<pre><code>  annotation class MyAnnotation(val strings: Array&lt;String&gt;)
+
+  @MyAnnotation(arrayOf("alpha", "beta", "omega")) // 'arrayOf()' reemplazable
+  class MyClass
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>  annotation class MyAnnotation(val strings: Array&lt;String&gt;)
+
+  @MyAnnotation(["alpha", "beta", "omega"])
+  class MyClass
+</code></pre>
+</body>
+</html>

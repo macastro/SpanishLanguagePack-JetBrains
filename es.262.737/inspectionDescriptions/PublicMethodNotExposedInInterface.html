@@ -1,0 +1,39 @@
+<html>
+<body>
+Reporta métodos <code>public</code> en clases
+que no son expuestos en una interfaz.
+<p>Exponer todos los métodos <code>public</code> a través de una interfaz es importante para
+mantener un acoplamiento débil, y podría ser necesario para ciertos estilos de programación basada en componentes.</p>
+<p>Ejemplo:</p>
+<pre><code>
+interface Persona {
+  String getNombre();
+}
+
+class PersonaImplementacion implements Persona {
+  private String nombre;
+
+  // ok: el método está expuesto en la interfaz
+  @Override
+  public String getNombre() {
+    return nombre;
+  }
+
+  // advertencia: el método es public
+  // pero no está expuesto en la interfaz
+  public void setNombre() {
+    this.nombre = nombre;
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Usa la lista <b>Ignorar si está anotada con</b> para especificar anotaciones especiales. Los métodos anotados con una de
+estas anotaciones serán ignorados por esta inspección.
+<p>
+  Usa la opción <b>Ignorar si la clase contenedora no implementa una interfaz que no sea de biblioteca</b> para ignorar métodos de clases que no
+implementan ninguna interfaz del proyecto.
+<p>
+
+</body>
+</html>

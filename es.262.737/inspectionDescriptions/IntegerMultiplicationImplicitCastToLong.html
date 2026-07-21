@@ -1,0 +1,35 @@
+<html>
+<body>
+Informes de multiplicaciones y desplazamientos a la izquierda enteros que se convierten implícitamente a tipo long.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void f(int i) {
+    long val = 65536 * i;
+  }
+</code></pre>
+<p>Después de que se aplica una corrección rápida, el código cambia a:</p>
+<pre><code>
+  void x(int i) {
+    long val = 65536<b>L</b> * i;
+  }
+</code></pre>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void f(int i) {
+    long value = i &lt;&lt; 24;
+  }
+</code></pre>
+<p>Después de que se aplica una corrección rápida, el código cambia a:</p>
+<pre><code>
+  void f(int i) {
+    long value = (long) i &lt;&lt; 24;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Tales multiplicaciones suelen ser errores, ya que pueden provocar un truncamiento de desbordamiento inesperado.
+  El problema se puede corregir convirtiendo el literal int en un literal long (<code>65536<b>L</b></code>).
+</p>
+
+</body>
+</html>

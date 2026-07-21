@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa de instanciaciones de objetos <code>java.util.Map</code>
+cuyos tipos de clave son clases enumeradas. Tales objetos <code>java.util.Map</code>
+pueden ser reemplazados por objetos <code>java.util.EnumMap</code>.
+<p>
+  Las implementaciones de <code>java.util.EnumMap</code> pueden ser mucho más eficientes
+  debido a que la estructura de datos subyacente es un array simple.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Map&lt;MyEnum, String&gt; myEnums = new HashMap&lt;&gt;();
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  Map&lt;MyEnum, String&gt; myEnums = new EnumMap&lt;&gt;(MyEnum.class);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<body>
+Reporta declaraciones de anulación redundantes.
+<p>
+    Se puede omitir una anulación si no modifica la semántica de la firma heredada, por ejemplo, cambiando la visibilidad.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>open class</b> Foo {
+      open fun singleExpression() {
+      }
+  }
+
+  class Bar : Foo() {
+      <b>override</b> fun singleExpression() = super.singleExpression()
+  }
+</code></pre>
+
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class Bar : Foo() {
+  }
+</code></pre>
+</body>
+</html>

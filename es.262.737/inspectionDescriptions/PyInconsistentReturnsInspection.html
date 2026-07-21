@@ -1,0 +1,37 @@
+<html>
+<body>
+Resalta las sentencias return inconsistentes en una función.
+De acuerdo con PEP8, todas las sentencias return en una función deben devolver una expresión, o ninguna de ellas debe hacerlo.
+<p>
+  Recomendación de PEP8: Todas las sentencias return en una función deben devolver una expresión, o ninguna de ellas debe hacerlo.
+  Si alguna sentencia return devuelve una expresión, cualquier sentencia return que no devuelva un valor debe indicarlo explícitamente como return None, y debe haber una sentencia return explícita al final de la función (si es alcanzable):
+</p>
+<pre><code>
+# Correcto:
+
+def foo(x):
+    if x >= 0:
+        return math.sqrt(x)
+    else:
+        return None
+
+def bar(x):
+    if x < 0:
+        return None
+    return math.sqrt(x)
+</code></pre>
+<pre><code>
+# Incorrecto:
+
+def foo(x):
+    if x >= 0:
+        return math.sqrt(x)
+
+def bar(x):
+    if x < 0:
+        return
+    return math.sqrt(x)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

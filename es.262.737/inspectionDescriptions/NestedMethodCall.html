@@ -1,0 +1,35 @@
+<html>
+<body>
+Reporta una llamada a un método que se utiliza como parámetro de otra llamada a un método.
+<p>Esta corrección rápida introduce una variable, simplificando el código y facilitando la depuración.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public int y() { return 1; }
+  public int f(int x) { return 2 * x; }
+
+  public void foo() {
+      int x = f(y());
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  public int y() { return 1; }
+  public int f(int x) { return 2 * x; }
+
+  public void foo() {
+      int y = y();
+      int x = f(y);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+Utiliza las opciones de inspección para cambiar los informes de:
+</p>
+<ul>
+  <li>Llamadas a métodos en inicializadores de campo.</li>
+  <li>Llamadas a métodos estáticos.</li>
+  <li>Llamadas a getters simples.</li>
+</ul>
+
+</body>
+</html>

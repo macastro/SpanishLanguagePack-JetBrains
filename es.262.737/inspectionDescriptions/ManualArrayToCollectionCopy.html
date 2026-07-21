@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa del código que usa un bucle para copiar el contenido de un array a una colección.
+<p>
+  Una forma más corta y, potencialmente, más rápida (dependiendo de la implementación de la colección) de hacerlo es usar <code>Collection.addAll(Arrays.asList())</code> o <code>Collections.addAll()</code>.
+</p>
+<p>
+<p>Solo los bucles sin declaraciones adicionales en su interior son informados.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void addAll(List&lt;String&gt; list, String[] arr) {
+    for (int i = 0; i &lt; arr.length; i++) {
+      String s = arr[i];
+      list.add(s);
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void addAll(List&lt;String&gt; list, String[] arr) {
+    Collections.addAll(list, arr);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

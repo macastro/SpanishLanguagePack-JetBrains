@@ -1,0 +1,21 @@
+<html>
+<body>
+Informa sobre llamadas a métodos de interfaces funcionales que se invocan directamente en la definición de lambda, referencia de método o clase anónima.
+Estas llamadas a métodos se pueden reemplazar con el cuerpo de la implementación de interfaz funcional.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  boolean contains(List&lt;String&gt; nombres, String nombre) {
+    return ((Predicate&lt;String&gt;)x -> {
+      return nombres.contains(x);
+    }).test(nombre);
+  }
+</code></pre>
+<p>Cuando se aplica el arreglo rápido, la llamada a método cambia a:</p>
+<pre><code>
+  boolean contains(List&lt;String&gt; nombres, String nombre) {
+    return nombres.contains(nombre);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

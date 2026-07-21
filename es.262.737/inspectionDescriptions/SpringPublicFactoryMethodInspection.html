@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Informa de métodos no públicos referenciados en los atributos <code>factory-method</code> de los elementos <strong>&lt;bean&gt;</strong>.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+public class MyFactory {
+  private static FooBean createBean() {...}
+  }
+}
+</code></pre>
+<pre><code lang="xml">
+&lt;beans&gt;
+  &lt;bean class="MyFactory" factory-method="createBean"/&gt;
+  // informa de "El método de fábrica 'createBean' debe ser público"
+&lt;/beans&gt;
+</code></pre>
+</body>
+</html>

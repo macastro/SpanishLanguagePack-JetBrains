@@ -1,0 +1,35 @@
+<html>
+<body>
+Informe sobre los constructores de runBlocking alcanzables desde corrutinas.
+<p>Las corrutinas comparten el hilo utilizado para su ejecución. Cuando se llama a un constructor de runBlocking desde una corrutina, esta bloquea el hilo subyacente, impidiendo que otras corrutinas utilicen este recurso. Esto puede provocar problemas de rendimiento y, en el peor de los casos, inanición de hilos.</p>
+<p>Proporciona una pila de llamadas potencial desde una primitiva de corrutina (función o constructor de suspensión) hasta un constructor de runBlocking.</p>
+<p>Ejemplo: </p>
+<pre><code>
+  suspend fun main() {
+      foo() 
+   }
+
+  fun foo() {
+      runBlocking { suspendFunction() }
+  }
+</code></pre>
+<p>Posible solución: </p>
+<pre><code>
+  suspend fun main() {
+      foo() 
+   }
+
+  suspend fun foo() {
+      suspendFunction()
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Use la opción <b>Inspeccionar funciones con anulaciones</b> para configurar el análisis de funciones virtuales:</p>
+<ul>
+    <li>Utilice la opción <b>No</b> si desea omitir el análisis de las funciones con anulaciones.</li>
+    <li>Utilice la opción <b>Sí, excluir anulaciones</b> para inspeccionar funciones solamente en los tipos de llamadores definidos.</li>
+    <li>Utilice la opción <b>Sí, incluir anulaciones</b> para inspeccionar las funciones y todas las anulaciones.</li>
+</ul>
+
+</body>
+</html>

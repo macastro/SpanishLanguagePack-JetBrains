@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>Informa sobre código que emula <code>.flatten</code> en colecciones de colecciones.</p>
+
+<p><b>Ejemplo:</b>
+<pre><code>
+  Seq(seq1, seq2).flatMap(identity)
+  Seq(seq1, seq2).flatMap(x => identity(x))
+  Seq(seq1, seq2).flatMap(x => x)
+
+  val nestedOption = Option(Some(10))
+  nestedOption.getOrElse(None)
+  nestedOption.map(_.get)
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+  Seq(seq1, seq2).flatten
+  Seq(seq1, seq2).flatten
+  Seq(seq1, seq2).flatten
+
+  val nestedOption = Option(Some(10))
+  nestedOption.flatten
+  nestedOption.flatten
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,117 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Plantilla incorporada de comentarios PHPDoc para propiedades de clase PHP. Incluye fragmentos de código que se pueden incluir en plantillas de archivos (pestaña <b>Plantillas</b>) mediante la directiva <b>#parse</b>.<br>
+      La plantilla es editable. Además del texto, código y comentarios estáticos, se pueden utilizar variables predefinidas, las cuales se expandirán a sus valores correspondientes como lo hacen las macros.</font><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+      Las variables predefinidas toman los siguientes valores:</font></td>
+  </tr>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la propiedad.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CLASS_NAME}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la clase.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${STATIC}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Toma el valor 'static' si la propiedad es estática, o una cadena vacía en caso contrario.</font></td>
+  </tr>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAMESPACE}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de espacio de la propiedad totalmente calificado sin la barra inicial.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El signo de dólar se evalúa como el carácter ‘$' normal.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_SHORT}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Las primeras 3 letras del nombre del mes actual, Ej.: Jan, Feb, etc.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MONTH_NAME_FULL}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre completo del mes actual, Ej.: January, February, etc.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Día del mes actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${SECOND}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Segundo actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Usuario actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${CARET}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Almacena la posición a la que se debe mover el cursor después de agregar el comentario.</font></td>
+  </tr>
+</table>
+</body>
+</html>

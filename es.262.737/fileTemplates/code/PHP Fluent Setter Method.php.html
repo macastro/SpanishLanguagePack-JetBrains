@@ -1,0 +1,60 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Una plantilla integrada para métodos setter de PHP. Por ejemplo, se utiliza cuando se invoca la corrección rápida "agregar getters y setters".</font><br>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas toman los siguientes valores:</font></td>
+  </tr>
+  <tr>    
+    <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">
+      Nombre del método en estilo camel case, sin el prefijo "set" y con el primer carácter en mayúscula. Por ejemplo, el nombre de propiedad '_my_property' se convierte en 'MyProperty'.
+    </font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CLASS_NAME}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre de la clase contenedora.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${SCALAR_TYPE_HINT}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Contiene la sugerencia de tipo escalar si el nivel del lenguaje es PHP 7.0 o superior.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Indica si el nivel del lenguaje es PHP 7.0 o superior, permitiendo así especificar un tipo de retorno para la función/método.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${FIELD_NAME}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre original de la propiedad tal cual.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${PARAM_NAME}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El nombre del parámetro del setter. Casi igual que ${FIELD_NAME}, pero el primer guion bajo (si lo hay) se elimina. Por ejemplo, el nombre de propiedad '_myProperty' se convierte en 'myProperty'.</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${TYPE_HINT}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">La sugerencia de tipo de la propiedad. Si no se especifica, es una cadena vacía.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El signo de dólar, se evalúa como el carácter '$' normal.</font></td>
+  </tr>
+</table>
+</body>
+</html>

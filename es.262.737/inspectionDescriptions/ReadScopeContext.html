@@ -1,0 +1,20 @@
+<html>
+<body>
+Advertir llamadas inválidas de <code>ReadScope</code> desde contextos detenidos o de acción.
+<p>
+  No se pueden llamar funciones <code>ReadScope</code> desde una corrutina o una acción.
+  Si se hace, pueden ocurrir excepciones en tiempo de ejecución.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun ReadScope.kernel(/*...*/) { /*...*/ }
+
+  fun ReadScope.foo() {
+      readEditorAction { ac ->
+          kernel() // Incorrecto
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

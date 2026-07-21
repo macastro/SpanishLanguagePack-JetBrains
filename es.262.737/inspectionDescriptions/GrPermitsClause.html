@@ -1,0 +1,11 @@
+<html>
+<body>
+Reporta clases permitidas que no extienden la clase base **sealed**.
+<p>Groovy no requiere que todas las clases permitidas estén disponibles en tiempo de compilación y compiladas junto con la clase base. El compilador no advierte al usuario sobre el manejo de subclases permitidas no extendidas, pero contradice la naturaleza de las clases sealed.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class A permits B {} // reporta B
+  class B {}
+</code></pre>
+</body>
+</html>

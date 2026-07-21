@@ -1,0 +1,25 @@
+<html>
+<body>
+Reporta los recursos <code>javax.microedition.rms.RecordStore</code> de Java ME que no están abiertos frente a un bloque <code>try</code> y cerrados en el bloque <code>finally</code> correspondiente.
+<p>Dichos recursos pueden perderse sin darse cuenta si se lanza una excepción antes de cerrar el recurso.</p>
+<p>
+  Esta inspección está pensada para Java ME y otros entornos con recursos muy limitados.
+  Aplicar los resultados de esta inspección sin consideración puede tener efectos negativos en la claridad y el diseño del código.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void foo1() throws RecordStoreException {
+      RecordStore rs = RecordStore.openRecordStore("bar", true); // advertencia
+  }
+  void foo2() throws RecordStoreException {
+      RecordStore rs = RecordStore.openRecordStore("bar", true); // no advertencia
+      try {
+          /* ... */
+      } finally {
+          rs.closeRecordStore();
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

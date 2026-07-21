@@ -1,0 +1,37 @@
+<html>
+<body>
+Informa sobre plantillas de cadena que se utilizan como argumentos de métodos de registro de <b>SLF4J</b> y <b>Log4j 2</b>.
+El método <code>org.apache.logging.log4j.Logger.log()</code> y sus sobrecargas solo son compatibles con la opción de <b>todos los niveles de registro</b>.
+Las plantillas de cadena se evalúan en tiempo de ejecución, incluso cuando el mensaje de registro no se registra; esto puede afectar negativamente al rendimiento.
+En su lugar, se recomienda utilizar un mensaje de registro parametrizado, que no se evaluará cuando el registro esté deshabilitado.
+<p><b>Ejemplo (para Kotlin):</b></p>
+<pre><code lang="kotlin">
+      val variable1 = getVariable()
+      logger.info("variable1: $variable1")
+</code></pre>
+<p><b>Después de aplicar la corrección rápida (para Kotlin):</b></p>
+<pre><code lang="kotlin">
+      val variable1 = getVariable()
+      logger.info("variable1: {}", variable1)
+</code></pre>
+<p>
+  Ten en cuenta que la sustitución sugerida puede no ser equivalente al código original, por ejemplo,
+  cuando las plantillas de cadena contienen llamadas a métodos o expresiones de asignación.
+</p>
+<!-- tooltip end -->
+<ul>
+  <li>
+    Utiliza la lista <b>Avisar sobre</b> para ignorar determinados niveles de registro más altos. Los niveles de registro más altos pueden estar siempre habilitados y los argumentos siempre se evaluarán.
+  </li>
+  <li>
+    Utiliza la opción <b>No avisar cuando solo se incluyan expresiones con tipos primitivos, sus contenedores o una cadena</b> para ignorar
+    plantillas de cadena que solo contienen expresiones con tipos primitivos, sus contenedores o una cadena.
+    Por ejemplo, podría ser útil para evitar cargar colecciones de carga diferida.
+    Ten en cuenta que crear cadenas incluso solo con expresiones con tipos primitivos,
+    sus contenedores o una cadena en tiempo de ejecución puede afectar negativamente al rendimiento.
+  </li>
+</ul>
+
+<p><small>Novedad de 2023.1</small></p>
+</body>
+</html>

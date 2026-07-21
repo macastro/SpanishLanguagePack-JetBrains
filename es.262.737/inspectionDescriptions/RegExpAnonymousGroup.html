@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre grupos de captura anónimos y referencias inversas numéricas en un RegExp.
+Solo se informa cuando el dialecto de RegExp admite grupos con nombre y referencias de grupos con nombre.
+Los grupos con nombre y las referencias inversas con nombre mejoran la legibilidad del código y se recomienda usarlos en su lugar.
+Cuando no se necesita una captura, la coincidencia puede tener un mejor rendimiento y utilizar menos memoria mediante el uso de un grupo sin captura,
+es decir, <code>(?:xxx)</code> en lugar de <code>(xxx)</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  (\d\d\d\d)\1
+</code></pre>
+<p>Un mejor patrón de expresión regular podría verse así:</p>
+<pre><code>
+  (?&lt;quad>\d\d\d\d)\k&lt;quad>
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2017.2</small>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+Reporta tipos de variables locales redundantes.
+<p>Estos tipos pueden ser inferidos desde el contexto y por lo tanto reemplazados con <code>var</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void test(InputStream s) {
+    try (InputStream in = s) {}
+  }
+</code></pre>
+<p>Después de aplicar el parche:</p>
+<pre><code>
+  void test(InputStream s) {
+    try (var in = s) {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

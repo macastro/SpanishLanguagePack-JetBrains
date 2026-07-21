@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>Esto se informa cuando una colección se invierte explícitamente antes de llamar a <code>map</code>.</p>
+<p> La corrección rápida utilizará <code>xs.reverseMap(f)</code>, lo que puede ser más eficiente en algunos casos.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  var seq: Seq[Int]
+  seq.reverse.map(f)
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  var seq: Seq[Int]
+  seq.reverseMap(f)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

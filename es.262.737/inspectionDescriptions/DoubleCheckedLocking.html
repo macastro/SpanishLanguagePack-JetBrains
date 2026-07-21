@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa sobre el <a href="https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html">bloqueo de doble comprobación</a>.
+<p>
+  El bloqueo de doble comprobación intenta inicializar un campo bajo demanda de forma segura para hilos, evitando al mismo tiempo la sobrecarga de la sincronización.
+  Lamentablemente, no es seguro para hilos cuando se utiliza en campos que no se han declarado como <code>volatile</code>.
+  Al utilizar Java 1.4 o versiones anteriores, el bloqueo de doble comprobación no funciona incluso para campos <code>volatile</code>.
+  Consulte el artículo enlazado anteriormente para obtener una explicación detallada de este problema.
+</p>
+<p>Ejemplo de bloqueo de doble comprobación incorrecto:</p>
+<pre><code>
+  class Foo {
+    private Helper helper = null;
+    public Helper getHelper() {
+      if (helper == null)
+        synchronized(this) {
+          if (helper == null) helper = new Helper();
+        }
+        return helper;
+      }
+    }
+    // Otros métodos y miembros...
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<body>
+Se encontraron las siguientes violaciones a la especificación EJB:
+<ul>
+  <li>La interfaz EJB no extiende la interfaz EJB correcta</li>
+  <li>La interfaz EJB no es pública ni final</li>
+</ul>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+public interface EntityRemote extends Runnable {} // Error: La clase debe extenderse de `javax.ejb.EJBObject`
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta la construcción de colecciones ordenadas, como <code>TreeSet</code>, que dependen de un ordenamiento natural, cuyo tipo de elemento no implementa la interfaz <code>Comparable</code>.
+<p>Es poco probable que tal colección funcione correctamente.</p>
+<p>
+ Puede haber un falso positivo si el tipo de elemento de la colección es un supertipo no comparable, pero la colección está pensada para contener únicamente subtipos comparables. Incluso si éste es el caso, es mejor acotar el tipo de elemento de la colección o declarar el supertipo como <code>Comparable</code>, ya que el enfoque mencionado es propenso a errores.
+</p>
+<!-- tooltip end -->
+<p>
+  La inspección también reporta casos cuando el elemento de la colección es un parámetro de tipo que no está declarado como <code>extends Comparable</code>.
+  Puedes suprimir las advertencias sobre los parámetros de tipo utilizando la opción provista (por ejemplo, para mantener la compatibilidad con la API).
+</p>
+<p>
+  <small>Nuevo en 2018.3</small>
+</p>
+</body>
+</html>

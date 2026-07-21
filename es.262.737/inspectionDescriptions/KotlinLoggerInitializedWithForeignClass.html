@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta instancias de <code>Logger</code> inicializadas con un literal de clase distinto de la clase en la que reside <code>Logger</code>.
+<p>
+    Esto puede ocurrir al copiar y pegar desde otra clase.
+    Puede dar lugar a eventos de registro en una categoría inesperada y a un filtrado incorrecto.
+</p>
+<p>
+    Utilice las opciones de inspección para especificar las clases y métodos de fábrica de registradores reconocidos por esta inspección.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+class AnotherService
+class MyService {
+    private val logger = LoggerFactory.getLogger(AnotherService::class.java)
+}
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+class MyService {
+    private val logger = LoggerFactory.getLogger(MyService::class.java)
+}
+</code></pre>
+
+</body>
+</html>

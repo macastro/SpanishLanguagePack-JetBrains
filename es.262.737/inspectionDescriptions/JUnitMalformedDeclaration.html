@@ -1,0 +1,82 @@
+<html>
+<body>
+Informa las declaraciones de miembros de prueba de JUnit que están mal formadas y es probable que el framework de prueba de JUnit no las reconozca.
+Esta inspección informa los siguientes problemas:
+<ul>
+  <li>Clases de prueba que no se pueden construir</li>
+  <li>Campos anotados por <code>@RegisterExtension</code> que tienen el tipo incorrecto o que no se declaran como estáticos cuando es requerido</li>
+  <li>Clases internas estáticas o privadas anotadas con <code>@Nested</code></li>
+  <li>Pruebas parametrizadas que se definen sin un origen</li>
+  <li>Pruebas parametrizadas con un <code>@MethodSource</code> que tiene un destino desconocido, no estático o sin argumentos</li>
+  <li>Tipos incompatibles entre el parámetro del método de prueba parametrizado y los valores especificados de <code>@ValueSource</code> o <code>@EnumSource</code></li>
+  <li>Pruebas anotadas por más de uno de <code>@Test</code>, <code>@ParameterizedTest</code> o <code>@RepeatedTest</code></li>
+  <li>Métodos <code>setup()</code> o <code>tearDown()</code> que no son públicos, cuyo tipo de retorno no es nulo o que toman argumentos</li>
+  <li>Métodos <code>suite()</code> que son privados, toman argumentos o no son estáticos</li>
+  <li>
+    Métodos anotados por <code>@BeforeClass</code>, <code>@AfterClass</code>, <code>@BeforeAll</code> o <code>@AfterAll</code> que no son públicos,
+    no estáticos, cuyo tipo de retorno no es void o no tienen una lista de parámetros válida
+  </li>
+  <li>
+    Métodos anotados por <code>@Before</code>, <code>@After</code>, <code>@BeforeEach</code> o <code>@AfterEach</code> que no son públicos, 
+    cuyo tipo de retorno no es void o aceptan argumentos
+  </li>
+  <li><code>RepetitionInfo</code> inyectado en métodos <code>@BeforeAll</code> o <code>@AfterAll</code></li>
+  <li>
+    <code>RepetitionInfo</code> inyectado en métodos <code>@BeforeEach</code> o <code>@AfterEach</code> que son utilizados por 
+    pruebas anotadas con <code>@Test</code>
+  </li>
+  <li>Campos y métodos anotados por <code>@DataPoint</code> o <code>@DataPoints</code> que no son públicos o estáticos</li>
+  <li>
+    Campos y métodos anotados por <code>@Rule</code> que no son públicos o no son un subtipo de <code>TestRule</code>
+    o <code>MethodRule</code>
+  </li>
+  <li>Campos y métodos anotados por <code>@ClassRule</code> que no son públicos, no estáticos o no son un subtipo de <code>TestRule</code></li>
+  <li>
+    Métodos dentro de una subclase de <code>TestCase</code> con un prefijo <code>test</code> que no son públicos, cuyo tipo de retorno 
+    no es void, aceptan argumentos o son estáticos
+  </li>
+  <li>
+    Métodos anotados por <code>@Test</code> que no son públicos, cuyo tipo de retorno no es void, aceptan argumentos o son estáticos
+  </li>
+</ul>
+
+Ten en cuenta que en Kotlin, las funciones de suspensión tienen argumentos y un tipo de retorno que no es void. Por lo tanto, tampoco serán ejecutadas por el corredor de pruebas de JUnit. Esta inspección también informará sobre este problema.
+
+<p><b>Ejemplo de un método <code>@Before</code> mal formado:</b></p>
+<pre><code lang="java">
+  @Before private int foo(int arg) { }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="java">
+  @Before public void foo() { }
+</code></pre>
+
+<p><b>Ejemplo de falta de origen del método (Kotlin):</b></p>
+<pre><code lang="kotlin">
+  class Example {
+    @MethodSource("parameters")
+    @ParameterizedTest
+    fun foo(param: String) { ... }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="kotlin">
+  class Example {
+    @MethodSource("parameters")
+    @ParameterizedTest
+    fun foo(param: String) { ... }
+
+    companion object {
+      @JvmStatic
+      fun parameters(): Stream&lt;Arguments&gt; {
+        TODO("Not yet implemented")
+      }
+    }
+  }
+</code></pre>
+
+<!-- tooltip end -->
+<p>Utiliza las opciones de inspección para especificar anotaciones. Cualquier parámetro anotado con una de estas anotaciones no será informado.
+</p>
+</body>
+</html>

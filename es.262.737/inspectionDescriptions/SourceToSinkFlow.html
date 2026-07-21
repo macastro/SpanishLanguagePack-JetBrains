@@ -1,0 +1,55 @@
+<html>
+<body>
+Informa de los casos en los que se pasa un objeto no seguro a un método con un parámetro marcado con la anotación <code>@Untainted</code>, se devuelve desde un método anotado o se asigna a un campo, parámetro o variable local anotados. No se admiten los métodos <code>set</code> y <code>get</code> de Kotlin para campos como puntos de entrada.
+<p>
+  Los objetos seguros (dentro de la misma clase) son:
+<ul>
+  <li>Literales de cadena, instancias de interfaz u objetos de enumeración</li>
+  <li>Resultados de llamadas a métodos marcados con <code>@Untainted</code></li>
+  <li>Campos private asignados únicamente con literales de cadena y que tengan inicializadores seguros</li>
+  <li>Campos final con inicializadores seguros</li>
+  <li>Variables locales o parámetros marcados con <code>@Untainted</code> que no hayan sido asignados a partir de un objeto no seguro</li>
+</ul>
+Este campo, variable local o parámetro no debe pasarse como argumento a un método ni utilizarse como calificador, o bien debe ser un tipo primitivo, su wrapper o un objeto inmutable.
+
+Además, los campos static final también se consideran seguros.
+<p>
+  El análisis se realiza únicamente dentro de un archivo. Para gestionar dependencias de otras clases, utilice las opciones.
+  El análisis se extiende a métodos private o static y tiene límites de profundidad de propagación.
+<p>
+  Ejemplo:
+<pre>
+<code lang="java">
+  void doSmth(boolean b) {
+    String s = safe();
+    String s1 = "other";
+    if (b) s1 = s;
+    sink(s);
+  }
+
+  String sink(@Untainted String s) {}
+</code>
+</pre>
+<p>
+  Aquí no hay ninguna asignación de cadena no segura a <code>s</code>, por lo que no se genera ninguna advertencia. Por otro lado:
+<pre>
+<code lang="java">
+  void doSmth(boolean b) {
+    String s = safe();
+    String s1 = "other";
+    s1 = foo();
+    if (b) s = s1;
+    sink(s);        // Advertencia aquí
+  }
+  
+  String foo();
+
+  String sink(@Untainted String s) {}
+</code>
+</pre>
+<p>
+  Aquí hay una advertencia porque <code>s1</code> tiene un estado desconocido tras la asignación del resultado de la llamada a <code>foo</code>.
+  <!-- tooltip end -->
+<p><small>Novedad en 2021.2</small></p>
+</body>
+</html>

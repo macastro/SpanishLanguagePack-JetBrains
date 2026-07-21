@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>Informa sobre las funciones que anulan a miembros abstractos pero que no cuentan con un modificador de anulación.</p>
+<p>Scala no requiere que un desarrollador utilice <code>override</code> en métodos que implementan miembros abstractos.
+    Sin embargo, es una buena idea marcar tales métodos con <code>override</code> para ser notificado
+    por el compilador cuando la relación de anulación se rompe (por ejemplo, por una refactorización posterior).</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  trait Base {
+    def fun(): Int
+  }
+
+  class Impl extends Base {
+    def fun(): Int = 42
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  trait Base {
+    def fun(): Int
+  }
+
+  class Impl extends Base {
+    override def fun(): Int = 42
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

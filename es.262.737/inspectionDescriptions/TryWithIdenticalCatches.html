@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa secciones `catch` idénticas dentro de una única sentencia `try`.
+<p>Colapsar dichas secciones en un único bloque `multi-catch` puede reducir la duplicación de código y prevenir situaciones en las que una sección `catch` es actualizada pero otra no lo es.</p>
+<p>**Ejemplo:**</p>
+<pre><code>
+    try {
+        doSmth();
+    }
+    catch (IOException e) {
+        LOG.error(e);
+    }
+    catch (URISyntaxException e) {
+        LOG.error(e);
+    }
+</code></pre>
+<p>Se puede utilizar un arreglo rápido para hacer que el código sea más conciso:</p>
+<pre><code>
+    try {
+        doSmth();
+    }
+    catch (IOException | URISyntaxException e) {
+        LOG.error(e);
+    }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

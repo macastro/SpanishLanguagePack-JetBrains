@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa de llamadas a <code>equals()</code> que comparan dos matrices.
+<p>Cuando se llama a <code>equals()</code> en una matriz, se compara la identidad, que es equivalente a utilizar <code>==</code>.
+  Utiliza <code>Arrays.equals()</code> para comparar los contenidos de dos matrices, o <code>Arrays.deepEquals()</code> para matrices multidimensionales.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void sample(int[] first, int[] second){
+    if (first.equals(second)) return;
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  void sample(int[] first, int[] second){
+    if (Arrays.equals(first, second)) return;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

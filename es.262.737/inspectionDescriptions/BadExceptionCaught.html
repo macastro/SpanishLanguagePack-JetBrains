@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre las cláusulas <code>catch</code> que capturan excepciones inapropiadas.
+<p>Algunas excepciones (por ejemplo, <code>java.lang.NullPointerException</code> o <code>java.lang.IllegalMonitorStateException</code>) indican errores de programación y, casi con toda seguridad, no deberían capturarse en el código de producción.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  try {
+    return component.getMousePosition(true) != null;
+  } catch (NullPointerException e) { // advertencia: Se ha capturado la excepción prohibida 'NullPointerException'
+    return false;
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Utilice la lista de <b>Excepciones prohibidas</b> para especificar qué excepciones deben notificarse.<p>
+</body>
+</html>

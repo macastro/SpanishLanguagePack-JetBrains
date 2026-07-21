@@ -1,0 +1,23 @@
+<html>
+<body>
+Informa sobre el uso de `StringBuffer`, `StringBuilder` o `StringJoiner` que pueden sustituirse por una única concatenación de `String`.
+<p>El uso de concatenación de `String` hace que el código sea más corto y simple.</p>
+<p>
+Esta inspección solo informa cuando el reemplazo sugerido no introduce un problema de rendimiento significativo en las JVM modernas. En la mayoría de los casos, la concatenación de `String` puede mejorar el rendimiento.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  StringBuilder result = new StringBuilder();
+  result.append("i = ");
+  result.append(i);
+  result.append(";");
+  return result.toString();
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  String result = "i = " + i + ";";
+  return result;
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

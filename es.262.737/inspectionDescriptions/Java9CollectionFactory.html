@@ -1,0 +1,35 @@
+<html>
+<body>
+Informa a las llamadas de colección inalterable <code>java.util.Collections</code> que se pueden convertir a los métodos más nuevos de la colección de fábrica.
+Estos se pueden reemplazar con, por ejemplo, <code>List.of()</code> o <code>Set.of()</code> introducidos en Java 9 o <code>List.copyOf()</code> introducido en Java 10.
+
+<p>Tenga en cuenta que, en contraste con los métodos de <code>java.util.Collections</code>, los métodos de fábrica de colecciones Java 9:
+<ul>
+  <li>No aceptan valores <code>null</code>.
+  <li>Requieren elementos de conjunto únicos y claves de mapa.
+  <li>No aceptan argumentos <code>null</code> para consultar métodos como <code>List.contains()</code> o <code>Map.get()</code> de las colecciones devueltas.
+</ul>
+<p>Cuando se violan estos casos, se lanzan excepciones.
+  Esto puede cambiar la semántica del código después de la migración.</p>
+<p>Ejemplo:
+<pre><code>
+  List&lt;Integer> even = Collections.unmodifiableList(
+    Arrays.asList(2, 4, 6, 8, 10, 2));
+  List&lt;Integer> evenCopy = Collections.unmodifiableList(
+    new ArrayList&lt;>(list1));
+</code></pre>
+<p>Después de que se aplique la solución rápida:</p>
+<pre><code>
+  List&lt;Integer> even = List.of(2, 4, 6, 8, 10, 2);
+  List&lt;Integer> evenCopy = List.copyOf(list);
+</code></pre>
+
+<!-- tooltip end -->
+<p>
+Utilice la opción <b>No advertir cuando el contenido no es constante</b> para informar solo en los casos en que los argumentos proporcionados sean constantes de tiempo de compilación.
+Esto reduce las posibilidades de que el comportamiento cambie, ya que no siempre es posible verificar estáticamente si los elementos originales son únicos y no <code>null</code>.
+<p>
+  Utilice la opción <b>Sugerir 'Map.ofEntries'</b> para sugerir reemplazar mapas inalterables con más de 10 entradas con <code>Map.ofEntries()</code>.
+<p><small>Novedad en 2017.2</small></p>
+</body>
+</html>

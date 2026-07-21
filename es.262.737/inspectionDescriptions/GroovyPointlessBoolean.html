@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa de expresiones booleanas sin sentido o innecesariamente complicadas.
+<p>
+  Estas expresiones incluyen conjunción con verdadero,
+  disyunción con falso,
+  comparación de igualdad con un literal booleano o negación de un literal booleano. Tales expresiones pueden ser
+  el resultado de refactorizaciones automáticas
+  no completamente seguidas hasta su finalización, y en cualquier caso es poco probable que sean lo que el desarrollador
+  pretendía hacer.
+</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  si (algunBool && verdadero) {}
+</code></pre>
+<p>Una vez aplicada la solución rápida:</p>
+<pre><code>
+  si (algunBool) {}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa de una llamada a <code>mapIndexed</code> que se puede reemplazar por el generador de <code>List</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  val a = listOf(1, 2, 3).mapIndexed { i, _ ->
+      i + 42
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  val a = List(listOf(1, 2, 3).size) { i ->
+          i + 42
+  }
+</code></pre>
+</body>
+</html>

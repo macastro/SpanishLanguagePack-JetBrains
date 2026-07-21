@@ -1,0 +1,26 @@
+<html>
+<body>
+Informa una llamada a función <code>async</code> sin un prefijo <code>await</code> esperado dentro de una función <code>async</code>.
+Tal llamada devuelve una <code>Promise</code> y el flujo de control continúa inmediatamente.
+<p>Ejemplo:</p>
+<pre><code>
+async function bar() { /* ... */ }
+async function foo() {
+    bar(); // malo
+}
+</code></pre>
+<p>
+Tras aplicar la corrección rápida, se añade el prefijo <code>await</code>:</p>
+<pre><code>
+async function bar() { /* ... */ }
+async function foo() {
+    await bar(); // bueno
+}
+</code></pre>
+<br/>
+Cuando está seleccionada la casilla de verificación "Informe de promesas en instrucciones return", también sugiere añadir <code>await</code> en las instrucciones return.<br/>
+Aunque generalmente no es necesario, aporta dos ventajas principales.<br/><ul><li>
+No olvidarás añadir <code>await</code> cuando rodees tu código con <code>try-catch</code>.</li>
+<li>Un <code>await</code> explícito ayuda al tiempo de ejecución de V8 a proporcionar <a href="https://bit.ly/v8-zero-cost-async-stack-traces">seguimientos de pila asincrónicos</a>.</li></ul>
+</body>
+</html>

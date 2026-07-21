@@ -1,0 +1,40 @@
+<html>
+<body>
+Informa si hay sentencias <code>if</code> con tres o más ramas que se pueden reemplazar por la expresión <code>when</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun checkIdentifier(id: String) {
+      fun Char.isIdentifierStart() = this in 'A'..'z'
+      fun Char.isIdentifierPart() = isIdentifierStart() || this in '0'..'9'
+
+      if (id.isEmpty()) {
+          print("El identificador está vacío")
+      } else if (!id.first().isIdentifierStart()) {
+          print("El identificador debe comenzar con una letra")
+      } else if (!id.subSequence(1, id.length).all(Char::isIdentifierPart)) {
+          print("El identificador solo debe contener letras y números")
+      }
+  }
+</code></pre>
+<p>La corrección rápida convierte la expresión <code>if</code> a <code>when</code>:</p>
+<pre><code>
+  fun checkIdentifier(id: String) {
+      fun Char.isIdentifierStart() = this in 'A'..'z'
+      fun Char.isIdentifierPart() = isIdentifierStart() || this in '0'..'9'
+
+      when {
+          id.isEmpty() -> {
+              print("El identificador está vacío")
+          }
+          !id.first().isIdentifierStart() -> {
+              print("El identificador debe comenzar con una letra")
+          }
+          !id.subSequence(1, id.length).all(Char::isIdentifierPart) -> {
+              print("El identificador solo debe contener letras y números")
+          }
+      }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

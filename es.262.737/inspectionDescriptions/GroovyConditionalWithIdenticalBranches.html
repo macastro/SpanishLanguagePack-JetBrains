@@ -1,0 +1,14 @@
+<html>
+<body>
+Reporta expresiones ternarias con ramas idénticas "then" y "else". Dichas expresiones son casi con seguridad un error del programador.
+<p>La solución rápida reemplaza la expresión con su rama "then".</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  condición ? a.foo() : a.foo()
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  a.foo()
+</code></pre>
+</body>
+</html>

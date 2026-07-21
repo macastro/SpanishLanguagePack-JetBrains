@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa de la creación innecesaria de objetos temporales al convertir
+de un tipo primitivo a una <code>String</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  String foo = new Integer(3).toString();
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  String foo = Integer.toString(3);
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

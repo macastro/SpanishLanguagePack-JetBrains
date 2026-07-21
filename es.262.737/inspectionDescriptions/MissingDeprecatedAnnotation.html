@@ -1,0 +1,25 @@
+<html>
+<body>
+<code>@deprecated</code> Reporta declaraciones de módulos, clases, campos o métodos que tienen una etiqueta Javadoc <code>@deprecated</code>, pero no una anotación <code>@java.lang.Deprecated</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  /**
+   * @deprecated use {@code example()} instead
+   */
+  void sample(){ }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  /**
+   * @deprecated use {@code example()} instead
+   */
+  @Deprecated
+  void sample(){ }
+</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 5 o superior.</p>
+<p>
+Utiliza la siguiente casilla de verificación para informar a los miembros que tienen una anotación <code>@Deprecated</code>, pero sin una explicación en la etiqueta Javadoc <code>@deprecated</code>.
+
+</body>
+</html>

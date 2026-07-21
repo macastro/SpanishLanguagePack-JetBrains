@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa variables <code>static</code> que son leídas antes de la inicialización.
+<p>La inspección ignora las comprobaciones de igualdad con <code>null</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+    public static int bar;
+
+    public static void main(String[] args) {
+      System.out.println(bar);
+    }
+  }
+</code></pre>
+<p>Obsérvese que esta inspección utiliza un algoritmo de flujo de datos muy conservador y puede informar incorrectamente las variables <code>static</code> como no inicializadas. Las variables que se informan como inicializadas siempre se inicializarán.</p>
+<!-- tooltip end -->
+<p>Utiliza la opción <b>Ignorar campos primitivos</b> para ignorar los campos primitivos no inicializados.</p>
+</body>
+</html>

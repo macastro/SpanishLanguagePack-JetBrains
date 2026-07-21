@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa métodos booleanos que se pueden acceder mediante el mismo nombre de propiedad.
+<p>El resultado de acceder a dicha propiedad podría ser inesperado.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class X {
+      boolean esFoo() { verdadero }
+      boolean obtenerFoo() { falso }
+  }
+
+  // llamará a obtenerFoo()
+  new X().foo
+</code></pre>
+</body>
+</html>

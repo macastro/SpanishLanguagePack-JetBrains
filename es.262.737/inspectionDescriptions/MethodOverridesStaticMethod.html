@@ -1,0 +1,18 @@
+<html>
+<body>
+Avisos de métodos <code>static</code> con una firma idéntica a un método <code>static</code> de una superclase.
+Este método puede verse como un sobrescrito cuando en realidad oculta el método de la superclase porque
+los métodos <code>static</code> en Java no pueden sobrescribirse.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Padre {
+    static void método(){}
+  }
+
+  class Ejemplo extends Padre {
+    static void método(){} //advertencia
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

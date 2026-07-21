@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>Informa sobre el uso de "equals" en matrices e iteradores.</p>
+<p>El método Equals en matrices e iteradores comprueba la igualdad de referencia, la cual es raramente útil.
+    Esta inspección sugiere comparar su contenido mediante <code>sameElements</code>.</p>
+<pre><code>
+  Array(1) == Array(1) //false
+  Iterator(1) == Iterator(1) //false
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  Array(1) sameElements Array(1) //true
+  Iterator(1) sameElements Iterator(1) //true
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

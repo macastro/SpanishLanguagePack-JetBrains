@@ -1,0 +1,31 @@
+<html>
+<body>
+Reporta expresiones con un patrón repetitivo que podrían ser reemplazadas con <i>Stream API</i> o <code>String.join()</code>.
+<p>Ejemplo:</p>
+<pre><code>
+  boolean allStartWith(String a, String b, String c, String d, String prefix) {
+    return a.startsWith(prefix) && b.startsWith(prefix) && c.startsWith(prefix) && d.startsWith(prefix);
+  }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  boolean foo(String a, String b, String c, String d, String prefix) {
+    return Stream.of(a, b, c, d).allMatch(s -> s.startsWith(prefix));
+  }
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code>
+  String joinAll(String a, String b, String c, String d) {
+    return a + "," + b + "," + c + "," + d;
+  }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  String joinAll(String a, String b, String c, String d) {
+    return String.join(",", a, b, c, d);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2018.2</small></p>
+</body>
+</html>

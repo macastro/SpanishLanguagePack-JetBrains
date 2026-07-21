@@ -1,0 +1,23 @@
+<!-- Copyright 2000-2022 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+<html>
+<body>
+Reporta patrones de formato de fecha y hora no válidos.
+<p>Reporta los siguientes errores:</p>
+<ul>
+  <li>Caracteres de patrón no soportados como "TT"</li>
+  <li>Uso de caracteres reservados como "#"</li>
+  <li>Relleno usado incorrectamente</li>
+  <li>Corchetes no balanceados</li>
+  <li>Cantidad incorrecta de caracteres de patrón consecutivos</li>
+</ul>
+<p>Ejemplos:</p>
+<pre><code>
+  DateTimeFormatter.ofPattern("[][]]"); // ']' de cierre sin '[' de apertura
+  DateTimeFormatter.ofPattern("TT"); // Carácter de patrón ilegal 'T'
+  DateTimeFormatter.ofPattern("{"); // Se usa el carácter reservado '{'
+  DateTimeFormatter.ofPattern("MMMMMM"); // Demasiados caracteres de patrón 'M' consecutivos
+</code></pre>
+<!-- tooltip end -->
+<p><small>Novedad de 2022.3</small>
+</body>
+</html>

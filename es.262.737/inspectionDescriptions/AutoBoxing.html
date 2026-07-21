@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa de las expresiones que son afectadas por conversión de boxing automático (envoltorio automático de valores primitivos como objetos).
+Intenta no usar objetos en lugar de primitivos. Podría afectar significativamente al rendimiento.
+<p><b>Ejemplo:</b></p>
+<pre><code>Integer x = 42;</code></pre>
+<p>La corrección rápida hace que la conversión sea explícita:</p>
+<pre><code>Integer x = Integer.valueOf(42);</code></pre>
+<!-- tooltip end -->
+<p>
+  <i>AutoBoxing</i> apareció en Java 5.
+  Esta inspección puede ayudar a degradar para compatibilidad con versiones anteriores con versiones anteriores de Java.
+</p>
+</body>
+</html>

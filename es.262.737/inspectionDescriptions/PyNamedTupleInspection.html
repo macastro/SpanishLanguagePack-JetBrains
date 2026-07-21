@@ -1,0 +1,25 @@
+<html>
+<body>
+<p>Informa sobre una definición no válida de una <a href="https://docs.python.org/3/library/typing.html#typing.NamedTuple">typing.NamedTuple</a>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+import typing
+
+
+class FullName(typing.NamedTuple):
+    first: str
+    last: str = ""
+    middle: str
+</code></pre>
+<p>Para corregirlo, pon el campo con el valor por defecto después de los campos sin valores por defecto:</p>
+<pre><code>
+import typing
+
+
+class FullName(typing.NamedTuple):
+    first: str
+    middle: str
+    last: str = ""
+</code></pre>
+</body>
+</html>

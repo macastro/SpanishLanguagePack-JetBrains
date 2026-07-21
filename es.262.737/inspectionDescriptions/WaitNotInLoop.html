@@ -1,0 +1,31 @@
+<html>
+<body>
+Se informa sobre llamadas de `wait()` que no se realizan dentro de un bucle.
+<p>
+  <code>wait()</code> se utiliza normalmente para pausar un hilo hasta que se cumpla una condición.
+  Como un hilo puede despertarse por otras razones, la condición debe comprobarse tras el regreso de la llamada a <code>wait()</code>.
+  Una forma sencilla de implementarlo es mediante un bucle.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class BoundedCounter {
+    private int count;
+    synchronized void inc() throws InterruptedException {
+      if (count >= 10) wait();
+      ++count;
+    }
+  }
+</code></pre>
+<p>El código adecuado sería:</p>
+<pre><code>
+  class BoundedCounter {
+    private int count;
+    synchronized void inc() throws InterruptedException {
+      while (count >= 10) wait();
+      ++count;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

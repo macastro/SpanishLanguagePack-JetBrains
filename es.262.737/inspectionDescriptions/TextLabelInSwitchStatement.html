@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre sentencias con etiqueta dentro de sentencias <code>switch</code>.
+Si bien ocasionalmente es intencional, esta construcción a menudo es el resultado de un error tipográfico.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  switch (x) {
+      case 1:
+      case2:   // advertencia: etiqueta de texto 'case2:' en sentencia 'switch'
+      case 3:
+          break;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

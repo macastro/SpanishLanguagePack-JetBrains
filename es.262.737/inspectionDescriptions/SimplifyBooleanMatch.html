@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>Informa coincidencias de patrones triviales en expresiones booleanas que pueden ser reemplazados por sentencias condicionales.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  val bool: Boolean
+  bool match {
+    case true => ???
+    case false => ???
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  val bool: Boolean
+  if (bool) {
+    ???
+  } else {
+    ???
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

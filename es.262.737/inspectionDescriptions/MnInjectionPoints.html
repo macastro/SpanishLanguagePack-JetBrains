@@ -1,0 +1,23 @@
+<html>
+<body>
+<p>Reporta puntos de inyección en clases de bean que tienen dependencias faltantes o ambiguas.</p>
+<!-- tooltip end -->
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  interface Engine {}
+
+  @Singleton
+  class GasEngine implements Engine {}
+
+  @Singleton
+  class ElectricEngine implements Engine {}
+
+  @Singleton
+  class Car {
+
+    @Inject
+    Engine <b>engine</b>; // Dependencia ambigua: hay múltiples beans que coinciden con el punto de inyección
+  }
+</code></pre>
+</body>
+</html>

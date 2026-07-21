@@ -1,0 +1,15 @@
+<html>
+<body>
+Reporta clases abstractas que tienen exactamente un heredero directo. Si bien dichas clases pueden ofrecer una admirable claridad de diseño, en entornos con memoria limitada o con ancho de banda limitado, aumentan innecesariamente el tamaño total de la aplicación. Considera combinar la clase abstracta con su heredero.
+<p>
+Esta inspección está destinada a Java ME y a otros entornos donde los recursos están muy restringidos. Aplicar los resultados de esta inspección sin consideraciones podría tener efectos negativos en la claridad y diseño del código.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  abstract class Base {} // se reportará
+
+  class Inheritor extends Base {}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

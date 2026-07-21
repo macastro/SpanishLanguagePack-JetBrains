@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre sentencias <code>switch</code> que están anidadas dentro de otras sentencias <code>switch</code>.
+Las sentencias switch anidadas son confusas y pueden resultar en comportamientos inesperados.
+<p><b>Ejemplo:</b></p>
+<pre>
+<code>
+switch (outer) {
+  case 1:
+    switch (inner) {
+      case 1:
+        print "inner 1"
+        break
+      default:
+        print "inner default"
+    }
+    break
+  default:
+    print "default"
+}
+</code>
+</pre>
+</body>
+</html>

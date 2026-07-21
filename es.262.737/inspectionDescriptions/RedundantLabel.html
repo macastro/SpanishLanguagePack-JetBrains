@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa sobre las etiquetas redundantes que no se pueden referenciar desde las sentencias 'break', 'continue' o 'return'.
+<p>
+Estas etiquetas se pueden eliminar de forma segura.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+fun foo(c: Boolean) {
+    b@ while (true) a@ {
+        while (true) {
+            break@b
+        }
+    }
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+fun foo(c: Boolean) {
+    b@ while (true) {
+        while (true) {
+            break@b
+        }
+    }
+}
+</code></pre>
+</body>
+</html>

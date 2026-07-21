@@ -1,0 +1,24 @@
+<html>
+<body>
+Reporta archivos de bienvenida duplicados listados en el descriptor para desplegar un módulo Web a un servidor.
+
+<p><b>Ejemplo:</b></p><br/>
+<pre><code>
+  &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+  &lt;!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd"&gt;
+  &lt;web-app&gt;
+    &lt;welcome-file-list&gt;
+      &lt;welcome-file&gt;
+        Welcome1.jsp
+      &lt;/welcome-file&gt;
+      &lt;welcome-file&gt;
+        /Welcome1.jsp // Error: archivo de bienvenida duplicado
+      &lt;/welcome-file&gt;
+      &lt;welcome-file&gt;
+        Welcome3.jsp
+      &lt;/welcome-file&gt;
+    &lt;/welcome-file-list&gt;
+  &lt;/web-app&gt;
+</code></pre>
+</body>
+</html>

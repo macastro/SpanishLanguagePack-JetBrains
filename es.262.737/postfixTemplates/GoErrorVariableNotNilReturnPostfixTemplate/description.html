@@ -1,0 +1,21 @@
+<html>
+<body>
+Genera un código obligatorio para tratar errores habituales.
+<p>
+  Puede llamarse sobre variables y expresiones de tipo <code>error</code>.
+</p>
+<ul>
+  <li><p>Reemplaza la variable <code>err</code> con la siguiente construcción:</p>
+  <pre><code>if err != nil {
+    return value1, value2, ...
+  }</code></pre></li>
+  <li><p>Reemplaza la expresión <code>expr</code> con la siguiente construcción:</p>
+  <pre><code>if err := expr; err != nil {
+    return value1, value2, ...
+  }</code></pre></li>
+</ul>
+<p>
+  Cada <code>valor</code> puede ser la variable <code>err</code> o el valor por defecto correspondiente al tipo de retorno de la función envolvente. Es posible llamar a esta plantilla sobre una expresión con múltiples valores.
+</p>
+</body>
+</html>

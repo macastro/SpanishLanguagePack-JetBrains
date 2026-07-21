@@ -1,0 +1,34 @@
+<html>
+<body>
+Informa de la recursión de cola, es decir, cuando un método se llama a sí mismo como última acción antes de devolver un valor.
+<p>
+  La recursión de cola siempre puede reemplazarse por un bucle, lo que será considerablemente más rápido.
+  Algunas JVM llevan a cabo la optimización de llamadas de cola, mientras que otras no. Por tanto, las soluciones recursivas de cola pueden tener características de rendimiento considerablemente distintas en diferentes máquinas virtuales.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  int factorial(int val, int runningVal) {
+    if (val == 1) {
+      return runningVal;
+    } else {
+      return factorial(val - 1, runningVal * val);
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  int factorial(int val, int runningVal) {
+    while (true) {
+      if (val == 1) {
+        return runningVal;
+      } else {
+        runningVal = runningVal * val;
+        val = val - 1;
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa qué operaciones de asignación pueden ser reemplazadas por asignación de operador.
+<p>El código que usa asignación de operador es más corto y puede ser más claro.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  x = x + 3;
+  x = x / 3;
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>  x += 3;
+  x /= 3;
+</code></pre>
+<!-- tooltip end -->
+<p>
+Usa la opción <b>Ignorar operadores condicionales</b> para ignorar <code>&amp;&amp;</code>
+y <code>||</code>. Reemplazar operadores condicionales con asignación de operador cambiaría la evaluación de perezosa a ansiosa, lo que puede cambiar la semántica de la expresión.
+</p>
+<p>
+Usa la opción <b>Ignorar operadores oscuros</b> para ignorar <code>^</code> y <code>%</code>, que son menos conocidos.
+</p>
+</body>
+</html>

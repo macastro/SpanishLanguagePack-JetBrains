@@ -1,0 +1,22 @@
+<html>
+<body>
+Informe las comprobaciones de <code>size == 0</code> de <code>Collections/Array/String</code> que deberían reemplazarse con <code>isEmpty()</code>.
+<p>El uso de <code>isEmpty()</code> simplifica el código.</p>
+<p>El arreglo rápido reemplazará las comprobaciones de tamaño por <code>isEmpty()</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo() {
+      val arrayOf = arrayOf(1, 2, 3)
+      arrayOf.size == 0
+  }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  fun foo() {
+      val arrayOf = arrayOf(1, 2, 3)
+      arrayOf.isEmpty()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

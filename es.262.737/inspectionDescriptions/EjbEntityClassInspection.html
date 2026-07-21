@@ -1,0 +1,20 @@
+<html>
+<body>
+Son detectadas las siguientes violaciones de la especificación EJB a nivel de error:
+<ul>
+  <li>Finder y los métodos selectores no están definidos correctamente</li>
+  <li>Los accesadores de campo CMP y CMR no están definidos correctamente</li>
+</ul>
+</body>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+public class SessionEJB implements javax.ejb.SessionBean {
+  // Error: El método 'ejbCreateXXX' debe ser público
+  protected void ejbCreateExample() { ... }
+
+  // Error: El método 'ejbCreateAnotherExample' debe devolver 'void'
+  public int ejbCreateAnotherExample() { ... }
+}
+</code></pre>
+</html>

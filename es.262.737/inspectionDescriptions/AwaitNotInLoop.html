@@ -1,0 +1,26 @@
+<html>
+<body>
+Informa que <code>java.util.concurrent.locks.Condition.await()</code> no se está invocando dentro de un bucle.
+<p>
+  <code>await()</code> y métodos relacionados se utilizan normalmente para suspender un hilo hasta que alguna condición se vuelve verdadera.
+  Como el hilo podría haberse despertado por una razón diferente,
+  la condición se debe verificar después de que la llamada <code>await()</code> regrese.
+  Un bucle es una forma sencilla de lograr esto.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void acquire(Condition released) throws InterruptedException {
+    released.await();
+  }
+</code></pre>
+<p>El código correcto debería verse como sigue:</p>
+<pre><code>
+  void acquire(Condition released) throws InterruptedException {
+    while (acquired) {
+      released.await();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

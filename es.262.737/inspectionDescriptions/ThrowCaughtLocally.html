@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sentencias <code>throw</code> cuyas excepciones siempre son atrapadas por las sentencias <code>try</code> que las contienen.
+<p>El uso de sentencias <code>throw</code> como "goto" para cambiar el flujo de control local genera confusión y da como resultado un mal rendimiento.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  try {
+    if (!Files.isDirectory(PROJECTS)) {
+        throw new IllegalStateException("Directory not found."); // advertencia: 'throw' capturado por la sentencia 'try' que lo contiene
+    }
+    ...
+  } catch (Exception e) {
+      LOG.error("run failed");
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Utiliza la opción <b>Ignorar excepciones relanzadas</b> para ignorar las excepciones que se relanzan.</p>
+</body>
+</html>

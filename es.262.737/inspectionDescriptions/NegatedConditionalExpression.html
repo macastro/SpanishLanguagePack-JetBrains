@@ -1,0 +1,16 @@
+<html>
+<body>
+Reporta expresiones condicionales que se niegan con una expresión de prefijo, ya que tales construcciones pueden ser confusas.
+<p>Hay una solución que propaga la negación externa a ambas ramas.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  !(i == 1 ? a : b)
+</code></pre>
+<p>Después de que se aplica la solución rápida:</p>
+<pre><code>
+  i == 1 ? !a : !b
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

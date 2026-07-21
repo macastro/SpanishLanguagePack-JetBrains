@@ -1,0 +1,28 @@
+<html>
+<body>
+Informa variables locales que no siguen las convenciones de nomenclatura.
+<p>Puedes especificar el patrón requerido en las opciones de inspección.</p>
+<p><a href="https://kotlinlang.org/docs/coding-conventions.html#function-names">Convenciones de nomenclatura recomendadas</a>: debe comenzar con una letra minúscula, usar mayúsculas y minúsculas y sin guiones bajos.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun fibonacciNumber(index: Int): Long = when(index) {
+      0 -> 0
+      else -> {
+          // no sigue las convenciones de nomenclatura: contiene el símbolo de guión bajo (`_`)
+          var number_one: Long = 0
+          // no sigue las convenciones de nomenclatura: comienza con una letra mayúscula
+          var NUMBER_TWO: Long = 1
+          // sigue las convenciones de nomenclatura: comienza con una letra minúscula, usa mayúsculas y minúsculas y sin guiones bajos.
+          var numberThree: Long = number_one + NUMBER_TWO
+
+          for(currentIndex in 2..index) {
+              numberThree = number_one + NUMBER_TWO
+              number_one = NUMBER_TWO
+              NUMBER_TWO = numberThree
+          }
+          numberThree
+      }
+  }
+</code></pre>
+</body>
+</html>

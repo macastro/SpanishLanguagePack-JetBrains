@@ -1,0 +1,32 @@
+<html>
+<body>
+Informa a los métodos <code>clone()</code> con tipos de retorno diferentes a la clase en la que se encuentran.
+<p>A menudo un método <code>clone()</code> tendrá un tipo de retorno de <code>java.lang.Object</code>, lo que dificulta su uso por sus clientes.
+<i>Effective Java</i> (segunda y tercera edición) recomienda hacer que el tipo de retorno de los métodos <code>clone()</code> sea el mismo que el tipo de clase del objeto que devuelve.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>class</b> Foo <b>implements</b> Cloneable {
+    <b>public</b> Object clone() {
+      <b>try</b> {
+        <b>return</b> super.clone();
+      } <b>catch</b> (CloneNotSupportedException e) {
+        <b>throw new</b> AssertionError();
+      }
+    }
+  }
+</code></pre>
+<p>Después de que se aplica la corrección rápida:</p>
+<pre><code>
+  <b>class</b> Foo <b>implements</b> Cloneable {
+    <b>public</b> Foo clone() {
+      <b>try</b> {
+        <b>return</b> (Foo)super.clone();
+      } <b>catch</b> (CloneNotSupportedException e) {
+        <b>throw new</b> AssertionError();
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

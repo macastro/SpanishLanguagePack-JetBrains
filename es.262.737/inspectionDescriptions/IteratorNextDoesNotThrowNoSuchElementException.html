@@ -1,0 +1,26 @@
+<html>
+<body>
+Informar implementaciones de <code>Iterator.next()</code>
+que no pueden arrojar <code>java.util.NoSuchElementException</code>.
+<p>
+  Tales implementaciones violan el contrato de <code>java.util.Iterator</code>,
+  y pueden provocar errores sutiles si el iterador se utiliza de manera no estándar.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Numbers implements Iterator&lt;Integer&gt; {
+    @Override
+    public Integer next() { //warning
+        if (hasNext()) {
+            return generateNext();
+        } else {
+            return null; //arrojar NoSuchElementException en su lugar
+        }
+    }
+
+    ...
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+Reporta cualquier archivo <code>package.html</code> que se use para documentar paquetes.
+<p>Desde JDK 1.5, se recomienda que use archivos <code>package-info.java</code> en su lugar, ya que dichos archivos también pueden contener anotaciones de paquetes. De esta manera, package-info.java se convierte en un único repositorio para anotaciones y documentación a nivel de paquete.</p>
+<p>Ejemplo: <code>package.html</code></p>
+<pre><code>
+&lt;html&gt;
+  &lt;body&gt;
+    Documentation example.
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Después de aplicar la solución rápida: <code>package-info.java</code></p>
+<pre><code>
+/**
+ * Documentation example.
+ */
+package com.sample;
+</code></pre>
+</body>
+</html>

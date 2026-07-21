@@ -1,0 +1,12 @@
+<html>
+<body>
+Inspección de código que nunca puede ser ejecutado porque no existe una ruta de flujo de control hacia el código desde el resto del programa.
+<p>Ejemplo:</p>
+<pre><code>func _() int {
+ print(1)
+ return 2
+ println() // Este código es inalcanzable 
+ return 0
+}</code></pre>
+</body>
+</html>

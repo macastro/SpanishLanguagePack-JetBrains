@@ -1,0 +1,24 @@
+<html>
+<body>
+Reporta bloques <code>synchronized</code> que se bloquean en objetos inicializados con un literal.
+<p>
+  Los literales de cadena son internados y <code>Character</code>, <code>Boolean</code> y <code>Number</code> pueden ser asignados desde un caché.
+  Debido a esto, es posible que alguna otra parte del sistema, que usa un objeto inicializado con el mismo literal, esté sosteniendo una referencia al mismo objeto.  Esto puede crear situaciones de interbloqueo inesperadas, si el objeto de bloqueo fue considerado privado.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main {
+    final String mutex = "Mutex";
+    void method() {
+      synchronized (mutex) {
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Usa la opción <strong>Advertir sobre todos los posibles literales</strong> para reportar cualquier sincronización en
+  <code>String</code>, <code>Character</code>, <code>Boolean</code> y <code>Number</code> objetos.
+</p>
+</body>
+</html>

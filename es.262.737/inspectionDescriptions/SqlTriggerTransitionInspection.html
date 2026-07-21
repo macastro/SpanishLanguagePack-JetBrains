@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre los usos incorrectos de variables de tabla de transición en disparadores.
+<p>Ejemplo (HSQLDB):</p>
+<pre><code>CREATE TABLE foo(a INT);
+
+CREATE TRIGGER trg
+ AFTER DELETE ON foo
+BEGIN
+   SELECT * FROM NEW;
+END;
+
+CREATE TRIGGER trig AFTER INSERT ON foo
+   REFERENCING OLD ROW AS newrow
+   FOR EACH ROW WHEN (a > 1)
+   INSERT INTO foo VALUES (1)</code></pre>
+<p>En HSQLDB, los disparadores DELETE pueden usarse solo con el estado OLD mientras que los disparadores INSERT solo pueden usar el estado NEW. Así que, en el ejemplo previo, tanto NEW en <code>SELECT * FROM NEW;</code> como OLD en <code>REFERENCING OLD ROW AS newrow</code> serán resaltados.</p>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<html>
+<body>
+<p>Se informa de los siguientes problemas con JUnit 5 <code>@RepeatedTest</code> :</p>
+<ul>
+  <li><code>@Test</code> y <code>@RepeatedTest</code> se utilizan en el mismo método. Aunque se les permite ser usados juntos, su uso combinado no tiene ningún efecto adicional.</li>
+  <li>El parámetro <code>RepetitionInfo</code> se utiliza en los métodos <code>@BeforeAll</code> y <code>@AfterAll</code> . El parámetro no se inyecta en estos métodos.</li>
+  <li>El parámetro <code>RepetitionInfo</code> se utiliza en los métodos <code>@BeforeEach</code> y <code>@AfterEach</code> de una clase que contiene métodos <code>@Test</code> . El parámetro no se inyectará en los métodos <code>@Test</code> en este caso.</li>
+</ul>
+<!-- tooltip end -->
+</body>
+</html>

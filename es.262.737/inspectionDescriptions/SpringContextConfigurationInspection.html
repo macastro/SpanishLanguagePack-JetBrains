@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>Informa sobre configuraciones de contexto Spring incorrectas.</p>
+<ul>
+  <li>Archivos y directorios no resueltos en atributos <code>locations</code> y atributos alias correspondientes de metaanotaciones <code>@ContextConfiguration</code>
+  </li>
+  <li>Falta archivo de contexto de aplicación predeterminado</li>
+</ul>
+
+<p>Para más información, consulta <a href=https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/ContextConfiguration.html>@ContextConfiguration</a>.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  @ContextConfiguration(locations = "classpath:META-INF/unknown-context.xml") // informa "No se puede resolver el archivo 'unknown-context.xml'"
+  class MyTests {...}
+</code></pre>
+</body>
+</html>

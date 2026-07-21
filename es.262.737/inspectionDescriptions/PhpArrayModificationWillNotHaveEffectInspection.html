@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta el llamado a una función que devuelve un arreglo por valor, lo cual invalida la operación de asignación. Se debería usar retorno por referencia.
+<p><b>Por ejemplo:</b></p>
+<pre><code>
+&lt?php
+class A {
+    private $values = [];
+    public function getValues() {
+        return $this->values;
+    }
+}
+$config = new A();
+$config->getValues()['a'] = 'a';
+</code></pre>
+</body>
+</html>

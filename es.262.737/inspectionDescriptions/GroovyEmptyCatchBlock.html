@@ -1,0 +1,25 @@
+<html>
+<body>
+Informa sobre los bloques <code>catch</code> vacíos. Aunque a veces es intencionado, los bloques <code>catch</code> vacíos pueden dificultar enormemente la depuración.
+<p><b>Ejemplo:</b></p>
+<pre>
+<code>
+try {
+  throw new Exception()
+}
+catch (Exception e) {
+}
+</code>
+</pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre>
+<code>
+try {
+  throw new Exception()
+}
+catch (Exception ignored) {
+}
+</code>
+</pre>
+</body>
+</html>

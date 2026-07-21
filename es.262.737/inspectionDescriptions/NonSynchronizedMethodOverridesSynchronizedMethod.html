@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa sobre métodos no <code>synchronized</code> que reemplazan a métodos <code>synchronized</code>.
+<p>
+  El método reemplazado no se sincronizará automáticamente si el método de la superclase
+  se declara como <code>synchronized</code>. Esto puede generar condiciones de carrera inesperadas al utilizar la subclase.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Super {
+    synchronized void process() {}
+  }
+  class Sub extends Super {
+    // El método no sincronizado 'process()' reemplaza al método sincronizado
+    void process() {}
+  }  
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

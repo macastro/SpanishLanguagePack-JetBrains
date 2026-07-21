@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta la barra diagonal (<code>/</code>) o la barra invertida (<code>\</code>) hacía adelante o hacía atrás en una cadena o en un literal de carácter. Comúnmente, estos caracteres se utilizan como separadores de archivos y la portabilidad podría verse afectada si se les codifica.
+<p>
+  La inspección no reportará barras invertidas dentro de secuencias de escape ni barras diagonales inmediatamente después del caracter '&lt;' o inmediatamente antes del caracter '&gt;', debido a que a menudo indican etiquetas XML o HTML en lugar de nombres de archivo. Las cadenas que representan un ID de <code>java.util.TimeZone</code>, cadenas que son expresiones regulares válidas o cadenas que igualan tipos de medios MIME registrados en IANA no serán reportadas tampoco.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  new File("C:\\Users\\Name");
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Utiliza la opción para incluir <code>example/*</code> en el conjunto de tipos de medios reconocidos.
+  Normalmente, el uso del tipo de medio MIME <code>example/*</code> fuera de un ejemplo (por ejemplo, en un encabezado <code>Content-Type</code>) es un error.
+</p>
+</body>
+</html>

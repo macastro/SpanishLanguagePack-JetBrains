@@ -1,0 +1,33 @@
+<html>
+<body>
+Informa sobre sentencias y expresiones <code>switch</code> con muy pocas etiquetas <code>case</code>, y sugiere reescribirlas como sentencias <code>if</code> y <code>else if</code>.
+<p>Ejemplo (mínimo de ramas == 3):</p>
+<pre><code>
+  switch (expresión) {
+    case "foo" -&gt; foo();
+    case "bar" -&gt; bar();
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  if ("foo".equals(expresión)) {
+    foo();
+  } else if ("bar".equals(expresión)) {
+    bar();
+  }
+</code></pre>
+<p>No se informa sobre expresiones switch exhaustivas (Java 14+) o sentencias switch de patrones (vista previa de Java 17) sin la rama 'default'. Esto se debe a que la comprobación de exhaustividad en tiempo de compilación se perderá cuando el <code>switch</code> se convierta en <code>if</code>, lo que podría no ser deseable.
+</p>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+<p>Utiliza el campo <b>Número mínimo de ramas</b> para especificar el número mínimo esperado de etiquetas <code>case</code>.</p>
+<p>Utiliza la opción <b>No informar sobre sentencias de switch de patrones</b> para evitar informar sobre sentencias y expresiones switch que tengan ramas de patrones. Por ejemplo:</p>
+<pre><code>
+  String resultado = switch(obj) {
+    case String str -> str.trim();
+    default -> "ninguno";
+  };
+</code></pre>
+<p>Puede ser preferible mantener el switch incluso con una sola rama de patrón, en lugar de usar la sentencia <code>instanceof</code>.</p>
+</body>
+</html>

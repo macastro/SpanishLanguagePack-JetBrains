@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>Informa <code>collection.collect(f).headOption</code> y sugiere reemplazarlo con <code>collection.collectFirst(f)</code> si es posible.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  val x: Set[Int]
+  x.collect(f).headOption
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  val x: Set[Int]
+  x.collectFirst(f)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

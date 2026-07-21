@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa cuando las clases padre e hijo en una jerarquía de pruebas JUnit están anotadas con <code>@RunWith</code>.
+Puede provocar un comportamiento de prueba inesperado.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  @RunWith(Suite.class)
+  @SuiteClasses(MySuiteClass.class)
+  public abstract Padre {
+  }
+
+  @RunWith(Parameterized.class)
+  public MiPrueba {
+  }
+</code></pre>
+
+<!-- tooltip end -->
+<p>
+ <small>Nuevo en 2024.1</small>
+</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+<p> Informa usos inválidos de <a href="https://docs.python.org/3/library/typing.html#typing.ClassVar">anotaciones ClassVar</a> .</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+from typing import ClassVar
+
+
+class Cat:
+    color: ClassVar[str] = "white"
+    weight: int
+
+    def __init__(self, weight: int):
+        self.weight = weight
+
+
+Cat.color = "black"  # OK
+my_cat = Cat(5)
+my_cat.color = "gray"  # Error, estableciendo la variable de clase en la instancia
+</code></pre>
+</body>
+</html>

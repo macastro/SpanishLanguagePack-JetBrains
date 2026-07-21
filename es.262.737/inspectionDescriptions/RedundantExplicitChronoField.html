@@ -1,0 +1,40 @@
+<!-- Copyright 2000-2023 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+<html>
+<body>
+Informa las llamadas al método <code>java.time</code> con <code>java.time.temporal.ChronoField</code> y
+<code>java.time.temporal.ChronoUnit</code> como argumentos cuando estas llamadas pueden reemplazarse por
+llamadas a métodos más específicos.
+<p>Ejemplo:</p>
+<pre><code>
+LocalTime localTime = LocalTime.now();
+int minuto = localTime.get(ChronoField.MINUTE_OF_HOUR);
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+LocalTime localTime = LocalTime.now();
+int minuto = localTime.getMinute();
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2023.2</small></p>
+</body>
+</html>
+<!-- Copyright 2000-2023 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+<html>
+<body>
+Informa la llamada al método <code>java.time</code> con <code>java.time.temporal.ChronoField</code> y
+<code>java.time.temporal.ChronoUnit</code> como argumentos cuando estas llamadas se pueden reemplazar por
+llamadas a métodos más específicos.
+<p>Ejemplo:</p>
+<pre><code>
+LocalTime localTime = LocalTime.now();
+int minuto = localTime.get(ChronoField.MINUTE_OF_HOUR);
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+LocalTime localTime = LocalTime.now();
+int minuto = localTime.getMinute();
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2023.2</small></p>
+</body>
+</html>

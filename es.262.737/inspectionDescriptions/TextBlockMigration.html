@@ -1,0 +1,34 @@
+<html>
+<body>
+Informa concatenaciones de <code>String</code> que se pueden simplificar reemplazándolas con bloques de texto.
+<p>Requisitos:</p>
+<ul>
+  <li><code>\n</code> ocurre dos o más veces.</li>
+  <li>Los bloques de texto no están concatenados.</li>
+</ul>
+<p>
+Utilice la opción <b>Informe literales de cadena únicos</b> para resaltar literales únicos que contengan saltos de línea.
+La corrección rápida seguirá estando disponible incluso cuando esta opción esté deshabilitada.
+<p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  String html = "&lt;html&gt;\n" +
+                "    &lt;body&gt;\n" +
+                "        &lt;p&gt;Hello, world&lt;/p&gt;\n" +
+                "    &lt;/body&gt;\n" +
+                "&lt;/html&gt;\n";
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  String html = """
+                &lt;html&gt;
+                    &lt;body&gt;
+                        &lt;p&gt;Hello, world&lt;/p&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                """;
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2019.3</small></p>
+</body>
+</html>

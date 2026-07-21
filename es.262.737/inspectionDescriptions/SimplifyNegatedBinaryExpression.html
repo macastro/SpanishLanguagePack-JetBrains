@@ -1,0 +1,31 @@
+<html>
+<body>
+Reporta expresiones booleanas negadas que pueden simplificarse.
+<p>El arreglo rápido simplifica la expresión booleana.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    fun test(n: Int) {
+        !(0 == 1)
+    }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+    fun test(n: Int) {
+        0 != 1
+    }
+</code></pre>
+<p>Ten en cuenta que esta acción puede cambiar la semántica del código si hay valores IEEE-754 NaN involucrados:</p>
+<pre><code>
+    fun main() {
+        println(!(Double.NaN &gt;= 0)) // true
+    }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+    fun main() {
+        println(Double.NaN &lt; 0) // false
+    }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

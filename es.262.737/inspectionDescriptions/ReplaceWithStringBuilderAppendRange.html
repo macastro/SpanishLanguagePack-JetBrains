@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta una llamada a la función <code>StringBuilder.append(CharArray, offset, len)</code> en la plataforma JVM que debería ser reemplazada por una llamada a la función <code>StringBuilder.appendRange(CharArray, startIndex, endIndex)</code>.
+<p>La función <code>append</code> se comporta de manera diferente en las plataformas JVM, JS y Native, por lo que se recomienda utilizar la función <code>appendRange</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun f(charArray: CharArray, offset: Int, len: Int): String {
+      return buildString {
+          append(charArray, offset, len)
+      }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun f(charArray: CharArray, offset: Int, len: Int): String {
+      return buildString {
+          appendRange(charArray, offset, offset + len)
+      }
+  }
+</code></pre>
+</body>
+</html>

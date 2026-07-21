@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>Informa de relaciones erróneas en los archivos de Docker Compose.</p>
+<p>
+  Según la <a href="https://docs.docker.com/reference/compose-file/services/#volumes">especificación de los archivos de Compose</a>,
+  ciertos campos pueden no ser válidos dependiendo de los otros pares clave-valor y pueden provocar errores.
+</p>
+<p>
+  Por ejemplo, una de estas relaciones es el campo <code>source</code> del volumen, que no es válido cuando el <code>type</code> del volumen es <code>tmpfs</code>.
+</p>
+<br>
+</body>
+</html>

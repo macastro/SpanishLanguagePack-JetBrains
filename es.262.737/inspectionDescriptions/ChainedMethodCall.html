@@ -1,0 +1,40 @@
+<html>
+<body>
+Informa las llamadas al método cuyo destino es otra llamada al método.
+La solución rápida sugiere introducir una variable local.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class X {
+    int foo(File f) {
+      return f.getName().length();
+    }
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  class X {
+    int foo(File f) {
+      final String name = f.getName();
+      return name.length();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Utilice las opciones de inspección para alternar las advertencias para los siguientes casos:</p>
+<ul>
+  <li>
+    <p>
+      llamadas al método encadenado en inicializadores de campo,
+      por ejemplo, <code>private final int i = new Random().nextInt();</code>
+    </p>
+  </li>
+  <li>
+    <p>
+      las llamadas al método encadenado que operan en el mismo tipo,
+      por ejemplo, <code>new StringBuilder().append("x: ").append(new X()).append("y: ").append(new Y()).toString();</code>.
+    </p>
+  </li>
+</ul>
+
+</body>
+</html>

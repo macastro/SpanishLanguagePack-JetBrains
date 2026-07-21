@@ -1,0 +1,8 @@
+<html>
+<body>
+Informa sobre el uso de miembros de tipo package-private declarados en el mismo paquete pero en módulos diferentes.
+<p>Si la clase declarada es cargada por otro cargador, el código que acceda a miembros de tipo package-private fallará en tiempo de ejecución con un <code>IllegalAccessError</code>.</p>
+<p>Los métodos que redefinen métodos de tipo package-private en clases cargadas por otro cargador no serán invocados cuando se invoque al método super en una instancia de la clase de implementación.</p>
+<p>Si un método implementa métodos abstractos de tipo package-private de clases cargadas por otro cargador, las llamadas al método super en una instancia de la clase de implementación fallarán con un <code>AbstractMethodError</code>.</p>
+</body>
+</html>

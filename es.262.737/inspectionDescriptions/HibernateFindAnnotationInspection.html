@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Informa sobre errores de anotación @Find de Hibernate</p>
+<ul>
+  <li>El tipo de retorno de un método anotado debe ser un tipo de entidad <b>E</b>, o uno de los siguientes tipos:
+    <ul>
+      <li>java.util.List&lt;E&gt;</li>
+      <li>org.hibernate.query.Query&lt;E&gt;</li>
+      <li>org.hibernate.query.SelectionQuery&lt;E&gt;</li>
+      <li>jakarta.persistence.Query&lt;E&gt;</li>
+      <li>jakarta.persistence.TypedQuery&lt;E&gt;</li>
+    </ul>
+  </li>
+  <li>Los nombres y tipos de los parámetros de un método finder deben coincidir exactamente con los nombres y tipos de los campos persistentes del
+    tipo de entidad devuelto por el método finder.
+  </li>
+</ul>
+</body>
+</html>

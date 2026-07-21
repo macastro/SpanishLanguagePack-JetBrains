@@ -1,0 +1,30 @@
+<html>
+<body>
+Reporta los proveedores de datos <code>TestNG</code> con nombres iguales si ha ocurrido <code>org.testng.TestNGException</code>.
+<p>Ejemplo:</p>
+<pre><code>
+  public class DuplicatedDataProviders {
+    @DataProvider
+    public Object[][] intTestData() { // duplicado 1
+      return new Integer[][]{
+        new Integer[]{1, 1},
+      };
+    }
+
+    @DataProvider(name = "intTestData")
+    public Object[][] someTestData() { // duplicado 2
+      return new Integer[][]{
+        new Integer[]{1, 1},
+      };
+    }
+
+    @Test(dataProvider = "intTestData")
+    public void testIsOK(Integer key, Integer value) {
+      assertEquals(key, value);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

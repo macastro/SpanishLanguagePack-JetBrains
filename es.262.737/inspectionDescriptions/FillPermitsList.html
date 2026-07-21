@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta las clases sealed cuyas cláusulas permits no incluyen algunas de las subclases del mismo archivo.
+<p>Ejemplo:</p>
+<pre><code>
+  sealed class A {}
+  final class B extends A {}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  sealed class A permits B {}
+  final class B extends A {}
+</code></pre>
+<!-- tooltip end -->
+<p><small>Novedad en 2020.3</small></p>
+</body>
+</html>

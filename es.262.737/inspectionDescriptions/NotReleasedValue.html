@@ -1,0 +1,13 @@
+<html>
+<body>
+Inspecciona si hay objetos propios (retained objects) almacenados en variables locales o parámetros que más adelante no son liberados o son sobreescritos por otro valor antes de ser liberados.
+<br>
+- Si creas un objeto utilizando un método cuyo nombre empieza por <code>alloc</code> o <code>new</code>, que contiene <code>copy</code> o si le envías un mensaje <code>retain</code>, obtendrás la propiedad de ese objeto.
+<br>
+- Puedes renunciar a la propiedad de un objeto usando <code>release</code> o <code>autorelease</code>.
+<br>
+Las reglas de gestión de memoria de Objective-C requieren que liberes o liberes automáticamente cada objeto propio (retained object). Consulta <a href="https://developer.apple.com/es/library/archive/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/MemoryMgmt.html">Memory Management Programming Guide</a> para obtener más información.
+<br>
+Esta inspección estará deshabilitada si está habilitada ARC (conteo automático de referencias).
+</body>
+</html>

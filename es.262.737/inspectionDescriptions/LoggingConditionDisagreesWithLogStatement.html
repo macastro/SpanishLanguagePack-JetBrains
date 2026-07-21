@@ -1,0 +1,15 @@
+<html>
+<body>
+Informe <code>if</code> con la condición <em>is log enabled for</em> que no coincide con el nivel de registro de las llamadas al registro incluidas.
+<p>
+Ejemplo:
+<pre><code>
+  <b>if</b> (LOG.isTraceEnabled()) {
+    // El nivel de depuración se registra, pero se comprueba el nivel de seguimiento
+    LOG.debug("some log message");
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección entiende los marcos de registro <em>java.util.logging</em>, <em>log4j</em>, <em>Log4j 2</em>, <em>Apache Commons Logging</em> y <em>SLF4J</em>.
+</body>
+</html>

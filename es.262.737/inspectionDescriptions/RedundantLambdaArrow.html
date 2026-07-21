@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>Reporta redundancia de flechas lambda en lambdas sin parámetros.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo(f: () -> Unit) = f()
+
+  fun bar() {
+      foo { <b>-></b> println("¡Hola!") }
+  }
+</code></pre>
+<p>Después de que se aplica la corrección rápida:</p>
+<pre><code>
+  fun foo(f: () -> Unit) = f()
+
+  fun bar() {
+      foo { println("¡Hola!") }
+  }
+</code></pre>
+</body>
+</html>

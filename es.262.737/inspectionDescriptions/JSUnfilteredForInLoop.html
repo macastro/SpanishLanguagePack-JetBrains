@@ -1,0 +1,26 @@
+<html>
+<body>
+Inspecciona los bucles <code>for-in</code> sin filtrar.
+<br/><br/>
+El uso de este método da como resultado que se procesen no solo las propiedades del propio objeto sino también las propiedades de su prototipo.
+Puede ser un comportamiento inesperado en algunos casos concretos, por ejemplo en métodos utilitarios que copian o modifican todas las propiedades, o cuando el prototipo de <code>Object</code> pueda ser modificado incorrectamente.
+Por ejemplo, el siguiente código imprimirá <b>42</b> y <b>myMethod</b>:
+<br/><br/>
+<pre><code>
+Object.prototype.myMethod = function myMethod() {};
+let a = { foo: 42 };
+for (let i in a) {
+  console.log(a[i]);
+}
+</code></pre>
+
+<p>Sugiere reemplazar el bucle entero con el método <code>Object.keys()</code> o añadir una comprobación de <code>hasOwnProperty()</code>. Después de aplicar el arreglo rápido, el código se ve así:</p>
+<pre><code>
+for (let i in a) {
+  if (a.hasOwnProperty(i)) {
+    console.log(a[i]);
+  }
+}
+</code></pre>
+</body>
+</html>

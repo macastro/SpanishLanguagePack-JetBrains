@@ -1,0 +1,28 @@
+<html>
+<body>
+Reporta una expresión de referencia de función que puede reemplazarse con un literal de función (lambda).
+<p>
+    En algunas ocasiones, pasar una lambda se ve más directo y consistente con el resto del código.
+    Además, el arreglo puede ser útil si necesitas reemplazar una llamada simple con algo más complejo.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun Int.isEven() = this % 2 == 0
+
+  fun example() {
+      val numbers = listOf(1, 2, 4, 7, 9, 10)
+      val evenNumbers = numbers.filter(Int::isEven)
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  fun Int.isEven() = this % 2 == 0
+
+  fun example() {
+      val numbers = listOf(1, 2, 4, 7, 9, 10)
+      val evenNumbers = numbers.filter { it.isEven() }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

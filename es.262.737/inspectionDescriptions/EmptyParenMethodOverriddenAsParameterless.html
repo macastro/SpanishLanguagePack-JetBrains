@@ -1,0 +1,33 @@
+<html>
+<body>
+<p>Informa de métodos sin cláusulas de parámetros que anulan métodos con cláusulas de parámetros vacías.</p>
+
+<p>La convención es que un método debe tener paréntesis si tiene
+    <a href="https://es.wikipedia.org/wiki/Efecto_secundario_(inform%C3%A1tica)">efectos secundarios</a>.
+    De acuerdo con el <a href="https://es.wikipedia.org/wiki/Principio_de_sustituci%C3%B3n_de_Liskov">principio de sustitución de Liskov</a>,
+    cuando un método anulado tiene una cláusula de parámetro, que indica un efecto secundario,
+    el método anulado también debe declararse como un método con efectos secundarios.</p>
+
+<p>La corrección rápida añade una cláusula de parámetro vacía.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Base {
+    def x() = 1
+  }
+  class Impl extends Base {
+    override def x = 2
+  }
+</code></pre>
+<p>Después de aplicar las correcciones rápidas:</p>
+<pre><code>
+  class Base {
+    def x() = 1
+  }
+  class Impl extends Base {
+    override def x() = 2
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

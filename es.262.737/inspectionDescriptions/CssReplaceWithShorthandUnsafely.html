@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta un conjunto de propiedades CSS explícitas y sugiere remplazar un conjunto incompleto de propiedades CSS explícitas con una forma abreviada,
+aunque no es 100% equivalente en este caso.
+<p>
+  Por ejemplo, dos propiedades: <code>outline-color</code> y <code>outline-style</code> pueden ser remplazados con un único <code>outline</code>.
+  Tal reemplazo no es 100% equivalente porque los atajos restablecen todos los subvalores omitidos a sus estados iniciales.
+  En este ejemplo, cambiar al atajo <code>outline</code> significa que <code>outline-width</code> también se establece en su valor inicial,
+  que es <code>medium</code>.
+</p>
+<!-- tooltip end -->
+<p>
+  Esta inspección no maneja conjuntos completos de propiedades explícitas (cuando cambiar a atajo es 100% seguro).
+  Para tales casos, vea la inspección "Las propiedades pueden ser reemplazadas de forma segura con un atajo".
+</p>
+</body>
+</html>

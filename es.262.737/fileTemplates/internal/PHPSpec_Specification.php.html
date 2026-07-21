@@ -1,0 +1,135 @@
+<html>
+<body>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse; border-color:#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+      Es una plantilla incorporada para las especificaciones de PHPSpec.
+      Se utiliza cada vez que creas una nueva especificación PHPSpec (elige <b>Nuevo | Prueba PHP</b> en el menú emergente de una de las vistas del proyecto y selecciona 'PHPSpec' como biblioteca de pruebas).<br>
+      Esta plantilla se puede editar. Además de los enunciados, expresiones y comentarios de PHP, también puedes utilizar las siguientes variables predefinidas que figuran más abajo. Cada variable se ampliará al valor correspondiente como una macro.<br>
+      Si utilizas la instrucción <b>#parse</b>, podrás incluir plantillas que se encuentran en la pestaña <b>Incluye</b>, especificando el nombre completo de la plantilla deseada como parámetro entre comillas.<br>
+      </font>
+    </td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse; border-color:#111111">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas reciben los siguientes valores:</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${TESTED_NAME}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la clase que se está probando</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${TESTED_NAMESPACE}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Espacio de nombres de la clase que se está probando</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${NAME}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la clase de pruebas</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${NAMESPACE}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Espacio de nombres de la clase de pruebas</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${FILE_NAME}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del archivo actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${USER}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de inicio de sesión del sistema del usuario actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DATE}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha actual del sistema</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${TIME}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual del sistema</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${YEAR}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Año actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${MONTH}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DAY}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Día del mes actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${HOUR}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${MINUTE}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${PRODUCT_NAME}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del IDE actual</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${DS}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El signo de dólar se evalúa como el carácter "$" normal.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><b>${PROJECT_NAME}</b></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del proyecto actual</font></td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<body>
+Reporta expresiones de conversión de tipo que están antecedidas por una verificación de <code>instanceof</code> para un tipo diferente.
+<p>
+  Aunque esto podría ser intencional, tal construcción es muy probable que sea un error y dará como resultado una <code>java.lang.ClassCastException</code> en tiempo de ejecución.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main {
+    int whenCharSequenceCastToNumber(Object o){
+      if (o instanceof CharSequence) {
+        return ((Number) o).intValue();
+      }
+      return 0;
+    }
+
+    int earlyReturnWhenNotCharSequence(Object o){
+      if (!(o instanceof CharSequence)) return 0;
+      return ((Number)o).intValue();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

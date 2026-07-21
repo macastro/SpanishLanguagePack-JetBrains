@@ -1,0 +1,68 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">
+      Rellena el cuerpo de la propiedad al generar propiedades anuladas (por ejemplo, utilizando la acción <b>Código | Generar | Anular métodos</b>).<br>
+      La plantilla es editable. Además de las expresiones y comentarios de Swift, puede utilizar variables predefinidas que se expandirán a sus valores correspondientes.
+    </font></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Las variables predefinidas tomarán los siguientes valores:</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${CALL_SUPER}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Llamada a la superpropiedad: <code>super.propertyName</code></font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${RETURN_TYPE}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Tipo de retorno de la propiedad creada</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${DEFAULT_RETURN_VALUE}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Valor que la propiedad devuelve por defecto</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${SIGNATURE}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Firma de la propiedad</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${HAS_SET}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Es <b>"true"</b> cuando la propiedad tiene un setter</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${HAS_SUPER_SET}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Es <b>"true"</b> cuando la propiedad anulada tiene un setter</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${GETTER_EFFECTS}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Efectos del getter de la propiedad (<code>async</code>, <code>throws</code>)</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${GET_ATTRIBUTES}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Atributos del getter de la propiedad</font></td>
+  </tr>
+  <tr>
+    <td valign="top"><nobr><font face="verdana" size="-2"><b>${SET_ATTRIBUTES}</b></font></nobr></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Atributos del setter de la propiedad</font></td>
+  </tr>
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Todas las variables predefinidas de la plantilla <b>Swift File Header</b> (pestaña <b>Include</b>) también están disponibles (por ejemplo,
+      <font face="verdana" size="-2"><b>${USER}</b></font>,
+      <font face="verdana" size="-2"><b>${DATE}</b></font>, etc.).
+    </font></td>
+  </tr>
+</table>
+</body>
+</html>

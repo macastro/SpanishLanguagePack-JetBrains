@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa si se utiliza una expresión lambda trivial en casos en los que existe un método alternativo que se comporta de la misma manera, pero que acepta un valor concreto
+en lugar de una lambda.
+<p>Esta inspección ayuda a simplificar el código.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  Optional.orElseGet(() -> null)
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  Optional.orElse(null)
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2017.1</small></p>
+</body>
+</html>

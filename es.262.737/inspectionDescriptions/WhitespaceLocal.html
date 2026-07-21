@@ -1,0 +1,27 @@
+<html>
+<body>
+<p>Detecta el uso de caracteres de sangría incoherentes en los espacios en blanco iniciales. En concreto, marca los tabuladores donde se han configurado espacios y los espacios donde se han configurado tabuladores.</p>
+<p>Godot no permite mezclar tabuladores y espacios en la sangría.</p>
+<p>
+    Por ejemplo, si su estilo de código está configurado para usar espacios en la sangría:
+</p>
+<pre><code>
+func _init():
+  var x = 1
+\tvar y = 2 # resaltado: se ha encontrado un tabulador donde se esperaban espacios
+</code></pre>
+<p>
+    O, si su estilo de código está configurado para usar tabuladores en la sangría:
+</p>
+<pre><code>
+func _init():
+\tvar x = 1
+    var y = 2 # resaltado: se han encontrado espacios donde se esperaba un tabulador
+</code></pre>
+<!-- tooltip end -->
+<!--<p>Text after this comment will only be shown in the settings of the inspection.</p>-->
+
+<!--<p>To open related settings directly from the description, add a link with `settings://$` optionally followed by `?$` to pre-select a UI-->
+<!--    element.</p>-->
+</body>
+</html>

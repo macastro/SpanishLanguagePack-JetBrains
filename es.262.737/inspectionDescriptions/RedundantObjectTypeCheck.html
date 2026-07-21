@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>Inspecciona vérificaciones de tipo <code>is</code> para un objeto que no son idiomaticas.</p>
+<p>Se recomienda reemplazar esas verificaciones con una comparación de referencias.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  object Foo
+
+  fun foo(arg: Any) = when {
+      arg <b>is</b> Foo -> ...
+      arg <b>!is</b> Foo -> ...
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  object Foo
+
+  fun foo(arg: Any) = when {
+      arg <b>===</b> Foo -> ...
+      arg <b>!==</b> Foo -> ...
+  }
+</code></pre>
+</body>
+</html>

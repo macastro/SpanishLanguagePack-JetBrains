@@ -1,0 +1,38 @@
+<html>
+<body>
+<p>Inspecciona las clases de los casos de prueba de Arquillian que no han sido desplegadas.</p>
+<p>
+  Según la <a href="https://docs.jboss.org/arquillian/reference/1.0.0.Alpha5/es-ES/html/gettingstarted.html#d0e451">Documentación de Arquillian</a>, la clase de prueba de Arquillian debería definir el archivo de despliegue con métodos públicos estáticos que tengan una firma particular y que utilicen la anotación <code>@Deployment</code>.
+</p>
+<p>La Fix Rápida añade el método requerido a partir de una plantilla de código del <em>método de despliegue de Arquillian</em> editable por el usuario.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // Este caso de prueba no puede iniciarse con Arquillian
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    @Test
+    public void testSomething() {
+      Assert.fail("Por implementar");
+    }
+  }
+</code></pre>
+<p>Después de aplicar la Fix Rápida:</p>
+<pre><code>
+  @RunWith(Arquillian.class)
+  public class SomeTest {
+    // Añadido por la Fix Rápida
+    @Deployment
+    public static JavaArchive ${DEPLOYMENT_NAME}() {
+      return ShrinkWrap.create(JavaArchive.class)
+                       .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
+    }
+
+    @Test
+    public void testSomething() {
+      Assert.fail("Por implementar");
+    }
+  }
+</code></pre>
+</body>
+</html>

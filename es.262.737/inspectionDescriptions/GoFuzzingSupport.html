@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>Informa la presencia de pruebas fuzz cuando la versión del SDK de Go es menor a 1.18</p>
+
+<p>Las pruebas fuzz son un método de pruebas automatizadas que implican una búsqueda dirigida de datos de entrada que puedan causar un bloqueo del programa o exponer un comportamiento no válido. Go admite las pruebas fuzz a partir de Go 1.18.</p>
+<p>Ejemplo de una prueba fuzz:</p>
+<pre><code>
+func Div(a, b int) int {
+	return a / b
+}
+
+func FuzzDiv(f *testing.F) {
+	f.Fuzz(func(t *testing.T, a, b int) {
+		Div(a, b) // informa un error de tiempo de ejecución: división entera entre cero
+	})
+}
+</code></pre>
+<p>
+  Consulta <a href="https://go.dev/doc/fuzz/">Go Fuzzing</a> para obtener más información.
+</p>
+</body>
+</html>

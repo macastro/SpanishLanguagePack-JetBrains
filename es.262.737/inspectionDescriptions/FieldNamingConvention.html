@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre campos cuyos nombres son demasiado cortos, demasiado largos o no siguen el patrón de expresión regular especificado.
+<p><b>Ejemplo</b>: si la inspección está habilitada para constantes y la longitud mínima especificada para el nombre del campo es 5 (valor predeterminado), se generará una advertencia para la siguiente constante, ya que la longitud de su nombre es 3, que es menor que 5: <code>public static final int MAX = 42;</code>.</p>
+<p>La corrección rápida para cambiar el nombre de tales campos solo está disponible en el editor.</p>
+<!-- tooltip end -->
+<p>Configuración de la inspección:</p>
+<p>Utilice la lista en la sección <b>Opciones</b> para especificar qué campos deben inspeccionarse. Desmarque la casilla de los campos para los que desee omitir la inspección.</p>
+<p>Para cada tipo de campo, utilice los campos de entrada proporcionados para especificar la longitud mínima, la longitud máxima y la expresión regular del nombre del campo.
+  Especifique <b>0</b> en los campos de longitud para omitir la comprobación correspondiente.</p>
+<p>Las expresiones regulares deben especificarse en el formato estándar de <code>java.util.regex</code>.</p>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+<body>
+<p>
+  Inspecciona cualquier acción registrada en el archivo <code>plugin.xml</code> e inicializa su presentación (texto, descripción y/o icono) en su constructor.
+</p>
+<p>
+  Esta práctica es desaconsejable porque puede provocar la carga de texto, descripción y/o icono y forzar la creación de una presentación de acción que puede que no siempre sea necesaria. Un enfoque más eficiente es aprovechar los constructores sin argumentos de <code>AnAction</code> y otras clases base y seguir la convención de configuración de texto, descripción e icono. La plataforma IntelliJ solo cargará el texto, la descripción y el icono cuando la acción se muestre realmente en algún lugar.
+</p>
+<p>
+  La convención para configurar texto, descripción e icono es la siguiente:
+</p>
+<ul>
+  <li>
+    Configura la propiedad <code>id</code> para la acción en el archivo <code>plugin.xml</code>.
+  </li>
+  <li>
+    Opcionalmente, configura la propiedad <code>icon</code> si se necesita un icono.
+  </li>
+  <li>
+    Al configurar claves para texto y descripción en archivos de propiedades, sigue esta estructura:
+    <ul>
+      <li><code>action.&lt;action-id&gt;.text=Texto de acción traducido</code></li>
+      <li><code>action.&lt;action-id&gt;.description=Descripción de acción traducida</code></li>
+    </ul>
+  </li>
+</ul>
+<p><b>Ejemplo deficiente:</b></p>
+<pre><code lang="kotlin">
+  // NewKotlinFileAction.kt
+  internal class NewKotlinFileAction : AnAction(
+    KotlinBundle.message("action.new.file.text"),
+    KotlinBundle.message("action.new.file.description"),
+    KotlinIcons.FILE
+  )
+</code></pre>
+<pre><code lang="xml">
+  // plugin.xml
+  &lt;action
+    class="org.jetbrains.kotlin.idea.actions.NewKotlinFileAction"
+  &lt;/action&gt;
+</code></pre>
+<p><b>Ejemplo correcto:</b></p>
+<pre><code lang="kotlin">
+  // NewKotlinFileAction.kt
+  internal class NewKotlinFileAction : AnAction()
+</code></pre>
+<pre><code lang="xml">
+  // plugin.xml
+  &lt;action
+    id="Kotlin.NewFile"
+    class="org.jetbrains.kotlin.idea.actions.NewKotlinFileAction"
+    icon="org.jetbrains.kotlin.idea.KotlinIcons.FILE">
+  &lt;/action&gt;
+</code></pre>
+<pre><code lang="properties">
+  // KotlinBundle.properties
+  action.Kotlin.NewFile.text=Clase/archivo Kotlin
+  action.Kotlin.NewFile.description=Crea una nueva clase o archivo Kotlin
+</code></pre>
+<p><small>Novedad en 2023.2</small></p>
+</body>
+</html>

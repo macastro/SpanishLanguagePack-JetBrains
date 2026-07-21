@@ -1,0 +1,18 @@
+<html>
+<body>
+Reporta ciclos <code>for</code> que no contienen ni componentes de inicialización ni de actualización, y sugiere convertirlos en ciclos <code>while</code>. Esto hace que el código sea más fácil de leer.
+<p>Ejemplo:</p>
+<pre><code>
+  for(; exitCondition(); ) {
+    process();
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  while(exitCondition()) {
+    process();
+  }
+</code></pre>
+<p>La solución rápida también está disponible para otros ciclos <code>for</code>, por lo que puede reemplazar cualquier ciclo <code>for</code> con un ciclo <code>while</code>.</p>
+<!-- tooltip end -->
+<p>Utilice la opción <b>Ignorar ciclos 'infinite' for sin condiciones</b> si desea ignorar ciclos <code>for</code> con condiciones triviales o inexistentes.

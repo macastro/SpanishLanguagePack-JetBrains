@@ -1,0 +1,30 @@
+<html>
+<body>
+Informa de recursos JDBC que no están cerrados correctamente. Los recursos JDBC informados por esta inspección incluyen <code>java.sql.Connection</code>,
+<code>java.sql.Statement</code>, <code>java.sql.PreparedStatement</code>,
+<code>java.sql.CallableStatement</code> y <code>java.sql.ResultSet</code>.
+<p>
+De manera predeterminada, la inspección asume que los recursos se pueden cerrar mediante cualquier método con 'close' o 'cleanup' en su nombre.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  ResultSet findAllElements(Connection connection) throws SQLException {
+    PreparedStatement statement = connection.prepareStatement("SELECT * FROM TABLE"); // La declaración no está cerrada
+    statement.execute();
+    return statement.getResultSet();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+Utiliza las siguientes opciones para configurar la inspección:
+</p>
+<ul>
+  <li>
+    Si se permite abrir un recurso JDBC dentro de un bloque <code>try</code>. Este estilo es menos deseable porque es más detallado que abrir un recurso delante de un bloque <code>try</code>.
+  </li>
+  <li>
+    Si el recurso se puede cerrar mediante cualquier llamada a un método con el recurso pasado como argumento.
+  </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<body>
+Reporta llamadas a funciones con tipo de resultado <code>Deferred</code> si no se usa el valor de retorno.
+<p>Si no se usa el valor de retorno <code>Deferred</code>, el sitio de llamada no esperará a completar esta función.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun calcEverythingAsync() = CompletableDeferred(42)
+
+  fun usage() {
+      calcEverythingAsync()
+  }
+</code></pre>
+<p>La corrección rápida proporciona una variable con el inicializador <code>Deferred</code>:</p>
+<pre><code>
+  fun calcEverythingAsync() = CompletableDeferred(42)
+
+  fun usage() {
+      val answer = calcEverythingAsync()
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

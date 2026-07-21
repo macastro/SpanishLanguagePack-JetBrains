@@ -1,0 +1,18 @@
+<html>
+<body>
+Informes anulando el método <code>Object.finalize()</code>.
+<p>De acuerdo con la documentación de <code>Object.finalize()</code>:</p>
+<blockquote>
+  <p>
+    El mecanismo de finalización es inherentemente problemático. La finalización puede ocasionar problemas de rendimiento, interbloqueos y bloqueos. Los errores en los finalizadores pueden ocasionar fugas de recursos; no hay forma de cancelar la finalización si ya no es necesaria; y no se especifica ningún orden entre las llamadas a los métodos <code>finalize</code> de diferentes objetos. Además, no hay garantías con respecto al momento de la finalización. El método <code>finalize</code> podría llamarse en un objeto finalizable solo después de una demora indefinida, si es que acaso.
+  </p>
+</blockquote>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+<ul>
+  <li>
+    Utilice la opción <b>Ignorar implementaciones triviales 'finalize()'</b> para ignorar las implementaciones <code>finalize()</code> con un cuerpo de método vacío o un cuerpo que contiene solo declaraciones de <code>if</code> que tienen una condición que se evalúa en <code>false</code> y es una constante de tiempo de compilación. Por razones de rendimiento, puede ser beneficioso anular un <code>finalize()</code> no trivial con una implementación vacía en una subclase. Una implementación final vacía <code>finalize()</code> también se puede usar para evitar que las subclases anulen.
+  </li>
+</ul>
+</body>
+</html>

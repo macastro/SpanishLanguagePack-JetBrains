@@ -1,0 +1,57 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3">
+      <span style="font-family: Verdana; font-size: small;">
+        Esta plantilla integrada se utiliza para rellenar el cuerpo de un método anulado cada vez que se genera,
+        por ejemplo, cuando se llama a la función <code>Código | Anular método...</code>.<br>
+        La plantilla es editable. Junto con expresiones y comentarios de JavaScript, también puede utilizar variables predefinidas. 
+        Estas variables se reemplazarán por los valores correspondientes cuando se aplique la plantilla.
+      </span>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><span style="font-family: Verdana; font-size: small;">Las variables predefinidas tomarán los siguientes valores:</span></td>
+  </tr>
+  <tr>
+    <td valign="top"><span style="font-family: Verdana; font-size: xx-small;"><b>${CALL_SUPER}</b></span></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><span style="font-family: Verdana; font-size: small;">una llamada a un método super, para métodos <b>void</b> - <code><b>super</b>.<i>nombre_método</i>();</code> con o sin parámetros;
+      para otros métodos - <code><b>return</b> <b>super</b>.<i>nombre_método</i>();</code> con o sin parámetros
+    </span></td>
+  </tr>
+  <tr>
+    <td valign="top"><span style="font-family: Verdana; font-size: xx-small;"><b>${PLAIN_CALL_SUPER}</b></span></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><span style="font-family: Verdana; font-size: small;">una llamada a un método super, <code><b>super</b>.<i>nombre_método</i>();</code> con o sin parámetros;
+    </span></td>
+  </tr>
+  <tr>
+    <td valign="top"><span style="font-family: Verdana; font-size: xx-small;"><b>${RETURN_TYPE}</b></span></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><span style="font-family: Verdana; font-size: small;">tipo de retorno de un método creado</span></td>
+  </tr>
+  <tr>
+    <td valign="top"><span style="font-family: Verdana; font-size: xx-small;"><b>${DEFAULT_RETURN_VALUE}</b></span></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><span style="font-family: Verdana; font-size: small;">valor devuelto por el método por defecto</span></td>
+  </tr>
+  <tr>
+    <td valign="top"><span style="font-family: Verdana; font-size: xx-small;"><b>${METHOD_NAME}</b></span></td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><span style="font-family: Verdana; font-size: small;">nombre del método que se anula</span></td>
+  </tr>
+  <tr>
+    <td colspan="3"><span style="font-family: Verdana; font-size: small;">Todas las variables predefinidas de la plantilla <i>Encabezado de archivo</i> (pestaña <i>Incluir</i>) también están disponibles
+      (por ejemplo,
+      <span style="font-family: Verdana; font-size: xx-small;"><b>${USER}</b></span>,
+      <span style="font-family: Verdana; font-size: xx-small;"><b>${DATE}</b></span>,
+      etc.)</span>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

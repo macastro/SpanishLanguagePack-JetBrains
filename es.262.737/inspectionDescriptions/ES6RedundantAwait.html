@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa de un uso redundante de <code>await</code>, como <code>await await</code>, o de await con un resultado que no es una promesa.
+<!-- tooltip end -->
+<p>
+  Cuando se selecciona la opción "Informar promesas", sugiere eliminar <code>await</code> antes de las promesas cuando proceda (en declaraciones <code>return</code>, y con <code>Promise.resolve/reject</code>).
+</p>
+<p>Eliminar <code>await</code> en tales contextos provoca dos problemas:</p>
+<ul>
+  <li>
+    Rodear tu código con <code>try-catch</code> y olvidarte de añadir <code>await</code> cambiará la semántica del código aunque puedas no darte cuenta.
+  </li>
+<li>
+    Tener un <code>await</code> explícito puede evitar que el tiempo de ejecución V8 proporcione <a href="http://bit.ly/v8-zero-cost-async-stack-traces">trazas de pila asíncronas</a>.
+  </li>
+</ul>
+</body>
+</html>

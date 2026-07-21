@@ -1,0 +1,35 @@
+<html>
+<body>
+Reporta los campos de una clase derivada que tienen el mismo nombre que un campo de una superclase.
+Los campos de Java no se pueden sobreescribir en clases derivadas,
+por lo que el campo de la clase derivada ocultará el campo de la superclase.
+<p>
+  Como resultado de dicha denominación, se puede utilizar accidentalmente el campo de la clase derivada
+  cuando se pretende utilizar el campo con el mismo nombre de una clase base.
+</p>
+<p>Se sugiere una corrección rápida para cambiar el nombre del campo en la clase derivada.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>class Padre {
+  Padre padre;
+}
+class Hijo extiende Padre {
+  Hijo padre;
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Se pueden configurar las siguientes opciones para esta inspección:
+</p>
+<ol>
+  <li>
+    <strong>Ignorar los campos no accesibles</strong>: indica si esta inspección debe informar todas las coincidencias de nombres,
+    o sólo las coincidencias con campos que son visibles desde la subclase.
+  </li>
+  <li>
+    <strong>Ignorar los campos estáticos que ocultan campos estáticos</strong> - ignorar los campos <code>estáticos</code>
+    que ocultan los campos <code>estáticos</code> en las clases base.
+  </li>
+</ol>
+
+</body>
+</html>

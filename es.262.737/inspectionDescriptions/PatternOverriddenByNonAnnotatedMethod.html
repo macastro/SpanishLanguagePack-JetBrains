@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa cuando un método sin anotación <code>@Pattern</code> anula un método anotado como <code>@Pattern</code>.
+Esto no impide el resaltado de errores dentro del editor, sin embargo, el método de anulación no se comprobará en tiempo de ejecución.
+<p>
+Se proporciona una solución rápida para añadir una anotación <code>@Pattern</code> que coincida con la del método de la superclase. Esto asegura que la instrumentación de la comprobación en tiempo de ejecución funciona correctamente.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  abstract class Parent {
+    abstract @Pattern("\\d\\d-\\d\\d\\d") String getId();
+  }
+  class Child extends Parent {
+    @Override String getId() { // advertencia aquí
+      return "12-345";
+    }
+  }
+</code></pre>
+</body>
+</html>

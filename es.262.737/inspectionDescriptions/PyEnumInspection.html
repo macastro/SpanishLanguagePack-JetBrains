@@ -1,0 +1,39 @@
+<html>
+<body>
+<p>
+  Informa sobre definiciones y usos no válidos de <a href="https://peps.python.org/pep-0435/">Enum</a>.
+</p>
+<p>
+  <b>Ejemplos:</b>
+</p>
+<pre><code>
+from enum import Enum
+
+
+class Shape(Enum):
+    SQUARE = 1
+    CIRCLE = 2
+
+
+class ExtendedShape(Shape):  # la clase enum 'Shape' es final y no se puede subclasificar
+    TRIANGLE = 3
+</code></pre>
+<pre><code>
+  from enum import Enum
+
+
+  class Color(Enum):
+    _value_: int
+    RED = 1
+    GREEN = "green"  # el tipo 'str' no es asignable al tipo 'int' declarado
+</code></pre>
+<pre><code>
+  from enum import Enum
+
+
+  class Pet(Enum):
+    CAT = 1
+    DOG: int = 2  # no se permiten anotaciones de tipo para los miembros de la enumeración
+</code></pre>
+</body>
+</html>

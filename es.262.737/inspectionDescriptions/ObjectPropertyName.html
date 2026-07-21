@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporta propiedades que no siguen los acuerdos para nombrar.
+<p>Las siguientes propiedades son reportadas:</p>
+<ul>
+    <li>Propiedades de alto nivel</li>
+    <li>Propiedades en objetos y objetos partner</li>
+</ul>
+<p>Puedes especificar el patrón requerido en las opciones de inspección.</p>
+<p><a href="https://kotlinlang.org/docs/coding-conventions.html#naming-rules">Acuerdos para nombrar recomendados</a>: deben empezar con una letra mayúscula, usar mayúsculas y minúsculas y sin subrayados.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  // propiedad de alto nivel
+  val NOMBRE_DE_USUARIO_CAMPO = "NombreDeUsuario"
+  // propiedad de alto nivel con referencia al objeto singular
+  val PersonComparator: Comparator&lt;Person&gt; = /*...*/
+
+  class Persona {
+    companion object {
+      // propiedad en objeto partner
+      val SIN_NOMBRE = Persona()
+    }
+  }
+</code></pre>
+
+</body>
+</html>

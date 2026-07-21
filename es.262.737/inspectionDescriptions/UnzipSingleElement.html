@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>Informa de que <code>unzip</code> se utiliza para extraer un solo elemento.</p>
+
+<p>La corrección rápida lo reemplaza con <code>map</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+Seq((1, 11), (2, 22)).unzip._1
+Seq((1, 11, 111), (2, 22, 222)).unzip3._1
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+Seq((1, 11), (2, 22)).map(_._1)
+Seq((1, 11, 111), (2, 22, 222)).map(_._1)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa las llamadas a <code>assertXXX()</code> o <code>fail()</code> sin un argumento de cadena de mensaje de error.
+Un mensaje de error cuando la afirmación falla podría ayudar a aclarar la intención del caso de prueba.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  assertTrue(checkValid());
+</code></pre>
+<p>Después de que se aplica la corrección rápida:</p>
+<pre><code>assertTrue(checkValid(), "|");</code></pre>
+<p>
+  El argumento del mensaje se agrega antes o después de los argumentos existentes según el marco de afirmaciones que use.
+</p>
+<!-- tooltip end -->
+
+</body>
+</html>

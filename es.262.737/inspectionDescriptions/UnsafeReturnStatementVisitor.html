@@ -1,0 +1,8 @@
+<html>
+<body>
+<code>JavaRecursiveElementVisitor.visitReturnStatement()</code> uso inseguro reportado.
+<p>
+  Incluso si <code>PsiReturnStatement</code> pertenece a otro <code>PsiClass</code> o <code>PsiLambdaExpression</code>, el procesamiento en la mayoría de los casos es un error, siendo más probable que el visitante deba implementar los métodos <code>visitClass()</code> y <code>visitLambdaExpression()</code>.
+</p>
+</body>
+</html>

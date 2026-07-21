@@ -1,0 +1,18 @@
+<html>
+<body>
+<p><span>Informa de un problema cuando un valor mutable como una lista o un diccionario es detectado en un valor por defecto para un argumento.</span> <br/>
+Los valores por defecto de los argumentos sólo se evalúan una vez durante la definición de la función, lo que significa que la modificación del valor por defecto del argumento afectará a todas las llamadas posteriores a esa función.</p>
+<p><span>Ejemplo:</span></p>
+<pre><code>
+def func(s, cache={}):
+    cache[s] = None
+</code></pre>
+<p>Cuando se aplica la solución rápida, el código cambia a:</p>
+<pre><code>
+def func(s, cache=None):
+    if cache is None:
+        cache = {}
+    cache[s] = None
+</code></pre>
+</body>
+</html>

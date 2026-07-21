@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre las llamadas a constructores de corrutinas que aceptan un <code>CoroutineContext</code> que contiene un <code>Job</code>, lo cual viola la concurrencia estructurada.
+<p>
+  Pasar un contexto con un <code>Job</code> a constructores de corrutinas (como <code>launch</code>, <code>async</code>, <code>produce</code>, <code>promise</code>) o a <code>withContext</code> rompe la relación padre-hijo entre las corrutinas, lo que anula el propósito de la concurrencia estructurada.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+coroutineScope.launch(Job()) {
+  // Esta corrutina no tiene una relación padre-hijo con el receptor `coroutineScope`
+}
+</code></pre>
+</body>
+</html>

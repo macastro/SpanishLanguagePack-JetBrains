@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre intentos de crear instancias de nuevos objetos `StringBuffer` o `StringBuilder` sin especificar su capacidad inicial.
+<p>
+  Si no se especifica la capacidad inicial, se utilizará la capacidad predeterminada, pero rara vez es la opción óptima.
+  No especificar la capacidad inicial de `StringBuffer` puede provocar problemas de rendimiento si es necesario volver a asignar espacio y copiar memoria cuando se excede la capacidad inicial.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  // No se ha especificado la capacidad
+  var sb = new StringBuilder();
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

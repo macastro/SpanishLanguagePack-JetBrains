@@ -1,0 +1,24 @@
+<html>
+<body>
+<p>Informa de transformaciones de operadores que pueden devolver <code>null</code> dentro de una cadena Reactive Stream.</p>
+
+<p>
+  Reactive Stream no admite valores nulos, lo que hace que dicho código falle.
+  La solución rápida sugiere reemplazar <code>map()</code> con <code>mapNotNull</code>, que omite excepciones.
+</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">repository.findWithTailableCursorBy()
+    .map(e -> (Person)null)
+    .doOnNext(System.out::println)
+</code></pre>
+
+<p>Después de que se aplique la solución rápida:</p>
+<pre><code lang="java">repository.findWithTailableCursorBy()
+    .mapNotNull(e -> (Person)null)
+    .doOnNext(System.out::println)
+</code></pre>
+
+<p><small>Nuevo en 2019.3</small></p>
+</body>
+</html>

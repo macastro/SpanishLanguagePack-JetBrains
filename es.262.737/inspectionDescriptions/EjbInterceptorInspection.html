@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre las clases definidas al mismo tiempo como clases EJB e interceptadoras.
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+@Stateless
+public class ExampleBean {
+
+  @Interceptors(ExampleBean.class) // Error: La clase está definida al mismo tiempo como EJB e interceptor
+  public void getAnotherBean() {
+    ...
+  }
+}
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa de las llamadas a métodos en las que el número de argumentos pasados (incluidos los bloques) no coincide con la firma del método. La firma del método se toma de una de las siguientes fuentes:
+<ul>
+  <li>La declaración del método</li>
+  <li>Las firmas de tipo RBS</li>
+</ul>
+<p>En algunos casos, se puede utilizar una corrección rápida para añadir los argumentos que faltan o eliminar los argumentos sobrantes.</p>
+<p>Ejemplo:</p>
+<pre>
+<code>def example
+end
+
+# Demasiados argumentos
+example(true)
+</code>
+</pre>
+</body>
+</html>

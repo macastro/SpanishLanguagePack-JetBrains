@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>Informa casos en los que la llamada al constructor dinámico podría reemplazarse de forma segura con una llamada al método de fábrica.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import akka.actor._
+  
+  class Foo extends AbstractActor
+  
+  object Foo {
+    def props(): Props = Props(new Foo())
+  }
+  
+  Props(classOf[Foo])
+</code></pre>
+<p>Tras aplicar la solución rápida:</p>    
+<pre><code>
+  import akka.actor._
+  
+  class Foo extends AbstractActor
+  
+  object Foo {
+    def props(): Props = Props(new Foo())
+  }
+  
+  Foo.props()
+</code></pre>  
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+<p>Informa sobre los argumentos que tienen el mismo valor que los predeterminados.</p>
+
+<p>La corrección rápida eliminará las conversiones redundantes.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  def f(x: Int, y: Int = 0, z: Int) {}
+  f(1, y = 0, z = 1)
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  def f(x: Int, y: Int = 0, z: Int) {}
+  f(1, z = 1)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

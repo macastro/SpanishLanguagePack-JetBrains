@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa sobre campos con la anotación <code>@RegisterExtension</code> cuyos tipos son incorrectos o no se han declarado como static cuando es necesario.
+Las extensiones de este tipo no se podrán registrar correctamente y podrían generar una falla al iniciar la prueba.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class MyTest {
+    @RegisterExtension
+    private JUnit4Rule rule;
+  }
+</code></pre>
+
+<!-- tooltip end -->
+</body>
+</html>

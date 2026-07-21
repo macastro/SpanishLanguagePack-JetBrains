@@ -1,0 +1,15 @@
+<html>
+<body>
+Reporta expresiones <code>when</code> con las ramas constantes <code>true</code> o <code>false</code>.
+<p>El arreglo rápido <b>"Simplicar cuando"</b> puede ser utilizado para modificar el código automáticamente.</p>
+<p>Ejemplos:</p>
+<pre><code>
+  fun redundante() {
+      when { // &lt;== redundante, el arreglo rápido simplifica la expresión when a "println("true")"
+          true -> println("true")
+          else -> println("false")
+      }
+  }
+</code></pre>
+</body>
+</html>

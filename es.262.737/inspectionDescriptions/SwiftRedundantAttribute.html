@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>
+  Informa usos de los atributos <code>@objc</code> en declaraciones que ya tienen un atributo <code>@objc</code> inferido.
+</p>
+<p>
+  Sugiere eliminar <code>@objc</code> y <code>@nonobjc</code> redundantes.
+</p>
+<!-- tooltip end -->
+<p>
+  <b>Ejemplo:</b>
+</p>
+<pre><code>
+  @objc
+  class C : NSObject {
+  }
+</code></pre>
+<p>
+  Después de aplicar la solución rápida:
+</p>
+<pre><code>
+  class C : NSObject {
+  }
+</code></pre>
+</body>
+</html>

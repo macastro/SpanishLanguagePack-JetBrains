@@ -1,0 +1,15 @@
+<html>
+<body>
+Informa de las expresiones de acceso a variables de apuntares o arrays cuando el índice puede estar fuera de rango del array o del búfer asignado.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void foo() {
+      int buffer[100];
+
+      for (int i = 0; i &lt;= 100; i ++)
+          buffer[i] = 0; // desbordamiento del búfer cuando <i>i</i> es igual a <i>100</i>
+  }
+</code></pre>
+<p><small>Novedad de 2022.2</small></p>
+</body>
+</html>

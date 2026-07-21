@@ -1,0 +1,39 @@
+<html>
+<body>
+Informa de parámetros de método con nombre idéntico al de un campo de una clase envolvente.
+Como resultado de esta denominación, puedes usar accidentalmente el parámetro cuando se pretende usar el campo con nombre idéntico.
+<p>Se sugiere una corrección rápida para cambiar el nombre del parámetro.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main {
+    private String valor;
+
+    public Main(String valor) {
+      valor = valor.toUpperCase();
+    }
+  }
+  </code></pre>
+<!-- tooltip end -->
+<p>
+  Puedes configurar las siguientes opciones para esta inspección:
+</p>
+<ol>
+  <li>
+    <strong>Ignorar para definidores de propiedades</strong>: ignorar parámetros de definidores simples.
+  </li>
+  <li>
+    <strong>Ignorar campos de superclase no visibles desde subclase</strong>: ignorar campos <code>private</code> en una superclase que no son visibles desde el método.
+  </li>
+  <li>
+    <strong>Ignorar para constructores</strong>: ignorar parámetros de constructores.
+  </li>
+  <li>
+    <strong>Ignorar para métodos abstractos</strong>: ignorar parámetros de métodos abstractos.
+  </li>
+  <li>
+    <strong>Ignorar para parámetros de método estático que ocultan campos de instancia</strong>: ignorar parámetros de métodos <code>static</code> que ocultan un campo de instancia e ignorar parámetros de métodos de instancia en clases internas estáticas que ocultan un campo de instancia de una clase externa. Aunque no lo ocultan estrictamente, estos parámetros pueden resultar confusos.
+  </li>
+</ol>
+
+</body>
+</html>

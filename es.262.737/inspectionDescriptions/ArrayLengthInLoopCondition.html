@@ -1,0 +1,18 @@
+<html>
+<body>
+Reporta los accesos a la propiedad <code>.length</code> de un array en la parte de condición de
+una sentencia de bucle. En entornos muy restringidos en recursos, dichas llamadas pueden
+tener implicaciones adversas en el rendimiento.
+<p>
+  Esta inspección está pensada para Java ME y otros entornos muy restringidos en recursos.
+  Aplicar los resultados de esta inspección sin consideración podría tener efectos negativos en la claridad del código y el diseño.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void foo(Object[] x) {
+    for (int i = 0; i &lt; x.length; i++) { /**/ }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

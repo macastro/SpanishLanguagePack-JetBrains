@@ -1,0 +1,22 @@
+<html>
+<body>
+Reporta llamadas a <code>wait()</code>, <code>notify()</code> y <code>notifyAll()</code> que no se realizan dentro de una sentencia <code>synchronized</code> o un método <code>synchronized</code> correspondiente.
+<p>
+  Llamar a estos métodos en un objeto sin poseer el bloqueo (lock) provocará una excepción <code>IllegalMonitorStateException</code>.
+  Esta construcción no es necesariamente un error, ya que el bloqueo necesario podría haberse adquirido antes de llamar al método que la contiene, pero aun así se recomienda revisarla con atención.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Sync {
+    private final Object lock = new Object();
+
+    void test() throws InterruptedException {
+      synchronized (this) {
+        lock.wait(); // 'lock.wait()' no está sincronizado en 'lock'
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

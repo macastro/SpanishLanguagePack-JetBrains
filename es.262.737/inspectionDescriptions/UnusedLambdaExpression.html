@@ -1,0 +1,24 @@
+<html>
+<body>
+Informa sobre las expresiones lambda que no se invocan ni se asignan.
+
+<p>
+  Las expresiones lambda que no se invocan ni se asignan a una variable no tienen ningún efecto en la ejecución del programa y es probable que no sean intencionadas.
+</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun foo() {
+    {} // Advertencia: la expresión lambda nunca se invoca
+  }
+</code></pre>
+
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  fun foo() {
+    run {} // La expresión lambda ahora se invoca mediante la función 'run'
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

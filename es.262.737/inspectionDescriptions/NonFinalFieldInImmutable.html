@@ -1,0 +1,24 @@
+<html>
+<body>
+Inspecciona cualquier campo no final en una clase con la anotación <code>@Immutable</code>.
+Esto viola el contrato de la anotación <code>@Immutable</code>.
+<p>Ejemplo:</p>
+<pre><code>
+  import javax.annotation.concurrent.Immutable;
+  @Immutable
+  class Foo {
+    String bar = "foo";
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Las anotaciones <code>@GuardedBy</code> compatibles son:</p>
+<ul>
+  <li><code>net.jcip.annotations.GuardedBy</code></li>
+  <li><code>javax.annotation.concurrent.GuardedBy</code></li>
+  <li><code>org.apache.http.annotation.GuardedBy</code></li>
+  <li><code>com.android.annotations.concurrency.GuardedBy</code></li>
+  <li><code>androidx.annotation.GuardedBy</code></li>
+  <li><code>com.google.errorprone.annotations.concurrent.GuardedBy</code></li>
+</ul>
+</body>
+</html>

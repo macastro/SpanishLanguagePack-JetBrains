@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa de la falta de dependencias de tiempo de ejecución <code>intellij.platform.frontend</code> o <code>intellij.platform.backend</code> en el descriptor del módulo (XML).
+<p>El desarrollo remoto introdujo módulos marcadores para los módulos que deben cargarse en modo de frontend o de backend:</p>
+<ul>
+  <li><code>intellij.platform.frontend</code></li>
+  <li><code>intellij.platform.backend</code></li>
+</ul>
+<p>
+  Si no se especifica una dependencia de este tipo, el IDE cargará módulos independientemente del modo actual; por ejemplo, cargará módulos de backend en el modo de frontend.
+  Esto afectará al rendimiento y puede provocar errores.
+</p>
+<p>Esta inspección se basa en la convención de nomenclatura de módulos de frontend/backend (<code>*.frontend</code>/<code>*.backend</code>).</p>
+<!-- tooltip end -->
+<p><small>Novedad en 2025.2</small>
+</body>
+</html>

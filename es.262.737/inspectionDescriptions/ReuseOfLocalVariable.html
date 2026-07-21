@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre las variables locales que se "reutilizan" sobrescribiendo sus valores con nuevos valores no relacionados con su uso original.
+<p>Tal reutilización de variables locales puede ser confusa, ya que la semántica prevista de la variable local puede variar con cada uso. También puede ser susceptible a errores si, debido a los cambios en el código, los valores que se han considerado sobrescritos en realidad parecen estar activos. Es una buena práctica mantener el ciclo de vida de las variables lo más corto posible y no reutilizar variables locales por el bien de la brevedad.</p>
+<!-- tooltip end -->
+<p>Ejemplo:</p>
+<pre><code>
+    void x() {
+        String s = "uno";
+        System.out.println("s = " + s);
+        s = "dos"; //reutilización de la variable local 's'
+        System.out.println("s = " + s);
+    }
+</code></pre>
+
+</body>
+</html>

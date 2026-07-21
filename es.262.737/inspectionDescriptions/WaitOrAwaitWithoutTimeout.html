@@ -1,0 +1,17 @@
+<html>
+<body>
+Reporta llamadas a <code>Object.wait()</code> o <code>Condition.await()</code> sin especificar un tiempo de espera.
+<p>
+  Tales llamadas pueden ser peligrosas en programas de alta disponibilidad, ya que fallas en un componente pueden resultar en bloqueos del componente en espera
+  si nunca se llaman <code>notify()</code>/<code>notifyAll()</code>
+  o <code>signal()</code>/<code>signalAll()</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void foo(Object bar) throws InterruptedException {
+    bar.wait();
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

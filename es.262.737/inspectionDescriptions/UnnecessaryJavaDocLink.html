@@ -1,0 +1,29 @@
+<html>
+<body>
+Informa los tags Javadoc <code>@see</code>,
+<code>{@link}</code> y <code>{@linkplain}</code>
+que hagan referencia al método al que corresponde el comentario, al supermétodo del método correspondiente al comentario o a la clase que contiene el comentario.
+<p>Tales enlaces son innecesarios y pueden ser eliminados con seguridad mediante la acción rápida de esta inspección. La acción rápida eliminará el comentario Javadoc completo si el tag es su único contenido.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Ejemplo {
+    /**
+     * @see Ejemplo#método
+     */
+    public void método() { }
+  }
+</code></pre>
+<p>Luego de aplicar la acción rápida:</p>
+<pre><code>
+class Ejemplo {
+  public void método() { }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+Utilice el casillero de abajo para ignorar los enlaces en línea (<code>{@link}</code> y <code>{@linkplain}</code>)
+a los supermétodos. Si bien el enlace a todos los supermétodos es añadido automáticamente por la herramienta
+Javadoc, un enlace en línea al supermétodo puede requerirse a veces en los textos de los comentarios Javadoc.
+
+</body>
+</html>

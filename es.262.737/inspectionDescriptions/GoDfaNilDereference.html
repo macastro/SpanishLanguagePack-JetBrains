@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa instancias donde punteros que pueden ser <code>nil</code> son desreferenciados.
+<p>Ejemplo:</p>
+<pre><code>
+type Person struct{ Name string }
+
+func _(person *Person) {
+	if person != nil || person.Name != "Peter" {
+	}
+}
+</code></pre>
+<p>En el ejemplo proveído, <code>person</code> es un puntero a una estructura <code>Person</code>, pero es <code>nil</code> ya que no se le ha asignado un valor.
+  Intentar desreferenciar a <code>person</code> para acceder a <code>Name</code> sin verificar si <code>person</code> es <code>nil</code> resultará en un error de ejecución.</p>
+</body>
+</html>

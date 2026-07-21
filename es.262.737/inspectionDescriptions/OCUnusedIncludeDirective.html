@@ -1,0 +1,15 @@
+<html>
+<body>
+Esta inspección reporta directivas `include` que no son usadas o no son necesarias y que pueden ser eliminadas de manera segura.
+<dl>
+  <dt><b>Detectar directivas `include` completamente no utilizadas</b></dt>
+  <dd>Se considera que una directiva `include` no se usa si las declaraciones que incluye no se usan en ninguna parte de la unidad de traducción.</dd>
+  <dt><b>Detectar directivas `include` no utilizadas directamente</b></dt>
+  <dd>Se considera que una directiva `include` no se usa si las declaraciones que incluye no se usan directamente en el archivo. Funciona mejor con la política "Incluye lo que usas".</dd>
+  <dt><b>Detectar directivas `include` innecesarias</b></dt>
+  <dd>Detecta el conjunto mínimo de directivas `include` que son necesarias para que el archivo sea compilable. Todas las demás directivas `#include` se consideran no utilizadas.</dd>
+</dl>
+<p>Utiliza las casillas de verificación a continuación para ejecutar la inspección en archivos de encabezado.</p>
+<!-- tooltip end -->
+</body>
+</html>

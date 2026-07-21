@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporta llamadas a <code>System.out.println()</code> con una excepción como argumento.
+<p>El uso de sentencias de impresión para registrar excepciones oculta el seguimiento de la pila, lo que puede complicar la investigación del problema.
+  Se recomienda usar un registrador en su lugar.</p>
+<p>Las llamadas a <code>System.out.print()</code>, <code>System.err.println()</code> y <code>System.err.print()</code> con un argumento de excepción también son
+reportadas. Es mejor usar un registrador para registrar excepciones en su lugar.</p>
+<!-- tooltip end -->
+<p>Por ejemplo, en lugar de:</p>
+<pre><code>
+  try {
+      foo();
+  } catch (Exception e) {
+      System.out.println(e);
+  }
+</code></pre>
+<p>use el siguiente código:</p>
+<pre><code>
+  try {
+      foo();
+  } catch (Exception e) {
+      logger.warn(e); // la llamada al registrador puede ser diferente
+  }
+</code></pre>
+
+</body>
+</html>

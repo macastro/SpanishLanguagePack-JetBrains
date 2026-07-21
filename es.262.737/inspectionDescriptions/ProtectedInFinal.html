@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre la visibilidad <code>protected</code> utilizada dentro de una clase <code>final</code>.
+En tales casos, los miembros <code>protected</code> son accesibles solo en la propia clase, por lo que son <code>private</code> en la práctica.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class FinalClass {
+      <b>protected</b> fun foo() {}
+  }
+</code></pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre><code>
+  class FinalClass {
+      <b>private</b> fun foo() {}
+  }
+</code></pre>
+</body>
+</html>

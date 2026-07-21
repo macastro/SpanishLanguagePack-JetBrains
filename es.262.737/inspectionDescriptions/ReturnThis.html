@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre los métodos que devuelven <code>this</code>.
+<p>
+  Si bien dicha devolución es válida, rara vez es necesaria y generalmente indica que el método está destinado a usarse
+  como parte de una cadena de llamadas a métodos similares (por ejemplo, <code>buffer.append("foo").append("bar").append("baz")</code>).
+  Muchas normas de codificación desaprueban dichas cadenas.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public Builder append(String str) {
+    // [...]
+    return this;
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

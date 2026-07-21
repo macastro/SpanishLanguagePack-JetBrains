@@ -1,0 +1,24 @@
+<html>
+<body>
+Reporta llamadas a la función `hashMapOf` o al constructor `HashMap` que puedan ser reemplazadas por una llamada al constructor `EnumMap`.
+<p>Utilizar el constructor `EnumMap` simplifica el código.</p>
+<p>La corrección rápida reemplaza a la llamada a la función con la llamada al constructor `EnumMap`.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  enum class E {
+      A, B
+  }
+
+  fun getMap(): Map&lt;E, String&gt; = hashMapOf()
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  enum class E {
+      A, B
+  }
+
+  fun getMap(): Map&lt;E, String&gt; = EnumMap(E::class.java)
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

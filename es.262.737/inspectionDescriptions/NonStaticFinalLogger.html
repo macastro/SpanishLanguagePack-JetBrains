@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa de campos de registro que no se declaran <code>static</code> o <code>final</code>.
+Asegurarse de que cada registrador de clase es efectivamente constante y está vinculado a dicha clase simplifica la tarea de proporcionar una implementación de registro unificada para una aplicación.
+<p>Se proporciona una corrección rápida para cambiar los modificadores de registro a <code>static final</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>public class</b> Significant {
+    <b>private</b> Logger LOG = Logger.getLogger(Critical.class);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  <b>public class</b> Significant {
+    <b>private static final</b> Logger LOG = Logger.getLogger(Critical.class);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Configurar la inspección:
+</p>
+<ul>
+  <li>Usa la tabla <b>Nombre de clase de registro</b> para especificar los nombres de clase de registro. La inspección informará sobre los campos que no son <code>static</code> y <code>final</code> y que son de un tipo igual a uno de los nombres de clase especificados.
+  </li>
+</ul>
+</body>
+</html>

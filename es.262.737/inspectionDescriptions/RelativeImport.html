@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>Informa sobre las declaraciones de importación que no utilizan una referencia completamente calificada.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  package org.something
+
+  import someInnerPackage
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  package org.something
+
+  import org.something.someInnerPackage
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

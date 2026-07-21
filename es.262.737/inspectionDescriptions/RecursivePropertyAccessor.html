@@ -1,0 +1,22 @@
+<html>
+<body>
+<p>
+    Reporta llamadas del accesor de propiedades recursivas que pueden terminar en un <code>StackOverflowError</code>.
+    Tales llamadas usualmente se confunden con el acceso al campo de respaldo.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  var counter: Int = 0
+      set(value) {
+          <b>counter</b> = if (value &lt; 0) 0 else value
+      }
+</code></pre>
+<p>Luego de aplicar la corrección rápida:</p>
+<pre><code>
+  var counter: Int = 0
+      set(value) {
+          <b>field</b> = if (value &lt; 0) 0 else value
+      }
+</code></pre>
+</body>
+</html>

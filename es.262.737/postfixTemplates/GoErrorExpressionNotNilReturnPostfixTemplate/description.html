@@ -1,0 +1,21 @@
+<html>
+<body>
+Genera código cliché para manejo de errores.
+<p>
+Se puede invocar en variables y expresiones del tipo <code>error</code>.
+</p>
+<ul>
+  <li><p>Sustituye la variable <code>err</code> por la siguiente sintaxis:</p>
+  <pre><code>if err != nil {
+    return value1, value2, ...
+  }</code></pre></li>
+  <li><p>Sustituye la expresión <code>expr</code> por la siguiente sintaxis:</p>
+  <pre><code>if err := expr; err != nil {
+    return value1, value2, ...
+  }</code></pre></li>
+</ul>
+<p>
+  Cada <code>valor</code> es la variable <code>err</code> o el valor predeterminado del tipo del valor de retorno correspondiente de la función envolvente. Esta plantilla se puede invocar en una expresión con múltiples valores.
+</p>
+</body>
+</html>

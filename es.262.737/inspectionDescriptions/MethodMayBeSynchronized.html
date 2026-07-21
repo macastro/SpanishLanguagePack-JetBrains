@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporta métodos cuyo cuerpo contiene una sola expresión `synchronized`.
+La expresión de bloqueo para esta expresión `synchronized` debe ser igual a
+`this` para métodos de instancia o `[NombreClase].class` para métodos estáticos.
+<p>
+  Para mejorar la legibilidad de este tipo de métodos,
+  puedes eliminar el contenedor `synchronized` y marcar el método como `synchronized`.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public int generateInt(int x) {
+    synchronized (this) {
+      return 1;
+    }
+  }
+</code></pre>
+<p>Después de aplicar la correción rápida:</p>
+<pre><code>
+  public synchronized int generateInt(int x) {
+    return 1;
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

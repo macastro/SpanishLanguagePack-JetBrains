@@ -1,0 +1,18 @@
+<html>
+<body>
+Reporta el desempaquetado, que es el desenvuelto explícito de valores primitivos envueltos.
+<p>El desempaquetado es innecesario a partir de Java 5 en adelante y puede eliminarse de forma segura.</p>
+<p><b>Ejemplos:</b></p>
+<ul>
+  <li><code>Integer i = Integer.valueOf(42).intValue();</code> &rarr; <code>Integer i = Integer.valueOf(42);</code></li>
+  <li><code>int k = Integer.valueOf(42).intValue();</code> &rarr; <code>int k = Integer.valueOf(42);</code>
+    <p>(informa solo cuando la opción <b>Informar solo expresiones realmente desempaquetadas superfluamente</b> no está marcada)</p></li>
+</ul>
+<!-- fin de la información sobre herramientas -->
+<p>
+  Use la opción <b>Informar solo expresiones realmente desempaquetadas superfluamente</b> para informar solo el desempaquetado realmente superfluo,
+  donde un valor desempaquetado se empaqueta inmediatamente de forma implícita o explícita.
+  En este caso, se puede eliminar todo el paso desempaquetar-empaquetar. La inspección no informa desempaquetado explícito simple.</p>
+<p>Esta inspección solo informa si el nivel de idioma del proyecto o módulo es 5 o superior.</p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+<body>
+Inspecciona las sentencias <code>break</code> o <code>continue</code> dentro de los bloques <code>finally</code>.
+<p>Aunque ocasionalmente son intencionadas, tales sentencias son muy confusas, pueden enmascarar excepciones lanzadas y complicar la depuración.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    while (true) {
+        try {
+          throwingMethod();
+        } finally {
+            continue;
+        }
+    }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

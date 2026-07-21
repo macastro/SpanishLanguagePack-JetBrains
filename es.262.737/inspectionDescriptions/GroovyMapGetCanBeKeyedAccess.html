@@ -1,0 +1,19 @@
+<html>
+<body>
+Reporta las llamadas al método <code>java.util.Map.get()</code>. Dichas llamadas pueden sustituirse por una forma de acceso por clave más corta y clara.
+<p><b>Ejemplo:</b></p>
+<pre>
+<code>
+def map = ["foo": "bar"]
+def str = map.get("foo") // map.get("foo") se puede reemplazar por map["foo"]
+</code>
+</pre>
+<p>Tras aplicar la corrección rápida:</p>
+<pre>
+<code>
+def map = ["foo": "bar"]
+def str = map["foo"]
+</code>
+</pre>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<body>
+Se informa de las clases que hacen referencia a sus propias subclases.
+Estas referencias pueden ser confusas y violan varias reglas de diseño orientado a objetos.
+<p>Ejemplo:</p>
+<pre><code>
+  class Entity {
+    // Advertencia: La clase hace referencia a su subclase
+    void compare(SimpleEntity entity) {
+      ...
+    }
+  }
+  class SimpleEntity extends Entity {
+    ...
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

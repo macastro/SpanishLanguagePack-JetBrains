@@ -1,0 +1,19 @@
+<html>
+<body>
+El número de comillas alrededor del argumento en el valor de propiedad es incorrecto.
+<p>
+  Si hay argumentos en el valor de propiedad, entonces el valor debe pasarse como un patrón a <code>java.text.MessageFormat</code>.
+  Esto significa que se usan comillas simples para el escape. Por lo tanto, para que las comillas sean visibles, se deben usar comillas repetidas:
+<ul>
+  <li><code>'{0}'</code> &rarr; <code>{0}</code></li>
+  <li><code>''{0}''</code> &rarr; <code>'$value$'</code></li>
+</ul>
+<p>
+  Cuando se utiliza el formato de choice, el formato anidado se evalúa como un formato en sí mismo, por lo que se debe agregar una segunda comilla doble.
+  Cuando se pasa <code>1</code>:
+<ul>
+  <li><code>{0, choice, 0#no|#1''{0}'' file}</code> &rarr; <code>{0} files</code></li>
+  <li><code>{0, choice, 0#no|#1''''{0}'''' file}</code> &rarr; <code>'$number_of_files$' files</code></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+Informa las variables locales que tienen el mismo nombre exacto que los campos de la clase externa. Tales nombres pueden hacer que se use por error la variable cuando se pretende usar el campo con el mismo nombre.
+<p>Se sugiere un arreglo rápido para cambiar el nombre de la variable.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  public class Foo {
+    public Object foo;
+
+    void bar() {
+      Object o = new Object() {
+        void baz() {
+          Object foo; // La variable local 'foo' oculta el campo 'Foo' de la clase
+        }
+      };
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Puede configurar las siguientes opciones para esta inspección:
+</p>
+<ol>
+  <li><strong>Ignorar campos inaccesibles</strong> - Ignorar variables locales con el mismo nombre exacto de un campo de superclase que no sea visible (por ejemplo, porque el campo es privado).</li>
+  <li><strong>Ignorar variables locales en contextos estáticos que ocultan campos no estáticos</strong> - Ignorar, por ejemplo, cuando la variable local está dentro de un método estático o dentro de un método de una clase interna estática.
+  </li>
+</ol>
+</body>
+</html>

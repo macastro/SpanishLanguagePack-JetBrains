@@ -1,0 +1,71 @@
+<html>
+<body>
+Informa de parámetros de métodos genéricos que pueden utilizar <a href="https://en.wikipedia.org/wiki/Wildcard_(Java)">comodines acotados</a>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void process(Consumer&lt;Number&gt; consumer);
+</code></pre>
+<p>debería sustituirse por:</p>
+<pre><code>
+  void process(Consumer&lt;? super Number&gt; consumer);
+</code></pre>
+<p>
+  Esta signatura de método es más flexible porque acepta más tipos: no solo
+  <code>Consumer&lt;Number&gt;</code>, sino también <code>Consumer&lt;Object&gt;</code>.
+</p>
+<p>Del mismo modo, los parámetros de tipo en posición covariante:</p>
+<pre><code>
+  T produce(Producer&lt;T&gt; p);
+</code></pre>
+<p>debería sustituirse por:</p>
+<pre><code>
+  T produce(Producer&lt;? extends T&gt; p);
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Citando a <a href="https://en.wikipedia.org/wiki/Joshua_Bloch#Effective_Java">Joshua Bloch</a> en la tercera edición de <em>Effective Java</em>:
+</p>
+<blockquote>
+  <h4>Elemento 31: Utiliza comodines acotados para aumentar la flexibilidad de la API</h4>
+  El uso de tipos comodín en tus API, aunque es complicado, las hace mucho más flexibles.
+  Si escribes una biblioteca que tendrá un uso generalizado, debe considerarse obligatorio el uso adecuado de tipos comodín.
+  Recuerda la regla básica: productor-extends, consumidor-super (PECS).
+  Recuerda también que todos los Comparable y Comparator son consumidores.
+</blockquote>
+
+<p>
+  Utiliza las opciones de inspección para alternar la información de:
+</p>
+<ul>
+  <li>
+    <p>
+      Clases invariantes. Un ejemplo de clase invariante es <code>java.util.List&lt;T&gt;</code> porque acepta valores
+      (a través del método <code>List.add(T)</code>)
+      y produce valores (a través del método <code>T List.get()</code>).
+    </p>
+    <p>
+      Por otra parte, las clases <code>contravariantes</code> solo reciben valores, por ejemplo, <code>java.util.function.Consumer&lt;T&gt;</code>
+      con el único método <code>accept(T)</code>. Del mismo modo, las clases <code>covariantes</code>
+      solo producen valores, por ejemplo, <code>java.util.function.Supplier&lt;T&gt;</code>
+      con el único método <code>T get()</code>.
+    </p>
+    <p>
+      La gente suele utilizar comodines acotados en clases covariantes/contravariantes,
+      pero evita los comodines en clases invariantes, por ejemplo, <code>void process(List&lt;? extends T&gt; l)</code>.
+      Desactiva esta opción para ignorar esas clases invariantes y déjalas con una tipificación rígida, por ejemplo, <code>void
+      process(List&lt;T&gt; l)</code>.
+    </p>
+  </li>
+  <li>
+    <p>
+      Métodos <code>private</code>, que pueden considerarse no parte de la API pública
+    </p>
+  </li>
+  <li>
+    <p>
+      Métodos de instancia
+    </p>
+  </li>
+</ul>
+</body>
+</html>

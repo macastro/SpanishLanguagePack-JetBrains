@@ -1,0 +1,37 @@
+<html>
+<body>
+Informa declaraciones <code>switch</code> sobre tipos enumerados que no son exhaustivos.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  <b>enum</b> AlphaBetaGamma {
+    A, B, C;
+
+    <b>void</b> x(AlphaBetaGamma e) {
+      <b>switch</b> (e) {
+
+      }
+    }
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  <b>enum</b> AlphaBetaGamma {
+    A, B, C;
+
+    <b>void</b> x(AlphaBetaGamma e) {
+      <b>switch</b> (e) {
+        <b>case</b> A -> {}
+        <b>case</b> B -> {}
+        <b>case</b> C -> {}
+      }
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+Use la opción **Ignorar sentencias switch con una rama predeterminada** para ignorar <code>switch</code>
+sentencias que tienen una rama <code>default</code> .
+<p>
+
+</body>
+</html>

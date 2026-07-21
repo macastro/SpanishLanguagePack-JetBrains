@@ -1,0 +1,135 @@
+<html>
+<body>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td><font face="verdana" size="-1"><b>Go Scratch</b> es una plantilla preestablecida que se utiliza cada vez que se crea un archivo Go scratch nuevo.
+      Los archivos scratch son archivos completamente funcionales, ejecutables y depurables que se pueden utilizar para elaborar ideas de código. Para crear un archivo scratch, abra <b>Archivo | Nuevo | Archivo scratch</b>. En el cuadro de diálogo <b>Nuevo archivo scratch</b>, busque <b>Go</b> y selecciónelo.<br><br>
+      La plantilla se puede editar. En la plantilla, se pueden utilizar las siguientes variables predefinidas. Estas variables se expandirán más tarde en el editor al valor correspondiente.<br><br>
+
+      También es posible especificar variables personalizadas. Las variables personalizadas utilizan el siguiente formato: <code>${VARIABLE_NAME}</code>, donde <code>VARIABLE_NAME</code> es el nombre de la variable (por ejemplo, <code>${MY_CUSTOM_FUNCTION_NAME}</code>).
+      Antes de que el IDE use variables personalizadas para crear un archivo nuevo, se mostrará un cuadro de diálogo donde se puede definir el valor de las variables personalizadas de la plantilla.<br><br>
+
+      Mediante el uso de la directiva <code>#parse</code>, se pueden incluir plantillas que se encuentran en la pestaña <b>Incluir</b>. Para incluir una plantilla, especifique el nombre completo de la plantilla entre comillas como parámetro (por ejemplo, <code>#parse("File Header")</code>).
+    </font></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellspacing="0" style="border-collapse: collapse">
+  <tr>
+    <td colspan="3"><font face="verdana" size="-1">Lista de variables predefinidas</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${GO_PACKAGE_NAME_WITH_TEST_SUFFIX}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del paquete en el que se crea el archivo de prueba nuevo. El archivo debe tener el sufijo <code>_test</code>. El nombre tiene el siguiente formato: <code>package_test</code>.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${GO_PACKAGE_NAME}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del paquete en el que se crea el archivo nuevo.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${DATE}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Fecha del sistema actual.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${DAY}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Día del mes actual.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${DAY_NAME_SHORT}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del día actual (por ejemplo, <code>Lun</code>, <code>Mar</code>, etc.).</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${DAY_NAME_FULL}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del día actual (por ejemplo, <code>Lunes</code>, <code> Martes</code>, etc.).</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${DIR_PATH}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Ruta del directorio donde se almacenará el archivo nuevo. Esta ruta es relativa a la raíz del proyecto.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${DS}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">El signo de dólar ($). Esta variable se utiliza para escapar del carácter del dólar para que no se trate como prefijo de las variables de plantilla.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${FILE_NAME}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre del archivo nuevo.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${HOUR}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Hora actual.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${MINUTE}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Minuto actual.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${SECOND}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Segundo actual.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${MONTH}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Mes actual.</font></td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${MONTH_NAME_SHORT}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Primeras 3 letras del nombre del mes actual (por ejemplo, <code>Ene</code>, <code>Feb</code>, etc.).</font>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${MONTH_NAME_FULL}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre completo del mes actual (por ejemplo, <code>Enero</code>, <code>Febrero</code>, etc.).</font>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <nobr><font face="verdana" size="-2"><strong>${NAME}</strong></font></nobr>
+    </td>
+    <td width="10"></td>
+    <td width="100%" valign="top"><font face="verdana" size="-1">Nombre de la entidad nueva (archivo, tipo, interfaz, etc.).</font></td>
+  </tr>
+  <tr>
+    <td valign="

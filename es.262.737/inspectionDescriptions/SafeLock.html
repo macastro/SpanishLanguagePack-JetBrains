@@ -1,0 +1,16 @@
+<html>
+<body>
+Se informan los recursos de <code>java.util.concurrent.locks.Lock</code> que no se adquieren antes de un bloque <code>try</code> o que no se desbloquean en el bloque <code>finally</code> correspondiente. Dichos recursos pueden perderse sin darse cuenta si se lanza una excepción antes de que se cierre el recurso.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  lock.lock(); // se informará ya que falta el bloque 'finally'
+  try {
+    doSmthWithLock();
+  } catch (IOException e) {
+    throw new UncheckedIOException(e);
+  }
+  lock.unlock();
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

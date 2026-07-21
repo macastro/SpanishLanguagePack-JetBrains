@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporta los prefijos de signo de dólar redundantes en las expresiones de plantillas de cadenas.
+<p>
+Dichos prefijos se pueden eliminar de forma segura.
+</p>
+<p>
+Ejemplo:
+</p>
+<pre><code>
+fun example() {
+    $"Ejemplo: un prefijo de longitud uno siempre es redundante"
+    $$"Ejemplo: la cadena no contiene ningún valor interpolado"
+    $$"Ejemplo: aquí los signos de dólar $$ son caracteres normales $$"
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+fun example() {
+    "Ejemplo: un prefijo de longitud uno siempre es redundante"
+    "Ejemplo: la cadena no contiene ningún valor interpolado"
+    "Ejemplo: aquí los signos de dólar $$ son caracteres normales $$"
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

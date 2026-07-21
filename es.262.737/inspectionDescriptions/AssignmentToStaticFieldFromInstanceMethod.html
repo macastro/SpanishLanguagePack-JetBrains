@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre la asignación o modificación de campos <code>static</code> desde un método de instancia.
+<p>Aunque legítimas, esas asignaciones son difíciles de hacer de forma segura y a menudo son resultado de marcar campos como <code>static</code> inadvertidamente.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Counter {
+    private static int count = 0;
+
+    void increment() {
+      // Advertencia: actualización de un campo static
+      // desde un método de instancia
+      count++;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

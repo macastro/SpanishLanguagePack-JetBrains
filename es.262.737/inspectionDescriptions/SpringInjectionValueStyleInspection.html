@@ -1,0 +1,29 @@
+<html>
+<body>
+<p>Informa sobre propiedades configuradas a través de subelementos <code>&lt;value&gt;</code> o <code>&lt;ref&gt;</code> y ofrece reemplazarlas por sus atributos correspondientes.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  &lt;beans&gt;
+    &lt;bean class="MyBean" id="myBean"/&gt;
+
+    &lt;bean class="MyFactory"&gt;
+      &lt;property name="bean"&gt;
+        &lt;ref bean="myBean"/&gt; &lt;!-- informa de 'Uso del elemento &lt;ref&gt; explícito' --&gt;
+      &lt;/property&gt;
+    &lt;/bean&gt;
+  &lt;/beans&gt;
+</code></pre>
+
+<p>Después de aplicar la corrección rápida:</p>
+
+<pre><code>
+  &lt;beans&gt;
+    &lt;bean class="MyBean" id="myBean"/&gt;
+    &lt;bean class="MyFactory"&gt;
+      &lt;property name="bean" ref="myBean"/&gt;
+    &lt;/bean&gt;
+  &lt;/beans&gt;
+</code></pre>
+</body>
+</html>

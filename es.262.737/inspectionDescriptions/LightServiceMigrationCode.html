@@ -1,0 +1,27 @@
+<html>
+<body>
+Reporta clases que pueden marcarse como servicios ligeros mediante la anotación <code>@com.intellij.openapi.components.Service</code> en lugar de registrarse como servicios en <code>plugin.xml</code>.
+<p>
+  Los servicios que no están destinados a ser sobrescritos no necesitan registrarse en el archivo <code>plugin.xml</code>.
+  En su lugar, se puede utilizar la anotación <code>@Service</code> en la clase de servicio. Para servicios a nivel de proyecto, especifique <code>@Service(Service.Level.PROJECT)</code>.
+<p>
+  Requisitos:
+<ul>
+  <li>IntelliJ Platform 2019.3 o posterior.</li>
+  <li>La clase de servicio debe ser <code>final</code>.</li>
+  <li>No se ha especificado <code>serviceInterface</code>.</li>
+  <li>Si el servicio a nivel de aplicación es <code>com.intellij.openapi.components.PersistentStateComponent</code>, se debe desactivar el roaming (<code>roamingType = RoamingType.DISABLED</code>).
+  </li>
+  <li>No se ha especificado ninguno de los siguientes atributos: <code>os</code>, <code>client</code>, <code>overrides</code>, <code>id</code>, <code>preload</code>, <code>configurationSchemaKey</code>.</li>
+</ul>
+<p>
+  Consulte la sección de <a href="https://plugins.jetbrains.com/docs/intellij/plugin-services.html">Servicios</a> en la documentación del SDK de plugins de la plataforma IntelliJ para obtener más detalles.
+</p>
+<p>
+  Consulte también la inspección <code>Plugin DevKit | Descriptor de plugin | El servicio se puede convertir en un servicio ligero</code>.
+</p>
+
+<!-- tooltip end -->
+<p><small>Novedad en 2023.2</small>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa la instanciación de clases genéricas en las cuales se utiliza el símbolo <b>&lt;&gt;</b> (rombo) en lugar de los parámetros de tipo.
+
+<p>La corrección rápida remplaza <b>&lt;&gt;</b> (rombo) con parámetros de tipo explícitos.</p>
+<p>Ejemplo:</p>
+<pre><code>List &lt;String&gt; list = new ArrayList&lt;&gt;()</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>List &lt;String&gt; list = new ArrayList&lt;String&gt;()</code></pre>
+<!-- tooltip end -->
+<p>
+  La <i>operación de rombo</i> apareció en Java 7.
+  Esta inspección puede ayudarte a degradar a una versión anterior de Java para compatibilidad hacia atrás.
+</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<body>
+Informa de 'caída' en una declaración <code>switch</code>.
+<p>La caída se produce cuando no se garantiza que una serie de declaraciones ejecutables después de una etiqueta <code>case</code> transfieran el control antes de la siguiente etiqueta <code>case</code>. Por ejemplo, esto puede suceder si a la bifurcación le falta una declaración <code>break</code>.
+En ese caso, el control cae a través de las declaraciones después de esa etiqueta <code>switch</code>, incluso si la expresión <code>switch</code> no es igual a
+  el valor de la etiqueta caída. Aunque a veces sea intencionado, esta construcción es confusa y a menudo es el resultado de una errata.</p>
+<p>
+Esta inspección ignora cualquier caída comentada con un texto que coincida con el patrón de regex <code>(?i)falls?\s*thro?u</code>.
+</p>
+<p>Hay una corrección que agrega un <code>break</code> a la bifurcación que puede caer a la siguiente bifurcación.</p>
+<p>Ejemplo:</p>
+<pre><code>
+    switch(x) {
+      case (4):
+          if (condition) {
+              System.out.println("3");
+              // no break here
+          } else {
+              break;
+          }
+      case (6):
+          System.out.println("4");
+    }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+    switch(x) {
+        case (4):
+            if (condition) {
+                System.out.println("3");
+            } else {
+                break;
+            }
+            break;
+        case (6):
+            System.out.println("4");
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<body>
+<code>else</code> rama incluye condicional negada <code>if</code> sentencia.
+<p>. Normalmente, invirtiendo el orden de las ramas <code>if</code> y <code>else</code> se incrementa la claridad de este tipo de sentencias.</p>
+<p> Hay una corrección rápida para invertir la sentencia <code>if</code> actual.</p>
+<p>Ejemplo:</p>
+<pre><code>
+    void m(Object o1, Object o2) {
+        if (o1 != o2) {
+            System.out.println(1);
+        }
+        else {
+            System.out.println(2);
+        }
+    }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+    void m(Object o1, Object o2) {
+        if (o1 == o2) {
+            System.out.println(2);
+        } else {
+            System.out.println(1);
+        }
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>Usa la opción <b>Ignorar comparación '!= null'</b> para ignorar comparaciones de la forma <code>!= null</code>.</p>
+<p>Usa la opción <b>Ignorar comparación '!= 0'</b> para ignorar comparaciones de la forma<code>!= 0</code>.</p>
+
+</body>
+</html>

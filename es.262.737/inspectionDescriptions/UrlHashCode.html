@@ -1,0 +1,17 @@
+<html>
+<body>
+<code>java.net.URL</code> objeto en llamadas <code>hashCode()</code> y <code>equals()</code> y a agregarlo en mapas y conjuntos.
+<p>
+  <code>URL</code> del método <code>equals()</code> y <code>hashCode()</code> pueden ejecutar una búsqueda de DNS para resolver el nombre de host.
+  Esto puede causar retrasos importantes dependiendo de la disponibilidad y velocidad de la red y del servidor DNS.
+  El uso de <code>java.net.URI</code> en lugar de <code>java.net.URL</code>  evitará la búsqueda de DNS.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  boolean urlEquals(URL url1, URL url2) {
+      return url1.equals(url2);
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

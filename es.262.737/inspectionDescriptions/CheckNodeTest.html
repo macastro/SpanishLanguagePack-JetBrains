@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa de nombres de elementos o atributos que se utilizan en una expresión XPath pero que faltan en los archivos XML asociados y que no están definidos en los esquemas referenciados.
+Estos nombres suelen ser el resultado de errores tipográficos y, de lo contrario, probablemente solo se descubrirían en tiempo de ejecución.
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  &lt;xsl:template match="<b>h:txtarea</b>" />
+</code></pre>
+
+<p>
+  Si <code>h</code> está enlazado al espacio de nombres XHTML, la inspección informará de esta parte de la expresión <code>match</code> como un nombre de elemento desconocido porque el nombre correcto del elemento es "textarea".
+</p>
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<html>
+<body>
+<p>Informa expresiones no anotadas con <code>@Nls</code> que se pasan a parámetros que requieren una cadena <code>@Nls</code>.</p>
+<p>Esto indica una conversión no deseada de una cadena normal a una cadena de lenguaje natural.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  def setTitle(@Nls title: String) = ???
+
+  setTitle("Hardcoded title") // Esto debería extraerse en un bundle
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

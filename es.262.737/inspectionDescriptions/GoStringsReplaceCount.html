@@ -1,0 +1,10 @@
+<html>
+<body>
+Reporta llamadas a <code>strings.Replace</code> con el conteo de reemplazos en <code>0</code> en lugar de <code>-1</code>.
+<p>El argumento de conteo para cuántas veces una cadena de caracteres debe ser reemplazada no debe ser <code>0</code>
+	ya que no reemplazará nada y hará que la llamada a la función sea redundante. Use <code>-1</code> en su lugar.</p>
+<p>Ejemplo:</p>
+<pre><code>a := strings.Replace("SSS", "S", "H", 0) // no reemplaza nada
+b := strings.Replace("SSS", "S", "H", -1) // reemplaza todas las ocurrencias de S con H</code></pre>
+</body>
+</html>

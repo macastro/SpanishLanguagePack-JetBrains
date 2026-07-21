@@ -1,0 +1,55 @@
+<html>
+<body>
+Reporta llamadas de miembros <code>super</code> con calificación de supertipo redundante.
+<p>
+    El código en una clase derivada puede llamar a sus funciones de superclase y a las implementaciones de accessores de propiedades usando la palabra clave <code>super</code>.
+    Para especificar el supertipo del cual se toma la implementación heredada, <code>super</code> puede ser calificado por el nombre de supertipo en corchetes angulares,
+    por ejemplo: <code>super&lt;Base&gt;</code>. Algunas veces esta calificación es redundante y puede omitirse.
+    Usa la acción rápida "Eliminar calificación de supertipo explícita" para limpiar el código.
+</p>
+<p><b>Ejemplos:</b></p>
+<pre><code>
+  open class B {
+      open fun foo(){}
+  }
+
+  class A : B() {
+      override fun foo() {
+         super&lt;B&gt;.foo() // &lt;== redundante porque 'B' es el único supertipo
+      }
+  }
+
+  interface I {
+      fun foo() {}
+  }
+
+  class C : B(), I {
+      override fun foo() {
+          super&lt;B&gt;.foo() // &lt;== aquí el calificador &lt;B&gt; es necesario para distinguir 'B.foo()' de 'I.foo()'
+      }
+  }
+</code></pre>
+<p>Después de que se aplique la acción rápida:</p>
+<pre><code>
+  open class B {
+      open fun foo(){}
+  }
+
+  class A : B() {
+      override fun foo() {
+         super.foo() // &lt;== Actualizado
+      }
+  }
+
+  interface I {
+      fun foo() {}
+  }
+
+  class C : B(), I {
+      override fun foo() {
+          super&lt;B&gt;.foo()
+      }
+  }
+</code></pre>
+</body>
+</html>

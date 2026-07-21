@@ -1,0 +1,19 @@
+<html>
+<body>
+Informa sobre los caracteres de los archivos de propiedades no compatibles con el juego de caracteres ISO-8859-1 cuando se utiliza Java 1.8 o una versión anterior.
+Esta inspección comprueba si los archivos de propiedades contienen caracteres que no se pueden asignar a ISO-8859-1 y sugiere convertirlos a secuencias de escape Unicode para lograr la compatibilidad.
+<p>Configuración de la inspección:</p>
+<p>
+  Utilice la solución rápida <b>Convertir a secuencia de escape</b> para garantizar la compatibilidad con la codificación ISO-8859-1:
+</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  key=Java + ☕ = 🍀
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  key=Java + \u2615 = \uD83C\uDF40
+</code></pre>
+</body>
+</html>

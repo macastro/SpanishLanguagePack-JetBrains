@@ -1,0 +1,41 @@
+<html>
+<body>
+Informa sobre modificadores redundantes y sugiere eliminarlos.
+El código resultante será más breve, no obstante, el comportamiento y el significado seguirá siendo el mismo.
+<p><b>Ejemplo 1:</b></p>
+<pre><code>
+  // Todo el código es implícitamente strictfp en Java 17 y superior
+  strictfp class X {
+
+    // Las enumeraciones internas son implícitamente estáticas
+    static enum Inner {
+        A, B, C
+    }
+
+    // Los registros internos son implícitamente estáticos
+    static record R() {
+    }
+  }
+</code></pre>
+<p><b>Ejemplo 2:</b></p>
+<pre><code>
+  final record R() {
+    // Todos los registros son implícitamente finales
+  }
+</code></pre>
+<p><b>Ejemplo 3:</b></p>
+<pre><code>
+  // Todas las interfaces son implícitamente abstractas
+  abstract interface Printer {
+
+    // Todos los miembros de la interfaz son implícitamente públicos
+    public int size();
+
+    // Todas las clases internas de las interfaces son implícitamente estáticas
+    static class Inner {}
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

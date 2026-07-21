@@ -1,0 +1,47 @@
+<html>
+<body>
+Este informe muestra las llamadas de `Iterable.forEach()` y `Map.forEach()` de la cadena de API de secuencias que se puede convertir en un ciclo tradicional.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  String joinNonEmpty(List&lt;String&gt; list) {
+    return list.stream() // Las secuencias se pueden convertir en ciclos
+      .filter(s -> !s.isEmpty())
+      .map(String::trim)
+      .collect(Collectors.joining(", "));
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  String joinNonEmpty(List&lt;String&gt; list) {
+    StringJoiner joiner = new StringJoiner(", ");
+    for (String s : list) {
+      if (!s.isEmpty()) {
+        String trim = s.trim();
+        joiner.add(trim);
+      }
+    }
+    return joiner.toString();
+  }
+</code></pre>
+<p>
+  Tenga en cuenta que esta inspección a veces puede provocar un ligero cambio de semántica.
+  Se debe prestar especial atención a los cortocircuitos, ya que no se especifica la cantidad real de elementos que se leerán cuando la secuencia se cortocircuita.
+</p>
+<!-- tooltip end -->
+<p>Configuración de la inspección:</p>
+<p>Utilice la opción **Iterar por una fuente de secuencia desconocida a través de Stream.iterator()** para sugerir conversiones para secuencias que usan un origen que no se puede reconocer.
+  En este caso, se creará un iterador a partir de la secuencia.
+  Por ejemplo, aquí es donde se sugeriría una conversión si se selecciona la casilla de verificación:</p>
+<pre><code>
+  List&lt;ProcessHandle&gt; handles = ProcessHandle.allProcesses().collect(Collectors.toList());</code></pre>
+<p>En este caso, el resultado sería el siguiente:</p>
+<pre><code>
+  List&lt;ProcessHandle&gt; handles = new ArrayList&lt;&gt;();
+  for (Iterator&lt;ProcessHandle&gt; it = ProcessHandle.allProcesses().iterator(); it.hasNext(); ) {
+    ProcessHandle allProcess = it.next();
+    handles.add(allProcess);
+  }
+</code></pre>
+<p><small>Novedad en la versión 2017.1</small></p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa sentencias o expresiones <code>switch</code> con demasiadas etiquetas de <code>case</code>.
+<p>Una sentencia <code>switch</code>tan larga puede resultar confusa y debería refactorizarse.
+  Algunas veces, no es un problema (por ejemplo, un dominio es muy complejo y tiene enums con muchas constantes).</p>
+<p>Ejemplo:</p>
+<pre><code>
+    switch (x) {
+        case 1 -> {}
+        case 2 -> {}
+        case 3 -> {}
+        case 4 -> {}
+        case 5 -> {}
+        case 6 -> {}
+        case 7 -> {}
+        case 8 -> {}
+        case 9 -> {}
+        case 10 -> {}
+        case 11,12,13 -> {}
+        default -> {}
+    }
+</code></pre>
+<!-- tooltip end -->
+<p>Usa el campo <b>Número máximo de ramas</b> para especificar el número máximo de etiquetas de <code>case</code> esperadas.
+<p>
+</body>
+</html>

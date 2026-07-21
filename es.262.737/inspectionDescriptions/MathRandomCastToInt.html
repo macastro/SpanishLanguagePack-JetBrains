@@ -1,0 +1,14 @@
+<html>
+<body>
+Informa sobre las llamadas a <code>Math.random()</code> en las que se realiza una conversión inmediata a <code>int</code>. 
+<p>Convertir un <code>double</code> entre <code>0.0</code> (incluido) y <code>1.0</code> (excluido) a <code>int</code> siempre redondea hacia abajo a cero. El valor debe multiplicarse primero por algún factor antes de convertirlo a <code>int</code> para obtener un valor entre cero (incluido) y el factor de multiplicación (excluido).
+  Otra posible solución es utilizar el método <code>nextInt()</code> de <code>java.util.Random</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  <b>int</b> r = (<b>int</b>)Math.random() * 10;
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>  <b>int</b> r = (<b>int</b>)(Math.random() * 10);
+</code></pre>
+  <!-- tooltip end -->
+</body>
+</html>

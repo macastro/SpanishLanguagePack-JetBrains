@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre los métodos <code>static</code> y campos que solo se usan desde una clase diferente a la clase que los contiene. Dichos miembros pueden moverse a la clase que los usa.
+Las inspecciones ignoran los métodos factory y los miembros a los que se accede desde una clase anónima dentro de la clase del miembro.
+Las sobrecargas de conveniencia, que llaman a un método con el mismo nombre en la misma clase pero tienen menos parámetros, también se ignoran.
+<!-- tooltip end -->
+<p>
+Usa la primera casilla de verificación para suprimir esta inspección cuando el miembro static solo se usa desde una clase de prueba.
+<p>
+Usa la segunda casilla de verificación a continuación para ignorar los usos de miembros desde clases internas anónimas, locales o no estáticas.
+<p>
+Usa la tercera casilla de verificación a continuación para no advertir sobre miembros que no se pueden mover sin problemas,
+por ejemplo, porque ya hay un método con una firma idéntica en la clase de destino,
+o porque no se podrá acceder a un campo o método usado dentro del método cuando se mueva este método.
+<p>
+Usa la cuarta casilla de verificación para ignorar miembros ubicados en clases de utilidades.
+</body>
+</html>

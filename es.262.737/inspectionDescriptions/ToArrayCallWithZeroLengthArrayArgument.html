@@ -1,0 +1,14 @@
+<html>
+<body>
+Se informa la llamada no preferida de <code>Collection.toArray()</code>, y se sugiere aplicar el estilo preferente.
+<p>Existen dos estilos para convertir de una colección a un arreglo:</p>
+<ul>
+  <li>Arreglo de tamaño predeterminado, p. ej., <code>c.toArray(new String[c.size()])</code></li>
+  <li>Arreglo vacío, p. ej., <code>c.toArray(new String[0])</code></li>
+</ul>
+<p>En versiones anteriores de Java, se recomendaba utilizar arreglos de tamaño predeterminado porque las llamadas de reflexión necesarias para crear un arreglo del tamaño adecuado eran muy lentas.</p>
+<p>Sin embargo, desde la actualización más reciente de OpenJDK 6, esta llamada se incorporó, por lo que el rendimiento de la versión de arreglo vacío es similar o, en ocasiones, superior al de la versión de arreglo de tamaño predeterminado. Además, pasar un arreglo de tamaño predeterminado es peligroso para colecciones simultáneas o sincronizadas, ya que puede ocurrir una condición de carrera de datos entre las llamadas a <code>size</code> y <code>toArray</code>. Esto puede provocar nulos adicionales al final del arreglo si la colección se reduce simultáneamente durante la operación.</p>
+<!-- tooltip end -->
+<p>Utilice las opciones de inspección para seleccionar el estilo preferido.</p>
+</body>
+</html>

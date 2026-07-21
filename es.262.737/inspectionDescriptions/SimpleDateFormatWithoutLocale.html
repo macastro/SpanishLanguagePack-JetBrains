@@ -1,0 +1,13 @@
+<html>
+<body>
+Inspecciona instanciaciones de <code>java.util.SimpleDateFormat</code> o <code>java.time.format.DateTimeFormatter</code> que no especifican un <code>java.util.Locale</code>.
+Estas llamadas utilizarán el locale por defecto de la plataforma, que depende de la configuración del sistema operativo.
+Esto puede dar lugar a un comportamiento sorprendente cuando el código se ejecuta en una plataforma diferente o cuando cambian la configuración del sistema operativo.
+<p><code>Ejemplo:</code></p>
+<pre><code>
+  new SimpleDateFormat("yyyy");
+  DateTimeFormatter.ofPattern("d/M/y");
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

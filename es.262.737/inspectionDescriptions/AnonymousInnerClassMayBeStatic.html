@@ -1,0 +1,39 @@
+<html>
+<body>
+Reporta clases anónimas que se pueden reemplazar de forma segura con clases internas <code>static</code>.
+Una clase anónima puede ser una clase interna <code>static</code> si no hace referencia explícitamente a su instancia envolvente o clases locales desde su método envolvente.
+<p>
+Una clase interna <code>static</code> no mantiene una referencia implícita a su instancia envolvente.
+Esto evita una causa común de fugas de memoria y utiliza menos memoria por instancia de clase.
+</p>
+<p>
+Desde Java 18, únicamente las clases anónimas serializables mantienen una referencia implícita a su instancia envolvente,
+si no se utiliza esta referencia. Por lo tanto, si el nivel del lenguaje del módulo es Java 18 o superior,
+esta inspección reporta únicamente clases serializables.
+</p>
+<p>La solución rápida extrae la clase anónima en una clase interna <code>static</code> con nombre.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void sample() {
+    Thread thread = new Thread(new Runnable() {
+      @Override
+      public void run() {
+      }
+    });
+  }
+</code></pre>
+<p>Tras aplicar la solución rápida:</p>
+<pre><code>
+  void sample() {
+    Thread thread = new Thread(new Task());
+  }
+
+  private static class Task implements Runnable {
+    @Override
+    public void run() {
+    }
+  }
+</code></pre>
+  <!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,7 @@
+<html>
+<body>
+  Reporta mensajes de <code>dealloc</code> enviados directamente. Dichos mensajes nunca deben enviarse directamente.
+  En su lugar, el método <code>dealloc</code> del objeto debe ser llamado indirectamente a través del método de protocolo <code>release NSObject</code> (si el mensaje <code>release</code> hace que el conteo de retención del receptor sea 0).
+  Para obtener más detalles sobre el uso de estos métodos, consulte <a href="https://developer.apple.com/library/ios/documentation/cocoa/conceptual/MemoryMgmt/Articles/MemoryMgmt.html">Memory Management Programming Guide</a>.
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+<code> equals() </code> en lugar de usar <b>==</b> o <b>!=</b> para probar la equivalencia de <code>Number</code>.
+<p>
+  Cuando se usa el autoboxing, es un error común comparar dos instancias del tipo contenedor en lugar de dos primitivos. Por ejemplo, usando <code>Integer</code> en lugar de <code>int</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>  void foo(Integer a, Integer b) {
+    final boolean bool = a == b;
+  }
+</code></pre>
+<p>Si se sabe que <code>a</code> no es null, es seguro aplicar una corrección rápida "insegura" para obtener un resultado como:</p>
+<pre><code>  void foo(Integer a, Integer b) {
+    final boolean bool = a.equals(b);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

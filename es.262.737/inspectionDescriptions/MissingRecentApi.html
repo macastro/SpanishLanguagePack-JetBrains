@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre el uso de las API de la plataforma IntelliJ que se introdujeron en una versión <em>superior</em> a la especificada en la versión actual. La versión se especifica en <code>&lt;idea-version></code> <code>@since-build</code> (en <code>plugin.xml</code>).
+<p>
+  El uso de estas API puede provocar problemas de compatibilidad con las versiones anteriores del IDE y del plugin.
+</p>
+<p>
+  Para evitar posibles problemas al ejecutar el plugin en versiones anteriores del IDE, incrementa <code>since-build</code> en consecuencia o elimina el uso de esta API.
+</p>
+<p>
+  Para obtener más información, consulta los <a href="https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html">rangos de número de compilación</a> en la documentación del SDK del plugin para la plataforma IntelliJ.
+</p>
+<!-- tooltip end -->
+<p>Configuración de la inspección:</p>
+Si no se especifican los atributos <code>@since/until-build</code> de <code>&lt;idea-version></code> en <code>plugin.xml</code>, establece <b>Desde</b>/<b>Hasta</b> de forma explícita.
+</body>
+</html>

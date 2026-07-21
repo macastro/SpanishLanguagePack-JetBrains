@@ -1,0 +1,22 @@
+<html>
+<body>
+Inspecciona innecesariamente caracteres escapados en literales <code>String</code> y, opcionalmente, en <code>char</code>.
+<p>Los caracteres de tabulación escapados <code>\t</code> no se inspeccionan, porque son invisibles.</p>
+<p>Ejemplos:</p>
+<pre><code>
+  String s = "\'Scare\' quotes";
+  String t = """
+    All you need is\n\tLove\n""";
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  String s = "'Scare' quotes";
+  String t = """
+    All you need is
+    \tLove
+  """;
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en la versión 2019.3</small>
+</body>
+</html>

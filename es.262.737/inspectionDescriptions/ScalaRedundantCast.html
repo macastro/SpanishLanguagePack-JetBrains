@@ -1,0 +1,15 @@
+<html>
+<body><p>Informa de conversiones redundantes <code>asInstanceOf</code> y sugiere eliminarlas.</p>
+<p>Una conversión es redundante si el tipo de expresión es el mismo que el tipo de conversión.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  "test".asInstanceOf[String]
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  "test"
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

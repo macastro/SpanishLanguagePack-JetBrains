@@ -1,0 +1,26 @@
+<html>
+<body>
+Inspecciona el uso de retorno etiquetado en la última expresión en lambdas.
+
+<p>Dicho retorno es redundante y puede eliminarse de forma segura.</p>
+
+<p><b>Ejemplo:</b></p>
+<pre><code>
+fun foo() {
+  listOf(1,2,3).find {
+    return@find true
+  }
+}
+</code></pre>
+
+<p>Después de aplicar la reparación rápida:</p>
+<pre><code>
+fun foo() {
+  listOf(1,2,3).find {
+    true
+  }
+}
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

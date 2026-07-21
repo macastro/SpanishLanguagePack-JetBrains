@@ -1,0 +1,22 @@
+<html>
+<body>
+Informa de etiquetas que no son objetivos de sentencias <code>break</code> o <code>continue</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  etiqueta: <b>for</b> (int i = 0; i &lt; 10; i++) {
+    <b>if</b> (i == 3) {
+      <b>break</b>;
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida, se elimina la etiqueta:</p>
+<pre><code>
+  <b>for</b> (int i = 0; i &lt; 10; i++) {
+    <b>if</b> (i == 3) {
+      <b>break</b>;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

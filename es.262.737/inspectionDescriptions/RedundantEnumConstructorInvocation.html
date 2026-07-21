@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>Reporta las invocaciones redundantes de constructores en las entradas de enumeraciones.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  enum class Baz(i: Int = 0) {
+      A(1),
+      B<b>()</b>,
+      C<b>()</b>,
+  }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  enum class Baz(i: Int = 0) {
+      A(1),
+      B,
+      C,
+  }
+</code></pre>
+</body>
+</html>

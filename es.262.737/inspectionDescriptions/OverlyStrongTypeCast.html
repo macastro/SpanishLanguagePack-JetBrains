@@ -1,0 +1,27 @@
+<html>
+<body>
+Informa conversiones de tipos que son excesivamente fuertes. Por ejemplo,
+convertir un objeto a <code>ArrayList</code> cuando convertirlo a
+<code>List</code> funcionaría igual de bien.
+<p>
+  <b>Nota:</b> de forma muy parecida a la inspección de <i>Conversión de tipo redundante</i>, aplicar la solución
+  para esta inspección puede cambiar la semántica de su programa si está
+  usando intencionalmente una conversión demasiado fuerte para provocar que se genere una <code>ClassCastException</code>.
+</p>
+<p>Ejemplo:</p>
+<pre><code>
+  interface Super {
+    void doSmth();
+  }
+  interface Sub extends Super { }
+
+  void use(Object obj) {
+    // Advertencia: ((Super)obj).doSmth() podría usarse
+    ((Sub)obj).doSmth();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Use la casilla de verificación a continuación para ignorar conversiones cuando hay una comprobación <code>instanceof</code> coincidente en el código.
+</body>
+</html>

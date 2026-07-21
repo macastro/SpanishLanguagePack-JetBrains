@@ -1,0 +1,30 @@
+<html>
+<body>
+Reporta llamadas de registro de SLF4J, Log4j2 y akka.event.LoggingAdapter, como `logger.info("{}: {}", key)` donde el número de marcadores de posición de `{ }` en el mensaje de registro no coincide con el número de otros argumentos en la llamada de registro.
+<!-- tooltip end -->
+<p>
+Utilice la opción de inspección para especificar qué implementación utiliza SLF4J.
+Si se selecciona **Verificar automáticamente**, entonces `org.apache.logging.slf4j.Log4jLogger` se busca en la ruta de clase.
+Si este archivo es encontrado o se selecciona **Sí**, entonces los casos, cuando el último parámetro con un tipo de excepción tiene un marcador de posición, no se reportará para SLFJ4 API.<br/>
+Por ejemplo:
+<pre><code lang="java">
+//este caso no será reportado con la opción "Sí"
+log.error("For id {}: {}", "1", new RuntimeException());
+</code></pre>
+En este caso 'new RuntimeException()' se imprimirá utilizando 'toString()', (su rastro de pila no se imprimirá):
+<pre><code lang="text">
+For id 1: java.lang.RuntimeException
+</code></pre>
+
+De lo contrario, se resaltará porque el último marcador de posición no se utiliza:
+<pre><code lang="text">
+For id 1: {}
+java.lang.RuntimeException: null
+</code></pre>
+
+La opción **No** se puede utilizar para resaltar siempre tales casos cuando se utiliza un marcador de posición para una excepción incluso si `org.apache.logging.slf4j.Log4jLogger` se utiliza como un backend.<br/>
+
+Esta opción solo funciona para SLF4J.
+<p>
+</body>
+</html>

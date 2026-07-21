@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>Informen sentencias que no son alcanzables. Esto puede ocurrir si la sentencia está después de un bucle infinito, sentencia <code>return</code>, <code>break</code> o <code>continue</code>.</p>
+<p><b>Ejemplo:</b>
+<pre><code>
+  <b>void</b> foo (int n) {
+      if (n < 1) {
+          return
+          <b>print('Esta sentencia no es alcanzable')</b>
+      }
+      mientras (verdadero){
+          print ('¡Hola, mundo!')
+      }
+      <b>print('Esta sentencia tampoco es alcanzable')</b>
+  }
+</code></pre>
+</body>
+</html>

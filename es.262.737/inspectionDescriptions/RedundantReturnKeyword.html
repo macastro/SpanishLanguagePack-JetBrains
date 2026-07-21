@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>
+    Informa de las palabras clave <code>return</code> redundantes que aparecen en la última expresión de una rama <code>if</code> o <code>when</code> cuando se devuelve la propia expresión <code>if</code>/<code>when</code> completa.
+</p>
+<p>Estas palabras clave no aportan ningún valor y solo ensucian el código.</p>
+<p>La corrección rápida permite eliminar la palabra clave <code>return</code> redundante, dejando solo la expresión.</p>
+<!-- tooltip end -->
+<p>Ejemplo:</p>
+<pre><code>
+fun foo(flag: Boolean): String {
+  return if (flag) {
+    "foo"
+  } else {
+    return "bar"  // palabra clave 'return' redundante
+  }
+}
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+fun foo(flag: Boolean): String {
+  return if (flag) {
+    "foo"
+  } else {
+    "bar"
+  }
+}
+</code></pre>
+<p><small>Novedad en 2025.3</small></p>
+</body>
+</html>

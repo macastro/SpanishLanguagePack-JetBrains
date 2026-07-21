@@ -1,0 +1,18 @@
+<html>
+<body>
+<p>Reporta parámetros de métodos de recursos (anotados con <code>@PathParam</code>, <code>@QueryParam</code>, etc.) con tipos no soportados.</p>
+<p>El tipo del parámetro, campo o propiedad anotado debe cumplir con uno de los siguientes requisitos:</p>
+<ol>
+  <li>Ser un tipo primitivo</li>
+  <li>Tener un constructor que acepte un único argumento <code>String</code></li>
+  <li>Tener un método estático llamado <code>valueOf()</code> o <code>fromString()</code> que acepte un único argumento <code>String</code>,
+    por ejemplo, <code>Integer.valueOf(String)</code>.
+  </li>
+  <li>Tener una implementación registrada de <code>ParamConverterProvider</code> JAX-RS SPI de extensión que devuelva una instancia de <code>ParamConverter</code>
+    capaz de convertir una cadena a un tipo particular.
+  </li>
+  <li>Ser <code>List&lt;T&gt;</code>, <code>Set&lt;T&gt;</code> o <code>SortedSet&lt;T&gt;</code>,
+    donde T cumple 2, 3 o 4 arriba. La colección resultante es de solo lectura.</li>
+</ol>
+</body>
+</html>

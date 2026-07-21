@@ -1,0 +1,34 @@
+<html>
+<body>
+Reporta sentencias <code>if</code> que se pueden simplificar a una sola asignación, 
+<code>return</code>, o sentencia <code>assert</code>.
+<p>Ejemplo:</p>
+<pre><code>
+  if (foo()) {
+    return true;
+  } else {
+    return false;
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  return foo();
+</code></pre>
+<!-- tooltip end -->
+<p>Configurar la inspección:</p>
+<p>Usa la opción <b>Ignorar sentencias 'if' encadenadas</b> si deseas ocultar una advertencia
+  para sentencias <code>if</code> encadenadas.</p>
+<p>Por ejemplo, en el siguiente código la advertencia se ocultará, pero la solución
+  rápida aún estará disponible:</p>
+<pre><code>
+  if (condition1) return true;
+  if (condition2) return false;
+  return true;
+</code></pre>
+<p>Nota que reemplazar <code>if (isTrue()) assert false;</code> con <code>assert isTrue();</code> puede cambiar la semántica
+  del programa cuando las aserciones están deshabilitadas si la condición tiene efectos
+  secundarios.
+  Usa la opción <b>Ignorar sentencias 'if' con 'assert' triviales</b> si deseas ocultar una advertencia
+  para sentencias <code>if</code> que solo contienen una sentencia <code>assert</code> en sus cuerpos.</p>
+</body>
+</html>

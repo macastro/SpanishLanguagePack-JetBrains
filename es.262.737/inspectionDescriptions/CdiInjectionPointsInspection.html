@@ -1,0 +1,21 @@
+<html>
+<body>
+<p>Informa sobre puntos de inyección ambiguos en clases de beans que tienen dependencias ambiguas.</p>
+<!-- tooltip end -->
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  interface Motor {}
+
+  @Singleton
+  class MotorGasolina implements Motor {}
+
+  @Singleton
+  class MotorElectrico implements Motor {}
+
+  @Singleton
+  class Coche {
+    @Inject Motor <b>motor</b>; // Dependencia ambigua: hay varios beans que coinciden con el punto de inyección
+  }
+</code></pre>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<body>
+Reportan acceso a un campo no <code>final</code> dentro de una implementación de <code>compareTo()</code>.
+<p>
+  Tal acceso puede resultar en que <code>compareTo()</code> devuelva resultados diferentes en diferentes puntos del ciclo de vida del objeto, lo que a su vez puede causar problemas al utilizar las clases de colecciones estándar, por ejemplo, <code>java.util.TreeSet</code>.
+</p>
+<p>
+  Un arreglo rápido para hacer que el campo sea <code>final</code> solo está disponible cuando no hay acceso de escritura al campo, de lo contrario no se sugieren arreglos.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo implements Comparable&lt;Foo&gt;{
+    private int index;
+    Foo(int idx) {
+      index = idx;
+    }
+    @Override
+    public int compareTo(Foo foo) {
+     return Integer.compare(this.index, foo.index);
+    }
+  }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  class Foo implements Comparable&lt;Foo&gt;{
+    private final int index;
+    Foo(int idx) {
+      index = idx;
+    }
+    @Override
+    public int compareTo(Foo foo) {
+      return Integer.compare(this.index, foo.index);
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+
+</body>
+</html>

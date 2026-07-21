@@ -1,0 +1,26 @@
+<html>
+<body>
+<p>
+  Informa sobre usos no válidos de <a href="https://docs.python.org/3/library/typing.html#typing.NewType">NewType</a>.
+</p>
+<p>
+  <b>Ejemplo:</b>
+</p>
+<pre><code>
+  from typing import NewType
+
+  InvalidName = NewType("Name", int)  # El nombre de la variable 'InvalidName' no coincide con el nombre del NewType 'Name'
+</code></pre>
+<pre><code>
+  from typing import Literal
+
+  InvalidType = NewType("InvalidType", Literal[1])  # NewType no se puede utilizar con 'Literal[1]'
+</code></pre>
+<pre><code>
+  Base = NewType("Base", str)
+
+  class Derived(Base):  # No se pueden crear subclases de 'Base'
+      pass
+</code></pre>
+</body>
+</html>

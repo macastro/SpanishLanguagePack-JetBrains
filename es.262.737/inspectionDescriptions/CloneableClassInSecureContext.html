@@ -1,0 +1,26 @@
+<html>
+<body>
+Informa clases que pueden ser clonadas.
+<p>
+  Una clase
+  puede ser clonada si soporta la interface <code>Cloneable</code>,
+  y su método <code>clone()</code> no está definido para lanzar un error inmediatamente. Las clases clonables pueden ser peligrosas en códigos diseñados para uso seguro.
+</p>
+<p><b>Ejemplo:</b></p>
+<code>class SecureBean implements Cloneable {}</code>
+<p>Después de aplicar la corrección rápida:</p><code>class SecureBean {}</code>
+<p>
+Cuando la clase extiende una clase clonable existente o implementa una interfaz clonable,
+  entonces después de aplicar la corrección rápida, el código puede verse así: 
+<pre><code>class SecureBean extends ParentBean {
+    @Override
+    protected SecureBean clone() throws CloneNotSupportedException {
+        throw new CloneNotSupportedException();
+    }
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

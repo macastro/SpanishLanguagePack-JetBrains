@@ -1,0 +1,20 @@
+<html>
+<body>
+Informa de excepciones que se lanzan desde dentro de bloques <code>catch</code> pero que no "envuelven" la excepción capturada.
+<p>Cuando se lanza una excepción en respuesta a una excepción, envolver la excepción inicial impide perder información valiosa del contexto, como marcos de pila y números de línea.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  ...
+  catch (IOException e) {
+    closeAllConnections();
+    throw new ConnectException("Connection problem."); // advertencia: 'throw' dentro del bloque 'catch' ignora la excepción capturada 'e'
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Configuración de la inspección:</p>
+<ul>
+  <li>Utiliza la opción <b>Ignorar si se utiliza el resultado de la llamada al método de excepción</b> para indicar si la inspección debería ignorar las excepciones cuyo argumento es el resultado de una llamada al método en la excepción original, como <code>getMessage()</code>.</li>
+  <li>Utiliza la opción <b>Ignorar si la excepción lanzada no puede envolver una excepción</b> para ignorar las sentencias <code>throw</code> que lanzan excepciones sin un constructor que acepte una causa <code>Throwable</code>.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<body>
+Informa sobre el acceso a un campo de superclase desde una clase interna anónima o local,
+si hay disponible una variable local, parámetro o campo con el mismo nombre en el código que rodea a la clase.
+En este caso, puede parecer que se accede a un elemento del código circundante,
+cuando en realidad se trata de un acceso a un campo de la superclase.
+<p>
+  Para aclarar la intención del código, se recomienda agregar un
+  calificador explícito <code>super</code> al acceso de campo.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+    class Primero {
+      protected String ambiguo;
+    }
+    class Segundo {
+      void foo(String ambiguo) {
+        new Primero() {
+          {
+            System.out.println(ambiguo); // se accede al campo, no al parámetro
+          }
+        };
+      }
+    }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+    class Primero {
+      protected String ambiguo;
+    }
+    class Segundo {
+      void foo(String ambiguo) {
+        new Primero() {
+          {
+            System.out.println(super.ambiguo);
+          }
+        };
+      }
+    }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

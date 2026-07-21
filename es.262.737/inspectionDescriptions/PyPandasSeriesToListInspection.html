@@ -1,0 +1,14 @@
+<html>
+<body>
+<p>Se informa de una <code>list</code> redundante en el enunciado <code>list(Series.values)</code> para las bibliotecas de pandas y polars.
+  Tal extracción de valores de <code>Series</code> se puede reemplazar con la llamada a la función <code>to_list()</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre style="font-family: monospace">
+list(df['column'].values)
+</pre>
+<p>Al aplicar la corrección rápida, el código cambia a:</p>
+<pre style="font-family: monospace">
+df['column'].to_list()
+</pre>
+</body>
+</html>

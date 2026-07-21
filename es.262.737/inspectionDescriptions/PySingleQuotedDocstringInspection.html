@@ -1,0 +1,17 @@
+<html>
+<body>
+<p>Informa docstrings que no se ciñen al formato de cadena triple entrecomillada doble.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+def calc(self, balance=0):
+    'param: balance'
+    self.balance = balance
+</code></pre>
+<p>Cuando se aplica la solución rápida, el código cambia a:</p>
+<pre><code>
+def calc(self, balance=0):
+    """param: balance"""
+    self.balance = balance
+</code></pre>
+</body>
+</html>

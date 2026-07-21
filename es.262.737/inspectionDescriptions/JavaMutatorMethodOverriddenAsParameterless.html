@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>Informa los métodos sin cláusulas de parámetros que anulan los métodos de Java con nombres similares a mutadores.</p>
+<p>Scala permite anular los métodos de Java sin parámetros sin cláusulas de parámetros.
+    Esto se debe principalmente a que permite que el código de Scala anule los métodos accesores de Java de la misma manera que los métodos accesores de Scala.
+    Es decir, sin cláusula de parámetros y de ese modo adherirse al <a href="https://en.wikipedia.org/wiki/Uniform_access_principle">principio de acceso uniforme</a>, que indica que el código del cliente no debería verse afectado por la decisión de implementar un atributo como un campo o método.</p>
+
+<p>Sin embargo, para los métodos con <a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">efectos secundarios</a>, es una convención tener una cláusula de parámetro vacía.
+    Esto estaría de acuerdo con el <a href="https://en.wikipedia.org/wiki/Liskov_substitution_principle">principio de sustitución de Liskov</a>, mediante el cual, cuando un método anulado tiene efectos secundarios,
+    el método que anula también debe declararse como un método con efectos secundarios.</p>
+
+<p>La solución rápida agrega una cláusula de parámetro vacía.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  import java.util
+
+  class Test extends util.ArrayList[String] {
+    override def clear: Unit = ???
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  import java.util
+
+  class Test extends util.ArrayList[String] {
+    override def clear(): Unit = ???
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

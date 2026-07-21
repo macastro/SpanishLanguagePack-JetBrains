@@ -1,0 +1,23 @@
+<html>
+<body>
+Reporta los campos de clase interna con el mismo nombre que un campo de la clase circundante.
+Como resultado de esta denominación, puede usar accidentalmente el campo de la clase interna cuando se pretende utilizar el campo con el mismo nombre de una clase circundante.
+
+<p>Se sugiere una solución rápida para renombrar el campo de clase interna.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Outer {
+    private String name;
+
+    class Inner {
+      private String name;
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Utilice la opción para elegir si esta inspección debe reportar todos los conflictos de nombres o solo los conflictos con campos que son visibles desde la clase interna.
+</p>
+
+</body>
+</html>

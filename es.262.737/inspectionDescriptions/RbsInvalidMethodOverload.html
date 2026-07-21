@@ -1,0 +1,16 @@
+<html>
+<body>
+Informa sobre sobrecargas de métodos no válidas (<code>...</code>). Una sobrecarga de métodos solo es válida si existe exactamente otra definición no sobrecargada
+para el método.
+<p>Hay disponible una corrección rápida para eliminar la sobrecarga de métodos no válida.</p>
+<p>Ejemplo:</p>
+<pre><code>class Example
+  # No se puede encontrar una declaración no sobrecargada para el método 'call' de la clase 'Example'
+  def call: -> untyped | ...
+end</code></pre>
+<p>Tras la corrección rápida:</p>
+<pre><code>class Example
+  def call: -> untyped
+end</code></pre>
+</body>
+</html>

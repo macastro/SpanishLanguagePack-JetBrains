@@ -1,0 +1,72 @@
+<html>
+<body>
+Informa sobre datos no seguros en expresiones EL no escapadas en páginas JSP. Dichos casos pueden dar lugar a <a href="https://es.wikipedia.org/wiki/Secuencia_de_comandos_en_sitios_cruzados">vulnerabilidades de secuencias de comandos en sitios cruzados (XSS)</a>.
+<p>
+  La siguiente descripción utiliza el término datos <b>no contaminados</b> para referirse a datos seguros y de confianza, como opuesto a <b>contaminados</b> (no seguros, no confiables). Consulte <a href="https://es.wikipedia.org/wiki/Comprobaci%C3%B3n_de_taint">Comprobación de taint</a> para obtener más información.
+</p>
+<p>
+  Un objeto seguro (no contaminado) es:
+</p>
+<ul>
+  <li>un tipo de datos primitivo (excepto <code>char</code>)</li>
+  <li>el resultado de una llamada a un método que está marcado como no contaminado</li>
+  <li>el resultado de una llamada a una función de escape</li>
+  <li>un campo que está marcado como no contaminado</li>
+</ul>
+<p>
+La página JSP podría tener diferentes contextos para los datos proporcionados, y si los datos son seguros para un contexto, no significa necesariamente que sean seguros para todos.
+Consulte <a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding">Hoja de referencia sobre prevención de secuencias de comandos en sitios cruzados</a> para ver algunos ejemplos. Esta inspección omite los datos marcados como no contaminados (seguros) en <b>TODOS</b> los contextos.
+</p>
+<p>
+  Esta inspección admite las siguientes opciones para marcar métodos y campos como seguros:
+</p>
+<ul>
+  <li>mediante el uso de cualquier anotación de la lista configurable de anotaciones no contaminadas</li>
+  <li>mediante la configuración de la lista de métodos y campos seguros</li>
+  <li>todos los campos finales estáticos podrían marcarse como no contaminados eligiendo la opción "Considerar campos finales estáticos como no contaminados" en la pestaña "Métodos y campos no contaminados"</li>
+</ul>
+<p>
+  Esta inspección no resalta los lugares donde los datos no seguros llegan a las etiquetas seguras en las páginas JSP.
+  Por ejemplo, la etiqueta <code>out</code> de JSTL taglib es segura porque escapa el valor dado por defecto.
+  La lista de etiquetas seguras es configurable (omite el valor <code>tag</code> o <code>attribute</code> para definir un rango completo).
+</p>
+<p>El arreglo rápido "Envolver en etiqueta JSTL &lt;out&gt;" envuelve una expresión EL con la etiqueta JSTL <code>&lt;out&gt;</code>.</p>
+<p>Antes:</p>
+<pre>
+  <code>
+    ${foo}
+  </code>
+</pre>
+<p>Después:</p>
+<pre>
+  <code>
+  &lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
+  &lt;c:out value=&quot;${foo}&quot;/&gt;
+  </code>
+</pre>
+<p>El arreglo rápido "Envolver en función JSTL escapeXml()" envuelve un valor no seguro con la función de escape <code>escapeXml</code>.</p>
+<p>Antes:</p>
+<pre>
+  <code>
+  &lt;%@ taglib prefix=&quot;custom&quot; uri=&quot;WEB_INF/custom.tld&quot; %&gt;
+  &lt;custom:tag value=&quot;${foo}&quot;/&gt;
+  </code>
+</pre>
+<p>Después:</p>
+<pre>
+  <code>
+    &lt;%@ taglib prefix=&quot;custom&quot; uri=&quot;WEB-INF/custom.tld&quot; %&gt;
+    &lt;%@ taglib prefix=&quot;fn&quot; uri=&quot;http://java.sun.com/jsp/jstl/functions&quot; %&gt;
+    &lt;custom:tag value=&quot;${fn:escapeXml(foo)}&quot;/&gt;
+  </code>
+</pre>
+<p>Existen más arreglos rápidos para agregar etiquetas seleccionadas a etiquetas seguras o anotar métodos (o campos) relacionados con anotaciones no contaminadas.</p>
+<p>
+  Es posible agregar funciones de escape personalizadas (consulte la pestaña "Funciones de escape").
+  Ahora contiene funciones de JSTL que devuelven un valor seguro (por ejemplo, una función <code>escapeXml</code> conocida).
+  No requiere definir funciones JSTL dos veces con diferentes URI de espacio de nombres.
+  Si se utilizó uno de los "http://java.sun.com/jsp/jstl/functions" o "http://java.sun.com/jstl/functions", también se verificaría el otro. También es posible omitir una función de escape en todas partes por su nombre.
+  Para hacerlo, deje vacío el campo URI del espacio de nombres.
+</p>
+</body>
+</html>

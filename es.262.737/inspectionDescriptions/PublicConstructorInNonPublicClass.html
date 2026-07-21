@@ -1,0 +1,24 @@
+<html>
+<body>
+Reporta constructores <code>públicos</code> en clases no <code>públicas</code>.
+<p>Usualmente, no hay razón para crear un constructor <code>público</code> en una clase con un menor nivel de acceso.
+  Sírvanse notar, sin embargo, que esta inspección cambia el comportamiento de algunas llamadas de reflexión. En particular,
+  <code>Class.getConstructor()</code> no podrá encontrar el constructor actualizado
+  (se debería usar <code>Class.getDeclaredConstructor()</code> en su lugar). No use la inspección si su código
+  o el código de algunos frameworks usados se basa en la accesibilidad del constructor vía <code>getConstructor()</code>.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class House {
+    public House() {}
+  }
+</code></pre>
+<p>Después de que se aplica la solución rápida:</p>
+<pre><code>
+  class House {
+    House() {}
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

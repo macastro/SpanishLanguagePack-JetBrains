@@ -1,0 +1,30 @@
+<html>
+<body>
+Informa de los tipos de parámetros de un método de subclase que tienen el mismo nombre que el tipo de parámetro del método supercorrespondiente pero que pertenecen a un paquete diferente.
+En estos casos, el método de la subclase no puede anular el método super.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+<b>public class</b> A {
+ <b>public void</b> method(Object o) {}
+}
+
+<b>public class</b> B <b>extends</b> A {
+ <b>public void</b> method(Object o) {} // advertencia sobre el tipo de parámetro
+ <b>class</b> Object {}
+}
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+<b>public class</b> A {
+ <b>public void</b> method(Object o) {}
+}
+
+<b>public class</b> B <b>extends</b> A {
+ <b>public void</b> method(java.lang.Object o) {} // nuevo tipo de parámetro
+ <b>class</b> Object {}
+}
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

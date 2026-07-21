@@ -1,0 +1,52 @@
+<html>
+<body>
+Informa sobre el modificador <code>synchronized</code> en los métodos.
+<p>
+  Hay varias razones por las que un modificador <code>synchronized</code> en un método puede ser una mala idea:
+</p>
+<ol>
+  <li>
+    Se debe realizar el menor trabajo posible bajo un bloqueo. Por lo tanto, suele ser mejor usar un bloque <code>synchronized</code> y
+    mantener allí solo el código que funciona con el estado compartido.
+  </li>
+  <li>
+    La sincronización se convierte en parte de la interfaz de un método. Esto dificulta la transición a un mecanismo de bloqueo diferente.
+  </li>
+  <li>
+    Hacer un seguimiento de lo que bloquea un objeto en particular se vuelve más difícil.
+  </li>
+  <li>
+    El ataque DoS (denegación de servicio) se vuelve factible ya sea a propósito o sin saberlo al heredar la clase del método.
+  </li>
+</ol>
+<p>
+  Como alternativa, considere sincronizar con un objeto de bloqueo <code>private final</code>, cuyo acceso se puede controlar completamente.
+</p>
+<p>Se proporciona una solución rápida para envolver el cuerpo del método con <code>synchronized(this)</code>.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Main {
+    public synchronized void fooBar() {
+    }
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  class Main {
+    public void fooBar() {
+      synchronized (this) {
+      }
+    }
+  }
+</code></pre>
+
+<!-- tooltip end -->
+<p>Puede configurar las siguientes opciones para esta inspección:</p>
+<ol>
+  <li><strong>Incluir métodos nativos</strong> - incluir métodos nativos en el ámbito de la inspección.</li>
+  <li><strong>Ignorar métodos que sobrescriben un método sincronizado</strong> -
+    no informar métodos que sobrescriben un método <code>synchronized</code>.</li>
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<body>
+Informa declaraciones de variable local y accesores para componentes de registro que pueden reemplazarse con variables de patrón en sentencias `for` mejoradas, las cuales son usualmente más compactas.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+registro Registro(Entero x, Cadena y) {
+}
+
+público estático vacío probar(Lista&lt;Registro&gt; registros) {
+    para (Registro registro : registros) {
+        Sistema.imprimir(registro.y());
+        Entero x = registro.x;
+        Sistema.imprimir(x);
+    }
+}
+</code></pre>
+<p>Puede remplazarse con:</p>
+<pre><code>
+registro Registro(Entero x, Cadena y) {
+}
+
+público estático vacío probar(Lista&lt;Registro&gt; registros) {
+    para (Registro(Entero x, Cadena y) : registros) {
+        Sistema.imprimir(y);
+        Sistema.imprimir(x);
+    }
+}
+</code></pre>
+<!-- tooltip end -->
+<ul>
+  <li>Utiliza la opción <b>Límite de profundidad de anidamiento</b> para especificar el máximo número de patrones de deconstrucción anidados a informar</li>
+  <li>Utiliza la opción <b>Número máximo de componentes de registro para deconstruir</b> para especificar el número máximo de componentes que un registro puede contener para ser usado en patrones de deconstrucción</li>
+  <li>Utiliza la opción <b>Número máximo de componentes de registro no utilizados</b> para especificar el número máximo de componentes que no se utilizan en una sentencia `for`</li>
+</ul>
+
+<p><small>Nuevo en 2023.1</small></p>
+</body>
+</html>

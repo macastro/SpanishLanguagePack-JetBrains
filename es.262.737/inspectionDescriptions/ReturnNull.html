@@ -1,0 +1,47 @@
+<html>
+<body>
+Reporta las sentencias return con valores de retorno null.
+Si bien ocasionalmente son útiles, esta construcción puede hacer que el código sea más propenso a fallar con una NullPointerException.
+<p>
+  Si un método está diseñado para devolver null, se sugiere marcarlo con la anotación @Nullable, estos métodos serán ignorados por esta inspección.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Persona {
+    public String getNombre () {
+      return null;
+    }
+  }
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  class Persona {
+    @Nullable
+    public String getNombre () {
+      return null;
+    }
+  }
+</code></pre>
+<p>
+  Si el tipo de retorno es java.util.Optional, se sugiere un arreglo rápido adicional para convertir null a Optional.empty().
+</p>
+<!-- tooltip end -->
+<p>
+  Usa las siguientes opciones para configurar la inspección:
+</p>
+<ul>
+  <li>
+    Si se ignoran los métodos 'private'.
+    Esto también ignorará el retorno de null desde clases anónimas y lambdas.
+  </li>
+  <li>
+    Si se deben reportar los valores null en retornos de arreglos, retornos de objetos de colección, retornos de objetos simples o una combinación de los tres.
+    El retorno de null en métodos con tipo de retorno java.util.Optional siempre se reporta.
+  </li>
+  <li>
+    Haz clic en <b>Configurar anotaciones</b> para especificar qué anotaciones deben considerarse 'nullable'.
+  </li>
+</ul>
+
+</body>
+</html>

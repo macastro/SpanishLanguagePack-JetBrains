@@ -1,0 +1,20 @@
+<html>
+<body>
+El inspector reporta llamadas a <code>java.sql.Connection.prepareStatement()</code>, <code>java.sql.Connection.prepareCall()</code> o sus diferentes variantes que reciben cadenas de caracteres construidas dinámicamente como la consulta a preparar.
+<p>
+  Las sentencias SQL construidas dinámicamente son una fuente común de vulnerabilidades de seguridad. Por defecto esta inspección ignora las constantes en tiempo de compilación.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  String bar() { return "bar"; }
+
+  Connection connection = DriverManager.getConnection("", "", "");
+  connection.("SELECT * FROM user WHERE name='" + bar() + "'");
+</code></pre>
+<!-- tooltip end -->
+Usa las configuraciones de inspección para que se consideren como constantes todos los campos <code>static</code> <code>final</code>. Ten cuidado que al habilitar esta opción, se ignorarán cadenas de caracteres como la siguiente:
+<pre><code>
+  static final String SQL = "SELECT * FROM user WHERE name='" + getUserInput() + "'";
+</code></pre>
+</body>
+</html>

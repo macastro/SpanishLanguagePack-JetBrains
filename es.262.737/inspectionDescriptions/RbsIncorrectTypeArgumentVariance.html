@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta los argumentos de tipo utilizados en una declaración de herencia (una cláusula de superclase, auto-tipo, o una llamada de inclusión) que tienen varianzas incorrectas. Los argumentos de tipo pasados a una declaración de herencia deben coincidir en varianza con la variable de tipo declarante.
+<p>Ejemplo:</p>
+<pre><code>module Enumerable[unchecked out A]
+end
+
+class Example[in A]
+  # Variable de tipo contravariante 'A' de la clase 'Example' usada como un argumento covariante
+  include Enumerable[A]
+end</code></pre>
+</body>
+</html>

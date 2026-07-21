@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa las declaraciones <code>throw</code> que lanzan una excepción inapropiada.
+Por ejemplo, una excepción puede ser inapropiada porque es demasiado genérica,
+como <code>java.lang.Exception</code> o <code>java.io.IOException</code>.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void setup(Mode mode) {
+      if (mode == null)
+          throw new RuntimeException("Problema durante la configuración"); // advertencia: se lanzó la excepción prohibida 'RuntimeException'
+      ...
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Usa la lista <b>Excepciones prohibidas</b> para especificar qué excepciones deberían informarse.<p>
+</body>
+</html>

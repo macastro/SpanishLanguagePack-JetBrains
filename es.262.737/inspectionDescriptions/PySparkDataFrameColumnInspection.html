@@ -1,0 +1,15 @@
+<html>
+<body>
+<p>
+  Reporta intentos de acceder a columnas dataframe PySpark que no existen dentro del esquema.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code lang="Python">
+df = spark.createDataFrame(data=[("John", 10),
+                                 ("Anakin", 20),
+                                 ("Luke", 30)],
+                           schema=["name", "age"])
+df.select("unknown_column")
+</code></pre>
+</body>
+</html>

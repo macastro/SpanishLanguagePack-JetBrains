@@ -1,0 +1,18 @@
+<html>
+<body>
+Informa sobre las referencias internas que no se podrán resolver en tiempo de ejecución.
+Esto significa que la referencia interna nunca podrá coincidir con nada.
+Una referencia interna no se podrá resolver cuando el grupo se defina después de la referencia interna, o si el grupo se define en una rama diferente de una alternación.
+<p><b>Ejemplo de un grupo definido después de su referencia interna:</b></p>
+<pre><code>
+  \1(abc)
+</code></pre>
+<p><b>Ejemplo de un grupo y una referencia interna en diferentes ramas:</b></p>
+<pre><code>
+  a(b)c|(xy)\1z
+</code></pre>
+
+<!-- tooltip end -->
+<p><small>Novedad en 2022.1</small>
+</body>
+</html>

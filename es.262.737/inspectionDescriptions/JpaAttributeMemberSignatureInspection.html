@@ -1,0 +1,32 @@
+<html>
+<body>
+Reporta los siguientes errores de especificación JPA:
+<ul>
+  <li>Varios atributos están configurados para un método o campo</li>
+  <li>Atributo ilegal utilizado en un objeto incrustable (JPA 1.0)</li>
+  <li>Metadatos de atributos persistentes no se especifican ni en un campo o propiedad getter</li>
+  <li>No hay setter o getter con acceso basado en propiedades</li>
+</ul>
+
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  @Entity
+  @Table(name = "TABLE")
+  public class JavaEntity {
+
+    private Integer id; // Error: ambos getter y setter deben estar presentes
+
+    public Integer getId() { ... }
+
+
+
+    private String data;
+
+    public String getData() { ... }
+
+    @Basic // Error: la anotación de persistencia debe colocarse en campo o método getter
+    public void setData(String data) { ... }
+  }
+</code></pre><br/>
+</body>
+</html>

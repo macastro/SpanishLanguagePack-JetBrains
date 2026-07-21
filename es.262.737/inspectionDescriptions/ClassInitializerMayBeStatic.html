@@ -1,0 +1,30 @@
+<html>
+<body>
+Este informe detecta inicializadores de instancia que se pueden declarar como <code>static</code>.
+<p>
+  Los inicializadores de instancia que no hacen referencia a ningún miembro no estático de su clase pueden ser estáticos.
+  Los inicializadores estáticos se ejecutan después de la resolución de la clase, mientras que los inicializadores de instancia se ejecutan en cada creación de instancias de esa clase.
+</p>
+<p>Esta inspección no informa sobre inicializadores de instancia y inicializadores vacíos en clases anónimas.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class A {
+     public static String CONSTANT;
+     {
+        CONSTANT = "Hola";
+     }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  class A {
+     public static String CONSTANT;
+     static {
+        CONSTANT = "Hola"; // Ahora se instancia solo una vez por clase
+     }
+  }
+</code></pre>
+
+<!-- tooltip end -->
+</body>
+</html>

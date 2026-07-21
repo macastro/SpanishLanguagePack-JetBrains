@@ -1,0 +1,20 @@
+<html>
+<body>
+<p>Informa variables locales con parámetros de tipo.</p>
+<p>Un parámetro de tipo para una variable local no tiene sentido porque no se puede especializar.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  fun main() {
+      val &lt;T&gt; x = ""
+  }
+</code></pre>
+<p>Después de aplicar la revisión rápida:</p>
+<pre><code>
+  fun main() {
+      val x = ""
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de lenguaje Kotlin del proyecto o módulo es 1.4 o superior.</p>
+</body>
+</html>

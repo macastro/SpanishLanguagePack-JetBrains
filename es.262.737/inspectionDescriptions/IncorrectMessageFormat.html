@@ -1,0 +1,25 @@
+<!-- Copyright 2000-2023 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+<html>
+<body>
+Informa de patrones de formato de mensaje incorrectos o de índices incorrectos de marcadores de posición
+<p>Se informan de los siguientes errores:</p>
+<ul>
+  <li>Índice no analizado o negativo</li>
+  <li>Llave no cerrada</li>
+  <li>Comillas no emparejadas. En este caso, una parte del patrón puede no utilizarse</li>
+  <li>Probablemente número incorrecto de comillas</li>
+  <li>Límite inferior incorrecto de patrones de opciones anidadas</li>
+  <li>Índices incorrectos de marcadores de posición. En este caso, es posible que no se sustituya un marcador de posición o que no se utilice un argumento</li>
+</ul>
+<p>Ejemplos:</p>
+<pre><code>
+  MessageFormat.format("{wrong}", 1); // índice incorrecto
+  MessageFormat.format("{0", 1); // Llave sin cerrar
+  MessageFormat.format("'{0}", 1); // Comillas sin emparejar
+  MessageFormat.format("It''''s {0}", 1); // Se imprimirá "It''s" en lugar de "It's"
+  MessageFormat.format("{0}", 1, 2); // El argumento con índice '1' no se utiliza en el patrón
+</code></pre>
+<!-- tooltip end -->
+<p><small>Nuevo en 2023.2</small>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<body>
+Informa sobre las instanciaciones de nuevos objetos <code>Long</code>,
+<code>Integer</code>, <code>Short</code> o
+<code>Byte</code> que tienen un argumento primitivo <code>long</code>,
+<code>integer</code>, <code>short</code> o
+<code>byte</code>.
+<p>Se recomienda utilizar el método estático <code>valueOf()</code>
+introducido en Java 5. Por defecto, este método guarda en caché los objetos para valores entre -128 y
+127, ambos incluidos.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  Integer i = new Integer(1);
+  Long l = new Long(1L);
+</code></pre>
+<p>Después de aplicar la corrección rápida, el código cambia a:</p>
+<pre><code>
+  Integer i = Integer.valueOf(1);
+  Long l = Long.valueOf(1L);
+</code></pre>
+<!-- tooltip end -->
+<p>Esta inspección solo informa si el nivel de lenguaje del proyecto o módulo es 5 o superior.</p>
+<p>
+  Utiliza la opción <b>Ignorar nuevas expresiones numéricas con un argumento de cadena</b> para ignorar las llamadas a constructores numéricos con un argumento <code>String</code>.</p>
+<p>
+  Utiliza la opción <b>Informar solo cuando el constructor esté marcado como @Deprecated</b> para informar solo sobre las llamadas a constructores obsoletos.
+  Los constructores <code>Long</code>, <code>Integer</code>, <code>Short</code> y <code>Byte</code> están obsoletos desde JDK 9.</p>
+</body>
+</html>

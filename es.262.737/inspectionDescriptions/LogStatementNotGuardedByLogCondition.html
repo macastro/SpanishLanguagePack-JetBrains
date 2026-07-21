@@ -1,0 +1,28 @@
+<html>
+<body>
+El informe no envuelve llamadas de registro con condiciones de protección.
+Evaluar los parámetros actuales de la llamada puede ser muy costoso.
+Usar cláusulas críticas para envolver la llamada de registro evita este costo cuando el nivel usado por la instrucción de registro desactiva el registro. Esto es especialmente útil para los niveles de llamada de registro menos serios (rastreo, depuración, más detallado) ya que estas llamadas se desactivan más a menudo en entornos de producción.
+<p><b>Ejemplo:</b></p>
+<pre><code lang="java">
+  public class TestObject {
+    void test(Object object) {
+      LOG.debug("some logging " + expensiveCalculation(1));
+    }
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code lang="java">
+  public class TestObject {
+    void test(Object object) {
+      if(LOG.isDebugEnabled()){
+        LOG.debug("some logging " + expensiveCalculation(1));
+      }
+    }
+  }
+</code></pre>
+<p>Esta inspección soporta los marcos de registro <em>Log4j2</em> and <em>SLF4J</em> (excepto builder).
+<!-- tooltip end -->
+<p><small>Novedades en 2024.2</small></p>
+</body>
+</html>

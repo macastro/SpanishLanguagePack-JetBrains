@@ -1,0 +1,30 @@
+<html>
+<body>
+Reporta los bucles <code>for</code> que iteran sobre las colecciones o arreglos, y que pueden ser reemplazados automáticamente con un bucle <code>for</code> mejorado (sintaxis de iteración foreach).
+<!--  'foreach' still used in this description so that the inspection continues to be found using this keyword -->
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  for (Iterator&lt;String&gt; iterator = list.iterator(); iterator.hasNext(); ) {
+    String item = iterator.next();
+    System.out.println(item);
+  }
+</code></pre>
+<p>Después de aplicar la corrección rápida:</p>
+<pre><code>
+  for (String item : list) {
+    System.out.println(item);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  Usa la opción <b>Reportar bucles 'java.util.List' indizados</b> para encontrar los bucles que involucran llamadas a <code>list.get(index)</code>.
+  Generalmente, estos bucles pueden ser reemplazados con bucles <code>for</code> mejorados,
+  a menos que modifiquen una lista subyacente en el proceso, por ejemplo, llamando a <code>list.remove(index)</code>.
+  Si este último es el caso, el bucle <code>for</code> mejorado puede lanzar <code>ConcurrentModificationException</code>.
+  También, en algunos casos, los bucles <code>list.get(index)</code> pueden funcionar un poco más rápido.</p>
+<p>
+  Usa la opción <b>No reportar iteraciones sobre colecciones sin tipo</b> para ignorar las colecciones sin parámetros de tipo.
+  Esto evita la creación de variables de bucle <code>for</code> mejoradas del tipo <code>java.lang.Object</code> y la inserción de conversiones explícitas
+  donde se use la variable del bucle.</p>
+</body>
+</html>

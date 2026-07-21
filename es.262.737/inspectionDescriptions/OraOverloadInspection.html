@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa de casos no válidos de sobrecarga de subprogramas en Oracle.
+<p>Ejemplo (Oracle):</p>
+<pre><code>DECLARE
+    SUBTYPE fff IS BINARY_INTEGER;
+    SUBTYPE ggg IS NATURAL;
+    PROCEDURE foo (a IN ggg) IS BEGIN NULL; END;
+    PROCEDURE foo (a IN fff) IS BEGIN NULL; END;
+BEGIN
+    NULL;
+END;</code></pre>
+<p>No se pueden sobrecargar subprogramas cuyos parámetros difieren solo en subtipos. Por ejemplo, no puede sobrecargar procedimientos en los que uno acepta un parámetro
+  BINARY INTEGER y el otro acepta un parámetro NATURAL. Para obtener más información sobre las restricciones en la sobrecarga de procedimientos,
+consulte <a href="https://docs.oracle.com/cd/B19306_01/appdev.102/b14261/subprograms.htm">Restricciones de sobrecarga en docs.oracle.com</a>.</p>
+</body>
+</html>

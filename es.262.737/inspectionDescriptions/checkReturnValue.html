@@ -1,0 +1,13 @@
+<html>
+<body>
+Reporta llamadas a métodos anotados con <code>@CheckReturnValue</code> cuyo resultado no es verificado.
+<p>
+  <code>@CheckReturnValue</code> puede usarse en métodos que pueden fallar pero no lanzan excepciones.
+  Si el error devuelto no es verificado, el llamador puede no estar al tanto del fallo.
+</p>
+<p>
+  Esta es una situación válida cuando no es necesario que algunas llamadas tengan éxito o fallen.
+  Sin embargo, esta situación es rara, y en estos casos es mejor ignorar explícitamente la verificación.
+</p>
+</body>
+</html>

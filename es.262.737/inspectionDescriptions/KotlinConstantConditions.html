@@ -1,0 +1,30 @@
+<html>
+<body>
+Reporta condiciones y valores no triviales que estáticamente se sabe que siempre son verdad, falso, nulos o cero.
+Si bien a veces es intencional, a menudo es un signo de error lógico en el programa. Además,
+informa ramas <code>when</code> nunca alcanzables y algunas expresiones que estáticamente se sabe que siempre fallan.
+<p>Ejemplos:</p>
+<pre><code>
+fun process(x: Int?) {
+  val isNull = x == null
+  if (!isNull) {
+    if (<span style="background: yellow">x != null</span>) {} // La condición siempre es verdadera
+    require(<span style="background: yellow">x!! &lt; 0 && x &gt; 10</span>) // La condición siempre es falsa
+  } else {
+    println(x<span style="background: yellow">!!</span>) // El operador !! siempre fallará
+  }
+}
+fun process(v: Any) {
+  when(v) {
+    is CharSequence -&gt; println(v <span style="background: yellow">as</span> Int) // La conversión siempre fallará
+    <span style="background: yellow">is String</span> -&gt; println(v) // La rama es inalcanzable
+  }
+}
+</code></pre>
+<p>
+    Desmarque la opción "Avisar cuando la constante se almacena en una variable" para evitar informar sobre variables que tienen valores constantes que no están en condiciones.
+</p>
+<!-- tooltip end -->
+<p><small>Novedad en 2021.3</small></p>
+</body>
+</html>

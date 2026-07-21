@@ -1,0 +1,17 @@
+<html>
+<body>
+Informa sobre los accesos a un campo estático no constante que se bloquea en `this` o en un campo de instancia de `this`.
+<p>
+  El bloqueo de un campo estático en datos de instancia no evita que el campo sea modificado por otras instancias, y por lo tanto puede dar lugar a condiciones de carrera sorprendentes.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  static String s;
+  def foo() {
+      synchronized (this) {
+          System.out.println(s); // advertencia
+      }
+  }
+</code></pre>
+</body>
+</html>

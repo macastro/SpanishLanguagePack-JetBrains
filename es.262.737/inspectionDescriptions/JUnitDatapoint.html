@@ -1,0 +1,44 @@
+<html>
+<body>
+Informa los campos o métodos que no son `public` y `/o no estáticos` y que usan la anotación `@DataPoint`.
+Las clases de prueba de <a href="https://github.com/junit-team/junit4/wiki/Theories">Teorías</a> con miembros `@DataPoint` mal formados no se pueden ejecutar.
+<p>Ejemplo:</p>
+<pre><code>
+  @RunWith(Theories.class)
+  <b>public class</b> SeriousTest {
+    @DataPoint
+    <b>private</b> String dataPoint = "value";
+
+    @DataPoint("generated")
+    <b>private</b> String generatedDataPoint() {
+      <b>return</b> "generated value";
+    }
+
+    @Theory
+    <b>public void</b> theoryMethod(String param) {
+      // ...
+    }
+  }
+</code></pre>
+<p>Hay una corrección rápida para modificar los modificadores:</p>
+<pre><code>
+  @RunWith(Theories.class)
+  <b>public class</b> SeriousTest {
+    @DataPoint
+    <b>public static</b> String dataPoint = "value";
+
+    @DataPoint("generated")
+    <b>public static</b> String generatedDataPoint() {
+      <b>return</b> "generated value";
+    }
+
+    @Theory
+    <b>public void</b> theoryMethod(String param) {
+      // ...
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+</body>
+</html>

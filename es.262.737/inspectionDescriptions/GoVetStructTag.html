@@ -1,0 +1,16 @@
+**Inspección de Etiqueta de Estructura Go**
+
+Informa sobre etiquetas de estructura que no se ajustan a los <a href="https://pkg.go.dev/reflect#StructTag">convenios de Go para etiquetas de estructura</a>.
+
+<p>Según estas convenciones, las cadenas de etiqueta son una concatenación de pares `clave:"valor"` separados por espacios, opcionalmente. Cada
+  clave es una cadena no vacía que consta de caracteres que no sean de control que no sean <code>espacio (U+0020 ' ')</code>, <code>comilla (U+0022 '"')</code>,
+  y
+  <code>dos puntos (U+003A ':')</code>. Cada valor va entre comillas utilizando caracteres <code>U+0022 '"'</code> y sintaxis literal de cadena de Go.</p>
+
+<p>Además, la inspección comprueba que los campos con etiquetas se exportan.</p>
+
+<p>Ejemplo de una etiqueta válida:</p>
+<pre><code>type Ejemplo struct {
+  Campo int `json:"campo" xml:"demo"`
+}</code>
+</pre>

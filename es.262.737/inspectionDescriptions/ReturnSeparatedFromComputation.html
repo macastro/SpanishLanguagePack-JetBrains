@@ -1,0 +1,31 @@
+<html>
+<body>
+Reporta declaraciones <code>return</code> que retornan una variable local donde el valor de la variable se calcula
+en algún otro lugar dentro del mismo método.
+<p>El arreglo rápido realiza un ajuste en línea de la variable retornada moviendo la declaración return a la ubicación
+en la que se calcula el valor de la variable.
+Cuando el valor retornado no puede ajustarse en línea en la declaración <code>return</code>,
+el arreglo rápido intenta mover la declaración return lo más cerca posible al cálculo del valor retornado.</p>
+<p>Ejemplo:</p>
+<pre><code>
+  int n = -1;
+  for (int i = 0; i &lt; a.length; i++) {
+    if (a[i] == b) {
+      n = i;
+      break;
+    }
+  }
+  return n;
+</code></pre>
+<p>Después de aplicar el arreglo rápido:</p>
+<pre><code>
+  int n = -1;
+  for (int i = 0; i &lt; a.length; i++) {
+    if (a[i] == b) {
+      return i;
+    }
+  }
+  return n;
+</code></pre>
+</body>
+</html>

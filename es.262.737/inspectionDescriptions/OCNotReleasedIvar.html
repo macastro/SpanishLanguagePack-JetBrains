@@ -1,0 +1,13 @@
+<html>
+<body>
+Informa de todos los objetos poseídos que no se han liberado, almacenados en variables de instancia.<br>
+Obtengras la posesión de un objeto cuando: <br>
+- Se crea usando un método cuyo nombre comienza con <code>alloc</code> o <code>new</code> o incluye <code>copy</code><br>
+- Le envías un mensaje <code>retain</code><br>
+- Estableces el valor de una propiedad que tiene el atributo <code>retain</code> o <code>copy</code> y se sintetiza con una variable de instancia<br> 
+Para abandonar la posesión de un objeto, necesitas: <br>
+- Enviarle un mensaje <code>release</code> o <code>autorelease</code><br>
+- Asignar <code>nil</code> a la propiedad sintetizada con la variable de instancia<br> 
+Esta inspección se deshabilita si está habilitada la gestión automática de referencias (ARC). En caso de que la siguiente casilla de verificación esté desactivada, puedes liberar las variables de instancia en cualquier método de la clase. Si está desactivada, podrás liberar las variables de instancia en los métodos <code>dealloc</code>, <code>tearDown</code>, <code>applicationWillTerminate:</code>, <code>didTurnIntoFault</code> y en cualquier método que pueda invocarse desde ellos.
+</body>
+</html>

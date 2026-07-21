@@ -1,0 +1,41 @@
+<html>
+<body>
+Informa de la concatenación de cadena <code>String</code> utilizada como argumento a <code>StringBuffer.append()</code>,
+<code>StringBuilder.append()</code> o <code>Appendable.append()</code>.
+<p>
+  Tales llamadas pueden convirtirse ventajosamente en llamadas de anexión encadenadas en el <code>StringBuffer/Builder/Appendable</code> existente, lo que ahorra el coste de una asignación extra de <code>StringBuffer/Builder</code>.
+  Esta inspección ignora las concatenaciones de <code>String</code> evaluadas en tiempo de compilación, en cuyo caso la conversión solo empeoraría el rendimiento.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void bar(StringBuilder builder, String name) {
+    builder.append("Hola, " + name);    //advertencia
+    builder.append("Hola, " + "mundo"); //sin advertencia
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>
+
+<html>
+<body>
+Informa de la concatenación de <code>String</code> utilizada como argumento a <code>StringBuffer.append()</code>,
+<code>StringBuilder.append()</code> o <code>Appendable.append()</code>.
+<p>
+  Tales llamadas pueden convertirse ventajosamente en llamadas de anexión encadenadas en el <code>StringBuffer/Builder/Appendable</code> existente, ahorrando el coste de una asignación extra de <code>StringBuffer/Builder</code>.
+  Esta inspección ignora las concatenaciones de <code>String</code> evaluadas en tiempo de compilación, en cuyo caso la conversión solo empeoraría el rendimiento.
+</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void bar(StringBuilder builder, String name) {
+    builder.append("Hola, " + name);    //advertencia
+    builder.append("Hola, " + "mundo"); //sin advertencia
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+
+</body>
+</html>

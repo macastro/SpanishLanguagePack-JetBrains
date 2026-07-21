@@ -1,0 +1,22 @@
+<html>
+<body>
+<code>String</code> denunciado por llamar a <code>equals()</code> para comparar con una cadena vacía.
+En este caso, es preferible usar <code>.isEmpty()</code> debido a que hace más claro lo que se está comprobando.
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  void checkString(String s){
+    if ("".equals(s)) throw new IllegalArgumentException();
+  }
+</code></pre>
+<p>Tras aplicar el arreglo rápido:</p>
+<pre><code>
+  void checkString(String s){
+    if (s != null && s.isEmpty()) throw new IllegalArgumentException();
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  <code>"".equals(str)</code> devuelve false si <code>str</code> es nulo. Por seguridad, el arreglo rápido de esta inspección inserta un control de nulo explícito cuando el argumento de <code>equals()</code> puede ser nulo. Use las opciones para hacer que la inspección ignore dichos casos.
+</p>
+</body>
+</html>

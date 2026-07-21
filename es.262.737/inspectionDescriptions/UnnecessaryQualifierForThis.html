@@ -1,0 +1,33 @@
+<html>
+<body>
+Reporta calificaciones innecesarias de <code>this</code> o <code>super</code>.
+<p>
+  El uso de un calificador en <code>this</code> o <code>super</code> para
+  desambiguar una referencia de código puede fácilmente volverse innecesario a través de refactorizaciones automáticas y debería eliminarse para mayor claridad.</p>
+<p><b>Ejemplo:</b></p>
+<pre><code>
+  class Foo {
+    void foo() {}
+  }
+
+  class Bar extends Foo {
+    void bar() {
+      Bar.super.foo();
+    }
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  class Foo {
+    void foo() {}
+  }
+
+  class Bar extends Foo {
+    void bar() {
+      super.foo();
+    }
+  }
+</code></pre>
+<!-- tooltip end -->
+</body>
+</html>

@@ -1,0 +1,7 @@
+<html>
+<body>
+<p>Reporta llamadas a <code>wait()</code> no realizadas dentro de una sentencia <em>synchronized</em> o método <em>synchronized</em> correspondiente.</p>
+<p>Llamar <code>wait()</code> sobre un objeto sin mantener un bloqueo sobre ese objeto resultará en una <code>IllegalMonitorStateException</code> lanzada.
+Tal constructo no es necesariamente un error, ya que el bloqueo necesario puede ser adquirido antes de que se llame al método contenedor, pero vale la pena revisarlo.</p>
+</body>
+</html>

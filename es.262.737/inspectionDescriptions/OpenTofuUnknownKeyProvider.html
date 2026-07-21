@@ -1,0 +1,28 @@
+<html>
+<body>
+<p>
+  Detecta referencias a proveedores de claves de cifrado inexistentes en la configuración del bloque de cifrado de OpenTofu. Por ejemplo, para el código
+  <pre>
+  <code>
+    terraform {
+      encryption {
+        key_provider "pbkdf2" "foo" {
+          # Configuration parameters
+        }
+        method "aes_gcm" "yourname" {
+          keys = key_provider.pbkdf2.unknown
+        }
+        method "aes_gcm" "yourname2" {
+          keys = key_provider.pbkdf2.foo
+        }
+      }
+    }
+  </code>
+  </pre>
+  Esta inspección comprueba que la referencia al proveedor de claves sea correcta. En este caso, resalta la referencia <code>unknown</code>.
+</p>
+<p>
+  Para más detalles, consulte https://opentofu.org/docs/language/state/encryption/#methods.
+</p>
+</body>
+</html>

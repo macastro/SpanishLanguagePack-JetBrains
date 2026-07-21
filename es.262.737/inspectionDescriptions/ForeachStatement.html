@@ -1,0 +1,24 @@
+<html>
+<body>
+Admite declaraciones en <code>for</code> aumentadas.
+<p>Ejemplo:</p>
+<pre><code>
+  for (int x: Arrays.asList(1, 2, 3)) {
+    System.out.println(x);
+  }
+</code></pre>
+<p>Después de aplicar la solución rápida:</p>
+<pre><code>
+  for (Iterator&lt;Integer&gt; iterator = Arrays.asList(1, 2, 3).iterator(); iterator.hasNext(); ) {
+    final int x = iterator.next();
+    System.out.println(x);
+  }
+</code></pre>
+<!-- tooltip end -->
+<p>
+  La declaración en <code>for</code> <i>aumentada</i> apareció en Java 5.
+  Esta inspección puede ayudar a degradar para garantizar la compatibilidad con versiones anteriores de Java.
+</p>
+
+</body>
+</html>

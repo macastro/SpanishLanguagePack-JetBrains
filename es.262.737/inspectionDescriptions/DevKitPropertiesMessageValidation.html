@@ -1,0 +1,62 @@
+<html>
+<body>
+Se presentan los siguientes problemas de <code>MessageFormat</code> que ocurren en los valores de propiedades:
+
+<p><b>Tipo de formato desconocido</b>
+<p>
+  <code>MessageFormat</code> sólo soporta los siguientes tipos de formato:
+<ul>
+  <li>Número</li>
+  <li>Fecha</li>
+  <li>Hora</li>
+  <li>Elección</li>
+</ul>
+  Se informará cualquier otro tipo de formato.
+
+<p><b>Comillas no emparejadas</b>
+<pre><code>
+  property.key=Shouldn't happen: {0}
+</code></pre>
+<p>
+  Las comillas simples se interpretan como escapes hasta el final de la propiedad y no aparecen en la cadena de caracteres resultante.
+  En la mayoría de los casos, esto no es lo que se pretende.
+  Si se requiere una comilla simple en la cadena de caracteres resultante, se deben duplicar dentro de la propiedad.
+
+<p><b>Llaves no emparejadas</b>
+<p>
+  Cada marcador de posición debe tener una llave de cierre.
+
+<p><b>Demasiadas comillas</b>
+<p>
+  En algunos casos (como <code>it's</code>), se espera una sola comilla en la cadena de caracteres resultante.
+  Se informan los casos en que dos o más comillas se encuentran consecutivamente en la cadena de caracteres resultante.
+
+<p><b>Límite inferior incorrecto del <code>ChoiceFormat</code> anidado</b>
+<p>
+  Los límites inferiores deben ser numéricos y deben ordenarse en orden ascendente.
+
+<p><b>Número incorrecto de comillas alrededor de los parámetros</b>
+<p>
+  En el patrón <code>java.text.MessageFormat</code>, las comillas simples se utilizan para escapar.
+  Para permitir que las comillas sean visibles, deben duplicarse.
+  Por ejemplo, al pasar <code>1</code>:
+<ul>
+  <li><code>'{0}'</code> &rarr; <code>{0}</code></li>
+  <li><code>''{0}''</code> &rarr; <code>'1'</code></li>
+</ul>
+<p>
+  Al usar un formato de elección, el formato anidado se evalúa como la propia cadena de formato, por lo que las comillas deben duplicarse una segunda vez.
+  Por ejemplo, al pasar <code>1</code>:
+<ul>
+  <li><code>{0, choice, 0#ninguno|#1''{0}'' archivos}</code> &rarr; <code>{0} archivos</code></li>
+  <li><code>{0, choice, 0#ninguno|#1''''{0}'''' archivos}</code> &rarr; <code>'1' archivos</code></li>
+</ul>
+
+<p><b>Nota</b>
+<p>
+  Los valores de propiedad solo se validan cuando contienen texto literal <code>{0}</code>, <code>{0,</code>, <code>{1}</code> o <code>{1,</code>.
+  La validación se realiza para garantizar que estos valores de propiedad se utilicen de hecho como patrones <code>MessageFormat</code>.
+<!-- tooltip end -->
+<p><small>Nuevo en 2023.2</small>
+</body>
+</html>
